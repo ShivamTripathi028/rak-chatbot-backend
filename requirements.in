@@ -1,0 +1,19 @@
+# requirements.in
+
+# FastAPI Server & Utilities
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# LangChain & RAG Ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-huggingface
+langchain-chroma
+
+# Foundational Libraries for AI/ML
+sentence-transformers
+chromadb
+unstructured[md]

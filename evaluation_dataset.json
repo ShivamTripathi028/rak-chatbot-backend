@@ -1,0 +1,1927 @@
+[
+{
+"query": "What is the main purpose of WisBlock Base?",
+"expected_source_paths": ["WisBlock/README.md", "WisBlock/Quickstart/README.md"],
+"category": "WisBlock",
+"expected_answer": "WisBlock Base is the baseboard or platform carrier that connects all WisBlock modules (Core, Sensor, IO), provides power supply, and has connectors for programming and debugging."
+},
+{
+"query": "What are the four modular blocks WisBlock is created with?",
+"expected_source_paths": ["WisBlock/Quickstart/README.md"],
+"category": "WisBlock",
+"expected_answer": "WisBlock is created with four modular blocks: WisBlock Base, WisBlock Core, WisBlock Sensor, and WisBlock IO."
+},
+{
+"query": "What is the typical size of a WisBlock Base board?",
+"expected_source_paths": ["WisBlock/Quickstart/README.md", "WisBlock/README.md"],
+"category": "WisBlock",
+"expected_answer": "A WisBlock Base board is typically 30 mm by 60 mm in size."
+},
+{
+"query": "What connectivity options are included in the WisBlock IoT Starter Kit (Kit1)?",
+"expected_source_paths": ["WisBlock/Kit1-IoT-Starter/Datasheet/README.md", "WisBlock/Kit1-IoT-Starter/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock IoT Starter Kit includes LoRaWAN, BLE, and LTE-M/NB-IoT connectivity options. It also mentions WiFi capability through the RAK11200 module."
+},
+{
+"query": "Name two sensor modules included in the WisBlock IoT Starter Kit.",
+"expected_source_paths": ["WisBlock/Kit1-IoT-Starter/Datasheet/README.md", "WisBlock/Kit1-IoT-Starter/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock IoT Starter Kit includes RAK12010 Light Sensor and RAK1901 Temperature and Humidity Sensor, among others."
+},
+{
+"query": "Which WisBlock Core modules are part of the WisBlock IoT Starter Kit?",
+"expected_source_paths": ["WisBlock/Kit1-IoT-Starter/Datasheet/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock IoT Starter Kit includes one RAK4631 LPWAN Module and one RAK11200 WiFi Module as WisBlock Core modules."
+},
+{
+"query": "What is the main function of the WisBlock Outdoor Location Tracker Kit (Kit10)?",
+"expected_source_paths": ["WisBlock/Kit10-Outdoor-Tracker/Datasheet/README.md", "WisBlock/Kit10-Outdoor-Tracker/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock Outdoor Location Tracker Kit is designed to track the location of objects in outdoor environments using precise GPS/GNSS modules, 9-DOF sensors, and accelerometers."
+},
+{
+"query": "Name one GNSS Location Sensor module included in the WisBlock Outdoor Location Tracker Kit.",
+"expected_source_paths": ["WisBlock/Kit10-Outdoor-Tracker/Datasheet/README.md", "WisBlock/Kit10-Outdoor-Tracker/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock Outdoor Location Tracker Kit includes the RAK12500 GNSS Location Sensor (or RAK1910 GNSS Location Sensor)."
+},
+{
+"query": "What types of environmental conditions can the WisBlock Environment Sensor Kit (Kit11) monitor?",
+"expected_source_paths": ["WisBlock/Kit11-Environment-Sensor/Datasheet/README.md", "WisBlock/Kit11-Environment-Sensor/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock Environment Sensor Kit can monitor temperature, humidity, pressure, UV, CO2, Particulate Matter, VOC, and IAQ (Indoor Air Quality)."
+},
+{
+"query": "Which CO2 sensor module is included in the WisBlock Environment Sensor Kit (Kit11)?",
+"expected_source_paths": ["WisBlock/Kit11-Environment-Sensor/Datasheet/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock Environment Sensor Kit includes the RAK12037 CO2 Sensor."
+},
+{
+"query": "What sensors are primarily included in the WisBlock Biometric Monitoring Kit (Kit2)?",
+"expected_source_paths": ["WisBlock/Kit2-Biometric-Monitoring/Datasheet/README.md", "WisBlock/Kit2-Biometric-Monitoring/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The WisBlock Biometric Monitoring Kit primarily includes sensors for monitoring heart rate, blood oxygen levels, and a non-contact body temperature sensor (RAK12003 and RAK12012)."
+},
+{
+"query": "How do you put the RAK11200 into download mode for firmware flashing?",
+"expected_source_paths": ["WisBlock/RAK11200/Datasheet/README.md", "WisBlock/RAK11200/Quickstart/README.md"],
+"category": "WisBlock",
+"expected_answer": "To put the RAK11200 into download mode, you need to connect the BOOT0 pin on the WisBlock Base RAK5005-O to GND and then push the reset button."
+},
+{
+"query": "What is the chipset of the RAK11310 WisBlock LPWAN Module?",
+"expected_source_paths": ["WisBlock/RAK11310/Datasheet/README.md", "WisBlock/RAK11310/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The RAK11310 chipset consists of the Raspberry Pi Foundation RP2040 and the Semtech SX1262."
+},
+{
+"query": "What is the function of the RAK12001 module?",
+"expected_source_paths": ["WisBlock/RAK12001/Datasheet/README.md", "WisBlock/RAK12001/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The RAK12001 is a fingerprint sensor module that supports both fingerprint enrollment and fingerprint matching."
+},
+{
+"query": "What is the chipset used in the RAK12002 RTC Module?",
+"expected_source_paths": ["WisBlock/RAK12002/Datasheet/README.md", "WisBlock/RAK12002/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The RAK12002 RTC Module uses the RV-3028-C7 chip from Micro Crystal."
+},
+{
+"query": "What type of sensor is the RAK12004 and what gases is it sensitive to?",
+"expected_source_paths": ["WisBlock/RAK12004/Datasheet/README.md", "WisBlock/RAK12004/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "RAK12004 is an MQ2 gas sensor module, sensitive to LPG, butane, propane, methane, alcohol, hydrogen, smoke, and other flammable steam."
+},
+{
+"query": "What is the purpose of the RAK13001 module?",
+"expected_source_paths": ["WisBlock/RAK13001/Datasheet/README.md", "WisBlock/RAK13001/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "RAK13001 is a relay and opto-coupler module used for isolated digital input and output applications, allowing programmatic switching of devices operating at high voltage or current."
+},
+{
+"query": "How many channels can the RAK13004 PWM expander module control?",
+"expected_source_paths": ["WisBlock/RAK13004/Datasheet/README.md", "WisBlock/RAK13004/Overview/README.md"],
+"category": "WisBlock",
+"expected_answer": "The RAK13004 PWM expander module can control 16 channels."
+},
+{
+"query": "What is the primary function of the RAK10700 WisBlock Solution?",
+"expected_source_paths": ["WisBlock/RAK10700/README.md", "WisBlock/RAK10700/Overview/README.md", "WisBlock/RAK10700/Datasheet/README.md"],
+"category": "WisBlock",
+"expected_answer": "The RAK10700 WisBlock Solution is a ready-to-use GNSS Tracker for LoRaWAN, designed for location tracking applications."
+},
+{
+"query": "What are the key sensor components of the RAK10702 Indoor Comfort Node?",
+"expected_source_paths": ["WisBlock/RAK10702/README.md", "WisBlock/RAK10702/Overview/README.md", "WisBlock/RAK10702/Datasheet/README.md"],
+"category": "WisBlock",
+"expected_answer": "The RAK10702 Indoor Comfort Node includes sensors for CO2 (SCD30), particulate matter (Plantower PM sensor), VOC (SGP40), temperature & humidity (SHTC3), and ambient light (VEML7700), plus a PIR sensor (AM312)."
+},
+{
+"query": "What are the main integrated components of the All-in-One 5G device?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md", "5G/All-in-One-5G/Overview/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G device integrates AGW (Access Gateway), LTE, 5G NR, and LoRa capabilities in one enclosure."
+},
+{
+"query": "What type of power supply does the All-in-One 5G support?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md", "5G/All-in-One-5G/Overview/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G supports PoE++ (IEEE 802.3bt Standard) power supply."
+},
+{
+"query": "How much RAM and eMMC storage does the All-in-One 5G have?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md", "5G/All-in-One-5G/Overview/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G has 4G RAM (LPDDR4) and 32G eMMC storage."
+},
+{
+"query": "What is the maximum RF Tx power of the All-in-One 5G?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G has a 24 dBm RF Tx power for LTE and 5G NR, and 27 dBm for LoRa."
+},
+{
+"query": "Which 3GPP bands does the All-in-One 5G support for LTE and 5G NR?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md", "5G/All-in-One-5G/Overview/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G supports 3GPP B48 for LTE and 3GPP n48 for 5G NR."
+},
+{
+"query": "What is the ingress protection rating of the All-in-One 5G?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G has an ingress protection rating of IP30."
+},
+{
+"query": "What is the operating temperature range for the All-in-One 5G?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md"],
+"category": "5G",
+"expected_answer": "The operating temperature range for the All-in-One 5G is -5°C to 45°C (23°F to 113°F)."
+},
+{
+"query": "How many concurrent users can the All-in-One 5G support for LTE and 5G NR respectively?",
+"expected_source_paths": ["5G/All-in-One-5G/Datasheet/README.md"],
+"category": "5G",
+"expected_answer": "The All-in-One 5G supports 32 concurrent users for LTE and 64 concurrent users for 5G NR."
+},
+{
+"query": "What are the steps for wall mounting the All-in-One 5G device?",
+"expected_source_paths": ["5G/All-in-One-5G/Installation-Guide/README.md"],
+"category": "5G",
+"expected_answer": "To wall mount the All-in-One 5G: 1. Mark hole positions. 2. Drill holes (5mm drill head) and insert screw anchors. 3. Attach the mounting bracket with four tapping screws. 4. Slide the device onto the bracket."
+},
+{
+"query": "What is a prerequisite for activating and running the 4G and 5G radios on the All-in-One 5G?",
+"expected_source_paths": ["5G/All-in-One-5G/Quickstart/README.md"],
+"category": "5G",
+"expected_answer": "A good GPS signal is required to activate and run the 4G and 5G radios on the All-in-One 5G."
+},
+{
+"query": "What are the default IP addresses to access the local web management for the RAK M310/M320 4G eNodeB and 5G gNodeB?",
+"expected_source_paths": ["5G/All-in-One-5G/Quickstart/README.md"],
+"category": "5G",
+"expected_answer": "The default IP for 4G eNodeB is 192.168.150.1/24 and for 5G gNodeB is 192.168.150.7/24."
+},
+{
+"query": "What are the default login credentials for the All-in-One 5G eNodeB local web GUI?",
+"expected_source_paths": ["5G/All-in-One-5G/User-Manual/LTE-Radio-Configuration/README.md"],
+"category": "5G",
+"expected_answer": "The default username is 'admin' and the default password is 'admin' for the eNodeB local web GUI."
+},
+{
+"query": "What are the default login credentials for the All-in-One 5G gNodeB local web GUI?",
+"expected_source_paths": ["5G/All-in-One-5G/Quickstart/README.md", "5G/All-in-One-5G/User-Manual/NR-Radio-Configuration/README.md"],
+"category": "5G",
+"expected_answer": "The default username is 'new_user' and the default password is 'gNB@2014' for the gNodeB local web GUI."
+},
+{
+"query": "How can I disable the 4G eNodeB on the RAK M320 if I only want 5G gNodeB functionality?",
+"expected_source_paths": ["5G/All-in-One-5G/Quickstart/README.md"],
+"category": "5G",
+"expected_answer": "To disable 4G on M320, log in to the eNodeB's local web (192.168.150.1), navigate to Quick Setting, scroll to Cell Quick Setting, and set RF Status to OFF, then save."
+},
+{
+"query": "What does the RAK M310/M320 CM4 module's static IP address change to after installing the built-in Magma AGW or Open5GS?",
+"expected_source_paths": ["5G/All-in-One-5G/Quickstart/README.md"],
+"category": "5G",
+"expected_answer": "After installing Magma AGW or Open5GS, the CM4 module's static IP address changes to 192.168.151.100/24."
+},
+{
+"query": "What are the RSRP, RSRQ, and SINR values considered 'Excellent' in the All-in-One 5G Test Report?",
+"expected_source_paths": ["5G/All-in-One-5G/Test-Report/README.md"],
+"category": "5G",
+"expected_answer": "For 'Excellent' RF conditions (Area A), RSRP is >= -80 dBm, RSRQ is >= -10 dB, and SINR is >= 20 dB."
+},
+{
+"query": "What was the peak downlink TCP data rate achieved during performance tests of the All-in-One 5G?",
+"expected_source_paths": ["5G/All-in-One-5G/Test-Report/README.md"],
+"category": "5G",
+"expected_answer": "The peak downlink TCP data rate achieved was 102 Mbps."
+},
+{
+"query": "What version of software is the All-in-One 5G LTE Radio Configuration User Manual for?",
+"expected_source_paths": ["5G/All-in-One-5G/User-Manual/LTE-Radio-Configuration/README.md"],
+"category": "5G",
+"expected_answer": "The LTE Radio Configuration User Manual is for software version BaiBS_QRTA_2.11.x_RAK."
+},
+{
+"query": "What is the default IP address for the LAN interface of the All-in-One 5G eNB for local maintenance?",
+"expected_source_paths": ["5G/All-in-One-5G/User-Manual/LTE-Radio-Configuration/README.md"],
+"category": "5G",
+"expected_answer": "The default IP address of the LAN interface (LMT port) on the eNB is 192.168.150.1."
+},
+{
+"query": "What is the maximum number of NTP servers supported if NTP is used as an external clock source for the All-in-One 5G eNB?",
+"expected_source_paths": ["5G/All-in-One-5G/User-Manual/LTE-Radio-Configuration/README.md"],
+"category": "5G",
+"expected_answer": "If NTP is used as an external clock source by the eNB, up to three NTP servers are supported: one master and two backups."
+},
+{
+"query": "What cryptocurrency is the RAK Hotspot efficient for?",
+"expected_source_paths": ["WisGate/RAK-Hotspot/Datasheet/README.md", "WisGate/RAK-Hotspot/Overview/README.md", "WisGate/RAK-Hotspot-v2/Datasheet/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK Hotspot is efficient for a new cryptocurrency, Helium (HNT)."
+},
+{
+"query": "How much RAM does the original RAK Hotspot have?",
+"expected_source_paths": ["WisGate/RAK-Hotspot/Datasheet/README.md", "WisGate/RAK-Hotspot/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK Hotspot has 2 GB on-board RAM."
+},
+{
+"query": "What are the onboard RAM options for RAK Hotspot V2?",
+"expected_source_paths": ["WisGate/RAK-Hotspot-v2/Datasheet/README.md", "WisGate/RAK-Hotspot-v2/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK Hotspot V2 has onboard RAM options of 2 GB, 4 GB, or 8 GB."
+},
+{
+"query": "What is the IP rating of the RAK Hotspot V2 housing?",
+"expected_source_paths": ["WisGate/RAK-Hotspot-v2/Datasheet/README.md", "WisGate/RAK-Hotspot-v2/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK Hotspot V2 has an IP30 housing."
+},
+{
+"query": "What software is recommended for backing up the RAK Hotspot SD card on macOS?",
+"expected_source_paths": ["WisGate/RAK-Hotspot/Backup/README.md"],
+"category": "WisGate",
+"expected_answer": "SD Clone is recommended for backing up the RAK Hotspot SD card on macOS."
+},
+{
+"query": "What is the default Wi-Fi password for RAK7243 in AP Mode?",
+"expected_source_paths": ["WisGate/RAK7243/Quickstart/README.md"],
+"category": "WisGate",
+"expected_answer": "The default Wi-Fi password for RAK7243 in AP Mode is 'rakwireless'."
+},
+{
+"query": "What are the main hardware features of the RAK7240 WisGate Edge Prime?",
+"expected_source_paths": ["WisGate/RAK7240/Datasheet/README.md", "WisGate/RAK7240/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "Hardware features of RAK7240 include an IP65 enclosure, PoE with surge protection, dual LoRa concentrators (up to 16 channels), Wi-Fi, LTE, and Ethernet backhaul, GPS, and an SD card slot."
+},
+{
+"query": "Does the RAK7240V2 operate with WisGateOS 2?",
+"expected_source_paths": ["WisGate/RAK7240-V2/Datasheet/README.md", "WisGate/RAK7240-V2/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "Yes, the RAK7240V2 operates under WisGateOS 2, which is built on the latest OpenWrt kernel."
+},
+{
+"query": "How many LoRa channels does the RAK7249 WisGate Edge Max support?",
+"expected_source_paths": ["WisGate/RAK7249/Datasheet/README.md", "WisGate/RAK7249/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7249 WisGate Edge Max supports up to 16 LoRa channels using dual LoRa Concentrators."
+},
+{
+"query": "What is the TX power of the RAK7289 WisGate Edge Pro?",
+"expected_source_paths": ["WisGate/RAK7289/Datasheet/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7289 WisGate Edge Pro has a TX power up to 27 dBm."
+},
+{
+"query": "What is the IP rating of the RAK7249 enclosure?",
+"expected_source_paths": ["WisGate/RAK7249/Datasheet/README.md", "WisGate/RAK7249/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7249 has an IP67/NEMA-6 industrial-grade enclosure."
+},
+{
+"query": "What are the functions of the Reset key on the RAK7268V2?",
+"expected_source_paths": ["WisGate/RAK7268-V2/Datasheet/README.md", "WisGate/RAK7268-V2/Quickstart/README.md"],
+"category": "WisGate",
+"expected_answer": "For the RAK7268V2, a short press of the Reset key restarts the gateway, and a long press (5 seconds or more) restores factory settings."
+},
+{
+"query": "What technology does Helium LongFi combine?",
+"expected_source_paths": ["WisGate/RAK-Hotspot/Datasheet/README.md", "WisGate/RAK-Hotspot-v2/Datasheet/README.md", "WisGate/RAK-Hotspot/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "Helium LongFi combines LoRaWAN wireless technology and the Helium Blockchain."
+},
+{
+"query": "What is the default IP address for accessing the RAK7244C in Wi-Fi AP Mode?",
+"expected_source_paths": ["WisGate/RAK7244C/Quickstart/README.md"],
+"category": "WisGate",
+"expected_answer": "The default IP address for RAK7244C in Wi-Fi AP Mode is 192.168.230.1."
+},
+{
+"query": "What is the power supply voltage for the RAK7246G gateway?",
+"expected_source_paths": ["WisGate/RAK7246G/Datasheet/README.md", "WisGate/RAK7246G/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7246G power supply is 5V / 2.5A (power adapter sold separately)."
+},
+{
+"query": "Which mPCIe slots on the RAK7391 are recommended for LoRaWAN concentrators with SPI and USB2 interfaces?",
+"expected_source_paths": ["WisGate/RAK7391/Compatible-Hardware/README.md", "WisGate/RAK7391/Assembly-Guide/README.md"],
+"category": "WisGate",
+"expected_answer": "For RAK7391, LoRaWAN concentrators should be installed in MiniPCIe slots #1 or #2 for SPI and USB2 interfaces."
+},
+{
+"query": "What is the maximum TX power for the RAK7258 WisGate Edge Lite?",
+"expected_source_paths": ["WisGate/RAK7258/Datasheet/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7258 has a maximum TX power of 27 dBm."
+},
+{
+"query": "How many LoRa channels does the RAK7285 WisGate Edge Ultra support in full-duplex?",
+"expected_source_paths": ["WisGate/RAK7285/Datasheet/README.md", "WisGate/RAK7285/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7285 WisGate Edge Ultra supports up to 8 LoRa channels in full-duplex."
+},
+{
+"query": "What operating system does the RAK7289V2 WisGate Edge Pro use?",
+"expected_source_paths": ["WisGate/RAK7289-V2/Datasheet/README.md", "WisGate/RAK7289-V2/Overview/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7289V2 WisGate Edge Pro supports WisGateOS 2, which is built on the latest OpenWRT kernel."
+},
+{
+"query": "What is the casing material for the RAK7394 gateway?",
+"expected_source_paths": ["WisGate/RAK7394/Datasheet/README.md"],
+"category": "WisGate",
+"expected_answer": "The RAK7394 gateway housing is built with an aluminum casing."
+},
+{
+"query": "What is the core purpose of the Meshtastic open-source initiative?",
+"expected_source_paths": [
+"Meshtastic/README.md",
+"Meshtastic/Meshtastic-Starter-Kit/Overview/README.md",
+"Meshtastic/WisMesh-Base/Overview/README.md",
+"Meshtastic/WisMesh-Hub/Overview/README.md",
+"Meshtastic/WisMesh-Pocket/Overview/README.md",
+"Meshtastic/WisMesh-Tap/Overview/README.md"
+],
+"category": "Meshtastic",
+"expected_answer": "The Meshtastic open-source initiative aims at building an off-grid, decentralized mesh network designed to operate on affordable, low-power devices, especially vital where traditional communication systems fail."
+},
+{
+"query": "Who is the Meshtastic Starter Kit primarily designed for?",
+"expected_source_paths": [
+"Meshtastic/Meshtastic-Starter-Kit/Overview/README.md",
+"Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md"
+],
+"category": "Meshtastic",
+"expected_answer": "The Meshtastic Starter Kit is ideal for DIY enthusiasts looking for a hassle-free Meshtastic node."
+},
+{
+"query": "What are some items included in the Meshtastic Starter Kit?",
+"expected_source_paths": ["Meshtastic/Meshtastic-Starter-Kit/Overview/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The Meshtastic Starter Kit includes a range of WisBlock nRF52840 core modules, sensor modules, enclosures, and a high-gain 2 dBi Rubber Antenna."
+},
+{
+"query": "What is the recommended firmware filename for a standard RAK4631 base board setup in Meshtastic?",
+"expected_source_paths": [
+"Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md",
+"Meshtastic/WisMesh-Base/Quickstart/README.md",
+"Meshtastic/WisMesh-Hub/Quickstart/README.md",
+"Meshtastic/WisMesh-Pocket/Quickstart/README.md"
+],
+"category": "Meshtastic",
+"expected_answer": "For all base boards with RAK4631 (excluding RAK14000 E-Ink display setups), the firmware filename is firmware-rak4631-w.x.yy.zzzzzzz.uf2."
+},
+{
+"query": "Which WisBlock Base board is mentioned as a hardware prerequisite for the Meshtastic Starter Kit?",
+"expected_source_paths": ["Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The RAK19007 WisBlock Base is listed as a hardware prerequisite for the Meshtastic Starter Kit."
+},
+{
+"query": "Name two types of applications that can be used to configure Meshtastic devices.",
+"expected_source_paths": [
+"Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md",
+"Meshtastic/WisMesh-Pocket/Quickstart/README.md",
+"Meshtastic/WisMesh-Tap/Quickstart/README.md"
+],
+"category": "Meshtastic",
+"expected_answer": "Meshtastic devices can be configured using applications such as an Android App and an Apple App. Other options include a Web Client and Python CLI."
+},
+{
+"query": "What MCU and LoRa transceiver are integrated into the RAK19026 WisMesh Base Board?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The RAK19026 WisMesh Base Board has an integrated WisDuo RAK4630 module, which features the Nordic nRF52840 MCU and the Semtech SX1262 LoRa transceiver."
+},
+{
+"query": "Does the RAK19026 WisMesh Base Board have a slot for a WisBlock Core module?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "No, different from other WisBlock Base Boards, the RAK19026 does not have a Core Slot for a WisBlock Core module; instead, it has a WisDuo RAK4630 integrated as its MCU."
+},
+{
+"query": "What is the typical charging current for the RAK19026 WisMesh Base battery via USB?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The charging current for the RAK19026 battery via the Type-C USB port is 350 mA."
+},
+{
+"query": "What is the primary power solution for the WisMesh Hub?",
+"expected_source_paths": ["Meshtastic/WisMesh-Hub/Overview/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The WisMesh Hub is solar-powered for continuous operation."
+},
+{
+"query": "Does the WisMesh Hub require external antennas?",
+"expected_source_paths": ["Meshtastic/WisMesh-Hub/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "No, the WisMesh Hub has internal LoRa and BLE antennas and does not require the assembly or connection of any external antenna."
+},
+{
+"query": "What is the MCU in the WisMesh Pocket based on?",
+"expected_source_paths": ["Meshtastic/WisMesh-Pocket/Overview/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The WisMesh Pocket is powered by an efficient WisBlock solution based on the nRF52840."
+},
+{
+"query": "What is the recommended way to recharge the WisMesh Pocket?",
+"expected_source_paths": ["Meshtastic/WisMesh-Pocket/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "To recharge the WisMesh Pocket, plug a USB-C cable into the device and connect it to a 5V 2A USB wall charger."
+},
+{
+"query": "What key feature allows the WisMesh Tap to send messages without a phone?",
+"expected_source_paths": ["Meshtastic/WisMesh-Tap/Overview/README.md", "Meshtastic/WisMesh-Tap/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The WisMesh Tap allows sending messages over the Meshtastic network without needing a phone by using its large TFT display and on-screen keyboard."
+},
+{
+"query": "Which RAKwireless product is the WisMesh Tap based on?",
+"expected_source_paths": ["Meshtastic/WisMesh-Tap/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The WisMesh Tap is based on the RAKwireless RAK10701 Field Tester."
+},
+{
+"query": "What is the size of the WisBlock modules supported by Slot D on the RAK19026 WisMesh Base?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "On the RAK19026 WisMesh Base, Slot D holds modules up to 23 mm in size."
+},
+{
+"query": "What is the location accuracy of the u-blox ZOE-M8Q GNSS module on the RAK19026?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The u-blox ZOE-M8Q GNSS module on the RAK19026 has a location accuracy of ±2.5 meters."
+},
+{
+"query": "What is the chipset of the acceleration sensor on the RAK19026 WisMesh Base board?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The acceleration sensor on the RAK19026 uses the ST LIS3DH chipset."
+},
+{
+"query": "What type of USB connector is used on the RAK19026 WisMesh Base for programming and charging?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The RAK19026 WisMesh Base uses a Type-C USB connector for programming, debugging, and battery charging."
+},
+{
+"query": "What is advised regarding firmware for RAKwireless Meshtastic devices to ensure compatibility?",
+"expected_source_paths": [
+"Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md",
+"Meshtastic/WisMesh-Base/Quickstart/README.md",
+"Meshtastic/WisMesh-Hub/Quickstart/README.md",
+"Meshtastic/WisMesh-Pocket/Quickstart/README.md",
+"Meshtastic/WisMesh-Tap/Quickstart/README.md"
+],
+"category": "Meshtastic",
+"expected_answer": "It is advised to download the latest Meshtastic firmware from meshtastic.org and upload it to your RAKwireless device to ensure it is compatible with the Meshtastic network."
+},
+{
+"query": "Are LiSoCl2 batteries recommended for powering the WisMesh Hub?",
+"expected_source_paths": ["Meshtastic/WisMesh-Hub/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "No, it is not recommended to power the WisMesh Hub with LiSoCl2 batteries due to the power consumption of the Meshtastic LoRa network, which would result in a very limited lifespan for these non-rechargeable batteries."
+},
+{
+"query": "What is the gain of the rubber antenna included with the Meshtastic Starter Kit?",
+"expected_source_paths": ["Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md", "Meshtastic/Meshtastic-Starter-Kit/Overview/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The Meshtastic Starter Kit includes a high-gain 2 dBi Rubber Antenna."
+},
+{
+"query": "What kind of power supply can be connected to the solar panel connector on the RAK19026 WisMesh Base?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md", "Meshtastic/WisMesh-Base/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "A small solar panel or a regulated 5V supply can be connected to the solar panel connector on the RAK19026."
+},
+{
+"query": "How do you navigate through screens on the WisMesh Tap?",
+"expected_source_paths": ["Meshtastic/WisMesh-Tap/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "You can navigate through the usual Meshtastic screens on the WisMesh Tap by swiping on the display to the left or right."
+},
+{
+"query": "What should be done if you encounter problems with the pre-flashed Meshtastic firmware on a WisMesh device?",
+"expected_source_paths": [
+"Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md",
+"Meshtastic/WisMesh-Hub/Quickstart/README.md",
+"Meshtastic/WisMesh-Pocket/Quickstart/README.md",
+"Meshtastic/WisMesh-Tap/Quickstart/README.md"
+],
+"category": "Meshtastic",
+"expected_answer": "If you encounter problems with the pre-flashed Meshtastic firmware, you should update the Meshtastic firmware to the latest version."
+},
+{
+"query": "What is the purpose of the battery disconnect switch on the RAK19026 WisMesh Base?",
+"expected_source_paths": ["Meshtastic/WisMesh-Base/Datasheet/README.md", "Meshtastic/WisMesh-Base/Overview/README.md"],
+"category": "Meshtastic",
+"expected_answer": "The battery disconnect switch on the RAK19026 WisMesh Base can power down the MCU and all sensor and IO modules, while still allowing the battery to be recharged."
+},
+{
+"query": "What is the recommended procedure for disassembling WisBlock modules from a base board like the RAK19007 or RAK19026?",
+"expected_source_paths": ["Meshtastic/Meshtastic-Starter-Kit/Quickstart/README.md", "Meshtastic/WisMesh-Base/Quickstart/README.md"],
+"category": "Meshtastic",
+"expected_answer": "To disassemble WisBlock modules, first remove the screws, then check the silkscreen for the correct location to apply even force to detach the module from the baseboard."
+},
+{
+"query": "What is the Angle Mounting Plate made of?",
+"expected_source_paths": ["Accessories/Angle-Mounting-Plate/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The Angle Mounting Plate is made of carbon steel with coating."
+},
+{
+"query": "What is the suitable pole diameter for the Angle Mounting Plate?",
+"expected_source_paths": ["Accessories/Angle-Mounting-Plate/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The Angle Mounting Plate is suitable for pole diameters of 35-50 mm."
+},
+{
+"query": "What type of antenna is the Angle Mounting Plate specially designed for?",
+"expected_source_paths": ["Accessories/Angle-Mounting-Plate/Overview/README.md", "Accessories/Angle-Mounting-Plate/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The Angle Mounting Plate is specially designed for the RAK 5 dBi fiberglass antenna (RAKARG19)."
+},
+{
+"query": "What is the clip diameter for the Antenna Clip?",
+"expected_source_paths": ["Accessories/Antenna-Clip/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The Antenna Clip has a clip diameter of < 35 mm."
+},
+{
+"query": "What is the recommended use environment for the Antenna Clip?",
+"expected_source_paths": ["Accessories/Antenna-Clip/Datasheet/README.md", "Accessories/Antenna-Clip/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The Antenna Clip is for indoor use only and best suited for smooth surfaces like ceramic tiles, glass, metal, or plastic."
+},
+{
+"query": "What are the available lengths for the Antenna Feeder Line cable for WisGate Edge Prime and Max?",
+"expected_source_paths": ["Accessories/Antenna-Feeder-Line/Datasheet/README.md", "Accessories/Antenna-Feeder-Line/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The Antenna Feeder Line cable is available in 1.5 m, 3 m, and 5 m length variants."
+},
+{
+"query": "What is the cable type of the Antenna Feeder Line?",
+"expected_source_paths": ["Accessories/Antenna-Feeder-Line/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The Antenna Feeder Line uses LMR195 cable type."
+},
+{
+"query": "What are the four types of antenna mounting options in the Antenna Mounting Kit?",
+"expected_source_paths": ["Accessories/Antenna-Mounting-Kit/Datasheet/README.md", "Accessories/Antenna-Mounting-Kit/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The four antenna mounting options are L-Shaped Wall Mounting Pole, Small U-Shaped Hoisting Pole, Large U-Shaped Hoisting Pole, and I-Shaped Vertical Mounting Rod."
+},
+{
+"query": "Which mounting pole from the Antenna Mounting Kit is fixed on horizontal surfaces like roofs?",
+"expected_source_paths": ["Accessories/Antenna-Mounting-Kit/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The I-Shaped Vertical Mounting Rod is fixed on horizontal surfaces, such as roofs."
+},
+{
+"query": "What is the model name or identifier for the Battery Plus Service Power Adapter?",
+"expected_source_paths": ["Accessories/Battery-Plus-Service-Power-Adapter/Overview/README.md", "Accessories/Battery-Plus-Service-Power-Adapter/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The model for the Battery Plus Service Power Adapter is HKA18019095-6C."
+},
+{
+"query": "What is the DC output voltage and current of the Battery Plus Service Power Adapter?",
+"expected_source_paths": ["Accessories/Battery-Plus-Service-Power-Adapter/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The Battery Plus Service Power Adapter provides a 19 VDC output with a 9.47 A current."
+},
+{
+"query": "What is the model name of the enclosure included in the Bobcat Outdoor Enclosure Kit?",
+"expected_source_paths": ["Accessories/Bobcat-Enclosure-Kit/Overview/README.md", "Accessories/Bobcat-Enclosure-Kit/Installation-Guide/README.md"],
+"category": "Accessories",
+"expected_answer": "The Bobcat Outdoor Enclosure Kit includes the RAKBox-GW-4 (or RAKBox-GW-4B)."
+},
+{
+"query": "What is the IP rating of the Bobcat Outdoor Enclosure Kit?",
+"expected_source_paths": ["Accessories/Bobcat-Enclosure-Kit/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The Bobcat Outdoor Enclosure Kit is IP67 Rated."
+},
+{
+"query": "What is the purpose of the RAK Solar Shield for the Bobcat Outdoor Enclosure Kit?",
+"expected_source_paths": ["Accessories/Bobcat-Enclosure-Kit/Solar-Shield/README.md"],
+"category": "Accessories",
+"expected_answer": "RAK Solar Shield is to protect outdoor placed gateways or Hotspots (like the Bobcat Miner in the outdoor enclosure) from the hot sun."
+},
+{
+"query": "What is the protection level of the Ethernet Cable Gland?",
+"expected_source_paths": ["Accessories/Ethernet-Cable-Gland/Datasheet/README.md", "Accessories/Ethernet-Cable-Gland/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The Ethernet Cable Gland has a protection level of IP67."
+},
+{
+"query": "What is the model name of the GPS SPD?",
+"expected_source_paths": ["Accessories/GPS-SPD/Overview/README.md", "Accessories/GPS-SPD/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The model name of the GPS SPD is LA-GT2500 Z5N1-4."
+},
+{
+"query": "What is the DC pass voltage for the GPS SPD?",
+"expected_source_paths": ["Accessories/GPS-SPD/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The GPS SPD has a DC pass voltage of 6V."
+},
+{
+"query": "What is the model name of the Helical Magnetic Base Antenna?",
+"expected_source_paths": ["Accessories/Helical-Base-Magnetic-Antenna/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The model name for the Helical Magnetic Base Antenna is RAKARJ13."
+},
+{
+"query": "What is the connector type for the Helical Magnetic Base Antenna?",
+"expected_source_paths": ["Accessories/Helical-Base-Magnetic-Antenna/Datasheet/README.md", "Accessories/Helical-Base-Magnetic-Antenna/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The Helical Magnetic Base Antenna uses an RP-SMA-J connector."
+},
+{
+"query": "What are the three installation options for the Helium 5G Outdoor Small Cell Mounting Kit?",
+"expected_source_paths": ["Accessories/Helium-Outdoor-Small-Cell-Mounting-Kit/Overview/README.md", "Accessories/Helium-Outdoor-Small-Cell-Mounting-Kit/Installation-Guide/README.md"],
+"category": "Accessories",
+"expected_answer": "The three installation options are roof mounting, concrete ground mounting, and wall mounting."
+},
+{
+"query": "What is the model name of the LoRa Wi-Fi LTE SPD?",
+"expected_source_paths": ["Accessories/LoRa-WiFi-LTE-SPD/Overview/README.md", "Accessories/LoRa-WiFi-LTE-SPD/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The model name of the LoRa Wi-Fi LTE SPD is LA-GT2700 DN1-5."
+},
+{
+"query": "What is the maximum transmission power supported by the LoRa Wi-Fi LTE SPD?",
+"expected_source_paths": ["Accessories/LoRa-WiFi-LTE-SPD/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The LoRa Wi-Fi LTE SPD supports a maximum transmission power of ≤ 200 W."
+},
+{
+"query": "What is the model name for the Outdoor Enclosure Kit designed for RAK Hotspot and RAK7244?",
+"expected_source_paths": ["Accessories/Outdoor-Enclosure-Kit/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The model name is RAKBox-GW-3."
+},
+{
+"query": "Which gateways is the RAKBox-GW-3 Outdoor Enclosure Kit suitable for?",
+"expected_source_paths": ["Accessories/Outdoor-Enclosure-Kit/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKBox-GW-3 Outdoor Enclosure kit is suitable for RAK Hotspot, RAK7244, RAK7244P, and RAK7244C."
+},
+{
+"query": "What is the input voltage for the 100M PoE Injector R012-4800500?",
+"expected_source_paths": ["Accessories/R012-4800500/Datasheet/README.md", "Accessories/R012-4800500/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The input voltage for the 100M PoE Injector R012-4800500 is 100-240 VAC (50~60 Hz)."
+},
+{
+"query": "Is the Raspberry Pi 4 included in the RAK RPi DIY Gateway Kit?",
+"expected_source_paths": ["Accessories/RAK-RPi-DIY-Gateway-Kit/Installation-Guide/README.md", "Accessories/RAK-RPi-DIY-Gateway-Kit/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "No, the Raspberry Pi 4 is NOT included in the RAK RPi DIY Gateway Kit."
+},
+{
+"query": "What is the battery capacity of the RAK9154 Solar Battery?",
+"expected_source_paths": ["Accessories/RAK9154/Datasheet/README.md", "Accessories/RAK9154/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9154 Solar Battery has a nominal capacity of 5200 mAh (5.2 Ah)."
+},
+{
+"query": "What is the rated energy of the RAK9155 Battery Plus?",
+"expected_source_paths": ["Accessories/RAK9155/Datasheet/README.md", "Accessories/RAK9155/Quickstart/README.md", "Accessories/RAK9155/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9155 Battery Plus has a rated energy of 640 Wh."
+},
+{
+"query": "What is the IP rating of the RAK9155 Battery Plus enclosure?",
+"expected_source_paths": ["Accessories/RAK9155/Datasheet/README.md", "Accessories/RAK9155/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9155 Battery Plus has an IP65 rating for its enclosure."
+},
+{
+"query": "What are the output voltage options for the RAK9168 PoE Splitter?",
+"expected_source_paths": ["Accessories/RAK9168/Datasheet/README.md", "Accessories/RAK9168/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9168 PoE Splitter has two versions: one with 5V USB Type-C output (6A max) and another with 12V barrel jack output (2.5A max)."
+},
+{
+"query": "What components are included in the RAK9720 A-Fix Bracket Kit?",
+"expected_source_paths": ["Accessories/RAK9720/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9720 A-Fix Bracket Kit includes one flat plate, one rounded plate, two U-shaped brackets, and all the screws and nuts."
+},
+{
+"query": "What is the cable type for the RAK9731 Pulsar Cable?",
+"expected_source_paths": ["Accessories/RAK9731/Datasheet/README.md", "Accessories/RAK9731/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9731 Pulsar Cable is an LMR400 type cable."
+},
+{
+"query": "What are the connector types for the RAK9732 Pulsar Cable?",
+"expected_source_paths": ["Accessories/RAK9732/Datasheet/README.md", "Accessories/RAK9732/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9732 Pulsar Cable has N-type male to N-type male connectors."
+},
+{
+"query": "What gateways is the RAK9733 Pulsar Cable suitable for?",
+"expected_source_paths": ["Accessories/RAK9733/Datasheet/README.md", "Accessories/RAK9733/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9733 Pulsar cable is suitable for all gateways from the WisGate Developer series and the RAK Hotspot."
+},
+{
+"query": "What is the cable length for the RAK9734 Pulsar Cable?",
+"expected_source_paths": ["Accessories/RAK9734/Datasheet/README.md", "Accessories/RAK9734/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAK9734 Pulsar Cable has a length of 5m."
+},
+{
+"query": "What is the cable type for the RAKA0C52 Magnetic Antenna Base?",
+"expected_source_paths": ["Accessories/RAKA0C52/Datasheet/README.md", "Accessories/RAKA0C52/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKA0C52 Magnetic Antenna Base uses LMR200 cable type."
+},
+{
+"query": "What is the polarization of the RAKAGPS1 GPS Antenna?",
+"expected_source_paths": ["Accessories/RAKAGPS1/Datasheet/README.md", "Accessories/RAKAGPS1/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKAGPS1 GPS Antenna has Right-Hand Side Circular Polarization (RHCP)."
+},
+{
+"query": "What is the VSWR for the RAKARJ17 868MHz Black Blade Antenna?",
+"expected_source_paths": ["Accessories/RAKARJ17/Datasheet/README.md", "Accessories/RAKARJ17/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKARJ17 868MHz Black Blade Antenna has a VSWR of ≤ 1.3 (Datasheet shows 1.20 at 863MHz and 1.30 at 870MHz. Overview says <=1.3.)."
+},
+{
+"query": "What is the center frequency of the RAKARJ18 Yellow Antenna?",
+"expected_source_paths": ["Accessories/RAKARJ18/Datasheet/README.md", "Accessories/RAKARJ18/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKARJ18 Yellow Antenna has a center frequency of 916 MHz."
+},
+{
+"query": "What type of antenna is the RAKARJ19 868MHz Gray Antenna described as?",
+"expected_source_paths": ["Accessories/RAKARJ19/Datasheet/README.md", "Accessories/RAKARJ19/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKARJ19 868MHz Gray Antenna is described as an HWR Series ½-wave center-fed dipole antenna."
+},
+{
+"query": "Is the RAKARL01 LTE Outdoor Fiberglass antenna omnidirectional?",
+"expected_source_paths": ["Accessories/RAKARL01/Datasheet/README.md", "Accessories/RAKARL01/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "Yes, the RAKARL01 LTE Outdoor Fiberglass antenna has an omnidirectional radiation pattern."
+},
+{
+"query": "What is the horizontal beam width of the RAKARP01 12dBi Directional Antenna?",
+"expected_source_paths": ["Accessories/RAKARP01/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKARP01 12dBi Directional Antenna has a horizontal beam width of 65º (± 10º)."
+},
+{
+"query": "What is the IP rating of the RAKARW01 2.4 GHz Wi-Fi Fiberglass Antenna?",
+"expected_source_paths": ["Accessories/RAKARW01/Datasheet/README.md", "Accessories/RAKARW01/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKARW01 2.4 GHz Wi-Fi Fiberglass Antenna is IP67 rated."
+},
+{
+"query": "What is the material thickness of the RAKBox-B4 enclosure?",
+"expected_source_paths": ["Accessories/RAKBox-B4/Datasheet/README.md"],
+"category": "Accessories",
+"expected_answer": "The RAKBox-B4 enclosure has a material thickness of 3mm."
+},
+{
+"query": "What is the antenna cable connector type provided in the SenseCAP M1 Outdoor Enclosure Kit for the LoRa antenna?",
+"expected_source_paths": ["Accessories/SenseCAP-M1-Outdoor-Enclosure-Kit/Overview/README.md", "Accessories/SenseCAP-M1-Outdoor-Enclosure-Kit/Installation-Guide/README.md"],
+"category": "Accessories",
+"expected_answer": "The SenseCAP M1 Outdoor Enclosure Kit provides an antenna cable with N-type female to SMA female connectors for the LoRa antenna."
+},
+{
+"query": "What is the net weight of the UPS PoE-03?",
+"expected_source_paths": ["Accessories/UPS-PoE-03/Datasheet/README.md", "Accessories/UPS-PoE-03/Overview/README.md"],
+"category": "Accessories",
+"expected_answer": "The net weight of the UPS PoE-03 is 265 g."
+},
+{
+    "query": "What is the main purpose of WisBlock?",
+    "expected_source_paths": [
+      "WisBlock/README.md",
+      "WisBlock/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "WisBlock is a modular system that makes it easy to implement a low power wide area network (LPWAN) into your IoT solution, from rapid prototyping to mass production."
+  },
+  {
+    "query": "What are the four modular blocks WisBlock is created with?",
+    "expected_source_paths": [
+      "WisBlock/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "WisBlock is created with four modular blocks: WisBlock Base, WisBlock Core, WisBlock Sensor, and WisBlock IO."
+  },
+  {
+    "query": "What is the main purpose of WisBlock Base?",
+    "expected_source_paths": [
+      "WisBlock/README.md",
+      "WisBlock/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "WisBlock Base is the baseboard or platform carrier that connects all WisBlock modules (Core, Sensor, IO), provides power supply, and has connectors for programming and debugging."
+  },
+  {
+    "query": "What is the typical size of a WisBlock Base board?",
+    "expected_source_paths": [
+      "WisBlock/Quickstart/README.md",
+      "WisBlock/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "A WisBlock Base board is typically 30 mm by 60 mm in size."
+  },
+  {
+    "query": "What is the role of WisBlock Core?",
+    "expected_source_paths": [
+      "WisBlock/README.md",
+      "WisBlock/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "WisBlock Core is the computation and data processing center of the WisBlock system, some of which also offer communication capabilities like LoRa/LoRaWAN, BLE, or Wi-Fi."
+  },
+  {
+    "query": "What is the function of WisBlock Sensor modules?",
+    "expected_source_paths": [
+      "WisBlock/README.md",
+      "WisBlock/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "WisBlock Sensor modules are the data acquisition modules of WisBlock, which include analog, digital, environmental, and location sensors."
+  },
+  {
+    "query": "What do WisBlock IO modules do?",
+    "expected_source_paths": [
+      "WisBlock/Quickstart/README.md",
+      "WisBlock/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "WisBlock IO modules extend the input and output possibilities of the system, including options like cellular connectivity, displays, buttons, and additional communication interfaces."
+  },
+  {
+    "query": "What connectivity options are included in the WisBlock IoT Starter Kit (Kit1)?",
+    "expected_source_paths": [
+      "WisBlock/Kit1-IoT-Starter/Datasheet/README.md",
+      "WisBlock/Kit1-IoT-Starter/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock IoT Starter Kit includes LoRaWAN, BLE, and LTE-M/NB-IoT connectivity options. It also mentions WiFi capability through the RAK11200 module."
+  },
+  {
+    "query": "Name two sensor modules included in the WisBlock IoT Starter Kit.",
+    "expected_source_paths": [
+      "WisBlock/Kit1-IoT-Starter/Datasheet/README.md",
+      "WisBlock/Kit1-IoT-Starter/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock IoT Starter Kit includes RAK12010 Light Sensor and RAK1901 Temperature and Humidity Sensor, among others."
+  },
+  {
+    "query": "Which WisBlock Core modules are part of the WisBlock IoT Starter Kit?",
+    "expected_source_paths": [
+      "WisBlock/Kit1-IoT-Starter/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock IoT Starter Kit includes one RAK4631 LPWAN Module and one RAK11200 WiFi Module as WisBlock Core modules."
+  },
+  {
+    "query": "What is the main function of the WisBlock Outdoor Location Tracker Kit (Kit10)?",
+    "expected_source_paths": [
+      "WisBlock/Kit10-Outdoor-Tracker/Datasheet/README.md",
+      "WisBlock/Kit10-Outdoor-Tracker/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Outdoor Location Tracker Kit is designed to track the location of objects in outdoor environments using precise GPS/GNSS modules, 9-DOF sensors, and accelerometers."
+  },
+  {
+    "query": "Name one GNSS Location Sensor module included in the WisBlock Outdoor Location Tracker Kit.",
+    "expected_source_paths": [
+      "WisBlock/Kit10-Outdoor-Tracker/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Outdoor Location Tracker Kit includes the RAK12500 GNSS Location Sensor (or RAK1910 GNSS Location Sensor)."
+  },
+  {
+    "query": "What types of environmental conditions can the WisBlock Environment Sensor Kit (Kit11) monitor?",
+    "expected_source_paths": [
+      "WisBlock/Kit11-Environment-Sensor/Datasheet/README.md",
+      "WisBlock/Kit11-Environment-Sensor/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Environment Sensor Kit can monitor temperature, humidity, pressure, UV, CO2, Particulate Matter, VOC, and IAQ (Indoor Air Quality)."
+  },
+  {
+    "query": "Which CO2 sensor module is included in the WisBlock Environment Sensor Kit (Kit11)?",
+    "expected_source_paths": [
+      "WisBlock/Kit11-Environment-Sensor/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Environment Sensor Kit includes the RAK12037 CO2 Sensor."
+  },
+  {
+    "query": "What sensors are primarily included in the WisBlock Biometric Monitoring Kit (Kit2)?",
+    "expected_source_paths": [
+      "WisBlock/Kit2-Biometric-Monitoring/Datasheet/README.md",
+      "WisBlock/Kit2-Biometric-Monitoring/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Biometric Monitoring Kit primarily includes sensors for monitoring heart rate, blood oxygen levels, and a non-contact body temperature sensor (RAK12003 and RAK12012)."
+  },
+  {
+    "query": "What sensors are included in the WisBlock Movement Detection Kit (Kit3)?",
+    "expected_source_paths": [
+      "WisBlock/Kit3-Movement-Detection/Datasheet/README.md",
+      "WisBlock/Kit3-Movement-Detection/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Movement Detection Kit includes an accelerometer, gyroscope, PIR (Passive Infrared) sensor, and radar sensor."
+  },
+  {
+    "query": "What are some of the sensors and interfaces included in the WisBlock Industrial 4.0 Kit (Kit4)?",
+    "expected_source_paths": [
+      "WisBlock/Kit4-Industrial/Datasheet/README.md",
+      "WisBlock/Kit4-Industrial/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Industrial 4.0 Kit includes inductive, proximity, fork, and current/coulomb sensors, as well as interfaces like relays, joysticks, and a barcode scanner."
+  },
+  {
+    "query": "What are the two main focuses of the WisBlock Home and Office Security Kit (Kit5)?",
+    "expected_source_paths": [
+      "WisBlock/Kit5-Home-and-Office-Security/Datasheet/README.md",
+      "WisBlock/Kit5-Home-and-Office-Security/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Home and Office Security Kit focuses on detecting intrusion (using PIR, radar, and ultrasonic sensors) and access control (using fingerprint, NFC, and barcode sensors)."
+  },
+  {
+    "query": "What kind of modules are in the WisBlock Light and Color Kit (Kit6)?",
+    "expected_source_paths": [
+      "WisBlock/Kit6-Light-and-Color/Datasheet/README.md",
+      "WisBlock/Kit6-Light-and-Color/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Light and Color Kit includes RGB, visible, and UV light sensors, as well as LED bar and RGB modules."
+  },
+  {
+    "query": "Name three interfaces included in the WisBlock Agriculture Kit (Kit7).",
+    "expected_source_paths": [
+      "WisBlock/Kit7-Agriculture/Datasheet/README.md",
+      "WisBlock/Kit7-Agriculture/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Agriculture Kit includes SDI-12, 4-20 mA, and RS485 interfaces."
+  },
+  {
+    "query": "What technologies does the WisBlock Indoor Location Tracker Kit (Kit9) use for tracking?",
+    "expected_source_paths": [
+      "WisBlock/Kit9-Indoor-Tracker/Datasheet/README.md",
+      "WisBlock/Kit9-Indoor-Tracker/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The WisBlock Indoor Location Tracker Kit uses ultra-wideband (UWB) technology, accelerometers, and 9-DOF sensors for indoor tracking."
+  },
+  {
+    "query": "How do you put the RAK11200 into download mode for firmware flashing?",
+    "expected_source_paths": [
+      "WisBlock/RAK11200/Datasheet/README.md",
+      "WisBlock/RAK11200/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "To put the RAK11200 into download mode, you need to connect the BOOT0 pin on the WisBlock Base to GND and then push the reset button."
+  },
+  {
+    "query": "What is the chipset of the RAK11310 WisBlock LPWAN Module?",
+    "expected_source_paths": [
+      "WisBlock/RAK11310/Datasheet/README.md",
+      "WisBlock/RAK11310/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK11310 chipset consists of the Raspberry Pi Foundation RP2040 and the Semtech SX1262."
+  },
+  {
+    "query": "What is the function of the RAK12001 module?",
+    "expected_source_paths": [
+      "WisBlock/RAK12001/Datasheet/README.md",
+      "WisBlock/RAK12001/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12001 is a fingerprint sensor module that supports both fingerprint enrollment and fingerprint matching."
+  },
+  {
+    "query": "What is the chipset used in the RAK12002 RTC Module?",
+    "expected_source_paths": [
+      "WisBlock/RAK12002/Datasheet/README.md",
+      "WisBlock/RAK12002/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12002 RTC Module uses the RV-3028-C7 chip from Micro Crystal."
+  },
+  {
+    "query": "What type of sensor is the RAK12004 and what gases is it sensitive to?",
+    "expected_source_paths": [
+      "WisBlock/RAK12004/Datasheet/README.md",
+      "WisBlock/RAK12004/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "RAK12004 is an MQ-2 gas sensor module, sensitive to LPG, butane, propane, methane, alcohol, hydrogen, smoke, and other flammable steam."
+  },
+  {
+    "query": "What is the function of the RAK12006 PIR sensor?",
+    "expected_source_paths": [
+      "WisBlock/RAK12006/Datasheet/README.md",
+      "WisBlock/RAK12006/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12006 is a Pyroelectric Infrared (PIR) module designed to detect occupancy and motion from infrared radiated objects."
+  },
+  {
+    "query": "What is the detection range of the RAK12007 Ultrasonic Sensor?",
+    "expected_source_paths": [
+      "WisBlock/RAK12007/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12007 Ultrasonic Sensor has a detection range of 2 cm to 4 m."
+  },
+  {
+    "query": "What is the measurement range of the RAK12008 CO2 sensor?",
+    "expected_source_paths": [
+      "WisBlock/RAK12008/Datasheet/README.md",
+      "WisBlock/RAK12008/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12008 CO2 sensor has a measurement range of 0 to 100 vol%."
+  },
+  {
+    "query": "What is the detection range of the RAK12009 alcohol gas sensor?",
+    "expected_source_paths": [
+      "WisBlock/RAK12009/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12009 has a detection range of 25 to 500 ppm for alcohol gas."
+  },
+  {
+    "query": "What is the measurement range of the RAK12010 ambient light sensor?",
+    "expected_source_paths": [
+      "WisBlock/RAK12010/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12010 can measure an ambient light range from 0 lx to about 120,000 lx."
+  },
+  {
+    "query": "What makes the RAK12011 Barometer WT Sensor suitable for wet environments?",
+    "expected_source_paths": [
+      "WisBlock/RAK12011/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12011 is suitable for wet environments because its pressure sensor has a water-resistant package and the PCB is protected with a three-proof paint."
+  },
+  {
+    "query": "What does the RAK12012 sensor module measure?",
+    "expected_source_paths": [
+      "WisBlock/Kit2-Biometric-Monitoring/Datasheet/README.md",
+      "WisBlock/RAK12012/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12012 is an integrated pulse oximetry and heart-rate monitor module used for measuring a person's heart rate and blood oxygen saturation."
+  },
+  {
+    "query": "What is the maximum detection distance of the RAK12013 Radar Sensor?",
+    "expected_source_paths": [
+      "WisBlock/RAK12013/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK12013 Radar Sensor has a detection distance of 5 to 7 meters."
+  },
+  {
+    "query": "What is the purpose of the RAK13001 module?",
+    "expected_source_paths": [
+      "WisBlock/RAK13001/Datasheet/README.md",
+      "WisBlock/RAK13001/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "RAK13001 is a relay and opto-coupler module used for isolated digital input and output applications, allowing programmatic switching of devices operating at high voltage or current."
+  },
+  {
+    "query": "What is the main function of the RAK13002 module?",
+    "expected_source_paths": [
+      "WisBlock/RAK13002/Datasheet/README.md",
+      "WisBlock/RAK13002/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK13002 is a WisBlock Core adaptor module that exposes all WisBlock Core signals like I2C, SPI, UART, GPIO, and ADC to standard 2.54 mm pitch pin headers."
+  },
+  {
+    "query": "How many bidirectional I/O ports does the RAK13003 module provide?",
+    "expected_source_paths": [
+      "WisBlock/RAK13003/Datasheet/README.md",
+      "WisBlock/RAK13003/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK13003 IO expansion module offers 16 bidirectional I/O ports."
+  },
+  {
+    "query": "How many channels can the RAK13004 PWM expander module control?",
+    "expected_source_paths": [
+      "WisBlock/RAK13004/Datasheet/README.md",
+      "WisBlock/RAK13004/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK13004 PWM expander module can control 16 channels."
+  },
+  {
+    "query": "What is the purpose of the RAK13005 LIN module?",
+    "expected_source_paths": [
+      "WisBlock/RAK13005/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK13005 is a Local Interconnect Network (LIN) transceiver module designed for in-vehicle networks, home appliances, and industrial automation, supporting data rates up to 20 kBaud."
+  },
+  {
+    "query": "What is the primary function of the RAK10700 WisBlock Solution?",
+    "expected_source_paths": [
+      "WisBlock/RAK10700/README.md",
+      "WisBlock/RAK10700/Overview/README.md",
+      "WisBlock/RAK10700/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK10700 WisBlock Solution is a ready-to-use GNSS Tracker for LoRaWAN, designed for location tracking applications."
+  },
+  {
+    "query": "What are the key sensor components of the RAK10702 Indoor Comfort Node?",
+    "expected_source_paths": [
+      "WisBlock/RAK10702/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK10702 Indoor Comfort Node includes sensors for CO2 (SCD30), particulate matter (Plantower PM sensor), VOC (SGP40), temperature & humidity (SHTC3), ambient light (VEML7700), and a PIR sensor (AM312)."
+  },
+  {
+    "query": "What firmware is the RAK11722 module based on?",
+    "expected_source_paths": [
+      "WisBlock/RAK11722/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK11722 firmware is based on RUI3 (RAKwireless Unified Interface V3)."
+  },
+  {
+    "query": "What technology does the RAK13801 UWB module use?",
+    "expected_source_paths": [
+      "WisBlock/RAK13801/Overview/README.md",
+      "WisBlock/RAK13801/Datasheet/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK13801 module uses UWB (Ultra Wideband) Technology, a short-range wireless communication that operates at a frequency bandwidth above 1 GHz."
+  },
+  {
+    "query": "What is the display resolution of the white-black version of the RAK14000 E-Ink Display?",
+    "expected_source_paths": [
+      "WisBlock/RAK14000/Datasheet/README.md",
+      "WisBlock/RAK14000/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The white-black version of the RAK14000 E-Ink Display has a resolution of 212 x 104 pixels."
+  },
+  {
+    "query": "What is the memory capacity of the RAK15000 EEPROM module?",
+    "expected_source_paths": [
+      "WisBlock/RAK15000/Datasheet/README.md",
+      "WisBlock/RAK15000/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK15000 EEPROM module provides 2 Mbit (262,144 x 8 bits) of serial EEPROM."
+  },
+  {
+    "query": "What is the memory capacity of the RAK15001 Flash module?",
+    "expected_source_paths": [
+      "WisBlock/RAK15001/Datasheet/README.md",
+      "WisBlock/RAK15001/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK15001 is a NOR flash module with a 16 Mbit (2 MByte) nonvolatile memory."
+  },
+  {
+    "query": "What interface does the RAK15002 Micro SD Card module use?",
+    "expected_source_paths": [
+      "WisBlock/RAK15002/Datasheet/README.md",
+      "WisBlock/RAK15002/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK15002 Micro SD card module uses a 4-line SPI interface."
+  },
+  {
+    "query": "What is the data retention period for the RAK15003 FRAM module at +85 °C?",
+    "expected_source_paths": [
+      "WisBlock/RAK15003/Datasheet/README.md",
+      "WisBlock/RAK15003/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK15003 FRAM module has a data retention period of 10 years at +85 °C."
+  },
+  {
+    "query": "What is the function of the RAK16000 DC Current Module?",
+    "expected_source_paths": [
+      "WisBlock/RAK16000/Overview/README.md",
+      "WisBlock/RAK16000/Quickstart/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK16000 is a module capable of measuring DC current in the range of 0 to 3A and DC voltage in the range of 0 to 26V."
+  },
+  {
+    "query": "How many independent voltages can the RAK16001 ADC module measure?",
+    "expected_source_paths": [
+      "WisBlock/RAK16001/Datasheet/README.md",
+      "WisBlock/RAK16001/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK16001 ADC module can measure 8 independent single-ended voltages or 4 independent differential voltages."
+  },
+  {
+    "query": "What is the primary function of the RAK16002 Coulomb Sensor module?",
+    "expected_source_paths": [
+      "WisBlock/RAK16002/Datasheet/README.md",
+      "WisBlock/RAK16002/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK16002 Coulomb Sensor module measures the battery charge state in battery-powered IoT devices and features programmable high and low thresholds for accumulated charge."
+  },
+  {
+    "query": "What types of motors can the RAK17000 Motor Control Module drive?",
+    "expected_source_paths": [
+      "WisBlock/RAK17000/Datasheet/README.md",
+      "WisBlock/RAK17000/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK17000 Motor Control Module can drive one stepper motor or two DC motors."
+  },
+  {
+    "query": "What is the maximum output current of the RAK17001 H-Bridge Module?",
+    "expected_source_paths": [
+      "WisBlock/RAK17001/Datasheet/README.md",
+      "WisBlock/RAK17001/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK17001 H-Bridge Module has a maximum output current of 2.6 Arms."
+  },
+  {
+    "query": "What is the function of the RAK18001 Buzzer Module?",
+    "expected_source_paths": [
+      "WisBlock/RAK18001/Datasheet/README.md",
+      "WisBlock/RAK18001/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK18001 is a buzzer module that produces an audible high-pitched sound, which can be controlled via PWM for use in alarm and notifier applications."
+  },
+  {
+    "query": "What is the purpose of the RAK18003 Audio Interposer Module?",
+    "expected_source_paths": [
+      "WisBlock/RAK18003/Datasheet/README.md",
+      "WisBlock/RAK18003/Overview/README.md"
+    ],
+    "category": "WisBlock",
+    "expected_answer": "The RAK18003 is an interposer module that allows multiple WisBlock Audio modules to be used together on a single IO slot."
+  },
+  {
+    "query": "What cryptocurrency is the RAK Hotspot designed to mine?",
+    "expected_source_paths": ["WisGate/RAK-Hotspot/Overview/README.md", "WisGate/RAK-Hotspot/Datasheet/README.md", "WisGate/RAK-Hotspot-v2/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK Hotspot is efficient for mining a cryptocurrency called Helium (HNT)."
+  },
+  {
+    "query": "What technology does the RAK Hotspot use to maximize range and battery life?",
+    "expected_source_paths": ["WisGate/RAK-Hotspot/Overview/README.md", "WisGate/RAK-Hotspot/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK Hotspot uses LongFi technology, which combines LoRaWAN and the Helium Blockchain to maximize range and battery life."
+  },
+  {
+    "query": "What does a constantly blinking green LED on the RAK Hotspot V2 typically indicate?",
+    "expected_source_paths": ["WisGate/RAK-Hotspot-v2/Troubleshooting/README.md"],
+    "category": "WisGate",
+    "expected_answer": "A constantly blinking green LED on the RAK Hotspot V2 suggests a problem, usually related to the SD card, but possibly also due to a power issue."
+  },
+  {
+    "query": "How is the RAK Hotspot V2 put into pairing mode for setup with the Helium app?",
+    "expected_source_paths": ["WisGate/RAK-Hotspot-v2/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "To put the RAK Hotspot V2 into pairing mode, you need to press the pairing button located on the side of the device."
+  },
+  {
+    "query": "What is the ingress protection rating of the RAK7240 WisGate Edge Prime?",
+    "expected_source_paths": ["WisGate/RAK7240/Overview/README.md", "WisGate/RAK7240/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7240 WisGate Edge Prime has an ingress protection rating of IP65."
+  },
+  {
+    "query": "What are the available backhaul connectivity options for the RAK7240?",
+    "expected_source_paths": ["WisGate/RAK7240/Datasheet/README.md", "WisGate/RAK7240/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7240 supports Wi-Fi, LTE, and Ethernet as backhaul connectivity options."
+  },
+  {
+    "query": "What is the default IP address to access the RAK7240's Web Management Platform when it's in Wi-Fi AP Mode?",
+    "expected_source_paths": ["WisGate/RAK7240/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The default IP address to access the RAK7240 in Wi-Fi AP Mode is 192.168.230.1."
+  },
+  {
+    "query": "What are the default login credentials for the RAK7240's Web UI?",
+    "expected_source_paths": ["WisGate/RAK7240/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The default login credentials for the RAK7240 Web UI are username 'root' and password 'root'."
+  },
+  {
+    "query": "What operating system is the RAK7240V2 based on?",
+    "expected_source_paths": ["WisGate/RAK7240-V2/Datasheet/README.md", "WisGate/RAK7240-V2/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7240V2's software is based on WisGateOS 2, which is built on the latest OpenWrt kernel."
+  },
+  {
+    "query": "What is the main hardware difference between the RAK7243 and RAK7243C developer gateways?",
+    "expected_source_paths": ["WisGate/RAK7243/Overview/README.md", "WisGate/RAK7243C/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7243C includes the RAK2013 Cellular Pi HAT, which provides cellular backhaul connectivity, while the base RAK7243 does not."
+  },
+  {
+    "query": "What single board computer (SBC) is used in the RAK7244 WisGate Developer D4 Gateway?",
+    "expected_source_paths": ["WisGate/RAK7244/Datasheet/README.md", "WisGate/RAK7244/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7244 WisGate Developer D4 Gateway uses a Raspberry Pi 4."
+  },
+  {
+    "query": "How can you get the Gateway EUI from a RAK7244 using the command line?",
+    "expected_source_paths": ["WisGate/RAK7244/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "You can get the Gateway EUI by running either `sudo gateway-config` or `sudo gateway-version` in the command line interface."
+  },
+  {
+    "query": "How can you revert a RAK developer gateway to Wi-Fi AP mode after entering incorrect client credentials?",
+    "expected_source_paths": ["WisGate/RAK7243/Quickstart/README.md", "WisGate/RAK7244/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "To revert to Wi-Fi AP mode, you need to power off the gateway, remove the SD card, create an empty file named 'rak_ap' in the root directory of the SD card using a PC, and then re-insert the card and power the gateway back on."
+  },
+  {
+    "query": "What LoRa concentrator chip is used in the RAK7268 WisGate Edge Lite 2?",
+    "expected_source_paths": ["WisGate/RAK7268/Overview/README.md", "WisGate/RAK7268/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7268 WisGate Edge Lite 2 uses the Semtech SX1302 LoRa concentrator chip."
+  },
+  {
+    "query": "What is the IP rating of the RAK7258 WisGate Edge Lite?",
+    "expected_source_paths": ["WisGate/RAK7258/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7258 has an ingress protection rating of IP30."
+  },
+  {
+    "query": "What happens if you long-press the reset key (for 5 seconds or more) on a RAK7258 gateway?",
+    "expected_source_paths": ["WisGate/RAK7258/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "A long press of the reset key for 5 seconds or more will restore the RAK7258 gateway to its factory settings."
+  },
+  {
+    "query": "What is the core computer and LoRa concentrator in the RAK7246G WisGate Developer D0 Gateway?",
+    "expected_source_paths": ["WisGate/RAK7246G/Overview/README.md", "WisGate/RAK7246G/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7246G is composed of a Raspberry Pi Zero W and a RAK2246 Pi HAT LPWAN Concentrator module, which uses a Semtech SX1308 baseband processor."
+  },
+  {
+    "query": "What software is required to be installed on a RAK7246G before installing the AWS IoT Greengrass Core software?",
+    "expected_source_paths": ["WisGate/RAK7246G/AWS-Greengrass/README.md"],
+    "category": "WisGate",
+    "expected_answer": "You need to install the Java 8 runtime (openjdk-8-jdk) before installing the AWS IoT Greengrass Core software."
+  },
+  {
+    "query": "What is the core LoRa concentrator engine in the RAK7248 WisGate Developer D4H?",
+    "expected_source_paths": ["WisGate/RAK7248/Overview/README.md", "WisGate/RAK7248/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7248 uses the Semtech SX1302 as its LoRa Concentrator Engine."
+  },
+  {
+    "query": "What are the three main variants of the RAK7248 gateway?",
+    "expected_source_paths": ["WisGate/RAK7248/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The three variants are RAK7248 (base model), RAK7248C (with cellular connectivity), and RAK7248P (with Power-over-Ethernet support)."
+  },
+  {
+    "query": "How is the RAK7248 gateway connected to AWS IoT Core for LoRaWAN?",
+    "expected_source_paths": ["WisGate/RAK7248/Supported-LoRa-Network-Servers/README.md"],
+    "category": "WisGate",
+    "expected_answer": "It is connected by downloading and compiling the LoRa Basics Station software and configuring it with the certificates and endpoints obtained from the AWS console."
+  },
+  {
+    "query": "What is the IP rating for the RAK7249 WisGate Edge Max enclosure?",
+    "expected_source_paths": ["WisGate/RAK7249/Overview/README.md", "WisGate/RAK7249/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7249 has an IP67/NEMA-6 industrial-grade enclosure."
+  },
+  {
+    "query": "How many LoRa channels can the RAK7249 support at maximum?",
+    "expected_source_paths": ["WisGate/RAK7249/Overview/README.md", "WisGate/RAK7249/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7249 can support up to 16 LoRa channels by using dual LoRa concentrators."
+  },
+  {
+    "query": "What is the primary function of the RAK7271/RAK7371 WisGate Developer Base?",
+    "expected_source_paths": ["WisGate/RAK7271-7371/Overview/README.md", "WisGate/RAK7271-7371/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "Its primary function is to convert RAK2287 (in RAK7271) or RAK5146 (in RAK7371) mPCIe LoRa concentrator modules into a plug-and-play device with a USB Type C interface."
+  },
+  {
+    "query": "How is the RAK7271 WisGate Developer Base recognized when connected to a host computer's USB port?",
+    "expected_source_paths": ["WisGate/RAK7271-7371/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "It is recognized as a 'STMicroelectronics Virtual COM Port'."
+  },
+  {
+    "query": "What is the core processing unit of the RAK7391 WisGate Connect?",
+    "expected_source_paths": ["WisGate/RAK7391/Overview/README.md", "WisGate/RAK7391/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7391 WisGate Connect is based on the Raspberry Pi Compute Module 4 (CM4)."
+  },
+  {
+    "query": "Name at least three specialized interfaces available on the RAK7391 board.",
+    "expected_source_paths": ["WisGate/RAK7391/Overview/README.md", "WisGate/RAK7391/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7391 features several specialized interfaces, including mPCIe slots, an M.2 B-Key interface, and two WisBlock IO slots."
+  },
+  {
+    "query": "What is RAKPiOS, the recommended operating system for the RAK7391?",
+    "expected_source_paths": ["WisGate/RAK7391/Overview/README.md", "WisGate/RAK7391/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "RAKPiOS is a custom operating system for the WisGate Connect, which is a fork of the Raspberry Pi OS that includes all necessary drivers, security changes, and Docker by default."
+  },
+  {
+    "query": "Which WisBlock module should be used with the RAK7391 to add RS485 ModBUS capability?",
+    "expected_source_paths": ["WisGate/RAK7391/Connecting-To-WisBlock/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK5802 RS485 ModBUS Module should be used to add RS485 ModBUS capability."
+  },
+  {
+    "query": "What is the main purpose of the RAKR314 board?",
+    "expected_source_paths": ["WisGate/RAKR314/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAKR314 is a carrier board designed to adapt the Raspberry Pi Compute Module 4 to the standard Raspberry Pi 4 form factor, providing standard I/O ports."
+  },
+  {
+    "query": "What is the first step to flash the eMMC on a Raspberry Pi CM4 installed on a RAKR314 board?",
+    "expected_source_paths": ["WisGate/RAKR314/Flashing-the-OS/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The first step is to put the module into flash mode by shorting the eMMC boot pin and the GND pin while connecting the USB-C port to a computer."
+  },
+  {
+    "query": "What is the function of a short press vs a long press on the RAK7268's reset key?",
+    "expected_source_paths": ["WisGate/RAK7268/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "A short press restarts the gateway, while a long press (5 seconds or more) restores it to factory settings."
+  },
+  {
+    "query": "What is the enclosure material of the RAK7289V2 WisGate Edge Pro V2?",
+    "expected_source_paths": ["WisGate/RAK7289-V2/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The enclosure of the RAK7289V2 is made of aluminum and plastic."
+  },
+  {
+    "query": "What is the power consumption of the RAK7258 gateway in typical conditions?",
+    "expected_source_paths": ["WisGate/RAK7258/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The typical power consumption of the RAK7258 is 12 Watts."
+  },
+  {
+    "query": "What is the operating temperature range for the RAK7243 gateway?",
+    "expected_source_paths": ["WisGate/RAK7243/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The operating temperature range for the RAK7243 is -20º C to +65º C."
+  },
+  {
+    "query": "What is the procedure to enable Wi-Fi client mode on a RAK developer gateway like the RAK7243?",
+    "expected_source_paths": ["WisGate/RAK7243/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "Using the `sudo gateway-config` tool, first select 'Enable Client Mode/Disable AP Mode', and then select 'Add New SSID for Client' to enter the network details."
+  },
+  {
+    "query": "What is the maximum transmit power (TX power) of the RAK7249 WisGate Edge Max?",
+    "expected_source_paths": ["WisGate/RAK7249/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7249 has a maximum TX power of up to 27 dBm."
+  },
+  {
+    "query": "What services are provided as templates in the RAK7391's Portainer application?",
+    "expected_source_paths": ["WisGate/RAK7391/Services/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The Portainer templates include LoRaWAN Packet Forwarders (Basics Station, UDP Packet Forwarder), LoRaWAN Network Servers (ChirpStack, The Things Stack), Node-RED, Grafana, and InfluxDB."
+  },
+  {
+    "query": "How is the RAK7391 WisGate Connect powered if PoE is used?",
+    "expected_source_paths": ["WisGate/RAK7391/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "If PoE is used, the RAK7391 must have the specialized PoE HAT module installed, and it can then be powered through the 1 Gb Ethernet port."
+  },
+  {
+    "query": "What is the purpose of the RAK9003 Pi HAT in the RAK7244P gateway?",
+    "expected_source_paths": ["WisGate/RAK7244/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK9003 Pi HAT provides Power-over-Ethernet (PoE 802.3 af) capability to the RAK7244P gateway."
+  },
+  {
+    "query": "Which LoRa baseband processor is used in the RAK7243 WisGate Developer D3?",
+    "expected_source_paths": ["WisGate/RAK7243/Datasheet/README.md", "WisGate/RAK7243/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7243 uses the Semtech SX1301 baseband processor."
+  },
+  {
+    "query": "What is the default username and password to log in to the ChirpStack web UI that is built-in on RAK developer gateways?",
+    "expected_source_paths": ["WisGate/RAK7243/Supported-LoRa-Network-Servers/README.md", "WisGate/RAK7244/Supported-LoRa-Network-Servers/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The default username is 'admin' and the default password is 'admin'."
+  },
+  {
+    "query": "Which antennas are internal on the RAK7289 WisGate Edge Pro, and which is external?",
+    "expected_source_paths": ["WisGate/RAK7289/Overview/README.md", "WisGate/RAK7289/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7289 has internal antennas for Wi-Fi, GPS, and LTE, and an external antenna for LoRa."
+  },
+  {
+    "query": "What is the maximum number of LoRa channels supported by the RAK7289 WisGate Edge Pro?",
+    "expected_source_paths": ["WisGate/RAK7289/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7289 supports up to 16 LoRa channels with its dual LoRa concentrators."
+  },
+  {
+    "query": "What are the two power supply options for the RAK7268 WisGate Edge Lite 2?",
+    "expected_source_paths": ["WisGate/RAK7268-V2/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7268V2 can be powered by a DC 12V - 1A adapter or by Power-over-Ethernet (PoE IEEE 802.3 af)."
+  },
+  {
+    "query": "Which concentrator module is inside the RAK7371 WisGate Developer Base?",
+    "expected_source_paths": ["WisGate/RAK7271-7371/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7371 contains a RAK5146 (SX1303) LoRaWAN concentrator module."
+  },
+  {
+    "query": "How do you start the packet forwarder process on a Linux machine connected to a RAK7271?",
+    "expected_source_paths": ["WisGate/RAK7271-7371/Quickstart/README.md"],
+    "category": "WisGate",
+    "expected_answer": "After navigating to the `packet_forwarder` directory within the `sx1302_hal-2.0.1` folder and ensuring the correct `global_conf.json` is in place, you run the command `sudo ./lora_pkt_fwd`."
+  },
+  {
+    "query": "Which cellular module is used in the RAK7244C for LTE connectivity?",
+    "expected_source_paths": ["WisGate/RAK7244/Datasheet/README.md", "WisGate/RAK7244C/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7244C uses the Quectel EG95 LTE CAT4 module."
+  },
+  {
+    "query": "How many channels does the RAK7258 WisGate Edge Lite support?",
+    "expected_source_paths": ["WisGate/RAK7258/Datasheet/README.md", "WisGate/RAK7258/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7258 is a full 8-channel gateway."
+  },
+  {
+    "query": "What is the purpose of the RAKR314 carrier board?",
+    "expected_source_paths": ["WisGate/RAKR314/Overview/README.md", "WisGate/RAK7394/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAKR314 is a carrier board designed for the Raspberry Pi Compute Module 4, adapting it to the familiar Raspberry Pi 4 form factor with standard GPIO and other interfaces."
+  },
+  {
+    "query": "What is the new feature in the RAK7289 V2 enclosure design?",
+    "expected_source_paths": ["WisGate/RAK7289-V2/Overview/README.md", "WisGate/RAK7289-V2/Datasheet/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The new enclosure design for the RAK7289 V2 allows the LTE, Wi-Fi, and GPS antennas to be housed internally."
+  },
+  {
+    "query": "What are the power supply options for the RAK7391 WisGate Connect?",
+    "expected_source_paths": ["WisGate/RAK7391/Datasheet/README.md", "WisGate/RAK7391/Overview/README.md"],
+    "category": "WisGate",
+    "expected_answer": "The RAK7391 has flexible power supply modes, including a DC terminal (10-28V), a Phoenix terminal (10-28V), and optional Power-over-Ethernet (PoE)."
+  },
+  {
+        "query": "What is the primary purpose of the WisDuo product line?",
+        "expected_source_paths": ["WisDuo/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "WisDuo products combine a microcontroller (MCU) and a LoRa transceiver, sometimes including BLE, into a single small module. This design simplifies the process of creating new IoT solutions by providing a compact, low-power component for long-range wireless data applications."
+    },
+    {
+        "query": "Which communication protocols are generally supported by WisDuo modules?",
+        "expected_source_paths": ["WisDuo/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "WisDuo modules typically support LoRaWAN specifications and LoRa point-to-point (P2P) communication. Some variants also include support for BLE 5."
+    },
+    {
+        "query": "What chipset does the RAK11300 module use?",
+        "expected_source_paths": ["WisDuo/README.md", "WisDuo/RAK11300-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK11300 module is based on the Raspberry Pi RP2040 chip and the Semtech SX1262 RF transceiver."
+    },
+    {
+        "query": "Which WisDuo module incorporates the nRF52840 chipset and supports BLE 5?",
+        "expected_source_paths": ["WisDuo/README.md", "WisDuo/RAK4630-Module/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4630 module uses the nRF52840 chipset and supports LoRa/LoRaWAN as well as BLE 5."
+    },
+    {
+        "query": "What is the typical sleep current of the RAK3172 module?",
+        "expected_source_paths": ["WisDuo/README.md", "WisDuo/RAK3172-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK3172 module has an ultra-low power consumption of 1.69 μA in sleep mode."
+    },
+    {
+        "query": "What is the main function of the RAK3244 BastWAN Breakout Board?",
+        "expected_source_paths": ["WisDuo/BastWAN/Datasheet/README.md", "WisDuo/BastWAN/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK3244 BastWAN is a Feather-compatible breakout board designed to harness the power of the RAK4260 module (ATSAMR34J18B SiP) for LoRaWAN and LoRa P2P communication, with an added ATECC606A cryptographic co-processor for enhanced security."
+    },
+    {
+        "query": "What is the key security component of the RAK3244 BastWAN board?",
+        "expected_source_paths": ["WisDuo/BastWAN/Overview/README.md", "WisDuo/BastWAN/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "A key feature is the ATECC606A Cryptographic co-processor, which provides secure hardware-based key storage."
+    },
+    {
+        "query": "How do you add support for the BastWAN board to the Arduino IDE?",
+        "expected_source_paths": ["WisDuo/BastWAN/Quickstart/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "You need to add the URL 'https://electroniccats.github.io/Arduino_Boards_Index/package_electroniccats_index.json' to the 'Additional Boards Manager URLs' in the Arduino IDE preferences, and then install the 'Electronic Cats SAMD Boards' package."
+    },
+    {
+        "query": "How do you upgrade the firmware of a RAK11300 module?",
+        "expected_source_paths": ["WisDuo/RAK11300-Module/Quickstart/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "To upgrade the firmware, you must activate the USB bootloader mode by resetting the module twice or using the BootSel button. This makes the module appear as a USB Mass Storage device named 'RPI-RP2', to which you can copy the '.uf2' firmware file."
+    },
+    {
+        "query": "What are the main chipsets used in the RAK11720 module?",
+        "expected_source_paths": ["WisDuo/RAK11720-Module/Datasheet/README.md", "WisDuo/RAK11720-Module/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK11720 module is based on the Ambiq Apollo3 Blue AMA3B1KK-KBR-B0 SoC MCU and the Semtech SX1262 LoRa transceiver."
+    },
+    {
+        "query": "What is RUI3, as mentioned in relation to the RAK11720 module?",
+        "expected_source_paths": ["WisDuo/RAK11720-Module/Datasheet/README.md", "WisDuo/RAK11720-Module/AT-Command-Manual/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "RUI3 (RAKwireless Unified Interface V3) is the framework on which the RAK11720's default firmware is based. It allows users to create custom firmware using Arduino-compatible RUI3 APIs and provides an AT command interface."
+    },
+    {
+        "query": "How do you perform a firmware recovery on a non-responsive RAK11720 module?",
+        "expected_source_paths": ["WisDuo/RAK11720-Module/Quickstart/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "To recover the RAK11720, connect the SWO/BOOT pin to VDD and momentarily pull the reset pin to GND. This puts the module into recovery mode, allowing you to re-flash the bootloader using the Ambiq SBL tool in the Arduino IDE."
+    },
+    {
+        "query": "What is the purpose of the RAK11721 Breakout Board?",
+        "expected_source_paths": ["WisDuo/RAK11721-Breakout-Board/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK11721 Breakout Board is designed to simplify the development and testing of the RAK11720 stamp module by providing easy access to its pins via 2.54 mm headers."
+    },
+    {
+        "query": "What is the core system-on-chip (SoC) for the RAK3172 module?",
+        "expected_source_paths": ["WisDuo/RAK3172-Module/Overview/README.md", "WisDuo/RAK3172-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK3172 module is based on the STM32WLE5CCU6 SoC chip from STMicroelectronics."
+    },
+    {
+        "query": "What is the difference between the RAK3172 and RAK3172-T modules?",
+        "expected_source_paths": ["WisDuo/RAK3172-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK3172-T version includes a Temperature Compensated Crystal Oscillator (TCXO) for higher frequency stability and has a wider operating temperature range of -40° C to 85° C, compared to the standard RAK3172's -20° C to 85° C range."
+    },
+    {
+        "query": "What is the procedure for a low-level firmware update on a RAK3172 module using the internal bootloader?",
+        "expected_source_paths": ["WisDuo/RAK3172-Module/Low-Level-Development/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "To use RAK's bootloader for custom firmware, the application code's interrupt vector table must be shifted to address 0x3000. The application must also implement the `at+boot` command, which prepares the module for an update by writing a flag and resetting the MCU."
+    },
+    {
+        "query": "Which AT command sets the LoRa network work mode on a RAK3172 with deprecated firmware (v1.0.4 or below)?",
+        "expected_source_paths": ["WisDuo/RAK3172-Module/Deprecated-AT-Command/README.md", "WisDuo/RAK3172-Evaluation-Board/Deprecated-AT-Command/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The command `AT+NWM=<mode>` is used, where a mode of '0' sets it to P2P and '1' sets it to LoRaWAN."
+    },
+    {
+        "query": "How is the transparent data transmission mode exited on a RAK3172 with deprecated firmware?",
+        "expected_source_paths": ["WisDuo/RAK3172-Module/Deprecated-AT-Command/README.md", "WisDuo/RAK3172-Evaluation-Board/Deprecated-AT-Command/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "To exit the transparent transmission mode, you must input the `+++` command without any termination characters like <CR> or <LF>."
+    },
+    {
+        "query": "What is the primary difference between the RAK3172-SiP and RAK3172LP-SiP variants?",
+        "expected_source_paths": ["WisDuo/RAK3172-SiP/Datasheet/README.md", "WisDuo/RAK3172-SiP/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The two variants use different RF output paths to optimize current consumption. The RAK3172-SiP uses the High Power output (RFO_HP), while the RAK3172LP-SiP uses the Low Power output (RFO_LP) of the STM32WL SoC."
+    },
+    {
+        "query": "What is a key layout guideline for the RF trace when designing a PCB for the RAK3172-SiP?",
+        "expected_source_paths": ["WisDuo/RAK3172-SiP/Application-Note/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RF trace must have 50 Ohms impedance, be kept away from interference sources, and it is recommended that the trace be routed in a curve rather than sharp 90-degree angles. A Coplanar Waveguide (CPWG) model is recommended."
+    },
+    {
+        "query": "What is the purpose of the RAK3272-SiP Breakout Board?",
+        "expected_source_paths": ["WisDuo/RAK3272-SiP-Breakout-Board/Overview/README.md", "WisDuo/RAK3272-SiP-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK3272-SiP Breakout Board is designed to simplify development and testing by providing easy access to the pins of the RAK3172-SiP module via 2.54 mm headers."
+    },
+    {
+        "query": "What are the core components of the RAK4200 module?",
+        "expected_source_paths": ["WisDuo/RAK4200-Module/Datasheet/README.md", "WisDuo/RAK4200-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4200 module integrates an STM32L071KB MCU and an SX1276 LoRa transceiver."
+    },
+    {
+        "query": "What is the sleep mode current consumption of the RAK4200 module at 3.3V for the US915 region?",
+        "expected_source_paths": ["WisDuo/RAK4200-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The typical sleep current for the US915 region is 9.40 μA at 3.3V."
+    },
+    {
+        "query": "Which AT command is used to restart the RAK4200 module?",
+        "expected_source_paths": ["WisDuo/RAK4200-Breakout-Board/AT-Command-Manual/README.md", "WisDuo/RAK4200-Module/AT-Command-Manual/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The command `at+set_config=device:restart` is used to restart the module."
+    },
+    {
+        "query": "What is the chipset used in the RAK4260 module?",
+        "expected_source_paths": ["WisDuo/RAK4260-Module/Datasheet/README.md", "WisDuo/RAK4260-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4260 module is based on Microchip’s ATSAMR34J18B System-in-Package (SiP)."
+    },
+    {
+        "query": "What is a distinguishing security feature of the RAK4260 Breakout Board?",
+        "expected_source_paths": ["WisDuo/RAK4260-Breakout-Board/Datasheet/README.md", "WisDuo/RAK4260-Breakout-Board/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "It includes an ATECC608A Cryptographic co-processor with secure hardware-based key storage for enhanced security."
+    },
+    {
+        "query": "How can you flash new firmware onto the RAK4260 Evaluation Board?",
+        "expected_source_paths": ["WisDuo/RAK4260-Evaluation-Board/Low-Level-Development/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "Firmware can be flashed using a RAKDAP1 tool and the pyOCD Python package with the command `pyocd flash -t atsaml21j18a <filename>.hex`."
+    },
+    {
+        "query": "What are the core MCU and LoRa chips in the RAK4270 module?",
+        "expected_source_paths": ["WisDuo/RAK4270-Module/Datasheet/README.md", "WisDuo/RAK4270-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4270 module includes an STM32L071 MCU and an SX1262 LoRa chip."
+    },
+    {
+        "query": "What is the maximum LoRa transmission power of the RAK4270 module?",
+        "expected_source_paths": ["WisDuo/RAK4270-Module/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The maximum output power can reach up to 22 dBm."
+    },
+    {
+        "query": "Which UART port is recommended for AT commands versus firmware updates on the RAK4270?",
+        "expected_source_paths": ["WisDuo/RAK4270-Breakout-Board/AT-Command-Manual/README.md", "WisDuo/RAK4270-Module/AT-Command-Manual/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "It is recommended to use UART2 for AT commands with an external MCU and reserve UART1 for debugging and firmware upgrades."
+    },
+    {
+        "query": "What are the main components of the RAK4600 module?",
+        "expected_source_paths": ["WisDuo/RAK4600-Module/Datasheet/README.md", "WisDuo/RAK4600-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4600 module integrates a Nordic nRF52832 MCU and a Semtech SX1276 LoRa chip."
+    },
+    {
+        "query": "What wireless technologies does the RAK4600 support?",
+        "expected_source_paths": ["WisDuo/RAK4600-Module/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4600 supports LoRa/LoRaWAN and BLE 5.0."
+    },
+    {
+        "query": "How can the RAK4600 be configured wirelessly?",
+        "expected_source_paths": ["WisDuo/RAK4600-Breakout-Board/Quickstart/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4600 can be configured by sending AT commands over its BLE interface using an application like Nordic's nRF Connect for Mobile."
+    },
+    {
+        "query": "How do you upgrade the RAK4600 firmware over the air?",
+        "expected_source_paths": ["WisDuo/RAK4600-Breakout-Board/Quickstart/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "Firmware can be upgraded wirelessly using the Device Firmware Upgrade (DFU) over BLE feature. This is done by putting the device into DFU mode and using the nRF Connect mobile app to send the DFU package (ZIP file)."
+    },
+    {
+        "query": "What chipset does the RAK4630 module utilize?",
+        "expected_source_paths": ["WisDuo/RAK4630-Module/Datasheet/README.md", "WisDuo/RAK4630-Module/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4630 module is based on the Nordic nRF52840 MCU and the Semtech SX1262 LoRa transceiver."
+    },
+    {
+        "query": "How can the RAK4630 firmware be updated?",
+        "expected_source_paths": ["WisDuo/RAK4630-Module/DFU/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The firmware can be updated via a direct USB connection using the nRFutil utility program or wirelessly via BLE using Over-the-Air Device Firmware Upgrade (OTA DFU)."
+    },
+    {
+        "query": "What is the procedure for updating RAK4630 firmware via USB on Windows?",
+        "expected_source_paths": ["WisDuo/RAK4630-Module/DFU/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "First, send the `AT+BOOT` command to the device. Then, use the nrfutil.exe command-line tool with the command `nrfutil.exe dfu serial -pkg <firmware_package.zip> -p <COM_PORT>`."
+    },
+    {
+        "query": "What are the core components of the RAK811 module?",
+        "expected_source_paths": ["WisDuo/RAK811-Module/Datasheet/README.md", "WisDuo/RAK811-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK811 module is integrated with a Semtech SX1276 LoRa transceiver and an STM32 microcontroller."
+    },
+    {
+        "query": "What is the form factor of the RAK811 Breakout Board?",
+        "expected_source_paths": ["WisDuo/RAK811-Breakout-Board/Overview/README.md", "WisDuo/RAK811-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK811 Breakout Board has an Xbee form factor with standard 2.00 mm headers for easy prototyping."
+    },
+    {
+        "query": "Which UART port is recommended for connecting an external MCU to the RAK811 module, and why?",
+        "expected_source_paths": ["WisDuo/RAK811-Module/AT-Command-Manual/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "It is recommended to use UART3 for connecting to an external MCU, reserving UART1 for firmware upgrades."
+    },
+    {
+        "query": "What two wireless technologies are combined in the RAK813 module?",
+        "expected_source_paths": ["WisDuo/RAK813-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK813 module combines BLE, based on the Nordic nRF52832, and LoRa, based on the Semtech SX127x chipset."
+    },
+    {
+        "query": "What component is used in the RAK813 for high-frequency stability of the LoRa clock source?",
+        "expected_source_paths": ["WisDuo/RAK813-Module/Datasheet/README.md", "WisDuo/RAK813-Module/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK813 module uses a TCXO (Temperature-Compensated Crystal Oscillator) to ensure stability across different temperatures."
+    },
+    {
+        "query": "What are the two variants of the RAK813 module based on frequency?",
+        "expected_source_paths": ["WisDuo/RAK813-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The two variants are RAK813-HF for high frequencies (865-928 MHz) and RAK813-LF for low frequencies (433-510 MHz)."
+    },
+    {
+        "query": "What is the sleep current of the RAK811 module at 3.3V for the EU868 region?",
+        "expected_source_paths": ["WisDuo/RAK811-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The typical sleep current for the EU868 region at 3.3V is 11.9 µA."
+    },
+    {
+        "query": "How is the RF switch controlled on the RAK811(H) module?",
+        "expected_source_paths": ["WisDuo/RAK811-Module/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RF switch is controlled by three GPIOs: SX_RF_HF, SX_RF_RX, and SX_RF_PA. For RX mode, the logic is 0, 1, 0 respectively. For TX mode, the logic is 0, 0, 1."
+    },
+    {
+        "query": "What is the purpose of the `at+set_config=device:uart_mode:1:1` command on RAK modules like RAK4200 and RAK811?",
+        "expected_source_paths": ["WisDuo/RAK811-Module/AT-Command-Manual/README.md", "WisDuo/RAK4200-Module/AT-Command-Manual/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "This command sets the UART port into data transmission mode, where all serial input is sent directly as a LoRaWAN payload instead of being interpreted as an AT command. To exit this mode, `+++` must be sent without any line terminators."
+    },
+    {
+        "query": "What is the LoRaWAN version supported by the RAK3172-SiP?",
+        "expected_source_paths": ["WisDuo/RAK3172-SiP/Datasheet/README.md", "WisDuo/RAK3172-SiP/Overview/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK3172-SiP module is compliant with the LoRaWAN 1.0.3 specification."
+    },
+    {
+        "query": "What is the recommended value for pull-up resistors on the I2C lines of the RAK4600 Breakout Board?",
+        "expected_source_paths": ["WisDuo/RAK4600-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The datasheet does not specify a value, but the AT Command Manual for the RAK4270 (a similar board) suggests 10 kΩ pull-up resistors might be necessary depending on the connected device."
+    },
+    {
+        "query": "Which WisDuo module provides LoRaWAN, BLE, and NFC capabilities?",
+        "expected_source_paths": ["WisDuo/README.md", "WisDuo/RAK4600-Breakout-Board/Datasheet/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK4600 module, based on the nRF52832 MCU, supports LoRaWAN, BLE 5.0, and has an optional NFC interface."
+    },
+    {
+        "query": "What are the two default serial interfaces on the RAK811 module and their recommended uses?",
+        "expected_source_paths": ["WisDuo/RAK811-Module/AT-Command-Manual/README.md"],
+        "category": "WisDuo",
+        "expected_answer": "The RAK811 has UART1 (pins 6 & 7) and UART3 (pins 25 & 26). It is recommended to use UART3 for connecting to an external MCU and reserve UART1 for firmware upgrades."
+    }
+]
+

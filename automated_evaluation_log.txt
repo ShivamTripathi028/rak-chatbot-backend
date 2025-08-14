@@ -1,0 +1,502 @@
+2025-07-15 17:36:14,180 - INFO - ================ AUTOMATED EVALUATION SCRIPT STARTED ================
+2025-07-15 17:36:14,181 - INFO - Successfully loaded 290 evaluation items from /Users/shivam/Downloads/rak_chatbot-master/evaluation_dataset.json
+2025-07-15 17:36:14,181 - INFO - Initializing embedding model: BAAI/bge-base-en-v1.5...
+2025-07-15 17:36:17,202 - INFO - Load pretrained SentenceTransformer: BAAI/bge-base-en-v1.5
+2025-07-15 17:36:21,541 - INFO - Embedding model initialized.
+2025-07-15 17:36:21,541 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 17:36:21,541 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=15, ReRanker='None', FinalK=0
+2025-07-15 17:36:21,541 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 17:36:21,541 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 17:36:21,553 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-15 17:36:21,632 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 17:36:21,632 - INFO - Setting up retrieval: initial_k=15, reranker='None', final_k=0
+2025-07-15 17:36:21,632 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 17:36:25,714 - INFO - 
+Evaluating Category: 5G
+2025-07-15 17:36:25,715 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 17:36:25,715 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-15 17:36:25,719 - INFO - Vector store for '5G' loaded.
+2025-07-15 17:36:25,719 - INFO - Setting up retrieval: initial_k=15, reranker='None', final_k=0
+2025-07-15 17:36:25,719 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 17:36:26,613 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 17:36:26,614 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 17:36:26,614 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-15 17:36:26,617 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 17:36:26,617 - INFO - Setting up retrieval: initial_k=15, reranker='None', final_k=0
+2025-07-15 17:36:26,617 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 17:36:29,792 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 17:36:29,793 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 17:36:29,793 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-15 17:36:29,797 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 17:36:29,797 - INFO - Setting up retrieval: initial_k=15, reranker='None', final_k=0
+2025-07-15 17:36:29,797 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 17:36:30,986 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 17:36:30,986 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 17:36:30,986 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-15 17:36:30,990 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 17:36:30,990 - INFO - Setting up retrieval: initial_k=15, reranker='None', final_k=0
+2025-07-15 17:36:30,990 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 17:36:33,056 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 17:36:33,056 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 17:36:33,056 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-07-15 17:36:33,059 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 17:36:33,059 - INFO - Setting up retrieval: initial_k=15, reranker='None', final_k=0
+2025-07-15 17:36:33,060 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 17:36:35,262 - INFO - --- Iteration Summary ---
+2025-07-15 17:36:35,263 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 15, 'reranker_model': 'None', 'final_k': 'N/A', 'total_queries': 290, 'base_retriever_hits': 276, 'base_hit_rate': '95.17', 'final_retriever_hits': 276, 'final_hit_rate': '95.17'}
+2025-07-15 17:36:36,268 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 17:36:36,268 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=15, ReRanker='BAAI/bge-reranker-base', FinalK=3
+2025-07-15 17:36:36,268 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 17:36:36,269 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 17:36:36,276 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 17:36:36,276 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 17:37:37,868 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:39:39,959 - INFO - 
+Evaluating Category: 5G
+2025-07-15 17:39:39,960 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 17:39:39,962 - INFO - Vector store for '5G' loaded.
+2025-07-15 17:39:39,962 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 17:39:41,859 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:40:21,254 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 17:40:21,256 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 17:40:21,258 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 17:40:21,258 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 17:40:23,234 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:42:33,648 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 17:42:33,649 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 17:42:33,651 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 17:42:33,651 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 17:42:35,483 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:43:21,424 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 17:43:21,425 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 17:43:21,426 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 17:43:21,427 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 17:43:23,760 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:44:49,347 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 17:44:49,348 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 17:44:49,351 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 17:44:49,352 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 17:44:51,302 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:46:30,909 - INFO - --- Iteration Summary ---
+2025-07-15 17:46:30,909 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 15, 'reranker_model': 'BAAI/bge-reranker-base', 'final_k': 3, 'total_queries': 290, 'base_retriever_hits': 276, 'base_hit_rate': '95.17', 'final_retriever_hits': 266, 'final_hit_rate': '91.72'}
+2025-07-15 17:46:31,914 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 17:46:31,915 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=15, ReRanker='BAAI/bge-reranker-base', FinalK=5
+2025-07-15 17:46:31,915 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 17:46:31,917 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 17:46:31,923 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 17:46:31,923 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 17:46:33,914 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:48:41,389 - INFO - 
+Evaluating Category: 5G
+2025-07-15 17:48:41,391 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 17:48:41,394 - INFO - Vector store for '5G' loaded.
+2025-07-15 17:48:41,394 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 17:48:43,258 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:49:23,526 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 17:49:23,528 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 17:49:23,530 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 17:49:23,530 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 17:49:25,935 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:51:42,275 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 17:51:42,277 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 17:51:42,280 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 17:51:42,280 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 17:51:44,187 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:52:31,519 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 17:52:31,520 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 17:52:31,522 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 17:52:31,523 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 17:52:33,425 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:54:00,835 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 17:54:00,837 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 17:54:00,840 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 17:54:00,840 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 17:54:02,809 - INFO - Base and Compression retrievers initialized.
+2025-07-15 17:55:49,444 - INFO - --- Iteration Summary ---
+2025-07-15 17:55:49,445 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 15, 'reranker_model': 'BAAI/bge-reranker-base', 'final_k': 5, 'total_queries': 290, 'base_retriever_hits': 276, 'base_hit_rate': '95.17', 'final_retriever_hits': 271, 'final_hit_rate': '93.45'}
+2025-07-15 17:55:50,450 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 17:55:50,451 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=15, ReRanker='BAAI/bge-reranker-large', FinalK=3
+2025-07-15 17:55:50,451 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 17:55:50,453 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 17:55:50,459 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 17:55:50,459 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 17:57:50,884 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:06:49,217 - INFO - 
+Evaluating Category: 5G
+2025-07-15 18:06:49,219 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 18:06:49,231 - INFO - Vector store for '5G' loaded.
+2025-07-15 18:06:49,231 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 18:06:51,377 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:09:38,661 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 18:09:38,662 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 18:09:38,665 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 18:09:38,665 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 18:09:40,636 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:16:33,632 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 18:16:33,633 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 18:16:33,637 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 18:16:33,637 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 18:16:35,751 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:19:06,542 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 18:19:06,544 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 18:19:06,547 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 18:19:06,547 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 18:19:08,541 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:23:50,243 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 18:23:50,244 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 18:23:50,248 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 18:23:50,248 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 18:23:52,179 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:29:27,634 - INFO - --- Iteration Summary ---
+2025-07-15 18:29:27,635 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 15, 'reranker_model': 'BAAI/bge-reranker-large', 'final_k': 3, 'total_queries': 290, 'base_retriever_hits': 276, 'base_hit_rate': '95.17', 'final_retriever_hits': 260, 'final_hit_rate': '89.66'}
+2025-07-15 18:29:28,641 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 18:29:28,641 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=15, ReRanker='BAAI/bge-reranker-large', FinalK=5
+2025-07-15 18:29:28,641 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 18:29:28,644 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 18:29:28,662 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 18:29:28,662 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 18:29:30,834 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:37:03,659 - INFO - 
+Evaluating Category: 5G
+2025-07-15 18:37:03,661 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 18:37:03,675 - INFO - Vector store for '5G' loaded.
+2025-07-15 18:37:03,675 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 18:37:06,133 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:39:18,152 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 18:39:18,154 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 18:39:18,156 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 18:39:18,157 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 18:39:20,161 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:46:48,076 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 18:46:48,078 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 18:46:48,094 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 18:46:48,094 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 18:46:50,227 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:49:17,541 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 18:49:17,542 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 18:49:17,545 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 18:49:17,545 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 18:49:19,637 - INFO - Base and Compression retrievers initialized.
+2025-07-15 18:53:53,787 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 18:53:53,789 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 18:53:53,793 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 18:53:53,794 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 18:53:55,813 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:01:32,270 - INFO - --- Iteration Summary ---
+2025-07-15 19:01:32,271 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 15, 'reranker_model': 'BAAI/bge-reranker-large', 'final_k': 5, 'total_queries': 290, 'base_retriever_hits': 276, 'base_hit_rate': '95.17', 'final_retriever_hits': 270, 'final_hit_rate': '93.10'}
+2025-07-15 19:01:33,276 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 19:01:33,277 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=15, ReRanker='BAAI/bge-reranker-large', FinalK=7
+2025-07-15 19:01:33,277 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 19:01:33,279 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 19:01:33,296 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 19:01:33,296 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-15 19:01:35,603 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:08:07,963 - INFO - 
+Evaluating Category: 5G
+2025-07-15 19:08:07,964 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 19:08:07,969 - INFO - Vector store for '5G' loaded.
+2025-07-15 19:08:07,969 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-15 19:08:10,163 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:23:52,975 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 19:23:52,976 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 19:23:52,981 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 19:23:52,981 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-15 19:23:53,091 - INFO - Backing off send_request(...) for 0.0s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-15 19:23:54,809 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:30:30,566 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 19:30:30,569 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 19:30:30,582 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 19:30:30,582 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-15 19:30:32,669 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:32:53,428 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 19:32:53,429 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 19:32:53,433 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 19:32:53,433 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-15 19:32:55,710 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:37:17,509 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 19:37:17,510 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 19:37:17,522 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 19:37:17,522 - INFO - Setting up retrieval: initial_k=15, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-15 19:37:24,146 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:42:46,611 - INFO - --- Iteration Summary ---
+2025-07-15 19:42:46,612 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 15, 'reranker_model': 'BAAI/bge-reranker-large', 'final_k': 7, 'total_queries': 290, 'base_retriever_hits': 276, 'base_hit_rate': '95.17', 'final_retriever_hits': 272, 'final_hit_rate': '93.79'}
+2025-07-15 19:42:47,617 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 19:42:47,618 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=20, ReRanker='None', FinalK=0
+2025-07-15 19:42:47,618 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 19:42:47,620 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 19:42:47,629 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 19:42:47,629 - INFO - Setting up retrieval: initial_k=20, reranker='None', final_k=0
+2025-07-15 19:42:47,629 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 19:42:51,492 - INFO - 
+Evaluating Category: 5G
+2025-07-15 19:42:51,493 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 19:42:51,495 - INFO - Vector store for '5G' loaded.
+2025-07-15 19:42:51,495 - INFO - Setting up retrieval: initial_k=20, reranker='None', final_k=0
+2025-07-15 19:42:51,495 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 19:42:52,507 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 19:42:52,508 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 19:42:52,510 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 19:42:52,510 - INFO - Setting up retrieval: initial_k=20, reranker='None', final_k=0
+2025-07-15 19:42:52,510 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 19:42:56,070 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 19:42:56,072 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 19:42:56,074 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 19:42:56,074 - INFO - Setting up retrieval: initial_k=20, reranker='None', final_k=0
+2025-07-15 19:42:56,074 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 19:42:57,433 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 19:42:57,433 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 19:42:57,435 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 19:42:57,436 - INFO - Setting up retrieval: initial_k=20, reranker='None', final_k=0
+2025-07-15 19:42:57,436 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 19:42:59,788 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 19:42:59,788 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 19:42:59,793 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 19:42:59,793 - INFO - Setting up retrieval: initial_k=20, reranker='None', final_k=0
+2025-07-15 19:42:59,793 - INFO - Base retriever initialized (no re-ranker).
+2025-07-15 19:43:02,410 - INFO - --- Iteration Summary ---
+2025-07-15 19:43:02,411 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 20, 'reranker_model': 'None', 'final_k': 'N/A', 'total_queries': 290, 'base_retriever_hits': 280, 'base_hit_rate': '96.55', 'final_retriever_hits': 280, 'final_hit_rate': '96.55'}
+2025-07-15 19:43:03,416 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 19:43:03,416 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=20, ReRanker='BAAI/bge-reranker-base', FinalK=3
+2025-07-15 19:43:03,417 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 19:43:03,417 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 19:43:03,425 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 19:43:03,426 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 19:43:05,333 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:45:51,427 - INFO - 
+Evaluating Category: 5G
+2025-07-15 19:45:51,428 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 19:45:51,432 - INFO - Vector store for '5G' loaded.
+2025-07-15 19:45:51,432 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 19:45:53,355 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:46:43,608 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 19:46:43,609 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 19:46:43,612 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 19:46:43,612 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 19:46:45,668 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:49:34,965 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 19:49:34,967 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 19:49:34,969 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 19:49:34,969 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 19:49:36,987 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:50:34,346 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 19:50:34,347 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 19:50:34,349 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 19:50:34,350 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 19:50:36,303 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:52:17,460 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 19:52:17,462 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 19:52:17,465 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 19:52:17,465 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=3
+2025-07-15 19:52:19,286 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:54:15,830 - INFO - --- Iteration Summary ---
+2025-07-15 19:54:15,831 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 20, 'reranker_model': 'BAAI/bge-reranker-base', 'final_k': 3, 'total_queries': 290, 'base_retriever_hits': 280, 'base_hit_rate': '96.55', 'final_retriever_hits': 270, 'final_hit_rate': '93.10'}
+2025-07-15 19:54:16,837 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 19:54:16,837 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=20, ReRanker='BAAI/bge-reranker-base', FinalK=5
+2025-07-15 19:54:16,837 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 19:54:16,838 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 19:54:16,846 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 19:54:16,846 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 19:54:19,174 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:57:01,474 - INFO - 
+Evaluating Category: 5G
+2025-07-15 19:57:01,476 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 19:57:01,479 - INFO - Vector store for '5G' loaded.
+2025-07-15 19:57:01,480 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 19:57:03,451 - INFO - Base and Compression retrievers initialized.
+2025-07-15 19:57:53,533 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 19:57:53,535 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 19:57:53,540 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 19:57:53,540 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 19:57:55,458 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:00:42,351 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 20:00:42,352 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 20:00:42,356 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 20:00:42,357 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 20:00:44,238 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:01:44,039 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 20:01:44,041 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 20:01:44,045 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 20:01:44,045 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 20:01:46,271 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:03:27,850 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 20:03:27,852 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 20:03:27,854 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 20:03:27,854 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-base', final_k=5
+2025-07-15 20:03:29,701 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:05:26,981 - INFO - --- Iteration Summary ---
+2025-07-15 20:05:26,982 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 20, 'reranker_model': 'BAAI/bge-reranker-base', 'final_k': 5, 'total_queries': 290, 'base_retriever_hits': 280, 'base_hit_rate': '96.55', 'final_retriever_hits': 274, 'final_hit_rate': '94.48'}
+2025-07-15 20:05:27,987 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 20:05:27,987 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=20, ReRanker='BAAI/bge-reranker-large', FinalK=3
+2025-07-15 20:05:27,988 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 20:05:27,990 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 20:05:27,996 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 20:05:27,997 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 20:05:30,132 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:14:07,602 - INFO - 
+Evaluating Category: 5G
+2025-07-15 20:14:07,604 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 20:14:07,613 - INFO - Vector store for '5G' loaded.
+2025-07-15 20:14:07,613 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 20:14:09,938 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:16:40,191 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 20:16:40,192 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 20:16:40,195 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 20:16:40,195 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 20:16:42,182 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:25:16,366 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-15 20:25:16,367 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-15 20:25:16,371 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-15 20:25:16,371 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 20:25:18,425 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:28:21,419 - INFO - 
+Evaluating Category: Accessories
+2025-07-15 20:28:21,420 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-15 20:28:21,423 - INFO - Vector store for 'Accessories' loaded.
+2025-07-15 20:28:21,423 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 20:28:23,337 - INFO - Base and Compression retrievers initialized.
+2025-07-15 20:33:43,283 - INFO - 
+Evaluating Category: WisDuo
+2025-07-15 20:33:43,285 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-15 20:33:43,289 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-15 20:33:43,289 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=3
+2025-07-15 20:33:45,469 - INFO - Base and Compression retrievers initialized.
+2025-07-15 21:39:45,757 - INFO - --- Iteration Summary ---
+2025-07-15 21:39:45,757 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 20, 'reranker_model': 'BAAI/bge-reranker-large', 'final_k': 3, 'total_queries': 290, 'base_retriever_hits': 280, 'base_hit_rate': '96.55', 'final_retriever_hits': 264, 'final_hit_rate': '91.03'}
+2025-07-15 21:39:46,763 - INFO - --- Starting Evaluation Iteration ---
+2025-07-15 21:39:46,763 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=20, ReRanker='BAAI/bge-reranker-large', FinalK=5
+2025-07-15 21:39:46,763 - INFO - 
+Evaluating Category: WisBlock
+2025-07-15 21:39:46,765 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-15 21:39:46,785 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-15 21:39:46,785 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 21:39:47,403 - INFO - Backing off send_request(...) for 0.1s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-15 21:39:50,071 - INFO - Base and Compression retrievers initialized.
+2025-07-15 21:47:41,678 - INFO - 
+Evaluating Category: 5G
+2025-07-15 21:47:41,680 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-15 21:47:41,691 - INFO - Vector store for '5G' loaded.
+2025-07-15 21:47:41,691 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 21:47:43,897 - INFO - Base and Compression retrievers initialized.
+2025-07-15 22:05:31,695 - INFO - 
+Evaluating Category: WisGate
+2025-07-15 22:05:31,696 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-15 22:05:31,700 - INFO - Vector store for 'WisGate' loaded.
+2025-07-15 22:05:31,701 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-15 22:05:31,841 - INFO - Backing off send_request(...) for 0.5s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-15 22:05:33,491 - INFO - Base and Compression retrievers initialized.
+2025-07-16 01:11:13,137 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-16 01:11:13,139 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-16 01:11:13,152 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-16 01:11:13,153 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-16 01:11:13,175 - INFO - Backing off send_request(...) for 0.2s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 01:11:15,175 - INFO - Base and Compression retrievers initialized.
+2025-07-16 02:39:59,683 - INFO - 
+Evaluating Category: Accessories
+2025-07-16 02:39:59,685 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-16 02:39:59,690 - INFO - Vector store for 'Accessories' loaded.
+2025-07-16 02:39:59,691 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-16 02:40:25,510 - INFO - Backing off send_request(...) for 0.9s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 02:40:27,269 - INFO - Base and Compression retrievers initialized.
+2025-07-16 04:42:04,796 - INFO - 
+Evaluating Category: WisDuo
+2025-07-16 04:42:04,798 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-16 04:42:04,803 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-16 04:42:04,803 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=5
+2025-07-16 04:42:05,158 - INFO - Backing off send_request(...) for 0.2s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 04:42:34,981 - INFO - Base and Compression retrievers initialized.
+2025-07-16 07:23:44,939 - INFO - --- Iteration Summary ---
+2025-07-16 07:23:44,940 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 20, 'reranker_model': 'BAAI/bge-reranker-large', 'final_k': 5, 'total_queries': 290, 'base_retriever_hits': 280, 'base_hit_rate': '96.55', 'final_retriever_hits': 274, 'final_hit_rate': '94.48'}
+2025-07-16 07:23:45,948 - INFO - --- Starting Evaluation Iteration ---
+2025-07-16 07:23:45,949 - INFO - Params: Embedding='BAAI/bge-base-en-v1.5', InitialK=20, ReRanker='BAAI/bge-reranker-large', FinalK=7
+2025-07-16 07:23:45,949 - INFO - 
+Evaluating Category: WisBlock
+2025-07-16 07:23:45,951 - INFO - Loading vector store for: WisBlock from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisblock_db
+2025-07-16 07:23:45,966 - INFO - Vector store for 'WisBlock' loaded.
+2025-07-16 07:23:45,966 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-16 07:23:46,174 - INFO - Backing off send_request(...) for 0.7s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 07:23:47,881 - INFO - Base and Compression retrievers initialized.
+2025-07-16 10:39:19,702 - INFO - 
+Evaluating Category: 5G
+2025-07-16 10:39:19,703 - INFO - Loading vector store for: 5G from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/5g_db
+2025-07-16 10:39:19,716 - INFO - Vector store for '5G' loaded.
+2025-07-16 10:39:19,716 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-16 10:39:20,135 - INFO - Backing off send_request(...) for 0.2s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 10:39:22,442 - INFO - Base and Compression retrievers initialized.
+2025-07-16 11:23:19,467 - INFO - 
+Evaluating Category: WisGate
+2025-07-16 11:23:19,469 - INFO - Loading vector store for: WisGate from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisgate_db
+2025-07-16 11:23:19,473 - INFO - Vector store for 'WisGate' loaded.
+2025-07-16 11:23:19,473 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-16 11:23:19,716 - INFO - Backing off send_request(...) for 0.8s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 11:23:49,073 - INFO - Base and Compression retrievers initialized.
+2025-07-16 14:20:32,920 - INFO - 
+Evaluating Category: Meshtastic
+2025-07-16 14:20:32,922 - INFO - Loading vector store for: Meshtastic from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/meshtastic_db
+2025-07-16 14:20:32,934 - INFO - Vector store for 'Meshtastic' loaded.
+2025-07-16 14:20:32,934 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-16 14:20:33,041 - INFO - Backing off send_request(...) for 0.9s (requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer')))
+2025-07-16 14:20:34,914 - INFO - Base and Compression retrievers initialized.
+2025-07-16 14:23:30,114 - INFO - 
+Evaluating Category: Accessories
+2025-07-16 14:23:30,115 - INFO - Loading vector store for: Accessories from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/accessories_db
+2025-07-16 14:23:30,119 - INFO - Vector store for 'Accessories' loaded.
+2025-07-16 14:23:30,119 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-16 14:23:32,396 - INFO - Base and Compression retrievers initialized.
+2025-07-16 14:28:48,213 - INFO - 
+Evaluating Category: WisDuo
+2025-07-16 14:28:48,215 - INFO - Loading vector store for: WisDuo from /Users/shivam/Downloads/rak_chatbot-master/new_rak_category_dbs/wisduo_db
+2025-07-16 14:28:48,223 - INFO - Vector store for 'WisDuo' loaded.
+2025-07-16 14:28:48,223 - INFO - Setting up retrieval: initial_k=20, reranker='BAAI/bge-reranker-large', final_k=7
+2025-07-16 14:28:50,638 - INFO - Base and Compression retrievers initialized.
+2025-07-16 14:35:05,263 - INFO - --- Iteration Summary ---
+2025-07-16 14:35:05,265 - INFO - {'embedding_model': 'BAAI/bge-base-en-v1.5', 'initial_k': 20, 'reranker_model': 'BAAI/bge-reranker-large', 'final_k': 7, 'total_queries': 290, 'base_retriever_hits': 280, 'base_hit_rate': '96.55', 'final_retriever_hits': 277, 'final_hit_rate': '95.52'}
+2025-07-16 14:35:06,300 - INFO - Full results saved to /Users/shivam/Downloads/rak_chatbot-master/automated_evaluation_results.csv

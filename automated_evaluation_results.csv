@@ -1,0 +1,13 @@
+embedding_model,initial_k,reranker_model,final_k,total_queries,base_retriever_hits,base_hit_rate,final_retriever_hits,final_hit_rate
+BAAI/bge-base-en-v1.5,15,None,N/A,290,276,95.17,276,95.17
+BAAI/bge-base-en-v1.5,15,BAAI/bge-reranker-base,3,290,276,95.17,266,91.72
+BAAI/bge-base-en-v1.5,15,BAAI/bge-reranker-base,5,290,276,95.17,271,93.45
+BAAI/bge-base-en-v1.5,15,BAAI/bge-reranker-large,3,290,276,95.17,260,89.66
+BAAI/bge-base-en-v1.5,15,BAAI/bge-reranker-large,5,290,276,95.17,270,93.10
+BAAI/bge-base-en-v1.5,15,BAAI/bge-reranker-large,7,290,276,95.17,272,93.79
+BAAI/bge-base-en-v1.5,20,None,N/A,290,280,96.55,280,96.55
+BAAI/bge-base-en-v1.5,20,BAAI/bge-reranker-base,3,290,280,96.55,270,93.10
+BAAI/bge-base-en-v1.5,20,BAAI/bge-reranker-base,5,290,280,96.55,274,94.48
+BAAI/bge-base-en-v1.5,20,BAAI/bge-reranker-large,3,290,280,96.55,264,91.03
+BAAI/bge-base-en-v1.5,20,BAAI/bge-reranker-large,5,290,280,96.55,274,94.48
+BAAI/bge-base-en-v1.5,20,BAAI/bge-reranker-large,7,290,280,96.55,277,95.52
