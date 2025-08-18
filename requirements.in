@@ -17,3 +17,6 @@ langchain-chroma
 sentence-transformers
 chromadb
 unstructured[md]
+
+# API Clients
+openai
