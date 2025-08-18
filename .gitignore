@@ -1,1 +1,17 @@
-/venv
+# Byte-compiled / optimized / C files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+
+# Log files
+feedback.log
+automated_evaluation_log.txt
+
+# IDE / OS specific
+.vscode/
+.idea/
+.DS_Store
