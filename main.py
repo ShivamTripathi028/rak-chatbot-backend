@@ -33,7 +33,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 # --- Environment Variable for Production CORS ---
 # This allows us to securely specify which frontend URL can connect to our API.
 # It defaults to a common local dev port if not set.
-FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:8080")
+FRONTEND_URL = "https://talk-to-rak.netlify.app"
 
 # --- Pydantic Models for API validation ---
 class ChatRequest(BaseModel):
