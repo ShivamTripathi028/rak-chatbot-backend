@@ -19,9 +19,9 @@ EVAL_RESULTS_CSV = BASE_DIR / "automated_evaluation_results.csv"
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5"
 
 # --- LLM Configuration (for rak_chatbot.py) ---
-OPENROUTER_MODEL_NAME = "deepseek/deepseek-r1-0528:free" # Or your preferred OpenRouter model
+OPENROUTER_MODEL_NAME = "mistralai/mistral-small-3.2-24b-instruct:free" # Or your preferred OpenRouter model
 # Optional: These are sent to OpenRouter for analytics and identifying your app.
-SITE_URL = "http://localhost:8501" 
+SITE_URL = "https://talk-to-rak.netlify.app" 
 SITE_TITLE = "RAKwireless Support Chatbot"
 
 
