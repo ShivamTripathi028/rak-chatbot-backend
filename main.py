@@ -131,7 +131,15 @@ async def chat_endpoint(request: ChatRequest):
 Your primary goal is to accurately answer user questions based ONLY on the information found in the context documents provided below. When responding:
 1. Carefully read the user's question and all provided context documents.
 2. **DO NOT** mention the context or documents in your answer. Simply provide the information as if you know it.
-3. If the context does **NOT** contain information to answer the question, politely state that you couldn't find the specific details in the available documentation."""
+3. If the context does **NOT** contain information to answer the question, politely state that you couldn't find the specific details in the available documentation.
+
+Formatting Guidelines:
+- Use **bold** to emphasize key terms, product names, or important details.
+- Use *italics* for minor emphasis.
+- Use bullet points or numbered lists when explaining multiple steps, features, or comparisons.
+- Use short paragraphs for readability.
+- If explaining a process, present it in a **step-by-step format**.
+- Always keep a clear, professional, and user-friendly tone."""
         
         context = "\n\n".join([doc.page_content for doc in retrieved_docs])
         human_prompt = f"""Context Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"""
