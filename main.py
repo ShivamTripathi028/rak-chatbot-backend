@@ -1,4 +1,4 @@
-# main.py
+ # main.py
 import os
 import logging
 from contextlib import asynccontextmanager
@@ -24,31 +24,25 @@ from langchain.retrievers.document_compressors import CrossEncoderReranker
 from langchain_core.messages import SystemMessage, HumanMessage
 from langchain.schema import BaseRetriever
 
-# Load environment variables from .env file at the start
+
+
+# --- (Load env, logging, constants, and Pydantic models - No changes here) ---
 load_dotenv()
-
-# --- Logging Setup ---
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# --- Environment Variable for Production CORS ---
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:8080")
-
-# --- Pydantic Models for API validation ---
 class ChatMessage(BaseModel):
     role: Literal['user', 'assistant']
     content: str
-
 class ChatRequest(BaseModel):
     query: str
     category: str
     chat_history: List[ChatMessage]
-
 ml_models: Dict[str, any] = {}
 
-# --- FastAPI Lifespan Manager (loads models on startup) ---
+# --- (lifespan function for model loading is unchanged) ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # This section is unchanged
+    # This entire function is unchanged from the last working version
     logging.info("--- Server starting up: Loading all models... ---")
     ml_models["embedding_model"] = HuggingFaceEmbeddings(model_name=config.EMBEDDING_MODEL_NAME, model_kwargs={'device': 'cpu'}, encode_kwargs={'normalize_embeddings': True})
     logging.info("Embedding model loaded.")
@@ -78,10 +72,8 @@ async def lifespan(app: FastAPI):
     ml_models.clear()
     logging.info("--- Server shutting down: Models cleared. ---")
 
-
 app = FastAPI(lifespan=lifespan)
-
-# CORS Middleware is unchanged
+# --- (CORS and root endpoint are unchanged) ---
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[FRONTEND_URL, "http://localhost:8080", "http://localhost:5173", "http://localhost:8888"],
@@ -89,17 +81,30 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
-
 @app.get("/")
 def read_root():
     return {"status": "RAK Chatbot API is running."}
+
+def get_eol_products_from_query(query: str) -> List[str]:
+    """
+    Identifies which specific EOL products are mentioned in the user's query.
+    Returns a list of the matched EOL product names.
+    """
+    query_lower = query.lower()
+    mentioned_eol_products = [
+        p for p in config.EOL_PRODUCTS
+        if f" {p.lower()} " in f" {query_lower} " or \
+           query_lower.startswith(f"{p.lower()} ") or \
+           query_lower.endswith(f" {p.lower()}") or \
+           query_lower == p.lower()
+    ]
+    return mentioned_eol_products
 
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest):
     query = request.query
     category = request.category
     chat_history = request.chat_history
-
     retriever = ml_models.get("retrievers", {}).get(category)
     llm = ml_models.get("llm")
 
@@ -109,12 +114,11 @@ async def chat_endpoint(request: ChatRequest):
     retrieved_docs = retriever.invoke(query)
 
     async def stream_llm_response():
-        history_string = "\n".join(
-            [f"{msg.role}: {msg.content}" for msg in chat_history]
-        )
-
-        # --- THIS IS THE UPDATED PROMPT SECTION ---
-        system_prompt = """You are a helpful, friendly, and knowledgeable RAKwireless product support specialist.
+        history_string = "\n".join([f"{msg.role}: {msg.content}" for msg in chat_history])
+        
+        mentioned_eol_products = get_eol_products_from_query(query)
+        
+        system_prompt_base = """You are a helpful, friendly, and knowledgeable RAKwireless product support specialist.
 Your primary goal is to accurately answer user questions based ONLY on the information found in the context documents provided below. Use the chat history to understand follow-up questions. When responding:
 1. Carefully read the user's question, chat history, and all provided context documents.
 2. **DO NOT** mention the context or documents in your answer. Simply provide the information as if you know it.
@@ -126,10 +130,20 @@ Formatting Guidelines:
 - Use short paragraphs for readability.
 - If explaining a process, present it in a **step-by-step format**.
 - Always keep a clear, professional, and user-friendly tone."""
-        # --- END OF UPDATED PROMPT SECTION ---
+
+        if mentioned_eol_products:
+            if len(mentioned_eol_products) == 1:
+                product_list_str = f"the {mentioned_eol_products[0]}"
+                verb = "is"
+            else:
+                product_list_str = f"the {', '.join(mentioned_eol_products[:-1])} and {mentioned_eol_products[-1]}"
+                verb = "are"
+            eol_instruction = f"IMPORTANT INSTRUCTION: The product(s) {product_list_str} {verb} End-of-Life (EOL). You MUST start your response with the exact phrase '**Please be aware that {product_list_str} {verb} an End-of-Life (EOL) product.**' before providing the detailed answer."
+            system_prompt = f"{eol_instruction}\n\n{system_prompt_base}"
+        else:
+            system_prompt = system_prompt_base
         
         context = "\n\n".join([doc.page_content for doc in retrieved_docs])
-        
         human_prompt = f"""Chat History:\n------------------\n{history_string}\n------------------\nContext Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"""
         
         messages = [SystemMessage(content=system_prompt), HumanMessage(content=human_prompt)]
