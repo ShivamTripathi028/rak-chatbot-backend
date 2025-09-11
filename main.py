@@ -1,9 +1,9 @@
- # main.py
+# main.py
 import os
 import logging
-from datetime import datetime # Added for timestamping
+from datetime import datetime
 from contextlib import asynccontextmanager
-from typing import Dict, List, Literal
+from typing import Dict, List, Literal, Set
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -23,28 +23,27 @@ from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
 from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_core.documents import Document
 from langchain.schema import BaseRetriever
 
-
-
-# --- (Load env, logging, constants, and Pydantic models - No changes here) ---
+# --- Setup, models, lifespan, CORS, etc. ---
 load_dotenv()
-# Updated logging config to include a request ID for easier tracking
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:8080")
+
 class ChatMessage(BaseModel):
     role: Literal['user', 'assistant']
     content: str
+
 class ChatRequest(BaseModel):
     query: str
     category: str
     chat_history: List[ChatMessage]
+
 ml_models: Dict[str, any] = {}
 
-# --- (lifespan function for model loading is unchanged) ---
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # This entire function is unchanged from the last working version
     logging.info("--- Server starting up: Loading all models... ---")
     ml_models["embedding_model"] = HuggingFaceEmbeddings(model_name=config.EMBEDDING_MODEL_NAME, model_kwargs={'device': 'cpu'}, encode_kwargs={'normalize_embeddings': True})
     logging.info("Embedding model loaded.")
@@ -75,7 +74,6 @@ async def lifespan(app: FastAPI):
     logging.info("--- Server shutting down: Models cleared. ---")
 
 app = FastAPI(lifespan=lifespan)
-# --- (CORS and root endpoint are unchanged) ---
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[FRONTEND_URL, "http://localhost:8080", "http://localhost:5173", "http://localhost:8888"],
@@ -83,85 +81,110 @@ app.add_middleware(
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
+
 @app.get("/")
 def read_root():
     return {"status": "RAK Chatbot API is running."}
 
+# --- HELPER FUNCTIONS ---
 def get_eol_products_from_query(query: str) -> List[str]:
-    """
-    Identifies which specific EOL products are mentioned in the user's query.
-    Returns a list of the matched EOL product names.
-    """
     query_lower = query.lower()
-    mentioned_eol_products = [
-        p for p in config.EOL_PRODUCTS
-        if f" {p.lower()} " in f" {query_lower} " or \
-           query_lower.startswith(f"{p.lower()} ") or \
-           query_lower.endswith(f" {p.lower()}") or \
-           query_lower == p.lower()
-    ]
+    mentioned_eol_products = [p for p in config.EOL_PRODUCTS if p.lower() in query_lower]
     return mentioned_eol_products
+
+def is_document_eol(doc: Document) -> bool:
+    doc_path = doc.metadata.get("relative_path", "")
+    if not doc_path: return False
+    return any(p.lower() in doc_path.lower() for p in config.EOL_PRODUCTS)
+
+def extract_product_names_from_docs(docs: List[Document]) -> Set[str]:
+    product_names = set()
+    for doc in docs:
+        path = doc.metadata.get("relative_path", "")
+        parts = path.split('/')
+        if len(parts) > 2:
+            product_name = parts[-2]
+            if "RAK" in product_name or "Wis" in product_name:
+                product_names.add(product_name)
+    return product_names
 
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest):
-    # --- Phase 1: Query Received ---
     start_time = datetime.now()
     logging.info(f"PHASE 1: Received new user query at {start_time.isoformat()}. Query: '{request.query}'")
 
     query = request.query
-    category = request.category
-    chat_history = request.chat_history
-    retriever = ml_models.get("retrievers", {}).get(category)
+    retriever = ml_models.get("retrievers", {}).get(request.category)
     llm = ml_models.get("llm")
 
     if not retriever or not llm:
-        return {"error": f"Model or retriever for category '{category}' not available."}
+        return {"error": f"Model or retriever for category '{request.category}' not available."}
 
-    # --- Phase 2: Data Extraction (Retrieval) ---
     logging.info(f"PHASE 2: Starting data extraction from knowledge base...")
     retrieval_start_time = datetime.now()
     retrieved_docs = retriever.invoke(query)
     retrieval_end_time = datetime.now()
     logging.info(f"PHASE 2: Data extraction complete. Took: {(retrieval_end_time - retrieval_start_time).total_seconds():.2f}s. Found {len(retrieved_docs)} documents.")
 
+    # --- DIAGNOSTIC LOGGING BLOCK WITH FULL CONTENT ---
+    logging.info("--- DIAGNOSTIC: Inspecting retrieved document metadata and FULL content ---")
+    for i, doc in enumerate(retrieved_docs):
+        path = doc.metadata.get('relative_path', 'N/A')
+        is_eol = is_document_eol(doc)
+        # Use a multi-line f-string for a clean, grouped log message with the full content
+        log_message = (
+            f"\n----- Document [{i+1}/{len(retrieved_docs)}] -----\n"
+            f"  Path    : {path}\n"
+            f"  Is EOL? : {is_eol}\n"
+            f"  Content :\n{doc.page_content}\n"
+            f"----- End Document [{i+1}/{len(retrieved_docs)}] -----"
+        )
+        logging.info(log_message)
+    logging.info("--- END DIAGNOSTIC ---")
+    
+    mentioned_eol_products = get_eol_products_from_query(query)
+    is_suggestion_query = not mentioned_eol_products
+    context_is_all_eol = False
+    
+    if is_suggestion_query:
+        active_docs = [doc for doc in retrieved_docs if not is_document_eol(doc)]
+        if not active_docs and retrieved_docs:
+            logging.warning("No active products found in retrieved docs. Falling back to EOL suggestions.")
+            final_docs = retrieved_docs
+            context_is_all_eol = True
+        else:
+            final_docs = active_docs
+    else:
+        final_docs = retrieved_docs
 
     async def stream_llm_response():
         try:
-            history_string = "\n".join([f"{msg.role}: {msg.content}" for msg in chat_history])
+            system_prompt_base = """You are a helpful, friendly, and knowledgeable RAKwireless product support specialist. Your primary goal is to accurately answer user questions based ONLY on the information found in the context documents provided below. If the context does not contain information to answer the question, politely state that you couldn't find the specific details in the available documentation."""
             
-            mentioned_eol_products = get_eol_products_from_query(query)
-            
-            system_prompt_base = """You are a helpful, friendly, and knowledgeable RAKwireless product support specialist.
-    Your primary goal is to accurately answer user questions based ONLY on the information found in the context documents provided below. Use the chat history to understand follow-up questions. When responding:
-    1. Carefully read the user's question, chat history, and all provided context documents.
-    2. **DO NOT** mention the context or documents in your answer. Simply provide the information as if you know it.
-    3. If the context does **NOT** contain information to answer the question, politely state that you couldn't find the specific details in the available documentation.
-    Formatting Guidelines:
-    - Use **bold** to emphasize key terms, product names, or important details.
-    - Use *italics* for minor emphasis.
-    - Use bullet points or numbered lists when explaining multiple steps, features, or comparisons.
-    - Use short paragraphs for readability.
-    - If explaining a process, present it in a **step-by-step format**.
-    - Always keep a clear, professional, and user-friendly tone."""
+            system_prompt = system_prompt_base
 
             if mentioned_eol_products:
-                if len(mentioned_eol_products) == 1:
-                    product_list_str = f"the {mentioned_eol_products[0]}"
-                    verb = "is"
-                else:
-                    product_list_str = f"the {', '.join(mentioned_eol_products[:-1])} and {mentioned_eol_products[-1]}"
-                    verb = "are"
-                eol_instruction = f"IMPORTANT INSTRUCTION: The product(s) {product_list_str} {verb} End-of-Life (EOL). You MUST start your response with the exact phrase '**Please be aware that {product_list_str} {verb} an End-of-Life (EOL) product.**' before providing the detailed answer."
+                product_list_str = f"the {', '.join(mentioned_eol_products)}"
+                verb = "is" if len(mentioned_eol_products) == 1 else "are"
+                eol_instruction = f"IMPORTANT: You MUST start your response with the exact phrase '**Please be aware that {product_list_str} {verb} an End-of-Life (EOL) product.**' before providing the detailed answer from the context."
                 system_prompt = f"{eol_instruction}\n\n{system_prompt_base}"
-            else:
-                system_prompt = system_prompt_base
             
-            context = "\n\n".join([doc.page_content for doc in retrieved_docs])
-            human_prompt = f"""Chat History:\n------------------\n{history_string}\n------------------\nContext Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"""
+            elif context_is_all_eol:
+                eol_instruction = "IMPORTANT: You MUST start your response with the exact phrase '**Please note, the most relevant options I found are End-of-Life (EOL) products, which are no longer recommended for new designs.**' before providing the suggestion from the context."
+                system_prompt = f"{eol_instruction}\n\n{system_prompt_base}"
+            
+            elif is_suggestion_query and final_docs:
+                allowed_products = extract_product_names_from_docs(final_docs)
+                if allowed_products:
+                    allowed_products_str = ", ".join(sorted(list(allowed_products)))
+                    suggestion_instruction = f"CRITICAL RULE: The user wants a suggestion. Base your answer ONLY on the context provided. You can only recommend products from this list: **{allowed_products_str}**. Do not mention any other RAK product names."
+                    system_prompt = f"{suggestion_instruction}\n\n{system_prompt_base}"
+
+            context = "\n\n".join([doc.page_content for doc in final_docs])
+            human_prompt = f"Context Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"
             
             messages = [SystemMessage(content=system_prompt), HumanMessage(content=human_prompt)]
             
-            # --- Phase 3: LLM Generation ---
             logging.info(f"PHASE 3: Passing data to LLM and starting response stream...")
             llm_start_time = datetime.now()
 
@@ -172,9 +195,7 @@ async def chat_endpoint(request: ChatRequest):
             logging.info(f"PHASE 3: LLM stream generation complete. Took: {(llm_end_time - llm_start_time).total_seconds():.2f}s.")
 
         finally:
-            # --- Phase 4: Response Displayed on UI ---
             end_time = datetime.now()
             logging.info(f"PHASE 4: Full response streamed to UI. Total request time: {(end_time - start_time).total_seconds():.2f}s.")
-
 
     return StreamingResponse(stream_llm_response(), media_type="text/event-stream")
