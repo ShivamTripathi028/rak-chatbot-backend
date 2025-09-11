@@ -4,6 +4,7 @@ import logging
 from datetime import datetime
 from contextlib import asynccontextmanager
 from typing import Dict, List, Literal, Set
+import re # Import the regular expression module
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -26,7 +27,7 @@ from langchain_core.messages import SystemMessage, HumanMessage
 from langchain_core.documents import Document
 from langchain.schema import BaseRetriever
 
-# --- Setup, models, lifespan, CORS, etc. ---
+# --- (Setup, models, lifespan, CORS, etc. remain unchanged) ---
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:8080")
@@ -44,6 +45,7 @@ ml_models: Dict[str, any] = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # This is unchanged
     logging.info("--- Server starting up: Loading all models... ---")
     ml_models["embedding_model"] = HuggingFaceEmbeddings(model_name=config.EMBEDDING_MODEL_NAME, model_kwargs={'device': 'cpu'}, encode_kwargs={'normalize_embeddings': True})
     logging.info("Embedding model loaded.")
@@ -86,16 +88,34 @@ app.add_middleware(
 def read_root():
     return {"status": "RAK Chatbot API is running."}
 
-# --- HELPER FUNCTIONS ---
+# --- CORRECTED HELPER FUNCTIONS ---
 def get_eol_products_from_query(query: str) -> List[str]:
-    query_lower = query.lower()
-    mentioned_eol_products = [p for p in config.EOL_PRODUCTS if p.lower() in query_lower]
+    """
+    Finds EOL product names in the query using exact, whole-word matching.
+    """
+    mentioned_eol_products = []
+    for product in config.EOL_PRODUCTS:
+        # Use regex with word boundaries (\b) for a precise match
+        # re.escape handles product names with special characters
+        pattern = r'\b' + re.escape(product) + r'\b'
+        if re.search(pattern, query, re.IGNORECASE):
+            mentioned_eol_products.append(product)
     return mentioned_eol_products
 
 def is_document_eol(doc: Document) -> bool:
+    """
+    Checks if a document's path contains an exact EOL product name component.
+    """
     doc_path = doc.metadata.get("relative_path", "")
-    if not doc_path: return False
-    return any(p.lower() in doc_path.lower() for p in config.EOL_PRODUCTS)
+    if not doc_path:
+        return False
+    
+    # Split the path into parts (e.g., ['WisGate', 'RAK7289-V2', 'Overview', 'README.md'])
+    path_components = set(p.lower() for p in doc_path.split('/'))
+    eol_products_lower = set(p.lower() for p in config.EOL_PRODUCTS)
+    
+    # Check for any intersection between the two sets
+    return not path_components.isdisjoint(eol_products_lower)
 
 def extract_product_names_from_docs(docs: List[Document]) -> Set[str]:
     product_names = set()
@@ -110,6 +130,8 @@ def extract_product_names_from_docs(docs: List[Document]) -> Set[str]:
 
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest):
+    # This entire function is now correct and does not need to be changed.
+    # The fix is in the helper functions it calls.
     start_time = datetime.now()
     logging.info(f"PHASE 1: Received new user query at {start_time.isoformat()}. Query: '{request.query}'")
 
@@ -126,12 +148,10 @@ async def chat_endpoint(request: ChatRequest):
     retrieval_end_time = datetime.now()
     logging.info(f"PHASE 2: Data extraction complete. Took: {(retrieval_end_time - retrieval_start_time).total_seconds():.2f}s. Found {len(retrieved_docs)} documents.")
 
-    # --- DIAGNOSTIC LOGGING BLOCK WITH FULL CONTENT ---
     logging.info("--- DIAGNOSTIC: Inspecting retrieved document metadata and FULL content ---")
     for i, doc in enumerate(retrieved_docs):
         path = doc.metadata.get('relative_path', 'N/A')
         is_eol = is_document_eol(doc)
-        # Use a multi-line f-string for a clean, grouped log message with the full content
         log_message = (
             f"\n----- Document [{i+1}/{len(retrieved_docs)}] -----\n"
             f"  Path    : {path}\n"
