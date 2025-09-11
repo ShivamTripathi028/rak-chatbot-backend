@@ -1,6 +1,7 @@
  # main.py
 import os
 import logging
+from datetime import datetime # Added for timestamping
 from contextlib import asynccontextmanager
 from typing import Dict, List, Literal
 
@@ -28,6 +29,7 @@ from langchain.schema import BaseRetriever
 
 # --- (Load env, logging, constants, and Pydantic models - No changes here) ---
 load_dotenv()
+# Updated logging config to include a request ID for easier tracking
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:8080")
 class ChatMessage(BaseModel):
@@ -102,6 +104,10 @@ def get_eol_products_from_query(query: str) -> List[str]:
 
 @app.post("/api/chat")
 async def chat_endpoint(request: ChatRequest):
+    # --- Phase 1: Query Received ---
+    start_time = datetime.now()
+    logging.info(f"PHASE 1: Received new user query at {start_time.isoformat()}. Query: '{request.query}'")
+
     query = request.query
     category = request.category
     chat_history = request.chat_history
@@ -111,44 +117,64 @@ async def chat_endpoint(request: ChatRequest):
     if not retriever or not llm:
         return {"error": f"Model or retriever for category '{category}' not available."}
 
+    # --- Phase 2: Data Extraction (Retrieval) ---
+    logging.info(f"PHASE 2: Starting data extraction from knowledge base...")
+    retrieval_start_time = datetime.now()
     retrieved_docs = retriever.invoke(query)
+    retrieval_end_time = datetime.now()
+    logging.info(f"PHASE 2: Data extraction complete. Took: {(retrieval_end_time - retrieval_start_time).total_seconds():.2f}s. Found {len(retrieved_docs)} documents.")
+
 
     async def stream_llm_response():
-        history_string = "\n".join([f"{msg.role}: {msg.content}" for msg in chat_history])
-        
-        mentioned_eol_products = get_eol_products_from_query(query)
-        
-        system_prompt_base = """You are a helpful, friendly, and knowledgeable RAKwireless product support specialist.
-Your primary goal is to accurately answer user questions based ONLY on the information found in the context documents provided below. Use the chat history to understand follow-up questions. When responding:
-1. Carefully read the user's question, chat history, and all provided context documents.
-2. **DO NOT** mention the context or documents in your answer. Simply provide the information as if you know it.
-3. If the context does **NOT** contain information to answer the question, politely state that you couldn't find the specific details in the available documentation.
-Formatting Guidelines:
-- Use **bold** to emphasize key terms, product names, or important details.
-- Use *italics* for minor emphasis.
-- Use bullet points or numbered lists when explaining multiple steps, features, or comparisons.
-- Use short paragraphs for readability.
-- If explaining a process, present it in a **step-by-step format**.
-- Always keep a clear, professional, and user-friendly tone."""
+        try:
+            history_string = "\n".join([f"{msg.role}: {msg.content}" for msg in chat_history])
+            
+            mentioned_eol_products = get_eol_products_from_query(query)
+            
+            system_prompt_base = """You are a helpful, friendly, and knowledgeable RAKwireless product support specialist.
+    Your primary goal is to accurately answer user questions based ONLY on the information found in the context documents provided below. Use the chat history to understand follow-up questions. When responding:
+    1. Carefully read the user's question, chat history, and all provided context documents.
+    2. **DO NOT** mention the context or documents in your answer. Simply provide the information as if you know it.
+    3. If the context does **NOT** contain information to answer the question, politely state that you couldn't find the specific details in the available documentation.
+    Formatting Guidelines:
+    - Use **bold** to emphasize key terms, product names, or important details.
+    - Use *italics* for minor emphasis.
+    - Use bullet points or numbered lists when explaining multiple steps, features, or comparisons.
+    - Use short paragraphs for readability.
+    - If explaining a process, present it in a **step-by-step format**.
+    - Always keep a clear, professional, and user-friendly tone."""
 
-        if mentioned_eol_products:
-            if len(mentioned_eol_products) == 1:
-                product_list_str = f"the {mentioned_eol_products[0]}"
-                verb = "is"
+            if mentioned_eol_products:
+                if len(mentioned_eol_products) == 1:
+                    product_list_str = f"the {mentioned_eol_products[0]}"
+                    verb = "is"
+                else:
+                    product_list_str = f"the {', '.join(mentioned_eol_products[:-1])} and {mentioned_eol_products[-1]}"
+                    verb = "are"
+                eol_instruction = f"IMPORTANT INSTRUCTION: The product(s) {product_list_str} {verb} End-of-Life (EOL). You MUST start your response with the exact phrase '**Please be aware that {product_list_str} {verb} an End-of-Life (EOL) product.**' before providing the detailed answer."
+                system_prompt = f"{eol_instruction}\n\n{system_prompt_base}"
             else:
-                product_list_str = f"the {', '.join(mentioned_eol_products[:-1])} and {mentioned_eol_products[-1]}"
-                verb = "are"
-            eol_instruction = f"IMPORTANT INSTRUCTION: The product(s) {product_list_str} {verb} End-of-Life (EOL). You MUST start your response with the exact phrase '**Please be aware that {product_list_str} {verb} an End-of-Life (EOL) product.**' before providing the detailed answer."
-            system_prompt = f"{eol_instruction}\n\n{system_prompt_base}"
-        else:
-            system_prompt = system_prompt_base
-        
-        context = "\n\n".join([doc.page_content for doc in retrieved_docs])
-        human_prompt = f"""Chat History:\n------------------\n{history_string}\n------------------\nContext Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"""
-        
-        messages = [SystemMessage(content=system_prompt), HumanMessage(content=human_prompt)]
-        
-        for chunk in llm.stream(messages):
-            yield chunk.content
+                system_prompt = system_prompt_base
+            
+            context = "\n\n".join([doc.page_content for doc in retrieved_docs])
+            human_prompt = f"""Chat History:\n------------------\n{history_string}\n------------------\nContext Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"""
+            
+            messages = [SystemMessage(content=system_prompt), HumanMessage(content=human_prompt)]
+            
+            # --- Phase 3: LLM Generation ---
+            logging.info(f"PHASE 3: Passing data to LLM and starting response stream...")
+            llm_start_time = datetime.now()
+
+            for chunk in llm.stream(messages):
+                yield chunk.content
+            
+            llm_end_time = datetime.now()
+            logging.info(f"PHASE 3: LLM stream generation complete. Took: {(llm_end_time - llm_start_time).total_seconds():.2f}s.")
+
+        finally:
+            # --- Phase 4: Response Displayed on UI ---
+            end_time = datetime.now()
+            logging.info(f"PHASE 4: Full response streamed to UI. Total request time: {(end_time - start_time).total_seconds():.2f}s.")
+
 
     return StreamingResponse(stream_llm_response(), media_type="text/event-stream")
