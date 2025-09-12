@@ -78,7 +78,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[FRONTEND_URL, "http://localhost:8080", "http://localhost:5173", "http://localhost:8888", "https://rak-knowledge-hub.vercel.app/"],
+    allow_origins=[FRONTEND_URL, "http://localhost:8080", "http://localhost:5173", "http://localhost:8888", "https://rak-knowledge-hub.vercel.app"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
