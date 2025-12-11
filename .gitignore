@@ -1,11 +1,13 @@
 # Byte-compiled / optimized / C files
 __pycache__/
+*.py[cod]
 *.pyc
 *.pyo
 *.pyd
 
 # Virtual Environment
 venv/
+.env
 
 # Log files
 feedback.log

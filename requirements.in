@@ -12,6 +12,7 @@ langchain-core
 langchain-community
 langchain-huggingface
 langchain-chroma
+langchain-openai
 
 # Foundational Libraries for AI/ML
 sentence-transformers

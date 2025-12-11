@@ -6,11 +6,11 @@ import logging
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
-# build_databases.py
-
 import nltk
 import ssl
+import torch
 
+# --- SSL Context Fix ---
 try:
     _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
@@ -18,13 +18,13 @@ except AttributeError:
 else:
     ssl._create_default_https_context = _create_unverified_https_context
 
+# --- NLTK ---
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     print("Downloading required NLTK resource 'punkt'...")
     nltk.download('punkt')
-
-# ...
+    nltk.download('punkt_tab')
 
 # --- Local Imports ---
 import config
@@ -32,7 +32,7 @@ from utils import load_and_parse_single_readme_file_with_metadata
 
 # --- LangChain Components ---
 from langchain_core.documents import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 
@@ -74,7 +74,7 @@ def chunk_documents_for_db(documents: list[Document], category_name_for_log: str
     return chunked_documents
 
 def build_and_persist_db(chunks_to_embed: list[Document], db_persist_path: str, embedding_func, db_name_for_log: str):
-    """Builds and persists a ChromaDB vector store."""
+    """Builds and persists a ChromaDB vector store with batching."""
     if not chunks_to_embed:
         logging.warning(f"No chunks to embed for DB: {db_name_for_log} at {db_persist_path}. Skipping.")
         return
@@ -86,18 +86,40 @@ def build_and_persist_db(chunks_to_embed: list[Document], db_persist_path: str, 
     os.makedirs(db_persist_path, exist_ok=True)
 
     logging.info(f"Creating new vector store for '{db_name_for_log}' in: {db_persist_path}")
-    logging.info(f"Embedding {len(chunks_to_embed)} chunks with {config.EMBEDDING_MODEL_NAME}. This will take time...")
+    logging.info(f"Total chunks to embed: {len(chunks_to_embed)}")
+    
     start_embed_time = time.time()
+    
+    # --- BATCHING LOGIC START ---
+    # ChromaDB (SQLite) has a limit on parameters, typically around 5461 or 999.
+    # We use a safe batch size of 4000 to avoid "ValueError: Batch size exceeds maximum".
+    BATCH_SIZE = 4000
+    
     try:
-        Chroma.from_documents(
-            documents=chunks_to_embed,
+        # Initialize the DB with the first batch
+        first_batch = chunks_to_embed[:BATCH_SIZE]
+        logging.info(f"  - Processing Batch 1/{len(chunks_to_embed)//BATCH_SIZE + 1} ({len(first_batch)} chunks)...")
+        
+        vector_store = Chroma.from_documents(
+            documents=first_batch,
             embedding=embedding_func,
             persist_directory=db_persist_path
         )
+
+        # Process remaining batches
+        if len(chunks_to_embed) > BATCH_SIZE:
+            for i in range(BATCH_SIZE, len(chunks_to_embed), BATCH_SIZE):
+                batch = chunks_to_embed[i : i + BATCH_SIZE]
+                batch_num = (i // BATCH_SIZE) + 1
+                logging.info(f"  - Processing Batch {batch_num}/{len(chunks_to_embed)//BATCH_SIZE + 1} ({len(batch)} chunks)...")
+                vector_store.add_documents(batch)
+                
         end_embed_time = time.time()
         logging.info(f"DB for '{db_name_for_log}' created. Embedding took {end_embed_time - start_embed_time:.2f} seconds.")
+    
     except Exception as e:
         logging.error(f"ERROR creating DB for '{db_name_for_log}': {e}", exc_info=True)
+    # --- BATCHING LOGIC END ---
 
 if __name__ == "__main__":
     overall_start_time = time.time()
@@ -107,25 +129,40 @@ if __name__ == "__main__":
         logging.error(f"ERROR: Data directory '{config.DATA_DIRECTORY}' not found. Cannot build databases.")
         exit()
 
+    # Clean up old databases
     if os.path.exists(config.CHROMA_BASE_PERSIST_DIR):
         logging.info(f"Deleting old base DB directory: {config.CHROMA_BASE_PERSIST_DIR}")
         shutil.rmtree(config.CHROMA_BASE_PERSIST_DIR)
     os.makedirs(config.CHROMA_BASE_PERSIST_DIR, exist_ok=True)
     
     logging.info(f"Initializing embedding model: {config.EMBEDDING_MODEL_NAME}...")
-    model_kwargs_embed = {'device': 'cpu'} 
+
+    # --- UNIVERSAL HARDWARE DETECTION ---
+    if torch.cuda.is_available():
+        device_type = "cuda"
+        logging.info("Hardware acceleration: NVIDIA CUDA detected.")
+    elif torch.backends.mps.is_available():
+        device_type = "mps"
+        logging.info("Hardware acceleration: Apple Metal (MPS) detected.")
+    else:
+        device_type = "cpu"
+        logging.info("Hardware acceleration: None. Using CPU (this might be slow).")
+    
+    model_kwargs_embed = {'device': device_type} 
     encode_kwargs_embed = {'normalize_embeddings': True} 
+    
     embedding_function = HuggingFaceEmbeddings(
         model_name=config.EMBEDDING_MODEL_NAME,
         model_kwargs=model_kwargs_embed,
         encode_kwargs=encode_kwargs_embed
     )
-    logging.info("Embedding model initialized.")
+    logging.info(f"Embedding model initialized on {device_type}.")
 
     root_path = Path(config.DATA_DIRECTORY).resolve()
     all_documents_for_global_db = [] 
     category_specific_documents = {} 
 
+    # Process Root README
     root_readme_path = root_path / "README.md"
     if root_readme_path.is_file():
         logging.info(f"\nProcessing root README: {root_readme_path.name}")
@@ -135,6 +172,7 @@ if __name__ == "__main__":
         all_documents_for_global_db.extend(docs_root)
         logging.info(f"Found {len(docs_root)} document sections in root README.")
 
+    # Process Categories in Parallel
     subfolders = [item for item in root_path.iterdir() if item.is_dir() and not item.name.startswith('.')]
     
     if subfolders:
@@ -154,6 +192,7 @@ if __name__ == "__main__":
                     logging.error(f"Category {original_folder_path.name} generated an exception: {exc}", exc_info=True)
         logging.info("Parallel category document loading complete.")
     
+    # Build Category Databases
     for category_name, docs_list in category_specific_documents.items():
         logging.info(f"\n--- Building DB for Category: {category_name} ---")
         db_name_sanitized = f"{category_name.lower().replace(' ', '_').replace('-', '_')}_db"
@@ -161,6 +200,7 @@ if __name__ == "__main__":
         chunks_for_category = chunk_documents_for_db(docs_list, category_name)
         build_and_persist_db(chunks_for_category, category_db_persist_path, embedding_function, category_name)
 
+    # Build Global Database
     if all_documents_for_global_db:
         logging.info("\n--- Building Global DB ('All Categories') ---")
         global_db_persist_path = str(config.CHROMA_BASE_PERSIST_DIR / config.GLOBAL_DB_NAME)

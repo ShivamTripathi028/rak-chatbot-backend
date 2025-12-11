@@ -18,16 +18,14 @@ EVAL_RESULTS_CSV = BASE_DIR / "automated_evaluation_results.csv"
 # --- Model Configuration ---
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5"
 
-# --- LLM Configuration (for rak_chatbot.py) ---
-OPENROUTER_MODEL_NAME = "mistralai/mistral-small-3.2-24b-instruct:free" # Or your preferred OpenRouter model
-# Optional: These are sent to OpenRouter for analytics and identifying your app.
-SITE_URL = "https://talk-to-rak.netlify.app" 
-SITE_TITLE = "RAKwireless Support Chatbot"
-
+# --- LLM Configuration (Updated for OpenAI) ---
+# We use gpt-4o as the default. You can also use "gpt-4o-mini" for a faster/cheaper alternative.
+OPENAI_MODEL_NAME = "gpt-5-nano-2025-08-07"
 
 # --- RAG Pipeline Parameters ---
-BEST_INITIAL_K = 20
-BEST_FINAL_K = 7
+# (Based on your evaluation results)
+BEST_INITIAL_K = 35
+BEST_FINAL_K = 20
 BEST_RERANKER_MODEL = "BAAI/bge-reranker-large"
 
 # --- Database & Data Processing Parameters (for build_databases.py) ---
@@ -36,11 +34,11 @@ CHUNK_SIZE = 1000
 # The overlap between consecutive text chunks.
 CHUNK_OVERLAP = 350
 # The name for the global database that contains all categories.
-GLOBAL_DB_NAME = "all_rak_global_db"  # <-- THIS LINE WAS MISSING. IT IS NOW FIXED.
+GLOBAL_DB_NAME = "all_rak_global_db"
 # Number of CPU cores to use for parallel data processing.
 MAX_WORKERS_DATA_PROCESSING = os.cpu_count()
 
-
+# --- End of Life (EOL) Product List ---
 EOL_PRODUCTS = [
     'RAK7240',
     'RAK7289',
