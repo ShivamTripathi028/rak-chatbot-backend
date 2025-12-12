@@ -1,6 +1,7 @@
 # main.py
 import os
 import logging
+import asyncio
 from datetime import datetime
 from contextlib import asynccontextmanager
 from typing import Dict, List, Literal, Set
@@ -20,8 +21,7 @@ import torch
 import config
 from utils import get_product_categories
 
-# --- LangChain Components ---
-from langchain_openai import ChatOpenAI
+# --- LangChain Components (Only Retrieval) ---
 from langchain_huggingface import HuggingFaceEmbeddings
 
 try:
@@ -32,18 +32,10 @@ except ImportError:
 from langchain_chroma import Chroma
 from langchain.retrievers import ContextualCompressionRetriever
 from langchain.retrievers.document_compressors import CrossEncoderReranker
-from langchain.retrievers.multi_query import MultiQueryRetriever
-
-# --- LangChain Core ---
-from langchain_core.messages import SystemMessage, HumanMessage, AIMessage
 from langchain_core.documents import Document
-from langchain_core.caches import BaseCache
-from langchain_core.callbacks import Callbacks
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.prompts import ChatPromptTemplate
 
-# Fix Pydantic/LangChain integration issue
-ChatOpenAI.model_rebuild()
+# --- OpenAI Raw Client ---
+from openai import AsyncOpenAI
 
 # --- Setup ---
 load_dotenv()
@@ -53,10 +45,8 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 allowed_origins_env = os.getenv("ALLOWED_ORIGINS")
 if allowed_origins_env:
     ALLOWED_ORIGINS = [origin.strip() for origin in allowed_origins_env.split(",") if origin.strip()]
-    logging.info(f"CORS: Loaded allowed origins from env: {ALLOWED_ORIGINS}")
 else:
-    ALLOWED_ORIGINS = ["http://localhost:8080", "http://localhost:5173", "https://rak-knowledge-hub.vercel.app"]
-    logging.warning(f"CORS: 'ALLOWED_ORIGINS' env var not set. Using defaults: {ALLOWED_ORIGINS}")
+    ALLOWED_ORIGINS = ["http://localhost:8080", "http://localhost:5173", "https://rak-knowledge-hub.rak-internal.net"]
 
 class ChatMessage(BaseModel):
     role: Literal['user', 'assistant']
@@ -91,26 +81,23 @@ async def lifespan(app: FastAPI):
         encode_kwargs={'normalize_embeddings': True}
     )
     
+    logging.info(f"Loading Reranker: {config.BEST_RERANKER_MODEL}")
     ml_models["reranker_model"] = HuggingFaceCrossEncoder(
         model_name=config.BEST_RERANKER_MODEL, 
         model_kwargs={'device': 'cpu'} 
     )
     
-    # 3. Load Main LLM
-    model_name = config.OPENAI_MODEL_NAME
-    # Reasoning models (gpt-5-nano, o1) require temperature=1
-    temp_val = 1 if ("nano" in model_name or "gpt-5" in model_name or "o1" in model_name) else 0.1
-    ml_models["llm"] = ChatOpenAI(model=model_name, temperature=temp_val)
+    # 3. Load OpenAI Client
+    api_key = os.getenv("OPENAI_API_KEY")
+    ml_models["openai_client"] = AsyncOpenAI(api_key=api_key)
     
-    logging.info(f"LLM loaded: {model_name}")
+    logging.info(f"AsyncOpenAI Client initialized for model: {config.OPENAI_MODEL_NAME}")
     
     # 4. Load Retrievers
     categories = get_product_categories(config.DATA_DIRECTORY)
     retrievers = {}
     embedding_func = ml_models["embedding_model"]
     reranker = ml_models["reranker_model"]
-    # Use the main LLM for query generation
-    query_gen_llm = ml_models["llm"] 
     
     for category_name in categories:
         db_name = config.GLOBAL_DB_NAME if category_name == "All Categories (Global DB)" else f"{category_name.lower().replace(' ', '_').replace('-', '_')}_db"
@@ -121,35 +108,26 @@ async def lifespan(app: FastAPI):
             
         vector_store = Chroma(persist_directory=str(db_path), embedding_function=embedding_func)
         
-        # A. MMR Retrieval (Diversity Focus)
         base_retriever = vector_store.as_retriever(
             search_type="mmr",
             search_kwargs={
-                "k": config.BEST_INITIAL_K, # e.g., 30
-                "fetch_k": 50,             # Look at top 200 candidates
-                "lambda_mult": 0.25         # High diversity to catch comparison docs
+                "k": config.BEST_INITIAL_K, 
+                "fetch_k": 40,
+                "lambda_mult": 0.25
             } 
         )
         
-        # B. Multi-Query Expansion
-        multi_query_retriever = MultiQueryRetriever.from_llm(
-            retriever=base_retriever,
-            llm=query_gen_llm,
-            include_original=True
-        )
-
-        # C. Re-ranking
         compressor = CrossEncoderReranker(model=reranker, top_n=config.BEST_FINAL_K)
         final_retriever = ContextualCompressionRetriever(
             base_compressor=compressor, 
-            base_retriever=multi_query_retriever
+            base_retriever=base_retriever
         )
         
         retrievers[category_name] = final_retriever
-        logging.info(f"Retriever constructed for '{category_name}'.")
         
+    logging.info(f"Retrievers loaded for {len(retrievers)} categories.")
     ml_models["retrievers"] = retrievers
-    logging.info("--- All models loaded ---")
+    logging.info("--- All models loaded and optimized ---")
     yield
     ml_models.clear()
 
@@ -193,51 +171,59 @@ async def chat_endpoint(request: ChatRequest):
 
     query = request.query
     retriever = ml_models.get("retrievers", {}).get(request.category)
-    llm = ml_models.get("llm")
+    client: AsyncOpenAI = ml_models.get("openai_client")
 
-    if not retriever or not llm:
+    if not retriever or not client:
         return {"error": "Model not available."}
 
     # --- STEP 2A: Contextual Query Rewriting ---
     final_search_query = query
     
-    if request.chat_history:
+    # OPTIMIZATION: Only rewrite if there is actual USER history.
+    # The last message is the current query, so we look at everything before it.
+    previous_messages = request.chat_history[:-1]
+    
+    # Check if there is at least one 'user' message in the past history.
+    # This ignores the initial "Hello" message from the bot.
+    has_prior_user_context = any(msg.role == 'user' for msg in previous_messages)
+
+    if has_prior_user_context:
         logging.info("PHASE 2A: Rewriting query based on history...")
         history_str = ""
-        # Convert history to string, skipping the very last user message (which is current 'query')
-        for msg in request.chat_history[:-1]:
+        for msg in previous_messages:
             role = "User" if msg.role == "user" else "Assistant"
             history_str += f"{role}: {msg.content}\n"
             
-        if history_str:
-            rewrite_prompt = ChatPromptTemplate.from_template(
-                """Given the following conversation and a follow-up question, rephrase the follow-up question to be a standalone question.
-                Chat History:
-                {history}
-                Follow Up Input: {question}
-                Standalone question:"""
+        rewrite_messages = [
+            {"role": "system", "content": "Given the following conversation and a follow-up question, rephrase the follow-up question to be a standalone question."},
+            {"role": "user", "content": f"Chat History:\n{history_str}\nFollow Up Input: {query}\nStandalone question:"}
+        ]
+        
+        try:
+            rewrite_response = await client.chat.completions.create(
+                model=config.OPENAI_MODEL_NAME, 
+                messages=rewrite_messages,
+                temperature=1 # Reasoning models usually default to 1, but for rewriting we want precision. 
+                              # Note: gpt-5-nano might enforce strict parameters, but standard chat completion allows temperature.
             )
-            # Use the main LLM for rewriting now
-            rewriter_chain = rewrite_prompt | llm | StrOutputParser()
-            try:
-                final_search_query = rewriter_chain.invoke({"history": history_str, "question": query})
-                logging.info(f"PHASE 2A: Rewritten Query: '{final_search_query}'")
-            except Exception as e:
-                logging.error(f"Rewriting failed: {e}. Using original.")
+            final_search_query = rewrite_response.choices[0].message.content.strip()
+            logging.info(f"PHASE 2A: Rewritten Query: '{final_search_query}'")
+        except Exception as e:
+            logging.error(f"Rewriting failed: {e}. Using original.")
+    else:
+        logging.info("PHASE 2A: First user question detected. Skipping rewrite.")
 
-    # --- STEP 2B: Retrieval (Using Rewritten Query) ---
+    # --- STEP 2B: Retrieval ---
     logging.info(f"PHASE 2B: Searching DB with: '{final_search_query}'")
     retrieval_start = datetime.now()
-    retrieved_docs = retriever.invoke(final_search_query) 
+    
+    loop = asyncio.get_running_loop()
+    retrieved_docs = await loop.run_in_executor(None, retriever.invoke, final_search_query)
+    
     logging.info(f"PHASE 2B: Found {len(retrieved_docs)} docs. Took: {(datetime.now() - retrieval_start).total_seconds():.2f}s.")
 
-    # --- DIAGNOSTIC: Log Docs ---
-    for i, doc in enumerate(retrieved_docs):
-        path = doc.metadata.get('relative_path', 'N/A')
-        logging.info(f"Doc [{i+1}]: {path}")
-
     # --- EOL & Suggestion Logic ---
-    mentioned_eol_products = get_eol_products_from_query(final_search_query) # Check against rewritten query
+    mentioned_eol_products = get_eol_products_from_query(final_search_query) 
     is_suggestion_query = not mentioned_eol_products
     context_is_all_eol = False
     
@@ -258,11 +244,12 @@ async def chat_endpoint(request: ChatRequest):
 CORE RESPONSIBILITIES:
 1. Answer based ONLY on the provided context.
 2. If the context is missing info, politely admit it.
-3. Use Markdown formatting to make answers readable (bold key terms, use bullet points).
+3. Use Markdown formatting (bold key terms, bullet points) to make answers readable.
 
 FORMATTING RULES:
-- If the user asks for a COMPARISON between two or more products, you MUST format the result as a Markdown Table.
-- Example Table structure: | Feature | Product A | Product B |
+- **Technical Specs:** If the user asks to compare technical specifications, use a Markdown Table.
+- **Scenarios/Advice:** If the user asks for "which is better for X" or "use cases", prefer using **bullet points** or **text explanations**.
+- **Check History:** If a comparison table for these products was ALREADY provided, **DO NOT** generate the table again.
 """
         system_prompt = system_prompt_base
 
@@ -284,24 +271,36 @@ FORMATTING RULES:
         context = "\n\n".join([doc.page_content for doc in final_docs])
         human_prompt = f"Context Documents:\n------------------\n{context}\n------------------\nUser's Question: {query}\nHelpful and Accurate Answer:"
         
-        # --- HISTORY INJECTION ---
-        messages = [SystemMessage(content=system_prompt)]
+        messages = [{"role": "system", "content": system_prompt}]
         
         if request.chat_history:
             for msg in request.chat_history[:-1]:
-                if msg.role == 'user':
-                    messages.append(HumanMessage(content=msg.content))
-                elif msg.role == 'assistant':
-                    messages.append(AIMessage(content=msg.content))
+                messages.append({"role": msg.role, "content": msg.content})
         
-        messages.append(HumanMessage(content=human_prompt))
+        messages.append({"role": "user", "content": human_prompt})
         
-        logging.info(f"PHASE 3: Streaming LLM response...")
+        logging.info(f"PHASE 3: Streaming LLM response via Raw Client...")
         llm_start_time = datetime.now()
 
-        for chunk in llm.stream(messages):
-            if chunk.content:
-                yield chunk.content
+        try:
+            stream = await client.chat.completions.create(
+                model=config.OPENAI_MODEL_NAME,
+                messages=messages,
+                temperature=1.0 if "nano" in config.OPENAI_MODEL_NAME.lower() else 0.0,
+                stream=True 
+            )
+
+            # Yield empty space to flush headers
+            yield " " 
+
+            async for chunk in stream:
+                content = chunk.choices[0].delta.content
+                if content:
+                    yield content
+                    
+        except Exception as e:
+            logging.error(f"Error during OpenAI stream: {e}")
+            yield f"Error: {str(e)}"
         
         logging.info(f"PHASE 3: Stream complete. Took: {(datetime.now() - llm_start_time).total_seconds():.2f}s.")
         logging.info(f"PHASE 4: Done. Total time: {(datetime.now() - start_time).total_seconds():.2f}s.")
