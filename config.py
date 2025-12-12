@@ -26,8 +26,8 @@ OPENAI_MODEL_NAME = "gpt-5-nano-2025-08-07"
 # --- RAG Pipeline Parameters (OPTIMIZED) ---
 # Reduced 'Initial K' prevents the Reranker from processing too many documents.
 # Switched to 'bge-reranker-base'. 'Large' is too slow for CPU inference.
-BEST_INITIAL_K = 25 
-BEST_FINAL_K = 8
+BEST_INITIAL_K = 30 
+BEST_FINAL_K = 15
 BEST_RERANKER_MODEL = "BAAI/bge-reranker-base"
 
 # --- Database & Data Processing Parameters ---

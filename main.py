@@ -112,7 +112,7 @@ async def lifespan(app: FastAPI):
             search_type="mmr",
             search_kwargs={
                 "k": config.BEST_INITIAL_K, 
-                "fetch_k": 40,
+                "fetch_k": 60,
                 "lambda_mult": 0.25
             } 
         )
@@ -178,13 +178,7 @@ async def chat_endpoint(request: ChatRequest):
 
     # --- STEP 2A: Contextual Query Rewriting ---
     final_search_query = query
-    
-    # OPTIMIZATION: Only rewrite if there is actual USER history.
-    # The last message is the current query, so we look at everything before it.
     previous_messages = request.chat_history[:-1]
-    
-    # Check if there is at least one 'user' message in the past history.
-    # This ignores the initial "Hello" message from the bot.
     has_prior_user_context = any(msg.role == 'user' for msg in previous_messages)
 
     if has_prior_user_context:
@@ -203,8 +197,7 @@ async def chat_endpoint(request: ChatRequest):
             rewrite_response = await client.chat.completions.create(
                 model=config.OPENAI_MODEL_NAME, 
                 messages=rewrite_messages,
-                temperature=1 # Reasoning models usually default to 1, but for rewriting we want precision. 
-                              # Note: gpt-5-nano might enforce strict parameters, but standard chat completion allows temperature.
+                temperature=1 
             )
             final_search_query = rewrite_response.choices[0].message.content.strip()
             logging.info(f"PHASE 2A: Rewritten Query: '{final_search_query}'")
@@ -221,6 +214,14 @@ async def chat_endpoint(request: ChatRequest):
     retrieved_docs = await loop.run_in_executor(None, retriever.invoke, final_search_query)
     
     logging.info(f"PHASE 2B: Found {len(retrieved_docs)} docs. Took: {(datetime.now() - retrieval_start).total_seconds():.2f}s.")
+
+    # --- DEBUGGING: Print Sources to Console ONLY ---
+    logging.info("--- RETRIEVED SOURCES ---")
+    for i, doc in enumerate(retrieved_docs):
+        path = doc.metadata.get('relative_path', 'Unknown Source')
+        # This will show up in your terminal/Uvicorn logs
+        logging.info(f"  [Doc {i+1}]: {path}")
+    logging.info("---------------------------")
 
     # --- EOL & Suggestion Logic ---
     mentioned_eol_products = get_eol_products_from_query(final_search_query) 
