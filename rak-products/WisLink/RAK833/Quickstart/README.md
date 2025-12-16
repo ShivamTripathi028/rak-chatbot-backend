@@ -1,1 +1,0 @@
-<rk-redirect to="/Product-Categories/WisLink/RAK833/Datasheet/" />

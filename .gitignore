@@ -17,3 +17,6 @@ automated_evaluation_log.txt
 .vscode/
 .idea/
 .DS_Store
+
+#DB
+new_rak_category_dbs/

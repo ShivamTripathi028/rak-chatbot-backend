@@ -4,7 +4,7 @@ from pathlib import Path
 
 # --- Core Directories and Paths ---
 BASE_DIR = Path(__file__).parent.resolve()
-DATA_DIRECTORY = BASE_DIR / "rak-products"
+DATA_DIRECTORY = BASE_DIR / "product-categories"
 CHROMA_BASE_PERSIST_DIR = BASE_DIR / "new_rak_category_dbs"
 
 # --- Logging Configuration ---

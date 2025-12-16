@@ -1,1 +1,0 @@
-<rk-redirect to="/Product-Categories/5G/All-in-One-5G/User-Manual/LTE-Radio-Configuration" />

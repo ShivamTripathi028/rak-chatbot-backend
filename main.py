@@ -167,11 +167,13 @@ def extract_product_names_from_docs(docs: List[Document]) -> Set[str]:
     product_names = set()
     for doc in docs:
         path = doc.metadata.get("relative_path", "")
+        path = path.replace("\\", "/")
         parts = path.split('/')
-        if len(parts) > 2:
+        if len(parts) > 1:
             product_name = parts[-2]
-            if "RAK" in product_name or "Wis" in product_name:
-                product_names.add(product_name)
+            if "rak" in product_name.lower() or "wis" in product_name.lower():
+                product_names.add(product_name.upper())
+                
     return product_names
 
 @app.post("/api/chat")

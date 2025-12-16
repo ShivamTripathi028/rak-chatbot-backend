@@ -40,19 +40,29 @@ from langchain_chroma import Chroma
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 def process_single_category_for_db(category_folder_path_str: str, root_dir_str: str):
-    """Processes all README.md files in a single category folder."""
+    """Processes all .md files in a single category folder."""
     category_folder_path = Path(category_folder_path_str)
     category_name = category_folder_path.name
     logging.info(f"  [Worker] Processing category: {category_name}")
+    
     category_documents = []
-    readme_files_in_category = list(category_folder_path.rglob("README.md"))
-    for readme_filepath in readme_files_in_category:
-        if ".DS_Store" in str(readme_filepath) or "._" in readme_filepath.name:
+    
+    # --- UPDATED: Look for ANY .md file, not just README.md ---
+    md_files_in_category = list(category_folder_path.rglob("*.md"))
+    
+    for md_filepath in md_files_in_category:
+        # Filter out system files or hidden files
+        if ".DS_Store" in str(md_filepath) or md_filepath.name.startswith("._"):
             continue
+            
+        # Optional: Skip specific files if needed (e.g., if you don't want to index 'index.md')
+        # if md_filepath.name == "index.md": continue 
+
         docs = load_and_parse_single_readme_file_with_metadata(
-            str(readme_filepath), root_dir_str, category_name
+            str(md_filepath), root_dir_str, category_name
         )
         category_documents.extend(docs)
+        
     logging.info(f"  [Worker] Finished category: {category_name}. Found {len(category_documents)} document sections.")
     return category_name, category_documents
 
@@ -90,13 +100,10 @@ def build_and_persist_db(chunks_to_embed: list[Document], db_persist_path: str, 
     
     start_embed_time = time.time()
     
-    # --- BATCHING LOGIC START ---
-    # ChromaDB (SQLite) has a limit on parameters, typically around 5461 or 999.
-    # We use a safe batch size of 4000 to avoid "ValueError: Batch size exceeds maximum".
+    # Batching to prevent SQLite limits
     BATCH_SIZE = 4000
     
     try:
-        # Initialize the DB with the first batch
         first_batch = chunks_to_embed[:BATCH_SIZE]
         logging.info(f"  - Processing Batch 1/{len(chunks_to_embed)//BATCH_SIZE + 1} ({len(first_batch)} chunks)...")
         
@@ -106,7 +113,6 @@ def build_and_persist_db(chunks_to_embed: list[Document], db_persist_path: str, 
             persist_directory=db_persist_path
         )
 
-        # Process remaining batches
         if len(chunks_to_embed) > BATCH_SIZE:
             for i in range(BATCH_SIZE, len(chunks_to_embed), BATCH_SIZE):
                 batch = chunks_to_embed[i : i + BATCH_SIZE]
@@ -119,7 +125,6 @@ def build_and_persist_db(chunks_to_embed: list[Document], db_persist_path: str, 
     
     except Exception as e:
         logging.error(f"ERROR creating DB for '{db_name_for_log}': {e}", exc_info=True)
-    # --- BATCHING LOGIC END ---
 
 if __name__ == "__main__":
     overall_start_time = time.time()
@@ -137,7 +142,7 @@ if __name__ == "__main__":
     
     logging.info(f"Initializing embedding model: {config.EMBEDDING_MODEL_NAME}...")
 
-    # --- UNIVERSAL HARDWARE DETECTION ---
+    # Hardware Detection
     if torch.cuda.is_available():
         device_type = "cuda"
         logging.info("Hardware acceleration: NVIDIA CUDA detected.")
@@ -162,15 +167,17 @@ if __name__ == "__main__":
     all_documents_for_global_db = [] 
     category_specific_documents = {} 
 
-    # Process Root README
-    root_readme_path = root_path / "README.md"
-    if root_readme_path.is_file():
-        logging.info(f"\nProcessing root README: {root_readme_path.name}")
+    # --- UPDATED: Process Root Markdown Files (looking for *.md) ---
+    root_md_files = list(root_path.glob("*.md"))
+    for root_file in root_md_files:
+        if root_file.name.startswith("._") or ".DS_Store" in str(root_file):
+            continue
+        logging.info(f"\nProcessing root file: {root_file.name}")
         docs_root = load_and_parse_single_readme_file_with_metadata(
-            str(root_readme_path), str(root_path), "_root_"
+            str(root_file), str(root_path), "_root_"
         )
         all_documents_for_global_db.extend(docs_root)
-        logging.info(f"Found {len(docs_root)} document sections in root README.")
+        logging.info(f"Found {len(docs_root)} document sections in {root_file.name}.")
 
     # Process Categories in Parallel
     subfolders = [item for item in root_path.iterdir() if item.is_dir() and not item.name.startswith('.')]

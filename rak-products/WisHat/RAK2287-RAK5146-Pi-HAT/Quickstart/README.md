@@ -1,1 +1,0 @@
-<rk-redirect to="/Product-Categories/WisHat/RAK2287-RAK5146-Pi-HAT/Datasheet/" />
