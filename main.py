@@ -21,14 +21,18 @@ import torch
 import config
 from utils import get_product_categories
 
-# --- LangChain Components ---
+# --- LangChain Components (Only Retrieval) ---
 from langchain_huggingface import HuggingFaceEmbeddings
+
+try:
+    from langchain_huggingface import HuggingFaceCrossEncoder
+except ImportError:
+    from langchain_community.cross_encoders import HuggingFaceCrossEncoder
+
 from langchain_chroma import Chroma
 from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import CrossEncoderReranker
 from langchain_core.documents import Document
-
-# --- OPTIMIZED CPU RERANKER (FlashRank) ---
-from langchain_community.document_compressors.flashrank_rerank import FlashrankRerank
 
 # --- OpenAI Raw Client ---
 from openai import AsyncOpenAI
@@ -70,36 +74,30 @@ async def lifespan(app: FastAPI):
         device_type = "cpu"
         logging.info("Hardware acceleration: None. Using CPU.")
 
-    # 2. Load Embedding Model
-    logging.info(f"Loading Embedding Model: {config.EMBEDDING_MODEL_NAME}")
+    # 2. Load Embedding & Reranker
     ml_models["embedding_model"] = HuggingFaceEmbeddings(
         model_name=config.EMBEDDING_MODEL_NAME, 
         model_kwargs={'device': device_type}, 
         encode_kwargs={'normalize_embeddings': True}
     )
     
-    # 3. Load Optimized Reranker (FlashRank)
-    logging.info("Loading Optimized CPU Reranker (FlashRank)...")
-    
-    # --- FIX: Removed 'cache_dir' as it causes Pydantic validation error ---
-    ml_models["reranker_model"] = FlashrankRerank(
-        model="ms-marco-MiniLM-L-12-v2", 
-        top_n=config.BEST_FINAL_K
+    logging.info(f"Loading Reranker: {config.BEST_RERANKER_MODEL}")
+    ml_models["reranker_model"] = HuggingFaceCrossEncoder(
+        model_name=config.BEST_RERANKER_MODEL, 
+        model_kwargs={'device': 'cpu'} 
     )
     
-    # 4. Load OpenAI Client
+    # 3. Load OpenAI Client
     api_key = os.getenv("OPENAI_API_KEY")
     ml_models["openai_client"] = AsyncOpenAI(api_key=api_key)
     
     logging.info(f"AsyncOpenAI Client initialized for model: {config.OPENAI_MODEL_NAME}")
     
-    # 5. Load Retrievers
+    # 4. Load Retrievers
     categories = get_product_categories(config.DATA_DIRECTORY)
     retrievers = {}
     embedding_func = ml_models["embedding_model"]
     reranker = ml_models["reranker_model"]
-    
-    logging.info("Building retrievers for categories...")
     
     for category_name in categories:
         db_name = config.GLOBAL_DB_NAME if category_name == "All Categories (Global DB)" else f"{category_name.lower().replace(' ', '_').replace('-', '_')}_db"
@@ -110,7 +108,6 @@ async def lifespan(app: FastAPI):
             
         vector_store = Chroma(persist_directory=str(db_path), embedding_function=embedding_func)
         
-        # Base Retriever (MMR for diversity)
         base_retriever = vector_store.as_retriever(
             search_type="mmr",
             search_kwargs={
@@ -120,9 +117,9 @@ async def lifespan(app: FastAPI):
             } 
         )
         
-        # Final Retriever (FlashRank for precision)
+        compressor = CrossEncoderReranker(model=reranker, top_n=config.BEST_FINAL_K)
         final_retriever = ContextualCompressionRetriever(
-            base_compressor=reranker, 
+            base_compressor=compressor, 
             base_retriever=base_retriever
         )
         
@@ -152,7 +149,7 @@ def get_eol_products_from_query(query: str) -> List[str]:
 def is_document_eol(doc: Document) -> bool:
     """
     Checks if a document belongs to an EOL product by analyzing its path.
-    Handles paths like 'WisDuo/RAK4270-Module/...' by treating hyphens as separators.
+    Updated to handle hyphens and underscores (e.g., RAK4270-Module).
     """
     doc_path = doc.metadata.get("relative_path", "")
     if not doc_path: return False
@@ -224,13 +221,11 @@ async def chat_endpoint(request: ChatRequest):
     retrieval_start = datetime.now()
     
     loop = asyncio.get_running_loop()
-    
-    # Run retrieval in thread pool
     retrieved_docs = await loop.run_in_executor(None, retriever.invoke, final_search_query)
     
     logging.info(f"PHASE 2B: Found {len(retrieved_docs)} docs. Took: {(datetime.now() - retrieval_start).total_seconds():.2f}s.")
 
-    # --- DEBUGGING: Print INITIAL Sources ---
+    # --- LOGGING: Raw Retrieval ---
     logging.info("--- RETRIEVED SOURCES (RAW from DB) ---")
     for i, doc in enumerate(retrieved_docs):
         path = doc.metadata.get('relative_path', 'Unknown Source')
@@ -243,9 +238,7 @@ async def chat_endpoint(request: ChatRequest):
     context_is_all_eol = False
     
     if is_suggestion_query:
-        # FILTER: Remove EOL docs unless they are the only ones left
         active_docs = [doc for doc in retrieved_docs if not is_document_eol(doc)]
-        
         if not active_docs and retrieved_docs:
             final_docs = retrieved_docs
             context_is_all_eol = True
@@ -254,8 +247,7 @@ async def chat_endpoint(request: ChatRequest):
     else:
         final_docs = retrieved_docs
 
-    # --- DEBUGGING: Print FINAL Context Docs ---
-    # This block verifies what actually gets sent to the LLM after EOL filtering
+    # --- LOGGING: Final Filtered Context ---
     logging.info(f"--- FINAL CONTEXT DOCS PASSED TO LLM ({len(final_docs)}) ---")
     for i, doc in enumerate(final_docs):
         path = doc.metadata.get('relative_path', 'Unknown Source')
