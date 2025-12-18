@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK15003 WisBlock 32kByte FRAM Module
 
 Thank you for choosing **RAK15003 WisBlock 32kByte FRAM Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK15003 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak15003/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak15003/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK15003 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK15003.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
@@ -37,20 +35,20 @@ RAK15003 is a WisBlock FRAM module that extends the WisBlock system with an MB85
 ## Product Features
 
 * **Sensor specifications**
-    *  Temperature Range：-40&nbsp;°C to +85&nbsp;°C
-    *  I2C compatible digital interface, supports 1&nbsp;MHz
-    *  Operating power supply current 200&nbsp;uA (Max @ 1&nbsp;MHz)
-    *  Standby current 27&nbsp;uA (Typical)
+    *  Temperature Range：-40 °C to +85 °C
+    *  I2C compatible digital interface, supports 1 MHz
+    *  Operating power supply current 200 uA (Max @ 1 MHz)
+    *  Standby current 27 uA (Typical)
     *  32,768 words x 8 bits
     *  High Reliability：
        - Read/write endurance：1,000,000,000,000/byte
        - Data retention：
-           - 10 years（+85&nbsp;°C）
-           - 95 years（+55&nbsp;°C）
-           - Over 200 years（+35&nbsp;°C）
+           - 10 years（+85 °C）
+           - 95 years（+55 °C）
+           - Over 200 years（+35 °C）
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -60,6 +58,3 @@ To use a **RAK15003**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-
-<RkBottomNav/>

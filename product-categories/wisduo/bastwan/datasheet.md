@@ -12,16 +12,13 @@ slug: /product-categories/wisduo/bastwan/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3244 BastWAN Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-The **RAK3244 BastWAN Breakout Board** is designed to be compatible with the **Feather format** while leveraging the capabilities of the RAK4260 module. At its core, the board features the RAK4260, a module built around the ATSAMR34J18B SiP. This high level of integration delivers exceptional performance, including LoRa TX power of up to 20&nbsp;dBm.
+The **RAK3244 BastWAN Breakout Board** is designed to be compatible with the **Feather format** while leveraging the capabilities of the RAK4260 module. At its core, the board features the RAK4260, a module built around the ATSAMR34J18B SiP. This high level of integration delivers exceptional performance, including LoRa TX power of up to 20 dBm.
 
 A key feature of this breakout board is the ATECC606A **cryptographic co-processor**, which provides secure, hardware-based key storage. This sets the RAK3244 BastWAN apart from the RAK4200 and RAK4600 by adding an extra layer of security to future-proof your platform.
 
@@ -30,17 +27,17 @@ The board complies with LoRaWAN 1.0.2 specification, and it also supports LoRa P
 ### Features
 
 - Feather compatible with a feather-like weight of 5 grams
-- RAK4260 @ 48&nbsp;MHz with 3.3&nbsp;V logic/power
-- 256&nbsp;KB of FLASH + 32KB of RAM
-- 32.768&nbsp;kHz crystal for clock generation & RTC
-- 3.3&nbsp;V regulator with 500&nbsp;mA peak current output
+- RAK4260 @ 48 MHz with 3.3 V logic/power
+- 256 KB of FLASH + 32KB of RAM
+- 32.768 kHz crystal for clock generation & RTC
+- 3.3 V regulator with 500 mA peak current output
 - USB native support, comes with a USB bootloader and serial port debugging
 - Up to 20 GPIO pins
 - Hardware Serial, hardware I2C, hardware SPI support
 - PWM outputs on all pins
 - 6 x 12-bit analog inputs
 - 1 x 10-bit analog output (DAC)
-- Built-in 100&nbsp;mA LiPoly charging port, with LED indicator
+- Built-in 100 mA LiPoly charging port, with LED indicator
 - Programmable built-in LED for customized applications
 - Power/enable pin
 - Four (4) mounting holes
@@ -50,25 +47,15 @@ The board complies with LoRaWAN 1.0.2 specification, and it also supports LoRa P
 
 ### Overview
 
-The RAK3244 BastWAN Breakout Board is shown in **Figure 1**, which displays the top and back view of the board, respectively.<br/><br/>
+The RAK3244 BastWAN Breakout Board is shown in **Figure 1**, which displays the top and back view of the board, respectively.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244-front-back.svg"
-  width="40%"
-  caption="RAK3244 BastWAN Breakout Board Front and Back View"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Front and Back View
 
 #### Block Diagram
 
-The block diagram of the RAK3244 BastWAN illustrates the various interfaces corresponding to the functionalities outlined in the product overview. <br/><br/>
+The block diagram of the RAK3244 BastWAN illustrates the various interfaces corresponding to the functionalities outlined in the product overview. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244-block-diagram.svg"
-  width="80%"
-  caption="RAK3244 BastWAN Breakout Board Block Diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Block Diagram
 
 ### Hardware
 
@@ -78,12 +65,7 @@ The hardware specification is divided into four sections, detailing the interfac
 
 **Figure 3** shows the overview of interfaces available on the RAK3244 BastWAN Breakout Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244-interface.svg"
-  width="70%"
-  caption="RAK3244 BastWAN Breakout Board Interface Overview"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Interface Overview
 
 ##### SWD Programming Interface
 
@@ -100,12 +82,7 @@ It is recommended to leave these pins exposed for programming purposes and avoid
 
 The proper connection between the DapLink tool and RAK3244 BastWAN Breakout Board is illustrated in **Figure 4**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244_daplink.svg"
-  width="45%"
-  caption="RAK3244 BastWAN Breakout Board Pinout for DapLink tool"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Pinout for DapLink tool
 
 ##### I2C Interface
 
@@ -117,12 +94,7 @@ The RF pin of the RAK4260 module is wired to an SMA antenna connector.
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244-pinout.svg"
-  width="50%"
-  caption="RAK3244 BastWAN Breakout Board Pinout"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Pinout
 
 The following tables show the pin definition of the RAK3244 BastWAN Breakout Board:
 
@@ -188,48 +160,19 @@ The RAK3244 Breakout Board supports the following LoRa bands:
 
 ##### Sensitivity Level
 
-The following charts show the receiving sensitivity of RAK3244 BastWAN at 866&nbsp;Mhz operating frequency.<br/><br/>
+The following charts show the receiving sensitivity of RAK3244 BastWAN at 866 Mhz operating frequency.
 
+> **Image:** RAK3244 BastWAN Breakout Board Sensitivity Levels
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244_sensitivity1.png"
-  width="80%"
-  caption="RAK3244 BastWAN Breakout Board Sensitivity Levels"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Sensitivity Plot @ SF7
 
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244_sensitivity2.png"
-  width="55%"
-  caption="RAK3244 BastWAN Breakout Board Sensitivity Plot @ SF7"
-  zoomMode={true}
-/>
-
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244_sensitivity3.png"
-  width="55%"
-  caption="RAK3244 BastWAN Breakout Board Sensitivity Plot @ SF12"
-  zoomMode={true}
-/>
-
-
+> **Image:** RAK3244 BastWAN Breakout Board Sensitivity Plot @ SF12
 
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
-**Figure 9** shows the actual dimensions of the RAK3244 BastWAN Breakout Board measured in millimeters (mm). <br/><br/>
+**Figure 9** shows the actual dimensions of the RAK3244 BastWAN Breakout Board measured in millimeters (mm). 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/bastwan/datasheet/rak3244_mechanical.png"
-  width="65%"
-  caption="RAK3244 BastWAN Breakout Board Board Dimension"
-  zoomMode={true}
-/>
+> **Image:** RAK3244 BastWAN Breakout Board Board Dimension
 
-
-<RkBottomNav/>

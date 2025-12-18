@@ -16,9 +16,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisMesh Ethernet MQTT Gateway
 
 The WisMesh MQTT Ethernet Gateway connects your Meshtastic devices to the Cloud, enabling communication with the Meshtastic or your own MQTT Broker. It supports sending sensor data, location information, and text messages.
@@ -29,34 +26,26 @@ Pre-assembled and pre-flashed with the original Meshtastic `firmware-rak4631_eth
 
 For added option, the gateway can be powered via the Ethernet cable using the optional RAK19018 PoE module.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-ethernet-gateway.png"
-  width="80%"
-  caption="WisMesh Ethernet MQTT Gateway"
-/>
+> **Image:** WisMesh Ethernet MQTT Gateway
 
-This guide covers the basics for the RAKwireless Meshtastic devices that are not covered by the <a href="https://meshtastic.org/docs/introduction" target="_blank">Meshtastic documentation</a>.
+This guide covers the basics for the RAKwireless Meshtastic devices that are not covered by the [Meshtastic documentation](https://meshtastic.org/docs/introduction).
 
-For detailed instructions how to configure the devices for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/getting-started" target="_blank">Meshtastic Getting Started</a> guide.
+For detailed instructions how to configure the devices for the Meshtastic network, follow the [Meshtastic Getting Started](https://meshtastic.org/docs/getting-started) guide.
 
 You can also check the following guides:
 
 <div class="flex items-center flex-col align-center gap-2">
-  <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-basic-device-setup/" class="no-underline text-white bg-rak-primary px-[15px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Basic Device Setup </a>
+  [ Meshtastic Basic Device Setup ](https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-basic-device-setup/)
 </div>
-
-<br/>
 
 <div class="flex items-center flex-col align-center gap-2">
-  <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-gateway-setup/" class="no-underline text-white bg-rak-primary px-[25px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Gateway Setup </a>
+  [ Meshtastic Gateway Setup ](https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-gateway-setup/)
 </div>
-
 
 ----
 
 :::tip NOTE
-To ensure you are running the latest version of the Meshtastic firmware, it is advised to download the latest <a href="https://meshtastic.org/downloads" target="_blank">Meshtastic firmware</a> and upload it to your RAKwireless device to make it compatible with the Meshtastic network.
+To ensure you are running the latest version of the Meshtastic firmware, it is advised to download the latest [Meshtastic firmware](https://meshtastic.org/downloads) and upload it to your RAKwireless device to make it compatible with the Meshtastic network.
 
 For Firmware 1.3 and 2.0 (from November 1, 2022), the WisBlock Base board is autodetected. Besides JSON output to the MQTT broker, there's a special firmware for the WisMesh Ethernet MQTT Gateway. Make sure to update the device with this Meshtastic firmware.
 
@@ -69,19 +58,19 @@ Before going through each and every step on using WisMesh Ethernet MQTT Gateway,
 
 ### Hardware
 
-- <a href="https://store.rakwireless.com/products/wismesh-ethernet-gateway?variant=44413995385030?utm_source=wismesh_eth_gateway&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">WisMesh Ethernet MQTT Gateway</a>
+- [WisMesh Ethernet MQTT Gateway](https://store.rakwireless.com/products/wismesh-ethernet-gateway?variant=44413995385030?utm_source=wismesh_eth_gateway&utm_medium=Document&utm_campaign=BuyFromStore)
 
 ### Software
 
 The WisBlock Core module of the WisMesh Ethernet MQTT Gateway comes pre-flashed with the Meshtastic firmware.
 
 However, to connect the device to the Meshtastic network, you will have to configure it. The recommended way to configure the WisMesh Ethernet MQTT Gateway is using a mobile phone via a BLE connection with either of these configurations:
-- <a href="https://meshtastic.org/docs/category/android-app" target="_blank">Android App</a>
-- <a href="https://meshtastic.org/docs/category/apple-apps" target="_blank">Apple App</a>
+- [Android App](https://meshtastic.org/docs/category/android-app)
+- [Apple App](https://meshtastic.org/docs/category/apple-apps)
 
 Alternatively, the WisMesh Ethernet MQTT Gateway has an USB connector inside. With the USB connection, you can use either of these configurations:
-- <a href="https://meshtastic.org/docs/software/web-client" target="_blank">Web Client</a>
-- <a href="https://meshtastic.org/docs/software/python/cli" target="_blank">Python CLI</a>
+- [Web Client](https://meshtastic.org/docs/software/web-client)
+- [Python CLI](https://meshtastic.org/docs/software/python/cli)
 
 :::tip NOTE
 Make sure that you have installed one of these applications, as they are required for the configuration of the Meshtastic network.
@@ -93,25 +82,15 @@ To access the connector, unscrew the mounting plate inside the enclosure and lif
 
 ### Hardware Setup
 
-The WisMesh Ethernet MQTT Gateway comes fully assembled. Due to its dimensions, this WisBlock assembly is not compatible with the smaller Unify Enclosure. However, it can be mounted using a custom plate with the <a href="https://store.rakwireless.com/products/unify-enclosure-ip67-150-100-45mm" target="_blank">Unify Enclosure 150x100x45&nbsp;mm</a>.
+The WisMesh Ethernet MQTT Gateway comes fully assembled. Due to its dimensions, this WisBlock assembly is not compatible with the smaller Unify Enclosure. However, it can be mounted using a custom plate with the [Unify Enclosure 150x100x45 mm](https://store.rakwireless.com/products/unify-enclosure-ip67-150-100-45mm).
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/eth-gw-enclosure.png"
-  width="60%"
-  caption="Suggested assembly in the Unify Enclosure 150x100x45mm"
-/>
+> **Image:** Suggested assembly in the Unify Enclosure 150x100x45mm
 
 #### Connect the Ethernet Cable
 
 Connect the Ethernet cable to the RAK13800 Ethernet module, as shown in **Figure 3**
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/eth-gw-cable.png"
-  width="60%"
-  caption="Connect the Ethernet cable"
-/>
+> **Image:** Connect the Ethernet cable
 
 #### Use PoE to Supply the Device
 
@@ -120,7 +99,7 @@ If you have an PoE injector connected to the Ethernet cable, the device can be p
 The RAK19018 is a Power-over-Ethernet module used together with the RAK13800 Ethernet Interface module to draw power from CAT5/CAT6 cables. This PoE module is based on the Silvertel Ag9905MT converter board and compatible with the IEEE 802.3af PoE standard.
 
 :::tip NOTE
-More details can be found in the <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19018/datasheet" target="_blank">RAK19018 datasheet</a>.
+More details can be found in the [RAK19018 datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak19018/datasheet).
 :::
 
 #### Antennas
@@ -131,19 +110,19 @@ The WisMesh Ethernet MQTT Gateway comes with a PCB BLE antenna and a LoRa antenn
 
 ### Software Setup
 
-To ensure you are running the latest version of the Meshtastic firmware, it is advised to download the latest <a href="https://meshtastic.org/downloads" target="_blank">Meshtastic firmware</a> and upload it to your RAKwireless device to make it compatible with the Meshtastic network.
+To ensure you are running the latest version of the Meshtastic firmware, it is advised to download the latest [Meshtastic firmware](https://meshtastic.org/downloads) and upload it to your RAKwireless device to make it compatible with the Meshtastic network.
 
 For Firmware 1.3 and 2.0 (from November 1, 2022), the WisBlock Base board is autodetected. To support JSON output to the MQTT broker, there's a special firmware for the WisMesh Ethernet MQTT Gateway. Make sure to update the device with this Meshtastic firmware.
 
 - Meshtastic Ethernet MQTT Gateway with RAK4631: **`firmware-rak4631_eth_gw-w.x.yy.zzzzzzz.uf2`**
 
-<b>Flashing the WisMesh Ethernet MQTT Gateway Firmware:</b>
+**Flashing the WisMesh Ethernet MQTT Gateway Firmware:**
 
 The WisMesh Ethernet MQTT Gateway comes pre-flashed with the Meshtastic firmware. If problems occur, update the Meshtastic firmware to the latest version.
 
-- <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52" target="_blank">Guide to flash nRF52 devices</a>.
+- [Guide to flash nRF52 devices](https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52).
 
-To set up the WisMesh Ethernet MQTT Gateway for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration/" target="_blank">configuration guide</a> in the Meshtastic documentation.
+To set up the WisMesh Ethernet MQTT Gateway for the Meshtastic network, follow the [configuration guide](https://meshtastic.org/docs/configuration/) in the Meshtastic documentation.
 
 ## Tutorial - Meshtastic MQTT Gateway Setup
 
@@ -158,12 +137,7 @@ The Meshtastic MQTT Gateway comes pre-flashed with Meshtastic firmware, but its 
 
 To set up the device, connect the Meshtastic Gateway by selecting it on the Meshtastic app.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/gw-device-list-2.png"
-  width="30%"
-  caption="WisMesh devices in the Meshtastic Mobile App"
-/>
+> **Image:** WisMesh devices in the Meshtastic Mobile App
 
 :::tip NOTE
 - Set all your devices to the same _**Region**_ and _**Channel**_.
@@ -171,23 +145,13 @@ To set up the device, connect the Meshtastic Gateway by selecting it on the Mesh
 - If required, a RAK12500 GNSS module can be added to sensor Slot A.
 :::
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/gw-fixed-location.png"
-  width="30%"
-  caption="Setup fixed location"
-/>
+> **Image:** Setup fixed location
 
 ### Gateway Connections
 
 1. Connect the gateway to the internet. In this case, the RAK4631 with the RAK13800 Ethernet Module will be used.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/gw-eth-network.png"
-  width="30%"
-  caption="Ethernet setup"
-/>
+> **Image:** Ethernet setup
 
 :::warning IMPORTANT
 Below are the options for connecting the gateway through Ethernet:
@@ -197,23 +161,16 @@ Below are the options for connecting the gateway through Ethernet:
 
 2. Set up the connection to the MQTT broker.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/gw-mqtt-settings.png"
-  width="30%"
-  caption="MQTT setup"
-/>
+> **Image:** MQTT setup
 
 :::tip NOTE
-- The MQTT broker used here is the free MQTT broker provided by Meshtastic. You can find the URL, address, username, and password in the <a href="https://meshtastic.org/docs" target="_blank">Meshtastic documentation</a>
+- The MQTT broker used here is the free MQTT broker provided by Meshtastic. You can find the URL, address, username, and password in the [Meshtastic documentation](https://meshtastic.org/docs)
 - To make parsing of the data easier, enable the JSON output.
 - To avoid too much traffic, create a custom root topic. If the root topic already existed, it will be more difficult to filter out the devices later at your end.
-- If you prefer to see the devices on the public Meshtastic maps (e.g. <a href="https://meshmap.net/" target="_blank">MeshMap.net</a>), enable **Map reporting** and set a **Map reporting interval**.
+- If you prefer to see the devices on the public Meshtastic maps (e.g. [MeshMap.net](https://meshmap.net/)), enable **Map reporting** and set a **Map reporting interval**.
 :::
 
 :::info
-A more comprehensive guide for the Meshtastic Gateway can be found in the <a href="https://github.com/beegee-tokyo/Meshtastic-Sensor-Network" target="_blank">Meshtastic-Sensor-Network</a> PoC. This includes setting up multiple sensor nodes, retrieving the sensor data from the MQTT broker, and visualizing the data in Grafana.
+A more comprehensive guide for the Meshtastic Gateway can be found in the [Meshtastic-Sensor-Network](https://github.com/beegee-tokyo/Meshtastic-Sensor-Network) PoC. This includes setting up multiple sensor nodes, retrieving the sensor data from the MQTT broker, and visualizing the data in Grafana.
 :::
 
-
-<RkBottomNav/>

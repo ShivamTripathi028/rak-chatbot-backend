@@ -10,18 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14007 WisBlock Interface Module Datasheet
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14007/datasheet/rak14007_front_back.png"
-  width="40%"
-  caption="RAK14007 WisBlock Interface Module"
-/>
+> **Image:** RAK14007 WisBlock Interface Module
 
 ### Description
 
@@ -31,7 +24,7 @@ RAK14007 is an Interface module for connecting other WisBlock modules (like RAK1
 
 - A separate joystick PCB module [RAK14013](https://docs.rakwireless.com/product-categories/wisblock/rak14013/overview/) is required
 - One (1) available connector for RAK14013 WisBlock Joystick Module.
-- Module size: 15 x 25&nbsp;mm
+- Module size: 15 x 25 mm
 
 ## Specifications
 
@@ -41,26 +34,17 @@ RAK14007 is an Interface module for connecting other WisBlock modules (like RAK1
 
 The RAK14007 module can be mounted on the IO slot of the WisBlock Base board. **Figure 2** shows the mounting mechanism of the RAK14007 on a WisBlock Base board, such as the RAK5005-O.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14007/datasheet/image_mounting.png"
-  width="60%"
-  caption="RAK14007 mounting mechanism on a WisBlock Base module"
-/>
+> **Image:** RAK14007 mounting mechanism on a WisBlock Base module
 
 ### Hardware
 
 The hardware specification is categorized into three (3) parts. It discusses the pinouts and their corresponding functions and diagrams of the module. Also, it shows the mechanical characteristics of the RAK14007 WisBlock Interface Module.
 
-
 #### Pin Definition
 
 The RAK14007 module has a 40-pin WisConnector that is compatible with the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14007/datasheet/rak14007-pinout.svg"
-  width="65%"
-  caption="RAK14007 Pinout Schematic"
-/>
+> **Image:** RAK14007 Pinout Schematic
 
 :::tip NOTE
 - **3V3_S**, **VBAT**, **I2C** related pin, **AIN1**, **IO3**, **IO4**, **IO5**, and **GND** are connected to WisConnector.
@@ -72,29 +56,17 @@ The RAK14007 module has a 40-pin WisConnector that is compatible with the WisBlo
 
 **Figure 4** shows the mechanical dimensions of the RAK14007 Module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14007/datasheet/mechanical-dimensions.png"
-  width="75%"
-  caption="RAK14007 mechanical dimensions"
-/>
+> **Image:** RAK14007 mechanical dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14007/datasheet/wisconnector-pcb.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK14007 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14007/datasheet/rak14007_schematic_diagram.png"
-  width="70%"
-  caption="RAK14007 WisBlock Interface Module schematics"
-/>
+> **Image:** RAK14007 WisBlock Interface Module schematics
 
 :::tip NOTE
 The following modules are now available to access RAK14007. There may be other modules in the future.
@@ -104,4 +76,3 @@ The following modules are now available to access RAK14007. There may be other m
 - RAK12035 and RAK14013  can connect to J3.
 :::
 
-<RkBottomNav/>

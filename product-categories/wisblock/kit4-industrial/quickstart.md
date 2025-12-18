@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock IoT Education Kit - Smart Industry Quick Start Guide
 
 ## Prerequisite
@@ -52,35 +49,15 @@ The **WisBlock IoT Education Kit - Smart Industry** comes with **RAK19007** and 
 
 - **Battery Monitoring Application - RAK4631 + RAK16002 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/rak4631-rak16002.png"
-  figureCount="1"
-  width="80%"
-  caption="RAK4631 + RAK16002 Board"
-/>
+> **Image:** RAK4631 + RAK16002 Board
 
 - **Material Classifier Application - RAK4631 + RAK12014 + RAK12029 + RAK13001 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/rak4631-all_sensors_new.png"
-  figureCount="2"
-  width="90%"
-  caption="RAK4631 + RAK12014 + RAK12029 + RAK13001 Board"
-/>
+> **Image:** RAK4631 + RAK12014 + RAK12029 + RAK13001 Board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/rak4631-all_sensors_3.png"
-  figureCount="3"
-  width="40%"
-  caption="RAK12014 connected at RAK19001 board"
-/>
+> **Image:** RAK12014 connected at RAK19001 board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/rak4631-all_sensors_2_new.png"
-  figureCount="4"
-  width="80%"
-  caption="RAK4631 + RAK12014 + RAK12029 + RAK13001 Board"
-/>
+> **Image:** RAK4631 + RAK12014 + RAK12029 + RAK13001 Board
 
 #### Assembly and Functionality Tests of WisBlock Smart Industry Modules
 
@@ -102,12 +79,7 @@ The following WisBlock Smart Industry modules listed below are used in this kit.
 
 The **Battery Monitoring LoRaWAN Application** is used to monitor the state-of-charge (SoC) of the battery used in RAKwireless devices via **TTN** or **Qubitro**. It uses **RAK16002** coulomb sensor module which is based on **LTC2941IDCB**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_battery.png"
-  figureCount="5"
-  width="60%"
-  caption="Battery Monitoring device"
-/>
+> **Image:** Battery Monitoring device
 
 ###### Battery Monitoring - TTN Registration Section and Device Registration
 
@@ -415,7 +387,6 @@ void send_lora_frame(void)
 ```
 </details>
 
-
 Before uploading the Arduino Code, there are configurations that you need to set up to ensure that the device can join a LoRaWAN Network server. The steps below will explain the default settings and how to configure them.
 
 - Set up the LoRaWAN region. The **LORAMAC_REGION** can be any of your desired region to work with. You can change this to a region that is applicable to you like `LORAMAC_REGION_US915`, `LORAMAC_REGION_AU915`, etc. Below is the table of LoRaWAN regions and their respective countries where they are used in:
@@ -465,55 +436,25 @@ uint8_t nodeAppEUI[8] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 uint8_t nodeAppKey[16] = {0x64, 0xF6, 0xCB, 0x00, 0x35, 0x2D, 0x3B, 0x99, 0x6C, 0xFB, 0x36, 0xE4, 0xCE, 0x1A, 0x08, 0x91};
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_21.png"
-  figureCount="6"
-  width="90%"
-  caption="Device's credentials registered in TTN"
-/>
+> **Image:** Device's credentials registered in TTN
 
-3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** &gt; **Board:XXXXX** &gt; **RAKwireless nRF Boards** &gt; **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** &gt; **Port** &gt; then the specific port of your board.
+3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** > **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** > **Port** > then the specific port of your board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_1.png"
-  figureCount="7"
-  width="90%"
-  caption="Selecting the RAK4631 board"
-/>
+> **Image:** Selecting the RAK4631 board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_2.png"
-  figureCount="8"
-  width="90%"
-  caption="Selecting the port of RAK4631 board"
-/>
+> **Image:** Selecting the port of RAK4631 board
 
 4. Once done, you can now upload your code. Simply click the right arrow sign at the upper left portion of your Arduino IDE. Once done, you will see the **Device programmed** notification at the bottom part of your Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_3.png"
-  figureCount="9"
-  width="90%"
-  caption="Uploading your code into your RAK4631 board"
-/>
+> **Image:** Uploading your code into your RAK4631 board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_4.png"
-  figureCount="10"
-  width="90%"
-  caption="Arduino code is successfully uploaded into your RAK4631 board"
-/>
+> **Image:** Arduino code is successfully uploaded into your RAK4631 board
 
 ###### Battery Monitoring via TTN
 
 1. To monitor the data of your **Battery Monitoring** device via **TTN**, you need to go back to your TTN account where you created your application and registered your device. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_5.png"
-  figureCount="11"
-  width="90%"
-  caption="Your Battery Monitoring device in TTN"
-/>
+> **Image:** Your Battery Monitoring device in TTN
 
 2. Then go to **Payload formatters**. Under **Formatter type**, select **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace the default code with the one below. This will decode the data from your device going to **TTN**. Once done, simply click **Save changes**.
 
@@ -544,28 +485,13 @@ function Decoder(bytes, port)
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_6.png"
-  figureCount="12"
-  width="90%"
-  caption="Payload Formatter"
-/>
+> **Image:** Payload Formatter
 
 3. Then go back to **Live data** of your device in TTN and compare it with the live data from the **Serial Monitor** of your device. You should now seeing identical results between them.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_7.png"
-  figureCount="13"
-  width="90%"
-  caption="Live data from your device in TTN"
-/>
+> **Image:** Live data from your device in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak16002_8.png"
-  figureCount="14"
-  width="90%"
-  caption="Live data from your device in its Serial Monitor"
-/>
+> **Image:** Live data from your device in its Serial Monitor
 
 ###### Battery Monitoring via Qubitro
 
@@ -573,94 +499,39 @@ This section will guide you on how to integrate your application using Qubitro.
 
 1. Go to [Qubitro Portal](https://portal.qubitro.com/login) and create your account.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_1.png"
-  figureCount="15"
-  width="80%"
-  caption="Creating Qubitro Account"
-/>
+> **Image:** Creating Qubitro Account
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_2.png"
-  figureCount="16"
-  width="80%"
-  caption="Creating Qubitro Account"
-/>
+> **Image:** Creating Qubitro Account
 
 2. Once done with the account creation, login into your **Qubitro Account**. Then click **New Project**, then fill out your desired **Name**, as well as the **Description** based on your battery monitoring application, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_3.png"
-  figureCount="17"
-  width="80%"
-  caption="Creating New Project"
-/>
+> **Image:** Creating New Project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_4.png"
-  figureCount="18"
-  width="80%"
-  caption="Creating New Project"
-/>
+> **Image:** Creating New Project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_5.png"
-  figureCount="19"
-  width="80%"
-  caption="Created New Project"
-/>
+> **Image:** Created New Project
 
 3. Then click into your newly-created project then click **New source**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_6.png"
-  figureCount="20"
-  width="80%"
-  caption="Adding New source"
-/>
+> **Image:** Adding New source
 
 4. Among the data sources, choose **The Things Stack**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_7.png"
-  figureCount="21"
-  width="80%"
-  caption="Choosing The Things Stack"
-/>
+> **Image:** Choosing The Things Stack
 
 5. For the **integration type**, choose **Import from network**, then copy and paste the **PROJECT ID** and **WEBHOOK SIGNING KEY** temporarily to notepad. These credentials will be used on the later part, then click **Go to project**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_8.png"
-  figureCount="22"
-  width="80%"
-  caption="Copying the credentials"
-/>
+> **Image:** Copying the credentials
 
-6. Then head back to your **TTN Application** where you created your battery monitoring application to add webhook from it. To do this, just click your device then go to **Integrations** &gt; **Webhooks** &gt; **+ Add webhook**.
+6. Then head back to your **TTN Application** where you created your battery monitoring application to add webhook from it. To do this, just click your device then go to **Integrations** > **Webhooks** > **+ Add webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_9.png"
-  figureCount="23"
-  width="80%"
-  caption="Going to your TTN application for your Battery Monitoring Application"
-/>
+> **Image:** Going to your TTN application for your Battery Monitoring Application
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_10.png"
-  figureCount="24"
-  width="80%"
-  caption="Adding Webhook"
-/>
+> **Image:** Adding Webhook
 
 7. Then choose **Qubitro** as your webhook template.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_11.png"
-  figureCount="25"
-  width="80%"
-  caption="Qubitro"
-/>
+> **Image:** Qubitro
 
 8. Then fill in the needed details:
    - **Webhook ID** - For this example, you can use **battery-monitoring-application**.
@@ -669,58 +540,23 @@ This section will guide you on how to integrate your application using Qubitro.
 
    Then click **Create Qubitro webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_12.png"
-  figureCount="26"
-  width="80%"
-  caption="Creating Qubitro webhook"
-/>
+> **Image:** Creating Qubitro webhook
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_13.png"
-  figureCount="27"
-  width="80%"
-  caption="Added a Qubitro webhook"
-/>
+> **Image:** Added a Qubitro webhook
 
 9. After you created your webhook, go back to your **Qubitro** platform to check the changes made. Refresh **Qubitro** by clicking the **Refresh** button on the upper right side of your screen. You will notice that a newly-added device is included in the platform.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_14.png"
-  figureCount="28"
-  width="80%"
-  caption="Refreshing Qubitro to add devices into it"
-/>
+> **Image:** Refreshing Qubitro to add devices into it
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_15.png"
-  figureCount="29"
-  width="80%"
-  caption="Device successfully included in Qubitro"
-/>
+> **Image:** Device successfully included in Qubitro
 
-10. To add the decoder, simply go to **Functions** &gt; **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
+10. To add the decoder, simply go to **Functions** > **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_16.png"
-  figureCount="30"
-  width="80%"
-  caption="Creating Function"
-/>
+> **Image:** Creating Function
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_17.png"
-  figureCount="31"
-  width="80%"
-  caption="Decoder Function"
-/>
+> **Image:** Decoder Function
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_18.png"
-  figureCount="32"
-  width="80%"
-  caption="Function Configuration"
-/>
+> **Image:** Function Configuration
 
 11. Under the **Formatter type**, choose **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace its default entry with the code below:
 
@@ -753,238 +589,83 @@ function Decoder(bytes, port)
 
 Once done, simply click **Save and complete**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_19.png"
-  figureCount="33"
-  width="80%"
-  caption="Function Configuration"
-/>
+> **Image:** Function Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_20.png"
-  figureCount="34"
-  width="80%"
-  caption="Created Decoder Function"
-/>
+> **Image:** Created Decoder Function
 
 12. Then go to your device and click on the **Data** tab to check for the incoming data coming from your device. You should now be seeing live data from your device. To gather the most recent data, simply click **Refresh**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_21.png"
-  figureCount="35"
-  width="80%"
-  caption="Data Tab"
-/>
+> **Image:** Data Tab
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_22.png"
-  figureCount="36"
-  width="80%"
-  caption="Historical Data"
-/>
+> **Image:** Historical Data
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_23.png"
-  figureCount="37"
-  width="80%"
-  caption="Refreshing data to get newer ones"
-/>
+> **Image:** Refreshing data to get newer ones
 
-13. To add a monitoring dashboard for the data from the battery monitoring device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** &gt; **New dashboard** &gt; **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
+13. To add a monitoring dashboard for the data from the battery monitoring device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** > **New dashboard** > **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_24.png"
-  figureCount="38"
-  width="80%"
-  caption="Creating dashboard for your Battery Monitoring device"
-/>
+> **Image:** Creating dashboard for your Battery Monitoring device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_25.png"
-  figureCount="39"
-  width="80%"
-  caption="Creating dashboard for your Battery Monitoring device"
-/>
+> **Image:** Creating dashboard for your Battery Monitoring device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_26.png"
-  figureCount="40"
-  width="80%"
-  caption="Creating dashboard for your Battery Monitoring device"
-/>
+> **Image:** Creating dashboard for your Battery Monitoring device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_27.png"
-  figureCount="41"
-  width="80%"
-  caption="Newly-created dashboard for your Battery Monitoring device"
-/>
+> **Image:** Newly-created dashboard for your Battery Monitoring device
 
-14. Click **Edit** &gt; **New widget** to add a widget for a specific parameter need to be monitored.
+14. Click **Edit** > **New widget** to add a widget for a specific parameter need to be monitored.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_28.png"
-  figureCount="42"
-  width="80%"
-  caption="Adding a widget"
-/>
+> **Image:** Adding a widget
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_29.png"
-  figureCount="43"
-  width="80%"
-  caption="Adding a widget"
-/>
+> **Image:** Adding a widget
 
 15. Once done, you're now at the **Widget Configuration**. At the **WIDGET TYPE**, choose **Chart**. Then provide the name of the parameter under **SHOW WIDGET NAME**. Once done, proceed to **Add point +**. Choose your **existing project**, **application** and the **specific parameter** you need to monitor in your dashboard. Once done, just click **Save**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_30.png"
-  figureCount="44"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_31.png"
-  figureCount="45"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_32.png"
-  figureCount="46"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_33.png"
-  figureCount="47"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_34.png"
-  figureCount="48"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_35.png"
-  figureCount="49"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_36.png"
-  figureCount="50"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_37.png"
-  figureCount="51"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_38.png"
-  figureCount="52"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
 16. Now you have an existing preview of your data from your device. Under **CHART TYPE** at the left side of your screen, choose **Line**. Once done, go to **STANDARD OPTIONS** to choose the appropriate unit for your parameter to be monitored in the dashboard. Once done, click **Save widget**. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_39.png"
-  figureCount="53"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_40.png"
-  figureCount="54"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_41.png"
-  figureCount="55"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_42.png"
-  figureCount="56"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_43.png"
-  figureCount="57"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_44.png"
-  figureCount="58"
-  width="100%"
-  caption="Saving the changes made in your Widget Configuration"
-/>
+> **Image:** Saving the changes made in your Widget Configuration
 
 17. Then click **Save changes** to include the data of parameter. Then you have now the newly-made widget for your specific parameter.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_45.png"
-  figureCount="59"
-  width="100%"
-  caption="Save changes"
-/>
+> **Image:** Save changes
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_46.png"
-  figureCount="60"
-  width="100%"
-  caption="Newly-made widget"
-/>
+> **Image:** Newly-made widget
 
-18. In able for you to include additional widgets for other parameters, you need to click **Edit** &gt; **New widget** then repeat **Step 15** to **Step 17**.
+18. In able for you to include additional widgets for other parameters, you need to click **Edit** > **New widget** then repeat **Step 15** to **Step 17**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_47.png"
-  figureCount="61"
-  width="100%"
-  caption="Adding widgets into your dashboard"
-/>
+> **Image:** Adding widgets into your dashboard
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_48.png"
-  figureCount="62"
-  width="100%"
-  caption="Adding widgets into your dashboard"
-/>
+> **Image:** Adding widgets into your dashboard
 
 19. Then there you have it a real-time monitoring dashboard for your battery monitoring device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/qub_49.png"
-  figureCount="63"
-  width="100%"
-  caption="Monitoring dashboard for your battery monitoring device"
-/>
+> **Image:** Monitoring dashboard for your battery monitoring device
 
 [Back](#lorawan-applications-for-wisblock-smart-industry-kit-using-ttn-and-quibitro)
 
@@ -992,12 +673,7 @@ Once done, simply click **Save and complete**.
 
 The **Material Classifier LoRaWAN Application** is used to monitor the distance to a certain material and at the same time, it determines whether a material is metallic or non-metallic via **TTN** or **Qubitro**. It uses **RAK12014** module responsible for accurate distance measurement based on **VL53L0X**, **RAK12029** module responsible for metal detection based on **LDC1614**, and **RAK13001** relay module that can control an external device once a metallic material is detected.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_object_new.png" 
-  figureCount="64"
-  width="80%"
-  caption="Material Classifier device"
-/>
+> **Image:** Material Classifier device
 
 ###### Material Classifier - TTN Registration Section and Device Registration
 
@@ -1394,55 +1070,26 @@ uint8_t nodeDeviceEUI[8] = { 0xAC, 0x1F, 0x09, 0xFF, 0xFE, 0x06, 0xD3, 0xE9 };
 uint8_t nodeAppEUI[8] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 uint8_t nodeAppKey[16] = { 0xC0, 0x81, 0xBB, 0x65, 0x54, 0xCF, 0xF7, 0x65, 0x87, 0x70, 0xFD, 0x31, 0x7F, 0x01, 0x87, 0x51 };
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_5.png"
-  figureCount="65"
-  width="90%"
-  caption="Device's credentials registered in TTN"
-/>
 
-3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** &gt; **Board:XXXXX** &gt; **RAKwireless nRF Boards** &gt; **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** &gt; **Port** &gt; then the specific port of your board.
+> **Image:** Device's credentials registered in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_1.png"
-  figureCount="66"
-  width="90%"
-  caption="Selecting the RAK4631 board"
-/>
+3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** > **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** > **Port** > then the specific port of your board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_2.png"
-  figureCount="67"
-  width="90%"
-  caption="Selecting the port of RAK4631 board"
-/>
+> **Image:** Selecting the RAK4631 board
+
+> **Image:** Selecting the port of RAK4631 board
 
 4. Once done, you can now upload your code. Simply click the right arrow sign at the upper left portion of your Arduino IDE. Once done, you will see the **Device programmed** notification at the bottom part of your Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_3.png"
-  figureCount="68"
-  width="90%"
-  caption="Uploading your code into your RAK4631 board"
-/>
+> **Image:** Uploading your code into your RAK4631 board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_4.png"
-  figureCount="69"
-  width="90%"
-  caption="Arduino code is successfully uploaded into your RAK4631 board"
-/>
+> **Image:** Arduino code is successfully uploaded into your RAK4631 board
 
 ###### Material Classifier via TTN
 
 1. To monitor the data of your **Material Classifier** device via **TTN**, you need to go back to your TTN account where you created your application and registered your device. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_6.png"
-  figureCount="70"
-  width="90%"
-  caption="Your Battery Monitoring device in TTN"
-/>
+> **Image:** Your Battery Monitoring device in TTN
 
 2. Then go to **Payload formatters**. Under **Formatter type**, select **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace the default code with the one below. This will decode the data from your device going to **TTN**. Once done, simply click **Save changes**.
 
@@ -1473,28 +1120,13 @@ function Decoder(bytes, port)
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_7.png"
-  figureCount="71"
-  width="90%"
-  caption="Payload Formatter"
-/>
+> **Image:** Payload Formatter
 
 3. Then go back to **Live data** of your device in TTN and compare it with the live data from the **Serial Monitor** of your device. You should now seeing identical results between them.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_8.png"
-  figureCount="72"
-  width="90%"
-  caption="Live data from your device in TTN"
-/>
+> **Image:** Live data from your device in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_rak12014_9.png"
-  figureCount="73"
-  width="90%"
-  caption="Live data from your device in its Serial Monitor"
-/>
+> **Image:** Live data from your device in its Serial Monitor
 
 ###### Material Classifier via Qubitro
 
@@ -1502,94 +1134,39 @@ This section will guide you on how to integrate your application using Qubitro.
 
 1. Go to [Qubitro Portal](https://portal.qubitro.com/login) and create your account.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_1.png"
-  figureCount="74"
-  width="80%"
-  caption="Creating Qubitro Account"
-/>
+> **Image:** Creating Qubitro Account
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_2.png"
-  figureCount="75"
-  width="80%"
-  caption="Creating Qubitro Account"
-/>
+> **Image:** Creating Qubitro Account
 
 2. Once done with the account creation, login into your **Qubitro Account**. Then click **New Project**, then fill out your desired **Name**, as well as the **Description** based on your material classifier application, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_3.png"
-  figureCount="76"
-  width="80%"
-  caption="Creating New Project"
-/>
+> **Image:** Creating New Project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_4.png"
-  figureCount="77"
-  width="80%"
-  caption="Creating New Project"
-/>
+> **Image:** Creating New Project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_5.png"
-  figureCount="78"
-  width="80%"
-  caption="Created New Project"
-/>
+> **Image:** Created New Project
 
 3. Then click into your newly-created project then click **New source**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_6.png"
-  figureCount="79"
-  width="80%"
-  caption="Adding New source"
-/>
+> **Image:** Adding New source
 
 4. Among the data sources, choose **The Things Stack**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_7.png"
-  figureCount="80"
-  width="80%"
-  caption="Choosing The Things Stack"
-/>
+> **Image:** Choosing The Things Stack
 
 5. For the **integration type**, choose **Import from network**, then copy and paste the **PROJECT ID** and **WEBHOOK SIGNING KEY** temporarily to notepad. These credentials will be used on the later part, then click **Go to project**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_8.png"
-  figureCount="81"
-  width="80%"
-  caption="Copying the credentials"
-/>
+> **Image:** Copying the credentials
 
-6. Then head back to your **TTN Application** where you created your material classifier application to add webhook from it. To do this, just click your device then go to **Integrations** &gt; **Webhooks** &gt; **+ Add webhook**.
+6. Then head back to your **TTN Application** where you created your material classifier application to add webhook from it. To do this, just click your device then go to **Integrations** > **Webhooks** > **+ Add webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_9.png"
-  figureCount="82"
-  width="80%"
-  caption="Going to your TTN application for your Battery Monitoring Application"
-/>
+> **Image:** Going to your TTN application for your Battery Monitoring Application
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_10.png"
-  figureCount="83"
-  width="80%"
-  caption="Adding Webhook"
-/>
+> **Image:** Adding Webhook
 
 7. Then choose **Qubitro** as your webhook template.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_11.png"
-  figureCount="84"
-  width="80%"
-  caption="Qubitro"
-/>
+> **Image:** Qubitro
 
 8. Then fill in the needed details:
    - **Webhook ID** - For this example, you can use **material-classifier-application**.
@@ -1598,58 +1175,23 @@ This section will guide you on how to integrate your application using Qubitro.
 
    Then click **Create Qubitro webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_12.png"
-  figureCount="85"
-  width="80%"
-  caption="Creating Qubitro webhook"
-/>
+> **Image:** Creating Qubitro webhook
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_13.png"
-  figureCount="86"
-  width="80%"
-  caption="Added a Qubitro webhook"
-/>
+> **Image:** Added a Qubitro webhook
 
 9. After you created your webhook, go back to your **Qubitro** platform to check the changes made. Refresh **Qubitro** by clicking the **Refresh** button on the upper right side of your screen. You will notice that a newly-added device is included in the platform.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_14.png"
-  figureCount="87"
-  width="80%"
-  caption="Refreshing Qubitro to add devices into it"
-/>
+> **Image:** Refreshing Qubitro to add devices into it
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_15.png"
-  figureCount="88"
-  width="80%"
-  caption="Device successfully included in Qubitro"
-/>
+> **Image:** Device successfully included in Qubitro
 
-10. To add the decoder, simply go to **Functions** &gt; **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
+10. To add the decoder, simply go to **Functions** > **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_16.png"
-  figureCount="89"
-  width="80%"
-  caption="Creating Function"
-/>
+> **Image:** Creating Function
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_17.png"
-  figureCount="90"
-  width="80%"
-  caption="Decoder Function"
-/>
+> **Image:** Decoder Function
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_18.png"
-  figureCount="91"
-  width="80%"
-  caption="Function Configuration"
-/>
+> **Image:** Function Configuration
 
 11. Under the **Formatter type**, choose **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace its default entry with the code below:
 
@@ -1682,238 +1224,83 @@ function Decoder(bytes, port)
 
 Once done, simply click **Save and complete**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_19.png"
-  figureCount="92"
-  width="80%"
-  caption="Function Configuration"
-/>
+> **Image:** Function Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_20.png"
-  figureCount="93"
-  width="80%"
-  caption="Created Decoder Function"
-/>
+> **Image:** Created Decoder Function
 
 12. Then go to your device and click on the **Data** tab to check for the incoming data coming from your device. You should now be seeing live data from your device. To gather the most recent data, simply click **Refresh**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_21.png"
-  figureCount="94"
-  width="80%"
-  caption="Data Tab"
-/>
+> **Image:** Data Tab
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_22.png"
-  figureCount="95"
-  width="80%"
-  caption="Historical Data"
-/>
+> **Image:** Historical Data
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_23.png"
-  figureCount="96"
-  width="80%"
-  caption="Refreshing data to get newer ones"
-/>
+> **Image:** Refreshing data to get newer ones
 
-13. To add a monitoring dashboard for the data from the material classifier device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** &gt; **New dashboard** &gt; **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
+13. To add a monitoring dashboard for the data from the material classifier device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** > **New dashboard** > **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_24.png"
-  figureCount="97"
-  width="80%"
-  caption="Creating dashboard for your Material Classifier device"
-/>
+> **Image:** Creating dashboard for your Material Classifier device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_25.png"
-  figureCount="98"
-  width="80%"
-  caption="Creating dashboard for your Material Classifier device"
-/>
+> **Image:** Creating dashboard for your Material Classifier device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_26.png"
-  figureCount="99"
-  width="80%"
-  caption="Creating dashboard for your Material Classifier device"
-/>
+> **Image:** Creating dashboard for your Material Classifier device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_27.png"
-  figureCount="100"
-  width="80%"
-  caption="Newly-created dashboard for your Material Classifier device"
-/>
+> **Image:** Newly-created dashboard for your Material Classifier device
 
 14. Click **Edit** > **New widget** to add a widget for a specific parameter need to be monitored.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_28.png"
-  figureCount="101"
-  width="80%"
-  caption="Adding a widget"
-/>
+> **Image:** Adding a widget
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_29.png"
-  figureCount="102"
-  width="80%"
-  caption="Adding a widget"
-/>
+> **Image:** Adding a widget
 
 15. Once done, you're now at the **Widget Configuration**. At the **WIDGET TYPE**, choose **Chart**. Then provide the name of the parameter under **SHOW WIDGET NAME**. Once done, proceed to **Add point +**. Choose your **existing project**, **application** and the **specific parameter** you need to monitor in your dashboard. Once done, just click **Save**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_30.png"
-  figureCount="103"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_31.png"
-  figureCount="104"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_32.png"
-  figureCount="105"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_33.png"
-  figureCount="106"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_34.png"
-  figureCount="107"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_35.png"
-  figureCount="108"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_36.png"
-  figureCount="109"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_37.png"
-  figureCount="110"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_38.png"
-  figureCount="111"
-  width="100%"
-  caption="Connect Data Point"
-/>
+> **Image:** Connect Data Point
 
 16. Now you have an existing preview of your data from your device. Under **CHART TYPE** at the left side of your screen, choose **Line**. Once done, go to **STANDARD OPTIONS** to choose the appropriate unit for your parameter to be monitored in the dashboard. Once done, click **Save widget**. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_39.png"
-  figureCount="112"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_40.png"
-  figureCount="113"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_41.png"
-  figureCount="114"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_42.png"
-  figureCount="115"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_43.png"
-  figureCount="116"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_44.png"
-  figureCount="117"
-  width="100%"
-  caption="Saving the changes made in your Widget Configuration"
-/>
+> **Image:** Saving the changes made in your Widget Configuration
 
 17. Then click **Save changes** to include the data of parameter. Then you have now the newly-made widget for your specific parameter.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_45.png"
-  figureCount="118"
-  width="100%"
-  caption="Save changes"
-/>
+> **Image:** Save changes
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_46.png"
-  figureCount="119"
-  width="100%"
-  caption="Newly-made widget"
-/>
+> **Image:** Newly-made widget
 
-18. In able for you to include additional widgets for other parameters, you need to click **Edit** &gt; **New widget** then repeat **Step 15** to **Step 17**.
+18. In able for you to include additional widgets for other parameters, you need to click **Edit** > **New widget** then repeat **Step 15** to **Step 17**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_47.png"
-  figureCount="120"
-  width="100%"
-  caption="Adding widgets into your dashboard"
-/>
+> **Image:** Adding widgets into your dashboard
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_48.png"
-  figureCount="121"
-  width="100%"
-  caption="Adding widgets into your dashboard"
-/>
+> **Image:** Adding widgets into your dashboard
 
 19. Then there you have it a real-time monitoring dashboard for your material classifier device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/mc_qub_49.png"
-  figureCount="122"
-  width="100%"
-  caption="Monitoring dashboard for your material classifier device"
-/>
+> **Image:** Monitoring dashboard for your material classifier device
 
 [Back](#lorawan-applications-for-wisblock-smart-industry-kit-using-ttn-and-quibitro)
 
@@ -1923,74 +1310,29 @@ Once done, simply click **Save and complete**.
 
 1. The first step is to go to [The Things Network](https://www.thethingsnetwork.org/) and sign up an account shown in the figure below. Then select a cluster as shown in the figure below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_1.png"
-  figureCount="123"
-  width="90%"
-  caption="Signing up an account in TTN"
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_2.png"
-  figureCount="124"
-  width="90%"
-  caption="Signing up an account in TTN"
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_3.png"
-  figureCount="125"
-  width="90%"
-  caption="Selecting Cluster in TTN"
-/>
+> **Image:** Selecting Cluster in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_4.png"
-  figureCount="126"
-  width="90%"
-  caption="Signing up through the Things ID"
-/>
+> **Image:** Signing up through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_5.png"
-  figureCount="127"
-  width="90%"
-  caption="Creation of an account through the Things ID"
-/>
+> **Image:** Creation of an account through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_6.png"
-  figureCount="128"
-  width="90%"
-  caption="Creation of an account through the Things ID"
-/>
+> **Image:** Creation of an account through the Things ID
 
 You can use the same login credentials on the TTN V2 if you have one. If you have no account yet, you need to create one.
 
 2. Now that you are logged in to the platform, the next step is to create an application. Click **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_7.png"
-  figureCount="129"
-  width="90%"
-  caption="The Things Stack Platform"
-/>
+> **Image:** The Things Stack Platform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_8.png"
-  figureCount="130"
-  width="90%"
-  caption="Creating TTN Application of your LoRaWAN devices"
-/>
+> **Image:** Creating TTN Application of your LoRaWAN devices
 
 3. To have an application registered, input first the specific details and necessary information about your application then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_10.png"
-  figureCount="131"
-  width="70%"
-  caption="Details of the TTN application"
-/>
+> **Image:** Details of the TTN application
 
 :::tip NOTE
 
@@ -2013,53 +1355,23 @@ Above procedures are applicable to all applications you will be using.
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+ Register end device**, as shown below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_11.png"
-  figureCount="132"
-  width="90%"
-  caption="Register End Device"
-/>
+> **Image:** Register End Device
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_12.png"
-  figureCount="133"
-  width="60%"
-  caption="Enter end device specifics manually"
-/>
+> **Image:** Enter end device specifics manually
 
 3. Next step is to set up **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported. Then provide the **JoinEUI** credentials by entering zeroes into it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_13.png"
-  figureCount="134"
-  width="70%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_14.png"
-  figureCount="135"
-  width="60%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
 4. Then click **Show advanced activation, LoRaWAN class and cluster settings**. Configure the activation mode by selecting **Over the air activation (OTAA)** and Additional LoRaWAN class capabilities to **class A only**. Then click **Confirm**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_15.png"
-  figureCount="136"
-  width="60%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_16.png"
-  figureCount="137"
-  width="50%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
 5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. This will automatically generate the specific End
 device ID of your board. Then click **Generate** under **AppKey** under Provisioning information section. Once done, you need to change the **End device ID** since it is automatically prefilled using the **DevEUI** of your device. Then click **Register end device**.
@@ -2074,33 +1386,13 @@ device ID of your board. Then click **Generate** under **AppKey** under Provisio
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_17.png"
-  figureCount="138"
-  width="50%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_18.png"
-  figureCount="139"
-  width="50%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_19.png"
-  figureCount="140"
-  width="50%"
-  caption="Changing the End device ID"
-/>
+> **Image:** Changing the End device ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_20.png"
-  figureCount="141"
-  width="50%"
-  caption="Register End Device"
-/>
+> **Image:** Register End Device
 
 6. You should now be able to see the device on the TTN console after you fully register your device, as shown below.
 
@@ -2111,12 +1403,7 @@ device ID of your board. Then click **Generate** under **AppKey** under Provisio
 - These parameters are always accessible on the device console page, as highlighted in the figure below.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_21.png"
-  figureCount="142"
-  width="90%"
-  caption="OTAA device successfully registered to TTN"
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 :::tip NOTE
 
@@ -2131,65 +1418,25 @@ Above procedures are applicable to all applications you will be using.
 
 1. Download the [Arduino IDE](https://www.arduino.cc/en/software) and install it on your PC or laptop. You must choose the appropriate **Arduino IDE** depending on your operating system.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_22.png"
-  figureCount="143"
-  width="80%"
-  caption="Download Options for the Arduino IDE"
-/>
+> **Image:** Download Options for the Arduino IDE
 
-2. Open the **Arduino IDE** then install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE. Click on **File** &gt; **Preference**. In the **Preference** window, look for **Additional Boards Manager URLs** then click the icon on the right side. Paste the link into it then click **OK** &gt; **OK**.
+2. Open the **Arduino IDE** then install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE. Click on **File** > **Preference**. In the **Preference** window, look for **Additional Boards Manager URLs** then click the icon on the right side. Paste the link into it then click **OK** > **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_23.png"
-  figureCount="144"
-  width="80%"
-  caption="Preference Set-Up"
-/>
+> **Image:** Preference Set-Up
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_24.png"
-  figureCount="145"
-  width="80%"
-  caption="Preference Window"
-/>
+> **Image:** Preference Window
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_25.png"
-  figureCount="146"
-  width="80%"
-  caption="RAKwireless Arduino BSP"
-/>
+> **Image:** RAKwireless Arduino BSP
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_26.png"
-  figureCount="147"
-  width="80%"
-  caption="Completing the setup of the RAKwireless BSP support for the Arduino Board Manager"
-/>
+> **Image:** Completing the setup of the RAKwireless BSP support for the Arduino Board Manager
 
-3. Then to your **Arduino IDE**, go to **Tools** &gt; **Board:XXXXX** &gt; **Boards Manager**. Then look for **RAKwireless Boards by RAKwireless** since we will be working on with the **RAK4631 WisBlock Core**. Choose the latest version then install it. Once done, close the **Board Manager**.
+3. Then to your **Arduino IDE**, go to **Tools** > **Board:XXXXX** > **Boards Manager**. Then look for **RAKwireless Boards by RAKwireless** since we will be working on with the **RAK4631 WisBlock Core**. Choose the latest version then install it. Once done, close the **Board Manager**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_27.png"
-  figureCount="148"
-  width="80%"
-  caption="Opening the Boards Manager"
-/>
+> **Image:** Opening the Boards Manager
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_28.png"
-  figureCount="149"
-  width="80%"
-  caption="Installing the RAKwireless nRF Boards"
-/>
+> **Image:** Installing the RAKwireless nRF Boards
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit4_quickstart/ttn_kit4_29.png"
-  figureCount="150"
-  width="80%"
-  caption="Successfully installed the RAKwireless nRF Boards"
-/>
+> **Image:** Successfully installed the RAKwireless nRF Boards
 
 :::tip NOTE
 
@@ -2199,9 +1446,4 @@ Above procedures are applicable to all applications you will be using.
 - For **Material Classifier**, go to this [link](#lorawan-code-for-material-classifier) once done with the installation.
 
 :::
-
-
-<RkBottomNav/>
-
-
 

@@ -11,10 +11,6 @@ image: https://images.docs.rakwireless.com/wisnode/weather-station/weather-stati
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Weather Station Monitoring Solution
 
 Thank you for choosing the **Weather Station Monitoring Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -22,7 +18,6 @@ Thank you for choosing the **Weather Station Monitoring Solution** in your aweso
 - [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisnode/weather-station/quickstart/)
 - [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisnode/weather-station/lorawan-network-server-guide/)
 - [Datasheet](https://docs.rakwireless.com/product-categories/wisnode/weather-station/datasheet/)
-
 
 ### Solution Description
 
@@ -43,35 +38,14 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 - Versatile climate assessment
 - High-strength structural design
 - IP rating: IP65
-- Support solar panel and 12&nbsp;V<sub>DC</sub> power adapter for power supply
+- Support solar panel and 12 V<sub>DC</sub> power adapter for power supply
 
 ### Package Inclusion
 
-<table>
-  <thead>
-    <tr>
-      <th>Device List</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
-      <td>Sensor Hub + Sensor Hub Installation Kit</td>
-    </tr>
-    <tr>
-      <td>1 x Micro Weather Sensor <br/> 1 x Sensor Probe IO</td>
-      <td>Sensor Probe IO + Micro Weather Sensor</td>
-    </tr>
-    <tr>
-      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
-      <td>Sensor Hub Power Adapter + Power Cable</td>
-    </tr>
-    <tr>
-      <td>1 x Cable Tie</td>
-      <td>For wiring or fixing</td>
-    </tr>
-  </tbody>
-</table>
+| Device List | Description |
+| --- | --- |
+| 1 x Sensor Hub 1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
+| 1 x Micro Weather Sensor 1 x Sensor Probe IO | Sensor Probe IO + Micro Weather Sensor |
+| 1 x Power Adapter 1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
+| 1 x Cable Tie | For wiring or fixing |
 
-<RkBottomNav/>

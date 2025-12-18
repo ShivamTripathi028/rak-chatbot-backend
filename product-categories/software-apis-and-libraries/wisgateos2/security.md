@@ -35,7 +35,8 @@ This section provides an overview of the default open ports in **WisGateOS 2**, 
 
 :::tip NOTE
 - By default, **port `8080`** is not enabled on all gateways. Currently, it is only available on **RAK7437**.
-- If you need to **manage gateway ports**, you can use the **RAK Open/Close Port Extension**.<br/>
+- If you need to **manage gateway ports**, you can use the **RAK Open/Close Port Extension**.
+
   For details, refer to the Open/Close Port documentation:  
   - [WisGateOS 2 v2.2.x or later](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#rak-openclose-port)  
   - [WisGateOS 2 v2.0.x / v2.1.x](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-20x21x#openclose-port)

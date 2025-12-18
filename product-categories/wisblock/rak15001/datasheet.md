@@ -10,44 +10,32 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK15001 WisBlock Flash Module Datasheet
 
 ## Overview
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15001/datasheet/rak15001_illustrated.png"
-  width="40%"
-  caption="RAK15001 WisBlock Flash Module"
-/>
-
-
+> **Image:** RAK15001 WisBlock Flash Module
 
 ### Description
 
-The RAK15001 is a NOR flash module with a 16&nbsp;MBit (2&nbsp;MByte) nonvolatile memory. It uses GD25Q16CNIG (16&nbsp;Mbit) from GigaDevice with standard SPI interface. In this large memory, you can save big data that your applications need to access frequently, like conversion tables, lookup tables or images, and even sound files. Compared to the EEPROM module, the RAK15001 Flash Memory module has fewer write/erase cycles, so it is not ideal as storage for constantly changing data like for sensor readings.
+The RAK15001 is a NOR flash module with a 16 MBit (2 MByte) nonvolatile memory. It uses GD25Q16CNIG (16 Mbit) from GigaDevice with standard SPI interface. In this large memory, you can save big data that your applications need to access frequently, like conversion tables, lookup tables or images, and even sound files. Compared to the EEPROM module, the RAK15001 Flash Memory module has fewer write/erase cycles, so it is not ideal as storage for constantly changing data like for sensor readings.
 
 ### Features
 
 * **Sensor specifications**
-    * 16&nbsp;Mbit (2&nbsp;MByte) capacity
+    * 16 Mbit (2 MByte) capacity
     * SPI interface: SCLK, CS#, SI, SO, WP#, HOLD#
     * Software/Hardware write protection
     * GigaDevice GD25Q16 chip
-    * Full voltage range: **2.7~3.6&nbsp;V**
-    * Standby current less than 5&nbsp;uA
-    * Temperature range: **-40&nbsp;°C to +85&nbsp;°C**
+    * Full voltage range: **2.7~3.6 V**
+    * Standby current less than 5 uA
+    * Temperature range: **-40 °C to +85 °C**
     * Chipset: GigaDevice GD25Q16CNIG
 
 * **Module Size**
-    * 10 x 10&nbsp;mm
-
+    * 10 x 10 mm
 
 ## Specifications
-
 
 ### Overview
 
@@ -55,11 +43,7 @@ The RAK15001 is a NOR flash module with a 16&nbsp;MBit (2&nbsp;MByte) nonvolatil
 
 The RAK15001 module can be mounted on slots A, B, C, or D of the WisBase board. Figure 2 shows the mounting mechanism of the RAK15001 on a WisBlock baseboard, such as the RAK5005-O.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15001/datasheet/rak15001_mounting.png"
-  width="50%"
-  caption="RAK15001 WisBlock Flash Module Mounting"
-/>
+> **Image:** RAK15001 WisBlock Flash Module Mounting
 
 ### Hardware
 
@@ -79,12 +63,7 @@ The RAK15001 WisBlock EEPROM module comprises a standard WisSensor connector. Th
 Only the **VDD**, **GND**, and **Standard SPI** related pins are connected to this module.
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15001/datasheet/rak15001_pinout.svg"
-  width="60%"
-  caption="RAK15001 WisBlock NOR Flash Pinout Diagram"
-/>
+> **Image:** RAK15001 WisBlock NOR Flash Pinout Diagram
 
 This table shows WP pin and HOLD pin connections depending on WisBlock sensor slot is used.
 
@@ -111,28 +90,13 @@ The SPI CS, SCK, MOSI and MISO pins are the same on any sensor slot selected.
 
 Figure 4 shows the dimensions and the mechanical drawing of the RAK15001 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15001/datasheet/rak15001_mechanic_drawing.png"
-  width="60%"
-  caption="RAK15001 WisBlock NOR Flash Mechanical Drawing"
-/>
+> **Image:** RAK15001 WisBlock NOR Flash Mechanical Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15001/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
-
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
+> **Image:** RAK15001 WisBlock NOR Flash Schematic
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15001/datasheet/schematic.png"
-  width="100%"
-  caption="RAK15001 WisBlock NOR Flash Schematic"
-/>
-
-<RkBottomNav/>

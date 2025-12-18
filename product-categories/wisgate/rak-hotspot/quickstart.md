@@ -10,9 +10,6 @@ sidebar_label: Quick Start Guide
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK Hotspot Quick Start Guide
 
@@ -21,7 +18,7 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 ### What Do You Need?
 
 1. [**RAK Hotspot**](https://store.rakwireless.com/products/rak-hotspot-miner?utm_source=RAKHotspotMiner&utm_medium=Document&utm_campaign=BuyFromStore)
-2. 32&nbsp;GB microSD Card (included) + Card Reader
+2. 32 GB microSD Card (included) + Card Reader
 3. USB Type-C Power Adapter (included)
 
 :::warning
@@ -30,11 +27,7 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 
 ### What's Included in the Package?
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/package-contents.png"
-  width="75%"
-  caption="Package Contents"
-/>
+> **Image:** Package Contents
 
 ## Product Configuration
 For Antenna Mounting Scenarios and proper connectivity chain, refer to this [guide](troubleshooting#proper-connection-scenarios-with-the-rak-outdoor-enclosureantennas).
@@ -45,18 +38,9 @@ The application is available for both Android and iOS. You can manually search i
 * [**Android**](https://play.google.com/store/apps/details?id=com.helium.wallet)
 * [**iOS:**](https://apps.apple.com/ph/app/helium-hotspot/id1450463605)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/qr.png"
-  width="50%"
-  caption="QR Codes"
-/>
+> **Image:** QR Codes
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/app.png"
-  width="50%"
-  caption="iOS and Android App"
-/>
-
+> **Image:** iOS and Android App
 
 ### Power on the RAK Hotspot
 
@@ -76,11 +60,7 @@ From powering up the device, you only have 5 minutes to complete the setup. Afte
 
 During the setup of your account, you will be asked to input 12 words that must be used in order to recover or move accounts between phones.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/fill-up.png"
-  width="50%"
-  caption="Account recovery or transfer keywords"
-/>
+> **Image:** Account recovery or transfer keywords
 
 ### Backup your microSD Card
 

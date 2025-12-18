@@ -10,8 +10,6 @@ image: "https://images.docs.rakwireless.com/wisnode/environmental-and-barometric
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Environmental and Barometric Monitoring Solution
 
 Thank you for choosing the **Environmental and Barometric Monitoring Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -20,7 +18,6 @@ Thank you for choosing the **Environmental and Barometric Monitoring Solution** 
 - [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisnode/environmental-and-barometric/lorawan-network-server-guide/)
 - [Datasheet](https://docs.rakwireless.com/product-categories/wisnode/environmental-and-barometric/datasheet/)
 
-
 ### Solution Description
 
 The Environmental and Barometric Monitoring Solution integrates the RAK1901 temperature and humidity sensor and RAK1902 barometric pressure sensor. This solution features low power consumption and accurate data acquisition capabilities. It has critical requirements for temperature, humidity, and barometric pressure, ideal for the food industry, agricultural, and industrial applications.
@@ -28,7 +25,6 @@ The Environmental and Barometric Monitoring Solution integrates the RAK1901 temp
 With the plug-and-play feature of the Sensor Hub, the Environmental and Barometric Monitoring Solution comes with pre-installed components ready for easy installation and connection. The sensor provides highly accurate soil pH readings, with the Sensor Hub collecting and transmitting the data via LoRaWAN or NB-IoT/CAT M1.
 
 The Sensor Hub’s connectivity function allows for versatile data transmission to the cloud using the two most commonly used communication protocols in IoT. This versatility ensures that data is readily available for storage, visualization, and in-depth analysis, enabling informed decision-making based on comprehensive knowledge of temperature, humidity and barometric pressure levels.
-
 
 ### Solution Features
 
@@ -41,35 +37,14 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 - Long transmission distance
 - Single wire protocol
 - IP rating: IP67
-- Support solar panel and 12&nbsp;V<sub>DC</sub> power adapter for power supply
+- Support solar panel and 12 V<sub>DC</sub> power adapter for power supply
 
 ### Package Inclusion
 
-<table>
-  <thead>
-    <tr>
-      <th>Device List</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
-      <td>Sensor Hub + Sensor Hub Installation Kit</td>
-    </tr>
-    <tr>
-      <td>1 x Micro Sensor Probe</td>
-      <td>RAK1901 temperature and humidity sensor<br/>RAK1902 barometric pressure sensor</td>
-    </tr>
-    <tr>
-      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
-      <td>Sensor Hub Power Adapter + Power Cable</td>
-    </tr>
-    <tr>
-      <td>1 x Cable Tie</td>
-      <td>For wiring or fixing</td>
-    </tr>
-  </tbody>
-</table>
+| Device List | Description |
+| --- | --- |
+| 1 x Sensor Hub 1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
+| 1 x Micro Sensor Probe | RAK1901 temperature and humidity sensor RAK1902 barometric pressure sensor |
+| 1 x Power Adapter 1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
+| 1 x Cable Tie | For wiring or fixing |
 
-<RkBottomNav/>

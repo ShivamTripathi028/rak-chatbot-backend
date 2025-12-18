@@ -10,34 +10,31 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # GPS Antenna Datasheet
 
 ## Overview
 
 ### Description
 
-The GPS Antenna is a high-gain and high-efficiency active antenna designed with lightning protection antistatic (LNA) feature. It is widely used in power base stations and marine positioning systems and supports 1559 ~ 1577&nbsp;MHz frequencies.
+The GPS Antenna is a high-gain and high-efficiency active antenna designed with lightning protection antistatic (LNA) feature. It is widely used in power base stations and marine positioning systems and supports 1559 ~ 1577 MHz frequencies.
 
 ### Features
 
-- Frequency: 1559-1577&nbsp;MHz
+- Frequency: 1559-1577 MHz
 - Type: Active Antenna
-- Gain: 28 ± 2&nbsp;dB typical
-- Voltage: 3&nbsp;V ± 0.3&nbsp;V<sub>DC</sub>
-- Current: ≤ 10&nbsp;mA at 3&nbsp;V
+- Gain: 28 ± 2 dB typical
+- Voltage: 3 V ± 0.3 V<sub>DC</sub>
+- Current: ≤ 10 mA at 3 V
 - Polarization: Right-Hand Side Circular Polarization (RHCP)
-- Output impedance: 50&nbsp;Ω
+- Output impedance: 50 Ω
 - Connector: N-type male
-- Cable: 2&nbsp;m ± 50&nbsp;mm RG195 Coaxial Cable
+- Cable: 2 m ± 50 mm RG195 Coaxial Cable
 
 ### Kit Inclusion
 
 - 1x GPS antenna with cable
 - 2x Mounting bracket with M6 nuts, washer, and spring washer
-- 1x Mounting pole – 150&nbsp;mm, Ф25.6&nbsp;mm
+- 1x Mounting pole – 150 mm, Ф25.6 mm
 
 ## Specifications
 
@@ -47,47 +44,37 @@ The GPS Antenna is a high-gain and high-efficiency active antenna designed with 
 
 | Parameter        | Value                     |
 | ---------------- | ------------------------- |
-| Frequency        | 1559 ~ 1577&nbsp;MHz        |
-| Voltage          | DC 3 ±0.3&nbsp;V          |
-| Current          | ≤10&nbsp;mA at 3&nbsp;V  |
-| Gain             | 28 ± 2&nbsp;dB typical    |
-| Noise Figure     | 1.5&nbsp;dB max           |
-| Bandwidth        | 18&nbsp;MHz min           |
+| Frequency        | 1559 ~ 1577 MHz        |
+| Voltage          | DC 3 ±0.3 V          |
+| Current          | ≤10 mA at 3 V  |
+| Gain             | 28 ± 2 dB typical    |
+| Noise Figure     | 1.5 dB max           |
+| Bandwidth        | 18 MHz min           |
 | Output VSWR      | 3.0 max                   |
-| Output Impedance | 50&nbsp;Ω                 |
-| Dimensions       | Ф&nbsp;96×129&nbsp;mm          |
-| Cable            | 2000 ± 50&nbsp;mm (RG195) |
+| Output Impedance | 50 Ω                 |
+| Dimensions       | Ф 96×129 mm          |
+| Cable            | 2000 ± 50 mm (RG195) |
 | Connector        | N-type male               |
 
 #### Environmental Characteristics
 
-<b>Operation Environment</b>
+**Operation Environment**
 
 | Parameter   | Value             |
 | ----------- | ----------------- |
-| Temperature | -40° ~ 85°&nbsp;C |
+| Temperature | -40° ~ 85° C |
 | Humidity    | 10% ~ 95% RH      |
 
-<b>Storage environment </b>
+**Storage environment **
 
 | Parameter   | Value            |
 | ----------- | ---------------- |
-| Temperature | 40° ~ 85°&nbsp;C |
+| Temperature | 40° ~ 85° C |
 | Humidity    | 10% ~ 95% RH     |
-
 
 #### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/gps-antenna/1.png"
-  width="60%"
-  caption="Antenna Dimensions"
-/>
+> **Image:** Antenna Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/gps-antenna/2.png"
-  width="40%"
-  caption="Mounting Bracket Dimensions"
-/>
+> **Image:** Mounting Bracket Dimensions
 
-<RkBottomNav/>

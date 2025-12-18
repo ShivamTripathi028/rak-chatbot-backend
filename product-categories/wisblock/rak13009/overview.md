@@ -11,21 +11,17 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13009 WisBlock QWIIC Module
 
 Thank you for choosing **RAK13009 WisBlock QWIIC** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK13009 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak13009/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak13009/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK13009 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK13009.stp)
 * [24-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
-
-
 
 ## Product Description
 
@@ -38,7 +34,7 @@ The RAK13009 is a QWIIC module, which is a part of the RAKWireless WisBlock Inte
     * Standard QWIIC interface
 
 * **Module Size**
-    * 10&nbsp;mm x 10&nbsp;mm
+    * 10 mm x 10 mm
 
 ## Prerequisites
 
@@ -48,4 +44,3 @@ To use a **RAK13009**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

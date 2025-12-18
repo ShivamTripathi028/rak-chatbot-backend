@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12002 WisBlock RTC Module Datasheet
 
 ## Overview
@@ -23,16 +20,16 @@ The RAK12002 is a Real-Time Clock module, part of the RAK Wireless WisBlock Seri
 
 ### Features
 
-- Built-in 32.768&nbsp;kHz crystal oscillator
+- Built-in 32.768 kHz crystal oscillator
 - Counters for seconds, minutes, hours, date, month, year, and day of the week.
 - Automatic leap-year correction
-- 3.3&nbsp;V power supply
+- 3.3 V power supply
 - I2C Interface
 - Programmable Clock output
-- Extreme low-current consumption 40&nbsp;nA
+- Extreme low-current consumption 40 nA
 - Super capacitor backup power supply
 - Chipset: Micro Crystal RV-3028-C7
-- Small size: 10&nbsp;mm x 10&nbsp;mm
+- Small size: 10 mm x 10 mm
 
 ## Specifications
 
@@ -42,11 +39,7 @@ The RAK12002 is a Real-Time Clock module, part of the RAK Wireless WisBlock Seri
 
 The RAK12002 RTC module can be mounted on slot A, B, C, or D of the WisBlock Base board. Figure 1 shows the mounting mechanism of the RAK12002 on a WisBlock Base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12002/datasheet/mounting.png"
-  width="50%"
-  caption="RAK12002 WisBlock RTC Module Mounting"
-/>
+> **Image:** RAK12002 WisBlock RTC Module Mounting
 
 ### Hardware
 
@@ -65,11 +58,7 @@ The RAK12002 WisBlock RTC module includes a standard WisConnector. The WisConnec
 **I2C** related pins,**INT**, **CLKOUT**, **3V3**, and **GND** are connected to WisConnector.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12002/datasheet/rak12002_pinouts.svg"
-  width="50%"
-  caption="RAK12002 WisBlock RTC Module Pinout"
-/>
+> **Image:** RAK12002 WisBlock RTC Module Pinout
 
 #### Electrical Characteristics
 
@@ -85,28 +74,15 @@ The RAK12002 WisBlock RTC module includes a standard WisConnector. The WisConnec
 
 Figure 3 shows the dimensions and the mechanic drawing of the RAK12002 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12002/datasheet/rak12002_mechanic_drawing.png"
-  width="60%"
-  caption="RAK12002 WisBlock RTC Module Mechanic Drawing"
-/>
+> **Image:** RAK12002 WisBlock RTC Module Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12002/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
-Figure 5 shows the RAK12002 RTC Module Schematic Diagram. C2 and C3 are supercapacitors, default uses C2, 70&nbsp;mF/3.3&nbsp;V, 11&nbsp;mF/3.3&nbsp;V for reserved.
+Figure 5 shows the RAK12002 RTC Module Schematic Diagram. C2 and C3 are supercapacitors, default uses C2, 70 mF/3.3 V, 11 mF/3.3 V for reserved.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12002/datasheet/schematic_diagram.png"
-  width="100%"
-  caption="RAK12002 WisBlock RTC Module Schematic"
-/>
+> **Image:** RAK12002 WisBlock RTC Module Schematic
 
-<RkBottomNav/>

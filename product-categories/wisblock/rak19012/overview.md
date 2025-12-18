@@ -9,18 +9,16 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19012 WisBlock USB LiPo Solar Power Slot Module
 
 Thank you for choosing the **RAK19012 WisBlock USB LiPo Solar Power Slot Module** for your awesome IoT project! 🎉 To help you get started, we have provided all the necessary documentation.
 
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19012/quickstart/" target="_blank">RAK19012 Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19012/datasheet/" target="_blank">Datasheet</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
-* <a href="https://github.com/RAKWireless/WisBlock/" target="_blank">WisBlock Source Code Repository</a>
-* <a href="https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK19012.stp" target="_blank">RAK19012 3D Model</a>
-* <a href="https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp" target="_blank">40-Pin Male Connector 3D file</a>
+* [RAK19012 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak19012/quickstart/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak19012/datasheet/)
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
+* [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
+* [RAK19012 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK19012.stp)
+* [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 
 ## Product Description
 
@@ -29,9 +27,8 @@ The RAK19012 WisBlock USB LiPo Solar Power Slot Module is a power board comprisi
 ### WisBlock IO Pin Mapping Tool
 
 :::tip NOTE
-For optimal results when building a WisBlock solution, utilize the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool" target="_blank">WisBlock IO Pin Mapping Tool</a>. This tool proactively identifies compatible pins for each module combination, thereby preventing pin conflicts.
+For optimal results when building a WisBlock solution, utilize the [WisBlock IO Pin Mapping Tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool). This tool proactively identifies compatible pins for each module combination, thereby preventing pin conflicts.
 :::
-
 
 ## Product Features
 
@@ -42,7 +39,7 @@ For optimal results when building a WisBlock solution, utilize the <a href="http
 * Solar panel connector for battery charging
 * Onboard battery charger chip
 * LEDs for charging status and user-configurable LEDs
-* **Size**: 30&nbsp;mm x 20&nbsp;mm
+* **Size**: 30 mm x 20 mm
 
 ## Prerequisites
 
@@ -50,8 +47,7 @@ To use a **RAK19012**, you need at least a **WisBlock Base** Board with Power Sl
 
 :::warning 
 - Make sure to fix the module with the screws to ensure proper function.
-- Only 3.7&nbsp;V-4.2&nbsp;V rechargeable Li-ion batteries are supported. Do not use other types of rechargeable batteries with the system.
-- Only 5&nbsp;V solar panels (up to 6&nbsp;V) are supported. Do not use 12&nbsp;V solar panels; this will destroy the charging unit and eventually other electronic parts.
+- Only 3.7 V-4.2 V rechargeable Li-ion batteries are supported. Do not use other types of rechargeable batteries with the system.
+- Only 5 V solar panels (up to 6 V) are supported. Do not use 12 V solar panels; this will destroy the charging unit and eventually other electronic parts.
 :::
 
-<RkBottomNav/>

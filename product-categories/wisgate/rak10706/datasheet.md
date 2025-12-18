@@ -15,9 +15,6 @@ sidebar_label: Datasheet
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10706 Signal Meter for LoRa Pro Datasheet
 
 ## Overview
@@ -35,7 +32,7 @@ The **RAK10706 Signal Meter for LoRa** operates in LoRa P2P and LoRaWAN modes, w
 ### Features
 
 - Supports LoRaWAN regions: RU864, IN865, EU868, US915, AU915, KR920, & AS923-1/2/3/4
-- Supports LoRa P2P from 830 to 960&nbsp;MHz frequencies
+- Supports LoRa P2P from 830 to 960 MHz frequencies
 - Compatible with LoRaWAN 1.0.3
 - Offers different test modes
    - LoRaWAN LinkCheck
@@ -51,14 +48,13 @@ The **RAK10706 Signal Meter for LoRa** operates in LoRa P2P and LoRaWAN modes, w
       - Can send out test packets to other LoRa P2P nodes
 - WisToolBox compatible
    - Allows wireless configuration via BLE
-- Powered by 3,200&nbsp;mAh battery
+- Powered by 3,200 mAh battery
 - Rechargeable over a USB Type-C connector
 - 1.3" OLED display
 - Single button UI and device control
-- 2.3&nbsp;dBi external antenna via RP-SMA connector
-- Operating Temperature: -10°&nbsp;C ~ 60°&nbsp;C
-- Storage Temperature: -40°&nbsp;C ~ 80°&nbsp;C
-
+- 2.3 dBi external antenna via RP-SMA connector
+- Operating Temperature: -10° C ~ 60° C
+- Storage Temperature: -40° C ~ 80° C
 
 ## Specifications
 
@@ -66,11 +62,7 @@ The **RAK10706 Signal Meter for LoRa** operates in LoRa P2P and LoRaWAN modes, w
 
 RAK10706 Signal Meter for LoRa with an external antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-view-1.png"
-  width="40%"
-  caption="RAK10706 Signal Meter for LoRa"
-/>
+> **Image:** RAK10706 Signal Meter for LoRa
 
 ### Hardware
 
@@ -91,11 +83,7 @@ The RAK10706 Signal Meter for LoRa has multiple interfaces, which are:
 
 The OLED display is the visual interface of the device. Most of the test results are displayed on the OLED display.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-oled.png"
-  width="75%"
-  caption="RAK10706 front view with the OLED screen"
-/>
+> **Image:** RAK10706 front view with the OLED screen
 
 :::tip NOTE
 The complete details on different pages of the screen are discussed in the [RAK10706 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak10706/quickstart/).
@@ -110,29 +98,17 @@ There is one external button on RAK10706 which can be used in various scenarios.
 3. Forced uplink with DR sweep
 4. Open the device settings UI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-button.png"
-  width="50%"
-  caption="RAK10706 button"
-/>
+> **Image:** RAK10706 button
 
 ##### Antenna RP-SMA Connector
 
 On top of the RAK10706 Signal Meter for LoRa is an RP-SMA port for the external antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-antenna.png"
-  width="40%"
-  caption="RAK10706 RP-SMA antenna port"
-/>
+> **Image:** RAK10706 RP-SMA antenna port
 
-The RAK10706 package includes one antenna with a 2.3&nbsp;dBi gain.
+The RAK10706 package includes one antenna with a 2.3 dBi gain.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/interface-blade-antenna.png"
-  width="30%"
-  caption="2.3 dBi antenna"
-/>
+> **Image:** 2.3 dBi antenna
 
 :::tip NOTE
 Detailed information about the LoRa antenna can be found on the datasheet:
@@ -145,11 +121,7 @@ Detailed information about the LoRa antenna can be found on the datasheet:
 
 On top of the RAK10706 Signal Meter for LoRa is an SD card slot.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-sd-card.png"
-  width="40%"
-  caption="RAK10706 SD card port"
-/>
+> **Image:** RAK10706 SD card port
 
 :::warning IMPORTANT
 The SD card slot is covered with a flexible rubber lid to protect the device from the environment. The rubber lid does not protect against water intrusion.
@@ -161,21 +133,13 @@ There is also a USB interface on RAK10706. You can use [WisToolBox](https://docs
 
 Next to the USB connector is a RESET button (requires a pin to use), and status indicators for charging and activities.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-usb-open.png"
-  width="40%"
-  caption="RAK10706 USB-C port"
-/>
+> **Image:** RAK10706 USB-C port
 
 :::warning IMPORTANT
 The USB connector slot is closed with a flexible rubber lid to protect the device from the environment. The rubber lid does not protect against water intrusion.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-usb-closed.png"
-  width="40%"
-  caption="RAK10706 USB-C port closed"
-/>
+> **Image:** RAK10706 USB-C port closed
 
 #### WisBlock Modules
 
@@ -186,7 +150,7 @@ The main part is the [RAK19026 Base Board](https://docs.rakwireless.com/product-
 - Voltage regulator and battery charger
 - 1.3" OLED display
 - Battery connector 
-- 5&nbsp;V supply connector for solar panel or external power supply
+- 5 V supply connector for solar panel or external power supply
 - ON/OFF switch
 - User button
 
@@ -194,16 +158,9 @@ On the Base Board a [RAK15002 SD-Card](https://store.rakwireless.com/products/sd
 
 An optional [RAK12002 RTC module](https://store.rakwireless.com/products/rtc-module-rak12002?utm_source=RAK12002&utm_medium=Document&utm_campaign=BuyFromStore) is available to provide precise time stamps to the logs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak19026-top.png"
-  width="40%"
-  caption="RAK19026 top view"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak19026-bottom.png"
-  width="40%"
-  caption="RAK19026 bottom view"
-/>
+> **Image:** RAK19026 top view
+
+> **Image:** RAK19026 bottom view
 
 #### RF Characteristics
 
@@ -213,20 +170,20 @@ The RAK10706 Signal Meter for LoRa supports the regional bands shown in the tabl
 
 | Region        | Frequency (MHz) | RAK10706 Signal Meter for LoRa |
 |---------------|-----------------|--------------------------------|
-| Russia        | RU864           | 8xx&nbsp;MHz version           |
-| India         | IN865           | 8xx&nbsp;MHz version           |
-| Europe        | EU868           | 8xx&nbsp;MHz version           |
-| North America | US915           | 9xx&nbsp;MHz version           |
-| Canada        | US915           | 9xx&nbsp;MHz version           |
-| Australia     | AU915           | 9xx&nbsp;MHz version           |
-| Korea         | KR920           | 9xx&nbsp;MHz version           |
-| Asia          | AS923-1/2/3/4   | 9xx&nbsp;MHz version           |
+| Russia        | RU864           | 8xx MHz version           |
+| India         | IN865           | 8xx MHz version           |
+| Europe        | EU868           | 8xx MHz version           |
+| North America | US915           | 9xx MHz version           |
+| Canada        | US915           | 9xx MHz version           |
+| Australia     | AU915           | 9xx MHz version           |
+| Korea         | KR920           | 9xx MHz version           |
+| Asia          | AS923-1/2/3/4   | 9xx MHz version           |
 
 ##### GPS Antenna
 
 | Items     | Parameter        |
 |-----------|------------------|
-| Frequency | 1575.42&nbsp;MHz |
+| Frequency | 1575.42 MHz |
 
 #### Electrical Characteristics
 
@@ -235,21 +192,21 @@ The RAK10706 Signal Meter for LoRa supports the regional bands shown in the tabl
 
 | Mode                 | Condition        | Power Consumption            |
 |----------------------|------------------|------------------------------|
-| Idle Mode (LoRaWAN)  | OLED On          | ~&nbsp;8&nbsp;mA             |
-|                      | OLED Off         | 60&nbsp;mA                   |
+| Idle Mode (LoRaWAN)  | OLED On          | ~ 8 mA             |
+|                      | OLED Off         | 60 mA                   |
 | Packet TX (LoRaWAN)  | OLED On          | depends on selected TX power |
 |                      | OLED Off         | depends on selected TX power |
-| Idle Mode (LoRa P2P) | OLED On          | 120&nbsp;mA                  |
-|                      | OLED Off         | 60&nbsp;mA                   |
+| Idle Mode (LoRa P2P) | OLED On          | 120 mA                  |
+|                      | OLED Off         | 60 mA                   |
 | Packet TX (LoRa P2P) | OLED On          | depends on selected TX power |
 |                      | OLED Off         | depends on selected TX power |
-| Location tracking    | GNSS searching   | 120&nbsp;mA                  |
-|                      | GNSS maintaining | 60&nbsp;mA                   |
+| Location tracking    | GNSS searching   | 120 mA                  |
+|                      | GNSS maintaining | 60 mA                   |
 -->
 
 ##### Battery Supply
 
-The RAK10706 Signal Meter for LoRa is equipped with a built-in rechargeable 3.7&nbsp;V Li-ion battery with 3200&nbsp;mAh capacity. This can be charged via a USB Type-C connector interface.
+The RAK10706 Signal Meter for LoRa is equipped with a built-in rechargeable 3.7 V Li-ion battery with 3200 mAh capacity. This can be charged via a USB Type-C connector interface.
 
 #### Environmental Characteristics
 
@@ -257,8 +214,8 @@ The table below lists the operation and storage temperature requirements.
 
 | Parameter             | Min.        | Typical     | Max.        |
 |-----------------------|-------------|-------------|-------------|
-| Storage Temp. Range   | -40°&nbsp;C | +25°&nbsp;C | +80°&nbsp;C |
-| Operation Temp. Range | -10°&nbsp;C | +25°&nbsp;C | +60°&nbsp;C |
+| Storage Temp. Range   | -40° C | +25° C | +80° C |
+| Operation Temp. Range | -10° C | +25° C | +60° C |
 
 :::warning IMPORTANT
 The enclosure is made of ABS material. It should be protected from direct sun light and extreme temperatures to avoid damage to the enclosure.
@@ -266,19 +223,12 @@ The enclosure is made of ABS material. It should be protected from direct sun li
 
 #### Mechanical Characteristics
 
-- Dimensions (without antenna): 102.5&nbsp;mm x 60&nbsp;mm x 28.5&nbsp;mm
-<!-- - Weight: approximately ???&nbsp;oz (???&nbsp;g) without battery -->
+- Dimensions (without antenna): 102.5 mm x 60 mm x 28.5 mm
+<!-- - Weight: approximately ??? oz (??? g) without battery -->
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706-dimensions.png"
-  width="40%"
-  caption="RAK10706 Dimensions"
-/>
+> **Image:** RAK10706 Dimensions
 
 ### Firmware
 
+Download the latest firmware version of RAK10706 from our [Download Center](https://downloads.rakwireless.com/#LoRa/RAK10706/Firmware/) and flash it to the [ WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/overview).
 
-Download the latest firmware version of RAK10706 from our [Download Center](https://downloads.rakwireless.com/#LoRa/RAK10706/Firmware/) and flash it to the <a href="https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/overview"> WisToolBox</a>.
-
-
-<RkBottomNav/>

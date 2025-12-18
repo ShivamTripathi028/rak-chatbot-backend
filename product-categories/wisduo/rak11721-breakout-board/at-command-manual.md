@@ -11,8 +11,6 @@ slug: /product-categories/wisduo/rak11721-breakout-board/at-command-manual/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11721 WisDuo Breakout Board AT Command Manual
 
 ## Overview
@@ -23,8 +21,7 @@ To facilitate the integration of LoRa technology into your projects, the RAK1172
 
 ## RUI3 AT Command List
 
-The RAK11721 default firmware is based on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#hardware-compatibility" target="_blank">RUI3 (RAKwireless Unified Interface V3)</a>. You can access the AT command via UART0 by default.
+The RAK11721 default firmware is based on [RUI3 (RAKwireless Unified Interface V3)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#hardware-compatibility). You can access the AT command via UART0 by default.
 
-The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation</a>.
+The complete list of commands can be found in [RUI3 AT Commands Documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/).
 
-<RkBottomNav/>

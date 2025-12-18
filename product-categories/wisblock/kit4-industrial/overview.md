@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock Industrial 4.0 Kit
 
 Thank you for choosing **WisBlock Industrial 4.0 Kit** in your awesome IoT project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -43,11 +41,8 @@ Depending on the use case, this kit supports a variety of connectivity options, 
     - Two [RAK12018 Bar Code Scanner](https://docs.rakwireless.com/product-categories/wisblock/rak12018/quickstart/)
     - Two [RAK16000 DC Current Sensor](https://docs.rakwireless.com/product-categories/wisblock/rak16000/quickstart/)
     - Two [RAK14007/RAK14013 Joystick/Button Modules](https://docs.rakwireless.com/product-categories/wisblock/rak14013/quickstart/)
-    - Two relay modules; you can choose between RAK13001 110&nbsp;V and RAK13007 220&nbsp;V versions
+    - Two relay modules; you can choose between RAK13001 110 V and RAK13007 220 V versions
     - LoRaWAN supported bands: RU864, IN865, EU868, AU915, US915, KR920, and AS923
     - (Optional) Cellular variant dependent on a country: two (2) [RAK5860](https://docs.rakwireless.com/product-categories/wisblock/rak5860/quickstart/) with 5G LTE NB-IoT capability and two (2) [RAK13101](https://docs.rakwireless.com/product-categories/wisblock/rak13101/quickstart/) with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
-
-
-<RkBottomNav/>

@@ -1,3 +1,3 @@
-import RkRedirect from '@site/src/components/Redirection'
+
 
 <RkRedirect to='/product-categories/wishat/rak2287-rak5146/datasheet' />

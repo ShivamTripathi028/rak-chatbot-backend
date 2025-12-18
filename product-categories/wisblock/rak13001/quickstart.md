@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13001 WisBlock Relay IO Module Quick Start Guide
 
 ## Prerequisite
@@ -30,7 +27,7 @@ Before going through each and every step on using the RAK13001 WisBlock module, 
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - LED
-- 1&nbsp;kΩ Resistor
+- 1 kΩ Resistor
 
 #### Software
 
@@ -43,23 +40,16 @@ Before going through each and every step on using the RAK13001 WisBlock module, 
 
 ### Block Diagram
 
-The RAK13001 uses one relay to isolate the output of MCU. The dielectric strength between coil and contacts of a relay is 4000&nbsp;VAC 1min.
+The RAK13001 uses one relay to isolate the output of MCU. The dielectric strength between coil and contacts of a relay is 4000 VAC 1min.
 
-For input, RAK13001 uses an opto-couple as isolation, and it supports wet contact as default. The rating of input is 12&nbsp;V-24&nbsp;VDC. It also can be configured as dry contact by reworking some resistors on the PCB module as instructed in the [datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak13001/datasheet/#hardware). The relay has a maximum rating of 130&nbsp;VAC / 30&nbsp;VDC.
+For input, RAK13001 uses an opto-couple as isolation, and it supports wet contact as default. The rating of input is 12 V-24 VDC. It also can be configured as dry contact by reworking some resistors on the PCB module as instructed in the [datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak13001/datasheet/#hardware). The relay has a maximum rating of 130 VAC / 30 VDC.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/block-diagram.png"
-  width="70%"
-  caption="RAK13001 Block Diagram"
-/>
+> **Image:** RAK13001 Block Diagram
 
 :::warning
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/warning.png"
-  width="90%"
-  caption="Safety Precaution"
-/>
+
+> **Image:** Safety Precaution
+
 :::
 
 ### Hardware Setup
@@ -70,11 +60,7 @@ For more information about RAK13001, refer to the [Datasheet](datasheet.md).
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak13001-pinout.png"
-  width="30%"
-  caption="RAK13001 Pin Definition"
-/>
+> **Image:** RAK13001 Pin Definition
 
 :::tip NOTE
 - **NO1** and **NO2** are Output contacts for the Relay.
@@ -87,23 +73,15 @@ For more information about RAK13001, refer to the [Datasheet](datasheet.md).
 
 The RAK13001 module can be mounted on the IO slot of the WisBlock Base board as shown in **Figure 4**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/mounting-mechanism.png"
-  width="60%"
-  caption="RAK13001 mounting connection to WisBlock Base module"
-/>
+> **Image:** RAK13001 mounting connection to WisBlock Base module
 
 ##### RAK13001 Connector Crimping Mechanism
 
-The RAK13001 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20&nbsp;AWG to 24&nbsp;AWG. The usual stripping length is around 6 to 7&nbsp;mm.
+The RAK13001 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20 AWG to 24 AWG. The usual stripping length is around 6 to 7 mm.
 
 As shown in **Figure 5**, during the crimping process, you should first press down and maintain the spring head of the crimping terminal firmly, then insert the stripped cable head into the corresponding connector’s hole. Once inserted correctly, release the spring head, and the crimping process is completed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/crimping_process.png"
-  width="40%"
-  caption="RAK13001 Module Connector"
-/>
+> **Image:** RAK13001 Module Connector
 
 ##### Disassembling Procedure
 
@@ -111,27 +89,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/16.removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/17.detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 8**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/18.detaching-module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -141,9 +107,9 @@ Now, you can connect the battery (optional) and USB cable to start programming y
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires are matching the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -168,22 +134,13 @@ These are the quick links that go directly to the software guide for the specifi
 
 **Figure 9** is an illustration on how to use the RAK13001 relay for switching applications. You can connect any module to the RAK13001 as long as it operates on its recommended voltage rating.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak13001-example.png"
-  width="50%"
-  caption="RAK13001 switching the LED"
-/>
+> **Image:** RAK13001 switching the LED
 
 1. First, you need to select the RAK4631 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak4631-board.png"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -256,17 +213,9 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/select-port.png"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/upload.png"
-  width="100%"
-  caption="Uploading the RAK13001 Sample code"
-/>
+> **Image:** Uploading the RAK13001 Sample code
 
 4. When you successfully uploaded the example sketch, you'll now be to see that the RAK13001 Relay module switches the LED on and off every 5 seconds. You'll also be able to hear clicking sounds from the RAK13001 module which means that the relay is switching.
 
@@ -276,22 +225,13 @@ If you experience any error in compiling the example sketch, check the updated c
 
 **Figure 13** is an illustration on how to use the RAK13001 relay for switching applications. You can connect any module to the RAK13001 as long as it operates on its recommended voltage rating.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak13001-example.png"
-  width="50%"
-  caption="RAK13001 switching the LED"
-/>
+> **Image:** RAK13001 switching the LED
 
 1. First, you need to select the RAK11200 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak11200-board.png"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -369,17 +309,9 @@ If you experience any error in compiling the example sketch, check the updated c
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 quick start guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak11200-select-port.png"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak11200-upload.png"
-  width="100%"
-  caption="Uploading the RAK13001 Sample code"
-/>
+> **Image:** Uploading the RAK13001 Sample code
 
 4. When you successfully uploaded the example sketch, you'll now be to see that the RAK13001 Relay module switches the LED on and off every 5 seconds. You'll also be able to hear clicking sounds from the RAK13001 module which means that the relay is switching.
 
@@ -389,22 +321,13 @@ RAK11200 requires the **Boot0** pin to be configured properly first before uploa
 
 **Figure 17** is an illustration on how to use the RAK13001 relay for switching applications. You can connect any module to the RAK13001 as long as it operates on its recommended voltage rating.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak13001-example.png"
-  width="50%"
-  caption="RAK13001 switching the LED"
-/>
+> **Image:** RAK13001 switching the LED
 
 1. First, you need to select the RAK11310 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak11310-board.png"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -478,19 +401,9 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 19** and **Figure 20**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak11310-selectport.png"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/rak11310-upload.png"
-  width="100%"
-  caption="Uploading the RAK13001 Sample code"
-/>
+> **Image:** Uploading the RAK13001 Sample code
 
 4. When you successfully uploaded the example sketch, you'll now be to see that the RAK13001 Relay module switches the LED on and off every 5 seconds. You'll also be able to hear clicking sounds from the RAK13001 module which means that the relay is switching.
 
-
-<RkBottomNav/>

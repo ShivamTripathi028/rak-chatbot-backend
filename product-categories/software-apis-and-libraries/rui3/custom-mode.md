@@ -1,4 +1,4 @@
-import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 
 # Custom Mode
 
@@ -58,4 +58,3 @@ void loop()
 }
 ```
 
-<RkBottomNav/>

@@ -24,10 +24,6 @@ date: 2022-04-07
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4630 WisBlock LoRaWAN+BLE Module Datasheet
 
 ## Overview
@@ -50,14 +46,14 @@ The default firmware of the RAK4630 is built on RUI3 (RAKwireless Unified Interf
 - Easy-to-use AT Command set via UART interface
 - TCXO crystal for LoRa chip
 - IO ports: UART, I2C, GPIO, USB
-- Temperature range: -40°&nbsp;C to +85°&nbsp;C
-- Supply voltage: 2.0 ~ 3.6&nbsp;V
-- Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz bandwidth
-- Ultra-Low Power Consumption 4.23&nbsp;uA in sleep mode
-- LoRa PA Boost mode with 22&nbsp;dBm output power
-- BLE 5.0 (Tx power -20 to +4&nbsp;dBm in 4&nbsp;dB steps)
+- Temperature range: -40° C to +85° C
+- Supply voltage: 2.0 ~ 3.6 V
+- Low-Power Wireless Systems with 7.8 kHz to 500 kHz bandwidth
+- Ultra-Low Power Consumption 4.23 uA in sleep mode
+- LoRa PA Boost mode with 22 dBm output power
+- BLE 5.0 (Tx power -20 to +4 dBm in 4 dB steps)
 - Serial Wire Debug (SWD) interface
-- Module size: 15&nbsp;mm x 23&nbsp;mm x 3&nbsp;mm
+- Module size: 15 mm x 23 mm x 3 mm
 
 ## Specifications
 
@@ -88,26 +84,21 @@ The hardware specification is categorized into three parts: RF, electrical, and 
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/datasheet/rak4630_pinout.svg"
-  width="60%"
-  caption="RAK4630 module pinout diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 module pinout diagram
 
 :::warning
 When using `RF_LoRa` and `RF_BT` pins for the antenna and not the IPEX connector variant, design considerations are necessary to ensure optimum RF performance.
 
 - RF traces must be away from interference (switching nodes of DC-DC supplies, high-current/voltage pulses from controllers of inductive loads like motors, signal generators, etc.).
-- RF traces must have 50&nbsp;
+- RF traces must have 50 
 ohm impedance.  It is advisable to use impedance simulation software to achieve this requirement.
 - If using an external antenna connector, place it close to the `RF_LoRa` and `RF_BT` pins.
 - Ground plane optimization is critical for certain antenna types, such as monopoles.
 - The GND trace used for the RF return path must be directly connected to the GND plane and not treated as a thermal relief.
-- It is recommended that RF traces be routed in curves, not sharp 90&nbsp;
+- It is recommended that RF traces be routed in curves, not sharp 90 
 degree angles.
 
-In addition, with a commitment to making IoT easy, RAK offers a dedicated service for <a href="https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test" target="_blank">Antenna RF Design</a> which includes PCB design, tuning, matching, and RF testing.
+In addition, with a commitment to making IoT easy, RAK offers a dedicated service for [Antenna RF Design](https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test) which includes PCB design, tuning, matching, and RF testing.
 :::
 
 | **Pin No.** | **Name**                        |
@@ -182,7 +173,7 @@ Important for successful SX1262 initialization:
 When purchasing a RAK4630 module, it is essential to specify the correct core module, RAK4630 H/L, for your region. H indicates high-frequency regions, and L indicates low-frequency regions. The RAK4630 module supports LoRaWAN bands as outlined in the table below.
 
 :::tip NOTE
-Detailed information about the RAK4630 BLE and LoRa antenna can be found on the <a href="https://downloads.rakwireless.com/#LoRa/WisBlock/Accessories/" target="_blank">antenna datasheet</a>.
+Detailed information about the RAK4630 BLE and LoRa antenna can be found on the [antenna datasheet](https://downloads.rakwireless.com/#LoRa/WisBlock/Accessories/).
 :::
 
 | Region        | Frequency (MHz)  | Core Module |
@@ -203,11 +194,11 @@ Detailed information about the RAK4630 BLE and LoRa antenna can be found on the 
 
 | **Item**                                 | **Current Average** | **Condition - Voltage and Dwell Time**             |
 | :--------------------------------------: | :-----------------: | :------------------------------------------------: |
-| RAK4630 Module in One-Time Sleep         | 4.42&nbsp;uA        | 3.3&nbsp;V 10&nbsp;seconds                         |
-| RAK4630 Module System up in Idle mode    | 3.35&nbsp;mA        | 3.3&nbsp;V 10&nbsp;seconds                         |
-| RAK4630 Module in LoRaWAN One-Time Sleep | 4.23&nbsp;uA        | 3.3&nbsp;V 10&nbsp;seconds                         |
-| RAK4630 Module 15 Bytes Data TX Sending  | 67.8&nbsp;mA        | 3.6&nbsp;V 1&nbsp;second (in RAK5005-O board)      |
-| RAK4630 Module in RX Window Received     | 2.22&nbsp;mA        | 3.6&nbsp;V 1&nbsp;second (in RAK5005-O board)      |
+| RAK4630 Module in One-Time Sleep         | 4.42 uA        | 3.3 V 10 seconds                         |
+| RAK4630 Module System up in Idle mode    | 3.35 mA        | 3.3 V 10 seconds                         |
+| RAK4630 Module in LoRaWAN One-Time Sleep | 4.23 uA        | 3.3 V 10 seconds                         |
+| RAK4630 Module 15 Bytes Data TX Sending  | 67.8 mA        | 3.6 V 1 second (in RAK5005-O board)      |
+| RAK4630 Module in RX Window Received     | 2.22 mA        | 3.6 V 1 second (in RAK5005-O board)      |
 
 ##### Absolute Maximum Ratings
 
@@ -218,7 +209,6 @@ Detailed information about the RAK4630 BLE and LoRa antenna can be found on the 
 | VDD_NRF    | MCU power supply              | -0.3     |          | 3.9      | V        |
 | VBUS       | USB supply voltage            | -0.3     |          | 5.8      | V        |
 | VBAT_NRF   | MCU high voltage power supply | -0.3     |          | 5.8      | V        |
-
 
 ##### Recommended Operating Conditions
 
@@ -232,70 +222,33 @@ Detailed information about the RAK4630 BLE and LoRa antenna can be found on the 
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/datasheet/schematic-1.png"
-  width="95%"
-  caption="SX1262 Section"
-  zoomMode={true}
-/>
+> **Image:** SX1262 Section
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/datasheet/schematic-2.png"
-  width="95%"
-  caption="nRF51840 and Module Pinout"
-  zoomMode={true}
-/>
-
+> **Image:** nRF51840 and Module Pinout
 
 #### Mechanical Characteristics
 
 ##### Module Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/datasheet/mechanical_drawing.png"
-  width="80%"
-  caption="Board dimension"
-  zoomMode={true}
-/>
+> **Image:** Board dimension
 
 ##### Layout Recommendation
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/datasheet/pcb_footprint.png"
-  width="70%"
-  caption="PCB footprint and recommendations"
-  zoomMode={true}
-/>
+> **Image:** PCB footprint and recommendations
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-  {
-      'ce': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_CE_Certification.zip',
-  },
-  {
-      'fcc': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_FCC_Certification.zip'
-  },
-  {
-      'ised': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_ISED_Certification.pdf'
-  },
-  {
-      'kc': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_KC_Certification.pdf'
-  },
-  {
-      'rcm': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RCM_Certification.pdf'
-  },
-  {
-      'reach': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_REACH_Report.pdf'
-  },
-  {
-      'rohs': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_RoHS_Report.pdf'
-  }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_FCC_Certification.zip
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_ISED_Certification.pdf
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_KC_Certification.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RCM_Certification.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_RoHS_Report.pdf
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
-You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
+You can find it in our [RUI3 documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide) or get it from our [Download Center](https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/).    
 ::: 
 
-<RkBottomNav/>

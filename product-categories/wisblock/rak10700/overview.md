@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10700 WisBlock GNSS Tracker for LoRaWAN
 
 Thank you for choosing **RAK10700 WisBlock GNSS Tracker for LoRaWAN** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,7 +27,7 @@ It is a feature-packed tracker device for featured applications development. Thi
 ## Product Features
 
 - Supports sleep mode, low power consumption.
-- **Built-in LIS3DH - digital motion sensor**, which has dynamic user selectable full scales of Â±2g/Â±4g/Â±8g/Â±18g and is capable of measuring accelerations with output data rates from 1&nbsp;Hz to 5&nbsp;kHz.
+- **Built-in LIS3DH - digital motion sensor**, which has dynamic user selectable full scales of Â±2g/Â±4g/Â±8g/Â±18g and is capable of measuring accelerations with output data rates from 1 Hz to 5 kHz.
 - **Environment sensor**: Built-in Bosch BME680 air quality sensor
 - **GNSS location sensor**: u-blox ZOE-M8Q
 - LoRaWAN 1.0.2 Standard support - ABP or OTAA mode.
@@ -38,4 +36,3 @@ It is a feature-packed tracker device for featured applications development. Thi
 - Micro USB for configuration and charging of the battery
 - Supports global license-free frequency band: RU864, IN865, EU868, RU864, US915, AU915, KR920, and AS923.
 
-<RkBottomNav/>

@@ -18,30 +18,26 @@ sidebar_label: Datasheet
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # LoRa SPD Datasheet
 
 ## Overview
 
 ## Description
 
-The **LoRa SPD**, also known as the LA-GT1000 SN1-1 Lightning Arrestor 2, is an outdoor RF surge protection device installed between the antenna and the LoRa gateway to prevent damage from lightning-induced surges, transient voltages, and overcurrent events. It features a two-stage protection circuit that ensures fast response and stable signal transmission with low insertion loss and 50&nbsp;Ω impedance across the 800&nbsp;MHz\~960&nbsp;MHz range.
+The **LoRa SPD**, also known as the LA-GT1000 SN1-1 Lightning Arrestor 2, is an outdoor RF surge protection device installed between the antenna and the LoRa gateway to prevent damage from lightning-induced surges, transient voltages, and overcurrent events. It features a two-stage protection circuit that ensures fast response and stable signal transmission with low insertion loss and 50 Ω impedance across the 800 MHz\~960 MHz range.
 
 Constructed from high-conductivity copper and enclosed in an IP67-rated housing, the LoRa SPD provides reliable and durable performance in harsh outdoor environments.
 
 ## Features
 
 - Connector type: **N-type male to N-type female**
-- Impedance: **50&nbsp;Ω**
-- Frequency range: **800&nbsp;MHz\~960&nbsp;MHz**
-- Power loss: **≤ 0.3&nbsp;dB**
+- Impedance: **50 Ω**
+- Frequency range: **800 MHz\~960 MHz**
+- Power loss: **≤ 0.3 dB**
 - Ingress protection: **IP67**
-- Nominal Discharge Current: **10&nbsp;kA (8/20&nbsp;µs)**
+- Nominal Discharge Current: **10 kA (8/20 µs)**
 - Two-stage protection circuit
-- Residual Voltage (Up): **≤ 15&nbsp;V**
+- Residual Voltage (Up): **≤ 15 V**
 
 ## Specifications
 
@@ -51,19 +47,19 @@ Constructed from high-conductivity copper and enclosed in an IP67-rated housing,
 
 | Parameter                          | Value                                                                         | Remarks     |
 |------------------------------------|-------------------------------------------------------------------------------|-------------|
-| Frequency                          | 800&nbsp;MHz ～960&nbsp;MHz                                                    |             |
+| Frequency                          | 800 MHz ～960 MHz                                                    |             |
 | Connector                          | N-type male(protect) to N-type female(surge)                                  |             |
-| Port impedance                     | 50&nbsp;Ω                                                                     |             |
-| Maximum transmission power         | ≤ 50&nbsp;W                                                                   |             |
+| Port impedance                     | 50 Ω                                                                     |             |
+| Maximum transmission power         | ≤ 50 W                                                                   |             |
 | Voltage standing wave ratio (VSWR) | ≤ 1.25                                                                        |             |
-| Insertion loss                     | ≤ 0.3&nbsp;dB                                                                 |             |
-| Nominal discharge current In       | 10&nbsp;kA                                                                    | 8/20 µs     |
-| Maximum discharge current Imax     | 20&nbsp;kA                                                                    | 8/20 µs     |
-| Voltage protection Level Up        | ≤ 15&nbsp;V                                                                   | 10kA，8/20µs |
+| Insertion loss                     | ≤ 0.3 dB                                                                 |             |
+| Nominal discharge current In       | 10 kA                                                                    | 8/20 µs     |
+| Maximum discharge current Imax     | 20 kA                                                                    | 8/20 µs     |
+| Voltage protection Level Up        | ≤ 15 V                                                                   | 10kA，8/20µs |
 | Degree of ingressive protection    | IP67                                                                          | GB 4208     |
 | Mounting                           | N-F port metal wall-through fixation                                          |             |
 | Grounding                          | Grounding connector                                                           |             |
-| Weight                             | ≤ 300&nbsp;g                                                                  |             |
+| Weight                             | ≤ 300 g                                                                  |             |
 | Material                           | High-conductivity copper, PTFE insulation, and ternary alloy inner connectors |             |
 
 #### Environmental Characteristics
@@ -72,17 +68,17 @@ Constructed from high-conductivity copper and enclosed in an IP67-rated housing,
 
 | Parameter            | Value                     |
 |----------------------|---------------------------|
-| Ambient temperature  | -40°&nbsp;C\~70°&nbsp;C   |
+| Ambient temperature  | -40° C\~70° C   |
 | Relative humidity    | 5%\~95%                   |
-| Atmospheric pressure | 70&nbsp;kPa\~106&nbsp;kPa |
+| Atmospheric pressure | 70 kPa\~106 kPa |
 
 **Storage Environment:**
 
 | Parameter            | Value                     |
 |----------------------|---------------------------|
-| Ambient temperature  | -40°&nbsp;C\~80°&nbsp;C   |
+| Ambient temperature  | -40° C\~80° C   |
 | Relative humidity    | 5%\~95%                   |
-| Atmospheric pressure | 70&nbsp;kPa\~106&nbsp;kPa |
+| Atmospheric pressure | 70 kPa\~106 kPa |
 
 #### Standards
 
@@ -94,17 +90,7 @@ Constructed from high-conductivity copper and enclosed in an IP67-rated housing,
 
 #### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/lora-spd/lora-spd-mechanical-dimensions.png"
-  width="60%"
-  caption="LoRa SPD Mechanical Dimensions"
-/>
+> **Image:** LoRa SPD Mechanical Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/lora-spd/lora-spd-typical-use.png"
-  width="60%"
-  caption="Typical Use of LoRa SPD"
-/>
+> **Image:** Typical Use of LoRa SPD
 
-
-<RkBottomNav/>

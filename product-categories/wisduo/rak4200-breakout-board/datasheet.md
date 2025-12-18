@@ -11,19 +11,15 @@ slug: /product-categories/wisduo/rak4200-breakout-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4200 WisDuo Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-The **RAK4200 Breakout Board** is specifically designed to allow easy access to the pins on the board to simplify development and testing. The breakout board footprint allows the RAK4200 stamp module pins to be transferred to 2.54&nbsp;mm headers.
+The **RAK4200 Breakout Board** is specifically designed to allow easy access to the pins on the board to simplify development and testing. The breakout board footprint allows the RAK4200 stamp module pins to be transferred to 2.54 mm headers.
 
-The board itself has the RAK4200 at its core, integrating an **STM32L071KB MCU** and an **SX1276 LoRa transceiver**. It has an ultra-low power consumption of 9.40&nbsp;uA (down to 1.08&nbsp;uA @ 2.0&nbsp;V) in sleep mode, and high LoRa output power (19&nbsp;dBm) in work mode.
+The board itself has the RAK4200 at its core, integrating an **STM32L071KB MCU** and an **SX1276 LoRa transceiver**. It has an ultra-low power consumption of 9.40 uA (down to 1.08 uA @ 2.0 V) in sleep mode, and high LoRa output power (19 dBm) in work mode.
 
 The board complies with LoRaWAN 1.0.2 specification. It also supports LoRa Point-to-Point (P2P) communication.
 
@@ -33,16 +29,16 @@ The board's low-power, long-range LoRa communication capabilities make it ideal 
 
 - LoRa module for Smart City, Smart Agriculture, Smart Industry
 - I/O ports: **UART/I2C/GPIO**
-- Frequency range: **863–923&nbsp;MHz** (entire LoRa high band spectrum)
-- Low-Power Wireless Systems with **7.8&nbsp;kHz** to **500&nbsp;kHz** Bandwidth
-- LoRa Tx power up to **19&nbsp;dBm**
-- Ultra-Low Power Consumption of 9.40&nbsp;μA (down to 1.08&nbsp;μA @ 2.0&nbsp;V) in sleep mode
+- Frequency range: **863–923 MHz** (entire LoRa high band spectrum)
+- Low-Power Wireless Systems with **7.8 kHz** to **500 kHz** Bandwidth
+- LoRa Tx power up to **19 dBm**
+- Ultra-Low Power Consumption of 9.40 μA (down to 1.08 μA @ 2.0 V) in sleep mode
 - Core: **ARM 32-bit Cortex M0+** with MPU
-- Up to 128&nbsp;KB flash memory with ECC
-- 20&nbsp;KB RAM
-- 6&nbsp;KB of data EEPROM with ECC
-- Supply voltage: **2.0&nbsp;V ~ 3.6&nbsp;V**
-- Temperature range: **-40°&nbsp;C ~ +85°&nbsp;C**
+- Up to 128 KB flash memory with ECC
+- 20 KB RAM
+- 6 KB of data EEPROM with ECC
+- Supply voltage: **2.0 V ~ 3.6 V**
+- Temperature range: **-40° C ~ +85° C**
 
 ## Specifications
 
@@ -50,17 +46,11 @@ The board's low-power, long-range LoRa communication capabilities make it ideal 
 
 **Figure 1** shows the RAK4200 Breakout Board, presenting a top view of the board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/datasheet/rak4200-breakout-board-illustration.png"
-  width="30%"
-  caption="RAK4200 Breakout Board Illustration"
-  zoomMode={true}
-/>
+> **Image:** RAK4200 Breakout Board Illustration
 
 ### Hardware
 
 The hardware specification is divided into four (4) sections, covering interfacing, pinouts, and their corresponding functions and diagrams. It also includes the electrical, mechanical, and environmental parameters, presented with tabular data detailing the functionalities and standard values of the RAK4200 Breakout Board.
-
 
 #### Interfaces
 
@@ -106,12 +96,7 @@ It is recommended to leave this pin unconnected.
 
 **Figure 2** shows the pinout of the RAK4200 Breakout Board:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/datasheet/rak4200-breakout-board-pinout.png"
-  width="60%"
-  caption="RAK4200 Breakout Board Pinout"
-  zoomMode={true}
-/>
+> **Image:** RAK4200 Breakout Board Pinout
 
 The pin definitions of the RAK4200 Breakout Board are shown in the tables below:
 
@@ -145,7 +130,7 @@ The pin definitions of the RAK4200 Breakout Board are shown in the tables below:
 
 | Pin | Name | I/O | Description | Alternate Functions           |
 | :-: | :--: | :-: | :---------: | :---------------------------: |
-| 1   | VDD  | -   | DC3V3       | Supply voltage 2.0~3.3&nbsp;V |
+| 1   | VDD  | -   | DC3V3       | Supply voltage 2.0~3.3 V |
 | 2   | GND  | -   | Ground      | -                             |
 
 #### RF Characteristics
@@ -154,55 +139,17 @@ The pin definitions of the RAK4200 Breakout Board are shown in the tables below:
 
 The RAK4200 Breakout Board supports the following LoRa bands:
 
-<table>
-  <thead style={{ textAlign: 'center' }}>
-    <tr>
-<th>Module</th>
-<th>Region</th>
-<th>Frequency (MHz)</th>
-    </tr>
-  </thead>
-  <tbody style={{ textAlign: 'center' }}>
-      <tr>
-      <td rowspan = "2"><b>RAK4200(L)</b></td>
-      <td>Europe</td>
-      <td>EU433</td>
-    </tr>
-    <tr>
-      <td>China</td>
-      <td>CN470 </td>
-    </tr>
-    <tr>
-      <td rowspan = "7"><b>RAK4200(H)</b></td>
-      <td>Russia</td>
-      <td>RU864</td>
-    </tr>
-    <tr>
-      <td>India</td>
-      <td>IN865</td>
-    </tr>
-    <tr>
-      <td>Europe</td>
-      <td>EU868</td>
-    </tr>
-    <tr>
-      <td>North America</td>
-      <td>US915</td>
-    </tr>
-    <tr>
-      <td>Australia</td>
-      <td>AU915</td>
-    </tr>
-    <tr>
-      <td>Korea</td>
-      <td>KR920</td>
-    </tr>
-    <tr>
-      <td>Asia</td>
-      <td>AS923</td>
-    </tr>
-  </tbody>
-</table>
+| Module | Region | Frequency (MHz) |
+| --- | --- | --- |
+| RAK4200(L) | Europe | EU433 |
+| RAK4200(L) | China | CN470 |
+| RAK4200(H) | Russia | RU864 |
+| RAK4200(H) | India | IN865 |
+| RAK4200(H) | Europe | EU868 |
+| RAK4200(H) | North America | US915 |
+| RAK4200(H) | Australia | AU915 |
+| RAK4200(H) | Korea | KR920 |
+| RAK4200(H) | Asia | AS923 |
 
 #### Electrical Characteristics
 
@@ -212,13 +159,13 @@ The table below shows the power consumption of the RAK4200 Breakout Board:
 
 | Item                         | Power Consumption | Condition                      |
 | :--------------------------: | :---------------: | :----------------------------: |
-| Tx mode LoRa @19&nbsp;dBm    | 120&nbsp;mA       | LoRa @ PA_BOOST & BT sleep     |
-| Tx mode LoRa @17&nbsp;dBm    | 87&nbsp;mA        | LoRa @ PA_BOOST & BT sleep     |
-| Rx mode LoRa @37.5&nbsp;Kbps | 15&nbsp;mA        | LoRa @ Receive mode & BT sleep |
+| Tx mode LoRa @19 dBm    | 120 mA       | LoRa @ PA_BOOST & BT sleep     |
+| Tx mode LoRa @17 dBm    | 87 mA        | LoRa @ PA_BOOST & BT sleep     |
+| Rx mode LoRa @37.5 Kbps | 15 mA        | LoRa @ Receive mode & BT sleep |
 
 ##### Sleep Current
 
-| Feature             | Condition | Minimum (2.0&nbsp;V) | Typical (3.3&nbsp;V) | Maximum | Unit |
+| Feature             | Condition | Minimum (2.0 V) | Typical (3.3 V) | Maximum | Unit |
 | :-----------------: | :-------: | :------------------: | :------------------: | :-----: | :--: |
 | Current Consumption | EU868     | 1.08                 | 8.66                 |         | μA   |
 |                     | US915     | 1.14                 | 9.40                 |         | μA   |
@@ -226,19 +173,9 @@ The table below shows the power consumption of the RAK4200 Breakout Board:
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/datasheet/rak4200-breakout-module-schematic.png"
-  width="100%"
-  caption="RAK4200 Breakout Board Schematic"
-  zoomMode={true}
-/>
+> **Image:** RAK4200 Breakout Board Schematic
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/datasheet/rak4200-reference-ckt.png"
-  width="100%"
-  caption="RAK4200 Breakout Board Reference Circuit"
-  zoomMode={true}
-/>
+> **Image:** RAK4200 Breakout Board Reference Circuit
 
 ### Software
 
@@ -256,26 +193,14 @@ Download the latest firmware and bootloader of the RAK4200 Breakout Board provid
 
 | Model   | Version   | Source                                                                                          |
 | :-----: | :-------: | :---------------------------------------------------------------------------------------------: |
-| RAK4200 | V3.2.0.16 | <a href="https://downloads.rakwireless.com/LoRa/RAK4200/Firmware/RAK4200_Latest_Firmware.zip" target="_blank">Download</a> |
+| RAK4200 | V3.2.0.16 | [Download](https://downloads.rakwireless.com/LoRa/RAK4200/Firmware/RAK4200_Latest_Firmware.zip) |
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_CE_Certification.zip',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200_FCC_Certification.zip',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_ISED_Certification.pdf',
-    },
-    {
-        'reach': 'https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_REACH_Report.pdf',
-    },
-    {
-        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_RoHS_Report.pdf',
-    }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200_FCC_Certification.zip
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_ISED_Certification.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_RoHS_Report.pdf
 
-<RkBottomNav/>

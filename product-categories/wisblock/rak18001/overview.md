@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18001 WisBlock Buzzer Module
 
 Thank you for choosing **RAK18001 WisBlock Buzzer Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK18001 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak18001/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak18001/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK18001 Buzzer Module 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK18001.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
@@ -42,17 +40,17 @@ Refer to the sample code: [RAK18001 Play a melody](https://github.com/RAKWireles
 ## Product Features
 
 * **Module Specification**
-    * 3.3&nbsp;V Input Voltage: On/Off Control by the WisBlock Core
-    * Operating Voltage: 2.0&nbsp;V - 5.0&nbsp;V
-    * 75&nbsp;dB sound output at 10&nbsp;cm distance
-    * Resonant Frequency: 4000&nbsp;Hz
+    * 3.3 V Input Voltage: On/Off Control by the WisBlock Core
+    * Operating Voltage: 2.0 V - 5.0 V
+    * 75 dB sound output at 10 cm distance
+    * Resonant Frequency: 4000 Hz
     * PWM Controlled: Loudness and pitch level can be customized using your code
     * Uses MLT-5020 Buzzer - small and compact
     * Chipset: Jiangsu Huaneng Electronics MLT-5020
 
 * **Size**
-    * Module Size: 10&nbsp;mm x 10&nbsp;mm
-    * Built-in Buzzer Size: 5&nbsp;mm x 5&nbsp;mm x 2&nbsp;mm
+    * Module Size: 10 mm x 10 mm
+    * Built-in Buzzer Size: 5 mm x 5 mm x 2 mm
 
 ## Prerequisites
 
@@ -62,4 +60,3 @@ To use the **RAK18001 Buzzer Module**, you need a **WisBlock Base** to plug the 
 Make sure to fix the module with the matching screws to ensure intact placement and connection.
 :::
 
-<RkBottomNav/>

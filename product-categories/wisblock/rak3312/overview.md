@@ -24,8 +24,6 @@ date: 2025-05-23
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3312 WisBlock LoRaWAN Module
 
 Thank you for choosing **RAK3312 WisBlock LoRaWAN Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -33,7 +31,7 @@ Thank you for choosing **RAK3312 WisBlock LoRaWAN Module** in your awesome IoT P
 * [RAK3312 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak3312/quickstart/)
 * [RAK3312 Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak3312/datasheet/)
 * [RAK3112 Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak3112-module/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [RAK3312 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK3312.step)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 
@@ -47,14 +45,14 @@ The module supports custom firmware development using the Arduino framework and 
 
 - Based on **Espressif ESP32-S3**
 	- Xtensa® 32-bit LX7 dual-core microprocessor
-	- 16&nbsp;MB Flash
-	- 512&nbsp;kB SRAM
-	- 512&nbsp;kB RAM
-	- 8&nbsp;MB PSRAM
-	- 16&nbsp;kB RTC SRAM
+	- 16 MB Flash
+	- 512 kB SRAM
+	- 512 kB RAM
+	- 8 MB PSRAM
+	- 16 kB RTC SRAM
 - LoRa transceiver **Semtech SX1262**
 	- LoRa and LoRaWAN support
-	- Frequency support from 863&nbsp;MHz to 928&nbsp;MHz
+	- Frequency support from 863 MHz to 928 MHz
 - Compliant with the **LoRaWAN 1.0.2** (LoRaWAN **BasicModem** support in preparation)
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -63,18 +61,17 @@ The module supports custom firmware development using the Arduino framework and 
 - WiFi support
 - Custom firmware using Arduino
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10&nbsp;km with optimized antenna
+- Long-range: greater than 10 km with optimized antenna
 - MHF4 IPEX connector for external antenna integration
-- **Supply Voltage**: 3.0&nbsp;V\~3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C\~65°&nbsp;C
+- **Supply Voltage**: 3.0 V\~3.6 V
+- **Temperature range**: -40° C\~65° C
 
 ## Prerequisites
 
-To use the **RAK3312**, you need at least one <a href="https://store.rakwireless.com/collections/wisblock-base?srsltid=AfmBOopZc6hiRouDzzO5q0m5oX1p821fsEmv8clcSIVJmJvtxjafHXqS" target="_blank">WisBlock Base</a> to plug the module into. The WisBlock Base provides power to the RAK3312 module and includes the programming and debugging interface.
+To use the **RAK3312**, you need at least one [WisBlock Base](https://store.rakwireless.com/collections/wisblock-base?srsltid=AfmBOopZc6hiRouDzzO5q0m5oX1p821fsEmv8clcSIVJmJvtxjafHXqS) to plug the module into. The WisBlock Base provides power to the RAK3312 module and includes the programming and debugging interface.
 
 :::warning
 - Make sure to secure the module with screws to ensure proper functionality.
 - When using the LoRa, WiFi, or BLE transceivers, make sure that an antenna is always connected. Using these transceivers without an antenna can damage the system.
 :::
 
-<RkBottomNav/>

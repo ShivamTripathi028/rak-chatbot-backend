@@ -10,13 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK1905 WisBlock 9-Axis Sensor Module Datasheet
 
 ## Overview
-
 
 ### Description
 
@@ -25,40 +21,27 @@ RAK1905 is a 3-axis gyroscope, 3-axis accelerometer, and 3-axis magnetometer, pa
 ### Features
 
 - Chipset: **TDK MPU-9250**
-- Supply voltage: **3.3&nbsp;V**
-- Current consumption: **8&nbsp;uA - 2.7&nbsp;mA**
-- Accelerometer output: **±2&nbsp;g**, **±4&nbsp;g**, **±8&nbsp;g**, and **±16&nbsp;g**
-- Gyroscope output: **±250**, **±500**, **±1000**, and **±2000&nbsp;°/sec**
+- Supply voltage: **3.3 V**
+- Current consumption: **8 uA - 2.7 mA**
+- Accelerometer output: **±2 g**, **±4 g**, **±8 g**, and **±16 g**
+- Gyroscope output: **±250**, **±500**, **±1000**, and **±2000 °/sec**
 - 16-bit ADCs
-- Magnetometer full-scale measurement range: **±4800&nbsp;µT**
+- Magnetometer full-scale measurement range: **±4800 µT**
 - Digital Motion Processor (DMP)
 - I2C Interface
-- Module size: **10&nbsp;mm x 10&nbsp;mm**
+- Module size: **10 mm x 10 mm**
 
 ## Specifications
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1905/datasheet/rak1905-overview.png"
-  figureCount="1"
-  caption="RAK1905 WisBlock 9-Axis Sensor Module top and bottom view" 
-   width="35%"
-/>
-
-
+> **Image:** RAK1905 WisBlock 9-Axis Sensor Module top and bottom view
 
 #### Mounting
 
 **Figure 2** shows the mounting mechanism of the RAK1905 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK1905 module can be mounted on the slots: **A, B, C, D, E, & F**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1905/datasheet/rak1905-mounting.png"
-  figureCount="2"
-  caption="RAK1905 WisBlock 9-Axis Module mounting" 
-   width="50%"
-/>
+> **Image:** RAK1905 WisBlock 9-Axis Module mounting
 
 ### Hardware
 
@@ -74,12 +57,7 @@ The hardware specification is categorized into five parts. It presents the chips
 
 The RAK1905 9-Axis Sensor WisBlock Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK1905 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1905/datasheet/rak1905-pinout.png"
-  figureCount="3"
-  caption="RAK1905 WisBlock 9-Axis Sensor Module pinout" 
-   width="60%"
-/>
+> **Image:** RAK1905 WisBlock 9-Axis Sensor Module pinout
 
 :::tip NOTE
 **I2C** related pins, **INT**, **VDD33**, and **GND** are connected to WisBlock Sensor connector.
@@ -102,37 +80,20 @@ If there are other sensor modules connected on the base other than RAK1905 and a
 | Symbol | Description                                                                                | Min. | Nom. | Max. | Unit |
 | ------ | ------------------------------------------------------------------------------------------ | ---- | ---- | ---- | ---- |
 | VDD    | Power supply voltage                                                                       | -    | 3.3  | -    | V    |
-| IDD    | 9-axis (no DMP), 1&nbsp;kHz gyro ODR, 4&nbsp;kHz accel ODR, 8&nbsp;Hz mag. repetition rate | -    | 2.7  | -    | mA   |
+| IDD    | 9-axis (no DMP), 1 kHz gyro ODR, 4 kHz accel ODR, 8 Hz mag. repetition rate | -    | 2.7  | -    | mA   |
 | IDDL   | Full Chip Idle Mode supply current                                                         | -    | 8    | -    | uA   |
 
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1905/datasheet/mech-dimension.png"
-  figureCount="4"
-  caption="RAK1905 WisBlock 9-Axis Module mechanical drawing" 
-   width="60%"
-/>
+> **Image:** RAK1905 WisBlock 9-Axis Module mechanical drawing
 
 ##### WisBlock Connector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1905/datasheet/pcb-footprint.png"
-  figureCount="5"
-  caption="WisBlock Connector PCB footprint and recommendations" 
-   width="100%"
-/>
+> **Image:** WisBlock Connector PCB footprint and recommendations
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1905/datasheet/rak1905-schematic.png"
-  figureCount="6"
-  caption="RAK1905 WisBlock 9-Axis Sensor Module schematic diagram" 
-   width="100%"
-/>
-
-<RkBottomNav/>
+> **Image:** RAK1905 WisBlock 9-Axis Sensor Module schematic diagram
 

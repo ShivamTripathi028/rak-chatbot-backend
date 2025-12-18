@@ -13,9 +13,6 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7240 WisGate Edge Prime
 Thank you for choosing **RAK7240 WisGate Edge Prime** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -56,5 +53,4 @@ Thus, the **RAK7240 WisGate Edge Prime**, is suited for any use case scenario, b
 - **LoRa Frame filtering** (node whitelisting)
 - **MQTT v3.1** Bridging with **TLS** encryption
 - **Buffering of LoRa frames** in case of NS outage (no data loss)
-
 

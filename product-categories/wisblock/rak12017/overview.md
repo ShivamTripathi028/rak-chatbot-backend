@@ -12,15 +12,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12017 WisBlock IR Detection Sensor Module
 
 Thank you for choosing **RAK12017 WisBlock IR Detection Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK12017 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak12017/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak12017/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK12017 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12017.stp)
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -34,19 +32,18 @@ Thank you for choosing **RAK12017 WisBlock IR Detection Sensor Module** in your 
 
 The RAK12017 is an IR detection module. This module uses ITR20001 optical switch from Everlight to detect whether the IR Signal reflects. Sample applications of this module are: to identify if an object is approaching and check changes between black and white lines.
 
-
 ## Product Features
 
 * **Module Specifications**
     * Detect whether IR Signal is reflected back
-    * λP=940&nbsp;nm
-    * 3.3&nbsp;V Power supply
-    * Current Consumption: < 21&nbsp;mA
+    * λP=940 nm
+    * 3.3 V Power supply
+    * Current Consumption: < 21 mA
     * Chipset: Everlight ITR20001
-    * Infrared Line Tracking Range: 1&nbsp;cm to 5&nbsp;cm
+    * Infrared Line Tracking Range: 1 cm to 5 cm
 
 * **Module Size**
-    * 15&nbsp;mm x 25&nbsp;mm
+    * 15 mm x 25 mm
 
 ## Prerequisites
 
@@ -56,4 +53,3 @@ To use a **RAK12017**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

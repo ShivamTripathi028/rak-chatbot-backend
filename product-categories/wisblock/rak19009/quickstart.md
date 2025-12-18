@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19009 WisBlock Mini Base Board with Power Slot Quick Start Guide
 
 This guide introduces the RAK19009 WisBlock Mini Base Board with Power Slot and how to use it.
@@ -35,12 +32,12 @@ It is highly recommended to also check the dedicated Quick Start Guide that you 
 
 Based on the choice of the WisBlock Core, select a Development Environment:
 
-<b>Programming via Arduino IDE</b>
+**Programming via Arduino IDE**
 
 - [RAKwireless BSP support for Arduino](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index)
 In Arduino IDE, once you installed the BSP, the examples for WisBlock Core will be automatically included on the list of examples.
 
-<b>Programming via PlatformIO IDE:</b>
+**Programming via PlatformIO IDE:**
 
 - [RAKwireless WisBlock modules in PlatformIO](https://github.com/RAKWireless/WisBlock/blob/master/PlatformIO/README)
 
@@ -54,12 +51,7 @@ To give you a better understanding of how the WisBlock Base works, the block dia
 
 The block diagram shown in **Figure 1** shows the internal architecture and external interfaces of the RAK19009 board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/block-diagram.svg" 
-  figureCount="1"
-  caption="RAK19009 WisBlock Base block diagram" 
-   width="60%"
-/>
+> **Image:** RAK19009 WisBlock Base block diagram
 
 The MCU in the WisBlock Core module offers the I2C, UART, and SPI data buses to the sensor modules. Through these buses, the MCU can control and retrieve data from the sensors. The WisBlock Power module provides power for WisBlock Core and WisBlock Sensor slots.
 
@@ -85,75 +77,35 @@ This guide uses two arrows. Refer to **Figure 2** for its representation.
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/1.arrows.png" 
-  figureCount="2"
-  caption="Notation within the guide" 
-   width="50%"
-/>
+> **Image:** Notation within the guide
 
 1. Align the connectors. Keep the header parallel and place it lightly in the corresponding lap joint of the socket.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/2.alignment.png" 
-  figureCount="3"
-  caption="Alignment of WisConnector" 
-   width="75%"
-/>
+> **Image:** Alignment of WisConnector
 
 2. Fit the connector. Tilt one end of the connector (header) less than 20 degrees, while do not apply force during this process, gently place the other end in parallel.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/3.header-to-socket.png" 
-  figureCount="4"
-  caption="Fit the WisConnector’s header inside of the socket" 
-   width="75%"
-/>
+> **Image:** Fit the WisConnector’s header inside of the socket
 
 3. After the above alignment steps, the header and socket are matched but still not buckled.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/4.header-matched.png" 
-  figureCount="5"
-  caption="WisConnector’s header matched inside of the socket" 
-   width="75%"
-/>
+> **Image:** WisConnector’s header matched inside of the socket
 
 4. Apply forces evenly by pressing in parallel, then there will be a sound confirming the completion of the buckling.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/5.buckle-the-head.png" 
-  figureCount="6"
-  caption="Apply forces to buckle the heard to the socket" 
-   width="75%"
-/>
+> **Image:** Apply forces to buckle the heard to the socket
 
 5. In the process of buckling and applying force, avoid the application of uneven force on both sides.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/6.uneven-forces.png" 
-  figureCount="7"
-  caption="Avoid applying uneven forces" 
-   width="75%"
-/>
+> **Image:** Avoid applying uneven forces
 
 6. When the buckling process is completed, check that the header and socket are kept in parallel.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/7.buckle-header-to-socket.png" 
-  figureCount="8"
-  caption="Correct way to buckle the WisConnector’s header to the socket" 
-   width="75%"
-/>
+> **Image:** Correct way to buckle the WisConnector’s header to the socket
 
 7. If after buckling, the header and socket are not in a parallel state (not fully assembled in one place), then press the even force on both sides of the long side to complete the correct buckling.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/8.not-parallel.png" 
-  figureCount="9"
-  caption="WisConnector’s header is not parallel to the socket" 
-   width="75%"
-/>
+> **Image:** WisConnector’s header is not parallel to the socket
 
 8. When the aforementioned steps are not completed yet, do not apply force to buckle. Otherwise, there will be a risk to damage the connector. When the connector cannot be smoothly buckled down, repeat the alignment step.
 
@@ -161,39 +113,19 @@ This guide uses two arrows. Refer to **Figure 2** for its representation.
 
 1. To disconnect the header from the socket, pull out in parallel with even forces.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/9.detach-header.png" 
-  figureCount="10"
-  caption="Correct way: Applying even forces to detach the header from the socket" 
-   width="75%"
-/>
+> **Image:** Correct way: Applying even forces to detach the header from the socket
 
 2. Avoid pulling out the header asymmetrically in the long-side direction.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/10.wrong-way-of-detaching.png" 
-  figureCount="11"
-  caption="Wrong way: Applying uneven forces to detach the header from the socket" 
-   width="60%"
-/>
+> **Image:** Wrong way: Applying uneven forces to detach the header from the socket
 
 3. The short-side of the connector can be pulled out asymmetrically, but apply the force vertically and avoid rotating the header.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/11.dont-rotate.png" 
-  figureCount="12"
-  caption="Wrong way: Do not rotate the header" 
-   width="60%"
-/>
+> **Image:** Wrong way: Do not rotate the header
 
 4. Avoid applying forces in a single corner.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/12.dont-apply-force.png" 
-  figureCount="13"
-  caption="Wrong way: Do not apply force in a single corner of the header" 
-   width="55%"
-/>
+> **Image:** Wrong way: Do not apply force in a single corner of the header
 
 #####  Assembling a WisBlock Module
 
@@ -201,67 +133,37 @@ This guide uses two arrows. Refer to **Figure 2** for its representation.
 
 A WisBlock Core module is designed to be installed on the CPU slot of the RAK19009 Base Board. As shown in **Figure 14**, the location is properly marked by silkscreen.
 
-Follow carefully the procedure defined in [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19009/quickstart/#attaching-a-wisconnector) section in order to attach a Core module. Once attached, fix the module  with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the WisBlock Core.
+Follow carefully the procedure defined in [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19009/quickstart/#attaching-a-wisconnector) section in order to attach a Core module. Once attached, fix the module  with one or more pieces of M1.2 x 3 mm screws depending on the WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/rak19009-core-assy.png" 
-  figureCount="14"
-  caption="WisBlock Core silkscreen on the RAK19009 Mini Base Board with Power Slot" 
-   width="40%"
-/>
+> **Image:** WisBlock Core silkscreen on the RAK19009 Mini Base Board with Power Slot
 
 ###### WisBlock Power
 
 A WisBlock Power module is designed to be installed on the Power slot of the RAK19009 Base Board. As shown in **Figure 15**, the location is properly marked by silkscreen.
 
-Follow carefully the procedure defined in [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19009/quickstart/#attaching-a-wisconnector) section in order to attach a Core module. Once attached, fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the WisBlock Core.
+Follow carefully the procedure defined in [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19009/quickstart/#attaching-a-wisconnector) section in order to attach a Core module. Once attached, fix the module with one or more pieces of M1.2 x 3 mm screws depending on the WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/rak19009-power-assy.png" 
-  figureCount="15"
-  caption="WisBlock Power silkscreen on the RAK19009 Mini Base Board with Power Slot" 
-   width="40%"
-/>
+> **Image:** WisBlock Power silkscreen on the RAK19009 Mini Base Board with Power Slot
 
 ###### WisBlock Sensor
 
 A WisBlock Sensor module is designed to be installed on the Sensor slot of the RAK19009 Base Board. There are two (2) available sensor slots in the RAK19009 Base Board. As shown in **Figure 16**, the location of the slots is properly marked by silkscreen.
 
-Follow carefully the procedure of the section, [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19009/quickstart/#attaching-a-wisconnector), to attach a WisBlock Sensor module. Once attached, fix the module with an M1.2 x 3&nbsp;mm screw.
+Follow carefully the procedure of the section, [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19009/quickstart/#attaching-a-wisconnector), to attach a WisBlock Sensor module. Once attached, fix the module with an M1.2 x 3 mm screw.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/rak19009-io-assy.png" 
-  figureCount="16"
-  caption="WisBlock Sensor silkscreen on the RAK19009 Mini Base Board with Power Slot" 
-   width="40%"
-/>
+> **Image:** WisBlock Sensor silkscreen on the RAK19009 Mini Base Board with Power Slot
 
 ##### Disassembling a WisBlock Module
 
 1. The procedure to disassemble any type of WisBlock module is the same. As shown in **Figure 17**, first, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/rak19009-remove.png" 
-  figureCount="17"
-  caption="Removing screws from the WisBlock module" 
-   width="40%"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, on the PCB of a WisBlock module, there is a silkscreen that shows the correct location where force can be applied. By applying even force under the marked area, the module can be detached from the Base Board. See **Figure 18** and **Figure 19**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/17.detaching-silkscreen.png" 
-  figureCount="18"
-  caption="Detaching silkscreen on the WisBlock module" 
-   width="75%"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19009/quickstart/18.detaching-module.png" 
-  figureCount="19"
-  caption="Applying even forces on the proper location of a WisBlock module to detach the module from the Base Board" 
-   width="65%"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module to detach the module from the Base Board
 
 ### Software Setup
 
@@ -272,4 +174,3 @@ Before you continue, you should have either an [Arduino BSP](https://github.com/
 
 To quickly build your IoT device with less hassle, example codes for WisBlock Core are provided. You can access the codes on the [WisBlock Example code repository](https://github.com/RAKWireless/WisBlock/tree/master/examples). The example codes on folder `common` are compatible with RAK4631, RAK11200, and RAK11310 WisBlock cores.
 
-<RkBottomNav/>

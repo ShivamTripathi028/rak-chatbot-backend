@@ -10,10 +10,6 @@ image: https://images.docs.rakwireless.com/wisnode/water-conductivity-monitoring
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Water Conductivity Monitoring Solution
 
 Thank you for choosing the **Water Conductivity Monitoring Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -21,7 +17,6 @@ Thank you for choosing the **Water Conductivity Monitoring Solution** in your aw
 - [Quick Start Guide](quickstart.md)
 - [LoRaWAN Network Server Guide](lorawan-network-server-guide.md)
 - [Datasheet](datasheet.md)
-
 
 ### Solution Description
 
@@ -48,31 +43,10 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 
 ### Package Inclusion
 
-<table>
-  <thead>
-    <tr>
-      <th>Device List</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
-      <td>Sensor Hub + Sensor Hub Installation Kit</td>
-    </tr>
-    <tr>
-      <td>1 x Water Conductivity Sensor <br/> 1 x Sensor Probe IO</td>
-      <td>Water Conductivity Sensor + Sensor Probe IO</td>
-    </tr>
-    <tr>
-      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
-      <td>Sensor Hub Power Adapter + Power Cable</td>
-    </tr>
-    <tr>
-      <td>1 x Cable Tie</td>
-      <td>For wiring or fixing</td>
-    </tr>
-  </tbody>
-</table>
+| Device List | Description |
+| --- | --- |
+| 1 x Sensor Hub 1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
+| 1 x Water Conductivity Sensor 1 x Sensor Probe IO | Water Conductivity Sensor + Sensor Probe IO |
+| 1 x Power Adapter 1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
+| 1 x Cable Tie | For wiring or fixing |
 
-<RkBottomNav/>

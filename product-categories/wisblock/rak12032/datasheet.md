@@ -10,19 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK12032 WisBlock 3-Axis Accelerometer Sensor Datasheet
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12032/datasheet/rak12032_front_back.png"
-  width="60%"
-  caption="RAK12032 WisBlock 3-Axis Sensor"
-/>
+> **Image:** RAK12032 WisBlock 3-Axis Sensor
 
 ### Description
 
@@ -34,15 +26,15 @@ RAK12032 is a WisBlock 3-axis Accelerometer Sensor Module that extends the WisBl
     *  Based on ADXL313
     *  Measurement range：+/-0.5g, +/-1g, +/-2g, +/-4g
     *  High resolution (up to 13-bit)
-    *  Ultra-low power (scales automatically with data rate), as low as 30&nbsp;uA in measurement mode
-    *  Low noise performance: 150&nbsp;ug/Hz typical for X-Y axes
+    *  Ultra-low power (scales automatically with data rate), as low as 30 uA in measurement mode
+    *  Low noise performance: 150 ug/Hz typical for X-Y axes
     *  Built-in motion detection functions for activity/inactivity monitoring
     *  I2C digital interfaces
-    *  3.3&nbsp;V power supply
-    *  Operating temperature range: -40&nbsp;°C to +85&nbsp;°C
+    *  3.3 V power supply
+    *  Operating temperature range: -40 °C to +85 °C
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Specifications
 
@@ -52,11 +44,7 @@ RAK12032 is a WisBlock 3-axis Accelerometer Sensor Module that extends the WisBl
 
 **Figure 2** shows the mounting mechanism of the RAK12032 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12032 module can be mounted on the slots: **C, D, E, & F**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12032/datasheet/rak19xx_mounting.png"
-  width="50%"
-  caption="RAK12032 WisBlock 3-Axis Sensor Mounting"
-/>
+> **Image:** RAK12032 WisBlock 3-Axis Sensor Mounting
 
 :::tip NOTE
 When the RAK12032 is used with other sensor modules powered by **3V3_S** together, it can not be mounted on slot **A** and slot **B**.
@@ -76,11 +64,7 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK12032 WisBlock 3-Axis Sensor comprises a standard WisBlock connector. The WisBlock connector allows the RAK12032 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12032/datasheet/rak12032_pinout.png"
-  width="40%"
-  caption="RAK12032 WisBlock 3-Axis Sensor Pinout Diagram"
-/>
+> **Image:** RAK12032 WisBlock 3-Axis Sensor Pinout Diagram
 
 :::tip NOTE
 
@@ -123,28 +107,14 @@ The following are connected to WisBlock connector:
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK12032 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12032/datasheet/rak19xx_mechanic_drawing.png"
-  width="60%"
-  caption="RAK12032 WisBlock 3-Axis Sensor Mechanic Drawing"
-/>
+> **Image:** RAK12032 WisBlock 3-Axis Sensor Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12032/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 **Figure 6** shows the schematic of the RAK12032 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12032/datasheet/rak12032-schematic.png"
-  width="100%"
-  caption="RAK12032 WisBlock 3-Axis Sensor schematics"
-/>
+> **Image:** RAK12032 WisBlock 3-Axis Sensor schematics
 
-
-<RkBottomNav/>

@@ -10,16 +10,12 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAKR314 CM4 Base Board
 
 Thank you for choosing **RAKR314 CM4 Base Board** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [Flashing the OS](https://docs.rakwireless.com/product-categories/wisgate/rakr314/flashing-the-os/)
 * [Assembly Guide](https://docs.rakwireless.com/product-categories/wisgate/rakr314/assembly-guide/)
-
 
 ## Product Description
 
@@ -29,35 +25,25 @@ It offers extensive connectivity options, including two USB 2.0 ports, two USB 3
 
 One of the standout features of the RAKR314 is its ability to harness the power of the CM4 module while maintaining the familiar Raspberry Pi form factor, allowing compatibility with all your existing HATs. Additionally, the included enclosure kit simplifies the process of building your devices.
 
-
 ## Product Features
 
 - Gigabit Ethernet port
 - Support PoE with RAK PoE HAT for Raspberry Pi
 - USB-C CM4 flashing connector
-- USB-C DC 5&nbsp;V power supply connector
+- USB-C DC 5 V power supply connector
 - 2x USB 2.0 ports
 - 2x USB 3.0 ports
 - 40-pin header
 - 1x PWR LED
 - 1x ACT LED
 - 1x Micro SD card slot
-- Dimensions: 68.63&nbsp;mm x 94.09&nbsp;mm
+- Dimensions: 68.63 mm x 94.09 mm
 
 ### Board Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rakr314/1.board-overview.png"
-  width="60%"
-  caption="RAKR314 Board Overview"
-/>
+> **Image:** RAKR314 Board Overview
 
 ### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rakr314/2.interfaces.png"
-  width="70%"
-  caption="RAKR314 Interfaces"
-/>
+> **Image:** RAKR314 Interfaces
 
-<RkBottomNav/>

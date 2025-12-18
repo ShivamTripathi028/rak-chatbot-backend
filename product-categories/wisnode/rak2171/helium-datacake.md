@@ -12,49 +12,29 @@ keywords:
 sidebar_label: Helium + Datacake
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisNode TrackIt Helium Integration
 
 This guide shows how to register the TrackIt device in the Helium console and make integration to Datacake, where you can use the dashboard to view the data in a more user-friendly way. For example, create a map so you can see the location of the device.
 
 Before you dive into registering the device in the Helium console and creating the Datacake integration, you need to set the device to work in [Third-Party LoRaWAN Network Server (LNS) Mode](https://docs.rakwireless.com/product-categories/wisnode/rak2171/quickstart/#third-party-lorawan-network-server-lns-mode).
 
-
 ## Register the TrackIt Node in the Helium Console
 
 1. Login into your Helium console account. If you do not have one, head to the web page and create one. Once you are logged in, you will see the Welcome window.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/01.png"
-  width="100%"
-  caption="Helium console main page"
-/>
+> **Image:** Helium console main page
 
 2. In the menu on the left side of the console, select **Devices** and click the **Add new device** button (<img width="20px" src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/1.png"/>) to register your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/02.png"
-  width="100%"
-  caption="Helium console devices page"
-/>
+> **Image:** Helium console devices page
 
 3. In the **Name** field, type the preferred name of your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/03.png"
-  width="100%"
-  caption="Add New Device page"
-/>
+> **Image:** Add New Device page
 
 4. You can see that the Helium console generates random **Dev EUI**, **App EUI**, and **App Key**. Since the TrackIt keys cannot be changed, you need to type your keys in the fields. These keys can be found in the TrackIt application in the LoRaWAN Working Mode (**Third Party NS**).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/04.png"
-  width="100%"
-  caption="TrackIt keys"
-/>
+> **Image:** TrackIt keys
 
 5. Optionally, you can select a **Profile** and **Attach a Label**. For this tutorial, they will be skipped. Note that **Profiles** and **Labels** can be added after the device is registered.
 
@@ -64,145 +44,77 @@ Before you dive into registering the device in the Helium console and creating t
 
 1. While the device is joining, you can create the integration. Select **Integrations** from the menu in the left panel.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/05.png"
-  width="100%"
-  caption="Integration page"
-/>
+> **Image:** Integration page
 
 2. To create an integration, click the **Add New Integration button** (<img width="20px" src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/2.png"/>). A list of the available integrations will appear. As for this guide, click Datacake. For further information, refer to the [**Integrations** documentation](https://docs.helium.com/use-the-network/console/integrations/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/06.png"
-  width="100%"
-  caption="List of available integrations"
-/>
+> **Image:** List of available integrations
 
 3. On the next page, you will need a **Datacake Token**. To generate one, you will need a Datacake account. If you don't have an account yet, you can create one on [Datacake's website](https://datacake.co/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/07.png"
-  width="100%"
-  caption="Datacake endpoint token"
-/>
+> **Image:** Datacake endpoint token
 
 4. After logging in to your Datacake account, click your profile and select **Edit Profile.**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/08.png"
-  width="100%"
-  caption="Datacake console page"
-/>
+> **Image:** Datacake console page
 
 5. In the **API** tab, you will find your API token. Copy and paste it into the **Enter Datacake Token** field in the Helium console, as shown in **Figure 9**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/09.png"
-  width="100%"
-  caption="Datacake endpoint"
-/>
+> **Image:** Datacake endpoint
 
 6. When you place the token, type a name of your choice for the integration and click **Add Integration** to continue.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/10.png"
-  width="100%"
-  caption="Adding integration name"
-/>
+> **Image:** Adding integration name
 
 ### Connection Between Helium and Datacake
 
 1. Now that the device is registered and the integration created, you will need to make the connection between Helium and Datacake. Click **Flows** from the left menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/11.png"
-  width="100%"
-  caption="Helium console flows"
-/>
+> **Image:** Helium console flows
 
 2. Click the **+** in the **Nodes area**. A window will pop up with four menus – **Labels, Devices, Functions**, and **Integrations**. Click **Devices**, and you will see your registered device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/12.png"
-  width="100%"
-  caption="Nodes"
-/>
+> **Image:** Nodes
 
 3. Now, click the registered device and drag and drop it on the blank page below, as shown in **Figure 13**.
 
 4. Do the same with the created integration. Click the **Integrations** menu and drag and drop your created integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/15.png"
-  width="100%"
-  caption="Creating the connection between the device and the integration"
-/>
+> **Image:** Creating the connection between the device and the integration
 
 ### Datacake Device Registration
 
 1. You need to add the device to the Datacake console. Head to the **Devices** tab and click the **+ Add Device** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/16.png"
-  width="100%"
-  caption="Datacake console"
-/>
+> **Image:** Datacake console
 
 2. Datacake has ready-to-use TrackIt template. To add the device, click **LoRaWAN** and then **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/17.png"
-  width="100%"
-  caption="Adding a new device"
-/>
+> **Image:** Adding a new device
 
 3. On the next window, in the **Search** field, type **TrackIt** and choose the **Device Template**. Then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/18.png"
-  width="100%"
-  caption="Selecting product template"
-/>
+> **Image:** Selecting product template
 
 4. On the next page, choose **Helium** for Network server and click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/19.png"
-  width="100%"
-  caption="Choosing network server"
-/>
+> **Image:** Choosing network server
 
 5. On the next page, type the **Dev EUI** and the **Name of your device**. You can add more than one device. You can also drag and drop a `.csv` file, and it automatically adds multiple devices at once. Then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/20.png"
-  width="100%"
-  caption="Adding device"
-/>
+> **Image:** Adding device
 
 6. Finally, choose a plan. For this example, choose the **Free** one. Click **Add 1 device** to finish.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/21.png"
-  width="100%"
-  caption="Choosing a plan"
-/>
+> **Image:** Choosing a plan
 
 7. Now, your device is registered in Datacake.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/22.png"
-  width="100%"
-  caption="Registered TrackIt device in Datacake"
-/>
+> **Image:** Registered TrackIt device in Datacake
 
 8. You can click the name of your device and check the Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/23.png"
-  width="100%"
-  caption="TrackIt Dashboard"
-/>
+> **Image:** TrackIt Dashboard
 
 Everything in the Dashboard is pre-configured (fields, decoder, widgets), and it is ready to use.
 
@@ -212,19 +124,11 @@ Everything in the Dashboard is pre-configured (fields, decoder, widgets), and it
 
 1. You need to decode the raw data that the device sends to Datacake, so you can preview it in a more user-friendly way. On the device page of the Datacake console, you can find different tabs like **Dashboard**, **History**, and **Downlinks**. For now, head to the **Configuration tab**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/24.png"
-  width="100%"
-  caption="Device’s Dashboard"
-/>
+> **Image:** Device’s Dashboard
 
 2. Scroll down until you find the Payload Decoder field.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/25.png"
-  width="100%"
-  caption="Device’s Configuration Page"
-/>
+> **Image:** Device’s Configuration Page
 
 3. In the **Payload Decoder** field, copy and paste the code below. Then click the **Save** button below the decoder field.
 
@@ -300,38 +204,31 @@ function Decoder(bytes, port) {
 
 4. Now you can see the decoded data you receive in the **Debug tab**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/26.png"
-  width="70%"
-  caption="TrackIt Data"
-/>
+> **Image:** TrackIt Data
 
 5. Create fields for the different data that the device sends. Below is a list of the fields you can create:
 
-<table>
-   <thead><tr><th>Type</th><th>Name</th><th>Identifier</th><th>Description</th></tr></thead>
-   <tbody>
-   <tr><td>Integer</td><td>Frame Counter</td><td>NUM</td><td>Packets Counter</td></tr>
-   <tr><td>Integer</td><td>Application ID</td><td>APP_ID</td><td>The ID of the application</td></tr>
-   <tr><td>Integer</td><td>Device ID</td><td>DEV_ID</td><td>The ID of the device</td></tr>
-   <tr><td>Boolean</td><td>Fix</td><td>FIX</td><td>GPS fix</td></tr>
-   <tr><td>Integer</td><td>Battery</td><td>BATT</td><td>Battery Level</td></tr>
-   <tr><td>String</td><td>Time Stamp</td><td>TIME_STAMP</td><td>Time of the packet</td></tr>
-   <tr><td>String</td><td>Date Stamp</td><td>DATE_STAMP</td><td>Date of the packet</td></tr>
-   <tr><td>Integer</td><td>Status</td><td>STAT</td><td>1=sending</td>
-   <tr><td> </td><td> </td><td> </td><td>3=sending</td>
-   <tr><td>Integer</td><td>GPS</td><td>GPS</td><td>GPS Status</td>
-   <tr><td> </td><td> </td><td> </td><td>0:open the GPS fix</td>
-   <tr><td> </td><td> </td><td> </td><td>4:locating</td>
-   <tr><td> </td><td> </td><td> </td><td>8:successful</td>
-   <tr><td> </td><td> </td><td> </td><td>12:failed</td>
-   <tr><td>Integer</td><td>Accuracy</td><td>ACC</td><td>Accuracy of GPS</td>
-   <tr><td>Geolocation</td><td>Location</td><td>LOCATION</td><td>GPS coordinates</td></tr>
-   <tr><td>String</td><td>Tracker ID</td><td>TRACKER_ID</td><td>The ID of the tracker</td></tr>
-   <tr><td>Integer</td><td>Alarm Level</td><td>ALARM_LVL</td><td>The level of the alarm set in the application</td></tr>
-   <tr><td>Integer</td><td>Alarm</td><td>ALARM</td><td>Shows if the alarm is triggered</td></tr>
-   </tbody>
-</table>
+| Type | Name | Identifier | Description |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Integer | Frame Counter | NUM | Packets Counter |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Application ID | APP_ID | The ID of the application |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Device ID | DEV_ID | The ID of the device |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Boolean | Fix | FIX | GPS fix |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Battery | BATT | Battery Level |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| String | Time Stamp | TIME_STAMP | Time of the packet |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| String | Date Stamp | DATE_STAMP | Date of the packet |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Status | STAT | 1=sending |  |  |  | 3=sending | Integer | GPS | GPS | GPS Status |  |  |  | 0:open the GPS fix |  |  |  | 4:locating |  |  |  | 8:successful |  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |
+|  |  |  | 3=sending | Integer | GPS | GPS | GPS Status |  |  |  | 0:open the GPS fix |  |  |  | 4:locating |  |  |  | 8:successful |  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |
+| Integer | GPS | GPS | GPS Status |  |  |  | 0:open the GPS fix |  |  |  | 4:locating |  |  |  | 8:successful |  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |
+|  |  |  | 0:open the GPS fix |  |  |  | 4:locating |  |  |  | 8:successful |  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  | 4:locating |  |  |  | 8:successful |  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  | 8:successful |  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+|  |  |  | 12:failed | Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Accuracy | ACC | Accuracy of GPS | Geolocation | Location | LOCATION | GPS coordinates | String | Tracker ID | TRACKER_ID | The ID of the tracker | Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application | Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Geolocation | Location | LOCATION | GPS coordinates |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| String | Tracker ID | TRACKER_ID | The ID of the tracker |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Alarm Level | ALARM_LVL | The level of the alarm set in the application |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+| Integer | Alarm | ALARM | Shows if the alarm is triggered |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 6. To create a field, in the **Configuration** tab for the device in the Datacake console, scroll down to the **Fields** field. Click on the **+ Add Field** button. In the **Add Field** window, fill in the following information based on the table above:
 
@@ -341,93 +238,50 @@ function Decoder(bytes, port) {
 - **Unit (optional)** – The unit of the value (e.g. V for battery (volts)).
 - **Use formula** - Formulas can be used to perform calculations on values based on other fields.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/27.png"
-  width="70%"
-  caption="Adding a field"
-/>
+> **Image:** Adding a field
 
 For example, to create a **LOCATION** field, choose **Geolocation** in the **Type** field. For the **Identifier** field, type the name of the decoded data field: **LOCATION**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/28.png"
-  width="70%"
-  caption="Location field"
-/>
+> **Image:** Location field
 
 7. When you enter the required information, click **Add Field**. You will see the created field in the Field tab. Once a packet is received, the field will take the value of the identifier.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/29.png"
-  width="100%"
-  caption="Successfully Created Field"
-/>
+> **Image:** Successfully Created Field
 
 Another example is if you want to create a field for the battery level. Click again **+ Add Field**, and select **Integer** in the **Type** field. Type **Battery** in the Name field and **BATT** in the Identifier field.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/30.png"
-  width="70%"
-  caption="Add battery field"
-/>
+> **Image:** Add battery field
 
 8. Do the same with the other fields. It is up to you to decide on what fields are required for your project. Make sure you select the right **Type** and enter the correct **Identifier**.
 
 9. Now that the fields are created, head to the **Dashboard** of the device. Activate the **Edit mode** using the switch (<img src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/4.png"/> ) and click **+ Add Widget**. You can create a widget to preview the data in the dashboard. Choose the correct widget for the desired field.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/31.png"
-  width="80%"
-  caption="Datacake Widgets"
-/>
+> **Image:** Datacake Widgets
 
 For example, when creating a map, click the **Map (Displays a map)** widget.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/32.png"
-  width="70%"
-  caption="Map Widget"
-/>
+> **Image:** Map Widget
 
 10.  In the **Basics** tab, you can type a name for the widget. In the **Appearance** tab, you can set a design to your widget (color, style). The **Data** tab is most important. Here you need to select the location field you have created above. Click on the **+** **Add field** and select the **Location** field. In addition, in the **Timeframe** tab, you can enable whether the map will show historical data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/33.png"
-  width="70%"
-  caption="Map field"
-/>
+> **Image:** Map field
 
 1.  Once you have set the field, click **Save** and you will see the map in the Dashboard.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/34.png"
-  width="100%"
-  caption="Datacake map"
-/>
-
+> **Image:** Datacake map
 
 In addition, if you want to add a widget to see the battery level of the device, click again **+ Add Widget** and select **Value**. In the **Data** tab, select **Battery** for **Field**. Then click **Save** to add the widget.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/35.png"
-  width="70%"
-  caption="Add Battery Widget"
-/>
+> **Image:** Add Battery Widget
 
 12.  If you want, you can create other widgets. For example:
 
 - **String/Integer** field - choose **Value** (Displays a measurement).
 - **Boolean** field - choose **Boolean** (Displays a boolean state).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/36.png"
-  width="100%"
-  caption="TrackIt Dashboard"
-/>
+> **Image:** TrackIt Dashboard
 
 13. Once you add your widgets, you can customize your Dashboard depending on your needs. Remember, when you finish customizing your Dashboard, deactivate the **Edit mode** by clicking the **yellow switch** to save your changes.
 
 --->
 
-<RkBottomNav/>

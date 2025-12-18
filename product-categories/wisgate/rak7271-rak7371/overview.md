@@ -12,8 +12,6 @@ keywords:
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7271/RAK7371 WisGate Developer Base
 
 Thank you for choosing **RAK7271/RAK7371 WisGate Developer Base** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -47,4 +45,3 @@ This device provides a complete and cost-efficient LoRa gateway solution, offeri
 - 1pc USB Type C to A Cable
 - 1pc LoRa Antenna (2.3 dBi)
 
-<RkBottomNav/>

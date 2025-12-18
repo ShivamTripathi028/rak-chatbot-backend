@@ -16,9 +16,6 @@ sidebar_label: Quick Start Guide
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkImage from '@site/src/components/Image'
-
 # RAK10714 Quick Start Guide
 
 ## Prerequisites
@@ -29,8 +26,8 @@ Before going through each step in the installation guide of the RAK10714 WisTrio
 
 - [RAK10714 LTE-M, NB-IoT, GSM cellular and LoRaWAN Development Board](https://store.rakwireless.com/collections/wisblock-solutions?utm_source=wisblocksolutions&utm_medium=Document&utm_campaign=BuyFromStore)
 - USB-C Cable
-- Li-Ion 3.7&nbsp;V rechargeable battery
-- 5&nbsp;V Solar Panel (optional)
+- Li-Ion 3.7 V rechargeable battery
+- 5 V Solar Panel (optional)
 - Nano SIM card if you are using the Blues.IO Notecard in a region that is not supported by the eSIM of the Notecard. You can check the coverage on the [Blues.IO Coverage Overview](https://dev.blues.io/datasheets/notecard-datasheet/note-wbex-500/?&_gl=1*1lmj2te*_ga*MTA3NTk4Nzc2My4xNjg5NzI0NjI3*_ga_PJ7RGMWWBX*MTY5NTk3MTA1MS4xNjUuMS4xNjk1OTcxMDcwLjQxLjAuMA..&_ga=2.90494298.1734536464.1695971059-1075987763.1689724627#cellular-service)
 
 ### Software
@@ -43,17 +40,9 @@ Before going through each step in the installation guide of the RAK10714 WisTrio
 
 When you buy RAK10714, you can choose between two variants: one with bare modules and antennas and one with an enclosure and more optimized antennas.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/included_modules.png"
-  width="70%"
-  caption="RAK10714 modules without Enclosure"
-/>
+> **Image:** RAK10714 modules without Enclosure
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/included_modules_enclosure.png"
-  width="70%"
-  caption="RAK10714 with Enclosure"
-/>
+> **Image:** RAK10714 with Enclosure
 
 ## Product Configuration
 
@@ -63,73 +52,37 @@ When you buy RAK10714, you can choose between two variants: one with bare module
 
 1. Assemble each module, including the respective antenna. Refer to **Figure 3** for the connections.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/assembly_rak10714.png"
-  width="70%"
-  caption="RAK10714 Modules and Antenna Connection"
-/>
+> **Image:** RAK10714 Modules and Antenna Connection
 
 2. When the modules are plugged in together, they should look the same as in **Figures 4** and **Figure 5**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/rak10714_top.png"
-  width="45%"
-  caption="RAK10714 Modules top view"
-/>
+> **Image:** RAK10714 Modules top view
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/rak10714_bottom.png"
-  width="45%"
-  caption="RAK10714 Modules bottom view"
-/>
+> **Image:** RAK10714 Modules bottom view
 
 #### RAK10714 With Enclosure
 
 1. If you have the RAK10714 with enclosure, you have to prepare the WisBlock Modules together with the WisBlock Baseplate with antenna, circular connector, IPEX-SMA cellular antenna connector, and GPS antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/wisblock-base-antenna-enclosure.png"
-  width="55%"
-  caption="RAK10714 with Enclosure"
-/>
+> **Image:** RAK10714 with Enclosure
 
 2. On the WisBlock Baseplate, you have to remove the cutout that is designed to be used for the mini-base board. This cutout part must be removed for RAK10714.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/wisblock-plate-antenna-cutout.png"
-  width="55%"
-  caption="Removing the cutout section of the WisBlock Baseplate"
-/>
+> **Image:** Removing the cutout section of the WisBlock Baseplate
 
 3. After removing the cutout, you can now attach the WisBlock Base Board to the WisBlock Baseplate using screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/wisblock-plate-antenna-wisblock.png"
-  width="40%"
-  caption="Attaching the WisBlock Base board to WisBlock Baseplate with PCB Antenna"
-/>
+> **Image:** Attaching the WisBlock Base board to WisBlock Baseplate with PCB Antenna
 
 4. The next step is to connect the IPEX-IPEX from the WisBlock Core to the WisBlock Baseplate with an antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/wisblock-plate-antenna-connect.png"
-  width="40%"
-  caption="IPEX-to-IPEX connector"
-/>
+> **Image:** IPEX-to-IPEX connector
 
 5. Then, you can now attach it to the enclosure and complete it with the rest of the parts.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/wisblock-antenna-enclosure.png"
-  width="40%"
-  caption="Mounting the modules to RAK10714 enclosure"
-/>
+> **Image:** Mounting the modules to RAK10714 enclosure
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/assembled_with_enclosure.png"
-  width="40%"
-  caption="Assembled RAK10714 with all the parts"
-/>
+> **Image:** Assembled RAK10714 with all the parts
 
 :::tip NOTE
 After assembling all the parts, connect the battery to the WisBlock Base. Without the battery connected, the Blues.IO Notecard will not be able to function correctly due to a lack of power source. The USB connection will not be able to provide enough power to achieve enough performance stability.
@@ -141,17 +94,9 @@ After assembling all the parts, connect the battery to the WisBlock Base. Withou
 The RAK13102 module and the connected WisBlock Base Board and Core module can be supplied with a regulated 5V DC supply through the P1 connector on the bottom. A matching connector is available with our [M8 Power Connector](https://store.rakwireless.com/products/m8-power-connector)
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/ex-power.png"
-  width="40%"
-  caption="5V supply through M8 power connector"
-/>
+> **Image:** 5V supply through M8 power connector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/m8-power-connector.png"
-  width="30%"
-  caption="M8 power connector"
-/>
+> **Image:** M8 power connector
 
 ### Software Setup
 
@@ -181,11 +126,8 @@ Connect the WisBlock USB port to your computer and connect a serial terminal app
 To connect the Blues Notecard to the NoteHub, a _**Product UID**_ is required. This product UID is created when you create your project in NoteHub as shown in [Set up Notehub](https://dev.blues.io/quickstart/notecard-quickstart/notecard-and-notecarrier-f/#set-up-notehub).
 
 Get the Product UID from your NoteHub project:
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/notehub-product-uid.png"
-  width="100%"
-  caption="Notecard PUID"
-/>
+
+> **Image:** Notecard PUID
 
 Then use the ATC+BEUI command to save the Product UID in the WisBlock:
 
@@ -196,7 +138,6 @@ Replace `com.my-company.my-name:my-project` with your project EUI.
 The current product UID can be queried with
 
 _**`ATC+BUID=?`**_
-
 
 ###### Select the SIM card
 There are two options for the Blues Notecard to connect. The primary option is to use the eSIM that is already on the Notecard. However, there are countries where the eSIM is not working yet. In this case, you need to use an external SIM card in the RAK13102 WisBlock module. This can be a SIM card from your local cellular provider or an IoT data SIM card like for example a SIM card from [Monogoto](https://monogoto.io/)↗️ or from another provider.
@@ -216,7 +157,6 @@ Several carriers will have a website dedicated to manually configuring devices, 
 The current settings can be queried with
 _**`AT+BSIM=?`**_
 
-
 ###### Select Notecard Connection Mode
 The Blues Notecard supports different connection modes. For testing purposes, it might be required to have the Notecard connected continuously to the cellular network, but in a battery-powered application, the preferred connection type would be minimal, which connects to the cellular network only when data needs to be transferred.
 
@@ -231,7 +171,6 @@ The default is to use minimal connection mode.
 The current status can be queried with
 _**`AT+BMOD=?`**_.
 
-
 ###### Delete Blues Notecard settings
 If required, all stored Blues Notecard settings can be deleted from the WisBlock Core module with the AT+BR command.
 :::tip NOTE
@@ -239,27 +178,21 @@ _Requires restart or power cycle of the device_
 :::
 The syntax is _**`AT+BR`**_
 
-
 ###### Reset Blues Notecard to Factory Settings
 If required, the Blues Notecard can be reset to factory default.
 
-
 :::warning
-<i><h6>⚠️ THIS WILL ERASE ALL SETTINGS IN THE NOTECARD! ⚠️ </h6></i>
+*<h6>⚠️ THIS WILL ERASE ALL SETTINGS IN THE NOTECARD! ⚠️ </h6>*
 :::
-
-<br />
 
 All saved settings like Product UID, connection settings, and the APN in the Notecard _**WILL BE ERASED**_
 
 Syntax: _**`AT+BRES`**_.
 
-
 ###### Get Blues Notecard Status
 Show Notecard connection status with _**`req:hub.status`**_.
 
 Syntax: _**`AT+BLUES`**_
-
 
 ###### Send Request to the Notecard
 :::warning
@@ -270,7 +203,6 @@ Sends a simple request to the Notecard and returns the response from the Notecar
 
 Syntax: _**`AT+BREQ=<request>`**_
 `<request>` is the Notecard request, e.g. _**`card.version`**_ or _**`card.location`**_
-
 
 ##### ⚠️ _LoRaWAN Setup_ ⚠️
 Besides the cellular connection, you also need to set the LoRaWAN connection. The WisBlock solutions can be connected to any LoRaWAN server like Helium, Chirpstack, TheThingsNetwork, or others. Details on how to set up the device on a LNS are available in the [RAK Documentation Center](https://docs.rakwireless.com/introduction/).
@@ -318,7 +250,6 @@ As with most location trackers, an accurate location requires that the GNSS ante
 If there is no GNSS location available, the device is using the tower location information from the Blues Notecard instead!
 :::
 
-
 ### WisBlock Blues Tracker in Action
 
 #### LoRaWAN server
@@ -326,18 +257,12 @@ If there is no GNSS location available, the device is using the tower location i
 For testing, I used Chirpstack V4 as a LoRaWAN server. The tracker has to be set up with its DevEUI and AppEUI in an application on the Chirpstack LNS.
 Optional you can add a payload decoder in the Device Profile. Then you can see the decoded payload in the events list of the device.
 Here is an example log output with the result of the CayenneLPP data parson the LNS before it is sent to the Blues NoteHub:
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/log_gateway.png"
-  width="100%"
-  caption="LoRaWAN Gateway"
-/>
+
+> **Image:** LoRaWAN Gateway
 
 Within the Chirpstack LNS application, integration is needed to forward the data to Datacake, for the visualization. The integration is a simple webhook to Datacake:
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/chirpstack-integration.png"
-  width="100%"
-  caption="Chirpstack"
-/>
+
+> **Image:** Chirpstack
 
 You can of course use other LoRaWAN servers like TTN or Helium for the LoRaWAN devices connection.
 For the location visualization, only the Datacake solution is explained here. If you want to use another location visualization, you need to figure out how to connect one device through both LoRaWAN and cellular connections.
@@ -346,21 +271,14 @@ For the location visualization, only the Datacake solution is explained here. If
 
 #### Blues Notehub
 The notes sent to the Blues Notehub can be seen in the _**Events**_ listing of the Nothub
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/notehub-event-log.png"
-  width="100%"
-  caption="Notehub Event Log"
-/>
+
+> **Image:** Notehub Event Log
 
 The location and sensor data are sent as binary payloads, so there is nothing to see here in the body field.
 
 The next step is to create the _**Route**_ in NoteHub that forwards the data to Datacake. Instead of the default URL for the Datacake route, use the URL for LoRaWAN devices. Also, the note you want to forward is the _**`data.qo`**_ note.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/notehub-routes-setup.png"
-  width="100%"
-  caption="Notehub Route Setup"
-/>
+> **Image:** Notehub Route Setup
 
 :::tip NOTE
 At this point, it is getting a little bit complicated because the location data sent to Datacake can come _**EITHER**_ from the LoRaWAN server _**OR**_ from NoteHub.IO. The JSON object sent by the two looks of course very different.
@@ -384,29 +302,17 @@ The JSONata expression needed is very simple. You can simulate a LoRaWAN packet 
 In the Route setup, scroll down to the Data section.
 Select JSONata Expression to transform the data, then copy the JSONata expression into the entry field.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/notehub-routes-transform.png"
-  width="100%"
-  caption="Notehub Routes Transform"
-/>
+> **Image:** Notehub Routes Transform
 
 The JSONata is pulling the required info from the Blues JSON data packet to build the "fake" LoRaWAN packet. You can check the functionality with the JSONata Exerciser:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/jsonata-exerciser.png"
-  width="100%"
-  caption="JSONata Exerciser"
-/>
+> **Image:** JSONata Exerciser
 
 The resulting JSON object is then sent to Datacake, which handles it as if it comes from a LoRaWAN server.
 
 The routing events are shown in the Routes log view:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/notehub-routes-log.png"
-  width="100%"
-  caption="Notehub Routed Log"
-/>
+> **Image:** Notehub Routed Log
 
 ----
 
@@ -425,21 +331,13 @@ To distinguish whether the data is coming from the LNS or NoteHub, a different f
 The payload decoder I used can be found in the file [Decoder.js](https://github.com/beegee-tokyo/Blues-WisBlock-Tracker/blob/main/Decoder.js) in the Github repository.
 The content of this file has to be copied into the _**Payload Decoder**_ of the device configuration in Datacake:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/datacake-payload-decoder.png"
-  width="120%"
-  caption="Payload Decoder"
-/>
+> **Image:** Payload Decoder
 
 ----
 
 Then the matching fields for the sensor data have to be created. The easiest way to do this is to wait for incoming data from the sensors. If no matching field is existing, the data will be shown in the _**Suggested Fields**_ list in the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/datacake-suggested-fields.png"
-  width="100%"
-  caption="Suggested Fields"
-/>
+> **Image:** Suggested Fields
 
 The sensor data can be easily assigned to fields using the _**Create Field**_ button.
 
@@ -455,25 +353,14 @@ It will take some time before the suggested fields are listed as complete. Inste
 | Humidity (only if RAK1906 is present)    | HUMIDITY    | Float    | N/A             |
 | Barometer (only if RAK1906 is present)   | BAROMETER   | Float    | N/A             |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/datacake-create-fields.png"
-  width="100%"
-  caption="Create Fields"
-/>
-
+> **Image:** Create Fields
 
 Once all the sensor data is assigned to fields, you can start with the visualization of the data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/datacake-created-fields.png"
-  width="100%"
-  caption="Created Fields"
-/>
-
+> **Image:** Created Fields
 
 In Datacake, each device has its own _**Device Dashboard**_ which is used to display the location data.
 Details on how to create visualization widgets in Datacake is in the other tutorials already.
-
 
 The final result for the WisBlock Blues Tracker:
 
@@ -481,31 +368,18 @@ You can see life data on the [public dashboard.](https://app.datacake.de/pd/7bb0
 
 In the top part of the dashboard are the locations of the device (history enabled) on the map and device sensor values on the side (temperature and humidity are only available if a RAK1906 is present).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/datacake-dashboard-1.png"
-  width="100%"
-  caption="Locations"
-/>
+> **Image:** Locations
 
 In the lower part, a chart shows at what times the sensor used LoRaWAN to transmit data and when it used the cellular connection.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/datacake-dashboard-2.png"
-  width="100%"
-  caption="Data transmission mode"
-/>
-
+> **Image:** Data transmission mode
 
 #### Using Custom Firmware From Other Rakwireless Examples
 
 1. Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the ```https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json``` board installation package, the WisBlock Core RAK4631 should now be available on the Arduino IDE.
 2. RAK10714 uses RAK4631 WisBlock Core as the main processor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/sw_select_core.png"
-  width="70%"
-  caption="Selecting RAK4631 WisBlock Core of RAK10714"
-/>
+> **Image:** Selecting RAK4631 WisBlock Core of RAK10714
 
 3. Once you are ready with the Arduino IDE software and the RAK4631 board has already been added, you can now check the Cellular examples available for the Blues.IO Notecard.
 - Blues Note
@@ -530,11 +404,7 @@ For low-power examples, you can check:
 This example works without any other WisBlock modules added. But it also supports as well the RAK1906 environment sensor to acquire real sensor data. Without the RAK1906, the example will send fixed virtual sensor data only.
 ::::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10714/quickstart/rak10714-sensor-log.png"
-  width="85%"
-  caption="UART output of Blues Sensor example"
-/>
+> **Image:** UART output of Blues Sensor example
 
 ##### Other Software Examples
 
@@ -549,6 +419,3 @@ There are several examples, utilizing the WisBlock RAK10714 you can find them in
 
 Check out some [Tutorials and Guides repos on Github](https://github.com/RAKWireless/tutorials-and-guides) for more examples.
 
-
-
-<RkBottomNav/>

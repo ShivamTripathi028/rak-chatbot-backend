@@ -10,11 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
-
 # RAK7267 WisGate Soho Pro Datasheet
 
 ## Overview
@@ -25,9 +20,7 @@ The RAK7267 WisGate Soho Pro is an innovative 8-channel LoRaWAN® gateway design
 
 This gateway uses an IP67-rated Unify Enclosure, a weatherproof and flame-retardant enclosure made of UV stabilized ABS plastic that protects internal components from dust and water. The new enclosure is designed to allow the LoRa, LTE, Wi-Fi, and GPS antennas to be inside the enclosure.
 
-In addition, RAK7267 operates under <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview" target="_blank">WisGateOS 2</a>, which is built on the latest OpenWrt kernel. The OS Web UI features a new design and supports multiple extension installations, enabling remote management using <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisdm/overview/" target="_blank">WisDM</a> for personalized gateway customization.
-
-
+In addition, RAK7267 operates under [WisGateOS 2](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview), which is built on the latest OpenWrt kernel. The OS Web UI features a new design and supports multiple extension installations, enabling remote management using [WisDM](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisdm/overview/) for personalized gateway customization.
 
 ### Features
 
@@ -37,16 +30,16 @@ In addition, RAK7267 operates under <a href="https://docs.rakwireless.com/produc
 - LoRa Concentrator for up to **8 channels**
 - Backhaul: Wi-Fi and LTE
 - GPS
-- Supports 9\~36&nbsp;V<sub>DC</sub> power supply and RAK Solar Battery Kit
+- Supports 9\~36 V<sub>DC</sub> power supply and RAK Solar Battery Kit
 - Internal antenna for LoRa, LTE, Wi-Fi, and GPS
 
 #### Software
 
-- <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview" target="_blank">WisGateOS 2</a>
+- [WisGateOS 2](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview)
 - **WisGateOS 2 Extensions**: Adds support for features such as OpenVPN, WireGuard VPN, and more. Use the appropriate installation guide based on your WisGateOS 2 version:
-    - <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later/" target="_blank">For WisGateOS 2 version 2.2.x or later</a>
-    - <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-20x21x/" target="_blank">For WisGateOS 2 versions 2.0.x and 2.1.x</a>
-- Remote management with <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisdm/overview/" target="_blank">WisDM</a> Fleet Management
+    - [For WisGateOS 2 version 2.2.x or later](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later/)
+    - [For WisGateOS 2 versions 2.0.x and 2.1.x](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-20x21x/)
+- Remote management with [WisDM](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisdm/overview/) Fleet Management
 - Built-in Network Server (LoRaWAN support V 1.0.3)
 - LoRaWAN Stack support with Semtech SX1303
 - LoRa Frame filtering (node whitelisting in Packet Forwarder mode)
@@ -63,132 +56,42 @@ This section presents the block diagram for the RAK7267 that shows the internal 
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/datasheet/block_diagram.png"
-  width="100%"
-  caption="RAK7267 Block Diagram"
-/>
-
+> **Image:** RAK7267 Block Diagram
 
 #### Main Specifications
 
-<table>
-    <thead>
-        <tr>
-            <th>Feature</th>
-            <th>Specifications</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Computing</td>
-            <td>MT7628, DDR2 RAM 128&nbsp;MB</td>
-        </tr>
-        <tr>
-            <td rowSpan="5">LoRa Feature</td>
-            <td>SX1303 On Board</td>
-        </tr>
-        <tr>
-            <td>8 Channels</td>
-        </tr>
-        <tr>
-            <td>Frequency: EU868/IN865/RU864/US915/AU915/KR920/AS923-1/2/3/4</td>
-        </tr>
-        <tr>
-            <td>Listen Before Talk</td>
-        </tr>
-        <tr>
-            <td>LoRa Radio: Refer to the <a href="#lora-radio-specifications">LoRa Radio Specifications</a>  section for detailed information.</td>
-        </tr>
-         <tr>
-            <td rowSpan="4">Wi-Fi Feature</td>
-            <td>Frequency: 2.4&nbsp;GHz (802.11 b / g / n)</td>
-        </tr>
-         <tr>
-            <td>Channels: 1-13</td>
-        </tr>
-        <tr>
-            <td>2x2 MIMO</td>
-        </tr>
-        <tr>
-            <td>Wi-Fi Radio: Refer to the <a href="#wi-fi-radio-specifications">Wi-Fi Radio Specifications</a>  section for detailed information.</td>
-        </tr>
-        <tr>
-            <td>Cellular Feature</td>
-            <td><b>Nano SIM Card:</b> 12&nbsp;mm x 9&nbsp;mm x 0.67&nbsp;mm<br/>Supports Quectel EG915U-EU / EG915U-LA / EG915Q-NA (IoT / M2M -LTE Cat 1 module)<br/>LTE Radio: Refer to the <a href="#lte-radio-specifications">LTE Radio Specifications</a> section for detailed information.</td>
-        </tr>
-        <tr>
-            <td>Power Supply</td>
-            <td>9\~36&nbsp;V<sub>DC</sub><br/>Compatible with RAK Solar Battery Kit</td>
-        </tr>
-        <tr>
-            <td rowSpan="9">Antenna</td>
-            <td>LoRa / LTE / Wi-Fi / GPS: Internal antenna</td>
-        </tr>
-        <tr>
-            <td><b>LoRa</b></td>
-        </tr>
-        <tr>
-            <td>Frequency Range: 863&nbsp;MHz\~928&nbsp;MHz<br/>Peak Gain: 2.5&nbsp;dBi<br/>VSWR: ≤ 1.5<br/>Efficiency: &gt;85%<br/>Polarization: Vertical</td>
-        </tr>
-         <tr>
-            <td><b>LTE</b></td>
-        </tr>
-        <tr>
-            <td>Frequency Range: 700&nbsp;MHz\~960&nbsp;MHz/1710&nbsp;MHz\~21700&nbsp;MHz<br/>Peak Gain: 3&nbsp;dBi<br/>VSWR: ≤ 3<br/>Efficiency: &gt;60%<br/>Polarization: Vertical</td>
-        </tr>
-        <tr>
-            <td><b>Wi-Fi</b></td>
-        </tr>
-        <tr>
-            <td>Frequency Range: 2400&nbsp;MHz\~2500&nbsp;MHz <br/>Peak Gain: 2&nbsp;dBi<br/>VSWR: ≤ 2.5<br/>Efficiency: &gt;75%<br/>Polarization: Vertical</td>
-        </tr>
-         <tr>
-            <td><b>GPS</b></td>
-        </tr>
-        <tr>
-            <td>Frequency Range: 1575&nbsp;MHz\~1602&nbsp;MHz <br/>Peak Gain: 28&nbsp;dBi<br/>VSWR: &lt;2<br/>Polarization: RHCP</td>
-        </tr>
-        <tr>
-            <td>Ingress Protection</td>
-            <td>IP67</td>
-        </tr>
-        <tr>
-            <td>Weight</td>
-            <td>0.66&nbsp;kg</td>
-        </tr>
-        <tr>
-            <td>Dimension</td>
-            <td>180&nbsp;mm x 130&nbsp;mm x 60&nbsp;mm</td>
-        </tr>
-        <tr>
-            <td>Enclosure Material</td>
-            <td>UV stabilized ABS</td>
-        </tr>
-        <tr>
-            <td>Operating Temperature</td>
-            <td>﹣30˚&nbsp;C to ﹢55˚&nbsp;C</td>
-        </tr>
-        <tr>
-            <td>Storage Temperature</td>
-            <td>﹣40˚&nbsp;C to ﹢85˚&nbsp;C</td>
-        </tr>
-        <tr>
-            <td>Operating Humidity</td>
-            <td>0\~95%&nbsp;RH non-condensing</td>
-        </tr>
-        <tr>
-            <td>Storage Humidity</td>
-            <td>0\~95%&nbsp;RH non-condensing</td>
-        </tr>
-        <tr>
-            <td>Installation Method</td>
-            <td>Pole mounting (other options available per request)</td>
-        </tr>
-    </tbody>
-</table>
-
-
+| Feature | Specifications |
+| --- | --- |
+| Computing | MT7628, DDR2 RAM 128 MB |
+| LoRa Feature | SX1303 On Board |
+| LoRa Feature | 8 Channels |
+| LoRa Feature | Frequency: EU868/IN865/RU864/US915/AU915/KR920/AS923-1/2/3/4 |
+| LoRa Feature | Listen Before Talk |
+| LoRa Feature | LoRa Radio: Refer to the LoRa Radio Specifications section for detailed information. |
+| Wi-Fi Feature | Frequency: 2.4 GHz (802.11 b / g / n) |
+| Wi-Fi Feature | Channels: 1-13 |
+| Wi-Fi Feature | 2x2 MIMO |
+| Wi-Fi Feature | Wi-Fi Radio: Refer to the Wi-Fi Radio Specifications section for detailed information. |
+| Cellular Feature | Nano SIM Card: 12 mm x 9 mm x 0.67 mm Supports Quectel EG915U-EU / EG915U-LA / EG915Q-NA (IoT / M2M -LTE Cat 1 module) LTE Radio: Refer to the LTE Radio Specifications section for detailed information. |
+| Power Supply | 9\~36 V DC Compatible with RAK Solar Battery Kit |
+| Antenna | LoRa / LTE / Wi-Fi / GPS: Internal antenna |
+| Antenna | LoRa |
+| Antenna | Frequency Range: 863 MHz\~928 MHz Peak Gain: 2.5 dBi VSWR: ≤ 1.5 Efficiency: >85% Polarization: Vertical |
+| Antenna | LTE |
+| Antenna | Frequency Range: 700 MHz\~960 MHz/1710 MHz\~21700 MHz Peak Gain: 3 dBi VSWR: ≤ 3 Efficiency: >60% Polarization: Vertical |
+| Antenna | Wi-Fi |
+| Antenna | Frequency Range: 2400 MHz\~2500 MHz Peak Gain: 2 dBi VSWR: ≤ 2.5 Efficiency: >75% Polarization: Vertical |
+| Antenna | GPS |
+| Antenna | Frequency Range: 1575 MHz\~1602 MHz Peak Gain: 28 dBi VSWR: <2 Polarization: RHCP |
+| Ingress Protection | IP67 |
+| Weight | 0.66 kg |
+| Dimension | 180 mm x 130 mm x 60 mm |
+| Enclosure Material | UV stabilized ABS |
+| Operating Temperature | ﹣30˚ C to ﹢55˚ C |
+| Storage Temperature | ﹣40˚ C to ﹢85˚ C |
+| Operating Humidity | 0\~95% RH non-condensing |
+| Storage Humidity | 0\~95% RH non-condensing |
+| Installation Method | Pole mounting (other options available per request) |
 
 ### Hardware
 
@@ -196,11 +99,7 @@ This section provides an overview of the hardware specifications for the RAK7267
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/datasheet/3.interfaces.png"
-  width="60%"
-  caption="RAK7267 Interfaces"
-/>
+> **Image:** RAK7267 Interfaces
 
 ##### Interface Description
 
@@ -208,398 +107,147 @@ This section provides an overview of the hardware specifications for the RAK7267
 |----------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **DC 9-36 V**  | Power Input           | Provides power supply for the gateway.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | **Console**    | Type-C USB            | Used for debugging.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| **Reset**      | Reset Key             | **Short press**: Reboot the gateway. <br />**Long press** (5&nbsp;sec and above): Restore factory settings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **NanoSIM**    | NanoSIM Card Slot     | Slot for a NanoSIM card, enabling cellular connectivity.<br /><div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong><br/><span style={{ display: 'block', marginTop: '4px' }}> The SIM card slot of the cellular versions is not hot-swappable. Make sure the gateway is switched off before inserting or ejecting the SIM card.</span></div>                                                                                                |
-| **TF Card**    | SD Card Slot          | A 16 GB SD card is pre-installed in the gateway for data logging, system configurations, and other use cases that require local storage.<br /><div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong> <br /> <span style={{ display: 'block', marginTop: '4px' }}><strong>Do not</strong> eject the SD card located in the SD card slot during installation, as it stores logs and data essential for the device's performance. </span></div> |
+| **Reset**      | Reset Key             | **Short press**: Reboot the gateway. 
+**Long press** (5 sec and above): Restore factory settings.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **NanoSIM**    | NanoSIM Card Slot     | Slot for a NanoSIM card, enabling cellular connectivity.
+<div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong>
+<span style={{ display: 'block', marginTop: '4px' }}> The SIM card slot of the cellular versions is not hot-swappable. Make sure the gateway is switched off before inserting or ejecting the SIM card.</span></div>                                                                                                |
+| **TF Card**    | SD Card Slot          | A 16 GB SD card is pre-installed in the gateway for data logging, system configurations, and other use cases that require local storage.
+<div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong> 
+ <span style={{ display: 'block', marginTop: '4px' }}>**Do not** eject the SD card located in the SD card slot during installation, as it stores logs and data essential for the device's performance. </span></div> |
 | **Ground Pad** | Grounding Terminal    | Provides an earth grounding point for surge protection and EMI shielding. It is recommended to connect this to a reliable ground during installation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| **LEDs**       | Status Indicator LEDs | PWR<br />LoRa<br />WLAN<br />LTE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-
-
+| **LEDs**       | Status Indicator LEDs | PWR
+LoRa
+WLAN
+LTE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 ##### LED Indicator Details
 
 The status of the LEDs is described below. Refer to the LED printing on the main board.
 
-<table>
-    <thead>
-        <tr>
-            <th>LED</th>
-            <th>Status</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="2">PWR</td>
-            <td>On</td>
-            <td>Gateway is powered on</td>
-        </tr>
-        <tr>
-            <td>Off</td>
-            <td>Gateway is powered off</td>
-        </tr>
-        <tr>
-            <td rowspan="3">LoRa</td>
-            <td>On</td>
-            <td>LoRa module active</td>
-        </tr>
-        <tr>
-            <td>Off</td>
-            <td>LoRa module inactive</td>
-        </tr>
-        <tr>
-            <td>Flashing</td>
-            <td>Indicates LoRa packet transmission/reception</td>
-        </tr>
-        <tr>
-            <td rowspan="8">WLAN</td>
-            <td colspan="2"><strong>AP Mode</strong></td>
-        </tr>
-        <tr>
-            <td>On</td>
-            <td>AP is up</td>
-        </tr>
-        <tr>
-            <td>Off</td>
-            <td>AP is down</td>
-        </tr>
-        <tr>
-            <td>Flashing</td>
-            <td>Data transmitting or receiving</td>
-        </tr>
-        <tr>
-            <td colspan="2"><strong>STA Mode</strong></td>
-        </tr>
-        <tr>
-            <td>Slow Flash (1&nbsp;Hz)</td>
-            <td>Disconnected from Wi-Fi network</td>
-        </tr>
-        <tr>
-            <td>On</td>
-            <td>Connected to Wi-Fi network</td>
-        </tr>
-        <tr>
-            <td>Flashing</td>
-            <td>Data transmitting or receiving</td>
-        </tr>
-        <tr>
-            <td rowspan="3">LTE</td>
-            <td>Slow Flash 1<br/>(1800&nbsp;ms bright / 200&nbsp;ms dark)</td>
-            <td>Searching for network (unregistered)</td>
-        </tr>
-        <tr>
-            <td>Slow Flash 2<br/>(200&nbsp;ms bright / 1800&nbsp;ms dark)</td>
-            <td>Idle (registered to network)</td>
-        </tr>
-        <tr>
-            <td>Quick Flash<br/>(125&nbsp;ms bright / 125&nbsp;ms dark)</td>
-            <td>Data transmitting or receiving</td>
-        </tr>
-    </tbody>
-</table>
-
-
+| LED | Status | Description |
+| --- | --- | --- |
+| PWR | On | Gateway is powered on |
+| PWR | Off | Gateway is powered off |
+| LoRa | On | LoRa module active |
+| LoRa | Off | LoRa module inactive |
+| LoRa | Flashing | Indicates LoRa packet transmission/reception |
+| WLAN | AP Mode | AP Mode |
+| WLAN | On | AP is up |
+| WLAN | Off | AP is down |
+| WLAN | Flashing | Data transmitting or receiving |
+| WLAN | STA Mode | STA Mode |
+| WLAN | Slow Flash (1 Hz) | Disconnected from Wi-Fi network |
+| WLAN | On | Connected to Wi-Fi network |
+| WLAN | Flashing | Data transmitting or receiving |
+| LTE | Slow Flash 1 (1800 ms bright / 200 ms dark) | Searching for network (unregistered) |
+| LTE | Slow Flash 2 (200 ms bright / 1800 ms dark) | Idle (registered to network) |
+| LTE | Quick Flash (125 ms bright / 125 ms dark) | Data transmitting or receiving |
 
 #### RF Specifications
 
 ##### LoRa Radio Specifications
 
-<table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Specifications</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Operating Frequency</td>
-            <td><ul><li>EU868</li><li>IN865</li><li>RU864</li><li>US915</li><li>AU915</li><li>KR920</li><li>AS923-1/2/3/4</li></ul></td>
-        </tr>
-        <tr>
-            <td>Transmit Power</td>
-            <td>27&nbsp;dBm (Max)</td>
-        </tr>
-        <tr>
-            <td>Receiver Sensitivity</td>
-            <td>-140&nbsp;dBm (Min)</td>
-        </tr>
-    </tbody>
-</table>
-
-
+| Parameter | Specifications |
+| --- | --- |
+| Operating Frequency | EU868 IN865 RU864 US915 AU915 KR920 AS923-1/2/3/4 |
+| Transmit Power | 27 dBm (Max) |
+| Receiver Sensitivity | -140 dBm (Min) |
 
 ##### Wi-Fi Radio Specifications
 
-<table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Specifications</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Wireless Standard</td>
-            <td>IEEE 802.11 b / g / n</td>
-        </tr>
-        <tr>
-            <td>Frequency</td>
-            <td>ISM band: 2.412\~2.472&nbsp;GHz</td>
-        </tr>
-        <tr>
-            <td>Channels</td>
-            <td>1-13</td>
-        </tr>
-        <tr>
-            <td rowSpan="11">Transmit Power (The max power maybe different depending on local regulations) - per chain</td>
-            <td>**802.11b**</td>
-        </tr>
-        <tr>
-            <td>  19&nbsp;dBm @1&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>  19&nbsp;dBm @11&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>**802.11g**</td>
-        </tr>
-        <tr>
-            <td>  18&nbsp;dBm @6&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>  16&nbsp;dBm @54&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>  **802.11n (2.4&nbsp;GHz)**</td>
-        </tr>
-        <tr>
-            <td>  18&nbsp;dBm @MCS0 (HT20)</td>
-        </tr>
-        <tr>
-            <td>  16&nbsp;dBm @MCS7 (HT20)</td>
-        </tr>
-        <tr>
-            <td>  17&nbsp;dBm @MCS0 (HT40)</td>
-        </tr>
-        <tr>
-            <td>  15&nbsp;dBm @MCS7 (HT40)</td>
-        </tr>
-        <tr>
-            <td rowSpan="11">Receiver Sensitivity (Typical)</td>
-            <td>**802.11b**</td>
-        </tr>
-        <tr>
-            <td>﹣95&nbsp;dBm @1&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>﹣88&nbsp;dBm @11&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>**802.11g**</td>
-        </tr>
-        <tr>
-            <td>﹣90&nbsp;dBm @6&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>﹣75&nbsp;dBm @54&nbsp;Mbps</td>
-        </tr>
-        <tr>
-            <td>  **802.11n (2.4&nbsp;GHz)**</td>
-        </tr>
-        <tr>
-            <td>﹣89&nbsp;dBm @MCS0 (HT20)</td>
-        </tr>
-        <tr>
-            <td>﹣72&nbsp;dBm @MCS7 (HT20)</td>
-        </tr>
-        <tr>
-            <td>﹣86&nbsp;dBm @MCS0 (HT40)</td>
-        </tr>
-        <tr>
-            <td>﹣68&nbsp;dBm @MCS7 (HT40)</td>
-        </tr>
-    </tbody>
-</table>
-
-
+| Parameter | Specifications |
+| --- | --- |
+| Wireless Standard | IEEE 802.11 b / g / n |
+| Frequency | ISM band: 2.412\~2.472 GHz |
+| Channels | 1-13 |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | **802.11b** |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @1 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @11 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | **802.11g** |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @6 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @54 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | **802.11n (2.4 GHz)** |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @MCS0 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @MCS7 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 17 dBm @MCS0 (HT40) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 15 dBm @MCS7 (HT40) |
+| Receiver Sensitivity (Typical) | **802.11b** |
+| Receiver Sensitivity (Typical) | ﹣95 dBm @1 Mbps |
+| Receiver Sensitivity (Typical) | ﹣88 dBm @11 Mbps |
+| Receiver Sensitivity (Typical) | **802.11g** |
+| Receiver Sensitivity (Typical) | ﹣90 dBm @6 Mbps |
+| Receiver Sensitivity (Typical) | ﹣75 dBm @54 Mbps |
+| Receiver Sensitivity (Typical) | **802.11n (2.4 GHz)** |
+| Receiver Sensitivity (Typical) | ﹣89 dBm @MCS0 (HT20) |
+| Receiver Sensitivity (Typical) | ﹣72 dBm @MCS7 (HT20) |
+| Receiver Sensitivity (Typical) | ﹣86 dBm @MCS0 (HT40) |
+| Receiver Sensitivity (Typical) | ﹣68 dBm @MCS7 (HT40) |
 
 ##### LTE Radio Specifications
 
-<table>
-  <thead>
-    <tr>
-      <th>Module / Region</th>
-      <th>Supported Bands</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan="2">EG915U-EU for EMEA/Brazil/Australia/New Zealand Region</td>
-      <td>LTE FDD: B1 / B3 / B5 / B7 / B8 / B20 / B28</td>
-    </tr>
-    <tr>
-      <td>GSM: B2 / B3 / B5 / B8</td>
-    </tr>
-    <tr>
-      <td rowSpan="2">EG915U-LA for Latin America Region</td>
-      <td>LTE FDD: B2 / B3 / B4 / B5 / B7 / B8 / B28 / B66</td>
-    </tr>
-    <tr>
-      <td>GSM: B2 / B3 / B5 / B8</td>
-    </tr>
-    <tr>
-      <td>EG915Q-NA for North America Region</td>
-      <td>LTE FDD: B2 / B4 / B5 / B12 / B13 / B66 / B71</td>
-    </tr>
-  </tbody>
-</table>
+| Module / Region | Supported Bands |
+| --- | --- |
+| EG915U-EU for EMEA/Brazil/Australia/New Zealand Region | LTE FDD: B1 / B3 / B5 / B7 / B8 / B20 / B28 |
+| EG915U-EU for EMEA/Brazil/Australia/New Zealand Region | GSM: B2 / B3 / B5 / B8 |
+| EG915U-LA for Latin America Region | LTE FDD: B2 / B3 / B4 / B5 / B7 / B8 / B28 / B66 |
+| EG915U-LA for Latin America Region | GSM: B2 / B3 / B5 / B8 |
+| EG915Q-NA for North America Region | LTE FDD: B2 / B4 / B5 / B12 / B13 / B66 / B71 |
 
 #### Electrical Characteristics
 
 The RAK7267 WisGate Soho Pro supports multiple power input methods. Choose the option that best fits your deployment scenario.
 
-- **DC Adapter + Cable**<br/>
+- **DC Adapter + Cable**
+
   Recommended for indoor use. Use the provided power adapter and cable to supply power to the gateway.
 
-- **Custom DC Power (9~36&nbsp;V<sub>DC</sub>)**<br/> 
-  Suitable for industrial or flexible power environments. Use the DC cable to connect an external DC power source within the 9~36&nbsp;V<sub>DC</sub> range.
+- **Custom DC Power (9~36 V<sub>DC</sub>)**
+ 
+  Suitable for industrial or flexible power environments. Use the DC cable to connect an external DC power source within the 9~36 V<sub>DC</sub> range.
 
-- **RAK9155 Battery Plus System**<br/> 
+- **RAK9155 Battery Plus System**
+ 
   Recommended for outdoor installations. Use the dedicated power cable designed for RAK9155 Battery Plus to connect and supply power to the gateway.
 
 ### Software
 
-<table>
-    <thead>
-        <tr>
-            <th>LoRa</th>
-            <th>Network</th>
-            <th>Management</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Gateway OTA management</td>
-            <td>Wi-Fi Client mode</td>
-            <td>WisDM</td>
-        </tr>
-        <tr>
-            <td>LoRa package forward (packet forwarder, Basics Station)</td>
-            <td>LTE APN Setup</td>
-            <td>SSH2, NTP</td>
-        </tr>
-        <tr>
-            <td>Frequency Band Setup</td>
-            <td>Support 802.1q</td>
-            <td>Firmware update</td>
-        </tr>
-        <tr>
-            <td>Country Code setup</td>
-            <td>Uplink backup</td>
-            <td>LoRa Packet Forwarder</td>
-        </tr>
-        <tr>
-            <td>Server Address and Port Setup</td>
-            <td>Firewall</td>
-            <td>Built-in Network Server</td>
-        </tr>
-        <tr>
-            <td>TX Power Setup</td>
-            <td>DHCP Server/Client</td>
-            <td>MQTT Bridge</td>
-        </tr>
-        <tr>
-            <td>Data logger</td>
-            <td>Wi-Fi AP mode</td>
-            <td>OpenVPN, Ping Watch Dog</td>
-        </tr>
-        <tr>
-            <td>Location setup</td>
-            <td> </td>
-            <td>WEB UI</td>
-        </tr>
-        <tr>
-            <td>Statistic</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Supports class A, B, C</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Server address and Port setup</td>
-            <td> </td>
-            <td> </td>
-        </tr>
-</tbody>
-</table>
+| LoRa | Network | Management |
+| --- | --- | --- |
+| Gateway OTA management | Wi-Fi Client mode | WisDM |
+| LoRa package forward (packet forwarder, Basics Station) | LTE APN Setup | SSH2, NTP |
+| Frequency Band Setup | Support 802.1q | Firmware update |
+| Country Code setup | Uplink backup | LoRa Packet Forwarder |
+| Server Address and Port Setup | Firewall | Built-in Network Server |
+| TX Power Setup | DHCP Server/Client | MQTT Bridge |
+| Data logger | Wi-Fi AP mode | OpenVPN, Ping Watch Dog |
+| Location setup |  | WEB UI |
+| Statistic |  |  |
+| Supports class A, B, C |  |  |
+| Server address and Port setup |  |  |
 
 ### Firmware
 
-
 |          Model           |                                                         Source                                                          |
 |:------------------------:|:-----------------------------------------------------------------------------------------------------------------------:|
-| RAK7267 WisGate Soho Pro | <a href="https://downloads.rakwireless.com/LoRa/WisGateOS2/WisGateOS2_Latest_Firmware.zip" target="_blank">Download</a> |
+| RAK7267 WisGate Soho Pro | [Download](https://downloads.rakwireless.com/LoRa/WisGateOS2/WisGateOS2_Latest_Firmware.zip) |
 
 ## Models/Bundles
 
-<table class="q-table">
-    <thead>
-        <tr>
-            <th>Part Number</th>
-            <th style={{ textAlign: 'center' }}>8 Channel SX1303</th>
-            <th style={{ textAlign: 'center' }}>Cat1 Cellular</th>
-            <th style={{ textAlign: 'center' }}>GPS</th>
-            <th style={{ textAlign: 'center' }}>Wi-Fi</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>RAK7267-XYZ</td>
-            <td style={{ textAlign: 'center' }}>√</td>
-            <td style={{ textAlign: 'center' }}>√</td>
-            <td style={{ textAlign: 'center' }}>√</td>
-            <td style={{ textAlign: 'center' }}>√</td>
-        </tr>
-    </tbody>
-</table>
-
+| Part Number | 8 Channel SX1303 | Cat1 Cellular | GPS | Wi-Fi |
+| --- | --- | --- | --- | --- |
+| RAK7267-XYZ | √ | √ | √ | √ |
 
 ## Certification
 
+### Certifications
+- **ANATEL:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_ANATEL_Certification.pdf
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_ISED_Certification.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_RCM_Certification.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_ROHS_Report.pdf
+- **RSM:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_RSM_Certification.pdf
+- **RED:** https://downloads.rakwireless.com/LoRa/WisGate/Certification/WisGate_RED_Verification.pdf
+- **UKCA:** https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_UKCA_Certification.pdf
 
-<RkCertificationIcons certifications={[
-    {
-        'anatel': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_ANATEL_Certification.pdf',
-    },
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_CE_Certification.pdf',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_FCC_Certification.pdf',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_ISED_Certification.pdf',
-    },
-    {
-        'rcm': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_RCM_Certification.pdf',
-    },
-    {
-        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_ROHS_Report.pdf',
-    },
-    {
-        'rsm': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_RSM_Certification.pdf',
-    },
-    {
-        'red': 'https://downloads.rakwireless.com/LoRa/WisGate/Certification/WisGate_RED_Verification.pdf'
-    },
-    {
-        'ukca': 'https://downloads.rakwireless.com/LoRa/RAK7267/Certification/RAK7267_UKCA_Certification.pdf',
-    },
-]} />
-
-
-<RkBottomNav/>

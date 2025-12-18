@@ -19,9 +19,6 @@ slug: /product-categories/wisduo/rak11161-breakout-board/at-command-manual/
 date: 2025-08-05
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11161 WisDuo LoRaWAN + BLE + WiFi Module AT Command Manual
 
 ## Overview
@@ -32,10 +29,9 @@ To integrate LoRa technology into your projects, the RAK11161 uses a simple seri
 
 ## RUI3 AT Command List
 
-The RAK11161's default firmware is based on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/" target="_blank">RUI3 (RAKwireless Unified Interface) V3.</a> By default, AT commands are accessed via UART2.
+The RAK11161's default firmware is based on [RUI3 (RAKwireless Unified Interface) V3.](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/) By default, AT commands are accessed via UART2.
 
-The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation.</a>
+The complete list of commands can be found in [RUI3 AT Commands Documentation.](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/)
 
-The Espressif AT command manual can be found on Espressif's website in the <a href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html" target="_blank">ESP-AT User Guide.</a>
+The Espressif AT command manual can be found on Espressif's website in the [ESP-AT User Guide.](https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html)
 
-<RkBottomNav/>

@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock Light and Color Kit Datasheet
 
 ## Overview
@@ -50,11 +47,7 @@ The kit is designed for easy integration with other WisBlock modules, and it sup
 
 The WisBlock Light and Color Kit includes the following modules:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/6_lightcolor_kit_2.png" 
-  caption="Modules of the WisBlock Light and Color Kit" 
-   width="80%"
-/>
+> **Image:** Modules of the WisBlock Light and Color Kit
 
 ### Hardware
 
@@ -91,7 +84,6 @@ Check individual modules for their specific requirements like needed battery, co
 | [RAK14003](https://docs.rakwireless.com/product-categories/wisblock/rak14003) | LED Bar Graph        | MCP23017, KEM-102510A-RYG | Microchip, Hongke Lighting |
 | [RAK14001](https://docs.rakwireless.com/product-categories/wisblock/rak14001) | RGB LED Module       | NCP5623B                  | On Semiconductors          |
 
-
 #### WisBlock Cellular Modules
 
 The cellular modules support different cellular protocols as shown in the table.
@@ -105,5 +97,3 @@ The cellular modules support different cellular protocols as shown in the table.
 
 The WisBlock Movement Detection Kit is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
-
-<RkBottomNav/>

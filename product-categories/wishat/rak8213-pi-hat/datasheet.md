@@ -10,11 +10,7 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkImage from '@site/src/components/Image'
-
 # RAK8213 Pi HAT Datasheet
-
 
 ## Overview
 
@@ -32,14 +28,9 @@ import RkImage from '@site/src/components/Image'
 
 ### Overview
 
-
 RAK8213 Pi HAT maps the RAK8213 pins from the 52-pin mPCIe connector to the 40-pin Raspberry Pi connector. Refer to the block diagram in **Figure 1** shown below and the pin mapping table shown in the Pin Definition section.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wishat/rak8213/datasheet/rak8213_block_diagram.png"
-  width="50%"
-  caption="RAK8213 Pi HAT Block Diagram"
-/>
+> **Image:** RAK8213 Pi HAT Block Diagram
 
 ### Hardware
 
@@ -58,13 +49,12 @@ The following tables show the pin definition and description of RAK8213 Pi HAT o
 | PO       | Power output    |
 | NC       | No Connection   |
 
-
 | **Pin No.** | **Raspberry Pi 40-Pin Connector** | **RAK8213 Pi HAT Pin** | **I/O** | **Remarks**                                                                                                                                                                                                                                                                                                                                                             |
 | ----------- | --------------------------------- | ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1           | 3V3                               | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
-| 2           | 5&nbsp;V                          | 5&nbsp;V               | PI      | 5&nbsp;V Input                                                                                                                                                                                                                                                                                                                                                          |
+| 2           | 5 V                          | 5 V               | PI      | 5 V Input                                                                                                                                                                                                                                                                                                                                                          |
 | 3           | GPIO2 (SDA1)                      | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
-| 4           | 5&nbsp;V                          | 5&nbsp;V               | PI      | 5&nbsp;V Input                                                                                                                                                                                                                                                                                                                                                          |
+| 4           | 5 V                          | 5 V               | PI      | 5 V Input                                                                                                                                                                                                                                                                                                                                                          |
 | 5           | GPIO3 (SCL1)                      | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
 | 6           | GND                               | GND                    |         | Ground                                                                                                                                                                                                                                                                                                                                                                  |
 | 7           | GPIO4 (GPIO_GCLK)                 | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
@@ -72,13 +62,18 @@ The following tables show the pin definition and description of RAK8213 Pi HAT o
 | 9           | GND                               | GND                    |         | Ground                                                                                                                                                                                                                                                                                                                                                                  |
 | 10          | GPIO15 (RXD0)                     | UART_TXD_ LTE          | DO      | Connect RAK8213 built in LTE Module’s UART_TXD                                                                                                                                                                                                                                                                                                                          |
 | 11          | GPIO17 (GPIO_GEN0)                | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
-| 12          | GPIO18 (GPIO_GEN1)                | PWRKEY_LTE             | DI      | Turn on/off the module. When RAK8213 is in power off mode, it can be turned on to normal mode by driving the PI_PWRKEY pin to a high level for at least 500&nbsp;ms. <br/> When RAK8213 is in normal mode, driving the PWRKEY_LTE pin to a high-level voltage for at least 650&nbsp;ms, the module will execute power-down procedure after the PWRKEY_LTE is released. |
+| 12          | GPIO18 (GPIO_GEN1)                | PWRKEY_LTE             | DI      | Turn on/off the module. When RAK8213 is in power off mode, it can be turned on to normal mode by driving the PI_PWRKEY pin to a high level for at least 500 ms. 
+ When RAK8213 is in normal mode, driving the PWRKEY_LTE pin to a high-level voltage for at least 650 ms, the module will execute power-down procedure after the PWRKEY_LTE is released. |
 | 13          | GPIO27 (GPIO_GEN2)                | UART_DCD_LTE           | DO      | Data carrier detection                                                                                                                                                                                                                                                                                                                                                  |
 | 14          | GND                               | GND                    |         | Ground                                                                                                                                                                                                                                                                                                                                                                  |
 | 15          | GPIO22 (GPIO_GEN3)                | UART_DTR_LTE           | DI      | Data terminal ready (sleep mode control)                                                                                                                                                                                                                                                                                                                                |
-| 16          | GPIO23 (GPIO_GEN4)                | VBUS_CTRL_LTE          | DI      | USB detection control, <br/> High level: Enable USB detection <br/> Low level: Disable USB detection                                                                                                                                                                                                                                                                  |
+| 16          | GPIO23 (GPIO_GEN4)                | VBUS_CTRL_LTE          | DI      | USB detection control, 
+ High level: Enable USB detection 
+ Low level: Disable USB detection                                                                                                                                                                                                                                                                  |
 | 17          | 3V3                               | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
-| 18          | GPIO24 (GPIO_GEN5)                | GNSS_PWR_CTRL_LTE      | DI      | Active GNSS antenna power supply control, <br/> High level: Enable power supply (3.3&nbsp;V) <br/> Low level: Disable power supply                                                                                                                                                                                                                                    |
+| 18          | GPIO24 (GPIO_GEN5)                | GNSS_PWR_CTRL_LTE      | DI      | Active GNSS antenna power supply control, 
+ High level: Enable power supply (3.3 V) 
+ Low level: Disable power supply                                                                                                                                                                                                                                    |
 | 19          | GPIO10 (SPI_MOSI)                 | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
 | 20          | GND                               | GND                    |         | Ground                                                                                                                                                                                                                                                                                                                                                                  |
 | 21          | GPIO9 (SPI_MISO)                  | NC                     |         | No Connection                                                                                                                                                                                                                                                                                                                                                           |
@@ -106,13 +101,9 @@ The following tables show the pin definition and description of RAK8213 Pi HAT o
 There is a micro-USB connector on the RAK8213 Pi HAT, which connects to RAK8213\u2019s USB interface. This gives you direct access to the USB interface (BG96) and is also required to power the RAK8213 when inserted in the slot, as it requires additional power.
 :::
 
-
 ## Ordering Information
 
 | **Model**      | **Description**                          | **Supported Module** |
 | -------------- | ---------------------------------------- | -------------------- |
 | RAK8213 Pi HAT | PCIe to Pi HAT Convert Board for RAK8213 | RAK8213              |
-
-<RkBottomNav/>
-
 

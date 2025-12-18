@@ -9,15 +9,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK1920 WisBlock Sensor Adapter Module
 
 Thank you for choosing **RAK1920 WisBlock Sensor Adapter Module** in your awesome IoT Project! To help you get started, we have provided the necessary documentation for the product.
 
 * [RAK1920 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak1920/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak1920/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK1920 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK1920.stp)
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -37,18 +35,17 @@ The RAK1920 module, a part of the WisBlock Interface series, is a sensor extensi
 
 It supports several defacto-standard interfaces in the IoT market and allows you to integrate sensors manufactured by Mikroe, SparkFun, SeeedStudio, and others. For example, the RAK1920 supports the Click Boards™ series of modules provided by Mikroe, Qwiic Connect™ sensor interface designed by SparkFun. Also, it supports all kinds of I2C module digital I/O, UART, and ADC sensors with a Grove™ interface.
 
-
 ## Product Features
 
 * **Module specifications**
     * 1 Click Board compatible slot
     * 1 Grove connector compatible with I2C and digital IO boards
     * 1 Grove connector compatible with UART and analog IO boards
-    * Support for 5&nbsp;V Grove sensors up to 50&nbsp;mA
+    * Support for 5 V Grove sensors up to 50 mA
     * 1 QWICC compatible connector
 
 * **Size**
-    * 30 x 36&nbsp;mm
+    * 30 x 36 mm
 
 ## Prerequisites
 
@@ -58,4 +55,3 @@ To use a **RAK1920**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

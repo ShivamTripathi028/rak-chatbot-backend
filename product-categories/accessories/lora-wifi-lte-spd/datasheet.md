@@ -9,26 +9,22 @@ image: "https://images.docs.rakwireless.com/accessories/lora-wifi-lte-spd/lightn
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # LoRa Wi-Fi LTE SPD Datasheet
 
 ## Overview
 
 ## Description
 
-LA-GT2700 DN1-5 is a Surge Protective Device (SPD) for the protection of the transceiver against over-voltage and surge current induced by lightning. It can be used with a 50&nbsp;Ω system with a frequency range of 0 to 2700&nbsp;MHz and transmission power up to 200&nbsp;W. It is suitable to be used for LoRa, Wi-Fi, and LTE antennas.
+LA-GT2700 DN1-5 is a Surge Protective Device (SPD) for the protection of the transceiver against over-voltage and surge current induced by lightning. It can be used with a 50 Ω system with a frequency range of 0 to 2700 MHz and transmission power up to 200 W. It is suitable to be used for LoRa, Wi-Fi, and LTE antennas.
 
 For the purpose of protecting the indoor equipment and circuitry connected to the LoRa gateway, you need to install an Ethernet port Surge Protection Device (SPD).
 
 ## Features
 
 - Connector Type: **N-type male to N-type female**
-- Impedance: **50&nbsp;Ω**
-- Frequency Range: **0-2700&nbsp;MHz**
-- Power Loss **0-2000&nbsp;MHz**: ≤ **0.2&nbsp;dB**
+- Impedance: **50 Ω**
+- Frequency Range: **0-2700 MHz**
+- Power Loss **0-2000 MHz**: ≤ **0.2 dB**
 - Ingress protection: **IP67**
 
 ## Specifications
@@ -39,21 +35,23 @@ For the purpose of protecting the indoor equipment and circuitry connected to th
 
 | Parameter                          | Value                                                                     | Remarks      |
 | ---------------------------------- | ------------------------------------------------------------------------- | ------------ |
-| Frequency                          | 0~2700&nbsp;MHz                                                           |              |
+| Frequency                          | 0~2700 MHz                                                           |              |
 | SPD type                           | Switching type                                                            |              |
 | Connector                          | N-type male to N-type female                                              |              |
-| Port impedance                     | 50&nbsp;Ω                                                                 |              |
-| Maximum transmission power         | ≤ 200&nbsp;W                                                              |              |
-| DC startup voltage                 | 600&nbsp;V ± 25%                                                          |              |
-| Voltage standing wave ratio (VSWR) | 0-2000&nbsp;MHz：≤ 1.2<br/>Other frequency：≤ 1.25                       |              |
-| Insertion loss                     | 0-2000&nbsp;MHz：≤ 0.2&nbsp;dB  <br/>Other frequency：≤ 0.3&nbsp;dB      |              |
-| Nominal discharge current In       | 10&nbsp;kA                                                                | 8/20&nbsp;µs |
-| Maximum discharge current Imax     | 20&nbsp;kA                                                                | 8/20&nbsp;µs |
-| Voltage protection Level Up        | ≤ 1200&nbsp;V                                                             |              |
+| Port impedance                     | 50 Ω                                                                 |              |
+| Maximum transmission power         | ≤ 200 W                                                              |              |
+| DC startup voltage                 | 600 V ± 25%                                                          |              |
+| Voltage standing wave ratio (VSWR) | 0-2000 MHz：≤ 1.2
+Other frequency：≤ 1.25                       |              |
+| Insertion loss                     | 0-2000 MHz：≤ 0.2 dB  
+Other frequency：≤ 0.3 dB      |              |
+| Nominal discharge current In       | 10 kA                                                                | 8/20 µs |
+| Maximum discharge current Imax     | 20 kA                                                                | 8/20 µs |
+| Voltage protection Level Up        | ≤ 1200 V                                                             |              |
 | Degree of ingressive protection    | IP67                                                                      | GB 4208      |
 | Mounting                           | N-F port metal wall-through fixation                                      |              |
 | Grounding                          | N-F port metal wall-through fixation or grounding  by grounding connector |              |
-| Weight                             | ≤ 180&nbsp;g                                                              |              |
+| Weight                             | ≤ 180 g                                                              |              |
 
 #### Environmental Characteristics
 
@@ -61,17 +59,17 @@ Operation environment:
 
 | Parameter            | Value                      |
 | -------------------- | -------------------------- |
-| Ambient temperature  | -40°&nbsp;C ~ 70°&nbsp;C   |
+| Ambient temperature  | -40° C ~ 70° C   |
 | Relative humidity    | 5% ~ 95%                   |
-| Atmospheric pressure | 70&nbsp;kPa ~ 106&nbsp;kPa |
+| Atmospheric pressure | 70 kPa ~ 106 kPa |
 
 Storage environment:
 
 | Parameter            | Value                      |
 | -------------------- | -------------------------- |
-| Ambient temperature  | -40°&nbsp;C ~ 80°&nbsp;C   |
+| Ambient temperature  | -40° C ~ 80° C   |
 | Relative humidity    | 5% ~ 95%                   |
-| Atmospheric pressure | 70&nbsp;kPa ~ 106&nbsp;kPa |
+| Atmospheric pressure | 70 kPa ~ 106 kPa |
 
 #### Standards
 
@@ -82,21 +80,7 @@ Storage environment:
 
 #### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/lora-wifi-lte-spd/1.png"
-  width="60%"
-  caption="Mechanical Dimensions"
-/>
+> **Image:** Mechanical Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/lora-wifi-lte-spd/2.png"
-  width="60%"
-  caption="Typical Use"
-/>
+> **Image:** Typical Use
 
-
-
-
-
-
-<RkBottomNav/>

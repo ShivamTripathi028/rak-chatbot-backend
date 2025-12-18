@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13003 WisBlock IO Expansion Module Quick Start Guide
 
 ## Prerequisite
@@ -54,12 +51,7 @@ The RAK13003 is an IO expansion module that can be mounted to the IO slot of the
 
 For more information about RAK13003, refer to the [Datasheet](datasheet.md).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/rak13003_connection.png"
-  width="60%"
-  caption="RAK13003 Connection to WisBlock Base module"
-/>
-
+> **Image:** RAK13003 Connection to WisBlock Base module
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -67,12 +59,7 @@ For more information about RAK13003, refer to the [Datasheet](datasheet.md).
 
 The RAK13003 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 2**. Also, always secure the connection of the WisBlock module by using the compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/mounting-mechanism.png"
-  width="60%"
-  caption="RAK13003 mounting connection to WisBlock Base module"
-/>
-
+> **Image:** RAK13003 mounting connection to WisBlock Base module
 
 ##### Disassembling Procedure
 
@@ -80,33 +67,19 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/removing_screw.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/detach_silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/detach_module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
 :::
-
-
 
 ### Software Configuration and Example
 
@@ -118,31 +91,15 @@ In the following example, you will be using the [RAK13003 WisBlock IO Expansion 
 
 2. Shown in **Figure 6** is the illustration on how to use the RAK13003 IO Expansion Module to power ON LEDs using digitalWrite function.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/led_connection4631.png"
-  width="50%"
-  caption="RAK13003 as Output to LEDs"
-/>
+> **Image:** RAK13003 as Output to LEDs
 
 3. You need to select first the WisBlock Core you have, as shown in Figure 7 to Figure 9.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/board4631.png"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/board11200.png"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/rak11300_board.png"
-  width="100%"
-  caption="Selecting RAK11300 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11300 as WisBlock Core
 
 4. Next, copy the following sample code into your Arduino IDE.
 
@@ -274,11 +231,7 @@ If you experience any error in compiling the example sketch, check the updated c
 
 5. Install the required library, as shown in **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/adding_library.png"
-  width="80%"
-  caption="Installing the Library"
-/>
+> **Image:** Installing the Library
 
 :::tip NOTE
 The library version required must be at least **ver 2.1.0** to compile the example code successfully.
@@ -290,28 +243,15 @@ The library version required must be at least **ver 2.1.0** to compile the examp
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/selecting_port.png"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/upload.png"
-  width="100%"
-  caption="Uploading code"
-/>
+> **Image:** Uploading code
 
 7. When you have successfully uploaded the example sketch, you can see that the LEDs are powered ON and PB0 will have LED blinking output. You can also switch PB as INPUT and PA as OUTPUT by changing this line of code shown in **Figure 13**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/quickstart/pinswitch.png"
-  width="80%"
-  caption="Switching between PA and PB"
-/>
+> **Image:** Switching between PA and PB
+
 :::tip NOTE
 You can use **`mcp.digitalWrite(pin_no,state)`** and **`mcp.digitalRead(pin_no)`** to send or read states.
 :::
 
-
-<RkBottomNav/>

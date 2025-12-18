@@ -24,9 +24,6 @@ date: 2022-04-07
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4630 WisDuo LoRaWAN+BLE Module Quick Start Guide
 
 ## Prerequisites
@@ -37,20 +34,20 @@ Before going through the steps in the installation guide of the RAK4630 WisDuo L
 
 #### Hardware
 
-- <a href="https://store.rakwireless.com/products/rak4630-wisduo-lpwan-module?utm_source=RAK4630Module&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK4630 WisDuo LoRaWAN+BLE Module</a>
+- [RAK4630 WisDuo LoRaWAN+BLE Module](https://store.rakwireless.com/products/rak4630-wisduo-lpwan-module?utm_source=RAK4630Module&utm_medium=Document&utm_campaign=BuyFromStore)
 - Computer
 - USB to UART TTL adapter
 
 #### Software
 
-- Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>.
+- Download and install the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
 :::warning
 _**If you are using Windows 10**_.
 Do _**NOT**_ install the Arduino IDE from the Microsoft App Store. Install the original Arduino IDE from the Arduino official website! The Arduino app from the Microsoft App Store has problems using third-party Board Support Packages.
 :::
 
-- <a href="https://downloads.rakwireless.com/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip" target="_blank">RAK Serial Port Tool</a>
+- [RAK Serial Port Tool](https://downloads.rakwireless.com/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip)
 
 ## Product Configuration
 
@@ -62,62 +59,35 @@ Before you can start using the RAK4630, you need to make a few hardware connecti
 
 There are two ways to set up the RAK4630, depending on your power source. The following two modes are derived from the features of the nRF52840 chip embedded inside the RAK4630 module.
 
-- High Voltage Mode: for an external battery and 3.3&nbsp;V
-- Normal Mode: for a 3.3&nbsp;V voltage rail as a power source
+- High Voltage Mode: for an external battery and 3.3 V
+- Normal Mode: for a 3.3 V voltage rail as a power source
 
 **1. Standard Mode**
 
 In standard mode, you can use 3.3V power source to all voltage supply input.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_standard.png"
-  width="65%"
-  caption="RAK4630 Standard Mode"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 Standard Mode
 
 **2. High Voltage Mode**
 
-In high voltage mode, you can directly connect your external source (usually battery) to VBAT_NRF pin. VBAT_NRF should be higher than 3.3&nbsp;V which is the nominal operating VDD level and must be left floating. The maximum allowed voltage for VBAT_NRF is 5.5&nbsp;V.
+In high voltage mode, you can directly connect your external source (usually battery) to VBAT_NRF pin. VBAT_NRF should be higher than 3.3 V which is the nominal operating VDD level and must be left floating. The maximum allowed voltage for VBAT_NRF is 5.5 V.
 
 This configuration is required in nRF52840 inside the RAK4630 to operate in High Voltage Mode in which internal DC/DC and REG0/REG1 are enabled. This is the default setting on the RAK4631 WisBlock Core which uses RAK4630 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_minimum.png"
-  width="65%"
-  caption="RAK4630 High Voltage Mode"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 High Voltage Mode
 
 After selecting appropriate mode for your applicaiton, ensure that the antennas are properly connected to have a good LoRa and BLE signal. Also, note that you can damage the RF section of the chip if you power the module without an antenna connected to the IPEX connectors.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wisblock_antenna.png"
-  width="30%"
-  caption="LoRa antenna"
-  zoomMode={true}
-/>
+> **Image:** LoRa antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/ble-antenna.png"
-  width="40%"
-  caption="BLE antenna"
-  zoomMode={true}
-/>
+> **Image:** BLE antenna
 
 RAK4630 has a label on its sticker on where to connect the antennas, as shown in **Figure 4**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_antenna_label.png"
-  width="30%"
-  caption="RAK4630 antenna label"
-  zoomMode={true}
-/>
-
+> **Image:** RAK4630 antenna label
 
 :::tip NOTE
-Detailed information about the RAK4630 LoRa antenna can be found on the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf" target="_blank">863-870 MHz antenna datasheet</a> or the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf" target="_blank">902-928 MHz antenna datasheet</a>. For the BLE antenna, you can visit the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/2.4G%20Antenna%20Specification.pdf" target="_blank">2.4 GHz Antenna specifications.</a>
+Detailed information about the RAK4630 LoRa antenna can be found on the [863-870 MHz antenna datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf) or the [902-928 MHz antenna datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf). For the BLE antenna, you can visit the [2.4 GHz Antenna specifications.](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/2.4G%20Antenna%20Specification.pdf)
 :::
 
 :::warning
@@ -132,7 +102,7 @@ You can upload the custom firmware via USB or DFU OTA. Even when compiling custo
 
 ##### RAK4630 RUI3 Board Support Package in Arduino IDE
 
-If you don't have an Arduino IDE yet, you can download it from the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino official website</a> and follow the installation procedure on the [miscellaneous section](#arduino-installation) of this document.
+If you don't have an Arduino IDE yet, you can download it from the [Arduino official website](https://www.arduino.cc/en/Main/Software) and follow the installation procedure on the [miscellaneous section](#arduino-installation) of this document.
 
 :::tip NOTE
 **For Windows 10 and up users**:
@@ -143,136 +113,66 @@ Once the Arduino IDE has been installed successfully, configure the IDE to add t
 
 1. Open Arduino IDE and go to **File** > **Preferences**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/preferences.png"
-  width="90%"
-  caption="Arduino preferences"
-  zoomMode={true}
-/>
+> **Image:** Arduino preferences
 
 2. To add the RAK4630 to your Arduino Boards list, edit the **Additional Board Manager URLs**. Click the icon, as shown in **Figure 6**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/additional-boards.png"
-  width="70%"
-  caption="Modifying Additional Board Manager URLs"
-  zoomMode={true}
-/>
+> **Image:** Modifying Additional Board Manager URLs
 
 3. Copy the URL `https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_com_rui_index.json` and paste it on the field, as shown in **Figure 7**. If other URLs are already there, just add them on the next line. After adding the URL, click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/preferences-url.png"
-  width="90%"
-  caption="Add additional board manager URLs"
-  zoomMode={true}
-/>
+> **Image:** Add additional board manager URLs
 
 4. Restart the Arduino IDE.
 5. Open the **Boards Manager** from **Tools** Menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/boards-manager.png"
-  width="90%"
-  caption="Opening Arduino boards manager"
-  zoomMode={true}
-/>
+> **Image:** Opening Arduino boards manager
 
 6. Write `RAK` in the search bar, as shown in **Figure 9**. This will show the available RAKwireless module boards that you can add to your Arduino Board list. Select and install the latest version of the  **RAKwireless RUI nRF Boards**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/installing-rak.png"
-  width="70%"
-  caption="Installing RAKwireless RUI nRF boards"
-  zoomMode={true}
-/>
+> **Image:** Installing RAKwireless RUI nRF boards
 
 7. Once the BSP is installed, select  **Tools** > **Boards Manager** > **RAKWireless RUI nRF Modules** > **WisBlock Core RAK4631 Board**. The RAK4631 board uses the RAK4630 WisDuo module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rui-nrf.png"
-  width="90%"
-  caption="Selecting RAK4630 Module"
-  zoomMode={true}
-/>
+> **Image:** Selecting RAK4630 Module
 
 ##### Compile an Example with Arduino LED Breathing
 
 1. After completing the steps on adding your RAK4630 to the Arduino IDE, try to run a simple program to test your setup. You need to add two LEDs to the bare minimum schematic of the RAK4630 module, as shown in **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630-led-breathing.png"
-  width="70%"
-  caption="RAK4630 with two LEDs"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 with two LEDs
 
 :::warning
-VBAT should be higher than 3.3&nbsp;V. The recommended value is the nominal voltage of a Li-Ion battery, which ranges from 3.7&nbsp;V to 4.2&nbsp;V. This is required because the power configuration of the nRF52840 inside the RAK4630 is High Voltage, DC/DC with REG0 and REG1 enabled.
+VBAT should be higher than 3.3 V. The recommended value is the nominal voltage of a Li-Ion battery, which ranges from 3.7 V to 4.2 V. This is required because the power configuration of the nRF52840 inside the RAK4630 is High Voltage, DC/DC with REG0 and REG1 enabled.
 :::
 
 2. Connect the RAK4630 via USB and check RAK4630 COM Port using Windows **Device Manager**. Double-click the reset button if the module is not detected.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rui-port.png"
-  width="70%"
-  caption="Device manager ports (COM & LPT)"
-  zoomMode={true}
-/>
+> **Image:** Device manager ports (COM & LPT)
 
 3. Choose RAK4631 on board selection select via **Tools** > **Boards Manager** > **RAKWireless RUI nRF Modules** > **WisBlock Core RAK4631 Board**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rui-nrf.png"
-  width="90%"
-  caption="Selecting RAK4630 Module"
-  zoomMode={true}
-/>
+> **Image:** Selecting RAK4630 Module
 
 4. Open the **Tools** Menu and select a COM port. **COM4** is currently used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/select-port.png"
-  width="90%"
-  caption="Select COM port"
-  zoomMode={true}
-/>
+> **Image:** Select COM port
 
 5. Click the serial monitor icon to connect to the COM port.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/serial-mon.png"
-  width="90%"
-  caption="Open Arduino serial monitor"
-  zoomMode={true}
-/>
+> **Image:** Open Arduino serial monitor
 
 6. If the connection is successful, you can send AT Commands to RAK4630. For example: To check the RUI version, type `AT+VER=?` on the text area, then click on the **Send** button, as shown in **Figure 16**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/arduino-console.png"
-  width="90%"
-  caption="Arduino serial monitor COM4"
-  zoomMode={true}
-/>
+> **Image:** Arduino serial monitor COM4
 
 7. Open **Arduino_Led_Breathing** example code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/led-example.png"
-  width="90%"
-  caption="Led Breathing example"
-  zoomMode={true}
-/>
+> **Image:** Led Breathing example
 
 8. Click on the **Verify** icon to check if you have successfully compiled the example code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/verify-code.png"
-  width="90%"
-  caption="Verify the example code"
-  zoomMode={true}
-/>
+> **Image:** Verify the example code
 
 9. Click the **Upload** icon to send the compiled firmware to your RAK4630.
 
@@ -281,21 +181,11 @@ VBAT should be higher than 3.3&nbsp;V. The recommended value is the nominal volt
 - If BOOT mode is not initiated, you can manually send `AT+BOOT` command to start bootloader mode.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/upload-code.png"
-  width="90%"
-  caption="Upload the example code"
-  zoomMode={true}
-/>
+> **Image:** Upload the example code
 
 10. If the upload is successful, you will see the **Device programmed** message.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/dev-prog.png"
-  width="90%"
-  caption="Device programmed successfully"
-  zoomMode={true}
-/>
+> **Image:** Device programmed successfully
 
 11. After the Device Programmed is completed, you will see that LEDs are blinking.
 
@@ -305,12 +195,7 @@ This section discusses how to use and access the pinouts of RAK4630 using RUI3 A
 
 ###### How to Use Digital IO
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630-digital.png"
-  width="75%"
-  caption="Available digital I/O pins in RAK4630"
-  zoomMode={true}
-/>
+> **Image:** Available digital I/O pins in RAK4630
 
 You can use any of the pins, as shown in **Figure 22**, as Digital Pin by replacing the dot `.` to underscore `_`. See the example code below.
 
@@ -359,12 +244,7 @@ void loop()
 
 ###### How to Use Analog Input
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630-analog.png"
-  width="55%"
-  caption="Available Analog Input pins in RAK4630"
-  zoomMode={true}
-/>
+> **Image:** Available Analog Input pins in RAK4630
 
 You can use any of the pins, as shown in **Figure 23**, as Analog Input Pin by replacing the dot `.` to underscore `_`. See the example code below.
 
@@ -387,23 +267,16 @@ void loop()
 
 ###### How to Use Serial Interfaces
 
-- <b> UART </b>
+- ** UART **
 
 There are two UART peripherals available on RAK4630. There are also different [Serial Operating Modes](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/serial-operating-modes/) possible in RUI3, namely Binary Mode, AT Mode, and Custom Mode.
-
 
 | **Serial Port**           | **Serial Instance Assignment** | **Default Mode**  |
 | :-----------------------: | :----------------------------: | :---------------: |
 | UART1 (pin 19, 20)        | Serial0                        | AT Command        |
 | UART2 (pin 15, 16)        | Serial1                        | Custom Mode       |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630-uart.png"
-  width="60%"
-  caption="Available UART pins in RAK4630"
-  zoomMode={true}
-/>
+> **Image:** Available UART pins in RAK4630
 
 Example Code
 
@@ -419,16 +292,10 @@ void loop()
   delay(1000); // delay for 1 second
 }
 ```
-<br/>
 
-- <b> I2C </b>
+- ** I2C **
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630-i2c.png"
-  width="55%"
-  caption="Available I2C pins in RAK4630"
-  zoomMode={true}
-/>
+> **Image:** Available I2C pins in RAK4630
 
 Make sure you have an I2C device connected to specified I2C pins to run the example code below.
 
@@ -487,22 +354,15 @@ void loop()
 }
 ```
 
-<br/>
+- ** SPI **
 
-- <b> SPI </b>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630-spi.png"
-  width="60%"
-  caption="Available SPI pins in RAK4630"
-  zoomMode={true}
-/>
+> **Image:** Available SPI pins in RAK4630
 
 ##### LoRaWAN Example
 
 This example demonstrates how to program RAK4630 as a stand-alone LoRaWAN end-device using RUI3 Arduino APIs. To utilize RAK4630 as a LoRaWAN end-device, it must be in proximity to a functioning **LoRaWAN gateway** registered to a **LoRaWAN network server (LNS)** or with a built-in network server.
 
-Additionally, this guide will utilize the internal network server of the  <a href="https://store.rakwireless.com/products/wisgate-edge-lite-2-rak7268-rak7268c" target="_blank">WisGate Edge RAK7268</a>LoRaWAN gateway. RAK provides a range of WisGate LoRaWAN gateways available for purchase from the <a href="https://store.rakwireless.com/collections/wisgate" target="_blank">RAK store</a>. This guide concentrates on configuring RAK4630 as a LoRaWAN end-device.
+Additionally, this guide will utilize the internal network server of the  [WisGate Edge RAK7268](https://store.rakwireless.com/products/wisgate-edge-lite-2-rak7268-rak7268c)LoRaWAN gateway. RAK provides a range of WisGate LoRaWAN gateways available for purchase from the [RAK store](https://store.rakwireless.com/collections/wisgate). This guide concentrates on configuring RAK4630 as a LoRaWAN end-device.
 
 As a refresher on LoRaWAN, here are the three main components you need for a functioning LoRaWAN application:
 
@@ -513,10 +373,10 @@ As a refresher on LoRaWAN, here are the three main components you need for a fun
 :::tip NOTE
 If you are new to LoRaWAN, here are a few good references about LoRaWAN and gateways:
 
-- <a href="https://news.rakwireless.com/lorawan-r-101-all-you-need-to-know/" target="_blank">LoRaWAN 101</a>
-- <a href="https://news.rakwireless.com/what-is-a-lorawan-gateway/" target="_blank">What is a LoRaWAN Gateway</a>
-- <a href="https://news.rakwireless.com/how-do-lorawan-gateways-work/" target="_blank">How do LoRaWAN Gateways work?</a>
-- <a href="https://news.rakwireless.com/things-to-consider-when-picking-a-lorawan-gateway/" target="_blank">Things to Consider When Picking A LoRaWAN Gateway</a>
+- [LoRaWAN 101](https://news.rakwireless.com/lorawan-r-101-all-you-need-to-know/)
+- [What is a LoRaWAN Gateway](https://news.rakwireless.com/what-is-a-lorawan-gateway/)
+- [How do LoRaWAN Gateways work?](https://news.rakwireless.com/how-do-lorawan-gateways-work/)
+- [Things to Consider When Picking A LoRaWAN Gateway](https://news.rakwireless.com/things-to-consider-when-picking-a-lorawan-gateway/)
 
 LoRaWAN gateway models like WisGate Edge often come with built-in network servers. However, it's also common for LoRaWAN network servers to be external or in the cloud. One popular LoRaWAN network server in the cloud, which offers free usage with enterprise services available, is The Things Network (TTN).
 :::
@@ -533,86 +393,41 @@ This initial guide utilizes the LoRaWAN built-in network server of RAK7268, but 
 
 2. Once you have a functioning RAK7268 gateway, ensure that you are using the built-in LoRaWAN network server (LNS). You can configure this by selecting the **LoRa Network** tab and then choosing **Network Settings**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lora_network_setting.png"
-  width="90%"
-  caption="RAK7268 LoRa network settings"
-  zoomMode={true}
-/>
+> **Image:** RAK7268 LoRa network settings
 
 3. Select the **Mode** dropdown list as **Network Server** and make sure to take note of the **Region** setting. The **Region** should match the region specified in the code for the RAK4630 that you will compile later in this guide. For instance, the region of the LoRaWAN gateway and LNS used in this guide is US915.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/mode_network_server.png"
-  width="90%"
-  caption="RAK7268 network server mode"
-  zoomMode={true}
-/>
+> **Image:** RAK7268 network server mode
 
 4. After configuring the gateway to use a built-in LoRaWAN network server (LNS), proceed to add an application to the network server and register a device. Click on **Application**, which will display all the LoRaWAN applications you currently have, if any.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/add_application.png"
-  width="90%"
-  caption="Accessing Application Console in the network server"
-  zoomMode={true}
-/>
+> **Image:** Accessing Application Console in the network server
 
 5. Ensure to assign a meaningful name to your application. For this illustration, **RAK4630**, select **Unified Application Key**, then click **Add**. After the configuration, click **Save & Apply** to proceed with the application's setup.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/add_application_name.png"
-  width="90%"
-  caption="Adding Application to the LoRaWAN network server"
-  zoomMode={true}
-/>
+> **Image:** Adding Application to the LoRaWAN network server
 
 6. Another essential parameter in a LoRaWAN application is the **Application Key**, utilized in **OTAA** activation. While you can manually add one, it's advisable to let the network server generate it by clicking the generate icon button. Additionally, you can add a description to your application. Once you have the **Application Key**, click **Save & Apply**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/add_application_key.png"
-  width="90%"
-  caption="Configure Application Key"
-  zoomMode={true}
-/>
+> **Image:** Configure Application Key
 
 7. The new application will now be added to the application list of your network server. To register the RAK4630 WisDuo module as a device in that application, click edit to access the application console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/accessing_the_application.png"
-  width="90%"
-  caption="Access the LoRaWAN Application Console"
-  zoomMode={true}
-/>
+> **Image:** Access the LoRaWAN Application Console
 
 8. Add the device EUI (DEVEUI) on the application console. This must be unique, and it is highly encouraged that you use the **DEVEUI** printed on the sticker of your RAK4630 module. Then click the **Add** button to proceed with the next configurations.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/add_device.png"
-  width="90%"
-  caption="Adding device to the application"
-  zoomMode={true}
-/>
+> **Image:** Adding device to the application
 
 9. Put a name on your device, in this case, **RAK4630**. Three parameters in this list must be the same as your RAK4630 code: **Class**, **Join Mode**, and **Application Key**.
 
 In the Arduino code example in the latter part of this guide, Class A and Join Mode OTAA are the default. With that, you will only need to modify the code of the application key. Lastly, the **LoRaWAN MAC Version** must be **1.0.3**. After setting up all these parameters, click **Save & Apply**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/device_configuration.png"
-  width="90%"
-  caption="Configuration of the RAK4630 as OTAA device"
-  zoomMode={true}
-/>
+> **Image:** Configuration of the RAK4630 as OTAA device
 
 10. The device will now be shown as a device in your application. The next step is to prepare the RAK4630 WisDuo module so that it can match all the parameters in the network server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/device_registered.png"
-  width="90%"
-  caption="RAK4630 registered on the network server"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 registered on the network server
 
 ###### Uploading LoRaWAN Example to RAK4630
 
@@ -620,12 +435,7 @@ After successfully registering the RAK4630 device to the LoRaWAN Network Server,
 
 1. Open the example code under **RAK WisBlock RUI examples**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lorawan_example.png"
-  width="90%"
-  caption="OTAA LoRaWAN application example"
-  zoomMode={true}
-/>
+> **Image:** OTAA LoRaWAN application example
 
 2. In the example code, modify the device EUI (DEVEUI) and application key (APPKEY).
 
@@ -643,12 +453,7 @@ After successfully registering the RAK4630 device to the LoRaWAN Network Server,
   uint8_t node_app_key[16] = {0xD9, 0xB8, 0x70, 0x18, 0x3E, 0xF1, 0x00, 0x1D, 0x1B, 0x4F, 0x2B, 0x4C, 0xBF, 0x60, 0xCA, 0x83};
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lorawan_otaa_parameter.png"
-  width="90%"
-  caption="Updating DEVEUI and APPKEY"
-  zoomMode={true}
-/>
+> **Image:** Updating DEVEUI and APPKEY
 
 3. This guide uses US915 regional band, so you need to update the band in the code as well. Additionally, set up the channel mask (channels 8 to 15 are the most commonly used channels in the US915 band).
 
@@ -677,12 +482,7 @@ RAK4630 supports the following regions:
 * RAK_REGION_AS923 = 8
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lorawan_band_mask.png"
-  width="90%"
-  caption="Updating to US915 and setting up channel mask"
-  zoomMode={true}
-/>
+> **Image:** Updating to US915 and setting up channel mask
 
 4. The last step is to upload the code by clicking the **Upload** icon. Take note that you should select the right board and port, as shown in the previous example [LED Blinking](#compile-an-example-with-arduino-led-breathing).
 
@@ -691,33 +491,18 @@ RAK4630 should automatically go to BOOT mode when the firmware is uploaded via A
 If BOOT mode is not initiated, you can manually send `AT+BOOT` command to start bootloader mode.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lorawan_upload.png"
-  width="80%"
-  caption="Uploading the code"
-  zoomMode={true}
-/>
+> **Image:** Uploading the code
 
 5. You should now be able to view the terminal logs in the Serial Monitor of the Arduino IDE. There are times the COM port may be disconnected, preventing you from viewing of the terminal output immediately. In such cases, you can reconnect the module or try pressing the reset button to see the terminal output.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lorawan_logs.png"
-  width="65%"
-  caption="Output logs"
-  zoomMode={true}
-/>
+> **Image:** Output logs
 
 6. Check on the LoRaWAN network server logs of RAK7268 if your device has been successfully joined with the `join request` and `join accept` logs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/lorawan_gateway_log.png"
-  width="90%"
-  caption="WisGate LoRa packet logger"
-  zoomMode={true}
-/>
+> **Image:** WisGate LoRa packet logger
 
 :::tip NOTE
-More examples for the RAK4630 can be found in the <a href="https://github.com/RAKWireless/RUI3-Best-Practice" target="_blank">RUI3-Best-Practices</a> on Github.
+More examples for the RAK4630 can be found in the [RUI3-Best-Practices](https://github.com/RAKWireless/RUI3-Best-Practice) on Github.
 :::
 
 ### RAK4630 as a Lora/Lorawan Modem via AT Command
@@ -729,32 +514,27 @@ This section covers the guide on how to use RAK4630 as a LoRa/LoRaWAN modem via 
 
 #### AT Command via UART1
 
-RAK4630 module can be configured using AT commands via the UART1 interface. You will need a USB to UART TTL adapter to connect the RAK4630 to your computer's USB port and a serial terminal tool. It is highly recommended to use the <a href="https://downloads.rakwireless.com/#LoRa/Tools" target="_blank">RAK Serial Port Tool</a> so you can easily send AT commands and view the replies from the console output. You can configure the RAK4630 in two ways:
+RAK4630 module can be configured using AT commands via the UART1 interface. You will need a USB to UART TTL adapter to connect the RAK4630 to your computer's USB port and a serial terminal tool. It is highly recommended to use the [RAK Serial Port Tool](https://downloads.rakwireless.com/#LoRa/Tools) so you can easily send AT commands and view the replies from the console output. You can configure the RAK4630 in two ways:
 
 - [LoRaWAN End-Device](#configure-rak4630-as-lorawan-end-device) - RAK4630 as LoRaWAN IoT device.
 - [LoRa P2P](#lora-p2p-mode) - Point-to-point communication between two RAK4630 modules.
 
 ##### Connect to the RAK4630
 
-1. Connect the RAK4630 to the serial port of a general-purpose computer (USB port) using a USB to UART TTL adapter like <a href="https://store.rakwireless.com/collections/accessories/products/daplink-tool" target="_blank">RAKDAP1</a>, as shown in **Figure 41**.
+1. Connect the RAK4630 to the serial port of a general-purpose computer (USB port) using a USB to UART TTL adapter like [RAKDAP1](https://store.rakwireless.com/collections/accessories/products/daplink-tool), as shown in **Figure 41**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_rakdap1.png"
-  width="85%"
-  caption="RAK4630 module connection"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 module connection
 
 :::tip NOTE
 You can also send AT commands via direct USB connection to the module, as shown in [hardware setup](#hardware-setup).
 :::
 
-2. Any serial communication tool can be used, but it is recommended to use the <a href="https://downloads.rakwireless.com/#LoRa/Tools" target="_blank">RAK Serial Port Tool</a>.
+2. Any serial communication tool can be used, but it is recommended to use the [RAK Serial Port Tool](https://downloads.rakwireless.com/#LoRa/Tools).
 3. Configure the serial communication tool by selecting the proper port detected by the computer and configure the link as follows:
 
- * Baud Rate: **115200&nbsp;baud**
- * Data Bits: **8&nbsp;bits**
- * Stop Bits: **1&nbsp;stop&nbsp;bit**
+ * Baud Rate: **115200 baud**
+ * Data Bits: **8 bits**
+ * Stop Bits: **1 stop bit**
  * Parity: **NONE**
 
 ##### Configure RAK4630 as LoRaWAN End-device
@@ -777,14 +557,9 @@ This section illustrates how to connect the RAK4630 module to the TTN platform.
 You need to have a functioning gateway connected to TTN, or you must be within the coverage of a TTN community network.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/4.ttn-context.png"
-  width="100%"
-  caption="The Things Stack"
-  zoomMode={true}
-/>
+> **Image:** The Things Stack
 
-As shown in **Figure 42**, The Things Stack (TTN V3) is an open-source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments, as well as for small local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliance and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries</a>.
+As shown in **Figure 42**, The Things Stack (TTN V3) is an open-source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments, as well as for small local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliance and interoperability. This project is actively maintained by [The Things Industries](https://www.thethingsindustries.com/).
 
 LoRaWAN is a protocol for low-power wide-area networks. It allows for large-scale Internet of Things deployments where low-powered devices efficiently communicate with Internet-connected applications over long-range wireless connections.
 
@@ -792,83 +567,33 @@ The RAK4630 WisDuo module can be part of this ecosystem as a device, and the obj
 
 ###### Registration to TTN and Creating LoRaWAN Applications
 
-1. The first step is to visit <a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network</a> website and create an account, as depicted in **Figure 43**. Next, choose a cluster, as illustrated in **Figure 45**.
+1. The first step is to visit [The Things Network](https://www.thethingsnetwork.org/) website and create an account, as depicted in **Figure 43**. Next, choose a cluster, as illustrated in **Figure 45**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_1.png"
-  width="100%"
-  caption="Signing up an account in TTN"
-  zoomMode={true}
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_2.png"
-  width="100%"
-  caption="Signing up an account in TTN"
-  zoomMode={true}
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_3.png"
-  width="100%"
-  caption="Selecting Cluster in TTN"
-  zoomMode={true}
-/>
+> **Image:** Selecting Cluster in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_4.png"
-  width="100%"
-  caption="Signing up through the Things ID"
-  zoomMode={true}
-/>
+> **Image:** Signing up through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_5.png"
-  width="100%"
-  caption="Creation of an account through the Things ID"
-  zoomMode={true}
-/>
+> **Image:** Creation of an account through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_6.png"
-  width="100%"
-  caption="Creation of an account through the Things ID"
-  zoomMode={true}
-/>
+> **Image:** Creation of an account through the Things ID
 
  You can use the same login credentials on the TTN V2 if you have one. If you have no account yet, you need to create one.
 
 2. Now that you are logged in to the platform, the next step is to create an application. Click **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_7.png"
-  width="100%"
-  caption="The Things Stack Platform"
-  zoomMode={true}
-/>
+> **Image:** The Things Stack Platform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_8.png"
-  width="100%"
-  caption="Creating TTN application for your LoRaWAN devices"
-  zoomMode={true}
-/>
+> **Image:** Creating TTN application for your LoRaWAN devices
 
 3. To register an application, enter the required details and necessary information about your application, then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_9.png"
-  width="100%"
-  caption="Details of the TTN application"
-  zoomMode={true}
-/>
+> **Image:** Details of the TTN application
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_10.png"
-  width="80%"
-  caption="Details of the TTN application"
-  zoomMode={true}
-/>
+> **Image:** Details of the TTN application
 
 4. If you have no error in the previous step, you should now be on the application console page. The next step is to add end-devices to your TTN application.
 
@@ -878,67 +603,27 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+ Register end device**, as shown in **Figure 53**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_11.png"
-  width="100%"
-  caption="Register end device"
-  zoomMode={true}
-/>
+> **Image:** Register end device
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_12.png"
-  width="100%"
-  caption="Enter end device specifics manually"
-  zoomMode={true}
-/>
+> **Image:** Enter end device specifics manually
 
 3. Next step is to set up the **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported. Then provide the **JoinEUI** credentials by entering zeroes into it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_13.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_14.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_15.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_16.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 4. Then click **Show advanced activation, LoRaWAN class and cluster settings**. Configure the activation mode by selecting **Over the air activation (OTAA)** and Additional LoRaWAN class capabilities to **class A only**. Then click **Confirm**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_17.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_18.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. This will automatically generate the specific End device ID of your board. Then click **Generate** under **AppKey** under the Provisioning information section. Finally, click **Register end device**.
 
@@ -950,26 +635,11 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_19.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_20.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_21.png"
-  width="90%"
-  caption="Register end device"
-  zoomMode={true}
-/>
+> **Image:** Register end device
 
 6. You should now be able to see the device on the TTN console after you fully register your device, as shown in **Figure 64**.
 
@@ -982,12 +652,7 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 - These parameters are always accessible on the device console page.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/rak4630_new_22.png"
-  width="100%"
-  caption="OTAA device successfully registered to TTN"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 ##### OTAA Configuration for TTN
 
@@ -1003,46 +668,21 @@ The **RAK4630** should have the correct OTAA credentials to connect to TTN. This
 1. Connect your **RAK4630** to the PC via USB cable and open the **WisToolBox** application.
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Then select your target port where your **RAK4630** is connected. Once recognized, click **CONNECT**, as shown in **Figure 67**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once done, the **RAK4630** will appear in the dashboard then select it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_4.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Next, click on **PARAMETERS** to configure your RAK4630.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 6. Click on **Global settings** to set the network mode to LoRaWAN and the join mode to OTAA. Ensure that the active region is set to EU868 for this configuration. If you intend to operate in other regional bands, you can select the appropriate active region based on your location.
 
@@ -1050,35 +690,15 @@ The **RAK4630** should have the correct OTAA credentials to connect to TTN. This
 - LoRaWAN join mode: **OTAA**
 - LoRaWAN region: **EU868**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_6.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_7a.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
 7. Configure the **Application EUI (AppEUI)**, **Application key (AppKey)** and **Device EUI (DevEUI)**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_7b.png"
-  width="90%"
-  caption="LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_8b.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 8. Return to the console where your RAK4630 end-device was previously created and copy all the credentials from there. These credentials will also be used in the WisToolBox dashboard. Once entered into the dashboard, click on **APPLY COMMAND** to update your device, as illustrated in **Figure 81**.
 
@@ -1088,103 +708,43 @@ The **RAK4630** should have the correct OTAA credentials to connect to TTN. This
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_9.png"
-  width="100%"
-  caption="Your created OTAA device from your console"
-  zoomMode={true}
-/>
+> **Image:** Your created OTAA device from your console
 
 - **For Application EUI (AppEUI)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_9a.png"
-  width="100%"
-  caption="Copying the AppEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_10a.png"
-  width="90%"
-  caption="Copying the AppEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppEUI credential from TTN to WisToolBox
 
 - **For Application key (AppKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_9b.png"
-  width="100%"
-  caption="Copying the AppKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_10b.png"
-  width="90%"
-  caption="Copying the AppKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppKey credential from TTN to WisToolBox
 
 - **For Device EUI (DevEUI)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_9c.png"
-  width="100%"
-  caption="Copying the DevEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the DevEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_10c.png"
-  width="90%"
-  caption="Copying the DevEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the DevEUI credential from TTN to WisToolBox
 
 - **WisToolBox Dashboard**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_10.png"
-  width="90%"
-  caption="Used credentials from your console in WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Used credentials from your console in WisToolBox dashboard
 
 9. Once completed, you will see a summary of the commands that have been applied to your device, then click on **CLOSE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_11.png"
-  width="90%"
-  caption="Summary of commands"
-  zoomMode={true}
-/>
+> **Image:** Summary of commands
 
 10. You will then return to the dashboard with updated credentials of your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_12.png"
-  width="90%"
-  caption="Successfully configured OTAA device via WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Successfully configured OTAA device via WisToolBox dashboard
 
 11. After updating your device's credentials, it can now join the network. To do this, navigate to **Data on LoRa network** under **PARAMETERS**. Then, click on **JOIN NETWORK** under **LoRaWAN join settings**. After a few seconds, it will notify you that your OTAA device has successfully joined the TTN server. You can also check your TTN console to confirm if your device has successfully joined TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_13.png"
-  width="90%"
-  caption="Joining mode of your OTAA device"
-  zoomMode={true}
-/>
+> **Image:** Joining mode of your OTAA device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/wis_rak4630_new_15.png"
-  width="90%"
-  caption="OTAA device successfully joined the TTN server"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the TTN server
 
 ##### OTAA Configuration for TTN via WisToolBox Console
 
@@ -1193,69 +753,29 @@ Here's another way of OTAA configuration using **WisToolBox Console**. Below are
 1. Connect your **RAK4630** to the PC via USB cable and open the **WisToolBox** application.
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Then select your target port where your **RAK4630** is connected. Once recognized, click **CONNECT** as shown in **Figure 88**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once completed, the RAK4630 will appear in the dashboard. Select it from the list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_4.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Then, click **ADVANCED**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 6. Click on **OPEN CONSOLE** to proceed with the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_6.png"
-  width="90%"
-  caption="OPEN CONSOLE"
-  zoomMode={true}
-/>
+> **Image:** OPEN CONSOLE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_7.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_8.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
 7. To begin the configuration, type `ATE` to enable command echo for the configuration commands you input, and then press **Enter**.
 
@@ -1279,49 +799,19 @@ If there is no `OK` or any reply, check if the device is powered correctly. If y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_9a.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_9b.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_9c.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 8. Configure the LoRaWAN join mode to **OTAA**. Check what parameter you will input by typing `AT+NJM?` and then **Enter** into the console terminal. For **OTAA**, input `AT+NJM=1` and then press **Enter** as shown in **Figure 97**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_10.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_11.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_12.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 9. Once done, set up your LoRaWAN region to EU868. Check what parameter you will input by typing `AT+BAND?` and then **Enter** into the console terminal. For **EU868**, input `AT+BAND=4` then press **Enter**. If you wish to work on other regional bands, you may check the list of band parameter options below.
 
@@ -1340,7 +830,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 :::
 
-<b>List of band parameter options</b>
+**List of band parameter options**
 
 | Code | Regional Band |
 | :--: | :-----------: |
@@ -1357,177 +847,61 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_13.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_14.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_15.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 10. Next, you need to update the OTAA credentials of your device, starting with the **Application EUI (AppEUI)**. Return to the console where your RAK4630 End Device was created, copy the AppEUI credential, then paste it into the WisToolBox Console and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis-rak4630-new-w.png"
-  width="90%"
-  caption="Your created OTAA device from your TTN console"
-  zoomMode={true}
-/>
+> **Image:** Your created OTAA device from your TTN console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_16.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_17.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_18.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis-rak4630-new-x.png"
-  width="90%"
-  caption="Copying the AppEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_19.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 11. Follow the same procedure for the **Application Key (AppKey)** and **Device EUI (DevEUI)**. Copy each credential from your console and paste them into the WisToolBox Console, pressing **Enter** after each one.
 
 - **For Application key (AppKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_20.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_21.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_22.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis-rak4630-new-y.png"
-  width="90%"
-  caption="Copying the AppKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_23.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 - **For Device EUI (DevEUI)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_24.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_25.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis-rak4630-new-z.png"
-  width="90%"
-  caption="Copying the DevEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the DevEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_26.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 12. Once done, click **Dashboard** to check the updated credentials of your OTAA device. Click **PARAMETERS** to open the **Global Settings** and **LoRaWAN keys, ID, EUI** and check whether these portions are updated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_27.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_28.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_29.png"
-  width="90%"
-  caption="PARAMETERS"
-  zoomMode={true}
-/>
+> **Image:** PARAMETERS
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_30a.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_30b.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI details"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI details
 
 Now you have a configured OTAA device using WisToolBox Console. You can now join the network using the WisToolBox console.
 
@@ -1557,47 +931,17 @@ If the OTAA device failed to join, you need to check if your device is within re
 After checking all the things above, try to join again.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_34.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_35.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_36.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_37.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_38.png"
-  width="90%"
-  caption="OTAA device successfully joined the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_39a.png"
-  width="90%"
-  caption="OTAA device successfully joined the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the network
 
 14. With the end-device properly joined to the TTN, try to send some payload after a successful join. Send command format: **`AT+SEND=<port>:<payload>`**
 
@@ -1605,101 +949,41 @@ After checking all the things above, try to join again.
 AT+SEND=2:12345678
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_40.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_41.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_42.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_43.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
 15. You can view the data sent by the RAK4630 module on the TTN device console's *Live data* section. Additionally, the *Last seen* information should indicate a few seconds or minutes ago.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/conwis_rak4630_new_44.png"
-  width="90%"
-  caption="OTAA Test Sample Data Sent Viewed in TTN"
-  zoomMode={true}
-/>
+> **Image:** OTAA Test Sample Data Sent Viewed in TTN
 
 ###### TTN ABP Device Registration
 
 1. To register an ABP device, navigate to your application console and choose the application to which you want to add your device. Then, click **+ Register end device**, as illustrated in **Figure 134**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_1.png"
-  width="100%"
-  caption="Adding ABP Device"
-  zoomMode={true}
-/>
+> **Image:** Adding ABP Device
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_2.png"
-  width="100%"
-  caption="Enter end device specifics manually"
-  zoomMode={true}
-/>
+> **Image:** Enter end device specifics manually
 
 3. Next, set up the **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_3.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_4.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_5.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 4. Click **Show advanced activation, LoRaWAN class and cluster settings**. Configure the activation mode by selecting **Activation by personalization (ABP)** and Additional LoRaWAN class capabilities to **class A only**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_6.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_7.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 5. Once completed, enter the DevEUI credentials of your device into the **DevEUI** field. This will automatically generate the specific End Device ID for your board. Then, click **Generate** under **Device address**, **AppSKey**, and **NwkSKey** in the Provisioning Information section. Finally, click **Register end device**.
 
@@ -1709,56 +993,21 @@ AT+SEND=2:12345678
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_8.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_9.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_10.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_11.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_12.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_13.png"
-  width="100%"
-  caption="Register end device"
-  zoomMode={true}
-/>
+> **Image:** Register end device
 
 6. You should now see the device on the TTN console after you fully register your device, as shown in **Figure 147**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abp_rak4630_new_14.png"
-  width="100%"
-  caption="ABP device successfully registered to TTN"
-  zoomMode={true}
-/>
+> **Image:** ABP device successfully registered to TTN
 
 ##### ABP Configuration for TTN
 
@@ -1772,37 +1021,17 @@ The RAK4630 module can be configured using WisToolBox for ABP configuration. Wis
 1. Connect your **RAK4630** to the PC via USB cable and open the **WisToolBox** application.
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Select your target port where your **RAK4630** is connected. Once recognized, click **CONNECT** as shown in **Figure 150**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. The **RAK4630** will appear in the dashboard, Click on it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_4.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Click **PARAMETERS** to configure the RAK4630.
 
@@ -1812,12 +1041,7 @@ The RAK4630 module can be configured using WisToolBox for ABP configuration. Wis
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
  6. Click **Global settings** to set the network mode to **LoRaWAN** and the join mode to **ABP**. Ensure that the active region is set to **EU868** for this configuration. If you wish to work on other regional bands, you can choose among the active regions based on your location.
 
@@ -1825,35 +1049,15 @@ The RAK4630 module can be configured using WisToolBox for ABP configuration. Wis
 - LoRaWAN join mode: **ABP**
 - LoRaWAN region: **EU868**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_6.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_7a.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
 7. Click **LoRaWAN keys, ID, EUI** to configure the **Application session key (AppSKey)**, **Device address** and **Network session key (NwkSKey)**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_7b.png"
-  width="90%"
-  caption="LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_8a.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 8. Go back to the console where your RAK4630 End device is created previously, then copy all the credentials from there. Those will be the ones to be used also in the WisToolBox dashboard. Once encoded into the dashboard, click **APPLY COMMANDS** to update your device, as shown in **Figure 157**.
 
@@ -1863,87 +1067,37 @@ The RAK4630 module can be configured using WisToolBox for ABP configuration. Wis
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_9.png"
-  width="100%"
-  caption="Your created ABP device from your console"
-  zoomMode={true}
-/>
+> **Image:** Your created ABP device from your console
 
 - **For Application session key (AppSKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_9a.png"
-  width="90%"
-  caption="Copying the AppSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_10a.png"
-  width="90%"
-  caption="Copying the AppSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppSKey credential from TTN to WisToolBox
 
 - **For Device address**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_9b.png"
-  width="90%"
-  caption="Copying the Device address credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the Device address credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_10b.png"
-  width="90%"
-  caption="Copying the Device address credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the Device address credential from TTN to WisToolBox
 
 - **For Network session key (NwkSKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_9c.png"
-  width="90%"
-  caption="Copying the NwkSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the NwkSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_10c.png"
-  width="90%"
-  caption="Copying the NwkSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the NwkSKey credential from TTN to WisToolBox
 
 - **WisToolBox Dashboard**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_10.png"
-  width="90%"
-  caption="Used credentials from your console in WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Used credentials from your console in WisToolBox dashboard
 
 9. Once completed, you will see a summary of the commands that were applied to your device. Then, click **CLOSE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_11.png"
-  width="90%"
-  caption="Summary of commands"
-  zoomMode={true}
-/>
+> **Image:** Summary of commands
 
 10. Now you will see it returns to the dashboard with updated credentials of your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpwis_rak4630_new_12.png"
-  width="90%"
-  caption="Successfully configured ABP device via WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Successfully configured ABP device via WisToolBox dashboard
 
 ##### ABP Configuration for TTN via WisToolBox Console
 
@@ -1952,69 +1106,29 @@ Here's another way of ABP configuration using **WisToolBox Console**. Below are 
 1. Connect your **RAK4630** to the PC via USB cable and open the **WisToolBox** application.
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Select your target port where your **RAK4630** is connected. Once recognized, click **CONNECT** as shown in **Figure 169**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once done, the **RAK4630** will appear in the dashboard, click on it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_4.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Click **ADVANCED**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 6. click **OPEN CONSOLE** to proceed with the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_6.png"
-  width="90%"
-  caption="OPEN CONSOLE"
-  zoomMode={true}
-/>
+> **Image:** OPEN CONSOLE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_7.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_8.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
 7. To start the configuration, type **ATE** so you can echo the commands you input during your configuration. Then press **Enter**.
 
@@ -2038,51 +1152,21 @@ If there is no `OK` or any reply, check if the device is powered correctly. If y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_9a.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_9b.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_9c.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 8. Configure the LoRaWAN join mode to **ABP**. Check what parameter you will input by typing `AT+NJM?` and then **Enter** into the console terminal. For **ABP**, input `AT+NJM=0` and then press **Enter** as shown in **Figure 180**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_10.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_11.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_12.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-9. Once done, set up your LoRaWAN region to EU868. Check what parameter you will input by typing **AT+BAND?** and then **Enter** into the console terminal. For **EU868**, input **AT+BAND=4** then press **Enter**. If you wish to work on other regional bands, you may check the <b>List of band parameter options</b>
+9. Once done, set up your LoRaWAN region to EU868. Check what parameter you will input by typing **AT+BAND?** and then **Enter** into the console terminal. For **EU868**, input **AT+BAND=4** then press **Enter**. If you wish to work on other regional bands, you may check the **List of band parameter options**
 
 Set the frequency/region to EU868.
 
@@ -2099,7 +1183,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 :::
 
-**<b>List of band parameter options</b>**
+****List of band parameter options****
 
 | Code | Regional Band |
 | :--: | :-----------: |
@@ -2116,183 +1200,63 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_13.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_14.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_15.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 10.  Update the ABP credentials of your device and start with the **Application Session Key (AppSKey)**. Go back to your console where your RAK4630 End device was created to copy the AppSKey credential, then paste it into the WisToolBox Console, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis-rak4630-new-w.png"
-  width="90%"
-  caption="Your created ABP device from your TTN console"
-  zoomMode={true}
-/>
+> **Image:** Your created ABP device from your TTN console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_16.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_17.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_18.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis-rak4630-new-x.png"
-  width="90%"
-  caption="Copying the AppSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_19.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 11. Repeat the same procedure for the **Device Address** and **Network Session Key (NwkSKey)**.
 
 - **For Device address**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_20.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_21.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_22.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis-rak4630-new-y.png"
-  width="90%"
-  caption="Copying the Device address credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the Device address credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_23.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 - **For Network session key (NwkSKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_24.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_25.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_26.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis-rak4630-new-z.png"
-  width="90%"
-  caption="Copying the NwkSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the NwkSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_27.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 12. Once completed, click **Dashboard** to verify the updated credentials of your ABP device. Then, click **PARAMETERS** to open the **Global Settings** and **LoRaWAN keys, ID, EUI** sections to confirm that they have been updated accordingly.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_28.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_29.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_30.png"
-  width="90%"
-  caption="PARAMETERS"
-  zoomMode={true}
-/>
+> **Image:** PARAMETERS
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_31.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_31b.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI details"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI details
 
 Now you have a configured ABP device using WisToolBox Console. **ABP-configured devices** are directly tied to the network once done with the above procedures so joining procedure is not needed.
 
@@ -2302,56 +1266,25 @@ Now you have a configured ABP device using WisToolBox Console. **ABP-configured 
 AT+SEND=2:12345678
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_35.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_36.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_37.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_38.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
 14. You can see the data sent by the RAK4630 module on the TTN device console **Live data** section. Also, the **Last seen** info should be a few seconds or minutes ago.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconwis_rak4630_new_39.png"
-  width="90%"
-  caption="ABP Test Sample Data Sent Viewed in TTN"
-  zoomMode={true}
-/>
+> **Image:** ABP Test Sample Data Sent Viewed in TTN
 
 ###### Connecting with ChirpStack
 
 This section shows how to connect the RAK4630 module to the ChirpStack platform.
 
+> **Image:** RAK4630 Module in the context of the ChirpStack platform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/23.chirpstack-platform.png"
-  width="60%"
-  caption="RAK4630 Module in the context of the ChirpStack platform"
-  zoomMode={true}
-/>
-
-The ChirpStack, formerly known as the LoRaServer project, offers open-source components tailored for constructing LoRaWAN networks. Similar to TTN, the RAK4630 module is situated at the edge and communicates data to backend servers via a LoRaWAN gateway. Learn more about <a href="https://www.chirpstack.io/" target="_blank">ChirpStack</a>.
+The ChirpStack, formerly known as the LoRaServer project, offers open-source components tailored for constructing LoRaWAN networks. Similar to TTN, the RAK4630 module is situated at the edge and communicates data to backend servers via a LoRaWAN gateway. Learn more about [ChirpStack](https://www.chirpstack.io/).
 
 :::tip NOTE
 
@@ -2375,21 +1308,11 @@ The frequency band utilized in the demonstration is EU868. Employ the high-frequ
 1. Log in to the ChirpStack server using your account and password.
 2. Go to the Application section, as shown in **Figure 211**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/24.chirpstack.png"
-  width="100%"
-  caption="Application section"
-  zoomMode={true}
-/>
+> **Image:** Application section
 
 3. By default, you should create a new application, although you can reuse existing ones. For this setup, create a new Application by clicking on the **CREATE** button and filling in the required parameters, as shown in **Figure 212** and **Figure 213**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/25.new-application.png"
-  width="100%"
-  caption="Creating a new application"
-  zoomMode={true}
-/>
+> **Image:** Creating a new application
 
 For this setup, create an Application named **rak_node_test**.
 
@@ -2398,47 +1321,21 @@ ChirpStack LoRaServer supports multiple system configurations, although only one
 * **Service profile**: This field allows you to select the system profile.
 * **Payload codec**: This field determines the parsing method for payload data, such as parsing LPP format data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/26.filling-parameters.png"
-  width="100%"
-  caption="Filling in the parameters of an application"
-  zoomMode={true}
-/>
+> **Image:** Filling in the parameters of an application
 
-<b>Register a New Device</b>
+**Register a New Device**
 
 1. Choose the **Application** created in the previous step, then select the **DEVICES** tab, as shown in **Figure 214** and **Figure 215**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/27.application-available.png"
-  width="100%"
-  caption="List of applications created"
-  zoomMode={true}
-/>
+> **Image:** List of applications created
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/28.application-page.png"
-  width="100%"
-  caption="Device tab of an application"
-  zoomMode={true}
-/>
+> **Image:** Device tab of an application
 
 3. Inside the **DEVICE** tab, create a new device (LoRaWAN node) by clicking on the **+ CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/29.adding-node.png"
-  width="100%"
-  caption="Add a new device"
-  zoomMode={true}
-/>
+> **Image:** Add a new device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/30.new-device-registration.png"
-  width="100%"
-  caption="Chirpstack adding node into the RAK4630 Module"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack adding node into the RAK4630 Module
 
 4. Once the node is created, fill in the necessary data. You can generate a Device EUI automatically by clicking the *load* icon, or you can manually enter the correct Device EUI in the edit box.
 
@@ -2456,54 +1353,27 @@ Device profiles **DeviceProfile_OTAA** and **DeviceProfile_ABP** are only availa
 If you have your own Chirpstack installation, set up the device profile with `LoRaWAN MAC version 1.0.4` and `LoRaWAN Regional Parameters revision B` to make it compatible with RAK4630.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/31.adding-parameters.png"
-  width="100%"
-  caption="Generate a new Device EUI "
-  zoomMode={true}
-/>
-
+> **Image:** Generate a new Device EUI 
 
 ###### Chirpstack OTAA Device Registration
 
 1. If you have selected **DeviceProfile_OTAA**, as shown in **Figure 219**, after the device is created, an Application Key must also be created for this device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/32.otaa.png"
-  width="100%"
-  caption="Chirpstack OTAA activation"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA activation
 
 2. The previously created Application Key can be entered here, or a new one can be generated automatically by clicking the icon highlighted in red in **Figure 220**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/33.otaa-set-device-keys.png"
-  width="100%"
-  caption="Chirpstack OTAA Set Application Keys"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA Set Application Keys
 
 3. Once the Application Key is added to the form, the process can be finalized by clicking on the **SET DEVICE-KEYS** button.
 
 * As shown in **Figure 221**, a new device should be listed in the **DEVICES** tab. The most important parameters, such as the Device EUI, are shown in the summary.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/34.set-device-eui.png"
-  width="100%"
-  caption="Chirpstack OTAA list of the device in the Device Tab"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA list of the device in the Device Tab
 
 4. To end the process, it is a good practice to review that the Application Key is properly associated with this device. The Application Key can be verified in the **KEYS(OTAA)** tab, as shown in **Figure 222**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/35.application-key.png"
-  width="100%"
-  caption="Application key associated with the new device"
-  zoomMode={true}
-/>
+> **Image:** Application key associated with the new device
 
 :::tip NOTE
 
@@ -2536,12 +1406,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, see 
 If you haven't received an `OK` or any reply, you need to check if the wiring of your UART lines is correct and if the baud is correctly configured to 115200. Also, you can check if the device is powered correctly. If you are getting power from a USB port, ensure that you have a good USB cable.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/atstart.png"
-  width="90%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the OTAA LoRaWAN parameters in RAK4630:
 
@@ -2583,7 +1448,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 :::
 
-**<b>List of band parameter options</b>**
+****List of band parameter options****
 
 | Code | Regional Band |
 | :--: | :-----------: |
@@ -2597,13 +1462,7 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 7    | KR920         |
 | 8    | AS923         |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/otaaconfig.png"
-  width="90%"
-  caption="Configuring LoRa parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa parameters
 
 3. After the configuration of the LoRaWAN parameters, the next step is to set up the DevEUI and AppKey. You need the use the values from the Chirpstack device console.
 
@@ -2633,12 +1492,7 @@ Set the Application Key.
 AT+APPKEY=F921D50CD7D02EE3C5E6142154F274B2
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/chirp_otaa_eui.png"
-  width="90%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 4. After the EUI and key configuration, the device can now join the network and send some payload.
 
@@ -2672,27 +1526,15 @@ AT+SEND=2:12345678
 
 Send command format: **`AT+SEND=<port>:<payload>`**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/chirp_otaa_send.png"
-  width="90%"
-  caption="OTAA test sample data sent via RAK Serial Port Tool"
-  zoomMode={true}
-/>
+> **Image:** OTAA test sample data sent via RAK Serial Port Tool
 
 On the ChirpStack platform, you should see the join and uplink messages in the **LORAWAN FRAMES** tab, as shown in **Figure 227**. By convention, messages sent from nodes to gateways are considered as **Uplinks** while messages sent by gateways to nodes are considered as **Downlinks**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/41.message-received.png"
-  width="100%"
-  caption="Chirpstack data received preview"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack data received preview
 
 ###### Chirpstack ABP Device Registration
 
 1. During the registration of a new device, if you select **DeviceProfile_ABP**, as shown in **Figure 228**, the ChirpStack platform will assume that this device will join the LoRaWAN network using the ABP mode.
-
 
 :::tip NOTE
 
@@ -2700,13 +1542,7 @@ Check **Disable counting frame verification**. During testing, if the module is 
 
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/42.configuring-device-abp.png"
-  width="100%"
-  caption="ChirpStack console, configuring a device"
-  zoomMode={true}
-/>
+> **Image:** ChirpStack console, configuring a device
 
 2. After selecting the ABP mode, the following parameters appear in the Activation tab:
 
@@ -2714,15 +1550,9 @@ Check **Disable counting frame verification**. During testing, if the module is 
   * **Network Session Key**
   * **Application Session Key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/43.abp-activation-parameters.png"
-  width="100%"
-  caption="Chirpstack ABP activation parameters needed"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack ABP activation parameters needed
 
 3. The parameters can either be generated as random numbers by the platform or set with user-defined values. Once these parameters are filled in correctly, the process is completed by clicking on the **ACTIVATE DEVICE** button.
-
 
 ###### ABP Configuration for Chirpstack
 
@@ -2747,12 +1577,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, you 
 If haven't received an `OK` or any reply, you need to check if the wiring of your UART lines is correct and if the baud is correctly configured to 115200. Also, you can check if the device is powered correctly. If you are getting power from a USB port, ensure that you have a good USB cable.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/atstart.png"
-  width="90%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the ABP LoRaWAN parameters in RAK4630:
 
@@ -2794,7 +1619,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 :::
 
-**<b>List of band parameter options</b>**
+****List of band parameter options****
 
 | Code | Regional Band |
 | :--: | :-----------: |
@@ -2808,13 +1633,7 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 7    | KR920         |
 | 8    | AS923         |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/abpconfig.png"
-  width="90%"
-  caption="Configuring LoRa parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa parameters
 
 3. After the configuration of the LoRaWAN parameters, the next step is to set up the device address and session keys. Use the values from the Chirpstack device console.
 
@@ -2840,12 +1659,7 @@ Set the Network Session Key.
 AT+NWKSKEY=C280CB8D1DF688BC18601A97025C5488
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/chirp_abp_key.png"
-  width="90%"
-  caption="Configuring LoRa parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa parameters
 
 After the EUI and keys configuration, the device can now join the network and send some payload.
 
@@ -2871,13 +1685,7 @@ AT+SEND=2:12341234
 ```
 Send command format: **`AT+SEND=<port>:<payload>`**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/chirp_abp_send.png"
-  width="90%"
-  caption="ABP test sample data sent via RAK Serial Port Tool"
-  zoomMode={true}
-/>
-
+> **Image:** ABP test sample data sent via RAK Serial Port Tool
 
 ##### LoRa P2P Mode
 
@@ -2901,13 +1709,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, you 
 
 Try again `AT` and you should see it on the terminal followed by `OK`.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/p2p_at.png"
-  width="60%"
-  caption="AT command response"
-  zoomMode={true}
-/>
+> **Image:** AT command response
 
 1. To set up the RAK4630 to work in LoRa P2P mode, enter the work mode command on both RAK4630 modules. You might need to disconnect and reconnect the module as it changes its mode of operation if you are sending commands via USB.
 
@@ -2917,24 +1719,18 @@ AT+NWM=0
 
 2. For this P2P setup, the LoRa parameters are the following:
 
-- Link frequency: **868000000&nbsp;Hz**
+- Link frequency: **868000000 Hz**
 - Spreading factor: **7**
-- Bandwidth: **125&nbsp;kHz**
+- Bandwidth: **125 kHz**
 - Coding Rate: 0 = **4/5**
 - Preamble Length: **10**
-- Power: **14&nbsp;dBm**
+- Power: **14 dBm**
 
 ```
 AT+P2P=868000000:7:125:0:10:14
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/p2p_setup.png"
-  width="50%"
-  caption="P2P Setup"
-  zoomMode={true}
-/>
-
+> **Image:** P2P Setup
 
 :::tip NOTE
 
@@ -2962,13 +1758,7 @@ AT+PSEND=11223344
 
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/p2p_send.png"
-  width="90%"
-  caption="P2P Sending and Receiving LoRa packets"
-  zoomMode={true}
-/>
+> **Image:** P2P Sending and Receiving LoRa packets
 
 #### AT Command Over BLE
 
@@ -2980,35 +1770,20 @@ All available commands can be found in the [AT Command Manual](https://docs.rakw
 2. Make sure the Bluetooth on your mobile is turned on.
 3. Select **Category** then **Devices**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/available-serial-bluetooth.png"
-  width="70%"
-  caption="Available Serial Bluetooth Terminal"
-  zoomMode={true}
-/>
+> **Image:** Available Serial Bluetooth Terminal
 
 4. Select the **Bluetooth LE** icon and click the **SCAN** icon to scan the device.
 5. Look for a BLE Device named **RAK.XXXXXX** in the scanner list of the app and connect to this device.
 
 :::tip NOTE
-By default, the BLE signal of the RAK4630 has turned off automatically if no connection is established after 30&nbsp;seconds. Connect to the BLE signal of the RAK4630 immediately after pressing the reset button.
+By default, the BLE signal of the RAK4630 has turned off automatically if no connection is established after 30 seconds. Connect to the BLE signal of the RAK4630 immediately after pressing the reset button.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/scanning-devices.png"
-  width="70%"
-  caption="Scanning devices"
-  zoomMode={true}
-/>
+> **Image:** Scanning devices
 
 6. Make sure the connection is successful with **RAK.XXXXXX**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/connect-device.png"
-  width="40%"
-  caption="Connect with the device"
-  zoomMode={true}
-/>
+> **Image:** Connect with the device
 
 7. Send an AT Command and check remote console is received or not.
 
@@ -3016,12 +1791,7 @@ By default, the BLE signal of the RAK4630 has turned off automatically if no con
 at+ver=?
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/default-ble-id.png"
-  width="70%"
-  caption="RAK4630 default Bluetooth ID after resetting"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 default Bluetooth ID after resetting
 
 8. The remote device will receive the same AT Commands.
 
@@ -3037,19 +1807,13 @@ AT+CLASS=A
 OK
 ```
 
-
 ## Miscellaneous
 
 ### Arduino Installation
 
-Go to <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino official website</a> and download the Arduino IDE. You can see the multiple versions available for Windows, Linux, and Mac OS X. Choose the correct version of Arduino IDE and download it.
+Go to [Arduino official website](https://www.arduino.cc/en/Main/Software) and download the Arduino IDE. You can see the multiple versions available for Windows, Linux, and Mac OS X. Choose the correct version of Arduino IDE and download it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/1.download-arduino.png"
-  width="80%"
-  caption="Arduino IDE latest version"
-  zoomMode={true}
-/>
+> **Image:** Arduino IDE latest version
 
 #### Windows
 
@@ -3062,44 +1826,19 @@ Do **NOT** install the Arduino IDE from the Microsoft App store. Install the ori
 
 2. Click **I Agree** then **Next** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/2.agreement-license.png"
-  width="45%"
-  caption="Arduino setup license agreement"
-  zoomMode={true}
-/>
+> **Image:** Arduino setup license agreement
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/3.installation-options.png"
-  width="45%"
-  caption="Arduino setup installation options"
-  zoomMode={true}
-/>
+> **Image:** Arduino setup installation options
 
 3. Click **Install**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/4.installation-folder.png"
-  width="45%"
-  caption="Installing Arduino IDE"
-  zoomMode={true}
-/>
+> **Image:** Installing Arduino IDE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/5.installing.png"
-  width="45%"
-  caption="Ongoing installation"
-  zoomMode={true}
-/>
+> **Image:** Ongoing installation
 
 After 100% progress, the Arduino IDE has been installed successfully.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/6.installation-success.png"
-  width="45%"
-  caption="Successful installation"
-  zoomMode={true}
-/>
+> **Image:** Successful installation
 
 #### Linux
 
@@ -3109,41 +1848,21 @@ First, you need the check the compatibility with your system and choose between 
 
 After downloading the correct Arduino version, open a terminal, then run `ls` to check the installation file on the download folder.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/ls-arduino.png"
-  width="90%"
-  caption="Check the download folder"
-  zoomMode={true}
-/>
+> **Image:** Check the download folder
 
 A tarball is a type of compressed folder, like a `.zip` file, commonly used to distribute software in Linux. To extract the files from the tarball, change the directory to where the downloaded tarball is, then run:
 
 `tar xvf arduino-version.xz`
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/tar-linux.png"
-  width="90%"
-  caption="Tarball extract command"
-  zoomMode={true}
-/>
+> **Image:** Tarball extract command
 
 When the tar command finishes, run `ls` again. A folder named  **arduino-version** will be created.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/ls-tarball.png"
-  width="90%"
-  caption="Arduino install folder created"
-  zoomMode={true}
-/>
+> **Image:** Arduino install folder created
 
 Change the current directory and go to the newly created folder directory. There will be a file named `install.sh` in the folder. Execute `sudo ./install.sh` to install the Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/sudo-install.png"
-  width="90%"
-  caption="Arduino install script running"
-  zoomMode={true}
-/>
+> **Image:** Arduino install script running
 
 The `sudo` command temporarily elevates privileges allowing the installer to complete sensitive tasks without logging in as the root user.
 
@@ -3151,17 +1870,11 @@ The `sudo` command temporarily elevates privileges allowing the installer to com
 
 In Mac OS X, similar to Linux, there is no installation process. It is just a process of decompression, then you can open Arduino IDE successfully.
 
-
 ### Arduino IDE Parts Guide
 
 **Figure 251** shows the five (5) parts of Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/7.arduino-ide.png"
-  width="75%"
-  caption="Arduino IDE"
-  zoomMode={true}
-/>
+> **Image:** Arduino IDE
 
 1. **IDE Option Menu**
 
@@ -3176,12 +1889,7 @@ The operating buttons have five operations:
   - **Open** a **New** Arduino IDE window or existing application.
   - **Save** the current application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/miscellaneous/8.operating-buttons.png"
-  width="30%"
-  caption="Operating buttons"
-  zoomMode={true}
-/>
+> **Image:** Operating buttons
 
 3. **Code Area**
 You can edit the source code, which will be compiled and uploaded into WisBlock later in this area.
@@ -3189,5 +1897,3 @@ You can edit the source code, which will be compiled and uploaded into WisBlock 
 5. **Output Message Area**
 You can see the output message in this area, whether it's a failure or success information.
 
-
-<RkBottomNav/>

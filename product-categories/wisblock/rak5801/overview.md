@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK5801 WisBlock 4-20mA Interface Module
 
 Thank you for choosing **RAK5801 WisBlock 4-20mA Interface Module** in your awesome IoT project! To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK5801 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak5801/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak5801/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK5801 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK5801.stp)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -33,20 +31,17 @@ Thank you for choosing **RAK5801 WisBlock 4-20mA Interface Module** in your awes
 - For WisBlock Core RAK11200:
     * [Sample Code: RAK5801 4-20mA](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11200/IO/RAK5801_4-20mA)
 
-
 ## Product Description
 
-**RAK5801** is a **WisBlock Interface** module that extends the **WisBlock** system with 4-20&nbsp;mA current to voltage converter. It supports up to 2 4-20&nbsp;mA interfaces and voltage supply for connected sensors.
-
-
+**RAK5801** is a **WisBlock Interface** module that extends the **WisBlock** system with 4-20 mA current to voltage converter. It supports up to 2 4-20 mA interfaces and voltage supply for connected sensors.
 
 ## Product Features
 
 * **Module specifications**
-    * 4 to 20&nbsp;mA current to voltage converter.
-    * 12&nbsp;V output for sensors
-    * 0.1&nbsp;mA conversion accuracy
-    * 2&nbsp;kV ESD protection
+    * 4 to 20 mA current to voltage converter.
+    * 12 V output for sensors
+    * 0.1 mA conversion accuracy
+    * 2 kV ESD protection
     * 2 ports
     * Supports 2, 3, and 4 wire sensor connections
     * Chipset: STMicroelectronics LM2902
@@ -55,7 +50,7 @@ Thank you for choosing **RAK5801 WisBlock 4-20mA Interface Module** in your awes
     * The **RAK5801** modules power supply can be controlled by the **WisBlock Core** MCU to reduce power consumption.
 
 * **Size**
-    * 35 x 25&nbsp;mm
+    * 35 x 25 mm
 
 ## Prerequisites
 
@@ -65,5 +60,3 @@ To use a **RAK5801**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-<RkBottomNav/>

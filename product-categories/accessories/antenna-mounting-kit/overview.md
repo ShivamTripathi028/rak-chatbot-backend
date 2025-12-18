@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Antenna Mounting Kit
 
 Thank you for choosing **Antenna Mounting Kit** in your awesome IoT Project! ðŸŽ‰ To help you get started, we have provided you all the necessary documentation for your product.
@@ -20,4 +18,3 @@ Thank you for choosing **Antenna Mounting Kit** in your awesome IoT Project! ðŸŽ
 
 To achieve better coverage, outdoor antennas need to be installed in an elevated area with good visibility. Generally, the antenna is installed on a pole, but in the dense city environment, a pole is not easy to find and fix. With that, RAK presents four different antenna mounting options that help you to easily mount your antenna in almost every scenario.
 
-<RkBottomNav/>

@@ -9,56 +9,44 @@ image: "https://images.docs.rakwireless.com/accessories/rakarj16/black-915mhz-an
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAKARJ16 915MHz Black Blade Antenna Datasheet
  
 ## Overview
 
 ### Features
 
-- Frequency Range: 902~928&nbsp;MHz
-- Max Gain: 2.3&nbsp;dBi
+- Frequency Range: 902~928 MHz
+- Max Gain: 2.3 dBi
 - VSWR: ≤ 1.5
 - High efficiency
 - Vertically polarized
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj16/black-915mhz-antenna-features.png"
-  width="70%"
-  caption="RAKARJ16 Antenna Overview"
-/>
+> **Image:** RAKARJ16 Antenna Overview
 
 ## Specifications
 
 | **Model**                 | RAKARJ16                      |
 | :------------------------ | ----------------------------- |
-| **Frequency Range**       | 902&nbsp;MHz~928&nbsp;MHz     |
-| **Peak Gain**             | 2.3&nbsp;dBi                  |
+| **Frequency Range**       | 902 MHz~928 MHz     |
+| **Peak Gain**             | 2.3 dBi                  |
 | **VSWR**                  | ≤ 1.5                         |
 | **Efficiency**            | >80%                          |
-| **Feed Impedance**        | 50&nbsp;Ω                     |
+| **Feed Impedance**        | 50 Ω                     |
 | **Polarization**          | Vertical                      |
 | **Cover Material(color)** | Plastic(Black)                |
 | **Connector Type**        | RP-SMA                        |
-| **Dimensions (mm)**       | Փ13.0&nbsp;mm x 198.0&nbsp;mm |
-| **Operation Temp (°C)**   | -30&nbsp;°C ~ +75&nbsp;°C     |
+| **Dimensions (mm)**       | Փ13.0 mm x 198.0 mm |
+| **Operation Temp (°C)**   | -30 °C ~ +75 °C     |
 | **Humidity Range**        | 5%~95%                        |
 
 ### S11 & VSWR
 
 | **Frequency(MHz)** | S11   | VSER |
 | :----------------: | ----- | ---- |
-|  **902&nbsp;MHz**  | -18.3 | 1.28 |
-|  **928&nbsp;MHz**  | -14.6 | 1.46 |
+|  **902 MHz**  | -18.3 | 1.28 |
+|  **928 MHz**  | -14.6 | 1.46 |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj16/black-915mhz-antenna-vser.png"
-  width="70%"
-  caption="S11 & VSWR Graph"
-/>
+> **Image:** S11 & VSWR Graph
 
 ### Peak Gain & Efficiency
 
@@ -82,18 +70,9 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 ### Radiation Patterns
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj16/black-915mhz-antenna-radiation-patterns.png"
-  width="70%"
-  caption="Radiation Patterns"
-/>
+> **Image:** Radiation Patterns
 
 ### Mechanical Characteristics 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj16/black-915mhz-antenna-mechanical-specifications.png"
-  width="80%"
-  caption="Mechanical Specifications"
-/>
+> **Image:** Mechanical Specifications
 
-<RkBottomNav/>

@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK17000 WisBlock Motor Control Module Datasheet
 
 ## Overview
@@ -21,16 +18,15 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 The RAK17000 is a DC motor driver module. It can be mounted to the IO Slot of the WisBlock Base of your choice. It can drive one stepper motor or two DC motors. The RAK17000 module uses the DRV8833 motor driver IC from Texas Instruments.
 
-
 ### Features
 
 - Drive two DC motors or one stepper motor
-- Wide power supply voltage range: 2.7 to 10.8&nbsp;V
+- Wide power supply voltage range: 2.7 to 10.8 V
 - Motor power supply can be from an external source or from the WisBlock Base battery
 - Output current control
-- Selection of power source can be done via 2.54&nbsp;mm 2-pin jumper
+- Selection of power source can be done via 2.54 mm 2-pin jumper
 - Chipset: Texas Instruments DRV8833
-- Module size: 25X35&nbsp;mm
+- Module size: 25X35 mm
 
 ### Applications
 
@@ -46,11 +42,7 @@ The RAK17000 is a DC motor driver module. It can be mounted to the IO Slot of th
 
 The RAK17000 module can be mounted to the slots IO of the WisBlock Base board. Figure 1 shows the mounting mechanism of the RAK17000 on a WisBlock Base module, such as the RAK5005-O.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak17000/datasheet/rak17000_mounting.png"
-  width="60%"
-  caption="RAK17000 WisBlock Motor Drive Module Mounting"
-/>
+> **Image:** RAK17000 WisBlock Motor Drive Module Mounting
 
 ### Hardware
 
@@ -73,11 +65,7 @@ The RAK17000 WisBlock motor drive module comprises a standard WisBlock connector
 - **nSLEEP** enable pin, high active, internal pull-down, low-power sleep mode
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak17000/datasheet/rak17000-pinout.svg"
-  width="70%"
-  caption="RAK17000 WisBlock Motor Drive Module Pinout"
-/>
+> **Image:** RAK17000 WisBlock Motor Drive Module Pinout
 
 #### Electrical Characteristics
 
@@ -96,43 +84,23 @@ The RAK17000 WisBlock motor drive module comprises a standard WisBlock connector
 
 Figure 3 shows the dimensions and the mechanic drawing of the RAK17000 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak17000/datasheet/rak17000_mechanic_drawing.png"
-  width="90%"
-  caption="RAK17000 WisBlock Motor Control Module Mechanical Drawing"
-/>
+> **Image:** RAK17000 WisBlock Motor Control Module Mechanical Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak17000/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
 ##### Motor Drive
 
-Figure 5 shows RAK17000 motor drive schematic. VM is the motor power supply that has a range from 2.7&nbsp;V to 10.8&nbsp;V. It can change the motor current through modifying the R4, R5, R8, or R9. Default max output current is 0.85&nbsp;A.
+Figure 5 shows RAK17000 motor drive schematic. VM is the motor power supply that has a range from 2.7 V to 10.8 V. It can change the motor current through modifying the R4, R5, R8, or R9. Default max output current is 0.85 A.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak17000/datasheet/rak17000_schematic.png"
-  width="100%"
-  caption="RAK17000 WisBlock Motor Drive schematic"
-/>
+> **Image:** RAK17000 WisBlock Motor Drive schematic
 
 ##### Power Supply Switch
 
-The power source of the motor can be selected via the 2.54&nbsp;mm pitch jumper as shown in Figure 6. It can be from the battery of the WisBlock Base or via the external input voltage in the RAK17000 terminal. This is also the power source of the Driver IC. The max voltage input is 10.8&nbsp;V.
+The power source of the motor can be selected via the 2.54 mm pitch jumper as shown in Figure 6. It can be from the battery of the WisBlock Base or via the external input voltage in the RAK17000 terminal. This is also the power source of the Driver IC. The max voltage input is 10.8 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak17000/datasheet/rak17000_schematic_power.png"
-  width="35%"
-  caption="RAK17000 Wisblock Power Supply Switch"
-/>
+> **Image:** RAK17000 Wisblock Power Supply Switch
 
-
-
-
-<RkBottomNav/>

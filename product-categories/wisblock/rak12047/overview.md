@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12047 WisBlock VOC Sensor Module
 
 Thank you for choosing **RAK12047 WisBlock VOC Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK12047 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak12047/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak12047/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK12047 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12047.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
@@ -37,15 +35,15 @@ The RAK12047 WisBlock VOC Sensor Module is an indoor air quality sensor based on
 ## Product Features
 
 * **Sensor specifications**
-    * Voltage supply: 3.3&nbsp;V
-    * Current consumption: 34&nbsp;uA to 3.0&nbsp;mA
+    * Voltage supply: 3.3 V
+    * Current consumption: 34 uA to 3.0 mA
     * Chipset: Sensirion SGP40
     * Measures VOC
-    * Measurement range: 0 to 1000&nbsp;ppm (Ethanol in clean air)
+    * Measurement range: 0 to 1000 ppm (Ethanol in clean air)
     * I2C digital interface
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -55,4 +53,3 @@ To use a **RAK12047**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

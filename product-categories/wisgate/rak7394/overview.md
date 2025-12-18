@@ -12,8 +12,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7394 WisGate Developer CM4
 
 Thank you for choosing **RAK7394 WisGate Developer CM4** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -21,7 +19,6 @@ Thank you for choosing **RAK7394 WisGate Developer CM4** in your awesome IoT pro
 * [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7394/quickstart/)
 * [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7394/lorawan-network-server-guide/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisgate/rak7394/datasheet/)
-
 
 ## Product Description
 
@@ -54,12 +51,10 @@ By default, the CM4 comes with еMMC and the SD card can be used for additional 
 - Supports Cellular module (Quectel BG96 or EG95) for NB-IoT / LTE CAT-M1 / LTE CAT1 / LTE CAT4 (only in Cellular variant).
 - Built-in Ublox ZOE-M8Q GPS Module.
 - Built-in Heat Sink for thermal heat dissipation management.
-- Supports 5&nbsp;V / 3&nbsp;A and Power-Over-Ethernet (only in PoE variant) power supply.
+- Supports 5 V / 3 A and Power-Over-Ethernet (only in PoE variant) power supply.
 - IP30 housing.
-- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm @SF12, BW 125&nbsp;kHz.
+- TX power up to 27 dBm, RX sensitivity down to -139 dBm @SF12, BW 125 kHz.
 - LoRa Frequency band support: RU864, IN865, EU868, US915, AU915, KR920, AS923.
 - Includes Pi-ready 'ID EEPROM', GPIO setup, and device tree can be automatically configured from vendor information.
 - Supports a fully open-source LoRaWAN server.
 
-
-<RkBottomNav/>

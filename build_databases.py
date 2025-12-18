@@ -29,28 +29,64 @@ def process_file_wrapper(args):
     return load_and_parse_file(file_path, root_dir, category)
 
 def chunk_documents(documents):
-    # 1. Structural Split
+    # 1. Structural Split (Extracts H1-H3 into Metadata)
     headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
     markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
     
-    # 2. Size Split (1500 chars for BGE-Base)
-    # Priority separators to keep code blocks and paragraphs whole
+    # 2. Size Split
+    # We add H4 and H5 to separators to ensure we don't slice a sub-header 
+    # away from its content if possible.
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=config.CHUNK_SIZE,
         chunk_overlap=config.CHUNK_OVERLAP,
-        separators=["\n```", "\n\n", "\n", ". ", " ", ""]
+        separators=[
+            "\n```",   # Priority 1: Keep code blocks whole
+            "\n#### ", # Priority 2: Split at H4 headers (Keep them with content)
+            "\n##### ",# Priority 3: Split at H5 headers
+            "\n:::",   # Priority 4: Admonitions
+            "\n\n",    # Priority 5: Paragraphs
+            "\n", 
+            ". ", 
+            " ", 
+            ""
+        ]
     )
 
     final_chunks = []
     for doc in documents:
+        # Split by Header (H1-H3)
         header_splits = markdown_splitter.split_text(doc.page_content)
+        
+        # Split by Size (Respecting H4-H5 boundaries)
         recursive_splits = text_splitter.split_documents(header_splits)
         
         for split in recursive_splits:
             split.metadata.update(doc.metadata)
+            
+            # --- METADATA STAMPING (Context Injection) ---
+            # We explicitly add the hierarchy back into the text so the 
+            # embedding model "sees" the context even if the chunk is small.
+            context_prefixes = []
+            
+            # Product Title
             if "title" in split.metadata:
-                 split.page_content = f"Product: {split.metadata['title']}\n\n{split.page_content}"
+                context_prefixes.append(f"Product: {split.metadata['title']}")
+            
+            # Hierarchical Headers
+            if "Header 1" in split.metadata:
+                context_prefixes.append(f"Section: {split.metadata['Header 1']}")
+            if "Header 2" in split.metadata:
+                context_prefixes.append(f"Subsection: {split.metadata['Header 2']}")
+            if "Header 3" in split.metadata:
+                context_prefixes.append(f"Topic: {split.metadata['Header 3']}")
+            
+            # Prepend context string to the content
+            if context_prefixes:
+                context_str = " | ".join(context_prefixes)
+                split.page_content = f"{context_str}\n\n{split.page_content}"
+            
             final_chunks.append(split)
+            
     return final_chunks
 
 if __name__ == "__main__":

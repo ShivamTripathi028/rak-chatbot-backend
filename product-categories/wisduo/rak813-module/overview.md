@@ -9,15 +9,11 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK813 BLE+LoRa Module
 Thank you for choosing **RAK813 BLE+LoRa Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
 
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak813-module/datasheet/)
-
 
 ## Product Description
 
@@ -29,23 +25,21 @@ Based on the global leading Nordic Semiconductor Corporation's nRF52832 (BLE) an
 
 The RAK813 module uses TCXO as the LoRa clock source, so at different temperatures (such as indoor and outdoor) LoRa module of radio frequency close to the maximum, can effectively improve the decoding rate, to enhance the communication quality.
 
-RAK813 supports various protocols, including the newest BLE and LoRaWAN, where customers can choose a multi frequency, including 433&nbsp;MHz, 470&nbsp;MHz, 868&nbsp;MHz, and 915&nbsp;MHz.
-
-
+RAK813 supports various protocols, including the newest BLE and LoRaWAN, where customers can choose a multi frequency, including 433 MHz, 470 MHz, 868 MHz, and 915 MHz.
 
 ## Product Features
 
 - Base on nRF52832 (BLE) and SX127X (LoRa)
 - Supports UART, SPI, I2C, and GPIOs Interface.
 - Small size and low power, sleep current down to 2uA
-- High receiver sensitivity: LoRa down to -146&nbsp;dBm, BLE down to -96&nbsp;dBm
-- Operates at a Temperature of -40&nbsp;°C to 85&nbsp;°C
-- TX Power: LoRa adjustable up to +14&nbsp;dBm high efficiency PA, max PA boost up to 20&nbsp;dBm, BLE -20 to +4&nbsp;dBm in 4 DB steps
+- High receiver sensitivity: LoRa down to -146 dBm, BLE down to -96 dBm
+- Operates at a Temperature of -40 °C to 85 °C
+- TX Power: LoRa adjustable up to +14 dBm high efficiency PA, max PA boost up to 20 dBm, BLE -20 to +4 dBm in 4 DB steps
 - Building in both TX and RX filter
 - Building in TCXO for high-frequency stability
-- Provides multiple band selection including 433/470/868/915 MHz for LoRa and 2.4&nbsp;GHz for BLE
-- Storage Temperature: -40&nbsp;°C to 85&nbsp;°C
+- Provides multiple band selection including 433/470/868/915 MHz for LoRa and 2.4 GHz for BLE
+- Storage Temperature: -40 °C to 85 °C
 - Supports LoRa Point-to-Point Communication in all the bands
 - FSK, GFSK, and LoRa Technology modulation
-- llP3 = -11&nbsp;dBm
-- Up to 15&nbsp;km coverage at suburban and up to 5&nbsp;km coverage at urban areas.
+- llP3 = -11 dBm
+- Up to 15 km coverage at suburban and up to 5 km coverage at urban areas.

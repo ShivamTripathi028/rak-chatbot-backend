@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14008 WisBlock Gesture Sensor Module Quick Start Guide
 ## Prerequisite
 
@@ -45,13 +42,7 @@ For more information about RAK14008, refer to the [Datasheet](https://docs.rakwi
 
 RAK14008 module can be connected to the IO slot of [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) to communicate with the WisBlock Core, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak14008-assembly.png"
-  figureCount="1"
-  caption="RAK14008 connection to WisBlock Base" 
-   width="40%"
-/>
-
+> **Image:** RAK14008 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -59,12 +50,7 @@ RAK14008 module can be connected to the IO slot of [WisBlock Base](https://docs.
 
 The RAK14008 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 2**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/mounting-mechanism.png"
-  figureCount="2"
-  caption="RAK14008 mounting connection to WisBlock Base module" 
-   width="60%"
-/>
+> **Image:** RAK14008 mounting connection to WisBlock Base module
 
 ##### Disassembling
 
@@ -72,30 +58,15 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. Remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/removing_screw.png"
-  figureCount="3"
-  caption="Removing screws from the WisBlock module" 
-   width="70%"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/detach_silkscreen.png"
-  figureCount="4"
-  caption="Detaching silkscreen on the WisBlock module" 
-   width="70%"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/detach_module.png"
-  figureCount="5"
-  caption="Applying even forces on the proper location of a WisBlock module" 
-   width="70%"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -105,9 +76,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -121,30 +92,15 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 **RAK4631 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak4631-board.png"
-  figureCount="6"
-  caption="Selecting RAK4631 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 **RAK11200 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak11200-board.png"
-  figureCount="7"
-  caption="Selecting RAK11200 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 **RAK11310 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak11310-board.png"
-  figureCount="8"
-  caption="Selecting RAK11310 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 3. Next, copy the following sample code into your Arduino IDE:
 
@@ -279,20 +235,9 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example code is open, install the [PAJ7620](https://github.com/acrandal/RevEng_PAJ7620) library by clicking the yellow highlighted link, as shown in **Figure 9** and **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak14008-lib.png"
-  figureCount="9"
-  caption="Accessing the library used for RAK14008 Module" 
-   width="100%"
-/>
+> **Image:** Accessing the library used for RAK14008 Module
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak14008-libinstall.png"
-  figureCount="10"
-  caption="Installing the compatible library for RAK14008 Module" 
-   width="65%"
-/>
+> **Image:** Installing the compatible library for RAK14008 Module
 
 5. After the successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
@@ -300,27 +245,11 @@ If you experience any error in compiling the example sketch, check the updated c
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak4631-selectport.png"
-  figureCount="11"
-  caption="Selecting the correct Serial Port" 
-   width="100%"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak4631-upload.png"
-  figureCount="12"
-  caption="Uploading the RAK14008 example code" 
-   width="100%"
-/>
+> **Image:** Uploading the RAK14008 example code
 
 6. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE, set the baud rate correctly, and once you have made a gesture or movement in front of the RAK14008 sensor, you'll be able to see the sensor's output as shown below in **Figure 13**. Therefore, your RAK14008 is properly communicating to the WisBlock core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14008/quickstart/rak14008-data.png"
-  figureCount="13"
-  caption="RAK14008 Gesture Sensor Serial Readings" 
-   width="60%"
-/>
+> **Image:** RAK14008 Gesture Sensor Serial Readings
 
-<RkBottomNav/>

@@ -11,14 +11,11 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK RPi DIY Gateway Kit
 
 Thank you for choosing **RAK RPi DIY Gateway Kit** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
 
 * [Installation Guide](https://docs.rakwireless.com/product-categories/accessories/rak-rpi-diy-gateway-kit/installation-guide/)
-
 
 ## Prerequisites
 
@@ -38,4 +35,3 @@ The RAK RPi DIY Gateway Kit includes all required parts (**except for the Raspbe
 The RAK RPi DIY Gateway Kit is designed to work specifically with **Raspberry Pi 4**, which is **NOT** included in the kit. You need to provide it yourself. 
 :::
 
-<RkBottomNav/>

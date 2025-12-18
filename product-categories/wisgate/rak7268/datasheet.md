@@ -30,18 +30,13 @@ sidebar_label: Datasheet
 date: 2021-04-11
 ---
 
-
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK7268 WisGate Edge Lite 2 Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK7268 WisGate Edge Lite 2 is a full 8-channel indoor gateway, based on the LoRaWAN protocol, with built-in Ethernet connectivity for a straightforward setup. There is an onboard Wi-Fi setup (supporting 2.4&nbsp;GHz Wi-Fi) that allows it to be easily configured via the default Wi-Fi AP mode. Additionally, the gateway supports LTE uplink communication connections (optional).
+The RAK7268 WisGate Edge Lite 2 is a full 8-channel indoor gateway, based on the LoRaWAN protocol, with built-in Ethernet connectivity for a straightforward setup. There is an onboard Wi-Fi setup (supporting 2.4 GHz Wi-Fi) that allows it to be easily configured via the default Wi-Fi AP mode. Additionally, the gateway supports LTE uplink communication connections (optional).
 
 As with the other RAKwireless Industrial Gateways, it also supports MQTT Bridge mode, with the option for TLS authentication.
 
@@ -56,7 +51,7 @@ RAK7268 is especially suitable for small and medium-sized deployment scenarios i
 ### Features
 
 - Full LoRaWAN Stack support (V 1.0.3) with Semtech SX1302
-- Supports 2.4&nbsp;GHz Wi-Fi AP for configuration
+- Supports 2.4 GHz Wi-Fi AP for configuration
 - 100M Base-T Ethernet with PoE
 - Multi back-haul with Ethernet, Wi-Fi, Cellular
 - OpenWRT software supports  Web UI for easy configuration and monitoring
@@ -64,8 +59,6 @@ RAK7268 is especially suitable for small and medium-sized deployment scenarios i
 - TF card for log backup and LoRa frame buffering (in case of backhaul failover)
 - Built-in Network Server for easy deployment of applications and integration of gateways
 - LTE Cat 4 network (optional)
-
-
 
 ## Specifications
 
@@ -75,170 +68,148 @@ The overview presents the block diagram for the RAK7268 that shows the internal 
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7268/datasheet/block-diagram.png"
-  width="100%"
-  caption="WisGate Edge Lite 2 Block Diagram"
-/>
+> **Image:** WisGate Edge Lite 2 Block Diagram
 
 ### Hardware
 
 The hardware specification covers only the interfacing of the RAK7268 and its corresponding functionalities. It also presents the parameters and the standard values of the board.
 
-
 #### Interfaces
 
-The hardware interfaces of RAK7268 gateway include DC 12&nbsp;V, ETH interface, Console interface, Reset key, TF Card slot, Status indicator LEDs, LoRa Antenna connector, etc.
+The hardware interfaces of RAK7268 gateway include DC 12 V, ETH interface, Console interface, Reset key, TF Card slot, Status indicator LEDs, LoRa Antenna connector, etc.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7268/datasheet/rak7268_1.png"
-  width="60%"
-  caption="WisGate Edge Lite 2 Interfaces"
-/>
-
+> **Image:** WisGate Edge Lite 2 Interfaces
 
 ##### Reset Key Functions
 
 The function of the Reset key is as follows:
   - **Short press**: Restart the gateway.
-  - **Long press** (5&nbsp;sec and above): Restore factory settings.
+  - **Long press** (5 sec and above): Restore factory settings.
 
 ##### LED Indicators
 
-<table>
-    <thead>
-        <tr><th>LEDs</th><th>Status Indication Description</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>PWR LED</td><td>Power indicator - The LED is on when device power is on</td></tr>
-        <tr><td>Breathing LED</td><td>Breathing after system up</td></tr>
-        <tr><td rowSpan="3">ETH LED</td><td>ON - Linkup</td></tr>
-        <tr><td>OFF - Linkdown</td></tr>
-        <tr><td>Flicker - Data transmitting and receiving</td></tr>
-        <tr><td rowSpan="3">LoRa LED</td><td>ON - LoRa is working</td></tr>
-        <tr><td>OFF - LoRa is not working</td></tr>
-        <tr><td>Flicker - Indicate LoRa Packet receiving and sending</td></tr>
-        <tr><td rowSpan="8">WLAN LED</td><td>AP Mode: </td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-ON - The AP is up</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-OFF - The AP is down</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-Flicker - Data receiving and sending</td></tr>
-        <tr><td>STA Mode:</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-Slow flicker (1&nbsp;Hz) - Disconnected</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-ON - Connected</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-Flicker - Data receiving and sending</td></tr>
-            <tr><td rowSpan="3">LTE LED</td><td>Slow Flicker (1800&nbsp;ms High / 200&nbsp;ms Low) - Network searching</td></tr>
-        <tr><td>Slow flicker (200&nbsp;ms High / 1800&nbsp;ms Low) - Idle</td></tr>
-        <tr><td>Fast flicker (125&nbsp;ms High / 125&nbsp;ms Low) - Ongoing data transfer</td></tr>
-    </tbody>
-</table>
+| LEDs | Status Indication Description |
+| --- | --- |
+| PWR LED | Power indicator - The LED is on when device power is on |
+| Breathing LED | Breathing after system up |
+| ETH LED | ON - Linkup |
+| ETH LED | OFF - Linkdown |
+| ETH LED | Flicker - Data transmitting and receiving |
+| LoRa LED | ON - LoRa is working |
+| LoRa LED | OFF - LoRa is not working |
+| LoRa LED | Flicker - Indicate LoRa Packet receiving and sending |
+| WLAN LED | AP Mode: |
+| WLAN LED | -ON - The AP is up |
+| WLAN LED | -OFF - The AP is down |
+| WLAN LED | -Flicker - Data receiving and sending |
+| WLAN LED | STA Mode: |
+| WLAN LED | -Slow flicker (1 Hz) - Disconnected |
+| WLAN LED | -ON - Connected |
+| WLAN LED | -Flicker - Data receiving and sending |
+| LTE LED | Slow Flicker (1800 ms High / 200 ms Low) - Network searching |
+| LTE LED | Slow flicker (200 ms High / 1800 ms Low) - Idle |
+| LTE LED | Fast flicker (125 ms High / 125 ms Low) - Ongoing data transfer |
 
 #### Main Specifications
 
-
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Computing</td><td>MT7628, DDR2 RAM 128 MB</td></tr>
-        <tr><td rowSpan="4">Wi-Fi feature</td><td>Frequency: 2.4&nbsp;GHz (802.11b/g/n)</td></tr>
-        <tr><td>RX Sensitivity: -95&nbsp;dBm (Min) </td></tr>
-        <tr><td>TX Power: 20&nbsp;dBm (Max)</td></tr>
-        <tr><td>Operation channels: 2.4&nbsp;GHz: 1-13</td></tr>
-        <tr><td rowSpan="5">LoRa feature</td><td>SX1302 Mini PCIe card</td></tr>
-        <tr><td>8 Channels</td></tr>
-        <tr><td>RX Sensitivity: -139&nbsp;dBm (Min)</td></tr>
-        <tr><td>TX Power: 27&nbsp;dBm (Max)</td></tr>
-        <tr><td>Frequency: EU433/CN470/EU868/US915/AS923/AU915/IN865/KR920</td></tr>
-        <tr><td rowSpan="9">Cellular</td><td>Supports Quectel EG95-E/EG95-NA (IoT/M2M -optimized LTE Cat 4 Module)</td></tr>
-        <tr><td>EG95-E for EMEA Region</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- LTE FDD: B1/B3/B7/B8/B20/B28A</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- WCDMA: B1/B8</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- GSM/EDGE: B3/B8</td></tr>
-        <tr><td>EG95-NA for North America Region</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- LTE FDD: B2/B4/B5/B12/B13</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- WCDMA: B2/B4/B5</td></tr>
-        <tr><td><span style={{ color: 'red' }}>Optional supports other PCIe LTE module for Global Region</span></td></tr>
-        <tr><td rowSpan="2">Power supply</td><td>DC 12&nbsp;V - 1&nbsp;A</td></tr>
-        <tr><td>PoE (IEEE 802.3 af), 36~57&nbsp;V<sub>DC</sub></td></tr>
-        <tr><td>Power consumption</td><td>12&nbsp;W (typical)</td></tr>
-        <tr><td>ETH</td><td>RJ45 (10/100 M)</td></tr>
-        <tr><td>Console</td><td>Type-C USB</td></tr>
-        <tr><td rowSpan="3">Antenna</td><td>LoRa: RP-SMA female connector</td></tr>
-        <tr><td>LTE: Internal antenna</td></tr>
-        <tr><td>Wi-Fi: Internal antenna</td></tr>
-        <tr><td rowSpan="6">LEDs</td><td>POWER LED</td></tr>
-        <tr><td>Breathing LED (Top side)</td></tr>
-        <tr><td>ETH LED (On ETH connector)</td></tr>
-        <tr><td>LoRa LED</td></tr>
-        <tr><td>WLAN LED</td></tr>
-        <tr><td>LTE LED</td></tr>
-        <tr><td>Ingress protection</td><td>IP30 </td></tr>
-        <tr><td>Enclosure material</td><td>Plastic</td></tr>
-        <tr><td>Weight</td><td>0.3&nbsp;kg</td></tr>
-        <tr><td>Dimension</td><td>166x127x36&nbsp;mm</td></tr>
-        <tr><td>Operating temperature</td><td>-10 to 55&nbsp;˚C</td></tr>
-        <tr><td>Installation method</td><td>Wall mounting</td></tr>
-    </tbody>
-</table>
-
+| Feature | Specifications |
+| --- | --- |
+| Computing | MT7628, DDR2 RAM 128 MB |
+| Wi-Fi feature | Frequency: 2.4 GHz (802.11b/g/n) |
+| Wi-Fi feature | RX Sensitivity: -95 dBm (Min) |
+| Wi-Fi feature | TX Power: 20 dBm (Max) |
+| Wi-Fi feature | Operation channels: 2.4 GHz: 1-13 |
+| LoRa feature | SX1302 Mini PCIe card |
+| LoRa feature | 8 Channels |
+| LoRa feature | RX Sensitivity: -139 dBm (Min) |
+| LoRa feature | TX Power: 27 dBm (Max) |
+| LoRa feature | Frequency: EU433/CN470/EU868/US915/AS923/AU915/IN865/KR920 |
+| Cellular | Supports Quectel EG95-E/EG95-NA (IoT/M2M -optimized LTE Cat 4 Module) |
+| Cellular | EG95-E for EMEA Region |
+| Cellular | - LTE FDD: B1/B3/B7/B8/B20/B28A |
+| Cellular | - WCDMA: B1/B8 |
+| Cellular | - GSM/EDGE: B3/B8 |
+| Cellular | EG95-NA for North America Region |
+| Cellular | - LTE FDD: B2/B4/B5/B12/B13 |
+| Cellular | - WCDMA: B2/B4/B5 |
+| Cellular | Optional supports other PCIe LTE module for Global Region |
+| Power supply | DC 12 V - 1 A |
+| Power supply | PoE (IEEE 802.3 af), 36~57 V DC |
+| Power consumption | 12 W (typical) |
+| ETH | RJ45 (10/100 M) |
+| Console | Type-C USB |
+| Antenna | LoRa: RP-SMA female connector |
+| Antenna | LTE: Internal antenna |
+| Antenna | Wi-Fi: Internal antenna |
+| LEDs | POWER LED |
+| LEDs | Breathing LED (Top side) |
+| LEDs | ETH LED (On ETH connector) |
+| LEDs | LoRa LED |
+| LEDs | WLAN LED |
+| LEDs | LTE LED |
+| Ingress protection | IP30 |
+| Enclosure material | Plastic |
+| Weight | 0.3 kg |
+| Dimension | 166x127x36 mm |
+| Operating temperature | -10 to 55 ˚C |
+| Installation method | Wall mounting |
 
 #### RF Specifications
 
 ##### Wi-Fi Radio Specifications
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Wireless Standard</td><td>IEEE 802.11b/g/n</td></tr>
-        <tr><td>Operating Frequency</td><td>ISM band: 2.412~2.472&nbsp;GHz</td></tr>
-        <tr><td>Operation Channels</td><td>2.4&nbsp;GHz: 1-13</td></tr>
-        <tr><td rowSpan="11">Transmit Power<br/>(The max power maybe different<br/>depending on local regulations) - per chain</td><td>802.11b</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;19&nbsp;dBm @1&nbsp;Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;19&nbsp;dBm @11&nbsp;Mbps</td></tr>
-        <tr><td>802.11g</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;18&nbsp;dBm @6&nbsp;Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;16&nbsp;dBm @54&nbsp;Mbps</td></tr>
-        <tr><td>802.11n (2.4G)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;18&nbsp;dBm @MCS0 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;16&nbsp;dBm @MCS7 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;17&nbsp;dBm @MCS0 (HT40) </td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;15&nbsp;dBm @MCS7 (HT40)</td></tr>
-        <tr><td rowSpan="11">Receiver Sensitivity<br />(Typical)</td><td>802.11b</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-95&nbsp;dBm @1&nbsp;Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-88&nbsp;dBm @11&nbsp;Mbps</td></tr>
-        <tr><td>802.11g</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-90&nbsp;dBm @6&nbsp;Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-75&nbsp;dBm @54&nbsp;Mbps</td></tr>
-        <tr><td>802.11n (2.4G)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-89&nbsp;dBm @MCS0 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-72&nbsp;dBm @MCS7 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-86&nbsp;dBm @MCS0 (HT40)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-68&nbsp;dBm @MCS7 (HT40)</td></tr>
-    </tbody>
-</table>
-
+| Feature | Specifications |
+| --- | --- |
+| Wireless Standard | IEEE 802.11b/g/n |
+| Operating Frequency | ISM band: 2.412~2.472 GHz |
+| Operation Channels | 2.4 GHz: 1-13 |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11b |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @1 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @11 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11g |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @6 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @54 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11n (2.4G) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @MCS0 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @MCS7 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 17 dBm @MCS0 (HT40) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 15 dBm @MCS7 (HT40) |
+| Receiver Sensitivity (Typical) | 802.11b |
+| Receiver Sensitivity (Typical) | -95 dBm @1 Mbps |
+| Receiver Sensitivity (Typical) | -88 dBm @11 Mbps |
+| Receiver Sensitivity (Typical) | 802.11g |
+| Receiver Sensitivity (Typical) | -90 dBm @6 Mbps |
+| Receiver Sensitivity (Typical) | -75 dBm @54 Mbps |
+| Receiver Sensitivity (Typical) | 802.11n (2.4G) |
+| Receiver Sensitivity (Typical) | -89 dBm @MCS0 (HT20) |
+| Receiver Sensitivity (Typical) | -72 dBm @MCS7 (HT20) |
+| Receiver Sensitivity (Typical) | -86 dBm @MCS0 (HT40) |
+| Receiver Sensitivity (Typical) | -68 dBm @MCS7 (HT40) |
 
 ##### LoRa Radio Specifications
 
 | Feature              | Specifications                                  |
 | -------------------- | ----------------------------------------------- |
 | Operating Frequency  | EU433/CN470/EU868/US915/AS923/AU915/IN865/KR920 |
-| Transmit Power       | 27&nbsp;dBm (Max)                               |
-| Receiver Sensitivity | -139&nbsp;dBm (Min)                             |
+| Transmit Power       | 27 dBm (Max)                               |
+| Receiver Sensitivity | -139 dBm (Min)                             |
 
 ##### LTE Radio Specifications
 
 | Feature                          | Specification                                                                                                   |
 | -------------------------------- | --------------------------------------------------------------------------------------------------------------- |
-| EG95-E for EMEA Region           | LTE FDD:  B1/B3/B7/B8/B20/B28A<br />WCDMA:  B1/B8<br />GSM/EDGE:  B3/B8                                         |
-| EG95-NA for North America Region | LTE FDD:  B2/B4/B5/B12/B13<br />WCDMA:  B2/B4/B5<br />Optional supports other PCIE LTE module for Global Region |
-
+| EG95-E for EMEA Region           | LTE FDD:  B1/B3/B7/B8/B20/B28A
+WCDMA:  B1/B8
+GSM/EDGE:  B3/B8                                         |
+| EG95-NA for North America Region | LTE FDD:  B2/B4/B5/B12/B13
+WCDMA:  B2/B4/B5
+Optional supports other PCIE LTE module for Global Region |
 
 #### Electrical Requirements
 
-The Gateway comes with a 12&nbsp;V-1&nbsp;A power adaptor. It is also fully compatible with PoE (IEEE  802.3af), 36~57&nbsp;V<sub>DC</sub>.
+The Gateway comes with a 12 V-1 A power adaptor. It is also fully compatible with PoE (IEEE  802.3af), 36~57 V<sub>DC</sub>.
 
-The typical power consumption is 12&nbsp;W.
+The typical power consumption is 12 W.
 
 #### Environmental Requirements
 
@@ -246,9 +217,9 @@ The casing is IP30 rated and is made of plastic. There are holes for a mounting 
 
 | Parameter             | Value             |
 | --------------------- | ----------------- |
-| Dimensions            | 66x127x36&nbsp;mm |
-| Weight                | 0.3&nbsp;kg       |
-| Operating temperature | -10 to 55&nbsp;°C |
+| Dimensions            | 66x127x36 mm |
+| Weight                | 0.3 kg       |
+| Operating temperature | -10 to 55 °C |
 
 ### Firmware
 
@@ -273,66 +244,27 @@ The firmware sits on OpenWRT, which makes it possible to customize it. There is 
 | Location setup                | LTE APN setup      | OpenVPN, Ping Watch Dog               |
 | Server address and Port setup |                    | MQTT Bridge                           |
 
-
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'anatel' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_ANATEL_Certification.zip',
-    },
-    {
-        'ce' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_CE_Certification.pdf',
-    },
-    {
-        'ce' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_CE_Certification.pdf',
-    },
-    {
-        'fcc' : 'https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268_RAK7268V2_FCC_Certification.pdf',
-    },
-    {
-        'fcc' : 'https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268C_RAK7268CV2_FCC_Certification.pdf',
-    },
-    {
-        'ised' : 'https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268_RAK7268V2_IC_Certification.pdf',
-    },
-    {
-        'ised' : 'https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268C_RAK7268CV2_IC_Certification.pdf',
-    },
-    {
-        'jrl' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_JRL_Certification.pdf',
-    },
-    {
-        'jtbl' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_JTBL_Certification.pdf',
-    },
-    {
-        'kc' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_KC_Certification.pdf',
-    },
-    {
-        'kc' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_KC_Certification.pdf',
-    },
-    {
-        'rcm' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268C_RCM_Certification.pdf',
-    },
-    {
-        'reach' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_RAK7268CV2_RAK7268_RAK7268V2_REACH_Report.pdf',
-    },
-    {
-        'rohs' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_RAK7268CV2_RAK7268_RAK7268V2_RoHS_Report.pdf',
-    },
-    {
-        'rsm' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_RSM_Certification.pdf',
-    },
-    {
-        'srrc' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_SRRC_Certification.pdf',
-    },
-    {
-        'subtel' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_SUBTEL_Certification.pdf',
-    },
-    {
-        'ukca' : 'https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_UKCA_Certification.pdf',
-    },
-
-]} />
+### Certifications
+- **ANATEL:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_ANATEL_Certification.zip
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_CE_Certification.pdf
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268_RAK7268V2_FCC_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268C_RAK7268CV2_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268_RAK7268V2_IC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK7268V2/Certification/RAK7268C_RAK7268CV2_IC_Certification.pdf
+- **JRL:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_JRL_Certification.pdf
+- **JTBL:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_JTBL_Certification.pdf
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_KC_Certification.pdf
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_KC_Certification.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268C_RCM_Certification.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_RAK7268CV2_RAK7268_RAK7268V2_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268C_RAK7268CV2_RAK7268_RAK7268V2_RoHS_Report.pdf
+- **RSM:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_RSM_Certification.pdf
+- **SRRC:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_SRRC_Certification.pdf
+- **SUBTEL:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_SUBTEL_Certification.pdf
+- **UKCA:** https://downloads.rakwireless.com/LoRa/RAK7268/Certification/RAK7268_RAK7268V2_RAK7268C_RAK7268CV2_UKCA_Certification.pdf
 
 ### FCC Caution
 
@@ -353,7 +285,7 @@ This equipment has been tested and found to comply with the limits for a Class B
 
 ### FCC Radiation Exposure Statement
 
-This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with a minimum distance of 20&nbsp;cm between the radiator and your body.
+This equipment complies with FCC radiation exposure limits set forth for an uncontrolled environment. This equipment should be installed and operated with a minimum distance of 20 cm between the radiator and your body.
 
 ### ISEDC Warning
 
@@ -369,6 +301,6 @@ Le présent appareil est conforme aux CNR d' Innovation, Sciences et Développem
 
 2. l'utilisateur de l'appareil doit accepter tout brouillage radioélectrique subi, même si le brouillage est susceptible d'en compromettre le fonctionnement.
 
-The device complies with RF exposure guidelines, users can obtain Canadian information on RF exposure and compliance. The minimum distance from the body to use the device is 20&nbsp;cm.
+The device complies with RF exposure guidelines, users can obtain Canadian information on RF exposure and compliance. The minimum distance from the body to use the device is 20 cm.
 
-Le présent appareil est conforme Après examen de ce matériel aux conformité ou aux limites d’intensité de champ RF, les utilisateurs peuvent sur l’exposition aux radiofréquences et la conformité and compliance d’acquérir les informations correspondantes. La distance minimale du corps à utiliser le dispositif est de 20&nbsp;cm.
+Le présent appareil est conforme Après examen de ce matériel aux conformité ou aux limites d’intensité de champ RF, les utilisateurs peuvent sur l’exposition aux radiofréquences et la conformité and compliance d’acquérir les informations correspondantes. La distance minimale du corps à utiliser le dispositif est de 20 cm.

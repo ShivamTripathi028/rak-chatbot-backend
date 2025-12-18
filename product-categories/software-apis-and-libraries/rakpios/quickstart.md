@@ -8,9 +8,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAKPiOS Quick Start Guide
 
 ## Get the OS
@@ -26,26 +23,17 @@ Depending on the device to which you want to flash the OS, you may have:
 
 ## Flash to a Micro SD Card
 
-It is recommended to use a Micro SD card of 8&nbsp;GB or greater coupled with a good-quality and fast card reader. Insert the card into the card reader (make sure it is properly connected to the host device) and proceed as follows:
+It is recommended to use a Micro SD card of 8 GB or greater coupled with a good-quality and fast card reader. Insert the card into the card reader (make sure it is properly connected to the host device) and proceed as follows:
 
 1. Open balenaEtcher and select the OS image (no need to unzip the archive).
 2. Select the target (your Micro SD card).
 3. To begin the process, press the **Flash!** button.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/quickstart/4.balena-etcher.png"
-  width="70%"
-  caption="balena Etcher flashing window"
-/>
+> **Image:** balena Etcher flashing window
 
 Wait for the flashing process to complete, followed by the verification phase. You can now remove the card from the reader and insert it into the device's Micro SD slot on the bottom side of the board (next to the three SIM slots).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/quickstart/5.micro-sd.png"
-  width="70%"
-  caption="Micro SD slot"
-/>
+> **Image:** Micro SD slot
 
 ## Flash to the eMMC
 
@@ -59,19 +47,11 @@ Before installing the drivers, regardless of the operating system, make sure to 
 
 1. Connect the Type-C port to a USB port on your computer using a suitable cable. Do not turn on the gateway yet.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/quickstart/6.typec-port-location.png"
-  width="70%"
-  caption="Type-C port and Flash button location"
-/>
+> **Image:** Type-C port and Flash button location
 
 2. Press and hold the Flash button, or bridge the eMMC Flash jumper and power the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/quickstart/7.flash-jumper-location.png"
-  width="70%"
-  caption="eMMC flash jumper location"
-/>
+> **Image:** eMMC flash jumper location
 
 3. Once you have the respective utility installed depending on the OS, you will be able to see it as mounted storage.
 
@@ -136,17 +116,11 @@ rak@RAK7391 usbboot %
 
 Check out the Raspberry Pi [official documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html) for instructions on how to install the tools required, build the `usbboot` tool, and run the tool.
 
-
 ### Flash the Image File
 
 Now that you have the eMMC properly mounted, the rest of the procedure is very similar to what one has to do if flashing an SD card. Simply launch balenaEtcher, select the file, choose the **Compute Module** drive, and flash.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/quickstart/8.emmc-balena.png"
-  width="70%"
-  caption="eMMC as seen in Balena"
-/>
-
+> **Image:** eMMC as seen in Balena
 
 ## First Login
 
@@ -154,4 +128,3 @@ It is recommended to connect the device via Ethernet for its first-time setup. B
 
 The default RAKPiOS user name is `rak`, and the password is `changeme`. You will be prompted to change your default password upon your first login. For example, if you log in via SSH for the first time, you will have to create a new one by entering the default one first, followed by a new one.
 
-<RkBottomNav/>

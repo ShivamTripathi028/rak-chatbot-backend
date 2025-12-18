@@ -10,11 +10,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK15004 WisBlock FRAM Module Quick Start Guide
-
 
 ## Prerequisite
 
@@ -50,13 +46,9 @@ RAK15004 module can be connected to any slot of WisBlock Base to communicate wit
 
 ##### Assembling
 
-As shown in **Figure 1**, the location for sensor slots are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+As shown in **Figure 1**, the location for sensor slots are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/wisblock-sensor-silkscreen.png"
-  width="70%"
-  caption="Sensor connection to WisBlock Base"
-/>
+> **Image:** Sensor connection to WisBlock Base
 
 ##### Disassembling
 
@@ -64,27 +56,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. To begin disassembling, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. After removing the screws, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Detach the module from the baseboard by applying force to the module at the position of the connector, as shown in **Figure 4**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/detaching-module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 - If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool). This tool finds possible pin conflicts.
@@ -101,23 +81,11 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 2. After that, you need to select the WisBlock Core you have, as shown in **Figure 5** to **Figure 7**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak4631-board.png"
-  width="90%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak11200-board.png"
-  width="90%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak11310-board.png"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 3. Next, copy the following sample code into your Arduino IDE.
 
@@ -292,17 +260,9 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example code is open, install the [RAK1500x_MB85RC library](https://github.com/RAKWireless/RAK1500x-MB85RC). Click the highlighted link, as shown in **Figure 8** and **Figure 9**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak15004-lib.png"
-  width="90%"
-  caption="Accessing the library used for RAK15004 Module"
-/>
+> **Image:** Accessing the library used for RAK15004 Module
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak15004-libinstall.png"
-  width="50%"
-  caption="Installing the compatible library for RAK15004 Module"
-/>
+> **Image:** Installing the compatible library for RAK15004 Module
 
 5. After a successful library installation, select the right serial port and upload the code, as shown in **Figure 10** and **Figure 11**.
 
@@ -310,24 +270,11 @@ If you experience any error in compiling the example sketch, check the updated c
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak4631-selectport.png"
-  width="90%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak4631-upload.png"
-  width="90%"
-  caption="Uploading the RAK15004 example code"
-/>
+> **Image:** Uploading the RAK15004 example code
 
 6. When you have successfully uploaded the example sketch, you'll see that the WisBlock Core will perform a Write-Read test on the FRAM. Then, it reads out all its contents.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak15004/quickstart/rak15004-logs.png"
-  width="90%"
-  caption="Uploading the RAK15004 example code"
-/>
+> **Image:** Uploading the RAK15004 example code
 
-<RkBottomNav/>

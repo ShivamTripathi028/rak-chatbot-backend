@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13102 WisBlock Blues Notecarrier Module Datasheet
 
 ## Overview
@@ -31,9 +28,8 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 - USB Type C debug and log output connector
 - Nano SIM and ESIM options
 - Two WisBlock Sensor Slot connectors
-- 3.3&nbsp;V power supply (requires an additional battery for operation)
-- Small size: 29&nbsp;mm x 50&nbsp;mm
-
+- 3.3 V power supply (requires an additional battery for operation)
+- Small size: 29 mm x 50 mm
 
 ## Specifications
 
@@ -41,12 +37,7 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 The RAK13102 module can be mounted on the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK13102 on a WisBlock Base module, such as a RAK19007.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/mounting-mechanism.png" 
-  figureCount="1"
-  caption="RAK13102 mounting mechanism on a WisBlock Base module" 
-   width="60%"
-/>
+> **Image:** RAK13102 mounting mechanism on a WisBlock Base module
 
 ### Hardware
 
@@ -62,17 +53,12 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK13102 WisBlock Blues Notecarrier module comprises a standard WisBlock IO slot connector. The WisBlock connector allows the RAK13102 module to be mounted on a WisBlock baseboard with an IO slot, such as RAK19007. The pin order of the connector and the pinout definition are shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/rak13102-pin-out.png" 
-  figureCount="2"
-  caption="RAK13102 Connector Pin Definition" 
-   width="90%"
-/>
+> **Image:** RAK13102 Connector Pin Definition
 
 :::tip NOTE
 - RAK13102 WisBlock IO slot connector utilizes the **I2C** related pins, **ATTNP** via WB_IO5, **VBAT**, **3V3**, and **GND**.
 
-- **VBAT** is the battery voltage input with a max voltage of 4.2&nbsp;V. During cellular data mode, the peak current is ~2000&nbsp;mA, respectively, which exceeds the USB port supply current. That is why you must use a dedicated battery.
+- **VBAT** is the battery voltage input with a max voltage of 4.2 V. During cellular data mode, the peak current is ~2000 mA, respectively, which exceeds the USB port supply current. That is why you must use a dedicated battery.
 :::
 
 :::tip IMPORTANT
@@ -82,22 +68,12 @@ This datasheet covers only the specifications of the WisBlock Notecarrier module
 #### Power Supply with External 5V
 
 :::tip Info
-The RAK13102 module and the connected WisBlock Base Board and Core module can be supplied with a regulated 5&nbsp;V DC supply through the P1 connector on the bottom. A matching connector is available with our [M8 Power Connector.](https://store.rakwireless.com/products/m8-power-connector)
+The RAK13102 module and the connected WisBlock Base Board and Core module can be supplied with a regulated 5 V DC supply through the P1 connector on the bottom. A matching connector is available with our [M8 Power Connector.](https://store.rakwireless.com/products/m8-power-connector)
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/ex-power.png" 
-  figureCount="3"
-  caption="5V supply through M8 power connector" 
-   width="50%"
-/>
+> **Image:** 5V supply through M8 power connector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/m8-power.png" 
-  figureCount="4"
-  caption="M8 power connector" 
-   width="30%"
-/>
+> **Image:** M8 power connector
 
 #### Electrical Characteristics
 
@@ -127,78 +103,43 @@ The RAK13102 module and the connected WisBlock Base Board and Core module can be
 The dimensions are without the Blues Notecard!
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/mechanical_drawing.png" 
-  figureCount="5"
-  caption="RAK13102 Mechanical Drawing" 
-   width="50%"
-/>
+> **Image:** RAK13102 Mechanical Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/mxxs1003k6m.png" 
-  figureCount="6"
-  caption="WisConnector PCB Footprint and Recommendations" 
-   width="100%"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
 ##### Power Supply
 
-The Blues.IO Notecard main power supply comes from **VBAT**, which is a battery voltage connected to the WisBlock Base board. **EX_POWER** is the supply from an externally regulated 5&nbsp;V DC supply.
+The Blues.IO Notecard main power supply comes from **VBAT**, which is a battery voltage connected to the WisBlock Base board. **EX_POWER** is the supply from an externally regulated 5 V DC supply.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/power_supply.png" 
-  figureCount="7"
-  caption="RAK13102 Power Supply" 
-   width="90%"
-/>
+> **Image:** RAK13102 Power Supply
 
 ##### SIM Circuit
 
 **Figure 8** shows the schematic of the RAK13102 module with the slot for a standard SIM card and an optional **ESIM** PCB footprint.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/sim_circuit.png" 
-  figureCount="8"
-  caption="RAK13102 Notecarrier Module SIM Circuit" 
-   width="90%"
-/>
+> **Image:** RAK13102 Notecarrier Module SIM Circuit
 
 ##### WisConnector
 
 RAK13102 WisBlock IO slot connector utilizes **I2C** related pins, **ATTNP** via WB_IO5, **VBAT**, **3V3**, and **GND**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/io_connector.png" 
-  figureCount="9"
-  caption="RAK13102 Notecarrier IO Slot Connector" 
-   width="30%"
-/>
+> **Image:** RAK13102 Notecarrier IO Slot Connector
 
 ##### Debug Connector
 
 **Figure 10** shows the RAK13102 USB debugging circuit.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/usb_debug.png" 
-  figureCount="10"
-  caption="RAK13102 USB Debugging" 
-   width="50%"
-/>
+> **Image:** RAK13102 USB Debugging
 
 ##### Blues Notecard M.2 connector
 
 **Figure 11** shows the RAK13102 M.2 connector that is the interface to the Blues.IO Notecards.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/m2-connector.png" 
-  figureCount="11"
-  caption="RAK13102 Module M.2 Connector" 
-   width="60%"
-/>
+> **Image:** RAK13102 Module M.2 Connector
 
 ##### WisBlock Sensor Slots
 
@@ -208,13 +149,5 @@ When assembled in the IO slot, the RAK13102 IO module is covering the standard W
 
 **Figure 12** shows the RAK13102 Sensor Slot Connectors.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/datasheet/sensor-slot.png" 
-  figureCount="12"
-  caption="RAK13102 Module Sensor Slots" 
-   width="80%"
-/>
+> **Image:** RAK13102 Module Sensor Slots
 
-
-
-<RkBottomNav/>

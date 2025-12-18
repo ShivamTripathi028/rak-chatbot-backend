@@ -15,20 +15,17 @@ tags:
     - wisblock
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13302 WisBlock LPWAN Wireless Module
 
 Thank you for choosing **RAK13302 WisBlock LPWAN Wireless Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK13302 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/RAK13302/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/RAK13302/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK13302 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK13302.stp)
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
-
 
 ## Product Description
 
@@ -46,23 +43,22 @@ The module is compatible with the RAK6421 RPi WisBlock HAT and WisBlock Base Boa
     - Based on Semtech SX1262 LoRa chip
     - SKY66122 booster chip
     - LoRaWAN Specification compatible
-    - Supports 902-928&nbsp;MHz
+    - Supports 902-928 MHz
     - LoRaWAN Activation by OTAA/ABP
     - LoRa Point-to-Point (P2P) communication
     - Ultra-Low Power Consumption
-    - Supply Voltage: 5&nbsp;V
-    - Temperature Range: -40°&nbsp;C ~ 85°&nbsp;C
+    - Supply Voltage: 5 V
+    - Temperature Range: -40° C ~ 85° C
 
 - **Module Size**
-    - 25&nbsp;mm x 35&nbsp;mm
+    - 25 mm x 35 mm
 
 ## Prerequisites
 
 To use a **RAK13302**, you need at least a **WisBlock Base** to plug the module in. **WisBlock Base** is the connection to the MCU for the **RAK13302** module. Furthermore, you need a **WisBlock Core** module to use the sensor.
 
 :::warning
-- Due to the high power RF signal output, the module requires power either through the USB port on the WisBlock Base Board or from an external 5&nbsp;V supply voltage.    
+- Due to the high power RF signal output, the module requires power either through the USB port on the WisBlock Base Board or from an external 5 V supply voltage.    
 - Use screws to keep the module firmly in place for proper operation.
 :::
 
-<RkBottomNav/>

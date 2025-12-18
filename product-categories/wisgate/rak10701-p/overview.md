@@ -12,8 +12,6 @@ sidebar_label: Product Overview
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10701-P Field Tester for LoRaWAN Pro
 
 Thank you for choosing **RAK10701-P Field Tester for LoRaWAN Pro** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -46,12 +44,12 @@ The **RAK10701-P Field Tester for LoRaWAN** is a ready-to-use WisNode for evalua
 - Shows min and max RSSI levels
 - Shows min and max distance to gateways/hotspots in range
 - Compatible with WisToolBox and allows wireless configuration via BLE
-- Powered by 3,200&nbsp;mAh battery
+- Powered by 3,200 mAh battery
 - Rechargeable over a USB Type-C connector
 - 320x240 TFT touchscreen
-- 2.3&nbsp;dBi external antenna via RP-SMA connector
-- Operating Temperature: -10°&nbsp;C ~ 60°&nbsp;C
-- Storage Temperature: -40°&nbsp;C ~ 80°&nbsp;C
+- 2.3 dBi external antenna via RP-SMA connector
+- Operating Temperature: -10° C ~ 60° C
+- Storage Temperature: -40° C ~ 80° C
 
 ## Prerequisites
 
@@ -63,4 +61,3 @@ To use a **RAK10701-P**, you need the following:
 - RAK10701-P must be sufficiently charged.
 - RAK10701-P must have access to sky to get a GPS location fix.
 
-<RkBottomNav/>

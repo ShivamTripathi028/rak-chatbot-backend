@@ -9,10 +9,6 @@ image: "https://images.docs.rakwireless.com/accessories/gps-spd/lightning_arrest
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # GPS SPD
 
 Thank you for choosing **GPS SPD** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -30,11 +26,8 @@ By adopting a high pass filter, this product can effectively suppress the low-fr
 ## Product Features
 
 - Connector Type: **N-type male to N-type female**
-- Impedance: **50&nbsp;Ω**
-- Frequency Range: **1500-1650&nbsp;MHz**
-- Power Loss: **≤ 0.3&nbsp;dB**
+- Impedance: **50 Ω**
+- Frequency Range: **1500-1650 MHz**
+- Power Loss: **≤ 0.3 dB**
 - Ingress Protection: **IP65**
 
-
-
-<RkBottomNav/>

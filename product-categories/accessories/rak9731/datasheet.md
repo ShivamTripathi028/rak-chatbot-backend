@@ -9,10 +9,6 @@ image: "https://images.docs.rakwireless.com/accessories/rak9731/rak9731.png"
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Pulsar Cable LMR400 Datasheet
 
 ## Overview
@@ -23,9 +19,9 @@ The Pulsar cable is a high-grade cable, suitable for outdoor applications with *
 
 ### Features
 
--   Cable length variants: 1.5&nbsp;m / 4.9&nbsp;ft, 3&nbsp;m / 9.8&nbsp;ft, 5&nbsp;m/ 16.40&nbsp;ft, 10&nbsp;m/ 32.80&nbsp;ft
+-   Cable length variants: 1.5 m / 4.9 ft, 3 m / 9.8 ft, 5 m/ 16.40 ft, 10 m/ 32.80 ft
 -   Connector: N-type male to N-type female
--   Frequency Range: 0~6&nbsp;GHz
+-   Frequency Range: 0~6 GHz
 -   Cable type: LMR400
 -   VSWR: ≤ 1.5
 
@@ -34,49 +30,39 @@ The Pulsar cable is a high-grade cable, suitable for outdoor applications with *
 | Feature                    | Specifications                                                                                         |
 | :------------------------- | ------------------------------------------------------------------------------------------------------ |
 | Model                      | Pulsar cable                                                                                           |
-| Frequency range            | 0~6&nbsp;GHz                                                                                           |
+| Frequency range            | 0~6 GHz                                                                                           |
 | VSWR                       | ≤ 1.5                                                                                                  |
-| Length                     | 1.5&nbsp;m / 4.9&nbsp;ft, 3&nbsp;m / 9.8&nbsp;ft, <br/>5&nbsp;m/ 16.40&nbsp;ft, 10&nbsp;m/ 32.80&nbsp;ft |
+| Length                     | 1.5 m / 4.9 ft, 3 m / 9.8 ft, 
+5 m/ 16.40 ft, 10 m/ 32.80 ft |
 | Cable type                 | LMR400                                                                                                 |
-| Impedance                  | 50&nbsp;Ω                                                                                              |
+| Impedance                  | 50 Ω                                                                                              |
 | Color                      | Black                                                                                                  |
 | Connector type             | N-type male to N-type female                                                                           |
-| Operation temperature (°C) | -40&nbsp;°C ~ +85&nbsp;°C                                                                              |
+| Operation temperature (°C) | -40 °C ~ +85 °C                                                                              |
 | Humidity range             | 5% ~ 95%                                                                                               |
-
 
 ### Power Loss Report
 
 | Frequency          | 1.5-m Length   | 3-m Length     | 5-m Length     | 10-m Length    |
 | ------------------ | -------------- | -------------- | -------------- | -------------- |
-| 433 - 435&nbsp;MHz | ≤ 0.30&nbsp;dB | ≤ 0.15&nbsp;dB | ≤ 0.65&nbsp;dB | ≤ 1.15&nbsp;dB |
-| 470 - 510&nbsp;MHz | ≤ 0.35&nbsp;dB | ≤ 0.50&nbsp;dB | ≤ 0.70&nbsp;dB | ≤ 1.20&nbsp;dB |
-| 863 - 870&nbsp;MHz | ≤ 0.10&nbsp;dB | ≤ 0.63&nbsp;dB | ≤ 0.85&nbsp;dB | ≤ 1.65&nbsp;dB |
-| 902 - 930&nbsp;MHz | ≤ 0.15&nbsp;dB | ≤ 0.65&nbsp;dB | ≤ 0.90&nbsp;dB | ≤ 1.70&nbsp;dB |
-| 2.4&nbsp;GHz       | ≤ 0.60&nbsp;dB | ≤ 0.95&nbsp;dB | ≤ 1.20&nbsp;dB | ≤ 2.70&nbsp;dB |
-| 4&nbsp;GHz         | ≤ 0.90&nbsp;dB | ≤ 1.10&nbsp;dB | ≤ 2.15&nbsp;dB | ≤ 1.05&nbsp;dB |
+| 433 - 435 MHz | ≤ 0.30 dB | ≤ 0.15 dB | ≤ 0.65 dB | ≤ 1.15 dB |
+| 470 - 510 MHz | ≤ 0.35 dB | ≤ 0.50 dB | ≤ 0.70 dB | ≤ 1.20 dB |
+| 863 - 870 MHz | ≤ 0.10 dB | ≤ 0.63 dB | ≤ 0.85 dB | ≤ 1.65 dB |
+| 902 - 930 MHz | ≤ 0.15 dB | ≤ 0.65 dB | ≤ 0.90 dB | ≤ 1.70 dB |
+| 2.4 GHz       | ≤ 0.60 dB | ≤ 0.95 dB | ≤ 1.20 dB | ≤ 2.70 dB |
+| 4 GHz         | ≤ 0.90 dB | ≤ 1.10 dB | ≤ 2.15 dB | ≤ 1.05 dB |
 
 ### Mechanical Characteristics
 
 #### Connectors
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rak9731/connectors.png"
-  width="45%"
-  caption="Connector Types"
-/>
-
+> **Image:** Connector Types
 
 #### Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rak9731/dimension.png"
-  width="85%"
-  caption="Pulsar Cable Dimensions"
-/>
+> **Image:** Pulsar Cable Dimensions
 
-<b>Where:</b>
-
+**Where:**
 
 - 1 - N-type male connector for LMR400 cable
 - 2 - N-type female connector for LMR400 cable
@@ -85,5 +71,3 @@ The Pulsar cable is a high-grade cable, suitable for outdoor applications with *
 
 <!-- ## Certification -->
 
-
-<RkBottomNav/>

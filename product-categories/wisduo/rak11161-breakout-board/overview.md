@@ -22,17 +22,14 @@ slug: /product-categories/wisduo/rak11161-breakout-board/overview/
 date: 2025-08-14
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11161 WisDuo LoRaWAN + BLE + WiFi Breakout Board
 
 Thank you for choosing **RAK11161 WisDuo LoRaWAN + BLE + WiFi Breakout Board** for your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/quickstart/" target="_blank">Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/at-command-manual/" target="_blank">AT Command Manual</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/datasheet/" target="_blank">Datasheet</a>
-* <a href="https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK11161.step" target="_blank">RAK11161 3D Model</a>
+* [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/quickstart/)
+* [AT Command Manual](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/at-command-manual/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/datasheet/)
+* [RAK11161 3D Model](https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK11161.step)
 
 ## Product Description
 
@@ -51,10 +48,10 @@ By default, RAK11161 runs on the RUI3 (RAKwireless Unified Interface) firmware, 
 - UART interface for AT command interface
 - Based on **STM32WLE5**
 	- Arm 32-bit Cortex-M4
-	- 256&nbsp;kB Flash and 64&nbsp;kB SRAM
+	- 256 kB Flash and 64 kB SRAM
 - WiFi/BLE modem processor based on **Espressif ESP8684**
 	- RISC-V Single-Core CPU
-	- 2&nbsp;MB Flash and 272&nbsp;kB SRAM
+	- 2 MB Flash and 272 kB SRAM
 - **LoRaWAN 1.0.4** specification compliant
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -65,15 +62,14 @@ By default, RAK11161 runs on the RUI3 (RAKwireless Unified Interface) firmware, 
 - Easy-to-use AT command set for STM32WLE5 and LoRa settings via the UART interface
 - Espressif AT commands for configuring ESP8684 WiFi and BLE settings via the UART interface (similar to STM32WLE5 commands)
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10&nbsp;km with optimized antenna
-- Consumes ~6&nbsp;μA with ESP8684 powered down and STM32WLE5 in deep sleep
-- **Supply Voltage**: 3.0&nbsp;V\~3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C\~85°&nbsp;C
-- Dimensions: 29&nbsp;mm x 40&nbsp;mm
+- Long-range: greater than 10 km with optimized antenna
+- Consumes ~6 μA with ESP8684 powered down and STM32WLE5 in deep sleep
+- **Supply Voltage**: 3.0 V\~3.6 V
+- **Temperature range**: -40° C\~85° C
+- Dimensions: 29 mm x 40 mm
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
-You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
+You can find it in our [RUI3 documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide) or get it from our [Download Center](https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/).    
 ::: 
 
-<RkBottomNav/>

@@ -13,9 +13,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK815 WisTrio LPWAN Tracker Datasheet
 
 ## Overview
@@ -39,7 +36,7 @@ Overall, this LoRa device has various functionalities designed in a single board
 - Dedicated battery connector
 - Micro USB interface for charging and configuration
 - Equipped with MEMS and HT sensors + I2C LCD expansion
-- Operation temperature: -20&nbsp;ºC ~ 60&nbsp;ºC
+- Operation temperature: -20 ºC ~ 60 ºC
 
 ## Specifications
 
@@ -49,23 +46,15 @@ The overview shows the RAK815 board and its block diagram. It shows the internal
 
 #### Board Overview
 
-**RAK815 WisTrio LPWAN Tracker** has outer dimensions of **74&nbsp;mm x 43&nbsp;mm 17&nbsp;mm** including the Antenna interface.
+**RAK815 WisTrio LPWAN Tracker** has outer dimensions of **74 mm x 43 mm 17 mm** including the Antenna interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-breakout-board-dimensions.png"
-  width="50%"
-  caption="RAK815 Breakout Board Dimensions"
-/>
+> **Image:** RAK815 Breakout Board Dimensions
 
 #### Block Diagram
 
 Shown below is the System Diagram of the RAK815 Breakout Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/block-diagram.png"
-  width="80%"
-  caption="RAK815 System Diagram"
-/>
+> **Image:** RAK815 System Diagram
 
 ### Hardware
 
@@ -73,11 +62,7 @@ The hardware specification is categorized into three parts. It discusses the int
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-interface.png"
-  width="100%"
-  caption="RAK815 Interface"
-/>
+> **Image:** RAK815 Interface
 
 :::tip NOTE
 The pin numbers in the succeeding tables are sorted from top to bottom, as shown in **Figure 4**.
@@ -85,15 +70,11 @@ The pin numbers in the succeeding tables are sorted from top to bottom, as shown
 
 ##### SWD Debug Interface
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-swd-debug-interface.jpg"
-  width="25%"
-  caption="RAK815 SWD Debug Interface"
-/>
+> **Image:** RAK815 SWD Debug Interface
 
 |  Pin  |    Name    | Description                                            |
 | :---: | :--------: | ------------------------------------------------------ |
-|   1   |   VCC3.3   | 3.3&nbsp;V Power Supply                                |
+|   1   |   VCC3.3   | 3.3 V Power Supply                                |
 |   2   |   SWDIO    | SWD Interface data pin for NRF52832                    |
 |   3   |   SWDCLK   | SWD Interface clock pin for NRF52832                   |
 |   4   | P0.21_NRST | P0.21 for NRF52832, can be used as Reset pin (Button3) |
@@ -101,11 +82,7 @@ The pin numbers in the succeeding tables are sorted from top to bottom, as shown
 
 ##### UART Switch Interface
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-uart-switch-interface.jpg"
-  width="40%"
-  caption="RAK815 UART Switch Interface"
-/>
+> **Image:** RAK815 UART Switch Interface
 
 |  Pin  |  Name   |                      Description                       |
 | :---: | :-----: | :----------------------------------------------------: |
@@ -118,15 +95,11 @@ The pin numbers in the succeeding tables are sorted from top to bottom, as shown
 
 ##### GPS Module Expansion
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-gps-module-expansion.jpg"
-  width="25%"
-  caption="RAK815 GPS Module Expansion"
-/>
+> **Image:** RAK815 GPS Module Expansion
 
 |  Pin  |  Name   | Description                                        |
 | :---: | :-----: | -------------------------------------------------- |
-|   1   | VCC3.3  | 3.3&nbsp;V Power Supply                            |
+|   1   | VCC3.3  | 3.3 V Power Supply                            |
 |   2   |   GND   | Ground                                             |
 |   3   | GPS_TXD | UART TXD Pin for GPS Module                        |
 |   4   | GPS_RXD | UART RXD Pin for GPS Module                        |
@@ -134,26 +107,18 @@ The pin numbers in the succeeding tables are sorted from top to bottom, as shown
 
 ##### Reserved I2C Interface of the LCD
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-reserved-i2c-interface.jpg"
-  width="40%"
-  caption="RAK815 Reserved I2C Interface"
-/>
+> **Image:** RAK815 Reserved I2C Interface
 
 |  Pin  |  Name  | Description             |
 | :---: | :----: | ----------------------- |
 |   1   |  GND   | Ground                  |
-|   2   | VCC3.3 | 3.3&nbsp;V Power Supply |
+|   2   | VCC3.3 | 3.3 V Power Supply |
 |   3   |  SCL   | I2C SCL Clock Line      |
 |   4   |  SDA   | I2C SDA Data Line       |
 
 ##### P1 and P3 Interface PINOUT
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/rak815-p1-and-p3-pinout.png"
-  width="75%"
-  caption="RAK815 P1 and P3 Pinout"
-/>
+> **Image:** RAK815 P1 and P3 Pinout
 
 ##### Extension Interface P1
 
@@ -171,8 +136,8 @@ The pin numbers in the succeeding tables are sorted from top to bottom, as shown
 |  10   |  GND   | Ground                                                    |
 |  11   |  GND   | Ground                                                    |
 |  12   |  GND   | Ground                                                    |
-|  13   | VCC3.3 | 3.3&nbsp;V Power Supply                                   |
-|  14   | VCC3.3 | 3.3&nbsp;V Power Supply                                   |
+|  13   | VCC3.3 | 3.3 V Power Supply                                   |
+|  14   | VCC3.3 | 3.3 V Power Supply                                   |
 
 ##### Extension Interface P3
 
@@ -210,29 +175,13 @@ The board supports the following LoRaWAN frequency channels shown in the table b
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/gps-max-7q-schematic-diagram.png"
-  width="100%"
-  caption="GPS-MAX 7Q Schematic Diagram"
-/>
+> **Image:** GPS-MAX 7Q Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/usb-uart-i2c-with-gps-module-schematic-diagram.jpg"
-  width="100%"
-  caption="USB & UART and I2C with the GPS Module Schematic Diagram"
-/>
+> **Image:** USB & UART and I2C with the GPS Module Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/lora-ble-schematic-diagram.jpg"
-  width="100%"
-  caption="LoRa BLE Schematic Diagram"
-/>
+> **Image:** LoRa BLE Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak815/datasheet/u4-u8-u6-schematic-interface.jpg"
-  width="100%"
-  caption="U4, U8, and U6 Schematic Interface"
-/>
+> **Image:** U4, U8, and U6 Schematic Interface
 
 ### Firmware
 
@@ -250,4 +199,3 @@ Download the latest firmware of RAK813 WisTrio in the table provided below.
 | -------------------------- | -------------------------------------------------------------------- | ---------- |
 | RAK815 (RAK813 BreakBoard) | LoRaWAN Region Support EU868 / US915 / AS923 / AU915 / KR920 / IN865 | OTAA / ABP |
 
-<RkBottomNav/>

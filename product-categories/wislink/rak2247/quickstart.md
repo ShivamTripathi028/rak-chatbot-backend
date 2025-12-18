@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2247 Quick Start Guide
 
 ## Prerequisites
@@ -28,11 +25,7 @@ Before going through each and every step in the installation and guide of the RA
 
 ### What's Included in the Package?
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/quickstart/package.jpg"
-  width="70%"
-  caption="Package Contents"
-/>
+> **Image:** Package Contents
 
 ## Product Configuration
 
@@ -45,11 +38,7 @@ This section explains the basic steps on how to interface the RAK2247 WisLink LP
  If you want to connect the **RAK2247 mPCIe board** to the **Linux PC** directly, make sure to have the PERST# signal (Pin 22) pulled down.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/quickstart/rak2247-pcie.jpg"
-  width="60%"
-  caption="RAK2247 WisLink LPWAN Concentrator to a PCIe-to-USB board"
-/>
+> **Image:** RAK2247 WisLink LPWAN Concentrator to a PCIe-to-USB board
 
 2. Open the command line then enter the command below in order to clone the Github repository that is required for the process to be completed:
 
@@ -65,11 +54,7 @@ ifconfig
 
 An example in **Figure 2** shows the name of the wireless interface “**wlx6045bdf0cf64**”.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/quickstart/network-name.jpg"
-  width="75%"
-  caption="Network Interface Name"
-/>
+> **Image:** Network Interface Name
 
 * Enter the RAK Folder through:
 
@@ -174,4 +159,3 @@ Oct 09 17:52:00 raspberrypi ttn-gateway[721]: # RF packets received by concentra
 Oct 09 17:52:00 raspberrypi ttn-gateway[721]: # CRC_OK: 0.00%, CRC_FAIL: 0.00%, NO_CRC: 0.00%
 ```
 
-<RkBottomNav/>

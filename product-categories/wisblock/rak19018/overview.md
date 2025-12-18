@@ -11,14 +11,12 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19018 WisBlock PoE Module for RAK13800
 
 Thank you for choosing **RAK19018 WisBlock PoE Module for RAK13800** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak19018/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK19018 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK19018.step)
 
@@ -26,9 +24,9 @@ Thank you for choosing **RAK19018 WisBlock PoE Module for RAK13800** in your awe
 
 The RAK19018 is a Power-over-Ethernet module used together with the RAK13800 Ethernet Interface module to draw power from CAT5/CAT6 cables. This PoE module is based on the Silvertel Ag9905MT converter board and compatible with the IEEE 802.3af PoE standard.
 
-The Ag9905MT's signature and control circuit provide the PoE compatibility requirement by the Power Sourcing Equipment (PSE) before applying up to 9&nbsp;Watts of power to the port. This provides a Class 0 signature.
+The Ag9905MT's signature and control circuit provide the PoE compatibility requirement by the Power Sourcing Equipment (PSE) before applying up to 9 Watts of power to the port. This provides a Class 0 signature.
 
-The DC/DC converter operates over a wide input voltage from 36&nbsp;V to 57&nbsp;V and provides a regulated 5&nbsp;V output with built-in short-circuit output protection.
+The DC/DC converter operates over a wide input voltage from 36 V to 57 V and provides a regulated 5 V output with built-in short-circuit output protection.
 
 ## Product Features
 
@@ -37,17 +35,14 @@ The DC/DC converter operates over a wide input voltage from 36&nbsp;V to 57&nbsp
     * Requires RAK13800 Ethernet Module to work
     * Power-over-Ethernet module
     * IEEE802.3af compliant
-    * Input voltage range : 36&nbsp;V to 57&nbsp;V
-    * Output voltage : 5&nbsp;V
-    * Output power: 9&nbsp;W
+    * Input voltage range : 36 V to 57 V
+    * Output voltage : 5 V
+    * Output power: 9 W
     * Short-circuit protection and Over temperature protection
 * **Module Size**
-    * 32&nbsp;mm x 25&nbsp;mm
-
+    * 32 mm x 25 mm
 
 ## Prerequisites
 
 To use a **RAK19018**, you need at least the WisBlock Ethernet module **RAK13800** to plug the module in. The RAK19018 does not have an Ethernet connector. It will get the input voltage from the **RAK13800**, which has an Ethernet connector onboard.
 
-
-<RkBottomNav/>

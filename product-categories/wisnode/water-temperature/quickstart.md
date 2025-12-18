@@ -12,32 +12,24 @@ image: https://images.docs.rakwireless.com/wisnode/water-temperature/water-tempe
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Water Temperature Monitoring Solution Quick Start Guide
 
 ## Prerequisites
 
 Before proceeding with each step for using the Water Temperature Monitoring Solution, make sure to have all the necessary items listed below:
 
-<RkImage
-    src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/sensor-hub-water-temperature-solution-accessories.png"
-    width="80%"
-    caption="Water Temperature Monitoring Solution Package Inclusion"
-/>
+> **Image:** Water Temperature Monitoring Solution Package Inclusion
 
 ### Hardware Tools
 
-- <a href="https://store.rakwireless.com/collections/sensorhub-solution?variant=42505214427334?utm_source=solarpower&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">Water Temperature Monitoring Solution</a>
-- <a href="https://store.rakwireless.com/products/rak-battery-lite-solar-power-solution-rak9154?utm_source=RAK9154SolarBattery&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">Solar Battery Lite for Sensor Hub</a> (optional)
+- [Water Temperature Monitoring Solution](https://store.rakwireless.com/collections/sensorhub-solution?variant=42505214427334?utm_source=solarpower&utm_medium=Document&utm_campaign=BuyFromStore)
+- [Solar Battery Lite for Sensor Hub](https://store.rakwireless.com/products/rak-battery-lite-solar-power-solution-rak9154?utm_source=RAK9154SolarBattery&utm_medium=Document&utm_campaign=BuyFromStore) (optional)
 - Additional accessories: Probe Cable, Probe Splitter, power supply, and others (numbers and variations depending on the use case)
 - An Android or iOS mobile device with Bluetooth and NFC 
 
 ### Software
 
-<a href="https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-mobile/" target="_blank">WisToolBox</a>
+[WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-mobile/)
 
 ## Solution Configuration
 
@@ -49,77 +41,45 @@ If the selected solution utilizes the NB-IoT/LTE CAT-M wireless communication, f
 
 1. Remove the back cover by unscrewing the four screws with a cross screwdriver.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/1.sim-card-insertion.png"
-width="20%"
-caption="Remove the back cover"
-/>
+> **Image:** Remove the back cover
 
 2. Insert the SIM card into the groove, then gently push it into the card slot.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/2.sim-card-insertion.png"
-width="40%"
-caption="Insert the SIM card"
-/>
+> **Image:** Insert the SIM card
 
 #### Sensor Hub Mounting
 
 ##### Wall Mounting
 
-1. Use a 5&nbsp;mm drill bit to drill holes in the wall, then insert the screw anchors into the holes.
+1. Use a 5 mm drill bit to drill holes in the wall, then insert the screw anchors into the holes.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/3.sensor-hub-installation.png"
-width="80%"
-caption="Installation preparation"
-/>
+> **Image:** Installation preparation
 
 2. Secure the mounting bracket to the wall by using tapping screws.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/4.sensor-hub-installation.png"
-width="30%"
-caption="Secure the mounting bracket"
-/>
+> **Image:** Secure the mounting bracket
 
 3. Align the device's hanging tab with the slots on the bracket, then insert the tab into the slots. Pull the device downwards until it snaps into place.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/5.sensor-hub-installation.png"
-width="40%"
-caption="Align the device with the hanging tabs"
-/>
+> **Image:** Align the device with the hanging tabs
 
 ##### Pole Mounting
 
 1. Fix the mounting bracket to the pole using a steel strip.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/6.pole-mounting.png"
-width="20%"
-caption="Fix the mounting bracket"
-/>
+> **Image:** Fix the mounting bracket
 
 :::tip NOTE
-Mount the bracket on a pole with a 50-80&nbsp;mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
+Mount the bracket on a pole with a 50-80 mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
 :::
 
 2. Align the hanging tab of the device with the slots on the bracket, then insert the tab into the slots. Gently pull the device downwards until it securely snaps in place.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/7.pole-mounting.png"
-width="40%"
-caption="Device installation"
-/>
+> **Image:** Device installation
 
 3. Insert a security screw at the top to fasten the device and the bracket together.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/8.pole-mounting.png"
-width="20%"
-caption="Fasten the device and the bracket"
-/>
+> **Image:** Fasten the device and the bracket
 
 ## RAK2560 WisNode Sensor Hub + Water Temperature Sensor Setup
 
@@ -127,11 +87,7 @@ caption="Fasten the device and the bracket"
 
 The Water Temperature Sensor comes pre-assembled with Sensor Probe IO by default at the factory. Therefore, no additional assembly is required.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/water-temperature-sensor.png"
-width="40%"
-caption="Water Temperature Sensor "
-/>
+> **Image:** Water Temperature Sensor 
 
 :::tip NOTE
 - The sensor should avoid contact with organic solvents, alcohol, paint, oils, high-concentration gasses, as well as silicones and other adhesives.
@@ -148,28 +104,20 @@ The water temperature sensor comes pre-assembled with Sensor Probe IO by default
 
 2. Align the white dot symbol on the Sensor Probe IO SP11 connector plug with the white dot symbol on the Sensor Hub SP11 connector socket and push the plug firmly into the socket.
 
-3. Once connected, tighten the locking nut to secure the SPI connection. The Sensor Probe IO can connect to any Sensor Hub SP11 connector port. <br/> Refer to the actual use and connect to the appropriate port, as shown in **Figure 13**.
+3. Once connected, tighten the locking nut to secure the SPI connection. The Sensor Probe IO can connect to any Sensor Hub SP11 connector port. 
+ Refer to the actual use and connect to the appropriate port, as shown in **Figure 13**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/12.connect-sensor-probe-io-and-sensor-hub.png"
-width="45%"
-caption="Connect the Sensor Probe IO"
-/>
+> **Image:** Connect the Sensor Probe IO
 
-
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/water-temperature.png"
-width="40%"
-caption="Installation completed"
-/>
+> **Image:** Installation completed
 
 :::tip NOTE
-The JXBS-3001-SW-RS water temperature sensor must be placed in an area sheltered from wind and rain and wall-mounted at 90&nbsp;degrees perpendicular to the ground. The mounting holes are located in the middle of both sides of the device and the hole diameter is less than 4&nbsp;mm, with a hole spacing of 105&nbsp;mm. Use 3&nbsp;mm self-tapping screws for installation.
+The JXBS-3001-SW-RS water temperature sensor must be placed in an area sheltered from wind and rain and wall-mounted at 90 degrees perpendicular to the ground. The mounting holes are located in the middle of both sides of the device and the hole diameter is less than 4 mm, with a hole spacing of 105 mm. Use 3 mm self-tapping screws for installation.
 :::
 
 ## Power Supply Setup
 
-The Sensor Hub relies on the Sensor Probe IO for connectivity to the water temperature sensors. Consequently, it cannot be powered by batteries alone and requires a connection to either a solar panel or a 12&nbsp;V<sub>DC</sub> power supply for operation.
+The Sensor Hub relies on the Sensor Probe IO for connectivity to the water temperature sensors. Consequently, it cannot be powered by batteries alone and requires a connection to either a solar panel or a 12 V<sub>DC</sub> power supply for operation.
 
 :::tip NOTE
 SensorHub has two models based on the communication mode: LoRaWAN only and LoRaWAN+NB IoT. SensorHub's NB-IoT module supports two LTE (Long-Term Evolution) categories, namely CAT M1 and CAT NB2. CAT M1 offers higher data transfer rates and lower latency, while CAT NB2 offers ultra-low power consumption and a larger coverage range, making it ideal for battery-powered devices requiring long-term connectivity.
@@ -178,48 +126,28 @@ SensorHub has two models based on the communication mode: LoRaWAN only and LoRaW
 ### RAK9154 Solar Battery Installation
 
 :::tip NOTE
-Mount the bracket on a pole with a 50-80&nbsp;mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
+Mount the bracket on a pole with a 50-80 mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
 :::
 
 1. Secure the mounting bracket on the pole with two steel straps.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/14.connect-solar-panel-system.png"
-width="20%"
-caption="Secure the mounting bracket"
-/>
+> **Image:** Secure the mounting bracket
 
 2. Attach the mounting plate to the RAK9154 with two (2) M3 screws.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/15.connect-solar-panel-system.png"
-width="40%"
-caption="Attach the mounting plate"
-/>
+> **Image:** Attach the mounting plate
 
 3. Install the RAK9154 to the back of the solar panel with four (4) screws and nuts.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/16.connect-solar-panel-system.png"
-width="40%"
-caption="Attach RAK9154 to solar panel"
-/>
+> **Image:** Attach RAK9154 to solar panel
 
-4. Connect the cable of the solar panel to the **PV Input** connector of RAK9154. Install two (2) M6 screws to the mounting plate and leave a gap of about 3&nbsp;mm.
+4. Connect the cable of the solar panel to the **PV Input** connector of RAK9154. Install two (2) M6 screws to the mounting plate and leave a gap of about 3 mm.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/17.connect-solar-panel-system.png"
-width="40%"
-caption="Connector the RAK9154"
-/>
+> **Image:** Connector the RAK9154
 
 5. Suspend the solar panel on the mounting bracket, adjust its angle and direction, and then tighten the two (2) M6 screws along with the remaining two screws.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/18.connect-solar-panel-system.png"
-width="40%"
-caption="Install the solar panel combination"
-/>
+> **Image:** Install the solar panel combination
 
 6. Connect Sensor Hub and RAK9154. Use a cable to link the remaining connection port of the Sensor Hub to the lithium battery Output 1 SP11 connection port of RAK9154.
 
@@ -227,23 +155,15 @@ caption="Install the solar panel combination"
 When connecting to RAK9154, ensure that the Sensor Hub is connected to the Output 1 connection port.
 :::
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/connect-sensorhub-rak9154.png"
-width="60%"
-caption="Connect the Sensor Hub and RAK9154"
-/>
+> **Image:** Connect the Sensor Hub and RAK9154
 
 7. Once the connection is complete, the Sensor Hub is ready to be powered up.
 
-### 12&nbsp;V<sub>DC</sub> Power Supply Installation
+### 12 V<sub>DC</sub> Power Supply Installation
 
 1. Connect the power adapter to the external power cable of the Sensor Hub using a circular DC connector.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/21.connect-the-12-vdc-power-supply.png"
-width="40%"
-caption="Power Adapter Connection"
-/>
+> **Image:** Power Adapter Connection
 
 2. Connect the external power cable to the Sensor Hub using the SP11 connector.
 
@@ -251,12 +171,7 @@ caption="Power Adapter Connection"
 
 4. After the plug and socket are connected, tighten the locking nut to secure the connection of the SP11 connector. The external power cable can connect to any Sensor Hub connection port.
 
-
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/22.connect-the-12-vdc-power-supply.png"
-width="40%"
-caption="Connect the external power cable"
-/>
+> **Image:** Connect the external power cable
 
 ## Software Configuration Guide
 
@@ -267,7 +182,7 @@ caption="Connect the external power cable"
 After installing all hardware, connect the power supply. If the power supply consists of a solar panel and a battery, the device will power on automatically once all hardware has been installed.
 
 :::warning
-To prevent damage to the device, refrain from powering up the Sensor Hub before connecting it to the sensor. It is advisable to use the 12&nbsp;V<sub>DC</sub> adapter provided with the Sensor Hub for optimal performance.
+To prevent damage to the device, refrain from powering up the Sensor Hub before connecting it to the sensor. It is advisable to use the 12 V<sub>DC</sub> adapter provided with the Sensor Hub for optimal performance.
 :::
 
 #### Connect Sensor Hub to WisToolBox
@@ -276,61 +191,33 @@ To prevent damage to the device, refrain from powering up the Sensor Hub before 
 
 2. Initiate the app and confirm that NFC and Bluetooth are enabled on your mobile device. Click on **START**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/1.start-app.png"
-width="40%"
-caption="Start App"
-/>
+> **Image:** Start App
 
 3. On the **Select connection mode** menu, choose **NFC Activation**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/2.select-nfc-activation.png"
-width="40%"
-caption="Select NFC Activation"
-/>
+> **Image:** Select NFC Activation
 
 4. Select the **Sensor HUB** option in the device selection interface to establish a connection.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/3.select-sensor-hub.png"
-width="40%"
-caption="Select Sensor Hub"
-/>
+> **Image:** Select Sensor Hub
 
 5. Click the **CONNECT** button to initiate the scanning process for devices.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/4.click-on-the-connect-button.png"
-width="40%"
-caption="Click on the CONNECT button"
-/>
+> **Image:** Click on the CONNECT button
 
 6. Hold your mobile device close to the **N** symbol on the Sensor Hub device.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/5.scanning-in-progress.png"
-width="40%"
-caption="Scanning in progress"
-/>
+> **Image:** Scanning in progress
 
 :::tip NOTE
 The detection of the Sensor Hub device indicates that the device has been successfully powered up.
 :::
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/6.scan-successful.png"
-width="40%"
-caption="Scan Successful"
-/>
+> **Image:** Scan Successful
 
 7. After the connection is established, there will be a synchronization of device data. This process may take some time.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/7.sync-device.png"
-width="40%"
-caption="Sync Device"
-/>
+> **Image:** Sync Device
 
 :::tip NOTE
 - By default, if no connection is established within 30 seconds, the BLE broadcast of the Sensor Hub will automatically shut down. To establish a connection, connect the RAK device immediately after turning on the power or restart the power.
@@ -339,35 +226,19 @@ caption="Sync Device"
 
 8. Upon completion of data synchronization, the app will automatically transition to the **SENSOR HUB INFO** page.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/8.sensor-hub-info-page.png"
-width="40%"
-caption="SENSOR HUB INFO page"
-/>
+> **Image:** SENSOR HUB INFO page
 
 9. While on the **SENSOR HUB INFO** page, configure the Uplink Settings according to the selected network.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/9.uplink-settings-option.png"
-width="40%"
-caption="Uplink Settings option"
-/>
+> **Image:** Uplink Settings option
 
 10. Once configured, click **SAVE SELECTION**, and then the **APPLY** button to implement the configuration options.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/10.apply-the-configuration-options.png"
-width="40%"
-caption="Apply the configuration options"
-/>
+> **Image:** Apply the configuration options
 
 After a few seconds, the synchronization progress will be completed, concluding this process.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/11.commands-applied-successfully.png"
-width="40%"
-caption="Commands applied successfully"
-/>
+> **Image:** Commands applied successfully
 
 ### Sensor Hub Network Configuration
 
@@ -379,48 +250,33 @@ Refer to the [Connect the Gateway to TTN](https://docs.rakwireless.com/product-c
 
 1. Click the **LORA & LORAWAN PARAMETERS** tab. Configure the following parameters:
 
-- <b>Global settings</b>
+- **Global settings**
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/12.global-settings.png"
-width="40%"
-caption="Global Settings"
-/>
+> **Image:** Global Settings
 
 - **Join mode**: Configure the Join mode based on the device's network access mode: **Over-The-Air Activation (OTAA)** or **Activation By Personalization (ABP)**. Make sure it matches the join mode registered on the network server.
-- **Active region**: Set the Active region to the device's frequency plan. Ensure that it is consistent with the gateway and device frequency plan registered on the network server. <br/> Supported frequency bands include CN470, RU864, IN865, EU868, US915, AU915, KR920, AS923-1/2/3/4.
+- **Active region**: Set the Active region to the device's frequency plan. Ensure that it is consistent with the gateway and device frequency plan registered on the network server. 
+ Supported frequency bands include CN470, RU864, IN865, EU868, US915, AU915, KR920, AS923-1/2/3/4.
 
-<b>LoRaWAN keys, ID, EUI</b>
+**LoRaWAN keys, ID, EUI**
 
 - For the **OTAA join mode**, configure the following parameters: **Application EUI**, **Application key**, and **Device EUI**.
 
-  <RkImage
-  src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/13.otaa-join-mode-configuration.png"
-  width="40%"
-  caption="OTAA join mode configuration"
-  />
+  
+> **Image:** OTAA join mode configuration
 
-<b>LoRaWAN parameters</b>
+**LoRaWAN parameters**
 
   - **Application EUI**: Confirm that it matches the device's Application EUI as registered in the network server.
   - **Application key**: Verify its alignment with the device's Application key registered in the network server. Click **GENERATE KEY** to create a new key if needed.
   - **Device EUI**: Confirm that it matches the Device EUI registered in the network server. 
 - For the ABP join mode, configure the required parameters: **Application session key**, **Device address**, and **Network session key**.
 
-<RkImage
-    src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/14.abp-join-mode.png.jpg"
-    width="40%"
-    caption="ABP join mode"
-/>
+> **Image:** ABP join mode
 
-<b>Data on LoRa® network</b>
+**Data on LoRa® network**
 
-
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/15.data-on-lora-network.png"
-width="40%"
-caption="Data on LoRa® network"
-/>
+> **Image:** Data on LoRa® network
 
   * **Confirm mode**: Message confirmation mode.
   * **Enable auto join**: Determine whether to activate automatic network access. When enabled, the device will join the network automatically upon powering up.
@@ -430,11 +286,7 @@ caption="Data on LoRa® network"
 
 2. After clicking **JOIN NETWORK**, a message **Message sent** will appear, indicating that the join network command has been sent.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/16.join-the-network.png"
-width="40%"
-caption="Join the Network"
-/>
+> **Image:** Join the Network
 
 #### NB-IoT/LTE CAT-M1 Configuration
 
@@ -442,27 +294,20 @@ This section primarily introduces the configuration of LTE-M network parameters.
 
 1. Click the **LTE-M PARAMETERS** tab and check the following parameters to ensure that the network is working properly.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/17.view-the-nb-iot-parameters-tab-parameters.png"
-width="40%"
-caption="View the LTE-M Parameters tab"
-/>
+> **Image:** View the LTE-M Parameters tab
 
-<b>LTE-M Network</b>
+**LTE-M Network**
 
 - **OPERATOR**: shows the Network operator. If the operator's name is displayed (for example, *CHINAMOBILE*), it indicates that the device has recognized the SIM card.
 
-<b>IP Network</b>
+**IP Network**
 
 - **STATUS**: If the status is **Activated**, it signifies that the network of the SIM card is functioning normally.
 
 2. Select the **Application** option to configure the cellular network parameters.
  
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/configure-the-cellular-network-parameters.png"
-width="70%"
-caption="Configure the cellular network parameters"
-/>
+
+> **Image:** Configure the cellular network parameters
 
 - **Service**: Choose a service, either AWS IoT Core or Generic MQTT. For this guide, use Generic MQTT as an example.
 - **Server address**: Input the server address. Using the external MQTT broker as an example, enter `broker.hivemq.com`. Enter the address based on your specific use case.
@@ -476,19 +321,12 @@ caption="Configure the cellular network parameters"
 
 3. Following the configuration, click **APPLY** in the command list at the bottom of the interface to implement the changes. If the message **All commands applied successfully** appears, it indicates a successful configuration modification.
  
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/19.apply-the-modified-configuration.png"
-width="70%"
-caption="Apply the modified configuration"
-/>
+
+> **Image:** Apply the modified configuration
 
 4. When configured correctly and successfully connected to the server, the **Connection Status** will show as **connected**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/20.successfully-connected-to-the-server.png"
-width="40%"
-caption="Successfully connected to the server"
-/>
+> **Image:** Successfully connected to the server
 
 ### Sensor Configuration
 
@@ -496,70 +334,45 @@ This section details the configuration process of the water temperature sensor. 
 
 1. To start with, click the **SENSOR PROBE** tab to display the connected water temperature stations on the interface. 
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/21.water-temperature-sensor.png"
-width="40%"
-caption="Water Temperature sensor"
-/>
+> **Image:** Water Temperature sensor
 
 2. Click the dropdown to expand the details of the water temperature station.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/sensor-details.png"
-width="40%"
-caption="Sensor details"
-/>
+> **Image:** Sensor details
 
 - **Water Temperature**
 - **FETCH DATA**: Update the monitoring data from the sensor.
 - **Device details**
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/sensor-details2.png"
-width="40%"
-caption="Sensor details"
-/>
+> **Image:** Sensor details
 
 3. For this example, fetch the data of the water temperature and set the parameters by then choosing the water temperature feature. Configure the periodic uplink data sending, thresholds, and other relevant information for the sensor.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/set-the-sensor-parameters.png"
-width="40%"
-caption="Set the sensor parameters"
-/>
+> **Image:** Set the sensor parameters
 
 - **Sensor data**: Data provided by the sensor.
 - **FETCH DATA**: Update the latest sensor data.
 - **Send uplink if value changes**: Send uplink data if the sensor data changes.
-- **Sensor interval(s)**: The payload sending interval in seconds. It determines how often the sensor sends uplink data to the server, with a range interval from 60~86,400&nbsp;seconds. Set this parameter when the **Send periodic uplink** is enabled.
+- **Sensor interval(s)**: The payload sending interval in seconds. It determines how often the sensor sends uplink data to the server, with a range interval from 60~86,400 seconds. Set this parameter when the **Send periodic uplink** is enabled.
 - **Send periodic uplink**: Send uplink data periodically based on the sensor interval.
 - **Lower threshold**: The minimum acceptable value.
 - **Send uplink if below threshold**: Send uplink data if the value is below the lower threshold.
 - **Upper threshold**: Maximum acceptable value.
 - **Send uplink if above threshold**: Send uplink data if the value exceeds the upper threshold.
-- **Threshold, °&nbsp;C**: Range of acceptable values.
+- **Threshold, ° C**: Range of acceptable values.
 - **Send uplink if between thresholds**: Send uplink data if the value falls within the threshold range.
 
 4. After completing the modifications, a message **Commands in queue** will appear at the bottom of the interface. Click **APPLY** to send the parameter update commands.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/apply-commands.png"
-width="40%"
-caption="Apply commands"
-/>
+> **Image:** Apply commands
 
 5. When the message **All commands applied successfully** appears on the interface, it indicates that the parameter update commands have been successfully sent.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/water-temperature/quickstart/26.commands-applied-successfully.png"
-width="40%"
-caption="Commands applied successfully"
-/>
+> **Image:** Commands applied successfully
 
-<b>Other Operations</b>
+**Other Operations**
 
 - **REMOVE SENSOR PROBE**: Detach the sensor.
 - **RESTORE TO DEFAULT SETTINGS**: Reset the Sensor Probe to its default settings.
 - **UPGRADE SENSOR PROBE**: Update the firmware of the Sensor Probe.
 
-<RkBottomNav/>

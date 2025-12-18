@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK1901 WisBlock Temperature and Humidity Sensor
 
 Thank you for choosing **RAK1901 WisBlock Temperature and Humidity Sensor** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK1901 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak1901/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak1901/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK1901 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK1901.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
@@ -42,15 +40,15 @@ RAK1901 is a WisBlock Sensor which extends the WisBlock system with a Sensirion 
 ## Product Features
 
 * **Sensor specifications**
-    * ±0.2°&nbsp;C temperature accuracy
-    * -40°&nbsp;C to +125°&nbsp;C temperature range
+    * ±0.2° C temperature accuracy
+    * -40° C to +125° C temperature range
     * ±2.0% RH humidity accuracy
     * 0 to 100% humidity range
-    * Voltage Supply: 3.3&nbsp;V
-    * Current Consumption: 0.3&nbsp;uA to 270&nbsp;uA
+    * Voltage Supply: 3.3 V
+    * Current Consumption: 0.3 uA to 270 uA
     * Chipset: Sensirion SHTC3
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -60,4 +58,3 @@ To use a **RAK1901**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

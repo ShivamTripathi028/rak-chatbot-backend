@@ -14,28 +14,24 @@ sidebar_label: Quick Start Guide
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # Meshtastic WisMesh RAK3312 Starter Kit Quick Start Guide
 
 The WisMesh RAK3312 Starter Kit is a versatile DIY kit designed for users who want a simple and reliable Meshtastic node. It is ideal for beginners and hobbyists looking for a hassle-free way to begin building with Meshtastic.
 
-This guide covers the basics for the Meshtastic RAK3312 Starter Kit that are not handled by the <a href="https://meshtastic.org/docs/introduction" target="_blank">Meshtastic documentation</a>.
+This guide covers the basics for the Meshtastic RAK3312 Starter Kit that are not handled by the [Meshtastic documentation](https://meshtastic.org/docs/introduction).
 
-For detailed instructions how to configure the devices for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/getting-started" target="_blank">Meshtastic Getting Started</a> guide.
+For detailed instructions how to configure the devices for the Meshtastic network, follow the [Meshtastic Getting Started](https://meshtastic.org/docs/getting-started) guide.
 
 You can also check the Meshtastic Basic Device Setup Guide:.
 
 <div class="flex items-center flex-col align-center gap-2">
-  <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-basic-device-setup?intsource=docs_center&intmedium=organic&intcampaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&intterm=meshtastic_basic_device_setup&intcontent=documentation_link" class="no-underline text-white bg-rak-primary px-[15px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Basic Device Setup </a>
+  [ Meshtastic Basic Device Setup ](https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-basic-device-setup?intsource=docs_center&intmedium=organic&intcampaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&intterm=meshtastic_basic_device_setup&intcontent=documentation_link)
 </div>
 
 ----
 
 :::tip NOTE
-To make sure that your device runs the latest Meshtastic firmware, download the most recent version of the <a href="https://meshtastic.org/downloads" target="_blank"> Meshtastic firmware</a> and upload it to your RAKwireless device. This ensures compatibility with the Meshtastic network.
+To make sure that your device runs the latest Meshtastic firmware, download the most recent version of the [ Meshtastic firmware](https://meshtastic.org/downloads) and upload it to your RAKwireless device. This ensures compatibility with the Meshtastic network.
 
 - Meshtastic firmware for RAK3312 - **`firmware-rak3312-w.x.yy.zzzzzzz.bin`**
 :::
@@ -46,21 +42,21 @@ Before going through each and every step on using Meshtastic Starter Kit, make s
 
 ### Hardware
 
-- <a href="https://store.rakwireless.com/products/wismesh-rak3312-starter-kit?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=wismesh_rak3312_starter_kit&utm_content=store_link" target="_blank">WisMesh RAK3312 Starter Kit</a>
-- <a href="https://store.rakwireless.com/pages/wisblock?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=your_choice_of_wisblock_modules&utm_content=store_link" target="_blank">Your choice of WisBlock Modules</a>
+- [WisMesh RAK3312 Starter Kit](https://store.rakwireless.com/products/wismesh-rak3312-starter-kit?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=wismesh_rak3312_starter_kit&utm_content=store_link)
+- [Your choice of WisBlock Modules](https://store.rakwireless.com/pages/wisblock?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=your_choice_of_wisblock_modules&utm_content=store_link)
 - USB Cable
-- <a href="https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=li-ion_lipo_battery&utm_content=store_link" target="_blank">Li-Ion/LiPo battery (optional)</a>
-- <a href="https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=solar_charger&utm_content=store_link" target="_blank">Solar charger (optional)</a>
+- [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=li-ion_lipo_battery&utm_content=store_link)
+- [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=solar_charger&utm_content=store_link)
 
 ### Software
 
 The WisBlock Core module of the Meshtastic RAK3312 Starter Kit comes pre-flashed with the Meshtastic firmware.
 
 To connect the device to the Meshtastic network, you will need one of the following configuration tools:
-- <a href="https://meshtastic.org/docs/category/android-app" target="_blank">Android App</a>
-- <a href="https://meshtastic.org/docs/category/apple-apps" target="_blank">Apple App</a>
-- <a href="https://meshtastic.org/docs/software/web-client" target="_blank">Web Client</a>
-- <a href="https://meshtastic.org/docs/software/python/cli" target="_blank">Python CLI</a>
+- [Android App](https://meshtastic.org/docs/category/android-app)
+- [Apple App](https://meshtastic.org/docs/category/apple-apps)
+- [Web Client](https://meshtastic.org/docs/software/web-client)
+- [Python CLI](https://meshtastic.org/docs/software/python/cli)
 
 :::tip NOTE
 Make sure that you have installed one of these applications, you will need it to configure the Meshtastic network.
@@ -74,22 +70,17 @@ Make sure that you have installed one of these applications, you will need it to
 
 The Meshtastic RAK3312 Starter Kit comes with the RAK3312 module already assembled on the WisBlock Base board. The base board provides the USB interface for programming the RAK3312, a power source, and multiple module slots for adding WisBlock components.
 
-
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-**Figure 1** shows how to mount the RAK3312 module on top of a WisBlock Base board (RAK19007). Follow the assembly instructions in the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=wisblock_module_assembly/disassembly_instructions&utm_content=store_link" target="_blank">WisBlock module assembly/disassembly instructions</a> carefully to secure the connection safely. Once attached, secure the module with M1.2 x 3&nbsp;mm screws.
+**Figure 1** shows how to mount the RAK3312 module on top of a WisBlock Base board (RAK19007). Follow the assembly instructions in the [WisBlock module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard?utm_source=docs_center&utm_medium=organic&utm_campaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&utm_term=wisblock_module_assembly/disassembly_instructions&utm_content=store_link) carefully to secure the connection safely. Once attached, secure the module with M1.2 x 3 mm screws.
 
 :::tip NOTE
 Assembly of the RAK3312 on other base boards follows the same procedure. You can find assembly guides for other modules in their respective **Quick Start Guides**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11162/quickstart/rak11162-rak19007-connection.png"
-  width="60%"
-  caption="RAK3312 Mounting Sketch"
-/>
+> **Image:** RAK3312 Mounting Sketch
 
 ##### Disassembling
 
@@ -97,59 +88,35 @@ To remove any WisBlock module, follow these steps:
 
 1. Remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/16.removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Check the module silkscreen for the correct point where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/17.detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply gentle upward pressure at the connector area as shown in **Figure 4,** to detach the module from the base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/18.detaching-module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 #### LoRa and WiFi/BLE Antenna
 
 The Meshtastic Starter Kit includes several antennas:
 
-- A **2&nbsp;dBi rubber LoRa antenna** with a SMA connector and an IPEX-to-SMA pigtail cable.
+- A **2 dBi rubber LoRa antenna** with a SMA connector and an IPEX-to-SMA pigtail cable.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/rubber-antenna.png"
-  width="30%"
-  caption="LoRa Antenna"
-/>
+> **Image:** LoRa Antenna
 
 :::tip NOTE
-Detailed information about the 2&nbsp;dBi rubber antenna can be found on the <a href="https://downloads.rakwireless.com/Accessories/Antenna/Rubber-Antenna/2701C042_Sunnyway_LoRa%20Antenna_SWE047-ZT_20240411.pdf" target="_target">antenna datasheet</a>.
+Detailed information about the 2 dBi rubber antenna can be found on the [antenna datasheet](https://downloads.rakwireless.com/Accessories/Antenna/Rubber-Antenna/2701C042_Sunnyway_LoRa%20Antenna_SWE047-ZT_20240411.pdf).
 :::
 
 - A **LoRa PCB antenna** that can be connected directly to the RAK3312
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/lora-pcb-antenna.png"
-  width="40%"
-  caption="LoRa PCB Antenna"
-/>
+> **Image:** LoRa PCB Antenna
 
 - A **WiFi/BLE PCB antenna** that can be connected directly to the RAK3312
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/quickstart/ble-antenna.png"
-  width="40%"
-  caption="WiFi/BLE PCB Antenna"
-/>
+> **Image:** WiFi/BLE PCB Antenna
 
 :::warning
 Make sure the antenna is securely connected to ensure proper LoRa signal performance. Avoid powering the module without an antenna attached to the IPEX connector, as this can damage the RF section of the chip.
@@ -157,15 +124,10 @@ Make sure the antenna is securely connected to ensure proper LoRa signal perform
 
 RAK3312 has clear labels showing where each antenna connects, as shown in **Figure 8**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3312-antenna-label.svg"
-  width="30%"
-  caption="RAK3312 Antenna Label"
-/>
+> **Image:** RAK3312 Antenna Label
 
 :::tip NOTE
-Detailed information about the RAK3312 WiFi/BLE and LoRa antenna can be found on the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf" target="_blank">863-870&nbsp;MHz antenna datasheet</a> or the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf" target="_blank">902-928&nbsp;MHz antenna datasheet</a>.
+Detailed information about the RAK3312 WiFi/BLE and LoRa antenna can be found on the [863-870 MHz antenna datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf) or the [902-928 MHz antenna datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf).
 :::
 
 :::warning
@@ -174,23 +136,22 @@ When using the LoRa, WiFi, or BLE transceivers, make sure that an antenna is alw
 
 ### Software Setup
 
-To make sure that your device runs the latest Meshtastic firmware, download the most recent version of the <a href="https://meshtastic.org/downloads" target="_blank">Meshtastic firmware</a> and upload it to your RAKwireless device. This ensures compatibility with the Meshtastic network.
+To make sure that your device runs the latest Meshtastic firmware, download the most recent version of the [Meshtastic firmware](https://meshtastic.org/downloads) and upload it to your RAKwireless device. This ensures compatibility with the Meshtastic network.
 
 - Meshtastic firmware - **`firmware-rak3312-w.x.yy.zzzzzzz.bin`**
 
-<b>Flashing the Meshtastic Starter Kit Firmware:</b>
+**Flashing the Meshtastic Starter Kit Firmware:**
 
 The Meshtastic Starter Kits come pre-flashed with the Meshtastic firmware. If you encounter problems, update the Meshtastic firmware to the latest version.
 
-- <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/" target="_blank">Flash ESP32 devices</a>. (link goes to Meshtastic.org)
+- [Flash ESP32 devices](https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/). (link goes to Meshtastic.org)
 
-To configure your device for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration" target="_blank">Meshtastic Configuration Guide</a>.
+To configure your device for the Meshtastic network, follow the [Meshtastic Configuration Guide](https://meshtastic.org/docs/configuration).
 
 ### RAK3312 and WisBlock Base Boards
 
 Detailed information and datasheets can be found in the documentation for the different modules:
 
-- <a href="https://docs.rakwireless.com/product-categories/wisblock/rak3312?intsource=docs_center&intmedium=organic&intcampaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&intterm=rak3312_core_module&intcontent=documentation_link" target="_blank">RAK3312 Core Module</a>
-- <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19007?intsource=docs_center&intmedium=organic&intcampaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&intterm=rak19007_base_board&intcontent=documentation_link" target="_blank">RAK19007 Base Board</a>
+- [RAK3312 Core Module](https://docs.rakwireless.com/product-categories/wisblock/rak3312?intsource=docs_center&intmedium=organic&intcampaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&intterm=rak3312_core_module&intcontent=documentation_link)
+- [RAK19007 Base Board](https://docs.rakwireless.com/product-categories/wisblock/rak19007?intsource=docs_center&intmedium=organic&intcampaign=meshtastic_wismesh_rak3312_starter_kit_documentation_quick_start_guide_page&intterm=rak19007_base_board&intcontent=documentation_link)
 
-<RkBottomNav/>

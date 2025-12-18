@@ -13,8 +13,6 @@ sidebar_label: Product Overview
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10715 WisTrio LTE-M NB-IoT LoRaWAN Development Board
 
 Thank you for choosing **RAK10715 WisTrio LTE-M NB-IoT LoRaWAN Development Board** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,8 +36,8 @@ Overall, the RAK10715 is a powerful and flexible IoT device that provides a rang
 - Nordic nRF52840:
   - Ultra-low-power MCU
   - 32-bit ARM® Cortex-M4F CPU
-  - 4&nbsp;MHz CPU clock
-  - 1&nbsp;MB Flash, 256&nbsp;KB RAM
+  - 4 MHz CPU clock
+  - 1 MB Flash, 256 KB RAM
   - Wide range of connections:
     - I2C, SPI, & Analog inputs
     - Digital inputs and outputs
@@ -53,13 +51,11 @@ Overall, the RAK10715 is a powerful and flexible IoT device that provides a rang
   - Nano SIM and ESIM options
   - Supports LTE CAT M1 and LTE CAT NB2
   - GNSS location
-- Unify Enclosure 100x75x38&nbsp;mm
+- Unify Enclosure 100x75x38 mm
   - IP65 enclosure
   - Prepared for USB access and an external LTE antenna
-  - 3&nbsp;dBi external LTE antenna
+  - 3 dBi external LTE antenna
   - Matching SMA to IPEX connector
   - Internal LoRaWAN and BLE antenna on the mounting plate
   - Internal GNSS antenna
 
-
-<RkBottomNav/>

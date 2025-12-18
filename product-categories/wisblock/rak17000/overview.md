@@ -11,16 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK17000 WisBlock Motor Control Module
 
 Thank you for choosing **RAK17000 WisBlock Motor Control Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK17000 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak17000/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak17000/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK17000 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK17000.stp)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -46,16 +43,15 @@ For WisBlock Core RAK11310:
 
 The RAK17000 is a DC motor driver module. It can be mounted to the IO Slot of the WisBlock Base of your choice. It can drive one stepper motor or two DC motors. The RAK17000 module uses the DRV8833 motor driver IC from Texas Instruments.
 
-
 ## Product Features
 
 - Drive two DC motors or one stepper motor
-- Wide power supply voltage range: 2.7 to 10.8&nbsp;V
+- Wide power supply voltage range: 2.7 to 10.8 V
 - Motor power supply can be from an external source or from the WisBlock Base battery
 - Output current control
-- Selection of power source can be done via 2.54&nbsp;mm 2-pin jumper
+- Selection of power source can be done via 2.54 mm 2-pin jumper
 - Chipset: Texas Instruments DRV8833
-- Module size: 25X35&nbsp;mm
+- Module size: 25X35 mm
 
 ## Prerequisites
 
@@ -65,5 +61,3 @@ To use a **RAK17000**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-<RkBottomNav/>

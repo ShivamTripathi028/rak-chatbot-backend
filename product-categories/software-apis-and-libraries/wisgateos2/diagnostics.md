@@ -22,11 +22,6 @@ sidebar_label: Diagnostics
 date: 2022-08-01
 ---
 
-
-
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Diagnostics
 
 In the **Diagnostics** menu, review the system logs on the gateway and perform checks.
@@ -37,11 +32,7 @@ The **System log** tab displays complete system-level logs, primarily used for d
 
 The **Auto refresh** switch in the top right corner turns automatic log updates on or off.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-syslog.png"
-  width="100%"
-  caption="System log tab"
-/>
+> **Image:** System log tab
 
 ### Download System Log
 
@@ -49,19 +40,11 @@ To download system logs, follow these steps:
 
 1. Navigate to **Settings** > **File browser**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-download-log1.png"
-  width="100%"
-  caption="File browser"
-/>
+> **Image:** File browser
 
 2. Go to **mmcblk0p1** > **syslog**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-download-log2.png"
-  width="100%"
-  caption="syslog"
-/>
+> **Image:** syslog
 
 3. Select the log file based on the timestamp and click to download.
 
@@ -73,11 +56,7 @@ If you need to configure log storage settings or forward logs to an external ser
 
 The **Network utilities** page provides built-in diagnostic tools for network troubleshooting. These tools allow you to check connectivity, trace network routes, and perform DNS lookups directly from the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-network-utilities.png"
-  width="100%"
-  caption="Network utilities tab"
-/>
+> **Image:** Network utilities tab
 
 ### Available Tools
 
@@ -101,4 +80,3 @@ The **Network utilities** page provides built-in diagnostic tools for network tr
 
 3. The results will be displayed in the console output area below.
 
-<RkBottomNav/>

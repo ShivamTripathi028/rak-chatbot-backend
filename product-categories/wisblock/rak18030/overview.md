@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18030 WisBlock Audio PDM Microphone Module
 
 Thank you for choosing **RAK18030 WisBlock Audio PDM Microphone Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK18030 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak18030/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak18030/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK18030 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK18030.stp)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -36,18 +34,18 @@ RAK18030 is a WisBlock Audio that extends the WisBlock system based on the SPK06
 ## Product Features
 
 * **Sensor Specifications**
-    * Voltage supply: **3.3&nbsp;V ~ 3.6&nbsp;V**
-    * Current consumption: **26&nbsp;uA ~ 800&nbsp;uA**
+    * Voltage supply: **3.3 V ~ 3.6 V**
+    * Current consumption: **26 uA ~ 800 uA**
     * Chipset: **SPK0641HT4H-1**
     * PDM Microphone
     * Left or Right Channel Selection
-    * Flat frequency response: 20&nbsp; - 20,000&nbsp;Hz
-    * Low distortion of 2.2% at 115&nbsp;dB SPL
-    * 64.5&nbsp;dB(A) Signal-to-Noise Ratio
+    * Flat frequency response: 20  - 20,000 Hz
+    * Low distortion of 2.2% at 115 dB SPL
+    * 64.5 dB(A) Signal-to-Noise Ratio
     * Omnidirectional sensitivity
 
 * **Module Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
@@ -57,4 +55,3 @@ To use a **RAK18030**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
-<RkBottomNav/>

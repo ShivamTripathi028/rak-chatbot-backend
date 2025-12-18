@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12023 WisBlock Soil Moisture Sensor Connector Module Quick Start Guide
 
 ## Prerequisite
@@ -30,7 +27,6 @@ Before going through each and every step on using the RAK12023 WisBlock module, 
 - [RAK19008 WisBlock IO Extension Cable (optional)](https://store.rakwireless.com/products/wisblock-io-extension-cable-rak19008?utm_source=RAK19008&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
-
 
 #### Software
 
@@ -52,11 +48,7 @@ The RAK12023 module gives information about:
 
 RAK12023 module can be connected to the IO slot of [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) to communicate with the WisBlock Core, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak12023-assembly.png"
-  width="60%"
-  caption="RAK12023 connection to WisBlock Base"
-/>
+> **Image:** RAK12023 connection to WisBlock Base
 
 ### RAK12035 Soil Moisture Sensor Probe
 
@@ -64,11 +56,7 @@ A separate sensor PCB module RAK12035 is required. The RAK12035 is a sensor prob
 
 For more information about RAK12035, refer to the [RAK12035 Soil Moisture Sensor Overview](https://docs.rakwireless.com/product-categories/wisblock/rak12035/overview/#product-description).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak12035-image.png"
-  width="50%"
-  caption="RAK12035 Soil Moisture Sensor"
-/>
+> **Image:** RAK12035 Soil Moisture Sensor
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -76,11 +64,7 @@ For more information about RAK12035, refer to the [RAK12035 Soil Moisture Sensor
 
 The RAK12023 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/mounting-mechanism.png"
-  width="60%"
-  caption="RAK12023 mounting connection to WisBlock Base module"
-/>
+> **Image:** RAK12023 mounting connection to WisBlock Base module
 
 ##### Disassembling
 
@@ -88,27 +72,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/removing_screw.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/detach_silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/detach_module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -118,12 +90,11 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
-
 
 ### Software Configuration and Example
 
@@ -143,27 +114,15 @@ The calibration method in air and water is not very precise. To get more precise
 
 **RAK4631 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak4631-board.png"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 **RAK11200 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak11200-board.png"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 **RAK11310 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak11310-board.png"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 3. Next, copy the following sample code into your Arduino IDE:
 
@@ -342,7 +301,6 @@ void loop()
 ```
 </details>
 
-
 :::tip NOTE
 The above sample code is the [RAK12035 Calibration](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK12035_SoilMoisture/RAK12035_Calibration) code. If you experience any error in compiling the example sketch, check the updated code for your WisBlock Core Module that can be found on the [RAK12035 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK12035_SoilMoisture) and this sample code in Github will work on all WisBlock Core.
 
@@ -354,17 +312,9 @@ Other sample code in the WisBlock Github Repository:
 
 4. Once the example code is open, install the [RAK12035_SoilMoisture](https://github.com/RAKWireless/RAK12035_SoilMoisture) library by clicking the yellow highlighted link, as shown in **Figure 10** and **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak12023-lib.png"
-  width="100%"
-  caption="Accessing the library used for RAK12023 Module"
-/>
+> **Image:** Accessing the library used for RAK12023 Module
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak12023-libinstall.png"
-  width="70%"
-  caption="Installing the compatible library for RAK12023 Module"
-/>
+> **Image:** Installing the compatible library for RAK12023 Module
 
 5. After the successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 12** and **Figure 13**.
 
@@ -372,25 +322,13 @@ Other sample code in the WisBlock Github Repository:
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak4631-selectport.png"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak4631-upload.png"
-  width="100%"
-  caption="Uploading the RAK12023 example code"
-/>
+> **Image:** Uploading the RAK12023 example code
 
 6. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE and select the settings of the Serial Monitor, as shown below in **Figure 14**. Set it into "Newline" and set the baud rate correctly.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/serial-settings.png"
-  width="50%"
-  caption="Setting up the Serial Monitor"
-/>
+> **Image:** Setting up the Serial Monitor
 
 7. Finally, after setting up the Serial Monitor, you'll now be able to see the readings as shown below in **Figure 15**. Follow the steps carefully for you to be able to calibrate your sensor correctly.
 
@@ -398,10 +336,5 @@ If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **
 Upon calibration and before submerging the sensor into the water, following the [Recommended Depth](https://docs.rakwireless.com/product-categories/wisblock/rak12035/quickstart/#recommended-depth) of the RAK12035 Sensor probe is **required**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12023/quickstart/rak12023-serialreadings.png"
-  width="90%"
-  caption="Calibrating the RAK12035 Sensor"
-/>
+> **Image:** Calibrating the RAK12035 Sensor
 
-<RkBottomNav/>

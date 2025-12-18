@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18032 WisBlock Audio Ultrasonic Microphone Module Quick Start Guide
 
 ## Prerequisite
@@ -45,31 +42,19 @@ For more information about RAK18032, refer to the [Datasheet](https://docs.rakwi
 
 RAK18032 module can be connected to the IO slot of the WisBlock Base to communicate with the WisBlock Core. Always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/rak18032_example2.png"
-  width="70%"
-  caption="RAK18032 connection to WisBlock Base"
-/>
+> **Image:** RAK18032 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/rak18032_mounting.png"
-  width="60%"
-  caption="RAK18032 connection to WisBlock Base"
-/>
+> **Image:** RAK18032 connection to WisBlock Base
 
 When using the **RAK4631** board, connect the LoRa and BLE antennas to avoid damage to the board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/rak18032_example3.png"
-  width="60%"
-  caption="LoRa and BLE antennas of RAK4631"
-/>
+> **Image:** LoRa and BLE antennas of RAK4631
 
 ##### Disassembling
 
@@ -77,27 +62,15 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/16.removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/17.detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/18.detaching-module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK18032 uses I2C communication lines, and it can cause possible conflict, especially on other WisBlock Modules connected to Slot A to D of the WisBlock Base.
@@ -107,9 +80,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -121,25 +94,13 @@ The RAK18032 design is based on the SPH0641LU4H-1 microphone module from Knowles
 
 1. Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_1.png"
-  width="90%"
-  caption="Arduino IDE"
-/>
+> **Image:** Arduino IDE
 
 2. Install the latest [RAKwireless Audio Library](https://github.com/RAKWireless/RAKwireless-Audio-library) using the Library Manager of Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/rakwireless_audio_library.png"
-  width="90%"
-  caption="RAKwireless Audio Library"
-/>
+> **Image:** RAKwireless Audio Library
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/rakwireless_audio_library_2.png"
-  width="90%"
-  caption="RAKwireless Audio Library"
-/>
+> **Image:** RAKwireless Audio Library
 
 3. Open the sample code for **RAK18032**.
 
@@ -147,72 +108,35 @@ The RAK18032 design is based on the SPH0641LU4H-1 microphone module from Knowles
 The example codes of RAKwireless Audio Library are compatible with specific WisBlock Core. You have to select the correct WisBlock Core based on what core you used in your application.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_2.png"
-  width="90%"
-  caption="Selecting the sample code for RAK18032"
-/>
+> **Image:** Selecting the sample code for RAK18032
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_3.png"
-  width="90%"
-  caption="Sample code for RAK18032"
-/>
+> **Image:** Sample code for RAK18032
 
 4. Then select the **RAK4631** board and its serial port, as shown in **Figure 12** and **Figure 13**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_4.png"
-  width="90%"
-  caption="Selecting RAK4631 board as the WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 board as the WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_5.png"
-  width="90%"
-  caption="Selecting the serial port of RAK4631 WisBlock Core"
-/>
+> **Image:** Selecting the serial port of RAK4631 WisBlock Core
 
 5. Then upload the code as shown in **Figure 14** and **Figure 15**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_6.png"
-  width="90%"
-  caption="Uploading the RAK18032 code"
-/>
+> **Image:** Uploading the RAK18032 code
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_7.png"
-  width="90%"
-  caption="Uploading the RAK18032 code"
-/>
+> **Image:** Uploading the RAK18032 code
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated example code for your WisBlock Core Module that can be found on the [RAKwireless Audio Library.](https://github.com/RAKWireless/RAKwireless-Audio-library/tree/main/examples)
 :::
 
-6. When you successfully uploaded the sample code, open the Serial Plotter of the Arduino IDE to see the sensor's reading logs. To test the sound detection, you can download a sound-generating app on your smartphone and sweep frequencies starting from 1000&nbsp;Hz to 10000&nbsp;Hz. If you see the logs, then your RAK18032 is properly communicating to the WisBlock core.
+6. When you successfully uploaded the sample code, open the Serial Plotter of the Arduino IDE to see the sensor's reading logs. To test the sound detection, you can download a sound-generating app on your smartphone and sweep frequencies starting from 1000 Hz to 10000 Hz. If you see the logs, then your RAK18032 is properly communicating to the WisBlock core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_8.png"
-  width="90%"
-  caption="Sample code successfully uploaded to RAK4631"
-/>
+> **Image:** Sample code successfully uploaded to RAK4631
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/arduino_example_9.png"
-  width="90%"
-  caption="Opening the Serial Plotter"
-/>
+> **Image:** Opening the Serial Plotter
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18032/quickstart/rak18032-wave.png"
-  width="70%"
-  caption="FFT Plot of 10kHz sample signal"
-/>
+> **Image:** FFT Plot of 10kHz sample signal
 
 :::tip NOTE
 If there is no serial plot graph shown in Arduino 2.0.x, you can try the serial plotter of the legacy Arduino 1.8.x IDE.
 :::
 
-<RkBottomNav/>

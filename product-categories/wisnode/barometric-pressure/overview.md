@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Barometric Pressure Monitoring Sensor
 
 Thank you for choosing the **Barometric Pressure Monitoring Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -46,9 +44,10 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 
 | Device List                             | Description                             |
 |-----------------------------------------|-----------------------------------------|
-| 1 x Sensor Hub<br/>1 x Mounting Kit     | Sensor Hub + SensorHub Installation Kit |
+| 1 x Sensor Hub
+1 x Mounting Kit     | Sensor Hub + SensorHub Installation Kit |
 | 1 x Micro Sensor Probe                  | RAK1902 Barometric Pressure Sensor      |
-| 1 x Power Adapter <br/> 1 x Power Cable | Sensor Hub Power Adapter + Power Cable  |
+| 1 x Power Adapter 
+ 1 x Power Cable | Sensor Hub Power Adapter + Power Cable  |
 | 1 x Cable Tie                           | For wiring or fixing                    |
 
-<RkBottomNav/>

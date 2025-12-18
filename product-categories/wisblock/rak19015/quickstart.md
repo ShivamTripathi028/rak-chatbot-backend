@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19015 WisBlock Battery Power Slot Module Quick Start Guide
 
 ## Prerequisite
@@ -46,25 +43,17 @@ For more information about RAK19015, refer to the [Datasheet](https://docs.rakwi
 
 #### RAK19015 Connection to WisBlock Base
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/rak19015-rechargeable.svg"
-  width="70%"
-  caption="RAK19015 pinout and connector assignments"
-/>
+> **Image:** RAK19015 pinout and connector assignments
 
 :::tip NOTE
-The voltage of the battery must not exceed 4.3&nbsp;V.
+The voltage of the battery must not exceed 4.3 V.
 :::
 
 #### RAK19015 Supplemented by RAK5804 to Support WisBlock Core Reprogramming
 
-Since there is no USB on RAK19015, the only way to upload the code is by using <a href="https://store.rakwireless.com/products/rak5804-wisblock-interface-extension-board" target="_blank">RAK5804</a>.
+Since there is no USB on RAK19015, the only way to upload the code is by using [RAK5804](https://store.rakwireless.com/products/rak5804-wisblock-interface-extension-board).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/rak19015-rechargeable-rak5804.svg"
-  width="70%"
-  caption="RAK19015 and RAK5804 connection to WisBlock Base"
-/>
+> **Image:** RAK19015 and RAK5804 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -72,12 +61,7 @@ Since there is no USB on RAK19015, the only way to upload the code is by using <
 
 The RAK19015 WisBlock Battery Power Slot Module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/mounting-mechanism.png"
-  width="60%"
-  caption="RAK19015 mounting connection to WisBlock Base module"
-/>
-
+> **Image:** RAK19015 mounting connection to WisBlock Base module
 
 ##### Disassembling Procedure
 
@@ -85,27 +69,15 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. Start by removing the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/removing_screws.png"
-  width="60%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/detach_silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/detach_module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -115,18 +87,14 @@ If you will connect other modules to the remaining WisBlock Base slots, check on
 
 ##### Rechargeable Battery
 
-**RAK19015 WisBlock Battery Power Slot Module** can be powered by a rechargeable Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 7**. The matching connector for the rechargeable battery wires is a [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199). A cable assembly for the rechargeable battery connector is also available for purchase in [RAK store](https://store.rakwireless.com/products/battery-connector-cable).
+**RAK19015 WisBlock Battery Power Slot Module** can be powered by a rechargeable Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 7**. The matching connector for the rechargeable battery wires is a [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199). A cable assembly for the rechargeable battery connector is also available for purchase in [RAK store](https://store.rakwireless.com/products/battery-connector-cable).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19015/quickstart/rechargeable.svg"
-  width="50%"
-  caption="Rechargeable battery connector pin"
-/>
+> **Image:** Rechargeable battery connector pin
 
 :::warning
 
 - Improper handling of the battery can be harmful.
-- 3.7 ~ 4.2&nbsp;V Li-Ion batteries are primarily supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- 3.7 ~ 4.2 V Li-Ion batteries are primarily supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - Make sure the battery wires, both rechargeable and non-rechargeable, match the polarity on the RAK19015 board. Not all batteries have the same wiring.
 
 :::
@@ -142,6 +110,3 @@ Before you continue, you should have already set up either an [Arduino BSP](http
 To quickly build your IoT device with less hassle, example codes for WisBlock Core are provided. You can access the codes on the [WisBlock Example code repository](https://github.com/RAKWireless/WisBlock/tree/master/examples). The example codes on folder `common` are compatible with RAK4631, RAK11200, and RAK11310 WisBlock cores.
 The two user LEDs of RAK19015 can be accessed using macrodefinitions `LED_GREEN` / `PIN_LED1` for the green LED and `LED_BLUE` / `PIN_LED2` for the blue LED.
 
-
-
-<RkBottomNav/>

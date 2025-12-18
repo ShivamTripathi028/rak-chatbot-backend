@@ -12,9 +12,6 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7244 WisGate Developer D4
 
@@ -28,7 +25,6 @@ Thank you for choosing **RAK7244 LPWAN Developer D4 Gateway** in your awesome Io
 * [RAK7244 ready to flash Firmware](https://downloads.rakwireless.com/LoRa/Developer-LoRaWAN-Gateway-RAK7244%26RAK7244P/Firmware/RAK7244_Latest_Firmware.zip)
 * [RAK7244 Outdoor Case Assembly Guide](https://docs.rakwireless.com/product-categories/accessories/outdoor-enclosure-kit/overview/#wisgate-developer-d4-rak7244-outdoor-case)
 
-
 :::tip NOTE
 Purchasing the [RAK2013 WisLink Cellular Pi Hat](https://docs.rakwireless.com/product-categories/wislink/rak2013) separately with the intent of adding a cellular feature in your existing RAK7244 WisGate Developer Gateway is not possible. Hence, purchase the RAK7243C/7244C instead, as it is a specifically modified gateway that is composed of RAK2245 and RAK2013.
 :::
@@ -41,7 +37,6 @@ The gateway has a powerful LoRa digital signal processing engine from Semtech SX
 
 Overall, this gateway has various functionalities that are ideal for prototyping, proof-of-concept demonstrations and evaluation of future deployment scenarios. With its ready to use Raspbian based firmware, it is now possible to connect the Gateway to any standard LoRaWAN Server. The device is capable of tackling applications related to Smart Grids, Intelligent Farms and other IoT Enterprise applications.
 
-
 ## Product Features
 
 - Refreshed Case design with a new SBC (**Raspberry Pi 4**)
@@ -52,5 +47,4 @@ Overall, this gateway has various functionalities that are ideal for prototyping
 - Tx Power: **27 dBm Max**
 - Rx Sensitivity: **-139dBm**
 - Integrates **Ublox MAX-7Q GPS module**
-
 

@@ -11,20 +11,11 @@ sidebar_label: Datasheet
 date: 2020-08-22
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK1906 WisBlock Environmental Sensor Module Datasheet
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1906/datasheet/rak1906.png"
-  figureCount="1"
-  caption="RAK1906 WisBlock Environmental Sensor"
-   width="50%"
-/>
+> **Image:** RAK1906 WisBlock Environmental Sensor
 
 ### Description
 
@@ -33,17 +24,17 @@ The RAK1906 WisBlock Environmental Sensor Module, part of the RAK WisBlock Senso
 ### Features
 
 * **Sensor specifications**
-    * Voltage supply: 3.3&nbsp;V
-    * Current consumption: 0.15&nbsp;uA to 350&nbsp;uA
+    * Voltage supply: 3.3 V
+    * Current consumption: 0.15 uA to 350 uA
     * Chipset: BOSCH BME680
-    * Temperature range: -40&nbsp;°C to 85&nbsp;°C
+    * Temperature range: -40 °C to 85 °C
     * Humidity range: 0 to 100%
-    * Pressure range: 300&nbsp;hPa to 1100&nbsp;hPa
-    * Gas sensor response time < 1&nbsp;sec
+    * Pressure range: 300 hPa to 1100 hPa
+    * Gas sensor response time < 1 sec
     * Sensor outputs can be used with the [Bosch BSEC library](https://github.com/BoschSensortec/BSEC-Arduino-library) algorithm to calculate the IAQ (Indoor Air Quality) index
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Specifications
 ### Overview
@@ -52,17 +43,11 @@ The RAK1906 WisBlock Environmental Sensor Module, part of the RAK WisBlock Senso
 
 **Figure 2** shows the mounting mechanism of the RAK12001 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12001 module can be mounted on the slots: **A, B, C, D, E, & F**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1906/datasheet/rak19xx_mounting.png"
-  figureCount="2"
-  caption="RAK1906 WisBlock Environmental Sensor Mounting"
-   width="50%"
-/>
+> **Image:** RAK1906 WisBlock Environmental Sensor Mounting
 
 ### Hardware
 
 The hardware specification is categorized into six parts. It shows the chipset of the module and discusses the pinouts, sensors, and the corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK1906 WisBlock Environmental Sensor Module.
-
 
 ####  Chipset
 
@@ -74,12 +59,7 @@ The hardware specification is categorized into six parts. It shows the chipset o
 
 The RAK1906 WisBlock Environmental Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK1906 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1906/datasheet/rak1906_pinout.svg"
-  figureCount="3"
-  caption="RAK1906 WisBlock Environmental Sensor Pinout"
-   width="60%"
-/>
+> **Image:** RAK1906 WisBlock Environmental Sensor Pinout
 
 :::tip NOTE
 Only the **I2C** related pin, **VDD**, and **GND** are connected to this module.
@@ -91,211 +71,39 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | WB_IO1 | WB_IO2 | WB_IO3 | WB_IO5 | WB_IO4 | WB_IO6 |
 
-
 #### Sensors
 ##### Temperature Sensor
-<table  align="center">
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Symbol</th>
-    <th>Condition</th>
-    <th>Min</th>
-    <th>Typ</th>
-    <th>Max</th>
-    <th>Unit</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Operating Temperature Range</td>
-    <td>T<sub>A</sub></td>
-    <td>Operational</td>
-    <td>-40</td>
-    <td>25</td>
-    <td>85</td>
-    <td>°C</td>
-  </tr>
-  <tr>
-    <td>Supply Current</td>
-    <td>I<sub>DD,T</sub></td>
-    <td>1&nbsp;Hz Forced Mode, Temperature Measurement Only</td>
-    <td></td>
-    <td>1.0</td>
-    <td></td>
-    <td>µA</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Absolute Accuracy Temperature</td>
-    <td>A<sub>T,25</sub></td>
-    <td>25&nbsp;°C</td>
-    <td></td>
-    <td>±0.5</td>
-    <td></td>
-    <td>°C</td>
-  </tr>
-  <tr>
-    <td>A<sub>T,full</sub></td>
-    <td>0-65&nbsp;°C</td>
-    <td></td>
-    <td>±1.0</td>
-    <td></td>
-    <td>°C</td>
-  </tr>
-  <tr>
-    <td>Output Resolution</td>
-    <td>R<sub>T</sub></td>
-    <td>API Output Resolution </td>
-    <td></td>
-    <td>0.01</td>
-    <td></td>
-    <td>°C</td>
-  </tr>
-</tbody>
-</table>
+
+| Parameter | Symbol | Condition | Min | Typ | Max | Unit |
+| --- | --- | --- | --- | --- | --- | --- |
+| Operating Temperature Range | T A | Operational | -40 | 25 | 85 | °C |
+| Supply Current | I DD,T | 1 Hz Forced Mode, Temperature Measurement Only |  | 1.0 |  | µA |
+| Absolute Accuracy Temperature | A T,25 | 25 °C |  | ±0.5 |  | °C |
+| Absolute Accuracy Temperature | A T,full | 0-65 °C |  | ±1.0 |  | °C |
+| Output Resolution | R T | API Output Resolution |  | 0.01 |  | °C |
 
 ##### Humidity Sensor
-<table align="center">
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Symbol</th>
-    <th>Condition</th>
-    <th>Min</th>
-    <th>Typ</th>
-    <th>Max</th>
-    <th>Unit</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Operating Range</td>
-    <td></td>
-    <td></td>
-    <td>-40</td>
-    <td>25</td>
-    <td>85</td>
-    <td>°C</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>0</td>
-    <td></td>
-    <td>100</td>
-    <td>% r.H.</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Full Accuracy Range</td>
-    <td></td>
-    <td></td>
-    <td>0</td>
-    <td></td>
-    <td>65</td>
-    <td>°C</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td></td>
-    <td>10</td>
-    <td></td>
-    <td>90</td>
-    <td>% r.H.</td>
-  </tr>
-  <tr>
-    <td>Supply Current </td>
-    <td>I<sub>DD,H</sub></td>
-    <td>1&nbsp;Hz Forced Mode, <p>Temperature and Humidity Measurement</p></td>
-    <td></td>
-    <td>2.1</td>
-    <td>2.8</td>
-    <td>µA</td>
-  </tr>
-  <tr>
-    <td>Absolute Accuracy</td>
-    <td>A<sub>h</sub></td>
-    <td>20-80% r.H., 25&nbsp;°C, including hysteresis</td>
-    <td></td>
-    <td>±3</td>
-    <td></td>
-    <td>% r.H.</td>
-  </tr>
-</tbody>
-</table>
+
+| Parameter | Symbol | Condition | Min | Typ | Max | Unit |
+| --- | --- | --- | --- | --- | --- | --- |
+| Operating Range |  |  | -40 | 25 | 85 | °C |
+| Operating Range |  |  | 0 |  | 100 | % r.H. |
+| Full Accuracy Range |  |  | 0 |  | 65 | °C |
+| Full Accuracy Range |  |  | 10 |  | 90 | % r.H. |
+| Supply Current | I DD,H | 1 Hz Forced Mode, Temperature and Humidity Measurement |  | 2.1 | 2.8 | µA |
+| Absolute Accuracy | A h | 20-80% r.H., 25 °C, including hysteresis |  | ±3 |  | % r.H. |
 
 ##### Pressure Sensor
-<table align="center">
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Symbol</th>
-    <th>Condition</th>
-    <th>Min</th>
-    <th>Typ</th>
-    <th>Max </th>
-    <th>Unit</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td rowspan="2">Operating Temperature Range</td>
-    <td rowspan="2">T<sub>A</sub></td>
-    <td>Operational</td>
-    <td>-40</td>
-    <td>25</td>
-    <td>85</td>
-    <td rowspan="2">°C</td>
-  </tr>
-  <tr>
-    <td>Full Accuracy</td>
-    <td>0</td>
-    <td></td>
-    <td>65</td>
-  </tr>
-  <tr>
-    <td>Operating Pressure range</td>
-    <td>P</td>
-    <td>Full Accuracy</td>
-    <td>300</td>
-    <td></td>
-    <td>1100</td>
-    <td>hPa</td>
-  </tr>
-  <tr>
-    <td>Supply Current</td>
-    <td>I<sub>DD,LP</sub></td>
-    <td>1&nbsp;Hz Forced Mode, Pressure, and Temperature, Lowest Power</td>
-    <td></td>
-    <td>3.1</td>
-    <td>4.2</td>
-    <td>µA</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Temperature Coefficient Of Offset</td>
-    <td rowspan="2">TCO<sub>P</sub></td>
-    <td rowspan="2">25-40&nbsp;°C, 900&nbsp;hPa</td>
-    <td></td>
-    <td>±1.3</td>
-    <td></td>
-    <td>Pa,K</td>
-  </tr>
-  <tr>
-    <td></td>
-    <td>±10.9</td>
-    <td></td>
-    <td>cm/K</td>
-  </tr>
-  <tr>
-    <td>Absolute Accuracy Pressure</td>
-    <td>A<sub>p,full</sub></td>
-    <td>300-1100&nbsp;hPa <p>0-65&nbsp;°C</p></td>
-    <td></td>
-    <td>±0.6</td>
-    <td></td>
-    <td>hPa</td>
-  </tr>
-</tbody>
-</table>
+
+| Parameter | Symbol | Condition | Min | Typ | Max | Unit |
+| --- | --- | --- | --- | --- | --- | --- |
+| Operating Temperature Range | T A | Operational | -40 | 25 | 85 | °C |
+| Operating Temperature Range | T A | Full Accuracy | 0 |  | 65 | °C |
+| Operating Pressure range | P | Full Accuracy | 300 |  | 1100 | hPa |
+| Supply Current | I DD,LP | 1 Hz Forced Mode, Pressure, and Temperature, Lowest Power |  | 3.1 | 4.2 | µA |
+| Temperature Coefficient Of Offset | TCO P | 25-40 °C, 900 hPa |  | ±1.3 |  | Pa,K |
+| Temperature Coefficient Of Offset | TCO P | 25-40 °C, 900 hPa |  | ±10.9 |  | cm/K |
+| Absolute Accuracy Pressure | A p,full | 300-1100 hPa 0-65 °C |  | ±0.6 |  | hPa |
 
 ##### IAQ algorithm
 
@@ -303,74 +111,14 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 The IAQ is not calculated by the Bosch BME680 directly. The measured sensor values need to be send to the [Bosch BSEC library](https://github.com/BoschSensortec/BSEC-Arduino-library) algorithm to calculate the IAQ (Indoor Air Quality) index.
 :::
 
-<table align="center">
-<thead>
-  <tr>
-    <th>Parameter</th>
-    <th>Symbol</th>
-    <th>Condition</th>
-    <th>Min</th>
-    <th>Typ</th>
-    <th>Max </th>
-    <th>Unit</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Accuracy Status</td>
-    <td>AX<sub>IAQ</sub></td>
-    <td>Android Compatible</td>
-    <td>0</td>
-    <td></td>
-    <td>3</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>IAQ Resolution</td>
-    <td>IAQ<sub>rs</sub></td>
-    <td></td>
-    <td></td>
-    <td>1</td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>IAQ Range</td>
-    <td>IAQ<sub>rg</sub></td>
-    <td></td>
-    <td>0</td>
-    <td></td>
-    <td>500</td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>Sensor-to-sensor Deviation</td>
-    <td>IAQ<sub>S2S</sub></td>
-    <td>All Operation Modes</td>
-    <td></td>
-    <td>±15%<p>±15</p></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td rowspan="2">Durability To Siloxanes </td>
-    <td>IAQ<sub>S2S</sub></td>
-    <td>Sensor-to-sensor Deviation</td>
-    <td></td>
-    <td>±15%<p>±15</p></td>
-    <td></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td>IAQ<sub>drift</sub></td>
-    <td>Drift at Low &amp; High Concentrations</td>
-    <td></td>
-    <td>±1%<p>±4</p></td>
-    <td></td>
-    <td></td>
-  </tr>
-</tbody>
-</table>
+| Parameter | Symbol | Condition | Min | Typ | Max | Unit |
+| --- | --- | --- | --- | --- | --- | --- |
+| Accuracy Status | AX IAQ | Android Compatible | 0 |  | 3 |  |
+| IAQ Resolution | IAQ rs |  |  | 1 |  |  |
+| IAQ Range | IAQ rg |  | 0 |  | 500 |  |
+| Sensor-to-sensor Deviation | IAQ S2S | All Operation Modes |  | ±15% ±15 |  |  |
+| Durability To Siloxanes | IAQ S2S | Sensor-to-sensor Deviation |  | ±15% ±15 |  |  |
+| Durability To Siloxanes | IAQ drift | Drift at Low & High Concentrations |  | ±1% ±4 |  |  |
 
 #### Electrical Characteristics
 ##### Recommended Operating Conditions
@@ -382,39 +130,21 @@ The IAQ is not calculated by the Bosch BME680 directly. The measured sensor valu
 | I<sub>DD</sub>    | Pressure Measure current    |   -   |  714  |   -   |  uA   |
 | I<sub>DD</sub>    | Temperature Measure current |   -   |  350  |   -   |  uA   |
 
-
-
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK1906 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1906/datasheet/rak19xx_mechanic_drawing.png"
-  figureCount="4"
-  caption="RAK1906 WisBlock Environmental Sensor mechanic dimensions"
-   width="60%"
-/>
+> **Image:** RAK1906 WisBlock Environmental Sensor mechanic dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1906/datasheet/mxxs1003k6m.png"
-  figureCount="5"
-  caption="WisConnector PCB footprint and recommendations"
-   width="100%"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK1906 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1906/datasheet/rak1906-schematic.png"
-  figureCount="6"
-  caption="RAK1906 WisBlock Environmental Sensor schematics"
-   width="100%"
-/>
+> **Image:** RAK1906 WisBlock Environmental Sensor schematics
 
-<RkBottomNav/>

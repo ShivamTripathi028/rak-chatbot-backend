@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock Unify Outdoor Enclosure 150x100x45
 
 Thank you for choosing **RAKBox-UO150x100x45** for your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -28,11 +26,9 @@ Moreover, it supports different types of mounting options such as pole, wall, DI
 
 ## Product Features
 - IP67-rated
-- Dimensions L x W x H: 150&nbsp;mm x 100&nbsp;mm x 45&nbsp;mm
+- Dimensions L x W x H: 150 mm x 100 mm x 45 mm
 - Available in two (2) colors: cool gray and white color
 - Two base plate options: **Plain Base Plate** and **WisBlock Bespoke Base Plate**
 - Support the application of various scenarios via optional mounting accessories
 - Allows **customization service** without MOQ and supports CNC machining, painting, label printing, etc.
 
-
-<RkBottomNav/>

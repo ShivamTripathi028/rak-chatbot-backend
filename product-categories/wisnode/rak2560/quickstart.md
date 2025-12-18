@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2560 WisNode Sensor Hub Quick Start Guide
 
 ## Prerequisites
@@ -31,15 +28,11 @@ Before going through each and every step of using the RAK2560 WisNode Sensor Hub
 
 - [WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-mobile/)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/sensor-hub-ecosystem.png"
-  width="80%"
-  caption="Sensor Hub ecosystem"
-/>
+> **Image:** Sensor Hub ecosystem
 
 :::tip NOTE
 
-WisNode Sensor Hub can be powered with batteries or a dedicated power adapter. It supports 2 to 4 battery types: ER18505 3.6&nbsp;V 4000&nbsp;mAh Li-SOCl2 NON-rechargeable lithium batteries which are NOT included upon purchase.
+WisNode Sensor Hub can be powered with batteries or a dedicated power adapter. It supports 2 to 4 battery types: ER18505 3.6 V 4000 mAh Li-SOCl2 NON-rechargeable lithium batteries which are NOT included upon purchase.
 
 You can source the batteries locally or from one of the global electronics distributors:
 1. [Amazon](https://www.amazon.com/EEMB-Capacity-Batteries-Rechargeable-Certified/dp/B07TTGW7XQ/ref=sr_1_1_sspa?crid=3Q1EZ9Y11KCKN&keywords=ER18505&qid=1676374193&sprefix=er18505%2Caps%2C201&sr=8-1-spons&psc=1&smid=A3JZ0E8P9D7DI&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExWFpINDM3V1VLVkdWJmVuY3J5cHRlZElkPUExMDE2MzEzMkRZWDVTQ1VaQURPRyZlbmNyeXB0ZWRBZElkPUEwOTc1NjU3QTFDVFBINFIwUjEyJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==)
@@ -65,7 +58,7 @@ If the Sensor Probe with Temperature, Humidity, and Pressure is used (RAK1901+RA
 2. Use the power supply of your choice that is compatible with the device.
 
 :::tip NOTE
-Using the 12&nbsp;V<sub>DC</sub> adapter provided with the Sensor Hub is recommended. You can also use 4 x EVE ER18505 3.6&nbsp;V Lithium 4000&nbsp;mAh battery and the voltage must be stable.
+Using the 12 V<sub>DC</sub> adapter provided with the Sensor Hub is recommended. You can also use 4 x EVE ER18505 3.6 V Lithium 4000 mAh battery and the voltage must be stable.
 :::
 
 ### Device Configuration via WisToolBox
@@ -74,62 +67,34 @@ Using the 12&nbsp;V<sub>DC</sub> adapter provided with the Sensor Hub is recomme
 
 1. Download and install the WisToolBox App on your smartphone.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/wistoolbox-app.png"
-  width="25%"
-  caption="WisToolBox App"
-/>
+> **Image:** WisToolBox App
 
 2. Launch the app and make sure that the NFC is enabled on your mobile device and the Bluetooth is on. Press **SELECT DEVICE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/app-home-screen.png"
-  width="25%"
-  caption="App home screen"
-/>
+> **Image:** App home screen
 
 3. Select the connection mode to pair the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/connection_mode.png"
-  width="25%"
-  caption="Connection mode"
-/>
+> **Image:** Connection mode
 
 4. Select the Sensor Hub from the list of devices.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/in-app-list-of-devices.png"
-  width="25%"
-  caption="In-app list of devices"
-/>
+> **Image:** In-app list of devices
 
 5. Pair your smartphone and the Sensor Hub by touching your phone to the **N** symbol on the front of the Hub and pressing **CONNECT** in the app. Retain the position of the smartphone touching the **N** symbol on the Hub and wait until the scan is done.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/pairing-the-hub-to-your-smartphone-ready-to-scan.png"
-  width="50%"
-  caption="Pairing the Hub to your smartphone"
-/>
+> **Image:** Pairing the Hub to your smartphone
 
 6. Once the scan is done, a **Scan successful** message will appear.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/scan-successful.png"
-  width="25%"
-  caption="Scan successful"
-/>
+> **Image:** Scan successful
 
 7. Automatic synchronization will start, wait until the process is complete.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/device-sync.png"
-  width="75%"
-  caption="Device syncing"
-/>
+> **Image:** Device syncing
 
 :::tip 
-By default, the BLE advertising of the Sensor Hub is turned off automatically if no connection is established within 30&nbsp;seconds of availability. Connect to the RAK device immediately after powering it on again.
+By default, the BLE advertising of the Sensor Hub is turned off automatically if no connection is established within 30 seconds of availability. Connect to the RAK device immediately after powering it on again.
 <!-- or power it on again. -->
 
 Some Android smartphones require GPS enabled to permit connection to BLE. When GPS is enabled, no sensitive information is used or shared with the application.
@@ -148,11 +113,7 @@ When the data synchronization process is completed, you will see the **SENSOR HU
 - **Documentation** - A link to the RAK Documentation center
 - **Disconnect device** - Break the connection between your smartphone and the Hub
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/sensor-hub-info.png"
-  width="25%"
-  caption="Sensor Hub Info"
-/>
+> **Image:** Sensor Hub Info
 
 #### LoRa and LoRaWAN Parameters
 
@@ -160,19 +121,11 @@ In the **LORA & LORAWAN PARAMETERS** tab, you can set and see all the informatio
 
 1. Configure the **Join mode** and **Active region** in **Global settings**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/lora-and-lorawan-parameters-screen.png"
-  width="25%"
-  caption="LoRa and LoRaWAN parameters screen"
-/>
+> **Image:** LoRa and LoRaWAN parameters screen
 
 2. In the **Active region** menu, select the LoRaWAN band to be used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/active-region-list.png"
-  width="25%"
-  caption="Active region list"
-/>
+> **Image:** Active region list
 
 3. You can see the Sensor Hub **Application EUI**, **Application Key**, and **Device EUI** that are needed to register the device in the network.
 4. You can turn on/off the **Enable auto-join** and **ADR** buttons according to your preferences.
@@ -194,44 +147,26 @@ The table shows the probe, module combination, and functionalities.
 | Probe | Module Combination |             |          | Function            |                     |          |
 | :---: | :----------------: | :---------: | :------: | :-----------------: | :-----------------: | :------: |
 |       |                    | Temperature | Humidity | Barometric Pressure | 3-Axis Acceleration | Gas      |
-| A     | RAK1901            | &#10004;    | &#10004; |                     |                     |          |
-| B     | RAK1902            | &#10004;    | &#10004; | &#10004;            |                     |          |
-| C     | RAK1904            |             |          |                     | &#10004;            |          |
-| D     | RAK1906            | &#10004;    | &#10004; | &#10004;            |                     | &#10004; |
-| AB    | RAK1901+RAK1902    | &#10004;    | &#10004; | &#10004;            |                     |          |
-| AC    | RAK1901+RAK1904    | &#10004;    | &#10004; |                     | &#10004;            |          |
-| BC    | RAK1902+RAK1904    | &#10004;    | &#10004; | &#10004;            | &#10004;            |          |
-| CD    | RAK1904+RAK1906    | &#10004;    | &#10004; | &#10004;            | &#10004;            | &#10004; |
+| A     | RAK1901            | ✔    | ✔ |                     |                     |          |
+| B     | RAK1902            | ✔    | ✔ | ✔            |                     |          |
+| C     | RAK1904            |             |          |                     | ✔            |          |
+| D     | RAK1906            | ✔    | ✔ | ✔            |                     | ✔ |
+| AB    | RAK1901+RAK1902    | ✔    | ✔ | ✔            |                     |          |
+| AC    | RAK1901+RAK1904    | ✔    | ✔ |                     | ✔            |          |
+| BC    | RAK1902+RAK1904    | ✔    | ✔ | ✔            | ✔            |          |
+| CD    | RAK1904+RAK1906    | ✔    | ✔ | ✔            | ✔            | ✔ |
 
+> **Image:** Synchronization in progress
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/synchronization-in-progress.png"
-  width="25%"
-  caption="Synchronization in progress"
-/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/sensor-probe-screen.png"
-  width="25%"
-  caption="Sensor Probe screen"
-/>
+> **Image:** Sensor Probe screen
 
 2. Each sensor has a dropdown menu with the option to set some parameters as well.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/sensor-parameters.png"
-  width="25%"
-  caption="Sensor parameters"
-/>
+> **Image:** Sensor parameters
 
 - **Detailed sensor settings** - Configure the parameter for sending the data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2560/quickstart/sensor-rule-settings.png"
-  width="25%"
-  caption="Detailed sensor settings"
-/>
+> **Image:** Detailed sensor settings
 
 - **Sensor data** - The currently fetched data value
 - **Toogle button sensor data changes** - Send data if there is any change in the sensor value
@@ -251,7 +186,7 @@ The table shows the probe, module combination, and functionalities.
 | Between   | 4   | Data is between the below and above the threshold values.                                                          |
 | Different | 5   | Data is different than the last data.                                                                              |
 
-<b> Example 1:</b>
+** Example 1:**
 
 ```
 Key = 0x03(Hex) = 0b00000011(Bin)
@@ -262,7 +197,7 @@ Key = 0x03(Hex) = 0b00000011(Bin)
 - 0b00000001 = Alert Enable
 - 0b00000010 = Below Enable
 
-<b>Example 2:</b>
+**Example 2:**
 
 ```
 Key = 0x08(Oct) = 0b00001000(Bin)
@@ -272,12 +207,9 @@ Key = 0x08(Oct) = 0b00001000(Bin)
 
 - 0b00001000 = Periodic Enable
 
-
-
 ## Configuring Sensor Hub for LoRaWAN Usage
 
 In this video, you can learn how to visualize your Sensor Hub data in Datacake using a WisGate Edge Gateway and TTN.
-
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: '50%', overflow: 'hidden' }}>
 
@@ -292,12 +224,7 @@ In this video, you can learn how to visualize your Sensor Hub data in Datacake u
   
 </div>
 
-
-
-<br />
-
 :::tip NOTE
 This YouTube tutorial covers the Weather Station, but the basics apply to all solutions.
 :::
 
-<RkBottomNav/>

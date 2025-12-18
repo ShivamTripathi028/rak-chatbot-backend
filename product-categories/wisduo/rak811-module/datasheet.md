@@ -10,12 +10,8 @@ sidebar_label: Datasheet
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK811 WisDuo LPWAN Module Datasheet
-
 
 ## Overview
 
@@ -35,17 +31,17 @@ The RAK811 module is integrated with Semtech’s SX1276 and STM32. You can confi
 - LoRaWAN Activation by OTAA/ABP
 - LoRa Point-to-Point (P2P) communication
 - Easy to use AT Command Set via UART interface with configurable baud rate
-- Maximum output power 100&nbsp;mW (20&nbsp;dBm), adjustable from 5~20&nbsp;dBm
-- High sensitivity at -148&nbsp;dBm, enabling extremely long-range connectivity
-- Long-range - greater than 15&nbsp;km with optimized antenna
-- Low power consumption: 11&nbsp;μA on standby
-- Ultra-Low Power Consumption of 11.9&nbsp;μA (down to 1.11&nbsp;μA @ 2.1&nbsp;V) in sleep mode
-- Multi-channel, dual data buffer (256&nbsp;bytes each)
+- Maximum output power 100 mW (20 dBm), adjustable from 5~20 dBm
+- High sensitivity at -148 dBm, enabling extremely long-range connectivity
+- Long-range - greater than 15 km with optimized antenna
+- Low power consumption: 11 μA on standby
+- Ultra-Low Power Consumption of 11.9 μA (down to 1.11 μA @ 2.1 V) in sleep mode
+- Multi-channel, dual data buffer (256 bytes each)
 - LoRa/FSK/GFSK/OOK modulation, bidirectional two-way communication
 - Long battery life for battery-powered applications
-- LoRa technology is capable of demodulating 20&nbsp;dB below noise level which significantly improves immunity to interference when combined with integrated forward error
-- **Operating temperature**: -30°&nbsp;C ~ 85°&nbsp;C (industrial grade)
-- **Storage temperature**: -40°&nbsp;C ~ 85°&nbsp;C (non-condensing)
+- LoRa technology is capable of demodulating 20 dB below noise level which significantly improves immunity to interference when combined with integrated forward error
+- **Operating temperature**: -30° C ~ 85° C (industrial grade)
+- **Storage temperature**: -40° C ~ 85° C (non-condensing)
 
 ## Specifications
 
@@ -55,11 +51,7 @@ This section covers the hardware and software specifications of RAK811. All disc
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/interfaces/block-diagram.png"
-  width="70%"
-  caption="RAK811 System Block Diagram"
-/>
+> **Image:** RAK811 System Block Diagram
 
 ### Hardware
 
@@ -79,11 +71,11 @@ The RAK811 supports two different frequency variations: **Low Radio Frequency** 
 When using `RF_OUT` pin for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF trace must be away from interference (switching node of DC-DC supply, high current/voltage pulses from controllers of inductive load like motor, signal generators, etc.)
-- RF trace must have 50&nbsp;Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF trace must have 50 Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, make it close to the `RF_OUT` pin.
 - Ground plane optimization is critical on certain antenna types like monopole.
 - GND trace used for RF path return must be directly connected to the GND plane and not be treated as thermal relief.
-- It is recommended for the RF trace to be routed in a curve and not in a sharp 90&nbsp;degrees.
+- It is recommended for the RF trace to be routed in a curve and not in a sharp 90 degrees.
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for [Antenna RF Design](https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test) which includes PCB design, tuning, matching, and RF testing.
 :::
@@ -94,11 +86,7 @@ Low radio frequency hardware supports bandwidth in the regions of EU433 and CN47
 
 ###### Low RF Version Pin Outline
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/pin-definition/rak811_lf.png"
-  width="60%"
-  caption="Board Pinout for RAK811 Low RF"
-/>
+> **Image:** Board Pinout for RAK811 Low RF
 
 ###### Low RF Version Pin Definition
 
@@ -165,18 +153,13 @@ Low radio frequency hardware supports bandwidth in the regions of EU433 and CN47
 | 0            | 1            | 0            | RX mode       |
 | 0            | 0            | 1            | TX mode       |
 
-
 ##### 2. High Radio Frequency Version (RAK811(H))
 
 High radio frequency hardware supports the regions of EU868, US915, AU915, KR920, AS923, and IN865. For more information, refer to the [RF Characteristics](#rf-characteristics).
 
 ###### High RF Version Pin Outline
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/pin-definition/rak811_hf.png"
-  width="60%"
-  caption="Board Pinout for RAK811 High RF"
-/>
+> **Image:** Board Pinout for RAK811 High RF
 
 ###### High RF Version Pin Definition
 
@@ -219,7 +202,6 @@ High radio frequency hardware supports the regions of EU868, US915, AU915, KR920
 
 ##### LoRa Transceiver IC Connection to RAK811(HF) Internal STM32
 
-
 | **LoRa IC Pin** | **STM32 GPIO** |
 | :-------------: | :------------: |
 |      SX_D0      |      PA11      |
@@ -236,7 +218,6 @@ High radio frequency hardware supports the regions of EU868, US915, AU915, KR920
 |    SX_RF_HF     |      PB7       |
 |    SX_RF_RX     |      PB6       |
 |    SX_RF_PA     |      PA4       |
-
 
 ##### RF Switch Control Logic Table
 
@@ -274,39 +255,19 @@ RAK811 supports two UARTs: UART1 (pin6-TX1, pin7-RX1) and UART3 (pin25-TX3, pin2
 
 ###### Low Radio Frequency
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/schematic/rak811-lf-schematic1.png"
-  width="100%"
-  caption="RAK811 Low Frequency Schematic Diagram"
-/>
+> **Image:** RAK811 Low Frequency Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/schematic/rak811-lf-schematic2.png"
-  width="100%"
-  caption="RAK811 Low Frequency Schematic Diagram"
-/>
+> **Image:** RAK811 Low Frequency Schematic Diagram
 
 ###### High Radio Frequency
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/schematic/rak811-hf-schematic1.png"
-  width="100%"
-  caption="RAK811 High Frequency Schematic Diagram"
-/>
+> **Image:** RAK811 High Frequency Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/schematic/rak811-hf-schematic2.png"
-  width="100%"
-  caption="RAK811 High Frequency Schematic Diagram"
-/>
+> **Image:** RAK811 High Frequency Schematic Diagram
 
 ###### Reference Design
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/schematic/rak811-reference-design.png"
-  width="100%"
-  caption="Reference Design"
-/>
+> **Image:** Reference Design
 
 ##### Operating Voltage
 
@@ -314,14 +275,12 @@ RAK811 supports two UARTs: UART1 (pin6-TX1, pin7-RX1) and UART3 (pin25-TX3, pin2
 | :-----: | :-----: | :-----: | :-----: | :-------: |
 | VCC     | 2.1     | 3.3     | 3.45    | Volts (V) |
 
-
 ##### Operating Current
 
 | Feature           | Condition | Minimum                 | Typical | Maximum | Unit |
 | :---------------: | :-------: | :---------------------: | :-----: | :-----: | :--: |
-| Operating Current | TX Power  | 30 (@&nbsp;14&nbsp;dBm) |         |         | mA   |
+| Operating Current | TX Power  | 30 (@ 14 dBm) |         |         | mA   |
 |                   | RX Mode   | 5.5                     |         |         | mA   |
-
 
 ##### Sleep Current
 
@@ -331,24 +290,15 @@ RAK811 supports two UARTs: UART1 (pin6-TX1, pin7-RX1) and UART3 (pin25-TX3, pin2
 |                     | US915     | 1.11           | 11.8           |         | μA   |
 |                     | CN470     | 1.65           | 3.07           |         | μA   |
 
-
 #### Mechanical Characteristics
 
 ##### Module Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/board-layout/ksglqsrthvgpykwcugzy.png"
-  width="50%"
-  caption="RAK811 Physical Dimension"
-/>
+> **Image:** RAK811 Physical Dimension
 
 ##### Layout Recommendation
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/board-layout/pad_layout.png"
-  width="50%"
-  caption="RAK811 Layout"
-/>
+> **Image:** RAK811 Layout
 
 #### Environmental Characteristics
 
@@ -369,14 +319,10 @@ RAK811 supports two UARTs: UART1 (pin6-TX1, pin7-RX1) and UART3 (pin25-TX3, pin2
 Referred to IPC/JEDEC standard:
 
 - MSL Rating : Class 3
-- Peak Temperature : < 250°&nbsp;C
+- Peak Temperature : < 250° C
 - Number of Times : ≤ 2 times
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak811-module/datasheet/reflow-profile/tpe7u1eaanobuih9gq7x.png"
-  width="70%"
-  caption="Reflow Profile for RAK811"
-/>
+> **Image:** Reflow Profile for RAK811
 
 ### Software
 
@@ -397,26 +343,12 @@ The **hex file** contains both the bootloader and the application code. You need
 | RAK811(L) | V3.0.0.14.L | [Download](https://downloads.rakwireless.com/LoRa/RAK811/Firmware/RAK811%28L%29_Latest_Firmware.zip) |
 | RAK811(H) | V3.0.0.14.H | [Download](https://downloads.rakwireless.com/LoRa/RAK811/Firmware/RAK811%28H%29_Latest_Firmware.zip) |
 
-
 ## Certification
 
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289V2_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_FCC_Certification.pdf
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289C_RAK7289V2_RAK7289CV2_KC_Certification.pdf
+- **JRL:** https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_MIC_Certification.zip
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289_RAK7289CV2_RAK7289V2_RoHS_Report.pdf
 
-<RkCertificationIcons certifications={[
-  {
-'ce': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289V2_CE_Certification.pdf'
-},
-{
-'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_FCC_Certification.pdf'
-},
-{
-'kc': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289C_RAK7289V2_RAK7289CV2_KC_Certification.pdf'
-},
-{
-'jrl': 'https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_MIC_Certification.zip'
-},
-{
-'rohs': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289_RAK7289CV2_RAK7289V2_RoHS_Report.pdf'
-}
-]} />
-
-<RkBottomNav/>

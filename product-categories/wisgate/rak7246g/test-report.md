@@ -10,9 +10,6 @@ sidebar_label: Test Report
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # Environment Test Report
 
@@ -26,10 +23,10 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 | No. | Test item                     | Temperature conditions |
 | --- | ----------------------------- | ---------------------- |
-| 1   | Low-temperature storage test  | -10˚&nbsp;C            |
-| 2   | Low-temperature work test     | -10˚&nbsp;C            |
-| 3   | High-temperature storage test | 65˚&nbsp;C             |
-| 4   | High-temperature work test    | 65˚&nbsp;C             |
+| 1   | Low-temperature storage test  | -10˚ C            |
+| 2   | Low-temperature work test     | -10˚ C            |
+| 3   | High-temperature storage test | 65˚ C             |
+| 4   | High-temperature work test    | 65˚ C             |
 
 ## Test Equipment
 
@@ -42,39 +39,23 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 ## Pictures of the Test Equipment
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/1.png"
-  width="50%"
-  caption="Multi-channel temperature tester"
-/>
+> **Image:** Multi-channel temperature tester
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/2.png"
-  width="50%"
-  caption="RAK7246"
-/>
+> **Image:** RAK7246
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/3.png"
-  width="50%"
-  caption="Environmental test chamber"
-/>
+> **Image:** Environmental test chamber
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/4.png"
-  width="50%"
-  caption="LoRa nodes"
-/>
+> **Image:** LoRa nodes
 
 ## Test Requirements
 
 - Low-temperature storage test:
 
-Place the DUT in the temperature chamber and set the low temperature to -10˚&nbsp;C. The DUT can power up and login via SSH when all temperature monitoring points reach -10˚&nbsp;C.
+Place the DUT in the temperature chamber and set the low temperature to -10˚ C. The DUT can power up and login via SSH when all temperature monitoring points reach -10˚ C.
 
 - Low-temperature work test:
 
-a. When all test points reach -10˚&nbsp;C, The DUT can power up and login via SSH.
+a. When all test points reach -10˚ C, The DUT can power up and login via SSH.
 
 b. It can connect to the cloud server to send and receive LoRa packets.
 
@@ -82,11 +63,11 @@ c. The LAN port and Wi-Fi work well.
 
 - High-temperature storage test:
 
-Place the DUT in the temperature chamber and set the high temperature to 65˚&nbsp;C. The DUT can power up and login via SSH when all temperature monitoring points reach 65˚&nbsp;C.
+Place the DUT in the temperature chamber and set the high temperature to 65˚ C. The DUT can power up and login via SSH when all temperature monitoring points reach 65˚ C.
 
 - High-temperature work test:
 
-a. When all test points reach 65˚&nbsp;C, The DUT can power up and login via SSH.
+a. When all test points reach 65˚ C, The DUT can power up and login via SSH.
 
 b. It can connect to the cloud server to send and receive LoRa packets.
 
@@ -96,17 +77,13 @@ c. The LAN port and Wi-Fi work well.
 
 | Chains | Monitoring Point                                           | Color  | Max Temperature |
 | ------ | ---------------------------------------------------------- | ------ | --------------- |
-| ch1    | Raspberry Pi 0' CPU                                        | RED    | 89˚&nbsp;C      |
-| ch2    | Raspberry Pi 0' power chip                                 | YELLOW | 88.1˚&nbsp;C    |
-| ch3    | Raspberry Pi 0' Wi-Fi module                               | BLUE   | 87.6˚&nbsp;C    |
-| ch4    | Heat dissipation aluminum of RAK2245                       | PURPLE | 85.8˚&nbsp;C    |
-| ch5    | The internal temperature of the environmental test chamber | WHITE  | 65˚&nbsp;C      |
+| ch1    | Raspberry Pi 0' CPU                                        | RED    | 89˚ C      |
+| ch2    | Raspberry Pi 0' power chip                                 | YELLOW | 88.1˚ C    |
+| ch3    | Raspberry Pi 0' Wi-Fi module                               | BLUE   | 87.6˚ C    |
+| ch4    | Heat dissipation aluminum of RAK2245                       | PURPLE | 85.8˚ C    |
+| ch5    | The internal temperature of the environmental test chamber | WHITE  | 65˚ C      |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/5.png"
-  width="75%"
-  caption="Temperature monitoring points"
-/>
+> **Image:** Temperature monitoring points
 
 ## Test Results
 
@@ -117,29 +94,13 @@ c. The LAN port and Wi-Fi work well.
 | High-temperature storage | The DUT can power up and login via SSH.                                   | PASS       |
 | High-temperature work    | Can send and receive LoRa packets normally and the Wi-Fi also works well. | PASS       |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/6.png"
-  width="75%"
-  caption="Send and receive LoRa packets at -10 ℃"
-/>
+> **Image:** Send and receive LoRa packets at -10 ℃
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/7.png"
-  width="75%"
-  caption="Send and receive packets at 65 ℃"
-/>
+> **Image:** Send and receive packets at 65 ℃
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/8.png"
-  width="75%"
-  caption="Wi-Fi works well at -10 ℃"
-/>
+> **Image:** Wi-Fi works well at -10 ℃
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/testing-report/9.png"
-  width="75%"
-  caption="Wi-Fi works well at 65 ℃"
-/>
+> **Image:** Wi-Fi works well at 65 ℃
 
 ## Test Date and Location
 

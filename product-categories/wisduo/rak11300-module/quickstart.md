@@ -11,9 +11,6 @@ slug: /product-categories/wisduo/rak11300-module/quickstart/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11300 WisDuo LPWAN Module Quick Start Guide
 
 This guide covers the following topics:
@@ -32,15 +29,13 @@ Before going through the steps of installing the RAK11300 WisDuo LPWAN Module, m
 
 ### Hardware Tools
 
-1. <a href="https://store.rakwireless.com/products/wisduo-lpwan-module-rak11300?utm_source=RAK11300WisDuoLPWANModule&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">**RAK11300 WisDuo LPWAN Module**</a>
+1. [**RAK11300 WisDuo LPWAN Module**](https://store.rakwireless.com/products/wisduo-lpwan-module-rak11300?utm_source=RAK11300WisDuoLPWANModule&utm_medium=Document&utm_campaign=BuyFromStore)
 2. Windows PC
 3. USB to UART TTL adapter
 4. USB connection and cable for UF2 firmware update
 
-
 ### Software Tools
-1. Serial Terminal software like <a href="https://downloads.rakwireless.com/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip" target="_blank">RAK Serial Port Tool</a>.
-
+1. Serial Terminal software like [RAK Serial Port Tool](https://downloads.rakwireless.com/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip).
 
 #### List of Acronyms
 
@@ -59,29 +54,23 @@ Before going through the steps of installing the RAK11300 WisDuo LPWAN Module, m
 | NWKSKEY |               Network Session Key                |
 | APPSKEY |             Application Session Key              |
 
-
 ## Product Configuration
 
 ### Interface with RAK11300
 
-RAK11300 module can be configured using AT commands via the UART interface. You need a USB to UART TTL adapter to connect the RAK11300 to the PC's USB port and a serial terminal tool. You can use <a href="https://downloads.rakwireless.com/#LoRa/Tools" target="_blank">RAK Serial Port Tool</a>, so you can easily send AT commands and view the replies from the console output.
+RAK11300 module can be configured using AT commands via the UART interface. You need a USB to UART TTL adapter to connect the RAK11300 to the PC's USB port and a serial terminal tool. You can use [RAK Serial Port Tool](https://downloads.rakwireless.com/#LoRa/Tools), so you can easily send AT commands and view the replies from the console output.
 
 You can also use the USB pins of RAK11300 to send AT commands and update the firmware via `.uf2` firmware file.
 
 #### Connect to the RAK11300
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/rak11300_connection.png"
-  width="55%"
-  caption="RAK11300 Module Connection"
-  zoomMode={true}
-/>
+> **Image:** RAK11300 Module Connection
 
-1. Connect the UART pins of RAK11300 to the USB port of a general-purpose computer using a USB to UART TTL adapter like <a href="https://store.rakwireless.com/collections/accessories/products/daplink-tool" target="_blank">RAKDAP1</a>.
+1. Connect the UART pins of RAK11300 to the USB port of a general-purpose computer using a USB to UART TTL adapter like [RAKDAP1](https://store.rakwireless.com/collections/accessories/products/daplink-tool).
 
-2. You can also establish a direct USB connection to the USB Data pins (+) and (-) of the RAK11300. However, you still need to power the RAK11300 via external 3.3&nbsp;V on the VDD lines. You cannot use VBUS of the USB port of the PC because it is still at 5V level.
+2. You can also establish a direct USB connection to the USB Data pins (+) and (-) of the RAK11300. However, you still need to power the RAK11300 via external 3.3 V on the VDD lines. You cannot use VBUS of the USB port of the PC because it is still at 5V level.
 
-3. Prepare a serial terminal software like the <a href="https://downloads.rakwireless.com/#LoRa/Tools" target="_blank">RAK Serial Port Tool</a>.
+3. Prepare a serial terminal software like the [RAK Serial Port Tool](https://downloads.rakwireless.com/#LoRa/Tools).
 
 4. Configure the serial communication tool by selecting the proper port detected by the computer and configure the link as follows:
 
@@ -110,14 +99,9 @@ In this guide, you need to have a working gateway that is connected to TTN, or y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/4.ttn-context.png"
-  width="95%"
-  caption="RAK11300 EVB in the context of the TTN"
-  zoomMode={true}
-/>
+> **Image:** RAK11300 EVB in the context of the TTN
 
-As shown in **Figure 2**, The Things Stack (TTN V3) is an open-source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments, as well as for small, local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliancy and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries</a>.
+As shown in **Figure 2**, The Things Stack (TTN V3) is an open-source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments, as well as for small, local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliancy and interoperability. This project is actively maintained by [The Things Industries](https://www.thethingsindustries.com/).
 
 LoRaWAN is a protocol for low-power wide-area networks. It allows for large-scale Internet of Things deployments where low-powered devices efficiently communicate with Internet-connected applications over long-range wireless connections.
 
@@ -125,70 +109,35 @@ The RAK11300 WisDuo module can be part of this ecosystem as a device, and the ob
 
 #### Register to TTN and Create LoRaWAN Applications
 
-1. The first step is to go to <a href="https://console.cloud.thethings.network/" target="_blank">The Things Network platform</a> and select a cluster, as shown in **Figure 3**.
+1. The first step is to go to [The Things Network platform](https://console.cloud.thethings.network/) and select a cluster, as shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_1.png"
-  width="100%"
-  caption="Selecting Cluster in TTN V3"
-  zoomMode={true}
-/>
+> **Image:** Selecting Cluster in TTN V3
 
 You can use the same login credentials on the TTN V2 if you have one. If you have no account yet, you need to create one.
 
 2. To register as a new user to TTN, click on **Login with The Things ID**, then select **Register** on the next page, as shown in **Figure 4** and **Figure 5**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_2.png"
-  width="100%"
-  caption="Login using TTN account"
-  zoomMode={true}
-/>
+> **Image:** Login using TTN account
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_3.png"
-  width="100%"
-  caption="Registration of new account"
-  zoomMode={true}
-/>
+> **Image:** Registration of new account
 
 3. You should now be on the step of creating your TTN account. Fill in all the necessary details and activate your account.
 
 4. After creating an account, you should log in on the platform using your username/email and password, then click **Submit**, as shown in **Figure 6**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_4.png"
-  width="100%"
-  caption="Logging in to TTN platform"
-  zoomMode={true}
-/>
+> **Image:** Logging in to TTN platform
 
 5. Click **Authorize** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_5.png"
-  width="100%"
-  caption="Authorization to TTN"
-  zoomMode={true}
-/>
+> **Image:** Authorization to TTN
 
 6. Now that you are logged in to the platform. The next step is to create an application. Click **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_6.png"
-  width="100%"
-  caption="Creating TTN application for your LoRaWAN devices"
-  zoomMode={true}
-/>
+> **Image:** Creating TTN application for your LoRaWAN devices
 
 7. To have an application registered, input first the specific details and necessary information about your application, then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_7.png"
-  width="100%"
-  caption="Details of the TTN application"
-  zoomMode={true}
-/>
+> **Image:** Details of the TTN application
 
 If there is no error on the previous step, you should now be on the application console page. The next step is to add end-devices to your TTN application. LoRaWAN specification enforces that each end-device has to be personalized and activated. There are two options for registering devices depending on the activation mode selected. Activation can be done either via Over-The-Air-Activation (OTAA) or Activation-By-Personalization (ABP).
 
@@ -196,28 +145,13 @@ If there is no error on the previous step, you should now be on the application 
 
 1. Go to your application console to be able to register a device. To start adding an OTAA end-device, you need to click **+ Add end device**, as shown in **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_8.png"
-  width="100%"
-  caption="Add end device"
-  zoomMode={true}
-/>
+> **Image:** Add end device
 
 2. To register the module, you need to click first **Manually** then configure the **Frequency Plan**, **LoRaWAN Version**, and **Regional Parameter version**, as shown in **Figure 11** and **Figure 12**. By default, TTN V3 will be setting your device via OTAA mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_9.png"
-  width="100%"
-  caption="Manually register device to TTN"
-  zoomMode={true}
-/>
+> **Image:** Manually register device to TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_10.png"
-  width="65%"
-  caption="Device configuration"
-  zoomMode={true}
-/>
+> **Image:** Device configuration
 
 3. Then input the OTAA joining parameters **DevEUI**, **AppEUI**, and **AppKey**. You can click generate button on the side of the parameters **DevEUI** and **AppKey** to generate unique combinations. If your device has **DevEUI** on its label or sticker, you must use it to make sure your device uniqueness. The **AppKey** needs to be generated. **AppKey** can be left as all zero or with a specific hexadecimal value. Also, you can add a more descriptive **End device ID** for your device.
 
@@ -229,12 +163,7 @@ It is advisable to use a meaningful **End device ID** that will match your devic
 
 4. After putting all the details, click **Register end device** to end your device registration, as shown in **Figure 13**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_11.png"
-  width="65%"
-  caption="OTAA Device Registration"
-  zoomMode={true}
-/>
+> **Image:** OTAA Device Registration
 
 5. You should now be able to see the device on the TTN console after you fully register your device, as shown in **Figure 14**.
 
@@ -247,13 +176,7 @@ The three OTAA parameters on the TTN device console are MSB by default.
 These parameters are always accessible on the device console page, as shown in **Figure 14**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_14.png"
-  width="95%"
-  caption="OTAA device successfully registered to TTN"
-  zoomMode={true}
-/>
-
+> **Image:** OTAA device successfully registered to TTN
 
 #### OTAA Configuration for TTN
 
@@ -281,12 +204,7 @@ If you do not receive an `OK` response or any reply, check the following:
 - When powering the device via a USB port, make sure the USB cable is in good condition.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/at_ok.png"
-  width="55%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the OTAA LoRaWAN parameters in RAK11300:
 
@@ -321,12 +239,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=2`.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/otaaconfig.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 **List of band parameter options**
 
@@ -347,7 +260,6 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=2`.
 |  12  |     RU864     |
 
 3. After the configuration of the LoRaWAN parameters, the next step is to set up the EUIs and key. You need to use the values from the TTN console you configured in the earlier steps.
-
 
 - Device EUI: **70B3D57ED0046DBD**
 - Application EUI: **0000000000000000**
@@ -371,28 +283,13 @@ Set the Application Key.
 AT+APPKEY=FB55B2F3409A5E2AF3442AC2E99BBD14
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/otaaeuis.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 3. After EUI and keys configuration, you need to restart the device for the changes to take effect. You can do this by inputting the `ATZ` command or pushing the reset button. The Serial port connection is lost after the `ATZ` command or pushing the reset button. The connection must be re-established on the connected computer before log output can be seen or AT commands can be entered again. You must be able to see the summary of configurations when you reconnect your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/atz.png"
-  width="55%"
-  caption="Reset the Device"
-  zoomMode={true}
-/>
+> **Image:** Reset the Device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/otaa_summary.png"
-  width="55%"
-  caption="Summary of Device Parameters"
-  zoomMode={true}
-/>
+> **Image:** Summary of Device Parameters
 
 4. After checking if the parameters are properly set, you can now join the network and send the payload.
 
@@ -426,50 +323,23 @@ AT+SEND=2:1234
 
 6. Send command format: **`AT+SEND=<port>:<payload>`**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/join_send.png"
-  width="55%"
-  caption="OTAA Joining and Sample payload"
-  zoomMode={true}
-/>
+> **Image:** OTAA Joining and Sample payload
 
 7. You can see the data sent by the RAK11300 module on the TTN device console *Live data* section. Also, the *Last seen* info should be a few seconds or minutes ago.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/otaasend.png"
-  width="100%"
-  caption="OTAA Test Sample Data Sent Viewed in TTN"
-  zoomMode={true}
-/>
-
+> **Image:** OTAA Test Sample Data Sent Viewed in TTN
 
 #### TTN ABP Device Registration
 
 1. To register an ABP device, go to your application console and select the application where you want your device to be added. Then click **+ Add end device**, as shown in **Figure 22**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_8.png"
-  width="100%"
-  caption="Adding ABP Device"
-  zoomMode={true}
-/>
+> **Image:** Adding ABP Device
 
 2. To register the module as an ABP device, you need to select **Manually** then click **Show advance activation, LoRaWAN class and cluster settings**. This will allow you to change the activation mode to **Activation by personalization (ABP)**, as shown in **Figure 23** and **Figure 24**. By default, TTN V3 registers a device via OTAA, so you need to make sure ABP is selected. You can also enable other **LoRaWAN class capabilities** here.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_9.png"
-  width="100%"
-  caption="Manually register device to TTN"
-  zoomMode={true}
-/>
+> **Image:** Manually register device to TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_1_abp.png"
-  width="65%"
-  caption="Selecting ABP and LoRaWAN version"
-  zoomMode={true}
-/>
+> **Image:** Selecting ABP and LoRaWAN version
 
 3. At this step, input the ABP parameters needed by the device. You need to generate the parameters by clicking the Generate button. You must have values for **Device address**, **AppSKey**, and **NwkSKey**. The DevEUI is not really needed in ABP, but you can add that, too. Check if your module has a DevEUI on the sticker or QR that you can scan. You can use this as the DevEUI.
 
@@ -483,21 +353,11 @@ It is advisable to use a meaningful **End device ID** that will match and descri
 
 4. After all is configured, you can now click **Register end device** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_2_abp.png"
-  width="65%"
-  caption="ABP Device Configuration"
-  zoomMode={true}
-/>
+> **Image:** ABP Device Configuration
 
 5. You should now be able to see the device on the TTN console after you fully registered your device, as shown in **Figure 26**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/image_5_abp.png"
-  width="100%"
-  caption="ABP device successfully registered to TTN"
-  zoomMode={true}
-/>
+> **Image:** ABP device successfully registered to TTN
 
 #### ABP Configuration for TTN
 
@@ -519,12 +379,7 @@ Confirm that the device is powered on correctly.
 If you're powering the device via a USB port, make sure the USB cable is in good condition.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/at_ok.png"
-  width="55%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the ABP LoRaWAN parameters in RAK11300:
 
@@ -559,12 +414,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=2`.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abpconfig.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 **List of band parameter options**
 
@@ -608,28 +458,13 @@ Set the Network Session Key.
 AT+NWKSKEY=351F9B3C6468886E9B811FE596AD38BF
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abpeuis.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 4. After the Device address and sessions keys configuration, you need to restart the device for the changes to take effect. You can do this by either inputting the `ATZ` command or pushing the reset button. The Serial port connection is lost after the ATZ command or pushing the reset button. The connection must be re-established on the connected computer before log output can be seen or AT commands can be entered again. You must be able to see the summary of configurations when you reconnect your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abp_atz.png"
-  width="55%"
-  caption="Reset the Device"
-  zoomMode={true}
-/>
+> **Image:** Reset the Device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abp_summary.png"
-  width="55%"
-  caption="Summary of Device Parameters"
-  zoomMode={true}
-/>
+> **Image:** Summary of Device Parameters
 
 5. After checking if the parameters are properly set, you can now join the network and send the payload.
 
@@ -660,22 +495,11 @@ If your LoRaWAN payload didn't reach the TTN, check if your device is within rea
 After checking all the things above, try to send LoRaWAN payloads again.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abpjoin.png"
-  width="55%"
-  caption="ABP Uplink Sent to TTN server"
-  zoomMode={true}
-/>
+> **Image:** ABP Uplink Sent to TTN server
 
 8. You can see the data sent by the RAK11300 module on the TTN device console *Live data* section and the *Last seen* info should be few seconds ago.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abpsend.png"
-  width="100%"
-  caption="OTAA Test Sample Data Sent Viewed in TTN"
-  zoomMode={true}
-/>
+> **Image:** OTAA Test Sample Data Sent Viewed in TTN
 
 :::tip NOTE
 
@@ -686,15 +510,9 @@ The module is not tracking the frame counters when it resets via `ATZ` or when p
 
 In this section, it shows how to connect the RAK11300 module to the ChirpStack platform.
 
+> **Image:** RAK11300 Module in the Context of the ChirpStack Platform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/23.chirpstack-platform.png"
-  width="60%"
-  caption="RAK11300 Module in the Context of the ChirpStack Platform"
-  zoomMode={true}
-/>
-
-The ChirpStack, previously known as the LoRaServer project, provides open-source components for building LoRaWAN networks. Like the case of the TTN, the RAK11300 module is located in the periphery and will transmit the data to the backend servers through a LoRa gateway. Learn more about <a href="https://www.chirpstack.io/" target="_blank">ChirpStack</a>.
+The ChirpStack, previously known as the LoRaServer project, provides open-source components for building LoRaWAN networks. Like the case of the TTN, the RAK11300 module is located in the periphery and will transmit the data to the backend servers through a LoRa gateway. Learn more about [ChirpStack](https://www.chirpstack.io/).
 
 :::tip NOTE
 
@@ -719,22 +537,11 @@ The frequency band used in the demonstration is EU868. Use a high-frequency vers
 
 2. Go to the Application section, as shown in **Figure 35**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/24.chirpstack.png"
-  width="100%"
-  caption="Application Section"
-  zoomMode={true}
-/>
+> **Image:** Application Section
 
 3. By default, you should create a new application, although you can reuse the existing ones. For this setup, create a new Application by clicking on the **CREATE** button and filling the required parameters, as shown in **Figure 36** and **Figure 37**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/25.new-application.png"
-  width="100%"
-  caption="Creating a New Application"
-  zoomMode={true}
-/>
-
+> **Image:** Creating a New Application
 
 * For this setup, create an Application named **rak_node_test**.
 
@@ -743,49 +550,23 @@ ChirpStack LoraServer supports multiple system configurations, with only one by 
 * **Service profile**: Field is to select the system profile.
 * **Payload codec**: It is the parsing method for selecting load data such as parsing LPP format data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/26.filling-parameters.png"
-  width="100%"
-  caption="Filling Parameters of an Application"
-  zoomMode={true}
-/>
+> **Image:** Filling Parameters of an Application
 
-<b>Register a New Device</b>
+**Register a New Device**
 
 4. Choose the **Application** created in the previous step, then select the **DEVICES** tab, as shown in **Figure 38** and **Figure 39**.
 
 5. Once done, click **+ CREATE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/27.application-available.png"
-  width="100%"
-  caption="List of Applications Created"
-  zoomMode={true}
-/>
+> **Image:** List of Applications Created
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/28.application-page.png"
-  width="100%"
-  caption="Device Tab of an Application"
-  zoomMode={true}
-/>
+> **Image:** Device Tab of an Application
 
 6. Once inside the DEVICE tab, create a new device (LoRaWAN node) by clicking on the **+ CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/29.adding-node.png"
-  width="100%"
-  caption="Add a New Device"
-  zoomMode={true}
-/>
+> **Image:** Add a New Device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/30.new-device-registration.png"
-  width="100%"
-  caption="Chirpstack Adding Node into the RAK11300 Module"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack Adding Node into the RAK11300 Module
 
 7. Once the node is created, fill in the necessary data. You can generate a Device EUI automatically by clicking the following icon, or you can write a correct Device EUI in the edit box.
 
@@ -805,54 +586,27 @@ Device profiles **DeviceProfile_OTAA** and **DeviceProfile_ABP** are only availa
 If you have your own Chirpstack installation, you can set up the device profile with `LoRaWAN MAC version 1.0.3` and `LoRaWAN Regional Parameters revision B` to make it compatible with RAK11300.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/31.adding-parameters.png"
-  width="100%"
-  caption="Generate a New Device EUI "
-  zoomMode={true}
-/>
-
+> **Image:** Generate a New Device EUI 
 
 #### Chirpstack OTAA Device Registration
 
 1. If you have selected **DeviceProfile_OTAA**, as shown in **Figure 43**, then after the device is created, an Application Key must be also created for this device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/32.otaa.png"
-  width="100%"
-  caption="Chirpstack OTAA Activation"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA Activation
 
 2. A previously created Application Key can be entered here, or a new one can be generated automatically by clicking the icon highlighted in red in **Figure 44**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/33.otaa-set-device-keys.png"
-  width="100%"
-  caption="Chirpstack OTAA Set Application Keys"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA Set Application Keys
 
 3. Once the Application Key is added to the form, the process can be finalized by clicking on the **SET DEVICE-KEYS** button.
 
 * As shown in **Figure 45**, a new device should be listed in the DEVICES tab. The most important parameters, such as the Device EUI are shown in the summary.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/34.set-device-eui.png"
-  width="100%"
-  caption="Chirpstack OTAA List of Device in the Device Tab"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA List of Device in the Device Tab
 
 4. To end the process, it is a good practice to review that the Application Key is properly associated with this device. The Application Key can be verified in the **KEYS(OTAA)** tab, as shown in **Figure 46**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/35.application-key.png"
-  width="100%"
-  caption="Application Key Associated with the New Device"
-  zoomMode={true}
-/>
+> **Image:** Application Key Associated with the New Device
 
 :::tip NOTE
 
@@ -886,12 +640,7 @@ If you do not receive an `OK` response or any reply, check the following:
 - When powering the device via a USB port, make sure the USB cable is in good condition.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/at_ok.png"
-  width="55%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the OTAA LoRaWAN parameters in RAK11300:
 
@@ -926,13 +675,7 @@ To configure the masking of channels for the sub-bands, you can use the `AT+MASK
 To illustrate, you can use sub-band 2 by sending the command `AT+MASK=2`.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/otaaconfig.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
-
+> **Image:** Configuring LoRa Parameters
 
 **List of band parameter options**
 
@@ -980,28 +723,13 @@ Set the Application Key.
 AT+APPKEY=F921D50CD7D02EE3C5E6142154F274B2
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/chirp_otaaeuis.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 4. After EUI and keys configuration, you need to restart the device for the changes to take effect. You can do this by inputting the `ATZ` command or pushing the reset button. The Serial port connection is lost after the ATZ command or pushing the reset button. The connection must be re-established on the connected computer before log output can be seen or AT commands can be entered again. You must be able to see the summary of configurations when you reconnect your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/chirp_atz.png"
-  width="55%"
-  caption="Reset the Device"
-  zoomMode={true}
-/>
+> **Image:** Reset the Device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/chirp_otaa_summary.png"
-  width="50%"
-  caption="Summary of Device Parameters"
-  zoomMode={true}
-/>
+> **Image:** Summary of Device Parameters
 
 5. After checking if the parameters are properly set, you can now join the network and send the payload.
 
@@ -1035,27 +763,15 @@ AT+SEND=2:1234
 
 7. Send command format: **`AT+SEND=<port>:<payload>`**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/join_send.png"
-  width="55%"
-  caption="OTAA Joining and Sample payload"
-  zoomMode={true}
-/>
+> **Image:** OTAA Joining and Sample payload
 
 8. On the ChirpStack platform, you should see the join and uplink messages in the LORAWAN FRAMES tab, as shown in **Figure 51**. By convention, messages sent from nodes to gateways are considered as **Uplinks**, while messages sent by gateways to nodes are considered as **Downlinks**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/41.message-received.png"
-  width="100%"
-  caption="Chirpstack Data Received Preview"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack Data Received Preview
 
 #### Chirpstack ABP Device Registration
 
 1. During the registration of a new device, if you select **DeviceProfile_ABP**, as shown in **Figure 52**, then the ChirpStack platform will assume that this device will join the LoRaWAN network using the ABP mode.
-
 
 :::tip NOTE
 
@@ -1063,13 +779,7 @@ Check the **Disable counting frame verification**. During the test, when the mod
 
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/42.configuring-device-abp.png"
-  width="100%"
-  caption="ChirpStack Console, Configuring a Device"
-  zoomMode={true}
-/>
+> **Image:** ChirpStack Console, Configuring a Device
 
 2. After selecting the ABP mode, the following parameters appear in the Activation tab. Then, you can see that there are some parameters for ABP in the **ACTIVATION** item:
 
@@ -1077,15 +787,9 @@ Check the **Disable counting frame verification**. During the test, when the mod
   * **Network Session Key**
   * **Application Session Key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/43.abp-activation-parameters.png"
-  width="100%"
-  caption="Chirpstack ABP Activation Parameters Needed"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack ABP Activation Parameters Needed
 
 3. The parameters can be generated as random numbers by the platform or can be set with user values. Once these parameters are filled in properly, the process is completed by clicking on the **ACTIVATE DEVICE** button.
-
 
 #### ABP Configuration for Chirpstack
 
@@ -1107,12 +811,7 @@ Confirm that the device is powered on correctly.
 If you're powering the device via a USB port, make sure the USB cable is in good condition.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/at_ok.png"
-  width="55%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the ABP LoRaWAN parameters in RAK11300:
 
@@ -1165,13 +864,7 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=2`.
 |  11  |    AS923-4    |
 |  12  |     RU864     |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/abpconfig.png"
-  width="55%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 3. After configuration of the LoRaWAN parameters, the next step is to set up the device address and sessions keys. You need to use the values from the TTN console.
 
@@ -1197,28 +890,13 @@ Set the Network Session Key.
 AT+NWKSKEY=C280CB8D1DF688BC18601A97025C5488
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/chirp_abpeuis.png"
-  width="50%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 4. After the Device address and sessions keys configuration, you need to restart the device for the changes to take effect. You can do this by inputting the `ATZ` command or pushing the reset button. The serial port connection is lost after the `ATZ` command or pushing the reset button. The connection must be re-established on the connected computer before log output can be seen or AT commands can be entered again. You must be able to see the summary of configurations when you reconnect your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/chirp_abp_atz.png"
-  width="55%"
-  caption="Reset the Device"
-  zoomMode={true}
-/>
+> **Image:** Reset the Device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/chirp_abp_summary.png"
-  width="55%"
-  caption="Summary of Device Parameters"
-  zoomMode={true}
-/>
+> **Image:** Summary of Device Parameters
 
 5. After checking if the parameters are properly set, you can now join the network and send the payload.
 
@@ -1283,14 +961,7 @@ You need to do either of the two options until the USB Mass Storage `RPI-RP2` sh
 
 4. Copy the **firmware.uf2** file to the `RPI-RP2` Mass Storage device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/uf2.png"
-  width="75%"
-  caption="Drag the firmware.uf2 file to RPI-RP2 USB Mass Storage"
-  zoomMode={true}
-/>
+> **Image:** Drag the firmware.uf2 file to RPI-RP2 USB Mass Storage
 
 5. You need to reset the device after updating the `.uf2` firmware file.
 
-
-<RkBottomNav/>

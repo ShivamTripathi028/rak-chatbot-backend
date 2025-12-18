@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10700 WisBlock GNSS Tracker for LoRaWAN Datasheet
 
 ## Overview
@@ -26,7 +23,7 @@ It is a feature-packed tracker device for featured applications development. Thi
 ### Features
 
 - Supports sleep mode, low power consumption.
-- **Built-in LIS3DH - digital motion sensor**, which has dynamic user selectable full scales of Â±2g/Â±4g/Â±8g/Â±18g and is capable of measuring accelerations with output data rates from 1&nbsp;Hz to 5&nbsp;kHz.
+- **Built-in LIS3DH - digital motion sensor**, which has dynamic user selectable full scales of Â±2g/Â±4g/Â±8g/Â±18g and is capable of measuring accelerations with output data rates from 1 Hz to 5 kHz.
 - **Environment sensor**: Built-in Bosch BME680 air quality sensor
 - **GNSS location sensor**: u-blox ZOE-M8Q
 - LoRaWAN 1.0.2 Standard support - ABP or OTAA mode.
@@ -39,41 +36,25 @@ It is a feature-packed tracker device for featured applications development. Thi
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/rakbox-b2-enclosure.png" 
-  figureCount="1"
-  caption="RAK10700 WisBlock GNSS Tracker for LoRaWAN" 
-   width="30%"
-/>
+> **Image:** RAK10700 WisBlock GNSS Tracker for LoRaWAN
 
 #### Block Diagram
 
 The block diagram in **Figure 2** shows the different WisBlock modules used in the RAK10700 WisBlock GNSS Tracker for LoRaWAN and their position.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/modules.png" 
-  figureCount="2"
-  caption="RAK10700 WisBlock GNSS Tracker for LoRaWAN Block Diagram" 
-   width="60%"
-/>
+> **Image:** RAK10700 WisBlock GNSS Tracker for LoRaWAN Block Diagram
 
 ### Hardware
 
 The hardware specification is categorized into seven parts. It shows the interfacing and pinouts of the tracker. It also covers the rf, antennas, electrical, environmental, and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK10700 WisBlock GNSS Tracker for LoRaWAN.
 
-
 #### Interfaces
 
 The RAK10700 WisBlock GNSS Tracker for LoRaWAN provides USB interfaces, as shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/usb-interface.png" 
-  figureCount="3"
-  caption="RAK10700 WisBlock GNSS Tracker for LoRaWAN Interfaces" 
-   width="80%"
-/>
+> **Image:** RAK10700 WisBlock GNSS Tracker for LoRaWAN Interfaces
 
-- **Micro USB** - 5&nbsp;V DC power supply and UART communication.
+- **Micro USB** - 5 V DC power supply and UART communication.
 - Reset Button
 
 #### Pin Definition
@@ -107,70 +88,44 @@ The GNSS Tracker has a built-in active GPS Antenna, an iPex LoRa Antenna, and an
 
 ##### GPS Antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/gps_antenna.png" 
-  figureCount="4"
-  caption="GPS Antenna" 
-   width="50%"
-/>
+> **Image:** GPS Antenna
 
 | Items             | Parameter                           |
 | ----------------- | ----------------------------------- |
-| Outline Dimension | 15&nbsp;mm x 15&nbsp;mm x 7&nbsp;mm |
-| Frequency         | 1575.42&nbsp;MHz                    |
+| Outline Dimension | 15 mm x 15 mm x 7 mm |
+| Frequency         | 1575.42 MHz                    |
 
 ##### LoRa Antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/lora-antenna.png" 
-  figureCount="5"
-  caption="LoRa Antenna" 
-   width="40%"
-/>
+> **Image:** LoRa Antenna
 
 ##### BLE Antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/ble-antenna.png" 
-  figureCount="6"
-  caption="BLE Antenna" 
-   width="40%"
-/>
+> **Image:** BLE Antenna
 
 #### Electrical Characteristics
-
 
 ##### Working Mode
 
 | Mode        | Condition      | Power Consumption |
 | ----------- | -------------- | ----------------- |
-| Sleep Mode  |                | 40&nbsp;µA        |
-| Normal Mode | Tx @20&nbsp;dB | 124&nbsp;mA       |
-|             | Tx @17&nbsp;dB | 108&nbsp;mA       |
-|             | Tx @13&nbsp;dB | 89&nbsp;mA        |
-|             | Tx @10&nbsp;dB | 79&nbsp;mA        |
-|             | Tx @7&nbsp;dB  | 69&nbsp;mA        |
-|             | Rx             | 44&nbsp;mA        |
+| Sleep Mode  |                | 40 µA        |
+| Normal Mode | Tx @20 dB | 124 mA       |
+|             | Tx @17 dB | 108 mA       |
+|             | Tx @13 dB | 89 mA        |
+|             | Tx @10 dB | 79 mA        |
+|             | Tx @7 dB  | 69 mA        |
+|             | Rx             | 44 mA        |
 
 ##### Battery Supply
 
-The GNSS Tracker can be equipped with a built-in rechargeable 3.7&nbsp;V Li-ion battery, which can be charged via Micro USB. _**(Battery not included)**_
+The GNSS Tracker can be equipped with a built-in rechargeable 3.7 V Li-ion battery, which can be charged via Micro USB. _**(Battery not included)**_
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/box-battery.png" 
-  figureCount="7"
-  caption="Battery placement in the GNSS Tracker" 
-   width="40%"
-/>
+> **Image:** Battery placement in the GNSS Tracker
 
 A matching battery cable is included in the GNSS Tracker.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/datasheet/connector.png" 
-  figureCount="8"
-  caption="Battery cable for GNSS Tracker" 
-   width="40%"
-/>
+> **Image:** Battery cable for GNSS Tracker
 
 #### Environmental Characteristics
 
@@ -178,14 +133,14 @@ The table below lists the operation and storage temperature requirements.
 
 | Parameter             | Min.       | Typical     | Max.        |
 | --------------------- | ---------- | ----------- | ----------- |
-| Operation Temp. Range | -40&nbsp;C | +25&nbsp;°C | +60&nbsp;°C |
+| Operation Temp. Range | -40 C | +25 °C | +60 °C |
 
 #### Mechanical Characteristics
 
-- Dimensions: 95&nbsp;mm (W) x 65&nbsp;mm (L) x 58&nbsp;mm (H)
-- Weight: approximately 7.45&nbsp;oz (211.2&nbsp;g) without battery
-- Material thickness: 3&nbsp;mm
-- Pole and wall-mounting: 60~75&nbsp;mm pole diameter
+- Dimensions: 95 mm (W) x 65 mm (L) x 58 mm (H)
+- Weight: approximately 7.45 oz (211.2 g) without battery
+- Material thickness: 3 mm
+- Pole and wall-mounting: 60~75 mm pole diameter
 - Logo customization possibility
 - Optional openings for N-type antenna and external components with a gland
 
@@ -247,4 +202,3 @@ Build your own GNSS Tracker firmware with our open-source code available on the 
 
 You can extend the functionality of the GNSS Tracker by using these sources. You can write, as well, your own GNSS Tracker application based on these sources.
 
-<RkBottomNav/>

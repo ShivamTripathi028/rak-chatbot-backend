@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # WisBlock Environment Sensor Kit
 
 Thank you for choosing the **WisBlock Environment Sensor Kit** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -34,21 +31,20 @@ With its flexible connectivity options, this kit can be easily integrated into e
 - Supports Li-Ion battery with built-in solar charging capability
 - Multiple communication protocols: LoRaWAN, BLE, LTE-M (optional) and NB-IoT (optional)
 - Included modules:
-    - Two WisBlock Core modules - <a href="https://store.rakwireless.com/products/rak4631-lpwan-node" target="_blank">RAK4631 LPWAN Module</a>
-    - One standard <a href="https://store.rakwireless.com/products/rak19007-wisblock-base-board-2nd-gen" target="_blank">RAK19007 WisBlock Base Board</a> with 4 sensor slots and 1 IO slot
-    - One <a href="https://store.rakwireless.com/products/rak19001-wisblock-dual-io-base-board" target="_blank">RAK19001 Dual IO WisBlock Base Board</a>  with 6 sensor slots and 2 IO slots
-    - <a href="https://store.rakwireless.com/products/rak1901-shtc3-temperature-humidity-sensor" target="_blank">RAK1901 Temperature and Humidity Sensor</a>
-    - <a href="https://store.rakwireless.com/products/rak1902-kps22hb-barometric-pressure-sensor" target="_blank">RAK1902 Barometric Pressure Sensor</a>
-    - <a href="https://store.rakwireless.com/products/rak1903-opt3001dnpr-ambient-light-sensor" target="_blank">RAK1903 Ambient Light Sensor</a>
-    - <a href="https://store.rakwireless.com/products/rak1906-bme680-environment-sensor" target="_blank">RAK1906 IAQ (Indoor Air Quality) Sensor</a>
-    - <a href="https://store.rakwireless.com/products/wisblock-ambient-light-sensor-rak12010" target="_blank">RAK12010 Ambient Light Sensor</a>
-    - <a href="https://store.rakwireless.com/products/wisblock-barometer-wt-sensor-rak12011" target="_blank">RAK12011 Barometer WT Sensor</a>
-    - <a href="https://store.rakwireless.com/products/rak12019-wisblock-uv-sensor" target="_blank">RAK12019 UV Light Sensor</a>
-    - <a href="https://store.rakwireless.com/products/co2-sensor-sensirion-scd30-rak12037" target="_blank">RAK12037 CO2 Sensor</a>
-    - <a href="https://store.rakwireless.com/products/particle-matter-sensor-plantower-pmsa003i-rak12039" target="_blank">RAK12039 Particle Matter Sensor</a>
-    - <a href="https://store.rakwireless.com/products/rak12047-voc-sensor-sensirion-sgp40" target="_blank">RAK12047 VOC Sensor</a>
+    - Two WisBlock Core modules - [RAK4631 LPWAN Module](https://store.rakwireless.com/products/rak4631-lpwan-node)
+    - One standard [RAK19007 WisBlock Base Board](https://store.rakwireless.com/products/rak19007-wisblock-base-board-2nd-gen) with 4 sensor slots and 1 IO slot
+    - One [RAK19001 Dual IO WisBlock Base Board](https://store.rakwireless.com/products/rak19001-wisblock-dual-io-base-board)  with 6 sensor slots and 2 IO slots
+    - [RAK1901 Temperature and Humidity Sensor](https://store.rakwireless.com/products/rak1901-shtc3-temperature-humidity-sensor)
+    - [RAK1902 Barometric Pressure Sensor](https://store.rakwireless.com/products/rak1902-kps22hb-barometric-pressure-sensor)
+    - [RAK1903 Ambient Light Sensor](https://store.rakwireless.com/products/rak1903-opt3001dnpr-ambient-light-sensor)
+    - [RAK1906 IAQ (Indoor Air Quality) Sensor](https://store.rakwireless.com/products/rak1906-bme680-environment-sensor)
+    - [RAK12010 Ambient Light Sensor](https://store.rakwireless.com/products/wisblock-ambient-light-sensor-rak12010)
+    - [RAK12011 Barometer WT Sensor](https://store.rakwireless.com/products/wisblock-barometer-wt-sensor-rak12011)
+    - [RAK12019 UV Light Sensor](https://store.rakwireless.com/products/rak12019-wisblock-uv-sensor)
+    - [RAK12037 CO2 Sensor](https://store.rakwireless.com/products/co2-sensor-sensirion-scd30-rak12037)
+    - [RAK12039 Particle Matter Sensor](https://store.rakwireless.com/products/particle-matter-sensor-plantower-pmsa003i-rak12039)
+    - [RAK12047 VOC Sensor](https://store.rakwireless.com/products/rak12047-voc-sensor-sensirion-sgp40)
     - LoRaWAN supported bands: RU864, IN865, EU868, AU915, US915, KR920, and AS923
-    - (Optional) Cellular variant dependent on a country: two (2) <a href="https://store.rakwireless.com/products/rak5860-lte-nb-iot-extension-board" target="_blank">RAK5860</a> with 5G LTE NB-IoT capability and two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101" target="_blank">RAK13101</a> with GSM/GPRS capability
+    - (Optional) Cellular variant dependent on a country: two (2) [RAK5860](https://store.rakwireless.com/products/rak5860-lte-nb-iot-extension-board) with 5G LTE NB-IoT capability and two (2) [RAK13101](https://store.rakwireless.com/products/wisblock-gsm-module-rak13101) with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
-<RkBottomNav/>

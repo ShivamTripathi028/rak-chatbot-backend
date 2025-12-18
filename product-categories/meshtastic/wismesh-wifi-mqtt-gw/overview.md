@@ -18,13 +18,11 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Meshtastic WisMesh WiFi MQTT Gateway
 
 Thank you for choosing **WisMesh WiFi MQTT Gateway** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
-<a href="https://meshtastic.org/" target="_blank">Meshtastic</a> is an Open Source initiative aimed at building an off-grid, decentralized mesh network. Designed to operate on affordable, low-power devices.
+[Meshtastic](https://meshtastic.org/) is an Open Source initiative aimed at building an off-grid, decentralized mesh network. Designed to operate on affordable, low-power devices.
 
 This network is especially vital in scenarios where traditional communication systems fail, such as during disasters. Empowering individuals and groups within the HAM radio community and beyond, Meshtastic ensures connectivity when it's needed most.
 
@@ -41,13 +39,12 @@ With the update to **WisMesh WiFi MQTT Gateway V2**, the device now uses the Wis
 ## Product Features
 
 - Power Solutions:
-  - 5&nbsp;V over USB connector
-  - 5&nbsp;V supply through the 5-pin waterproof M8 connector and the included cable stub
+  - 5 V over USB connector
+  - 5 V supply through the 5-pin waterproof M8 connector and the included cable stub
 - Connectivity:
   - Connects the Meshtastic Network to any MQTT broker
 
 ## Getting Started
 
-To get started with the WisMesh WiFi Gateway, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20WiFi%20Gateway%20With%20Enclosure.pdf" target="_blank">WisMesh WiFi Gateway Getting Started</a> guide.
+To get started with the WisMesh WiFi Gateway, download our [WisMesh WiFi Gateway Getting Started](https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20WiFi%20Gateway%20With%20Enclosure.pdf) guide.
 
-<RkBottomNav/>

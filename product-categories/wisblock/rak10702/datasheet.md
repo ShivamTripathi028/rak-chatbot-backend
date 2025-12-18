@@ -12,9 +12,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10702 Indoor Comfort Node Datasheet
 
 ## Overview
@@ -29,11 +26,11 @@ It is a feature-packed air quality sensing device for application development. T
 
 - Supports sleep mode, low power consumption
 - **Nordic nRF52840 MCU** combined with the **Semtech SX1262** LoRa transceiver for powerful, yet low-power applications and additional BLE functionality.
-- **Sensirion SCD30 CO2 Sensor**: CO2 sensor with a measurement range from 400&nbsp;ppm to 10,000&nbsp;ppm and an accuracy of ±(30&nbsp;ppm + 3%)
+- **Sensirion SCD30 CO2 Sensor**: CO2 sensor with a measurement range from 400 ppm to 10,000 ppm and an accuracy of ±(30 ppm + 3%)
 - **Plantower PM sensor**: Particle Matter Sensor module allows to capture standard PM1.0, PM2.5, and PM10 values.
-- **Sensirion SGP40 VOC Sensor**: Detects a wide range of Volatile Organic Compounds (VOCs) with a measurement range of 0 to 1000&nbsp;ppm (Ethanol in clean air), combined with the Sensorion VOC algorithms it delivers a VOC index from 0 to 500.
-- **Vishay Semiconductor VEML7700 Light Sensor**: Can measure light exposure with an ambient light range from 0 lx to about 120,000&nbsp;lx with a resolution of 0.0036 lx.
-- **Sensirion SHTC3 Temperature and Humidity Sensor**: Low power T&H sensor with a temperature sensor accuracy of ±0.2°&nbsp;C, a temperature range from -40°&nbsp;C to +125°&nbsp;C, a humidity sensor accuracy of ±2.0% RH and a humidity range from 0 to 100%
+- **Sensirion SGP40 VOC Sensor**: Detects a wide range of Volatile Organic Compounds (VOCs) with a measurement range of 0 to 1000 ppm (Ethanol in clean air), combined with the Sensorion VOC algorithms it delivers a VOC index from 0 to 500.
+- **Vishay Semiconductor VEML7700 Light Sensor**: Can measure light exposure with an ambient light range from 0 lx to about 120,000 lx with a resolution of 0.0036 lx.
+- **Sensirion SHTC3 Temperature and Humidity Sensor**: Low power T&H sensor with a temperature sensor accuracy of ±0.2° C, a temperature range from -40° C to +125° C, a humidity sensor accuracy of ±2.0% RH and a humidity range from 0 to 100%
 - **Senba Technology AM312 PIR Sensor**: Detects occupancy and motion from infrared radiated objects.
 - **RGB LED**: Shows the air quality status in 3 levels.
 - **Micro Crystal RV-3028-C7 RTC Module**: Keeps the real-time accurate on the device.
@@ -43,7 +40,7 @@ It is a feature-packed air quality sensing device for application development. T
 - LoRa and BLE antenna are integrated inside the casing
 - Micro USB for configuration
 - Supports global license-free frequency band: RU864, IN865, EU868, RU864, US915, AU915, KR920, and AS923
-- (_**Optional**_) **E-Ink Display**: Shows the current values of all integrated sensors, with a resolution of 400x300&nbsp;pixel
+- (_**Optional**_) **E-Ink Display**: Shows the current values of all integrated sensors, with a resolution of 400x300 pixel
 - (_**Optional**_) **3D printed enclosure in SLS quality**: Perfect protection for the Indoor Comfort Node with a flexible mounting option
 - (_**Optional**_) **Open-sourced enclosure design for 3D printed enclosures**: Enclosure design available in different 3D formats to either print your enclosure or use it as a base for your enclosure design
 
@@ -53,12 +50,7 @@ It is a feature-packed air quality sensing device for application development. T
 
 The overview shows the RAK10702 WisBlock Indoor Comfort Node with the optional E-Ink display and the optional enclosure.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/rak10702.png" 
-  figureCount="1"
-  caption="RAK10702 WisBlock Indoor Comfort Node" 
-   width="60%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node
 
 #### Block Diagram
 
@@ -66,30 +58,15 @@ The block diagram in **Figure 2** shows the different WisBlock modules used in t
 
 Modules on the RAK13013 sensor carrier
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/assembly/1-rak13013-1.svg" 
-  figureCount="2"
-  caption="RAK10702 WisBlock Indoor Comfort Node Block Diagram" 
-   width="60%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node Block Diagram
 
 Modules on the top side of the RAK19024 Base Board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/assembly/9-rak19024-2.svg" 
-  figureCount="3"
-  caption="RAK10702 WisBlock Indoor Comfort Node Block Diagram" 
-   width="60%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node Block Diagram
 
 Modules on the bottom side of the RAK19024 Base Board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/assembly/8-rak19024-1.svg" 
-  figureCount="4"
-  caption="RAK10702 WisBlock Indoor Comfort Node Block Diagram" 
-   width="60%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node Block Diagram
 
 ### Hardware
 
@@ -103,15 +80,10 @@ The RAK10702 WisBlock Indoor Comfort Node has multiple interface options:
 - UART pin header
 - I2C pin header
 - SWD/JLink header
-- 5-24&nbsp;V supply connector
+- 5-24 V supply connector
 - Reset button
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-interfaces.png" 
-  figureCount="5"
-  caption="RAK10702 WisBlock Indoor Comfort Node Interfaces" 
-   width="100%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node Interfaces
 
 #### Pin Definition
 
@@ -119,63 +91,43 @@ The RAK10702 WisBlock Indoor Comfort Node has multiple interface options:
 
 Standard USB Type C connector, only USB serial and power supply supported.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-usb-2.png" 
-  figureCount="6"
-  caption="RAK10702 WisBlock Indoor Comfort Node UART" 
-   width="50%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node UART
 
 ##### UART Pin Header
 
-The UART pin header allows to connect to the RAK4630 module for debugging purposes or to connect additional modules with a 3.3&nbsp;V UART interface:
+The UART pin header allows to connect to the RAK4630 module for debugging purposes or to connect additional modules with a 3.3 V UART interface:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-uart.png" 
-  figureCount="7"
-  caption="RAK10702 WisBlock Indoor Comfort Node UART" 
-   width="40%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node UART
 
 | Pin | Pin Name | Description                                                           |
 | --- | -------- | --------------------------------------------------------------------- |
 | 1   | Unused   | -                                                                     |
 | 2   | GND      | Ground connection                                                     |
-| 3   | TX       | data transmit, max 3.3&nbsp;V, connected to P0.16/UART2_TX of RAK4630 |
-| 4   | RX       | data receive, max 3.3&nbsp;V, connected to P0.15/UART2_RX of RAK4630  |
+| 3   | TX       | data transmit, max 3.3 V, connected to P0.16/UART2_TX of RAK4630 |
+| 4   | RX       | data receive, max 3.3 V, connected to P0.15/UART2_RX of RAK4630  |
 
 ##### I2C Pin Header
 
 The I2C pin header allows to connection of external I2C devices to the RAK10702. The pinout is compatible with the WisBlock Base Boards:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-i2c.png" 
-  figureCount="8"
-  caption="RAK10702 WisBlock Indoor Comfort Node I2C" 
-   width="40%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node I2C
 
 | Pin | Pin Name | Description                                                  |
 | --- | -------- | ------------------------------------------------------------ |
-| 1   | VCC      | 3.3&nbsp;V output                                            |
+| 1   | VCC      | 3.3 V output                                            |
 | 2   | GND      | Ground connection                                            |
-| 3   | SCL      | clock, max 3.3&nbsp;V, connected to P0.14/I2C_SCL of RAK4630 |
-| 4   | SDA      | data, max 3.3&nbsp;V, connected to P0.13/I2C_SCL of RAK4630  |
+| 3   | SCL      | clock, max 3.3 V, connected to P0.14/I2C_SCL of RAK4630 |
+| 4   | SDA      | data, max 3.3 V, connected to P0.13/I2C_SCL of RAK4630  |
 
 ##### SWD/Jlink Pin Header
 
 The SWD/JLink pin header allows to flash firmware and debug firmware using a JLink adapter or a DAPLink adapter:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-swd.png" 
-  figureCount="9"
-  caption="RAK10702 WisBlock Indoor Comfort Node SWD" 
-   width="50%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node SWD
 
 | Pin | Pin Name | Description                                    |
 | --- | -------- | ---------------------------------------------- |
-| 1   | VCC      | 3.3&nbsp;V output, voltage reference for JLink |
+| 1   | VCC      | 3.3 V output, voltage reference for JLink |
 | 2   | IO       | SWDIO data transmission                        |
 | 3   | CLK      | SWCLK clock                                    |
 | 4   | GND      | Ground connection                              |
@@ -183,29 +135,23 @@ The SWD/JLink pin header allows to flash firmware and debug firmware using a JLi
 
 ##### 5-24V Supply Connector
 
-The 5-24&nbsp; V supply connector is for the power supply of the RAK10702 WisBlock Indoor Comfort Node:
+The 5-24  V supply connector is for the power supply of the RAK10702 WisBlock Indoor Comfort Node:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-supply.png" 
-  figureCount="10"
-  caption="RAK10702 WisBlock Indoor Comfort Node Supply" 
-   width="50%"
-/>
+> **Image:** RAK10702 WisBlock Indoor Comfort Node Supply
 
 | Pin | Pin Name | Description       |
 | --- | -------- | ----------------- |
-| 1   | VCC      | 5-24&nbsp;V input       |
+| 1   | VCC      | 5-24 V input       |
 | 2   | GND      | Ground connection |
 
 :::warning 
 
 When connecting an external supply, make sure
 
-- The voltage is not below 5&nbsp;V or exceeds 24&nbsp;V in any case (including voltage spikes)
+- The voltage is not below 5 V or exceeds 24 V in any case (including voltage spikes)
 - The polarity of the connection is correct
 
 :::
-
 
 #### RF Characteristics
 
@@ -231,31 +177,25 @@ The RAK10702 WisBlock Indoor Comfort Node has a built-in LoRa and BLE Antenna.
 <!--- To be added later
 #### Electrical Characteristics
 
-
 ##### Working Mode
 
 | Mode        | Condition      | Power Consumption |
 | ----------- | -------------- | ----------------- |
-| Sleep Mode  |                | 40&nbsp;µA        |
-| Normal Mode | Tx @20&nbsp;dB | 124&nbsp;mA       |
-|             | Tx @17&nbsp;dB | 108&nbsp;mA       |
-|             | Tx @13&nbsp;dB | 89&nbsp;mA        |
-|             | Tx @10&nbsp;dB | 79&nbsp;mA        |
-|             | Tx @7&nbsp;dB  | 69&nbsp;mA        |
-|             | Rx             | 44&nbsp;mA        |
+| Sleep Mode  |                | 40 µA        |
+| Normal Mode | Tx @20 dB | 124 mA       |
+|             | Tx @17 dB | 108 mA       |
+|             | Tx @13 dB | 89 mA        |
+|             | Tx @10 dB | 79 mA        |
+|             | Tx @7 dB  | 69 mA        |
+|             | Rx             | 44 mA        |
 
 --->
 
 ##### Power Supply
 
-The RAK10702 WisBlock Indoor Comfort Node can be supplied with a DC voltage from 5 to 24&nbsp; V through the screw terminal. Alternatively, the device can be supplied through the USB connector.
+The RAK10702 WisBlock Indoor Comfort Node can be supplied with a DC voltage from 5 to 24  V through the screw terminal. Alternatively, the device can be supplied through the USB connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10702/datasheet/rak10702-supply.png" 
-  figureCount="11"
-  caption="Power supply connector" 
-   width="40%"
-/>
+> **Image:** Power supply connector
 
 :::warning  
 
@@ -272,16 +212,16 @@ The table below lists the operation and storage temperature requirements.
 
 | Parameter             | Min.       | Typical     | Max.        |
 | --------------------- | ---------- | ----------- | ----------- |
-| Operation Temp. Range | -40&nbsp;C | +25&nbsp;°C | +60&nbsp;°C |
+| Operation Temp. Range | -40 C | +25 °C | +60 °C |
 
 <!--- to be added later
 
 #### Mechanical Characteristics
 
-- Dimensions: 95&nbsp;mm (W) x 65&nbsp;mm (L) x 58&nbsp;mm (H)
-- Weight: approximately 7.45&nbsp;oz (211.2&nbsp;g) without battery
-- Material thickness: 3&nbsp;mm
-- Pole and wall-mounting: 60~75&nbsp;mm pole diameter
+- Dimensions: 95 mm (W) x 65 mm (L) x 58 mm (H)
+- Weight: approximately 7.45 oz (211.2 g) without battery
+- Material thickness: 3 mm
+- Pole and wall-mounting: 60~75 mm pole diameter
 - Logo customization possibility
 - Optional openings for N-type antenna and external components with a gland
 
@@ -344,5 +284,3 @@ Build your own RAK10702 WisBlock Indoor Comfort Node firmware with our open-sour
 
 You can extend the functionality of the RAK10702 WisBlock Indoor Comfort Node by using these sources. You can write, as well, your own RAK10702 WisBlock Indoor Comfort Node application based on these sources.
 
-
-<RkBottomNav/>

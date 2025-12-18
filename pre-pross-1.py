@@ -3,20 +3,52 @@ import re
 import html
 from bs4 import BeautifulSoup
 
-# Configuration
+# Configuration: Directory to scan
 TARGET_DIR = "./product-categories" 
 
 def clean_imports(content):
     """
     Removes Docusaurus/React specific import lines.
     """
-    pattern = r"^import Rk.*$"
-    return re.sub(pattern, "", content, flags=re.MULTILINE)
+    content = re.sub(r"^import Rk.*$", "", content, flags=re.MULTILINE)
+    return content
+
+def convert_html_links(content):
+    """
+    Converts HTML links <a href="url">text</a> to Markdown [text](url).
+    """
+    # Pattern matches <a ... href="..." ...>Text</a>
+    # Capture group 1: URL
+    # Capture group 2: Link Text
+    link_pattern = r'<a\s+(?:[^>]*?\s+)?href="([^"]*)"[^>]*>(.*?)</a>'
+    return re.sub(link_pattern, r'[\2](\1)', content, flags=re.IGNORECASE)
+
+def process_certifications(content):
+    """
+    Finds <RkCertificationIcons ... /> tags.
+    Extracts the certification type and URL, converting them to a Markdown list.
+    """
+    pattern = r'<RkCertificationIcons\s+certifications=\{([\[\s\S]*?\])\}\s*\/>'
+
+    def replace_cert(match):
+        raw_data = match.group(1)
+        certs = re.findall(r"['\"](\w+)['\"]\s*:\s*['\"]([^'\"]+)['\"]", raw_data)
+
+        if not certs:
+            return ""
+
+        md_lines = ["\n### Certifications"]
+        for c_type, url in certs:
+            md_lines.append(f"- **{c_type.upper()}:** {url}")
+
+        return "\n".join(md_lines) + "\n"
+
+    return re.sub(pattern, replace_cert, content)
 
 def process_images(content):
     """
     Finds <RkImage ... /> tags.
-    Replaces them with their caption to preserve context.
+    Replaces them with their caption to preserve context for the LLM.
     """
     pattern = r'<RkImage\s+[^>]*caption="([^"]+)"[^>]*\/>'
     
@@ -26,7 +58,7 @@ def process_images(content):
 
     content = re.sub(pattern, replacement, content)
     content = re.sub(r'<RkImage[^>]*\/>', "", content)
-    content = re.sub(r'<RkCertificationIcons[^>]*\/>', "", content)
+    content = re.sub(r'<RkCertificationIcons[^>]*\/>', "", content) # Cleanup if process_certifications didn't catch it
     content = re.sub(r'<RkBottomNav[^>]*\/>', "", content)
     
     return content
@@ -46,8 +78,7 @@ def clean_html_formatting(content):
     # 3. Convert Break tags to newlines
     content = re.sub(r"<br\s*/?>", "\n", content, flags=re.IGNORECASE)
 
-    # 4. Decode HTML entities (e.g., &nbsp; -> space, &bull; -> -)
-    # We do this last so we don't accidentally create markdown characters that get processed wrongly later
+    # 4. Decode HTML entities
     content = html.unescape(content)
 
     return content
@@ -58,21 +89,17 @@ def html_table_to_markdown(table_html):
     """
     soup = BeautifulSoup(table_html, "html.parser")
     
-    # --- 1. Extract Headers ---
     headers = []
     thead = soup.find('thead')
-    
     if thead:
         header_rows = thead.find_all('tr')
         if header_rows:
-            # Use separator=" " to handle <br> inside headers
             for cell in header_rows[0].find_all(['th', 'td']):
                 headers.append(" ".join(cell.get_text(separator=" ", strip=True).split()))
         else:
             for cell in thead.find_all(['th', 'td']):
                 headers.append(" ".join(cell.get_text(separator=" ", strip=True).split()))
 
-    # --- 2. Extract Body Rows ---
     tbody = soup.find('tbody')
     if tbody:
         rows = tbody.find_all('tr')
@@ -86,7 +113,6 @@ def html_table_to_markdown(table_html):
     if not rows and not headers:
         return ""
 
-    # --- 3. Process Body (Flattening Rowspans) ---
     grid = []
     occupied = {} 
 
@@ -111,7 +137,6 @@ def html_table_to_markdown(table_html):
             except StopIteration:
                 break
 
-            # Use separator=" " to ensure <br> becomes a space, not a merge
             text = " ".join(cell.get_text(separator=" ", strip=True).split())
             
             try: rowspan = int(cell.get("rowspan", 1))
@@ -131,17 +156,16 @@ def html_table_to_markdown(table_html):
 
         grid.append(grid_row)
 
-    # --- 4. Normalize Widths ---
     max_cols = 0
-    if grid:
-        max_cols = max(len(r) for r in grid)
-    if headers:
-        max_cols = max(max_cols, len(headers))
+    if grid: max_cols = max(len(r) for r in grid)
+    if headers: max_cols = max(max_cols, len(headers))
 
+    # Pad Body Rows
     for row in grid:
         if len(row) < max_cols:
             row.extend([""] * (max_cols - len(row)))
             
+    # Pad Header Row
     if headers:
         if len(headers) < max_cols:
             headers.extend([""] * (max_cols - len(headers)))
@@ -149,7 +173,7 @@ def html_table_to_markdown(table_html):
         headers = grid[0]
         grid = grid[1:]
 
-    # --- 5. Clean Redundant Rows ---
+    # Remove redundant rows caused by flattening
     cleaned_grid = []
     if grid:
         skip_indices = set()
@@ -166,7 +190,6 @@ def html_table_to_markdown(table_html):
     else:
         cleaned_grid = grid
 
-    # --- 6. Build Markdown ---
     md_lines = []
     md_lines.append("| " + " | ".join(headers) + " |")
     md_lines.append("| " + " | ".join(["---"] * max_cols) + " |")
@@ -191,13 +214,19 @@ def process_file(file_path):
             return "\n" + html_table_to_markdown(match.group(0)) + "\n"
         content = table_pattern.sub(table_replacer, content)
 
-        # 3. Process Images
+        # 3. Convert Certifications
+        content = process_certifications(content)
+
+        # 4. Process Images
         content = process_images(content)
 
-        # 4. Clean General HTML Formatting (Bold, Br, Entities) -> NEW STEP
+        # 5. Clean HTML Links (NEW)
+        content = convert_html_links(content)
+
+        # 6. Clean General HTML Formatting
         content = clean_html_formatting(content)
 
-        # 5. Collapse excessive newlines
+        # 7. Collapse excessive newlines
         content = re.sub(r'\n{3,}', '\n\n', content)
 
         if content != original_content:

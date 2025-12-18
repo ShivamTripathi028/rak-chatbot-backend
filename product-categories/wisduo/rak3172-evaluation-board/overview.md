@@ -10,17 +10,13 @@ slug: /product-categories/wisduo/rak3172-evaluation-board/overview/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK3172 Evaluation Board
 Thank you for choosing **RAK3172 Evaluation Board** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/quickstart/" target="_blank">Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/at-command-manual/" target="_blank">AT Command Manual</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/datasheet/" target="_blank">Datasheet</a>
-* <a href="https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK3172-E.zip" target="_blank">RAK3172-E 3D Model</a>
+* [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/quickstart/)
+* [AT Command Manual](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/at-command-manual/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/datasheet/)
+* [RAK3172-E 3D Model](https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK3172-E.zip)
 
 ## Product Description
 
@@ -37,16 +33,15 @@ This module complies with LoRaWAN 1.0.3 specifications (Classes A, B, and C). It
 - LoRa Point-to-Point (P2P) communication
 - Easy-to-use AT command set via UART interface
 - Custom firmware using Arduino via RUI3 API
-- Long-range - greater than 15&nbsp;km with optimized antenna
+- Long-range - greater than 15 km with optimized antenna
 - ARM Cortex-M4 32-bit
-- 256&nbsp;kbytes flash memory with ECC
-- 64&nbsp;kbytes RAM
-- **Supply Voltage**: 5&nbsp;V via USB or 3.7-4.2&nbsp;V using Li-Ion Battery
-- **Temperature Range**: -20°&nbsp;C ~ 70°&nbsp;C
+- 256 kbytes flash memory with ECC
+- 64 kbytes RAM
+- **Supply Voltage**: 5 V via USB or 3.7-4.2 V using Li-Ion Battery
+- **Temperature Range**: -20° C ~ 70° C
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
-You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
+You can find it in our [RUI3 documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide) or get it from our [Download Center](https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/).    
 ::: 
 
-<RkBottomNav/>

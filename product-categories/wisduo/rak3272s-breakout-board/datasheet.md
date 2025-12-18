@@ -18,18 +18,15 @@ slug: /product-categories/wisduo/rak3272s-breakout-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3272S Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-**RAK3272S Breakout Board** is designed to provide easy access to the board's pins, streamlining development and testing. Its footprint enables the RAK3172 stamp module pins to be routed to 2.54&nbsp;mm headers.
+**RAK3272S Breakout Board** is designed to provide easy access to the board's pins, streamlining development and testing. Its footprint enables the RAK3172 stamp module pins to be routed to 2.54 mm headers.
 
-The board itself has the RAK3172 at its core, integrating a **STM32WLE5CC** chip. It has an ultra-low power consumption of 1.69&nbsp;uA in sleep mode.
+The board itself has the RAK3172 at its core, integrating a **STM32WLE5CC** chip. It has an ultra-low power consumption of 1.69 uA in sleep mode.
 
 This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It also supports LoRa Point-to-Point (P2P) communication mode, which helps you in implementing your own customized LoRa network quickly.
 
@@ -39,11 +36,10 @@ This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It 
 - Custom firmware using Arduino via RUI3 API
 - I/O ports: UART/I2C/GPIO/SPI
 - Serial Wire Debug (SWD) interface
-- Module size: 25.4&nbsp;mm x 32.3&nbsp;mm
-- Ultra-low-power consumption of 1.69&nbsp;uA in sleep mode
-- Supply Voltage: 2.0&nbsp;V ~ 3.6&nbsp;V
-- Temperature Range: -20°&nbsp;C ~ 85°&nbsp;C
-
+- Module size: 25.4 mm x 32.3 mm
+- Ultra-low-power consumption of 1.69 uA in sleep mode
+- Supply Voltage: 2.0 V ~ 3.6 V
+- Temperature Range: -20° C ~ 85° C
 
 ## Specifications
 
@@ -51,18 +47,11 @@ This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It 
 
 The top view of the RAK3272S Breakout Board is shown in **Figure 1**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s.png"
-  width="50%"
-  caption="RAK3272S Top and Bottom View"
-  zoomMode={true}
-/>
+> **Image:** RAK3272S Top and Bottom View
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It discusses the interfacing, pinouts, and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters of the board, including the tabular data of the functionalities and standard values.
-
 
 #### Interface
 
@@ -95,12 +84,7 @@ Only one I2C and SPI interface of RAK3272S:
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s-pinout.png"
-  width="60%"
-  caption="RAK3272S Breakout Board Pinout"
-  zoomMode={true}
-/>
+> **Image:** RAK3272S Breakout Board Pinout
 
 The tables below show the pin definition of the RAK3272S Breakout Board:
 
@@ -162,7 +146,7 @@ The RAK3272S module supports the LoRaWAN bands listed in the table below. When p
 
 |      Feature      | Condition |               Minimum               | Typical | Maximum | Unit  |
 | :---------------: | :-------: | :---------------------------------: | :-----: | :-----: | :---: |
-| Operating Current |  TX Mode  | 87 @&nbsp;20&nbsp;dBm, 868&nbsp;MHz |    -    |    -    |  mA   |
+| Operating Current |  TX Mode  | 87 @ 20 dBm, 868 MHz |    -    |    -    |  mA   |
 |                   |  RX Mode  |                5.22                 |    -    |    -    |  mA   |
 |   Sleep Current   |   EU868   |                  -                  |  1.69   |    -    |  uA   |
 |                   |   CN470   |                  -                  |  1.69   |    -    |  uA   |
@@ -175,24 +159,13 @@ The RAK3272S module supports the LoRaWAN bands listed in the table below. When p
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s-schematic.png"
-  width="80%"
-  caption="RAK3272S Schematic Diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK3272S Schematic Diagram
 
 #### Mechanical Characteristics
 
 **Figure 4** show RAK3272S board dimensions.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s-mechanical-dimensions.png"
-  width="40%"
-  caption="RAK3272S Mechanical Dimensions"
-  zoomMode={true}
-/>
-
+> **Image:** RAK3272S Mechanical Dimensions
 
 ### Software
 
@@ -200,7 +173,7 @@ Download the latest firmware of the RAK3272S Breakout Board provided below. RAK3
 
 The **bin file** contains only the application code and requires the **RAK DFU Tool** to upload it to the module.
 
-The **hex file** includes both the bootloader and the application code. To upload it, you need to use the <a href="https://learn.rakwireless.com/hc/en-us/articles/26687606549911-How-To-Guide-STM32CubeProgrammer-for-RAK-Modules" target="_blank">STM32CubeProgrammer</a>.
+The **hex file** includes both the bootloader and the application code. To upload it, you need to use the [STM32CubeProgrammer](https://learn.rakwireless.com/hc/en-us/articles/26687606549911-How-To-Guide-STM32CubeProgrammer-for-RAK-Modules).
 
 :::warning
 Uploading the **`.hex`** file using STM32CubeProgrammer will erase all configured data on the device.
@@ -218,20 +191,19 @@ If BOOT mode is not initiated, send the `AT+BOOT` command to start bootloader mo
 
 |     Model      |                     Version                     |                                                           Source                                                           |
 | :------------: | :---------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
-| RAK3272S(.bin) |        RUI3 (default baudrate = 115200)         |        <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK3172-E_latest.bin" target="_blank">Download</a>        |
-| RAK3272S(.hex) |        RUI3 (default baudrate = 115200)         |     <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK3172-E_latest_final.hex" target="_blank">Download</a>     |
-|    RAK3272S    | **DEPRECATED** V1.0.4 (default baudrate = 9600) | <a href="https://downloads.rakwireless.com/LoRa/RAK3172/Firmware/RAK3172_Latest_Firmware.zip" target="_blank">Download</a> |
+| RAK3272S(.bin) |        RUI3 (default baudrate = 115200)         |        [Download](https://downloads.rakwireless.com/RUI/RUI3/Image/RAK3172-E_latest.bin)        |
+| RAK3272S(.hex) |        RUI3 (default baudrate = 115200)         |     [Download](https://downloads.rakwireless.com/RUI/RUI3/Image/RAK3172-E_latest_final.hex)     |
+|    RAK3272S    | **DEPRECATED** V1.0.4 (default baudrate = 9600) | [Download](https://downloads.rakwireless.com/LoRa/RAK3172/Firmware/RAK3172_Latest_Firmware.zip) |
 
 :::warning
 - Some RAK3172 devices come with older firmware versions (v1.0.4 and below) that are not based on RUI3 (RAKwireless Unified Interface V3).
-- If the host microcontroller code is based on older firmware, the <a href="https://learn.rakwireless.com/hc/en-us/articles/26687498449559-AT-Command-Migration-Guide-of-RAK3172-to-RUI3-RAKwireless-Unified-Interface-V3/" target="_blank">RAK3172 AT Command Migration Guide</a> provides a detailed explanation of the key differences between the two AT command sets.
+- If the host microcontroller code is based on older firmware, the [RAK3172 AT Command Migration Guide](https://learn.rakwireless.com/hc/en-us/articles/26687498449559-AT-Command-Migration-Guide-of-RAK3172-to-RUI3-RAKwireless-Unified-Interface-V3/) provides a detailed explanation of the key differences between the two AT command sets.
 :::
 
 ### Certification
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
-You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
+You can find it in our [RUI3 documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide) or get it from our [Download Center](https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/).    
 ::: 
 
-<RkBottomNav/>

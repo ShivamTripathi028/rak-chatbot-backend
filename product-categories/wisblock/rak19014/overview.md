@@ -9,31 +9,27 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19014 WisBlock Battery USB Power Slot Module
 
 Thank you for choosing **RAK19014 WisBlock Battery USB Power Slot Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19014/quickstart/" target="_blank">RAK19014 Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/rak19014/datasheet/" target="_blank">Datasheet</a>
-* <a href="https://github.com/RAKWireless/WisBlock/" target="_blank">WisBlock Source Code Repository</a>
-* <a href="https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK19014.stp" target="_blank">RAK19014 3D Model</a>
-* <a href="https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp" target="_blank">40-Pin Male Connector 3D file</a>
-
+* [RAK19014 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak19014/quickstart/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak19014/datasheet/)
+* [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
+* [RAK19014 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK19014.stp)
+* [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 
 ## Product Description
 
 The RAK19014 WisBlock Battery USB Power Slot Module is a modular power board comprising a battery connector (no charging circuitry onboard) and a USB Type-C connector used for reprogramming the WisBlock Core. It is designed for use with the WisBlock Base Board with Power Slot via the 40-pin WisBlock connector.
 
-The RAK19014 is optimally designed to support very low-power applications since it only has a USB connector, battery connector, and a 3.3&nbsp;V switching regulator in the circuit, removing unnecessary components that cause extra current consumption.
+The RAK19014 is optimally designed to support very low-power applications since it only has a USB connector, battery connector, and a 3.3 V switching regulator in the circuit, removing unnecessary components that cause extra current consumption.
 
 ### WisBlock IO Pin Mapping Tool
 
 :::tip NOTE
-For optimal results when building a WisBlock solution, utilize the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool" target="_blank">WisBlock IO Pin Mapping Tool</a>. This tool proactively identifies compatible pins for each module combination, thereby preventing pin conflicts.
+For optimal results when building a WisBlock solution, utilize the [WisBlock IO Pin Mapping Tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool). This tool proactively identifies compatible pins for each module combination, thereby preventing pin conflicts.
 :::
-
 
 ## Product Features
 
@@ -43,7 +39,7 @@ For optimal results when building a WisBlock solution, utilize the <a href="http
 * Supports reprogramming of WisBlock Core via USB connector
 * High-efficiency switching regulator
 * Optimized for low-power devices
-* Size: 30&nbsp;mm x 20&nbsp;mm
+* Size: 30 mm x 20 mm
 
 ## Prerequisites
 
@@ -51,9 +47,8 @@ To use a **RAK19014**, you need at least a **WisBlock Base** Board with Power Sl
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- 3.7&nbsp;V-4.2&nbsp;V Li-ion batteries are primarily supported. It is highly recommended not to use other types of batteries with the system unless you are familiar with the risks.
+- 3.7 V-4.2 V Li-ion batteries are primarily supported. It is highly recommended not to use other types of batteries with the system unless you are familiar with the risks.
 - Ensure the battery wires, both rechargeable and non-rechargeable, match the polarity on the RAK19014 board. Not all batteries have the same wiring.
 - Ensure the module is secured with screws to ensure proper function.
 :::
 
-<RkBottomNav/>

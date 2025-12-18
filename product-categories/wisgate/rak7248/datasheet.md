@@ -11,9 +11,6 @@ sidebar_label: Datasheet
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7248 WisGate Developer D4H Gateway Datasheet
 
@@ -59,44 +56,23 @@ The overview covers the RAK7248 board and block diagram.
 
 The outer dimension of RAK7248 is **92x68.3x57.2 mm**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/1.png"
-  width="60%"
-  caption="RAK7248/RAK7248C/RAK7248P Dimensions"
-/>
+> **Image:** RAK7248/RAK7248C/RAK7248P Dimensions
 
 #### Circuit Board Modules Stack
 
 The figure below summarizes the basic building blocks of RAK7248. The RAK2287 is an essential part of it as it provides all LoRaWAN connectivity. It receives and transmits LoRa Frames and takes care of modulating/demodulating the signals among others. The processing of the LoRa Frames as well as higher-level protocol-related tasks is done by the embedded host system (Raspberry Pi). Received and processed LoRa Frames are being sent to a LoRaWAN Server. The segmentation of protocol-related tasks is outside the scope of this document.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/2.png"
-  width="75%"
-  caption="RAK7248 System Structure"
-/>
+> **Image:** RAK7248 System Structure
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/3.png"
-  width="75%"
-  caption="RAK7248C System Structure"
-/>
+> **Image:** RAK7248C System Structure
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/4.png"
-  width="75%"
-  caption="RAK7248P System Structure"
-/>
+> **Image:** RAK7248P System Structure
 
 #### Block Diagram
 
 RAK7248 is the central hardware solution for all LoRa based radio communication. It receives and transmits radio messages. The processing of radio messages as well as the protocol related tasks is done by the embedded host system (Raspberry Pi4). Received and processed radio messages are being sent to a LoRaWAN server. The following figure shows the block diagram of RAK7248.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/7.png"
-  width="75%"
-  caption="RAK7248C Block Diagram"
-/>
+> **Image:** RAK7248C Block Diagram
 
 :::tip NOTE
 The concrete segmentation of the protocol related tasks is outside the scope of this document.
@@ -106,11 +82,7 @@ The concrete segmentation of the protocol related tasks is outside the scope of 
 
 The concrete segmentation of the protocol related tasks is outside the scope of this document.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/8.png"
-  width="50%"
-  caption="RPi to RAK9003"
-/>
+> **Image:** RPi to RAK9003
 
 ### RAK2013 Pi HAT
 
@@ -118,33 +90,17 @@ The **RAK2013 Cellular Pi HAT** is an add-on board following the Raspberry Pi HA
 
 An additional feature of the board is the integrated audio codec and audio amplifier, which allow for VoLTE support. Thus, there is an earphone connector, MIC connector and speaker connector with an audio amplifier.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/9.png"
-  width="75%"
-  caption="RPi to RAK2013"
-/>
-
+> **Image:** RPi to RAK2013
 
 ### Hardware
-
-
 
 #### Interfaces
 
 The interface of RAK7248 is shown in the figure below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/5.png"
-  width="100%"
-  caption="RAK7248/RAK7248P Interfaces"
-/>
+> **Image:** RAK7248/RAK7248P Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/6.png"
-  width="100%"
-  caption="RAK7248C Interfaces"
-/>
-
+> **Image:** RAK7248C Interfaces
 
 #### RF Characteristics
 
@@ -231,47 +187,32 @@ It is highly recommended, to use optimized RSSI calibration values, which is par
 
 The LoRa Antenna with RP-SMA male connector is shown in **Figure 10**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/10.png"
-  width="80%"
-  caption="LoRa Antenna"
-/>
+> **Image:** LoRa Antenna
 
 ###### Antenna Dimension
 
 The antenna's mechanical dimension is shown below:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/11.png"
-  width="60%"
-  caption="LoRa Antenna Dimension (mm)"
-/>
+> **Image:** LoRa Antenna Dimension (mm)
 
 ###### Antenna Parameters
 
 | Items                              |              Specifications              |
 | ---------------------------------- | :--------------------------------------: |
 | Voltage Standard Wave Ratio (VSWR) |                  ≤ 1.5                   |
-| Gain                               |           2.3&nbsp;dBi (peak)            |
-| Working Temperature & Humidity     | T:-35°&nbsp;C ~ +80°&nbsp;C, H: 0% ~ 95% |
-| Storage Temperature & Humidity     | T:-40°&nbsp;C ~ +85°&nbsp;C, H: 0% ~ 95% |
+| Gain                               |           2.3 dBi (peak)            |
+| Working Temperature & Humidity     | T:-35° C ~ +80° C, H: 0% ~ 95% |
+| Storage Temperature & Humidity     | T:-40° C ~ +85° C, H: 0% ~ 95% |
 
 ##### LTE
 
 For a built-in BG96, there is one LTE antenna and one GPS antenna. For module built-in EG91/EG95, there are two LTE antennas and no GPS antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/12.png"
-  width="40%"
-  caption="LTE Antenna"
-/>
+> **Image:** LTE Antenna
+
 ###### Antenna Dimension
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/13.png"
-  width="40%"
-  caption="LTE Antenna Dimensions"
-/>
+> **Image:** LTE Antenna Dimensions
 
 ###### Antenna Parameters
 
@@ -287,21 +228,13 @@ For a built-in BG96, there is one LTE antenna and one GPS antenna. For module bu
 
 The GPS antenna with SMA Male Connector for the WisGate D4H LPWAN Gateway is shown below
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/14.png"
-  width="40%"
-  caption="GPS Antenna"
-/>
+> **Image:** GPS Antenna
 
 ###### GPS Antenna Dimension
 
 The antenna's mechanical dimension is shown below:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/datasheet/15.png"
-  width="60%"
-  caption="GPS Antenna Dimensions"
-/>
+> **Image:** GPS Antenna Dimensions
 
 ###### GPS Environmental Requirements
 
@@ -374,7 +307,6 @@ The table below lists the operation and storage temperature requirements:
 | **Operation Temperature Range** | -10 ºC   | +25 ºC      | +55 ºC  |
 | **Storage Temperature Range**   | -40 ºC   |             | +85 ºC  |
 
-
 ### Firmware
 
 | **Model** | **Raspberry Pi Board** | **Firmware Version** | **Source**                                                                                      |
@@ -404,47 +336,47 @@ The table below lists the operation and storage temperature requirements:
 
 | Part  Number | Package                                                                                                     | Description              |
 | ------------ | ----------------------------------------------------------------------------------------------------------- | ------------------------ |
-| RAK7248-03   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for EU868 region |
-| RAK7248-04   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for US915 region |
-| RAK7248-05   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for KR920 region |
-| RAK7248-06   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for AS923 region |
-| RAK7248-07   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for IN865 region |
-| RAK7248-08   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for AU915 region |
-| RAK7248-09   | 1pc LoRa Antenna <br/>1pc GPS Antenna<br/>1pc Power Adapter<br/>1pc 16G SD card with pre-installed firmware | RAK7248 for RU864 region |
+| RAK7248-03   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for EU868 region |
+| RAK7248-04   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for US915 region |
+| RAK7248-05   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for KR920 region |
+| RAK7248-06   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for AS923 region |
+| RAK7248-07   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for IN865 region |
+| RAK7248-08   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for AU915 region |
+| RAK7248-09   | 1pc LoRa Antenna 
+1pc GPS Antenna
+1pc Power Adapter
+1pc 16G SD card with pre-installed firmware | RAK7248 for RU864 region |
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'anatel': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_ANATEL_Certification.pdf',
-    },
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_CE_Certification.zip',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_FCC_Certification.zip',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_ISED_Certification.zip',
-    },
-    {
-        'imda': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_IMDA_Certification.zip',
-    },
-    {
-        'kc': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_KC_Certification.pdf',
-    },
-    {
-        'rcm': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_RCM_Certification.pdf',
-    },
-    {
-        'srrc': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_SRRC_Certification.zip',
-    },
-    {
-        'ukraine': 'https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_Ukraine_Certification.pdf',
-    },
-    
-   
-]} />
+### Certifications
+- **ANATEL:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_ANATEL_Certification.pdf
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_FCC_Certification.zip
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_ISED_Certification.zip
+- **IMDA:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_IMDA_Certification.zip
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_KC_Certification.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_RCM_Certification.pdf
+- **SRRC:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_SRRC_Certification.zip
+- **UKRAINE:** https://downloads.rakwireless.com/LoRa/RAK7248/Certification/RAK7248_Ukraine_Certification.pdf
 
 ### FCC Caution
 

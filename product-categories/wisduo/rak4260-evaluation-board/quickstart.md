@@ -9,11 +9,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4260 Evaluation Board Quick Start Guide
-
 
 ## Prerequisites
 
@@ -37,8 +33,6 @@ Before going through each and every step in the installation guide of the RAK426
 * 2-pcs 4-pin Header
 * 9-pcs Dupont Lines
 
-
-
 ## Product Configuration
 
 ### Interfacing with the RAK4260 Evaluation Board
@@ -51,27 +45,15 @@ Before powering the RAK4260 Evaluation Board, you should install the LoRa antenn
 
 1. Connect your RAK4260 Evaluation Board to your Windows PC using the provided micro USB cable.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/4interfacing-with-rak4260/rak4260-laptop.svg"
-  width="60%"
-  caption="RAK4260 Evaluation Board to Laptop Connection"
-/>
+> **Image:** RAK4260 Evaluation Board to Laptop Connection
 
 2. Open the RAK Serial Port Tool.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/4interfacing-with-rak4260/rak-serial-port-tool.png"
-  width="90%"
-  caption="RAK Serial Port Tool"
-/>
+> **Image:** RAK Serial Port Tool
 
 3. To find the correct COM Port number for your device, go to Device Manager by pressing **Windows + R**, and then type `devmgmt.msc`. Or, search for Device Manager in the Start Menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/4interfacing-with-rak4260/device-manager.png"
-  width="100%"
-  caption="Device Manager"
-/>
+> **Image:** Device Manager
 
 4. Look for Ports (COM & LPT) and find the name **USB-SERIAL CH340**. Take note of the COM Port Number.
 
@@ -81,48 +63,25 @@ If you didn't find any port with the name USB-Serial CH340, make sure you have i
 
 5. Choose the Correct Port Number and Baud rate from the Device Manager, then click on the “**OPEN**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/4interfacing-with-rak4260/correct-port-and-baudrate.png"
-  width="90%"
-  caption="Correct Port Number and Baud rate"
-/>
-
+> **Image:** Correct Port Number and Baud rate
 
 ### Connecting to The Things Network (TTN)
 
 In this section, you will be connecting the RAK4260 Evaluation Board to The Things Network (TTN). If you don't have an account yet, head on to [The Things Network](https://www.thethingsnetwork.org/) website and create one. Once done, log in to your account and go to the console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/ttn-homepage.png"
-  width="100%"
-  caption="The Things Network Home Page"
-/>
+> **Image:** The Things Network Home Page
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/ttn-console-page.png"
-  width="100%"
-  caption="TTN Console Page"
-/>
+> **Image:** TTN Console Page
 
 - Choose “**APPLICATIONS**”
-
 
 #### Adding an Application
 
 1. Click on the “**add application**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/application-page.png"
-  width="100%"
-  caption="Application Page"
-/>
+> **Image:** Application Page
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/add-application.png"
-  width="100%"
-  caption="Add Application Parameters"
-/>
+> **Image:** Add Application Parameters
 
 Here are the things that you should take note of in adding an application:
 
@@ -133,21 +92,13 @@ Here are the things that you should take note of in adding an application:
 
 2. After you fill in the necessary information, press the “**Add application**” button at the bottom of the page. If you see the same page, as shown in **Figure 9**, this means that you have successfully registered your application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/application-overview.png"
-  width="100%"
-  caption="Application Overview"
-/>
+> **Image:** Application Overview
 
 #### Register Device
 
 1. Click “**register device**”.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/device-section.png"
-  width="100%"
-  caption="Device Section"
-/>
+> **Image:** Device Section
 
 Here are the things that you should take note of in registering your device:
 
@@ -156,29 +107,17 @@ Here are the things that you should take note of in registering your device:
 
 2. Click on the highlighted in red icon and the Device EUI will be automatically generated. The App Key should be in auto-generation mode by default.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/fill-device.png"
-  width="100%"
-  caption="Add your Device"
-/>
+> **Image:** Add your Device
 
 3. Lastly, click on the “**Register**” button. Now, your device is registered under the corresponding application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/add-device.png"
-  width="100%"
-  caption="Register Device"
-/>
+> **Image:** Register Device
 
 #### TTN Device Overview
 
 You can check all the parameters of the newly registered device created by clicking the “**Overview**”. The default join mode is OTAA.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/ttn-overview.png"
-  width="100%"
-  caption="Device Overview"
-/>
+> **Image:** Device Overview
 
 ##### Testing RAK4260 LoRa Node demo
 
@@ -221,7 +160,6 @@ To test your project, you need to perform the steps below:
 #define DEMO_APP_ENDDEVICE_CLASS                 CLASS_A
 //#define DEMO_APP_ENDDEVICE_CLASS                 CLASS_C
 
-
 /* ABP Join Parameters */
 
 #define DEMO_DEVICE_ADDRESS                     0x02603119
@@ -262,56 +200,29 @@ The default join mode is **OTAA**, and the default frequency is **EU868**. After
 
 6. Press the “**reset button**” on your RAK5005 Baseboard Module. If everything works perfectly, you should see the same message shown in **Figure 14**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/startup-default-output.png"
-  width="45%"
-  caption="Serial Port Tool Successful Connection"
-/>
+> **Image:** Serial Port Tool Successful Connection
 
 7. Choose Option 1 “**Send Join Request**” then click on the “**SEND**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/network-join-parameters-set.png"
-  width="45%"
-  caption="Join parameters sent"
-/>
+> **Image:** Join parameters sent
 
 8. To send data from the RAK4260 to the TTN successfully, choose Option 2 then click on the “**SEND**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/sending-data-to-the-server.png"
-  width="45%"
-  caption="LoRaWAN data send"
-/>
+> **Image:** LoRaWAN data send
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/tx-success.png"
-  width="45%"
-  caption="LoRaWAN Transmission Success"
-/>
+> **Image:** LoRaWAN Transmission Success
 
 9. Data is now received by the TTN, as shown in **Figure 18**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/data-received-ttn.png"
-  width="100%"
-  caption="Data received by the TTN"
-/>
-
-
+> **Image:** Data received by the TTN
 
 #### ABP Mode
-
 
 ##### Configure the ABP Mode on the Platform
 
 1. To join TTN in ABP mode, first, it is required to change the activation method to ABP. This is done on the TTN website under the “**Device Settings**” page.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/ttn-abp-change.png"
-  width="100%"
-  caption="TTN Console, change the activation mode to ABP"
-/>
+> **Image:** TTN Console, change the activation mode to ABP
 
 * For ABP mode, the TTN parameters needed are the following: **Device Address**, **Network Session Key**, and **App Session Key**.
 
@@ -319,19 +230,11 @@ The default join mode is **OTAA**, and the default frequency is **EU868**. After
 These fields can be left empty in the form and TTN will complete them with random values. In other cases, you can complete them with specific values.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/ttn-abp-param.png"
-  width="100%"
-  caption="TTN Console ABP join parameters"
-/>
+> **Image:** TTN Console ABP join parameters
 
 2. After completing the activation mode change, the device parameters will be summarized the same, as shown in **Figure 21**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/5ttn/ttn-abp-fill.png"
-  width="100%"
-  caption="TTN Console, ABP mode configuration finalized"
-/>
+> **Image:** TTN Console, ABP mode configuration finalized
 
 3. Update the join parameters on the “**conf_app.h**” file.
 
@@ -343,11 +246,7 @@ This section shows how to connect the RAK4260 Evaluation Board to the ChirpStack
 
 “ChirpStack provides open-source components for LoRaWAN networks. Together they form a ready-to-use solution including a user-friendly web interface for device management and APIs for integration. The modular architecture makes it possible to integrate within existing infrastructures. All components are licensed under the MIT license and can be used for commercial purposes.”
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/loraserver.png"
-  width="80%"
-  caption="RAK4260 Evaluation Board in the context of the ChirpStack platform"
-/>
+> **Image:** RAK4260 Evaluation Board in the context of the ChirpStack platform
 
 The architecture of the ChirpStack platform is shown in **Figure 22**. Similar to the case of TTN, the RAK4260 Evaluation board is an **End Device** and will transmit the data to the backend servers through a LoRa gateway. For a more technical understanding of the ChirpStack components, refer to the [Architecture](https://www.chirpstack.io/project/architecture/) page of ChirpStack.
 
@@ -361,11 +260,7 @@ To register the device to the ChirpStack network server, you must choose either 
 
 2. Go to the Applications section then click on the “**+ CREATE**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-create-new-app.png"
-  width="100%"
-  caption="Creating a new Application on the RAK’s ChirpStack LoRaServer"
-/>
+> **Image:** Creating a new Application on the RAK’s ChirpStack LoRaServer
 
 3. Create an Application named **rak4260_node**. Fill in the required fields, as shown in **Figure 24**.
 
@@ -379,43 +274,23 @@ ChirpStack LoraServer supports multiple system configurations, with only one by 
 
 The **Application Description** field is just a descriptive text.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-filling-param.png"
-  width="100%"
-  caption="Filling parameters of an Application on the RAK’s ChirpStack LoRaServer"
-/>
+> **Image:** Filling parameters of an Application on the RAK’s ChirpStack LoRaServer
 
 #### Registering a new device
 
 1. Click on the Application **rak4260_node** created in the previous step.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-list-app.png"
-  width="100%"
-  caption="List of applications created on the RAK’s ChirpStack LoRaServer"
-/>
+> **Image:** List of applications created on the RAK’s ChirpStack LoRaServer
 
 2. Select the “**DEVICES**” tab, as shown in **Figure 26**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-device-tab.png"
-  width="100%"
-  caption="Device tab of an Application on the RAK’s ChirpStack LoRaServer"
-/>
+> **Image:** Device tab of an Application on the RAK’s ChirpStack LoRaServer
 
 3. Inside of the “**DEVICES**” tab, create a new device (LoRa node) by clicking on the “**+ CREATE**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-add-device.png"
-  width="100%"
-  caption="Add a new device at DEVICES tab of an Application on the RAK’s ChirpStack LoRaServer"
-/>
+> **Image:** Add a new device at DEVICES tab of an Application on the RAK’s ChirpStack LoRaServer
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-device-reg.png"
-  width="100%"
-  caption="New device registration form on the RAK’s ChirpStack LoRaServer"
-/>
+> **Image:** New device registration form on the RAK’s ChirpStack LoRaServer
 
 4. Fill in the parameters requested as appears in **Figure 28**:
 
@@ -429,11 +304,7 @@ ChirpStack doesn’t support AS923 in ABP mode.
 
 5. Press the “**CREATE DEVICE**” button at the bottom of this page to finish the device registration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-generate-deveui.png"
-  width="100%"
-  caption="Generate a new Device EUI in the device registration form"
-/>
+> **Image:** Generate a new Device EUI in the device registration form
 
 #### LoRaWAN Join Mode
 
@@ -445,37 +316,21 @@ The LoRaWAN specification defines that to join in a LoRaWAN network, each end-de
 
 1. If you have selected “**device_profile_otaa**”, then after the device is created, an “**Application Key**” must be also created for this device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-otaa.png"
-  width="100%"
-  caption="Choosing OTAA mode in the device registration form"
-/>
+> **Image:** Choosing OTAA mode in the device registration form
 
 2. A previously created “**Application Key**” can be entered here, or a new one can be generated automatically by clicking the icon highlighted in red.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-otaa-appkey.png"
-  width="100%"
-  caption="Application Key for the OTAA mode in the device registration form"
-/>
+> **Image:** Application Key for the OTAA mode in the device registration form
 
 3. Once the Application Key is added to the form, the process can be finalized by clicking the “**SET DEVICE-KEYS**” button.
 
 * As shown in **Figure 32**, a new device should be listed in the  “**DEVICES**” tab. The most important parameters, such as the “**Device EUI**”, are shown in the summary.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-deveui.png"
-  width="100%"
-  caption="New crated device listed in the DEVICES tab"
-/>
+> **Image:** New crated device listed in the DEVICES tab
 
 4. To end the process, it is a good practice to review that the **Application Key**” is properly associated with this device. The “**Application Key**” can be verified in the “**KEYS(OTAA)**” tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-appkey.png"
-  width="100%"
-  caption="Application Key associated to the new device"
-/>
+> **Image:** Application Key associated to the new device
 
 :::tip NOTE
 Standard OTAA mode requires the Device EUI, Application Key, and the Application EUI. But in ChirpStack’s implementation, only Device EUI and the Application Key are mandatory. The Application EUI is not required and is not recorded in the Application tab.
@@ -498,11 +353,7 @@ During the registration of a new device, if “**device_profile_abp**” is sele
 Check the Disable frame-counter validation to prevent the node-side counting the frame starting from zero after the node is powered on during the test, and the server cannot synchronize the node-side counting, causing the transmission to fail.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-abp-console.png"
-  width="100%"
-  caption="ChirpStack Console, configuring a device in ABP mode"
-/>
+> **Image:** ChirpStack Console, configuring a device in ABP mode
 
 After selecting the ABP mode, the following parameters appear in the “**ACTIVATION**” tab, as shown in **Figure 35**:
 
@@ -510,11 +361,7 @@ After selecting the ABP mode, the following parameters appear in the “**ACTIVA
 * **Network session key**
 * **Application session key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-abp-param.png"
-  width="100%"
-  caption="ChirpStack Console, parameters required for the ABP mode"
-/>
+> **Image:** ChirpStack Console, parameters required for the ABP mode
 
 * The parameters can be generated as random numbers by the platform or can be set with values. Once these parameters are filled properly, the process is completed by clicking on the “**(RE)ACTIVATE DEVICE**” button.
 
@@ -524,37 +371,21 @@ After selecting the ABP mode, the following parameters appear in the “**ACTIVA
 
 1. Go to **Applications** -> **rak4260-node** -> **Devices** -> **rak4260-node**, then select the “**LORAWAN FRAMES**” tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/otaa-activation.png"
-  width="100%"
-  caption="OTAA activation frame"
-/>
+> **Image:** OTAA activation frame
 
 2. Go to **Applications** -> **rak4260-node** -> **Devices** -> **rak4260-node** , then select “**DEVICE DATA**” tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/otaa-data.png"
-  width="100%"
-  caption="Device data OTAA frame"
-/>
+> **Image:** Device data OTAA frame
 
 ###### View LoRaWAN ABP Frames
 
 1. Go to **Applications** -> **rak4260-node** -> **Devices** -> **rak4260-abp**, then select the “**LORAWAN FRAMES**” tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-abp-frame.png"
-  width="100%"
-  caption="LoRaWAN ABP frame"
-/>
+> **Image:** LoRaWAN ABP frame
 
 2. Go to **Applications** -> **rak4260-node** -> **Devices** -> **rak4260-abp**, then select “**DEVICE DATA**” tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/6chirpstack/chirpstack-abp-data.png"
-  width="100%"
-  caption="Device data ABP frame"
-/>
+> **Image:** Device data ABP frame
 
 ### LoRa Simple P2P Demo
 
@@ -569,26 +400,11 @@ The RAK460 P2P demo can be cloned using the following link:
 
 Use the p2p-rak4260 branch, as shown in **Figure 40**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/7p2p/rak4260-p2p-clone.png"
-  width="90%"
-  caption="LoRa P2P Demo clone project"
-/>
-<br />
+> **Image:** LoRa P2P Demo clone project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/7p2p/p2p-scan.png"
-  width="90%"
-  caption="LoRa P2P Demo scanning channels"
-/>
+> **Image:** LoRa P2P Demo scanning channels
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/7p2p/p2p-broadcast.png"
-  width="90%"
-  caption="Lora P2P Demo broadcast messages"
-/>
-
-
+> **Image:** Lora P2P Demo broadcast messages
 
 ## Miscellaneous
 
@@ -601,7 +417,6 @@ RAK4261 is a circuit board module for RAK5005 with a pre-soldered RAK4260 LPWAN 
 :::
 
 Listed below are the accessible pins and data bus of the attached RAK5005 base board on the RAK4260 EVB:
-
 
 | RAK4261 Pin Definition | Function Name of WisBase | Pin Number | Pin Number | Function Name of WisBase | RAK4261 Pin Definition |
 | ---------------------- | ------------------------ | ---------- | ---------- | ------------------------ | ---------------------- |
@@ -626,6 +441,3 @@ Listed below are the accessible pins and data bus of the attached RAK5005 base b
 | NC                     | IO5                      | 37         | 38         | IO6                      | NC                     |
 | GND                    | GND                      | 39         | 40         | GND                      | GND                    |
 
-
-
-<RkBottomNav/>

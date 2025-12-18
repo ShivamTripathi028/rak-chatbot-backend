@@ -11,14 +11,12 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12040 WisBlock 8x8 IR Sensor
 
 Thank you for choosing **RAK12040 WisBlock 8x8 IR Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak12040/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK12040 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12040.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
@@ -34,11 +32,11 @@ RAK12040 is a WisBlock 8x8 IR Sensor Module that extends the WisBlock system wit
     *  Based on AMG8833
     *  Temperature detection of two-dimensional area：8x8 (64 pixels)
     *  I2C digital interfaces
-    *  3.3&nbsp;V power supply
-    *  Operating temperature range：0 to +80&nbsp;°C
+    *  3.3 V power supply
+    *  Operating temperature range：0 to +80 °C
 
 * **Size**
-    * 10 x 23&nbsp;mm
+    * 10 x 23 mm
 
 ## Prerequisites
 
@@ -48,4 +46,3 @@ To use a **RAK12040**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

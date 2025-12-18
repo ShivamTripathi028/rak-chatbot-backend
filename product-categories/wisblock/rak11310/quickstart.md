@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11310 WisBlock LPWAN Module Quick Start Guide
 
 This guide introduces the RAK11310 WisBlock Core LPWAN Module and how to use it. RAK11310 consists of a Raspberry Pi RP2040 chip and an SX1262 LoRa transceiver, making it ideal for various IoT projects.
@@ -36,7 +33,7 @@ Before going through each and every step on using RAK11310 WisBlock Core, make s
 
 You can choose the Arduino IDE or Platform IO to code the RAK11310 WisBlock Core.
 
-<b>Programming RAK11310 via Arduino IDE:</b>
+**Programming RAK11310 via Arduino IDE:**
 
 - Download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software).
 
@@ -55,9 +52,7 @@ After the installation of Arduino IDE, the USB driver must be manually installed
 
 In the Arduino IDE, once you installed the BSP, some examples for RAK11310 will be automatically included in the list of examples when you select WisBlock Core RAK11310 Board in the Boards Manager.
 
-
-
-<b>Programming RAK11310 via Platform IO:</b>
+**Programming RAK11310 via Platform IO:**
 
 - [Platform IO for RAK11310 complete setup guide](https://learn.rakwireless.com/hc/en-us/articles/26687276346775-How-To-Perform-Installation-of-Board-Support-Package-in-PlatformIO)
 
@@ -79,21 +74,11 @@ RAKwireless offers many [WisBlock Base Boards](https://store.rakwireless.com/col
 
 To illustrate, RAK11310 can be connected to the RAK5005-O WisBlock Base, as shown in **Figure 1**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak5005-connect.png"
-  figureCount="1"
-  caption="RAK11310 Connection to WisBlock Base RAK5005-O"
-   width="50%"
-/>
+> **Image:** RAK11310 Connection to WisBlock Base RAK5005-O
 
 There are a few pins that are exposed on RAK5005-O, and you can easily use them via header pins. The labels are at the back, as shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/io-pins.png"
-  figureCount="2"
-  caption="WisBlock Base exposed pins"
-   width="35%"
-/>
+> **Image:** WisBlock Base exposed pins
 
 More information can be found on the [official documentation of the specific WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) you used in your project.
 
@@ -131,25 +116,15 @@ The listed links are just examples. **All WisBlock Modules** have their own quic
 
 **Figure 3** shows an illustration on how you can combine various WisBlock Modules with the RAK11310 WisBlock Core via the WisBlock Base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11310-example-weather-assembly.png"
-  figureCount="3"
-  caption="RAK11310 Connection to WisBlock Base and other WisBlock Modules"
-   width="55%"
-/>
+> **Image:** RAK11310 Connection to WisBlock Base and other WisBlock Modules
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-**Figure 4** shows how to mount the RAK11310 module on top of a WisBlock Base board (RAK5005-O). Follow carefully the procedure defined in [WisBlock module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to secure the connection safely. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+**Figure 4** shows how to mount the RAK11310 module on top of a WisBlock Base board (RAK5005-O). Follow carefully the procedure defined in [WisBlock module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to secure the connection safely. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/datasheet/mounting-sketch.png"
-  figureCount="4"
-  caption="RAK11310 Mounting Sketch"
-   width="50%"
-/>
+> **Image:** RAK11310 Mounting Sketch
 
 ##### Disassembling
 
@@ -157,52 +132,27 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/16.removing-screws.png"
-  figureCount="5"
-  caption="Removing screws from the WisBlock module"
-   width="70%"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/detaching-silkscreen.png"
-  figureCount="6"
-  caption="Detaching silkscreen on the WisBlock module"
-   width="70%"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 7**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/18.detaching-module.png"
-  figureCount="7"
-  caption="Applying even forces on the proper location of a WisBlock module"
-   width="70%"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 #### LoRa Antenna
 
 Another important component of RAK11310 is the LoRa antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/lora-antenna.png"
-  figureCount="8"
-  caption="LoRa Antenna"
-   width="30%"
-/>
+> **Image:** LoRa Antenna
 
 You need to ensure that the antenna is properly connected to have a good LoRa signal. Do not power the module without an antenna connected to the IPEX connector to avoid damage to the RF section of the chip.
 
 RAK11310 has a label on its sticker showing where to connect the antennas, as shown in **Figure 9**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11310-antenna-label.png"
-  figureCount="9"
-  caption="RAK11310 Antenna Label"
-   width="30%"
-/>
+> **Image:** RAK11310 Antenna Label
 
 :::tip NOTE
 Detailed information about the RAK11310 LoRa antenna can be found on the [antenna datasheet](https://downloads.rakwireless.com/#LoRa/WisBlock/Accessories/).
@@ -214,39 +164,24 @@ When using LoRa, make sure that an antenna is always connected. Using these tran
 
 #### Battery and Solar Connection
 
-RAK11310 can be powered via the USB cable or a Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 11**. The matching connector for the battery wires is a [JST PHR-2 2&nbsp;mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable).
+RAK11310 can be powered via the USB cable or a Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 11**. The matching connector for the battery wires is a [JST PHR-2 2 mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable).
 
 This illustration uses RAK5005-O as WisBlock Base. There are other [WisBlock Base](https://store.rakwireless.com/collections/wisblock-base) boards available, and you need to check the datasheet of the specific WisBlock Base board for the right polarity and other parameters.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/battery-connect.png"
-  figureCount="10"
-  caption="WisBlock Base Connection"
-   width="50%"
-/>
+> **Image:** WisBlock Base Connection
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/quickstart/battery-connection.gif"
-  figureCount="11"
-  caption="Battery Connection"
-   width="25%"
-/>
+> **Image:** Battery Connection
 
-The battery can be recharged, as well, via a 5&nbsp;V solar panel, as shown in **Figure 12**. The matching connector for the solar panel wires is a [JST ZHR-2 1.5&nbsp;mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable).
+The battery can be recharged, as well, via a 5 V solar panel, as shown in **Figure 12**. The matching connector for the solar panel wires is a [JST ZHR-2 1.5 mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/solar-connect.png"
-  figureCount="12"
-  caption="Solar Panel Connection"
-   width="90%"
-/>
+> **Image:** Solar Panel Connection
 
 You can find the specification of the battery and solar panel in the datasheet of the WisBlock Base.
 
 :::warning
 
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. Do not use other types of batteries with the system.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. Do not use other types of batteries with the system.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the RAK5005-O board. Not all batteries have the same wiring.
 
 :::
@@ -267,12 +202,7 @@ To use these examples, you have two options: Arduino IDE or Platform IO.
 
 Some examples for various WisBlock Modules like the RAK1901 and RAK1902 are available in the Arduino IDE once you install the [BSP for the Arduino IDE](https://docs.rakwireless.com/product-categories/wisblock/rak11310/quickstart/#software), as shown in **Figure 13**. The updated and complete WisBlock examples are still in the [WisBlock Examples](https://github.com/RAKWireless/WisBlock/tree/master/examples).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11310_arduino_examples.svg"
-  figureCount="13"
-  caption="RAK11310 WisBlock Core Examples"
-   width="100%"
-/>
+> **Image:** RAK11310 WisBlock Core Examples
 
 It is highly recommended to also check the dedicated quick-start guide that you can follow on various WisBlock Modules. Each quick-start guide contains the detailed steps on how to open the examples and upload them to the RAK11310.
 
@@ -296,12 +226,7 @@ RAK11310 is the WisBlock Core capable of LoRaWAN connectivity.
 
 There is an example on how to start with LoRaWAN in the **RAK WisBlock examples** in the Arduino IDE named `LoRaWAN_OTAA_ABP`. This is also available in the [WisBlock Repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK11300/communications/LoRa/LoRaWAN/LoRaWAN_OTAA_ABP/LoRaWAN_OTAA_ABP.ino).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/lora-solution.svg"
-  figureCount="14"
-  caption="RAK11310 LoRaWAN Example"
-   width="100%"
-/>
+> **Image:** RAK11310 LoRaWAN Example
 
 ##### Configuration of LoRaWAN Example Code
 
@@ -368,7 +293,7 @@ uint8_t nodeAppsKey[16] = {0xFB, 0xAC, 0xB6, 0x47, 0xF3, 0x58, 0x45, 0xC7, 0x50,
 
 6. Set up uplink period.
 
-The default is **20000&nbsp;mS**.
+The default is **20000 mS**.
 
 ```
 #define LORAWAN_APP_INTERVAL 20000
@@ -451,39 +376,19 @@ void lorawan_rx_handler(lmh_app_data_t *app_data)
 
 After all the configuration is done and the payload is formatted properly, you can now compile and upload the code. If you get errors compiling the LoRaWAN example, ensure that you have an updated BSP by checking the version in the boards manager.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/bsp_version.svg"
-  figureCount="15"
-  caption="RAK11310 BSP(Board Support Package) in Arduino IDE Board Manager"
-   width="100%"
-/>
+> **Image:** RAK11310 BSP(Board Support Package) in Arduino IDE Board Manager
 
 You also need to ensure that you have the updated SX126x library.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/sx126x_lib.svg"
-  figureCount="16"
-  caption="SX126x-Arduino Library"
-   width="100%"
-/>
+> **Image:** SX126x-Arduino Library
 
 :::tip NOTE
 
 For Windows users, you need to run the `post_install.bat` script to be able to compile sketches for RAK11310. You can execute the script by double-clicking it or via command line.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11310_bat_install.png"
-  figureCount="17"
-  caption="Executing post_install.bat script directly"
-   width="70%"
-/>
+> **Image:** Executing post_install.bat script directly
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11300_commandline.png"
-  figureCount="18"
-  caption="Running post_install.bat via commandline"
-   width="80%"
-/>
+> **Image:** Running post_install.bat via commandline
 
 :::
 
@@ -527,24 +432,13 @@ Execute the following procedure to upgrade the firmware via USB using the .uf2 f
 - Click the reset button of the WisBlock Base Board twice to enable the USB Bootloader mode of the RAK11300 module.
 - Hold the BootSel button in the RAK11300 module, reset the module (press the reset button of WisBlock Base Board for at least 2 seconds) then wait for the USB Mass Storage `RPI-RP2` to appear before releasing the BootSel button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11310_bootsel.png"
-  figureCount="19"
-  caption="RAK11310 Bootsel Button"
-   width="30%"
-/>
+> **Image:** RAK11310 Bootsel Button
 
 You need to do either of the two options until the USB Mass Storage `RPI-RP2` shows on your computer.
 
 4.  Copy the **firmware.uf2** file to the `RPI-RP2` Mass Storage device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/quickstart/uf2.png"
-  figureCount="20"
-  caption="Drag the firmware.uf2 file to RPI-RP2 USB Mass Storage"
-   width="75%"
-/>
+> **Image:** Drag the firmware.uf2 file to RPI-RP2 USB Mass Storage
 
 5. You need to reset the device after updating the `.uf2` firmware file.
 
-<RkBottomNav/>

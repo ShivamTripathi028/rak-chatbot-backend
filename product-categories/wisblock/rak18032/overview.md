@@ -11,16 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18032 WisBlock Audio Ultrasonic Microphone Module
 
 Thank you for choosing **RAK18032 WisBlock Audio Ultrasonic Microphone Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK18032 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak18032/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak18032/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK18032 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK18032.stp)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -33,19 +30,19 @@ RAK18032 is a WisBlock Audio that extends the WisBlock system based on the SPH06
 ## Product Features
 
 * **Module Specifications**
-    * Voltage supply: **3.3&nbsp;V ~ 3.6&nbsp;V**
-    * Current consumption: **40&nbsp;uA ~ 690&nbsp;uA**
+    * Voltage supply: **3.3 V ~ 3.6 V**
+    * Current consumption: **40 uA ~ 690 uA**
     * Chipset: **SPH0655LM4H-1**
     * Ultrasonic PDM Microphone
     * Left or right channel selection
-    * Flat frequency response: 20&nbsp;kHz - 80&nbsp;kHz
+    * Flat frequency response: 20 kHz - 80 kHz
     * Low distortion
     * High SNR
     * Bottom port
     * Omnidirectional sensitivity
 
 * **Module Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
@@ -55,4 +52,3 @@ To use a **RAK18032**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
-<RkBottomNav/>

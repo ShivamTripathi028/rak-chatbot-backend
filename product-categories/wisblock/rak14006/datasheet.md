@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14006 WisBlock Rotary Encoder Module Datasheet
 
 ## Overview
@@ -21,13 +18,12 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 The RAK14006 is a rotary encoder module with PEC11L-4125F-S0020 from BOURNS. RAK14006 can detect user inputs such as rotation direction and rotation number of steps. Also, an independent push switch is provided for the user.
 
-
 ### Features
 
 - Rotary Encoder with an independent push switch
-- 3.3&nbsp;V Power supply
+- 3.3 V Power supply
 - Chipset: BOURNS PEC11L-4125F-S0020
-- Module Size: 25&nbsp;mm x 35&nbsp;mm
+- Module Size: 25 mm x 35 mm
 
 ## Specifications
 
@@ -37,11 +33,7 @@ The RAK14006 is a rotary encoder module with PEC11L-4125F-S0020 from BOURNS. RAK
 
 The RAK14006 WisBlock Rotary Encoder Module can be mounted to the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK14006 on a WisBlock Base board, such as the [RAK5005-O](https://store.rakwireless.com/products/rak5005-o-base-board).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/mounting.png"
-  width="60%"
-  caption="RAK14006 WisBlock Rotary Encoder Module Mounting"
-/>
+> **Image:** RAK14006 WisBlock Rotary Encoder Module Mounting
 
 #### Chipset
 
@@ -57,12 +49,8 @@ The RAK14006 WisBlock Rotary Encoder Module comprises a standard WisIO connector
 - The three(3) GPIOs: **IO4**, **IO5**, **IO6**, **3V3** and **GND** are connected to WisIO connector.
 :::
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/rak14006_pinouts.svg"
-  width="80%"
-  caption="RAK14006 WisBlock Rotary Encoder Module Pinout"
-/>
-
+ 
+> **Image:** RAK14006 WisBlock Rotary Encoder Module Pinout
 
 #### Electrical Characteristics
 
@@ -79,21 +67,12 @@ The RAK14006 WisBlock Rotary Encoder Module comprises a standard WisIO connector
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK14006 module.
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/mechanical-drawing.png"
-  width="60%"
-  caption="RAK14006 WisBlock Rotary Encoder Dimensions"
-/>
-
+ 
+> **Image:** RAK14006 WisBlock Rotary Encoder Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/pcb-layout.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
-
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
@@ -101,30 +80,17 @@ The RAK14006 WisBlock Rotary Encoder Module comprises a standard WisIO connector
 
 **Signal A** and **Signal B** are rotary encoder signals from PEC11L-4125F-S0020. SW is an independent push switch from PEC11L-4125F-S0020.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/signal-input.png"
-  width="60%"
-  caption="RAK14006 Signal Input"
-/>
-
+> **Image:** RAK14006 Signal Input
 
 ##### Hardware Rotation Direction
 
 The RAK14006 can detect rotation direction using 74HC4538D. CW square wave only comes from OUT_CW, and the CCW square wave comes from OUT_CCW.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/rotation-direction.png"
-  width="60%"
-  caption="Hardware Direction Rotation"
-/>
+> **Image:** Hardware Direction Rotation
 
 ##### WisConnector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/pinout.png"
-  width="40%"
-  caption="RAK14006 Module WisConnector"
-/>
+> **Image:** RAK14006 Module WisConnector
 
 :::tip NOTE
 - The three(3) GPIOs: **IO4**, **IO5**, **IO6**, **3V3** and **GND** are connected to WisIO connector.
@@ -132,4 +98,3 @@ The RAK14006 can detect rotation direction using 74HC4538D. CW square wave only 
 - If the R8 and R10 are used without connecting R7 and R9, the user can get the signal via hardware. Also, the user can get the rotation direction from which the GPIO the signal came from.
 :::
 
-<RkBottomNav/>

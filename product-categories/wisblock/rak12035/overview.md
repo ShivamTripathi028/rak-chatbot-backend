@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12035 WisBlock Soil Moisture Sensor Module
 
 Thank you for choosing **RAK12035 WisBlock Soil Moisture Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK12035 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak12035/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak12035/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK12035 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12035.stp)
 
@@ -28,7 +26,7 @@ Thank you for choosing **RAK12035 WisBlock Soil Moisture Sensor Module** in your
 
 ## Product Description
 
-RAK12035 is a soil sensor probe module based on the ATTINY441-SSU microcontroller from Atmel. It uses capacitive sensing to measure moisture. A 1&nbsp;MHz square wave is the output from the chip through a resistor into a big pad, and the surrounding ground plane acts as a parasitic capacitor. Both the resistor and the capacitor form a low-pass filter whose cutoff frequency changes when there is a change in capacitance.
+RAK12035 is a soil sensor probe module based on the ATTINY441-SSU microcontroller from Atmel. It uses capacitive sensing to measure moisture. A 1 MHz square wave is the output from the chip through a resistor into a big pad, and the surrounding ground plane acts as a parasitic capacitor. Both the resistor and the capacitor form a low-pass filter whose cutoff frequency changes when there is a change in capacitance.
 
 The soil around the sensor acts as an electrolyte whose dielectric constant changes depending on the amount of moisture in it, resulting in changing the capacitance of our makeshift capacitor too. The filtered square wave is fed into a peak detector, formed by a diode and capacitor. The diode allows the positive peaks to go through, while the capacitor stores the maximum voltage of those peaks. The voltage is measured by an ADC in the MCU. An NTC element is used to measure the temperature of the soil.
 
@@ -46,7 +44,7 @@ Because you need to bury the RAK12035 sensor probe into the soil, the electronic
     * Chipset: Atmel ATTINY441-SSU
 
 * **Size**
-    * 18.1 x 149&nbsp;mm
+    * 18.1 x 149 mm
 
 ## Prerequisites
 
@@ -57,4 +55,3 @@ To use a **RAK12035** sensor, you need to connect it to **RAK12023** Soil Moistu
 - The RAK12035 requires calibration to ensure a proper function.
 :::
 
-<RkBottomNav/>

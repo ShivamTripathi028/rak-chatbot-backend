@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAKDAP1 Flash and Debug Tool
 
 Thank you for choosing **RAKDAP1 Flash and Debug Tool** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -32,4 +30,3 @@ DAPLink is compatible with all known versions of Windows, Mac OSX, and Linux. On
 - HID - CMSIS-DAP compliant debug channel
 - WEBUSB HID - CMSIS-DAP compliant debug channel
 
-<RkBottomNav/>

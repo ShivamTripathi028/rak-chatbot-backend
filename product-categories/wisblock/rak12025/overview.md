@@ -11,20 +11,17 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12025 WisBlock Gyroscope Sensor Module
 
 Thank you for choosing **RAK12025 WisBlock Gyroscope Sensor Module** in your next IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK12025 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak12025/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak12025/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK12025 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12025.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
-
 
 **Examples**
 
@@ -38,17 +35,17 @@ RAK12025 is a gyroscope module, part of the RAKWireless WisBlock Sensor series. 
 ## Product Features
 
 * **Sensor specifications**
-    * Selectable full scale (245/500/2000&nbsp;dps)
+    * Selectable full scale (245/500/2000 dps)
     * I2C/SPI digital output interface
     * 16-bit rate value data output
     * 8-bit temperature data output
     * Two digital output lines (interrupt and data ready)
-    * Power Supply Voltage: 3.3&nbsp;V
-    * Current Consumption: 5&nbsp;uA - 6.1&nbsp;mA
+    * Power Supply Voltage: 3.3 V
+    * Current Consumption: 5 uA - 6.1 mA
     * Chipset: STMicroelectronics I3G4250D
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -58,4 +55,3 @@ To use a **RAK12025**, you need at least a **WisBlock Base board** to plug the m
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

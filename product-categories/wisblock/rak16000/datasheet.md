@@ -10,34 +10,26 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK16000 WisBlock DC Current Module Datasheet
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/rak16000_overview.png" 
-  caption="RAK16000 Top and Back View" 
-   width="50%"
-/>
+> **Image:** RAK16000 Top and Back View
 
 ### Description
 
-RAK16000 is a part of the WisBlock Sensor Series that is capable of measuring DC current in the range of 0 to 3&nbsp;A in a voltage range of 0 to 26&nbsp;V. With the two measured DC values, you get the power consumption by multiplying the current and voltage. Additionally, this module uses the INA219BID from Texas Instruments that offers high accuracy maximum rate of 0.5% over temperature.
-
+RAK16000 is a part of the WisBlock Sensor Series that is capable of measuring DC current in the range of 0 to 3 A in a voltage range of 0 to 26 V. With the two measured DC values, you get the power consumption by multiplying the current and voltage. Additionally, this module uses the INA219BID from Texas Instruments that offers high accuracy maximum rate of 0.5% over temperature.
 
 ### Features
 
-  * Measures DC current in the range of 0 to 3&nbsp;A
-  * Measure DC voltage in the range of 0 to 26&nbsp;V
+  * Measures DC current in the range of 0 to 3 A
+  * Measure DC voltage in the range of 0 to 26 V
   * High accuracy of 0.5% (max) over temperature (INA219B)
-  * 100&nbsp;mΩ shunt resistor can provide a resolution of up to 0.1&nbsp;mA
+  * 100 mΩ shunt resistor can provide a resolution of up to 0.1 mA
   * I2C interface
-  * 3.3&nbsp;V Power supply
+  * 3.3 V Power supply
   * Chipset: Texas Instruments INA219BID
-  * 15&nbsp;mm x 25&nbsp;mm
+  * 15 mm x 25 mm
 
 ## Specifications
 
@@ -47,11 +39,7 @@ RAK16000 is a part of the WisBlock Sensor Series that is capable of measuring DC
 
 The RAK16000 WisBlock DC Current Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 2** shows the mounting mechanism of the RAK16000 on a WisBlock Base module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/image-20210225140433974.png" 
-  caption="RAK16000 mounting mechanism on a WisBlock Base module" 
-   width="60%"
-/>
+> **Image:** RAK16000 mounting mechanism on a WisBlock Base module
 
 ### Hardware
 
@@ -67,11 +55,7 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK16000 WisBlock DC Current Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK16000 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/rak16000_pinout.svg" 
-  caption="RAK16000 WisBlock DC Current Module Pinout" 
-   width="80%"
-/>
+> **Image:** RAK16000 WisBlock DC Current Module Pinout
 
 :::tip NOTE
 
@@ -98,19 +82,11 @@ This section shows the maximum and minimum ratings of the RAK16000 module and it
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK16000 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/image-20210225140446062.png" 
-  caption="RAK16000 WisBlock DC Current Module Mechanic Drawing" 
-   width="80%"
-/>
+> **Image:** RAK16000 WisBlock DC Current Module Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/image-20201228093039748.png" 
-  caption="WisConnector PCB Footprint and Recommendations" 
-   width="100%"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
@@ -118,50 +94,31 @@ This section shows the maximum and minimum ratings of the RAK16000 module and it
 
 The default 7-bit I2C address is 0x41. The I2C address can be changed by the pull-up resistors (R7 and R8) and pull-down resistors (R9 and R10).
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/rak16000_i2c.png" 
-  caption="I2C Slave Address Select" 
-   width="50%"
-/>
+> **Image:** I2C Slave Address Select
 
 ##### I2C Pull-Up Resistor
 
 The pull-up resistor for I2C_SCL and I2C_SDA is already installed on the WisBlock Base board. Don't connect (NC) R2 and R3 on the RAK16000 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/rak16000_pup.png" 
-  caption="I2C Pull-Up Resistor" 
-   width="50%"
-/>
+> **Image:** I2C Pull-Up Resistor
 
 ##### INA219BD
 
 * R11, R12, and C3 are reserved for input filter circuit.
-* R6 is the shunt resistor, and the default value is 100&nbsp;mΩ (0.1&nbsp;Ω +- 1%).
+* R6 is the shunt resistor, and the default value is 100 mΩ (0.1 Ω +- 1%).
 
 :::tip NOTE
 
-- Using the 100&nbsp;mΩ shunt resistor, you can measure current with a minimum value of 100&nbsp;uA and LSB is 100&nbsp;uA.
-- Using the 1&nbsp;Ω shunt resistor, you can measure 10&nbsp;uA current, and the measure range will be 320&nbsp;uA.
+- Using the 100 mΩ shunt resistor, you can measure current with a minimum value of 100 uA and LSB is 100 uA.
+- Using the 1 Ω shunt resistor, you can measure 10 uA current, and the measure range will be 320 uA.
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/image-20210722204440705.png" 
-  caption="INA219BD" 
-   width="50%"
-/>
+> **Image:** INA219BD
 
 ##### Full Schematic
 
 **Figure 9** shows the complete schematic of the RAK16000 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16000/datasheet/rak16000_sch.png" 
-  caption="RAK16000 WisBlock DC Current Module Schematic" 
-   width="100%"
-/>
+> **Image:** RAK16000 WisBlock DC Current Module Schematic
 
-
-<RkBottomNav/>

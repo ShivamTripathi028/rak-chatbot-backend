@@ -9,10 +9,6 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg22/cbrs-antenna.pn
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # 3550-3700 MHz 10 dBi CBRS Band Antenna
 
 Thank you for choosing the **3550-3700 MHz 10 dBi CBRS Band Antenna** in your awesome IoT project! 🎉 To help you get started, we have provided you the necessary documentation for your product.
@@ -21,8 +17,8 @@ Thank you for choosing the **3550-3700 MHz 10 dBi CBRS Band Antenna** in your aw
 
 ## Product Features
 
-- Frequency range: 3550~3700&nbsp;MHz
-- Gain: 10&nbsp;dBi
+- Frequency range: 3550~3700 MHz
+- Gain: 10 dBi
 - VSWR: ≤ 1.31
 - Efficiency: ≥ 75%
 - Antenna type: Dipole
@@ -31,5 +27,3 @@ Thank you for choosing the **3550-3700 MHz 10 dBi CBRS Band Antenna** in your aw
 - Connector type: N-type female
 - IP67 rated
 
-
-<RkBottomNav/>

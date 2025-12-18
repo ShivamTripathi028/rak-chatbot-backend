@@ -7,9 +7,6 @@ keywords:
 sidebar_label: WisGate OS User Manual
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisGate OS User Manual
 
 ## Overview
@@ -21,7 +18,6 @@ This document describes the functionality of the WisGateOS in detail. The interf
 :::tip NOTE
 Make sure all the antennas are connected before powering the Gateway. 
 :::
-
 
 For RAK7258 and RAK7268, use the included adapter. RAK7249 and RAK7289 come with a PoE injector, which you need to connect to the grid on one side and to the gateway on the other (Ethernet cable not included). 
 
@@ -42,11 +38,7 @@ By default, the gateway is configured to work in Access Point (AP) mode. It has 
 
 Connect the Ethernet cable to the port marked **ETH** and the other end to your router. Use the same credentials for the Web UI as for AP mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/1.login.png"
-  width="100%"
-  caption="Login Page"
-/>
+> **Image:** Login Page
 
 ## Web Management Platform
 
@@ -60,11 +52,7 @@ This is where statistics about the Gateway behavior can be monitored in real tim
 
 The page consists of several areas where you can see the overview of some metrics and basic information about the gateway upon logging in the browser displays the page shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/2.overview.png"
-  width="100%"
-  caption="Overview Page"
-/>
+> **Image:** Overview Page
 
 - **Received**: Shows the total number of uplink LoRa messages received by the gateway. Here are displayed not only messages from devices connected to the gateway directly but from any device that is within the coverage of the gateway and transmitting LoRa messages.
 - **Transmitted**: Shows the total number of downlink LoRa messages sent by the gateway.
@@ -88,11 +76,7 @@ This is where a log of the LoRa messages is shown in real-time. There are severa
 
 By selecting a particular packet (by a single click on the packet), you get an extended window with the detailed metadata for the packet as well as some RF parameters. In addition, there is a graph area below the packets list, where is shown the **Air Time** for each of the nodes that have packets detected by the packet logger and also the load per frequency channel.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/3.packet-logger.png"
-  width="100%"
-  caption="LoRaWAN Packet Logger Page"
-/>
+> **Image:** LoRaWAN Packet Logger Page
 
 Filter the packets by choosing any of the following:
 
@@ -110,11 +94,7 @@ Filter the packets by choosing any of the following:
 
 On this page, you can see the complete system logs. It is useful mainly for debugging purposes. The System Log reports both system information and actual data from LoRa frames coming from the end nodes. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/4.system-log.png"
-  width="100%"
-  caption="System Log Page"
-/>
+> **Image:** System Log Page
 
 On the top right corner, you can find the button there:
 
@@ -124,11 +104,7 @@ On the top right corner, you can find the button there:
 
 This section shows only information about traffic on different ports, addresses, etc. It is organized in tables; however, there are no configuration options here, and this is only for observation. There is a dedicated sub-section for the Firewall Settings in the Network section, where you can actually configure rather than only observe. The only actions you can perform here are to **Reset Counters** or **Restart Firewall** via the links on the top left.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/5.firewall.png"
-  width="100%"
-  caption="Firewall Page"
-/>
+> **Image:** Firewall Page
 
 ### Network
 
@@ -136,35 +112,22 @@ This section shows only information about traffic on different ports, addresses,
 
 This page allows you to set up the **Ethernet Port Type**. The options are WAN and LAN, and they can be selected via the dropdown menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/6.ethernet.png"
-  width="100%"
-  caption="Ethernet Port Page"
-/>
+> **Image:** Ethernet Port Page
 
 #### WAN Interface
 
 The first element of this page is the **Status** field where you (*the user*) can check statistics about the gateway, such as the Uptime, MAC-Address, TX, RX, and IPv4 Address. You can also configure the protocol to be used for connecting to the network. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/7.wan-interface.png"
-  width="100%"
-  caption="WAN Interface Page"
-/>
+> **Image:** WAN Interface Page
 
 There are 2 options for the protocol:
 
 - **Static address**: Allows you to put a static address that will be used by the gateway.
 - **DHCP client**: The gateway will use the address that the router assigns to it.
 
-
 When **Static address** is selected, other settings that can be done: 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/8.wan-interface-static.png"
-  width="100%"
-  caption="WAN Interface with Static Address Page"
-/>
+> **Image:** WAN Interface with Static Address Page
 
 **IPv4 address**: The network address in Internet Protocol version 4.
 
@@ -188,11 +151,7 @@ When **Static address** is selected, other settings that can be done:
 
 This page is where you can make changes on the Cellular connectivity. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/9.cellular-interface.png"
-  width="100%"
-  caption="Cellular Interface Page"
-/>
+> **Image:** Cellular Interface Page
 
 - **Status**: This shows the **Uptime**, **MAC-Address**, **RX** (received packets), and **TX** (sent packets).
 - **LTE network is enabled**: A button that enables/disables the interface. 
@@ -212,11 +171,7 @@ This page is where you can make changes in the Wireless connection. Enabling/Dis
   - **Key**: In selecting an Encryption, a **Key** field will pop up. You must enter a password, which will be used to connect to the AP.
   - **Hidden**: You can hide the AP by enabling this. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/10.access-point.png"
-  width="100%"
-  caption="Access Point Mode"
-/>
+> **Image:** Access Point Mode
 
 - **Client**: Only the wireless client will be active. By this mode, you can easily connect the gateway to a wireless network. When selecting this mode, a **Wireless Client** field will appear. 
   - **ESSID**: You must type the name of the wireless network, to which they want to connect the gateway to.
@@ -224,12 +179,7 @@ This page is where you can make changes in the Wireless connection. Enabling/Dis
   - **Key**: With selecting an Encryption, a **Key** field will pop up. You must type the password that is used by the wireless network. 
   - Below the **Wireless Client** menu, there is another menu. The first element is the **Status** field where you can check statistics about the gateway (**Uptime**, **MAC-Address**, **TX**, **RX**, and **IPv4 Address**). You can also configure the protocol to be used for connecting to the network. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/11.client-mode.png"
-  width="100%"
-  caption="Client Mode Page"
-/>
-
+> **Image:** Client Mode Page
 
 There are 2 options for the protocol:
 
@@ -238,11 +188,7 @@ There are 2 options for the protocol:
 
 When **Static address** is selected, more settings pop up:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/12.client-mode-static.png"
-  width="100%"
-  caption="Client Menu with Static Address Page"
-/>
+> **Image:** Client Menu with Static Address Page
 
 **IPv4 address**: The static address in Internet Protocol version 4.
 
@@ -266,16 +212,11 @@ When **Static address** is selected, more settings pop up:
   - **Wireless Access Point**: See **Access Point** configuration to set up AP protection.
   - **Wireless Client**: See **Client** configuration to connect the gateway to a wireless network.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/13.access-client-mode.png"
-  width="100%"
-  caption="Access Point + Client Mode"
-/>
-
+> **Image:** Access Point + Client Mode
 
 Additionally, you can choose a preferred protocol for the Wi-Fi interface - **DHCP client** and **Static address**. The menu is the same as the **WAN Interface**.
 
-To see how to configure each mode, refer to <a href="wi-fi-modes-configuration" target="_blank"><b>Wi-Fi Modes Configuration</b></a> documentation.
+To see how to configure each mode, refer to [**Wi-Fi Modes Configuration**](wi-fi-modes-configuration) documentation.
 
 #### Diagnostics
 
@@ -283,11 +224,7 @@ This is where you can perform checks via the built-in tools: **Ping**, **Tracero
 
 You can either enter an URL or an IP Address in the text box and execute the command with the button. Both IPv4 and IPv6 are supported (chosen via the drop-down menu). The results are conveniently displayed in a CLI box.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/14.diagnostics.png"
-  width="100%"
-  caption="Diagnostics Page"
-/>
+> **Image:** Diagnostics Page
 
 #### Firewall
 
@@ -297,64 +234,35 @@ The Firewall page has a few separated tabs:
 
 - **General Settings**: This tab has two fields. The first field is the **General Settings** tab where general settings can be done: **Enable/Disable SYN-flood protection**, **Drop invalid packets on/off**, and **Input/Output/Forward settings**. The second field is for Zones settings where you can set up separate settings for the zones.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/15.general-settings.png"
-  width="100%"
-  caption="General Settings Tab"
-/>
+> **Image:** General Settings Tab
 
 - **Port Forwards**: This tab allows you to set up the port forwards. Port forwarding allows remote computers on the Internet to connect to a specific computer or service within the private LAN. In the tab, there is a register with the port forwards that are already set up, and below is a couple of fields to set up a new port forward. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/16.port-tab.png"
-  width="100%"
-  caption="Port Forwards Tab"
-/>
+> **Image:** Port Forwards Tab
 
 - **Traffic Rules**: This tab allows you to set up the traffic rules. Traffic rules define policies for packets traveling between different zones, for example, to reject traffic between certain hosts or to open WAN ports on the router. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/17.traffic-rules.png"
-  width="100%"
-  caption="Traffic Rules Tab"
-/>
+> **Image:** Traffic Rules Tab
 
 - **Custom Rules**: This tab allows you to execute arbitrary iptables commands which are not otherwise covered by the firewall framework. The rules that will be written is interpreted as a shell script.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/18.custom-rules.png"
-  width="100%"
-  caption="Custom Rules Tab"
-/>
+> **Image:** Custom Rules Tab
 
 #### Multi WAN
 
 In the Multi WAN menu, you can can set a priority for all the interfaces. If highest priority WAN source goes down, other in line will be used to access Internet. In the WAN Source Status, it shows which interface is available.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/19.multi-wan.png"
-  width="100%"
-  caption="Multi WAN Tab"
-/>
+> **Image:** Multi WAN Tab
 
 ### Channel Plan
 
 In the Channel Plan, you can set up the operating frequency of the gateway. These frequency channels are the ones that the gateway will use to both receiving and transmitting from/to LoRa nodes. The first field on the page is for the **Region** that the gateway is set to. You can also change the region, corresponding to the frequency band for their country. The other modifications that can be done are **LoRaWAN Public** (on/off), **Multi-SF LoRa Channel**, **Standard Lora Channel**, and **FSK Channel**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/20.channel-plan.png"
-  width="100%"
-  caption="Channel Plan Page"
-/>
-
+> **Image:** Channel Plan Page
 
 There is also the button **Conform to LoRaWAN** that when turned off, it will give you a possibility to set up a Radio Configuration for each concentrator.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/21.advanced-mode.png"
-  width="100%"
-  caption="Switch to Advanced Mode Tab"
-/>
+> **Image:** Switch to Advanced Mode Tab
 
 ### LoRa Network
 
@@ -376,11 +284,7 @@ Here, the working mode of the gateway is set up. In the **LoRaWAN Network Settin
   - **Auto-restart Threshold**: This variable defines how many times the Keepalive Interval can expire before the Packet Forwarder restarts.
   - **Is LoRaWAN Network**: When NO is chosen, frames that are not compliant with the LoRaWAN specification will be forwarded (in case of a proprietary LoRa Server solution). By default, YES is selected and non LoRaWAN packets are dropped.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/22.general-setup.png"
-  width="100%"
-  caption="General Setup Tab"
-/>
+> **Image:** General Setup Tab
 
 - **Beacon Setup**
 
@@ -392,11 +296,7 @@ Here, the working mode of the gateway is set up. In the **LoRaWAN Network Settin
   - **Beacon Bandwidth**: The bandwidth the beacon is going to use. 
   - **Beacon Tx Power**: This is the transmit power of the beacon.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/23.beacon-setup.png"
-  width="100%"
-  caption="Beacon Setup Tab"
-/>
+> **Image:** Beacon Setup Tab
 
 - **Packet Filter**
 
@@ -410,20 +310,12 @@ Here, the working mode of the gateway is set up. In the **LoRaWAN Network Settin
   - **Join Count 1**: Maximum count of join requests allowed during Join Interval.
   - **Join Count 2**: Maximum count of join requests allowed during the Join Period.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/24.packet-filter.png"
-  width="100%"
-  caption="Packet Filter Tab"
-/>
+> **Image:** Packet Filter Tab
 
 - **GPS Information**
   - **Fake GPS**: You can turn on/off the fake GPS functionality and manually set **Latitude**, **Longitude**, and **Altitude**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/25.gps-information.png"
-  width="100%"
-  caption="GPS Information Tab"
-/>
+> **Image:** GPS Information Tab
 
 ##### MQTT Bridge Settings
 
@@ -432,7 +324,7 @@ If you choose an **MQTT Bridge** option in the **Protocol** field of the **Gener
 - **General Setup**
   - **MQTT Broker Address**: The IP address of the Gateway where the MQTT Broker is hosted.
   - **MQTT Broker Port**: The corresponding port (default port is 1883).
-  - **MQTT Protocol Version**: You can choose between V3.1 and V3.1.1. There is very little difference between them, and you can refer to the document: <a href="https://github.com/mqtt/mqtt.org/wiki/Differences-between-3.1.0-and-3.1.1" target="_blank">Differences between 3.1.0 and 3.1.1</a>.
+  - **MQTT Protocol Version**: You can choose between V3.1 and V3.1.1. There is very little difference between them, and you can refer to the document: [Differences between 3.1.0 and 3.1.1](https://github.com/mqtt/mqtt.org/wiki/Differences-between-3.1.0-and-3.1.1).
   - **Client ID**: An ID that is used to associate with the topic. If the field is left empty, a random one will be generated.
   - **Clean Session**: When this function is enabled, the Broker will not store any subscription information or undelivered messages.
   - **Will Retain**: When this function is enabled, the last message published will be retained.
@@ -441,35 +333,19 @@ If you choose an **MQTT Bridge** option in the **Protocol** field of the **Gener
   - **Enable User Authentication**: This function enables Encryption of the transmitted data. You need to configure the Certificates used to encrypt the data to secure authentication being performed.
   - **SSL/TLS Mode**: When enabled (disabled by default), you can choose between three modes, **CA signed server certificate**, **Self-signed server certificate**, and **Self-signed server & client certificate**, with their corresponding options.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/26.general-setup.png"
-  width="100%"
-  caption="General Setup Tab"
-/>
+> **Image:** General Setup Tab
 
   - **MQTT Topic Template Setup**: There are two types of templates, depending on which LoRa Network Server Type you have have chosen.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/27.chirpstack-2x.png"
-  width="100%"
-  caption="ChirpStack 2.x Topic Template"
-/>
+> **Image:** ChirpStack 2.x Topic Template
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/28.chirpstack-3x.png"
-  width="100%"
-  caption="ChirpStack 3.x Topic Template"
-/>
+> **Image:** ChirpStack 3.x Topic Template
 
 ##### Basics Station
 
-By choosing this working mode, you can configure the gateway to work as a Basics Station with three options: **CUPS Boot Server**, **CUPS Server**, and **LNS Server**. For further information, refer to the <a href="https://doc.sm.tc/station/" target="_blank">LoRa Basics Station site</a>.
+By choosing this working mode, you can configure the gateway to work as a Basics Station with three options: **CUPS Boot Server**, **CUPS Server**, and **LNS Server**. For further information, refer to the [LoRa Basics Station site](https://doc.sm.tc/station/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/29.station-configuration.png"
-  width="100%"
-  caption="Basics Station Configuration"
-/>
+> **Image:** Basics Station Configuration
 
 Each option requires:
 
@@ -485,11 +361,7 @@ Each option requires:
 
 Network Server is the place where the configuration of the Built-in Network Server are done.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/30.network-server.png"
-  width="100%"
-  caption="Network Server Configuration"
-/>
+> **Image:** Network Server Configuration
 
 - **Network Server Settings**:
 
@@ -519,19 +391,13 @@ Network Server is the place where the configuration of the Built-in Network Serv
   - **Beacon Bandwidth**: The bandwidth the beacon is going to use. 
   - **Beacon Tx Power**: This is the transmit power of the beacon.
 
-
-
-For a detailed tutorial on how to configure your gateway when using either LNS or CUPS server, refer to <a href="lns-and-cups-configuration" target="_blank"><b>LNS and CUPS Configuration</b></a> documentation.
+For a detailed tutorial on how to configure your gateway when using either LNS or CUPS server, refer to [**LNS and CUPS Configuration**](lns-and-cups-configuration) documentation.
 
 ##### Network Server Status
 
 A dedicated page of the Built-in Network Server. The data is displayed in tables and graphs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/31.network-server-status.png"
-  width="100%"
-  caption="Network Server Status Page"
-/>
+> **Image:** Network Server Status Page
 
 - **Basic Information** 
   - **Uptime**: The time the Built-in Server has been working without interruption.
@@ -544,8 +410,8 @@ A dedicated page of the Built-in Network Server. The data is displayed in tables
   - **Rejected OTAA Request**: The total authentication requests that were rejected.
   - **Data Downlink**: The data that is sent by the gateway.
 
-- **RSSI Distribution**: This graph reflects the RSSI in increments of 20&nbsp;dBm starting from -120&nbsp;dBm and going up to -40&nbsp;dBm. You can get an idea of how many of the total packets received fall within a certain RSSI level.
-- **SNR Distribution**: This graph reflects the SNR in increments of 5&nbsp;dB starting from -15&nbsp;dB and going up to 5&nbsp;dB. You can get an idea of how many of the total packets received fall within a certain SNR level.
+- **RSSI Distribution**: This graph reflects the RSSI in increments of 20 dBm starting from -120 dBm and going up to -40 dBm. You can get an idea of how many of the total packets received fall within a certain RSSI level.
+- **SNR Distribution**: This graph reflects the SNR in increments of 5 dB starting from -15 dB and going up to 5 dB. You can get an idea of how many of the total packets received fall within a certain SNR level.
 - **DataRate Distribution**: The percentage of packets that have a certain Data Rate (DR0 to DR7)
 - **Traffic History**: A general graph reflecting the amount of traffic in packets versus time.
 
@@ -556,7 +422,7 @@ In this tab, you can add external gateways to work with the LoRa Network Server.
 - **General Setup**
   - **MQTT Broker Address**: The IP address of the machine where the MQTT Broker is hosted (default is `127.0.0.1` for the built-in one).
   - **MQTT Broker Port**: The corresponding port (default port is 1883).
-  - **MQTT Protocol Version**: You can choose between V3.1 and V3.1.1. There is very little difference between them, and you can refer to the document: <a href="https://github.com/mqtt/mqtt.org/wiki/Differences-between-3.1.0-and-3.1.1" target="_blank">Differences between 3.1.0 and 3.1.1</a>.
+  - **MQTT Protocol Version**: You can choose between V3.1 and V3.1.1. There is very little difference between them, and you can refer to the document: [Differences between 3.1.0 and 3.1.1](https://github.com/mqtt/mqtt.org/wiki/Differences-between-3.1.0-and-3.1.1).
   - **Client ID**: An ID that is used to associate with the topic. If the field is left empty, a random one will be generated.
   - **Clean Session**: When this function is enabled, the Broker will not store any subscription information or undelivered messages.
   - **Will Retain**: When this function is enabled, the last message published will be retained.
@@ -565,30 +431,17 @@ In this tab, you can add external gateways to work with the LoRa Network Server.
   - **Enable User Authentication**: This function enables Encryption of the transmitted data. You need to configure the Certificates used to encrypt the data to secure authentication being performed.
   - **SSL/TLS Mode**: When enabled (disabled by default), you can choose between three modes **CA signed server certificate**, **Self-signed server certificate**, and **Self-signed server & client certificate**, with their corresponding options.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/32.general-setup.png"
-  width="100%"
-  caption="General Setup Tab"
-/>
+> **Image:** General Setup Tab
 
 - **MQTT Topic**: Here, the topic templates can be found.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/33.mqtt.png"
-  width="100%"
-  caption="MQTT Topic Tab"
-/>
+> **Image:** MQTT Topic Tab
 
 #### Application
 
 Here, an application where a device can be registered and decrypt its data payload can be created. By default, there will be no created Applications.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/34.application-page.png"
-  width="100%"
-  caption="Application Page"
-/>
-
+> **Image:** Application Page
 
 To create an Application, type the name of the application in the name field, choose one of the options in the Type drop-down menu, and click the **Add** button.
 
@@ -601,7 +454,7 @@ In this section, you can do an integration of the Built-in LoRa Application Serv
 - **Generic MQTT** mode:
   - **MQTT Broker Address**: The IP address of the machine where the MQTT Broker is hosted (default is `127.0.0.1` for the built-in one).
   - **MQTT Broker Port**: The corresponding port (default port is 1883).
-  - **MQTT Protocol Version**: You can choose between V3.1 and V3.1.1. There is very little difference between them, and you can refer to the document: <a href="https://github.com/mqtt/mqtt.org/wiki/Differences-between-3.1.0-and-3.1.1" target="_blank">Differences between 3.1.0 and 3.1.1</a>.
+  - **MQTT Protocol Version**: You can choose between V3.1 and V3.1.1. There is very little difference between them, and you can refer to the document: [Differences between 3.1.0 and 3.1.1](https://github.com/mqtt/mqtt.org/wiki/Differences-between-3.1.0-and-3.1.1).
   - **Client ID**: An ID that is used to associate with the topic. If the field is left empty, a random one will be generated.
   - **Clean Session**: When this function is enabled, the Broker will not store any subscription information or undelivered messages.
   - **Will Retain**: When this function is enabled, the last message published will be retained.
@@ -611,11 +464,7 @@ In this section, you can do an integration of the Built-in LoRa Application Serv
   - **SSL/TLS Mode**: When enabled (disabled by default), you can choose between three modes **CA signed server certificate**, **Self-signed server certificate**, and **Self-signed server & client certificate**, with their corresponding options.
   - **Join/Uplink/Downlink/Ack/Topic/Status/Multicast Downlink Topics**: MQTT Templates of the Topics. These are just templates the topics should not be changed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/35.mqtt-mode.png"
-  width="100%"
-  caption="Generic MQTT Mode Settings"
-/>
+> **Image:** Generic MQTT Mode Settings
 
 - **AWS IoT Core** mode:
   - **AWS URL**: The address of the AWS.
@@ -624,26 +473,15 @@ In this section, you can do an integration of the Built-in LoRa Application Serv
   - **Vendor Certificate**: Certificate for the gateway, generated by AWS IoT Core.
   - **Vendor Key**: Private key for the gateway, generated by AWS IoT Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/36.aws-iot.png"
-  width="100%"
-  caption="AWS IoT Core Mode Settings"
-/>
+> **Image:** AWS IoT Core Mode Settings
 
-
-
-For a detailed tutorial on how to configure your gateway when using either LNS or CUPS server, refer to <a href="global-integration" target="_blank"><b>Global Integration</b></a> documentation.
+For a detailed tutorial on how to configure your gateway when using either LNS or CUPS server, refer to [**Global Integration**](global-integration) documentation.
 
 #### Multicast Group
 
 Here, you have the option to create and manage multicast groups of nodes to use for bulk-action downlinks.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/37.multicast.png"
-  width="100%"
-  caption="Multicast Group Page"
-/>
-
+> **Image:** Multicast Group Page
 
 To create a Multicast Group, type the name of it in the name field and click the **Add** button. If there are any created groups, they will be shown as a list with the option to access and edit them.
 
@@ -653,13 +491,9 @@ To create a Multicast Group, type the name of it in the name field and click the
 
 In this section, you can configure the DDNS. Dynamic DNS (DDNS) allows the gateway to be reached via a fixed hostname while having a dynamically changing IP address.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/38.dns.png"
-  width="100%"
-  caption="Dynamic DNS (Beta) Page"
-/>
+> **Image:** Dynamic DNS (Beta) Page
 
-- **Hints**: The **Show more** clickable text shows hints on how to configure the Dynamic DNS. A detailed tutorial on how to configure DDNS can be found in the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743930622743-How-To-Configure-RAK-Industrial-LPWAN-Gateway-Remote-Management-with-DDNS" target="_blank">Knowledge Hub</a>.
+- **Hints**: The **Show more** clickable text shows hints on how to configure the Dynamic DNS. A detailed tutorial on how to configure DDNS can be found in the [Knowledge Hub](https://learn.rakwireless.com/hc/en-us/articles/26743930622743-How-To-Configure-RAK-Industrial-LPWAN-Gateway-Remote-Management-with-DDNS).
 
 - **Overview**: You can change the global settings by pressing the text **To change global settings click here**. This will affect DDNS as a whole (both IPv4 and IPv6, for example).
 
@@ -667,42 +501,25 @@ If you want to have separate settings/rules for IPv4/IPv6, you need to define tw
 
 An IPv4 example is created by default. You can configure its parameters by pressing the **Edit** button.
 
-
-
-For a detailed tutorial on how to configure the DDNSe to access the gateway, refer to <a href="configuring-ddns" target="_blank"><b>Configuring DDNS</b></a> documentation.
+For a detailed tutorial on how to configure the DDNSe to access the gateway, refer to [**Configuring DDNS**](configuring-ddns) documentation.
 
 #### OpenVPN Tunnels
 
 This section shows you how to create a VPN tunnel.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/39.openvpn.png"
-  width="100%"
-  caption="OpenVPN Tunnels Page"
-/>
-
+> **Image:** OpenVPN Tunnels Page
 
 To create a tunnel, type a name for the **Custom Openvpn Configuration** and click on the **Add** button. Then you will be directed to the following page:
 
 - **Configuration**: You must type the certificates for the OpenVPN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/40.configuration-tab.png"
-  width="100%"
-  caption="Configuration Tab"
-/>
+> **Image:** Configuration Tab
 
 - **Upload file**: Instead of manually typing the certificate, you can upload the certificates from file.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/41.file-tab.png"
-  width="100%"
-  caption="Upload File Tab"
-/>
+> **Image:** Upload File Tab
 
-
-
-For a detailed tutorial in the configuring the OpenVIP, refer to <a href="openvpn-configuration" target="_blank"><b>OpenVPN Configuration</b></a> documentation.
+For a detailed tutorial in the configuring the OpenVIP, refer to [**OpenVPN Configuration**](openvpn-configuration) documentation.
 
 ### System
 
@@ -716,11 +533,7 @@ In this section, you can configure the basic aspects of the device like its Host
 
   - **Timezone**: The time-zone of the gateway. It is a good practice to set it to the time zone of your location for synchronization (Default is UTC). Syncing the clock of the gateway is good for monitoring and debugging. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/42.general-settings.png"
-  width="100%"
-  caption="General Settings Tab"
-/>
+> **Image:** General Settings Tab
 
   - **Logging**: You can configure how to keep a log of system events. 
   - **System log buffer size**: You can set size of the log in `kiB`.
@@ -729,19 +542,11 @@ In this section, you can configure the basic aspects of the device like its Host
   - **Log output level**: You can select what type of log output you want to save Debug, Info, Notice, Warning, Error, Critical, Alert, or Emergency.
   - **Cron Log Level**:  This is the level of the cron log: **Normal**, **Debug**, or **Warning**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/43.logging-tab.png"
-  width="100%"
-  caption="Logging Tab"
-/>
+> **Image:** Logging Tab
 
   - **Language**: In this tab, you can change the language of the Web UI. From the drop-down menu, you can choose a preferred language and click on **Save & Apply** to set the new language. Default (**auto**) is English.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/44.language-tab.png"
-  width="100%"
-  caption="Language Tab"
-/>
+> **Image:** Language Tab
 
 - **Time Synchronization**
   - **Enable NTP client**: Enables/disables the NTP (Network Time Protocol) client for the clock synchronization. 
@@ -755,31 +560,19 @@ In this section, you can configure the basic aspects of the device like its Host
   - **Disable**:  The light will be off regardless of **warning**.
   - **warning**: in terms of this tool warnings cold occur  either due to no internet connection or packet forwarder issues. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/45.breathing-light.png"
-  width="100%"
-  caption="Breathing Light Page"
-/>
+> **Image:** Breathing Light Page
 
 #### Administration
 
 From this tab, you can change the administrator password for accessing the Web UI of the gateway by typing the new password in both fields and clicking **Save & Apply**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/46.administration.png"
-  width="100%"
-  caption="Administration Page"
-/>
+> **Image:** Administration Page
 
 #### Backup / Flash Firmware
 
 In this section, you can generate a backup of the configuration files, perform a factory reset, restore a backup, or flash new firmware.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/47.flash-firmware.png"
-  width="100%"
-  caption="Backup / Flash Firmware Page"
-/>
+> **Image:** Backup / Flash Firmware Page
 
 - **Backup / Restore**
   - **Generate archive**: Generates and downloads an archive of the current configuration.
@@ -793,44 +586,29 @@ In this section, you can generate a backup of the configuration files, perform a
 The **Keep settings** check box is selected by default, as unchecking it will results in having a gateway with stock settings after the firmware update.
 :::
 
-
-For a detailed tutorial in the Backup or Restore process, refer to <a href="backup-restore-explanation" target="_blank"><b>Backup and Restore Explanation</b></a> documentation.
+For a detailed tutorial in the Backup or Restore process, refer to [**Backup and Restore Explanation**](backup-restore-explanation) documentation.
 
 #### Reboot
 
 In this tab, you can reboot the gateway. All the unsaved changes will be discarded.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/48.reboot.png"
-  width="100%"
-  caption="Reboot Page"
-/>
+> **Image:** Reboot Page
 
-
-
-For more details, refer to <a href="reboot-process" target="_blank"><b>Reboot Process</b></a> documentation.
+For more details, refer to [**Reboot Process**](reboot-process) documentation.
 
 #### File Browser
 
 This section gives you access to the files in the **root** partition. System logs can be downloaded from here.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/49.file-browser.png"
-  width="100%"
-  caption="File Browser Page"
-/>
+> **Image:** File Browser Page
 
-For more details, refer to <a href="file-browser-explanation" target="_blank"><b>File Browser Explanation</b></a> documentation.
+For more details, refer to [**File Browser Explanation**](file-browser-explanation) documentation.
 
 ### WisDM
 
-In this tab, you can enable/disable the WisDM functionality. More information about WisDM can be found in the <a href="https://news.rakwireless.com/managing-over-the-air-with-wisdm/" target="_blank">RAK News Hub</a>.
+In this tab, you can enable/disable the WisDM functionality. More information about WisDM can be found in the [RAK News Hub](https://news.rakwireless.com/managing-over-the-air-with-wisdm/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/main/50.wisdm.png"
-  width="100%"
-  caption="WisDM Page"
-/>
+> **Image:** WisDM Page
 
 - **Enable**: Enables/disables the WisDM.
 
@@ -838,4 +616,3 @@ In this tab, you can enable/disable the WisDM functionality. More information ab
 
 - **Enable FOTA**: When enabled, the gateway can be upgraded to a newer firmware version via the WisDM. If you want to upgrade the firmware via the Web UI, this function must be disabled. 
 
-<RkBottomNav/>

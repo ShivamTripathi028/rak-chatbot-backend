@@ -19,9 +19,6 @@ slug: /product-categories/wisduo/rak11160-module/at-command-manual/
 date: 2025-04-24
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11160 WisDuo LoRaWAN + BLE + WiFi Module AT Command Manual
 
 ## Overview
@@ -30,10 +27,9 @@ The RAK11160 is based on the STM32WLE5 MCU and Espressif ESP8684 co-processor. I
 
 ## RUI3 AT Command List
 
-The RAK11160 default firmware is based on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/" target="_blank">RUI3 RAKwireless Unified Interface V3</a>. Access the AT command via UART2 by default.
+The RAK11160 default firmware is based on [RUI3 RAKwireless Unified Interface V3](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/). Access the AT command via UART2 by default.
 
-The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation</a>.
+The complete list of commands can be found in [RUI3 AT Commands Documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/).
 
-The Espressif AT command manual can be found on Espressif's website in <a href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html" target="_blank">ESP-AT User Guide</a>.
+The Espressif AT command manual can be found on Espressif's website in [ESP-AT User Guide](https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html).
 
-<RkBottomNav/>

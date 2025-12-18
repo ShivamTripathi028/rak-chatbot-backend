@@ -1,5 +1,4 @@
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RUI Interface General Format
 
@@ -180,7 +179,9 @@ RUI_RETURN_STATUS rui_uart_init(RUI_UART_DEF uart_def,RUI_UART_BAUDRATE baudrate
 | **@brief**  | This API is used to configure the parameters for UART.                                                               |
 | ----------- | -------------------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                           |
-| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def:the instance of UART.<br /><br /> RUI_UART_BAUDRATE baudrate: UART baudrate value |
+| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def:the instance of UART.
+
+ RUI_UART_BAUDRATE baudrate: UART baudrate value |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, and RAK5010.                                                                      |
 
 ## RUI UART Uninitialize
@@ -204,7 +205,9 @@ RUI_RETURN_STATUS rui_uart_send(RUI_UART_DEF uart_def, uint8_t *pdata, uint16_t 
 | **@brief**  | This API is used to send data via UART.                                                                                                                            |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                                                         |
-| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def : the instance of UART.<br />uint8t \*pdata : the pointer of data you want to send.<br />uint16_t len : the length of the data. |
+| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def : the instance of UART.
+uint8t \*pdata : the pointer of data you want to send.
+uint16_t len : the length of the data. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, and RAK5010.                                                                                                                    |
 
 ## RUI UART Receive
@@ -216,7 +219,9 @@ void rui_uart_recv(RUI_UART_DEF uart_def, uint8_t *pdata, uint16_t len)
 | **@brief**  | This API is used to receive data from UART.                                                                                                                            |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **@return** | NULL                                                                                                                                                                   |
-| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def : the instance of UART.<br />uint8_t \*pdata : the pointer of data.<br />uint16_t len : the length of data. This value is always 1. |
+| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def : the instance of UART.
+uint8_t \*pdata : the pointer of data.
+uint16_t len : the length of data. This value is always 1. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, and RAK5010.                                                                                                                        |
 
 ## RUI UART Configure Mode
@@ -228,7 +233,8 @@ RUI_RETURN_STATUS rui_uart_mode_config(RUI_UART_DEF uart_def,RUI_UART_MODE uart_
 | **@brief**  | This API is used to configure uart work mode.                                                                                                |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                                   |
-| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def: the instance of UART.<br />RUI_UART_MODE uart_mode: value for RUI_UART_NORMAL, RUI_UART_UNVARNISHED. |
+| **@param**  | [RUI_UART_DEF](rui-interface-general-format#rui_uart_def) uart_def: the instance of UART.
+RUI_UART_MODE uart_mode: value for RUI_UART_NORMAL, RUI_UART_UNVARNISHED. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, and RAK5010.                                                                                              |
 
 ## RUI GPIO Initialize
@@ -255,7 +261,6 @@ void rui_gpio_uninit(RUI_GPIO_ST *rui_gpio);
 | **@param**  | [RUI_GPIO_ST](rui-interface-general-format#rui_gpio_st) \*rui_gpio: the instance of gpio. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.     |
 
-
 ## RUI GPIO Read/Write
 
 ```c
@@ -265,7 +270,8 @@ RUI_RETURN_STATUS rui_gpio_rw(RUI_IF_READ_WRITE rw_status,RUI_GPIO_ST *rui_gpio,
 | **@brief**  | This API is used to read or set a certain GPIO's Status.                                                                                                                                    |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                                                                                  |
-| **@param**  | [RUI_IF_READ_WRITE](rui-interface-general-format#rui_if_read_write) \*rui_gpio: the pin number of the GPIO which you want to read or set.<br />uint8_t\* status: the pointer of GPIO Value. 0 : low level, 1: high Level. |
+| **@param**  | [RUI_IF_READ_WRITE](rui-interface-general-format#rui_if_read_write) \*rui_gpio: the pin number of the GPIO which you want to read or set.
+uint8_t\* status: the pointer of GPIO Value. 0 : low level, 1: high Level. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                                                                                                                                   |
 
 ## RUI GPIO Interrupt
@@ -278,7 +284,11 @@ RUI_RETURN_STATUS rui_gpio_interrupt(bool control, RUI_GPIO_ST st, RUI_GPIO_INTE
 | **@brief**  | This API is used to register external GPIO, it may lead to power current increase. e.g 130 µA in Nordic platform.                                       |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                                              |
-| **@param**  | bool control: true or false, use it or not.<br /><br />[RUI_GPIO_ST](rui-interface-general-format#rui_gpio_st) pro: priority for interrupt<br /><br />calback callback: interrupt callback. |
+| **@param**  | bool control: true or false, use it or not.
+
+[RUI_GPIO_ST](rui-interface-general-format#rui_gpio_st) pro: priority for interrupt
+
+calback callback: interrupt callback. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                                                                                               |
 
 ## RUI Timer Initialize
@@ -290,7 +300,8 @@ RUI_RETURN_STATUS rui_timer_init(void *obj, void ( *callback )( void ));
 | **@brief**  | This API is used to create/initialize a timer.                                        |
 | ----------- | ------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                            |
-| **@param**  | void \*obj : timer instance<br />void (\*callback)(void): timer event callback function |
+| **@param**  | void \*obj : timer instance
+void (\*callback)(void): timer event callback function |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                             |
 
 ## RUI Timer Uninitialize
@@ -314,7 +325,8 @@ RUI_RETURN_STATUS rui_timer_setvalue(void *obj, uint32_t value );
 | **@brief**  | This API is used to set the interval value for timer.     |
 | ----------- | --------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                |
-| **@param**  | void \*obj: timer instance<br />uint32_t value: timer value |
+| **@param**  | void \*obj: timer instance
+uint32_t value: timer value |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M. |
 
 ## RUI Timer Start
@@ -374,7 +386,8 @@ RUI_RETURN_STATUS rui_adc_get(RUI_GPIO_ST *rui_gpio, uint16_t* value);
 | **@brief**  | This API is used to read the value of the ADC Pin                                                          |
 | ----------- | ---------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                 |
-| **@param**  | uint8_t\* value: the value which is read from ADC.<br />[RUI_GPIO_ST](rui-interface-general-format#rui_gpio_st) \*rui_gpio : GPIO struct |
+| **@param**  | uint8_t\* value: the value which is read from ADC.
+[RUI_GPIO_ST](rui-interface-general-format#rui_gpio_st) \*rui_gpio : GPIO struct |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                                                  |
 
 ## RUI I2C Initialization
@@ -388,7 +401,6 @@ RUI_RETURN_STATUS rui_i2c_init(RUI_I2C_ST *rui_i2c);
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                         |
 | **@param**  | [RUI_I2C_ST](#rui-i2c-st) \*rui_i2c: initialize parameters struct. |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, and RAK5010.                    |
-
 
 ## RUI I2C Read/Write
 
@@ -422,7 +434,15 @@ RUI_RETURN_STATUS rui_spi_rw(RUI_IF_READ_WRITE rw, uint8_t *tx, uint16_t tx_len,
 | **@brief**  | This API is used to read/write through SPI.                                                                                                                                                                           |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                                                                                                            |
-| **@param**  | [RUI_IF_READ_WRITE](rui-interface-general-format#rui_if_read_write) rw: read or write through SPI.<br /><br />uint8_t \*tx: write through SPI.<br /><br />uint16_t tx_len: TX length<br /><br />uint8_t \*rx: read buffer.<br /><br />uint16_t rx_len: RX length. |
+| **@param**  | [RUI_IF_READ_WRITE](rui-interface-general-format#rui_if_read_write) rw: read or write through SPI.
+
+uint8_t \*tx: write through SPI.
+
+uint16_t tx_len: TX length
+
+uint8_t \*rx: read buffer.
+
+uint16_t rx_len: RX length. |
 | **@module** | RAK4400, RAK4600 and RAK5010.                                                                                                                                                                                         |
 ## RUI PWM Initialize
 
@@ -471,7 +491,6 @@ RUI_RETURN_STATUS rui_delay_ms( uint32_t value );
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                |
 | **@param**  | uint32_t value : delay time value.                        |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M. |
-
 
 ## RUI Delay Microseconds
 
@@ -530,7 +549,11 @@ RUI_RETURN_STATUS rui_flash_write(RUI_FLASH_MODE mode, uint8_t *str, uint32_t le
 | **@brief**  | This API is used to write user data to flash                                                                                 |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                           |
-| **@param**  | uint8_t \*str<br /><br /> uint32_t len: For STM Series (RAK811/RAK4200/RAK4270) - Max 128 Bytes. For Nordic Series (RAK8212/RAK5010/RAK4600) - Max 64KB<br /><br />[RUI_FLASH_MODE](rui-interface-general-format#rui_flash_mod) mode: user data or origin data |
+| **@param**  | uint8_t \*str
+
+ uint32_t len: For STM Series (RAK811/RAK4200/RAK4270) - Max 128 Bytes. For Nordic Series (RAK8212/RAK5010/RAK4600) - Max 64KB
+
+[RUI_FLASH_MODE](rui-interface-general-format#rui_flash_mod) mode: user data or origin data |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                                                                            |
 
 ## RUI Flash Read
@@ -542,7 +565,11 @@ RUI_RETURN_STATUS rui_flash_read(RUI_FLASH_MODE mode,uint8_t *str, uint32_t len)
 | **@brief**  | This API is used to read user data from flash                                                                                 |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                           |
-| **@param**  | uint8_t \*str<br /><br /> uint32_t len: For STM Series (RAK811/RAK4200/RAK4270) - Max 128 Bytes. For Nordic Series (RAK8212/RAK5010/RAK4600) - Max 64KB<br /><br />[RUI_FLASH_MODE](rui-interface-general-format#rui_flash_mod) mode: user data or origin data |
+| **@param**  | uint8_t \*str
+
+ uint32_t len: For STM Series (RAK811/RAK4200/RAK4270) - Max 128 Bytes. For Nordic Series (RAK8212/RAK5010/RAK4600) - Max 64KB
+
+[RUI_FLASH_MODE](rui-interface-general-format#rui_flash_mod) mode: user data or origin data |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                                                                            |
 
 ## RUI AT Response
@@ -554,8 +581,10 @@ void  rui_at_response(bool is_success, uint8_t *p_msg, uint16_t ret_code);
 | **@brief**  | This API is used to return info for user defined AT, so that application can use their AT.                     |
 | ----------- | -------------------------------------------------------------------------------------------------------------- |
 | **@return** | [RUI_RETURN_STATUS](#rui-return-status)                                                                                  |
-| **@param**  | bool is_success: true or false<br /><br /> uint8_t \*p_msg: user message<br /><br /> uint16_t ret_code:user error code |
+| **@param**  | bool is_success: true or false
+
+ uint8_t \*p_msg: user message
+
+ uint16_t ret_code:user error code |
 | **@module** | RAK811, RAK4200, RAK4400, RAK4600, RAK5010 and RAK8212-M.                                                      |
 
-
-<RkBottomNav/>

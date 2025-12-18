@@ -19,9 +19,6 @@ date: 2022-04-07
 sidebar_label: Device Firmware Upgrade
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4631-R WisBlock LoRaWAN Module Device Firmware Upgrade
 
 There will be situations that you need to update the firmware of your RAK4631-R. Also, there are times when you want to reupload the firmware on your device to ensure that everything is set properly.
@@ -61,19 +58,11 @@ After connecting your RAK4631-R to WisBlock Base, you can immediately update its
 2. Create a new folder in your `C:\` drive named `RAK4631-R Update`.
 3. Download the [nRFutil.exe](https://github.com/NordicSemiconductor/pc-nrfutil/releases) and the [latest DFU Package](https://downloads.rakwireless.com/RUI/RUI3/Image/RAK4631_latest_dfu_package.zip). Once you downloaded both files, put them in the `RAK4631-R Update` folder you created as shown in **Figure 1**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/nrfutil-rak4631-r-latest-firmware.png"
-  width="70%"
-  caption="nRFutil.exe and RAK4631-R Latest Firmware"
-/>
+> **Image:** nRFutil.exe and RAK4631-R Latest Firmware
 
 4. Connect the RAK4631-R via USB and check if port has been detected via device manager. In this guide it is detected as COM32. The COM port number is not fixed and can be different depending on the PC. If no port is shown in device manager, you can try to double click reset button on the WisBlock Base and check again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/check-com-port-via-device-manager.png"
-  width="70%"
-  caption="Checking COM Port via Device Manager"
-/>
+> **Image:** Checking COM Port via Device Manager
 
 5. After that, you need to send `AT+BOOT` command to the device. You can follow the [guide on using Tera Term](#how-to-check-firmware-version-using-tera-term) but instead of checking the firmware version, you have to input `AT+BOOT`. You will see no reply since the module will restart then will be disconnected momentarily before re-establishing again the connection to Tera Term.
 
@@ -81,11 +70,7 @@ After connecting your RAK4631-R to WisBlock Base, you can immediately update its
 You have to disconnect the device connection to Tera Term or close it so that the COM port will be free when you do the firmware update on the next step. Else, you will have error during FW update.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/at-boot-to-initialize-boot-mode.png"
-  width="70%"
-  caption="AT+BOOT to Initialize Boot Mode"
-/>
+> **Image:** AT+BOOT to Initialize Boot Mode
 
 6. Next to initiating Boot mode, you can now execute the firmware update. To update the firmware, open the command prompt and ensure you're in the folder where you place the nRFutil and the latest firmware.
 
@@ -95,20 +80,11 @@ For this guide, it is in the `RAK4631-R Update` folder directory. Then, input th
 
 Make sure that you have the right `.zip` file name and `COM port number` to avoid errors.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/fw-update-using-nrfutil.png"
-  width="90%"
-  caption="FW Update Using nRFutil"
-/>
+> **Image:** FW Update Using nRFutil
 
 7. You can now check if the firmware is successful updated by using `AT+VER=?` command. To check the firmware version and confirm if the device is updated, follow the [guide on Tera Term.](#how-to-check-firmware-version-using-tera-term)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-latest-firmware-version-check.png"
-  width="70%"
-  caption="RAK4631-R Latest Firmware Version Check"
-/>
-
+> **Image:** RAK4631-R Latest Firmware Version Check
 
 ### For Linux
 
@@ -118,7 +94,6 @@ Perform the four steps described in the next section [Setup the Linux Environmen
 
 1. First, open a new terminal, then install all dependencies.
 
-
 ```
 sudo apt-get update
 sudo apt-get install net-tools git curl python xclip python3-pip
@@ -126,11 +101,7 @@ sudo apt-get install net-tools git curl python xclip python3-pip
 
 2. The following prerequisite must be installed: `Python 3.7` or later. Check your Python version, as shown in **Figure 6**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/python-version.png"
-  width="90%"
-  caption="Check Python version"
-/>
+> **Image:** Check Python version
 
 3. Add `.local` folder to Linux `$PATH` variable.
 
@@ -154,11 +125,7 @@ pip3 install adafruit-nrfutil==0.5.3.post16 --user
 
 When you plug in the RAK4631-R through the USB to Linux, you will see the related information "**cdc_acm 1-1:1.0:  ttyACM0: USB ACM device**" from the `dmesg` command.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/dmesg-command-tty-device.png"
-  width="90%"
-  caption="Checking USB CDC device using dmesg command"
-/>
+> **Image:** Checking USB CDC device using dmesg command
 
 In this case, the RAK4631-R **USB CDC** device name is `/dev/ttyACM0`.
 
@@ -174,11 +141,9 @@ AT+BOOT
 
 `nrfutil dfu usb-serial -pkg RAK4631_latest_dfu_package.zip -p /dev/ttyACM0`
 
-
 <!-- same section
 
 #### Setup the nRFutil-Linux Utility and Environment
-
 
 1. Open the terminal shell go to the directory where you put the [DFU Distribution Package](https://downloads.rakwireless.com/RUI/V3/Image/).
 
@@ -203,16 +168,12 @@ Building System Package is based on the Ubuntu-20.04.2.0-desktop-amd64.
    - [Ubuntu 20.04.2.0](https://ubuntu.com/download/desktop/thank-you?version=20.04.2.0&architecture=amd64)
 :::
 
-
 #### Checking the Device with a USB Interface
 
 When you plug in the RAK4631 through the USB to Ubuntu, you will see the related information "**ttyACM0: USB ACM device**" from the dmesg command.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/dmesg-command-tty-device.png"
-  width="90%"
-  caption="dmesg command tty device"
-/>
+> **Image:** dmesg command tty device
+
 -->
 <!--
 ```
@@ -241,7 +202,6 @@ sudo apt-get install minicom
 
 Enter the following code: `minicom -D /dev/ttyACM0`
 
-
 #### Checking the Device Firmware Version
 
 To check the device firmware version in the minicom console, enter the following AT command:
@@ -265,7 +225,6 @@ AT+BOOT
 2. Before upgrading the dfu package, confirm the module into the DFU mode.
 3. The device will reset, and then you can close the minicom window.
 
-
 #### Bootloader Update via USB
 
 1. Open the terminal shell go to the directory where you put the [DFU Distribution Package](https://downloads.rakwireless.com/RUI/RUI3/Image/RAK4631_latest_dfu_package.zip).
@@ -278,7 +237,6 @@ You have to make sure that you are uploading in the right port else it will fail
 :::
 
 -->
-
 
 ### For MacOS
 
@@ -296,11 +254,7 @@ cd /Users/username/Downloads
 chmod +x nrfutil-mac.1
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/download-nrfutil-for-macos.png"
-  width="60%"
-  caption="Download nrfutil for macOS"
-/>
+> **Image:** Download nrfutil for macOS
 
 4. You also need to determine the port name of the RAK4631-R using the command:
 
@@ -308,11 +262,7 @@ chmod +x nrfutil-mac.1
 ls /dev/cu.*
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-port.png"
-  width="60%"
-  caption="Check the port"
-/>
+> **Image:** Check the port
 
 5. Download the [RAK4631-R Firmware.](https://downloads.rakwireless.com/RUI/RUI3/Image/RAK4631_latest_dfu_package.zip) Usually, the `RAK4631_latest_dfu_package.zip` file will go to the downloads folder.
 
@@ -341,12 +291,7 @@ This section covers how to update your RAK4631-R firmware wirelessly via BLE. Fi
 - [DFU OTA Using iOS](#for-ios)
 - [DFU OTA Using Android](#for-android)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/nordic-app.png"
-  width="60%"
-  caption="nRF Connect App available in Play Store and App Store"
-/>
-
+> **Image:** nRF Connect App available in Play Store and App Store
 
 <!--
 
@@ -367,17 +312,11 @@ iOS and Android are supported.
 
 iOS 14.4 to do OTA DFU over BLE and nRF Connect is using the application version of 2.4.11.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/ios-nrfconnect.png"
-  width="90%"
-  caption="iOS 14.4 and nRF Connect 2.4.11"
-/>
+> **Image:** iOS 14.4 and nRF Connect 2.4.11
 
 --->
 
-
 #### OTA DFU over BLE
-
 
 1. Download the [DFU package](https://downloads.rakwireless.com/RUI/RUI3/Image/RAK4631_latest_dfu_package.zip) of the RAK4631-R and save it on your mobile phone.
 
@@ -390,11 +329,7 @@ Make sure the Bluetooth on your mobile is on.
 2. Press the reset button and wait for a couple of seconds.
 3. Open the nRF Connect mobile application. You will see all the BLE devices in range in the Scanner list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/available-bluetooth-ios.png"
-  width="40%"
-  caption="Available Bluetooth Devices"
-/>
+> **Image:** Available Bluetooth Devices
 
 4. Look for a BLE Device named **RAK.XXXXXX** in the scanner list of the app. Connect to this device and then click on the **Client** tab.
 
@@ -402,76 +337,35 @@ Make sure the Bluetooth on your mobile is on.
 By default, the BLE signal of the RAK4631-R is turned off automatically if no connection is established after 60 seconds. Connect to **RAK.XXXXXX** immediately after pressing the reset button.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/secure-dfu-ios.png"
-  width="70%"
-  caption="Secure DFU Service"
-/>
-
+> **Image:** Secure DFU Service
 
 5. Choose "**Secure DFU Service**" and click the button highlighted in red, as shown in **Figure 13**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/buttonless-dfu-ios.png"
-  width="40%"
-  caption="Buttonless DFU"
-/>
-
+> **Image:** Buttonless DFU
 
 7. A **Write Value** window will pop up. Select **Bool** tab, move the switch from `False` to `True` then press **Write** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/bootloader-reset-ios.png"
-  width="70%"
-  caption="Resetting the Bootloader via Bluetooth"
-/>
-
+> **Image:** Resetting the Bootloader via Bluetooth
 
 8. Now, the RAK4631-R is now working in DFU Mode. In the application, you will see the default status overview of RAK4631-R.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/default-bluetooth-id-ios.png"
-  width="40%"
-  caption="RAK4631-R default status overview after resetting"
-/>
-
+> **Image:** RAK4631-R default status overview after resetting
 
 9. In the Scanner list, find a BLE device named **DfuTarg** and then click the **Connect** button.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/default-status-overview-ios.png"
-  width="40%"
-  caption="RAK4631-R Default Bluetooth ID after Resetting"
-/>
-
+> **Image:** RAK4631-R Default Bluetooth ID after Resetting
 
 10. After connected, select the **DFU** tab, then click **Open Document Picker**. This will prompt you to select the Distribution packet zip file of the firmware you have downloaded. Press **OK**, and it will automatically start to upgrade the firmware of your RAK4631-R through DFU over BLE.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/distribution-packet-file-ios.png"
-  width="40%"
-  caption="Distribution Packet File Type under DFU"
-/>
-
+> **Image:** Distribution Packet File Type under DFU
 
 :::tip NOTE
 You can upload the Distribution packet (ZIP) file to [iCloud Services](https://www.icloud.com/) and download it to your smartphone.
 :::
 
-
 11. After upgrading, the module restarts, and the DFU connection will be disconnected. Now, you can use your RAK4631-R with the latest firmware.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/dfu-upgrade-ios.png"
-  width="100%"
-  caption="DFU Upgrading of RAK4631-R Firmware via BLE"
-/>
-
-
+> **Image:** DFU Upgrading of RAK4631-R Firmware via BLE
 
 ### For Android
 
@@ -481,15 +375,9 @@ You can upload the Distribution packet (ZIP) file to [iCloud Services](https://w
 
 Android 6.0 to do OTA DFU over BLE and nRF Connect is using the application version of 4.24.3.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/android-nrfconnect.png"
-  width="70%"
-  caption="Android 6.0 and nRF Connect 4.24.3"
-/>
+> **Image:** Android 6.0 and nRF Connect 4.24.3
 
 --->
-
 
 #### OTA DFU Over BLE
 
@@ -504,11 +392,7 @@ Make sure the Bluetooth on your mobile is on.
 2. Press the reset button and wait for a couple of seconds.
 3. Open the nRF Connect mobile application. You will see all the BLE devices in range in the Scanner list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/available-bluetooth-android.png"
-  width="40%"
-  caption="Available Bluetooth Devices in the Nordic App"
-/>
+> **Image:** Available Bluetooth Devices in the Nordic App
 
 4. Look for a BLE Device named **RAK.XXXXXX** in the scanner list of the app. Connect to this device and then click the **Client** tab.
 
@@ -516,76 +400,39 @@ Make sure the Bluetooth on your mobile is on.
 By default, the BLE signal of the RAK4631-R is turned off automatically if no connection is established after 60 seconds. Connect to **RAK.XXXXXX** immediately after pressing the reset button.
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/secure-dfu-nordic.png"
-  width="70%"
-  caption="Secure DFU Service in the Nordic App"
-/>
-
+> **Image:** Secure DFU Service in the Nordic App
 
 5. Choose "**Secure DFU Services**" and click the button highlighted in red, as shown in **Figure 21**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/buttonless-dfu-android.png"
-  width="40%"
-  caption="Buttonless DFU"
-/>
-
+> **Image:** Buttonless DFU
 
 6. Click the arrow up button highlighted in a red box.
 
 7. A **Write value** window will pop up. Press the **SEND** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/resetting-bootloader-android.png"
-  width="70%"
-  caption="Resetting the Bootloader via Bluetooth"
-/>
-
+> **Image:** Resetting the Bootloader via Bluetooth
 
 8. Now, the RAK4631-R is now working in DFU Mode. In the application, you will see the default status overview of RAK4631-R.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/default-status-overview-android.png"
-  width="40%"
-  caption="RAK4631-R default status overview after resetting"
-/>
-
+> **Image:** RAK4631-R default status overview after resetting
 
 9. In the Devices list, find a BLE device named **DfuTarg** and click on the **Connect** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/default-bluetooth-id-android.png"
-  width="40%"
-  caption="RAK4631-R Default Bluetooth ID after Resetting"
-/>
+> **Image:** RAK4631-R Default Bluetooth ID after Resetting
 
 After connected, click on the **DFU** icon highlighted in red, as shown below.
 
 10. Select the **Distribution packet (ZIP**) and press **OK**. This will prompt you to select the zip file of the firmware that you have downloaded. It will automatically start to upgrade the firmware of your RAK4631-R through DFU over BLE.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/distribution-packet-file-android.png"
-  width="70%"
-  caption="Distribution Packet File Type under DFU"
-/>
-
+> **Image:** Distribution Packet File Type under DFU
 
 :::tip NOTE
 You can upload the Distribution packet (ZIP) file to Google Drive and download it to your smartphone.
 :::
 
-
 11.  After upgrading, the module restarts, and the DFU connection will be disconnected. Now, you can use your RAK4631-R with the latest firmware.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/dfu-upgrading-android.png"
-  width="40%"
-  caption="DFU Upgrading of RAK4631-R Firmware via BLE"
-/>
+> **Image:** DFU Upgrading of RAK4631-R Firmware via BLE
 
 ## Updating RAK4631 to RUI3
 
@@ -606,51 +453,31 @@ Converting the RAK4631 to RAK4631-R is a two-step processes. First, you need to 
 1. Create a new folder in your `C:\` drive named `RAK4631 Bootloader to RUI v3`.
 2. Download the [adafruit-nrfutil.exe (you need to unzip the downloaded file)](https://github.com/adafruit/Adafruit_nRF52_nrfutil/releases/download/0.5.3.post17/adafruit-nrfutil--0.5.3.post17-win.zip) and [rui3_nrf52840_bootloader](https://downloads.rakwireless.com/RUI/RUI3/Bootloader%20Upgrade/rui3_nrf52840_bootloader_latest.zip) then copy both files to `RAK4631 Bootloader to RUI v3` folder you created.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/adafruit-nrfutil-rui3-bootloader.png"
-  width="80%"
-  caption="Adafruit-nrfutil and RUI3 Bootloader"
-/>
+> **Image:** Adafruit-nrfutil and RUI3 Bootloader
 
 3. Connect the RAK4631-R via USB and check if port has been detected via device manager. In this guide it is detected as COM31. The COM port number is not fixed and can be different depending on the PC. If no port is shown in device manager, you can try to double click reset button on the WisBlock Base and check again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/com-port-on-device-manager.png"
-  width="80%"
-  caption="COM Port on Device Manager"
-/>
+> **Image:** COM Port on Device Manager
 
 4. You are now ready to do the bootloader upgrade. Open the command prompt and change directory via `cd C:\RAK4631 Bootloader to RUI v3\`. After that, you can now execute the bootloader upgrade using the command below.
 
 ```
 adafruit-nrfutil.exe --verbose dfu serial --package rui3_nrf52840_bootloader_latest.zip --port COM31 -b 115200 --singlebank --touch 1200
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rui3-bootloader-upgrade.png"
-  width="90%"
-  caption="RUI3 Bootloader Upgrade"
-/>
+
+> **Image:** RUI3 Bootloader Upgrade
 
 5. After a successful bootloader upload, you are now ready to upload the RUI3 firmware on the next steps.
-
 
 #### Firmware Update via USB
 
 1. After completing the bootloader upgrade, it will change to a new COM port number. It this guide it changed from `COM31` to `COM32`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/com-port-change.png"
-  width="40%"
-  caption="COM Port Change"
-/>
+> **Image:** COM Port Change
 
 2. Download [nrfutil.exe](https://github.com/NordicSemiconductor/pc-nrfutil/releases/download/v6.1.7/nrfutil.exe) and the [rui3_rak4631_latest](https://downloads.rakwireless.com/RUI/RUI3/Bootloader%20Upgrade/rui3_rak4631_latest.zip) RUI3 FW which is specifically designed for the RAK4631's conversion to RAK4631-R. Then place the two files on `RAK4631 Bootloader to RUI v3` folder.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/nrfutil-rui3-rak4631-latest-firmware.png"
-  width="90%"
-  caption="Nrfutil and rui3_rak4631_latest Firmware"
-/>
+> **Image:** Nrfutil and rui3_rak4631_latest Firmware
 
 3. You are now ready to do the firmware update. Open the command prompt and change directory via `cd C:\RAK4631 Bootloader to RUI v3\`. After that, you can now execute the firmware update using the command below.
 
@@ -658,19 +485,11 @@ adafruit-nrfutil.exe --verbose dfu serial --package rui3_nrf52840_bootloader_lat
 nrfutil.exe dfu serial -pkg rui3_rak4631_latest.zip -p COM32
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/firmware-update-via-usb.png"
-  width="90%"
-  caption="Firmware update via USB"
-/>
+> **Image:** Firmware update via USB
 
 4. You can now check if the firmware upload is successful by checking the the firmware version using `AT+VER=?` command. You can follow the [guide on Tera Term](#how-to-check-firmware-version-using-tera-term) to check firmware version and confirm if the device is already updated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-latest-firmware-version-check.png"
-  width="70%"
-  caption="RAK4631-R Latest Firmware Version Check"
-/>
+> **Image:** RAK4631-R Latest Firmware Version Check
 
 ### Using Linux
 
@@ -678,14 +497,9 @@ Perform the four steps described in the section [Setup the Linux Environment](#s
 
 When you plug in the RAK4631-R through the USB to Linux, you will see the related information "**cdc_acm 1-1:1.0:  ttyACM0: USB ACM device**" from the `dmesg` command.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/dmesg-command-tty-device.png"
-  width="90%"
-  caption="Checking USB CDC device using dmesg command"
-/>
+> **Image:** Checking USB CDC device using dmesg command
 
 In this case, the RAK4631-R **USB CDC** device name is `/dev/ttyACM0`
-
 
 #### Bootloader Update via USB on Linux
 
@@ -699,11 +513,7 @@ adafruit-nrfutil --verbose dfu serial --package rui3_nrf52840_bootloader_latest.
 
 The -p parameter is RAK4631-R **USB CDC** device name.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/bootloader-update-via-usb.png"
-  width="90%"
-  caption="Bootloader update via USB"
-/>
+> **Image:** Bootloader update via USB
 
 #### Firmware Update via USB on Linux
 
@@ -717,11 +527,7 @@ On the download folder, execute the following command:
 
 The -p parameter is RAK4631-R **USB CDC** device name.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/ruiv3-fw.png"
-  width="90%"
-  caption="Firmware update via USB"
-/>
+> **Image:** Firmware update via USB
 
 <!--
 #### Setup the Linux Environment
@@ -733,7 +539,6 @@ The -p parameter is RAK4631-R **USB CDC** device name.
 
 2. Install all dependencies.
 
-
 ```
 sudo apt-get update
 sudo apt-get install net-tools git curl python xclip python3-pip
@@ -742,11 +547,7 @@ sudo apt-get install net-tools git curl python xclip python3-pip
 2. The following prerequisite must be installed: `Python 3.7` or later.
 Check your Python version, as shown below:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/python-version.png"
-  width="90%"
-  caption="Check Python version"
-/>
+> **Image:** Check Python version
 
 3. Add .local folder to Linux `$PATH` variable.
 
@@ -780,11 +581,8 @@ When a RAK4631-R is plugged into Linux via USB port, you will see the related in
 ```
 dmesg
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/dmesg.png"
-  width="90%"
-  caption="dmesg command"
-/>
+
+> **Image:** dmesg command
 
 In this case, the RAK4631-R **USB CDC** device name is `/dev/ttyACM0`
 -->
@@ -799,11 +597,7 @@ adafruit-nrfutil --verbose dfu serial --package ruiv3_bootloader.zip -p /dev/tty
 ```
 The -p parameter is RAK4631-R **USB CDC** device name.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/bootloader-update-via-usb.png"
-  width="90%"
-  caption="Bootloader update via USB"
-/>
+> **Image:** Bootloader update via USB
 
 #### Firmware update via USB on Linux
 
@@ -817,11 +611,7 @@ On the download folder, execute the following command:
 
 The -p parameter is RAK4631-R **USB CDC** device name.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/ruiv3-fw.png"
-  width="90%"
-  caption="Firmware update via USB"
-/>
+> **Image:** Firmware update via USB
 
 -->
 
@@ -841,11 +631,7 @@ minicom -D /dev/ttyACM0
 
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/minicom.png"
-  width="90%"
-  caption="Minicom utility"
-/>
+> **Image:** Minicom utility
 
 <!-- I will add minicom here
 1.  Download the console tool of putty from Ubuntu.
@@ -854,23 +640,13 @@ minicom -D /dev/ttyACM0
 4.  Open the putty console with the ttyACM0 interface.
 5.  `sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N`
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/upgrading-to-rui/Picture10.jpg"
-  width="60%"
-  caption="Putty with ttyACM0 device"
-/>
+> **Image:** Putty with ttyACM0 device
 
 #### How to check the device FW Version
 1.  How to check the device FW version from putty.
 2.  `sudo putty /dev/ttyACM0 -serial -sercfg 115200,8,n,1,N`
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/upgrading-to-rui/Picture11.jpg"
-  width="60%"
-  caption="Get the device FW Version"
-/>
+> **Image:** Get the device FW Version
 
 :::tip NOTE
 
@@ -905,22 +681,15 @@ cd /Users/username/Downloads
 chmod +x adafruit-nrfutil-macos
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/downloads-chmod.png"
-  width="60%"
-  caption="Download adafruit-nrfutil for macOS"
-/>
+> **Image:** Download adafruit-nrfutil for macOS
 
 4. You also need to determine the port name of the RAK4631-R using the command:
 
 ```
 ls /dev/cu.*
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-port.png"
-  width="60%"
-  caption="Check the port"
-/>
+
+> **Image:** Check the port
 
 5. Download the [RAK4631 to RAK4631-R Bootloader](https://downloads.rakwireless.com/RUI/RUI3/Bootloader%20Upgrade/rui3_nrf52840_bootloader_latest.zip) firmware. Usually, the `rui3_nrf52840_bootloader_latest.zip` file will go to the downloads folder.
 
@@ -935,12 +704,7 @@ ls /dev/cu.*
 ./adafruit-nrfutil-macos --verbose dfu serial --package rui3_nrf52840_bootloader_latest.zip -p /dev/cu.usbmodem14101 -b 115200 --singlebank --touch 1200
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/bootloader-update.png"
-  width="60%"
-  caption="Successful bootloader update"
-/>
-
+> **Image:** Successful bootloader update
 
 #### Uploading the RAK4631-R Firmware
 
@@ -960,11 +724,7 @@ cd /Users/username/Downloads
 chmod +x nrfutil-mac.1
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/download-nrfutil-for-macos.png"
-  width="60%"
-  caption="Download adafruit-nrfutil for macOS"
-/>
+> **Image:** Download adafruit-nrfutil for macOS
 
 4. You also need to determine the port name of the RAK4631 using the command:
 
@@ -972,11 +732,7 @@ chmod +x nrfutil-mac.1
 ls /dev/cu.*
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-port.png"
-  width="60%"
-  caption="Check the port"
-/>
+> **Image:** Check the port
 
 5. Download the [RAK4631 to RAK4631-R Conversion](https://downloads.rakwireless.com/#RUI/RUI3/Bootloader%20Upgrade/) firmware. Usually, the `rui3_rak4631_latest.zip` file will go to the downloads folder.
 
@@ -992,11 +748,7 @@ ls /dev/cu.*
 ./nrfutil-mac.1 dfu usb-serial -pkg rui3_rak4631_latest.zip -p /dev/cu.usbmodemC0D048F6604F1
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-conversion.png"
-  width="60%"
-  caption="Successful RAK4631-R Conversion"
-/>
+> **Image:** Successful RAK4631-R Conversion
 
 7. After the success FW upload, your RAK4631 is now RAK4631-R. Open a serial terminal software and run `AT+VER=?` to see the FW version.
 
@@ -1004,7 +756,6 @@ ls /dev/cu.*
 AT+VER=3.2.0-p2_22q1_final.87
 OK
 ```
-
 
 ## Converting RAK4631-R to RAK4631
 
@@ -1018,19 +769,11 @@ You have the option to convert your RAK4631-R to RAK4631.
 
 2. Create a new folder in your `C:\` drive named `RAK4631 Bootloader to RUI v3` and place all the conversion files you downloaded from the previous step.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-files-conversion.png"
-  width="70%"
-  caption="RAK4631-R Conversion FW files and NRFUTIL"
-/>
+> **Image:** RAK4631-R Conversion FW files and NRFUTIL
 
 3. Connect the RAK4631-R via USB and check if port has been detected via device manager. In this guide it is detected as COM32. The COM port number is not fixed and can be different depending on the PC. If no port is shown in device manager, you can try to double click reset button on the WisBlock Base and check again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/check-com-port-via-device-manager.png"
-  width="70%"
-  caption="Checking COM Port via Device Manager"
-/>
+> **Image:** Checking COM Port via Device Manager
 
 4. After that, you need to send `AT+BOOT` command to the device. You can follow the [guide on using Tera Term](#how-to-check-firmware-version-using-tera-term) but instead of checking the firmware version, you have to input `AT+BOOT`. You will see no reply since the module will restart then will be disconnected momentarily before re-establishing again the connection to Tera Term.
 
@@ -1038,28 +781,16 @@ You have the option to convert your RAK4631-R to RAK4631.
 You have to disconnect the device connection to Tera Term or close it so that the COM port will be free when you do the firmware update on the next step. Else, you will have error during FW update.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/at-boot-to-initialize-boot-mode.png"
-  width="70%"
-  caption="AT+BOOT to Initialize Boot Mode"
-/>
+> **Image:** AT+BOOT to Initialize Boot Mode
 
 5. Next to initiating Boot mode, you can now execute the firmware conversion. Open the command prompt and change directory via `cd C:\RAK4631 Bootloader to RUI v3\`.
 6. Execute the bootloader conversion using the command `nrfutil.exe dfu serial -pkg rak4631_factory_bootloader.zip -p COM5`. Make sure that you have the right `.zip` file name and `COM port number` to avoid errors.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-r-to-rak4631-conversion.png"
-  width="90%"
-  caption="RAK4631-R to RAK4631 Conversion"
-/>
+> **Image:** RAK4631-R to RAK4631 Conversion
 
 7. The previous step updated the bootloader of RAK4631. Another requirement is to ensure that the softdevice is compatible with the expected version by the Arduino BSP. To do this, execute the command `adafruit-nrfutil --verbose dfu serial --package rak4631_factory_softdevice.zip -p COM15`. You also have to make sure that you have the right `.zip` file name and `COM port number` to avoid errors. The COM port will likely be different compared to step 5.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/updating-softdevice.png"
-  width="100%"
-  caption="Updating softdevice"
-/>
+> **Image:** Updating softdevice
 
 8. After the successful upload, you can now see RAK4631 drive detected. This indicates that the device has now the Arduino BSP bootloader on it and ready to be uploaded with firmware created using the WisBlock Arduino BSP and not RUI3. You also need to check the COM port number since it will changed once you convert to Arduino BSP bootloader.
 
@@ -1067,11 +798,7 @@ You have to disconnect the device connection to Tera Term or close it so that th
 If there is no RAK4631 drive detected, try to double-click the reset button on the WisBlock Base.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/rak4631-detected.png"
-  width="70%"
-  caption="RAK4631 Detected"
-/>
+> **Image:** RAK4631 Detected
 
 ## Miscellaneous
 
@@ -1081,49 +808,27 @@ If there is no RAK4631 drive detected, try to double-click the reset button on t
 2. Connect the RAK4631-R via USB port of the WisBlock Base board.
 3. Check the COM port of the device using device manager. The port number is not fix and can change on different computers. If no port is detected, double click the reset button on the WisBlock Base.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/check-com-port-via-device-manager.png"
-  width="70%"
-  caption="Checking COM port via device manager"
-/>
+> **Image:** Checking COM port via device manager
 
-<!-- <RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/x3_port_zoom.png"
-  width="40%"
-  caption="COM port list"
-/> -->
+<!-- 
+> **Image:** COM port list
+ -->
 
 4. Launch **Tera Term** and **New Connection** window will open. Click on `Serial` and select the correct serial port on `Port`. To close the window, click on the **OK** button. You can check the co
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/tera-term-new-connection-window.png"
-  width="60%"
-  caption="Tera Term New connection window"
-/>
+> **Image:** Tera Term New connection window
 
 5. On the Tera Term menu, select **Setup** -> **Serial port...**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/tera-term-serial-port-selection.png"
-  width="60%"
-  caption="Tera Term Serial port selection"
-/>
+> **Image:** Tera Term Serial port selection
 
 5. Check the `Port` if correct. A USB interface is used for connection so you can ignore the Baud Rate (Speed) setting. Click on the **New setting** button to save.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/tera-term-serial-port-configuration.png"
-  width="40%"
-  caption="Tera Term Serial port Configuration"
-/>
+> **Image:** Tera Term Serial port Configuration
 
 6. You can now check the firmware version of your device via `AT+VER=?`. You can also input first `ATE` command so you can see the command you send.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/dfu/device-firmware-version.png"
-  width="60%"
-  caption="Get the device Firmware Version"
-/>
+> **Image:** Get the device Firmware Version
 
 :::tip NOTE
 
@@ -1137,4 +842,3 @@ AT+VER=3.2.0-p2_22q1_final.87
 
 :::
 
-<RkBottomNav/>

@@ -10,19 +10,15 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12014 WisBlock ToF Sensor Module Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK12014, a part of the RAKwireless WisBlock Sensor Series, is a Time-of-Flight (ToF) module designed based on VL53L0X from STMicroelectronics. The VL53L0X is a ToF laser-ranging module, providing accurate distance measurement up to 2&nbsp;m.
+The RAK12014, a part of the RAKwireless WisBlock Sensor Series, is a Time-of-Flight (ToF) module designed based on VL53L0X from STMicroelectronics. The VL53L0X is a ToF laser-ranging module, providing accurate distance measurement up to 2 m.
 
-The VL53L0X's 940&nbsp;nm VCSEL emitter (Vertical-Cavity Surface-Emitting Laser) is invisible to the human eye and coupled with internal physical infrared filters. It enables longer-ranging distances, higher immunity to ambient light, and better robustness to cover glass optical crosstalk.
-
+The VL53L0X's 940 nm VCSEL emitter (Vertical-Cavity Surface-Emitting Laser) is invisible to the human eye and coupled with internal physical infrared filters. It enables longer-ranging distances, higher immunity to ambient light, and better robustness to cover glass optical crosstalk.
 
 ### Features
 
@@ -30,10 +26,10 @@ The VL53L0X's 940&nbsp;nm VCSEL emitter (Vertical-Cavity Surface-Emitting Laser)
 - Measures absolute range up to 2 meters
 - I2C Interface
 - Xshutdown (reset) and interrupt GPIO
-- 2.6&nbsp;V ~ 3.5&nbsp;V power supply
-- Current Consumption: 3&nbsp;uA - 19&nbsp;mA
+- 2.6 V ~ 3.5 V power supply
+- Current Consumption: 3 uA - 19 mA
 - Chipset: STMicroelectronics VL53L0X
-- Module Size: 10&nbsp;mm x 10&nbsp;mm
+- Module Size: 10 mm x 10 mm
 
 ## Specifications
 
@@ -43,12 +39,7 @@ The VL53L0X's 940&nbsp;nm VCSEL emitter (Vertical-Cavity Surface-Emitting Laser)
 
 **Figure 1** shows the mounting mechanism of the RAK12014 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12014 module can be mounted on the slots: **C, D, E, & F**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12014/datasheet/mounting.png"
-  width="60%"
-  caption="RAK12014 WisBlock ToF Sensor Module Mounting"
-/>
-
+> **Image:** RAK12014 WisBlock ToF Sensor Module Mounting
 
 ### Hardware
 
@@ -69,11 +60,8 @@ The RAK12014 WisBlock ToF Sensor Module comprises a standard WisBlock connector.
 - **3V3_S** voltage output from the WisBlock Base that powers the RAK12014 module can be controlled by the WisBlock Core via WB_IO2 (WisBlock IO2 pin). This makes the module ideal for low-power IoT projects since the WisBlock Core can totally disconnect the power of the RAK12014 module.
 :::
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12014/datasheet/rak12014_pinout.svg"
-  width="70%"
-  caption="RAK12014 WisBlock ToF Sensor Module Pinout"
-/>
+ 
+> **Image:** RAK12014 WisBlock ToF Sensor Module Pinout
 
 If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse depends on what slot the module is plugged in. The following table shows the default IO used for different slots:
 
@@ -88,7 +76,6 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | SLOT C | SLOT D | SLOT E | SLOT F |
 | ------ | ------ | ------ | ------ |
 | WB_IO4 | WB_IO6 | WB_IO3 | WB_IO5 |
-
 
 #### Electrical Characteristics
 
@@ -107,7 +94,7 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | IDD1   | Operation mode current | Timed ranging inter measurement                                    | -    | 16   | -    | uA   |
 | IDD2   | Operation mode current | Active Ranging average consumption (including VCSEL)               | -    | 19   | -    | mA   |
 | IDD3   | Operation mode current | HW STANDBY                                                         | 3    | 5    | 7    | uA   |
-| P      | Power Dissipation      | Average power consumption at 10Hz with 33&nbsp;ms ranging sequence | -    | -    | 20   | mW   |
+| P      | Power Dissipation      | Average power consumption at 10Hz with 33 ms ranging sequence | -    | -    | 20   | mW   |
 
 #### Mechanical Characteristics
 
@@ -115,34 +102,19 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK12014 module.
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12014/datasheet/mechanical-drawing.png"
-  width="60%"
-  caption="RAK12014 WisBlock ToF Sensor Module Dimensions"
-/>
-
+ 
+> **Image:** RAK12014 WisBlock ToF Sensor Module Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12014/datasheet/pcb-layout.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
-
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12014/datasheet/schematic.png"
-  width="100%"
-  caption="RAK12014 WisBlock ToF Module Schematic"
-/>
+> **Image:** RAK12014 WisBlock ToF Module Schematic
 
 :::tip NOTE
 - Field Of View (FOV)  and Reflectance targets will affect the measuring distance and accuracy.
 - To get better performance, you may need to apply algorithms for the object being measured. But for usual measurements, the default output is sufficient.
 :::
 
-
-<RkBottomNav/>

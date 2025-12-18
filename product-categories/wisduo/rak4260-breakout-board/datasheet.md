@@ -11,19 +11,15 @@ slug: /product-categories/wisduo/rak4260-breakout-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4260 WisDuo Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-The **RAK4260 Breakout Board** is designed to provide easy access to the board's pins, simplifying development and testing. Its breakout board form factor transfers the RAK4260 stamp module pinout to 2.54&nbsp;mm headers, making debugging more convenient for developers.
+The **RAK4260 Breakout Board** is designed to provide easy access to the board's pins, simplifying development and testing. Its breakout board form factor transfers the RAK4260 stamp module pinout to 2.54 mm headers, making debugging more convenient for developers.
 
-The board itself has the RAK4260 at its core, which is a module that utilizes the **ATSAMR34J18B SIP**. This high level of integration allows for outstanding performance: 860&nbsp;nA in sleep mode and LoRa TX Power of up to 20&nbsp;dBm.
+The board itself has the RAK4260 at its core, which is a module that utilizes the **ATSAMR34J18B SIP**. This high level of integration allows for outstanding performance: 860 nA in sleep mode and LoRa TX Power of up to 20 dBm.
 
 A key feature of this Breakout Board is the **ATECC608A Cryptographic Co-Processor**, which provides secure hardware-based key storage. This sets the board apart from the RAK4200 and RAK4600, adding an extra layer of security to future-proof your platform.
 
@@ -35,17 +31,17 @@ The board's low-power, long-range LoRa communication capabilities make it ideal 
 
 - LoRa module for Smart City, Smart Agriculture, Smart Industry
 - I/O ports: **UART/I2C/SPI/ADC**
-- Frequency range: 863–923&nbsp;MHz (entire LoRa high band spectrum)
-- Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz Bandwidth
-- LoRa Tx power up to **20&nbsp;dBm**
-- Ultra-Low Power Consumption **860&nbsp;nA in sleep mode**
+- Frequency range: 863–923 MHz (entire LoRa high band spectrum)
+- Low-Power Wireless Systems with 7.8 kHz to 500 kHz Bandwidth
+- LoRa Tx power up to **20 dBm**
+- Ultra-Low Power Consumption **860 nA in sleep mode**
 - Core: **ARM 32-bit Cortex – M0+** with MPU
-- Up to 256&nbsp;KB flash memory with ECC
-- 32&nbsp;KB RAM
-- 6&nbsp;KB of data EEPROM with ECC
+- Up to 256 KB flash memory with ECC
+- 32 KB RAM
+- 6 KB of data EEPROM with ECC
 - **ATECC608A** cryptographic core
-- Supply voltage: **2.0&nbsp;V ~ 3.6&nbsp;V**
-- Temperature range: **-40°&nbsp;C ~ +85°&nbsp;C**
+- Supply voltage: **2.0 V ~ 3.6 V**
+- Temperature range: **-40° C ~ +85° C**
 
 ## Specifications
 
@@ -53,24 +49,13 @@ The board's low-power, long-range LoRa communication capabilities make it ideal 
 
 **Figures 1 and 2** show the RAK4260 Breakout Board, highlighting the top and back views of the board, respectively.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-breakout-board/datasheet/rak4260b-top-view.jpg"
-  width="25%"
-  caption="RAK4260 Breakout Board Top View"
-  zoomMode={true}
-/>
+> **Image:** RAK4260 Breakout Board Top View
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-breakout-board/datasheet/rak4260b-bottom-view.jpg"
-  width="25%"
-  caption="RAK4260 Breakout Board Bottom View"
-  zoomMode={true}
-/>
+> **Image:** RAK4260 Breakout Board Bottom View
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It discusses the interfacing, pinouts and its corresponding functions and diagrams. It also covers the RF and electrical parameters that include the tabular data of the functionalities and standard values of the RAK4260 Breakout Board.
-
 
 #### Interfaces
 
@@ -82,7 +67,6 @@ When programming via a DAPLink tool, it is required to have all of the following
 2. **SWDIO**
 3. **SWCLK**
 4. **GND**
-
 
 :::tip NOTE
 It is recommended to leave these pins exposed for programming purposes and avoid remapping them as GPIOs.
@@ -105,12 +89,7 @@ There are two UART interfaces on the RAK4200 Breakout Board:
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-breakout-board/datasheet/pinout.png"
-  width="65%"
-  caption="RAK4260 Breakout Board Pinout"
-  zoomMode={true}
-/>
+> **Image:** RAK4260 Breakout Board Pinout
 
 The tables below show the pin definition of the RAK4260 Breakout Board:
 
@@ -159,14 +138,14 @@ The tables below show the pin definition of the RAK4260 Breakout Board:
 | Pin | Name | I/O | Description | Alternate Functions                    |
 | :-: | :--: | :-: | :---------: | :------------------------------------: |
 | 1   | GND  |     | Ground      | GND                                    |
-| 2   | VDD  |     | DC3V3       | Supply voltage 2.0&nbsp;V ~ 3.3&nbsp;V |
+| 2   | VDD  |     | DC3V3       | Supply voltage 2.0 V ~ 3.3 V |
 
 ##### J14 Pin Definitions
 
 | Pin | Name | I/O | Description | Alternate Functions                    |
 | :-: | :--: | :-: | :---------: | :------------------------------------: |
 | 1   | GND  |     | Ground      | GND                                    |
-| 2   | VDD  |     | DC3V3       | Supply voltage 2.0&nbsp;V ~ 3.3&nbsp;V |
+| 2   | VDD  |     | DC3V3       | Supply voltage 2.0 V ~ 3.3 V |
 
 #### RF Characteristics
 
@@ -174,46 +153,15 @@ The tables below show the pin definition of the RAK4260 Breakout Board:
 
 The RAK4260 Breakout Board supports the following LoRa bands:
 
-<table>
-  <thead style={{ textAlign: 'center' }}>
-    <tr>
-<th>Module</th>
-<th>Region</th>
-<th>Frequency (MHz)</th>
-    </tr>
-  </thead>
-  <tbody style={{ textAlign: 'center' }}>
-    <tr>
-      <td rowspan = "7"><b>RAK4260(H)</b></td>
-      <td>Russia</td>
-      <td>RU864</td>
-    </tr>
-    <tr>
-      <td>India</td>
-      <td>IN865</td>
-    </tr>
-    <tr>
-      <td>Europe</td>
-      <td>EU868</td>
-    </tr>
-    <tr>
-      <td>North America</td>
-      <td>US915</td>
-    </tr>
-    <tr>
-      <td>Australia</td>
-      <td>AU915</td>
-    </tr>
-    <tr>
-      <td>Korea</td>
-      <td>KR920</td>
-    </tr>
-    <tr>
-      <td>Asia</td>
-      <td>AS923</td>
-    </tr>
-  </tbody>
-</table>
+| Module | Region | Frequency (MHz) |
+| --- | --- | --- |
+| RAK4260(H) | Russia | RU864 |
+| RAK4260(H) | India | IN865 |
+| RAK4260(H) | Europe | EU868 |
+| RAK4260(H) | North America | US915 |
+| RAK4260(H) | Australia | AU915 |
+| RAK4260(H) | Korea | KR920 |
+| RAK4260(H) | Asia | AS923 |
 
 #### Electrical Characteristics
 
@@ -221,29 +169,19 @@ The RAK4260 Breakout Board supports the following LoRa bands:
 
 | Item                         | Power Consumption      | Condition                  |
 | :--------------------------: | :--------------------: | :------------------------: |
-| Tx mode LoRa @20&nbsp;dBm    | 126.3&nbsp;mA          | PA_BOOST V=3.3&nbsp;V      |
-| Tx mode LoRa @17&nbsp;dBm    | 95.6&nbsp;mA           | PA_BOOST V=3.3&nbsp;V      |
-| Tx mode LoRa @14&nbsp;dBm    | 33.1&nbsp;mA (typical) | RFO_HF V=3.3&nbsp;V        |
-| Rx mode LoRa @37.5&nbsp;Kbps | 13.6&nbsp;mA           | -                          |
-| Sleep mode                   | 860&nbsp;nA            | Backup Mode V = 3.3&nbsp;V |
+| Tx mode LoRa @20 dBm    | 126.3 mA          | PA_BOOST V=3.3 V      |
+| Tx mode LoRa @17 dBm    | 95.6 mA           | PA_BOOST V=3.3 V      |
+| Tx mode LoRa @14 dBm    | 33.1 mA (typical) | RFO_HF V=3.3 V        |
+| Rx mode LoRa @37.5 Kbps | 13.6 mA           | -                          |
+| Sleep mode                   | 860 nA            | Backup Mode V = 3.3 V |
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-breakout-board/datasheet/schematic-diagram.png"
-  width="100%"
-  caption="RAK4260 Breakout Board Schematic Diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK4260 Breakout Board Schematic Diagram
 
 #### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-breakout-board/datasheet/rak4260_dimension.png"
-  width="50%"
-  caption="RAK4260 Mechanical Dimensions"
-  zoomMode={true}
-/>
+> **Image:** RAK4260 Mechanical Dimensions
 
 ### Software
 
@@ -253,17 +191,11 @@ Download the latest firmware of the RAK4260 Breakout Board in the table provided
 
 | Model   | Source                                                                                          |
 | :-----: | :---------------------------------------------------------------------------------------------: |
-| RAK4260 | <a href="https://downloads.rakwireless.com/LoRa/RAK4260/Firmware/RAK4260_Latest_Firmware.rar" target="_blank">Download</a> |
+| RAK4260 | [Download](https://downloads.rakwireless.com/LoRa/RAK4260/Firmware/RAK4260_Latest_Firmware.rar) |
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK4260/Certification-Report/RAK4260H_CE_Certification.zip',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK4260/Certification-Report/RAK4260H_FCC_Certification.zip',
-    }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4260/Certification-Report/RAK4260H_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK4260/Certification-Report/RAK4260H_FCC_Certification.zip
 
-<RkBottomNav/>

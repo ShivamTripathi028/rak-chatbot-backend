@@ -12,9 +12,6 @@ sidebar_label: Datasheet
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10701-L Field Tester for LoRaWAN Datasheet
 
 ## Overview
@@ -42,12 +39,12 @@ The device has to be charged first if it comes fresh from shipping. There is a p
 - Shows min and max RSSI levels
 - Shows min and max distance to gateways/hotspots in range
 - Compatible with WisToolBox and allows wireless configuration via BLE
-- Powered by 3200&nbsp;mAh battery
+- Powered by 3200 mAh battery
 - Rechargeable over a USB Type-C connector
 - 320x240 TFT touchscreen
-- 2.3&nbsp;dBi external antenna via RP-SMA connector
-- Operating Temperature: -10°&nbsp;C ~ 60°&nbsp;C
-- Storage Temperature: -40°&nbsp;C ~ 80°&nbsp;C
+- 2.3 dBi external antenna via RP-SMA connector
+- Operating Temperature: -10° C ~ 60° C
+- Storage Temperature: -40° C ~ 80° C
 
 ## Specifications
 
@@ -55,11 +52,7 @@ The device has to be charged first if it comes fresh from shipping. There is a p
 
 RAK10701-L Field Tester for LoRaWAN with the external antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-photo.png"
-  width="35%"
-  caption="RAK10701-L Field Tester for LoRaWAN"
-/>
+> **Image:** RAK10701-L Field Tester for LoRaWAN
 
 ### Hardware
 
@@ -73,19 +66,11 @@ The RAK10701-L Field Tester for LoRaWAN has four interfaces which are the touch 
 
 The touchscreen LCD is the main interface of the device. Most of the user interaction is done via the touchscreen LCD.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/interface-lcd.png"
-  width="30%"
-  caption="RAK10701-L front view with an LCD screen"
-/>
+> **Image:** RAK10701-L front view with an LCD screen
 
 You can interact with the device and check the data needed on your LoRaWAN network field testing. The icons highlighted in the red box are the areas responsive to touch. Other parts of the screen will not be responsive to any touch input.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/interface-main.png"
-  width="25%"
-  caption="RAK10701-L home display"
-/>
+> **Image:** RAK10701-L home display
 
 :::tip NOTE
 The complete details on different pages of the screens are discussed in the [RAK10701-L Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak10701-l/quickstart/).
@@ -99,29 +84,17 @@ There is one external button on RAK10701 which can be used in various scenarios.
 2. Forced uplink (double-click)
 3. Sleep and wake-up (single click)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/button.png"
-  width="25%"
-  caption="RAK10701-L useable button"
-/>
+> **Image:** RAK10701-L useable button
 
 ##### Antenna RP-SMA Connector
 
 On top of the RAK10701-L Field Tester for LoRaWAN is an RP-SMA port for the external antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/interface-antenna-2.png"
-  width="40%"
-  caption="RAK10701-L RP-SMA antenna port"
-/>
+> **Image:** RAK10701-L RP-SMA antenna port
 
-The antenna included in the RAK10701-L has a 2.0&nbsp;dBi gain. You can put a different antenna as long as it can fit on the RP-SMA connector.
+The antenna included in the RAK10701-L has a 2.0 dBi gain. You can put a different antenna as long as it can fit on the RP-SMA connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/2-dbi-antenna.png"
-  width="30%"
-  caption="2.0 dBi antenna"
-/>
+> **Image:** 2.0 dBi antenna
 
 :::tip NOTE
 Detailed information about the LoRa antenna can be found on the datasheet:
@@ -134,11 +107,7 @@ Detailed information about the LoRa antenna can be found on the datasheet:
 
 There is also a USB interface on RAK10701. You can use [WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/overview/) software to configure the devices via USB connection. You also have the option to configure the device wirelessly via BLE connection using the [WisToolBox Mobile App](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-mobile/) compatible with iOS and Android.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/datasheet/interface-usb-typec.png"
-  width="40%"
-  caption="USB Type-C connector access"
-/>
+> **Image:** USB Type-C connector access
 
 #### RF Characteristics
 
@@ -161,7 +130,7 @@ The RAK10701-L Field Tester for LoRaWAN supports the regional bands shown in the
 
 | Items     | Parameter        |
 | --------- | ---------------- |
-| Frequency | 1575.42&nbsp;MHz |
+| Frequency | 1575.42 MHz |
 
 #### Electrical Characteristics
 
@@ -169,12 +138,12 @@ The RAK10701-L Field Tester for LoRaWAN supports the regional bands shown in the
 
 | Mode      | Condition | Power Consumption |
 | --------- | --------- | ----------------- |
-| Idle Mode | LCD on    | 120&nbsp;mA       |
-|           | LCD off   | 60&nbsp;mA        |
+| Idle Mode | LCD on    | 120 mA       |
+|           | LCD off   | 60 mA        |
 
 ##### Battery Supply
 
-The RAK10701-L Field Tester for LoRaWAN is equipped with a built-in rechargeable 3.7&nbsp;V Li-ion battery with 3200&nbsp;mAh capacity. This can be charged via a USB Type-C connector interface.
+The RAK10701-L Field Tester for LoRaWAN is equipped with a built-in rechargeable 3.7 V Li-ion battery with 3200 mAh capacity. This can be charged via a USB Type-C connector interface.
 
 #### Environmental Characteristics
 
@@ -182,16 +151,15 @@ The table below lists the operation and storage temperature requirements.
 
 | Parameter             | Min.        | Typical     | Max.        |
 | --------------------- | ----------- | ----------- | ----------- |
-| Storage Temp. Range   | -40°&nbsp;C | +25°&nbsp;C | +80°&nbsp;C |
-| Operation Temp. Range | -10°&nbsp;C | +25°&nbsp;C | +60°&nbsp;C |
+| Storage Temp. Range   | -40° C | +25° C | +80° C |
+| Operation Temp. Range | -10° C | +25° C | +60° C |
 
 #### Mechanical Characteristics
 
-- Dimensions: 100&nbsp;mm x 75&nbsp;mm x 38&nbsp;mm
-- Weight: approximately 8.6&nbsp;oz (243.8&nbsp;g) without battery
+- Dimensions: 100 mm x 75 mm x 38 mm
+- Weight: approximately 8.6 oz (243.8 g) without battery
 
 ### Firmware
 
-Download the latest firmware version of RAK10701-L via the <a href="https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/overview"> WisToolBox</a>.
+Download the latest firmware version of RAK10701-L via the [ WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/overview).
 
-<RkBottomNav/>

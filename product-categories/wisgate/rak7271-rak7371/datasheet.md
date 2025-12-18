@@ -14,10 +14,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK7271/RAK7371 WisGate Developer Base Datasheet
 
 ## Overview
@@ -38,10 +34,9 @@ This device provides a complete and cost-efficient LoRa gateway solution, offeri
 
 - Compatible with RAK2287(SX1302) / RAK5146(SX1303) concentrator modules with 8 uplink channels and 1 downlink channel.
 - 2 x SX125x Tx/Rx front-ends.
-- Tx power up to 27&nbsp;dBm, Rx sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz.
+- Tx power up to 27 dBm, Rx sensitivity down to -139 dBm @ SF12, BW 125 kHz.
 - Supports global license-free frequency band (EU433, CN470, IN865, EU868, US915, AU915, KR920, AS923)
 - USB Type C interface port (USB 2.0)
-
 
 ### Package Contents
 
@@ -49,11 +44,7 @@ This device provides a complete and cost-efficient LoRa gateway solution, offeri
 - 1pc USB Type C to A Cable
 - 1pc LoRa Antenna (2.3 dBi)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/datasheet/1.package-contents.png"
-  width="70%"
-  caption="Package Contents"
-/>
+> **Image:** Package Contents
 
 ## Specifications
 
@@ -68,11 +59,7 @@ The RAK7271/RAK7371 WisGate Developer Base consists of four components:
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/datasheet/2.block-diagram.png"
-  width="80%"
-  caption="WisGate Developer Base Block Diagram"
-/>
+> **Image:** WisGate Developer Base Block Diagram
 
 ### Hardware
 
@@ -80,16 +67,11 @@ The hardware specification covers the interfacing of WisGate Developer Base and 
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/datasheet/3.interfaces.png"
-  width="70%"
-  caption="WisGate Developer Base Interfaces"
-/>
+> **Image:** WisGate Developer Base Interfaces
 
-- **Power supply**: There is a 5&nbsp;V to 3.3&nbsp;V DC-DC converter integrated on RAK2005, so the 5&nbsp;V DC that comes from the USB interface is enough for this device.
-- **USB Interface**: This device can connect to any USB 2.0 host equipped with compatible drivers. The RAK2287/RAK5146 module inside supports high-speed USB-to-SPI conversion via the STM32L412KBU6. It features a USB 2.0 compliant interface with a maximum data rate of 480&nbsp;Mb/s, serving as the communication interface with an external host application processor.
-- **RP-SMA antenna interface**: The modules feature a single RF interface via a standard RPSMA connector with a characteristic impedance of 50&nbsp;Ω. This RF port supports both transmission (Tx) and reception (Rx), serving as the antenna interface.
-
+- **Power supply**: There is a 5 V to 3.3 V DC-DC converter integrated on RAK2005, so the 5 V DC that comes from the USB interface is enough for this device.
+- **USB Interface**: This device can connect to any USB 2.0 host equipped with compatible drivers. The RAK2287/RAK5146 module inside supports high-speed USB-to-SPI conversion via the STM32L412KBU6. It features a USB 2.0 compliant interface with a maximum data rate of 480 Mb/s, serving as the communication interface with an external host application processor.
+- **RP-SMA antenna interface**: The modules feature a single RF interface via a standard RPSMA connector with a characteristic impedance of 50 Ω. This RF port supports both transmission (Tx) and reception (Rx), serving as the antenna interface.
 
 #### RF Characteristics
 
@@ -121,37 +103,28 @@ It is highly recommended to use optimized RSSI calibration values, which is part
 |          500           |        12        |       -134        |
 |          500           |        7         |       -120        |
 
-
 #### Antenna Specifications
 
 ##### LoRa Antenna
 
 WisGate Developer Base comes with LoRa Antenna with RP-SMA Male connector, shown in Figure 4.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/datasheet/4.lora-antenna.png"
-  width="60%"
-  caption="LoRa Antenna"
-/>
+> **Image:** LoRa Antenna
 
 ##### Antenna Dimension
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/datasheet/5.antenna-dimension.png"
-  width="70%"
-  caption="Antenna Dimension in mm"
-/>
+> **Image:** Antenna Dimension in mm
 
 ##### Antenna Parameters
 
 | Items                              | Specifications                       | Specifications                       |
 | ---------------------------------- | :----------------------------------- | ------------------------------------ |
-| Frequency Range                    | 863~870&nbsp;MHz                     | 902~928&nbsp;MHz                     |
-| Peak Gain                          | 2.8&nbsp;dBi                         | 2.3&nbsp;dBi                         |
+| Frequency Range                    | 863~870 MHz                     | 902~928 MHz                     |
+| Peak Gain                          | 2.8 dBi                         | 2.3 dBi                         |
 | Voltage Standard Wave Ratio (VSWR) | ≤ 1.5                                | ≤ 1.5                                |
 | Efficiency                         | > 80%                                | > 80%                                |
-| Feed Impedance                     | 50&nbsp;Ω                            | 50&nbsp;Ω                            |
-| Working Temperature & Humidity     | T: -30~+75°&nbsp;C, H: 5~95&nbsp;%RH | T: -30~+75°&nbsp;C, H: 5~95&nbsp;%RH |
+| Feed Impedance                     | 50 Ω                            | 50 Ω                            |
+| Working Temperature & Humidity     | T: -30~+75° C, H: 5~95 %RH | T: -30~+75° C, H: 5~95 %RH |
 
 #### Electrical Requirements
 
@@ -168,11 +141,10 @@ The limiting values given below are in accordance with the Absolute Maximum Rati
 
 | Symbol | Description            | Condition                                   | Min         | Max            |
 | ------ | ---------------------- | ------------------------------------------- | ----------- | -------------- |
-| 5V     | Device  supply voltage | Input  DC voltage                           | –0.3&nbsp;V | 5.25&nbsp;V    |
-| USB    | USB  D+/D- pins        | Input  DC voltage at USB interface pins     | -           | 3.6&nbsp;V     |
-| ANT    | Antenna  ruggedness    | Output  RF load mismatch ruggedness at ANT1 | -           | 10:1&nbsp;VSWR |
-| Tstg   | Storage  Temperature   | -                                           | –40&nbsp;°C | 85&nbsp;°C     |
-
+| 5V     | Device  supply voltage | Input  DC voltage                           | –0.3 V | 5.25 V    |
+| USB    | USB  D+/D- pins        | Input  DC voltage at USB interface pins     | -           | 3.6 V     |
+| ANT    | Antenna  ruggedness    | Output  RF load mismatch ruggedness at ANT1 | -           | 10:1 VSWR |
+| Tstg   | Storage  Temperature   | -                                           | –40 °C | 85 °C     |
 
 :::tip NOTE
 
@@ -184,19 +156,18 @@ The product is not protected against overvoltage or reversed voltages. Voltage s
 
 | Parameter | Typical    | Remarks                                            |
 | --------- | ---------- | -------------------------------------------------- |
-| ESD       | ±4&nbsp;KV | Indirect Discharge VCP according to IEC 61000-4-2  |
-| ESD       | ±4&nbsp;KV | Indirect Discharge HCP according Fto IEC 61000-4-2 |
+| ESD       | ±4 KV | Indirect Discharge VCP according to IEC 61000-4-2  |
+| ESD       | ±4 KV | Indirect Discharge HCP according Fto IEC 61000-4-2 |
 
 ##### Operating Conditions
 
 | Parameter             | Min         | Typical     | Max         |
 | --------------------- | ----------- | ----------- | ----------- |
-| Operating temperature | –40&nbsp;°C | +25&nbsp;°C | +85&nbsp;°C |
-
+| Operating temperature | –40 °C | +25 °C | +85 °C |
 
 :::warning
 
-Unless otherwise specified, all operating condition specifications assume an ambient temperature of 25°&nbsp;C. Operation outside the specified conditions is not recommended, and extended exposure to such conditions may impact the device's reliability.
+Unless otherwise specified, all operating condition specifications assume an ambient temperature of 25° C. Operation outside the specified conditions is not recommended, and extended exposure to such conditions may impact the device's reliability.
 
 :::
 
@@ -204,28 +175,25 @@ Unless otherwise specified, all operating condition specifications assume an amb
 
 | Symbol   | Parameter                             | Min         | Typical  | Max         |
 | -------- | ------------------------------------- | ----------- | -------- | ----------- |
-| 5&nbsp;V | Device supply operating input voltage | 4.75&nbsp;V | 5&nbsp;V | 5.25&nbsp;V |
+| 5 V | Device supply operating input voltage | 4.75 V | 5 V | 5.25 V |
 
 ##### Power Consumption
 
 | Mode             | Condition                                                   | Typical     |
 | ---------------- | ----------------------------------------------------------- | ----------- |
-| Active Mode (TX) | The power of TX channel is 27&nbsp;dBm and 5&nbsp;V supply. | 365&nbsp;mA |
-| Active Mode (RX) | TX disabled and RX enabled.                                 | 66&nbsp;mA  |
+| Active Mode (TX) | The power of TX channel is 27 dBm and 5 V supply. | 365 mA |
+| Active Mode (RX) | TX disabled and RX enabled.                                 | 66 mA  |
 
 #### Environmental Characteristics
 
 | Parameter                   | Min         | Typical     | Max         |
 | --------------------------- | ----------- | ----------- | ----------- |
-| Operation Temperature Range | -40&nbsp;°C | +25&nbsp;°C | +85&nbsp;°C |
+| Operation Temperature Range | -40 °C | +25 °C | +85 °C |
 
 #### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/datasheet/6.mechanical-dimension.png"
-  width="50%"
-  caption="WisGate Developer Base Dimension"
-/>
+> **Image:** WisGate Developer Base Dimension
+
 ## Models / Bundles
 
 | Product   | Concentrator | GPS | LBT | USB |
@@ -233,29 +201,15 @@ Unless otherwise specified, all operating condition specifications assume an amb
 | RAK7271-Y | RAK2287      |     |     | √   |
 | RAK7371-Y | RAK5146      |     |     | √   |
 
-
 | Parameter            | Variations                                                                             |
 | -------------------- | -------------------------------------------------------------------------------------- |
 | Y - Supported Region | 1 - EU433; 2 - CN470; 3 - EU868; 4 - US915; 5 - KR920; 6 - AS923; 7 - IN865; 8 - AU915 |
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_CE_Certification.pdf',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_FCC_and_ISED_Report.pdf',
-    },
-    {
-        'reach': 'https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_RAK7271_REACH_Report.pdf',
-    },
-    {
-        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_RAK7271_RoHS_Report.pdf',
-    },
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_FCC_and_ISED_Report.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_RAK7271_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK7371/Certification/RAK7371_RAK7271_RoHS_Report.pdf
 
-
-]} />
-
-
-<RkBottomNav/>

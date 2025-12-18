@@ -9,10 +9,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # UPS PoE-03 Datasheet
 
 ## Overview
@@ -27,56 +23,48 @@ This product provides power to the RAK7268 Indoor Gateway and the RAK7289 Outdoo
 
 ### Features
 
-- Input：100-240&nbsp;V<sub>AC</sub> (50~60&nbsp;Hz)
+- Input：100-240 V<sub>AC</sub> (50~60 Hz)
 - Output:
-  - 48&nbsp;V<sub>DC</sub> 0.23&nbsp;A
-  - 9~12&nbsp;V<sub>DC</sub> 3&nbsp;A
-  - 5&nbsp;V<sub>DC</sub> 1.5&nbsp;A
+  - 48 V<sub>DC</sub> 0.23 A
+  - 9~12 V<sub>DC</sub> 3 A
+  - 5 V<sub>DC</sub> 1.5 A
 - Offers intelligent recognition of adapter power capability
 - Supports overcurrent buck regulation
 - Supports adjustment of small current charging based on voltage drop switching, with small switching changes and short switching time
 - Supports low battery warning signal for lithium batteries, external power supply, or lithium battery power supply warning signal
 - The internal lithium battery pack has comprehensive protection against overcharging, discharging, overcurrent, short circuit
 - Support hardware, MCU control, and other multiple protection
-- Net Weight：265&nbsp;g
-- Dimension: 105 x 105 x 27.5&nbsp;mm
+- Net Weight：265 g
+- Dimension: 105 x 105 x 27.5 mm
 
 ## Specifications
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-poe-03/3.function-diagram.png"
-  width="70%"
-  caption="UPS PoE-03 function diagram"
-/>
+> **Image:** UPS PoE-03 function diagram
 
 ### Hardware
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-poe-03/2.parts.png"
-  width="60%"
-  caption="UPS PoE-03 parts"
-/>
+> **Image:** UPS PoE-03 parts
 
 | Number | Label                                                      |
 | ------ | ---------------------------------------------------------- |
 | 1      | Working Indicator                                          |
 | 2      | Power On/Off Switch                                        |
 | 3      | Charging Indicator                                         |
-| 4      | 110-240&nbsp;V<sub>AC</sub> Power Input port               |
-| 5      | 5&nbsp;V<sub>DC</sub> 1.5&nbsp;A Output port               |
-| 6      | 9~12&nbsp;V<sub>DC</sub> 3&nbsp;A Output port              |
+| 4      | 110-240 V<sub>AC</sub> Power Input port               |
+| 5      | 5 V<sub>DC</sub> 1.5 A Output port               |
+| 6      | 9~12 V<sub>DC</sub> 3 A Output port              |
 | 7      | LAN IN                                                     |
-| 8      | 48.0&nbsp;V<sub>DC</sub> 0.23&nbsp;A Output port (LAN OUT) |
+| 8      | 48.0 V<sub>DC</sub> 0.23 A Output port (LAN OUT) |
 
 | Port                                  | Specification                            |
 | ------------------------------------- | ---------------------------------------- |
-| Input Port AC 110&nbsp;V ~ 240&nbsp;V | US/EU/UK 8 digit-character AC power port |
-| Output no-load voltage                | 5.5 x 2.5&nbsp;mm DC Female connector    |
-| Average output conversion efficiency  | 5.5 x 2.5&nbsp;mm DC Female connector    |
+| Input Port AC 110 V ~ 240 V | US/EU/UK 8 digit-character AC power port |
+| Output no-load voltage                | 5.5 x 2.5 mm DC Female connector    |
+| Average output conversion efficiency  | 5.5 x 2.5 mm DC Female connector    |
 | Output current                        | RJ45 (LAN OUT)                           |
 
 ##### LED Indicator Status
@@ -87,125 +75,53 @@ This product provides power to the RAK7268 Indoor Gateway and the RAK7289 Outdoo
 | 🔴   | Device is charging. |
 
 - Short press the switch button turns on/off the device.
-- No input: Shuts down when the battery voltage falls 9&nbsp;V
-- No external input: Battery voltage below 9&nbsp;V shuts down output. Green light turns off.
+- No input: Shuts down when the battery voltage falls 9 V
+- No external input: Battery voltage below 9 V shuts down output. Green light turns off.
 - Charging the device turns on the red LED and automatically turns off when it's full charged.
-
 
 #### Electrical Characteristics
 
 | Item                                 | Min.       | Typical                                                                                                         | Max.       | Unit |
 | ------------------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------- | ---------- | ---- |
-| Power input port voltage             | 110&nbsp;V | 220&nbsp;V                                                                                                      | 240&nbsp;V | V    |
-| Output no-load voltage               | 5&nbsp;V   | 5&nbsp;V + 9&nbsp;V + 12&nbsp;V + 48&nbsp;V                                                                     | 48&nbsp;V  | V    |
+| Power input port voltage             | 110 V | 220 V                                                                                                      | 240 V | V    |
+| Output no-load voltage               | 5 V   | 5 V + 9 V + 12 V + 48 V                                                                     | 48 V  | V    |
 | Average output conversion efficiency | -          | ≥85%                                                                                                            | -          | -    |
-| Output current                       | -          | 48&nbsp;V<sub>DC</sub> 0.23&nbsp;A <br/> 9~12&nbsp;V<sub>DC</sub> 3&nbsp;A <br/> 5&nbsp;V<sub>DC</sub> 1.5&nbsp;A | -          | -    |
-
-
+| Output current                       | -          | 48 V<sub>DC</sub> 0.23 A 
+ 9~12 V<sub>DC</sub> 3 A 
+ 5 V<sub>DC</sub> 1.5 A | -          | -    |
 
 #### Battery Information
 
 ##### Li-Ion Battery Protection Characteristics
 
-<table>
-  <tr>
-    <th>Item</th>
-    <th>Symbol</th>
-    <th>Description</th>
-    <th>Standard</th>
-  </tr>
-  <tr>
-    <td rowSpan="3">Overcharge protection</td>
-    <td>V<sub>DET1</sub></td>
-    <td>Overcharge monitoring voltage</td>
-    <td>4.25±0.05&nbsp;V</td>
-  </tr>
-  <tr>
-    <td>tV<sub>DET1</sub></td>
-    <td>Overcharge detection delay time</td>
-    <td>700～1300&nbsp;ms</td>
-  </tr>
-  <tr>
-    <td>V<sub>REL1</sub></td>
-    <td>Overcharge release voltage</td>
-    <td>4.15±0.08&nbsp;V</td>
-  </tr>
-  <tr>
-    <td rowSpan="2">Over-discharge protection</td>
-    <td>V<sub>DET2</sub></td>
-    <td>Over-discharge detection voltage</td>
-    <td>2.40±0.2&nbsp;V</td>
-  </tr>
-  <tr>
-    <td>tV<sub>DET2</sub></td>
-    <td>Over-discharge detection delay time</td>
-    <td>80～170&nbsp;ms</td>
-  </tr>
-  <tr>
-    <td rowSpan="4">Overcurrent protection</td>
-    <td>V<sub>DET3</sub></td>
-    <td>Overcurrent detection voltage</td>
-    <td>0.20±0.025V</td>
-  </tr>
-  <tr>
-    <td>I<sub>DP</sub></td>
-    <td>Overcurrent protection current</td>
-    <td>3~6&nbsp;A</td>
-  </tr>
-  <tr>
-    <td>tV<sub>DET3</sub></td>
-    <td>Detection delay time</td>
-    <td>8~12&nbsp;ms</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>Protection release condition</td>
-    <td>Disconnect the load</td>
-  </tr>
-  <tr>
-    <td rowSpan="3">Short-circuit protection</td>
-    <td>-</td>
-    <td>Protection condition</td>
-    <td>External circuit short circuit</td>
-  </tr>
-  <tr>
-    <td>T<sub>SHORT</sub></td>
-    <td>Detection delay time</td>
-    <td>≤12&nbsp;us</td>
-  </tr>
-  <tr>
-    <td>-</td>
-    <td>Protection release condition</td>
-    <td>Disconnect the short circuit</td>
-  </tr>
-  <tr>
-    <td>Lithium battery Internal resistance</td>
-    <td>R<sub>DS</sub></td>
-    <td>Main circuit on-state resistance</td>
-    <td>VC = 4.2&nbsp;V；RDS≤60&nbsp;mΩ</td>
-  </tr>
-  <tr>
-    <td>Current consumption</td>
-    <td>I<sub>DD</sub></td>
-    <td>Internal circuit consumption during operation</td>
-    <td>IDD≤30.0&nbsp;μA</td>
-  </tr>
-</table>
-
-
+| Item | Symbol | Description | Standard |
+| --- | --- | --- | --- |
+| Overcharge protection | V DET1 | Overcharge monitoring voltage | 4.25±0.05 V |
+| Overcharge protection | tV DET1 | Overcharge detection delay time | 700～1300 ms |
+| Overcharge protection | V REL1 | Overcharge release voltage | 4.15±0.08 V |
+| Over-discharge protection | V DET2 | Over-discharge detection voltage | 2.40±0.2 V |
+| Over-discharge protection | tV DET2 | Over-discharge detection delay time | 80～170 ms |
+| Overcurrent protection | V DET3 | Overcurrent detection voltage | 0.20±0.025V |
+| Overcurrent protection | I DP | Overcurrent protection current | 3~6 A |
+| Overcurrent protection | tV DET3 | Detection delay time | 8~12 ms |
+| Overcurrent protection | - | Protection release condition | Disconnect the load |
+| Short-circuit protection | - | Protection condition | External circuit short circuit |
+| Short-circuit protection | T SHORT | Detection delay time | ≤12 us |
+| Short-circuit protection | - | Protection release condition | Disconnect the short circuit |
+| Lithium battery Internal resistance | R DS | Main circuit on-state resistance | VC = 4.2 V；RDS≤60 mΩ |
+| Current consumption | I DD | Internal circuit consumption during operation | IDD≤30.0 μA |
 
 #### Battery Working & Storage Conditions
 
 | Description                                       | Temperature               |
 | ------------------------------------------------- | ------------------------- |
-| Lithium battery charging working environment      | 0°&nbsp;C ~ +45°&nbsp;C   |
-| Lithium battery discharging working environment   | 0°&nbsp;C ~ +45°&nbsp;C   |
-| Battery capacity in 40% ~ 60% storage for 30 days | -20°&nbsp;C ~ +45°&nbsp;C |
-| Battery capacity in 40% ~ 60% storage for 90 days | -20°&nbsp;C ~ +35°&nbsp;C |
+| Lithium battery charging working environment      | 0° C ~ +45° C   |
+| Lithium battery discharging working environment   | 0° C ~ +45° C   |
+| Battery capacity in 40% ~ 60% storage for 30 days | -20° C ~ +45° C |
+| Battery capacity in 40% ~ 60% storage for 90 days | -20° C ~ +35° C |
 
 :::tip NOTE
 - Low-temperature environments reduce discharge capacity.
 - If the UPS POE-03 is not used for an extended period of time, it should be fully charged and stored in a cool, dry place, and it should be charged once every 3~5 months.
 :::
 
-<RkBottomNav/>

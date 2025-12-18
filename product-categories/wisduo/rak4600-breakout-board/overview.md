@@ -10,23 +10,21 @@ slug: /product-categories/wisduo/rak4600-breakout-board/overview/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4600 Breakout Board
 Thank you for choosing **RAK4600 Breakout Board** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4600-breakout-board/quickstart/" target="_blank">Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4600-breakout-board/datasheet/" target="_blank">Datasheet</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4600-breakout-board/at-command-manual/" target="_blank">AT Command Manual</a>
-* <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui/overview/" target="_blank">RUI Secondary Development</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4600-module/low-level-development/" target="_blank">Low Level Development</a>
-* <a href="https://downloads.rakwireless.com/3D_File/WisDuo/PWB-RAK4600%20Breakout%20Board.stp" target="_blank">RAK4600 Breakout 3D Model</a>
+* [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduo/rak4600-breakout-board/quickstart/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak4600-breakout-board/datasheet/)
+* [AT Command Manual](https://docs.rakwireless.com/product-categories/wisduo/rak4600-breakout-board/at-command-manual/)
+* [RUI Secondary Development](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui/overview/)
+* [Low Level Development](https://docs.rakwireless.com/product-categories/wisduo/rak4600-module/low-level-development/)
+* [RAK4600 Breakout 3D Model](https://downloads.rakwireless.com/3D_File/WisDuo/PWB-RAK4600%20Breakout%20Board.stp)
 
 ## Product Description
 
-The **RAK4600 Breakout Board** is specifically designed to provide easy access to the board's pins, simplifying development and testing. The breakout board's form factor converts the RAK4600 stamp module pinout to 2.54&nbsp;mm headers.
+The **RAK4600 Breakout Board** is specifically designed to provide easy access to the board's pins, simplifying development and testing. The breakout board's form factor converts the RAK4600 stamp module pinout to 2.54 mm headers.
 
-The board itself has the RAK4600 at its core, integrating an **nRF52832 MCU** and an **SX1276 LoRa chip**. It has an ultra-low power consumption of 13.3&nbsp;μA (down to 11.2&nbsp;μA @ 2.0&nbsp;V) in sleep mode, and high LoRa output power (20&nbsp;dBm) in work mode. Its BLE output power is up to 4&nbsp;dBm.
+The board itself has the RAK4600 at its core, integrating an **nRF52832 MCU** and an **SX1276 LoRa chip**. It has an ultra-low power consumption of 13.3 μA (down to 11.2 μA @ 2.0 V) in sleep mode, and high LoRa output power (20 dBm) in work mode. Its BLE output power is up to 4 dBm.
 
 The board complies with **LoRaWAN 1.0.2 specification**. It also supports LoRa Point-to-Point (P2P) communication.
 
@@ -36,14 +34,12 @@ The RF communication capabilities of the board (LoRa + BLE) make it ideal for va
 
 - LoRa module for Smart City, Smart Agriculture, Smart Industry
 - I/O ports: **UART/I2C/GPIO** (optional NFC interface)
-- Frequency range: **863–923&nbsp;MHz** (entire LoRa high band spectrum)
-- Low-Power Wireless Systems with **7.8&nbsp;kHz** to **500&nbsp;kHz** Bandwidth
-- LoRa Tx power up to **20&nbsp;dBm
-- BLE 5.0 (Tx power **-20&nbsp;dBm** to **+4&nbsp;dBm** in **4&nbsp;dB** steps)
+- Frequency range: **863–923 MHz** (entire LoRa high band spectrum)
+- Low-Power Wireless Systems with **7.8 kHz** to **500 kHz** Bandwidth
+- LoRa Tx power up to **20 dBm
+- BLE 5.0 (Tx power **-20 dBm** to **+4 dBm** in **4 dB** steps)
 - Serial Wire Debug (SWD) interface
-- Ultra-Low Power Consumption of **13.3&nbsp;μA** (down to 11.2&nbsp;μA @ 2.0&nbsp;V) in sleep mode
-- Supply Voltage: 2.0&nbsp;V ~ 3.6&nbsp;V
-- Temperature range: -40°&nbsp;C ~ +85°&nbsp;C
+- Ultra-Low Power Consumption of **13.3 μA** (down to 11.2 μA @ 2.0 V) in sleep mode
+- Supply Voltage: 2.0 V ~ 3.6 V
+- Temperature range: -40° C ~ +85° C
 
-
-<RkBottomNav/>

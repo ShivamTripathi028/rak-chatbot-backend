@@ -9,9 +9,6 @@ keywords:
 sidebar_label: Low Level Development
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4260 Evaluation Board Low Level Development
 
 ## Overview
@@ -24,9 +21,8 @@ Using Low Level Development, you can develop your own firmware that runs on RAK4
 
 One of the essential aspects that allow you to develop your own firmware is the hardware schematics. This allows you to understand the connections between the inner MCU and the LoRa transceiver.
 
-
 :::tip NOTE
-The RAK4260 Evaluation Board covers only the high-frequency LoRaWAN bands (864&nbsp;MHz to 923&nbsp;MHz).
+The RAK4260 Evaluation Board covers only the high-frequency LoRaWAN bands (864 MHz to 923 MHz).
 :::
 
 Check the [LoRaWAN frequencies by country](https://www.thethingsnetwork.org/docs/lorawan/frequencies-by-country.html).
@@ -34,7 +30,6 @@ Check the [LoRaWAN frequencies by country](https://www.thethingsnetwork.org/docs
 ### Microchip LoRaWAN Stack (MLS)
 
 Reading Microchip LoRaWAN Stack [API Reference Manual](http://ww1.microchip.com/downloads/en/DeviceDoc/SAM-R34-R35-Microchip-LoRaWAN-Stack-Software-API-Reference-Manual-DS70005382A.pdf) is recommended.
-
 
 ### RAK4260 Development Platform
 
@@ -44,61 +39,33 @@ Before compiling a project for the RAK4260 Evaluation Board, it is necessary to 
 
 1. Download and install the Microchip Studio web installer.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/microchip_studio.png"
-  width="80%"
-  caption="Microchip Studio web installer"
-/>
+> **Image:** Microchip Studio web installer
 
 2. Agree to the license terms and conditions.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/agree.png"
-  width="40%"
-  caption="Microchip Studio license"
-/>
+> **Image:** Microchip Studio license
 
 3. In Select Architecture, choose "SAM".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/sam_atmel_studio.png"
-  width="40%"
-  caption="Microchip Studio Architecture"
-/>
+> **Image:** Microchip Studio Architecture
 
 4. Don't select "Atmel Software Framework and Examples Project" yet. Do it later.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/asf_dont.png"
-  width="40%"
-  caption="ASF skip install"
-/>
+> **Image:** ASF skip install
 
 5. Launch Microchip Studio then select **Tools** -> **Extensions and Updates**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/microchip_extensions.png"
-  width="100%"
-  caption="Microchip Studio Extensions and Updates"
-/>
+> **Image:** Microchip Studio Extensions and Updates
 
 6. In the Extensions and Updates window, click on "**Online**" and then search for "**atmel software framework**".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/asf.png"
-  width="100%"
-  caption="ASF install"
-/>
+> **Image:** ASF install
 
 7. Select "**Atmel Software Framework**" and click on the "**Download**" button to install it.
 
 8. To finish the installation, launch Microchip Studio then go to **Tools** -> **Device Pack Manager**. Search for "**SAMR34**" and install "**SAMR34_DFP**" pack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/samr34_pack.png"
-  width="100%"
-  caption="SAMR34 pack install"
-/>
+> **Image:** SAMR34 pack install
 
 ### Build RAK4260 LoRaNode Demo Project
 
@@ -114,11 +81,7 @@ This sample firmware is solely for testing purposes. If you want to use and depl
 
 1. Clone the [RAK4260 GitHub repository](https://github.com/RAKWireless/RAK4260-LoRaNode-demo).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/github-repo.png"
-  width="100%"
-  caption="RAK4260 GitHub Repository"
-/>
+> **Image:** RAK4260 GitHub Repository
 
 2. Open and configure the RAK4260-LoRaNode-demo solution.
 
@@ -127,21 +90,13 @@ Go to the cloned directory folder:
 
 3. Compile RAK4260-LoRaNode-demo solution. In Microchip Studio, select **Build** -> **Build Solution**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/build-demo.png"
-  width="100%"
-  caption="Build RAK4260-LoRaNode-demo solution"
-/>
+> **Image:** Build RAK4260-LoRaNode-demo solution
 
 ### Flash the Firmware Using DAPLink and RAKDAP1
 
 To flash a new firmware, use the RAKDAP1, an SWD adapter. Refer to Figure 10 as a reference to connect RAKDAP1 and RAK4600 Evaluation Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/interfacing/rak4260-evb-connection.svg"
-  width="60%"
-  caption="RAK4260 Evaluation Board connected to RAKDAP1"
-/>
+> **Image:** RAK4260 Evaluation Board connected to RAKDAP1
 
 1. Install the [RAKDAP1 Flash and Debug Tool](https://docs.rakwireless.com/product-categories/accessories/rakdap1/overview/#rakdap1-flash-and-debug-tool).
 
@@ -160,27 +115,13 @@ As an example, flash the RAK4260-LoRaNode demo project. The hex file of the RAK4
 - **<cloned_dir>\RAK4260-LoRaNode-demo\APPS_ENDDEVICE_DEMO1\Debug**.
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/microchip_studio_config.png"
-  width="100%"
-  caption="Microchip Studio Solution Configurations"
-/>
+> **Image:** Microchip Studio Solution Configurations
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/microchip_hex.png"
-  width="90%"
-  caption="RAK4260 hex file"
-/>
+> **Image:** RAK4260 hex file
 
 ```
 pyocd flash -t atsaml21j18a APPS_ENDDEVICE_DEMO1.hex
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/quickstart/3burning-the-firmware/pyocd_flash.png"
-  width="100%"
-  caption="Successful pyOCD flash"
-/>
+> **Image:** Successful pyOCD flash
 
-
-<RkBottomNav/>

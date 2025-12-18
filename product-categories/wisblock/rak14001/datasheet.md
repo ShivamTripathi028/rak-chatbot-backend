@@ -10,27 +10,23 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14001 WisBlock RGB LED Module Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK14001 is an RGB LED module that can be mounted to the IO slot of the WisBlock Base board. It is capable of driving RGB LEDs with up to 20&nbsp;mA per segment via the I2C interface. The main component of this module is the NCP5623B from On Semiconductors. This IC has a built−in DC/DC converter that works as a high-efficiency charge pump providing the required DC voltage for all three LED segments. There is also an **IREF** pin that provides the reference current based on the internal band−gap voltage reference to control the output current flowing in the LED.
-
+The RAK14001 is an RGB LED module that can be mounted to the IO slot of the WisBlock Base board. It is capable of driving RGB LEDs with up to 20 mA per segment via the I2C interface. The main component of this module is the NCP5623B from On Semiconductors. This IC has a built−in DC/DC converter that works as a high-efficiency charge pump providing the required DC voltage for all three LED segments. There is also an **IREF** pin that provides the reference current based on the internal band−gap voltage reference to control the output current flowing in the LED.
 
 ### Features
 
-- 2.7&nbsp;V - 4.2&nbsp;V input voltage range
+- 2.7 V - 4.2 V input voltage range
 - RGB Function Fully Supported
 - Programmable Integrated Gradual Dimming
 - Support I2C Protocol
 - Support enable power supply
 - Chipset: On Semiconductors NCP5623B
-- Module size: 25 X 35&nbsp;mm
+- Module size: 25 X 35 mm
 
 ## Specifications
 
@@ -40,12 +36,7 @@ The RAK14001 is an RGB LED module that can be mounted to the IO slot of the WisB
 
 The RAK14001 module can be mounted on the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK14001 on a WisBlock Base module, such as the RAK5005-O.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/mounting-mechanism.png"
-  figureCount="1"
-  width="60%"
-  caption="RAK14001 mounting mechanism on a WisBlock Base module"
-/>
+> **Image:** RAK14001 mounting mechanism on a WisBlock Base module
 
 ### Hardware
 
@@ -60,16 +51,11 @@ The hardware specification is categorized into four (4) parts. It discusses the 
 
 The RAK14001 WisBlock module has a 40-pin WisConnector that is compatible to the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/rak14001-pinout.svg"
-  figureCount="2"
-  width="70%"
-  caption="RAK14001 Pinout Schematic"
-/>
+> **Image:** RAK14001 Pinout Schematic
 
 :::tip NOTE
 - **I2C** related pins, **EN**, **VBAT**, **3V3**, and **GND** are connected to this module.
-- **EN** is connected to power chip enable pin, High active. **VBAT** is battery voltage, maximum of 4.2&nbsp;V.
+- **EN** is connected to power chip enable pin, High active. **VBAT** is battery voltage, maximum of 4.2 V.
 
 :::
 
@@ -91,55 +77,27 @@ This section shows the maximum and minimum ratings of the RAK14001 module and it
 
 The mechanical dimensions of the RAK14001 module is shown in **Figure 3** below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/mechanical-dimensions.png"
-  figureCount="3"
-  width="80%"
-  caption="RAK14001 Mechanical Dimensions"
-/>
+> **Image:** RAK14001 Mechanical Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/wisconnector-pcb.png"
-  figureCount="4"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 **Figure 5** shows the schematic of the RAK14001 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/rak14001-schematic.png"
-  figureCount="5"
-  width="100%"
-  caption="RAK14001 WisBlock Module Schematics"
-/>
-
+> **Image:** RAK14001 WisBlock Module Schematics
 
 ##### Power Supply
 
 **Figure 6** shows the RAK14001 RGB LED driver chip power supply.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/led-psu.png"
-  figureCount="6"
-  width="90%"
-  caption="RAK14001 WisBlock RGB LED Driver Power Supply"
-/>
+> **Image:** RAK14001 WisBlock RGB LED Driver Power Supply
 
 ##### LED Driver
 
 **Figure 7** shows the RGB LED driver schematic, **R8** provides the reference current for LED 1 to LED 3 pins.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/datasheet/led-driver.png"
-  figureCount="7"
-  width="100%"
-  caption="RAK14001 WisBlock RGB LED Driver Schematic"
-/>
+> **Image:** RAK14001 WisBlock RGB LED Driver Schematic
 
-
-<RkBottomNav/>

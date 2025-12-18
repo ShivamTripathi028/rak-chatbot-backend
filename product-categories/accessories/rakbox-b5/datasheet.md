@@ -9,9 +9,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock RAKBox-B5 Enclosure Datasheet
 
 RAKBox-B5 is a transparent enclosure. It is designed specifically for the WisBlock products.
@@ -20,17 +17,13 @@ RAKBox-B5 is a transparent enclosure. It is designed specifically for the WisBlo
 
 The enclosure is made of transparent acrylic material and has an open design. It is protecting the PCB, yet is perfect for testing and code development. It supports all available WisBlock modules.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakbox-b5/datasheet/overview.png"
-  width="45%"
-  caption="WisBlock RAKBox-B5 Enclosure Overview"
-/>
+> **Image:** WisBlock RAKBox-B5 Enclosure Overview
 
 ## Mechanical Characteristics
 
-- Dimensions W x L x H: 105&nbsp;mm x 75&nbsp;mm x 30&nbsp;mm
-- Weight: approximately 4.23&nbsp;oz (120&nbsp;g)
-- Material thickness: 3&nbsp;mm (Cover); 5&nbsp;mm (Base)
+- Dimensions W x L x H: 105 mm x 75 mm x 30 mm
+- Weight: approximately 4.23 oz (120 g)
+- Material thickness: 3 mm (Cover); 5 mm (Base)
 
 ## WisBlock Module Support
 
@@ -61,10 +54,5 @@ The enclosure is compatible with the following WisBlock modules:
 
 Screws and hexagon studs for module mounting as well as a battery holder.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakbox-b5/datasheet/mounting-kit.png"
-  width="50%"
-  caption="Mounting Kit"
-/>
+> **Image:** Mounting Kit
 
-<RkBottomNav/>

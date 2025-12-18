@@ -8,14 +8,10 @@ keywords:
 image: https://images.docs.rakwireless.com/wisgate/rak7289/RAK7289.png
 sidebar_label: Datasheet
 ---    
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7289 WisGate Edge Pro Datasheet
 
 ## Overview
-
 
 ### Description
 
@@ -36,7 +32,7 @@ Thus, the RAK7289 is suited for any use case scenario, be it rapid deployment or
 - Dual LoRa Concentrators for up to **16 channels**
 - **Backhaul:** Wi-Fi, LTE, and Ethernet
 - GPS
-- Supports DC 12&nbsp;V or Solar power supply with Electricity monitoring (Solar Kit optional)
+- Supports DC 12 V or Solar power supply with Electricity monitoring (Solar Kit optional)
 - Internal antenna for Wi-Fi, GPS, and LTE, External antenna for LoRa
 - Dying-Gasp (optional)
 
@@ -61,49 +57,42 @@ The overview presents the block diagram for the RAK7289 that shows the internal 
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/datasheet/2.png"
-  width="70%"
-  caption="RAK7289 WisGate Edge Pro Block Diagram"
-/>
+> **Image:** RAK7289 WisGate Edge Pro Block Diagram
 
 #### Main Specifications
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Computing</td><td>MT7628, DDR2 RAM 128 MB</td></tr>
-        <tr><td rowSpan="5">Wi-Fi feature</td><td>Frequency: 2.4 GHz (802.11 b/g/b/)</td></tr>
-        <tr><td>2x2 MIMO</td></tr>
-        <tr><td>RX Sensitivity: -95 dBm (Min)</td></tr>
-        <tr><td>TX Power: 20 dBm (Max)</td></tr>
-        <tr><td>Operation channels: 2.4 GHz: 1-13</td></tr>
-        <tr><td rowSpan="5">LoRa feature</td><td>SX1303 mPCIe card (connects maximum of two)</td></tr>
-        <tr><td>8 Channels (16 channels optional)</td></tr>
-        <tr><td>RX Sensitivity: -139 dBm (Min)</td></tr>
-        <tr><td>TX Power: 27 dBm (Max)</td></tr>
-        <tr><td>Listen Before Talk</td></tr>
-        <tr><td>Frequency</td><td>EU433/CN470/EU868/US915/AS923/AU915/IN865/KR920</td></tr>
-        <tr><td rowSpan="8">Cellular feature</td><td>Supports Quectel EG95-E/EG95-NA (IoT/M2M -optimized LTE Cat 4 Module)</td></tr>
-        <tr><td>EG95-E for EMEA Region</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- LTE FDD: B1/B3/B7/B8/B20/B28A</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- WCDMA: B1/B8</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- GSM/EDGE: B3/B8</td></tr>
-        <tr><td>EG95-NA for North America Region</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- LTE FDD: B2/B4/B5/B12/B13</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;- WCDMA: B2/B4/B5</td></tr>
-        <tr><td>Power supply</td><td>PoE (IEEE 802.3 af), 37~57 VDC</td></tr>
-        <tr><td>ETH</td><td>RJ45 (10/100 Mbps)</td></tr>
-        <tr><td rowSpan="3">Antenna</td><td>LoRa: 1 or 2 N-Type connectors</td></tr>
-        <tr><td>LTE: Internal antenna</td></tr>
-        <tr><td>Wi-Fi: Internal antenna</td></tr>
-        <tr><td>Ingress protection</td><td>IP67</td></tr>
-        <tr><td>Enclosure material</td><td>Aluminum and plastic</td></tr>
-        <tr><td>Operating temperature</td><td>-30˚&nbsp;C to +55˚&nbsp;C</td></tr>
-        <tr><td>Operating humidity</td><td>0-95% RH non-condensing</td></tr>
-        <tr><td>Installation method</td><td>Pole or wall mounting</td></tr>
-    </tbody>
-</table>
+| Feature | Specifications |
+| --- | --- |
+| Computing | MT7628, DDR2 RAM 128 MB |
+| Wi-Fi feature | Frequency: 2.4 GHz (802.11 b/g/b/) |
+| Wi-Fi feature | 2x2 MIMO |
+| Wi-Fi feature | RX Sensitivity: -95 dBm (Min) |
+| Wi-Fi feature | TX Power: 20 dBm (Max) |
+| Wi-Fi feature | Operation channels: 2.4 GHz: 1-13 |
+| LoRa feature | SX1303 mPCIe card (connects maximum of two) |
+| LoRa feature | 8 Channels (16 channels optional) |
+| LoRa feature | RX Sensitivity: -139 dBm (Min) |
+| LoRa feature | TX Power: 27 dBm (Max) |
+| LoRa feature | Listen Before Talk |
+| Frequency | EU433/CN470/EU868/US915/AS923/AU915/IN865/KR920 |
+| Cellular feature | Supports Quectel EG95-E/EG95-NA (IoT/M2M -optimized LTE Cat 4 Module) |
+| Cellular feature | EG95-E for EMEA Region |
+| Cellular feature | - LTE FDD: B1/B3/B7/B8/B20/B28A |
+| Cellular feature | - WCDMA: B1/B8 |
+| Cellular feature | - GSM/EDGE: B3/B8 |
+| Cellular feature | EG95-NA for North America Region |
+| Cellular feature | - LTE FDD: B2/B4/B5/B12/B13 |
+| Cellular feature | - WCDMA: B2/B4/B5 |
+| Power supply | PoE (IEEE 802.3 af), 37~57 VDC |
+| ETH | RJ45 (10/100 Mbps) |
+| Antenna | LoRa: 1 or 2 N-Type connectors |
+| Antenna | LTE: Internal antenna |
+| Antenna | Wi-Fi: Internal antenna |
+| Ingress protection | IP67 |
+| Enclosure material | Aluminum and plastic |
+| Operating temperature | -30˚ C to +55˚ C |
+| Operating humidity | 0-95% RH non-condensing |
+| Installation method | Pole or wall mounting |
 
 ### Hardware
 
@@ -113,36 +102,33 @@ The hardware specification covers the interfacing of the RAK7289 and its corresp
 
 ##### Wi-Fi Radio Specifications
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Wireless Standard</td><td>IEEE 802.11 b/g/n</td></tr>
-        <tr><td>Operating Frequency</td><td>ISM band: 2.412~2.472 (GHz)</td></tr>
-        <tr><td>Operation Channels</td><td>2.4 GHz: 1-13</td></tr>
-        <tr><td rowSpan="11">Transmit Power<br />(The max power maybe different<br />depending on local regulations) - per chain</td><td>802.11b</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;19 dBm @1 Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;19 dBm @11 Mbps</td></tr>
-        <tr><td>802.11g</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;18 dBm @6 Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;16 dBm @54 Mbps</td></tr>
-        <tr><td>802.11n (2.4G)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;18 dBm @MCS0 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;16 dBm @MCS7 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;17 dBm @MCS0 (HT40) </td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;15 dBm @MCS7 (HT40)</td></tr>
-        <tr><td rowSpan="11">Receiver Sensitivity<br />(Typical)</td><td>802.11b</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-95 dBm @1 Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-88 dBm @11 Mbps</td></tr>
-        <tr><td>802.11g</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-90 dBm @6 Mbps</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-75 dBm @54 Mbps</td></tr>
-        <tr><td>802.11n (2.4G)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-89 dBm @MCS0 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-72 dBm @MCS7 (HT20)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-86 dBm @MCS0 (HT40)</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-68 dBm @MCS7 (HT40)</td></tr>
-    </tbody>
-</table>
+| Feature | Specifications |
+| --- | --- |
+| Wireless Standard | IEEE 802.11 b/g/n |
+| Operating Frequency | ISM band: 2.412~2.472 (GHz) |
+| Operation Channels | 2.4 GHz: 1-13 |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11b |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @1 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @11 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11g |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @6 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @54 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11n (2.4G) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @MCS0 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @MCS7 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 17 dBm @MCS0 (HT40) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 15 dBm @MCS7 (HT40) |
+| Receiver Sensitivity (Typical) | 802.11b |
+| Receiver Sensitivity (Typical) | -95 dBm @1 Mbps |
+| Receiver Sensitivity (Typical) | -88 dBm @11 Mbps |
+| Receiver Sensitivity (Typical) | 802.11g |
+| Receiver Sensitivity (Typical) | -90 dBm @6 Mbps |
+| Receiver Sensitivity (Typical) | -75 dBm @54 Mbps |
+| Receiver Sensitivity (Typical) | 802.11n (2.4G) |
+| Receiver Sensitivity (Typical) | -89 dBm @MCS0 (HT20) |
+| Receiver Sensitivity (Typical) | -72 dBm @MCS7 (HT20) |
+| Receiver Sensitivity (Typical) | -86 dBm @MCS0 (HT40) |
+| Receiver Sensitivity (Typical) | -68 dBm @MCS7 (HT40) |
 
 ##### LoRa Radio Specifications
 
@@ -154,12 +140,7 @@ The hardware specification covers the interfacing of the RAK7289 and its corresp
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/datasheet/3.png"
-  width="100%"
-  caption="RAK7289 WisGate Edge Pro Interfaces"
-/>
-
+> **Image:** RAK7289 WisGate Edge Pro Interfaces
 
 - The function of the Reset key is as follows:
   - **Short press:** Restart the gateway.
@@ -167,35 +148,29 @@ The hardware specification covers the interfacing of the RAK7289 and its corresp
 
 - LEDs status description:
 
-<table>
-    <thead>
-        <tr><th>LEDs</th><th>Status Indication Description</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>LED 1 (PWR)</td><td>Power indicator - The LED is on when device power is on</td></tr>
-        <tr><td rowSpan="3">LED 2 (ETH)</td><td>ON - Linkup</td></tr>
-        <tr><td>OFF - Linkdown</td></tr>
-        <tr><td>Flicker - Data transmitting and receiving</td></tr>
-        <tr><td rowSpan="3">LED 3 (LoRa 1)</td><td>ON - LoRa 1 is working</td></tr>
-        <tr><td>OFF - LoRa 1 is not working</td></tr>
-        <tr><td>Flicker - Indicate LoRa 1 Packet receiving and sending</td></tr>
-        <tr><td rowSpan="7">LED 4 (WLAN)</td><td>AP Mode: </td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-ON - The AP is up</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-Flicker - Data receiving and sending</td></tr>
-        <tr><td>STA Mode: </td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-Slow flicker (1 Hz) - Disconnected</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-ON - Connected</td></tr>
-        <tr><td>&nbsp;&nbsp;&nbsp;-Flicker - Data receiving and sending</td></tr>
-        <tr><td rowSpan="4">LED 5 (LTE)</td><td>Slow Flicker (1800 ms High / 200 ms Low) - Network searching</td></tr>
-        <tr><td>Slow flicker (200 ms High / 1800 ms Low) - Idle</td></tr>
-        <tr><td>Fast flicker (125 ms High / 125 ms Low) - Ongoing data transfer</td></tr>
-        <tr><td>ON - Voice is working</td></tr>
-        <tr><td rowSpan="3">LED 6 (LoRa 2 for 16 channel)</td><td>ON - LoRa 2 is working</td></tr>
-        <tr><td>OFF - LoRa 2 is not working</td></tr>
-        <tr><td>Flicker - Indicate LoRa 2 Packet receiving and sending</td></tr>
-    </tbody>
-</table>
-
+| LEDs | Status Indication Description |
+| --- | --- |
+| LED 1 (PWR) | Power indicator - The LED is on when device power is on |
+| LED 2 (ETH) | ON - Linkup |
+| LED 2 (ETH) | OFF - Linkdown |
+| LED 2 (ETH) | Flicker - Data transmitting and receiving |
+| LED 3 (LoRa 1) | ON - LoRa 1 is working |
+| LED 3 (LoRa 1) | OFF - LoRa 1 is not working |
+| LED 3 (LoRa 1) | Flicker - Indicate LoRa 1 Packet receiving and sending |
+| LED 4 (WLAN) | AP Mode: |
+| LED 4 (WLAN) | -ON - The AP is up |
+| LED 4 (WLAN) | -Flicker - Data receiving and sending |
+| LED 4 (WLAN) | STA Mode: |
+| LED 4 (WLAN) | -Slow flicker (1 Hz) - Disconnected |
+| LED 4 (WLAN) | -ON - Connected |
+| LED 4 (WLAN) | -Flicker - Data receiving and sending |
+| LED 5 (LTE) | Slow Flicker (1800 ms High / 200 ms Low) - Network searching |
+| LED 5 (LTE) | Slow flicker (200 ms High / 1800 ms Low) - Idle |
+| LED 5 (LTE) | Fast flicker (125 ms High / 125 ms Low) - Ongoing data transfer |
+| LED 5 (LTE) | ON - Voice is working |
+| LED 6 (LoRa 2 for 16 channel) | ON - LoRa 2 is working |
+| LED 6 (LoRa 2 for 16 channel) | OFF - LoRa 2 is not working |
+| LED 6 (LoRa 2 for 16 channel) | Flicker - Indicate LoRa 2 Packet receiving and sending |
 
 ### Firmware
 
@@ -232,6 +207,5 @@ The firmware sits on OpenWRT, which makes it possible to customize it. There is 
 | RAK7289-XYZ |                  |         √         |               |  √   |   √   |            |
 | RAK7289-XYZ |        √         |                   |               |  √   |   √   |     √      |
 | RAK7289-XYZ |                  |         √         |               |  √   |   √   |     √      |
-
 
 <!-- ## Certification -->

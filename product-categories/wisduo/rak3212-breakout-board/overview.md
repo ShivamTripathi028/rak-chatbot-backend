@@ -23,16 +23,13 @@ slug: /product-categories/wisduo/rak3212-breakout-board/overview/
 date: 2025-08-22
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3212 WisDuo LoRaWAN + BLE + WiFi Breakout Board
 
 Thank you for choosing **RAK3212 WisDuo LoRaWAN + BLE + WiFi Breakout Board** for your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3212-breakout-board/quickstart/" target="_blank">Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3212-breakout-board/datasheet/" target="_blank">Datasheet</a>
-* <a href="https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK3212.step" target="_blank">RAK3212 3D Model</a>
+* [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduo/rak3212-breakout-board/quickstart/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak3212-breakout-board/datasheet/)
+* [RAK3212 3D Model](https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK3212.step)
 
 ## Product Description
 
@@ -44,13 +41,13 @@ The **RAK3212** is a breakout board featuring the RAK3112 module, which combines
 - Provides all RAK3112 pins via header
 - **MCU**: **Espressif ESP32-S3**
 	- Xtensa® 32-bit LX7 dual-core microprocessor
-	- 16&nbsp;MB Flash
-	- 512&nbsp;kB SRAM
-	- 512&nbsp;kB RAM
-	- 8&nbsp;MB PSRAM
-	- 16&nbsp;kB RTC SRAM
+	- 16 MB Flash
+	- 512 kB SRAM
+	- 512 kB RAM
+	- 8 MB PSRAM
+	- 16 kB RTC SRAM
 - LoRa transceiver: **Semtech SX1262**
-	- 863-928&nbsp;MHz, LoRa/LoRaWAN support
+	- 863-928 MHz, LoRa/LoRaWAN support
 - **LoRaWAN 1.0.2** compliant (**BasicModem** support in preparation)
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation: OTAA/ABP
@@ -59,9 +56,8 @@ The **RAK3212** is a breakout board featuring the RAK3112 module, which combines
 - WiFi support
 - Custom firmware using Arduino
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10&nbsp;km with optimized antenna
-- **Supply Voltage**: 3.0&nbsp;V\~3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C\~65°&nbsp;C
-- **Dimensions**: 29&nbsp;mm x 40&nbsp;mm x 4.28&nbsp;mm
+- Long-range: greater than 10 km with optimized antenna
+- **Supply Voltage**: 3.0 V\~3.6 V
+- **Temperature range**: -40° C\~65° C
+- **Dimensions**: 29 mm x 40 mm x 4.28 mm
 
-<RkBottomNav/>

@@ -11,38 +11,33 @@ slug: /product-categories/wisduo/rak4270-breakout-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4270 WisDuo Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-The **RAK4270 Breakout Board** is a compact board specifically designed to simplify external connections to the RAK4270 pins. Its primary purpose is to provide access to the stamp module's pins via two rows of 2.54&nbsp;mm headers, making it convenient for debugging.
+The **RAK4270 Breakout Board** is a compact board specifically designed to simplify external connections to the RAK4270 pins. Its primary purpose is to provide access to the stamp module's pins via two rows of 2.54 mm headers, making it convenient for debugging.
 
-The RAK4270 LoRa Module includes an **STM32L071 MCU** and an **SX1262 LoRa chip**, which supports eight (8) spreading factors (**SF5 ~ SF12**) and signal bandwidth that can be adjusted between **7.8&nbsp;kHz** to **500&nbsp;kHz**. It has Ultra-Low Power Consumption of 2.31&nbsp;μA (down to 1.61&nbsp;μA @ 2.0&nbsp;V) in sleep mode, but during the Transmit mode, it can reach the maximum output power of **22&nbsp;dBm**. As a receiver, it can achieve a sensitivity of **-148&nbsp;dBm**.
+The RAK4270 LoRa Module includes an **STM32L071 MCU** and an **SX1262 LoRa chip**, which supports eight (8) spreading factors (**SF5 ~ SF12**) and signal bandwidth that can be adjusted between **7.8 kHz** to **500 kHz**. It has Ultra-Low Power Consumption of 2.31 μA (down to 1.61 μA @ 2.0 V) in sleep mode, but during the Transmit mode, it can reach the maximum output power of **22 dBm**. As a receiver, it can achieve a sensitivity of **-148 dBm**.
 
 The module complies with the LoRaWAN 1.0.2 protocol, so it can be used for implementing LoRa networks or Lora point-to-point communications. The module is suitable for various applications that require long-range data acquisition and low power consumption, like smart meters, supply chain and logistics tracking, agricultural sensors, smart cities, etc.
 
-This module is expected to be controlled by an external controller through its UART interface by sending a set of AT commands. These AT commands control not only the state of this module but also set the LoRaWan communication parameters and payloads (see RAK <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4270-breakout-board/at-command-manual/" target="_blank">AT Command Manual</a>).
-
+This module is expected to be controlled by an external controller through its UART interface by sending a set of AT commands. These AT commands control not only the state of this module but also set the LoRaWan communication parameters and payloads (see RAK [AT Command Manual](https://docs.rakwireless.com/product-categories/wisduo/rak4270-breakout-board/at-command-manual/)).
 
 ### Features
 
 - LoRa module for Smart City, Smart Agriculture, Smart Industry
 - I/O ports: **UART/I2C/GPIO**
-- Temperature range: **-40&nbsp;°C** to **+85&nbsp;°C**
-- Supply voltage: **2.0 ~ 3.6&nbsp;V**
+- Temperature range: **-40 °C** to **+85 °C**
+- Supply voltage: **2.0 ~ 3.6 V**
 - Supported bands: EU433, CN470, IN865, EU868, AU915, US915, KR920, and AS923-1/2/3/4
-- Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz bandwidth
-- Ultra-Low Power Consumption of 2.31&nbsp;μA (down to 1.61&nbsp;μA @ 2.0&nbsp;V) in sleep mode
+- Low-Power Wireless Systems with 7.8 kHz to 500 kHz bandwidth
+- Ultra-Low Power Consumption of 2.31 μA (down to 1.61 μA @ 2.0 V) in sleep mode
 - Core: ARM 32-bit Cortex – M0+ with MPU
-- Up to 128&nbsp;KB flash memory with ECC
-- 20&nbsp;KB RAM
-- 6&nbsp;KB of data EEPROM with ECC
+- Up to 128 KB flash memory with ECC
+- 20 KB RAM
+- 6 KB of data EEPROM with ECC
 
 ## Specifications
 
@@ -50,12 +45,7 @@ This module is expected to be controlled by an external controller through its U
 
 The RAK4270 Breakout Board is shown in **Figure 1** that displays the top view of the module and the dimensions of the board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4270-breakout-board/datasheet/rak4270-dimensions.png"
-  width="30%"
-  caption="RAK4270 Breakout Board Dimensions"
-  zoomMode={true}
-/>
+> **Image:** RAK4270 Breakout Board Dimensions
 
 ### Hardware
 
@@ -67,7 +57,6 @@ The hardware specification is divided into five categories:
 - **RF Parameters**: Covers the radio frequency specifications of the board.
 - **Electrical Parameters**: Provides tabular data on functionalities and standard values of the RAK4270 Breakout Board.
 
-
 #### Interfaces
 
 ##### SWD Programming Interface
@@ -78,7 +67,7 @@ To program the breakout board with the DAPLink tool, the following pins are requ
 | :---------------: | -------- | :-----: | -------------------------------- | ----------------------------- |
 |       J1 5        | SWDIO    |   I/O   | Programming (STM32L071KBU6 PA13) | SWDIO, LPUART1_RX             |
 |       J1 6        | SWCLK    |   I/O   | Programming (STM32L071KBU6 PA14) | SWCLK, USART2_TX, LPUART1_TX  |
-|       J2 1        | VDD      |    -    | DC3V3                            | Supply voltage 2.0~3.3&nbsp;V |
+|       J2 1        | VDD      |    -    | DC3V3                            | Supply voltage 2.0~3.3 V |
 |       J2 4        | GND      |    -    | Ground                           | -                             |
 |       J2 5        | MCU_NRST |   I/O   | MCU reset (STM32L071KBU6 NRST)   | -                             |
 
@@ -92,24 +81,15 @@ There are two UART ports on the RAK4270 Breakout Board. UART2_RX and UART2_TX ar
 
 ##### I2C Port
 
-I2C_SCL and I2C_SDA are the I2C port. Depending on the external device connected to it, it might be necessary to add 10&nbsp;kΩ pull-up resistors to these lines.
+I2C_SCL and I2C_SDA are the I2C port. Depending on the external device connected to it, it might be necessary to add 10 kΩ pull-up resistors to these lines.
 
 ##### RF Port
 
 The RF port is by default equipped with an SMA connector. If you need an IPEX connector, contact the customer service in advance. RAKwireless will replace the SMA connector with an IPEX-type connector.
 
-
 #### Pin Definition
 
-<br />
-<br />
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4270-breakout-board/datasheet/2.pin-definition.png"
-  width="60%"
-  caption="RAK4270 Breakout Board Pinout"
-  zoomMode={true}
-/>
+> **Image:** RAK4270 Breakout Board Pinout
 
 The pin definitions of the RAK4270 Breakout Board are shown in the following tables below:
 
@@ -126,12 +106,11 @@ The pin definitions of the RAK4270 Breakout Board are shown in the following tab
 |   7   | I2C_SCL  |  I/O  | I2C interface (STM32L071KBU6 PB6)                   | USART1_TX, I2C1_SCL, LPTIM1_ETR                                 |
 |   8   | I2C_SDA  |  I/O  | I2C interface (STM32L071KBU6 PB7)                   | USART1_RX, I2C1_SDA, LPTIM1_IN2, USART4_CTS                     |
 
-
 ##### J2 Pin Definitions
 
 |  Pin  | Name     |  I/O  | Description                                       | Alternate Functions                                             |
 | :---: | -------- | :---: | ------------------------------------------------- | --------------------------------------------------------------- |
-|   1   | VDD      |   -   | DC3V3                                             | Supply voltage 2.0~3.3&nbsp;V                                   |
+|   1   | VDD      |   -   | DC3V3                                             | Supply voltage 2.0~3.3 V                                   |
 |   2   | UART1_TX |  I/O  | Upgrade UART or General GPIO (STM32L071KBU6 PA9)  | MCO, USART1_TX, I2C1_SCL, I2C3_SMBA                             |
 |   3   | UART1_RX |  I/O  | Upgrade UART or General GPIO (STM32L071KBU6 PA10) | USART1_RX, I2C1_SDA                                             |
 |   4   | GND      |   -   | Ground                                            | -                                                               |
@@ -144,9 +123,8 @@ The pin definitions of the RAK4270 Breakout Board are shown in the following tab
 
 |  Pin  | Name |  I/O  | Description | Alternate Functions           |
 | :---: | ---- | :---: | ----------- | ----------------------------- |
-|   1   | VDD  |   -   | DC3V3       | Supply voltage 2.0~3.3&nbsp;V |
+|   1   | VDD  |   -   | DC3V3       | Supply voltage 2.0~3.3 V |
 |   2   | GND  |   -   | Ground      | GND                           |
-
 
 #### RF Characteristics
 
@@ -165,21 +143,19 @@ The RAK4270 Breakout board supports the following LoRaWAN bands:
 |            | Korea         | KR920               |
 |            | Asia          | AS923               |
 
-
-
 #### Electrical Characteristics
 
 ##### Power Consumption
 
-Values listed in the table are values measured with a LoRa frequency of **868&nbsp;MHz**:
+Values listed in the table are values measured with a LoRa frequency of **868 MHz**:
 
 | Mode     | Output Power | Current                 |
 | -------- | :----------: | ----------------------- |
-| Transmit | 21&nbsp;dBm  | 124&nbsp;mA on PA_BOOST |
-| Transmit | 20&nbsp;dBm  | 118&nbsp;mA on PA_BOOST |
-| Transmit | 17&nbsp;dBm  | 102&nbsp;mA on PA_BOOST |
-| Transmit | 14&nbsp;dBm  | 90&nbsp;mA on PA_BOOST  |
-| Receive  |      -       | 15&nbsp;mA              |
+| Transmit | 21 dBm  | 124 mA on PA_BOOST |
+| Transmit | 20 dBm  | 118 mA on PA_BOOST |
+| Transmit | 17 dBm  | 102 mA on PA_BOOST |
+| Transmit | 14 dBm  | 90 mA on PA_BOOST  |
+| Receive  |      -       | 15 mA              |
 
 ##### Sleep Current
 
@@ -188,15 +164,9 @@ Values listed in the table are values measured with a LoRa frequency of **868&nb
 | Current Consumption | EU868     | 1.74           | 2.19           |         | μA   |
 |                     | US915     | 1.61           | 2.31           |         | μA   |
 
-
 ##### Schematic Diagram
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4270-breakout-board/datasheet/3.schematic.png"
-  width="100%"
-  caption="RAK4270 Breakout Board Schematic"
-/>
+> **Image:** RAK4270 Breakout Board Schematic
 
 ### Software
 
@@ -214,29 +184,15 @@ The **hex file** contains both the bootloader and the application code. You need
 
 | Model   | Version   | Source                                                                                          |
 | ------- | --------- | ----------------------------------------------------------------------------------------------- |
-| RAK4270 | V3.3.0.18 | <a href="https://downloads.rakwireless.com/LoRa/RAK4270/Firmware/RAK4270_Latest_Firmware.zip" target="_blank">Download</a> |
+| RAK4270 | V3.3.0.18 | [Download](https://downloads.rakwireless.com/LoRa/RAK4270/Firmware/RAK4270_Latest_Firmware.zip) |
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_CE_Certification.zip',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_FCC_Certification.zip',
-    },
-    {
-        'jrl': 'https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_JRL_Certification.pdf',
-    },
-    {
-        'kc': 'https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_KC_Certification.pdf',
-    },
-    {
-        'reach': 'https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_REACH_Report.pdf',
-    },
-    {
-        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_RoHS_Report.pdf',
-    }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_FCC_Certification.zip
+- **JRL:** https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_JRL_Certification.pdf
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_KC_Certification.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK4270/Certification-Report/RAK4270_RoHS_Report.pdf
 
-<RkBottomNav/>

@@ -27,9 +27,6 @@ tags:
 date: 2022-07-04
 ---
 
-
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RUI3 LoRaWAN API
 
 :::warning
@@ -43,7 +40,6 @@ With version V4.1.1 of RUI3, the LoRa P2P functions are separated into a new cla
 | `api.lorawan.nwm.set(0)`   | `api.lora.nwm.set()`    | Set device to LoRa P2P mode.                     |
 
 :::
-
 
 ## LoRaWAN Data Type
 
@@ -138,7 +134,6 @@ The entry of a multicast group
 uint8_t entry
 ```
 
-
 ### RAK\_LORA\_chan\_rssi\_t
 
 The structure of a rssi data
@@ -160,7 +155,6 @@ The channel of a rssi
 uint32_t chan
 ```
 
-
 #### mask
 
 The mask of a rssi
@@ -177,8 +171,6 @@ The rssi on reception
 int8_t rssi
 ```
 
-
-
 ### RAK\_LORA\_BAND
 
 The regions of LoRa
@@ -186,7 +178,6 @@ The regions of LoRa
 ```c
 enum _RAK_LORA_BAND
 ```
-
 
 | Enumerator         |             |
 | ------------------ | ----------- |
@@ -235,7 +226,6 @@ enum _RAK_LORA_JOIN_MODE
 | ------------- | ----------------------------- |
 | RAK_LORA_ABP  | Activation by personalization |
 | RAK_LORA_OTAA | Over-the-air activation       |
-
 
 ```c
 typedef enum
@@ -288,8 +278,6 @@ typedef enum
   RAL_LORA_ACK = 1,    ///< The device will get received data from network
 } RAK_LORA_CONFIRM_MODE;
 ```
-
-
 
 ### RAK\_LORA\_CLASS
 
@@ -497,13 +485,12 @@ This API gets the network working mode (0 = P2P, 1 = LoRaWAN, 2 = FSK).
 api.lorawan.nwm.get();
 ```
 
-
 | **Function**      | `int get()`                                                      |
 | ----------------- | ---------------------------------------------------------------- |
 | **Returns**       | the network working mode                                         |
-| **Return Values** | **0** - P2P mode <br /> **1** - LoRaWAN mode <br /> **2** - FSK mode |
-
-
+| **Return Values** | **0** - P2P mode 
+ **1** - LoRaWAN mode 
+ **2** - FSK mode |
 
 <details>
 <summary> Click to view the code</summary>
@@ -525,7 +512,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API sets the network working mode to LoRaWAN.
@@ -537,7 +523,8 @@ api.lorawan.nwm.set();
 | **Function**      | `bool set()	`                                                                                 |
 | ----------------- | ---------------------------------------------------------------------------------------------------------- |
 | **Returns**       | bool                                                                                                       |
-| **Return Values** | **TRUE** for setting network working mode success <br />  **FALSE** for setting network working mode failure |
+| **Return Values** | **TRUE** for setting network working mode success 
+  **FALSE** for setting network working mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -559,9 +546,6 @@ void loop()
 
 ```
 </details>
-
-
-
 
 ### adr
 
@@ -586,8 +570,8 @@ api.lorawan.adr.get();
 | **Function**      | `bool get()`                                                                      |
 | ----------------- | --------------------------------------------------------------------------------- |
 | **Returns**       | bool                                                                              |
-| **Return Values** | **TRUE** - adaptive data rate enabled <br /> **FALSE** - adaptive data rate disabled |
-
+| **Return Values** | **TRUE** - adaptive data rate enabled 
+ **FALSE** - adaptive data rate disabled |
 
 <details>
 <summary> Click to view the code</summary>
@@ -608,7 +592,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to enable/disable the adaptive data rate.
@@ -619,10 +602,12 @@ api.lorawan.adr.set(value);
 
 | **Function**      | `bool set(bool value)`                                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------- |
-| **Parameters**    | **value** - the status of adaptive data rate <br /> - TRUE ADR enabled <br /> - FALSE ADR disabled |
+| **Parameters**    | **value** - the status of adaptive data rate 
+ - TRUE ADR enabled 
+ - FALSE ADR disabled |
 | **Returns**       | bool                                                                                          |
-| **Return Values** | **TRUE** for setting status of adr success  <br />  **FALSE** for setting status of adr failure |
-
+| **Return Values** | **TRUE** for setting status of adr success  
+  **FALSE** for setting status of adr failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -642,8 +627,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### deviceClass
 
@@ -664,8 +647,9 @@ api.lorawan.deviceClass.get();
 | **Function**      | `uint8_t get()`                                           |
 | ----------------- | --------------------------------------------------------- |
 | **Returns**       | the **LoRaWan** class (Type: **int**)                     |
-| **Return Values** | **0** - Class A <br /> **1** - Class B <br /> **2** - Class C |
-
+| **Return Values** | **0** - Class A 
+ **1** - Class B 
+ **2** - Class C |
 
 <details>
 <summary> Click to view the code</summary>
@@ -697,8 +681,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the LoRaWAN class.
@@ -709,10 +691,13 @@ api.lorawan.deviceClass.set(value);
 
 | **Function**      | `bool set(uint8_t value)`                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------- |
-| **Parameters**    | **value** - the LoRaWAN class <br /> **0** - Class A <br /> **1** - Class B <br /> **2** - Class C                                                              |
+| **Parameters**    | **value** - the LoRaWAN class 
+ **0** - Class A 
+ **1** - Class B 
+ **2** - Class C                                                              |
 | **Returns**       | bool                                                                                        |
-| **Return Values** | **TRUE** for setting LoRaWAN class success <br /> **FALSE** for setting LoRaWAN class failure |
-
+| **Return Values** | **TRUE** for setting LoRaWAN class success 
+ **FALSE** for setting LoRaWAN class failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -743,8 +728,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### dcs
 
@@ -765,8 +748,8 @@ api.lorawan.dcs.get();
 | **Function**      | `bool get()`                                                      |
 | ----------------- | ----------------------------------------------------------------- |
 | **Returns**       | bool                                                              |
-| **Return Values** | **TRUE** - duty cycle enabled <br /> **FALSE** - duty cycle disabled |
-
+| **Return Values** | **TRUE** - duty cycle enabled 
+ **FALSE** - duty cycle disabled |
 
 <details>
 <summary> Click to view the code</summary>
@@ -787,26 +770,22 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
-
 This API allows the user to enable/disable the duty cycle.
-
 
 ```c
 api.lorawan.dcs.set(dutyCycle);
 ```
 
-
 | **Function**      | `bool set(uint8_t dutyCycle)`                                                       |
 | ----------------- | ----------------------------------------------------------------------------------- |
-| **Parameters**    | **dutyCycle** - the LoRaWAN duty cycle   <br /> - **TRUE** - enable duty cycle <br /> - **FALSE** - disable duty cycle                                            |
+| **Parameters**    | **dutyCycle** - the LoRaWAN duty cycle   
+ - **TRUE** - enable duty cycle 
+ - **FALSE** - disable duty cycle                                            |
 | **Returns**       | bool                                                                                |
-| **Return Values** | **TRUE** for setting duty cycle success  <br /> **FALSE** for setting duty cycle fail |
-
-
+| **Return Values** | **TRUE** for setting duty cycle success  
+ **FALSE** for setting duty cycle fail |
 
 <details>
 <summary> Click to view the code</summary>
@@ -827,25 +806,26 @@ void loop()
 ```
 </details>
 
-
-
 ### dr
 
 This API allows the user to access the data rate.
 
 :::tip NOTE
-Complete information about DR parameter on each region can be found on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix/#data-rate-by-region" target="_blank">RUI3 Appendix - LoRaWAN Regional Parameter (Data Rate)</a>.
-- **EU433 / RU864 / IN865 / EU868 / CN470 / KR920** and the data rate range of values is 0-5 (DR0-DR5). <br />
-- **AS923** and the data rate range of values is 2-5 (DR2-DR5). <br />
-- **US915** and the data rate range of values is 0-4 (DR0-DR4). <br />
-- **AU915** and the data rate range of values is 0-6 (DR0-DR6). <br />
+Complete information about DR parameter on each region can be found on [RUI3 Appendix - LoRaWAN Regional Parameter (Data Rate)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix/#data-rate-by-region).
+- **EU433 / RU864 / IN865 / EU868 / CN470 / KR920** and the data rate range of values is 0-5 (DR0-DR5). 
+
+- **AS923** and the data rate range of values is 2-5 (DR2-DR5). 
+
+- **US915** and the data rate range of values is 0-4 (DR0-DR4). 
+
+- **AU915** and the data rate range of values is 0-6 (DR0-DR6). 
+
 - **LA915** and the data rate range of values is 0-6 (DR0-DR6).
 :::
 
 ```c
 RAKLorawan::dr
 ```
-
 
 #### get()
 
@@ -863,7 +843,6 @@ api.lorawan.dr.get();
 | ------------ | --------------- |
 | **Returns**  | the data rate  (Type: **int**)  |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -883,11 +862,9 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the data rate.
-
 
 ```c
 api.lorawan.dr.set(value);
@@ -897,8 +874,8 @@ api.lorawan.dr.set(value);
 | ----------------- | --------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the data rate  (Type: **int**)                                                               |
 | **Returns**       | bool                                                                                    |
-| **Return Values** | **TRUE** for setting data rate success   <br />   **FALSE** for setting data rate failure |
-
+| **Return Values** | **TRUE** for setting data rate success   
+   **FALSE** for setting data rate failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -918,8 +895,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### jn1dl
 
@@ -941,7 +916,6 @@ api.lorawan.jn1dl.get();
 | ------------ | --------------------------------------------- |
 | **Returns**  | the join delay on RX window 1 (Type: **int**) |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -961,8 +935,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the join delay on RX window 1. The range of acceptable values is 1 to 14 seconds.
@@ -975,8 +947,8 @@ api.lorawan.jn1dl.set(value);
 | ----------------- | ------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the join delay on RX window 1                                             |
 | **Returns**       | bool                                                                                  |
-| **Return Values** | **TRUE** for setting join delay success <br /> **FALSE** for setting join delay failure |
-
+| **Return Values** | **TRUE** for setting join delay success 
+ **FALSE** for setting join delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -997,10 +969,7 @@ void loop()
 ```
 </details>
 
-
-
 ### jn2dl
-
 
 ```c
 RAKLorawan::jn2dl
@@ -1017,7 +986,6 @@ api.lorawan.jn2dl.get();
 | **Function** | `int get()`                                    |
 | ------------ | ---------------------------------------------- |
 | **Returns**  | the join delay on RX window 2 (Type: **int**) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -1036,8 +1004,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the join delay on RX window 2. The range of acceptable values is 2 to 15 seconds.
@@ -1050,7 +1016,8 @@ api.lorawan.jn2dl.set(value);
 | ----------------- | ------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the join delay on RX window  (Type: **int**)2                                             |
 | **Returns**       | bool                                                                                  |
-| **Return Values** | **TRUE** for setting join delay success <br /> **FALSE** for setting join delay failure |
+| **Return Values** | **TRUE** for setting join delay success 
+ **FALSE** for setting join delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1071,7 +1038,6 @@ void loop()
 ```
 </details>
 
-
 ### pnm
 
 This API allows the user to access the public network mode.
@@ -1091,8 +1057,8 @@ api.lorawan.pnm.get();
 | **Function**      | `bool get()`                     |
 | ----------------- | -------------------------------- |
 | **Returns**       | bool                             |
-| **Return Values** | **TRUE**: On <br /> **FALSE**: Off |
-
+| **Return Values** | **TRUE**: On 
+ **FALSE**: Off |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1113,8 +1079,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the public network mode.
@@ -1125,10 +1089,12 @@ api.lorawan.pnm.set(value);
 
 | **Function**      | `bool set(bool value)`                                                                                   |
 | ----------------- | -------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **value** - the public network mode <br /> - TRUE set public network mode <br /> - FALSE set private network mode                                                                     |
+| **Parameters**    | **value** - the public network mode 
+ - TRUE set public network mode 
+ - FALSE set private network mode                                                                     |
 | **Returns**       | bool                                                                                                     |
-| **Return Values** | **TRUE** for setting public network mode success  <br /> **FALSE** for setting public network mode failure |
-
+| **Return Values** | **TRUE** for setting public network mode success  
+ **FALSE** for setting public network mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1149,12 +1115,9 @@ void loop()
 ```
 </details>
 
-
-
 ### rx1dl
 
 This API allows the user to access the delay of the received window 1.
-
 
 ```c
 RAKLorawan::rx1dl
@@ -1172,7 +1135,6 @@ api.lorawan.rx1dl.get();
 | ------------ | ---------------------------------- |
 | **Returns**  | the delay of the received window 1 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -1192,11 +1154,9 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
-This API allows the user to set the delay of the received window 1. The range of acceptable values is 1 to 15&nbsp;seconds. Whenever `RX 1 Delay` is updated, `RX 2 Delay` is also updated automatically.
+This API allows the user to set the delay of the received window 1. The range of acceptable values is 1 to 15 seconds. Whenever `RX 1 Delay` is updated, `RX 2 Delay` is also updated automatically.
 
 ```c
 api.lorawan.rx1dl.set(value);
@@ -1206,8 +1166,8 @@ api.lorawan.rx1dl.set(value);
 | ----------------- | ---------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the delay of the received window 1                               |
 | **Returns**       | bool                                                                         |
-| **Return Values** | **TRUE** for setting delay success  <br /> **FALSE** for setting delay failure |
-
+| **Return Values** | **TRUE** for setting delay success  
+ **FALSE** for setting delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1227,7 +1187,6 @@ void loop()
 }
 ```
 </details>
-
 
 ### rx2dl
 
@@ -1249,7 +1208,6 @@ api.lorawan.rx2dl.get();
 | ------------ | ---------------------------------- |
 | **Returns**  | the delay of the received window 2 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -1268,10 +1226,9 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
-This API allows the user to set the delay of the received window 2. The range of acceptable values is 2 to 15&nbsp;seconds. Whenever `RX 2 Delay` is updated, `RX 1 Delay` is also updated automatically.
+This API allows the user to set the delay of the received window 2. The range of acceptable values is 2 to 15 seconds. Whenever `RX 2 Delay` is updated, `RX 1 Delay` is also updated automatically.
 
 ```c
 api.lorawan.rx2dl.set(value)
@@ -1281,8 +1238,8 @@ api.lorawan.rx2dl.set(value)
 | ----------------- | --------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the delay of the received window 2                              |
 | **Returns**       | bool                                                                        |
-| **Return Values** | **TRUE** for setting delay success <br /> **FALSE** for setting delay failure |
-
+| **Return Values** | **TRUE** for setting delay success 
+ **FALSE** for setting delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1323,7 +1280,6 @@ api.lorawan.rx2dr.get();
 | ------------ | ---------------------------------- |
 | **Returns**  | the data rate of received window 2 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -1343,8 +1299,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the data rate of received window 2.
@@ -1357,8 +1311,8 @@ api.lorawan.rx2dr.set(value);
 | ----------------- | ----------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the data rate of received window 2                                      |
 | **Returns**       | bool                                                                                |
-| **Return Values** | **TRUE** for setting data rate success <br /> **FALSE** for setting data rate failure |
-
+| **Return Values** | **TRUE** for setting data rate success 
+ **FALSE** for setting data rate failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1378,8 +1332,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### rx2fq
 
@@ -1399,7 +1351,6 @@ api.lorawan.rx2fq.get();
 | ------------ | -------------------------------------- |
 | **Returns**  | the frequency of the received window 2 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -1417,16 +1368,18 @@ void loop()
 ```
 </details>
 
-
 ### txp
 
 This API allows the user to access the transmit power.
 
 :::tip NOTE
-Highest power start from 0. Complete information about TXP parameter on each region can be found on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix/#tx-power-by-region" target="_blank">RUI3 Appendix - LoRaWAN Regional Parameter (TX Power)</a>.
-- **EU868 / RU864 / KR920 / AS923 / CN470** Transmit power range of values is 0-7. <br />
-- **US915 / AU915 / LA915** Transmit power range of values is 0-14. <br />
-- **EU433** Transmit power range of values is 0-5. <br />
+Highest power start from 0. Complete information about TXP parameter on each region can be found on [RUI3 Appendix - LoRaWAN Regional Parameter (TX Power)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix/#tx-power-by-region).
+- **EU868 / RU864 / KR920 / AS923 / CN470** Transmit power range of values is 0-7. 
+
+- **US915 / AU915 / LA915** Transmit power range of values is 0-14. 
+
+- **EU433** Transmit power range of values is 0-5. 
+
 - **IN865** Transmit power range of values is 0-10.
 :::
 
@@ -1438,7 +1391,6 @@ RAKLorawan::txp
 
 This API allows the user to get the transmit power.
 
-
 ```c
 api.lorawan.txp.get();
 ```
@@ -1446,7 +1398,6 @@ api.lorawan.txp.get();
 | **Function** | `uint8_t get()`            |
 | ------------ | -------------------------- |
 | **Returns**  | the LoRaWAN transmit power |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -1466,8 +1417,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 #### set()
 
@@ -1480,8 +1429,8 @@ api.lorawan.txp.set(value);
 | **Function**   | `bool set(uint8_t value)`                                                                      |
 | -------------- | ---------------------------------------------------------------------------------------------- |
 | **Parameters** | **value** - the LoRaWAN transmit power                                                         |
-| **Returns**    | **TRUE** for setting transmit power success <br />  **FALSE** for setting transmit power failure |
-
+| **Returns**    | **TRUE** for setting transmit power success 
+  **FALSE** for setting transmit power failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1502,13 +1451,9 @@ void loop()
 ```
 </details>
 
-
-
-
 ### linkcheck
 
 This API allows the user to verify network link status.
-
 
 ```c
 RAKLorawan::linkcheck
@@ -1516,20 +1461,19 @@ RAKLorawan::linkcheck
 
 #### get()
 
-
 This API allows the user to verify network link status.
 
 ```c
 api.lorawan.linkcheck.get();
 ```
 
-
 | **Function**      | `uint32_t get()`                                                                                                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Returns**       | The mode of verifying network link status                                                                                                                   |
-| **Return Values** | Link Check setting <br /> - **0** link check disabled <br /> - **1** execute link check one time <br /> - **2** module will automatically execute a link check after every upload of data |
-
-
+| **Return Values** | Link Check setting 
+ - **0** link check disabled 
+ - **1** execute link check one time 
+ - **2** module will automatically execute a link check after every upload of data |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1551,12 +1495,9 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the network link status.
-
 
 ```c
 api.lorawan.linkcheck.set(value);
@@ -1564,9 +1505,13 @@ api.lorawan.linkcheck.set(value);
 
 | **Function**      | `bool set(uint8_t value)`                                                                                                              |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **value** - 	the mode of verifying network link status  <br /> - **0** link check disabled <br /> - **1** execute link check one time <br /> - **2** module will automatically execute a link check after every upload of data                                                                                 |
+| **Parameters**    | **value** - 	the mode of verifying network link status  
+ - **0** link check disabled 
+ - **1** execute link check one time 
+ - **2** module will automatically execute a link check after every upload of data                                                                                 |
 | **Returns**       | bool                                                                                                                                   |
-| **Return Values** | **TRUE** for setting mode of verifying network link status <br /> **FALSE**  for setting mode of verifying network link status failure ) |
+| **Return Values** | **TRUE** for setting mode of verifying network link status 
+ **FALSE**  for setting mode of verifying network link status failure ) |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1587,8 +1532,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### timereq
 
@@ -1602,11 +1545,12 @@ This api allows the user to get the status of timereq flag for next uplink
 api.lorawan.timereq.get();
 ```
 
-
 | **Function**      | `uint8_t get()`                                                                                                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Returns**       | The status of timereq flag for next uplink                                                                                                                    |
-| **Return Values** | Time request setting <br /> - **0** timereq flag is disable <br /> - **1** timereq flag is enable |
+| **Return Values** | Time request setting 
+ - **0** timereq flag is disable 
+ - **1** timereq flag is enable |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1632,8 +1576,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This api allows the user to enable the timereq flag for next uplink.
@@ -1644,9 +1586,12 @@ api.lorawan.timereq.set(value);
 
 | **Function**      | `bool set(uint8_t value)`                                                                                                              |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **value** - 	enable/disable time request  <br /> - **0** time request disabled <br /> - **1** time request enabled                                                                                 |
+| **Parameters**    | **value** - 	enable/disable time request  
+ - **0** time request disabled 
+ - **1** time request enabled                                                                                 |
 | **Returns**       | bool                                                                                                                                   |
-| **Return Values** | **TRUE** for setting timereq flag be enable  <br /> **FALSE**  for setting timereq flag be disable  |
+| **Return Values** | **TRUE** for setting timereq flag be enable  
+ **FALSE**  for setting timereq flag be disable  |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1672,8 +1617,6 @@ void loop()
 ```
 </details>
 
-
-
 ## Keys, IDs, and EUIs Management
 
 ### appeui
@@ -1683,7 +1626,6 @@ This API views or changes the LoRaWAN APPEUI and uses it to set up the LoRaWAN c
 :::tip NOTE
 This function can only work in OTAA mode.
 :::
-
 
 ```c
 RAKLorawan::appeui
@@ -1699,10 +1641,11 @@ api.lorawan.appeui.get(buf, len);
 
 | **Function**      | `bool get(uint8_t * buf, uint32_t len)`                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to get AppEUI <br /> **`len`**: the length of AppEUI (must be 8&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get AppEUI 
+ **`len`**: the length of AppEUI (must be 8 bytes) |
 | **Returns**       | bool                                                                                            |
-| **Return Values** | **TRUE** for getting AppEUI successfully <br /> **FALSE** for setting AppEUI failure              |
-
+| **Return Values** | **TRUE** for getting AppEUI successfully 
+ **FALSE** for setting AppEUI failure              |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1743,7 +1686,6 @@ api.lorawan.appeui.get(buf, len);
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the global application identifier.
@@ -1754,10 +1696,11 @@ api.lorawan.appeui.set(buf, len);
 
 | **Function**      | `bool set(uint8_t * buf, uint32_t len)`                                                         |
 | ----------------- | ----------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to set AppEUI <br /> **`len`**: the length of AppEUI (must be 8&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to set AppEUI 
+ **`len`**: the length of AppEUI (must be 8 bytes) |
 | **Returns**       | bool                                                                                            |
-| **Return Values** | **TRUE** for setting AppEUI successfully <br /> **FALSE** for setting AppEUI failure              |
-
+| **Return Values** | **TRUE** for setting AppEUI successfully 
+ **FALSE** for setting AppEUI failure              |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1798,8 +1741,6 @@ api.lorawan.appeui.set(buf, len);
 ```
 </details>
 
-
-
 ### appkey
 
 This API views or changes the LoRaWAN APPKEY and uses it to setup the LoRaWAN connection.
@@ -1822,10 +1763,11 @@ api.lorawan.appkey.get(buf, len);
 
 | **Function**      | `bool get(uint8_t* buf, uint32_t len)`                                                           |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
-| **Parameters**    | **`buf`**: the buffer to get AppKey <br /> **`len`**: the length of AppKey (must be 16&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get AppKey 
+ **`len`**: the length of AppKey (must be 16 bytes) |
 | **Returns**       | bool                                                                                             |
-| **Return Values** | **TRUE** for getting AppKey successfully <br /> **FALSE** for getting AppKey failure               |
-
+| **Return Values** | **TRUE** for getting AppKey successfully 
+ **FALSE** for getting AppKey failure               |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1867,7 +1809,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the application key.
@@ -1878,10 +1819,11 @@ api.lorawan.appkey.set(buf, len);
 
 | **Function**      | `bool set(uint8_t* buf, uint32_t len)`                                                           |
 | ----------------- | ------------------------------------------------------------------------------------------------ |
-| **Parameters**    | **`buf`**: the buffer to set AppKey <br /> **`len`**: the length of AppKey (must be 16&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to set AppKey 
+ **`len`**: the length of AppKey (must be 16 bytes) |
 | **Returns**       | bool                                                                                             |
-| **Return Values** | **TRUE** for setting AppKey successfully <br /> **FALSE** for setting AppKey failure               |
-
+| **Return Values** | **TRUE** for setting AppKey successfully 
+ **FALSE** for setting AppKey failure               |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1922,7 +1864,6 @@ void loop()
 
 ```
 </details>
-
 
 ### appskey
 
@@ -1946,9 +1887,11 @@ bool get(uint8_t* buf, uint32_t len)
 
 | **Function**      | `bool get(uint8_t* buf, uint32_t len)`                                                             |
 | ----------------- | -------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to get AppSKey <br /> **`len`**: the length of AppSKey (must be 16&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get AppSKey 
+ **`len`**: the length of AppSKey (must be 16 bytes) |
 | **Returns**       | bool                                                                                               |
-| **Return Values** | **TRUE** for getting AppSKey successfully <br /> **FALSE** for getting AppSKey failure               |
+| **Return Values** | **TRUE** for getting AppSKey successfully 
+ **FALSE** for getting AppSKey failure               |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1990,7 +1933,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the application session key.
@@ -2001,10 +1943,11 @@ api.lorawan.appskey.set(buf, len);
 
 | **Function**      | `bool set(uint8_t* buf, uint32_t len)`                                                             |
 | ----------------- | -------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to set AppSKey <br /> **`len`**: the length of AppSKey (must be 16&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to set AppSKey 
+ **`len`**: the length of AppSKey (must be 16 bytes) |
 | **Returns**       | bool                                                                                               |
-| **Return Values** | **TRUE** for setting AppSKey successfully <br /> **FALSE** for setting AppSKey failure               |
-
+| **Return Values** | **TRUE** for setting AppSKey successfully 
+ **FALSE** for setting AppSKey failure               |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2045,7 +1988,6 @@ void loop()
 
 ```
 </details>
-
 
 ### daddr
 
@@ -2069,9 +2011,11 @@ api.lorawan.daddr.get(buf, len);
 
 | **Function**      | `bool get(uint8_t* buf, uint32_t len)`                                                                                  |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to get the device address <br /> **`len`**: the length of the device address (must be 4&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get the device address 
+ **`len`**: the length of the device address (must be 4 bytes) |
 | **Returns**       | bool                                                                                                                    |
-| **Return Values** | **TRUE** for getting device address successfully <br /> **FALSE** for getting device address failure                      |
+| **Return Values** | **TRUE** for getting device address successfully 
+ **FALSE** for getting device address failure                      |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2112,7 +2056,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the device address.
@@ -2123,10 +2066,11 @@ api.lorawan.daddr.set(buf, len);
 
 | **Function**      | `bool set(uint8_t* buf, uint32_t len)`                                                                                  |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------|
-| **Parameters**    | **`buf`**: the buffer to set the device address <br /> **`len`**: the length of the device address (must be 4&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to set the device address 
+ **`len`**: the length of the device address (must be 4 bytes) |
 | **Returns**       | bool                                                                                                                    |
-| **Return Values** | **TRUE** for setting device address successfully <br /> **FALSE** for setting device address failure                      |
-
+| **Return Values** | **TRUE** for setting device address successfully 
+ **FALSE** for setting device address failure                      |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2167,7 +2111,6 @@ void loop()
 
 ```
 </details>
-
 
 ### deui
 
@@ -2191,10 +2134,11 @@ api.lorawan.deui.get(buf, len);
 
 | **Function**      | `bool get(uint8_t* buf, uint32_t len)`                                                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to get the device EUI <br /> **`len`**: the length of the device EUI (must be 8&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get the device EUI 
+ **`len`**: the length of the device EUI (must be 8 bytes) |
 | **Returns**       | bool                                                                                                            |
-| **Return Values** | **TRUE** for getting device EUI successfully <br /> **FALSE** for getting device EUI failure                      |
-
+| **Return Values** | **TRUE** for getting device EUI successfully 
+ **FALSE** for getting device EUI failure                      |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2235,7 +2179,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the global end-device ID.
@@ -2246,10 +2189,11 @@ api.lorawan.deui.set(buf, len);
 
 | **Function**      | `bool set(uint8_t* buf, uint32_t len)`                                                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to set the device EUI <br /> **`len`**: the length of the device EUI (must be 8&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to set the device EUI 
+ **`len`**: the length of the device EUI (must be 8 bytes) |
 | **Returns**       | bool                                                                                                            |
-| **Return Values** | **TRUE** for setting device EUI successfully <br /> **FALSE** for setting device EUI failure                      |
-
+| **Return Values** | **TRUE** for setting device EUI successfully 
+ **FALSE** for setting device EUI failure                      |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2291,7 +2235,6 @@ void loop()
 ```
 </details>
 
-
 ### netid
 
 This API allows the user to access the network identifier (NetID).
@@ -2310,14 +2253,15 @@ api.lorawan.netid.get(buf, len);
 
 | **Function**      | `bool get(uint8_t* buf, uint32_t len)`                                                                                                          |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to get the network identifier (NetID) <br /> **`len`**: the length of the network identifier (NetID) (must be 3&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get the network identifier (NetID) 
+ **`len`**: the length of the network identifier (NetID) (must be 3 bytes) |
 | **Returns**       | bool                                                                                                                                            |
-| **Return Values** | **TRUE** for getting the network identifier (NetID) successfully <br /> **FALSE** for getting the network identifier (NetID) failure              |
+| **Return Values** | **TRUE** for getting the network identifier (NetID) successfully 
+ **FALSE** for getting the network identifier (NetID) failure              |
 
 :::tip NOTE
 Even though the length of network identifier(NetID) is 3 bytes, you should give 4-byte buffer for natural alignment.
 :::
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -2371,7 +2315,6 @@ void loop()
 ```
 </details>
 
-
 ### nwkskey
 
 This API allows the user to get or set the network session key.
@@ -2394,10 +2337,11 @@ api.lorawan.nwkskey.get(buf, len);
 
 | **Function**      | `bool get(uint8_t* buf, uint32_t len)`                                                                                             |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **`buf`**: the buffer to get the network session key <br /> **`len`**: the length of the network session key (must be 16&nbsp;bytes) |
+| **Parameters**    | **`buf`**: the buffer to get the network session key 
+ **`len`**: the length of the network session key (must be 16 bytes) |
 | **Returns**       | bool                                                                                                                               |
-| **Return Values** | **TRUE** for getting the network session key successfully <br /> **FALSE** for getting the network session key failure               |
-
+| **Return Values** | **TRUE** for getting the network session key successfully 
+ **FALSE** for getting the network session key failure               |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2438,7 +2382,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the network session key.
@@ -2449,9 +2392,10 @@ api.lorawan.nwkskey.set(buf, len);
 
 | **Function**   | `bool set(uint8_t* buf, uint32_t len)`                                                                                             |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **`buf`**: the buffer to set the network session key <br /> **`len`**: the length of the network session key (must be 16&nbsp;bytes) |
-| **Returns**    | **TRUE** for setting the network session key successfully <br /> **FALSE** for setting the network session key failure               |
-
+| **Parameters** | **`buf`**: the buffer to set the network session key 
+ **`len`**: the length of the network session key (must be 16 bytes) |
+| **Returns**    | **TRUE** for setting the network session key successfully 
+ **FALSE** for setting the network session key failure               |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2493,10 +2437,7 @@ void loop()
 ```
 </details>
 
-
-
 ## Joining and Sending Data on LoRa Network
-
 
 ### rety
 
@@ -2510,16 +2451,13 @@ RAKLorawan::rety
 
 This API gets the times of retransmission of Confirm packet data.
 
-
 ```c
 api.lorawan.rety.get();
 ```
 
-
 | **Function** | `uint8_t get()`                    |
 | ------------ | ---------------------------------- |
 | **Returns**  | The retry times for retransmission |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -2541,10 +2479,7 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
-
 
 This API sets the times of retransmission of Confirm packet data.
 
@@ -2556,13 +2491,12 @@ api.lorawan.rety.set(value);
 | ----------------- | -------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the retry times for retransmission                                         |
 | **Returns**       | bool                                                                                   |
-| **Return Values** | **TRUE** for setting retry time success <br /> **FALSE** for setting retry times failure |
-
+| **Return Values** | **TRUE** for setting retry time success 
+ **FALSE** for setting retry times failure |
 
 :::tip NOTE
 Can only input 0 ~ 7 times.
 :::
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -2584,7 +2518,6 @@ void loop()
 ```
 </details>
 
-
 ### cfm
 
 This API allows the user to access the notification on received data coming from the network.
@@ -2604,8 +2537,8 @@ api.lorawan.cfm.get();
 | **Function**      | `bool get()`                                                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** - LoRaWAN uplink is not on confirm mode <br /> **FALSE** - LoRaWAN uplink is on confirm mode |
-
+| **Return Values** | **TRUE** - LoRaWAN uplink is not on confirm mode 
+ **FALSE** - LoRaWAN uplink is on confirm mode |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2628,7 +2561,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the notification on received data coming from the network.
@@ -2641,8 +2573,8 @@ api.lorawan.cfm.set(value);
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | **Parameters**    | **value**: the mode of confirm mode to set                                                |
 | **Returns**       | bool                                                                                      |
-| **Return Values** | **TRUE** for setting confirm mode success <br /> **FALSE** for setting confirm mode failure |
-
+| **Return Values** | **TRUE** for setting confirm mode success 
+ **FALSE** for setting confirm mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2665,8 +2597,6 @@ void loop()
 ```
 </details>
 
-
-
 ### cfs
 
 ```c
@@ -2683,13 +2613,12 @@ api.lorawan.cfs.get();
 
 | **Function** | `bool get()`                                               |
 | ------------ | ---------------------------------------------------------- |
-| **Returns**  | **TRUE**: Confirm success <br />  **FALSE**: Confirm failure |
-
+| **Returns**  | **TRUE**: Confirm success 
+  **FALSE**: Confirm failure |
 
 :::tip NOTE
 This API can only work when confirm mode is on.
 :::
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -2742,8 +2671,6 @@ void loop()
 ```
 </details>
 
-
-
 ### njm
 
 ```c
@@ -2751,7 +2678,6 @@ RAKLorawan::njm
 ```
 
 This API allows the user to access the network join mode.
-
 
 #### get()
 
@@ -2764,8 +2690,8 @@ api.lorawan.njm.get();
 | **Function**      | `bool get()`                       |
 | ----------------- | ---------------------------------- |
 | **Returns**       | bool                               |
-| **Return Values** | **TRUE**: OTAA <br /> **FALSE**: ABP |
-
+| **Return Values** | **TRUE**: OTAA 
+ **FALSE**: ABP |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2788,8 +2714,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the network join mode.
@@ -2800,10 +2724,12 @@ api.lorawan.njm.set(value);
 
 | **Function**      | `bool set(bool value)`                                                                              |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **value**: the mode of network join mode <br /> **ABP** - 0 <br /> **OTAA** - 1                         |
+| **Parameters**    | **value**: the mode of network join mode 
+ **ABP** - 0 
+ **OTAA** - 1                         |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting network join mode success <br /> **FALSE** for setting network join mode failure |
-
+| **Return Values** | **TRUE** for setting network join mode success 
+ **FALSE** for setting network join mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2825,8 +2751,6 @@ void loop()
 ```
 </details>
 
-
-
 ### njs
 
 This API allows the user to access the current status of the LoRa link.
@@ -2846,8 +2770,8 @@ api.lorawan.njs.get();
 | **Function**      | `bool get()`                                            |
 | ----------------- | ------------------------------------------------------- |
 | **Returns**       | bool                                                    |
-| **Return Values** | **TRUE**: Network join <br /> **FALSE**: Network not join |
-
+| **Return Values** | **TRUE**: Network join 
+ **FALSE**: Network not join |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2888,8 +2812,6 @@ void loop()
 ```
 </details>
 
-
-
 ### join()
 
 This API does a join request to the network.
@@ -2902,17 +2824,26 @@ api.lorawan.join(join_start, auto_join, auto_join_period, auto_join_cnt);
 | **Function**      | `bool join()`                                              |
 | ----------------- | ---------------------------------------------------------- |
 | **Returns**       | bool                                                       |
-| **Return Values** | **TRUE** for join request started  <br /> **FALSE** for join request failed |
+| **Return Values** | **TRUE** for join request started  
+ **FALSE** for join request failed |
 
 | **Function**      | `bool join()`                                              |
 | ----------------- | ---------------------------------------------------------- |
-| **Parameters**    | bool join_start <br /> manually join network <br />  - 0 means stop to join network <br />  - 1 means start to join network
-| **Parameters**    | bool auto_join <br /> automatically join network <br /> - 0 means stop automatically joining network <br /> - 1 means start automatically joining network.
-| **Parameters**    | int auto_join_period <br /> the delay betweeen join attemptS. The accepted values are 7 to 255 (in seconds). .
-| **Parameters**    | int auto_join_cnt <br /> the maximum number of join attempts. The accepted values are 0 to 255 (attempts).
+| **Parameters**    | bool join_start 
+ manually join network 
+  - 0 means stop to join network 
+  - 1 means start to join network
+| **Parameters**    | bool auto_join 
+ automatically join network 
+ - 0 means stop automatically joining network 
+ - 1 means start automatically joining network.
+| **Parameters**    | int auto_join_period 
+ the delay betweeen join attemptS. The accepted values are 7 to 255 (in seconds). .
+| **Parameters**    | int auto_join_cnt 
+ the maximum number of join attempts. The accepted values are 0 to 255 (attempts).
 | **Returns**       | bool                                                       |
-| **Return Values** | **TRUE** for join request started  <br /> **FALSE** for join request failed |
-
+| **Return Values** | **TRUE** for join request started  
+ **FALSE** for join request failed |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2953,7 +2884,6 @@ void loop()
 ```
 </details>
 
-
 :::tip NOTE
 This is an asynchronous command. A result of TRUE means that the device is joining. The completion of the join process can be verified with the `api.lorawan.njs.get()` command.
 
@@ -2980,10 +2910,14 @@ api.lorawan.send(length, payload, fport, confirm, retry);
 
 | **Function**      | `bool send(uint8_t length,uint8_t * payload, uint8_t fport, bool confirm = true, uint8_t retry)`                                                                                                                                                                                                     |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **length** - the length of the payload <br /> **payload** - the data to uplink <br /> **fport** - allow 1 ~ 223 <br /> **confirm** - Override cfm setting to get confirm message from gateway (optional) <br /> **retry** - Override retry setting to retry if sending failed (optional) |
+| **Parameters**    | **length** - the length of the payload 
+ **payload** - the data to uplink 
+ **fport** - allow 1 ~ 223 
+ **confirm** - Override cfm setting to get confirm message from gateway (optional) 
+ **retry** - Override retry setting to retry if sending failed (optional) |
 | **Returns**       | bool                                                                                                                                                                                                                                                                                                 |
-| **Return Values** | **TRUE** for start sending uplink success <br /> **FALSE** for start sending uplink failed              |
-
+| **Return Values** | **TRUE** for start sending uplink success 
+ **FALSE** for start sending uplink failed              |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3034,7 +2968,6 @@ void loop()
 ```
 </details>
 
-
 :::tip NOTE
 This is an asynchronous command. A result of TRUE means that the device is starting to send the payload. The completion of the send process is reported in the `SendCallback`. You can register a send callback handler with `api.lorawan.registerSendCallback(service_lora_send_cb callback) `
 :::
@@ -3043,18 +2976,19 @@ This is an asynchronous command. A result of TRUE means that the device is start
 
 This API provides a way to send long packet (1024 bytes) text data.
 
-
 ```c
 api.lorawan.lpsend(port, ack, payload, length);
 ```
 
-
 | **Function**      | `bool lpsend(uint8_t port, bool ack, uint8_t * payload, int length)`                                                                                                                                   |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters**    | **port** - application port to be transmitted  <br /> **ack** - indicate this is a confirmed message or not  <br />  **payload**	the data you want to send   <br />  **length** - the length of the payload |
+| **Parameters**    | **port** - application port to be transmitted  
+ **ack** - indicate this is a confirmed message or not  
+  **payload**	the data you want to send   
+  **length** - the length of the payload |
 | **Returns**       | bool                                                                                                                                                                                                   |
-| **Return Values** | **TRUE** for sending data success <br /> **FALSE** for sending data failure                                                                                                                              |
-
+| **Return Values** | **TRUE** for sending data success 
+ **FALSE** for sending data failure                                                                                                                              |
 
 **Example:**
 <details>
@@ -3107,7 +3041,6 @@ void loop()
 ```
 </details>
 
-
 :::tip NOTE
 This is an asynchronous command. A result of TRUE means that the device is starting to send the payload. The completion of the send process is reported in the `SendCallback`. You can register a send callback handler with `api.lorawan.registerSendCallback(service_lora_send_cb callback) `
 :::
@@ -3116,19 +3049,16 @@ This is an asynchronous command. A result of TRUE means that the device is start
 
 This API registers a callback function, so that application can be notified on receiving LoRaWAN data.
 
-
 ```c
 api.lorawan.registerRecvCallback(service_lora_recv_cb callback);
 ```
-
-
 
 | **Function**      | `bool registerRecvCallback(service_lora_recv_cb callback)`                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** callback function                                                                           |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3198,10 +3128,7 @@ void loop()
 ```
 </details>
 
-
-
 ### registerJoinCallback()
-
 
 This API registers a callback function, so that application can be notified when joining process is done.
 
@@ -3209,13 +3136,12 @@ This API registers a callback function, so that application can be notified when
 api.lorawan.registerJoinCallback(service_lora_join_cb callback);
 ```
 
-
 | **Function**      | `bool registerJoinCallback(service_lora_join_cb callback)`                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** callback function                                                                           |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3283,8 +3209,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### registerSendCallback()
 
@@ -3294,13 +3218,12 @@ This API registers a callback function, so that application can be notified when
 api.lorawan.registerSendCallback(service_lora_send_cb callback);
 ```
 
-
 | **Function**      | `bool registerSendCallback(service_lora_send_cb callback)`                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** callback function                                                                           |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3370,7 +3293,6 @@ void loop()
 ```
 </details>
 
-
 ### registerLinkCheckCallback()
 
 This API registers a callback function, so that application can be notified when linkcheck result is available.
@@ -3379,13 +3301,12 @@ This API registers a callback function, so that application can be notified when
 api.lorawan.registerLinkCheckCallback(service_lora_linkcheck_cb callback);
 ```
 
-
 | **Function**      | `bool registerLinkCheckCallback(service_lora_linkcheck_cb  callback)`                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** callback function                                                                           |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3461,7 +3382,6 @@ void loop()
 ```
 </details>
 
-
 ### registerTimereqCallback()
 
 This API registers a callback function, so that application can be notified when time request result is available.
@@ -3470,13 +3390,12 @@ This API registers a callback function, so that application can be notified when
 api.lorawan.registerTimereqCallback(service_lora_timereq_cb callback) ;
 ```
 
-
 | **Function**      | `bool registerTimereqCallback(service_lora_timereq_cb callback)`                                          |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** callback function                                                                           |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3544,8 +3463,6 @@ void loop()
 ```
 </details>
 
-
-
 ### dcs
 
 This api allows the user to access the duty cycle parameter
@@ -3565,8 +3482,8 @@ api.lorawan.dcs.get();
 | **Function**      | `bool get()`                                                      |
 | ----------------- | ----------------------------------------------------------------- |
 | **Returns**       | bool                                                              |
-| **Return Values** | **TRUE** - enable duty cycle  <br /> **FALSE** - disable duty cycle |
-
+| **Return Values** | **TRUE** - enable duty cycle  
+ **FALSE** - disable duty cycle |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3587,26 +3504,20 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
-
 This API allows the user to set the duty cycle parameter.
-
 
 ```c
 api.lorawan.dcs.set(dutyCycle);
 ```
 
-
 | **Function**      | `bool set(uint8_t dutyCycle)`                                                       |
 | ----------------- | ----------------------------------------------------------------------------------- |
 | **Parameters**    | **dutyCycle** - the LoRaWAN duty cycle                                              |
 | **Returns**       | bool                                                                                |
-| **Return Values** | **TRUE** for setting duty cycle success  <br /> **FALSE** for setting duty cycle fail |
-
-
+| **Return Values** | **TRUE** for setting duty cycle success  
+ **FALSE** for setting duty cycle fail |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3627,24 +3538,24 @@ void loop()
 ```
 </details>
 
-
-
 ### dr
 
 This API allows the user to access the data rate.
 
 :::tip NOTE
 Complete information about DR parameter on each region can be found on [RUI3 Appendix - LoRaWAN Regional Parameter (Data Rate)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix#data-rate-by-region).
-- **EU433 / RU864 / IN865 / EU868 / CN470 / KR920** and the data rate range of values is 0-5 (DR0-DR5). <br />
-- **AS923** and the data rate range of values is 2-5 (DR2-DR5). <br />
-- **US915** and the data rate range of values is 0-4 (DR0-DR4). <br />
+- **EU433 / RU864 / IN865 / EU868 / CN470 / KR920** and the data rate range of values is 0-5 (DR0-DR5). 
+
+- **AS923** and the data rate range of values is 2-5 (DR2-DR5). 
+
+- **US915** and the data rate range of values is 0-4 (DR0-DR4). 
+
 - **AU915** and the data rate range of values is 0-6 (DR0-DR6).
 :::
 
 ```c
 RAKLorawan::dr
 ```
-
 
 #### get()
 
@@ -3658,7 +3569,6 @@ api.lorawan.dr.get();
 | ------------ | --------------- |
 | **Returns**  | The data rate   |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -3678,11 +3588,9 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the data rate.
-
 
 ```c
 api.lorawan.dr.set(value);
@@ -3692,8 +3600,8 @@ api.lorawan.dr.set(value);
 | ----------------- | --------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the data rate                                                               |
 | **Returns**       | bool                                                                                    |
-| **Return Values** | **TRUE** for setting data rate success   <br />   **FALSE** for setting data rate failure |
-
+| **Return Values** | **TRUE** for setting data rate success   
+   **FALSE** for setting data rate failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3713,8 +3621,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### jn1dl
 
@@ -3736,7 +3642,6 @@ api.lorawan.jn1dl.get();
 | ------------ | --------------------------------------------- |
 | **Returns**  | The join delay on RX window 1 (Type: **int**) |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -3756,8 +3661,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the join delay on RX window 1.
@@ -3770,8 +3673,8 @@ api.lorawan.jn1dl.set(value);
 | ----------------- | ------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the join delay on RX window 1                                             |
 | **Returns**       | bool                                                                                  |
-| **Return Values** | **TRUE** for setting join delay success <br /> **FALSE** for setting join delay failure |
-
+| **Return Values** | **TRUE** for setting join delay success 
+ **FALSE** for setting join delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3792,10 +3695,7 @@ void loop()
 ```
 </details>
 
-
-
 ### jn2dl
-
 
 ```c
 RAKLorawan::jn2dl
@@ -3812,7 +3712,6 @@ api.lorawan.jn2dl.get();
 | **Function** | `int get()`                                    |
 | ------------ | ---------------------------------------------- |
 | **Returns**  | The join delay on RX window 2 (Type: **bool**) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -3831,8 +3730,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the join delay on RX window 2.
@@ -3845,7 +3742,8 @@ api.lorawan.jn2dl.set(value);
 | ----------------- | ------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the join delay on RX window 2                                             |
 | **Returns**       | bool                                                                                  |
-| **Return Values** | **TRUE** for setting join delay success <br /> **FALSE** for setting join delay failure |
+| **Return Values** | **TRUE** for setting join delay success 
+ **FALSE** for setting join delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3866,7 +3764,6 @@ void loop()
 ```
 </details>
 
-
 ### pnm
 
 This API allows the user to access the public network mode.
@@ -3886,8 +3783,8 @@ api.lorawan.pnm.get();
 | **Function**      | `bool get()`                     |
 | ----------------- | -------------------------------- |
 | **Returns**       | bool                             |
-| **Return Values** | **TRUE**: On <br /> **FALSE**: Off |
-
+| **Return Values** | **TRUE**: On 
+ **FALSE**: Off |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3908,8 +3805,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the public network mode.
@@ -3922,8 +3817,8 @@ api.lorawan.pnm.set(value);
 | ----------------- | -------------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the public network mode                                                                      |
 | **Returns**       | bool                                                                                                     |
-| **Return Values** | **TRUE** for setting public network mode success  <br /> **FALSE** for setting public network mode failure |
-
+| **Return Values** | **TRUE** for setting public network mode success  
+ **FALSE** for setting public network mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -3944,12 +3839,9 @@ void loop()
 ```
 </details>
 
-
-
 ### rx1dl
 
 This API allows the user to access the delay of the received window 1.
-
 
 ```c
 RAKLorawan::rx1dl
@@ -3967,7 +3859,6 @@ api.lorawan.rx1dl.get();
 | ------------ | ---------------------------------- |
 | **Returns**  | The delay of the received window 1 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -3987,8 +3878,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the delay of the received window 1.
@@ -4001,8 +3890,8 @@ api.lorawan.rx1dl.set(value);
 | ----------------- | ---------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the delay of the received window 1                               |
 | **Returns**       | bool                                                                         |
-| **Return Values** | **TRUE** for setting delay success  <br /> **FALSE** for setting delay failure |
-
+| **Return Values** | **TRUE** for setting delay success  
+ **FALSE** for setting delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4022,7 +3911,6 @@ void loop()
 }
 ```
 </details>
-
 
 ### rx2dl
 
@@ -4044,7 +3932,6 @@ api.lorawan.rx2dl.get();
 | ------------ | ---------------------------------- |
 | **Returns**  | The delay of the received window 2 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -4063,7 +3950,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the delay of the received window 2
@@ -4076,8 +3962,8 @@ api.lorawan.rx2dl.set(value)
 | ----------------- | --------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the delay of the received window 2                              |
 | **Returns**       | bool                                                                        |
-| **Return Values** | **TRUE** for setting delay success <br /> **FALSE** for setting delay failure |
-
+| **Return Values** | **TRUE** for setting delay success 
+ **FALSE** for setting delay failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4118,7 +4004,6 @@ api.lorawan.rx2dr.get();
 | ------------ | ---------------------------------- |
 | **Returns**  | The data rate of received window 2 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -4138,8 +4023,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the data rate of received window 2.
@@ -4152,8 +4035,8 @@ api.lorawan.rx2dr.set(value);
 | ----------------- | ----------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the data rate of received window 2                                      |
 | **Returns**       | bool                                                                                |
-| **Return Values** | **TRUE** for setting data rate success <br /> **FALSE** for setting data rate failure |
-
+| **Return Values** | **TRUE** for setting data rate success 
+ **FALSE** for setting data rate failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4173,8 +4056,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 ### rx2fq
 
@@ -4194,7 +4075,6 @@ api.lorawan.rx2fq.get();
 | ------------ | -------------------------------------- |
 | **Returns**  | The frequency of the received window 2 |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -4212,16 +4092,18 @@ void loop()
 ```
 </details>
 
-
 ### txp
 
 This API allows the user to access the transmit power.
 
 :::tip NOTE
 Highest power start from 0. Complete information about TXP parameter on each region can be found on [RUI3 Appendix - LoRaWAN Regional Parameter (TX Power)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix#tx-power-by-region).
-- **EU868 / RU864 / KR920 / AS923 / CN470** and Transmit power range of values is 0-7. <br />
-- **US915 / AU915** and Transmit power range of values is 0-14. <br />
-- **EU433** and Transmit power range of values is 0-5. <br />
+- **EU868 / RU864 / KR920 / AS923 / CN470** and Transmit power range of values is 0-7. 
+
+- **US915 / AU915** and Transmit power range of values is 0-14. 
+
+- **EU433** and Transmit power range of values is 0-5. 
+
 - **IN865** and Transmit power range of values is 0-10.
 :::
 
@@ -4233,7 +4115,6 @@ RAKLorawan::txp
 
 This API allows the user to get the transmit power.
 
-
 ```c
 api.lorawan.txp.get();
 ```
@@ -4241,7 +4122,6 @@ api.lorawan.txp.get();
 | **Function** | `uint8_t get()`            |
 | ------------ | -------------------------- |
 | **Returns**  | The LoRaWAN transmit power |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4261,8 +4141,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 #### set()
 
@@ -4275,8 +4153,8 @@ api.lorawan.txp.set(value);
 | **Function**   | `bool set(uint8_t value)`                                                                      |
 | -------------- | ---------------------------------------------------------------------------------------------- |
 | **Parameters** | **value** - the LoRaWAN transmit power                                                         |
-| **Returns**    | **TRUE** for setting transmit power success <br />  **FALSE** for setting transmit power failure |
-
+| **Returns**    | **TRUE** for setting transmit power success 
+  **FALSE** for setting transmit power failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4297,13 +4175,9 @@ void loop()
 ```
 </details>
 
-
-
-
 ### linkcheck
 
 This API allows the user to verify network link status.
-
 
 ```c
 RAKLorawan::linkcheck
@@ -4311,21 +4185,18 @@ RAKLorawan::linkcheck
 
 #### get()
 
-
 This API allows the user to verify network link status.
-
 
 ```c
 api.lorawan.linkcheck.get();
 ```
 
-
 | **Function**      | `uint32_t get()`                                                                                                                                            |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Returns**       | The mode of verifying network link status                                                                                                                   |
-| **Return Values** | **0** disable link check <br /> **1** execute link check one time <br /> **2** module will automatically execute one time link check after every upload of data |
-
-
+| **Return Values** | **0** disable link check 
+ **1** execute link check one time 
+ **2** module will automatically execute one time link check after every upload of data |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4347,12 +4218,9 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the network link status.
-
 
 ```c
 api.lorawan.linkcheck.set(value);
@@ -4362,7 +4230,8 @@ api.lorawan.linkcheck.set(value);
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - 	the mode of verifying network link status                                                                                |
 | **Returns**       | bool                                                                                                                                   |
-| **Return Values** | **TRUE** for setting mode of verifying network link status <br /> **FALSE**  for setting mode of verifying network link status failure   |
+| **Return Values** | **TRUE** for setting mode of verifying network link status 
+ **FALSE**  for setting mode of verifying network link status failure   |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4384,10 +4253,7 @@ void loop()
 ```
 </details>
 
-
-
 ## Class B Mode
-
 
 ### pgslot
 
@@ -4408,8 +4274,6 @@ api.lorawan.pgslot.get();
 | **Function** | `uint8_t get()`           |
 | ------------ | ------------------------- |
 | **Returns**  | The ping slot periodicity |
-
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4453,7 +4317,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API allows the user to set the unicast ping slot periodicity.
@@ -4466,8 +4329,8 @@ api.lorawan.pgslot.set(value);
 | ----------------- | -------------------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the unicast ping slot periodicity                                                                  |
 | **Returns**       | bool                                                                                                           |
-| **Return Values** | **TRUE** for setting ping slot periodicity success  <br />   **FALSE** for setting ping slot periodicity failure |
-
+| **Return Values** | **TRUE** for setting ping slot periodicity success  
+   **FALSE** for setting ping slot periodicity failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -4511,7 +4374,6 @@ void loop()
 ```
 </details>
 
-
 ### bfreq
 
 This API allows the user to access the current beacon (default broadcast) frequency.
@@ -4531,7 +4393,6 @@ api.lorawan.bfreq.get();
 | **Function** | `float get()`                                 |
 | ------------ | --------------------------------------------- |
 | **Returns**  | The current beacon frequency (Type: **long**) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4574,8 +4435,6 @@ void loop()
 ```
 </details>
 
-
-
 ### btime
 
 This API allows the user to access the current beacon time
@@ -4595,7 +4454,6 @@ api.lorawan.btime.get()
 | **Function** | `long get()`               |
 | ------------ | -------------------------- |
 | **Returns**  | The current beacon time(b) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4658,7 +4516,6 @@ api.lorawan.bgw.get();
 | ------------ | -------------------- |
 | **Returns**  | `beacon_bgw_t`       |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -4709,8 +4566,6 @@ void loop()
 ```
 </details>
 
-
-
 ### ltime()
 
 This API allows the user to access the local time in a UTC format
@@ -4729,7 +4584,6 @@ api.lorawan.ltime.get();
 | **Function** | `string get()`                                  |
 | ------------ | ----------------------------------------------- |
 | **Returns**  | The local time in a UTC format (Type: **bool**) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4772,10 +4626,7 @@ void loop()
 ```
 </details>
 
-
-
 ## Information
-
 
 ### rssi
 This API allows the user to access the RSSI on reception
@@ -4788,7 +4639,6 @@ RAKLorawan::rssi
 When the connection is successful, get the RSSI of the last received packet.
 :::
 
-
 #### get()
 
 This API allows the user to access the RSSI on reception.
@@ -4800,7 +4650,6 @@ api.lorawan.rssi.get();
 | **Function** | `int get()`                           |
 | ------------ | ------------------------------------- |
 | **Returns**  | The RSSI on reception (Type: **int**) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4851,8 +4700,6 @@ void loop()
 ```
 </details>
 
-
-
 ### snr
 
 This API allows the user to access the SNR of the last received packet
@@ -4863,7 +4710,6 @@ RAKLorawan::snr
 :::tip NOTE
 When the connection is successful, get the SNR of the last received packet.
 :::
-
 
 #### get()
 
@@ -4876,7 +4722,6 @@ api.lorawan.snr.get();
 | **Function** | `int get()`                                         |
 | ------------ | --------------------------------------------------- |
 | **Returns**  | The SNR of the last received packet (Type: **int**) |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4927,8 +4772,6 @@ void loop()
 ```
 </details>
 
-
-
 ### ver
 
 This API allows the user to get the LoRaWAN version.
@@ -4936,7 +4779,6 @@ This API allows the user to get the LoRaWAN version.
 ```c
 RAKLorawan::ver
 ```
-
 
 #### get()
 
@@ -4949,8 +4791,6 @@ api.lorawan.ver.get();
 | **Function** | `string get()`                         |
 | ------------ | -------------------------------------- |
 | **Returns**  | The LoRaWAN version (Type: **string**) |
-
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -4969,27 +4809,20 @@ void loop()
 ```
 </details>
 
-
-
-
-
 ### arssi()
 
 This API can access all open channel rssi.
-
 
 ```c
 api.lorawan.arssi(chan_arssi);
 ```
 
-
 | **Function**      | `bool arssi(RAK_LORA_chan_rssi * iterator)`                                |
 | ----------------- | -------------------------------------------------------------------------- |
 | **Parameters**    | **chan_arssi** - the structure array to store arssi                        |
 | **Returns**       | bool                                                                       |
-| **Return Values** | **TRUE** for getting arssi success <br /> **Fail** for getting arssi failure |
-
-
+| **Return Values** | **TRUE** for getting arssi success 
+ **Fail** for getting arssi failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5040,9 +4873,6 @@ void loop()
 ```
 </details>
 
-
-
-
 ## LoRaWAN Regional Commands
 
 ### mask
@@ -5057,7 +4887,6 @@ Only for US915, AU915, LA915, CN470
 RAKLorawan::mask
 ```
 
-
 #### get()
 
 This API allows the user to get the channel mask, close or open the channel.
@@ -5066,13 +4895,12 @@ This API allows the user to get the channel mask, close or open the channel.
 api.lorawan.mask.get(buff);
 ```
 
-
 | **Function**      | `bool get(uint16_t * buff)`                                                               |
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | **Parameters**    | **buff** - the buffer to store channel mask                                               |
 | **Returns**       | bool                                                                                      |
-| **Return Values** | **TRUE** for getting channel mask success <br /> **FALSE** for getting channel mask failure |
-
+| **Return Values** | **TRUE** for getting channel mask success 
+ **FALSE** for getting channel mask failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5099,8 +4927,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allows the user to set the channel mask, close or open the channel.
@@ -5109,13 +4935,12 @@ This API allows the user to set the channel mask, close or open the channel.
 api.lorawan.mask.set(value);
 ```
 
-
 | **Function**      | `bool set(uint16_t * value)`                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the buffer to set the channel mask                                              |
 | **Returns**       | bool                                                                                        |
-| **Return Values** | **TRUE** for setting channel mask success <br />   **FALSE** for setting channel mask failure |
-
+| **Return Values** | **TRUE** for setting channel mask success 
+   **FALSE** for setting channel mask failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5143,147 +4968,27 @@ void loop()
 ```
 </details>
 
-
 The table below shows the attached list on setting the channel mask.
 
-<table>
-<thead>
-  <tr>
-    <th>Sub-Band</th>
-    <th>Channels</th>
-    <th>16bits</th>
-    <th>US915</th>
-    <th>AU915</th>
-    <th>LA915</th>
-    <th>CN470</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>ALL</td>
-            <td>0000</td>
-            <td>0000000000000000</td>
-            <td>All Channels</td>
-            <td>All Channels</td>
-            <td>All Channels</td>
-            <td>All Channels</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>0001</td>
-            <td>0000000000000001</td>
-            <td>0-7, 64</td>
-            <td>0-7, 64</td>
-            <td>0-7, 64</td>
-            <td>0-7</td>
-        </tr>
-        <tr>
-           <td>2</td>
-            <td>0002</td>
-            <td>0000000000000010</td>
-            <td>8-15, 65</td>
-            <td>8-15, 65</td>
-            <td>8-15, 65</td>
-            <td>8-15</td>
-        </tr>
-        <tr>
-           <td>3</td>
-            <td>0004</td>
-            <td>0000000000000100</td>
-            <td>16-23, 66</td>
-            <td>16-23, 66</td>
-            <td>16-23, 66</td>
-            <td>16-23</td>
-        </tr>
-        <tr>
-           <td>4</td>
-            <td>0008</td>
-            <td>0000000000001000</td>
-            <td>24-31, 67</td>
-            <td>24-31, 67</td>
-            <td>24-31, 67</td>
-            <td>24-31</td>
-        </tr>
-        <tr>
-           <td>5</td>
-            <td>0010</td>
-            <td>0000000000010000</td>
-            <td>32-39, 68</td>
-            <td>32-39, 68</td>
-            <td>32-39, 68</td>
-            <td>32-39</td>
-        </tr>
-        <tr>
-           <td>6</td>
-            <td>0020</td>
-            <td>0000000000100000</td>
-            <td>40-47, 69</td>
-            <td>40-47, 69</td>
-            <td>40-47, 69</td>
-            <td>40-47</td>
-        </tr>
-        <tr>
-           <td>7</td>
-            <td>0040</td>
-            <td>0000000001000000</td>
-            <td>48-55, 70</td>
-            <td>48-55, 70</td>
-            <td>48-55, 70</td>
-            <td>48-55</td>
-        </tr>
-        <tr>
-           <td>8</td>
-            <td>0080</td>
-            <td>0000000010000000</td>
-            <td>56-63, 71</td>
-            <td>56-63, 71</td>
-            <td>56-63, 71</td>
-            <td>56-63</td>
-        </tr>
-        <tr>
-           <td>9</td>
-            <td>0100</td>
-            <td>0000000100000000</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>64-71</td>
-        </tr>
-        <tr>
-           <td>10</td>
-            <td>0200</td>
-            <td>0000001000000000</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>72-79</td>
-        </tr>
-        <tr>
-           <td>11</td>
-            <td>0400</td>
-            <td>0000010000000000</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>80-87</td>
-        </tr>
-        <tr>
-           <td>12</td>
-            <td>0800</td>
-            <td>0000100000000000</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>88-95</td>
-        </tr>
-</tbody>
-</table>
-
+| Sub-Band | Channels | 16bits | US915 | AU915 | LA915 | CN470 |
+| --- | --- | --- | --- | --- | --- | --- |
+| ALL | 0000 | 0000000000000000 | All Channels | All Channels | All Channels | All Channels |
+| 1 | 0001 | 0000000000000001 | 0-7, 64 | 0-7, 64 | 0-7, 64 | 0-7 |
+| 2 | 0002 | 0000000000000010 | 8-15, 65 | 8-15, 65 | 8-15, 65 | 8-15 |
+| 3 | 0004 | 0000000000000100 | 16-23, 66 | 16-23, 66 | 16-23, 66 | 16-23 |
+| 4 | 0008 | 0000000000001000 | 24-31, 67 | 24-31, 67 | 24-31, 67 | 24-31 |
+| 5 | 0010 | 0000000000010000 | 32-39, 68 | 32-39, 68 | 32-39, 68 | 32-39 |
+| 6 | 0020 | 0000000000100000 | 40-47, 69 | 40-47, 69 | 40-47, 69 | 40-47 |
+| 7 | 0040 | 0000000001000000 | 48-55, 70 | 48-55, 70 | 48-55, 70 | 48-55 |
+| 8 | 0080 | 0000000010000000 | 56-63, 71 | 56-63, 71 | 56-63, 71 | 56-63 |
+| 9 | 0100 | 0000000100000000 | - | - | - | 64-71 |
+| 10 | 0200 | 0000001000000000 | - | - | - | 72-79 |
+| 11 | 0400 | 0000010000000000 | - | - | - | 80-87 |
+| 12 | 0800 | 0000100000000000 | - | - | - | 88-95 |
 
 ### band
 
 This API set number corresponding to active regions.
-
 
 ```c
 RAKLorawan::band
@@ -5320,17 +5025,26 @@ Serial.printf("Set channel mask %s\r\n", api.lorawan.mask.set(&maskBuff) ? "Succ
 
 This API gets the number corresponding to active regions.
 
-
 ```c
 api.lorawan.band.get();
 ```
 
-
 | **Function**      | `int32_t get()`                                                                                                                                                                                                                                                   |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Returns**       | the active region                                                                                                                                                                                                                                                 |
-| **Return Values** | **0** - EU433  <br />  **1** - CN470 <br /> **2** - RU864 <br /> **3**	- IN865 <br /> **4** - EU868 <br /> **5**	- US915 <br /> **6** - AU915 <br /> **7** - KR920 <br /> **8** - AS923-1 <br /> **9** - AS923-2 <br /> **10** - AS923-3 <br /> **11** - AS923-4 <br /> **12** - LA915 |
-
+| **Return Values** | **0** - EU433  
+  **1** - CN470 
+ **2** - RU864 
+ **3**	- IN865 
+ **4** - EU868 
+ **5**	- US915 
+ **6** - AU915 
+ **7** - KR920 
+ **8** - AS923-1 
+ **9** - AS923-2 
+ **10** - AS923-3 
+ **11** - AS923-4 
+ **12** - LA915 |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5352,24 +5066,20 @@ void loop()
 ```
 </details>
 
-
 ##### set()
 
-
 This API set number corresponding to active regions.
-
 
 ```c
 api.lorawan.band.set(value);
 ```
 
-
 | **Function**      | `bool set(uint8_t value)`                                                                    |
 | ----------------- | -------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the active region to set                                                         |
 | **Returns**       | bool                                                                                         |
-| **Return Values** | **TRUE** for setting active region success <br />  **FALSE** for setting active region failure |
-
+| **Return Values** | **TRUE** for setting active region success 
+  **FALSE** for setting active region failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5392,9 +5102,6 @@ void loop()
 ```
 </details>
 
-
-
-
 ## Multicast Group Command
 
 ### addmulc()
@@ -5405,14 +5112,12 @@ This API adds a new multicast group configure multicast parameters.
 api.lorawan.addmulc(session);
 ```
 
-
 | **Function**      | `bool addmulc(RAK_LORA_McSession session)`                                                     |
 | ----------------- | ---------------------------------------------------------------------------------------------- |
 | **Parameters**    | **session** - The structure of session                                                         |
 | **Returns**       | bool                                                                                           |
-| **Return Values** | **TRUE**  for adding multicast group success <br /> **FALSE** for adding multicast group failure |
-
-
+| **Return Values** | **TRUE**  for adding multicast group success 
+ **FALSE** for adding multicast group failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5428,8 +5133,6 @@ uint8_t node_device_eui[8] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x88};
 uint8_t node_app_eui[8] = {0x0E, 0x0D, 0x0D, 0x01, 0x0E, 0x01, 0x02, 0x0E};
 // OTAA Application Key MSB
 uint8_t node_app_key[16] = {0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6, 0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3E};
-
-
 
 //LoRaWan Multicast Session
 
@@ -5487,8 +5190,6 @@ void loop()
 ```
 </details>
 
-
-
 ### rmvmulc()
 
 This API allows the removal of a configured multicast group.
@@ -5497,13 +5198,12 @@ This API allows the removal of a configured multicast group.
 api.lorawan.rmvmulc(devAddr);
 ```
 
-
 | **Function**      | `bool rmvmulc(uint32_t devAddr)`                                  |
 | ----------------- | ----------------------------------------------------------------- |
 | **Parameters**    | **devAddr** - the address to remove a multicast group             |
 | **Returns**       | bool                                                              |
-| **Return Values** | **TRUE** for removing success <br /> **FALSE** for removing failure |
-
+| **Return Values** | **TRUE** for removing success 
+ **FALSE** for removing failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5521,7 +5221,6 @@ uint8_t node_app_key[16] = {0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6, 0xAB
 uint8_t node_mc_address[4] = {0x01, 0x02, 0x03, 0x04};
 uint8_t node_mc_AppSKey[16] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08};
 uint8_t node_mc_NwkSKey[16] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08};
-
 
 void setup()
 {
@@ -5579,10 +5278,7 @@ void loop()
 ```
 </details>
 
-
-
 ### lstmulc()
-
 
 This command can view current configured multicast group information.
 
@@ -5594,8 +5290,8 @@ api.lorawan.lstmulc(&multicast_list);
 | ----------------- | ---------------------------------------------------------------------------------------- |
 | **Parameters**    | **multicast_list** - a RAK_LORA_McSession variable                                       |
 | **Returns**       | bool                                                                                     |
-| **Return Values** | **TRUE** for getting multicast list success <br /> **FALSE** for getting multicast failure |
-
+| **Return Values** | **TRUE** for getting multicast list success 
+ **FALSE** for getting multicast failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5611,8 +5307,6 @@ uint8_t node_device_eui[8] = {0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x88};
 uint8_t node_app_eui[8] = {0x0E, 0x0D, 0x0D, 0x01, 0x0E, 0x01, 0x02, 0x0E};
 // OTAA Application Key MSB
 uint8_t node_app_key[16] = {0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6, 0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, 0x3E};
-
-
 
 //LoRaWan Multicast Session
 
@@ -5696,11 +5390,8 @@ void loop()
 
 }
 
-
 ```
 </details>
-
-
 
 ## P2P Instructions
 
@@ -5720,13 +5411,12 @@ This API gets the network working mode (0 = P2P, 1 = LoRaWAN, 2 = FSK).
 api.lora.nwm.get();
 ```
 
-
 | **Function**      | `int get()`                                                      |
 | ----------------- | ---------------------------------------------------------------- |
 | **Returns**       | The network working mode                                         |
-| **Return Values** | **0** - P2P mode <br /> **1** - LoRaWAN mode <br /> **2** - FSK mode |
-
-
+| **Return Values** | **0** - P2P mode 
+ **1** - LoRaWAN mode 
+ **2** - FSK mode |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5748,7 +5438,6 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API sets the network working mode to P2P.
@@ -5760,7 +5449,8 @@ api.lora.nwm.set(value);
 | **Function**      | `bool set()	`                                                                                 |
 | ----------------- | ---------------------------------------------------------------------------------------------------------- |
 | **Returns**       | bool                                                                                                       |
-| **Return Values** | **TRUE** for setting network working mode success <br />  **FALSE** for setting network working mode failure |
+| **Return Values** | **TRUE** for setting network working mode success 
+  **FALSE** for setting network working mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5783,17 +5473,13 @@ void loop()
 ```
 </details>
 
-
-
 ### pfreq
 
 This API provides configuration frequency for the P2P mode.
 
-
 ```c
 RAKLora::pfreq
 ```
-
 
 #### get()
 
@@ -5802,7 +5488,6 @@ This API gets the P2P frequency.
 ```c
 api.lora.pfreq.get();
 ```
-
 
 | **Function** | `uint32_t get()`           |
 | ------------ | -------------------------- |
@@ -5828,13 +5513,9 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
-
 This API sets the P2P frequency.
-
 
 ```c
 api.lora.pfreq.set(value);
@@ -5844,8 +5525,8 @@ api.lora.pfreq.set(value);
 | ----------------- | ------------------------------------------------------------------------------------ |
 | **Parameters**    | **value** - the frequency for P2P mode                                               |
 | **Returns**       | bool                                                                                 |
-| **Return Values** | **TRUE** for setting frequency success <br />  **FALSE** for setting frequency failure |
-
+| **Return Values** | **TRUE** for setting frequency success 
+  **FALSE** for setting frequency failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5867,8 +5548,6 @@ void loop()
 ```
 </details>
 
-
-
 ### psf
 
 This API provides a configuration Spreading Factor for the P2P mode.
@@ -5889,7 +5568,6 @@ api.lora.psf.get();
 | ------------ | ------------------------ |
 | **Returns**  | The P2P spreading factor |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -5909,8 +5587,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 #### set()
 
@@ -5920,14 +5596,12 @@ This API sets P2P Spreading Factor (6,7, 8, 9, 10, 11, 12).
 api.lora.psf.set(value);
 ```
 
-
-
 | **Function**      | `bool set(uint8_t value)`                                                                                  |
 | ----------------- | ---------------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the P2P spreading factor                                                                       |
 | **Returns**       | bool                                                                                                       |
-| **Return Values** | **TRUE** for setting P2P spreading factor success <br />  **FALSE** for setting P2P spreading factor failure |
-
+| **Return Values** | **TRUE** for setting P2P spreading factor success 
+  **FALSE** for setting P2P spreading factor failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -5949,12 +5623,9 @@ void loop()
 ```
 </details>
 
-
-
 ### pbw
 
 This API provides configuration bandwidth for the P2P mode.
-
 
 ```c
 RAKLora::pbw
@@ -5962,18 +5633,15 @@ RAKLora::pbw
 
 #### get()
 
-
 This API gets P2P bandwidth in kHz (0 = 125, 1 = 250, 2 = 500, 3 = 7.8, 4 = 10.4, 5 = 15.63, 6 = 20.83, 7 = 31.25, 8 = 41.67, 9 = 62.5).
 
 ```c
 api.lora.pbw.get();
 ```
 
-
 | **Function** | `uint32_t get()`  |
 | ------------ | ----------------- |
 | **Returns**  | The P2P bandwidth |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -5995,8 +5663,6 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API allow to set P2P Bandwidth in kHz (0 = 125, 1 = 250, 2 = 500, 3 = 7.8, 4 = 10.4, 5 = 15.63, 6 = 20.83, 7 = 31.25, 8 = 41.67, 9 = 62.5).
@@ -6005,13 +5671,12 @@ This API allow to set P2P Bandwidth in kHz (0 = 125, 1 = 250, 2 = 500, 3 = 7.8, 
 api.lora.pbw.set(value);
 ```
 
-
 | **Function**      | `bool set(uint32_t value)`                                                                    |
 | ----------------- | --------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the P2P bandwidth                                                                 |
 | **Returns**       | bool                                                                                          |
-| **Return Values** | **TRUE** for setting P2P bandwidth success  <br />  **FALSE** for setting P2P bandwidth failure |
-
+| **Return Values** | **TRUE** for setting P2P bandwidth success  
+  **FALSE** for setting P2P bandwidth failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6033,12 +5698,9 @@ void loop()
 ```
 </details>
 
-
-
 ### pcr
 
 This API provides the configuration code rate for the P2P mode.
-
 
 ```c
 RAKLora::pcr
@@ -6056,7 +5718,6 @@ api.lora.pcr.get();
 | ------------ | --------------- |
 | **Returns**  | The code rate   |
 
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -6077,12 +5738,9 @@ void loop()
 ```
 </details>
 
-
-
 #### set()
 
 This API sets code rate for the P2P mode.
-
 
 ```c
 api.lora.pcr.set(value);
@@ -6092,8 +5750,8 @@ api.lora.pcr.set(value);
 | ----------------- | ------------------------------------------------------------------------------------ |
 | **Parameters**    | **value** - the code rate for P2P mode                                               |
 | **Returns**       | bool                                                                                 |
-| **Return Values** | **TRUE** for setting code rate success <br />  **FALSE** for setting code rate failure |
-
+| **Return Values** | **TRUE** for setting code rate success 
+  **FALSE** for setting code rate failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6115,23 +5773,17 @@ void loop()
 ```
 </details>
 
-
-
 ### ppl
 
-
 This API provides configuration Preamble Length for the P2P mode.
-
 
 ```c
 RAKLora::ppl
 ```
 
-
 #### get()
 
 This API gets P2P Preamble Length (2-65535).
-
 
 ```c
 api.lora.ppl.get();
@@ -6140,7 +5792,6 @@ api.lora.ppl.get();
 | **Function** | `uint16_t get()`    |
 | ------------ | ------------------- |
 | **Returns**  | The Preamble length |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -6161,7 +5812,6 @@ void loop()
 }
 ```
 </details>
-
 
 #### set()
 
@@ -6174,8 +5824,8 @@ api.lora.ppl.set(value);
 | **Function**   | `bool set(uint16_t value)`                                                                                        |
 | -------------- | ----------------------------------------------------------------------------------------------------------------- |
 | **Parameters** | **value** - the P2P preamble length (2-65536)                                                                     |
-| **Returns**    | **TRUE** for setting P2P preamble length success <br /> **FALSE** for setting preamble length fail (Type: **bool**) |
-
+| **Returns**    | **TRUE** for setting P2P preamble length success 
+ **FALSE** for setting preamble length fail (Type: **bool**) |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6198,8 +5848,6 @@ void loop()
 ```
 </details>
 
-
-
 ### ptp
 
 This API provides configuration power for the P2P mode.
@@ -6210,19 +5858,15 @@ RAKLora::ptp
 
 #### get()
 
-
 This API gets P2P TX Power (5-22).
-
 
 ```c
 api.lora.ptp.get();
 ```
 
-
 | **Function** | `uint8_t value`           |
 | ------------ | ------------------------- |
 | **Returns**  | The Tx power for P2P mode |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -6244,23 +5888,20 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
 This API sets P2P TX Power (5-22).
-
 
 ```c
 api.lora.ptp.set(value);
 ```
 
-
 | **Function**      | `bool set(uint8_t value)`                                                                 |
 | ----------------- | ----------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the P2P Tx power                                                              |
 | **Returns**       | bool                                                                                      |
-| **Return Values** | **TRUE** for setting P2P Tx power success <br /> **FALSE** for setting P2P Tx power failure |
-
+| **Return Values** | **TRUE** for setting P2P Tx power success 
+ **FALSE** for setting P2P Tx power failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6283,12 +5924,9 @@ void loop()
 ```
 </details>
 
-
-
 ### encry
 
 This API configures P2P mode encryption.
-
 
 ```c
 RAKLora::encry
@@ -6305,8 +5943,8 @@ api.lora.encry.get();
 | **Function**      | `bool get()`                                                                            |
 | ----------------- | --------------------------------------------------------------------------------------- |
 | **Returns**       | bool                                                                                    |
-| **Return Values** | **TRUE**: P2P mode encryption is enable  <br /> **FALSE**: P2P mode encryption is disable |
-
+| **Return Values** | **TRUE**: P2P mode encryption is enable  
+ **FALSE**: P2P mode encryption is disable |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6367,12 +6005,9 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
-
 This API enables or disables P2P mode encryption.
-
 
 ```c
 api.lora.encry.set(value);
@@ -6382,8 +6017,8 @@ api.lora.encry.set(value);
 | ----------------- | --------------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **value** - the status of P2P mode encryption                                                             |
 | **Returns**       | bool                                                                                                      |
-| **Return Values** | **TRUE** for setting status of encryption success <br /> **FALSE** for setting status of encryption failure |
-
+| **Return Values** | **TRUE** for setting status of encryption success 
+ **FALSE** for setting status of encryption failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6444,7 +6079,6 @@ void loop()
 ```
 </details>
 
-
 ### enckey
 
 This API will encrypt the data being sent and received.
@@ -6452,7 +6086,6 @@ This API will encrypt the data being sent and received.
 ```c
 RAKLora::enckey
 ```
-
 
 #### get()
 
@@ -6462,13 +6095,13 @@ This API gets the key of P2P mode encryption.
 api.lora.enckey.get(buff, len);
 ```
 
-
 | **Function**      | `bool get(uint8_t * buff, uint32_t len)`                                                                           |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Parameters**    | **buff**	- the buffer to store encryption key <br /> **len** - the length of encryption key (must be 16&nbsp;bytes) |
+| **Parameters**    | **buff**	- the buffer to store encryption key 
+ **len** - the length of encryption key (must be 16 bytes) |
 | **Returns**       | bool                                                                                                               |
-| **Return Values** | **TRUE** for getting encryption key success <br /> **FALSE** for getting encryption key failure                      |
-
+| **Return Values** | **TRUE** for getting encryption key success 
+ **FALSE** for getting encryption key failure                      |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6530,12 +6163,9 @@ void loop()
 ```
 </details>
 
-
 #### set()
 
-
 This API sets the key of P2P mode encryption.
-
 
 ```c
 api.lora.enckey.set(buff, len);
@@ -6543,11 +6173,11 @@ api.lora.enckey.set(buff, len);
 
 | **Function**      | `bool set(uint8_t * buff, uint32_t len)`                                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **buff** - the buffer to set encryption key <br /> **len** - the length of encryption key (must be 16&nbsp;bytes) |
+| **Parameters**    | **buff** - the buffer to set encryption key 
+ **len** - the length of encryption key (must be 16 bytes) |
 | **Returns**       | bool                                                                                                            |
-| **Return Values** | **TRUE** for setting encryption key success <br /> **FALSE** for setting encryption failure                       |
-
-
+| **Return Values** | **TRUE** for setting encryption key success 
+ **FALSE** for setting encryption failure                       |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6609,12 +6239,9 @@ void loop()
 ```
 </details>
 
-
-
 ### pbr
 
-
-This API configures the P2P FSK modem bitrate (600&nbsp;b/s - 307200&nbsp;b/s).
+This API configures the P2P FSK modem bitrate (600 b/s - 307200 b/s).
 
 ```c
 RAKLora::pbr
@@ -6622,7 +6249,7 @@ RAKLora::pbr
 
 #### get()
 
-This API gets the P2P FSK modem bitrate (600&nbsp;b/s - 307200&nbsp;b/s).
+This API gets the P2P FSK modem bitrate (600 b/s - 307200 b/s).
 
 ```c
 api.lora.pbr.get();
@@ -6632,21 +6259,17 @@ api.lora.pbr.get();
 | ------------ | ------------------------- |
 | **Returns**  | The P2P FSK modem bitrate |
 
-
 #### set()
 
-This API sets the P2P FSK modem bitrate (600&nbsp;b/s - 307200&nbsp;b/s).
-
+This API sets the P2P FSK modem bitrate (600 b/s - 307200 b/s).
 
 ```c
 api.lora.pbr.get();
 ```
 
-
 | **Function**   | `bool set(uint32_t value)` |
 | -------------- | -------------------------- |
 | **Parameters** | value                      |
-
 
 ### pfdev
 
@@ -6668,10 +6291,7 @@ api.lora.pfdev.get();
 | ------------ | ------------------------------------- |
 | **Returns**  | The P2P FSK modem frequency deviation |
 
-
-
 #### set()
-
 
 This API sets the P2P FSK modem frequency deviation.
 
@@ -6683,7 +6303,6 @@ api.lora.pfdev.set(value);
 | -------------- | -------------------------- |
 | **Parameters** | value                      |
 
-
 ### registerPRecvCallback()
 
 This API registers a callback function, so that application can be notified on receiving P2P data.
@@ -6692,13 +6311,12 @@ This API registers a callback function, so that application can be notified on r
 api.lora.registerPRecvCallback(service_lora_p2p_recv_cb_type callback);
 ```
 
-
 | **Function**      | `bool registerPRecvCallback(service_lora_p2p_recv_cb_type callback)`                                |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** - callback function                                                                         |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6759,7 +6377,6 @@ void loop()
 ```
 </details>
 
-
 ### registerPSendCallback()
 
 This API registers a callback function, so that application can be notified when P2P uplink process is done.
@@ -6772,9 +6389,8 @@ api.lora.registerPSendCallback(service_lora_p2p_send_cb_type callback);
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** - callback function                                                                         |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6836,7 +6452,6 @@ void loop()
 ```
 </details>
 
-
 ### registerPSendCADCallback()
 
 This API registers a callback function, so that application can be notified about the result of CAD (Channel Activity Detection).
@@ -6849,9 +6464,8 @@ api.lora.registerPSendCADCallback(service_lora_p2p_send_CAD_cb_type callback);
 | ----------------- | --------------------------------------------------------------------------------------------------- |
 | **Parameters**    | **The** - callback function                                                                         |
 | **Returns**       | bool                                                                                                |
-| **Return Values** | **TRUE** for setting callback function success <br /> **FALSE** for setting callback function failure |
-
-
+| **Return Values** | **TRUE** for setting callback function success 
+ **FALSE** for setting callback function failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6871,7 +6485,6 @@ void cad_cb(bool detect) {
 	else
 		Serial.println("no Activity");
 }
-
 
 long startTime;
 
@@ -6920,7 +6533,6 @@ void loop()
 ```
 </details>
 
-
 ### psend()
 
 This API provides the way to P2P send data.
@@ -6930,17 +6542,18 @@ This API provides the way to P2P send data.
 - By default, CAD is disabled. When CAD mode is enabled, the device will continue to check for channel activity until it can send the packet.
 :::
 
-
 ```c
 api.lora.psend(length, payload, ena_cad);
 ```
 
 | **Function**      | `bool psend(uint8_t length, uint8_t * payload, bool ena_cad)`                                                                                                      |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters**    | **length** - the length of the payload <br /> **payload** - the data send to the other device <br /> **ena_cad** - enable (TRUE) or disable (FALSE) CAD before sending |
+| **Parameters**    | **length** - the length of the payload 
+ **payload** - the data send to the other device 
+ **ena_cad** - enable (TRUE) or disable (FALSE) CAD before sending |
 | **Returns**       | bool                                                                                                                                                               |
-| **Return Values** | **TRUE**  for sending data success <br /> **FALSE** for sending data failure                                                                                         |
-
+| **Return Values** | **TRUE**  for sending data success 
+ **FALSE** for sending data failure                                                                                         |
 
 <details>
 <summary> Click to view the code</summary>
@@ -6973,8 +6586,6 @@ void loop()
 ```
 </details>
 
-
-
 ### precv()
 
 This API is used to enter P2P RX mode for a specified period.
@@ -6985,10 +6596,14 @@ api.lora.precv(uint32_t timeout)
 
 | **Function**      | `bool precv(uint32_t timeout)`                                                                                                                                                                                                                                                                                                                 |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **timeout** - the duration of P2P Rx mode in milliseconds <br /> Special timeout values: <br /> **65535**: Stay in RX mode until a packet is received. <br /> **65534**: Permanent RX mode (TX not possible) until `api.lora.precv(0)` is executed. <br /> **65533**: Permanent RX mode and still allows TX without calling `api.lora.precv(0)`. |
+| **Parameters**    | **timeout** - the duration of P2P Rx mode in milliseconds 
+ Special timeout values: 
+ **65535**: Stay in RX mode until a packet is received. 
+ **65534**: Permanent RX mode (TX not possible) until `api.lora.precv(0)` is executed. 
+ **65533**: Permanent RX mode and still allows TX without calling `api.lora.precv(0)`. |
 | **Returns**       | bool                                                                                                                                                                                                                                                                                                                                           |
-| **Return Values** | **TRUE** for entering P2P Rx mode success <br /> **FALSE** for failure to activate P2P RX mode                                                                                                                                                                                                                                                   |
-
+| **Return Values** | **TRUE** for entering P2P Rx mode success 
+ **FALSE** for failure to activate P2P RX mode                                                                                                                                                                                                                                                   |
 
 <details>
 <summary> Click to view the code</summary>
@@ -7019,6 +6634,3 @@ void setup()
 ```
 </details>
 
-
-
-<RkBottomNav/>

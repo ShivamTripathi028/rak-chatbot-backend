@@ -12,23 +12,15 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12022 WisBlock PT100 Module Datasheet
 
 ## Overview
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022-front-back.png"
-  width="70%"
-  caption="RAK12022 WisBlock PT100 Module"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module
 
 ### Description
 
-**RAK12022** is a PT100 IO module that uses **MAX31865**, an easy-to-use resistance-to-digital converter optimized for platinum resistance temperature detectors (RTDs). An external resistor sets the sensitivity for the RTD being used and a precision delta-sigma ADC converts the ratio of the RTD resistance to the reference resistance into digital form. The MAX31865’s inputs are protected against overvoltage faults as large as 45&nbsp;V. Programmable detection of RTD and cable open and short conditions is included.
+**RAK12022** is a PT100 IO module that uses **MAX31865**, an easy-to-use resistance-to-digital converter optimized for platinum resistance temperature detectors (RTDs). An external resistor sets the sensitivity for the RTD being used and a precision delta-sigma ADC converts the ratio of the RTD resistance to the reference resistance into digital form. The MAX31865’s inputs are protected against overvoltage faults as large as 45 V. Programmable detection of RTD and cable open and short conditions is included.
 
 ### Applications
 
@@ -42,12 +34,12 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 - Based on MCP2518FD and ATA6563
 - Compatible with 2-wire, 3-wire, and 4-wire sensor connections
 - SPI-compatible interface
-- 15-Bit ADC Resolution; Nominal Temperature Resolution 0.03125&nbsp;NC (varies due to RTD nonlinearity)
-- Total accuracy overall operating conditions: 0.5&nbsp;NC (0.05% of full scale) max
+- 15-Bit ADC Resolution; Nominal Temperature Resolution 0.03125 NC (varies due to RTD nonlinearity)
+- Total accuracy overall operating conditions: 0.5 NC (0.05% of full scale) max
 - Fully differential V<sub>REF</sub> inputs
-- 21&nbsp;ms (max) conversion time
-- Power supply: 3.3&nbsp;V
-- Operating temperature: -40°&nbsp;C ~ 85°&nbsp;C
+- 21 ms (max) conversion time
+- Power supply: 3.3 V
+- Operating temperature: -40° C ~ 85° C
 
 ## Specifications
 
@@ -57,16 +49,11 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 The RAK12022 PT100 module can be mounted to the IO slot of the WisBlock base board. **Figure 2** shows the mounting mechanism of the RAK12022 on a WisBlockBase Board module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_mount_to_wisbase.png"
-  width="50%"
-  caption="RAK12022 WisBlock PT100 Module Mounting"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module Mounting
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It shows the chipset of the module and discusses the pinouts and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include tabular data on the functionalities and standard values of the RAK12022 WisBlock PT100 Module.
-
 
 #### Chipset
 
@@ -82,11 +69,7 @@ The RAK12022 WisBlock PT100 Module comprises a standard WisBlock IO slot connect
 **SPI**-related pins, **DRDY**, **3V3_S**, and **GND** are connected to the WisIO connector.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_pinout.png"
-  width="70%"
-  caption="RAK12022 WisBlock PT100 Module Pinout"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module Pinout
 
 #### Electrical Characteristics
 
@@ -102,29 +85,17 @@ This table shows the RAK12022 module electrical characteristics.
 
 **Figure 4** shows the dimensions and the mechanical drawing of the RAK12022 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_mechanic_drawing.png"
-  width="80%"
-  caption="RAK12022 WisBlock PT100 Module Mechanical Drawing"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module Mechanical Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic diagram of the RAK12022 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_schematic.png"
-  width="100%"
-  caption="RAK12022 WisBlock PT100 Module Schematic"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module Schematic
 
 ##### Sensor Connection Instructions
 
@@ -135,11 +106,7 @@ This table shows the RAK12022 module electrical characteristics.
 - Install the jumper on Pin 1 and Pin 2 of J4.
 - Install the jumper on Pin 3 and Pin 4 of J4.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_2wire_a.png"
-  width="70%"
-  caption="RAK12022 WisBlock PT100 Module 2-Wire Connection"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module 2-Wire Connection
 
 ###### 3-Wire
 
@@ -147,11 +114,7 @@ This table shows the RAK12022 module electrical characteristics.
 - Install the jumper on Pin 1 and Pin 2 of J3.
 - Install the jumper on Pin 3 and Pin 4 of J4.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_3wire_a.png"
-  width="70%"
-  caption="RAK12022 WisBlock PT100 Module 3-Wire Connection"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module 3-Wire Connection
 
 ###### 4-Wire
 
@@ -159,11 +122,5 @@ This table shows the RAK12022 module electrical characteristics.
 - Another option: connect the two BLUE wires of the PT100 sensor to Pin 1 and Pin 2 of J2, and connect the two RED wires to Pin 3 and Pin 4 of J2. Either way will work.
 - Also, install Jumper on Pin 2 and Pin 3 of J3.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/datasheet/rak12022_4wire_a.png"
-  width="70%"
-  caption="RAK12022 WisBlock PT100 Module 4-Wire Connection"
-/>
+> **Image:** RAK12022 WisBlock PT100 Module 4-Wire Connection
 
-
-<RkBottomNav/>

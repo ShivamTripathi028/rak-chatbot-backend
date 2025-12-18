@@ -8,8 +8,6 @@ keywords:
     - Datasheet
 sidebar_label: Datasheet
 ---
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # Antenna Mounting Kit Datasheet
 
@@ -19,85 +17,41 @@ To achieve better coverage, outdoor antennas need to be installed in an elevated
 
 ### L-Shaped Wall Mounting Pole
 
-<b>Application Scenarios</b>: Fixed on the vertical facade, such as the sidewall of the building or roof parapet.
+**Application Scenarios**: Fixed on the vertical facade, such as the sidewall of the building or roof parapet.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/1.png"
-  width="60%"
-  caption="L-shaped wall mounting pole dimensions in mm"
-/>
+> **Image:** L-shaped wall mounting pole dimensions in mm
 
-<br />
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/2.png"
-  width="50%"
-  caption="L-shaped wall mounting pole example application"
-/>
+> **Image:** L-shaped wall mounting pole example application
 
 ### Small U-Shaped Hoisting Pole
 
-<b>Application Scenarios</b>: Fixed in roof and window eaves, indoor ceiling keel.
+**Application Scenarios**: Fixed in roof and window eaves, indoor ceiling keel.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/3.png"
-  width="40%"
-  caption="Small U-shaped hoisting pole dimensions in mm"
-/>
+> **Image:** Small U-shaped hoisting pole dimensions in mm
 
-<br />
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/4.png"
-  width="50%"
-  caption="Small U-shaped hoisting pole example application"
-/>
+> **Image:** Small U-shaped hoisting pole example application
 
 ### Large U-Shaped Hoisting Pole
 
-<b>Application Scenarios</b>: Fixed on the roof and window eaves. Compared to the previous one, it takes up more space, but the antenna installation position is relatively separated from the eaves so that the antenna can extend out of the roof, and the signal effect will be better.
+**Application Scenarios**: Fixed on the roof and window eaves. Compared to the previous one, it takes up more space, but the antenna installation position is relatively separated from the eaves so that the antenna can extend out of the roof, and the signal effect will be better.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/5.png"
-  width="60%"
-  caption="Large U-shaped hoisting pole dimensions in mm"
-/>
+> **Image:** Large U-shaped hoisting pole dimensions in mm
 
-<br />
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/6.png"
-  width="60%"
-  caption="Large U-shaped hoisting pole example application"
-/>
+> **Image:** Large U-shaped hoisting pole example application
 
 ### I-Shaped Vertical Mounting Rod
 
-<b>Application Scenarios</b>: Fixed on horizontal surfaces, such as roofs.
+**Application Scenarios**: Fixed on horizontal surfaces, such as roofs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/7.png"
-  width="40%"
-  caption="I-shaped vertical Mounting rod dimensions in mm"
-/>
+> **Image:** I-shaped vertical Mounting rod dimensions in mm
 
-<br />
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/8.png"
-  width="50%"
-  caption="I-shaped vertical Mounting rod example application"
-/>
+> **Image:** I-shaped vertical Mounting rod example application
 
 ## Quick Assembly Guide
 
 1. Fix the antenna between the flat bracket plate and the U-shaped bracket plate, using M4 Screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/9.png"
-  width="55%"
-  caption="Positioning and fixing the antenna in the brackets"
-/>
+> **Image:** Positioning and fixing the antenna in the brackets
 
 2. Fix the appropriate pole on the wall or other position of the building. 
 
@@ -109,10 +63,5 @@ The included screws in the kit for this purpose are standard. Depending on the s
 
 3. Fix the antenna onto the pole with the U-shaped brackets and nuts as shown in Figure 10.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/antenna-mounting-kit/10.png"
-  width="50%"
-  caption="Mounting the antenna to the pole"
-/>
+> **Image:** Mounting the antenna to the pole
 
-<RkBottomNav/>

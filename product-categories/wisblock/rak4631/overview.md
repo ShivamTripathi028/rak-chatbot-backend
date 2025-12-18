@@ -22,15 +22,13 @@ download: true
 date: 2020-09-18
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4631 WisBlock LoRaWAN Module
 
 Thank you for choosing **RAK4631 WisBlock LoRaWAN Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK4631 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak4631/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak4631/sidewalk/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [Arduino IDE BSP](https://learn.rakwireless.com/hc/en-us/articles/26687371039383-How-To-Perform-Installation-of-Board-Support-Package-in-Arduino-IDE)
 * [PlatformIO BSP](https://learn.rakwireless.com/hc/en-us/articles/26687276346775-How-To-Perform-Installation-of-Board-Support-Package-in-PlatformIO)
@@ -61,8 +59,8 @@ You can [convert your RAK4631 to RAK4631-R](https://docs.rakwireless.com/product
 
 * Nordic nRF52840 ultra-low power MCU
 * 32-bit ARM® Cortex™-M4 CPU
-* 64&nbsp;MHz CPU clock
-* 1&nbsp;MB Flash, 256&nbsp;KB RAM
+* 64 MHz CPU clock
+* 1 MB Flash, 256 KB RAM
 * Semtech SX1262 low power high range LoRa transceiver
 * LoRaWAN 1.0.2 protocol stack
 * Bluetooth 5.0 protocol stack
@@ -80,4 +78,3 @@ To use a **RAK4631**, you need at least a **WisBlock Base** to plug the module i
 - When using the LoRa or Bluetooth Low Energy transceivers, make sure that always an antenna is connected. Using these transceivers without an antenna can damage the system.
 :::
 
-<RkBottomNav/>

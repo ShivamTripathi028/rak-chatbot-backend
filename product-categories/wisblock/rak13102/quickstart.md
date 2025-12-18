@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13102 WisBlock Blues Notecarrier Module Quick Start Guide
 
 ## Prerequisite
@@ -32,7 +29,6 @@ Before going through each and every step of using the RAK13102 WisBlock module, 
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
-
 #### Software
 
 - Download and install the [Arduino IDE.](https://www.arduino.cc/en/Main/Software)
@@ -44,56 +40,35 @@ Before going through each and every step of using the RAK13102 WisBlock module, 
 
 You can integrate the RAK13102 module into your WisBlock project to extend its functionality and have cellular and location capabilities. This is ideal for tracking applications with LTE-M, NB-IoT, and GSM cellular connectivity in the area. For more information about RAK13102, refer to its [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak13102/datasheet/).
 
-The RAK13102 module can be mounted to the IO slot of the WisBlock Base and communicates to the WisBlock Core via I2C. Two antennas must be connected to the Notecard in the RAK13102 module as well, one for the GNSS antenna port and one for the cellular antenna port. An external battery (Li-Ion/LiPo 3.7–4.2&nbsp;V) is also required to power up the module properly. Optionally, you can supply the RAK13102 and WisBlock Base Board through the EX_POWER connector P1 from a regulated 5V DC source.
+The RAK13102 module can be mounted to the IO slot of the WisBlock Base and communicates to the WisBlock Core via I2C. Two antennas must be connected to the Notecard in the RAK13102 module as well, one for the GNSS antenna port and one for the cellular antenna port. An external battery (Li-Ion/LiPo 3.7–4.2 V) is also required to power up the module properly. Optionally, you can supply the RAK13102 and WisBlock Base Board through the EX_POWER connector P1 from a regulated 5V DC source.
 
 :::tip Info
-The RAK13102 module and the connected WisBlock Base Board and Core module can be supplied with a regulated 5&nbsp;V DC supply through the P1 connector on the bottom. A matching connector is available with our [M8 Power Connector](https://store.rakwireless.com/products/m8-power-connector)
+The RAK13102 module and the connected WisBlock Base Board and Core module can be supplied with a regulated 5 V DC supply through the P1 connector on the bottom. A matching connector is available with our [M8 Power Connector](https://store.rakwireless.com/products/m8-power-connector)
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/ex-power.png" 
-  figureCount="1"
-  caption="5V supply through M8 power connector" 
-   width="50%"
-/>
+> **Image:** 5V supply through M8 power connector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/m8-power.png" 
-  figureCount="2"
-  caption="M8 power connector" 
-   width="30%"
-/>
+> **Image:** M8 power connector
 
 :::warning
 
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and, eventually, other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and, eventually, other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/battery-connection.gif" 
-  figureCount="3"
-  caption="WisBlock Base RAK19007 battery polarity and connection" 
-   width="35%"
-/>
-
+> **Image:** WisBlock Base RAK19007 battery polarity and connection
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 4**, the locations for Slot A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [RAK19007 module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+As shown in **Figure 4**, the locations for Slot A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [RAK19007 module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/rak13102_mounting.png" 
-  figureCount="4"
-  caption="RAK13102 connection to WisBlock Base" 
-   width="70%"
-/>
+> **Image:** RAK13102 connection to WisBlock Base
 
 :::tip IMPORTANT
 Assemble the RAK13102 module _**BEFORE**_ you plug the Blues Notecard in. Otherwise, you cannot reach the screws to fix the IO module on the BaseBoard.
@@ -101,13 +76,7 @@ Assemble the RAK13102 module _**BEFORE**_ you plug the Blues Notecard in. Otherw
 
 After the RAK13102 module is assembled on the Base Board you can connect the Blues Notecard to the RAK13102. Fix the Notecard on the RAk13102 module with the M3 screw that comes with the RAK13102 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/wisblock-blues-carrier.gif" 
-  figureCount="5"
-  caption="Notecard assembly in the RAK13102" 
-   width="35%"
-/>
-
+> **Image:** Notecard assembly in the RAK13102
 
 ##### Disassembling
 
@@ -115,30 +84,15 @@ The procedure for disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/16.removing-screws.png" 
-  figureCount="6"
-  caption="Removing screws from the WisBlock module" 
-   width="70%"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/17.detaching-silkscreen.png" 
-  figureCount="7"
-  caption="Detaching silkscreen on the WisBlock module" 
-   width="70%"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 8**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/18.detaching-module.png" 
-  figureCount="8"
-  caption="Applying even forces on the proper location of a WisBlock module" 
-   width="70%"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK13102 uses I2C communication lines and one GPIO for interrupts.
@@ -154,33 +108,17 @@ If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWir
 
 1. You need to select first the WisBlock Core you have, as shown in **Figure 9** to **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/rak4631_board.png" 
-  figureCount="9"
-  caption="Selecting RAK4631 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/rak11200_board.png" 
-  figureCount="10"
-  caption="Selecting RAK11200 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/rak11300_board.png" 
-  figureCount="11"
-  caption="Selecting RAK11300 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK11300 as WisBlock Core
 
 :::tip IMPORTANT
 - Before you can use the RAK13102 and the Blues Notecard, you need to open a project in Blues Notehub.IO and get a product UID.
 Follow the [Quickstart](https://dev.blues.io/quickstart/) guides provided by Blues. Make sure the product UID is saved in the NoteCard during the setup.
 - To follow the Blues.IO [Quickstart](https://dev.blues.io/quickstart/), connect the USB of the RAK13102 module to your computer.
 :::
-
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -441,26 +379,15 @@ void loop()
 
 </details>
 
-
 3. You can now select the right serial port and upload the code, as shown in **Figure 12** and **Figure 13**.
 
 :::tip NOTE
 If you are using RAK11200 as WisBlock Core, you need to configure the BOOT0 pin before uploading. You need to short it to the ground then press the reset button of the WisBlock Base before releasing the BOOT0 pin. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/select_port.png" 
-  figureCount="12"
-  caption="Selecting the correct Serial Port" 
-   width="100%"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/upload.png" 
-  figureCount="13"
-  caption="Uploading the RAK13102 example code" 
-   width="100%"
-/>
+> **Image:** Uploading the RAK13102 example code
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK13102 Module that can be found on the [WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/communications/Cellular/RAK13102_Blues_Module/WisBlock-Blues-Sensor).
@@ -468,11 +395,5 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the initial logs, as shown in **Figure 14**. If you do not see any logs, you can try to disconnect the USB cable and battery, then reconnect again with the battery first. If you see that the LED of the Notecard on the RAK13102 is blinking after a few seconds, the module is now initialized properly.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13102/quickstart/basic_log.png" 
-  figureCount="14"
-  caption="RAK13102 initial logs" 
-   width="100%"
-/>
+> **Image:** RAK13102 initial logs
 
-<RkBottomNav/>

@@ -11,9 +11,6 @@ slug: /product-categories/wisduo/rak3172-sip/application-note/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3172-SiP WisDuo LPWAN SiP Application Note
 
 ## Overview
@@ -30,21 +27,11 @@ This document discusses the following:
 
 ### RF Harmonic Compression
 
-Place the harmonic suppression circuit close to the module's RF output. This might be necessary depending on your EMI test results. Default values are L102&nbsp;=&nbsp;8.2&nbsp;nH&nbsp;Murata&nbsp;LQW15AN, C125&nbsp;=&nbsp;3.3&nbsp;pF, and C126&nbsp;=&nbsp;3.3&nbsp;pF.
+Place the harmonic suppression circuit close to the module's RF output. This might be necessary depending on your EMI test results. Default values are L102 = 8.2 nH Murata LQW15AN, C125 = 3.3 pF, and C126 = 3.3 pF.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/rf-harmonic.png"
-  width="90%"
-  caption="Harmonic Compression Circuit"
-  zoomMode={true}
-/>
+> **Image:** Harmonic Compression Circuit
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/harmonic_suppression.png"
-  width="60%"
-  caption="Harmonic Compression Circuit"
-  zoomMode={true}
-/>
+> **Image:** Harmonic Compression Circuit
 
 ### RF Switch Control Table
 
@@ -55,56 +42,30 @@ PA0 and PA1 are internally connected and control the RF path.
 | High         | Low          | Off              | On                |
 | Low          | High         | On               | Off               |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/rf-switch-control-table.png"
-  width="45%"
-  caption="RF Switch"
-  zoomMode={true}
-/>
+> **Image:** RF Switch
 
 ### Power Considerations
 
-An independent LDO Buck or Boost converter for Vin regulated to VDD (3.3&nbsp;V) is recommended for RAK3172-SiP. Place the LDO Buck or Boost Converter as close as possible to the RAK3172-SiP power-related pins.
+An independent LDO Buck or Boost converter for Vin regulated to VDD (3.3 V) is recommended for RAK3172-SiP. Place the LDO Buck or Boost Converter as close as possible to the RAK3172-SiP power-related pins.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/power_pin_2.png"
-  width="25%"
-  caption="Power pins"
-  zoomMode={true}
-/>
+> **Image:** Power pins
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/power_pin_1.png"
-  width="60%"
-  caption="Bypass Capacitors"
-  zoomMode={true}
-/>
+> **Image:** Bypass Capacitors
 
 ### Battery Protection
 
 This is a safety feature you can add to the module. This will not affect the core functionality of the SiP module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/battery_protection.png"
-  width="35%"
-  caption="Battery Protection Circuit"
-  zoomMode={true}
-/>
+> **Image:** Battery Protection Circuit
 
 ### Inductor Selection
 
-The L1 (15&nbsp;μH) consideration and recommendation:
-- DCR (max) = 2&nbsp;ohms
-- Idc (min) = 100&nbsp;mA
-- Freq (min) = 20&nbsp;MHz
+The L1 (15 μH) consideration and recommendation:
+- DCR (max) = 2 ohms
+- Idc (min) = 100 mA
+- Freq (min) = 20 MHz
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/inductor_selection.png"
-  width="60%"
-  caption="Inductor Selection"
-  zoomMode={true}
-/>
+> **Image:** Inductor Selection
 
 | Reference       | Manufacturer | Value (uH) | Idc max (mA) | Freq (Mhz) | DCR (ohm) | Package (mm)       |
 | --------------- | ------------ | ---------- | ------------ | ---------- | --------- | ------------------ |
@@ -117,22 +78,12 @@ The L1 (15&nbsp;μH) consideration and recommendation:
 ### ST-LINK SWD Port
 Connect these three pins, SWDIO, SWCLK, and NRST, with the ST-LINK debugger.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/stlink.png"
-  width="40%"
-  caption="ST-Link Connection"
-  zoomMode={true}
-/>
+> **Image:** ST-Link Connection
 
 ### NRST
 The system reset is active low. Ensure to place R24/C16 as close as possible to the RAK3172-SIP module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/nrst.png"
-  width="40%"
-  caption="NRST pin"
-  zoomMode={true}
-/>
+> **Image:** NRST pin
 
 ## Power Supply Management
 
@@ -140,72 +91,62 @@ The RAK3172-SiP has two embedded regulators: one LDO and one DC/DC (SMPS). The S
 
 ### Power Supply Voltages
 
-The devices require a VDD operating voltage supply between 1.8&nbsp;V and 3.6&nbsp;V. Several independent supplies (VDDSMPS, VFBSMPS, VDDA, VDDRF) may be provided for specific peripherals.
+The devices require a VDD operating voltage supply between 1.8 V and 3.6 V. Several independent supplies (VDDSMPS, VFBSMPS, VDDA, VDDRF) may be provided for specific peripherals.
 
-- **VDD = 1.8&nbsp;V to 3.6&nbsp;V**
+- **VDD = 1.8 V to 3.6 V**
 
 VDD is the external power supply for the I/Os, the system's analog blocks such as reset, power management, internal clocks, and low-power regulators.  It is provided externally through VDD pins.
 
-- **VDDSMPS = 1.8&nbsp;V to 3.6&nbsp;V**
+- **VDDSMPS = 1.8 V to 3.6 V**
 
 VDDSMPS is the external power supply for the SMPS step-down converter. It is provided externally through the VDDSMPS supply pin and must be connected to the same supply as VDD.
 
-- **VFBSMPS = 1.45&nbsp;V to 1.62&nbsp;V (1.55&nbsp;V typical)**
+- **VFBSMPS = 1.45 V to 1.62 V (1.55 V typical)**
 
 VFBSMPS is the external power supply for the main system regulator. It is provided externally via the VFBSMPS pin and supplied through an SMPS step-down converter.
 
-- **VDDA = 0&nbsp;V to 3.6&nbsp;V**
+- **VDDA = 0 V to 3.6 V**
 
 VDDA is the external analog power supply for A/D converters, D/A converters, voltage reference buffers, and comparators. The VDDA voltage level is independent of the VDD voltage (refer to the power-up and power-down sequence section) and should preferably be connected to VDD when these peripherals are not in use.
 
-*DAC minimum voltage is 1.71&nbsp;V without buffer and 1.8&nbsp;V with buffer. COMP and ADC minimum voltages are 1.62&nbsp;V. VREFBUF minimum voltage is 2.4&nbsp;V.*
+*DAC minimum voltage is 1.71 V without buffer and 1.8 V with buffer. COMP and ADC minimum voltages are 1.62 V. VREFBUF minimum voltage is 2.4 V.*
 
-- **VDDRF = 1.8&nbsp;Vto 3.6&nbsp;V**
+- **VDDRF = 1.8 Vto 3.6 V**
 
 VDDRF is an external power supply for the radio. It is provided externally via the VDDRF pin and must be connected to the same supply as VDD.
 
-- **VBAT = 1.55&nbsp;Vto 3.6&nbsp;V**
+- **VBAT = 1.55 Vto 3.6 V**
 
-VBAT is the power supply for the RTC, TAMP, an external clock 32&nbsp;kHz oscillator, and backup registers (through a power switch) when VDD is not present.
+VBAT is the power supply for the RTC, TAMP, an external clock 32 kHz oscillator, and backup registers (through a power switch) when VDD is not present.
 
 - **VREF-, VREF+**
 
 VREF+ is the input reference voltage for ADC and DAC. It is also the output of the internal voltage reference buffer when enabled.
-   - When VDDA < 2&nbsp;V, VREF+ must be equal to VDDA.
-   - When VDDA ≥ 2&nbsp;V, VREF+ must be between 2&nbsp;V and VDDA.
+   - When VDDA < 2 V, VREF+ must be equal to VDDA.
+   - When VDDA ≥ 2 V, VREF+ must be between 2 V and VDDA.
 
 VREF+ can be grounded when ADC/DAC is not active. The internal voltage reference buffer supports the following output voltages, configured with VRS bit in the VREFBUF_CSR register:
-   - VREF+ around 2.048&nbsp;V: this requires VDDA ≥ 2.4&nbsp;V.
-   - VREF+ around 2.5&nbsp;V: this requires VDDA ≥ 2.8&nbsp;V.
+   - VREF+ around 2.048 V: this requires VDDA ≥ 2.4 V.
+   - VREF+ around 2.5 V: this requires VDDA ≥ 2.8 V.
 
 **Power Up and Down Sequence**
 
 During power up and power down, the following power sequence is required:
-1.  When VDD < 1&nbsp;Vother, power supplies (VDDA) must remain below VDD + 300&nbsp;mV.
-During power down, VDD can temporarily become lower than other supplies only if the energy provided to the device remains below 1&nbsp;mJ. This allows external decoupling capacitors to be discharged with different time constants during this transient phase.
+1.  When VDD < 1 Vother, power supplies (VDDA) must remain below VDD + 300 mV.
+During power down, VDD can temporarily become lower than other supplies only if the energy provided to the device remains below 1 mJ. This allows external decoupling capacitors to be discharged with different time constants during this transient phase.
 
-2.  When VDD > 1&nbsp;V, all other power supplies (VDDA) become independent.
+2.  When VDD > 1 V, all other power supplies (VDDA) become independent.
 An embedded linear voltage regulator is used to supply the internal digital power VCORE. VCORE powers the digital peripherals, SRAM1 and SRAM2. The flash memory is powered by VCORE and VDD. VCORE is split into two parts: a VDDO part and an interruptible part, VDDI.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/power_up_down.png"
-  width="50%"
-  caption="RAK3172-SiP Power Section"
-  zoomMode={true}
-/>
+> **Image:** RAK3172-SiP Power Section
 
 **VDDPA**
 
-To transmit high output power up to + 22&nbsp;dBm, VDDPA must be supplied directly from VDD on the VDDSMPS pin, as shown in **Figure 11**.
+To transmit high output power up to + 22 dBm, VDDPA must be supplied directly from VDD on the VDDSMPS pin, as shown in **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/vddpa.png"
-  width="50%"
-  caption="VDDPA Supply"
-  zoomMode={true}
-/>
+> **Image:** VDDPA Supply
 
-The output power range is programmable in 32 steps of 1&nbsp;dB. The power amplifier ramping timing is also programmable, allowing adaptation to meet radio regulation requirements. The table below gives the maximum transmitter output power versus the VDDPA supply level.
+The output power range is programmable in 32 steps of 1 dB. The power amplifier ramping timing is also programmable, allowing adaptation to meet radio regulation requirements. The table below gives the maximum transmitter output power versus the VDDPA supply level.
 
 | VDDPA Supply (V) | Transmit Output Power (dBm) |
 | ---------------- | --------------------------- |
@@ -221,12 +162,7 @@ There are two different supply configurations, as shown in **Figure 12**.
 1.  By the MCU using the SMPSEN setting in PWR control register 5 (PWR_CR5), which depends on the MCU system operating mode (Run, Stop, Standby, or Shutdown).
 2.  By the sub-GHz radio using SetRegulatorMode() command and the sub-GHz radio operating mode (Sleep, Calibrate, Standby, Standby with HSE32 or Active).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/ldo_smps.png"
-  width="60%"
-  caption="LDO and SMPS configurations"
-  zoomMode={true}
-/>
+> **Image:** LDO and SMPS configurations
 
 **Power Supply Related Details**
 - After any POR and NRST reset, the LDO mode is selected.  SMPS selection has priority over LDO selection.
@@ -248,12 +184,14 @@ Before enabling the SMPS, the SMPS clock detection must be enabled in the Sub-GH
 The module integrates a power-on/power-down reset, coupled with brownout reset (BOR) circuitry.
 
 - **BOR (Brownout Reset)**
-<br/>
+
 BOR0 level cannot be disabled. Other BOR levels can be enabled via user option. When enabled, BOR is active in all power modes except shutdown. Five BOR thresholds are selectable through option bytes.
 
-During power-on, BOR keeps the device under reset until the supply voltage VDD reaches the specified VBORx threshold: <br/>
-  &nbsp;&nbsp;&nbsp; • When VDD drops below the selected threshold, a device reset is generated. <br/>
-  &nbsp;&nbsp;&nbsp; • When VDD is above the VBORx upper limit, the device reset is released and the system can start.
+During power-on, BOR keeps the device under reset until the supply voltage VDD reaches the specified VBORx threshold: 
+
+      • When VDD drops below the selected threshold, a device reset is generated. 
+
+      • When VDD is above the VBORx upper limit, the device reset is released and the system can start.
 
 - **PVD (Programmable Voltage Detector)**
 
@@ -275,12 +213,12 @@ Two embedded linear voltage regulators supply all digital circuitry, except for 
 
 When MR is used, a dynamic voltage scaling is proposed to optimize power as follows:
   - Range 1: High-performance range
-      - The system clock frequency can be up to 48&nbsp;MHz.
+      - The system clock frequency can be up to 48 MHz.
       - The Flash memory access time for read access is minimized.
       - Write and erase operations are possible.
 
   - Range 2: Low-power range
-      - The system clock frequency can be up to 16&nbsp;MHz.
+      - The system clock frequency can be up to 16 MHz.
       - The flash memory access time for read access is increased as compared to range 1.
       - Write and erase operations are possible.
 
@@ -310,7 +248,7 @@ CPU clock off; all peripherals, including CPU core peripherals (such as NVIC, Sy
 
 - **Low-Power Run Mode (LPRun):**
 
-When the system clock frequency is reduced below 2&nbsp;MHz, the code is executed from the SRAM or the Flash memory. The regulator is in low-power mode to minimize the operating current.
+When the system clock frequency is reduced below 2 MHz, the code is executed from the SRAM or the Flash memory. The regulator is in low-power mode to minimize the operating current.
 
 - **Low-Power Sleep Mode (LPSleep):**
 
@@ -322,99 +260,68 @@ The contents of SRAM1, SRAM2, and all registers are retained. All clocks in the 
 
 - **Stop 1 Mode:**
 
-Stop 1 offers the largest number of active peripherals and wake-up sources, a smaller wake-up time, but higher consumption compared with Stop 2. In Stop 0 mode, the main regulator remains on, resulting in the fastest wake-up time but much higher consumption. The active peripherals and wake-up sources are the same as in Stop 1 mode, which uses the low-power regulator. When exiting Stop 0 or Stop 1 mode, the system clock can be either MSI up to 48&nbsp;MHz or HSI16, depending on the software configuration.
+Stop 1 offers the largest number of active peripherals and wake-up sources, a smaller wake-up time, but higher consumption compared with Stop 2. In Stop 0 mode, the main regulator remains on, resulting in the fastest wake-up time but much higher consumption. The active peripherals and wake-up sources are the same as in Stop 1 mode, which uses the low-power regulator. When exiting Stop 0 or Stop 1 mode, the system clock can be either MSI up to 48 MHz or HSI16, depending on the software configuration.
 
 - **Stop 2 Mode:**
 
 In Stop 2 mode, part of the VCORE domain is powered off. Only SRAM1, SRAM2, the CPU, and some peripherals retain their contents. All clocks in the VCORE domain are stopped. The PLL, MSI, HSI16, and HSE32 are disabled.
 
 LSI and LSE may remain active. The RTC may remain active (Stop 2 mode with RTC, Stop 2 mode without RTC). The sub-GHz radio may also remain active independently of the CPU. Some peripherals with wake-up capability may enable the HSI16 RC during Stop 2 mode to detect their wake-up condition.
-The system clock, when exiting Stop 2 mode, may be either MSI (up to 48&nbsp;MHz) or HSI16, depending on the software configuration.
+The system clock, when exiting Stop 2 mode, may be either MSI (up to 48 MHz) or HSI16, depending on the software configuration.
 
 - **Standby Mode:**
 
 The VCORE domain is powered off. However, SRAM2 content can be preserved as follows:
 
-&nbsp;&nbsp;&nbsp;• Standby mode with SRAM2 retention: Set the RRS bit in PWR control register 3 (PWR_CR3). SRAM2 is supplied by the low-power regulator.  Standby mode without SRAM2 retention: Clear the RRS bit in PWR_CR3. The main and low-power regulators are powered off. All VCORE domain clocks (PLL, MSI, HSI16, and HSE32) stop. LSI and LSE may remain active.
+   • Standby mode with SRAM2 retention: Set the RRS bit in PWR control register 3 (PWR_CR3). SRAM2 is supplied by the low-power regulator.  Standby mode without SRAM2 retention: Clear the RRS bit in PWR_CR3. The main and low-power regulators are powered off. All VCORE domain clocks (PLL, MSI, HSI16, and HSE32) stop. LSI and LSE may remain active.
 
-&nbsp;&nbsp;&nbsp;• The RTC may remain active (Standby mode with or without RTC). The sub-GHz radio and PVD may also remain active if enabled independently.  In Standby mode, the PVD uses its lowest level.  Upon exiting Standby mode, the system clock is MSI at 4 MHz.
-
+   • The RTC may remain active (Standby mode with or without RTC). The sub-GHz radio and PVD may also remain active if enabled independently.  In Standby mode, the PVD uses its lowest level.  Upon exiting Standby mode, the system clock is MSI at 4 MHz.
 
 - **Shutdown Mode:**
 
-The VCORE domain is powered off. All clocks in the VCORE domain are stopped. The PLL, MSI, HSI16, LSI, and HSE32 are disabled. The LSE can be kept running. The system clock when exiting shutdown mode is the MSI at 4&nbsp;MHz. In this mode, supply voltage monitoring is disabled, and product behavior is not guaranteed in case of a power voltage drop.
-
+The VCORE domain is powered off. All clocks in the VCORE domain are stopped. The PLL, MSI, HSI16, LSI, and HSE32 are disabled. The LSE can be kept running. The system clock when exiting shutdown mode is the MSI at 4 MHz. In this mode, supply voltage monitoring is disabled, and product behavior is not guaranteed in case of a power voltage drop.
 
 ## Layout Guideline
 
 - **Power Trace Management**
-    - Power traces should be directly connected to the regulator outputs, and then add 4.7&nbsp;µF bypass capacitors close to the module on each power trace.
+    - Power traces should be directly connected to the regulator outputs, and then add 4.7 µF bypass capacitors close to the module on each power trace.
     - Never let power traces cross each other or high-speed signal traces.
-
 
 - **Ground Management**
     - Ensure (1) GND polygon regions used for the module are as complete as possible and (2) well-established GND via holes are present, to maintain good heat dissipation and RF performance.
-    - The reference ground planes of RF traces need additional via holes; we recommend a distance between each of less than 1/8&nbsp;λ.
-
+    - The reference ground planes of RF traces need additional via holes; we recommend a distance between each of less than 1/8 λ.
 
 - **RF Trace Management**
-    - The CPWG model is recommended for RF trace calculation because of its superior EMC and RF capabilities.  Also, discuss with the PCB manufacturer how to evaluate and maintain the RF trace at 50&nbsp;Ω.
+    - The CPWG model is recommended for RF trace calculation because of its superior EMC and RF capabilities.  Also, discuss with the PCB manufacturer how to evaluate and maintain the RF trace at 50 Ω.
     - The recommended layout for RF trace bends is to maintain the same width in the corner.
 
-
-    <RkImage
-      src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/rf_trace.png"
-      width="60%"
-      caption="RF Trace"
-    />
+    
+> **Image:** RF Trace
 
     - The values of a and b will affect each other, it is best to control it not to be too wide from the width and gap of the output pad of the module
 
-    <RkImage
-      src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/pcb_rf_trace.png"
-      width="30%"
-      caption="PCB RF Trace"
-    />
+    
+> **Image:** PCB RF Trace
 
 - **RF Matching Circuit**
 
-    - In Pi-matching circuits, it is advised to place them close to the LoRa antenna. For 50&nbsp;Ω matching antenna applications, connect a 100&nbsp;pF capacitor to the RF trace.
+    - In Pi-matching circuits, it is advised to place them close to the LoRa antenna. For 50 Ω matching antenna applications, connect a 100 pF capacitor to the RF trace.
 
+    
+> **Image:** Pi-matching Circuit
 
-    <RkImage
-      src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/pi_matching.png"
-      width="30%"
-      caption="Pi-matching Circuit"
-    />
+    - If you choose a metal coil antenna, the impedance will be lower ( < 50 Ω) and it is inductive. Its R+jL is easier to fall on the upper left of the Smith Chart, so series inductance and parallel capacitance are the chosen matching method, but sometimes for bandwidth consideration, multi-level matching is also used.
 
-
-    - If you choose a metal coil antenna, the impedance will be lower ( < 50&nbsp;Ω) and it is inductive. Its R+jL is easier to fall on the upper left of the Smith Chart, so series inductance and parallel capacitance are the chosen matching method, but sometimes for bandwidth consideration, multi-level matching is also used.
-
-    <RkImage
-      src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/metal_coil_match.png"
-      width="30%"
-      caption="Matching Circuit for Coil Antenna"
-    />
+    
+> **Image:** Matching Circuit for Coil Antenna
 
 - **ESD Protection**
-    If used in a harsh ESD environment, the following example is a reference design for ESD protection. The recommended part is **Semtech - Rclamp2451z (1-Line, 24&nbsp;V)**.
+    If used in a harsh ESD environment, the following example is a reference design for ESD protection. The recommended part is **Semtech - Rclamp2451z (1-Line, 24 V)**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/esd.png"
-  width="60%"
-  caption="ESD Protection"
-  zoomMode={true}
-/>
+> **Image:** ESD Protection
 
 - **Shielding Cover**
     - Shielding Cover design is recommended for EMI suppression.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/application-note/shield.png"
-  width="30%"
-  caption="EMI Sheild"
-  zoomMode={true}
-/>
+> **Image:** EMI Sheild
 
-
-<RkBottomNav/>

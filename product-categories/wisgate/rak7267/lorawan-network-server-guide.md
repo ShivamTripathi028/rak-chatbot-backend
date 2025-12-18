@@ -12,9 +12,6 @@ sidebar_label: LNS Guide
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7267 WisGate Soho Pro LoRaWAN Network Server Guide
 
 This manual provides you with operation guidance for connecting the gateway to different LoRaWAN network servers.
@@ -30,21 +27,13 @@ This section provides an example demonstration on how to interconnect your RAK c
 
 ### Set the Gateway Work Mode
 
-1. Configure **Work mode** to **Built-in network server**. Navigate to **LoRa &gt; Configuration**. For **Work mode**, select **Built-in network server**.
+1. Configure **Work mode** to **Built-in network server**. Navigate to **LoRa > Configuration**. For **Work mode**, select **Built-in network server**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/network_server_settings.png"
-  width="100%"
-  caption="Set the gateway work mode"
-/>
+> **Image:** Set the gateway work mode
 
 2. Select the log level and frequency band.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/band_channel_select.png"
-  width="100%"
-  caption="Configure log level and frequency band"
-/>
+> **Image:** Configure log level and frequency band
 
 :::tip NOTE
 You can expand the **View detailed regional parameters of the frequency plan** option to configure detailed regional parameters.
@@ -52,22 +41,14 @@ You can expand the **View detailed regional parameters of the frequency plan** o
 
 ### Create an Application
 
-1. Navigate to **LoRa &gt; Applications** tab.
+1. Navigate to **LoRa > Applications** tab.
 2. Click the **Add application** button or the **add one now** link to add a new application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/add-application.png"
-  width="100%"
-    caption="Add an application"
-/>
+> **Image:** Add an application
 
 3. After the page jumps, configure the following information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/set-application-parameters.png"
-  width="100%"
-    caption="Set parameters"
-/>
+> **Image:** Set parameters
 
 + **Application name**: Name of the application
 
@@ -77,19 +58,13 @@ You can expand the **View detailed regional parameters of the frequency plan** o
 
   + **Unified Application key**: All devices will use the same application key. Selecting this option, then the application key field will appear, where you can type in an application key or click the **Autogenerate** button to generate a key. This value needs to be consistent with the value from the end device, so either obtain it by querying the end device, or auto-generate it and synchronously change the corresponding value on the device.
 
-    <RkImage
-      src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/unified-application-key.png"
-      width="50%"
-        caption="Configure unified application key"
-    />
+    
+> **Image:** Configure unified application key
 
     After enabling the **Auto Add Device** option, you need to configure the **Application EUI** option. This value needs to be consistent with the value from the end device, so either obtain it by querying the end device, or auto-generate it and synchronously change the corresponding value of the device. After the application EUI and key verification, the device will be automatically added to the application.
 
-    <RkImage
-      src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/auto-add-device.png"
-      width="50%"
-        caption="Enable auto add device"
-    />
+    
+> **Image:** Enable auto add device
 
   + **Separate Application keys**: Each device has its own application key. Add the key when registering the device.
 
@@ -97,13 +72,9 @@ You can expand the **View detailed regional parameters of the frequency plan** o
 
 ### Add End Devices
 
-1. Navigate to **LoRa &gt; Applications** tab.
+1. Navigate to **LoRa > Applications** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/application-list.png"
-  width="100%"
-    caption="Application list"
-/>
+> **Image:** Application list
 
 2. In the application list, click the newly created application and enter the **End devices** tab.
 
@@ -111,20 +82,14 @@ You can expand the **View detailed regional parameters of the frequency plan** o
 If you have enabled **Auto Add Device**, the device will be automatically registered with the adding request. Otherwise, you need to refer to the next step.
 :::
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/device-list.png"
-  width="100%"
-    caption="Device list"
-/>
+ 
+> **Image:** Device list
 
 3. Click the **Add end device** button.
 4. In the **End device information** interface, enter the following information.
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/add-new-device.png"
-  width="100%"
-    caption="Add new device"
-/>
+ 
+> **Image:** Add new device
 
 + **Activation Mode**: OTAA or ABP. This value needs to be consistent with the value from the end device. The ABP mode will pop up two additional fields, **Application Session Key** and **Network Session Key**.
 + **End device (group) name**: Name of the end device (group).
@@ -132,15 +97,11 @@ If you have enabled **Auto Add Device**, the device will be automatically regist
 + **Class**: This value needs to be consistent with the value from the end device.
 + **Frame Counter Width**: Keep the default value.
 
-
 5. Click **Add end devices** to enter the device adding page.
 6. In the **Adding end devices** interface, enter the device EUI in the **End Device EUI (main)** field and click the **Add to End Devices list** button.
 
- <RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/add-to-devicelist.png"
-  width="100%"
-    caption="Add new device to End Devices list"
-/>
+ 
+> **Image:** Add new device to End Devices list
 
 :::tip NOTE
 
@@ -152,15 +113,11 @@ If you have enabled **Auto Add Device**, the device will be automatically regist
 
 7. Click **Add end devices** to add the device to the application. Execute join request on the node side.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/device-online.png" width="100%"  caption="Device online"
-/>
+> **Image:** Device online
 
 By following the steps in the previous sections, you should now have your device registered. If you click on the **Device EUI**, you will go to the corresponding **Configuration** tab. Click the **Packet capture** button. Here you can monitor the data that the application is exchanging in real time.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/built-in-ns/data-packet.png" width="100%"  caption="End Device Packet Capture"
-/>
+> **Image:** End Device Packet Capture
 
 ## AWS IoT Core for LoRaWAN
 
@@ -174,9 +131,9 @@ Adding an IAM role allows the Configuration and Update Server (CUPS) to manage t
 
 This procedure only needs to be done once, but it must be performed before a LoRaWAN gateway attempts to connect with AWS IoT Core for LoRaWAN.
 
-1. Go to the <a href="https://console.aws.amazon.com/iam/home#/roles" target="_blank">IAM Roles</a> page on the IAM console.
+1. Go to the [IAM Roles](https://console.aws.amazon.com/iam/home#/roles) page on the IAM console.
 2. Choose **Create role**.
-3. On the Create Role page, choose **AWS account &gt; Another AWS account**.
+3. On the Create Role page, choose **AWS account > Another AWS account**.
 4. Enter your **Account ID**, then select **Next**.
 5. In the search box next to the filter policies, type **_AWSIoTWirelessGatewayCertManager_**.
 
@@ -184,7 +141,7 @@ This procedure only needs to be done once, but it must be performed before a LoR
 
     - If the policy does not exist, create one.
 
-        - Go to the <a href="https://console.aws.amazon.com/iam/home#/policies" target="_blank">IAM Policies</a> page. Choose **Create Policy**, then select the **JSON** tab to open the policy editor.
+        - Go to the [IAM Policies](https://console.aws.amazon.com/iam/home#/policies) page. Choose **Create Policy**, then select the **JSON** tab to open the policy editor.
         - Replace the existing template with a trust policy document.
 
      ```json
@@ -255,16 +212,16 @@ You must not use a different name.  This is for consistency with future releases
      At this point, you have created the **_IoTWirelessGatewayCertManagerRole_** and you won't need to do this again.
 
 :::tip NOTE
-The examples in this document are intended only for development environments. All devices in your fleet must have credentials with privileges that authorize only intended actions on specific resources. The specific permission policies may vary for your use case. Identify the permission policies that best meet your business's and security requirements. For more information, refer to <a href="https://docs.aws.amazon.com/iot/latest/developerguide/example-iot-policies.html"><b>Example Policies</b></a> and <a href="https://docs.aws.amazon.com/iot/latest/developerguide/security-best-practices.html"><b>Security Best Practices</b></a>.
+The examples in this document are intended only for development environments. All devices in your fleet must have credentials with privileges that authorize only intended actions on specific resources. The specific permission policies may vary for your use case. Identify the permission policies that best meet your business's and security requirements. For more information, refer to [**Example Policies**](https://docs.aws.amazon.com/iot/latest/developerguide/example-iot-policies.html) and [**Security Best Practices**](https://docs.aws.amazon.com/iot/latest/developerguide/security-best-practices.html).
 :::
 
 #### Add IAM Role for Destination to AWS IoT Core for LoRaWAN
 
-<b> Creating a Policy </b>
+** Creating a Policy **
 
 Creating a policy grants the role permissions to describe the IoT endpoint and publish messages to AWS IoT.
 
-1. Go to the <a href="http://console.aws.amazon.com/iam" target="_blank">IAM console</a>.
+1. Go to the [IAM console](http://console.aws.amazon.com/iam).
 2. Choose **Policies** from the navigation pane.
 3. Choose **Create Policy**, then choose the **JSON** tab to open the policy editor. Replace the existing template with this trust policy document:
 
@@ -290,11 +247,11 @@ Creating a policy grants the role permissions to describe the IoT endpoint and p
 6. For **Description**, enter a description of your choice.
 7. Choose **Create policy**.  You will see a confirmation message indicating that the policy has been created.
 
-<b> Creating the Role </b>
+** Creating the Role **
 
-1. In the <a href="http://console.aws.amazon.com/iam" target="_blank">IAM console</a>, choose **Roles** from the navigation pane to open the Roles page.
+1. In the [IAM console](http://console.aws.amazon.com/iam), choose **Roles** from the navigation pane to open the Roles page.
 2. Choose **Create Role**.
-3. On the Create Role page, choose **AWS account &gt; Another AWS account**.
+3. On the Create Role page, choose **AWS account > Another AWS account**.
 4. Enter your **Account ID**, then select **Next**.
 5. Search for the IAM policy you just created by entering the policy name in the search bar.
 6. In the search results, select the checkbox corresponding to the policy.
@@ -303,11 +260,11 @@ Creating a policy grants the role permissions to describe the IoT endpoint and p
 9. For **Description**, enter a description of your choice.
 10. Choose **Create role**.  You will see a confirmation message indicating that your role has been created.
 
-<b> Updating your Trust Policy</b>
+** Updating your Trust Policy**
 
 Update your role's trust relationship to grant AWS IoT Core for LoRaWAN permission to assume this IAM role when delivering messages from devices to your account.
 
-1. In the <a href="http://console.aws.amazon.com/iam" target="_blank">IAM console</a>, choose **Roles** from the navigation pane to open the Roles page.
+1. In the [IAM console](http://console.aws.amazon.com/iam), choose **Roles** from the navigation pane to open the Roles page.
 2. Enter the name of the role you created earlier in the search window, and click on the role name in the search results. This opens up the **Summary** page.
 3. Choose the **Trust relationships** tab to navigate to the Trust relationships page.
 4. Click **Edit trust policy**. The principal AWS role in your trust policy document defaults to root and must be changed. Replace the existing policy with this:
@@ -346,7 +303,7 @@ To complete setting up your gateway, you need the following:
 
 To register the gateway with AWS IoT Core for LoRaWAN, execute these steps:
 
-1. Go to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>.
+1. Go to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. Select **LPWAN devices** in the navigation panel on the left.
 3. Choose **Gateways**, and then click **Add gateway**.
 4. In the **Add gateway** section, fill in the **Gateway's EUI** and **Frequency band (RF Region)** fields.
@@ -361,47 +318,26 @@ To register the gateway with AWS IoT Core for LoRaWAN, execute these steps:
 
 ### Set Up the Gateway
 
-1. Using your preferred Web browser, access the gateway. To access the gateway, see the <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart/" target="_blank">Quick Start Guide</a>.
+1. Using your preferred Web browser, access the gateway. To access the gateway, see the [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/1-web-user-interface-log-in.png"
-  width="100%"
-  caption="Web User Interface Log-in"
-/>
-
+> **Image:** Web User Interface Log-in
 
 2. Configure **Network Mode** to **Basics Station**. Navigate to **LoRa**.
 3. For **Work mode**, select **Basics station** and click **Configure Basics Station server setup** to expand the Basics Station settings.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/3-basics-station-work-mode.png"
-  width="100%"
-  caption="Basics Station work mode"
-/>
+> **Image:** Basics Station work mode
 
 4. Select **LNS Server** from Server, then choose **TLS Server and Client Authentication** from Authentication Mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/4-configuring-network-mode-to-basics-station.png"
-  width="70%"
-  caption="Configuring Network Mode to Basics Station"
-/>
+> **Image:** Configuring Network Mode to Basics Station
 
 5. Configure URI, Port, and Authentication Mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/5-configuring-uri-port-and-authentication-mode.png"
-  width="100%"
-  caption="Configuring URI, Port, and Authentication Mode"
-/>
+> **Image:** Configuring URI, Port, and Authentication Mode
 
 6. Click **Save**. Check if the gateway is online in AWS IoT console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/6-verifying-operation.png"
-  width="100%"
-  caption="Verifying Operation"
-/>
+> **Image:** Verifying Operation
 
 ### Add a LoRaWAN Device to AWS IoT
 
@@ -430,24 +366,16 @@ AWS IoT Core for LoRaWAN supports device profiles and service profiles. Device p
 
 Some predefined profiles are available for device and service profiles. Before proceeding, verify that these profile settings match the devices you will set up to work with AWS IoT Core for LoRaWAN.
 
-1. Navigate to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>. In the navigation pane, choose **LPWAN devices** then click **Profiles**.
+1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot). In the navigation pane, choose **LPWAN devices** then click **Profiles**.
 2. In the **Device Profiles** section, there are some pre-defined profiles listed.
 3. Check each of the profiles to determine if one of them will work for you. If not, select **Add device profile** and set up the parameters as needed. For US915 as an example:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/7-adding-the-device-profile.png"
-  width="70%"
-  caption="Adding the Device Profile"
-/>
+> **Image:** Adding the Device Profile
 
 4. Click **Add device profile** once you have set a device profile that will work for you.
 5. In the **Service Profiles** section, click **Add service profile** and set up the parameters as needed. As an example, the default service profile parameters are shown below. However, only the **_Add gateway meta data_** setting can be changed at this time.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/8-adding-the-service-profile.png"
-  width="60%"
-  caption="Adding the Service Profile"
-/>
+> **Image:** Adding the Service Profile
 
 6. Proceed only if you have a device and service profile that will work for you.
 
@@ -455,11 +383,11 @@ Some predefined profiles are available for device and service profiles. Before p
 
 Because most LoRaWAN devices do not send data to AWS IoT Core for LoRaWAN in a format that can be consumed by AWS services, traffic must first be sent to a Destination. A Destination represents the AWS IoT rule that processes a device's data for use by AWS services. This AWS IoT rule contains the SQL statement that selects the device's data and the topic rule actions that send the result of the SQL statement to the services that will use it.
 
-For more information on Destinations, refer to the AWS <a href="https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan.html" target="_blank">LoRaWAN Developer Guide</a>.
+For more information on Destinations, refer to the AWS [LoRaWAN Developer Guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan.html).
 
 A destination consists of a Rule and a Role. To set up the destination, execute the following steps:
 
-1. Navigate to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>. In the navigation pane, choose **LPWAN devices**, and then **Destinations**.
+1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot). In the navigation pane, choose **LPWAN devices**, and then **Destinations**.
 2. Choose **Add Destination**.
 3. For the **Destination name**, enter **_ProcessLoRa_**, and then add an appropriate description under **Destination description – optional**.
 
@@ -470,19 +398,15 @@ The Destination name can be anything. For getting started and consistency, choos
 4. For **Rule name**, enter **_LoRaWANRouting_**. Ignore the section **Rules configuration – Optional** for now.  The Rule will be set up later in the "Hello World" sample application. See Create the IoT Rule for the destination.
 5. In the **Permissions** section, choose **Select an existing service role** and select the IAM role you had created earlier, from the drop-down.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/9-adding-destination.png"
-  width="60%"
-  caption="Adding Destination"
-/>
+> **Image:** Adding Destination
 
 6. Choose **Add Destination**.  You will see a message "_Destination added_", indicating the destination has been successfully added.
 
 #### Register the Device
 
-Now, register an endpoint device with AWS IoT Core for LoRaWAN as follows. Before adding a device to AWS IoT, retrieve the **DevEUI**, **AppEUI**, and **AppKEY** from the end device's console. The RAK3172 device used in this example needs to query device information through <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">AT commands</a>.
+Now, register an endpoint device with AWS IoT Core for LoRaWAN as follows. Before adding a device to AWS IoT, retrieve the **DevEUI**, **AppEUI**, and **AppKEY** from the end device's console. The RAK3172 device used in this example needs to query device information through [AT commands](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/).
 
-1. Go to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>.
+1. Go to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. Select **LPWAN devices** in the navigation panel on the left.
 3. Select **Devices**, then choose **Add wireless device**.
 4. On the **Add device** page, select the LoRaWAN specification version in the drop-down under **Wireless device specification**.
@@ -497,21 +421,13 @@ Compare your device details to ensure that the device profile is correct. If the
 
 9. Choose the destination you created earlier (*ProcessLoRa*) from the drop-down under **Choose destination**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/10-lorawan-specifications-and-wireless-device-configuration.png"
-  width="80%"
-  caption="LoRaWAN specifications and wireless device configuration"
-/>
+> **Image:** LoRaWAN specifications and wireless device configuration
 
 10. Click **Next**.
 11. Choose **Add device**. You will see a message saying "*Wireless device added*", indicating that your device has been set up successfully.
 12. Restart the end device, and it should join the AWS IoT LoRaWAN server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/13-joined-device.png"
-  width="80%"
-  caption="Joined Device"
-/>
+> **Image:** Joined Device
 
 ### Verifying Operation
 
@@ -519,18 +435,13 @@ Once setup is complete, provisioned OTAA devices can join the network and begin 
 
 Instructions for a sample Hello World application are given below, assuming that the device has joined and is capable of sending uplink traffic.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/14-sending-uplink-architecture.png"
-  width="100%"
-  caption="Sending Uplink Architecture"
-/>
+> **Image:** Sending Uplink Architecture
 
 #### Create a Lambda Function for Destination Rule
 
 Create the lambda function to process device messages processed by the destination rule.
 
-1. Go to the <a href="http://console.aws.amazon.com/lambda" target="_blank">AWS Lambda console</a>.
+1. Go to the [AWS Lambda console](http://console.aws.amazon.com/lambda).
 2. Select **Functions** in the navigation pane.
 3. Choose **Create function**.
 4. Select **Author** from scratch.
@@ -675,13 +586,11 @@ def lambda_handler(event, context):
           }
     ```
 
-
 12. Choose **Save** to save the event.
 13. In a new window, navigate to the AWS IoT console, choose **Test** on the navigation pane, and select MQTT test client.
 14. In Subscription topic field type “#” (all topics) and click Subscribe to topic. The MQTT will subscribe to all topics.
 15. Click on Test in the Lambda function page to generate the test event you just created.
 16. Verify the published data in the AWS IoT Core MQTT Test client. The output should look similar to this:
-
 
 ```json
   000000000000000088/project/sensor/decoded      February 09, 2021, 14:45:29 (UTC+0800)
@@ -698,13 +607,12 @@ def lambda_handler(event, context):
 
 In this section, create the IoT rule that forwards the device payload to your application.  This rule is associated with the destination created earlier in **Set up a Destination for Device Traffic** section.
 
-1. Navigate to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>.
+1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. In the navigation pane, choose **Message routing**, then select **Rules**.
 3. On the Rules page, choose **Create rule**.
 4. On the Create a rule page, enter as follows:
    - Name: **LoRaWANRouting**
    - Description: **Any description of your choice**.
-
 
     :::tip NOTE
     The **Name of your Rule** is the information needed when you provision devices to run on AWS IoT Core for LoRaWAN.
@@ -740,7 +648,6 @@ You can now verify that the decoded data is received and republished by AWS by t
     }
 ```
 
-
 ```json
   project/sensor/decoded    February 09, 2021, 14:47:21 (UTC+0800)
   {
@@ -769,7 +676,7 @@ You can now verify that the decoded data is received and republished by AWS by t
 
 You will be using the Amazon Simple Notification Service to send text messages (SMS) when certain conditions are met.
 
-1. Go to the <a href="http://console.aws.amazon.com/sns" target="_blank">Amazon SNS console</a>.
+1. Go to the [Amazon SNS console](http://console.aws.amazon.com/sns).
 2. Select **Text Messaging** (SMS) and choose **Publish text message**.
 3. Under **Message type**, select **Promotional**.
 4. Enter your phone number (phone number that will receive text alerts).
@@ -789,12 +696,11 @@ You will be using the Amazon Simple Notification Service to send text messages (
    - Under **Endpoint**, enter the previously validated phone number to receive the SMS alerts.
    - Choose **Create subscription**. You should see a **_Subscription to text_topic created successfully_** message.
 
-
 ##### Add a Rule for Amazon SNS Notification
 
 Now, add a new rule to send an Amazon SNS notification when certain conditions are met in a decoded message.
 
-1. Navigate to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>.
+1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. In the navigation pane, choose **Message routing**. Then, choose **Rules**.
 3. On the Rules page, choose **Create**.
 4. Enter the Name as *text_alert* and provide an appropriate Description. Click **Next**.
@@ -832,19 +738,15 @@ Wait for an uplink from the device. Here is the message from the mobile device a
 
 This section demonstrates how to send downlink payload from the AWS IoT LoRaWAN Server to the end device.
 
-1. Install the <a href="https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html" target="_blank">AWS SAM CLI</a>.
-2. Deploy <a href="https://github.com/aws-samples/aws-iot-core-lorawan/tree/main/send_downlink_payload" target="_blank">SAM template to AWS</a>.
+1. Install the [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html).
+2. Deploy [SAM template to AWS](https://github.com/aws-samples/aws-iot-core-lorawan/tree/main/send_downlink_payload).
 3. Send Payload to End Device.
    - Go to the AWS IoT console.
    - In the navigation pane, select **Test** and choose **MQTT test client**.
    - Subscribe to the wildcard topic '**#**' to receive messages from all topics.
    - Specify the topic to **_cmd/downlink/\{WirelessDeviceId\}_** and a base64-encoded message.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/15-specifying-a-topic.png"
-  width="100%"
-  caption="Specifying a topic"
-/>
+> **Image:** Specifying a topic
 
 4. You should see traffic on AWS similar as shown below:
 
@@ -865,12 +767,7 @@ This section demonstrates how to send downlink payload from the AWS IoT LoRaWAN 
    }
    ```
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/16-traffic-on-aws.png"
-  width="100%"
-  caption="Traffic on AWS"
-/>
+> **Image:** Traffic on AWS
 
 5. You should see traffic on your console of end device similar as shown below.
 
@@ -885,9 +782,9 @@ You will use IoT Analytics to visually display data via graphs if there is a nee
 
 ###### Create an IoT Analytics Rule
 
-<b> Create a Rule First </b>
+** Create a Rule First **
 
-1. Navigate to the <a href="http://console.aws.amazon.com/iot" target="_blank">AWS IoT console</a>.
+1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. In the navigation pane, choose **Message routing** and then, choose **Rules**.
 3. On the Rules page, choose **Create rule**.
 4. Enter the Name as **Visualize**, and provide an appropriate Description. Click **Next**.
@@ -907,7 +804,7 @@ SELECT * FROM 'project/sensor/decoded'
 
 ###### Configure AWS IoT Analytics
 
-1. Go to the <a href="http://console.aws.amazon.com/iotanalytics" target="_blank">AWS IoT Analytics console</a>.
+1. Go to the [AWS IoT Analytics console](http://console.aws.amazon.com/iotanalytics).
 2. In the navigation panel, choose **Data sets**.
 3. Select the data set generated by the Quick Create in **Create an IoT Analytics Rule**.
 4. In the Details section, click **Edit** in the **SQL query**.
@@ -925,7 +822,7 @@ SELECT devEui as device_id, temperature as temp, timestamp as time FROM LoRa_dat
 
 Amazon QuickSight lets you easily create and publish interactive business intelligence (BI) dashboards that include machine learning-powered insights.
 
-1. Go to <a href="http://console.aws.amazon.com/" target="_blank">AWS Management console</a>.
+1. Go to [AWS Management console](http://console.aws.amazon.com/).
 2. From the management console, enter **QuickSight** in the "_Search for services, features.._" search box.
 3. Click on **QuickSight** in the search results.
 4. If you haven't signed up for the service before, go ahead and sign up, as there is a free trial period.
@@ -948,11 +845,11 @@ Using your device, create a condition to generate an event, such as a high-tempe
 
 You can also visualize the data set as follows:
 
-1. Go to the <a href="http://console.aws.amazon.com/iotanalytics" target="_blank">AWS IoT Analytics console</a>.
+1. Go to the [AWS IoT Analytics console](http://console.aws.amazon.com/iotanalytics).
 2. Choose **Datasets**.
 3. Select the dataset created earlier.
 4. Select **Content** and ensure there are at least few uplink entries available in the data set.
-5. Go to the <a href="http://quicksight.aws.amazon.com/" target="_blank">**QuickSight console**</a>.
+5. Go to the [**QuickSight console**](http://quicksight.aws.amazon.com/).
 6. Choose **New analysis**.
 7. Choose the dataset created in **Create an IoT Analytics Rule**.
 8. Select time on the X-axis, Value as temp (Average), and Color as device_id to see a chart of your dataset.
@@ -961,11 +858,7 @@ You can also visualize the data set as follows:
 
 After login to the device using the web browser, the system log can be viewed from **Diagnostics** > **System Log**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/aws/17-system-log.png"
-  width="100%"
-  caption="System Log"
-/>
+> **Image:** System Log
 
 ### Troubleshooting
 
@@ -978,45 +871,30 @@ After login to the device using the web browser, the system log can be viewed fr
 
 ## AWS IoT Core Integration
 
-AWS IoT Core Integration is a software service that enables your LoRaWAN gateway to work with AWS IoT Core. The <a href="https://learn.rakwireless.com/hc/en-us/articles/26475924574103-How-To-Implement-AWS-Integration-for-WisGate-Edge-V2" target="_blank">AWS Integration for WisGate Edge V2</a> tutorial will show you how to set up a LoRaWAN end-node and view its data on the AWS IoT Console. In addition, it’ll show you how to send a message from AWS IoT Console to the end-node as well.
+AWS IoT Core Integration is a software service that enables your LoRaWAN gateway to work with AWS IoT Core. The [AWS Integration for WisGate Edge V2](https://learn.rakwireless.com/hc/en-us/articles/26475924574103-How-To-Implement-AWS-Integration-for-WisGate-Edge-V2) tutorial will show you how to set up a LoRaWAN end-node and view its data on the AWS IoT Console. In addition, it’ll show you how to send a message from AWS IoT Console to the end-node as well.
 
 ## The Things Network (TTN)
 
 This tutorial illustrates how to configure and connect your RAK Gateway with WisGateOS 2 to a LoRaWAN Network Server by using the Basics Station protocol. For this example, it will be shown how to connect the gateway to TTNv3.
 
 :::tip NOTE
-LoRa Basics Station is an implementation of a LoRa packet forwarder. This protocol simplifies the management of large-scale LoRaWAN Networks. More information about the Basics Station protocol can be found in the <a href="https://blog.semtech.com/expert-series-5-things-you-need-to-know-about-lorawan-based-gateways" target="_blank">explanatory document</a> provided by Semtech.
+LoRa Basics Station is an implementation of a LoRa packet forwarder. This protocol simplifies the management of large-scale LoRaWAN Networks. More information about the Basics Station protocol can be found in the [explanatory document](https://blog.semtech.com/expert-series-5-things-you-need-to-know-about-lorawan-based-gateways) provided by Semtech.
 :::
 
 ### Registering the Gateway
 
-1. Log in first and head on to <a href="https://eu1.cloud.thethings.network/console" target="_blank">TTNv3 website</a>. If you already have a TTN account, you can use your The Things ID credentials to log in.
+1. Log in first and head on to [TTNv3 website](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/1.ttn.png"
-  width="100%"
-  caption="The Things Stack Login Page"
-/>
-
+> **Image:** The Things Stack Login Page
 
 2. To register a commercial gateway, choose **Register a gateway** (for new users that do not already have a registered gateway) or go to **Gateways** > **+ Register gateway** (for users that have registered gateways before).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/2.console-page.png"
-  width="100%"
-  caption="Console Page After a Successful Login"
-/>
-
+> **Image:** Console Page After a Successful Login
 
 3. You will be redirected to the **Register gateway** page.
-4. In the **Gateway EUI** field, type the EUI of the gateway. The gateway's EUI can be found either on the sticker on the casing or by going to the **Dashboard > Overview** page via the Web UI. Instructions on how to access your gateway via Web UI can be found in the product's <a href="quickstart" target="_blank">Quick Start guide</a>.
+4. In the **Gateway EUI** field, type the EUI of the gateway. The gateway's EUI can be found either on the sticker on the casing or by going to the **Dashboard > Overview** page via the Web UI. Instructions on how to access your gateway via Web UI can be found in the product's [Quick Start guide](quickstart).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/3.register-gateway.png"
-  width="100%"
-  caption="Register gateway"
-/>
-
+> **Image:** Register gateway
 
 5. After typing the EUI, click on **Confirm**. Additional fields will pop up. Fill in the following information:
 - **Gateway ID**: This will be the unique ID of your gateway in the Network. An ID based on the EUI is automatically generated. You can change it if you need. Note that the ID must contain only lowercase letters, numbers, and dashes (-).
@@ -1030,20 +908,11 @@ LoRa Basics Station is an implementation of a LoRa packet forwarder. This protoc
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/4.adding-gateway.png"
-  width="80%"
-  caption="Adding a gateway"
-/>
-
+> **Image:** Adding a gateway
 
 6. To register your gateway, click **Register gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/5.gateway-added.png"
-  width="100%"
-  caption="Successfully added a gateway"
-/>
+> **Image:** Successfully added a gateway
 
 ### Generating the Token
 
@@ -1051,40 +920,19 @@ TTNv3 supports TLS server authentication and client tokens, which require a trus
 
 1. To generate a key file, from the **Overview page** of the registered gateway navigate to **API keys**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/6.overview-page.png"
-  width="100%"
-  caption="Overview page"
-/>
-
+> **Image:** Overview page
 
 2. On the **API keys page**, choose **+Add API key**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/7.api-key-page.png"
-  width="100%"
-  caption="API key page"
-/>
-
+> **Image:** API key page
 
 3. In the **Name field**, type the name of your key (for example - mykey). Choose **Grant individual rights** and select **Link as Gateway to a Gateway for traffic exchange, i.e. read uplink and write downlink**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/8.generate-api-key.png"
-  width="100%"
-  caption="Generating an API key"
-/>
-
+> **Image:** Generating an API key
 
 4. To generate the key, choose **Create API key**. The following window will pop up, telling you to copy the key you just generated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/9.copy-api-key.png"
-  width="50%"
-  caption="Copying the generated key"
-/>
+> **Image:** Copying the generated key
 
 :::warning
 Copy the key and save it in a `.txt` file (or other), because you won’t be able to view or copy your key after that.
@@ -1094,25 +942,14 @@ Copy the key and save it in a `.txt` file (or other), because you won’t be abl
 
 ### Configuring the Gateway
 
-1. To configure the gateway, access it via the Web UI. To learn how to do that, refer to the <a href="quickstart" target="_blank">Quick Start guide</a> for each gateway.
+1. To configure the gateway, access it via the Web UI. To learn how to do that, refer to the [Quick Start guide](quickstart) for each gateway.
 2. Navigate to **LoRa** > **Configuration** > **Work mode** and select **Basics station**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/10.working-mode.png"
-  width="100%"
-  caption="Changing the working mode"
-/>
-
+> **Image:** Changing the working mode
 
 3. Expand the Basics Station settings by clicking **Configure Basics Station server setup**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/11.basics-station.png"
-  width="100%"
-  caption="Expanded Basics Station settings"
-/>
-
+> **Image:** Expanded Basics Station settings
 
 4. To connect the gateway to TTNv3, configure the following parameters:
 
@@ -1125,29 +962,20 @@ wss://eu1.cloud.thethings.network
 
 - **Server Port**: The LNS Server uses port `8887`. Type in **`8887`**.
 - **Authentication Mode**: Choose **TLS server authentication and Client token**. When selected, the **Trust (CA Certificate)** and **Client token** fields will show up.
-- **Trust (CA Certificate)**: For **Trust**, upload the **Let’s Encrypt ISRG ROOT X1 Trust** certificate by clicking **choose file**. The file with the certificate can be downloaded <a href="https://letsencrypt.org/certs/isrgrootx1.pem" target="_blank">directly</a>.
+- **Trust (CA Certificate)**: For **Trust**, upload the **Let’s Encrypt ISRG ROOT X1 Trust** certificate by clicking **choose file**. The file with the certificate can be downloaded [directly](https://letsencrypt.org/certs/isrgrootx1.pem).
 - **Client Token**: This is the generated API key.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/12.basics-station-settings.png"
-  width="80%"
-  caption="Basics Station settings"
-/>
-
+> **Image:** Basics Station settings
 
 5. To save the changes, click **Save Changes**. If everything is set correctly, you can see the gateway is connected to TTNv3.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/ttn/13.successful-connection.png"
-  width="100%"
-  caption="Successful connection"
-/>
+> **Image:** Successful connection
 
 ## ChirpStack
 
 This guide will show you how to connect the RAKWireless Commercial gateway running WisGateOS 2 to a ChirpStack Network Server. The steps to add a gateway are the same regardless of whether you are using a local or external ChirpStack Network Server. This guide focuses on configuring the gateway to send data to the network server and does not cover the installation of ChirpStack. In this tutorial, an external ChirpStack v4 Network Server is used as an example.
 
-For external ChirpStack, RAK provides instructions for installing the ChirpStack Network Server on the AWS cloud. You can refer to the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#installing-chirpstack)" target="_blank">Learn Site</a>.
+For external ChirpStack, RAK provides instructions for installing the ChirpStack Network Server on the AWS cloud. You can refer to the [Learn Site](https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#installing-chirpstack)).
 
 ### Requirements
 
@@ -1163,7 +991,7 @@ To access the ChirpStack web UI, you need to enable **TCP port 8080** and to mak
 - Basics Station needs TCP port `3001`.
 
 :::tip NOTE
-Instructions for opening the ports mentioned above are provided in the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#installing-chirpstack" target="_blank">installing ChirpStack on AWS</a> guide.
+Instructions for opening the ports mentioned above are provided in the [installing ChirpStack on AWS](https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#installing-chirpstack) guide.
 :::
 
 ### Registering the Gateway
@@ -1176,41 +1004,23 @@ Instructions for opening the ports mentioned above are provided in the <a href="
 
 2. In this case, the ChirpStack is installed on the AWS cloud with the public IP address `18.156.176.220.`
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/36.login-page.png"
-  width="100%"
-  caption="ChirpStack login page"
-/>
-
+> **Image:** ChirpStack login page
 
 3. Login using the following credentials:
 
 - Username/email: **admin**
 - Password: **admin**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/37.dashboard.png"
-  width="100%"
-  caption="ChirpStack dashboard"
-/>
+> **Image:** ChirpStack dashboard
 
 4. On the left pane, head to **Gateways**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/38.list.png"
-  width="100%"
-  caption="Gateway list"
-/>
-
+> **Image:** Gateway list
 
 5. By default, no gateways are registered. To register one, click **Add gateway**.
 6. In the **General** menu, you need to set the gateway parameters.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/39.register.png"
-  width="100%"
-  caption="Registering the gateway"
-/>
+> **Image:** Registering the gateway
 
   - **Name**: unique name for the gateway on the Network server. The name may only contain words, numbers, and dashes.
   - **Description**: a brief description of the gateway.
@@ -1219,11 +1029,7 @@ Instructions for opening the ports mentioned above are provided in the <a href="
 
 7. Click **Submit**. You will see the registered gateway in the Gateway list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/40.registered-gateway.png"
-  width="100%"
-  caption="Registered gateway"
-/>
+> **Image:** Registered gateway
 
 ### Configuring the Gateway
 
@@ -1241,30 +1047,17 @@ In this method, you will configure the gateway’s packet forwarder to send data
 When connecting the gateway to the ChirpStack, you will need to open ports 1700 and 8080 to enable the communication between the gateway and the server and be able to access the ChirpStack.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/31.udp-port.png"
-  width="100%"
-  caption="Opened 1700 UDP port"
-/>
+> **Image:** Opened 1700 UDP port
 
 1. Start by accessing the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/32.login.png"
-  width="100%"
-  caption="Login page"
-/>
+> **Image:** Login page
 
-2. Login using the set credentials you have set in the <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart#access-the-gateway" target="_blank">Access the Gateway</a> section.
+2. Login using the set credentials you have set in the [Access the Gateway](https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart#access-the-gateway) section.
 3. On the left side, head to **LoRa**. By default, the gateway is configured to work as a **Built-in network server**.
 4. From **Work Mode**, select **Packet forwarder**. Click **Choose from the available protocols** to expand the Packet forwarder settings.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/3.packet-forwarder.png"
-  width="100%"
-  caption="Setting Packet Forwarder Mode"
-/>
-
+> **Image:** Setting Packet Forwarder Mode
 
 When Packet Forwarder mode is chosen, the **Semtech UDP GWMP Protocol** is selected by default.
 
@@ -1272,27 +1065,14 @@ To point the gateway to the ChirpStack network using the packet forwarder, you o
 
 In this case, the ChirpStack is installed on the AWS cloud instance with public IP **18.156.176.220** (yours will be different). The default ports that the packet forwarder uses are 1700.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/35.configure-packet.png"
-  width="80%"
-  caption="Configure packet forwarder to ChirpStack"
-/>
-
+> **Image:** Configure packet forwarder to ChirpStack
 
 5. Click **Save changes** to save the changes.
 6. If everything is set correctly, the gateway will display as online. You can click the gateway name to inspect the gateway traffic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/61.registered-gateway.png"
-  width="100%"
-  caption="Registered gateway"
-/>
+> **Image:** Registered gateway
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/62.gateway-details.png"
-  width="100%"
-  caption="Gateway details"
-/>
+> **Image:** Gateway details
 
 #### Connecting the Gateway via MQTT Bridge
 
@@ -1302,72 +1082,43 @@ In this method, you will configure the gateway’s built-in bridge to publish th
 When connecting the gateway to the ChirpStack, you will need to open ports 1883 and 8080 to enable the communication between the gateway and the server and be able to access the ChirpStack.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/72.png"
-  width="100%"
-  caption="Enbale ports"
-/>
-
+> **Image:** Enbale ports
 
 1. Start by accessing the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/32.login.png"
-  width="100%"
-  caption="Login page"
-/>
+> **Image:** Login page
 
-2. Login using the set credentials you have set in the <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart#access-the-gateway" target="_blank">Access the Gateway</a> section.
+2. Login using the set credentials you have set in the [Access the Gateway](https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart#access-the-gateway) section.
 3. On the left side, head to **LoRa**. By default, the gateway is configured to work as **Built-in network server**.
 4. From **Work Mode**, select **Packet forwarder**. Click **Choose from the available protocols** to expand the Packet forwarder settings.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/3.packet-forwarder.png"
-  width="100%"
-  caption="Setting packet forwarder mode"
-/>
+> **Image:** Setting packet forwarder mode
 
 5. To use the built-in gateway bridge, from the **Protocol** select **LoRa Gateway MQTT Bridge**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/76.png"
-  width="80%"
-  caption="LoRa Gateway MQTT bridge"
-/>
+> **Image:** LoRa Gateway MQTT bridge
 
 6. Choose **MQTT for ChirpStack 4.x (PROTOBUF)** as the MQTT protocol.
 
 :::tip NOTE
 
 + The ChirpStack v3 supports both **MQTT for ChirpStack 3.x (JSON)** and **MQTT for ChirpStack 3.x (PROTOBUF)**. If you are using an earlier version of ChirpStack (v3), you need to choose one of the MQTT protocols to use.
-+ If you want to use the JSON protocol, you need to change the payload marshaler in the gateway bridge `.toml` file to `.json`. By default, the marshaler is protobuf. To configure the payload marshaler, you will use the SSH client PuTTY to access the configuration files. How to do this is explained in the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#accessing-instance-via-ssh" target="_blank">Learn Site</a>.
++ If you want to use the JSON protocol, you need to change the payload marshaler in the gateway bridge `.toml` file to `.json`. By default, the marshaler is protobuf. To configure the payload marshaler, you will use the SSH client PuTTY to access the configuration files. How to do this is explained in the [Learn Site](https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#accessing-instance-via-ssh).
   :::
 
 By default, the built-in gateway bridge is pointed to the local broker (127.0.0.1). To point the gateway to the ChirpStack network, you need to set the ChirpStack Broker address in the **MQTT Broker Address** field.
 
 In this case, the ChirpStack is installed on an AWS cloud instance with public IP `18.156.176.220` (yours will be different). The default port that the MQTT Broker uses is 1883.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/50.configure.png"
-  width="80%"
-  caption="Configuring packet forwarder to ChirpStack"
-/>
+> **Image:** Configuring packet forwarder to ChirpStack
 
 7. Click **Save changes** to save the changes.
 
 If everything is set correctly, the gateway will display as online. You can click the gateway name to inspect the gateway traffic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/61.registered-gateway.png"
-  width="100%"
-  caption="Registered gateway"
-/>
+> **Image:** Registered gateway
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/62.gateway-details.png"
-  width="100%"
-  caption="Gateway details"
-/>
+> **Image:** Gateway details
 
 #### Connecting the Gateway via Basics Station
 
@@ -1377,33 +1128,18 @@ In this method, you will connect the gateway to the ChirpStack via Basics Statio
 When connecting the gateway to the ChirpStack, you will need to open TCP ports `3001` and `8080` to enable the communication between the gateway and the server and be able to access the ChirpStack.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/53.enable-port.png"
-  width="100%"
-  caption="ChirpStack enable ports"
-/>
-
+> **Image:** ChirpStack enable ports
 
 1. Start by accessing the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/32.login.png"
-  width="100%"
-  caption="Login page"
-/>
+> **Image:** Login page
 
-
-2. Login using the set credentials you have set in the <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart#access-the-gateway" target="_blank">Access the Gateway</a> section.
+2. Login using the set credentials you have set in the [Access the Gateway](https://docs.rakwireless.com/product-categories/wisgate/rak7267/quickstart#access-the-gateway) section.
 3. On the left side, head to **LoRa**. By default, the gateway is configured to work as a **Built-in network server**.
-
 
 4. For **Work Mode**, select **Basics station** and click **Configure Basics Station** server setup to expand the Basics Station settings.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/86.png"
-  width="100%"
-  caption="Setting Basics Station mode"
-/>
+> **Image:** Setting Basics Station mode
 
 - **Basics Station Server Type**: For server, choose LNS Server.
 - **Server URL**: the address of the ChirpStack v4 server. In this case, the ChirpStack v4 is installed on an AWS cloud instance with public IP `18.156.176.220` (yours will be different). The URL will be: `ws://18.156.176.220`.
@@ -1421,31 +1157,19 @@ Now, your gateway is configured to work as a Basics Station and is pointed to th
 
 To configure the backend of the ChirpStack gateway bridge, you need to access the configuration file of the bridge. To access it, you will need an SSH terminal. In this case, you will use the PuTTY client.
 
-To access the ChirpStack configuration files, you need to access the instance. How to do this is explained in the <a href="https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#accessing-instance-via-ssh" target="_blank">Learn Site</a>.
+To access the ChirpStack configuration files, you need to access the instance. How to do this is explained in the [Learn Site](https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN/#accessing-instance-via-ssh).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/88.png"
-  width="50%"
-  caption="PuTTY client"
-/>
+> **Image:** PuTTY client
 
 6. Go to the `/etc/chirpstack-gateway-bridge/` file path and open the `chirpstack-gateway-bridge.toml` file.
 
 7. In the file, find the gateway backend configuration paragraph and replace the type with `basic_station`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/89.png"
-  width="100%"
-  caption="Configure gateway bridge type"
-/>
+> **Image:** Configure gateway bridge type
 
 8. Now scroll down until you find the **Concentrator configuration** paragraph and uncomment the following text as shown below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/90.png"
-  width="100%"
-  caption="Configuring gateway bridge backend"
-/>
+> **Image:** Configuring gateway bridge backend
 
 :::tip NOTE
 The example uses US915. The frequency band setting needs to be consistent with the frequency band of the gateway used.
@@ -1461,17 +1185,9 @@ Now, the ChirpStack backend configuration is set to the Basics station.
 
 If everything is set correctly, the gateway will display as online. You can click the gateway name to inspect the gateway traffic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/61.registered-gateway.png"
-  width="100%"
-  caption="Registered gateway"
-/>
+> **Image:** Registered gateway
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7267/lorawan-network-server-guide/chirpstack/62.gateway-details.png"
-  width="100%"
-  caption="Gateway details"
-/>
+> **Image:** Gateway details
 
 ## ThingPark by Actility
 
@@ -1479,6 +1195,5 @@ In this section, you will learn how to add RAK7267 WisGate Soho Pro in **ThingPa
 
 ThingPark is Actility’s platform, in which you can register your LoRaWAN® gateway and end devices. ThingPark offers a user-friendly dashboard where you can monitor various information about the gateway/end device, such as status, radio traffic, statistics, and more. Together with HTTPS integration, you can send the data received from the end nodes to an application server for post-processing and visualization.
 
-For the complete step-by-step tutorial, refer to the <a href="https://learn.rakwireless.com/hc/en-us/articles/26476191725207-How-To-Add-RAK-WisGate-Edge-Gateway-V2-in-ThingPark-Actility-ThingPark-Guide" target="_blank">How to Add RAK WisGate Edge Gateway V2 in ThingPark - Actility ThingPark Guide</a>.
+For the complete step-by-step tutorial, refer to the [How to Add RAK WisGate Edge Gateway V2 in ThingPark - Actility ThingPark Guide](https://learn.rakwireless.com/hc/en-us/articles/26476191725207-How-To-Add-RAK-WisGate-Edge-Gateway-V2-in-ThingPark-Actility-ThingPark-Guide).
 
-<RkBottomNav/>

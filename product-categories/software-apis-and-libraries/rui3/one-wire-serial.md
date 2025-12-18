@@ -1,5 +1,4 @@
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # One Wire Serial
 
@@ -29,7 +28,8 @@ This callback receives data from the OneWire interface.
 
 | **Function**   | `void rak_onewire_serial_recv_cb callback(SERIAL_PORT port, RAK_ONEWIRE_SERIAL_RECEIVE_T *data)` |
 | -------------- | ------------------------------------------------------------------------------------------------ |
-| **Parameters** | port	- the serial port used <br /> *data - pointer to the received data structure                  |
+| **Parameters** | port	- the serial port used 
+ *data - pointer to the received data structure                  |
 | **Returns**    | void                                                                                             |
 
 ## RAKOneWireSerial Class
@@ -42,7 +42,10 @@ OneWireSerial(pin, callback)
 
 | **Function**   | `RAKOneWireSerial(uint32_t pin, rak_onewire_serial_recv_cb callback)`                                                                                                               |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **pin** - the pin number <br /> ONLY UART1_RXD_PIN and UART1_TXD_PIN are supported <br /> **callback** - the callback for receiving data <br /> _**not functional in RUI3 V4.1.0**_       |
+| **Parameters** | **pin** - the pin number 
+ ONLY UART1_RXD_PIN and UART1_TXD_PIN are supported 
+ **callback** - the callback for receiving data 
+ _**not functional in RUI3 V4.1.0**_       |
 | **Returns**    | void                                                                                                                                                                                |
 
 :::warning
@@ -77,7 +80,6 @@ Available pins for OneWire are only UART1_RXD_PIN and UART1_TXD_PIN!
 ```
 </details>
 
-
 ## begin
 
 This API sets the speed (baud rate) for the serial communication.
@@ -88,7 +90,8 @@ begin(baud, mode)
 
 | **Function**   | `void begin(uint32_t baud, RAK_SERIAL_MODE mode = RAK_DEFAULT_MODE)`  |
 | -------------- | --------------------------------------------------------------------- |
-| **Parameters** | baud - the baud rate <br /> mode - option, should be RAK_DEFAULT_MODE   |
+| **Parameters** | baud - the baud rate 
+ mode - option, should be RAK_DEFAULT_MODE   |
 | **Returns**    | void                                                                  |
 
 <details>
@@ -114,7 +117,6 @@ begin(baud, mode)
 ```
 </details>
 
-
 ## write
 
 This API writes a byte sequence to a specified one wire serial port.
@@ -125,7 +127,8 @@ write(buf, size)
 
 | **Function**   | `size_t write(const uint8_t *buf, size_t size)`                    |
 | -------------- | ------------------------------------------------------------------ |
-| **Parameters** | buf - pointer to data buffer <br /> size - number of bytes to send   |
+| **Parameters** | buf - pointer to data buffer 
+ size - number of bytes to send   |
 | **Returns**    | size_t - the number of bytes sent successfully                     |
 
 <details>
@@ -150,7 +153,6 @@ write(buf, size)
        }
 ```
 </details>
-
 
 ## available
 
@@ -187,7 +189,6 @@ available()
 ```
 </details>
 
-
 ## read
 
 This API gets the number of bytes available for reading from the specified one wire serial port.
@@ -223,7 +224,6 @@ read()
 ```
 </details>
 
-
 ## end
 
 This API closes the one wire serial port.
@@ -236,5 +236,3 @@ end()
 | -------------- | -------------------------------------- |
 | **Returns**    | void |
 
-
-<RkBottomNav/>

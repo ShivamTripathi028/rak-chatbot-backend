@@ -10,9 +10,6 @@ slug: /product-categories/wisduo/rak4630-module/at-command-manual/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4630 WisDuo LoRaWAN+BLE Module AT Command Manual
 
 ## Overview
@@ -21,14 +18,11 @@ The RAK4630 is built on the nRF52840 chip and incorporates the LoRa transceiver 
 
 ## RUI3 AT Command List
 
-The RAK4630's default firmware is based on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/" target="_blank">RUI3 (RAKwireless Unified Interface V3)</a>.  AT commands are accessible via USB and BLE by default.
+The RAK4630's default firmware is based on [RUI3 (RAKwireless Unified Interface V3)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/).  AT commands are accessible via USB and BLE by default.
 
-A complete list of commands is available in the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation</a>.
-
+A complete list of commands is available in the [RUI3 AT Commands Documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/).
 
 :::tip NOTE
-Apart from USB and BLE, AT commands can also be interfaced via UART1 (pins 9 and 10) and UART2 (pins 6 and 7—no AT command functionality by default).  For details on the pin distribution of this module, refer to the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4630-module/datasheet/#pin-definition" target="_blank">RAK4630 Datasheet</a>. The basic circuit setup can be found in the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4630-module/quickstart/#hardware-setup" target="_blank">RAK4630 Quick Start Guide</a>. You can configure the settings of each interface through the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#rak-unified-interface-v3-rui3-serial-operating-modes" target="_blank">RUI3 Serial Operating Modes</a>.
+Apart from USB and BLE, AT commands can also be interfaced via UART1 (pins 9 and 10) and UART2 (pins 6 and 7—no AT command functionality by default).  For details on the pin distribution of this module, refer to the [RAK4630 Datasheet](https://docs.rakwireless.com/product-categories/wisduo/rak4630-module/datasheet/#pin-definition). The basic circuit setup can be found in the [RAK4630 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduo/rak4630-module/quickstart/#hardware-setup). You can configure the settings of each interface through the [RUI3 Serial Operating Modes](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#rak-unified-interface-v3-rui3-serial-operating-modes).
 :::
 
-
-<RkBottomNav/>

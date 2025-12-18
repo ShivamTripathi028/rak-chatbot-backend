@@ -15,15 +15,13 @@ download: true
 date: 2020-09-18
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3401 WisBlock BLE Module
 
 Thank you for choosing **RAK3401 WisBlock BLE Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK3401 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak3401/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak3401/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [Arduino IDE BSP](https://learn.rakwireless.com/hc/en-us/articles/26687371039383-How-To-Perform-Installation-of-Board-Support-Package-in-Arduino-IDE)
 * [PlatformIO BSP](https://learn.rakwireless.com/hc/en-us/articles/26687276346775-How-To-Perform-Installation-of-Board-Support-Package-in-PlatformIO)
@@ -40,8 +38,8 @@ Thank you for choosing **RAK3401 WisBlock BLE Module** in your awesome IoT Proje
 
 * Nordic nRF52840 ultra-low power MCU
 * 32-bit ARM® Cortex™-M4 CPU
-* 64&nbsp;MHz CPU clock
-* 1&nbsp;MB Flash, 256&nbsp;KB RAM
+* 64 MHz CPU clock
+* 1 MB Flash, 256 KB RAM
 * Bluetooth 5.0 protocol stack
 
 * I2C, SPI, Analog inputs, Digital inputs, and outputs
@@ -57,4 +55,3 @@ To use a **RAK3401**, you need at least a **WisBlock Base** to plug the module i
 - When using the Bluetooth Low Energy transceiver, make sure that always an antenna is connected. Using these transceivers without an antenna can damage the system.
 :::
 
-<RkBottomNav/>

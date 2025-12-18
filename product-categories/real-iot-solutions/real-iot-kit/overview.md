@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Real IoT Kit
 
 Thank you for choosing **Real IoT Kit** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -31,4 +29,3 @@ Real IoT Kit is part of Real IoT Solutions Marketplace which is a comprehensive 
 - Easy to use and less configurations needed.
 - Scalable solution with integration to IoT platform partners.
 
-<RkBottomNav/>

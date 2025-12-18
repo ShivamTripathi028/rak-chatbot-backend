@@ -10,10 +10,6 @@ image: "https://images.docs.rakwireless.com/wisnode/environmental-monitoring/env
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Environmental Monitoring Solution
 
 Thank you for choosing the **Environmental Monitoring Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -21,7 +17,6 @@ Thank you for choosing the **Environmental Monitoring Solution** in your awesome
 - [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisnode/environmental-monitoring/quickstart/)
 - [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisnode/environmental-monitoring/lorawan-network-server-guide/)
 - [Datasheet](https://docs.rakwireless.com/product-categories/wisnode/environmental-monitoring/datasheet/)
-
 
 ### Solution Description
 
@@ -41,41 +36,20 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 - Long transmission distance
 - High-strength structural design
 - IP rating: IP67
-- Support solar panel and 12&nbsp;V<sub>DC</sub> power adapter for power supply 
-- Temperature measure range: -40°&nbsp;C ~ +125°&nbsp;C
-- Temperature accuracy: ±2%°&nbsp;C
-- Temperature resolution: 0.01°&nbsp;C
+- Support solar panel and 12 V<sub>DC</sub> power adapter for power supply 
+- Temperature measure range: -40° C ~ +125° C
+- Temperature accuracy: ±2%° C
+- Temperature resolution: 0.01° C
 - Humidity measure range: 0~100%RH
 - Humidity precision: ±2.0%RH
 - Humidity resolution: 0.01%RH
 
 ## Package Inclusion
 
-<table>
-  <thead>
-    <tr>
-      <th>DEVICE LIST</th>
-      <th>DESCRIPTION</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
-      <td>Sensor Hub + Sensor Hub Installation Kit</td>
-    </tr>
-    <tr>
-      <td>1 x Micro Sensor Probe</td>
-      <td>Temperature and Humidity Sensor</td>
-    </tr>
-    <tr>
-      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
-      <td>Sensor Hub Power Adapter + Power Cable</td>
-    </tr>
-    <tr>
-      <td>1 x Cable Tie Kit</td>
-      <td>For wiring or fixing</td>
-    </tr>
-  </tbody>
-</table>
+| DEVICE LIST | DESCRIPTION |
+| --- | --- |
+| 1 x Sensor Hub 1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
+| 1 x Micro Sensor Probe | Temperature and Humidity Sensor |
+| 1 x Power Adapter 1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
+| 1 x Cable Tie Kit | For wiring or fixing |
 
-<RkBottomNav/>

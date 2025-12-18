@@ -14,11 +14,8 @@ hide_table_of_contents: true
 
 ---
 
-import RkProductFilter from '@site/src/components/ProductFilter'
-
 # Gateway Family Comparison
 
 The following table provides a comparative summary of RAK commercial gateways. It highlights key specification differences to assist your selection.
-
 
 <RkProductFilter/>

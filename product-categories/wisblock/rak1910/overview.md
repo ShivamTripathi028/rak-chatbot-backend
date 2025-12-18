@@ -11,16 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK1910 WisBlock GNSS Location Module
 
 Thank you for choosing **RAK1910 WisBlock GNSS Location Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
 
 * [RAK1910 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak1910/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak1910/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK1910 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK1910.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
@@ -37,7 +34,6 @@ Thank you for choosing **RAK1910 WisBlock GNSS Location Module** in your awesome
     * [LoRaWAN Tracker Kit](https://store.rakwireless.com/collections/kits-bundles/products/wisblock-kit-3-gps-tracker?utm_source=WisBlockKit3&utm_medium=Document&utm_campaign=BuyFromStore)
     * [LoRaWAN Tracker Kit with Solar Panel](https://store.rakwireless.com/collections/kits-bundles/products/wisblock-kit-2-lora-based-gps-tracker-with-solar-panel?utm_source=WisBlockKit2&utm_medium=Document&utm_campaign=BuyFromStore)
 
-
 ## Product Description
 
 The RAK1910 WisBlock GNSS Location Module module, part of the RAK Wireless Wisblock series, is a u-blox MAX-7Q GNSS (GPS, GLONASS, QZSS, and SBAS) module. This module features exceptional performance, high sensitivity, and minimal acquisition time, which makes it suitable for low-power IoT solutions. The RAK1910 positioning module is a GNSS receiver. It receives and tracks the GPS (including SBAS and QZSS) and the GLONASS signals. QZSS and SBAS signals (by default) can be received concurrently with GPS signals.
@@ -45,18 +41,18 @@ The RAK1910 WisBlock GNSS Location Module module, part of the RAK Wireless Wisbl
 ## Product Features
 
 * **Sensor specifications**
-    * Voltage Supply: 3.3&nbsp;V
-    * Current Consumption: 15&nbsp;uA to 22&nbsp;mA
+    * Voltage Supply: 3.3 V
+    * Current Consumption: 15 uA to 22 mA
     * Chipset: u-Blox MAX-7Q
-    * High accuracy of 2.5&nbsp;m
-    * 10&nbsp;Hz update rate
-    * 0.1&nbsp;m/s velocity accuracy
+    * High accuracy of 2.5 m
+    * 10 Hz update rate
+    * 0.1 m/s velocity accuracy
     * 0.5 degrees heading accuracy
-    * Fast location fix. 29&nbsp;sec from cold start to first fix. 1&nbsp;sec from hot start
+    * Fast location fix. 29 sec from cold start to first fix. 1 sec from hot start
     * GPS and GLONASS satellite support
 
 * **Size**
-    * 10 x 23&nbsp;mm
+    * 10 x 23 mm
 
 ## Prerequisites
 
@@ -67,4 +63,3 @@ To use a **RAK1910**, you need at least a **WisBlock Base** and a **GPS Antenna*
 * Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

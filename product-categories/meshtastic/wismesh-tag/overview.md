@@ -21,16 +21,13 @@ tags:
   - overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Meshtastic WisMesh Tag
 
 Thank you for choosing **WisMesh Tag** for your awesome IoT project! 🎉 To help you get started, we have provided all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/meshtastic/wismesh-tag/quickstart" target="_blank">Quick Start Guide</a>
+* [Quick Start Guide](https://docs.rakwireless.com/product-categories/meshtastic/wismesh-tag/quickstart)
 
-<a href="https://meshtastic.org" target="_blank">Meshtastic</a> is an open-source initiative aimed at building an off-grid, decentralized mesh network. Designed to operate on affordable and low-power devices.
+[Meshtastic](https://meshtastic.org) is an open-source initiative aimed at building an off-grid, decentralized mesh network. Designed to operate on affordable and low-power devices.
 
 This network is especially vital in scenarios where traditional communication systems fail, such as during disasters. Empowering individuals and groups within the HAM radio community and beyond, Meshtastic ensures connectivity when it's needed most.
 
@@ -44,7 +41,7 @@ The WisMesh Tag does not have a display.
 
 ## Product Features
 
-- Robust 1000&nbsp;mAh built-in battery
+- Robust 1000 mAh built-in battery
 - Low Power Nordic nRF52840 MCU
 - Semtech SX1262 LoRa transceiver
 - Supports 8xx and 9xx MHz LoRa bands
@@ -57,20 +54,12 @@ The WisMesh Tag does not have a display.
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-  {
-      'ce': 'https://downloads.rakwireless.com/Meshtastic/Certifications/WisMesh_Tag/WisMesh_Tag_CE_Certification.pdf',
-  },
-  {
-      'fcc': 'https://downloads.rakwireless.com/Meshtastic/Certifications/WisMesh_Tag/WisMesh_Tag_FCC_Certification(DTS).pdf'
-  },
-  {
-      'fcc': 'https://downloads.rakwireless.com/Meshtastic/Certifications/WisMesh_Tag/WisMesh_Tag_FCC_Certification(DXX).pdf'
-  }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/Meshtastic/Certifications/WisMesh_Tag/WisMesh_Tag_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/Meshtastic/Certifications/WisMesh_Tag/WisMesh_Tag_FCC_Certification(DTS).pdf
+- **FCC:** https://downloads.rakwireless.com/Meshtastic/Certifications/WisMesh_Tag/WisMesh_Tag_FCC_Certification(DXX).pdf
 
 ## Getting Started
 
-To get started with the WisMesh Tag, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Tag.pdf?utm_source=docs_center&utm_medium=organic&utm_campaign=wismesh-tag-documentation-overview-page&utm_term=wismesh-tag-getting-started&utm_content_download-link " target="_blank">WisMesh Tag Getting Started</a> guide.
+To get started with the WisMesh Tag, download our [WisMesh Tag Getting Started](https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Tag.pdf?utm_source=docs_center&utm_medium=organic&utm_campaign=wismesh-tag-documentation-overview-page&utm_term=wismesh-tag-getting-started&utm_content_download-link ) guide.
 
-<RkBottomNav/>

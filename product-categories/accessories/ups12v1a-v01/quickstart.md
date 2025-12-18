@@ -9,23 +9,15 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # UPS 12V1A-V01 Quick Start Guide
 
 ## Connecting UPS 12V1A-V01 and RAK7268
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-12v1a-v01/4.connection.jpg"
-  width="70%"
-  caption="UPS 12V1A-V01 and RAK7268 Connection"
-/>
+> **Image:** UPS 12V1A-V01 and RAK7268 Connection
 
-1. Connect the DC 12&nbsp;V adapter to the UPS12V1A-V01 5.5 x 2.1&nbsp;mm input port.
-2. Attach the RAK7268 to the UPS 12V1A-V01 DC 5.5 x 2.5&nbsp;mm output port.
+1. Connect the DC 12 V adapter to the UPS12V1A-V01 5.5 x 2.1 mm input port.
+2. Attach the RAK7268 to the UPS 12V1A-V01 DC 5.5 x 2.5 mm output port.
 3. Turn on the UPS12V1A-V01 device switch.
-
 
 :::tip NOTE
 - Fully charge the UPS12V1A-V01 before using it for the first time.
@@ -39,12 +31,11 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 When the UPS12V1A-V01 is stored, the self-discharge rate is affected by the ambient temperature. Remove it from the RAK7268 and fully charge it if it will not be used for a long time. Then turn it off and store it in a cool, dry place.
 The UPS12V1A-V01 should not be stored without charging for more than the time indicated below:
 
-- Storage for 1 month: -20°&nbsp;C ~ 60°&nbsp;C
-- Storage for 3 months: -20°&nbsp;C ~ 45°&nbsp;C
-- Storage for 6 months: -20°&nbsp;C ~ 25°&nbsp;C
+- Storage for 1 month: -20° C ~ 60° C
+- Storage for 3 months: -20° C ~ 45° C
+- Storage for 6 months: -20° C ~ 25° C
 
-In addition, charge it regularly (once every 3 ~ 5 months) to prevent excessive discharge. An excessive discharge will affect the battery’s performance and function. The charging time is approximately 4 ~ 5 hours, and the voltage is maintained between 11.1&nbsp;V ~ 12.6&nbsp;V.
-
+In addition, charge it regularly (once every 3 ~ 5 months) to prevent excessive discharge. An excessive discharge will affect the battery’s performance and function. The charging time is approximately 4 ~ 5 hours, and the voltage is maintained between 11.1 V ~ 12.6 V.
 
 ## Safety Warning
 
@@ -57,4 +48,3 @@ In addition, charge it regularly (once every 3 ~ 5 months) to prevent excessive 
 - Keep the UPS 12V1A-V01 out of reach of children.
 :::
 
-<RkBottomNav/>

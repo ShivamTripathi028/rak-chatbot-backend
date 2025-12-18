@@ -10,19 +10,15 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2287 WisLink LPWAN Concentrator
 Thank you for choosing the **RAK2287 WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
-* <a href="https://docs.rakwireless.com/product-categories/wislink/rak2287/quickstart/" target="_blank">Quick Start Guide</a>
-* <a href="https://docs.rakwireless.com/product-categories/wislink/rak2287/datasheet/" target="_blank">Datasheet</a>
+* [Quick Start Guide](https://docs.rakwireless.com/product-categories/wislink/rak2287/quickstart/)
+* [Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak2287/datasheet/)
 * [RAK2287 + Raspberry Pi Source Code Repository](https://github.com/RAKWireless/rak_common_for_gateway)
 * [RAK2287 + Raspberry Pi ready to flash Firmware](https://downloads.rakwireless.com/LoRa/RAK2287-Mini-PCIe/Firmware/RAK2287_Latest_Firmware.zip)
 * [RAK2287 3D Model](https://downloads.rakwireless.com/3D_File/WisLink/PWB-RAK2287.stp)
 * [Quick Start Guide for Raspberry Pi and RAK LPWAN Concentrators](https://learn.rakwireless.com/hc/en-us/articles/26743452451095-How-To-Get-Started-with-Raspberry-Pi-and-RAK-LPWAN-Concentrators)
-
-
 
 ## Product Description
 
@@ -39,16 +35,14 @@ Additionally, RAK2287 can detect an uninterrupted combination of packets at 8 di
 - **Certified Compliance**: Fully certified with CE, REACH, RoHS, FCC, ISED, ANATEL, KC, and NCC standards.
 :::
 
-
 ## Product Features
 
 - Designed based on **Mini PCI-e form factor** with a heat sink
-- **SX1302 base band processor** emulates 8 x 8 channels LoRa packet detectors, 8 x SF5-SF12 LoRa demodulators, 8 x SF5-SF10 LoRa demodulators, one 125/250/500&nbsp;kHz high-speed LoRa demodulator and one (G) FSK demodulator
-- 3.3&nbsp;V **Mini PCI-e**, compatible with 3G/LTE card of Mini PCI-e type
+- **SX1302 base band processor** emulates 8 x 8 channels LoRa packet detectors, 8 x SF5-SF12 LoRa demodulators, 8 x SF5-SF10 LoRa demodulators, one 125/250/500 kHz high-speed LoRa demodulator and one (G) FSK demodulator
+- 3.3 V **Mini PCI-e**, compatible with 3G/LTE card of Mini PCI-e type
 - Compatible with **3G/LTE card** of Mini PCI-e type
-- Tx power up to 27&nbsp;dBm, Rx sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
+- Tx power up to 27 dBm, Rx sensitivity down to -139 dBm @ SF12, BW 125 kHz
 - Supports **global license-free frequency band** (EU868, EU433, CN470, US915, AS923, AU915, KR920, and IN865)
 - Supports optional SPI interfaces
 - Built-in **ZOE-M8Q GPS** module
 
-<RkBottomNav/>

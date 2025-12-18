@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock RAKBox-B3 Enclosure
 
 Thank you for choosing **RAKBox-B3** for your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -26,6 +24,5 @@ The enclosure has a small and lightweight design, perfect for setups where space
 ## Product Features
 
 - IP20 rated
-- Dimensions W x L x H: 90 x 85 x 34&nbsp;mm
+- Dimensions W x L x H: 90 x 85 x 34 mm
 
-<RkBottomNav/>

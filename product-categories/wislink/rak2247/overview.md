@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2247 WisLink LPWAN Concentrator
 Thank you for choosing **RAK2247 WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
@@ -27,7 +25,7 @@ RAK2247 supports development based on multiple platforms, you can choose suitabl
   * [RAK2247 SPI + Raspberry Pi Firmware](https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/RPi-Firmware/RAK2247-SPI_Latest_Firmware.zip)
 * **RAK2247 USB + x86 PC**
   * [Source Code Repository](https://github.com/RAKWireless/rak_common_for_gateway)
-  * <a href="https://docs.rakwireless.com/product-categories/wislink/rak2247/quickstart/#rak2247--x86-linux-pc" target="_blank">Quick Start Guide</a>
+  * [Quick Start Guide](https://docs.rakwireless.com/product-categories/wislink/rak2247/quickstart/#rak2247--x86-linux-pc)
 * **RAK2247 USB/SPI + OrangePI(Allwinner H6 CPU based)**
   * [Source Code Repository](https://github.com/RAKWireless/rak_gateway_for_OrangePi3)
 * **RAK2247 USB/SPI + OpenWRT(MT7628 CPU Based)**
@@ -40,7 +38,7 @@ RAK2247 supports development based on multiple platforms, you can choose suitabl
   * [Debian Quickstart](https://github.com/RAKWireless/RAK833-LoRaGateway-SolidRun-Debian)
 
 :::tip NOTE
-To address the chip shortage and not disrupt the operations of the customers and partners, the RAK2247 SPI is available with SX1308 core.  It can completely replace the RAK2247 with SX1301. The only difference is the operating temperature. For more information, check the <a href="https://docs.rakwireless.com/product-categories/wislink/rak2247/datasheet/#operating-conditions" target="_blank">RAK2247 Operating Conditions</a>.
+To address the chip shortage and not disrupt the operations of the customers and partners, the RAK2247 SPI is available with SX1308 core.  It can completely replace the RAK2247 with SX1301. The only difference is the operating temperature. For more information, check the [RAK2247 Operating Conditions](https://docs.rakwireless.com/product-categories/wislink/rak2247/datasheet/#operating-conditions).
 :::
 ## Product Description
 
@@ -54,8 +52,7 @@ Despite its small size, this is an 8 channel concentrator module. By integrating
 - SX1301 base band processor emulates 49 x LoRa demodulators, 10 parallel demodulation paths. It supports 8 uplinks channels and 1 downlink channel
 - 2 x SX125x Tx/Rx front-ends high/low frequency
 - Built-in FT2232H for SPI to USB 2.0 conversion (optional)
-- Operates at 3.3&nbsp;V, making it compatible with standard 3G/LTE card slots of Mini PCI-e type
-- Tx power up to 27&nbsp;dBm, Rx sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
+- Operates at 3.3 V, making it compatible with standard 3G/LTE card slots of Mini PCI-e type
+- Tx power up to 27 dBm, Rx sensitivity down to -139 dBm @ SF12, BW 125 kHz
 - Supports global license-free frequency band (EU433, CN470, IN865, EU868, US915, AU915, KR920,  and AS923)
 
-<RkBottomNav/>

@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # WisBlock Unify Outdoor Enclosure 150x100x45 with Solar Panel Datasheet
 
 ## Overview
@@ -31,7 +27,7 @@ Moreover, it supports different types of mounting options such as pole, wall, DI
 
 - IP65-rated
 - With Solar Panel
-- Dimensions L x W x H: 150&nbsp;mm x 100&nbsp;mm x 45&nbsp;mm
+- Dimensions L x W x H: 150 mm x 100 mm x 45 mm
 - Available in two (2) colors: **Cool gray** and **White**
 - Two base plate options: **Plain Base Plate** and **WisBlock Bespoke Base Plate**
 - Support the application of various scenarios via optional mounting accessories
@@ -40,13 +36,13 @@ Moreover, it supports different types of mounting options such as pole, wall, DI
 
 ## Solar Panel Specifications
 
-- <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/Solar%20Panel%2014090%E5%A4%9A%E6%99%B6%E5%B1%82%E5%8E%8B%E6%9D%BF%E8%A7%84%E6%A0%BC%E4%B9%A6.pdf" target="_blank">Solar Panel HX-140X90 Datasheet</a>
-- Panel Dimensions: 140&nbsp;mm x 90&nbsp;mm x 1.7&nbsp;mm (±0.2&nbsp;mm)
-- Voltage at nominal power: 5&nbsp;V (±10%)
-- Current at nominal power: 380&nbsp;mA (±5%)
+- [Solar Panel HX-140X90 Datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/Solar%20Panel%2014090%E5%A4%9A%E6%99%B6%E5%B1%82%E5%8E%8B%E6%9D%BF%E8%A7%84%E6%A0%BC%E4%B9%A6.pdf)
+- Panel Dimensions: 140 mm x 90 mm x 1.7 mm (±0.2 mm)
+- Voltage at nominal power: 5 V (±10%)
+- Current at nominal power: 380 mA (±5%)
 - Cell efficiency: 18%
 - Working Environment:
-  - Temperature (0-65°&nbsp;C)
+  - Temperature (0-65° C)
   - Humidity (45-85%)
   - UV resistance
 - The ZH1.5-2P connector
@@ -55,166 +51,81 @@ Moreover, it supports different types of mounting options such as pole, wall, DI
 
 ## Enclosure Mechanical Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/m-enclosure.png"
-  width="80%"
-  caption="Medium WisBlock Unify Enclosure dimensions"
-/>
+> **Image:** Medium WisBlock Unify Enclosure dimensions
 
 ## Enclosure with Mounting Accessories
 
-The installation guide for mounting the different types of accessories can be found in <a href="https://docs.rakwireless.com/product-categories/wisblock/rakbox-uo150x100x45-solar/installation-guide#mounting-guide)" target="_blank">Mounting Guide</a> of the medium unify enclosure.
+The installation guide for mounting the different types of accessories can be found in [Mounting Guide](https://docs.rakwireless.com/product-categories/wisblock/rakbox-uo150x100x45-solar/installation-guide#mounting-guide)) of the medium unify enclosure.
 
 ### Pole Mount Vertical
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/vertical-pole.png"
-  width="60%"
-  caption="Vertical pole mount"
-/>
+> **Image:** Vertical pole mount
 
 **Figure 3** shows the dimensions of the medium unify enclosure with vertical pole mounts attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/vertical-pole-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with vertical pole mount"
-/>
-
+> **Image:** Dimensions of the enclosure with vertical pole mount
 
 ### Pole Mount Overlap Horizontal
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/pole-overlap.png"
-  width="60%"
-  caption="Horizontal pole overlap mount"
-/>
+> **Image:** Horizontal pole overlap mount
 
 **Figure 5** shows the dimensions of the medium unify enclosure with horizontal pole mounts attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/pole-overlap-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with horizontal pole overlap mount"
-/>
+> **Image:** Dimensions of the enclosure with horizontal pole overlap mount
 
 ### Wall Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/wall-mount.png"
-  width="60%"
-  caption="Wall mount"
-/>
+> **Image:** Wall mount
 
 **Figure 7** shows the dimensions of the medium unify enclosure with wall mounts attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/wall-mount-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with wall mount"
-/>
-
+> **Image:** Dimensions of the enclosure with wall mount
 
 ### Belt Clip Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/belt-clip.png"
-  width="60%"
-  caption="Belt clip mount"
-/>
+> **Image:** Belt clip mount
 
 **Figure 9** shows the dimensions of the medium unify enclosure with a belt clip mount attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/belt-clip-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with belt clip mount"
-/>
-
+> **Image:** Dimensions of the enclosure with belt clip mount
 
 ### DIN Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/din-mount.png"
-  width="60%"
-  caption="DIN mount"
-/>
+> **Image:** DIN mount
 
 **Figure 11** shows the dimensions of the medium unify enclosure with a DIN mount attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/din-mount-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with DIN mount"
-/>
-
+> **Image:** Dimensions of the enclosure with DIN mount
 
 ### Magnet Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/magnet-mount.png"
-  width="60%"
-  caption="Magnet mount"
-/>
+> **Image:** Magnet mount
 
 **Figure 13** shows the dimensions of the medium unify enclosure with a magnet mount attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/magnet-mount-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with magnet mount"
-/>
-
+> **Image:** Dimensions of the enclosure with magnet mount
 
 ### Belt Loop Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/belt-loop.png"
-  width="60%"
-  caption="Belt loop mount"
-/>
+> **Image:** Belt loop mount
 
 **Figure 15** shows the dimensions of the medium unify enclosure with a belt loop mount attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/belt-loop-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with belt loop mount"
-/>
-
-
+> **Image:** Dimensions of the enclosure with belt loop mount
 
 ### Label Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/label-mount.png"
-  width="60%"
-  caption="Label mount"
-/>
+> **Image:** Label mount
 
 **Figure 17** shows the dimensions of the medium unify enclosure with a label mount attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/label-mount-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with label mount"
-/>
-
+> **Image:** Dimensions of the enclosure with label mount
 
 ### Hook Loop Mount
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/hook-loop.png"
-  width="60%"
-  caption="Hook loop mount"
-/>
+> **Image:** Hook loop mount
 
 **Figure 19** shows the dimensions of the medium unify enclosure with a label mount attached to it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45-solar/datasheet/hook-loop-dim.png"
-  width="60%"
-  caption="Dimensions of the enclosure with hook loop mount"
-/>
+> **Image:** Dimensions of the enclosure with hook loop mount
 
-<RkBottomNav/>

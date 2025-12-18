@@ -10,12 +10,8 @@ sidebar_label: LoRaWAN Network Server Guide
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7244 LoRaWAN Network Server Guide
-
 
 ## Connecting to The Things Stack (TTNv3)
 
@@ -31,36 +27,19 @@ In this section, you will learn how to connect RAK7244 WisGate Developer D4 Gate
 
 4. Click **Start building** and choose the cluster that is geographically closest to your region.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/ttn/1.choose-cluster.png"
-  width="100%"
-  caption="Choosing cluster"
-/>
+> **Image:** Choosing cluster
 
 5. Choose **Register a gateway** (for new users that do not already have a registered gateway) or go to **Gateways > + Add gateway** (for users that have registered gateways before).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/ttn/2.console-page.png"
-  width="100%"
-  caption="The Things Network console page"
-/>
+> **Image:** The Things Network console page
 
 6. All registered gateway will be displayed. To register a new gateway, click on **+ Add gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/ttn/3.add-gateway.png"
-  width="100%"
-  caption="Adding a new gateway"
-/>
+> **Image:** Adding a new gateway
 
 7. Fill in the required information and click **Create gateway** to register your gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/ttn/4.register-gateway.png"
-  width="100%"
-  caption="Registering your gateway"
-/>
+> **Image:** Registering your gateway
 
 - **Owner**- Automatically filled by The Things Stack, based on your account or created organization.
 - **Gateway ID** - This will be the unique ID of your gateway in the Network. Note that the ID must contain only lowercase letters, numbers, and dashes (-).
@@ -79,7 +58,7 @@ sudo gateway-config
 
 :::tip NOTE
 - This tutorial is based on using the EU868 frequency band, so the server address will be: **eu1.cloud.thethings.network**.
-- The **Europe 863-870&nbsp;MHz (SF12 for RX2)** is used.
+- The **Europe 863-870 MHz (SF12 for RX2)** is used.
 :::
 
 - **Frequency plan** - The frequency plan used by the gateway.
@@ -87,13 +66,7 @@ sudo gateway-config
 
 When the gateway is configured to TTN and is successfully registered in the console, it will show up online.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/ttn/5.gateway-connected.png"
-  width="100%"
-  caption="Gateway connected successfully to TTN"
-/>
-
-
+> **Image:** Gateway connected successfully to TTN
 
 ## Connecting with ChirpStack
 
@@ -121,39 +94,23 @@ There is a built-in ChirpStack in every RAK Developer gateway if you use the lat
 It is advisable to **change your password** to tighten the security of your account. You can change this by clicking the change password button at the user icon.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/6.chirpstack-ui.png"
-  width="100%"
-  caption="ChirpStack web-based UI"
-/>
+> **Image:** ChirpStack web-based UI
 
 - Everything should be pre-configured - **Device profiles** have been created, the gateway has been registered with the server, etc. If you go to the **Gateways tab** and click on **rak_gateway**, you should see the gateway details page.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/7.available-gateway.png"
-  width="100%"
-  caption="Available gateway in Chirpstack"
-/>
+> **Image:** Available gateway in Chirpstack
 
 - Go to **Gateways** and see the **Last seen status**. It must be a few seconds ago, which signifies that the gateway is visible in the ChirpStack server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/8.seen-status.png"
-  width="100%"
-  caption="Last seen status"
-/>
-
-
+> **Image:** Last seen status
 
 ### Using an Independent ChirpStack
 
 You can setup an independent ChirpStack by yourself and can set a ChirpStack in AWS. Refer to the [AWS guide](https://learn.rakwireless.com/hc/en-us/articles/26743884863767-How-To-Use-Amazon-Web-Services-with-LoRaWAN). If you want to run ChirpStack on a different host/cloud, then refer to the [guide](https://www.chirpstack.io/guides/debian-ubuntu/) on the ChirpStack site.
 
-
 :::warning
 Remember to run the `sudo gateway-config` command in the CLI and point the gateway to the IP address of the machine you just installed ChirpStack on. This can be done in item 2 in the menu **Setup RAK Gateway LoRa concentrator**.
 :::
-
 
 - Assuming you have set it up correctly, log into your ChirpStack to register your gateway by opening the ChirpStack's web page in a browser by entering:
 
@@ -161,39 +118,21 @@ Remember to run the `sudo gateway-config` command in the CLI and point the gatew
     - **Username**: admin
     - **Password**: admin
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/9.login-page.png"
-  width="100%"
-  caption="ChirpStack login page"
-/>
-
+> **Image:** ChirpStack login page
 
 - Click **Gateways** and select **+ CREATE** to register your gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/10.registered-gateways.png"
-  width="100%"
-  caption="ChirpStack registered gateways"
-/>
+> **Image:** ChirpStack registered gateways
 
 - After registering your gateway, fill in the necessary information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/11.fill-in.png"
-  width="100%"
-  caption="Filling in the details"
-/>
+> **Image:** Filling in the details
 
 - Fill in the gateway ID you got from the [Configuring the Gateway](https://docs.rakwireless.com/product-categories/wisgate/rak7244/quickstart/#configuring-the-gateway) section, also called gateway EUI.
 
 - If you have properly configured your gateway and there is a network connection between the external ChirpStack and your gateway, you should see the same page and status, as shown in **Figure 12**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244/supported-lora-network-servers/chirpstack/12.successful-registration.png"
-  width="100%"
-  caption="Successfully registered a gateway"
-/>
+> **Image:** Successfully registered a gateway
 
 Now, you have successfully connected your gateway to an external ChirpStack.
 

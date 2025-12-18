@@ -9,41 +9,31 @@ image: "https://images.docs.rakwireless.com/accessories/rakarj11/black_antenna_o
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAKARJ11 860-868 MHz Black Plastic Antenna Datasheet
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj11/black_antenna_overview_800.png"
-  width="20%"
-  caption="RAKARJ11 Antenna Overview"
-/>
+> **Image:** RAKARJ11 Antenna Overview
 
 ### Features
 
-- Frequency Range: 860-868&nbsp;MHz
-- Max Gain: 2.39&nbsp;dBi
+- Frequency Range: 860-868 MHz
+- Max Gain: 2.39 dBi
 - High efficiency
 - Vertically polarized monopole
-
-
 
 ## Specifications
 
 | **Parameter**   | **Value**              |
 | --------------- | ---------------------- |
 | Model           | RAKARJ11               |
-| Frequency Range | 860-868&nbsp;MHz       |
-| Gain            | 2.39&nbsp;dBi          |
+| Frequency Range | 860-868 MHz       |
+| Gain            | 2.39 dBi          |
 | VSWR            | ≤ 2.5                  |
-| Impedance       | 50&nbsp;Ω              |
+| Impedance       | 50 Ω              |
 | Polarization    | Vertical               |
-| Power           | 50&nbsp;W              |
+| Power           | 50 W              |
 | Connector       | RP-SMA-J               |
-| Dimensions      | L: 109&nbsp;±4&nbsp;mm |
+| Dimensions      | L: 109 ±4 mm |
 
 ### VSWR and Return Loss
 
@@ -59,11 +49,7 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 | 867                 | 1.4372   | -14.88               |
 | 868                 | 1.4185   | -15.21               |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj11/black_antenna_vswr_800.png"
-  width="70%"
-  caption="VSWR Graph"
-/>
+> **Image:** VSWR Graph
 
 ### Peak Gain & Efficiency
 
@@ -83,18 +69,9 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 ### Radiation Patterns
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj11/black_antenna_radiation_pattern_800.png"
-  width="80%"
-  caption="Radiation Patterns"
-/>
+> **Image:** Radiation Patterns
 
 ### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj11/black_antenna_mechanical_specification_800.png"
-  width="60%"
-  caption="Mechanical Specifications"
-/>
+> **Image:** Mechanical Specifications
 
-<RkBottomNav/>

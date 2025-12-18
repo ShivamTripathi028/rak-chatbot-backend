@@ -9,33 +9,27 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4260 Evaluation Board Datasheet
 
 ## Overview
 
 ### Description
 
-RAK4260 Evaluation Board is designed to give you a quick start to explore the LoRa/LPWAN world. The board measures 30 x 60&nbsp;mm and supports USB power supply, 3.7&nbsp;V LiPo battery and 5&nbsp;V solar charging.
+RAK4260 Evaluation Board is designed to give you a quick start to explore the LoRa/LPWAN world. The board measures 30 x 60 mm and supports USB power supply, 3.7 V LiPo battery and 5 V solar charging.
 
-The board itself has the RAK4260 as its core, which is a module that utilizes ATSAMR34J18B SiP. The high level of integration allows for outstanding performance: Lora TX Power of up to 20&nbsp;dBm.
+The board itself has the RAK4260 as its core, which is a module that utilizes ATSAMR34J18B SiP. The high level of integration allows for outstanding performance: Lora TX Power of up to 20 dBm.
 
 The board complies with LoRaWAN 1.0.2 specification, and it also supports LoRa P2P Point-to-Point communication. The low-power, long-range LoRa communication capabilities of the board make it suitable for a variety of applications in the IoT field such as home automation, sensor networks, building automation, and personal area networks applications such as health/fitness sensors and monitors.
 
 ### Features
 
 - 32-bit ARM Cortex M0+ MCU and SX1276 LoRa transceiver
-- RAK4260 @ 32&nbsp;MHz with 3.3&nbsp;V logic/power
-- 32.768&nbsp;kHz crystal for clock generation & RTC
-- 256&nbsp;KB flash memory + 40&nbsp;KB of RAM
+- RAK4260 @ 32 MHz with 3.3 V logic/power
+- 32.768 kHz crystal for clock generation & RTC
+- 256 KB flash memory + 40 KB of RAM
 - Hardware Serial, hardware I2C, hardware SPI support
 - PWM outputs on all pins
 - Programmable built-in LED for customized applications
-
 
 ## Specifications
 
@@ -43,13 +37,7 @@ The board complies with LoRaWAN 1.0.2 specification, and it also supports LoRa P
 
 The RAK4260 Evaluation Board front view (top) and back view are shown in **Figure 1**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/rak4260-top-back.png"
-  width="70%"
-  caption="RAK4260 Evaluation Board front and back view"
-/>
-
-
+> **Image:** RAK4260 Evaluation Board front and back view
 
 ### Hardware
 
@@ -59,11 +47,7 @@ The hardware specification is categorized into five parts. It covers the interfa
 
 **Figure 2** shows an overview of interfaces found on the RAK4260 Evaluation Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/rak4260-interfaces.png"
-  width="70%"
-  caption="RAK4260 Evaluation Board Interface Overview"
-/>
+> **Image:** RAK4260 Evaluation Board Interface Overview
 
 ##### SWD Programming Interface
 
@@ -77,7 +61,6 @@ When programming via a DAPLink tool, it is required to have all of the following
 :::tip NOTE
 For the aforementioned reason, it is best you leave these exposed for programming purposes and not to remap them as GPIOs.
 :::
-
 
 ### Flash the Firmware Using DAPLink and RAKDAP1
 
@@ -97,29 +80,23 @@ The Micro-B USB connector is compliant with the USB2.0 specification. The pin de
 
 | **Pin Number** | **Pin Name | **Description**             |
 | -------------- | ---------- | --------------------------- |
-| 1              | USB_VBUS   | (+5&nbsp;V) USB Bus Voltage |
+| 1              | USB_VBUS   | (+5 V) USB Bus Voltage |
 | 2              | USB_DM     | USB Bus D+ positive pin     |
 | 3              | USB_DP     | USB Bus D- negative pin     |
 | 4              | NC         | Not connected               |
 | 5              | GND        | Ground                      |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/microb-usb.png"
-  width="25%"
-  caption="RAK4260 Micro-B USB connector"
-/>
+> **Image:** RAK4260 Micro-B USB connector
 
 The USB data bus is connected to a **USB-SERIAL CH-340** chip. The **CH-340** is basically a USB bus convert chip that allows the USB to be converted to serial interface and serial interface pins converted to USB.
-
 
 #### Pin Definition
 
 The following tables below shows the pin definitions of the RAK4260 Evaluation Board:
 
-##### J10, J11, J12 2.54&nbsp;mm header
+##### J10, J11, J12 2.54 mm header
 
-On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used for IO extension. Some data bus and signal from the MCU module are also connected to these headers, such as I2C, UART, ADC, etc.
+On the RAK4260 Evaluation Board, there are three 2.54 mm pitch headers used for IO extension. Some data bus and signal from the MCU module are also connected to these headers, such as I2C, UART, ADC, etc.
 
 ##### J10 pin definition
 
@@ -129,7 +106,6 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 2              | VDD        | Power supply generated by CPU module |                         |
 | 3              | TX1        | UART3 TX pin                         | PA19                    |
 | 4              | RX1        | UART3 RX pin                         | PA18                    |
-
 
 ##### J11 pin definition
 
@@ -141,7 +117,7 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 4              | GND          | Ground                        |                         |
 
 :::tip NOTE
-3V3_S is another 3.3&nbsp;V power supply that can be controlled on/off by MCU. Set IO2=0 when the sensor is not in use to save power.
+3V3_S is another 3.3 V power supply that can be controlled on/off by MCU. Set IO2=0 when the sensor is not in use to save power.
 :::
 
 ##### J12 pin definition
@@ -155,11 +131,7 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 
 ##### IO Module Connector pin definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/io-module-connector.png"
-  width="35%"
-  caption="RAK4260 IO Module Connector"
-/>
+> **Image:** RAK4260 IO Module Connector
 
 | **Pin Number** | **Pin Name** | **Description**                                                                                            | **Microcontroller pin** |
 | -------------- | ------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -167,11 +139,11 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 2              | VBAT         | Li-Ion Battery positive pin                                                                                |                         |
 | 3              | GND          | Ground                                                                                                     |                         |
 | 4              | GND          | Ground                                                                                                     |                         |
-| 5              | 3V3          | 3.3&nbsp;V power supply                                                                                    |
-| 6              | 3V3_S        | 3.3&nbsp;V power supply can be shutdown by CPU module                                                      |
+| 5              | 3V3          | 3.3 V power supply                                                                                    |
+| 6              | 3V3_S        | 3.3 V power supply can be shutdown by CPU module                                                      |
 | 7              | USB+         | USB Bus D+ positive pin                                                                                    | PA25                    |
 | 8              | USB-         | USB Bus D- negative pin                                                                                    | PA24                    |
-| 9              | VBUS         | 5&nbsp;V USB Bus Voltage                                                                                   |                         |
+| 9              | VBUS         | 5 V USB Bus Voltage                                                                                   |                         |
 | 10             | SW1          | Switch signal for custom use                                                                               |                         |
 | 11             | UART1_TX     | UART1 TX signal                                                                                            | PA04                    |
 | 12             | UART1_RX     | UART1 RX signal                                                                                            | PA05                    |
@@ -179,8 +151,10 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 14             | LED1         | Red LED for battery charge indicator                                                                       |                         |
 | 15             | LED2         | Green LED for custom use                                                                                   | PA27                    |
 | 16             | LED3         | BLue LED for custom use                                                                                    | PA06                    |
-| 17             | VDD          | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
-| 18             | VDD          | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 17             | VDD          | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
+| 18             | VDD          | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 19             | I2C1_SDA     | I2C Data  Signal                                                                                           | PA17                    |
 | 20             | I2C1_SCL     | I2C clock signal                                                                                           | PA16                    |
 | 21             | AIN0         | Analog Input for ADC                                                                                       | PA08                    |
@@ -206,11 +180,7 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 
 ##### Sensor Module Connector Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/sensor-module-connector.png"
-  width="35%"
-  caption="Sensor Module Connector"
-/>
+> **Image:** Sensor Module Connector
 
 **Slot A**
 
@@ -224,14 +194,16 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 6              | SPI_MOSI     | SPI MOSI signal                                                                                | PA23                    |
 | 7              | I2C1_SCL     | I2C clock signal                                                                               | PA17                    |
 | 8              | I2C1_SDA     | I2C data  signal                                                                               | PA16                    |
-| 9              | VDD          | Controlled by CPU module.<br />Used to power sensor board if the MCU IO level is not 3.3&nbsp;V  |                         |
+| 9              | VDD          | Controlled by CPU module.
+Used to power sensor board if the MCU IO level is not 3.3 V  |                         |
 | 10             | IO2          | General Purpose IO                                                                             | PA15                    |
-| 11             | 3V3_S        | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 11             | 3V3_S        | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 12             | IO1          | General Purpose IO                                                                             | PB22                    |
 | 13             | NC           | Not connected                                                                                  |                         |
-| 14             | 3V3_S        | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 14             | 3V3_S        | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 15             | NC           | Not connected                                                                                  |                         |
-| 16             | VDD          | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 16             | VDD          | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 17             | NC           | Not connected                                                                                  |                         |
 | 18             | NC           | Not connected                                                                                  |                         |
 | 19             | NC           | Not connected                                                                                  |                         |
@@ -243,7 +215,6 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 
 **Slot B**
 
-
 | **Pin Number** | **Pin Name** | **Description**                                                                                | **Microcontroller Pin** |
 | -------------- | ------------ | ---------------------------------------------------------------------------------------------- | ----------------------- |
 | 1              | NC           | Not connected                                                                                  |                         |
@@ -254,14 +225,16 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 6              | SPI_MOSI     | SPI MOSI  signal                                                                               | PA23                    |
 | 7              | I2C1_SCL     | I2C Clock signal                                                                               | PA17                    |
 | 8              | I2C1_SDA     | I2C Data  signal                                                                               | PA16                    |
-| 9              | VDD          | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 9              | VDD          | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 10             | IO1          | General Purpose IO                                                                             | PB22                    |
-| 11             | 3V3_S        | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 11             | 3V3_S        | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 12             | IO2          | General Purpose IO                                                                             | PA15                    |
 | 13             | NC           | Not connected                                                                                  |                         |
-| 14             | 3V3_S        | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 14             | 3V3_S        | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 15             | NC           | Not connected                                                                                  |                         |
-| 16             | VDD          | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 16             | VDD          | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 17             | NC           | Not connected                                                                                  |                         |
 | 18             | NC           | Not connected                                                                                  |                         |
 | 19             | NC           | Not connected                                                                                  |                         |
@@ -273,7 +246,6 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 
 **Slot C**
 
-
 | **Pin Number** | **Pin Name** | **Description**                                                                                | **Microcontroller Pin** |
 | -------------- | ------------ | ---------------------------------------------------------------------------------------------- | ----------------------- |
 | 1              | NC           | Not connected                                                                                  |                         |
@@ -284,14 +256,16 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 6              | SPI_MOSI     | SPI MOSI signal                                                                                | PA23                    |
 | 7              | I2C1_SCL     | I2C Clock signal                                                                               | PA17                    |
 | 8              | I2C1_SDA     | I2C Data  signal                                                                               | PA16                    |
-| 9              | VDD          | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 9              | VDD          | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 10             | IO4          | General Purpose IO                                                                             |                         |
-| 11             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                         |                         |
+| 11             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                         |                         |
 | 12             | IO5          | General Purpose IO                                                                             |                         |
 | 13             | NC           | Not connected                                                                                  |                         |
-| 14             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                         |                         |
+| 14             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                         |                         |
 | 15             | NC           | Not connected                                                                                  |                         |
-| 16             | VDD          | Controlled by CPU module.<br />Used to power sensor board if the MCU IO level is not 3.3&nbsp;V  |                         |
+| 16             | VDD          | Controlled by CPU module.
+Used to power sensor board if the MCU IO level is not 3.3 V  |                         |
 | 17             | NC           | Not connected                                                                                  |                         |
 | 18             | NC           | Not connected                                                                                  |                         |
 | 19             | NC           | Not connected                                                                                  |                         |
@@ -301,9 +275,7 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 23             | GND          | Ground                                                                                         |                         |
 | 24             | NC           | Not connected                                                                                  |                         |
 
-
 **Slot D**
-
 
 | **Pin Number** | **Pin Name** | **Description**                                                                                            | **Microcontroller Pin** |
 | -------------- | ------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -315,14 +287,16 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 6              | SPI_MOSI     | SPI MOSI signal                                                                                            | PA23                    |
 | 7              | I2C1_SCL     | I2C Clock signal                                                                                           | PA17                    |
 | 8              | I2C1_SDA     | I2C Data signal                                                                                            | PA16                    |
-| 9              | VDD          | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 9              | VDD          | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 10             | IO6          | General Purpose IO                                                                                         |                         |
-| 11             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                                     |                         |
+| 11             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                                     |                         |
 | 12             | IO5          | General Purpose IO                                                                                         |                         |
 | 13             | NC           | Not connected                                                                                              |                         |
-| 14             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                                     |                         |
+| 14             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                                     |                         |
 | 15             | NC           | Not connected                                                                                              |                         |
-| 16             | VDD          | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 16             | VDD          | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 17             | NC           | Not connected                                                                                              |                         |
 | 18             | NC           | Not connected                                                                                              |                         |
 | 19             | NC           | Not connected                                                                                              |                         |
@@ -332,12 +306,10 @@ On the RAK4260 Evaluation Board, there are three 2.54&nbsp;mm pitch headers used
 | 23             | GND          | Ground                                                                                                     |                         |
 | 24             | NC           | Not connected                                                                                              |                         |
 
-
-
 ##### Battery Connector
 
 The pin definition of the RAK4260 Evaluation Board Li-Ion battery connector is shown in the table below.
-The matching connector for the battery wires is an [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
+The matching connector for the battery wires is an [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
 
 | **Pin** | **Pin Name** | **Description**               |
 | ------- | ------------ | ----------------------------- |
@@ -346,29 +318,26 @@ The matching connector for the battery wires is an [JST PHR-2 2&nbsp;mm pitch fe
 
 The full specification of the RAK4260 Evaluation Board battery is shown in the table below.
 
-
 | **No.** | **Item**                  | **Specification**                    |
 | ------- | ------------------------- | ------------------------------------ |
-| 1       | Charge Cut-off Voltage    | 4.2&nbsp;V                           |
-| 2       | Nominal Voltage           | 3.7&nbsp;V                           |
-| 3       | Discharge Cut-off Voltage | 2.75&nbsp;V                          |
-| 4       | Typical Capacity          | 2650&nbsp;mAh                        |
-| 5       | Max Discharge Current     | 0.5&nbsp;C at 25&nbsp;℃ to 45&nbsp;℃ |
-| 6       | PH Connector              | 2.0&nbsp;mm pitch                    |
-| 7       | Cable Length              | 110.0±3.0&nbsp;mm                    |
+| 1       | Charge Cut-off Voltage    | 4.2 V                           |
+| 2       | Nominal Voltage           | 3.7 V                           |
+| 3       | Discharge Cut-off Voltage | 2.75 V                          |
+| 4       | Typical Capacity          | 2650 mAh                        |
+| 5       | Max Discharge Current     | 0.5 C at 25 ℃ to 45 ℃ |
+| 6       | PH Connector              | 2.0 mm pitch                    |
+| 7       | Cable Length              | 110.0±3.0 mm                    |
 | 8       | Cable Color               | Red: VBAT, Black: GND                |
 
-
-
 :::tip NOTE
-The voltage of the Li-Ion battery **must not exceed 4.3&nbsp;V**.
+The voltage of the Li-Ion battery **must not exceed 4.3 V**.
 When connecting the battery make sure the polarity is correct. Not all connectors are wired the same.
 :::
 
 ##### Solar Panel Connector
 
 The pin definition of the RAK4260 Evaluation Board solar panel connector is shown in the table below.
-The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287)
+The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287)
 
 | **Pin** | **Pin Name** | **Description**               |
 | ------- | ------------ | ----------------------------- |
@@ -377,17 +346,16 @@ The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pi
 
 The full specification of the Solar Panel for the RAK4260 Evaluation Board is shown in the table below.
 
-
 | **No.** | **Item**        | **Specification**                                        |
 | ------- | --------------- | -------------------------------------------------------- |
-| 1       | Nominal Voltage | 5&nbsp;V                                                 |
-| 2       | Typical Current | 80&nbsp;mA                                               |
-| 3       | Size            | Length: 60&nbsp;mm, Width: 60&nbsp;mm, Height: 2&nbsp;mm |
-| 4       | Connector       | 1.5&nbsp;mm pitch                                        |
+| 1       | Nominal Voltage | 5 V                                                 |
+| 2       | Typical Current | 80 mA                                               |
+| 3       | Size            | Length: 60 mm, Width: 60 mm, Height: 2 mm |
+| 4       | Connector       | 1.5 mm pitch                                        |
 | 5       | Cable Color     | Red: C0NN_5V, Black: GND                                 |
 
 :::tip NOTE
-The output of the solar panel **must not exceed 5.5&nbsp;V**. Otherwise, it may cause permanent damage to the board.
+The output of the solar panel **must not exceed 5.5 V**. Otherwise, it may cause permanent damage to the board.
 :::
 
 ##### LEDs
@@ -408,11 +376,9 @@ The TCXO (Temperature compensated crystal oscillator) power pin is PB03.
 
 ##### RF Switch Pin Definition
 
-
 | **BAND_SEL** | **TX/RX** |
 | :----------: | :-------: |
 |     PA13     |   RXTX    |
-
 
 ##### RF Switch control logic table
 
@@ -423,11 +389,13 @@ The TCXO (Temperature compensated crystal oscillator) power pin is PB03.
 | RFI_HF (RX)   |      H       |     L     |    H     |
 | RFO_HF        |      H       |     H     |    H     |
 
-
 :::tip NOTE
-PA28 is RF Switch VDD pin<br />
-H  = High level<br />
-L  = Low level <br />
+PA28 is RF Switch VDD pin
+
+H  = High level
+
+L  = Low level 
+
 :::
 
 #### RF Requirements
@@ -443,7 +411,6 @@ The RAK4260 Evaluation Board supports the following LoRa bands:
 | Australia     | AU915           |
 | Asia          | AS923           |
 
-
 #### Electrical Characteristics
 
 ##### Power Consumption
@@ -453,8 +420,6 @@ The RAK4260 Evaluation Board supports the following LoRa bands:
 |               Leakage current               |    2    |  uA   |
 | Idle current (MCU and sensor in sleep mode) |   10    |  uA   |
 | Working current (LoRa module transmitting)  |   130   |  mA   |
-
-
 
 ##### Absolute Maximum Ratings
 
@@ -468,38 +433,21 @@ Exposure to maximum rating conditions may affect device reliability.
 | IO connector                  | -0.3 - VDD+0.3 | V    |
 | ESD                           | 2000           | V    |
 
-
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
-**Figure 6** shows the actual dimensions of the RAK4260 Evaluation Board measured in millimeters (mm). <br /><br />
+**Figure 6** shows the actual dimensions of the RAK4260 Evaluation Board measured in millimeters (mm). 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/rak4260-mechanical.png"
-  width="100%"
-  caption="RAK4260 Evaluation Board dimensions"
-/>
+> **Image:** RAK4260 Evaluation Board dimensions
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4260-evaluation-board/datasheet/schematic-diagram.png"
-  width="100%"
-  caption="RAK4260 WisDuo LPWAN Module Schematic Diagram"
-/>
+> **Image:** RAK4260 WisDuo LPWAN Module Schematic Diagram
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK4260/Certification-Report/RAK4260H_CE_Certification.zip',
-    },    
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_FCC_Certification.pdf',
-    },
-    
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4260/Certification-Report/RAK4260H_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_FCC_Certification.pdf
 
-
-<RkBottomNav/>

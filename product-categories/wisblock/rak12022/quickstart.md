@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12022 Quick Start Guide
 
 ## Prerequisite
@@ -46,31 +43,19 @@ For more information about RAK12022, refer to the [Datasheet](datasheet.md).
 
 RAK12022 module can be connected to the IO slot of the WisBlock Base to communicate with the WisBlock Core. Always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_assembly.png"
-  width="90%"
-  caption="RAK12022 connection to WisBlock Base"
-/>
+> **Image:** RAK12022 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws, depending on the module.
+As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws, depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_mounting.png"
-  width="70%"
-  caption="RAK12022 connection to WisBlock Base"
-/>
+> **Image:** RAK12022 connection to WisBlock Base
 
 When using the **RAK4631** board, connect the LoRa and BLE antennas to avoid damage to the board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak4631_antenna.png"
-  width="60%"
-  caption="LoRa and BLE antennas of RAK4631"
-/>
+> **Image:** LoRa and BLE antennas of RAK4631
 
 ##### Disassembling
 
@@ -78,27 +63,15 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/16.removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/17.detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/18.detaching-module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK12022 uses SPI communication lines, and it can cause possible conflicts, especially on other WisBlock Modules connected to Slots A to F of the WisBlock Base.
@@ -108,9 +81,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -124,83 +97,39 @@ The RAK12022 design is based on **MAX31865** from Analog Devices. The RAK12022 i
 
    **2-Wire**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_assembly_1.png"
-  width="100%"
-  caption="2-Wire Assembly"
-/>
+> **Image:** 2-Wire Assembly
 
    **3-Wire**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_assembly_2.png"
-  width="100%"
-  caption="3-Wire Assembly"
-/>
+> **Image:** 3-Wire Assembly
 
    **4-Wire**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_assembly_3.png"
-  width="100%"
-  caption="4-Wire Assembly"
-/>
+> **Image:** 4-Wire Assembly
 
 2. Once done with the configuration, install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/arduino_example.png"
-  width="90%"
-  caption="Arduino IDE"
-/>
+> **Image:** Arduino IDE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_wisblocks.png"
-  width="90%"
-  caption="WisBlock Cores inside the Arduino IDE"
-/>
+> **Image:** WisBlock Cores inside the Arduino IDE
 
 3. Then install the library of **RAK12022** into your Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_update_1.png"
-  width="90%"
-  caption="Managing libraries in Arduino IDE"
-/>
+> **Image:** Managing libraries in Arduino IDE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_update_2.png"
-  width="90%"
-  caption="RAK12022 Library"
-/>
+> **Image:** RAK12022 Library
 
 4. Then open the sample code for **RAK12022**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_update_3.png"
-  width="70%"
-  caption="Selecting the sample code for RAK12022"
-/>
+> **Image:** Selecting the sample code for RAK12022
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_2.png"
-  width="90%"
-  caption="Sample code for RAK12022"
-/>
+> **Image:** Sample code for RAK12022
 
 5. Then select the **RAK4631** board and its serial port, as shown in **Figure 16** and **Figure 17**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_3.png"
-  width="90%"
-  caption="Selecting RAK4631 board as the WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 board as the WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_4.png"
-  width="90%"
-  caption="Selecting the serial port of RAK4631 WisBlock Core"
-/>
+> **Image:** Selecting the serial port of RAK4631 WisBlock Core
 
 :::tip NOTE
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
@@ -208,17 +137,9 @@ If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the *
 
 6. Then upload the code as shown in **Figure 18** and **Figure 19**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_5.png"
-  width="90%"
-  caption="Uploading the RAK12022 sample code"
-/>
+> **Image:** Uploading the RAK12022 sample code
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_6.png"
-  width="90%"
-  caption="Uploading the RAK12022 sample code"
-/>
+> **Image:** Uploading the RAK12022 sample code
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK12022 WisBlock PT100 module that can be found on the [RAK12022 WisBlock Example Code Repository](https://github.com/RAKWireless/RAK12022-MAX31865).
@@ -226,19 +147,7 @@ If you experience any error in compiling the example sketch, check the updated c
 
 7. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to monitor the PT100 sensor's reading logs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_7.png"
-  width="90%"
-  caption="Sample code successfully uploaded to RAK4631"
-/>
+> **Image:** Sample code successfully uploaded to RAK4631
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12022/quickstart/rak12022_sample_8.png"
-  width="90%"
-  caption="Readings from the Serial Monitor"
-/>
+> **Image:** Readings from the Serial Monitor
 
-
-
-
-<RkBottomNav/>

@@ -21,16 +21,13 @@ date: 2021-10-10
 sidebar_label: Product Overview
 ---
 
-
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11310 WisBlock LoRaWAN Module
 
 Thank you for choosing **RAK11310 WisBlock LoRaWAN Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK11310 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11310/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak11310/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [Arduino IDE BSP](https://learn.rakwireless.com/hc/en-us/articles/26687371039383-How-To-Perform-Installation-of-Board-Support-Package-in-Arduino-IDE)
 * [PlatformIO BSP](https://learn.rakwireless.com/hc/en-us/articles/26687276346775-How-To-Perform-Installation-of-Board-Support-Package-in-PlatformIO)
@@ -56,9 +53,9 @@ The RF communication characteristic of the Lora module makes it suitable for a v
 - LoRaWan 1.0.2 protocol stack
 - **I/O ports**: UART/I2C/GPIO/USB
 - Serial Wire Debug (SWD) interface
-- **Module Size**: 20 x 30&nbsp;mm
-- **Supply Voltage**: 2.0&nbsp;V ~ 3.6&nbsp;V
-- **Temperature Range**: -20&nbsp;°C ~ 70&nbsp;°C
+- **Module Size**: 20 x 30 mm
+- **Supply Voltage**: 2.0 V ~ 3.6 V
+- **Temperature Range**: -20 °C ~ 70 °C
 - **Chipset**: Raspberry Pi Foundation RP2040, Semtech SX1262
 
 ## Prerequisites
@@ -70,4 +67,3 @@ To use a **RAK11310**, you need at least a **WisBlock Base** to plug the module 
 - When using the LoRa module, make sure that an antenna is always connected. Using these transceivers without an antenna can damage the system.
 :::
 
-<RkBottomNav/>

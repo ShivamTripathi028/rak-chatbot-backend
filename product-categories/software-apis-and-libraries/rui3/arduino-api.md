@@ -16,9 +16,6 @@ keywords:
 date: 2022-07-04
 ---
 
-
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Arduino API
 
 :::warning
@@ -53,7 +50,6 @@ enum RAK_SERIAL_MODE
 | RAK_CUSTOM_MODE  | Custom mode                            |
 | RAK_DEFAULT_MODE | Default mode which depends on platform |
 
-
 #### RAK\_ADC\_RESOLUTION
 
 ```c
@@ -62,12 +58,10 @@ enum RAK_ADC_RESOLUTION
 
 | Enumerator               |                        |
 | ------------------------ | ---------------------- |
-| RAK_ADC_RESOLUTION_8BIT  | 8&nbsp;bit resolution  |
-| RAK_ADC_RESOLUTION_10BIT | 10&nbsp;bit resolution |
-| RAK_ADC_RESOLUTION_12BIT | 12&nbsp;bit resolution |
-| RAK_ADC_RESOLUTION_14BIT | 14&nbsp;bit resolution |
-
-
+| RAK_ADC_RESOLUTION_8BIT  | 8 bit resolution  |
+| RAK_ADC_RESOLUTION_10BIT | 10 bit resolution |
+| RAK_ADC_RESOLUTION_12BIT | 12 bit resolution |
+| RAK_ADC_RESOLUTION_14BIT | 14 bit resolution |
 
 #### RAK\_ADC\_MODE
 
@@ -78,11 +72,10 @@ enum RAK_ADC_MODE
 | Enumerator           |                                               |
 | -------------------- | --------------------------------------------- |
 | RAK_ADC_MODE_DEFAULT | default range which depends on platform       |
-| RAK_ADC_MODE_3_0     | maximum 3.0&nbsp;V                            |
-| RAK_ADC_MODE_2_4     | maximum 2.4&nbsp;V                            |
-| RAK_ADC_MODE_1_8     | maximum 1.8&nbsp;V                            |
-| RAK_ADC_MODE_1_2     | maximum 1.2&nbsp;V                            |
-
+| RAK_ADC_MODE_3_0     | maximum 3.0 V                            |
+| RAK_ADC_MODE_2_4     | maximum 2.4 V                            |
+| RAK_ADC_MODE_1_8     | maximum 1.8 V                            |
+| RAK_ADC_MODE_1_2     | maximum 1.2 V                            |
 
 #### RAK\_PWM\_RESOLUTION
 
@@ -92,13 +85,12 @@ enum RAK_PWM_RESOLUTION
 
 | Enumerator               |                        |
 | ------------------------ | ---------------------- |
-| RAK_PWM_RESOLUTION_8BIT  | 8&nbsp;bit resolution  |
-| RAK_PWM_RESOLUTION_10BIT | 10&nbsp;bit resolution |
-| RAK_PWM_RESOLUTION_12BIT | 12&nbsp;bit resolution |
-| RAK_PWM_RESOLUTION_14BIT | 14&nbsp;bit resolution |
+| RAK_PWM_RESOLUTION_8BIT  | 8 bit resolution  |
+| RAK_PWM_RESOLUTION_10BIT | 10 bit resolution |
+| RAK_PWM_RESOLUTION_12BIT | 12 bit resolution |
+| RAK_PWM_RESOLUTION_14BIT | 14 bit resolution |
 
 ## Serial
-
 
 ### begin()
 
@@ -112,10 +104,15 @@ Serial.begin(baud);
 Serial.begin(baud, mode);
 ```
 
-
 | **Function**   | `void begin (uint32_t  baud, RAK_SERIAL_MODE  mode = RAK_DEFAULT_MODE) `                                                                                                                                                                                           |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters** | **baud** - The baudrate to set for the Serial. <br /> **mode(optional)** - The mode that use UART in different way (if not assigned, `RAK_DEFAULT_MODE` is chosen). <br /> List: <br /> `RAK_AT_MODE` <br /> `RAK_API_MODE` <br /> `RAK_CUSTOM_MODE` <br /> `RAK_DEFAULT_MODE` |
+| **Parameters** | **baud** - The baudrate to set for the Serial. 
+ **mode(optional)** - The mode that use UART in different way (if not assigned, `RAK_DEFAULT_MODE` is chosen). 
+ List: 
+ `RAK_AT_MODE` 
+ `RAK_API_MODE` 
+ `RAK_CUSTOM_MODE` 
+ `RAK_DEFAULT_MODE` |
 | **Returns**    | void                                                                                                                                                                                                                                                               |
 
 <details>
@@ -132,11 +129,9 @@ void loop() {
 ```
 </details>
 
-
 :::tip NOTE
 For RAK4630 and RAK11720 with BLE, the BLE UART is assigned to _**`Serial6`**_.
 :::
-
 
 ### end()
 
@@ -164,7 +159,6 @@ void loop() {
 ```
 </details>
 
-
 ### getBaudrate()
 
 Gets the data rate in bits per second (baud) for serial data transmission.
@@ -172,7 +166,6 @@ Gets the data rate in bits per second (baud) for serial data transmission.
 ```c
 Serial.getBaudrate(void);
 ```
-
 
 | **Function** | `uint32_t getBaudrate(void)` |
 | ------------ | ---------------------------- |
@@ -191,8 +184,6 @@ void loop() {
 }
 ```
 </details>
-
-
 
 ### lock()
 
@@ -232,7 +223,6 @@ void loop() {
 ```
 </details>
 
-
 ### password()
 
 Set up the password to unlock the device when locked.
@@ -245,11 +235,13 @@ Serial.password(str);
 Serial.password(new_passwd, len);
 ```
 
-
 | **Function**   | `bool password(char * new_passwd, size_t len)`                                                                                                                   |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **str** - a string to set for unlocking the device <br /> **new_passwd** - a char array to set for unlocking the device <br /> **len** -	the length of your password |
-| **Returns**    | **TRUE** - for success <br /> **FALSE** - for failure                                                                                                              |
+| **Parameters** | **str** - a string to set for unlocking the device 
+ **new_passwd** - a char array to set for unlocking the device 
+ **len** -	the length of your password |
+| **Returns**    | **TRUE** - for success 
+ **FALSE** - for failure                                                                                                              |
 
 <details>
 <summary> Click to view the code</summary>
@@ -270,7 +262,6 @@ void loop() {
 ```
 </details>
 
-
 ### write()
 
 Writes a byte sequence to a specified serial port.
@@ -282,11 +273,9 @@ Serial.write(val);
 Serial.write(buf, size);
 ```
 
-
 :::tip NOTE
 This function is a virtual function declared in `Print.h`.
 :::
-
 
 | **Function**   | `virtual size_t write( uint8_t val)`             |
 | -------------- | ------------------------------------------------ |
@@ -295,7 +284,8 @@ This function is a virtual function declared in `Print.h`.
 
 | **Function**   | `virtual size_t write(const uint8_t* buf, size_t size)`                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **buf** - an array to send as a series of bytes <br /> **size** - the number of bytes to be sent from the array |
+| **Parameters** | **buf** - an array to send as a series of bytes 
+ **size** - the number of bytes to be sent from the array |
 | **Returns**    | number of bytes sent successfully (Type: size_t)                                                              |
 
 <details>
@@ -313,7 +303,6 @@ void loop() {
 ```
 </details>
 
-
 ### available()
 
 Gets the number of bytes available for reading from the specified serial port.
@@ -325,7 +314,6 @@ Serial.available();
 :::tip NOTE
 - `Serial.available()` inherits from the Stream utility class.
 :::
-
 
 | **Function** | `virtual int available(void)`                                                        |
 | ------------ | ------------------------------------------------------------------------------------ |
@@ -348,7 +336,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### read()
 
@@ -384,7 +371,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### peek()
 
@@ -422,7 +408,6 @@ void loop() {
 ```
 </details>
 
-
 ### flush()
 
 Waits for the transmission of outgoing serial data to complete.
@@ -450,7 +435,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### print()
 
@@ -516,7 +500,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### println()
 
@@ -595,7 +578,6 @@ void loop()
 ```
 </details>
 
-
 ### setTimeout()
 
 This API is used to set the timeout value for read/write/flush API.
@@ -627,7 +609,6 @@ void loop() {
 ```
 </details>
 
-
 ### getTimeout()
 
 This API is used to get the timeout value for read/write/flush API.
@@ -658,7 +639,6 @@ void loop() {
 ```
 </details>
 
-
 ### readBytes()
 
 Read characters from Stream into buffer terminates if length characters have been read, or timeout (see [setTimeout](#settimeout)).
@@ -671,10 +651,10 @@ Serial.readBytes(buffer, length);
 `Serial.readBytes()` inherits from the Stream utility class.
 :::
 
-
 | **Function**   | `size_t readBytes(char* buffer,size_t length)`                                                |
 | -------------- | --------------------------------------------------------------------------------------------- |
-| **Parameters** | **buffer** - The buffer to store the bytes in. <br /> **length** - The number of bytes to read. |
+| **Parameters** | **buffer** - The buffer to store the bytes in. 
+ **length** - The number of bytes to read. |
 | **Returns**    | The number of bytes placed in the buffer (Type: `size_t`)                                     |
 
 <details>
@@ -709,7 +689,6 @@ void loop() {
 ```
 </details>
 
-
 ### readBytesUntil()
 
 As readBytes with terminator character Terminates if length characters have been read, timeout, or if the terminator character detected.
@@ -722,10 +701,11 @@ Serial.readBytesUntil(terminator, buffer, length);
 `Serial.readBytesUntil()` inherits from the Stream utility class
 :::
 
-
 | **Function**   | `size_t readBytesUntil(char terminator, char* buffer, size_t length)`                                                                         |
 | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **terminator** - The character to search for <br /> **buffer** - The buffer to store the bytes in <br /> **length** - The number of bytes to read |
+| **Parameters** | **terminator** - The character to search for 
+ **buffer** - The buffer to store the bytes in 
+ **length** - The number of bytes to read |
 | **Returns**    | `size_t`                                                                                                                                      |
 
 <details>
@@ -760,11 +740,9 @@ void loop() {
 ```
 </details>
 
-
 ### readString
 
 Reads characters from a Stream into a String. The function terminates if it times out (see [setTimeout()](#settimeout)).
-
 
 ```c
 Serial.readString();
@@ -807,7 +785,6 @@ void loop() {
 ```
 </details>
 
-
 ### readStringUntil()
 
 Reads characters from the serial buffer into a String until the terminator is found or a timeout occurs (see [setTimeout()](#settimeout)).
@@ -819,7 +796,6 @@ Serial.readStringUntil(terminator);
 :::tip NOTE
 `Serial.readStringUntil()` inherits from the Stream utility class.
 :::
-
 
 | **Function** | `String readStringUntil(char	terminator)`                                                          |
 | ------------ | -------------------------------------------------------------------------------------------------- |
@@ -854,7 +830,6 @@ void loop() {
 ```
 </details>
 
-
 ## Wire
 
 ### begin()
@@ -869,8 +844,6 @@ Wire.begin();
 | ------------ | ------------------ |
 | **Returns**  | void               |
 
-
-
 <details>
 <summary> Click to view the code</summary>
 
@@ -883,7 +856,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### end()
 
@@ -910,10 +882,9 @@ void loop() {
 ```
 </details>
 
-
 ### setClock()
 
-This function modifies the clock frequency for I2C communication. I2C slave devices have no minimum working clock frequency, however 100&nbsp;kHz is usually the baseline.
+This function modifies the clock frequency for I2C communication. I2C slave devices have no minimum working clock frequency, however 100 kHz is usually the baseline.
 
 ```c
 Wire.setClock(freq);
@@ -937,7 +908,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### beginTransmission()
 
@@ -968,7 +938,6 @@ void loop() {
 ```
 </details>
 
-
 ### endTransmission()
 
 Ends a transmission to a slave device that was begun by [beginTransmission()](#begintransmission) and transmits the bytes that were queued by `write()`.
@@ -983,8 +952,11 @@ Wire.endTransmission(sendStop);
 
 | **Function**   | `uint32_t endTransmission(uint8_t sendStop = false)`                                                                                                                                                         |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters** | **sendStop(optional)** <br /> &#x2022; **true** will send a stop message, releasing the bus after transmission. <br />  &#x2022; **false** will send a restart, keeping the connection active (default = false). |
-| **Returns**    | 0	- success <br /> 1- fail                                                                                                                                                                                     |
+| **Parameters** | **sendStop(optional)** 
+ • **true** will send a stop message, releasing the bus after transmission. 
+  • **false** will send a restart, keeping the connection active (default = false). |
+| **Returns**    | 0	- success 
+ 1- fail                                                                                                                                                                                     |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1014,10 +986,13 @@ Wire.requestFrom(address, quantity);
 Wire.requestFrom(address, quantity, sendStop);
 ```
 
-
 | **Function**   | `uint8_t requestFrom(uint8_t	address, uint8_t quantity, uint8_t sendStop)`                                                                                                                                                                                                                                                                  |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **address** - The 7-bit address of the device to request bytes from <br /> **quantity** - The number of bytes to request <br />  **sendStop** <br /> - **true** will send a stop message after the request, releasing the bus. <br /> - **false** will continually send a restart after the request, keeping the connection active(default = false) |
+| **Parameters** | **address** - The 7-bit address of the device to request bytes from 
+ **quantity** - The number of bytes to request 
+  **sendStop** 
+ - **true** will send a stop message after the request, releasing the bus. 
+ - **false** will continually send a restart after the request, keeping the connection active(default = false) |
 | **Returns**    | The number of bytes returned from the slave device (Type: byte)                                                                                                                                                                                                                                                                             |
 
 <details>
@@ -1045,7 +1020,6 @@ void loop() {
 ```
 </details>
 
-
 ### write()
 
 Writes data to a slave device.
@@ -1062,10 +1036,11 @@ Wire.write(data, size);
 In-between calls to [beginTransmission()](#begintransmission) and [endTransmission()](#endtransmission).
 :::
 
-
 | **Function**   | `virtual size_t write(const uint8_t* data, size_t size)`                                                                                       |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **value** - A value to send as a single byte <br /> **data** - An array of data to send as bytes <br /> **size** - The number of bytes to transmit |
+| **Parameters** | **value** - A value to send as a single byte 
+ **data** - An array of data to send as bytes 
+ **size** - The number of bytes to transmit |
 | **Returns**    | `write()` will return the number of bytes written, though reading that number is optional (Type: byte)                                         |
 
 <details>
@@ -1093,7 +1068,6 @@ In-between calls to [beginTransmission()](#begintransmission) and [endTransmissi
 ```
 </details>
 
-
 ### available()
 
 Returns the number of bytes available for retrieval with [read()](#read-2).
@@ -1101,7 +1075,6 @@ Returns the number of bytes available for retrieval with [read()](#read-2).
 ```c
 Wire.available();
 ```
-
 
 | **Function** | `virtual int available(void)`             |
 | ------------ | ----------------------------------------- |
@@ -1132,7 +1105,6 @@ void loop() {
 ```
 </details>
 
-
 ### read()
 
 Reads a byte that was transmitted from a slave device to a master
@@ -1144,7 +1116,6 @@ Wire.read();
 | **Function** | `virtual int read(void)` |
 | ------------ | ------------------------ |
 | **Returns**  | The next byte received   |
-
 
 :::tip NOTE
 - `read()` inherits from the Stream utility class.
@@ -1174,7 +1145,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ## SPI
 
@@ -1215,7 +1185,6 @@ receivedVal16 = SPI.transfer16(val16)
 | **Parameters** | **val16** - the two bytes variable to send out over the bus |
 | **Returns**    | The received data                                           |
 
-
 ### transfer()
 
 SPI transfer is based on a simultaneous send and receive: the received data is returned in receivedVal. In case of buffer transfers the received data is stored in the buffer in-place.
@@ -1228,10 +1197,10 @@ receivedVal = SPI.transfer(val)
 SPI.transfer(buffer, size)
 ```
 
-
 | **Function**   | `void transfer(void* buf, size_t count)`                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------- |
-| **Parameters** | **val** - the byte to send out over the bus <br /> **buffer** - the array of data to be transferred |
+| **Parameters** | **val** - the byte to send out over the bus 
+ **buffer** - the array of data to be transferred |
 | **Returns**    | The received data                                                                                 |
 
 ### beginTransaction()
@@ -1282,7 +1251,11 @@ SPI.setDataMode(mode)
 
 | **Function**   | `void setDataMode(uint8_t mode)`                                           |
 | -------------- | -------------------------------------------------------------------------- |
-| **Parameters** | **mode**<br />	- SPI_MODE0 <br />- SPI_MODE1 <br /> - SPI_MODE2 <br /> - SPI_MODE3 |
+| **Parameters** | **mode**
+	- SPI_MODE0 
+- SPI_MODE1 
+ - SPI_MODE2 
+ - SPI_MODE3 |
 | **Returns**    | void                                                                       |
 
 ### setClockDivider()
@@ -1295,7 +1268,15 @@ SPI.setClockDivider(divider)
 
 | **Function**   | `void setClockDivider(uint32_t uc_div)`                                                                                                                                                           |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **divider**<br /> - SPI_CLOCK_DIV2 <br /> - SPI_CLOCK_DIV4 <br /> - SPI_CLOCK_DIV8 <br /> - SPI_CLOCK_DIV16 <br /> - SPI_CLOCK_DIV32 <br /> - SPI_CLOCK_DIV64 <br /> - SPI_CLOCK_DIV128 <br /> - SPI_CLOCK_DIV256 |
+| **Parameters** | **divider**
+ - SPI_CLOCK_DIV2 
+ - SPI_CLOCK_DIV4 
+ - SPI_CLOCK_DIV8 
+ - SPI_CLOCK_DIV16 
+ - SPI_CLOCK_DIV32 
+ - SPI_CLOCK_DIV64 
+ - SPI_CLOCK_DIV128 
+ - SPI_CLOCK_DIV256 |
 | **Returns**    | void                                                                                                                                                                                              |
 
 ## Time
@@ -1331,7 +1312,6 @@ void loop() {
 ```
 </details>
 
-
 ### delayMicroseconds
 
 Pauses the program for the amount of time (in microseconds) specified by the parameter. There are a thousand microseconds in a millisecond and a million microseconds in a second.
@@ -1343,7 +1323,6 @@ delayMicroSeconds(us);
 | **Function**   | `void delayMicroseconds(uint32_t us)`        |
 | -------------- | -------------------------------------------- |
 | **Parameters** | **us** - The number of microseconds to pause |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -1363,7 +1342,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### millis
 
@@ -1396,7 +1374,6 @@ void loop() {
 ```
 </details>
 
-
 ### micros
 
 Returns the number of microseconds since the device began running the current program.
@@ -1428,7 +1405,6 @@ void loop() {
 ```
 </details>
 
-
 ## AdvancedIO
 
 ### tone()
@@ -1445,7 +1421,9 @@ tone(pin, frequency, duration);
 
 | **Function**   | `void tone(uint8_t pin, uint32_t frequency, uint64_t duration = 0)`                                                                                                                                          |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters** | **pin** - The device pin on which to generate the tone <br /> **frequency** - The frequency of the tone in hertz <br /> **duration(optional)** - The duration of the tone in milliseconds (default = no timeout) |
+| **Parameters** | **pin** - The device pin on which to generate the tone 
+ **frequency** - The frequency of the tone in hertz 
+ **duration(optional)** - The duration of the tone in milliseconds (default = no timeout) |
 | **Returns**    | void                                                                                                                                                                                                         |
 
 <details>
@@ -1477,7 +1455,6 @@ void loop() {
 }
 ```
 </details>
-
 
 ### noTone()
 
@@ -1522,7 +1499,6 @@ void loop() {
 ```
 </details>
 
-
 ### shiftOut()
 
 Shifts out a byte of data one bit at a time. Starts from either the most (That it the leftmost) or least (rightmost) significant bit. Each bit is written in turn to a data pin, after which a clock pin is pulsed (taken high, then low) to indicate that the bit is available.
@@ -1533,7 +1509,10 @@ shiftOut(dataPin, clockPin, bitOrder, val);
 
 | **Function**   | `void shiftOut(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder, uint8_t val)`                                                                                                                                                                                          |
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **dataPin** - The pin on which to output each bit <br /> **clockPin** - The pin to toggle once the dataPin has been set to the correct value <br /> **bitOrder** - Which order to shift out the bits, either **MSBFIRST** or **LSBFIRST** <br /> **val** - The data to shift out |
+| **Parameters** | **dataPin** - The pin on which to output each bit 
+ **clockPin** - The pin to toggle once the dataPin has been set to the correct value 
+ **bitOrder** - Which order to shift out the bits, either **MSBFIRST** or **LSBFIRST** 
+ **val** - The data to shift out |
 | **Returns**    | void                                                                                                                                                                                                                                                                       |
 
 ### shiftIn()
@@ -1546,9 +1525,10 @@ byte incoming = shiftIn(dataPin, clockPin, bitOrder);
 
 | **Function**   | `uint32_t shiftIn(uint8_t dataPin, uint8_t clockPin, uint8_t bitOrder)`                                                                                                                                                               |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **dataPin** - The pin on which to output each bit <br /> **clockPin** - The pin to toggle once the dataPin has been set to the correct value <br /> **bitOrder** - Which order to shift out the bits, either **MSBFIRST** or **LSBFIRST** |
+| **Parameters** | **dataPin** - The pin on which to output each bit 
+ **clockPin** - The pin to toggle once the dataPin has been set to the correct value 
+ **bitOrder** - Which order to shift out the bits, either **MSBFIRST** or **LSBFIRST** |
 | **Returns**    | The value read(Type: byte);                                                                                                                                                                                                           |
-
 
 ### pulseIn()
 
@@ -1564,7 +1544,9 @@ pulseIn(pin, state, timeout);
 
 | **Function**   | `unsigned long pulseIn(uint8_t pin, uint8_t state, unsigned long timeout = 1000000L)`                                                                                                                                        |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **pin** - The pin on which you want to read a pulse <br /> **state** - Type of pulse to read: either HIGH or LOW <br /> **timeout(optional)** - The number of microseconds to wait for the pulse to start; default is one second |
+| **Parameters** | **pin** - The pin on which you want to read a pulse 
+ **state** - Type of pulse to read: either HIGH or LOW 
+ **timeout(optional)** - The number of microseconds to wait for the pulse to start; default is one second |
 | **Returns**    | The length of the pulse (in microseconds) or 0 if no pulse started before the timeout(Type: unsigned long)                                                                                                                   |
 
 <details>
@@ -1611,9 +1593,10 @@ pulseInLong(pin, state, timeout);
 
 | **Function**   | `unsigned long pulseInLong(uint8_t pin, uint8_t state, unsigned long timeout = 1000000L)`                                                                                                                                     |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **pin** - The pin on which you want to read a pulse <br /> **state** - Type of pulse to read: either HIGH or LOW <br /> **timeout(optional)** - The number of microseconds to wait for the pulse to start; default is one second. |
+| **Parameters** | **pin** - The pin on which you want to read a pulse 
+ **state** - Type of pulse to read: either HIGH or LOW 
+ **timeout(optional)** - The number of microseconds to wait for the pulse to start; default is one second. |
 | **Returns**    | The length of the pulse (in microseconds) or 0 if no pulse started before the timeout(Type: unsigned long).                                                                                                                   |
-
 
 ## Characters
 
@@ -1628,7 +1611,8 @@ isAlphaNumeric(thisChar);
 | **Function**   | `boolean isAlphaNumeric(int thisChar)`                                                   |
 | -------------- | ---------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                        |
-| **Returns**    | **TRUE**: The character is alphanumeric<br /> **FALSE**: The character is not alphanumeric |
+| **Returns**    | **TRUE**: The character is alphanumeric
+ **FALSE**: The character is not alphanumeric |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1652,8 +1636,6 @@ void loop() {
 ```
 </details>
 
-
-
 ### isAlpha()
 
 Analyze if a char is alpha (that is a letter). Returns true if thisChar contains a letter.
@@ -1665,7 +1647,8 @@ isAlpha(thisChar);
 | **Function**   | `boolean isAlpha(int thisChar)`                                                    |
 | -------------- | ---------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                  |
-| **Returns**    | **TRUE**: The character is a letter<br /> **FALSE**	: The character is not a letter |
+| **Returns**    | **TRUE**: The character is a letter
+ **FALSE**	: The character is not a letter |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1689,7 +1672,6 @@ void loop() {
 ```
 </details>
 
-
 ### isAscii()
 
 Analyze if a char is Ascii. Returns true if thisChar contains an Ascii character.
@@ -1701,8 +1683,8 @@ isAscii(thisChar);
 | **Function**   | `boolean isAscii(int thisChar)`                                               |
 | -------------- | ----------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                             |
-| **Returns**    | **TRUE**: The character is Ascii <br /> **FALSE**	: The character is not Ascii |
-
+| **Returns**    | **TRUE**: The character is Ascii 
+ **FALSE**	: The character is not Ascii |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1726,7 +1708,6 @@ void loop() {
 ```
 </details>
 
-
 ### isWhitespace
 
 Analyze if a char is a space character. Returns true if the argument is a space or horizontal tab ('').
@@ -1738,7 +1719,8 @@ isWhitespace(thisChar);
 | **Function**   | `boolean isWhitespace(int thisChar)`                                                         |
 | -------------- | -------------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                            |
-| **Returns**    | **TRUE**: The character is a space or tab<br /> **FALSE**: The character is not a space or tab |
+| **Returns**    | **TRUE**: The character is a space or tab
+ **FALSE**: The character is not a space or tab |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1762,8 +1744,6 @@ void loop() {
 ```
 </details>
 
-
-
 ### isControl()
 
 Analyze if a char is a control character. Returns true if thisChar is a control character.
@@ -1775,7 +1755,8 @@ isControl(thisChar);
 | **Function**   | `boolean isControl(int thisChar)`                                                                       |
 | -------------- | ------------------------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                                       |
-| **Returns**    | **TRUE**: The character is a control character <br /> **FALSE**: The character is not a control character |
+| **Returns**    | **TRUE**: The character is a control character 
+ **FALSE**: The character is not a control character |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1799,8 +1780,6 @@ void loop() {
 ```
 </details>
 
-
-
 ### isDigit()
 
 Analyze if a char is a digit (that is a number). Returns true if thisChar is a number.
@@ -1812,7 +1791,8 @@ isDigit(thisChar);
 | **Function**   | `boolean isDigit(int thisChar)`                                                   |
 | -------------- | --------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                 |
-| **Returns**    | **TRUE**: The character is a number <br /> **FALSE**: The character is not a number |
+| **Returns**    | **TRUE**: The character is a number 
+ **FALSE**: The character is not a number |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1836,7 +1816,6 @@ void loop() {
 ```
 </details>
 
-
 ### isGraph()
 
 Analyze if a char is printable with some content (space is printable but has no content). Returns true if thisChar is printable.
@@ -1848,7 +1827,8 @@ isGraph(thisChar);
 | **Function**   | `boolean isGraph(int thisChar)`                                                     |
 | -------------- | ----------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                   |
-| **Returns**    | **TRUE**: The character is printable <br /> **FALSE**: The character is not printable |
+| **Returns**    | **TRUE**: The character is printable 
+ **FALSE**: The character is not printable |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1872,7 +1852,6 @@ void loop() {
 ```
 </details>
 
-
 ### isLowerCase()
 
 Analyze if a char is lower case (that is a letter in lower case). Returns true if thisChar contains a letter in lower case.
@@ -1884,7 +1863,8 @@ isLowerCase(thisChar);
 | **Function**   | `boolean isLowerCase(int thisChar)`                                                   |
 | -------------- | ------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                     |
-| **Returns**    | **TRUE**: The character is lower case <br /> **FALSE**: The character is not lower case |
+| **Returns**    | **TRUE**: The character is lower case 
+ **FALSE**: The character is not lower case |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1908,8 +1888,6 @@ void loop() {
 ```
 </details>
 
-
-
 ### isPrintable()
 
 Analyze if a char is printable (that is any character that produces an output, even a blank space). Returns true if thisChar is printable
@@ -1921,7 +1899,8 @@ isPrintable(thisChar);
 | **Function**   | `boolean isPrintable(int thisChar)`                                                 |
 | -------------- | ----------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                   |
-| **Returns**    | **TRUE**: The character is printable <br /> **FALSE**: The character is not printable |
+| **Returns**    | **TRUE**: The character is printable 
+ **FALSE**: The character is not printable |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1945,7 +1924,6 @@ void loop() {
 ```
 </details>
 
-
 ### isPunct()
 
 Analyze if a char is punctuation (that is a comma, a semicolon, an exclamation mark and so on). Returns true if thisChar is punctuation.
@@ -1957,7 +1935,8 @@ isPunct(thisChar);
 | **Function**   | `boolean isPunct(int thisChar)`                                                            |
 | -------------- | ------------------------------------------------------------------------------------------ |
 | **Parameters** | **thisChar**	variable(Type: char)                                                          |
-| **Returns**    | **TRUE**: The character is a punctuation<br /> **FALSE**: The character is not a punctuation |
+| **Returns**    | **TRUE**: The character is a punctuation
+ **FALSE**: The character is not a punctuation |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1981,7 +1960,6 @@ void loop() {
 ```
 </details>
 
-
 ### isSpace()
 
 Analyze if a char is a white-space character. Returns true if the argument is a space, form **feed ('')**, **newline ('')**, **carriage return ('')**, **horizontal tab ('')**, or **vertical tab ('')**.
@@ -1993,7 +1971,8 @@ isSpace(thisChar);
 | **Function**   | `boolean isSpace(int thisChar)`                                                         |
 | -------------- | --------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                       |
-| **Returns**    | **TRUE**: The character is white-space <br /> **FALSE**: The character is not white-space |
+| **Returns**    | **TRUE**: The character is white-space 
+ **FALSE**: The character is not white-space |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2017,7 +1996,6 @@ void loop() {
 ```
 </details>
 
-
 ### isUpperCase()
 
 Analyze if a char is upper case (that is a letter in upper case). Returns true if thisChar is upper case.
@@ -2029,7 +2007,8 @@ isUpperCase(thisChar);
 | **Function**   | `boolean isUpperCase(int thisChar)`                                                   |
 | -------------- | ------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                     |
-| **Returns**    | **TRUE**: The character is upper case <br /> **FALSE**: The character is not upper case |
+| **Returns**    | **TRUE**: The character is upper case 
+ **FALSE**: The character is not upper case |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2053,7 +2032,6 @@ void loop() {
 ```
 </details>
 
-
 ### isHexadecimalDigit()
 
 Analyze if a char is an hexadecimal digit (A-F, 0-9). Returns true if thisChar contains an hexadecimal digit.
@@ -2065,7 +2043,8 @@ isHexadecimalDigit(thisChar);
 | **Function**   | `boolean isHexadecimalDigit(int thisChar)`                                                                |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | **Parameters** | **thisChar**	variable(Type: char)                                                                         |
-| **Returns**    | **TRUE**: The character is an hexadecimal digit <br /> **FALSE**: The character is not an hexadecimal digit |
+| **Returns**    | **TRUE**: The character is an hexadecimal digit 
+ **FALSE**: The character is not an hexadecimal digit |
 
 <details>
 <summary> Click to view the code</summary>
@@ -2089,8 +2068,6 @@ void loop() {
 ```
 </details>
 
-
-
 ## Bit and Byte
 
 ### bitRead
@@ -2103,7 +2080,8 @@ bitRead(value, bit);
 
 | **Function**   | `uint8_t bitRead(value, bit)`                                                                                                       |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **value** - The number from which to read <br /> **bit** - Which bit to read, starting at 0 for the least-significant (rightmost) bit |
+| **Parameters** | **value** - The number from which to read 
+ **bit** - Which bit to read, starting at 0 for the least-significant (rightmost) bit |
 | **Returns**    | The value of the bit (0 or 1)                                                                                                       |
 
 <details>
@@ -2132,7 +2110,6 @@ void loop() {
 ```
 </details>
 
-
 ### bitSet
 
 Sets (writes a 1 to) a bit of a numeric variable.
@@ -2143,7 +2120,8 @@ bitSet(value, bit);
 
 | **Function**   | `void bitSet(value, bit)`                                                                                                                  |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters** | **value** - The numeric variable whose bit to set <br /> **bit** - Which bit to set, starting at 0 for the least-significant (rightmost) bit |
+| **Parameters** | **value** - The numeric variable whose bit to set 
+ **bit** - Which bit to set, starting at 0 for the least-significant (rightmost) bit |
 | **Returns**    | void                                                                                                                                       |
 
 <details>
@@ -2167,7 +2145,6 @@ void loop() {
 ```
 </details>
 
-
 ### bitClear
 
 Clears (writes a 0 to) a bit of a numeric variable.
@@ -2178,7 +2155,8 @@ bitClear(value, bit);
 
 | **Function**   | `void bitClear(value, bit)`                                                                                                                    |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **value** - The numeric variable whose bit to clear <br /> **bit** - Which bit to clear, starting at 0 for the least-significant (rightmost) bit |
+| **Parameters** | **value** - The numeric variable whose bit to clear 
+ **bit** - Which bit to clear, starting at 0 for the least-significant (rightmost) bit |
 | **Returns**    | The value of the numeric variable after the bit at position n is cleared                                                                       |
 
 <details>
@@ -2202,7 +2180,6 @@ void loop() {
 ```
 </details>
 
-
 ### bitWrite
 
 Writes a bit of a numeric variable.
@@ -2213,7 +2190,9 @@ bitWrite(value, bit, bitvalue);
 
 | **Function**   | `void bitWrite(value, bit, bitvalue)`                                                                                                                                                                                  |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **value** - The numeric variable to which to write <br /> **bit** - Which bit of the number to write, starting at 0 for the least-significant (rightmost) bit <br /> **bitvalue** - The value to write to the bit (0 or 1) |
+| **Parameters** | **value** - The numeric variable to which to write 
+ **bit** - Which bit of the number to write, starting at 0 for the least-significant (rightmost) bit 
+ **bitvalue** - The value to write to the bit (0 or 1) |
 | **Returns**    | void                                                                                                                                                                                                                   |
 
 <details>
@@ -2250,8 +2229,6 @@ void loop() {
 ```
 </details>
 
-
-
 ### bit
 
 Computes the value of the specified bit. (bit 0 is 1, bit 1 is 2, bit 2 is 4, etc.)
@@ -2282,8 +2259,6 @@ void loop() {
 }
 ```
 </details>
-
-
 
 ### lowByte
 
@@ -2320,7 +2295,6 @@ void loop() {
 ```
 </details>
 
-
 ### highByte
 
 Extracts the high-order (leftmost) byte of a word (or the second lowest byte of a larger data type).
@@ -2356,8 +2330,6 @@ void loop() {
 ```
 </details>
 
-
-
 ## DigitalIO
 
 ### pinMode()
@@ -2370,7 +2342,12 @@ pinMode(pin, mode);
 
 | **Function**   | `void pinMode(uint8_t pin, uint8_t mode)`                                                                                           |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **pin** - The pin which you want to set <br /> **mode** <br /> - `INPUT`<br /> -  `OUTPUT`<br /> -  `INPUT_PULLUP` <br /> -  `INPUT_PULLDOWN` |
+| **Parameters** | **pin** - The pin which you want to set 
+ **mode** 
+ - `INPUT`
+ -  `OUTPUT`
+ -  `INPUT_PULLUP` 
+ -  `INPUT_PULLDOWN` |
 | **Returns**    | void                                                                                                                                |
 
 <details>
@@ -2397,7 +2374,6 @@ void loop()
 ```
 </details>
 
-
 ### digitalWrite()
 
 Writes a HIGH or a LOW value to a digital pin.
@@ -2408,7 +2384,8 @@ digitalWrite(pin, value);
 
 | **Function**   | `void digitalWrite(uint8_t pin, uint8_t value)`                        |
 | -------------- | ---------------------------------------------------------------------- |
-| **Parameters** | **pin** - The pin which you want to write <br /> **value** - HIGH or LOW |
+| **Parameters** | **pin** - The pin which you want to write 
+ **value** - HIGH or LOW |
 | **Returns**    | void                                                                   |
 
 <details>
@@ -2435,11 +2412,9 @@ void loop()
 ```
 </details>
 
-
 ### digitalRead()
 
 Reads the value from a specified digital pin, either HIGH or LOW.
-
 
 ```c
 digitalRead(pin);
@@ -2474,7 +2449,6 @@ void loop()
 ```
 </details>
 
-
 ## AnalogIO
 
 ### analogRead()
@@ -2485,12 +2459,10 @@ Reads the value from the specified analog pin.
 analogRead(pin);
 ```
 
-
 | **Function**   | `int analogRead(uint8_t pin)`                           |
 | -------------- | ------------------------------------------------------- |
 | **Parameters** | **pin** - The name of the analog input pin to read from |
 | **Returns**    | The analog reading on the pin(Type: int)                |
-
 
 ### analogReference()
 
@@ -2502,7 +2474,12 @@ analogReference(type);
 
 | **Function**                           | `void analogReference(uint8_t type)`                                                                                                                                               |
 | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters (Interval Vref RAK4630)** | **type** - Which type of reference to use: <br /> `RAK_ADC_MODE_DEFAULT` (3.3&nbsp;V) <br /> `RAK_ADC_MODE_3_0`  <br />`RAK_ADC_MODE_2_4` <br /> `RAK_ADC_MODE_1_8` <br />`RAK_ADC_MODE_1_2` |
+| **Parameters (Interval Vref RAK4630)** | **type** - Which type of reference to use: 
+ `RAK_ADC_MODE_DEFAULT` (3.3 V) 
+ `RAK_ADC_MODE_3_0`  
+`RAK_ADC_MODE_2_4` 
+ `RAK_ADC_MODE_1_8` 
+`RAK_ADC_MODE_1_2` |
 | **Returns**                            | void                                                                                                                                                                               |
 
 :::warning
@@ -2517,13 +2494,10 @@ Sets the number of readings from the analog port.
 void analogOversampling(uint32_t ulOversampling);
 ```
 
-
 | **Function**   | `void analogOversampling(uint32_t ulOversampling)`        |
 | -------------- | --------------------------------------------------------- |
 | **Parameters** | **ulOversampling** - Number of readings from analog input |
 | **Returns**    | void                                                      |
-
-
 
 ### analogWrite()
 
@@ -2535,7 +2509,8 @@ analogWrite(pin, value);
 
 | **Function**   | `void analogWrite(uint8_t pin, int value)`                                                                           |
 | -------------- | -------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **pin** - The pin which you want to read <br /> **value** - The duty cycle: between 0 (always off) and 255 (always on) |
+| **Parameters** | **pin** - The pin which you want to read 
+ **value** - The duty cycle: between 0 (always off) and 255 (always on) |
 | **Returns**    | void                                                                                                                 |
 
 <details>
@@ -2579,11 +2554,9 @@ void loop() {
 ```
 </details>
 
-
 ### analogReadResolution()
 
 `analogReadResolution()` sets the size (in bits) of the value returned by `analogRead()`. It defaults to 10 bits (returns values between 0-1023) for backward compatibility with AVR based boards.
-
 
 ```c
 analogReadResolution(bits);
@@ -2591,7 +2564,7 @@ analogReadResolution(bits);
 
 | **Function**   | `void analogReadResolution(uint8_t bits)`                                                                                                                                                                                                                                          |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **bits** - Determines the resolution (in bits) of the value returned by the `analogRead()` function. You can set this between 1 and 32. You can also set the resolutions higher than the supported 12 or 16&nbsp;bits, but values returned by `analogRead()` will suffer approximation. |
+| **Parameters** | **bits** - Determines the resolution (in bits) of the value returned by the `analogRead()` function. You can set this between 1 and 32. You can also set the resolutions higher than the supported 12 or 16 bits, but values returned by `analogRead()` will suffer approximation. |
 | **Returns**    | void                                                                                                                                                                                                                                                                               |
 
 ### analogWriteResolution()
@@ -2606,8 +2579,6 @@ analogWriteResolution(bits);
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Parameters** | **bits** - Determines the resolution (in bits) of the values used in the `analogWrite()` function. The value can range from 1 to 32. If you choose a resolution higher or lower than your board’s hardware capabilities, the value used in `analogWrite()` will be either truncated if it’s too high or padded with zeros if it’s too low. |
 | **Returns**    | void                                                                                                                                                                                                                                                                                                                                       |
-
-
 
 ## Interrupts
 
@@ -2639,7 +2610,6 @@ void loop() {
 ```
 </details>
 
-
 ### noInterrupts()
 
 Disables interrupts. You can re-enable them with `interrupts()`.
@@ -2668,7 +2638,6 @@ void loop() {
 ```
 </details>
 
-
 ### attachInterrupt()
 
 Digital Pins With Interrupts. See also [AttachInterrupt](https://docs.arduino.cc/language-reference/en/functions/external-interrupts/attachInterrupt/)
@@ -2679,7 +2648,13 @@ attachInterrupt(pin, ISR, mode);
 
 | **Function**   | `void attachInterrupt(uint32_t pin, void(*)(void) userFunc, int mode)`                                                                                                                                                                                                                                                                                                               |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Parameters** | **pin** - The number of the interrupt <br /> **ISR** - The ISR to call when the interrupt occurs; this function must take no parameters and return nothing. This function is sometimes referred to as an interrupt service routine. <br />  **mode** - Defines when the interrupt should be triggered <br /> &#x2022; LOW <br /> &#x2022; CHANGE <br /> &#x2022; RISING <br /> &#x2022; FALLING. |
+| **Parameters** | **pin** - The number of the interrupt 
+ **ISR** - The ISR to call when the interrupt occurs; this function must take no parameters and return nothing. This function is sometimes referred to as an interrupt service routine. 
+  **mode** - Defines when the interrupt should be triggered 
+ • LOW 
+ • CHANGE 
+ • RISING 
+ • FALLING. |
 | **Returns**    | void                                                                                                                                                                                                                                                                                                                                                                                 |
 
 <details>
@@ -2715,7 +2690,6 @@ void loop()
 ```
 </details>
 
-
 ### detachInterrupt()
 
 Turns off the given interrupt.
@@ -2723,7 +2697,6 @@ Turns off the given interrupt.
 ```c
 detachInterrupt(pin);
 ```
-
 
 | **Function**   | `void detachInterrupt(uint32_t pin)`             |
 | -------------- | ------------------------------------------------ |
@@ -2763,7 +2736,6 @@ void loop()
 ```
 </details>
 
-
 ## RandomNumber
 
 ### random
@@ -2778,10 +2750,10 @@ random(max);
 random(min, max);
 ```
 
-
 | **Function**   | `long random(long min, long max)`                                                                                                     |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **min(optional)** - Lower bound of the random value, inclusive(default = 0) <br /> **max** - Upper bound of the random value, exclusive |
+| **Parameters** | **min(optional)** - Lower bound of the random value, inclusive(default = 0) 
+ **max** - Upper bound of the random value, exclusive |
 | **Returns**    | A random number between min and max-1(Type: long)                                                                                     |
 
 <details>
@@ -2817,7 +2789,6 @@ void loop()
 ```
 </details>
 
-
 ### randomSeed()
 
 `randomSeed()` initializes the pseudo-random number generator, causing it to start at an arbitrary point in its random sequence. This sequence, while very long, and random, is always the same.
@@ -2827,12 +2798,10 @@ If it is important for a sequence of values generated by `random()` to differ, o
 randomSeed(seed);
 ```
 
-
 | **Function**   | `void randomSeed	(unsigned long seed)`                   |
 | -------------- | -------------------------------------------------------- |
 | **Parameters** | **seed**	number to initialize the pseudo-random sequence |
 | **Returns**    | void                                                     |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -2855,6 +2824,3 @@ void loop() {
 ```
 </details>
 
-
-
-<RkBottomNav/>

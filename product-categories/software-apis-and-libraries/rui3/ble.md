@@ -1,4 +1,4 @@
-import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 
 # BLE
 
@@ -6,8 +6,8 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 | RAK Modules                                                                       |
 |-----------------------------------------------------------------------------------|
-| <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4630-module" target="_blank">RAK4630</a>   |
-| <a href="https://docs.rakwireless.com/product-categories/wisduo/rak11720-module" target="_blank">RAK11720</a> |
+| [RAK4630](https://docs.rakwireless.com/product-categories/wisduo/rak4630-module)   |
+| [RAK11720](https://docs.rakwireless.com/product-categories/wisduo/rak11720-module) |
 
 ## RUI BLE Data Type
 
@@ -26,7 +26,6 @@ enum RAK_BLE_SERVICE_MODE
 
 #### RAK\_CHARS\_SECURITY\_REQ
 
-
 ```c
 enum RAK_CHARS_SECURITY_REQ
 ```
@@ -36,7 +35,6 @@ enum RAK_CHARS_SECURITY_REQ
 | RAK_SET_OPEN          | Set <code>sec_mode</code> pointed to by ptr to require no protection, open link.           |
 | RAK_SET_ENC_NO_MITM   | Set <code>sec_mode</code> pointed to by ptr to require encryption, but no MITM protection. |
 | RAK_SET_ENC_WITH_MITM | Set <code>sec_mode</code> pointed to by ptr to require encryption and MITM protection.     |
-
 
 ### RAK\_CHARS\_PROPERTIES
 
@@ -56,24 +54,11 @@ typedef void(* BLE_HANDLER) (void)
 ```c
 enum Event
 ```
-<table>
-<thead>
-  <tr>
-    <th colspan="2">Enumerator</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>BLE_CONNECTED </td>
-    <td>Set callback for connection event.</td>
-  </tr>
-  <tr>
-    <td>BLE_DISCONNECTED  </td>
-    <td>Set callback for disconnect event.</td>
-  </tr>
-</tbody>
-</table>
 
+| Enumerator |  |
+| --- | --- |
+| BLE_CONNECTED | Set callback for connection event. |
+| BLE_DISCONNECTED | Set callback for disconnect event. |
 
 ## BLE
 
@@ -101,7 +86,8 @@ api.ble.registerCallback()
 
 | **Function**   | `void registerCallback (Event event, BLE_HANDLER callback)`                       |
 |----------------|-----------------------------------------------------------------------------------|
-| **Parameters** | **event** - set connect or disconnect event <br /> **callback** - callback function |
+| **Parameters** | **event** - set connect or disconnect event 
+ **callback** - callback function |
 | **Returns**    | void                                                                              |
 
 ## BLE UART
@@ -118,12 +104,10 @@ This API is used to start the BLE UART Service.
 api.ble.uart.start()
 ```
 
-
 | **Function**   | `void start(uint8_t adv_time)`                                                   |
 |----------------|----------------------------------------------------------------------------------|
 | **Parameters** | **adv_time** - advertising timeout in seconds. If x = 0, advertising never stops |
 | **Returns**    | void                                                                             |
-
 
 ### stop()
 
@@ -132,7 +116,6 @@ This API is used to stop the BLE UART Service.
 ```c
 api.ble.uart.stop()
 ```
-
 
 | **Function** | `void stop(void)` |
 |--------------|-------------------|
@@ -153,8 +136,6 @@ void loop()
 ```
 </details>
 
-
-
 ### available()
 
 This API is used to check if there is any incoming Byte from BLE UART Service.
@@ -163,11 +144,11 @@ This API is used to check if there is any incoming Byte from BLE UART Service.
 api.ble.uart.available()
 ```
 
-
 | **Function**      | `bool available(void)`                                                      |
 |-------------------|-----------------------------------------------------------------------------|
 | **Returns**       | bool                                                                        |
-| **Return Values** | **TRUE** - receive data from the ble device <br /> **FALSE** - nothing to get |
+| **Return Values** | **TRUE** - receive data from the ble device 
+ **FALSE** - nothing to get |
 
 ### read()
 
@@ -191,7 +172,8 @@ api.ble.uart.write(data, size)
 
 | **Function**   | `void write(uint8_t * data, uint16_t size = 6)`                                                                            |
 |----------------|----------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **data** - an array to send as a series of bytes <br /> **size** - length of the data that will be written to the ble device |
+| **Parameters** | **data** - an array to send as a series of bytes 
+ **size** - length of the data that will be written to the ble device |
 | **Returns**    | void                                                                                                                       |
 
 ### setPIN()
@@ -204,7 +186,8 @@ api.ble.uart.setPIN(key, size)
 
 | **Function**   | `void setPIN(uint8_t * key, uint16_t size)`                                                            |
 |----------------|--------------------------------------------------------------------------------------------------------|
-| **Parameters** | **key** - the key to set the passkey (6 digits only) <br /> **size** - the length of key (can only be 6) |
+| **Parameters** | **key** - the key to set the passkey (6 digits only) 
+ **size** - the length of key (can only be 6) |
 | **Returns**    | void                                                                                                   |
 
 ### setPermission()
@@ -217,7 +200,9 @@ api.ble.uart.setPermission(permission)
 
 | **Function**   | `void setPermission(RAK_CHARS_SECURITY_REQ permission)`                                                                                  |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **permission** - This will cause apps to perform pairing with static PIN you set <br /> `RAK_SET_ENC_WITH_MITM` <br /> `RAK_SET_ENC_NO_MITM` |
+| **Parameters** | **permission** - This will cause apps to perform pairing with static PIN you set 
+ `RAK_SET_ENC_WITH_MITM` 
+ `RAK_SET_ENC_NO_MITM` |
 | **Returns**    | void                                                                                                                                     |
 
 ## BLE Setting
@@ -246,8 +231,6 @@ If MAC is 6 bytes and x is passed as 2, the return value will be position [2] in
 | **Parameters** | **pos** - single byte, array location |
 | **Returns**    | The current BLE MAC Address           |
 
-
-
 ### txPower
 
 #### set()
@@ -258,13 +241,12 @@ This API is used to set the current transmit power level for the module's radio.
 api.ble.settings.txPower.set(txpwr)
 ```
 
-
 | **Function**      | `bool set(int8_t txpwr)`                                                                                                                               |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Parameters**    | **txpwr** - The TX power level (dBm), which can be one of the following values (from lowest to higher transmit power): 0~8, -4, -8, -12, -16, -20, -40 |
 | **Returns**       | bool                                                                                                                                                   |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail                                                                                                   |
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail                                                                                                   |
 
 #### get()
 
@@ -273,7 +255,6 @@ This API is used to get the current transmit power level (in dBm).
 ```c
 api.ble.settings.txPower.get()
 ```
-
 
 | **Function** | `int8_t get()`             |
 | ------------ | -------------------------- |
@@ -289,13 +270,12 @@ This API is used to set the time interval between two consecutive advertisements
 api.ble.settings.advertiseInterval.set(adv_interval)
 ```
 
-
 | **Function**      | `bool set	(int32_t adv_interval`                     |
 |-------------------|------------------------------------------------------|
-| **Parameters**    | **adv_interval** 1000&nbsp;ms ~ 10240&nbsp;ms        |
+| **Parameters**    | **adv_interval** 1000 ms ~ 10240 ms        |
 | **Returns**       | bool                                                 |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail |
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail |
 
 #### get()
 
@@ -305,11 +285,9 @@ This API is used to get the current advertisement interval.
 api.ble.settings.advertiseInterval.get()
 ```
 
-
 | **Function** | `int32_t get()`                                                          |
 |--------------|--------------------------------------------------------------------------|
-| **Returns**  | Return the current advertisement interval (1000&nbsp;ms ~ 10240&nbsp;ms) |
-
+| **Returns**  | Return the current advertisement interval (1000 ms ~ 10240 ms) |
 
 ### broadcastName
 
@@ -321,14 +299,13 @@ This API sets the name for this device. It is used in advertisement and as the D
 api.ble.settings.broadcastName.set(ble_name, device_name_length)
 ```
 
-
 | **Function**      | `bool set(char *ble_name, uint8_t device_name_length)`                                                                             |
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters**    | **ble_name** - setting device name an array of data to send as bytes <br /> **device_name_length** - the number of bytes to transmit |
+| **Parameters**    | **ble_name** - setting device name an array of data to send as bytes 
+ **device_name_length** - the number of bytes to transmit |
 | **Returns**       | bool                                                                                                                               |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail                                                                               |
-
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail                                                                               |
 
 #### get()
 
@@ -338,11 +315,9 @@ This API is used to get the current BLE device name.
 api.ble.settings.broadcastName.get()
 ```
 
-
 | **Function** | `char* get()`               |
 | ------------ | --------------------------- |
 | **Returns**  | The current BLE Device Name |
-
 
 ### RAKBleAdvertise
 
@@ -354,13 +329,12 @@ This API is used to start advertising after configuring the BLE settings.
 api.ble.advertise.start(adv_time)
 ```
 
-
 | **Function**       | `bool start(uint8_t adv_time)`                                                      |
 |--------------------|-------------------------------------------------------------------------------------|
 | **Parameters**     | **adv_time** - advertising timeout in seconds. If x = 0, advertising never stops.   |
 | **Returns**        | bool                                                                                |
-| **Returns Values** | **TRUE**	for start advertising success <br /> **FALSE** for start advertising failure |
-
+| **Returns Values** | **TRUE**	for start advertising success 
+ **FALSE** for start advertising failure |
 
 #### stop()
 
@@ -373,8 +347,8 @@ api.ble.advertise.stop()
 | **Function**       | `bool stop()`                                                                     |
 |--------------------|-----------------------------------------------------------------------------------|
 | **Returns**        | bool                                                                              |
-| **Returns Values** | **TRUE**	for stop advertising success <br /> **FALSE** for stop advertising failure |
-
+| **Returns Values** | **TRUE**	for stop advertising success 
+ **FALSE** for stop advertising failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -391,22 +365,18 @@ void loop()
 ```
 </details>
 
-
-
 #### status()
 
 ```c
 api.ble.advertise.status()
 ```
 
-
 | **Function**       | `bool status()`                                                                           |
 |--------------------|-------------------------------------------------------------------------------------------|
 | **Returns**        | bool                                                                                      |
-| **Returns Values** | **TRUE**	- the device is in advertising <br /> **FALSE** -  the device stops in advertising |
+| **Returns Values** | **TRUE**	- the device is in advertising 
+ **FALSE** -  the device stops in advertising |
 |                    |
-
-
 
 ### bleMode()
 
@@ -415,7 +385,6 @@ This API is used to support the current BLE UART Service mode switch to beacon m
 ```c
 api.ble.settings.blemode(ble_mode)
 ```
-
 
 | **Function**   | `void blemode(RAK_BLE_SERVICE_MODE ble_mode)` |
 |----------------|-----------------------------------------------|
@@ -440,8 +409,8 @@ api.ble.beacon.ibeacon.uuid.set(beaconUuid)
 |-------------------|------------------------------------------------------|
 | **Parameters**    | **beaconUuid** - define 16 bytes                     |
 | **Returns**       | bool                                                 |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail |
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail |
 
 #### major
 
@@ -455,10 +424,10 @@ api.ble.beacon.ibeacon.major.set(major_value)
 
 | **Function**      | `bool set(uint16_t major_value)`                          |
 | ----------------- | --------------------------------------------------------- |
-| **Parameters**    | **major_value**  - set major (define 2&nbsp;bytes)        |
+| **Parameters**    | **major_value**  - set major (define 2 bytes)        |
 | **Returns**       | bool                                                      |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail      |
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail      |
 
 #### minor
 
@@ -472,15 +441,16 @@ api.ble.beacon.ibeacon.minor.set(minor_value)
 
 | **Function**      | `bool set(uint16_t minor_value)`                          |
 | ----------------- | --------------------------------------------------------- |
-| **Parameters**    | **minor_value**  - set minor (define 2&nbsp;bytes)        |
+| **Parameters**    | **minor_value**  - set minor (define 2 bytes)        |
 | **Returns**       | bool                                                      |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail      |
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail      |
 
 #### power
 
 ##### set()
 
-This API provides information about the measured power value expected at one (1)&nbsp;meter from the beacon.
+This API provides information about the measured power value expected at one (1) meter from the beacon.
 
 ```c
 api.ble.beacon.ibeacon.power.set(ibeacon_power)
@@ -490,12 +460,12 @@ api.ble.beacon.ibeacon.power.set(ibeacon_power)
 |-------------------|---------------------------------------------------------|
 | **Parameters**    | **ibeacon_power** - display measured power value (RSSI) |
 | **Returns**       | bool                                                    |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail    |
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail    |
 
 #### set()
 
-This API provides the developer to control all data for BLE Beacon advertising and allows function to support full 31&nbsp;byte payload.
+This API provides the developer to control all data for BLE Beacon advertising and allows function to support full 31 byte payload.
 
 ```c
 api.ble.beacon.custom.payload.set(cus_adv_data[], cus_adv_len)
@@ -503,9 +473,11 @@ api.ble.beacon.custom.payload.set(cus_adv_data[], cus_adv_len)
 
 | **Function**      | `bool set(uint8_t cus_adv_data[], uint8_t cus_adv_len)`                                                                             |
 | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters**    | **cus_adv_data[]** - set the advertising payload (Max 31&nbsp;bytes) <br /> **cus_adv_len** - the number of bytes to advertising data |
+| **Parameters**    | **cus_adv_data[]** - set the advertising payload (Max 31 bytes) 
+ **cus_adv_len** - the number of bytes to advertising data |
 | **Returns**       | bool                                                                                                                                |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail                                                                                |
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail                                                                                |
 
 ## BLE Scanner
 
@@ -521,7 +493,6 @@ api.ble.scanner.start(timeout_sec)
 | **Parameters** | **timeout_sec** - field is scanning stop after x seconds. If `timeout_sec=0`, always scanning on. |
 | **Returns**    | void                                                                                              |
 
-
 ### setInterval()
 
 This API is used to specify a scan window (how long to scan) and interval (how long to wait between scans).
@@ -532,11 +503,11 @@ api.ble.scanner.setInterval(scan_interval, scan_window);
 
 | **Function**      | `bool setInterval(uint16_t scan_interval, uint16_t scan_window)`                                                                                                                           |
 |-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters**    | **scan_interval** - Defines at what intervals scanner is started. (3&nbsp;ms ~ 40960&nbsp;ms) <br /> **scan_window** - Defines how long to scan at each interval (3&nbsp;ms ~ 40960&nbsp;ms) |
+| **Parameters**    | **scan_interval** - Defines at what intervals scanner is started. (3 ms ~ 40960 ms) 
+ **scan_window** - Defines how long to scan at each interval (3 ms ~ 40960 ms) |
 | **Returns**       | bool                                                                                                                                                                                       |
-| **Return Values** | **TRUE** for success SET <br /> **FALSE** for SET fail                                                                                                                                       |
-
-
+| **Return Values** | **TRUE** for success SET 
+ **FALSE** for SET fail                                                                                                                                       |
 
 ### setScannerCallback()
 
@@ -551,7 +522,6 @@ void setScannerCallback	(void(*)(int8_t, uint8_t *, uint8_t *, uint16_t) userFun
 | **Parameters** | **userFunc**	callback                          |
 | **Returns**    | void                                           |
 
-
 ## Customize Service
 
 ### RAKBleService
@@ -565,9 +535,8 @@ RAKBleService hrms = RAKBleService(service_uuid[])
 ```
 | **Function**   | `RAKBleService(uint8_t service_uuid[])`                                                                  |
 | -------------- | -------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **service_uuid[]** - create a 128-bit base UUID, and the 3rd and 4th&nbsp;byte means Service 16-bit UUID |
+| **Parameters** | **service_uuid[]** - create a 128-bit base UUID, and the 3rd and 4th byte means Service 16-bit UUID |
 | **Returns**    | void                                                                                                     |
-
 
 #### begin()
 
@@ -584,11 +553,9 @@ RAKBleService hrms = RAKBleService(service_uuid[])
 ```
 :::
 
-
 | **Function** | `void begin()` |
 |--------------|----------------|
 | **Returns**  | void           |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -690,9 +657,6 @@ void loop()
 ```
 </details>
 
-
-
-
 ### RAKBleCharacteristic
 
 #### RAKBleCharacteristic()
@@ -705,8 +669,7 @@ RAKBleCharacteristic bslc = RAKBleCharacteristic(characteristicUUID)
 
 | **Function**   | `RAKBleCharacteristic(uint16_t characteristicUUID)`                                                                                                                                   |
 | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **characteristicUUID** - The base is the same as the base UUID used when construct an instance BLEService, only provided the 3rd and 4th&nbsp;byte means characteristic (16 bit UUID) |
-
+| **Parameters** | **characteristicUUID** - The base is the same as the base UUID used when construct an instance BLEService, only provided the 3rd and 4th byte means characteristic (16 bit UUID) |
 
 #### setProperties()
 
@@ -829,8 +792,6 @@ void loop()
 ```
 </details>
 
-
-
 #### setPermission()
 
 This API sets the security for the characteristic.
@@ -951,9 +912,6 @@ void loop()
 ```
 </details>
 
-
-
-
 #### setFixedLen()
 
 This API indicates how many bytes this characteristic has.
@@ -1073,9 +1031,6 @@ void loop()
 ```
 </details>
 
-
-
-
 #### begin()
 
 After adding the characteristic, must call .begin() to complete the configuration action
@@ -1094,7 +1049,6 @@ RAKBleCharacteristic bslc = RAKBleCharacteristic(characteristicUUID)
 | **Function** | `void begin()` |
 |--------------|----------------|
 | **Returns**  | void           |
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -1194,8 +1148,6 @@ void loop()
 }
 ```
 </details>
-
-
 
 #### notify()
 
@@ -1317,9 +1269,6 @@ void loop()
 ```
 </details>
 
-
-
-
 #### write()
 
 Data is written by the application to provide the peer connector for read data.
@@ -1438,7 +1387,6 @@ void loop()
 }
 ```
 </details>
-
 
 #### notifyEnabled()
 
@@ -1559,8 +1507,6 @@ void loop()
 ```
 </details>
 
-
-
 #### setCccdWriteCallback()
 
 This API is used to register a callback function, so that application can be notified on BLE notify data to peer connector.
@@ -1679,7 +1625,6 @@ void loop()
 }
 ```
 </details>
-
 
 #### setWriteCallback()
 
@@ -1801,7 +1746,6 @@ void loop()
 ```
 </details>
 
-
 ### RAKBleCustomer
 
 #### init()
@@ -1812,11 +1756,9 @@ This API initializes the basic work of BLE custom services.
 api.ble.customer.init()
 ```
 
-
 | **Function** | `void init()` |
 |--------------|---------------|
 | **Returns**  | void          |
-
 
 #### start()
 
@@ -1826,10 +1768,7 @@ After completing all the services and characteristic settings, start the custom 
 api.ble.customer.start()
 ```
 
-
 | **Function** | `void start()` |
 |--------------|----------------|
 | **Returns**  | void           |
 
-
-<RkBottomNav/>

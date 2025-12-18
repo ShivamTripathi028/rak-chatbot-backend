@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # WisBlock IoT Education Kit - Movement Detection Quick Start Guide
 
 ## Prerequisite
@@ -35,7 +31,6 @@ The **WisBlock IoT Education Kit - Movement Detection** comes with **RAK19007** 
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
-
 #### Software
 
 **Arduino**
@@ -49,50 +44,30 @@ The **WisBlock IoT Education Kit - Movement Detection** comes with **RAK19007** 
 
 **WisBlock IoT Education Kit - Movement Detection** includes several movement detection sensors that can be used with the **RAK19007** and **RAK19003 WisBlock Base Boards**, which you can choose from. They are used to monitor object movements or even for motion detection, which can be useful for different IoT applications. You can select from these movement detection sensors for your specific applications.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/all-sensors.png" 
-  figureCount="1"
-  caption="Set of WisBlock IoT Education Kit - Movement Detection" 
-   width="70%"
-/>
+> **Image:** Set of WisBlock IoT Education Kit - Movement Detection
+
  
 Assemble the WisBlock Movement Detection Modules with the RAK19007 WisBlock Base Board as shown in **Figures 2~5**:
 
 **RAK4631 + RAK12006 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak4631-rak12006.png" 
-  figureCount="2"
-  caption="RAK4631 + RAK12006 Board" 
-   width="60%"
-/>
+> **Image:** RAK4631 + RAK12006 Board
+
  
 **RAK4631 + RAK12007 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak4631-rak12007.png" 
-  figureCount="3"
-  caption="RAK4631 + RAK12007 Board" 
-   width="80%"
-/>
+> **Image:** RAK4631 + RAK12007 Board
+
  
 **RAK4631 + RAK12013 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak4631-rak12013.png" 
-  figureCount="4"
-  caption="RAK4631 + RAK12013 Board" 
-   width="70%"
-/>
+> **Image:** RAK4631 + RAK12013 Board
+
  
 **RAK4631 + RAK12017 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak4631-rak12017.png" 
-  figureCount="5"
-  caption="RAK4631 + RAK12017 Board" 
-   width="60%"
-/>
+> **Image:** RAK4631 + RAK12017 Board
+
  
 #### Assembly and Functionality Tests of WisBlock Movement Detection Modules
 
@@ -102,7 +77,6 @@ This kit makes use of the different WisBlock Movement Detection modules. Refer t
 - [RAK12007 Ultrasonic Sensor](https://docs.rakwireless.com/product-categories/wisblock/rak12007/quickstart/)
 - [RAK12013 Radar Sensor](https://docs.rakwireless.com/product-categories/wisblock/rak12013/quickstart/)
 - [RAK12017 IR Proximity Sensor](https://docs.rakwireless.com/product-categories/wisblock/rak12017/quickstart/)
-
 
 ### Software Configuration and Examples
 
@@ -138,7 +112,6 @@ The example code uses [SX126x-Arduino](https://github.com/beegee-tokyo/SX126x-Ar
 int gCurrentStatus = 0;         // variable for reading the pin current status
 
 int sensor_val;
-
 
 bool doOTAA = true;   // OTAA is used by default.
 #define SCHED_MAX_EVENT_DATA_SIZE APP_TIMER_SCHED_EVENT_DATA_SIZE /**< Maximum size of scheduler events. */
@@ -310,7 +283,6 @@ void loop()
 
 }
 
-
 /**@brief LoRa function for handling HasJoined event.
  */
 void lorawan_has_joined_handler(void)
@@ -374,7 +346,6 @@ void send_lora_frame(void)
   }
 }
 
-
 ```
 
 Before uploading the Arduino Code, there are configurations that you need to set up to ensure that the device can join a LoRaWAN Network server. The following steps will explain the default settings and how to configure them.
@@ -434,40 +405,23 @@ uint8_t nodeAppKey[16] = {0x3F, 0xC4, 0x80, 0x0D, 0x4A, 0xE7, 0xAD, 0x9F, 0xDC, 
 
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_20.png" 
-  figureCount="6"
-  caption="Device's credentials registered in TTN" 
-   width="90%"
-/>
+> **Image:** Device's credentials registered in TTN
+
  
-3. Once you're done with the code, you can now proceed with uploading it to your device. You must first choose your RAK4631 board on your desktop or laptop. To do so, navigate to **Tools** &gt; **Board:XXXXX** &gt; **RAKwireless nRF Boards** and select **WisBlock RAK4631**.
+3. Once you're done with the code, you can now proceed with uploading it to your device. You must first choose your RAK4631 board on your desktop or laptop. To do so, navigate to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** and select **WisBlock RAK4631**.
 
+> **Image:** Selecting the RAK4631 board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_30.png" 
-  figureCount="7"
-  caption="Selecting the RAK4631 board" 
-   width="90%"
-/>
  
-4. After you have selected your board, go to **Tools** &gt; **Port** and then select the specific port of your board.
+4. After you have selected your board, go to **Tools** > **Port** and then select the specific port of your board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_31.png" 
-  figureCount="8"
-  caption="Selecting the port of RAK4631 board" 
-   width="90%"
-/>
+> **Image:** Selecting the port of RAK4631 board
+
  
 5. You can then upload your code by clicking the Upload button (the right arrow sign). Once completed, the **Device programmed** notification will appear in the console at the bottom of the Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_33.png" 
-  figureCount="9"
-  caption="Arduino code is successfully uploaded into your RAK4631 board" 
-   width="90%"
-/>
+> **Image:** Arduino code is successfully uploaded into your RAK4631 board
+
  
 :::tip NOTE
 
@@ -481,7 +435,6 @@ The steps outlined above apply to the **RAK12013** and **RAK12017** applications
 
 This section will guide you on how to integrate your RAK12006 PIR Motion Sensor LoRaWAN application with ThingSpeak.
 
-
 1. If you already have an existing **ThingSpeak account** and available channels to create, you may proceed to the next step. If you haven't yet created an account, go to the [Setting up Your Device Using ThingSpeak](https://docs.rakwireless.com/product-categories/wisblock/kit3-movement-detection/quickstart/#setting-up-your-device-using-thingspeak) section to set up your **RAK12006 PIR Motion Sensor**.
 
 2. Once done, go to the **Channels** tab to create a new channel. Enter the details of the channel and then click **Save Channel**.
@@ -491,139 +444,84 @@ For **RAK12006 Application**:
   - Tick off **Field 1**.
   - Click **Save Channel**.
 
-
 :::tip NOTE
 
 The details and information are dependent on what device you are using (e.g. **RAK12006**).
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_11.png" 
-  figureCount="10"
-  caption="Creating the channel for RAK12006 application" 
-   width="80%"
-/>
+> **Image:** Creating the channel for RAK12006 application
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_12.png" 
-  figureCount="11"
-  caption="Creating the channel for RAK12006 application" 
-   width="80%"
-/>
+
+> **Image:** Creating the channel for RAK12006 application
+
  
 3. You should now see the **Movement Monitoring Channel** dashboard for the RAK12006 application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_13a.png" 
-  figureCount="12"
-  caption="Movement Monitoring channel for RAK12006 application" 
-   width="80%"
-/>
+> **Image:** Movement Monitoring channel for RAK12006 application
+
  
 4. You can edit and change the details of your **Movement Monitoring** channel by clicking the pencil logo under **Field 1 Chart**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_14a.png" 
-  figureCount="13"
-  caption="Edit the Movement Monitoring Channel detailsn" 
-   width="80%"
-/>
+> **Image:** Edit the Movement Monitoring Channel detailsn
+
  
 5. A window will pop up and you can now start editing the details. Since it is a PIR motion sensor, the goal is to monitor the movement status at specific time. For this application, you may follow the parameters in **Figure 14**, and then click **Save**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_15a.png" 
-  figureCount="14"
-  caption="Field 1 Chart Options" 
-   width="80%"
-/>
+> **Image:** Field 1 Chart Options
+
  
 You should now see the same dashboard as shown in **Figure 15.**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_16a.png" 
-  figureCount="15"
-  caption="Field 1 Chart for RAK12006 Application" 
-   width="80%"
-/>
+> **Image:** Field 1 Chart for RAK12006 Application
+
  
 6. Then go back to your TTN account and add the **ThingSpeak Webhook** for your **RAK12006 Application**. Under Applications, choose **Integrations** >**Webhooks**, and then select the **+ Add webhook** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_17.png" 
-  figureCount="16"
-  caption="Adding a webhook for your RAK12006 Application" 
-   width="80%"
-/>
+> **Image:** Adding a webhook for your RAK12006 Application
+
  
 7. Choose **ThingSpeak** from the webhook templates, and the **Setup webhook for ThingSpeak** window will appear. Following that, you must return to your ThingSpeak account to obtain the necessary credentials:
 
     - **Channel ID**
     - **API Key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_18.png" 
-  figureCount="17"
-  caption="Selecting ThingSpeak under the webhook templates" 
-   width="80%"
-/>
+> **Image:** Selecting ThingSpeak under the webhook templates
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_19.png" 
-  figureCount="18"
-  caption="Setup webhook for ThingSpeak" 
-   width="80%"
-/>
+
+> **Image:** Setup webhook for ThingSpeak
+
  
-<b> Channel ID </b>
+** Channel ID **
 
 - From the **Channel** menu, navigate to your Movement Monitoring dashboard. The Channel ID can be found under the name of your channel, **Movement Monitoring**; copy and paste it into the **Channel ID** section of your webhook in TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_20a.png" 
-  figureCount="19"
-  caption="Channel ID" 
-   width="80%"
-/>
+> **Image:** Channel ID
+
  
-<b> API Keys </b>
+** API Keys **
 
 - From the **Channel** menu, navigate to your Movement Monitoring dashboard and select **API Keys** tab. The **API Keys** can be found under the **Write API key** field; copy and paste it to the **API Key** section of your webhook. Once done, simply click **Create ThingSpeak webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_21a.png" 
-  figureCount="20"
-  caption="API Key" 
-   width="80%"
-/>
+> **Image:** API Key
+
  
 8. After filling in the necessary details, click **Create ThingSpeak webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_22a.png" 
-  figureCount="21"
-  caption="Create ThingSpeak webhook" 
-   width="80%"
-/>
+> **Image:** Create ThingSpeak webhook
+
  
 You should see your RAK12006 Application Webhook ID on the Webhooks dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_23.png" 
-  figureCount="22"
-  caption="Created ThingSpeak webhook under RAK12006 Application" 
-   width="80%"
-/>
+> **Image:** Created ThingSpeak webhook under RAK12006 Application
+
  
 9. Once done, go to **End devices** and click your existing device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_24.png" 
-  figureCount="23"
-  caption="RAK12006 Application" 
-   width="80%"
-/>
+> **Image:** RAK12006 Application
+
  
 :::tip NOTE
 
@@ -654,64 +552,37 @@ function Decoder(bytes, port)
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_25.png" 
-  figureCount="24"
-  caption="Payload Formatter" 
-   width="80%"
-/>
+> **Image:** Payload Formatter
+
  
 13. Then, return to your device's **Live data** in TTN and compare it to the live data from your ThingSpeak account. You should now be seeing accurate periods of movement occurrences.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_26a.png" 
-  figureCount="25"
-  caption="Live data from your device in TTN" 
-   width="80%"
-/>
- 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_27a.png" 
-  figureCount="26"
-  caption="Live data from your device in ThingSpeak" 
-   width="80%"
-/>
- 
-14. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** &gt; **+Add Widgets**.
+> **Image:** Live data from your device in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_28a.png" 
-  figureCount="27"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+ 
+
+> **Image:** Live data from your device in ThingSpeak
+
+ 
+14. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** > **+Add Widgets**.
+
+> **Image:** Adding Widget in ThingSpeak
+
  
 15. Select your desired widget for your application, then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_29a.png" 
-  figureCount="28"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 16. Set your preferred parameters for your widget, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_30a.png" 
-  figureCount="29"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 17. You should now see the newly added widgets for your RAK12006 application on the ThingSpeak Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_31a.png" 
-  figureCount="30"
-  caption="ThingSpeak Dashboard" 
-   width="80%"
-/>
+> **Image:** ThingSpeak Dashboard
+
   
 
 #### RAK12007 Ultrasonic Sensor LoRaWAN Application
@@ -730,7 +601,6 @@ function Decoder(bytes, port)
 :::tip NOTE
 The example code uses [SX126x-Arduino](https://github.com/beegee-tokyo/SX126x-Arduino) library which needs to be added to successfully compile the LoRaWAN code.
 :::
-
 
 ```c
 
@@ -760,8 +630,6 @@ float ratio = 346.6/1000/2;   //velocity of sound =331.6+0.6*25℃(m/s),(Indoor 
 long int duration_time();  //measure high level time
 
 long int duration, mm;
-
-
 
 bool doOTAA = true;   // OTAA is used by default.
 #define SCHED_MAX_EVENT_DATA_SIZE APP_TIMER_SCHED_EVENT_DATA_SIZE /**< Maximum size of scheduler events. */
@@ -915,7 +783,6 @@ void loop()
   // Put your application tasks here, like reading of sensors,
   // Controlling actuators and/or other functions.
 
-
   // long int duration, mm;
    digitalWrite(LED_BLUE,HIGH);
    digitalWrite(LED_GREEN, HIGH);
@@ -1027,7 +894,6 @@ void send_lora_frame(void)
   m_lora_app_data.buffer[i++] = (uint8_t)(mm_data & 0x000000FF);
   m_lora_app_data.buffsize = i;
 
-
   lmh_error_status error = lmh_send(&m_lora_app_data, g_CurrentConfirm);
   if (error == LMH_SUCCESS)
   {
@@ -1040,7 +906,6 @@ void send_lora_frame(void)
     Serial.printf("lmh_send fail count %d\n", count_fail);
   }
 }
-
 
 ```
 
@@ -1092,7 +957,6 @@ DeviceClass_t g_CurrentClass = CLASS_A;         /* class definition*/
 
 - Set up the EUIs and KEY. The **DeviceEUI**, **AppEUI**, and **AppKey** are the credentials of your device registered to TTN that will be used for the OTAA keys in the code. You need to replace the ones in the code with the credentials registered in TTN.
 
-
 ```c
 //OTAA keys !!!! KEYS ARE MSB !!!!
 uint8_t nodeDeviceEUI[8] = {0xAC, 0x1F, 0x09, 0xFF, 0xFE, 0x06, 0xD3, 0xE9};
@@ -1101,40 +965,24 @@ uint8_t nodeAppKey[16] = {0x8B, 0x0E, 0x96, 0x86, 0xE8, 0x4E, 0xA3, 0xB5, 0x31, 
 
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12007_20.png" 
-  figureCount="31"
-  caption="Device's credentials registered in TTN" 
-   width="90%"
-/>
- 
- 
-3. Once you're done with the code, you can now proceed with uploading it to your device. You must first choose your RAK4631 board on your desktop or laptop. To do so, navigate to **Tools** &gt; **Board:XXXXX** &gt; **RAKwireless nRF Boards** and select **WisBlock RAK4631**.
+> **Image:** Device's credentials registered in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12007_30.png" 
-  figureCount="32"
-  caption="Selecting the RAK4631 board" 
-   width="90%"
-/>
  
-4. After you have selected your board, go to **Tools** &gt; **Port** and then select the specific port of your board.
+ 
+3. Once you're done with the code, you can now proceed with uploading it to your device. You must first choose your RAK4631 board on your desktop or laptop. To do so, navigate to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** and select **WisBlock RAK4631**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12007_31.png" 
-  figureCount="33"
-  caption="Selecting the port of RAK4631 board" 
-   width="90%"
-/>
+> **Image:** Selecting the RAK4631 board
+
+ 
+4. After you have selected your board, go to **Tools** > **Port** and then select the specific port of your board.
+
+> **Image:** Selecting the port of RAK4631 board
+
  
 5. You can then upload your code by clicking the Upload button (the right arrow sign). Once completed, the **Device programmed** notification will appear in the console at the bottom of the Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12007_33.png" 
-  figureCount="34"
-  caption="Arduino code is successfully uploaded into your RAK4631 board" 
-   width="90%"
-/>
+> **Image:** Arduino code is successfully uploaded into your RAK4631 board
+
  
 ##### Setting up RAK12007 Ultrasonic Sensor Dashboard Using ThingSpeak
 
@@ -1149,134 +997,78 @@ For **RAK12007 Application**:
   - Tick off **Field 1**.
   - Click **Save Channel**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_11.png" 
-  figureCount="35"
-  caption="Creating the channel for RAK12007 application" 
-   width="80%"
-/>
+> **Image:** Creating the channel for RAK12007 application
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_12.png" 
-  figureCount="36"
-  caption="Creating the channel for RAK12007 application" 
-   width="80%"
-/>
+
+> **Image:** Creating the channel for RAK12007 application
 
 3. You should now see the **Movement Monitoring Channel** dashboard for the RAK12007 application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_13.png" 
-  figureCount="37"
-  caption="Distance Monitoring channel for RAK12007 application" 
-   width="80%"
-/>
+> **Image:** Distance Monitoring channel for RAK12007 application
+
  
 4. You can edit and change the details of your **Distance Monitoring** channel by clicking the pencil logo under **Field 1 Chart**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_14.png" 
-  figureCount="38"
-  caption="Distance Monitoring channel for RAK12007 application" 
-   width="80%"
-/>
+> **Image:** Distance Monitoring channel for RAK12007 application
+
  
 5. A window will pop up and you can now start editing the details. The goal is to monitor the distance status at specific time. For this application, you may follow the parameters in **Figure 39**, and then click **Save**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_15.png" 
-  figureCount="39"
-  caption="Field 1 Chart Options" 
-   width="80%"
-/>
+> **Image:** Field 1 Chart Options
+
  
 You should now see the same dashboard as shown in **Figure 40**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_16.png" 
-  figureCount="40"
-  caption="Field 1 Chart for RAK12007 Application" 
-   width="80%"
-/>
+> **Image:** Field 1 Chart for RAK12007 Application
+
  
 6. Then go back to your TTN account and add the **ThingSpeak Webhook** for your **RAK12007 Application**. Under Applications, choose **Integrations** >**Webhooks**, and then select the **+ Add webhook** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_17.png" 
-  figureCount="41"
-  caption="Adding a webhook for your RAK12007 Application" 
-   width="80%"
-/>
+> **Image:** Adding a webhook for your RAK12007 Application
+
  
 7. Choose **ThingSpeak** from the webhook templates, and the **Setup webhook for ThingSpeak** window will appear. Following that, you must return to your ThingSpeak account to obtain the necessary credentials:
 
     - **Channel ID**
     - **API Key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_18.png" 
-  figureCount="42"
-  caption="Selecting ThingSpeak under the webhook templates" 
-   width="80%"
-/>
- 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_19.png" 
-  figureCount="43"
-  caption="Setup webhook for ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Selecting ThingSpeak under the webhook templates
 
  
-<b> Channel ID </b>
+
+> **Image:** Setup webhook for ThingSpeak
+
+ 
+** Channel ID **
 
 - From the **Channel** menu, navigate to your Distance Monitoring dashboard. The Channel ID can be found under the name of your channel, **Movement Monitoring**; copy and paste it into the **Channel ID** section of your webhook in TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_20.png" 
-  figureCount="44"
-  caption="Channel ID" 
-   width="80%"
-/>
+> **Image:** Channel ID
+
  
 
-<b> API Keys </b>
+** API Keys **
 
 - From the **Channel** menu, navigate to your Movement Monitoring dashboard and select **API Keys** tab. The **API Keys** can be found under the **Write API key** field; copy and paste it to the **API Key** section of your webhook. Once done, simply click **Create ThingSpeak webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_21.png" 
-  figureCount="45"
-  caption="API Key" 
-   width="80%"
-/>
+> **Image:** API Key
+
  
 8. After filling in the necessary details, click **Create ThingSpeak webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_22.png" 
-  figureCount="46"
-  caption="Create ThingSpeak webhook" 
-   width="80%"
-/>
+> **Image:** Create ThingSpeak webhook
+
  
 You should see your RAK12007 Application Webhook ID on the Webhooks dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_23.png" 
-  figureCount="47"
-  caption="Created ThingSpeak webhook under RAK12007 Application" 
-   width="80%"
-/>
+> **Image:** Created ThingSpeak webhook under RAK12007 Application
+
  
 9. Once done, go to **End devices** and click your existing device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_24.png" 
-  figureCount="48"
-  caption="RAK12007 Application" 
-   width="80%"
-/>
+> **Image:** RAK12007 Application
+
  
 10. Click the device application and go to the **Payload formatters** tab.
 11. Setup the **Uplink** and under **Formatter type**, select **Custom Javascript formatter**.
@@ -1296,64 +1088,38 @@ function Decoder(bytes, port)
   }
 }
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_25.png" 
-  figureCount="49"
-  caption="Payload Formatter" 
-   width="80%"
-/>
+
+> **Image:** Payload Formatter
+
  
 13. Then, return to your device's **Live data** in TTN and compare it to the live data from your ThingSpeak account. You should now see measured values at their respective periods.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_26.png" 
-  figureCount="50"
-  caption="Live data from your device in TTN" 
-   width="80%"
-/>
- 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_27.png" 
-  figureCount="51"
-  caption="Live data of your device in ThingSpeak" 
-   width="80%"
-/>
- 
-14. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** &gt; **+Add Widgets**.
+> **Image:** Live data from your device in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_28.png" 
-  figureCount="52"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+ 
+
+> **Image:** Live data of your device in ThingSpeak
+
+ 
+14. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** > **+Add Widgets**.
+
+> **Image:** Adding Widget in ThingSpeak
+
  
 15. Select your desired widget for your application, then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_29.png" 
-  figureCount="53"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 16. Set your preferred parameters for your widget, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_30.png" 
-  figureCount="54"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 18. You should now see the newly added widgets for your RAK12007 application on the ThingSpeak Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12007_thingspeak_31.png" 
-  figureCount="55"
-  caption="ThingSpeak Dashboard" 
-   width="80%"
-/>
+> **Image:** ThingSpeak Dashboard
+
  
 
 #### RAK12013 Radar Sensor LoRaWAN Application
@@ -1658,64 +1424,38 @@ function Decoder(bytes, port)
 }
 
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_25.png" 
-  figureCount="56"
-  caption="Payload Formatter" 
-   width="80%"
-/>
+
+> **Image:** Payload Formatter
+
  
 6. Then, return to your device's **Live data** in TTN and compare it to the live data from your ThingSpeak account. You should now be seeing accurate periods of movement occurrences.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_26.png" 
-  figureCount="57"
-  caption="Live data from your device in TTN" 
-   width="80%"
-/>
- 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_27.png" 
-  figureCount="58"
-  caption="Live data of your device in ThingSpeak" 
-   width="80%"
-/>
- 
-7. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** &gt; **+Add Widgets**.
+> **Image:** Live data from your device in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_28.png" 
-  figureCount="59"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+ 
+
+> **Image:** Live data of your device in ThingSpeak
+
+ 
+7. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** > **+Add Widgets**.
+
+> **Image:** Adding Widget in ThingSpeak
+
  
 8. Select your desired widget for your application, then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_29.png" 
-  figureCount="60"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 9. Set your preferred parameters for your widget, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_30.png" 
-  figureCount="61"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 10. You should now see the newly added widgets for your RAK12006 application on the ThingSpeak Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12013_thingspeak_31.png" 
-  figureCount="62"
-  caption="ThingSpeak Dashboard" 
-   width="80%"
-/>
+> **Image:** ThingSpeak Dashboard
+
   
 #### RAK12017 IR Proximity Sensor LoRaWAN Application
 
@@ -2010,65 +1750,35 @@ function Decoder(bytes, port)
 
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_25.png" 
-  figureCount="63"
-  caption="Payload Formatter" 
-   width="80%"
-/>
+> **Image:** Payload Formatter
+
  
 6. Then, return to your device's **Live data** in TTN and compare it to the live data from your ThingSpeak account. You should now be seeing accurate periods of movement occurrences.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_26.png" 
-  figureCount="64"
-  caption="Live data from your device in TTN" 
-   width="80%"
-/>
+> **Image:** Live data from your device in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_27.png" 
-  figureCount="65"
-  caption="Live data of your device in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Live data of your device in ThingSpeak
+
  
-7. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** &gt; **+Add Widgets**.
+7. To have a better visualization of the gathered data, you may include a widget with your channel. Under the **Channels** Menu, go to **Private View** > **+Add Widgets**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_28.png" 
-  figureCount="66"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 
 8. Select your desired widget for your application, then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_29.png" 
-  figureCount="67"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 9. Set your preferred parameters for your widget, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_30.png" 
-  figureCount="68"
-  caption="Adding Widget in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Adding Widget in ThingSpeak
+
  
 10. You should now see the newly added widgets for your RAK12006 application on the ThingSpeak Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12017_thingspeak_31.png" 
-  figureCount="69"
-  caption="ThingSpeak Dashboard" 
-   width="80%"
-/>
+> **Image:** ThingSpeak Dashboard
 
 ## Miscellaneous
 
@@ -2078,60 +1788,35 @@ function Decoder(bytes, port)
 
 1. Go to [The Things Network](https://www.thethingsnetwork.org/) and sign up an account.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_1.png" 
-  figureCount="70"
-  caption="Signing up an account in TTN" 
-   width="90%"
-/>
+> **Image:** Signing up an account in TTN
+
  
 2. Choose a **Community** and get started.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_2.png" 
-  figureCount="71"
-  caption="Signing up an account in TTN" 
-   width="90%"
-/>
+> **Image:** Signing up an account in TTN
+
  
 3. Choose a network cluster.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_3.png" 
-  figureCount="72"
-  caption="Selecting Cluster in TTN" 
-   width="90%"
-/>
+> **Image:** Selecting Cluster in TTN
+
  
  
 You can also opt to sign up and create an account using your The Things ID.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_4.png" 
-  figureCount="73"
-  caption="Signing up through the Things ID" 
-   width="90%"
-/>
+> **Image:** Signing up through the Things ID
+
  
 If you have a TTN V2, you can use the same login credentials. If you do not yet have an account, you must create one.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_5.png" 
-  figureCount="74"
-  caption="Creation of an account through the Things ID" 
-   width="90%"
-/>
+> **Image:** Creation of an account through the Things ID
 
 #### Adding an Account
 
 1. Now that you are logged in to the platform, the next step is to create an application. Select **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_7.png" 
-  figureCount="75"
-  caption="The Things Stack Platform" 
-   width="90%"
-/>
+> **Image:** The Things Stack Platform
+
  
 2. Fill in the needed information, then click the **Create application** button.
 
@@ -2139,12 +1824,8 @@ If you have a TTN V2, you can use the same login credentials. If you do not yet 
    - **Application name** (optional) - This is the name of your application.
    - **Description** (optional) – Description of your application. Optional application description; can also be used to save notes about the application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_10.png" 
-  figureCount="76"
-  caption="Details of the TTN application" 
-   width="70%"
-/>
+> **Image:** Details of the TTN application
+
  
 :::tip NOTE
 The details and information are dependent on what device you are using.
@@ -2156,59 +1837,36 @@ If you have no error on the previous step, you should now be on the application 
 
 <!-- LoRaWAN specifications enforce that each end-device has to be personalized and activated. Activation can be done via Over-The-Air-Activation (OTAA) mode to register your device. -->
 
-
 #### OTAA Device Registration
 
 1. To start adding an OTAA end-device, go to your application console and click **+ Register end device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_11.png" 
-  figureCount="77"
-  caption="Adding a device in OTAA mode" 
-   width="90%"
-/>
+> **Image:** Adding a device in OTAA mode
+
  
 2. In the input method, select **Enter end device specifics manually** to register your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_12.png" 
-  figureCount="78"
-  caption="Registering the device in OTAA mode" 
-   width="60%"
-/>
+> **Image:** Registering the device in OTAA mode
+
  
 3. Next, set up the **Frequency plan**, the compatible **LoRaWAN version**, and the supported **Regional Parameters version**. Then provide the **JoinEUI** credentials by entering zeroes.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_14.png" 
-  figureCount="79"
-  caption="Setting up your device" 
-   width="60%"
-/>
+> **Image:** Setting up your device
+
  
 4. Click **Show advanced activation, LoRaWAN class and cluster settings** and configure the following parameters, then click **Confirm**:
    - Activation mode: **Over the air activation (OTAA)**
    - Additional LoRaWAN class capabilities: **None (class A only)**
    - Network defaults: **Use network's default MAC settings**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_15.png" 
-  figureCount="80"
-  caption="Setting up your device" 
-   width="60%"
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_16.png" 
-  figureCount="81"
-  caption="Setting up your device" 
-   width="50%"
-/>
+> **Image:** Setting up your device
+
  
-5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. Click the **Generate** button under **Provisioning Information** &gt; **AppKey** to automatically generate the specific end-device ID of your board.
+5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. Click the **Generate** button under **Provisioning Information** > **AppKey** to automatically generate the specific end-device ID of your board.
 
 Once done, you need to change the **End device ID** since it is automatically prefilled using the **DevEUI** of your device. Then click **Register end device**.
-
 
 :::tip NOTE
 
@@ -2217,12 +1875,8 @@ Once done, you need to change the **End device ID** since it is automatically pr
 - The details under **End device ID** are dependent on what device you are using.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_19.png" 
-  figureCount="82"
-  caption="Register End Device" 
-   width="50%"
-/>
+> **Image:** Register End Device
+
  
 6. After you have fully registered your device, you should be able to see it on the TTN console.
 
@@ -2232,77 +1886,43 @@ Once done, you need to change the **End device ID** since it is automatically pr
 - These parameters are always accessible on the device console page, as shown in **Figure 82**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_20.png" 
-  figureCount="83"
-  caption="OTAA device successfully registered to TTN" 
-   width="90%"
-/>
+> **Image:** OTAA device successfully registered to TTN
+
  
 ### Arduino IDE Installation + RAK4631
 
 1. Download the [Arduino IDE](https://www.arduino.cc/en/software) and install it on your PC or laptop. You must choose the appropriate **Arduino IDE** depending on your operating system.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_22.png" 
-  figureCount="84"
-  caption="Download Options for the Arduino IDE" 
-   width="80%"
-/>
+> **Image:** Download Options for the Arduino IDE
 
 2. Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE.
 
-3. Open the **Arduino IDE** and go to **File** &gt; **Preference**.
+3. Open the **Arduino IDE** and go to **File** > **Preference**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_23.png" 
-  figureCount="85"
-  caption="Preference Set-Up" 
-   width="80%"
-/>
+> **Image:** Preference Set-Up
+
  
 4. In the **Preferences** window, under the **Settings** tab, click the icon in line with **Additional Boards Manager URLs**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_24.png" 
-  figureCount="86"
-  caption="Preference Window" 
-   width="80%"
-/>
+> **Image:** Preference Window
+
  
 5. A window will pop up. Copy the highlighted link and click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_25.png" 
-  figureCount="87"
-  caption="RAKwireless Arduino BSP" 
-   width="80%"
-/>
+> **Image:** RAKwireless Arduino BSP
+
  
 6. Paste the link under the **Additional boards manager URLs:** field, and then click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_26.png" 
-  figureCount="88"
-  caption="Completing the setup of the RAKwireless BSP support for the Arduino Board Manager" 
-   width="80%"
-/>
+> **Image:** Completing the setup of the RAKwireless BSP support for the Arduino Board Manager
+
  
-7. In your **Arduino IDE**, go to **Tools** &gt; **Board:XXXXX** &gt; **Boards Manager** and look for **RAKwireless Boards by RAKwireless** since you will be working with **RAK4631 WisBlock Core**. Choose the latest version, then install it. Once done, close the **Board Manager**.
+7. In your **Arduino IDE**, go to **Tools** > **Board:XXXXX** > **Boards Manager** and look for **RAKwireless Boards by RAKwireless** since you will be working with **RAK4631 WisBlock Core**. Choose the latest version, then install it. Once done, close the **Board Manager**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_27.png" 
-  figureCount="89"
-  caption="Opening the Boards Manager" 
-   width="80%"
-/>
+> **Image:** Opening the Boards Manager
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/ttn_rak12006_28.png" 
-  figureCount="90"
-  caption="Installing the RAKwireless nRF Boards" 
-   width="80%"
-/>
+> **Image:** Installing the RAKwireless nRF Boards
+
  
 :::tip NOTE
 The steps outlined above apply to all devices you will be using. Once done with the installation of the device, proceed to its next step:
@@ -2313,42 +1933,26 @@ The steps outlined above apply to all devices you will be using. Once done with 
 - **RAK12017**: [LoRaWAN Code for RAK12017](https://docs.rakwireless.com/product-categories/wisblock/kit3-movement-detection/quickstart/#lorawan-code-for-rak12017)
 :::
 
-
 ### Setting up Your Device Using ThingSpeak
 
 1. Go to [thingspeak.com](https://thingspeak.com/), then click **Get Started For Free**. Select **Create One!** to create your ThingSpeak account.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_1.png" 
-  figureCount="91"
-  caption="ThingSpeak Platform" 
-   width="80%"
-/>
+> **Image:** ThingSpeak Platform
+
  
 2. Once your newly created account has been verified, click **OK**. Then, for the **ThingSpeak Usage Intent**, select **Personal, non-commercial projects** and click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_8.png" 
-  figureCount="92"
-  caption="ThingSpeak Account creation" 
-   width="80%"
-/>
+> **Image:** ThingSpeak Account creation
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_9.png" 
-  figureCount="93"
-  caption="ThingSpeak Account creation" 
-   width="80%"
-/>
+
+> **Image:** ThingSpeak Account creation
+
  
 3. Then under **Channels**, click **New Channel**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit3_quickstart/rak12006_thingspeak_10.png" 
-  figureCount="94"
-  caption="Creating New Channel in ThingSpeak" 
-   width="80%"
-/>
+> **Image:** Creating New Channel in ThingSpeak
+
  
 
 :::tip NOTE
@@ -2360,6 +1964,3 @@ The steps outlined above apply to all devices you will be using. Once you have f
 - **RAK12017**: [LoRaWAN Code for RAK12017](https://docs.rakwireless.com/product-categories/wisblock/kit3-movement-detection/quickstart/#setting-up-rak12017-ir-proximity-sensor-dashboard-using-thingspeak)
 :::
 
-
-
-<RkBottomNav/>

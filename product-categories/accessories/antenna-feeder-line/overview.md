@@ -8,9 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # Antenna Feeder Line
 
 Thank you for choosing **Antenna Feeder Line** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -19,14 +16,13 @@ Thank you for choosing **Antenna Feeder Line** in your awesome IoT project! 🎉
 
 ## Product Description
 
-Antenna Feeder Line cable for **WisGate Edge Prime and Max (RAK7240/7249).**  This Feeder Line cable allows you to better positioning the gateway antennas for optimal coverage. You can choose between 1.5&nbsp;m, 3&nbsp;m, and 5&nbsp;m cable length.
+Antenna Feeder Line cable for **WisGate Edge Prime and Max (RAK7240/7249).**  This Feeder Line cable allows you to better positioning the gateway antennas for optimal coverage. You can choose between 1.5 m, 3 m, and 5 m cable length.
 
 ## Product Features
 
-- Length variants: 1.5&nbsp;m, 3&nbsp;m, & 5&nbsp;m
+- Length variants: 1.5 m, 3 m, & 5 m
 - Connector: N-type female to N-type male
-- Frequency Range: 0~3&nbsp;GHz
+- Frequency Range: 0~3 GHz
 - Cable type: LMR195
 - VSWR: ≤ 1.5
 
-<RkBottomNav/>

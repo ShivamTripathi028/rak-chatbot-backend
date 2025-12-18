@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14002 WisBlock Touch Sensor Module Datasheet
 
 ## Overview
@@ -24,14 +21,14 @@ The RAK14002 WisBlock Touch Sensor module is a 3-channel Capacitive Touch Sensor
 ### Features
 
 * Three (3) Capacitive Touch Sensor Inputs
-* Low Power Operation 50&nbsp;µA quiescent current in standby mode
+* Low Power Operation 50 µA quiescent current in standby mode
 * Proximity Detection
 * Multiple Button Pattern Detection
 * Power button support
-* 3.3&nbsp;V power supply
+* 3.3 V power supply
 * I2C Compliant Communication Interface
 * Chipset: Microchip CAP1293
-* **Module size**: 25 x 35&nbsp;mm
+* **Module size**: 25 x 35 mm
 
 ## Specifications
 ### Overview
@@ -39,12 +36,7 @@ The RAK14002 WisBlock Touch Sensor module is a 3-channel Capacitive Touch Sensor
 #### Mounting
 The RAK14002 module can be mounted on the IO slot of the WisBlock Base board. Figure 1 shows the mounting mechanism of the RAK14002 module on a WisBlock Base module, such as the RAK5005-O.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14002/datasheet/rak14002_mounting.png"
-  width="50%"
-  caption="RAK14002 Mounting"
-/>
+> **Image:** RAK14002 Mounting
 
 ### Hardware
 
@@ -54,7 +46,6 @@ The hardware specification is categorized into five parts. It shows the chipset 
 | Vendor    | Part number |
 | --------- | ----------- |
 | Microchip | CAP1293     |
-
 
 :::tip NOTE
 The default 7-bit slave address is 0x50.
@@ -68,12 +59,7 @@ The RAK14002 WisBlock module comprises a standard 40-pin WisConnector. The WisCo
 - IO6 interrupt output pin, Low active, internal pull-up.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14002/datasheet/rak14002_pinout.svg"
-  width="100%"
-  caption="RAK14002 WisBlock Touch Sensor Module Pinout"
-/>
-
+> **Image:** RAK14002 WisBlock Touch Sensor Module Pinout
 
 #### Electrical Characteristics
 ##### Recommended Operating Conditions
@@ -84,8 +70,8 @@ The RAK14002 WisBlock module comprises a standard 40-pin WisConnector. The WisCo
 | V<sub>POR</sub>       | Power-On reset voltage                       |       |   1   |  1.3  |   V   |
 | I<sub>DD</sub>        | Capacitive Sensing Active                    |   -   |  500  |  750  |  uA   |
 | I<sub>DSLEEP_3V</sub> | Deep Sleep State current                     |   -   |   5   |   -   |  uA   |
-| I<sub>STBY_DEF</sub>  | Standby state active  70&nbsp;ms cycle time  |       |  120  |  170  |  uA   |
-| I<sub>STBY_LP</sub>   | Standby state active  140&nbsp;ms cycle time |       |  50   |       |  uA   |
+| I<sub>STBY_DEF</sub>  | Standby state active  70 ms cycle time  |       |  120  |  170  |  uA   |
+| I<sub>STBY_LP</sub>   | Standby state active  140 ms cycle time |       |  50   |       |  uA   |
 
 #### Mechanical Characteristics
 
@@ -93,26 +79,13 @@ The RAK14002 WisBlock module comprises a standard 40-pin WisConnector. The WisCo
 
 Figure 3 shows the dimensions and the mechanic drawing of the RAK14002 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14002/datasheet/rak14002_mechanic.png"
-  width="100%"
-  caption="RAK14002 WisBlock 3-channel Touchpad Mechanic Drawing"
-/>
+> **Image:** RAK14002 WisBlock 3-channel Touchpad Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14002/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14002/datasheet/rak14002-schematic.png"
-  width="100%"
-  caption="RAK14002 WisBlock 3-channel Touchpad Schematic"
-/>
+> **Image:** RAK14002 WisBlock 3-channel Touchpad Schematic
 
-<RkBottomNav/>

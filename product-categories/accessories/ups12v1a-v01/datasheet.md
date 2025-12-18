@@ -9,10 +9,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # UPS 12V1A-V01 Datasheet
 
 ## Overview
@@ -27,110 +23,63 @@ Additionally, it has useful features such as over-charged, over-discharged, over
 
 ### Features
 
-- Rated Capacity：14.8&nbsp;Wh
-- Input Voltage: 12&nbsp;V<sub>DC</sub> ±5%
-- Input Current: ≤350&nbsp;mA + loading current
-- Output Voltage: 12&nbsp;V<sub>DC</sub> ±5%
-- Output Current: ≤1000&nbsp;mA
+- Rated Capacity：14.8 Wh
+- Input Voltage: 12 V<sub>DC</sub> ±5%
+- Input Current: ≤350 mA + loading current
+- Output Voltage: 12 V<sub>DC</sub> ±5%
+- Output Current: ≤1000 mA
 - Working Temperature:
-  - Charging：0°&nbsp;C ~ 55°&nbsp;C
-  - Discharge：-20°&nbsp;C ~ 65°&nbsp;C
-- Net Weight: 153&nbsp;g ~ 350&nbsp;g
-- Dimension: 111 x 60 x 26&nbsp;mm
+  - Charging：0° C ~ 55° C
+  - Discharge：-20° C ~ 65° C
+- Net Weight: 153 g ~ 350 g
+- Dimension: 111 x 60 x 26 mm
 
 ## Specifications
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-12v1a-v01/1.ups-12v1a-v01.png"
-  width="55%"
-  caption="UPS 12V1A-V01 overview"
-/>
+> **Image:** UPS 12V1A-V01 overview
 
 #### Functional Diagram
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-12v1a-v01/3.function-diagram.png"
-  width="70%"
-  caption="UPS 12V1A-V01 function diagram"
-/>
-
+> **Image:** UPS 12V1A-V01 function diagram
 
 ### Hardware
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-12v1a-v01/2.parts.jpg"
-  width="50%"
-  caption="UPS 12V1A-V01 parts"
-/>
-
+> **Image:** UPS 12V1A-V01 parts
 
 | Number | Label                            |
 | ------ | -------------------------------- |
-| 1      | 5.5 x 2.5&nbsp;mm DC Output port |
-| 2      | 5.5 x 2.1&nbsp;mm DC Input port  |
+| 1      | 5.5 x 2.5 mm DC Output port |
+| 2      | 5.5 x 2.1 mm DC Input port  |
 | 3      | Power On/Off Switch button       |
 | 4      | LED Status Indicator             |
 
 ##### LED Indicator Status
 
-<table>
-  <tr>
-    <th>Description (Switch ON)</th>
-    <th>Input</th>
-    <th>Output</th>
-    <th>LED Status</th>
-  </tr>
-  <tr>
-    <td rowSpan = "3">Full charged</td>
-    <td>Without</td>
-    <td>Without</td>
-    <td>🟢 Green LED</td>
-  </tr>
-  <tr>
-    <td>With</td>
-    <td>With</td>
-    <td>🟢 Green LED</td>
-  </tr>
-  <tr>
-    <td>Without</td>
-    <td>With</td>
-    <td>🟢 Green LED</td>
-  </tr>
-  <tr>
-    <td>Not Full Charged/Low Power</td>
-    <td>Without</td>
-    <td>With</td>
-    <td>🟢 Green LED</td>
-  </tr>
-  <tr>
-    <td>Charging/Low Power</td>
-    <td>With</td>
-    <td>With</td>
-    <td>🔴 Red LED</td>
-  </tr>
-</table>
-
-
+| Description (Switch ON) | Input | Output | LED Status |
+| --- | --- | --- | --- |
+| Full charged | Without | Without | 🟢 Green LED |
+| Full charged | With | With | 🟢 Green LED |
+| Full charged | Without | With | 🟢 Green LED |
+| Not Full Charged/Low Power | Without | With | 🟢 Green LED |
+| Charging/Low Power | With | With | 🔴 Red LED |
 
 #### Electrical Characteristics
 
 | Item                                 | Technical Requirements         | Remarks                            |
 | ------------------------------------ | ------------------------------ | ---------------------------------- |
-| Input voltage                        | 12&nbsp;V ± 5%                 | -                                  |
-| Input current                        | ≤350&nbsp;mA + loading current | -                                  |
-| Output voltage range                 | 12&nbsp;v ± 5%                 | -                                  |
-| Output current range                 | ≤1000&nbsp;mA                  | -                                  |
-| Charging current                     | 350&nbsp;mA ± 10%              | -                                  |
+| Input voltage                        | 12 V ± 5%                 | -                                  |
+| Input current                        | ≤350 mA + loading current | -                                  |
+| Output voltage range                 | 12 v ± 5%                 | -                                  |
+| Output current range                 | ≤1000 mA                  | -                                  |
+| Charging current                     | 350 mA ± 10%              | -                                  |
 | Charging transfer efficiency         | ≥75%                           | -                                  |
-| No-load voltage range                | 12&nbsp;V ± 5%                 | -                                  |
+| No-load voltage range                | 12 V ± 5%                 | -                                  |
 | Discharging transfer efficiency      | ≥85%                           | -                                  |
-| Over-discharged protection (battery) | 6.0&nbsp;V                     | Over-discharged release 6.3&nbsp;V |
-| Over-charged protection (battery)    | 8.5&nbsp;V                     | Over-charged release 8.25&nbsp;V   |
-| With load current (battery)          | ≤1000&nbsp;mA                  | -                                  |
+| Over-discharged protection (battery) | 6.0 V                     | Over-discharged release 6.3 V |
+| Over-charged protection (battery)    | 8.5 V                     | Over-charged release 8.25 V   |
+| With load current (battery)          | ≤1000 mA                  | -                                  |
 
-<RkBottomNav/>

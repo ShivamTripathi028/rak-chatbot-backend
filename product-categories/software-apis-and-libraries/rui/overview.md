@@ -9,14 +9,10 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Getting Started
 
 :::tip NOTE
 This document is about RUI V2. The development of this framework is already discontinued. RUI V2 is only compatible to old modules RAK811, RAK4200, RAK4600, and RAK4270.
-
 
 [RUI3](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/overview/) is the new version of RAKwireless Unified Interface and primarily supports RAK3172, RAK3172-SiP, and RAK4630. RUI3 is not compatible to old RAK modules.
 :::
@@ -54,13 +50,7 @@ The SDK is the core of RUI. It was developed to support multiple types of the RA
 
 For the purpose and usage of RUI API, refer to the [RUI API Reference](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui/rui-api-reference) Manual.
 
-
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rui-sdk.png"
-  width="50%"
-  caption="The RUI SDK"
-/>
+> **Image:** The RUI SDK
 
 The application is open-sourced. Users can take the existing application code provided by RAK as a reference and extend it according to their business requirements.
 
@@ -72,21 +62,13 @@ The RUI SDK is not only for the external users, inside RAK, the development team
 
 You can find the RAK’s repository in Github in this URL: [https://github.com/RAKWireless/Products_practice_based_on_RUI_v2.0](https://github.com/RAKWireless/Products_practice_based_on_RUI_v2.0)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/github-repo.png"
-  width="50%"
-  caption="RAK’s Github repository"
-/>
+> **Image:** RAK’s Github repository
 
 As shown in Figure 2, the code repository is classified according to the model of the core module. Specific sample codes can be found inside of the directory of the corresponding core module.
 
 Taking the RAK811 module as an example. After entering into the "base on RAK811" directory, as shown in Figure 3, examples of application code based on the RAK811 module can be found. Some show how to control peripherals and sensors, others are the actual official firmware of products based on the RAK811 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/github-repo-sample-code.png"
-  width="50%"
-  caption="RAK’s Github, sample code"
-/>
+> **Image:** RAK’s Github, sample code
 
 In Figure 3, the "RAK5205" directory contains the application source code corresponding to the official firmware of RAK5205. The RAK5205 is based on the RAK811 module, adding the environmental monitoring sensor (BME680), a three-axis acceleration sensor (lis3dh), and GPS module (Ublox Max 7q). The code example in this directory shows how to connect other sensors through I2C and GPS module through UART based on RAK811 module and complete the development of customized firmware through the RUI API.
 
@@ -98,11 +80,7 @@ The “RAK811" is the application code corresponding to the official firmware of
 
 These sample codes on RAK’s Github repository are actually complete applications. For example, the RAK7204 example code described earlier is shown in Figure 4.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rak7204-sample-code.png"
-  width="50%"
-  caption="RAK’s Github, RAK7204 sample code"
-/>
+> **Image:** RAK’s Github, RAK7204 sample code
 
 For instance, Once the node received a LoRaWAN downlink data, it only prints the data out through the serial port without actually doing any action. Below is the snippet of the callback from the **app_7204.c** file:
 
@@ -137,11 +115,7 @@ Once the binary file is generated from the previous step, it has to be burned in
 * [Device Firmware Upgrade Tool for MacOS](https://downloads.rakwireless.com/LoRa/Tools/RAK_Device_Firmware_Upgrade_tool/RAK_Device_Firmware_Upgrade_Tool_v1.4_MacOS.zip)
 * [Device Firmware Upgrade Tool for Ubuntu](https://downloads.rakwireless.com/LoRa/Tools/RAK_Device_Firmware_Upgrade_tool/RAK_Device_Firmware_Upgrade_Tool_v1.4_Ubuntu.zip)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rak-upgrade-tool.png"
-  width="70%"
-  caption="RAK Firmware Upgrade Tool."
-/>
+> **Image:** RAK Firmware Upgrade Tool.
 
 As shown in Figure 5, the firmware update process is as simple as choosing the right serial port, select the binary file, and execute the update to the target module. This process should take less than one minute.
 
@@ -155,29 +129,17 @@ Go to [build.rakwireless.com](https://build.rakwireless.com/#/user/login) to acc
 
 1. Open the login interface of the RUI Online Compiler platform as shown in Figure 6. For the first time, you need to register an account.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rui-online-login.png"
-  width="30%"
-  caption="Login into RUI Online Compiler platform."
-/>
+> **Image:** Login into RUI Online Compiler platform.
 
 2. Click the “**Create an Account**” link in this interface to register an account. As shown in Figure 7, an **email** and a **password** will be required. Hit the “**Get verification code**” button to receive a code in your email and input in the form. Once that is done, click on the “**Create an Account**” button to finalize the operation. After activation, you can log into the platform.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rui-online-signup.png"
-  width="30%"
-  caption="Create a new account in the RUI Online Compiler platform"
-/>
+> **Image:** Create a new account in the RUI Online Compiler platform
 
 ### Code Compilation
 
 1. After logging in to the platform, as shown in Figure 8, you need to select first the model of the target module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rui-online-platform.png"
-  width="75%"
-  caption="Online Compiler platform."
-/>
+> **Image:** Online Compiler platform.
 
 2. The application code can be customized in any text editor. Once it is ready, they must be compressed into a ZIP format as shown in Figure 9.
 
@@ -185,19 +147,11 @@ Go to [build.rakwireless.com](https://build.rakwireless.com/#/user/login) to acc
 Only the files are required, avoid creating a parent directory. Then the packaged application code is uploaded to the platform for compilation.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/application-zip-file.png"
-  width="25%"
-  caption="Compress the application code into a ZIP file."
-/>
+> **Image:** Compress the application code into a ZIP file.
 
 3. The compilation progress will be displayed in real-time during compilation. If there are syntax errors, the output information will be displayed. If the compilation is successful, the final binary file can be downloaded to the local file system. Then make download the customized firmware into the target module by using the Firmware Upgrade Tool, as explained in the [Download Firmware](https://downloads.rakwireless.com/#LoRa/Tools/RAK_Device_Firmware_Upgrade_tool/) section.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui/rui-customized-development/rui-online-compilation-successful.png"
-  width="75%"
-  caption="Compilation finished successfully"
-/>
+> **Image:** Compilation finished successfully
 
 ### Upload Prebuilt Static Libraries
 
@@ -247,8 +201,6 @@ For example:
 # arm-none-eabi-ar rcs ./libmyutil.cm4_hard_float.a ./myutil.o
 ```
 
-<br />
-
 2. **ARM compiler 5**
 
   - **ARM Cortex M0**
@@ -283,9 +235,6 @@ For example:
 > armlink.exe --elf myutil.o --output myutil.axf
 > armar.exe --create libmyutil.win_armcc.cm4_hard_float.a myutil.axf
 ```
-
-
-<br />
 
 3. **ARM compiler 6**
 
@@ -322,4 +271,3 @@ For example:
 > armar.exe --create libmyutil.win_armclang.cm4_hard_float.a myutil.axf
 ```
 
-<RkBottomNav/>

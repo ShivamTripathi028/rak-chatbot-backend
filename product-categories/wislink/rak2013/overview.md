@@ -9,9 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2013 WisLink Cellular Pi HAT
 Thank you for choosing **RAK2013 WisLink Cellular Pi HAT** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
@@ -43,5 +40,3 @@ The module is supported with an extendable sensor board connected that follows t
 - Supports I2C, GPIOs, UART and ADC interfaces for Raspberry board
 - Supports EEPROM to configure IOs automatically
 
-
-<RkBottomNav/>

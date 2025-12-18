@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7431 Quick Start Guide
 
 ## Prerequisite
@@ -37,11 +34,7 @@ Before going through each and every step in the installation guide of the RAK743
 
 RAK7431 converts data from the RS485 protocol into LPWAN wireless messages and delivers it to a cloud server through an LPWAN gateway. Cloud servers can also proactively send data to RAK7431 for two-way data transmission. Using the RAK7431, you can convert data from a conventional RS485 wired network to a wireless network.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/typical-application.png"
-  width="80%"
-  caption="Example communication with RS485 enabled devices"
-/>
+> **Image:** Example communication with RS485 enabled devices
 
 ### Connect the RAK7431 to the Sensor
 
@@ -52,27 +45,19 @@ The RAK7431 device can be powered either by:
 - DC (VIN/GND) terminals
 - Micro USB
 
-The DC screw terminals are supporting 8 to 48&nbsp;V<sub>DC</sub>. The Micro USB port can be used to power the RAK7431, up to 5&nbsp;V / 500&nbsp;mA DC. At the same time, the USB port is used as the configuration port for the device. Using the USB cable to connect the RAK7431 to a computer’s USB port, you can import your configuration settings.
+The DC screw terminals are supporting 8 to 48 V<sub>DC</sub>. The Micro USB port can be used to power the RAK7431, up to 5 V / 500 mA DC. At the same time, the USB port is used as the configuration port for the device. Using the USB cable to connect the RAK7431 to a computer’s USB port, you can import your configuration settings.
 
 :::tip NOTE
 The Micro USB port can be used only for powering the device. It cannot provide power to VOUT and power other devices in the RS485 network.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/device-with-power-supply.png"
-  width="80%"
-  caption="RAK7431 bridge with connected sensor and power supply"
-/>
+> **Image:** RAK7431 bridge with connected sensor and power supply
 
 #### Data Interface Configuration
 
 The RAK7431 - RS485 serial interface can support up to **16 RS485 devices**. VOUT on the data interface can supply external power to the RS485 connected devices (only when the device is powered from the DC input). The VOUT output voltage is the same as the DC input voltage VIN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/rak7431-interface-pin-def.png"
-  width="50%"
-  caption="RAK7431 Interface pin definition"
-/>
+> **Image:** RAK7431 Interface pin definition
 
 ### Gateway Connection Settings
 
@@ -87,19 +72,11 @@ In this section, the **RAK7431 WisNode Bridge Serial** will be connected into th
 
 1. Start by accessing the gateway. You can see how to do it on the [WisGateOS V2 user manual](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/wisgateos-v2-login-page.png"
-  width="100%"
-  caption="WisGateOS V2 login page"
-/>
+> **Image:** WisGateOS V2 login page
 
 2. Once logged in, head to the **LoRa** menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/lora-page.png"
-  width="100%"
-  caption="LoRa page"
-/>
+> **Image:** LoRa page
 
 1. By default, the gateway works as a Built-In Network Server. If that is not the case, check the [Built-in Network Server Mode Settings](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#lora) on the WisGateOS V2 User manual to switch the mode.
 
@@ -107,11 +84,7 @@ In this section, the **RAK7431 WisNode Bridge Serial** will be connected into th
 
 1. Once the gateway is in Built-in network server mode, head to the **Applications** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/application-page.png"
-  width="100%"
-  caption="Create Application in the Built-In Network Server"
-/>
+> **Image:** Create Application in the Built-In Network Server
 
 2. Click the **Add application** button or **add one now** link to add a new application. On the new page, fill in the following information:
 
@@ -120,37 +93,21 @@ In this section, the **RAK7431 WisNode Bridge Serial** will be connected into th
 - **Application Type** - from the drop-down menu select the type of application.
 - **Unified Application key** - all devices will use the same application key. Selecting this option pops up an **Application Key** field. You can type your application key there or use the **Autogenerate** button to generate one.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/7.unified-application-key.png"
-width="45%"
-caption="Unified application key"
-/>
+> **Image:** Unified application key
 
 The **Auto Add Device** switch activates the **Application EUI** field. The device will be automatically added to the application after the application EUI and key verification.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/8.auto-add-device.png"
-width="45%"
-caption="Auto add device"
-/>
+> **Image:** Auto add device
 
 - **Separate Application keys** – each device will have its own application key. The key is added when registering the device.
 - **Payload type** - from the drop-down, select **CayenneLPP** payload type and turn on the **Only forward data object** feature.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/9.adding-application.png"
-width="100%"
-caption="Adding application"
-/>
+> **Image:** Adding application
 
 3. Once set, click **Save application** to add the application.
 4. After the application is added, head to the **End devices** tab. The devices should automatically register upon join request if you are using the Auto Add Device feature.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/10.successfully-added-end-device.png"
-width="100%"
-caption="Successfully added end device"
-/>
+> **Image:** Successfully added end device
 
 If that’s not the case, click the **Add end device** button. On the **End device information** page fill in the following information:
 
@@ -160,11 +117,7 @@ If that’s not the case, click the **Add end device** button. On the **End devi
     - **Application Session Key**
     - **Network Session Key**
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/11.adding-abp-device.png"
-width="40%"
-caption="Adding ABP device"
-/>
+> **Image:** Adding ABP device
 
 - **End device (group) name** – the name of the device.
 - **End device description (optional)** – optionally, you can add a description for the device.
@@ -172,32 +125,20 @@ caption="Adding ABP device"
 - **Frame Counter width** – the width of the frame counter. Leave it as default.
 - **LoRaWAN MAC Version** – the LoRaWAN MAC version. V1.0.2 pops up a **LoRaWAN Regional Parameters reversion** field where you need to select the reversion of the device.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/12.successfully-created-application.png"
-width="100%"
-caption="Successfully created application"
-/>
+> **Image:** Successfully created application
 
 ##### Adding the Device
 
 1. Once everything is set, click **Add end devices** to go to the page and add the device.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/13.adding-end-device.png"
-width="100%"
-caption="Adding end device"
-/>
+> **Image:** Adding end device
 
 2. On the **Adding end devices** page, type the device EUI at the **End Device EUI (main)** and click **Add to “End Devices list”**.
    - If the EUI is correct, the device will show in the **End devices list**.
    - If the EUI is not correct, the devices will show in the **End devices with an error**.
 3. Once the device is added to the **End devices list** click **Add end devices**. Confirm you are adding the device.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/14.confirmation-message-for-adding-a-device.png"
-width="40%"
-caption="Confirmation message for adding a device"
-/>
+> **Image:** Confirmation message for adding a device
 
 #### RAK7431 Configuration
 
@@ -207,11 +148,7 @@ caption="Confirmation message for adding a device"
 2. Open the RAK Serial Tool and select the correct COM port. The default baud rate is **115200**.
 3. After selecting, press **Open**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/rak-serial-port-tool.png"
-  width="45%"
-  caption="RAK Serial Tool"
-/>
+> **Image:** RAK Serial Tool
 
 - To set up the Device EUI, run the command:
 
@@ -247,11 +184,7 @@ AT+APPEUI
 AT+APPKEY
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/configuring-the-rak7431.png"
-  width="45%"
-  caption="Configuring the RAK7431"
-/>
+> **Image:** Configuring the RAK7431
 
 ##### Set the Frequency Region
 
@@ -317,11 +250,7 @@ AT+RESTART
 
 4. If everything is configured right, after the execution of the restart command this output pops up in the RAK Serial Tool:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/rak7431-successful-join.png"
-  width="45%"
-  caption="RAK7431 Successful Join"
-/>
+> **Image:** RAK7431 Successful Join
 
 ### Configure RAK7431 Working Modes
 
@@ -372,23 +301,19 @@ AT+ENABLEPOLL=n
 The modification takes effect after restart.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/sched-polling-example.png"
-  width="80%"
-  caption="Scheduled polling example"
-/>
+> **Image:** Scheduled polling example
 
 #### Scheduled Polling Cycle
 
 This command sets/reads the scheduled polling cycle. This command only works if scheduled polling is enabled. The modification takes effect after the next polling cycle or a restart.
 
-**Example**: To set the polling cycle to 60&nbsp;seconds, use this command:
+**Example**: To set the polling cycle to 60 seconds, use this command:
 
 ```sh
 AT+POLLPERIOD=60
 ```
 
-RAK7431 supports polling mode, which stores up to 32 query instructions at a maximum length of 128&nbsp;bytes per instruction. Polling intervals and wait times can be adjusted as needed. RAK7431 converts the data returned by the RS485 node into a LoRaWAN message, which can be sent to the LoRaWAN gateway as is or encapsulated. In transparent mode, the data for the RS485 is sent in the payload of the LoRa message as is, and in non-transparent mode, the data of RS485 is encapsulated in the LoRa message with a header and validation.
+RAK7431 supports polling mode, which stores up to 32 query instructions at a maximum length of 128 bytes per instruction. Polling intervals and wait times can be adjusted as needed. RAK7431 converts the data returned by the RS485 node into a LoRaWAN message, which can be sent to the LoRaWAN gateway as is or encapsulated. In transparent mode, the data for the RS485 is sent in the payload of the LoRa message as is, and in non-transparent mode, the data of RS485 is encapsulated in the LoRa message with a header and validation.
 
 #### Add Polling Instructions
 
@@ -401,7 +326,7 @@ AT+ADDPOLL=<n>:<xxxx>
 | **Parameter** | **Description**                                 | **Value Range**    |
 | ------------- | ----------------------------------------------- | ------------------ |
 | n             | polling instruction ID                          | 1 to 127           |
-| xxxx          | polling instruction content; hexadecimal string | 128&nbsp;bytes max |
+| xxxx          | polling instruction content; hexadecimal string | 128 bytes max |
 
 According to the temperature and humidity register address of the temperature and humidity sensor in the example and the RS485 address, the polling instruction should be:
 
@@ -434,26 +359,18 @@ AT+ADDPOLL=3:080300000002C492
 AT+ADDPOLL=4:0F0300000002C525
 ```
 
-The RAK7431 sends an instruction to the sensor every 1&nbsp;minute to obtain temperature and humidity data, and the following is the result of 3 consecutive scheduled polls:
+The RAK7431 sends an instruction to the sensor every 1 minute to obtain temperature and humidity data, and the following is the result of 3 consecutive scheduled polls:
 
 - **DTU Tx**: The polling instruction sent to the Sensors over RS485 Data Interface
 - **DTU Rx**: The sensor data received.
 - **LoRa Tx**：Send the received data through a LoRaWAN network.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/transparent-mode.png"
-  width="45%"
-  caption="Data in transparent mode"
-/>
+> **Image:** Data in transparent mode
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/non-transparent-mode.png"
-  width="45%"
-  caption="Data in non-transparent mode"
-/>
+> **Image:** Data in non-transparent mode
 
 - **Humidity calculation**: hex is 0210, the decimal is 528, converted humidity is 52.8% RH.
-- **Temperature calculation**: hex is 012F, the decimal is 303, converted temperature is 30.3°&nbsp;C.
+- **Temperature calculation**: hex is 012F, the decimal is 303, converted temperature is 30.3° C.
 
 ### MQTT Subscribe to Data Server
 
@@ -473,58 +390,34 @@ Application/{{application_ID}}/device/{{device_EUI}}/status
 
 2. After installation, the MQTT Client must be configured. Select **local mosquitto** from the drop-down list and click the **edit connection profiles** icon marked in the image below to open the settings page.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/mqttfx-client.png"
-  width="100%"
-  caption="MQTT.fx Client"
-/>
+> **Image:** MQTT.fx Client
 
 3. On the next window, input the **Broker Address** and **Broker Port**. If the Client ID is empty press **Generate**. Then click **OK**.
 
 - **Broker Address**: Address of MQTT server – the gateway IP.
 - **Broker Port**: Consistent with MQTT Broker Port set by the gateway - by default 1883.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/mqttfx-settings.png"
-  width="75%"
-  caption="MQTT.fx settings"
-/>
+> **Image:** MQTT.fx settings
 
 4. Click on the **Connect** button. The green dot indicates that the connection is successfully subscribed to the MQTT Broker.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/subscribe-mqtt-broker.png"
-  width="100%"
-  caption="MQTT.fx connected successfully"
-/>
+> **Image:** MQTT.fx connected successfully
 
 - If you want to receive all data from the MQTT Bridge, use the wildcard character **#**.
 
 5. Choose the **Subscribe tab**, enter the wildcard and press **Subscribe**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/subscribed-mqtt-wildcard.png"
-  width="100%"
-  caption="Subscribing to MQTT Broker with wildcard"
-/>
+> **Image:** Subscribing to MQTT Broker with wildcard
 
 - If the node sends data, the MQTT client will display it as it is subscribed to the topic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/subscribed-topic-data.png"
-  width="100%"
-  caption="Subscribed topic"
-/>
+> **Image:** Subscribed topic
 
 - Notice that the data field is in **base64** format, which has to be converted to hex string to be useful. You can change the data format from the built-in server settings.
 
 6. This is done by going to **LoRa>Application**, select the application you created and enter the "Configuration" interface of the application. Chose **HEX String** in Decode Type . Press **Save changes**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/data-encode-decode-type.png"
-  width="100%"
-  caption="Change the Data Encode/Decode Type"
-/>
+> **Image:** Change the Data Encode/Decode Type
 
 ### RAK7431 Remote Control and Configuration via MQTT.fx
 
@@ -534,29 +427,10 @@ To remotely control the RAK7431 you need to publish messages to the **Gateway’
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th colSpan="2">MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x03</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>TASK_ID</td>
-            <td>DATA</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-            <td>nByte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |  |
+| --- | --- | --- | --- | --- |
+| 0x03 | 2Byte | 2Byte | TASK_ID | DATA |
+| 0x03 | 2Byte | 2Byte | 1Byte | nByte |
 
 :::tip NOTE
 The message length does not contain the header.
@@ -594,11 +468,7 @@ Application ID and Device EUI should be consistent with the settings within the 
 
 **The content of the data that you will send is**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/content-data.jpg"
-  width="40%"
-  caption="Data arrangement"
-/>
+> **Image:** Data arrangement
 
 1. DTU command word
 2. The message number
@@ -606,79 +476,31 @@ Application ID and Device EUI should be consistent with the settings within the 
 4. The task ID
 5. The content of the task
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-data-to-rx-topic.png"
-  width="100%"
-  caption="Publishing data to RX topic"
-/>
+> **Image:** Publishing data to RX topic
 
 - After publishing the data, you can see the downlink instruction and uplink answer from the RAK Serial Tool:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-data-reply.png"
-  width="45%"
-  caption="Received data and sent an answer"
-/>
+> **Image:** Received data and sent an answer
 
 **Message format when execution is successful**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x83</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>TASK_ID</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x83 | 2Byte | 2Byte | TASK_ID |
+| 0x83 | 2Byte | 2Byte | 1Byte |
 
 - The MQTT subscription bar can see the upstream message "**83000100010101**" for successful execution.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-task-confirmation.png"
-  width="100%"
-  caption="Received confirmation of the task"
-/>
+> **Image:** Received confirmation of the task
 
 #### Remove the Scheduled Polling Task List
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x04</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>TASK_ID</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x04 | 2Byte | 2Byte | TASK_ID |
+| 0x04 | 2Byte | 2Byte | 1Byte |
 
 **Example**: Removal of timed polling temperature and humidity sensor task order on a node:
 
@@ -698,42 +520,16 @@ Application/1/device/60c5a8fffe75404b/tx
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/remove-poll-downlink-message.png"
-  width="100%"
-  caption="Remove poll downlink message"
-/>
+> **Image:** Remove poll downlink message
 
 **Message format when execution is successful**:
 
-<table style={{ textAlign: 'center' }}>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x84 | 2Byte | 2Byte | TASK_ID |
+| 0x84 | 2Byte | 2Byte | 1Byte |
 
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x84</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>TASK_ID</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/poll-remove-successful.png"
-  width="100%"
-  caption="Poll removed successfully message"
-/>
+> **Image:** Poll removed successfully message
 
 - The MQTT subscription bar sees the upstream message "**84000100010101**", which means the task was successfully removed.
 
@@ -741,28 +537,10 @@ Application/1/device/60c5a8fffe75404b/tx
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x05</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>TASK_ID</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x05 | 2Byte | 2Byte | TASK_ID |
+| 0x05 | 2Byte | 2Byte | 1Byte |
 
 **Publish topic**:
 
@@ -780,70 +558,26 @@ application/1/device/60c5a8fffe75404b/tx
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-read-poll-task.png"
-  width="100%"
-  caption="Publishing the read poll task message"
-/>
+> **Image:** Publishing the read poll task message
 
 **Perform successful upstream message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th colSpan="2">MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x85</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>TASK_ID</td>
-            <td>DATA</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-            <td>nByte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |  |
+| --- | --- | --- | --- | --- |
+| 0x85 | 2Byte | 2Byte | TASK_ID | DATA |
+| 0x85 | 2Byte | 2Byte | 1Byte | nByte |
 
 - Open the MQTT subscription column that is to see to the performance of the above line: "**8500010009010103000000002C40B**" is the query to the task, the order ID is 1, the task order content is 010300000002C40B (example registers).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-message-from-node.png"
-  width="100%"
-  caption="Received message from the node"
-/>
+> **Image:** Received message from the node
 
 #### Read the LoRa Configuration
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>0x06</td>
-            <td>2Byte</td>
-            <td>2Byte</td>
-            <td>0Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x06 | 2Byte | 2Byte | 0Byte |
 
 **Publish topic**:
 
@@ -861,46 +595,14 @@ Application/1/device/60c5a8fffe75404b/tx
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-lora-config-message.png"
-  width="100%"
-  caption="Publish LoRa configuration read message"
-/>
+> **Image:** Publish LoRa configuration read message
 
 **Perform successful upstream message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th colSpan="6">MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x86</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>DATA RATE</td>
-            <td>TXPWR</td>
-            <td>CONFIRM</td>
-            <td>RETRY</td>
-            <td>ADR</td>
-            <td>DUTY CYCLE</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x86 | 2Byte | 2Byte | DATA RATE | TXPWR | CONFIRM | RETRY | ADR | DUTY CYCLE |
+| 0x86 | 2Byte | 2Byte | 1Byte | 1Byte | 1Byte | 1Byte | 1Byte | 1Byte |
 
 - **DATARATE**: Speed rate (0 – 5)
 - **TXPOWER**: The transmit power level (0 – 20)
@@ -909,11 +611,7 @@ Application/1/device/60c5a8fffe75404b/tx
 - **ADR**: Whether to turn on the dynamic rate adjustment 0 – off, 1 - on
 - **DUTY CYCLE**: Whether to turn on duty cycle limit 0 – off, 1 – on
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-message-with-lora-config.png"
-  width="75%"
-  caption="Received message with LoRa configuration"
-/>
+> **Image:** Received message with LoRa configuration
 
 - Open the MQTT subscription bar to see the upstream message "**860001000006000010301000000**" to read the LoRa configuration based on the upstream message format for the successful execution above.
 
@@ -921,38 +619,10 @@ Application/1/device/60c5a8fffe75404b/tx
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th colSpan="6">MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x07</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>DATA RATE</td>
-            <td>TXPWR</td>
-            <td>CONFIRM</td>
-            <td>RETRY</td>
-            <td>ADR</td>
-            <td>DUTY CYCLE</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x07 | 2Byte | 2Byte | DATA RATE | TXPWR | CONFIRM | RETRY | ADR | DUTY CYCLE |
+| 0x07 | 2Byte | 2Byte | 1Byte | 1Byte | 1Byte | 1Byte | 1Byte | 1Byte |
 
 **Publish topic**:
 
@@ -972,40 +642,17 @@ Application/1/device/60c5a8fffe75404b/tx
 
 - The above command changes the **data rate to "1"** and the **transmit power to "5"**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-change-lora-config-data.png"
-  width="100%"
-  caption="Publish change LoRa configuration data"
-/>
+> **Image:** Publish change LoRa configuration data
 
 **Perform successful upstream message format**:
 
-<table style={{ textAlign: 'center' }}>
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>0x87</td>
-            <td>2Byte</td>
-            <td>2Byte</td>
-            <td>0Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x87 | 2Byte | 2Byte | 0Byte |
 
 - Open the MQTT subscription bar to see the upstream message for successful execution: "**8700010000**".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-confirmation-message.png"
-  width="75%"
-  caption="Received confirmation message"
-/>
+> **Image:** Received confirmation message
 
 #### Reset the Default LoRa Configuration
 
@@ -1025,69 +672,25 @@ Application/1/device/60c5a8fffe75404b/tx
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-reset-def-lora-config.png"
-  width="100%"
-  caption="Publish reset the default LoRa configuration"
-/>
+> **Image:** Publish reset the default LoRa configuration
 
 - Open the MQTT subscription bar to see the upstream message for successful execution: "**9D00010000**".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-data1.png"
-  width="75%"
-  caption="Received Data"
-/>
+> **Image:** Received Data
 
 **LORA configuration default values**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DATARATE</th>
-    <th>TXPOWER</th>
-    <th>CONFIRM</th>
-    <th>RETRY</th>
-    <th>ADR_ENABlE</th>
-    <th>DUTYCYCLE_ENABLE</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>0 – DR_0</td>
-            <td>19 -19dBm</td>
-            <td>1 – open</td>
-            <td>3 times</td>
-            <td>1 – open</td>
-            <td>0 – close</td>
-        </tr>
-</tbody>
-</table>
+| DATARATE | TXPOWER | CONFIRM | RETRY | ADR_ENABlE | DUTYCYCLE_ENABLE |
+| --- | --- | --- | --- | --- | --- |
+| 0 – DR_0 | 19 -19dBm | 1 – open | 3 times | 1 – open | 0 – close |
 
 #### Read the DTU Configuration
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>0x08</td>
-            <td>2Byte</td>
-            <td>2Byte</td>
-            <td>0Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x08 | 2Byte | 2Byte | 0Byte |
 
 **Publish topic**:
 
@@ -1105,44 +708,14 @@ Application/1/device/60c5a8fffe75404b/tx
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-read-dtu-config.png"
-  width="100%"
-  caption="Publish message for reading the DTU configuration"
-/>
+> **Image:** Publish message for reading the DTU configuration
 
 **Uplink data message format when execution successful**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th colSpan="5">MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x88</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>POLL ENABLE</td>
-            <td>POLL PERIOD</td>
-            <td>BUS TIMEOUT</td>
-            <td>RETRY</td>
-            <td>RS485</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-            <td>4Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x88 | 2Byte | 2Byte | POLL ENABLE | POLL PERIOD | BUS TIMEOUT | RETRY | RS485 |
+| 0x88 | 2Byte | 2Byte | 1Byte | 4Byte | 1Byte | 1Byte | 1Byte |
 
 - **POLL ENABLE**: Enables scheduled polling, 0 - off, 1 - on
 - **POLL PERIOD**: Polling period, in seconds
@@ -1152,46 +725,16 @@ Application/1/device/60c5a8fffe75404b/tx
 
 Open the MQTT subscription bar to see the upstream message "**8800010000800000003C010050**" to read the DTU configuration according to the successful upstream message format above.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/receive-current-dtu-config.png"
-  width="75%"
-  caption="Received message with current DTU configuration"
-/>
+> **Image:** Received message with current DTU configuration
 
 #### Change the DTU POLL Configuration
 
 **Downlink instruction message format**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th colSpan="5">MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td rowSpan="2">0x09</td>
-            <td rowSpan="2">2Byte</td>
-            <td rowSpan="2">2Byte</td>
-            <td>POLL ENABLE</td>
-            <td>POLL PERIOD</td>
-            <td>BUS TIMEOUT</td>
-            <td>RETRY</td>
-            <td>RS485</td>
-        </tr>
-        <tr>
-            <td>1Byte</td>
-            <td>4Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-            <td>1Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x09 | 2Byte | 2Byte | POLL ENABLE | POLL PERIOD | BUS TIMEOUT | RETRY | RS485 |
+| 0x09 | 2Byte | 2Byte | 1Byte | 4Byte | 1Byte | 1Byte | 1Byte |
 
 **Publish topic**:
 
@@ -1211,41 +754,17 @@ Application/1/device/60c5a8fffe75404b/tx
 
 - The above command changes the polling period to only 1 hour.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-change-dtu-config.png"
-  width="100%"
-  caption="Publish message for change the DTU configuration"
-/>
+> **Image:** Publish message for change the DTU configuration
 
 **Uplink data message format when execution successful**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>DTU_CMD</th>
-    <th>MSER</th>
-    <th>MDATA_LEN</th>
-    <th>MDATA</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>0x89</td>
-            <td>2Byte</td>
-            <td>2Byte</td>
-            <td>0Byte</td>
-        </tr>
-</tbody>
-</table>
+| DTU_CMD | MSER | MDATA_LEN | MDATA |
+| --- | --- | --- | --- |
+| 0x89 | 2Byte | 2Byte | 0Byte |
 
 - Open the MQTT subscription bar to see the upstream message for successful execution: "**8900010000**".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-dtu-confirm-message.png"
-  width="75%"
-  caption="Received confirmation message"
-/>
+> **Image:** Received confirmation message
 
 #### Reset the Default DTU Configuration
 
@@ -1265,41 +784,17 @@ Application/1/device/60c5a8fffe75404b/tx
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/publish-reset-default-dtu.png"
-  width="100%"
-  caption="Publish reset the default DTU configuration"
-/>
+> **Image:** Publish reset the default DTU configuration
 
 - Open the MQTT subscription bar to see the upstream message for successful execution: "**9E00010000**".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/received-data2.png"
-  width="75%"
-  caption="Received Data"
-/>
+> **Image:** Received Data
 
 **DTU Configure the initial value**:
 
-<table style={{ textAlign: 'center' }}>
-
-<thead>
-  <tr>
-    <th>POLL_ENABLE</th>
-    <th>POLL_PERIOD</th>
-    <th>BUS_TIMEOUT</th>
-    <th>RS485</th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>1 - on</td>
-            <td>3600&nbsp;seconds</td>
-            <td>1&nbsp;second</td>
-            <td>0xE0</td>
-        </tr>
-</tbody>
-</table>
+| POLL_ENABLE | POLL_PERIOD | BUS_TIMEOUT | RS485 |
+| --- | --- | --- | --- |
+| 1 - on | 3600 seconds | 1 second | 0xE0 |
 
 ### Connecting to the Helium Network
 
@@ -1309,43 +804,23 @@ This section will focus on giving a brief guide on how to connect the RAK7431 to
 
 Log in or create your account in the [Helium console page](https://www.helium.com/console).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/1.helium-console.png"
-  width="85%"
-  caption="Helium Console"
-/>
+> **Image:** Helium Console
 
 Once registered/logged in, you will end up at the home page where you can see your function tree on the left and your DC balance at the top, as well as several useful links.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/2.home.png"
-  width="100%"
-  caption="Helium console home screen"
-/>
+> **Image:** Helium console home screen
 
 Go to the **Devices** section in the function tree. If this is your first time doing this, there will be no devices registered. Click the **+ Add Device** button to get started.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/3.device-section.png"
-  width="100%"
-  caption="Devices section"
-/>
+> **Image:** Devices section
 
 A window will pop up with a set of a field containing the device parameters required for its registration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/4.add-device.png"
-  width="60%"
-  caption="Adding a new device"
-/>
+> **Image:** Adding a new device
 
 Fill in a name of your choosing. The **Dev EUI**, **App EUI**, and **App Key** will have random values generated for you by default. Press the eye icon to reveal the values. You can manually replace them with values of your own. For this tutorial, use the default values. Press the **Submit** button, and you are done.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/5.registered-device.png"
-  width="100%"
-  caption="Helium devices"
-/>
+> **Image:** Helium devices
 
 Now, your RAK7431 is registered and is awaiting activation. For this to happen, you need to import the Dev EUI, App EUI, and App Key in the RAK7431 using the [RAK Serial Port Tool](https://downloads.rakwireless.com/en/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip).
 
@@ -1397,35 +872,19 @@ Once the procedure is initiated and successfully complete, you will have a notif
 at+restart
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/6.join.png"
-  width="90%"
-  caption="RAK7431 EUIs and key"
-/>
+> **Image:** RAK7431 EUIs and key
 
 If you take a look at the Helium console, you will also see the join request packets both in the graph and event log. Your node is now a part of the Helium Network.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/7.live-data.png"
-  width="100%"
-  caption="Helium console live device data"
-/>
+> **Image:** Helium console live device data
 
 ### Connecting to The Things Network V3 (TTNv3)
 
 At The Things Conference 2021, it was announced that The Things Network is upgrading to The Things Stack v3. In this section, it will be shown how to connect RAK7431 WisNode Bridge Serial to The Things Stack. To login into the TTNv3, head on [here](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image001.png"
-  width="100%"
-  caption="The Things Stack Home Page"
-/>
+> **Image:** The Things Stack Home Page
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image002.png"
-  width="100%"
-  caption="Console Page after successful login"
-/>
+> **Image:** Console Page after successful login
 
 :::tip NOTE
 To be able to connect RAK7431 WisNode Bridge Serial to TTNv3 you should already have connected a gateway in range to TTNv2 or TTNv3, or you have to be sure that you are in the range of a public gateway.
@@ -1439,11 +898,7 @@ This tutorial is for EU868 Frequency band.
 
 1. To create an application, choose **Create an application** (for new users that do not already have created applications) or **Go to applications** > **+ Add application** (for users that have created applications before).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image003.png"
-  width="100%"
-  caption="Create an application page"
-/>
+> **Image:** Create an application page
 
 2. Fill in the needed information:
 
@@ -1454,11 +909,7 @@ This tutorial is for EU868 Frequency band.
 
 3. After you fill in the information, click **Create application**. If everything is filled in correctly, you will see the same page, as shown in Figure 53.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image004.png"
-  width="100%"
-  caption="Application Overview"
-/>
+> **Image:** Application Overview
 
 #### Registering and Configuring the Device In OTAA Mode
 
@@ -1466,19 +917,11 @@ This tutorial is for EU868 Frequency band.
 
 1. From the Application Overview page, click on **+ Add end device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image005.png"
-  width="100%"
-  caption="Adding a device in OTAA mode"
-/>
+> **Image:** Adding a device in OTAA mode
 
 2. Below the **Register end device** heading you can find two options for registering a device. Since RAK7431 WisNode Bridge Serial is part of The LoRaWAN Device Repository, you can register it **From The LoRaWAN Repository** option. In the **Brand** dropdown menu find and select **RAKwireless Technology Co.** and a **Model** field will pop up next to it. In it choose **RAK7431 WisNode Bridge Serial**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image006.png"
-  width="100%"
-  caption="Choosing the device"
-/>
+> **Image:** Choosing the device
 
 3. After choosing the device, three more fields will pop up.
 
@@ -1492,26 +935,18 @@ For this example, the EU_863_870 is chosen.
 
 4. Next, an **Enter registration data** heading will pop up below. Scroll down to enter the required data for the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image007.png"
-  width="100%"
-  caption="Registration Data"
-/>
+> **Image:** Registration Data
 
 5. Here you must enter the following information:
 
-- **Frequency plan** – Note: For this example, you will choose Europe 863-870&nbsp;MHz (SF9 for RX2 - recommended).
+- **Frequency plan** – Note: For this example, you will choose Europe 863-870 MHz (SF9 for RX2 - recommended).
 - **AppEUI** - The AppEUI uniquely identifies the owner of the end device. It is provided by the device manufacturer. To get the AppEUI, connect your device via USB cable to your computer. Open RAK Serial Port Tool, choose the correct COM port and BaudRate and run the following command:
 
 ```
 AT+APPEUI
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/1.dfu-tool.png"
-  width="70%"
-  caption="AppEUI of the device"
-/>
+> **Image:** AppEUI of the device
 
 - **DevEUI** - The DevEUI is the unique identifier for this end device. It is provided by the manufacturer and is printed on the label on the back of the device.
 - **AppKey** - The root key to deriving session keys to secure communication between the end device and the application. AppKey can be generated by clicking the **Generate** button <img src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image008.png" />.
@@ -1527,11 +962,7 @@ If you are going to register more than one device of this type, you can choose t
 
 1. For configuring the node you will need the following three parameters: **Device EUI, Application EUI**, and **Application Key**. You can see them all in the **Device Overview** page, but since the two EUI's come with the device, you only need the Application Key from there.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image009.png"
-  width="100%"
-  caption="OTAA device parameters"
-/>
+> **Image:** OTAA device parameters
 
 2. Using the RAK Serial Port Tool, set the join mode, device class, and your LoRaWAN region to your correct frequency band, with the following set of AT commands:
 
@@ -1553,11 +984,7 @@ AT+CLASS=A
 AT+REGION=EU868
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image010.png"
-  width="70%"
-  caption="Setting up the RAK7431 WisNode Bridge Serial operation modes"
-/>
+> **Image:** Setting up the RAK7431 WisNode Bridge Serial operation modes
 
 :::tip NOTE
 The following tutorial is based on using the EU868 frequency band.
@@ -1569,11 +996,7 @@ The following tutorial is based on using the EU868 frequency band.
 AT+APPKEY=XXXX
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image011.png"
-  width="70%"
-  caption="Setting up the RAK7431 WisNode Bridge Serial OTAA parameters"
-/>
+> **Image:** Setting up the RAK7431 WisNode Bridge Serial OTAA parameters
 
 4. To connect to the LoRaWAN Network after configuration, the device must be restarted. Restart it with the command:
 
@@ -1581,18 +1004,9 @@ AT+APPKEY=XXXX
 AT+RESTART
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image012.png"
-  width="70%"
-  caption="Joining the network confirmation"
-/>
+> **Image:** Joining the network confirmation
 
 You can see in the **Live data** feed that the RAK7431 WisNode Bridge Serial is successfully joined.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak7431/quickstart/image013.png"
-  width="100%"
-  caption="Receiving data in the Live data feed"
-/>
+> **Image:** Receiving data in the Live data feed
 
-<RkBottomNav/>

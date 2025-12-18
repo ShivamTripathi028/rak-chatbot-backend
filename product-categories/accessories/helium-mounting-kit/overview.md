@@ -12,16 +12,11 @@ image: "https://images.docs.rakwireless.com/accessories/helium-mounting-kit/mast
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # Helium 5G Outdoor Small Cell Mounting Kit
 
 Thank you for choosing **Helium 5G Outdoor Small Cell Mounting Kit** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
 
 * [Installation Guide](https://docs.rakwireless.com/product-categories/accessories/helium-mounting-kit/installation-guide/)
-
 
 ## Kit Inclusion
 
@@ -41,7 +36,3 @@ Thank you for choosing **Helium 5G Outdoor Small Cell Mounting Kit** in your awe
     - Antenna Mounting Bracket
     - Screws
 
-
-
-
-<RkBottomNav/>

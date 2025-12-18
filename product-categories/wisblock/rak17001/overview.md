@@ -11,7 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
  
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RAK17001 WisBlock H-Bridge Module
 
@@ -19,7 +18,7 @@ Thank you for choosing **RAK17001 WisBlock H-Bridge Module** in your awesome IoT
 
 * [RAK17001 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak17001/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak17001/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK17001 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK17001.step)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -44,12 +43,12 @@ RAK17001 is a WisBlock H-Bridge module which extends the WisBlock system with a 
 
 * **Sensor specifications**
     *  DC motor drive module
-    *  Operating voltage from 1.8&nbsp;V to 10&nbsp;V
-    *  Maximum output current 2.6&nbsp;Arms
+    *  Operating voltage from 1.8 V to 10 V
+    *  Maximum output current 2.6 Arms
     *  Full protection set
 
 * **Size**
-    * 25 x 35&nbsp;mm
+    * 25 x 35 mm
 
 ## Prerequisites
 
@@ -59,6 +58,3 @@ To use a **RAK17001**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-
-<RkBottomNav/>

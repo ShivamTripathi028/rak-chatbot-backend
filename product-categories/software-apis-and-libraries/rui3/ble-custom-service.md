@@ -1,6 +1,4 @@
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # BLE Custom Service
 
@@ -9,34 +7,21 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 Before compiling the **RUI3 BLE Examples**, you must check the procedures described in the Prerequisite section of [RAK4631-R QuickStart Guide](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/#prerequisite).
 You will also need to install and configure the Arduino IDE, as described in the RAK4631-R [Software](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/#software) section.
 
-
 ## Loading the Example
 
 The project is available on Arduino IDE **RAK WisBlock RUI examples**.
 
 1. Launch Arduino IDE then go to: **File** -> **Examples** -> **RAK WisBlock RUI examples** -> **Example** -> **BLE_BLE_Custom_Service**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-custom-arduino.png"
-  width="100%"
-  caption="RAK WisBlock RUI BLE Custom Service example"
-/>
+> **Image:** RAK WisBlock RUI BLE Custom Service example
 
 2. Once the example code is open, you can now select the correct serial port, as shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/arduino-port.png"
-  width="100%"
-  caption="Selecting the correct serial port"
-/>
+> **Image:** Selecting the correct serial port
 
 3. The last step is to upload the code by clicking the highlighted **Upload** icon.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/custom-service-upload.png"
-  width="100%"
-  caption="Uploading the BLE Custom Service example code"
-/>
+> **Image:** Uploading the BLE Custom Service example code
 
 ## Example Details
 
@@ -102,10 +87,5 @@ void cccd_callback(uint16_t chars_uuid, uint8_t * cccd_value)
 
 ### Arduino Serial Monitor Log
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/custom-log.png"
-  width="80%"
-  caption="BLE Custom Service log"
-/>
+> **Image:** BLE Custom Service log
 
-<RkBottomNav/>

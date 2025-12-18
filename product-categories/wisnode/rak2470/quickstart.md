@@ -10,10 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2470 WisNode Bridge Serial Prime Quick Start Guide
 
 ## Prerequisite
@@ -22,7 +18,7 @@ Before going through each and every step in the installation guide of the WisNod
 
 ### Hardware
 
-1. <a href="https://store.rakwireless.com/products/wisnode-bridge-serial-prime-rak2470?utm_source=rak2470&utm_medium=Document&utm_campaign=BuyFromStore&variant=43592626634950" target="_blank">RAK2470 WisNode Bridge Serial Prime</a>
+1. [RAK2470 WisNode Bridge Serial Prime](https://store.rakwireless.com/products/wisnode-bridge-serial-prime-rak2470?utm_source=rak2470&utm_medium=Document&utm_campaign=BuyFromStore&variant=43592626634950)
 2. [Configuration Cable for WisNode Bridge Serial Prime RAK2470](https://store.rakwireless.com/products/configuration-cable-for-wisnode-bridge-serial-prime-rak2470)
 3. Gateway in range (for testing)
 4. A Windows/macOS/Linux Computer
@@ -31,17 +27,13 @@ Before going through each and every step in the installation guide of the WisNod
 
 IO.Box Desktop is a software application that will allow you to configure the devices from the RAK24XX series. You can download the application from here:
 
-- <a href="https://apps.microsoft.com/detail/9nbxvlt622bs?hl=en-US&gl=US" target="_blank">Windows</a>
-- <a href="https://downloads.rakwireless.com/#IO.Box/" target="_blank">Linux</a> (coming soon)
-- <a href="https://downloads.rakwireless.com/#IO.Box/" target="_blank">macOS</a> (coming soon)
+- [Windows](https://apps.microsoft.com/detail/9nbxvlt622bs?hl=en-US&gl=US)
+- [Linux](https://downloads.rakwireless.com/#IO.Box/) (coming soon)
+- [macOS](https://downloads.rakwireless.com/#IO.Box/) (coming soon)
 
 ## Package Inclusion
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/2.package-contents.png"
-  caption="RAK2470 Package Inclusions"
-  width="60%"
-/>
+> **Image:** RAK2470 Package Inclusions
 
 - One (1) RAK2470 WisNode Bridge Serial Prime
 - One (1) Mounting Kit
@@ -54,33 +46,19 @@ RAK2470 allows for pole mounting. Follow the provided installation steps to ensu
 
 1. Fix the RAK2470 to the mounting kit with four (4) M4\*20 screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/5.fixing-the-device-to-the-mounting-kit.png"
-  caption="Fixing the device to the mounting kit"
-  width="30%"
-/>
+> **Image:** Fixing the device to the mounting kit
 
 2. Using two (2) steel strips, fasten the RAK2470 on the pole.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/6.using-the-steel-strips.png"
-  caption="Using the steel strips"
-  width="45%"
-/>
+> **Image:** Using the steel strips
 
 :::tip NOTE
-The pole diameter supported by the included steel strips is 55 ~ 80&nbsp;mm.
+The pole diameter supported by the included steel strips is 55 ~ 80 mm.
 :::
 
 3. Link the connector of the RAK2470 to the corresponding port.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/7.adding-the-connector.png"
-  caption="Adding the connector"
-  width="45%"
-/>
-
-
+> **Image:** Adding the connector
 
 ## Connect the RAK2470 to the Sensor
 
@@ -90,11 +68,7 @@ There are two ways to connect devices to RAK2470:
 
 + When the device cannot provide power, it needs to be powered through the T-type conversion cable as follows.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/8.connecting-the-bridge-to-a-device.png"
-  caption="Connecting the bridge to a device"
-  width="70%"
-/>
+> **Image:** Connecting the bridge to a device
 
 ### Data Interface Connection
 
@@ -104,31 +78,19 @@ The connection to a sensor is via the L20-4 Port of the T-type conversion cable.
 + Pin 3: Connect to RS485-B of the sensor.
 + Pin 4: Connect to the negative terminal of the sensor's power cord.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/connecting-the-sensor-to-the-t-type-conversion.png"
-  caption="Data interface connection"
-  width="70%"
-/>
+> **Image:** Data interface connection
 
 ### RAK2470 Connection
 
 If you are using the RAK2470 for the first time, you need to configure it. To do so, connect the RAK2470 to your PC using the USB configuration cable.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/rak2470-connection.png"
-  caption="RAK2470 Connection"
-  width="70%"
-/>
+> **Image:** RAK2470 Connection
 
 ## Power On the Device
 
-The RAK2470 device can be powered with 5 ~ 12&nbsp;V<sub>DC</sub> wide-range input via a 12&nbsp;V<sub>DC</sub> adapter. Simply connect the adapter to the DC port of the T-type conversion cable.
+The RAK2470 device can be powered with 5 ~ 12 V<sub>DC</sub> wide-range input via a 12 V<sub>DC</sub> adapter. Simply connect the adapter to the DC port of the T-type conversion cable.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/device-with-power-supply.png"
-  caption="Power interface connection"
-  width="60%"
-/>
+> **Image:** Power interface connection
 
 ## Connect the RAK2470 to the IO.Box
 
@@ -138,21 +100,13 @@ The RAK2470 device can be powered with 5 ~ 12&nbsp;V<sub>DC</sub> wide-range inp
 
 3. Click **Connect Device** in the IO.Box console.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/iobox-get-started.png"
-width="100%"
-caption="IOBox get started"
-/>
+> **Image:** IOBox get started
 
 :::tip NOTE
 If an error occurs indicating that no device is detected, a common cause is that the RAK2470 has been connected to the PC for more than 30 seconds without any action. In this case, simply unplugging and re-plugging the device should resolve the issue.
 :::
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/iobox-error.png"
-width="100%"
-caption="No device error"
-/>
+> **Image:** No device error
 
 4. On the IO.Box dashboard screen, you can see information about the devices connected to the PC in the form of a list of connected devices with device models and EUIs. Choose the device that you wish to configure via the **Connect** button next to it.
 
@@ -174,17 +128,13 @@ caption="No device error"
 
 - **ADR**: Enable Adaptive Data Rate allowing the network server to control the data rate for your device.
   + **DataRate**: Manually set the data transmission rate. Lower rates extend coverage but increase transmission time and power usage. Choose based on the distance and signal quality to the gateway.
-  + **TX Power Level**: Adjust the transmission power level. The lower the number the higher the power. 0 is the maximum allowed in the selected region and each incrementation of 1 to the number reduces the power by 2&nbsp;dBm.
+  + **TX Power Level**: Adjust the transmission power level. The lower the number the higher the power. 0 is the maximum allowed in the selected region and each incrementation of 1 to the number reduces the power by 2 dBm.
 
 - **Data Collection Period**: Set up the global data report period of the device. Range: 60–86400 in seconds.
 
 - **LoRaWAN Status**: Indicates the activity of the device in the LoRaWAN network.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/lorawan-tab.png"
-  width="100%"
-  caption="LoRaWAN tab"
-/>
+> **Image:** LoRaWAN tab
 
 ## Interface Configuration
 
@@ -199,11 +149,7 @@ This section shows the interface configuration references for different applicat
 - **Stopbits**: Select the number of stop bits used in the RS485 communication. Common options are 1 or 2, depending on your device's data transmission protocol.
 - **Parity**: Select the parity setting for the RS485 interface. Options typically include **None** for no parity, **Even** for even parity, or **Odd** for odd parity. Choose based on your device's communication requirements.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/interface-configuration.png"
-width="100%"
-caption="RS485 interface configuration"
-/>
+> **Image:** RS485 interface configuration
 
 #### Add Modbus Poll Task
 
@@ -211,19 +157,11 @@ This section shows how to create a polling task with an integer data type. If yo
 
 1. In the **Modbus Poll Task** menu click **+ Add** for a new poll. You will see the **Polling Task parameters** that need to be configured.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add-poll-task.png"
-width="100%"
-caption="Modbus poll task"
-/>
+> **Image:** Modbus poll task
 
 2. Fill in the relevant fields according to the specific sensor's datasheet. Here we create a temperature polling task as an example.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add_temperature_poll_task_int.png"
-width="100%"
-caption="Configure the polling task"
-/>
+> **Image:** Configure the polling task
 
 - **Channel ID**: Enter the identifier for the polling task. This ID is included in the device’s uplink data to indicate the task.
 - **Name**: Custom name, length: 4-15.
@@ -246,46 +184,25 @@ caption="Configure the polling task"
 
 5. Create the moisture and EC polling tasks in the same way.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add_moisture_poll_task_int.png"
-width="100%"
-caption="Add a moisture polling task"
-/>
+> **Image:** Add a moisture polling task
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add_ec_poll_task_int.png"
-width="100%"
-caption="Add a EC polling task"
-/>
+> **Image:** Add a EC polling task
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/lorawan-poll-tasks.png"
-width="100%"
-caption="Created polling tasks"
-/>
+> **Image:** Created polling tasks
 
 :::tip NOTE
 The RAK2470 WisNode Serial Prime has one channel used for both the RS485 communication with the sensor, and in the setup procedure. This is why you cannot see the requested data (polled data) from the sensor during setup.
 :::
 
-
 ### (Optional) Add a **Raw Data in Binary** Poll Task
 
 1. In the **Modbus Poll Task** menu click **+ Add** for a new poll. You will see the **Polling Task parameters** that need to be configured.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add-poll-task.png"
-width="100%"
-caption="Modbus poll task"
-/>
+> **Image:** Modbus poll task
 
 2. Fill in the **register address** and other relevant fields according to the specific sensor's datasheet. Here we create a temperature polling task as an example.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add_temperature_poll_task_bin.png"
-width="100%"
-caption="Configure the polling task"
-/>
+> **Image:** Configure the polling task
 
 - **Channel ID**: Enter the identifier for the polling task. This ID is included in the device’s uplink data to indicate the task.
 - **Name**: Custom name, length: 4-15.
@@ -308,23 +225,11 @@ caption="Configure the polling task"
 
 5. Create moisture and EC polling tasks in the same way.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add_moisture_poll_task_bin.png"
-width="100%"
-caption="Add a moisture polling task"
-/>
+> **Image:** Add a moisture polling task
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/add_ec_poll_task_bin.png"
-width="100%"
-caption="Add a EC polling task"
-/>
+> **Image:** Add a EC polling task
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/lorawan-poll-tasks-bin.png"
-width="100%"
-caption="Created polling tasks"
-/>
+> **Image:** Created polling tasks
 
 :::tip NOTE
 The RAK2470 WisNode Serial Prime has one channel that is used both for the RS485 communication with the sensor and in the setup procedure. This is why you cannot see the requested data (polled data) from the sensor during setup.
@@ -340,21 +245,13 @@ In this section, the RAK2470 WisNode Bridge Serial Prime will be connected to a 
 
 ####  Set-up the Built-in Network Server
 
-1. Start by accessing the gateway. You can see how to do it on the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/" target="_blank">WisGateOS V2 user manual</a>.
+1. Start by accessing the gateway. You can see how to do it on the [WisGateOS V2 user manual](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-wisgateos-v2-login-page.png"
-  caption="WisGateOS 2 login page"
-  width="100%"
-/>
+> **Image:** WisGateOS 2 login page
 
 2. Once logged in, head to the **LoRa** menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-lora-page.png"
-  caption="LoRa page"
-  width="100%"
-/>
+> **Image:** LoRa page
 
 3. By default, the gateway works as a Built-In Network Server. If not, switch the **Work mode** to **Built-in network server**.
 
@@ -362,52 +259,33 @@ In this section, the RAK2470 WisNode Bridge Serial Prime will be connected to a 
 
 1. Once the gateway is in Built-in network server mode, head to the **Applications** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-application-page.png"
-  caption="Create Application in the Built-In Network Server"
-  width="100%"
-/>
+> **Image:** Create Application in the Built-In Network Server
 
 2. Click the **Add application** button or **add one now** link to add a new application. On the new page, fill in the following information:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-9.adding-application.png"
-  caption="Adding application"
-  width="100%"
-/>
+> **Image:** Adding application
 
 - **Application name**: type a name for the application.
 - **Application description**: optionally you can write a description of the application.
 - **Application Type**: from the drop-down menu select the type of application.
 - **Unified Application key**: all devices will use the same application key. Selecting this option pops up an **Application Key** field. This value needs to be consistent with the value from the end device. You can type your application key there or use the **Autogenerate** button to generate one.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-7.unified-application-key.png"
-  caption="Unified application key"
-  width="45%"
-/>
+> **Image:** Unified application key
 
 The **Auto Add Device** switch activates the **Application EUI** field. The device will be automatically added to the application after the application EUI and key verification.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-8.auto-add-device.png"
-  caption="Auto add device"
-  width="45%"
-/>
+> **Image:** Auto add device
 
 - **Separate Application keys**: each device will have its own application key. The key is added when registering the device.
 - **Payload type**: from the drop-down, select **CayenneLPP** payload type and turn on the **Only forward data object** feature.
 
 3. Once set, click **Save application** to add the application.
 
-4. After the application is added, head to the **End devices** tab. The devices should automatically register upon join request if you are using the Auto Add Device feature. <br/>
+4. After the application is added, head to the **End devices** tab. The devices should automatically register upon join request if you are using the Auto Add Device feature. 
+
 If that’s not the case, click the **Add end device** button. On the **End device information** page fill in the following information:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-11.adding-device.png"
-  caption="Successfully created application"
-  width="100%"
-/>
+> **Image:** Successfully created application
 
 - **Activation Mode**: choose the activation mode of your device.
   - **OTAA**
@@ -420,44 +298,26 @@ If that’s not the case, click the **Add end device** button. On the **End devi
 - **Frame Counter width**: the width of the frame counter. Leave it as default.
 - **LoRaWAN MAC Version**: the LoRaWAN MAC version.
 
-
-
 #### Adding the Device
 
 1. Once everything is set, click **Add end devices** to go to the page and add the device.
 
 2. On the **Adding end devices** page, type the device EUI at the **End Device EUI (main)** and click **Add to “End Devices list”**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-13.adding-end-device.png"
-  caption="Adding end device"
-  width="100%"
-/>
+> **Image:** Adding end device
 
 - If the EUI is correct, the device will show in the **End devices list**.
 - If the EUI is not correct, the devices will show in the **End devices with an error**.
 
 3. Once the device is added to the **End devices list** click **Add end devices**. Confirm you are adding the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-confirm_add_device.png"
-  caption="Confirmation message for adding a device"
-  width="50%"
-/>
+> **Image:** Confirmation message for adding a device
 
 4. After the device has successfully joined the LNS, you will see the LoRaWAN status in the IO.Box console toggles as activated. You might need to refresh the page.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-device-online.png"
-  caption="Device is online"
-  width="100%"
-/>
+> **Image:** Device is online
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/lorawan-status.png"
-  caption="LoRaWAN status"
-  width="60%"
-/>
+> **Image:** LoRaWAN status
 
 You have now completed the configuration of the RAK2470. However, the LoRa network server is not yet able to receive the uplink data because the RAK2470 currently has only one channel, which is being used both for RS485 communication with the sensor and during the setup process. To resolve this, remove the configuration cable to exit configuration mode. Then, connect the RAK2470 directly to the T-type conversion cable.
 
@@ -487,11 +347,7 @@ After disconnecting the device, wait for a while, and you'll see uplink data fro
 192000 x 0.001 (conversion factor) = 192.000 us/cm
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/built-in-polling-task-parameters.png"
-  caption="Uplink data"
-  width="100%"
-/>
+> **Image:** Uplink data
 
 ### The Things Network (TTN)
 
@@ -501,27 +357,15 @@ After disconnecting the device, wait for a while, and you'll see uplink data fro
 
 1. Log in first and head on to [TTNv3 website ](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-login-ttn.png"
-  caption="Login in"
-  width="100%"
-/>
+> **Image:** Login in
 
 2. To register a commercial gateway, choose **Gateways** tab. Click **+ Register gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-register-gateway.png"
-  caption="Add a gateway"
-  width="100%"
-/>
+> **Image:** Add a gateway
 
 3. In the **Gateway EUI** field, type the EUI of the gateway. Click on **Confirm**. The gateway's EUI can be found either on the sticker on the casing or by going to the **Dashboard > Overview** page via the Web UI. Instructions on how to access your gateway via Web UI can be found in the product's [Quick Start Guide ](https://docs.rakwireless.com/product-categories/wisgate/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-add-gateway-eui.png"
-  caption="Add gateway EUI"
-  width="100%"
-/>
+> **Image:** Add gateway EUI
 
 4. After typing the EUI, click on **Confirm**. Additional fields will pop up. Fill in the following information:
 
@@ -529,19 +373,11 @@ After disconnecting the device, wait for a while, and you'll see uplink data fro
 - **Gateway name**: Optionally, you can type a name for your gateway.
 - **Frequency plan**: The frequency plan used by the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-configure-gateway-paras.png"
-  caption="Configure parameters"
-  width="100%"
-/>
+> **Image:** Configure parameters
 
 5. To register your gateway, click **Register gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-add-gateway-successfully.png"
-  caption="Successfully added a gateway"
-  width="100%"
-/>
+> **Image:** Successfully added a gateway
 
 ##### Generating the Token
 
@@ -549,27 +385,15 @@ After disconnecting the device, wait for a while, and you'll see uplink data fro
 
 2. On the **API keys page**, choose **+ Add API key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-add-api-key.png"
-  caption="API key page"
-  width="100%"
-/>
+> **Image:** API key page
 
 3. In the **Name field**, type the name of your key (for example - mykey). Choose **Grant individual rights** and select **Link as Gateway to a Gateway for traffic exchange, i.e. write uplink and read downlink**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-configure-api-key.png"
-  caption="Generate an API key"
-  width="100%"
-/>
+> **Image:** Generate an API key
 
 4. To generate the key, choose **Create API key**. The following window will pop up, telling you to copy the key you just generated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-copy-api-key.png"
-  caption="Copying the generated key"
-  width="60%"
-/>
+> **Image:** Copying the generated key
 
 :::warning
 
@@ -584,11 +408,7 @@ Copy the key and save it in a `.txt` file (or other), because you won’t be abl
 1. To configure the gateway, access it via the Web UI. To learn how to do that, refer to the [Quick Start Guide ](https://docs.rakwireless.com/product-categories/wisgate/).
 2. Navigate to **LoRa** > **Configuration**. Configure the following parameters and save.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-configure-gateway.png"
-  caption="Configure the gateway parameters"
-  width="100%"
-/>
+> **Image:** Configure the gateway parameters
 
 - **Basics Station Server Type**: For server type, choose **LNS Server**.
 - **Server URL**: This is the link to The Things Stack server. Note that, for this tutorial, the gateway is connected to the European cluster. For Europe fill in the following:
@@ -604,11 +424,7 @@ wss://eu1.cloud.thethings.network
 
 3. To save the changes, click **Save Changes**. If everything is set correctly, you can see the gateway is connected to TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-joined-ttn.png"
-  caption="Successful connection"
-  width="100%"
-/>
+> **Image:** Successful connection
 
 #### RAK2470 Configuration
 
@@ -616,19 +432,11 @@ wss://eu1.cloud.thethings.network
 
 1. Click the **Application** tab at the top of the left navigation to enter the application interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-application-list.png"
-  caption="Application list"
-  width="100%"
-/>
+> **Image:** Application list
 
 2. Click **+ Add application** to create an application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-create-an-application.png"
-  caption="Create an application"
-  width="100%"
-/>
+> **Image:** Create an application
 
 3. Click **Create application** to save the configuration.
 
@@ -638,19 +446,11 @@ IO.Box supports automatically adding node device to the TTN network server.
 
 1. Navigate to the **Integration** tab and choose the **Onboard to TheThings Stack Server** to create a device profile. Click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-onboard-to-ttn.png"
-  caption="Create a device profile"
-  width="100%"
-/>
+> **Image:** Create a device profile
 
 2. Click **Create New** to create a TheThingsStack Server and configure the following parameters.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-configure-ttnserver-paras.png"
-  caption="Create a TheThingsStack Server"
-  width="100%"
-/>
+> **Image:** Create a TheThingsStack Server
 
 + **Name**: The name of TheThingsStack Server.
 
@@ -664,84 +464,45 @@ IO.Box supports automatically adding node device to the TTN network server.
 
   2. Enter a **Name** for your key, set the **Expiry date**, select rights that you want to grant and then press **Create API Key**.
 
-     <RkImage
-       src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-create-api-key.png"
-       caption="Create API key"
-       width="100%"
-     />
+     
+> **Image:** Create API key
 
   3. You will see a screen that shows your newly created API Key. You now can copy it in your clipboard by pressing the copy button. After saving the key in a safe place, press **I have copied the key**. You will not be able to see this key again in the future, and if you lose it, you can create a new one by following this same procedure.
 
-     <RkImage
-       src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-copy-api-key-2.png"
-       caption="Copy API key"
-       width="60%"
-     />
+     
+> **Image:** Copy API key
 
 3. Click **Create** to save the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-created-server.png"
-  caption="Created server"
-  width="100%"
-/>
-
+> **Image:** Created server
 
 4. Click the created server and select the application created previously in the TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-select-application.png"
-  caption="Select the created application"
-  width="100%"
-/>
+> **Image:** Select the created application
 
 5. Click **OK** to confirm the registered node device information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-register-device.png"
-  caption="Register the device"
-  width="100%"
-/>
+> **Image:** Register the device
 
 6. After the device is created successfully, you can view the added device in the TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-added-device.png"
-  caption="Added device in the TTN"
-  width="100%"
-/>
+> **Image:** Added device in the TTN
 
 7. To activate the device, click **Apply**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-active-device.png"
-  caption="Active the device"
-  width="100%"
-/>
+> **Image:** Active the device
 
 8. After a successful **Apply**, the device in the TTN is activated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-device-online.png"
-  caption="Device is online"
-  width="100%"
-/>
+> **Image:** Device is online
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/lorawan-status.png"
-  caption="LoRaWAN status"
-  width="60%"
-/>
+> **Image:** LoRaWAN status
 
 You have now completed the configuration of the RAK2470. However, the LoRa network server is not yet able to receive the uplink data because the RAK2470 currently has only one channel, which is being used both for RS485 communication with the sensor and during the setup process. To resolve this, remove the configuration cable to exit configuration mode. Then, connect the RAK2470 directly to the T-type conversion cable.
 
 After disconnecting the device, wait for a while, and you'll see uplink data from the LoRaWAN network in the TTN. The figure below shows the uplink data from the example sensor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/ttn-data-details.png"
-  caption="Data details"
-  width="100%"
-/>
+> **Image:** Data details
 
 ### ChirpStack
 
@@ -763,29 +524,17 @@ This guide will show you how to connect the RAK2470 to a ChirpStack network serv
 
    + Password: **admin**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-login-page.png"
-  caption="ChirpStack login page"
-  width="100%"
-/>
+> **Image:** ChirpStack login page
 
 3. On the left pane, head to **Gateways**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-gateway-list.png"
-  caption="Gateway list"
-  width="100%"
-/>
+> **Image:** Gateway list
 
 4. To register one, click **Add gateway**.
 
 5. In the **General** menu, you need to set the gateway parameters.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-register-gateway.png"
-  caption="Registering the gateway"
-  width="100%"
-/>
+> **Image:** Registering the gateway
 
 - **Name**: Unique name for the gateway on the Network server. The name may only contain words, numbers, and dashes.
 - **Description**: A brief description of the gateway.
@@ -794,11 +543,7 @@ This guide will show you how to connect the RAK2470 to a ChirpStack network serv
 
 6. Click **Submit**. You will see the registered gateway in the **Gateway list**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-registered-gateway.png"
-  caption="Registered gateway"
-  width="100%"
-/>
+> **Image:** Registered gateway
 
 ##### Configuring the Gateway
 
@@ -807,11 +552,7 @@ In this section, you will configure the gateway’s packet forwarder to send dat
 1. To configure the gateway, access it via the Web UI. To learn how to do that, refer to the [Quick Start Guide ](https://docs.rakwireless.com/product-categories/wisgate/).
 2. Navigate to **LoRa** > **Configuration**. Configure the following parameters and save.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-configure-gateway.png"
-  caption="Configure gateway parameters"
-  width="100%"
-/>
+> **Image:** Configure gateway parameters
 
 - **Work mode**: Packet forwarder.
 - **Protocol**: Semtech UDP GWMP Protocol.
@@ -823,11 +564,7 @@ In this section, you will configure the gateway’s packet forwarder to send dat
 
 4. If everything is set correctly, the gateway will display as online. You can click the gateway name to inspect the gateway traffic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-gateway-online.png"
-  caption="Registered gateway"
-  width="100%"
-/>
+> **Image:** Registered gateway
 
 #### RAK2470 Configuration
 
@@ -835,27 +572,15 @@ In this section, you will configure the gateway’s packet forwarder to send dat
 
 1. On the left pane, head to **Application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-application-list.png"
-  caption="Application list"
-  width="100%"
-/>
+> **Image:** Application list
 
 2. Click **Add application** and configure the parameters.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-add-application.png"
-  caption="Create application"
-  width="100%"
-/>
+> **Image:** Create application
 
 3. Click **Submit**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-added-application.png"
-  caption="Added application"
-  width="100%"
-/>
+> **Image:** Added application
 
 ##### Adding the device
 
@@ -863,19 +588,11 @@ IO.Box supports automatically adding node device to the ChirpStack server.
 
 1. Navigate to the **Integration** tab and choose the **Onboard to ChirpStack Server** to create a device profile. Click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-onboard-to-chirpstack.png"
-  caption="Create a device profile"
-  width="100%"
-/>
+> **Image:** Create a device profile
 
 2. Click **Create New** to create a ChirpStack Server and configure the following parameters.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-configure-server-paras.png"
-  caption="Create a ChirpStack Server"
-  width="100%"
-/>
+> **Image:** Create a ChirpStack Server
 
 + **Name**: The name of ChirpStack Server.
 
@@ -889,95 +606,49 @@ IO.Box supports automatically adding node device to the ChirpStack server.
 
   2. Enter a **Name** for your key and then press **Submit**.
 
-     <RkImage
-
-       src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-create-api-key.png"
-       caption="Create API key"
-       width="100%"
-     />
+     
+> **Image:** Create API key
 
   3. You will see the newly created API Key. Copy the key and save it in a safe place, press **Back**. You will not be able to see this key again in the future, and if you lose it, you can create a new one by following this same procedure.
 
-     <RkImage
-
-       src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-copy-api-key-3.png"
-       caption="Copy API key"
-       width="100%"
-     />
+     
+> **Image:** Copy API key
 
 + **Tenant**: ChirpStack.
 
 3. Click **Create** to save the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-created-server.png"
-  caption="Created server"
-  width="100%"
-/>
-
-
+> **Image:** Created server
 
 4. Click the created server and select the application created previously in the ChirpStack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-select-application.png"
-  caption="Select the created application"
-  width="100%"
-/>
+> **Image:** Select the created application
 
 5. Click **OK** to confirm the registered node device information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-register-device.png"
-  caption="Register the device"
-  width="100%"
-/>
+> **Image:** Register the device
 
 6. After the device is created successfully, you can view the added device in the ChirpStack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-added-device.png"
-  caption="Added device in the ChirpStack"
-  width="100%"
-/>
+> **Image:** Added device in the ChirpStack
 
 7. To activate the device, click **Apply**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-active-device.png"
-  caption="Active the device"
-  width="100%"
-/>
+> **Image:** Active the device
 
 8. After a successful **Apply**, the device in the ChirpStack is activated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-joined-chirpstack.png"
-  caption="Active the device"
-  width="100%"
-/>
+> **Image:** Active the device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/lorawan-status.png"
-  caption="LoRaWAN status"
-  width="60%"
-/>
+> **Image:** LoRaWAN status
 
 You have now completed the configuration of the RAK2470. However, the LoRa network server is not yet able to receive the uplink data because the RAK2470 currently has only one channel, which is being used both for RS485 communication with the sensor and during the setup process. To resolve this, remove the configuration cable to exit configuration mode. Then, connect the RAK2470 directly to the T-type conversion cable.
 
 After disconnecting the device, wait for a while, and you'll see uplink data from the LoRaWAN network in ChirpStack. The figure below shows the uplink data from the example sensor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-device-online.png"
-  caption="Device is online"
-  width="100%"
-/>
+> **Image:** Device is online
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/chirpstack-data-details.png"
-  caption="Data details"
-  width="100%"
-/>
+> **Image:** Data details
 
 ### System
 
@@ -985,11 +656,7 @@ From the main menu of IO.Box, go to the **System** tab to find device informatio
 
 #### Device Version Information
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/device-info.png"
-  caption="Device version information"
-  width="80%"
-/>
+> **Image:** Device version information
 
 - **Hardware Version**: Displays the specific version of the device’s hardware.
 - **Firmware Version**: Displays the device's firmware version.
@@ -1001,21 +668,13 @@ From the main menu of IO.Box, go to the **System** tab to find device informatio
 
 #### System Reset & Firmware Upgrade
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/system.png"
-  caption="System reset && firmware upgrade"
-  width="80%"
-/>
+> **Image:** System reset && firmware upgrade
 
 ##### Reboot
 
 1. Simply press the **Reboot** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/reboot.png"
-  caption="Reboot button"
-  width="80%"
-/>
+> **Image:** Reboot button
 
 2. After clicking **OK**, the device will reboot and disconnect from the IO.Box application.
 
@@ -1023,11 +682,7 @@ From the main menu of IO.Box, go to the **System** tab to find device informatio
 
 1. To restore the device to factory settings, press the **Reset to Factory** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/reset.png"
-  caption="Reset Button"
-  width="80%"
-/>
+> **Image:** Reset Button
 
 2. After clicking **OK**, the device will restore to factory setting.
 
@@ -1037,22 +692,9 @@ From the main menu of IO.Box, go to the **System** tab to find device informatio
 2. Click **Firmware Upgrade** and select the firmware file.
 3. Confirm the firmware information and then click **Upgrade**. Wait for the procedure to finish.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/firmware-info.png"
-  caption="Confirm the firmware information"
-  width="80%"
-/>
+> **Image:** Confirm the firmware information
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/upgrading.png"
-  caption="Upgrading procedure"
-  width="80%"
-/>
+> **Image:** Upgrading procedure
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2470/quickstart/upgrade-ok.png"
-  caption="Successful upgrade"
-  width="80%"
-/>
+> **Image:** Successful upgrade
 
-<RkBottomNav/>

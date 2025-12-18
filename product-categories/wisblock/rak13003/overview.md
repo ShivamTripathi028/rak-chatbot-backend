@@ -11,15 +11,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13003 WisBlock IO Expansion Module
 
 Thank you for choosing **RAK13003 WisBlock IO Expansion Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [RAK13003 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak13003/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak13003/datasheet/)
-* <a href="https://docs.rakwireless.com/product-categories/wisblock/quickstart/" target="_blank">WisBlock Quick Start Guide</a>
+* [WisBlock Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/quickstart/)
 * [WisBlock Source Code Repository](https://github.com/RAKWireless/WisBlock/)
 * [RAK13003 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK13003.stp)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
@@ -35,7 +33,6 @@ For All WisBlock Core Modules:
 
 The RAK13003 is an IO expansion module that can be mounted to IO slot of WisBlock Base board. It offers 16 bidirectional I/O ports by using MCP23017 IC from Microchip. The configuration of the module is via I2C interface and it supports both standard and fast I2C modes.
 
-
 ## Product Features
 
 - 16-Bit Remote Bidirectional I/O Port
@@ -43,10 +40,10 @@ The RAK13003 is an IO expansion module that can be mounted to IO slot of WisBloc
 - Configurable Interrupt Output Pins
 - INTA and INTB can be configured to operate independently or together
 - External Reset Input
-- Low Standby Current: 1&nbsp;μA (max.)
-- Operating Voltage: 2.7&nbsp;V to 5.5&nbsp;V @ -40&nbsp;°C to +85&nbsp;°C
+- Low Standby Current: 1 μA (max.)
+- Operating Voltage: 2.7 V to 5.5 V @ -40 °C to +85 °C
 - Chipset: Microchip MCP23017
-- Module size: 25X3&nbsp;5mm
+- Module size: 25X3 5mm
 
 ## Prerequisites
 
@@ -56,5 +53,3 @@ To use a **RAK13003**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-<RkBottomNav/>

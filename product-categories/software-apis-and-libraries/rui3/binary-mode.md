@@ -1,4 +1,3 @@
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 
 :::tip NOTE    
@@ -18,7 +17,14 @@ api.apiMode.send(port, flag, frame_type, payload, length, response_handler);
 
 | **Function**   | `void send(RAK_SERIAL_PORT port, uint8_t flag,uint8_t frame_type, uint8_t * payload,uint16_t length,RAK_PROTO_HANDLER response_handler)`                                                                                                                                                                                                                                                                         |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **port**	The port this packet is sent to <br /> **List:** <br /> `RAK_SERIAL_UART0` `RAK_SERIAL_UART1` `RAK_SERIAL_UART2` `RAK_SERIAL_USB0` `RAK_SERIAL_BLE0` <br />**flag**	flag header of Binary mode protocol <br />**frame_type**	frame type header of Binary mode protocol <br /> **payload**	packet payload <br /> **length**	packet length <br /> **response_handler**	one-time handler for this Binary mode request |
+| **Parameters** | **port**	The port this packet is sent to 
+ **List:** 
+ `RAK_SERIAL_UART0` `RAK_SERIAL_UART1` `RAK_SERIAL_UART2` `RAK_SERIAL_USB0` `RAK_SERIAL_BLE0` 
+**flag**	flag header of Binary mode protocol 
+**frame_type**	frame type header of Binary mode protocol 
+ **payload**	packet payload 
+ **length**	packet length 
+ **response_handler**	one-time handler for this Binary mode request |
 
  Click to View Example
 ```c{12}
@@ -49,8 +55,8 @@ api.apiMode.registerHandler(frame_type, request_handler);
 
 | **Function**   | `int32_t registerHandler	(uint8_t frame_type, RAK_PROTO_HANDLER request_handler)`                                      |
 | -------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | **frame_type**	frame type header of Binary mode protocol <br /> **request_handler**	request handler for this frame type |
-
+| **Parameters** | **frame_type**	frame type header of Binary mode protocol 
+ **request_handler**	request handler for this frame type |
 
 ## deregisterHandler()
 
@@ -66,4 +72,3 @@ api.apiMode.deregisterHandler(frame_type);
 
 -->
 
-<RkBottomNav/>

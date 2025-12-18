@@ -28,8 +28,6 @@ date: 2022-07-04
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4631-R WisBlock LoRaWAN Module
 
 Thank you for choosing **RAK4631-R WisBlock LoRaWAN Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -50,24 +48,23 @@ RAK4631-R and RAK4631 share common hardware and are 100% identical, but they hav
 
 The RAK4631-R WisBlock Core module is a RAK4630 stamp module with an expansion PCB and connectors compatible with WisBlock Base. It allows an easy way to access the pins of the RAK4630 module to simplify development and testing processes.
 
-The module itself comprises a RAK4630 as its main component. The RAK4630 is a combination of an nRF52840 MCU and an SX1262 LoRa chip. It features ultra-low power consumption of 2.0&nbsp;uA during sleep mode, high LoRa output power up to 22&nbsp;dBm during a transmission mode, and the BLE interface with output power up to 4&nbsp;dBm.
+The module itself comprises a RAK4630 as its main component. The RAK4630 is a combination of an nRF52840 MCU and an SX1262 LoRa chip. It features ultra-low power consumption of 2.0 uA during sleep mode, high LoRa output power up to 22 dBm during a transmission mode, and the BLE interface with output power up to 4 dBm.
 
 Also, it complies with LoRaWAN 1.0.3 protocols and supports LoRa point-to-point communication. The RF communication characteristic of the module (LoRa + BLE) makes it suitable for a variety of applications in the IoT field, such as home automation, sensor networks, building automation, personal area networks applications (health/fitness sensors, and monitors, etc.).
-
 
 ## Product Features
 
 - TCXO crystal for LoRa chip
 - I/O ports: UART/I2C/GPIO/USB
 - SPI pins and optional NFC interface are accessible using WisBlock IO module
-- Temperature range: -40°&nbsp;C to +85°&nbsp;C
-- Supply voltage: 2.0 ~ 3.6&nbsp;V
-- Low-Power Wireless Systems with 7.8&nbsp;KHz to 500&nbsp;kHz Bandwidth
-- Ultra-Low Power Consumption 2.0&nbsp;uA in sleep mode
-- LoRa PA Boost mode with 22&nbsp;dBm output power
-- BLE5.0 (Tx power -20 to +4&nbsp;dBm in 4&nbsp;dB steps)
+- Temperature range: -40° C to +85° C
+- Supply voltage: 2.0 ~ 3.6 V
+- Low-Power Wireless Systems with 7.8 KHz to 500 kHz Bandwidth
+- Ultra-Low Power Consumption 2.0 uA in sleep mode
+- LoRa PA Boost mode with 22 dBm output power
+- BLE5.0 (Tx power -20 to +4 dBm in 4 dB steps)
 - Serial Wire Debug (SWD) interface
-- Module size: 20 x 30&nbsp;mm
+- Module size: 20 x 30 mm
 - Chipset: Nordic nRF52840, Semtech SX1262
 
 ## Prerequisites
@@ -81,7 +78,6 @@ To use a **RAK4631-R**, you need at least a **WisBlock Base** to plug the module
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
-You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
+You can find it in our [RUI3 documentation](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide) or get it from our [Download Center](https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/).    
 ::: 
 
-<RkBottomNav/>

@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12011 WisBlock Barometer WT Sensor Module Datasheet
 
 ## Overview
@@ -24,17 +21,17 @@ The RAK12011 is a Barometric Pressure sensor module that is part of the RAKWirel
 ### Features
 
 - Measures Barometric Pressure
-- **Operating Pressure Range: 260-1260&nbsp;hPa**
-- **Pressure Sensor Accuracy: ±0.1&nbsp;hPa**
+- **Operating Pressure Range: 260-1260 hPa**
+- **Pressure Sensor Accuracy: ±0.1 hPa**
 - Measures Ambient Temperature
-- **Operating Temperature Range:** -40&nbsp;°C to +85&nbsp;°C
+- **Operating Temperature Range:** -40 °C to +85 °C
 - Embedded Temperature Compensation
-- Low current consumption down to 3&nbsp;μA
+- Low current consumption down to 3 μA
 - Via I2C interface
-- Supply Voltage: 3.3&nbsp;V
-- Current Consumption: 1-15&nbsp;uA
+- Supply Voltage: 3.3 V
+- Current Consumption: 1-15 uA
 - Chipset: STMicroelectronics LPS33HW
-- **Module size: 10** X 10&nbsp;mm
+- **Module size: 10** X 10 mm
 
 ## Specifications
 
@@ -48,11 +45,7 @@ The RAK12011 is a Barometric Pressure sensor module that is part of the RAKWirel
 RAK12011 has one digital output line, so you need one GPIO from WisBlock Core. It means RAK12011 should be used on a sensor slot with one available GPIO. However, WB_IO2 is used to control 3V3_S. Hence, RAK12011 is used only on slots without WB_IO2 like sensor slots A, C to F on WisBlock Base board.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12011/datasheet/mounting-mechanism.png"
-  width="50%"
-  caption="RAK12011 Mounting Mechanism on a WisBlock Base Module"
-/>
+> **Image:** RAK12011 Mounting Mechanism on a WisBlock Base Module
 
 ### Hardware
 
@@ -63,16 +56,11 @@ The hardware specification is categorized into five parts. It shows the chipset 
 | ------------------ | ----------- |
 | STMicroelectronics | LPS33HW     |
 
-
 #### Pin Definition
 
 The RAK12011 WisBlock Fingerprint Sensor comprises a standard WisBlock connector. The WisBlock connector allows the RAK12011 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12011/datasheet/rak12011_pinout.png"
-  width="60%"
-  caption="RAK12011 Pinout Diagram"
-/>
+> **Image:** RAK12011 Pinout Diagram
 
 :::tip NOTE
 - Only **I2C** related pins, **INT**, **3V3_S**, and **GND** are connected to the WisConnector on this module.
@@ -89,7 +77,6 @@ The table below shows the default IOs used for different slots using INT:
 | SLOT A | SLOT C | SLOT D | SLOT E | SLOT F |
 | -------| ------ | ------ | ------ | ------ |
 | WB_IO1 | WB_IO3 | WB_IO5 | WB_IO4 | WB_IO6 |
-
 
 #### Electrical Characteristics
 
@@ -109,8 +96,8 @@ This section shows the maximum and minimum ratings of the RAK12011 module and it
 | Symbol | Description    | Condition                                   | Min. | Nom. | Max. | Unit |
 | ------ | -------------- | ------------------------------------------- | ---- | ---- | ---- | ---- |
 | VDD    | Supply voltage | Normal work                                 | 1.7  | 3.3  | 3.6  | V    |
-| IDD1   | Supply current | @ ODR 1&nbsp;Hz LC_EN bit = 0 at 1.8&nbsp;V | -    | 15   | -    | uA   |
-| IDD2   | Supply current | @ ODR 1&nbsp;Hz LC_EN bit = 1               | -    | 3    | -    | uA   |
+| IDD1   | Supply current | @ ODR 1 Hz LC_EN bit = 0 at 1.8 V | -    | 15   | -    | uA   |
+| IDD2   | Supply current | @ ODR 1 Hz LC_EN bit = 1               | -    | 3    | -    | uA   |
 | IDD3   | Supply current | Power-Down Mode                             | -    | 1    | -    | uA   |
 
 #### Mechanical Characteristics
@@ -119,28 +106,15 @@ This section shows the maximum and minimum ratings of the RAK12011 module and it
 
 **Figure 3** shows the mechanical dimensions of the RAK12011 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12011/datasheet/mechanical-dimensions.png"
-  width="75%"
-  caption="RAK12011 Mechanical Dimensions"
-/>
+> **Image:** RAK12011 Mechanical Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12011/datasheet/wisconnector-pcb.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
 **Figure 5** shows the schematic of the RAK12011 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12011/datasheet/rak12011-schematic.png"
-  width="100%"
-  caption="RAK12011 WisBlock Module Schematics"
-/>
+> **Image:** RAK12011 WisBlock Module Schematics
 
-<RkBottomNav/>

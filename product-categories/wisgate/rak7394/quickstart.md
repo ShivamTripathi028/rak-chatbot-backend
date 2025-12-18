@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Quick Start Guide 
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7394 WisGate Developer CM4 Quick Start Guide
 
 ## Prerequisites
@@ -21,7 +18,7 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 ### Hardware
 
 - RAK7394/RAK7394C/RAK7394P WisGate Developer CM4 Gateway
-- 5&nbsp;V at least 2.5&nbsp;A Micro USB power supply
+- 5 V at least 2.5 A Micro USB power supply
 - A Windows/Mac OS/Linux Computer
 
 ### Software
@@ -30,17 +27,9 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 ### Package Inclusion
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/1.rak7394p.png"
-  width="90%"
-  caption="RAK7394P package inclusion"
-/>
+> **Image:** RAK7394P package inclusion
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/2.rak7394c.png"
-  width="90%"
-  caption="RAK7394C package inclusion"
-/>
+> **Image:** RAK7394C package inclusion
 
 ## Product Configuration
 
@@ -64,11 +53,7 @@ This section outlines several methods for accessing the gateway, offering differ
 
 By default, when you power on RAK7394 and no other connection is established with the device (eg. Ethernet connection) the gateway will work in Wi-Fi AP mode, which means you can find an SSID named RAK_XXXX on your PC Wi-Fi Network List.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/3.access-point.png"
-  width="70%"
-  caption="RAKwireless access point"
-/>
+> **Image:** RAKwireless access point
 
 :::tip NOTE
 **XXXX** is the last 2 bytes of your RAK7394’s Wi-Fi MAC address. Connect to this Wi-Fi SSID using the password provided below. Take note of the default IP address of the gateway provided below as this will be needed in connecting via SSH.
@@ -81,11 +66,7 @@ By default, when you power on RAK7394 and no other connection is established wit
 
 Power up the RAK7394 and connect it to your router via an Ethernet cable. By default, the OS operates in DHCP client mode. Then, look up the IP address your gateway gets assigned from the router. It will be listed as **rakpios**. Use your favorite SSH tool to log in and get started.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/4.network.png"
-  width="100%"
-  caption="Gateway-assigned IP address"
-/>
+> **Image:** Gateway-assigned IP address
 
 ### Log into the Gateway
 
@@ -95,22 +76,13 @@ SSH (Secure Shell) is commonly used to log in to a remote machine and execute co
 
 1. Choose the client that best suits your needs. For this guide, however, Putty will be used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/7.putty.png"
-  width="45%"
-  caption="Putty Software for SSH in Windows"
-/>
-
+> **Image:** Putty Software for SSH in Windows
 
 2. Log in via SSH, enter the default password, and then set a new password when prompted.
 
 The default RAKPiOS username is **rak**, and the password is **changeme**. During your first login, you will be required to change the default password for security purposes.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/8.command_win.png"
-  width="100%"
-  caption="First login password change"
-/>
+> **Image:** First login password change
 
 3. After changing the default password (as required), the terminal and SSH session will close automatically. Reopen the session and log in using the new password.
 
@@ -118,11 +90,7 @@ The default RAKPiOS username is **rak**, and the password is **changeme**. Durin
 
 1. Open the Terminal on macOS by launching the Terminal application located in the `/Applications/Utilities/` directory. Alternatively, you can open it using Spotlight by pressing **Command + Spacebar** and typing **Terminal**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/9.mac.png"
-  width="60%"
-  caption="macOS terminal search"
-/>
+> **Image:** macOS terminal search
 
 2. After opening the terminal of macOS, enter **root mode** by typing the following command:
 
@@ -135,11 +103,7 @@ ssh user@IP-Address
 ```
 4. You will be asked to provide a password for login.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/8.command_mac.png"
-  width="100%"
-  caption="Login prompt"
-/>
+> **Image:** Login prompt
 
 #### Linux OS
 
@@ -152,67 +116,36 @@ If your PC runs Linux, follow the same steps as for macOS, except for enabling r
 ```
 sudo raspi-config
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/10_config.png"
-  width="100%"
-  caption="Enter config mode"
-/>
+
+> **Image:** Enter config mode
 
 2. When you execute the command, you will be prompted to enter the **sudo** password. Enter the password to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/11_password.png"
-  width="100%"
-  caption="Enter the password"
-/>
+> **Image:** Enter the password
 
 3. The Raspberry Pi configuration tool will open. Navigate to and select **System Options**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/12_config_tool.png"
-  width="100%"
-  caption="Raspberry Pi configuration Tool"
-/>
+> **Image:** Raspberry Pi configuration Tool
 
 4. Select **Wireless LAN**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/13_wireless.png"
-  width="100%"
-  caption="Wireless LAN"
-/>
+> **Image:** Wireless LAN
 
 5. You will be asked to select the country in which the Pi is to be used. Select the corresponding country.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/14_wireless_country.png"
-  width="100%"
-  caption="Select country of operation"
-/>
+> **Image:** Select country of operation
 
 6. Confirm the selection.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/15_wireless_confirmation.png"
-  width="100%"
-  caption="Selection confirmation"
-/>
+> **Image:** Selection confirmation
 
 7. You will be prompted to enter the SSID of the wireless network you wish to connect to. After entering the SSID, click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/16_wireless_ssid.png"
-  width="100%"
-  caption="Enter the SSID"
-/>
+> **Image:** Enter the SSID
 
 8. Next, you will be prompted to enter the passphrase for your Wi-Fi. If your network does not require a passphrase, leave this box empty. Once all the settings are configured, the tool will return to the main menu. Select **Finish** to close the window.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/17_wireless_finish.png"
-  width="100%"
-  caption="Raspberry Pi configuration tool"
-/>
+> **Image:** Raspberry Pi configuration tool
 
 9. The RAK7394 should now be connected to Wi-Fi. To verify the connection, use the **ifconfig** command. The console should display information indicating that the connection is established.
 
@@ -220,11 +153,7 @@ sudo raspi-config
 ifconfig
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/18_wireless_connected.png"
-  width="100%"
-  caption="RAK7394 connected to Wi-Fi"
-/>
+> **Image:** RAK7394 connected to Wi-Fi
 
 #### Connect Through Ethernet
 
@@ -250,52 +179,27 @@ When you have access to the RAK314, you need to follow this [guide.](https://doc
 sudo raspi-config
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/19.config_tool_pwd.png"
-  width="100%"
-  caption="Open the configuration tool"
-/>
+> **Image:** Open the configuration tool
 
 2. From the menu, select **System Options**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/20.config_tool.png"
-  width="100%"
-  caption="Configuration tool"
-/>
+> **Image:** Configuration tool
 
 3. Select **Password**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/21.system_options.png"
-  width="100%"
-  caption="System options"
-/>
+> **Image:** System options
 
 4. A message will appear informing you that you need to enter a new password.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/22.password.png"
-  width="100%"
-  caption="Password"
-/>
+> **Image:** Password
 
 5. After clicking **OK**, you will be prompted to enter a new password and then confirm it by entering it again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/23.password_confirm.png"
-  width="100%"
-  caption="Enter and confirm the new password"
-/>
-
+> **Image:** Enter and confirm the new password
 
 6. After confirming the password, the configuration tool will display a message indicating that the password has been changed successfully.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/24.password_changed.png"
-  width="100%"
-  caption="Password changed"
-/>
+> **Image:** Password changed
 
 ### Switch Network Interfaces
 
@@ -304,28 +208,14 @@ sudo raspi-config
 ```
 rakpios-cli
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/25.network_switch.png"
-  width="100%"
-  caption="Execute the command"
-/>
+
+> **Image:** Execute the command
 
 2. You will see a menu with the available configuration options, select **Manage networks**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/26.network_configuration.png"
-  width="100%"
-  caption="Configuration options"
-/>
+> **Image:** Configuration options
 
 3. This will display a list of available interfaces. Select the desired interface and configure it as preferred by making the necessary changes.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/quickstart/27.interfaces.png"
-  width="100%"
-  caption="Available network interfaces"
-/>
+> **Image:** Available network interfaces
 
-
-
-<RkBottomNav/>
