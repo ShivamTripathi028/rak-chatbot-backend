@@ -10,18 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12040 WisBlock 8x8 IR Sensor Datasheet
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12040/datasheet/rak12040_front_back.png" 
-  caption="RAK12040 WisBlock 8x8 IR Sensor" 
-   width="60%"
-/>
+> **Image:** RAK12040 WisBlock 8x8 IR Sensor
 
 ### Description
 
@@ -33,11 +26,11 @@ RAK12040 is a WisBlock 8x8 IR Sensor Module that extends the WisBlock system wit
     *  Based on AMG8833
     *  Temperature detection of two-dimensional area：8x8 (64 pixels)
     *  I2C digital interfaces
-    *  3.3&nbsp;V power supply
-    *  Operating temperature range：0 to +80&nbsp;°C
+    *  3.3 V power supply
+    *  Operating temperature range：0 to +80 °C
 
 * **Size**
-    * 10 x 23&nbsp;mm
+    * 10 x 23 mm
 
 ## Specifications
 
@@ -47,16 +40,11 @@ RAK12040 is a WisBlock 8x8 IR Sensor Module that extends the WisBlock system wit
 
 **Figure 2** shows the mounting mechanism of the RAK12040 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12040 module can be mounted on the slots: **A & C**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12040/datasheet/rak19xx_mounting.png" 
-  caption="RAK12040 WisBlock 8x8 IR Sensor Mounting" 
-   width="50%"
-/>
+> **Image:** RAK12040 WisBlock 8x8 IR Sensor Mounting
 
 ### Hardware
 
 The hardware specification is categorized into five parts. It shows the chipset of the module and discusses the pinouts, sensors, and the corresponding functions and diagrams. It also covers the electrical and mechanical parameters, including the tabular data of the functionalities and standard values of the RAK12040 WisBlock 8x8 IR Sensor.
-
 
 #### Chipset
 
@@ -68,11 +56,7 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK12040 WisBlock 8x8 IR Sensor comprises a standard WisBlock connector. The WisBlock connector allows the RAK12040 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition are shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12040/datasheet/rak12040_pinout.png" 
-    caption="RAK12040 WisBlock 8x8 IR Sensor Pinout Diagram" 
-   width="40%"
-/>
+> **Image:** RAK12040 WisBlock 8x8 IR Sensor Pinout Diagram
 
 :::tip NOTE
 
@@ -94,30 +78,15 @@ When the RAK12040 is used with other sensor modules powered by **3V3_S** togethe
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK12040 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12040/datasheet/rak19xx_mechanic_drawing.png" 
-    caption="RAK12040 WisBlock 8x8 IR Sensor Mechanic Drawing" 
-   width="60%"
-/>
+> **Image:** RAK12040 WisBlock 8x8 IR Sensor Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12040/datasheet/mxxs1003k6m.png" 
-    caption="WisConnector PCB footprint and recommendations" 
-   width="100%"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK12040 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12040/datasheet/rak12040-schematic.png" 
-    caption="RAK12040 WisBlock 8x8 IR Sensor schematics" 
-   width="100%"
-/>
+> **Image:** RAK12040 WisBlock 8x8 IR Sensor schematics
 
-
-
-<RkBottomNav/>

@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13101 WisBlock GSM/GPRS Module
 
 Thank you for choosing **RAK13101 WisBlock GSM/GPRS Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,18 +27,17 @@ Thank you for choosing **RAK13101 WisBlock GSM/GPRS Module** in your awesome IoT
 
 **WisBlock RAK13101 GSM/GPRS Module** is a part of the WisBlock Wireless series that provides GSM/GPRS capability on the WisBlock platform by using Quectel MC20CE cellular module.
 
-
 ## Product Features
 
 - Quectel MC20CE module
-- Supports GSM/GPRS/GNSS: 850/900/1800/1900&nbsp;MHz
+- Supports GSM/GPRS/GNSS: 850/900/1800/1900 MHz
 - Supports BeiDou/GPS/GLONASS/QZSS
 - Built-in LNA
 - IPEX connectors for the GSM and GNSS antenna
 - Micro-USB debug and log output connector
 - Nano SIM support
-- 3.3&nbsp;V Power supply
-- Small size: 25&nbsp;mm x 45&nbsp;mm
+- 3.3 V Power supply
+- Small size: 25 mm x 45 mm
 
 ## Prerequisites
 
@@ -50,4 +47,3 @@ To use a **RAK13101**, you need at least a **WisBlock Base** with IO slot to plu
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

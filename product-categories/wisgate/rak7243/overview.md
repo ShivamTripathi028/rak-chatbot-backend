@@ -12,9 +12,6 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7243 WisGate Developer D3
 Thank you for choosing **RAK7243 WisGate Developer D3** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -26,7 +23,6 @@ Thank you for choosing **RAK7243 WisGate Developer D3** in your awesome IoT Proj
 * [Environment Test Report](test-report)
 * [WisGate Developer Gateway Firmware Setup](https://learn.rakwireless.com/hc/en-us/articles/26744073850775-How-To-Set-Up-WisGate-Developer-Gateway-Firmware)
 * [RAK7243 ready to flash Firmware](https://downloads.rakwireless.com/LoRa/Pilot-Gateway-Pro-RAK7243/Firmware/RAK7243_Latest_Firmware.zip)
-
 
 :::tip NOTE
 Purchasing the [RAK2013 WisLink Cellular Pi Hat](https://docs.rakwireless.com/product-categories/wislink/rak2013) separately with the intent of adding a cellular feature in your existing RAK7243 WisGate Developer Gateway is not possible. Hence, purchase the RAK7243C/7244C instead, as it is a specifically modified gateway that is composed of RAK2245 and RAK2013.
@@ -40,16 +36,14 @@ For the built-in RAK2245 Pi HAT, the SX1301 chip from Semtech is used, which is 
 
 Pilot Gateway Pro is ideal for prototyping, proof-of-concept demonstration, or evaluation. It includes a ready-to-use gateway OS that can be connected to a LoRaWan server. Also, it is developer-friendly and even for not-so-techy users to set up the LoRaWan system. It has to be the best value and function for connectivity to address a variety of applications like Smart Grid, Intelligent Farm, and other IoT enterprise applications.
 
-
-
 ## Product Features
 
 - Preassembled, fully functioning gateway
 - **SX1301 baseband processor**, emulates 49 x LoRa demodulators 10 programmable parallel demodulation paths, supports 8 uplinks channel and 1 downlink channel
 - Built-in **Ublox MAX-7Q GPS Module**
 - Built-in heat sink for thermal heat dissipation management
-- Supports 5&nbsp;V / 2.5&nbsp;A power supply
-- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm@SF12, BW 125&nbsp;kHz
+- Supports 5 V / 2.5 A power supply
+- TX power up to 27 dBm, RX sensitivity down to -139 dBm@SF12, BW 125 kHz
 - Frequency band support: EU433, CN470, RU864, IN865, EU868, US915, AU915, KR920, AS923
 - Housing with top cover, body, bottom cover with riveted motherboard standoff
 - Includes Pi ready **ID EEPROM**, **GPIO** setup, and a device tree that  can be automatically configured from vendor information

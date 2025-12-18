@@ -10,15 +10,9 @@ sidebar_label: Overview
 download: true
 ---
 
-
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK Hotspot V2
 
 Thank you for choosing **RAK Hotspot V2** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
-
 
 * [Quick Start Guide](/product-categories/wisgate/rak-hotspot-v2/quickstart/)
 * [Troubleshooting](/product-categories/wisgate/rak-hotspot-v2/troubleshooting/)
@@ -37,7 +31,7 @@ Thank you for choosing **RAK Hotspot V2** in your awesome IoT Project! 🎉 To h
 - Efficient for mining the **Helium (HNT)** cryptocurrency
 - Complete setup in minutes using a smartphone
 - **LongFi technology** maximizes range and battery life without Wi-Fi, cellular, or Bluetooth
-- Low Power: Only consumes about the same amount of energy as an LED light bulb (5&nbsp;W)
+- Low Power: Only consumes about the same amount of energy as an LED light bulb (5 W)
 - Easily manage hotspots and tokens from the mobile app
 
 ![longfi](https://images.docs.rakwireless.com/wisgate/rak-hotspot/icons/longfi.png)
@@ -46,9 +40,9 @@ Thank you for choosing **RAK Hotspot V2** in your awesome IoT Project! 🎉 To h
 
 ![proof-of-coverage](https://images.docs.rakwireless.com/wisgate/rak-hotspot/icons/proof-of-coverage.png)
 
-RAK Hotspots earn Helium when devices connect and for validating wireless coverage provided by peers. Through a system called Proof-of-Coverage, RAK Hotspots earn more Helium when they are within range of other RAK Hotspots, provided they are at least 300&nbsp;meters apart.
+RAK Hotspots earn Helium when devices connect and for validating wireless coverage provided by peers. Through a system called Proof-of-Coverage, RAK Hotspots earn more Helium when they are within range of other RAK Hotspots, provided they are at least 300 meters apart.
 
-The range depends on the environment: in rural areas, it can reach **up to 10&nbsp;miles or more**, while in dense urban areas, it is typically **up to a mile**. A single RAK Hotspot earns less because it can only issue Challenges over the internet and cannot participate in Proof-of-Coverage.
+The range depends on the environment: in rural areas, it can reach **up to 10 miles or more**, while in dense urban areas, it is typically **up to a mile**. A single RAK Hotspot earns less because it can only issue Challenges over the internet and cannot participate in Proof-of-Coverage.
 
 ![wireless-coverage](https://images.docs.rakwireless.com/wisgate/rak-hotspot/icons/wireless-coverage.png)
 
@@ -63,12 +57,12 @@ The range depends on the environment: in rural areas, it can reach **up to 10&nb
 ## Product Features
 
 - Utilizes the Raspberry Pi 4 computer board
-- Onboard RAM: 2&nbsp;GB, 4&nbsp;GB, or 8&nbsp;GB
-- 32&nbsp;GB SD card
+- Onboard RAM: 2 GB, 4 GB, or 8 GB
+- 32 GB SD card
 - Based on the LoRa Concentrator Engine: Semtech® SX1302
 - Built-in heat sink for efficient thermal heat dissipation management
-- Supports 5&nbsp;V / 2.4&nbsp;A power supply
+- Supports 5 V / 2.4 A power supply
 - IP30 housing
-- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm @SF12, BW 125&nbsp;kHz
+- TX power up to 27 dBm, RX sensitivity down to -139 dBm @SF12, BW 125 kHz
 - LoRa frequency band support includes RU864, IN865, EU868, US915, AU915, KR920, and AS923
-- 2.4&nbsp;GHz and 5.0&nbsp;GHz IEEE 802.11b/g/n/ac wireless LAN, Bluetooth 5.0, BLE
+- 2.4 GHz and 5.0 GHz IEEE 802.11b/g/n/ac wireless LAN, Bluetooth 5.0, BLE

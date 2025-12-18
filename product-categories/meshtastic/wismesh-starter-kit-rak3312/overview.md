@@ -15,8 +15,6 @@ sidebar_label: Product Overview
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Meshtastic RAK3312 Starter Kit
 
 Thank you for choosing **Meshtastic Starter Kit** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,7 +23,7 @@ Thank you for choosing **Meshtastic Starter Kit** in your awesome IoT Project! T
 
 This network is especially vital in scenarios where traditional communication systems fail, such as during disasters. Empowering individuals and groups within the HAM radio community and beyond, Meshtastic ensures connectivity when it's needed most.
 
-The **Meshtastic Starter Kit** is our most popular offering, ideal for DIY enthusiasts. This kit includes a range of WisBlock nRF52840 core modules, sensor modules, enclosures, and a high-gain 2&nbsp;dBi Rubber Antenna. Customize your node, repeater, tracker, or weather station with various modular options.
+The **Meshtastic Starter Kit** is our most popular offering, ideal for DIY enthusiasts. This kit includes a range of WisBlock nRF52840 core modules, sensor modules, enclosures, and a high-gain 2 dBi Rubber Antenna. Customize your node, repeater, tracker, or weather station with various modular options.
 
 ## Product Features
 
@@ -38,4 +36,3 @@ The **Meshtastic Starter Kit** is our most popular offering, ideal for DIY enthu
 
 To get started with the WisBlock Meshtastic Starter Kit, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20RAK3312%20Starter%20Kit.pdf" target="_blank">WisBlock Meshtastic RAK3312 Starter Kit Getting Started</a> guide.
 
-<RkBottomNav/>

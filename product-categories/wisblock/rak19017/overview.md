@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19017 WisBlock POE Slot Module
 
 Thank you for choosing **RAK19017 WisBlock POE Slot Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,14 +23,14 @@ Thank you for choosing **RAK19017 WisBlock POE Slot Module** in your awesome IoT
 
 The **RAK19017** is a WisBlock POE Power Slot Module that has an Ethernet connector with POE (power supply only, no Ethernet connection) capability and a reset button. It is compatible with the WisBlock Base board with Power Slot.
 
-The RAK19017 WisBlock POE module is a power board that is designed based on Ag9905MT from Silvertel. RAK19017 Wisblock POE module is an IEEE 802.3af compliant POE module that can draw power from the conventional twisted pair CAT5 ethernet cable. This circuit provides the necessary signature required by the Power Sourcing Equipment (PSE) before delivering up to 9&nbsp;W of power to the port. The Ag9905MT provides a regulated 5&nbsp;V output from the internal DC-DC converter that has a built-in short-circuit output protection.
+The RAK19017 WisBlock POE module is a power board that is designed based on Ag9905MT from Silvertel. RAK19017 Wisblock POE module is an IEEE 802.3af compliant POE module that can draw power from the conventional twisted pair CAT5 ethernet cable. This circuit provides the necessary signature required by the Power Sourcing Equipment (PSE) before delivering up to 9 W of power to the port. The Ag9905MT provides a regulated 5 V output from the internal DC-DC converter that has a built-in short-circuit output protection.
 
 ## Product Features
 
 - POE Power Module (power supply only, no Ethernet connection capability)
-- 36&nbsp;V to 57&nbsp;V Input voltage range
+- 36 V to 57 V Input voltage range
 - Short-circuit protection and Over temperature protection
-- Compact size, the minimum size is: 30 x 50&nbsp;mm
+- Compact size, the minimum size is: 30 x 50 mm
 
 ## Prerequisites
 
@@ -43,4 +41,3 @@ To use a **RAK19017**, you need at least a **WisBlock Base** Board with Power Sl
 - Ensure that the POE voltage is within specs.
 :::
 
-<RkBottomNav/>

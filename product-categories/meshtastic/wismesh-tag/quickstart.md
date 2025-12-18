@@ -21,9 +21,6 @@ tags:
   - quickstart
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisMesh Tag Quick Start Guide
 
 The WisMesh Tag is your super-slim go-to device for ready-to-use and long-lasting connectivity. It is ideal for users seeking a hassle-free Meshtastic node. This device is powered by the efficient MCU Nordic nRF52840, a top performer on the Meshtastic Community Approval list.
@@ -32,7 +29,7 @@ Its integrated location tracking and acceleration sensors can provide accurate l
 
 ## Product Features
 
-- Robust 1000&nbsp;mAh built-in battery
+- Robust 1000 mAh built-in battery
 - Low Power Nordic nRF52840 MCU
 - Semtech SX1262 LoRa transceiver
 - Supports 8xx and 9xx MHz LoRa bands
@@ -67,7 +64,6 @@ Before going through each step of using the WisMesh Tag, make sure to prepare th
 - <a href="https://store.rakwireless.com/products/wismesh-tag-meshtastic-gps-lora-tracker-ip66?utm_source=docs_center&utm_medium=organic&utm_campaign=wismesh_tag_documentation_quickstart_page&utm_term=buy_now&utm_content=store_link" target="_blank">WisMesh Tag</a>
 - USB Cable
 
-
 ### Software
 
 The nRF52840 MCU of the WisMesh Tag comes pre-flashed with the Meshtastic firmware.
@@ -86,7 +82,7 @@ Make sure that you have installed one of these applications, as they are require
 
 ### Hardware Description
 
-The WisMesh Tag comes fully assembled with an internal battery. However, it is recommended to fully recharge the battery before switching the device on. It is powered by its internal 1000&nbsp;mAh battery and features a multi-function button, three LEDs and a 4-pin connector for recharging.
+The WisMesh Tag comes fully assembled with an internal battery. However, it is recommended to fully recharge the battery before switching the device on. It is powered by its internal 1000 mAh battery and features a multi-function button, three LEDs and a 4-pin connector for recharging.
 
 :::info
 The enclosure cannot be opened without damaging the device.
@@ -116,11 +112,7 @@ The front button, positioned on the top of the device, operates under the contro
 - **Triple press**: Toggles GPS on or off
 - **Long press**: Shuts down the device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tag-button.png"
-  width="50%"
-  caption="WisMesh Tag User button"
-/>
+> **Image:** WisMesh Tag User button
 
 ##### Back Button
 
@@ -128,22 +120,14 @@ The back button is located at the bottom of the device. It is recommended to fun
 - **Single press**: Resets the device
 - **Double press**: Puts the device into DFU mode
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tag-reset-button.png"
-  width="50%"
-  caption="WisMesh Tag Power Button"
-/>
+> **Image:** WisMesh Tag Power Button
 
 #### Recharging Port
 
 The 4-pin connector on the top of the device is for recharging the device and also serves as a USB interface to flash new firmware or debug the Meshtastic firmware.
-It is recommended to use a 5&nbsp;V 0.5&nbsp;A USB charger to recharge the battery.
+It is recommended to use a 5 V 0.5 A USB charger to recharge the battery.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tag-port.png"
-  width="50%"
-  caption="WisMesh Tag On/Off button"
-/>
+> **Image:** WisMesh Tag On/Off button
 
 A matching magnetic connector cable with a USB connector is included in the WisMesh Tag package.
 
@@ -151,16 +135,11 @@ A matching magnetic connector cable with a USB connector is included in the WisM
 
 LoRa, BLE and GNSS antennas are inside the enclosure.
 
-
 #### Dimensions
 
 Enclosure dimensions:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tag-enclosure.png"
-  width="50%"
-  caption="WisMesh Tag dimensions"
-/>
+> **Image:** WisMesh Tag dimensions
 
 ### Software Setup
 
@@ -172,11 +151,10 @@ For Firmware 1.3 and 2.0 (from November 1, 2022), the WisMesh Tag is autodetecte
 - For WisMesh Tag **`firmware-wismesh-tag-w.x.yy.zzzzzzz.uf2`**
 :::
 
-<b>Flashing the WisMesh Tag Firmware:</b>
+**Flashing the WisMesh Tag Firmware:**
 
 The WisMesh Tag comes pre-flashed with the Meshtastic firmware. If you encounter problems, update the Meshtastic firmware to the latest version.
 - <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52" target="_blank">Guide to flash nRF52 devices</a> (link goes to Meshtastic.org)
 
 For the setup of the WisMesh Tag for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration/" target="_blank">configuration guide</a> in the Meshtastic documentation.
 
-<RkBottomNav/>

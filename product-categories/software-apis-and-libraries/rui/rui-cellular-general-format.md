@@ -1,5 +1,4 @@
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RUI Cellular General Format
 
@@ -27,11 +26,12 @@ RUI_RETURN_STATUS rui_cellular_send(uint8_t *data)
 RUI_RETURN_STATUS rui_cellular_response(uint8_t *response, uint32_t len, uint32_t timeout)
 ```
 
-
 | @brief | This API is used to wait for a correct response from cellular module. | 
 | ---- | ---- | 
-| **@return&nbsp;** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | __uint8_t *response__: the response of server string <br /> **uint32_t len**: response data length <br /> **uint32_ t timeout**: the time to wait for response until timeout | 
+| **@return ** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
+| **@param** | __uint8_t *response__: the response of server string 
+ **uint32_t len**: response data length 
+ **uint32_ t timeout**: the time to wait for response until timeout | 
 | **@module** | RAK8212-M and RAK5010 core module. | 
 
 ## RUI Cellular Register Receive Callback
@@ -46,7 +46,6 @@ RUI_RETURN_STATUS rui_cellular_register_recv_callback(cellular_receive callback)
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
 | **@param** | **cellular_receive callback**: the callback function for receiving cellular data. | 
 | **@module** | RAK8212-M and RAK5010 core module. | 
-
 
 ## RUI Cellular Set Mode
 
@@ -69,9 +68,9 @@ RUI_RETURN_STATUS rui_cellular_open_socket(uint8_t* data)
 | @brief | This API is used to open a TCP socket with a remote server. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | __uint8_t* data__: open TCP link cmd <br /> For example: AT+QIOPEN=1,0,"TCP","ip",%port,0,1" | 
+| **@param** | __uint8_t* data__: open TCP link cmd 
+ For example: AT+QIOPEN=1,0,"TCP","ip",%port,0,1" | 
 | **@module** | RAK8212-M and RAK5010 core module. | 
-
 
 ## RUI Cellular Set Operator
 
@@ -82,9 +81,13 @@ RUI_RETURN_STATUS rui_cellular_set_operator(uint8_t *APN,uint8_t *operator_long_
 | @brief | This API is used to configure parameters of Cellular operator. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | __uint8_t *APN__: The APN name of Cellular operator <br /> __uint8_t *operator_long_name__: The operator’s long name. <br /> For example: “CHINAMOBILE”. <br /> __uint8_t *operator_short_name__: The operator's short name. <br /> For example, "CMCC" <br /> __uint8_t operator_net__: The cellular network type. | 
+| **@param** | __uint8_t *APN__: The APN name of Cellular operator 
+ __uint8_t *operator_long_name__: The operator’s long name. 
+ For example: “CHINAMOBILE”. 
+ __uint8_t *operator_short_name__: The operator's short name. 
+ For example, "CMCC" 
+ __uint8_t operator_net__: The cellular network type. | 
 | **@module** | RAK8212-M and RAK5010 core module. | 
-
 
 ## RUI Cellular Mode
 
@@ -97,8 +100,4 @@ RUI_RETURN_STATUS rui_cellular_mode(uint8_t on);
 | @return | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
 | @param | **uint8_t on**: 0-off, 1-on | 
 | @module | RAK8212-M and RAK5010 core module. | 
-
-
-
-<RkBottomNav/>
 

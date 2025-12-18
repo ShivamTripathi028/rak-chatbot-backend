@@ -1,5 +1,4 @@
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # Binary Command Manual
 
@@ -42,8 +41,7 @@ The frame structure of Binary mode protocol is in the following format:
 | Start Delimiter | Length       | Frame Type  | Flag        | Payload      | Checksum    |
 | --------------- | ------------ | ----------- | ----------- | ------------ | ----------- |
 | 0x7E            | MSB First    |             |             |              |             |
-| 1&nbsp;Byte     | 2&nbsp;Bytes | 1&nbsp;Byte | 1&nbsp;Byte | N&nbsp;Bytes | 1&nbsp;Byte |
-
+| 1 Byte     | 2 Bytes | 1 Byte | 1 Byte | N Bytes | 1 Byte |
 
 **Start Delimiter**	
 
@@ -51,7 +49,7 @@ The frame structure of Binary mode protocol is in the following format:
 
 **Length**
 
-- 2&nbsp;bytes value, in the unit of byte, which indicates the length of the frame payload.
+- 2 bytes value, in the unit of byte, which indicates the length of the frame payload.
 
 **Frame Type** 
 
@@ -69,16 +67,15 @@ The frame structure of Binary mode protocol is in the following format:
     - **1** - Indicates this is a Response flag
     - Bit 1~7 (Reserved for future use)
 
-
 **Payload** 
 - The format of the payload depends on how upper software layers design their protocol. For example, the RAK sensor hub UART protocol uses TLV format to pack the data.
 
 **Checksum**
 - Checksum is the last byte of the frame and helps test data integrity, which simply counts the number of set bits, and then only saves the lowest byte to this field.
 - Only the following 3 values are calculated by checksum:
-    - Frame Type: 1&nbsp;byte
-    - Flag: 1&nbsp;byte
-    - Payload: N&nbsp;bytes
+    - Frame Type: 1 byte
+    - Flag: 1 byte
+    - Payload: N bytes
 - If the Checksum value is not as expected, silently drop this frame.
 
 ### Built-in Echo Handler
@@ -93,15 +90,13 @@ If an API mode device receives a frame with frame type 0x01, the payload data wi
 
 The expected frame payload of the built-in AT command handler is in the following format:
 
-
 | Length       | Flag        | ATCMD ID    | Payload      |
 | ------------ | ----------- | ----------- | ------------ |
-| 2&nbsp;Bytes | 1&nbsp;Byte | 1&nbsp;Byte | N&nbsp;Bytes |
-
+| 2 Bytes | 1 Byte | 1 Byte | N Bytes |
 
 **Length**
 
-- 2&nbsp;bytes value, in the unit of byte, which indicates the length of the frame payload.
+- 2 bytes value, in the unit of byte, which indicates the length of the frame payload.
 
 **Flag**
 
@@ -127,11 +122,12 @@ The expected frame payload of the built-in AT command handler is in the followin
 
 ### ATCMD ID
 
-It is composed of 1&nbsp;byte ID which represents which AT command should be selected. For CLI version 1.6.0, the following is the ATCMD ID mapping table:
+It is composed of 1 byte ID which represents which AT command should be selected. For CLI version 1.6.0, the following is the ATCMD ID mapping table:
 
 :::tip NOTE
 The ATCMD ID in the table are in decimal format. It must be converted to hexadicemal if applied to the binary command format.
-<br />For example, `AT+HWMODEL` will use `0x0D` instead of 13.
+
+For example, `AT+HWMODEL` will use `0x0D` instead of 13.
 :::
 
 | ATCMD ID | AT Command Name | Description                                     |
@@ -408,7 +404,6 @@ Send **AT+REPOINFO=?**
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x06 0x00 0x06
 ```
 
-
 ### AT+VER
 
 Description: The version of the firmware
@@ -595,7 +590,6 @@ Send **AT+BAT=?**
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x0F 0x00 0x08
 ```
 
-
 ## Sleep Mode
 
 ### AT+SLEEP
@@ -684,7 +678,6 @@ The following table explains how to build a frame to execute the `AT+BAUD=?` AT 
 | `ATCMD ID`      | 8       | 0x0C  | `AT+BAUD`                          |
 | Checksum        | 9       | 0x03  |                                    |
 
-
 **Example:**
 
 If the baud rate is 115200, the example is shown as follows:
@@ -715,7 +708,6 @@ The following table explains how to build a frame to execute the `AT+BAUD=115200
 |                 | 11      | 0xC2  |                                    |
 |                 | 12      | 0x00  |                                    |
 | Checksum        | 13      | 0x09  |                                    |
-
 
 **Example:**
 
@@ -751,7 +743,6 @@ The following table explains how to build a frame to execute the `AT+APPEUI=?` A
 | `ATCMD ID`      | 8       | 0x10  | `AT+APPEUI`: Application Identifier |
 | Checksum        | 9       | 0x02  |                                     |
 
-
 **Example:**
 
 If the application EUI is 0x0102030405060708, the example is shown as follows:
@@ -786,7 +777,6 @@ The following table explains how to build a frame to execute the `AT+APPEUI=0102
 |                 | 15      | 0x07  |                                    |
 |                 | 16      | 0x08  |                                    |
 | Checksum        | 17      | 0x11  |                                    |
-
 
 **Example:**
 
@@ -867,7 +857,6 @@ Send **AT+APPKEY=01020304050607080102030405060708**
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x11 0x00 0x06
 ```
 
-
 ### AT+APPSKEY
 
 Description: Application Session Key
@@ -892,7 +881,6 @@ The following table explains how to build a frame to execute the `AT+APPSKEY=?` 
 
 If the network join mode is set the ABP mode first and the application session key is 0x01020304050607080102030405060708.
 (AT+NJM: get or set the network join mode (0 = ABP, 1 = OTAA))
-
 
 Send **AT+APPSKEY=?**
 ```
@@ -941,7 +929,6 @@ Send **AT+APPSKEY=01020304050607080102030405060708**
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x12 0x00 0x06
 ```
 
-
 ### AT+DEVADDR
 
 Description: Device Address
@@ -961,7 +948,6 @@ The following table explains how to build a frame to execute the `AT+DEVADDR=?` 
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x13  | `AT+DEVADDR`: Device Address       |
 | Checksum        | 9       | 0x04  |                                    |
-
 
 **Example:**
 
@@ -1003,7 +989,6 @@ Send **AT+DEVADDR=01020304**
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x13 0x00 0x07
 ```
 
-
 ### AT+DEVEUI
 
 Description: Device AEUI
@@ -1023,7 +1008,6 @@ The following table explains how to build a frame to execute the `AT+DEVEUI=?` A
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x14  | `AT+DEVEUI`: Device EUI            |
 | Checksum        | 9       | 0x03  |                                    |
-
 
 **Example:**
 
@@ -1088,7 +1072,6 @@ The following table explains how to build a frame to execute the `AT+NETID=?` AT
 | `ATCMD ID`      | 8       | 0x15  | `AT+NETID`: Network Identifier (NetID) |
 | Checksum        | 9       | 0x04  |                                        |
 
-
 **Example:**
 
 If the network identifier (NetID) is 0x010203
@@ -1123,7 +1106,6 @@ The following table explains how to build a frame to execute the `AT+NWKSKEY=?` 
 **Example:**
 
 If the network session key is 0x01020304050607080102030405060708
-
 
 Send **AT+NWKSKEY=?**
 ```
@@ -1172,10 +1154,6 @@ Send **AT+NWKSKEY=01020304050607080102030405060708**
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x16 0x00 0x07
 ```
 
-
-
-
-
 ## LoRaWAN Joining and Sending
 
 This section describes the commands related to the join procedure and data payload.
@@ -1201,7 +1179,6 @@ The following table explains how to build a frame to execute the `AT+CFM=?` AT c
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x17  | `AT+CFM`: Confirm Mode             |
 | Checksum        | 9       | 0x05  |                                    |
-
 
 **Example:**
 
@@ -1230,7 +1207,6 @@ The following table explains how to build a frame to execute the `AT+CFM=1` AT c
 | `ATCMD ID`      | 8       | 0x17  | `AT+CFM`: Confirm Mode             |
 | `Payload`       | 9       | 0x01  | Example data                       |
 | Checksum        | 10      | 0x08  |                                    |
-
 
 **Example:**
 
@@ -1617,7 +1593,6 @@ The following table explains how to build a frame to execute the `AT+ADR=?` AT c
 | `ATCMD ID`      | 8       | 0x1F  | `AT+ADR`: Adaptive Rate            |
 | Checksum        | 9       | 0x06  |                                    |
 
-
 **Example:**
 
 If the ADR is enabled, the example is shown as follows:
@@ -1645,7 +1620,6 @@ The following table explains how to build a frame to execute the `AT+ADR=1` AT c
 | `ATCMD ID`      | 8       | 0x1F  | `AT+ADR`: Adaptive Rate            |
 | `Payload`       | 9       | 0x01  | Example data                       |
 | Checksum        | 10      | 0x09  |                                    |
-
 
 **Example:**
 
@@ -1918,7 +1892,7 @@ The following table explains how to build a frame to execute the `AT+JN2DL=?` AT
 
 **Example:**
 
-If the join accept delay between the end of TX and the join RX Window 2 is 6&nbsp;seconds, and the example is shown as follows:
+If the join accept delay between the end of TX and the join RX Window 2 is 6 seconds, and the example is shown as follows:
 
 Send **AT+JN2DL=?**
 ```
@@ -2404,7 +2378,6 @@ The following table explains how to build a frame to execute the `AT+PGSLOT=?` A
 | `ATCMD ID`      | 8       | 0x2C  | `AT+PGSLOT`: Periodicity           |
 | Checksum        | 9       | 0x04  |                                    |
 
-
 **Example:**
 
 If the periodicity is 0, the example is shown as follows:
@@ -2432,7 +2405,6 @@ The following table explains how to build a frame to execute the `AT+PGSLOT=1` A
 | `ATCMD ID`      | 8       | 0x2C  | `AT+PGSLOT`: Periodicity           |
 | `Payload`       | 9       | 0x01  | Example data:                      |
 | Checksum        | 10      | 0x07  |                                    |
-
 
 **Example:**
 
@@ -2463,7 +2435,6 @@ The following table explains how to build a frame to execute the `AT+BFREQ=?` AT
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x2D  | `AT+BFREQ`                         |
 | Checksum        | 9       | 0x05  |                                    |
-
 
 **Example:**
 
@@ -2498,7 +2469,6 @@ The following table explains how to build a frame to execute the `AT+BTIME=?` AT
 | `ATCMD ID`      | 8       | 0x2E  | `AT+BTIME`                         |
 | Checksum        | 9       | 0x05  |                                    |
 
-
 **Example:**
 
 If the beacon time is  1319453824, and the example is shown as follows:
@@ -2531,7 +2501,6 @@ The following table explains how to build a frame to execute the `AT+BGW=?` AT c
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x2F  | `AT+BGW`                           |
 | Checksum        | 9       | 0x06  |                                    |
-
 
 **Example:**
 
@@ -2566,10 +2535,9 @@ The following table explains how to build a frame to execute the `AT+BGW=?` AT c
 | `ATCMD ID`      | 8       | 0x30  | `AT+LTIME`                         |
 | Checksum        | 9       | 0x03  |                                    |
 
-
 **Example:**
 
-If the local time is 03&nbsp;h56&nbsp;m52&nbsp;s on 09/18/2021, and the example is shown as follows:
+If the local time is 03 h56 m52 s on 09/18/2021, and the example is shown as follows:
 
 Send **AT+LTIME=?**
 ```
@@ -2604,7 +2572,6 @@ The following table explains how to build a frame to execute the `AT+RSSI=?` AT 
 | `ATCMD ID`      | 8       | 0x31  | `AT+RSSI`                          |
 | Checksum        | 9       | 0x04  |                                    |
 
-
 **Example:**
 
 If the RSSI of the last received packet is -77, the example is shown as follows:
@@ -2637,7 +2604,6 @@ The following table explains how to build a frame to execute the `AT+SNR=?` AT c
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x32  | `AT+SNR`                           |
 | Checksum        | 9       | 0x04  |                                    |
-
 
 **Example:**
 
@@ -2677,7 +2643,6 @@ The following table explains how to build a frame to execute the `AT+MASK=?` AT 
 | `ATCMD ID`      | 8       | 0x33  | `AT+MASK`                          |
 | Checksum        | 9       | 0x05  |                                    |
 
-
 **Example:**
 
 If the AT+MASK is 00FF, the example is shown as follows:
@@ -2707,7 +2672,6 @@ The following table explains how to build a frame to execute the `AT+PGSLOT=1` A
 |                 | 10      | 0x01  |                                    |
 | Checksum        | 11      | 0x08  |                                    |
 
-
 **Example:**
 
 Send **AT+MASK=0001**
@@ -2715,7 +2679,6 @@ Send **AT+MASK=0001**
 >> 0x7E 0x00 0x06 0x01 0x00 0x00 0x02 0x02 0x33 0x00 0x01 0x08
 << 0x7E 0x00 0x05 0x01 0x01 0x00 0x01 0x01 0x33 0x00 0x08
 ```
-
 
 ### AT+CHS
 
@@ -2738,7 +2701,6 @@ The following table explains how to build a frame to execute the `AT+CHS=?` AT c
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x35  | `AT+CHS`                           |
 | Checksum        | 9       | 0x05  |                                    |
-
 
 **Example:**
 
@@ -2772,7 +2734,6 @@ The following table explains how to build a frame to request a remote API mode d
 |                 | 12      | 0xE0  |                                    |
 | Checksum        | 13      | 0x17  |                                    |
 
-
 **Example:**
 
 The example is shown as follows:
@@ -2805,7 +2766,6 @@ The following table explains how to build a frame to execute the `AT+BAND=?` AT 
 | `ATCMD ID`      | 8       | 0x36  | `AT+BAND`                          |
 | Checksum        | 9       | 0x05  |                                    |
 
-
 **Example:**
 
 If the AT+BAND is US915, and the example is shown as follows:
@@ -2834,7 +2794,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `Payload`       |         |       |                                    |
 |                 | 9       | 0x05  | Example data:                      |
 | Checksum        | 10      | 0x09  |                                    |
-
 
 **Example:**
 
@@ -2872,7 +2831,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x37  | `AT+NWM`                           |
 | Checksum        | 9       | 0x06  |                                    |
 
-
 **Example:**
 
 If the network working mode is LoRaWAN, the example is shown as follows:
@@ -2900,7 +2858,6 @@ The following table explains how to build a frame to execute the `AT+NWM=0` AT c
 | `ATCMD ID`      | 8       | 0x37  | `AT+NWM`                           |
 | `Payload`       | 9       | 0x00  | Example data:                      |
 | Checksum        | 10      | 0x08  |                                    |
-
 
 **Example:**
 
@@ -2932,7 +2889,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x38  | `AT+PFREQ`                         |
 | Checksum        | 9       | 0x04  |                                    |
 
-
 **Example:**
 
 If the P2P frequency is 868000000, and the example is shown as follows:
@@ -2963,7 +2919,6 @@ The following table explains how to build a frame to request a remote API mode d
 |                 | 11      | 0xA1  |                                    |
 |                 | 12      | 0x00  |                                    |
 | Checksum        | 13      | 0x12  |                                    |
-
 
 **Example:**
 
@@ -2997,7 +2952,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x39  | `AT+PSF`                           |
 | Checksum        | 9       | 0x05  |                                    |
 
-
 **Example:**
 
 If the P2P spreading factor is 7, and the example is shown as follows:
@@ -3025,7 +2979,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x39  | `AT+PSF`                           |
 | `Payload`       | 9       | 0x07  |                                    |
 | Checksum        | 10      | 0x0A  |                                    |
-
 
 **Example:**
 
@@ -3059,10 +3012,9 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x3A  | `AT+PBW`                           |
 | Checksum        | 9       | 0x05  |                                    |
 
-
 **Example:**
 
-If the P2P bandwidth is 125&nbsp;KHz, and the example is shown as follows
+If the P2P bandwidth is 125 KHz, and the example is shown as follows
 
 Send **AT+PBW=?**
 ```
@@ -3090,7 +3042,6 @@ The following table explains how to build a frame to request a remote API mode d
 |                 | 11      | 0x00  |                                    |
 |                 | 12      | 0x7D  |                                    |
 | Checksum        | 13      | 0x0D  |                                    |
-
 
 **Example:**
 
@@ -3124,7 +3075,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x3B  | `AT+PCR`                           |
 | Checksum        | 9       | 0x06  |                                    |
 
-
 **Example:**
 
 If the coding rate is 4/5, and the example is shown as follows:
@@ -3152,7 +3102,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x3B  | `AT+PCR`                           |
 | `Payload`       | 9       | 0x01  |                                    |
 | Checksum        | 10      | 0x09  |                                    |
-
 
 **Example:**
 
@@ -3186,7 +3135,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x3C  | `AT+PPL`                           |
 | Checksum        | 9       | 0x05  |                                    |
 
-
 **Example:**
 
 If the P2P preamble length is 8, and the example is shown as follows:
@@ -3215,7 +3163,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `Payload`       | 9       | 0x00  |                                    |
 |                 | 10      | 0x08  |                                    |
 | Checksum        | 11      | 0x08  |                                    |
-
 
 **Example:**
 
@@ -3249,7 +3196,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x3D  | `AT+PTP`                           |
 | Checksum        | 9       | 0x06  |                                    |
 
-
 **Example:**
 
 If the P2P TX power is 14, and the example is shown as follows:
@@ -3277,7 +3223,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x3D  | `AT+PTP`                           |
 | `Payload`       | 9       | 0x0D  |                                    |
 | Checksum        | 10      | 0x0B  |                                    |
-
 
 **Example:**
 
@@ -3313,7 +3258,6 @@ The following table explains how to build a frame to request a remote API mode d
 |                 | 10      | 0x34  |                                    |
 |                 | 11      | 0x56  |                                    |
 | Checksum        | 12      | 0x12  |                                    |
-
 
 **Example:**
 
@@ -3351,7 +3295,6 @@ The following table explains how to build a frame to request a remote API mode d
 |                 | 12      | 0xE8  |                                    |
 | Checksum        | 13      | 0x0F  |                                    |
 
-
 **Example:**
 
 The example is shown as follows 
@@ -3384,7 +3327,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x40  | `AT+ENCRY`                         |
 | Checksum        | 9       | 0x02  |                                    |
 
-
 **Example:**
 
 If the P2P encryption is disabled, and the example is shown as follows:
@@ -3412,7 +3354,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `ATCMD ID`      | 8       | 0x40  | `AT+ENCRY`                         |
 | `Payload`       | 9       | 0x01  |                                    |
 | Checksum        | 10      | 0x05  |                                    |
-
 
 **Example:**
 
@@ -3445,7 +3386,6 @@ The following table explains how to build a frame to request a remote API mode d
 | `Flag`          | 7       | 0x00  | Read                               |
 | `ATCMD ID`      | 8       | 0x41  | `AT+ENCKEY`                        |
 | Checksum        | 9       | 0x03  |                                    |
-
 
 **Example:**
 
@@ -3482,8 +3422,6 @@ The following table explains how to build a frame to request a remote API mode d
 |                 | 16      | 0x08  |                                    |
 | Checksum        | 17      | 0x12  |                                    |
 
-
-
 **Example:**
 
 The example is shown as follows: 
@@ -3495,4 +3433,3 @@ Send **AT+ENCKEY=0102030405060708**
 ```
 -->
 
-<RkBottomNav/>

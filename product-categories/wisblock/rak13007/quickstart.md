@@ -11,11 +11,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13007 WisBlock Relay Module Quick Start Guide
-
 
 ## Prerequisite
 
@@ -41,20 +37,14 @@ Before going through each and every step on using the RAK13007 WisBlock module, 
 
 ### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/block-diagram.png"
-  width="70%"
-  caption="RAK13007 Block Diagram"
-/>
+> **Image:** RAK13007 Block Diagram
 
-The RAK13007 uses one relay to isolate the output of the MCU. The dielectric strength between coil and contacts of a relay is 2500&nbsp;V<sub>DC</sub>, 50/60&nbsp;Hz 1&nbsp;min.
+The RAK13007 uses one relay to isolate the output of the MCU. The dielectric strength between coil and contacts of a relay is 2500 V<sub>DC</sub>, 50/60 Hz 1 min.
 
 :::warning
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/quickstart/warning.png"
-  width="90%"
-  caption="Safety Precaution"
-/>
+
+> **Image:** Safety Precaution
+
 :::
 
 ### Hardware Setup
@@ -63,12 +53,7 @@ RAK13007 is a WisBlock Interface module that extends the WisBlock system to be u
 
 For more information about RAK13007, refer to the [Datasheet](datasheet.md).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak13007-assembly.png"
-  width="50%"
-  caption="RAK13007 connection to WisBlock Base"
-/>
-
+> **Image:** RAK13007 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -76,11 +61,7 @@ For more information about RAK13007, refer to the [Datasheet](datasheet.md).
 
 The RAK13007 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 4**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/mounting-mechanism.png"
-  width="60%"
-  caption="RAK13007 mounting connection to WisBlock Base module"
-/>
+> **Image:** RAK13007 mounting connection to WisBlock Base module
 
 ##### Disassembling
 
@@ -88,27 +69,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/removing_screw.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/detach_silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 7**, to detach the module from the base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/detach_module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -118,9 +87,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -138,11 +107,7 @@ For RAK13007, the accessible pin assignment is defined as follows in the Arduino
 
 **Figure 8** is an illustration on how to use the RAK13007 relay for switching applications. You can connect any module or device to the RAK13007 as long as it operates on its recommended voltage rating.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak13007-example.png"
-  width="50%"
-  caption="RAK13007 switching the LED"
-/>
+> **Image:** RAK13007 switching the LED
 
 If you have already installed the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index), the WisBlock Core and example code should now be available on the Arduino IDE.
 
@@ -150,27 +115,15 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 
 **RAK4631 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak4631-board.png"
-  width="90%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 **RAK11200 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak11200-board.png"
-  width="90%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 **RAK11310 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak11310-board.png"
-  width="90%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -205,27 +158,15 @@ void loop() {
 If you experience any error in compiling the example sketch, check the updated code for your WisBlock Core Module that can be found on the [RAK13007 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK13007_Relay_G5LE-14-DC3). This sample code in Github will work on all WisBlock Core.
 :::
 
-<br />
-
 3. Once the example code is open, you can now select the right serial port and upload the code, as shown in **Figure 12** and **Figure 13**.
 
 :::tip NOTE
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak4631-selectport.png"
-  width="90%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13007/quickstart/rak4631-upload.png"
-  width="90%"
-  caption="Uploading the RAK13007 example code"
-/>
+> **Image:** Uploading the RAK13007 example code
 
 4. When you have successfully uploaded the example sketch, you will now see the RAK13007 Relay module switches the LED on and off every 5 seconds. Also, notice that the built-in red led on the RAK13007 module lights on when there is contact, or it is normally closed, and then lights off when it is normally open. You'll also be able to hear clicking sounds from the RAK13007 module, which means that the relay is switching.
 
-
-<RkBottomNav/>

@@ -9,25 +9,16 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg22/cbrs-antenna.pn
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # 3550-3700 MHz 10 dBi CBRS Band Antenna Datasheet
-
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/cbrs-antenna.png"
-  width="80%"
-  caption="RAKARG22 3550-3700 MHz 10 dBi CBRS Band Antenna Overview"
-/>
+> **Image:** RAKARG22 3550-3700 MHz 10 dBi CBRS Band Antenna Overview
 
 ### Features
 
-- Frequency range: 3550~3700&nbsp;MHz
-- Gain: 10&nbsp;dBi
+- Frequency range: 3550~3700 MHz
+- Gain: 10 dBi
 - VSWR: ≤ 1.31
 - Efficiency: ≥ 75%
 - Antenna type: Dipole
@@ -36,53 +27,44 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 - Connector type: N-type female
 - IP67 rated
 
-
 ## Specification
-
 
 | Parameter              | Value                        |
 | ---------------------- | ---------------------------- |
 | Model                  | RAKARG22                     |
-| Frequency range        | 3550~3700&nbsp;MHz           |
-| Gain                   | 10&nbsp;dBi                  |
+| Frequency range        | 3550~3700 MHz           |
+| Gain                   | 10 dBi                  |
 | Beamwidth              | H: 360°                      |
 | VSWR                   | ≤ 1.31                       |
 | Efficiency             | ≥ 75%                        |
-| Feed impedance         | 50&nbsp;Ω                    |
+| Feed impedance         | 50 Ω                    |
 | Antenna type           | Dipole                       |
 | Radiation pattern      | Omnidirectional              |
 | Polarization           | Vertical                     |
 | Cover material (color) | Fiberglass (white)           |
 | Connector type         | N-type female                |
-| Dimensions (mm)        | Φ 28.5&nbsp;mm x 750&nbsp;mm |
-| Operation temp (°C)    | -40°&nbsp;C + 75°&nbsp;C     |
-| Storage temperature    | -40°&nbsp;C + 85°&nbsp;C     |
+| Dimensions (mm)        | Φ 28.5 mm x 750 mm |
+| Operation temp (°C)    | -40° C + 75° C     |
+| Storage temperature    | -40° C + 85° C     |
 | Rating                 | IP67 rated                   |
 
 ### VSWR
 
 | Frequency (MHz) | VSWR |
 | --------------- | ---- |
-| 3550&nbsp;MHz   | 1.27 |
-| 3565&nbsp;MHz   | 1.31 |
-| 3580&nbsp;MHz   | 1.27 |
-| 3595&nbsp;MHz   | 1.21 |
-| 3610&nbsp;MHz   | 1.16 |
-| 3625&nbsp;MHz   | 1.16 |
-| 3640&nbsp;MHz   | 1.21 |
-| 3655&nbsp;MHz   | 1.24 |
-| 3670&nbsp;MHz   | 1.27 |
-| 3685&nbsp;MHz   | 1.27 |
-| 3700&nbsp;MHz   | 1.21 |
+| 3550 MHz   | 1.27 |
+| 3565 MHz   | 1.31 |
+| 3580 MHz   | 1.27 |
+| 3595 MHz   | 1.21 |
+| 3610 MHz   | 1.16 |
+| 3625 MHz   | 1.16 |
+| 3640 MHz   | 1.21 |
+| 3655 MHz   | 1.24 |
+| 3670 MHz   | 1.27 |
+| 3685 MHz   | 1.27 |
+| 3700 MHz   | 1.21 |
 
-<br/>
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/vswr.png"
-  width="100%"
-  caption="RAKARG22 VSWR Graph"
-/>
+> **Image:** RAKARG22 VSWR Graph
 
 #### Peak Gain
 
@@ -105,14 +87,7 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 | 3690            | 11.2       |
 | 3700            | 10.8       |
 
-<br/>
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/gain.png"
-  width="100%"
-  caption="RAKARG22 Peak Gain"
-/>
+> **Image:** RAKARG22 Peak Gain
 
 #### Efficiency
 
@@ -135,42 +110,15 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 | 3690            | 73             |
 | 3700            | 73             |
 
-<br/>
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/efficiency.png"
-  width="100%"
-  caption="RAKARG22 Efficiency"
-/>
+> **Image:** RAKARG22 Efficiency
 
 #### Radiation Patterns
 
-<br/>
+> **Image:** RAKARG22 Horizontal Radiation Pattern
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/horizontal-radiation.png"
-  width="80%"
-  caption="RAKARG22 Horizontal Radiation Pattern"
-/>
-
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/vertical-radiation.png"
-  width="80%"
-  caption="RAKARG22 Vertical Radiation Pattern"
-/>
+> **Image:** RAKARG22 Vertical Radiation Pattern
 
 #### Mechanical Characteristics
 
-<br/>
+> **Image:** RAKARG22 Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg22/mechanical-dimension.png"
-  width="100%"
-  caption="RAKARG22 Mechanical Characteristics"
-/>
-
-
-<RkBottomNav/>

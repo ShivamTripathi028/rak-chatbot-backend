@@ -10,25 +10,22 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13006 WisBlock CAN Module Datasheet
 
 ## Overview
 
 ### Description
 
-RAK13006 is a CAN Bus communication module based on the MCP2518FD CAN controller and ATA6563 CAN transceiver both from Microchip. The MCP2518FD is the CAN chip that communicates to WisBlock Core MCU via SPI up to 17&nbsp;MHz SPI Clock Speed and ATA6563 is the low-level physical layer chip that provides a physical connection with the CAN bus communication lines. It supports both CAN 2.0B and CAN FD with an arbitration bit rate up to 1&nbsp;Mbps. This WisBlock Interface module is ideal for industrial and automotive applications.
+RAK13006 is a CAN Bus communication module based on the MCP2518FD CAN controller and ATA6563 CAN transceiver both from Microchip. The MCP2518FD is the CAN chip that communicates to WisBlock Core MCU via SPI up to 17 MHz SPI Clock Speed and ATA6563 is the low-level physical layer chip that provides a physical connection with the CAN bus communication lines. It supports both CAN 2.0B and CAN FD with an arbitration bit rate up to 1 Mbps. This WisBlock Interface module is ideal for industrial and automotive applications.
 
 ### Features
 
 - Based on MCP2518FD and ATA6563
-- Arbitration Bit Rate up to 1&nbsp;Mbps
+- Arbitration Bit Rate up to 1 Mbps
 - ISO11898-2:2016 and SAEJ2962-2 Compliant
 - Configurable terminal resistance on CANH and CANL lines via slide switch
-- Operating temperature: **-40&nbsp;°C ~ 85&nbsp;°C**
-- Size: 25 x 35&nbsp;mm
+- Operating temperature: **-40 °C ~ 85 °C**
+- Size: 25 x 35 mm
 
 ## Specifications
 
@@ -38,20 +35,9 @@ RAK13006 is a CAN Bus communication module based on the MCP2518FD CAN controller
 
 The RAK13006 module can be mounted on the IO Slot of a WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK13006 on a WisBlock Base board, such as the RAK5005-O, and **Figure 2** shows the terminal crimp connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/rak13006-mount.png"
-  width="60%"
-  caption="RAK13006 WisBlock CAN Module mounting"
-/>
+> **Image:** RAK13006 WisBlock CAN Module mounting
 
-<br />
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/terminal.png"
-  width="60%"
-  caption="RAK13006 Crimp Terminal Connector and Terminal Resistance Switch"
-/>
-
+> **Image:** RAK13006 Crimp Terminal Connector and Terminal Resistance Switch
 
 ### Hardware
 
@@ -74,11 +60,7 @@ The RAK13006 WisBlock CAN module comprises a standard 40-pin WisConnector. The W
 - IO5 connected to interrupt pin
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/rak13006_pinout.png"
-  width="55%"
-  caption="RAK13006 WisBlock CAN Module pinout diagram"
-/>
+> **Image:** RAK13006 WisBlock CAN Module pinout diagram
 
 #### Electrical Characteristics
 
@@ -102,43 +84,25 @@ The RAK13006 WisBlock CAN module comprises a standard 40-pin WisConnector. The W
 | Ivcc_rec  | Normal Mode Current (recessive) | 2.0  |  -   | 5.0  | mA   |
 | Ivcc_dom  | Normal Mode Current (dominant)  | 30   | 50   | 70   | mA   |
 
-
 #### Mechanical Characteristic
 
 ##### Board Dimensions
 
 Figure 4 shows the dimensions and the mechanic drawing of the RAK13006 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/rak13006-mechanic-drawing.png"
-  width="80%"
-  caption="RAK13006 WisBlock CAN Module mechanic drawing"
-/>
+> **Image:** RAK13006 WisBlock CAN Module mechanic drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 - CAN Controller and CAN PHY Transceiver:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/can-chip-phy.png"
-  width="70%"
-  caption="RAK13006 CAN controller and transceiver"
-/>
+> **Image:** RAK13006 CAN controller and transceiver
 
 - 5-V Boost converter for CAN PHY transceiver voltage supply:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13006/datasheet/5v-boost.png"
-  width="75%"
-  caption="5V Boost"
-/>
+> **Image:** 5V Boost
 
-<RkBottomNav/>

@@ -9,9 +9,6 @@ sidebar_label: Low Level Development
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # LoRa Module Low Level Development Reference
 
@@ -45,8 +42,9 @@ Finally, the protocol stack code can be added after other pins are configured.
 
 Once the porting protocol stack is ready, customers can focus on the development of their applications. There are two options:
 
-&nbsp;&nbsp;&nbsp;&nbsp;a. Do not use the original bootloader that comes in RAK modules from the factory. In this case, you must provide your own version of bootloader.<br />
-&nbsp;&nbsp;&nbsp;&nbsp;b. Use RAK's bootloader and upgrade the custom firmware by using nRF Connect. You can download it from here: [https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-mobile](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-mobile)
+    a. Do not use the original bootloader that comes in RAK modules from the factory. In this case, you must provide your own version of bootloader.
+
+    b. Use RAK's bootloader and upgrade the custom firmware by using nRF Connect. You can download it from here: [https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-mobile](https://www.nordicsemi.com/Software-and-tools/Development-Tools/nRF-Connect-for-mobile)
 
 If you want to develop your own bootloader, you can refer to the schematic diagram and the datasheet of the MCU to implement the code. If you want to use RAK’s bootloader, continue reading the next section.
 
@@ -56,11 +54,7 @@ In any MCU, after the power is connected, the System bootloader is in charge to 
 
 The following image shows a usual memory map for an ARM Cortex M4, which is the architecture of RAK4600 MCU:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4600-module/deep-development/memory-map.png"
-  width="25%"
-  caption="Usual memory map for an ARM Cortex M4 MCU"
-/>
+> **Image:** Usual memory map for an ARM Cortex M4 MCU
 
 The flash memory section sits between the address 0x0800 0000 and 0x080X 0000. The X depends on the different models of MCU.
 

@@ -10,9 +10,6 @@ slug: /product-categories/wisduo/rak11720-module/overview/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11720 WisDuo LPWAN+BLE Module
 
 Thank you for choosing **RAK11720 WisDuo LPWAN+BLE Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,7 +35,7 @@ There are two variants available for the RAK11720 Module:
 
 - Based on **AMA3B1KK-KBR-B0** and **SX1262**
 - ARM Cortex-M4F
-- 1&nbsp;MB Flash and 348&nbsp;KB SRAM
+- 1 MB Flash and 348 KB SRAM
 - **LoRaWAN 1.0.3** specification compliant
 - **Supported bands**: EU433, CN470, IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -46,14 +43,13 @@ There are two variants available for the RAK11720 Module:
 - Custom firmware using Arduino via RUI3 API
 - Easy-to-use AT Command set via UART interface
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range - greater than 10&nbsp;km with optimized antenna
-- Ultra-low-power consumption of 2.37&nbsp;μA in sleep mode
-- **Supply Voltage**: 1.8&nbsp;V ~ 3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C ~ 85°&nbsp;C
+- Long-range - greater than 10 km with optimized antenna
+- Ultra-low-power consumption of 2.37 μA in sleep mode
+- **Supply Voltage**: 1.8 V ~ 3.6 V
+- **Temperature range**: -40° C ~ 85° C
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

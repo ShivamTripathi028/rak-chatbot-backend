@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Magnetic Antenna Base
 
 Thank you for choosing **Magnetic Antenna Base** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -18,11 +16,10 @@ Thank you for choosing **Magnetic Antenna Base** in your awesome IoT Project! �
 
 ## Product Features
 
--   Frequency Range: **0~6&nbsp;GHz**
+-   Frequency Range: **0~6 GHz**
 -   Cable length: **2 meters**
 -   Cable type: **LMR200**
--   Max. input power **≥ 2&nbsp;W**
+-   Max. input power **≥ 2 W**
 -   VSWR: **≤ 2.0**
 -   Polarization: **Linear**
 
-<RkBottomNav/>

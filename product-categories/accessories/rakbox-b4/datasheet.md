@@ -9,9 +9,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock RAKBox-B4 Enclosure Datasheet
 
 RAKBox-B4 is an IP67 rated enclosure for outdoor usage. It is designed specifically for the WisBlock products.
@@ -22,35 +19,21 @@ RAKBox-B4 is an IP67 rated enclosure for outdoor usage. It is designed specifica
 - Perfect for setups where space is limited
 - It is rated I67/NEMA-6, so it is a weather proof
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakbox-b4/datasheet/top-view.png"
-  width="40%"
-  caption="WisBlock RAKBox-B4 Enclosure Top View"
-/>
+> **Image:** WisBlock RAKBox-B4 Enclosure Top View
 
 ## Mechanical Characteristics
 
-- Dimensions W x L x H: 168&nbsp;mm (include mount ears) x 120&nbsp;mm x 55&nbsp;mm
-- Weight: approximately 8.46&nbsp;oz (240&nbsp;g)
-- Material thickness: 3&nbsp;mm
-- Pole and wall-mounting: 50~75&nbsp;mm pole diameter
+- Dimensions W x L x H: 168 mm (include mount ears) x 120 mm x 55 mm
+- Weight: approximately 8.46 oz (240 g)
+- Material thickness: 3 mm
+- Pole and wall-mounting: 50~75 mm pole diameter
 - Logo customization possibility
 - Support for Logo printing and custom color painting
 - Support opening as required.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakbox-b4/datasheet/enclosure.png"
-  width="50%"
-  caption="RAKBox-B4 Enclosure Overview"
-/>
+> **Image:** RAKBox-B4 Enclosure Overview
 
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakbox-b4/datasheet/overview.png"
-  width="35%"
-  caption="RAKBox-B4 Enclosure"
-/>
+> **Image:** RAKBox-B4 Enclosure
 
 ## Ports
 
@@ -85,10 +68,5 @@ The enclosure is compatible with the following WisBlock modules:
 
 A set of brackets for wall or pole mounting is included in the package.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakbox-b4/datasheet/mounting-kit.png"
-  width="75%"
-  caption="Mounting Kit"
-/>
+> **Image:** Mounting Kit
 
-<RkBottomNav/>

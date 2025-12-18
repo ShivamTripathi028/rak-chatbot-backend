@@ -11,9 +11,6 @@ slug: /product-categories/wisduo/rak11300-module/at-command-manual/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11300 WisDuo LPWAN Module AT Command Manual
 
 ## Introduction
@@ -22,13 +19,9 @@ The RAK11300 WisDuo LPWAN module is based on the Raspberry Pi RP2040 chip and SX
 
 AT commands can be interfaced via USB (acting as a serial port, pins 2 **USB_DM** and 3 **USB_DP**) or via UART1 (pins 10 **TX1** and 9 **RX1**). The default AT command parameter is **115200/8-N-1**. Firmware upgrades are possible only via USB. To familiarize yourself with the module's pin distribution and find a reference application schematic , refer to the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak11300-module/datasheet/" target="_blank">RAK11300 Module Datasheet</a>.
 
-
-
-
 ## AT Command Syntax
 
 The AT command is based on ASCII characters. In general, the AT command starts with the prefix `AT` and ends with `<CR><LF>` (i.e., \r\n). For the rest of the document, the `\r\n` will be omitted for clarity.
-
 
 The AT commands have the standard format “AT+XXX”, with XXX denoting the command.
 
@@ -86,7 +79,6 @@ Returns a list of all available commands with a short description
 | :-----: | :-------------: | :----------------: | :---------: |
 |  `AT?`  |        -        | *List of commands* |    `OK`     |
 
-
 ```
 AT?
 AT?
@@ -126,7 +118,6 @@ OK
 
 ```
 
-
 ----
 
 ## ATR
@@ -137,8 +128,6 @@ This command is used to restore all parameters to the initial default values of 
 | :-----: | :-------------: | :----------: | :---------: |
 | `ATR?`  |        -        |      -       |    `OK`     |
 |  `ATR`  |        -        |      -       |    `OK`     |
-
-
 
 ----
 
@@ -152,8 +141,6 @@ This command is used to trigger an MCU reset.
 | :-----: | :-------------: | :----------------------: | :---------: |
 | `ATZ?`  |        -        | `ATZ: Trig a MCU reset`  |    `OK`     |
 |  `ATZ`  |        -        | *No return. MCU resets.* |    `OK`     |
-
-
 
 ----
 
@@ -191,8 +178,6 @@ AT+APPEUI=70b3d57ed00201eh
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+APPKEY
@@ -228,8 +213,6 @@ AT+APPKEY=2b84e0b09b68e5cb42176fe753dcee7x
 
 +CME ERROR:5
 ```
-
-
 
 ----
 
@@ -267,8 +250,6 @@ AT+DEVEUI=ac1f09fffe03efdx
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+APPSKEY
@@ -305,8 +286,6 @@ AT+APPSKEY=3f6a66459d5edca63cbc4619cd61a11x
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+NWKSKEY
@@ -342,8 +321,6 @@ AT+NWKSKEY=323d155a000df335307a16da0c9df53f0
 
 +CME ERROR:5
 ```
-
-
 
 ----
 
@@ -382,8 +359,6 @@ AT+DEVADDR=26021FBX
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+CFM
@@ -419,8 +394,6 @@ AT+CFM=3
 
 +CME ERROR:5
 ```
-
-
 
 ----
 
@@ -469,8 +442,6 @@ AT+JOIN=3:1:8:10
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+NJS
@@ -497,8 +468,6 @@ AT+NJS=?
 AT+NJS:1
 OK
 ```
-
-
 
 ----
 
@@ -536,8 +505,6 @@ AT+NJM=2
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+SENDFREQ
@@ -569,8 +536,6 @@ AT+SENDFREQ=60
 
 OK
 ```
-
-
 
 ----
 
@@ -619,8 +584,8 @@ Downlink packet received
 - In this example, the format has the corresponding values:
   - **fport**: 2
   - **data length**: 6
-  - **rssi**: -46&nbsp;dBm
-  - **snr**: 11&nbsp;dB
+  - **rssi**: -46 dBm
+  - **snr**: 11 dB
   - **data payload**: 48656C6C6F0A
 
 :::
@@ -634,8 +599,6 @@ AT+SEND=SUCCESS
 RX:2:6:-46:11:48656C6C6F0A
 OK
 ```
-
-
 
 ----
 
@@ -672,8 +635,6 @@ AT+ADR=3
 
 +CME ERROR:5
 ```
-
-
 
 ----
 
@@ -713,8 +674,6 @@ AT+CLASS=F
 +CME ERROR:5
 ```
 
-
-
 ----
 
 ## AT+DR
@@ -749,8 +708,6 @@ AT+DR=3
 OK
 ```
 
-
-
 ----
 
 ## AT+TXP
@@ -767,7 +724,7 @@ This command is used to access and configure the transmit power.
 
 Check <a href="https://docs.rakwireless.com/product-categories/wisduo/rak11300-module/at-command-manual/#appendix-ii-tx-power-by-region" target="_blank">Appendix II</a> for the input parameter depending on the frequency band selected.
 
-For example, at EU868, a value of 2 represents **MaxEIRP - 4&nbsp;dB** where MaxEIRP = +16&nbsp;dBm.
+For example, at EU868, a value of 2 represents **MaxEIRP - 4 dB** where MaxEIRP = +16 dBm.
 
 **Examples**:
 
@@ -786,8 +743,6 @@ AT+TXP=0
 
 OK
 ```
-
-
 
 ----
 
@@ -836,8 +791,6 @@ AT+BAND=22
 
 +CME ERROR:8
 ```
-
-
 
 ----
 
@@ -892,8 +845,6 @@ AT+MASK=13
 +CME ERROR:8
 ```
 
-
-
 ----
 
 ## AT+BAT
@@ -926,8 +877,6 @@ AT+BAT=?
 +BAT:254
 OK
 ```
-
-
 
 ----
 
@@ -962,8 +911,6 @@ AT+RSSI:-41
 OK
 ```
 
-
-
 ----
 
 ## AT+SNR
@@ -997,8 +944,6 @@ AT+SNR:11
 OK
 ```
 
-
-
 ----
 
 ## AT+VER
@@ -1025,8 +970,6 @@ AT+VER=?
 AT+VER:1.0.0.0 May 27 2021 17:11:12
 OK
 ```
-
-
 
 ----
 
@@ -1078,139 +1021,122 @@ LoRaWAN status:
 OK
 ```
 
-
-
 ----
 
 ## Appendix
 
 ### Appendix I Data Rate by Region
 
-<b> EU433/EU868/RU864/AS923 </b>
+** EU433/EU868/RU864/AS923 **
 
 | Data Rate |       Configuration       | Indicative Physical Bit Rate [bit/s] |
 | :-------: | :-----------------------: | :----------------------------------: |
-|     0     | LoRa: SF12 / 125&nbsp;kHz |                 250                  |
-|     1     | LoRa: SF11 / 125&nbsp;kHz |                 440                  |
-|     2     | LoRa: SF10 / 125&nbsp;kHz |                 980                  |
-|     3     | LoRa: SF9 / 125&nbsp;kHz  |                 1760                 |
-|     4     | LoRa: SF8 / 125&nbsp;kHz  |                 3125                 |
-|     5     | LoRa: SF7 / 125&nbsp;kHz  |                 5470                 |
-|     6     | LoRa: SF7 / 250&nbsp;kHz  |                11000                 |
-|     7     |     FSK: 50&nbsp;kbps     |                50000                 |
+|     0     | LoRa: SF12 / 125 kHz |                 250                  |
+|     1     | LoRa: SF11 / 125 kHz |                 440                  |
+|     2     | LoRa: SF10 / 125 kHz |                 980                  |
+|     3     | LoRa: SF9 / 125 kHz  |                 1760                 |
+|     4     | LoRa: SF8 / 125 kHz  |                 3125                 |
+|     5     | LoRa: SF7 / 125 kHz  |                 5470                 |
+|     6     | LoRa: SF7 / 250 kHz  |                11000                 |
+|     7     |     FSK: 50 kbps     |                50000                 |
 |  8 ~ 15   |            RFU            |                                      |
 
-<br/>
-
-<b> CN470/KR920 </b>
+** CN470/KR920 **
 
 | Data Rate |       Configuration       | Indicative Physical Bit Rate [bit/s] |
 | :-------: | :-----------------------: | :----------------------------------: |
-|     0     | LoRa: SF12 / 125&nbsp;kHz |                 250                  |
-|     1     | LoRa: SF11 / 125&nbsp;kHz |                 440                  |
-|     2     | LoRa: SF10 / 125&nbsp;kHz |                 980                  |
-|     3     | LoRa: SF9 / 125&nbsp;kHz  |                 1760                 |
-|     4     | LoRa: SF8 / 125&nbsp;kHz  |                 3125                 |
-|     5     | LoRa: SF7 / 125&nbsp;kHz  |                 5470                 |
+|     0     | LoRa: SF12 / 125 kHz |                 250                  |
+|     1     | LoRa: SF11 / 125 kHz |                 440                  |
+|     2     | LoRa: SF10 / 125 kHz |                 980                  |
+|     3     | LoRa: SF9 / 125 kHz  |                 1760                 |
+|     4     | LoRa: SF8 / 125 kHz  |                 3125                 |
+|     5     | LoRa: SF7 / 125 kHz  |                 5470                 |
 |  6 ~ 15   |            RFU            |                                      |
 
-<br/>
-
-<b> US915 </b>
+** US915 **
 
 | Data Rate |       Configuration       | Indicative Physical Bit Rate [bit/s] |
 | :-------: | :-----------------------: | :----------------------------------: |
-|     0     | LoRa: SF10 / 125&nbsp;kHz |                 980                  |
-|     1     | LoRa: SF9 / 125&nbsp;kHz  |                 1760                 |
-|     2     | LoRa: SF8 / 125&nbsp;kHz  |                 3125                 |
-|     3     | LoRa: SF7 / 125&nbsp;kHz  |                 5470                 |
-|     4     | LoRa: SF8 / 500&nbsp;kHz  |                12500                 |
+|     0     | LoRa: SF10 / 125 kHz |                 980                  |
+|     1     | LoRa: SF9 / 125 kHz  |                 1760                 |
+|     2     | LoRa: SF8 / 125 kHz  |                 3125                 |
+|     3     | LoRa: SF7 / 125 kHz  |                 5470                 |
+|     4     | LoRa: SF8 / 500 kHz  |                12500                 |
 |   5 ~ 7   |            RFU            |                                      |
-|     8     | LoRa: SF12 / 500&nbsp;kHz |                 980                  |
-|     9     | LoRa: SF11 / 500&nbsp;kHz |                 1760                 |
-|    10     | LoRa: SF10 / 500&nbsp;kHz |                 3900                 |
-|    11     | LoRa: SF9 / 500&nbsp;kHz  |                 7000                 |
-|    12     | LoRa: SF8 / 500&nbsp;kHz  |                12500                 |
-|    13     | LoRa: SF7 / 500&nbsp;kHz  |                21900                 |
+|     8     | LoRa: SF12 / 500 kHz |                 980                  |
+|     9     | LoRa: SF11 / 500 kHz |                 1760                 |
+|    10     | LoRa: SF10 / 500 kHz |                 3900                 |
+|    11     | LoRa: SF9 / 500 kHz  |                 7000                 |
+|    12     | LoRa: SF8 / 500 kHz  |                12500                 |
+|    13     | LoRa: SF7 / 500 kHz  |                21900                 |
 |  14 ~ 15  |            RFU            |                                      |
 
-<br/>
-
-<b> AU915 </b>
+** AU915 **
 
 | Data Rate |       Configuration       | Indicative Physical Bit Rate [bit/s] |
 | :-------: | :-----------------------: | :----------------------------------: |
-|     0     | LoRa: SF12 / 125&nbsp;kHz |                 250                  |
-|     1     | LoRa: SF11 / 125&nbsp;kHz |                 440                  |
-|     2     | LoRa: SF10 / 125&nbsp;kHz |                 980                  |
-|     3     | LoRa: SF9 / 125&nbsp;kHz  |                 1760                 |
-|     4     | LoRa: SF8 / 125&nbsp;kHz  |                 3125                 |
-|     5     | LoRa: SF7 / 125&nbsp;kHz  |                 5470                 |
-|     6     | LoRa: SF8 / 500&nbsp;kHz  |                12500                 |
+|     0     | LoRa: SF12 / 125 kHz |                 250                  |
+|     1     | LoRa: SF11 / 125 kHz |                 440                  |
+|     2     | LoRa: SF10 / 125 kHz |                 980                  |
+|     3     | LoRa: SF9 / 125 kHz  |                 1760                 |
+|     4     | LoRa: SF8 / 125 kHz  |                 3125                 |
+|     5     | LoRa: SF7 / 125 kHz  |                 5470                 |
+|     6     | LoRa: SF8 / 500 kHz  |                12500                 |
 |     7     |            RFU            |                 RFU                  |
-|     8     | LoRa: SF12 / 500&nbsp;kHz |                 980                  |
-|     9     | LoRa: SF11 / 500&nbsp;kHz |                 1760                 |
-|    10     | LoRa: SF10 / 500&nbsp;kHz |                 3900                 |
-|    11     | LoRa: SF9 / 500&nbsp;kHz  |                 7000                 |
-|    12     | LoRa: SF8 / 500&nbsp;kHz  |                12500                 |
+|     8     | LoRa: SF12 / 500 kHz |                 980                  |
+|     9     | LoRa: SF11 / 500 kHz |                 1760                 |
+|    10     | LoRa: SF10 / 500 kHz |                 3900                 |
+|    11     | LoRa: SF9 / 500 kHz  |                 7000                 |
+|    12     | LoRa: SF8 / 500 kHz  |                12500                 |
 
-<br/>
-
-<b> IN865 </b>
+** IN865 **
 
 | Data Rate |       Configuration       | Indicative Physical Bit Rate [bit/s] |
 | :-------: | :-----------------------: | :----------------------------------: |
-|     0     | LoRa: SF12 / 125&nbsp;kHz |                 250                  |
-|     1     | LoRa: SF11 / 125&nbsp;kHz |                 440                  |
-|     2     | LoRa: SF10 / 125&nbsp;kHz |                 980                  |
-|     3     | LoRa: SF9 / 125&nbsp;kHz  |                 1760                 |
-|     4     | LoRa: SF8 / 125&nbsp;kHz  |                 3125                 |
-|     5     | LoRa: SF7 / 125&nbsp;kHz  |                 5470                 |
+|     0     | LoRa: SF12 / 125 kHz |                 250                  |
+|     1     | LoRa: SF11 / 125 kHz |                 440                  |
+|     2     | LoRa: SF10 / 125 kHz |                 980                  |
+|     3     | LoRa: SF9 / 125 kHz  |                 1760                 |
+|     4     | LoRa: SF8 / 125 kHz  |                 3125                 |
+|     5     | LoRa: SF7 / 125 kHz  |                 5470                 |
 |     6     |            RFU            |                 RFU                  |
-|     7     |     FSK: 50&nbsp;kbps     |                50000                 |
+|     7     |     FSK: 50 kbps     |                50000                 |
 |  8 ~ 15   |            RFU            |                 RFU                  |
-
-
 
 ----
 
 ### Appendix II TX Power by Region
 
-<b> EU868 </b>
+** EU868 **
 
-By default, MaxEIRP is considered to be +16&nbsp;dBm.
+By default, MaxEIRP is considered to be +16 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    | MaxEIRP - 2&nbsp;dB  |
-|    2    | MaxEIRP - 4&nbsp;dB  |
-|    3    | MaxEIRP - 6&nbsp;dB  |
-|    4    | MaxEIRP - 8&nbsp;dB  |
-|    5    | MaxEIRP - 10&nbsp;dB |
-|    6    | MaxEIRP - 12&nbsp;dB |
-|    7    | MaxEIRP - 14&nbsp;dB |
+|    1    | MaxEIRP - 2 dB  |
+|    2    | MaxEIRP - 4 dB  |
+|    3    | MaxEIRP - 6 dB  |
+|    4    | MaxEIRP - 8 dB  |
+|    5    | MaxEIRP - 10 dB |
+|    6    | MaxEIRP - 12 dB |
+|    7    | MaxEIRP - 14 dB |
 | 8 ~ 15  |         RFU          |
 
-<br/>
-
-
-<b> US915 </b>
+** US915 **
 
 | TXPower | Configuration (Conducted Power) |
 | :-----: | :-----------------------------: |
-|    0    |     30&nbsp;dBm - 2*TXpower     |
-|    1    |           28&nbsp;dBm           |
-|    2    |           26&nbsp;dBm           |
+|    0    |     30 dBm - 2*TXpower     |
+|    1    |           28 dBm           |
+|    2    |           26 dBm           |
 |  3 ~ 9  |                -                |
-|   10    |           10&nbsp;dBm           |
+|   10    |           10 dBm           |
 | 11 ~ 15 |               RFU               |
 
-<br/>
+** AU915 **
 
-<b> AU915 </b>
-
-By default, MaxEIRP is considered to be +30&nbsp;dBm.
+By default, MaxEIRP is considered to be +30 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
@@ -1218,120 +1144,102 @@ By default, MaxEIRP is considered to be +30&nbsp;dBm.
 | 1 ~ 10  | MaxEIRP - 2*TXPower  |
 | 11 ~ 10 |         RFU          |
 
-<br/>
+** KR920 **
 
-
-<b> KR920 </b>
-
-By default, MaxEIRP is considered to be +14&nbsp;dBm.
+By default, MaxEIRP is considered to be +14 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    | MaxEIRP - 2&nbsp;dB  |
-|    2    | MaxEIRP - 4&nbsp;dB  |
-|    3    | MaxEIRP - 6&nbsp;dB  |
-|    4    | MaxEIRP - 8&nbsp;dB  |
-|    5    | MaxEIRP - 10&nbsp;dB |
-|    6    | MaxEIRP - 12&nbsp;dB |
-|    7    | MaxEIRP - 14&nbsp;dB |
+|    1    | MaxEIRP - 2 dB  |
+|    2    | MaxEIRP - 4 dB  |
+|    3    | MaxEIRP - 6 dB  |
+|    4    | MaxEIRP - 8 dB  |
+|    5    | MaxEIRP - 10 dB |
+|    6    | MaxEIRP - 12 dB |
+|    7    | MaxEIRP - 14 dB |
 | 8 ~ 15  |         RFU          |
 
-<br/>
+** AS923 **
 
-
-<b> AS923 </b>
-
-By default, Max EIRP is considered to be 16&nbsp;dBm.
+By default, Max EIRP is considered to be 16 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    | MaxEIRP - 2&nbsp;dB  |
-|    2    | MaxEIRP - 4&nbsp;dB  |
-|    3    | MaxEIRP - 6&nbsp;dB  |
-|    4    | MaxEIRP - 8&nbsp;dB  |
-|    5    | MaxEIRP - 10&nbsp;dB |
-|    6    | MaxEIRP - 12&nbsp;dB |
-|    7    | MaxEIRP - 14&nbsp;dB |
+|    1    | MaxEIRP - 2 dB  |
+|    2    | MaxEIRP - 4 dB  |
+|    3    | MaxEIRP - 6 dB  |
+|    4    | MaxEIRP - 8 dB  |
+|    5    | MaxEIRP - 10 dB |
+|    6    | MaxEIRP - 12 dB |
+|    7    | MaxEIRP - 14 dB |
 | 8 ~ 15  |         RFU          |
 
+** IN865 **
 
-<br/>
-
-
-<b> IN865 </b>
-
-By default, MaxEIRP is considered to be 30&nbsp;dBm.
+By default, MaxEIRP is considered to be 30 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    | MaxEIRP - 2&nbsp;dB  |
-|    2    | MaxEIRP - 4&nbsp;dB  |
-|    3    | MaxEIRP - 6&nbsp;dB  |
-|    4    | MaxEIRP - 8&nbsp;dB  |
-|    5    | MaxEIRP - 10&nbsp;dB |
-|    6    | MaxEIRP - 12&nbsp;dB |
-|    7    | MaxEIRP - 14&nbsp;dB |
-|    8    | MaxEIRP - 16&nbsp;dB |
-|    9    | MaxEIRP - 18&nbsp;dB |
-|   10    | MaxEIRP - 20&nbsp;dB |
+|    1    | MaxEIRP - 2 dB  |
+|    2    | MaxEIRP - 4 dB  |
+|    3    | MaxEIRP - 6 dB  |
+|    4    | MaxEIRP - 8 dB  |
+|    5    | MaxEIRP - 10 dB |
+|    6    | MaxEIRP - 12 dB |
+|    7    | MaxEIRP - 14 dB |
+|    8    | MaxEIRP - 16 dB |
+|    9    | MaxEIRP - 18 dB |
+|   10    | MaxEIRP - 20 dB |
 | 11 ~ 15 |         RFU          |
 
-<br/>
+** RU864 **
 
-<b> RU864 </b>
-
-By default, MaxEIRP is considered to be +16&nbsp;dBm.
+By default, MaxEIRP is considered to be +16 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    | MaxEIRP - 2&nbsp;dB  |
-|    2    | MaxEIRP - 4&nbsp;dB  |
-|    3    | MaxEIRP - 6&nbsp;dB  |
-|    4    | MaxEIRP - 8&nbsp;dB  |
-|    5    | MaxEIRP - 10&nbsp;dB |
-|    6    | MaxEIRP - 12&nbsp;dB |
-|    7    | MaxEIRP - 14&nbsp;dB |
+|    1    | MaxEIRP - 2 dB  |
+|    2    | MaxEIRP - 4 dB  |
+|    3    | MaxEIRP - 6 dB  |
+|    4    | MaxEIRP - 8 dB  |
+|    5    | MaxEIRP - 10 dB |
+|    6    | MaxEIRP - 12 dB |
+|    7    | MaxEIRP - 14 dB |
 | 8 ~ 15  |         RFU          |
 
-<br/>
+** CN470 **
 
-<b> CN470 </b>
-
-By default, MaxEIRP is considered to be +19.15&nbsp;dBm.
+By default, MaxEIRP is considered to be +19.15 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    |  MaxEIRP 2&nbsp;dB   |
-|    2    |  MaxEIRP 4&nbsp;dB   |
-|    3    |  MaxEIRP 6&nbsp;dB   |
-|    4    |  MaxEIRP 8&nbsp;dB   |
-|    5    | MaxEIRP - 10&nbsp;dB |
-|    6    | MaxEIRP - 12&nbsp;dB |
-|    7    | MaxEIRP - 14&nbsp;dB |
+|    1    |  MaxEIRP 2 dB   |
+|    2    |  MaxEIRP 4 dB   |
+|    3    |  MaxEIRP 6 dB   |
+|    4    |  MaxEIRP 8 dB   |
+|    5    | MaxEIRP - 10 dB |
+|    6    | MaxEIRP - 12 dB |
+|    7    | MaxEIRP - 14 dB |
 | 8 ~ 15  |         RFU          |
 
-<br/>
+** EU433 **
 
-<b> EU433 </b>
-
-By default, MAxEIRP is considered to be +12.15&nbsp;dBm.
+By default, MAxEIRP is considered to be +12.15 dBm.
 
 | TXPower | Configuration (EIRP) |
 | :-----: | :------------------: |
 |    0    |       MaxEIRP        |
-|    1    | MaxEIRP - 2&nbsp;dB  |
-|    2    | MaxEIRP - 4&nbsp;dB  |
-|    3    | MaxEIRP - 6&nbsp;dB  |
-|    4    | MaxEIRP - 8&nbsp;dB  |
-|    5    | MaxEIRP - 10&nbsp;dB |
+|    1    | MaxEIRP - 2 dB  |
+|    2    | MaxEIRP - 4 dB  |
+|    3    | MaxEIRP - 6 dB  |
+|    4    | MaxEIRP - 8 dB  |
+|    5    | MaxEIRP - 10 dB |
 | 6 ~ 15  |         RFU          |
-
-
 
 ----
 
@@ -1341,7 +1249,7 @@ By default, MAxEIRP is considered to be +12.15&nbsp;dBm.
 In the following list, M is the length including the MAC header; N is the maximum usable payload size for user data, excluding the MAC header.
 :::
 
-<b> EU868 </b>
+** EU868 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1355,9 +1263,7 @@ In the following list, M is the length including the MAC header; N is the maximu
 |     7     |     250     |     242     |
 |  8 ~ 15   | Not Defined | Not Defined |
 
-<br/>
-
-<b> US915 </b>
+** US915 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1375,9 +1281,7 @@ In the following list, M is the length including the MAC header; N is the maximu
 |    13     |     250     |     242     |
 |  14 ~ 15  | Not Defined | Not Defined |
 
-<br/>
-
-<b> AU915 </b>
+** AU915 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1397,9 +1301,7 @@ In the following list, M is the length including the MAC header; N is the maximu
 |    13     |     250     |     242     |
 |  14 ~ 15  | Not Defined | Not Defined |
 
-<br/>
-
-<b> KR920 </b>
+** KR920 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1411,93 +1313,22 @@ In the following list, M is the length including the MAC header; N is the maximu
 |     5     |     250     |     242     |
 |  6 ~ 15   | Not Defined | Not Defined |
 
-<br/>
+** AS923 **
 
-<b> AS923 </b>
+| Data Rate | Uplink MAC Payload Size (M) | Downlink MAC Payload Size (M) |  |  |
+| --- | --- | --- | --- | --- |
+|  | UplinkDwellTime = 0 | UplinkDwellTime = 1 | DownlinkDwellTime = 0 | DownlinkDwellTime = 1 |
+| 0 | 59 | N/A | 59 | N/A |
+| 1 | 59 | N/A | 59 | N/A |
+| 2 | 59 | 19 | 59 | 19 |
+| 3 | 123 | 61 | 123 | 61 |
+| 4 | 250 | 133 | 250 | 133 |
+| 5 | 250 | 250 | 250 | 250 |
+| 6 | 250 | 250 | 250 | 250 |
+| 7 | 250 | 250 | 250 | 250 |
+| 8 | RFU | RFU | RFU | RFU |
 
-<table>
-    <thead>
-        <tr>
-            <th>Data Rate</th>
-            <th colspan = "2">Uplink MAC Payload Size (M)</th>
-            <th colspan = "2">Downlink MAC Payload Size (M)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td>UplinkDwellTime = 0</td>
-            <td>UplinkDwellTime = 1</td>
-            <td>DownlinkDwellTime = 0</td>
-            <td>DownlinkDwellTime = 1</td>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td>59</td>
-            <td>N/A</td>
-            <td>59</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>59</td>
-            <td>N/A</td>
-            <td>59</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>59</td>
-            <td>19</td>
-            <td>59</td>
-            <td>19</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>123</td>
-            <td>61</td>
-            <td>123</td>
-            <td>61</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>250</td>
-            <td>133</td>
-            <td>250</td>
-            <td>133</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>250</td>
-            <td>250</td>
-            <td>250</td>
-            <td>250</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>250</td>
-            <td>250</td>
-            <td>250</td>
-            <td>250</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>250</td>
-            <td>250</td>
-            <td>250</td>
-            <td>250</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td colspan = "2">RFU</td>
-            <td colspan = "2">RFU</td>
-        </tr>
-    </tbody>
-</table>
-
-<br/>
-
-<b> IN865 </b>
+** IN865 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1511,9 +1342,7 @@ In the following list, M is the length including the MAC header; N is the maximu
 |     7     |     250     |     242     |
 |  8 ~ 15   | Not Defined | Not Defined |
 
-<br/>
-
-<b> RU864 </b>
+** RU864 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1527,9 +1356,7 @@ In the following list, M is the length including the MAC header; N is the maximu
 |     7     |     230     |     222     |
 |  8 ~ 15   | Not Defined | Not Defined |
 
-<br/>
-
-<b> CN470 </b>
+** CN470 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1541,9 +1368,7 @@ In the following list, M is the length including the MAC header; N is the maximu
 |     5     |     250     |     242     |
 |  6 ~ 15   | Not Defined | Not Defined |
 
-<br/>
-
-<b> EU433 </b>
+** EU433 **
 
 | Data Rate |      M      |      N      |
 | :-------: | :---------: | :---------: |
@@ -1557,7 +1382,3 @@ In the following list, M is the length including the MAC header; N is the maximu
 |     7     |     250     |     242     |
 |  8 ~ 15   | Not Defined | Not Defined |
 
-
-
-
-<RkBottomNav/>

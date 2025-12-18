@@ -10,9 +10,6 @@ sidebar_label: Datasheet
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7258 WisGate Edge Lite Datasheet
 
@@ -50,19 +47,11 @@ The overview shows the circuit board of RAK7258. It also presents the block diag
 
 #### Circuit Board (Main Electronic Circuit Board)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7258/datasheet/board_overview.svg"
-  width="80%"
-  caption="RAK7258 WisGate Edge Lite Circuit Board"
-/>
+> **Image:** RAK7258 WisGate Edge Lite Circuit Board
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7258/datasheet/block-diagram.png"
-  width="70%"
-  caption="RAK7258 WisGate Edge Lite Block Diagram"
-/>
+> **Image:** RAK7258 WisGate Edge Lite Block Diagram
 
 ### Hardware
 
@@ -72,11 +61,7 @@ The hardware specification covers only the interfacing of the RAK7258 and its co
 
 The RAK7258 WisGate Edge Lite's hardware interfaces include DC 12V, an ETH interface, console interface, a reset key, a USB port, a Nano-SIM slot, a TF Card slot, six status indicator LEDs, a LoRa antenna connector, etc. as shown in the following figure.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7258/datasheet/hardware-interfaces.png"
-  width="60%"
-  caption="RAK7258 WisGate Edge Lite Hardware Interfaces"
-/>
+> **Image:** RAK7258 WisGate Edge Lite Hardware Interfaces
 
 ##### Reset Key Functions
 The function of the **reset** key is as follows:
@@ -89,25 +74,51 @@ The status of the LEDs is described below:
 | LEDs | Status Indication Description                                                                                                                                                                                                        |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | PWR  | Power Indicator, LED on when device powers on                                                                                                                                                                                         |
-| ETH  | **ON**: linkup <br /> **OFF**: linkdown <br />**Flash**: Data transmitting and receiving                                                                                                                                                 |
-| LoRa | **ON**: LoRa is working <br />**OFF**: LoRa is not working <br />**Flash**: Indicate that LoRa Packet receiving and sending                                                                                                           |
+| ETH  | **ON**: linkup 
+ **OFF**: linkdown 
+**Flash**: Data transmitting and receiving                                                                                                                                                 |
+| LoRa | **ON**: LoRa is working 
+**OFF**: LoRa is not working 
+**Flash**: Indicate that LoRa Packet receiving and sending                                                                                                           |
 | ACT  | Expanded Led indicator, useless                                                                                                                                                                                                      |
 | STAT | Expanded Led indicator, useless                                                                                                                                                                                                      |
-| WLAN | AP Mode: <br />**ON**: WLAN is working<br />**Flash**: Data transmitting and receiving  <br/> STA Mode: <br />**Slow Flash (1Hz)**: Connection disconnected <br />**ON**: Connection successful <br />**Flash**: Data receiving and sending |
+| WLAN | AP Mode: 
+**ON**: WLAN is working
+**Flash**: Data transmitting and receiving  
+ STA Mode: 
+**Slow Flash (1Hz)**: Connection disconnected 
+**ON**: Connection successful 
+**Flash**: Data receiving and sending |
 
 #### Main Specifications
 
 | Feature             | Specifications                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Computing           | MT7628, DDR2RAM 128MB                                                                                                                                                                                                                                                                                                                  |
-| Wi-Fi Feature       | • **Frequency**: 2.400-2.4835GHz(802.11b/g/n) <br /> • **RX Sensitivity**: -95dBm (Min), <br />• **TX Power**: 20dBm (Max) <br /> • **Operation Channels**: 2.4GHz: 1-13                                                                                                                                                                     |
-| LoRa Feature       | • SX1301 Mini PCIe card <br /> • 8 Channels <br /> • **RX Sensitivity**: -139 dBm (Min) <br /> • **TX Power**: 27 dBm (Max) <br /> • **Frequency**: EU433 / CN470 / EU868 / US915 / AS923 / AU915 / IN865 / KR920                                                                                                                              |
-| Cellular            | Supports Quectel EG95-E / EG95-NA(IoT/M2M-optimized LTE Cat 4 Module), not supported by default  <br/>  EG95-E for EMEA Region: <br /> • **LTE FDD**: B1/B3/B7/B8/B20/B28A <br /> • **WCDMA**: B1/B8 <br /> • **GSM/EDGE**: B3/B8  <br/>  EG95-NA for North America Region: <br /> • **LTE FDD**: B2/B4/B5/B12/B13 <br /> • **WCDMA**: B2/B4/B5 |
-| Power Supply        | • DC 12 Volts - 1 Ampere <br /> • POE (IEEE 802.3af), 42~57 VDC                                                                                                                                                                                                                                                                          |
+| Wi-Fi Feature       | • **Frequency**: 2.400-2.4835GHz(802.11b/g/n) 
+ • **RX Sensitivity**: -95dBm (Min), 
+• **TX Power**: 20dBm (Max) 
+ • **Operation Channels**: 2.4GHz: 1-13                                                                                                                                                                     |
+| LoRa Feature       | • SX1301 Mini PCIe card 
+ • 8 Channels 
+ • **RX Sensitivity**: -139 dBm (Min) 
+ • **TX Power**: 27 dBm (Max) 
+ • **Frequency**: EU433 / CN470 / EU868 / US915 / AS923 / AU915 / IN865 / KR920                                                                                                                              |
+| Cellular            | Supports Quectel EG95-E / EG95-NA(IoT/M2M-optimized LTE Cat 4 Module), not supported by default  
+  EG95-E for EMEA Region: 
+ • **LTE FDD**: B1/B3/B7/B8/B20/B28A 
+ • **WCDMA**: B1/B8 
+ • **GSM/EDGE**: B3/B8  
+  EG95-NA for North America Region: 
+ • **LTE FDD**: B2/B4/B5/B12/B13 
+ • **WCDMA**: B2/B4/B5 |
+| Power Supply        | • DC 12 Volts - 1 Ampere 
+ • POE (IEEE 802.3af), 42~57 VDC                                                                                                                                                                                                                                                                          |
 | Power Consumption   | 12 Watts (typical)                                                                                                                                                                                                                                                                                                                     |
 | Ethernet (ETH)      | RJ-45(10/100M)                                                                                                                                                                                                                                                                                                                         |
 | Console             | RJ-45 (RS232)                                                                                                                                                                                                                                                                                                                          |
-| Antenna             | • **LoRa**: RP-SMA Female Connector <br /> • **Wi-Fi**: Internal antenna                                                                                                                                                                                                                                                                 |
+| Antenna             | • **LoRa**: RP-SMA Female Connector 
+ • **Wi-Fi**: Internal antenna                                                                                                                                                                                                                                                                 |
 | LEDs                | LoRa LED(1), Cellular LED (2), POWER LED(1), ETH LED(1), WiFi LED(1)                                                                                                                                                                                                                                                                   |
 | Ingress Protection  | IP30                                                                                                                                                                                                                                                                                                                                   |
 | Enclosure Material  | Plastics                                                                                                                                                                                                                                                                                                                               |
@@ -133,8 +144,28 @@ The status of the LEDs is described below:
 | Wireless Standard                                          | IEEE 802.11b/g/n                                                                                                                                                                                                                                    |
 | Operating Frequency                                        | **ISM band**: 2.412~2.472(GHz)                                                                                                                                                                                                                      |
 | Operation Channels                                         | 2.4GHz: 1-13                                                                                                                                                                                                                                        |
-| Transmit Power (Max power on local regulations) -per chain | **802.11b** <br /> • 1Mbps: 19dBm <br /> • 11Mbps: 19dBm  <br/> **802.11g** <br /> • 6Mbps: 18dBm <br /> • 54Mbps: 16dBm  <br/> **802.11n(2.4G)** <br /> • MCS0 (HT20): 18dBm <br /> • MCS7 (HT20): 16dBm <br /> • MCS0 (HT40): 17dBm <br /> • MCS7 (HT40): 15dBm |
-| Receiver Sensitivity (Typical)                             | **802.11b** <br /> • 1Mbps: -95dBm <br /> • 11Mbps: -88dBm  <br/> **802.11g** <br /> • 6Mbps: -90dBm <br /> • 54Mbps: -75dBm  <br/> **802.11n(2.4G)** <br /> • MCS0 (HT20): -89dBm <br /> • MCS7(HT20): -72dBm <br /> • MCS0(HT40): -86dBm <br /> • MCS7(HT40): -68dBm    |
+| Transmit Power (Max power on local regulations) -per chain | **802.11b** 
+ • 1Mbps: 19dBm 
+ • 11Mbps: 19dBm  
+ **802.11g** 
+ • 6Mbps: 18dBm 
+ • 54Mbps: 16dBm  
+ **802.11n(2.4G)** 
+ • MCS0 (HT20): 18dBm 
+ • MCS7 (HT20): 16dBm 
+ • MCS0 (HT40): 17dBm 
+ • MCS7 (HT40): 15dBm |
+| Receiver Sensitivity (Typical)                             | **802.11b** 
+ • 1Mbps: -95dBm 
+ • 11Mbps: -88dBm  
+ **802.11g** 
+ • 6Mbps: -90dBm 
+ • 54Mbps: -75dBm  
+ **802.11n(2.4G)** 
+ • MCS0 (HT20): -89dBm 
+ • MCS7(HT20): -72dBm 
+ • MCS0(HT40): -86dBm 
+ • MCS7(HT40): -68dBm    |
 
 ### Firmware
 
@@ -143,7 +174,6 @@ RAK7258 supports software in LoRa, Network and Management. Supported features ar
 | Model                    | Firmware Version  | Source                                                                                     |
 | ------------------------ | ----------------- | ------------------------------------------------------------------------------------------ |
 | RAK7258 WisGate Edge Lite | WisGateOS V1.3.9 | [Download](https://downloads.rakwireless.com/LoRa/WisGateOS/WisGateOS_Latest_Firmware.zip) |
-
 
 ### Software
 

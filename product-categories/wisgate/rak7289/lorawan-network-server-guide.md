@@ -8,9 +8,6 @@ keywords:
 image: https://images.docs.rakwireless.com/wisgate/rak7289/RAK7289.png
 sidebar_label: LoRaWAN Network Server Guide
 ---    
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7289 LoRaWAN Network Server Guide
 
@@ -18,11 +15,9 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 Execute the following steps to set up your AWS account and permissions:
 
-
 ### Set up Your AWS Account and Permissions
 
 If you don't have an AWS account, refer to the [AWS guide](https://docs.aws.amazon.com/iot/latest/developerguide/setting-up.html). The relevant sections are **Sign up for an AWS account** and **Create a user and grant permissions**.
-
 
 #### Overview
 
@@ -62,7 +57,6 @@ You can select an appropriate frequency band from the [RAK store](https://store.
 
 :::
 
-
 ##### Add the LoRaWAN Gateway
 
 To register the gateway with AWS IoT Core for LoRaWAN, follow the steps in the [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-onboard-gateway-add.html) under the **Add a gateway using the console** section.
@@ -90,7 +84,6 @@ Because most LoRaWAN devices don't send data to AWS IoT Core for LoRaWAN in a fo
 
 For more information, refer to the [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-create-destinations.html) under sections **Add a destination using the console** and **Create an IAM role for your destinations**. Also, refer to **Create rules to process LoRaWAN device messages** section in the [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-create-destinations.html).
 
-
 ### Set up the Gateway
 
 - [**Set up the Gateway Hardware**](https://docs.rakwireless.com/product-categories/wisgate/rak7289/quickstart/#power-on-the-gateway)
@@ -99,7 +92,6 @@ For more information, refer to the [online guide](https://docs.aws.amazon.com/io
 For Additional Software References, check the following link:
 
 - [**Community Forum**](https://forum.rakwireless.com/?utm_source=Docs&utm_medium=Docsheader&utm_campaign=RAKDocs)
-
 
 #### Configure the Gateway Device
 
@@ -118,22 +110,13 @@ No password is required to connect via Wi-Fi.
 - Username: **root**
 - Password: **root**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/aws/1.login-page.png"
-  width="100%"
-  caption="Login page"
-/>
+> **Image:** Login page
 
 3. The first firmware version that supports AWS IoT Core for LoRaWAN is **1.2.0065_Release_r209**. It can be verified on **Status** -> **Overview** -> **System** -> **Firmware Version**.
 
 4. Navigate to **System** -> **Backup/Flash Firmware** -> **Flash new firmware image**, and upgrade the firmware.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/aws/2.flash-fw.png"
-  width="100%"
-  caption="Flash new firmware image"
-/>
+> **Image:** Flash new firmware image
 
 4. Configure Network Mode to Basic Station.
 
@@ -141,21 +124,11 @@ No password is required to connect via Wi-Fi.
     - Change **Mode** in LoRaWAN Network Settings to **Basic Station**.
     - Select **LNS Server** from Server, then select **TLS Server and Client Authentication** from Authentication Mode.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/aws/3.configure-lorawan-settings.png"
-  width="100%"
-  caption="Configure network settings to Basic Station"
-/>
+> **Image:** Configure network settings to Basic Station
 
 5. Configure URI, Port and Authentication Mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/aws/4.basic-station-configuration.png"
-  width="100%"
-  caption="Configure network settings to Basic Station"
-/>
-
+> **Image:** Configure network settings to Basic Station
 
 ##### Connect the Gateway and Verify the Connection Status
 
@@ -163,13 +136,7 @@ Follow the instructions in the [online guide](https://docs.aws.amazon.com/iot/la
 
 To verify the connection status, refer to the instructions in the **Check gateway connection status using the console** section.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/aws/8.verify-connection.png"
-  width="100%"
-  caption="LNS server configuration"
-/>
-
+> **Image:** LNS server configuration
 
 ### Add End-Devices
 
@@ -181,19 +148,13 @@ Follow the instructions in the [online guide](https://docs.aws.amazon.com/iot/la
 
 To verify the connection status, refer to the instructions in the **Check device connection status using the console** section.  You can also check [**View format of uplink messages sent from LoRaWAN devices**](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-uplink-metadata-format.html).
 
-
 ### Verifying Operation
 
 Once setup is completed, provisioned OTAA devices can join the network and start to send messages. Messages from devices can then be received by AWS IoT Core for LoRaWAN and forwarded to the IoT Rules Engine.
 
 Instructions for a sample Hello World application are given below, assuming that the device has joined and is capable of sending uplink traffic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/aws/9.uplink-architecture.png"
-  width="100%"
-  caption="Sending Uplink Architecture"
-/>
-
+> **Image:** Sending Uplink Architecture
 
 #### Create a Lambda Function for Destination Rule
 
@@ -413,7 +374,6 @@ You will be using the Amazon Simple Notification Service to send text messages (
       - Under **Endpoint**, enter the previously validated phone number to receive the SMS alerts.
       - Choose **Create subscription**. You should see a "_**Subscription to text_topic created successfully**_" message.
 
-
 ##### Add a Rule for Amazon SNS Notification
 
 Now, add a new rule to send an Amazon SNS notification when certain conditions are met in a decoded message.
@@ -469,11 +429,7 @@ Follow the instruction in the [Deploy SAM template to AWS](https://github.com/aw
 3. Subscribe to the wildcard topic **#** to receive messages from all topics.
 4. Specify the topic to **`cmd/downlink/{WirelessDeviceId}`** and a base64-encoded message.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/lorawan-network-server-guide/aws/15.publish.png"
-  width="90%"
-  caption="Specifying a topic"
-/>
+> **Image:** Specifying a topic
 
 5. You should see traffic on AWS similar as shown below:
 
@@ -494,12 +450,7 @@ Follow the instruction in the [Deploy SAM template to AWS](https://github.com/aw
   }
 ```
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7248/lorawan-network-server-guide/aws/16.cmd.png"
-  width="80%"
-  caption="Traffic on AWS"
-/>
+> **Image:** Traffic on AWS
 
 5. You should see traffic on your console of end-device similar as shown below:
 
@@ -514,7 +465,7 @@ You will use IoT Analytics to visually display data via graphs if there is a nee
 
 ###### Create an IoT Analytics Rule
 
-<b> Create a Rule First </b>
+** Create a Rule First **
 
 1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. In the navigation pane, choose **Act** and then, choose **Rules**.
@@ -532,10 +483,9 @@ You will use IoT Analytics to visually display data via graphs if there is a nee
 11. Once the **Quick Create Finished** message is displayed, choose **Add action**.
 12. Choose **Create rule**. You should see a Success message, indicating that the rule has been created.
 
-
 ###### Configure AWS IoT Analytics
 
-<b> Set Up AWS IoT Analytics </b>
+** Set Up AWS IoT Analytics **
 
 1. Go to the [AWS IoT Analytics console](http://console.aws.amazon.com/iotanalytics).
 2. In the navigation panel, choose **Data sets**.
@@ -569,7 +519,6 @@ Amazon QuickSight lets you easily create and publish interactive BI dashboards t
 15. Choose **Create data source**, and then choose **Visualize**.
 16. Select the dataset created, then select **Refresh** or **Schedule Refresh** for a periodic refresh of the dataset.
 
-
 #### Testing Your "Hello Word" Application
 
 Using your device, create a condition to generate an event such as a high-temperature condition. If the temperature is above the configured threshold, then you will receive a text alert on your phone. This alert will include key parameters about the alert.
@@ -588,7 +537,6 @@ You can also visualize the data set as follows:
     - **Value** as temp (Average)
     - **Color** as device_id.
 
-
 ### Debugging
 
 If you experience any issues, you can check the logs located in the `/var/log/` directory.
@@ -599,20 +547,13 @@ If you experience any issues, you can check the logs located in the `/var/log/` 
     - Check that your wifi is connected to **RAK7Wireless_XXXX**.
     - Try ping **192.168.230.1**.
 
-
-
 ## The Things Network v3 (TTNv3)
 
 In this section, it will be shown how to connect RAK7289 WisGate Edge Pro to TTNv3.
 
 To login into the TTNv3, head on [here](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/1.png"
-  width="100%"
-  caption="The Things Stack Home Page"
-/>
-
+> **Image:** The Things Stack Home Page
 
 :::tip NOTE
 This tutorial is for the EU868 Frequency band.
@@ -621,21 +562,13 @@ This tutorial is for the EU868 Frequency band.
 
 1. To register a commercial gateway, choose **Register a gateway** (for new users that do not already have a registered gateway) or go to **Gateways** > **+ Add gateway** (for users that have registered gateways before).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/2.png"
-  width="100%"
-  caption="Console Page after successful login"
-/>
+> **Image:** Console Page after successful login
 
 2. You will be redirected to the **Register gateway** page.
 
 3. In the **Gateway EUI** field type the EUI of the gateway. The gateway's EUI can be found either on the sticker on the casing or by going to the **LoRa Network Settings** page in the **LoRa Gateway** menu accessible via the Web UI. Instructions on how to access your gateway via Web UI can be found in the product's [Quickstart Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7289/quickstart/#access-the-gateway).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/3.png"
-  width="100%"
-  caption="Register gateway"
-/>
+> **Image:** Register gateway
 
 4. After typing the EUI, click on **Confirm**. Additional fields will pop up. Fill in the following information:
 
@@ -646,24 +579,16 @@ This tutorial is for the EU868 Frequency band.
 - **Frequency plan** - The frequency plan used by the gateway.
 
 :::tip NOTE
-For this tutorial, we will use Europe 863-870&nbsp;MHz (SF12 for RX2).
+For this tutorial, we will use Europe 863-870 MHz (SF12 for RX2).
 :::
 
 - The other settings are optional and can be changed to satisfy your requirements.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/4.png"
-  width="100%"
-  caption="Adding a gateway"
-/>
+> **Image:** Adding a gateway
 
 5. To register your gateway click **Register gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/5.png"
-  width="100%"
-  caption="Successfully added gateway"
-/>
+> **Image:** Successfully added gateway
 
 TTNv3 supports TLS server authentication and Client token, which requires a trust file and a key file to configure the Gateway to successfully connect it to the network.
 
@@ -671,35 +596,19 @@ TTNv3 supports TLS server authentication and Client token, which requires a trus
 
 1. To generate a key file, from the **Overview page** of the registered Gateway navigate to **API keys**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/6.png"
-  width="100%"
-  caption="Overview page"
-/>
+> **Image:** Overview page
 
 2. On the **API keys page**, choose **+ Add API key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/7.png"
-  width="100%"
-  caption="API key page"
-/>
+> **Image:** API key page
 
 3. In the **Name field** type the name of your key (for example - mykey). Choose **Grant individual rights** and select **Link as Gateway to a Gateway for traffic exchange, i.e. read uplink and write downlink**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/8.png"
-  width="100%"
-  caption="Generating an API key"
-/>
+> **Image:** Generating an API key
 
 4. To generate the key, choose **Create API key**. The following window will pop up, telling you to copy the key you just generated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/9.png"
-  width="60%"
-  caption="Copying the generated key"
-/>
+> **Image:** Copying the generated key
 
 :::warning
 Copy the key and save it in a .txt file (or other), because you won’t be able to view or copy your key after that.
@@ -713,11 +622,7 @@ Copy the key and save it in a .txt file (or other), because you won’t be able 
 
 2. Navigate to **LoRa Network** > **Network Settings** > **Mode** drop-down menu > choose **Basics Station**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/10.png"
-  width="100%"
-  caption="Changing the working mode"
-/>
+> **Image:** Changing the working mode
 
 3. Select **Switch mode** to apply the change. After that, the **Basics Station Configuration** pane settings will show up. To connect the Gateway to TTNv3, the following parameters must be configured:
 
@@ -736,21 +641,13 @@ Authorization: YOUR_API_KEY
 Replace **YOUR_API_KEY** with the key generated previously. Have in mind that there should be a “space” between **Authorization:** and **YOUR_API_KEY**, as shown in the example.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/11.png"
-  width="100%"
-  caption="LoRa Basics Station settings"
-/>
+> **Image:** LoRa Basics Station settings
 
 4. To save the changes click **Save & Apply**.
 
 You can now see that your gateway is connected to TTNv3 as Basics Station:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289/supported-lora-network-servers/ttn/12.png"
-  width="100%"
-  caption="Successful connection"
-/>
+> **Image:** Successful connection
 
 ## ThingPark by Actility
 

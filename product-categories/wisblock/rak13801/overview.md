@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13801 WisBlock UWB Module
 
 Thank you for choosing **RAK13801 WisBlock UWB Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -26,14 +24,14 @@ Thank you for choosing **RAK13801 WisBlock UWB Module** in your awesome IoT Proj
 
 ## Product Description
 
-RAK13801 is a WisBlock IO that extends the WisBlock system based on Decawave's DW1000 module. This module uses a UWB (Ultra Wideband) Technology, a short-range wireless communication similar to Wi-Fi or Bluetooth and it uses a frequency bandwidth above 1&nbsp;GHz. It has an integrated antenna, all RF circuitry, power management, and clock circuitry in one module. It can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10&nbsp;cm and supports data rates of up to 6.8&nbsp;Mbps.
+RAK13801 is a WisBlock IO that extends the WisBlock system based on Decawave's DW1000 module. This module uses a UWB (Ultra Wideband) Technology, a short-range wireless communication similar to Wi-Fi or Bluetooth and it uses a frequency bandwidth above 1 GHz. It has an integrated antenna, all RF circuitry, power management, and clock circuitry in one module. It can be used in 2-way ranging or TDOA location systems to locate assets to a precision of 10 cm and supports data rates of up to 6.8 Mbps.
 
 ## Product Features
 
 * **Module specifications**
     * Power supply: **VBAT**
     * Chipset: **Decawave DW1000**
-    * Operating temperature: **-40&nbsp;°C ~ 85&nbsp;°C**
+    * Operating temperature: **-40 °C ~ 85 °C**
     * Very precise location of tagged objects delivers enterprise efficiency gains and cost reductions
     * Extended communications range minimizes required infrastructure in RTLS
     * High multipath fading immunity
@@ -42,7 +40,7 @@ RAK13801 is a WisBlock IO that extends the WisBlock system based on Decawave's D
     * Low power consumption reduces the need to replace batteries and lowers system lifetime costs
 
 * **Size**
-    * 35 x 25&nbsp;mm
+    * 35 x 25 mm
 
 ## Prerequisites
 
@@ -52,4 +50,3 @@ To use a **RAK13801**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK16002 WisBlock Coulomb Sensor Module Quick Start Guide
 
 ## Prerequisite
@@ -45,18 +42,9 @@ RAK16002 is a Coulomb sensor module based on LTC2941IDCB that features programma
 
 The RAK16002 WisBlock Coulomb sensor module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws. In this example, we use J2 shorted pin1 and pin2 (internal charge/load) and J4 shorted pin1 and pin2 (internal battery measurement). See **Figure 2** for jumper and battery connector settings.
 
+> **Image:** RAK16002 connection to WisBlock Base Board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak16002_assembly.svg" 
-  caption="RAK16002 connection to WisBlock Base Board" 
-   width="60%"
-/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak16002_jumper.svg" 
-  caption="RAK16002 jumper and battery connectors" 
-   width="40%"
-/>
+> **Image:** RAK16002 jumper and battery connectors
 
 :::tip NOTE
 - **J2  charge/load select**
@@ -77,11 +65,7 @@ The RAK16002 WisBlock Coulomb sensor module can be mounted on the IO slot of the
 
 The RAK16002 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/image-20210225140433974.png" 
-  caption="RAK16002 mounting connection to WisBlock Base module" 
-   width="50%"
-/>
+> **Image:** RAK16002 mounting connection to WisBlock Base module
 
 ##### Disassembling Procedure
 
@@ -89,29 +73,15 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. Remove the screws.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/16.removing-screws.png" 
-  caption="Removing screws from the WisBlock module" 
-   width="70%"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/17.detaching-silkscreen.png" 
-  caption="Detaching silkscreen on the WisBlock module" 
-   width="70%"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/18.detaching-module.png" 
-  caption="Applying even forces on the proper location of a WisBlock module" 
-   width="70%"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -131,11 +101,7 @@ In our example, you can measure voltage and DC current from a sensor.
 
 Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) to find the RAK4631 in the Arduino Boards Manager.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak4631_board.png" 
-  caption="Selecting RAK4631 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -205,7 +171,6 @@ void setup(void)
   ltc2941.setAccumulatedCharge(42352); // Set the current battery level to 1800 mAh.
 
   attachInterrupt(digitalPinToInterrupt(INTERRUPT_PIN), interruptRoutine, FALLING);
-
 
   ltc2941.setBatteryAlert( VBAT_3_0_V );
 
@@ -285,47 +250,25 @@ void interruptRoutine()
 
 3. Once the example sketch is open, install the **GROVE-Coulomb_Counter** library by clicking the red-highlighted link, as shown in **Figure 8** and **Figure 9**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak4631_library.png" 
-  caption="Install GROVE-Coulomb_Counter Library" 
-   width="100%"
-/>
+> **Image:** Install GROVE-Coulomb_Counter Library
 
 Click on the **Install** button to finish the library installation.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak4631_library_install.png" 
-  caption="Arduino Library Manager GROVE-Coulomb_Counter" 
-   width="100%"
-/>
+> **Image:** Arduino Library Manager GROVE-Coulomb_Counter
 
 4. Now, you can select the right port and upload the code, as shown in **Figure 10** and **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak4631_select_port.png" 
-  caption="Selecting the correct Serial Port" 
-   width="100%"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak4631_uploading.png" 
-  caption="Uploading the RAK16002 Sample code" 
-   width="100%"
-/>
+> **Image:** Uploading the RAK16002 Sample code
 
 After a successful upload, open the Arduino Serial Monitor by clicking **Tools**->**Serial Monitor** and check the charge, capacity, and charge percentage.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak4631_serial_logs.png" 
-  caption="RAK16002 serial monitor" 
-   width="100%"
-/>
+> **Image:** RAK16002 serial monitor
 
 :::tip NOTE
 If you experience any error in compiling an example sketch, check the updated code for the RAK16002 WisBlock Core Module that can be found on the [RAK16002 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK16002_Coulomb).
 :::
-
 
 #### RAK16002 in RAK11200 WisBlock Core Guide
 
@@ -335,11 +278,7 @@ If you experience any error in compiling an example sketch, check the updated co
 
 Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) to find the RAK11200 in the Arduino Boards Manager.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200_board.png" 
-  caption="Selecting RAK11200 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -409,7 +348,6 @@ void setup(void)
   ltc2941.setAccumulatedCharge(42352); // Set the current battery level to 1800 mAh.
 
   attachInterrupt(digitalPinToInterrupt(INTERRUPT_PIN), interruptRoutine, FALLING);
-
 
   ltc2941.setBatteryAlert( VBAT_3_0_V );
 
@@ -489,56 +427,31 @@ void interruptRoutine()
 
 3. Once the example sketch is open, install the **GROVE-Coulomb_Counter** library by clicking the red-highlighted link, as shown in **Figure 14** and **Figure 15**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200_library_install.png" 
-  caption="Install GROVE-Coulomb_Counter Library" 
-   width="100%"
-/>
+> **Image:** Install GROVE-Coulomb_Counter Library
 
 Click on the **Install** button to finish library installation.
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200_library_install.png" 
-  caption="Install GROVE-Coulomb_Counter Library" 
-   width="100%"
-/>
+
+> **Image:** Install GROVE-Coulomb_Counter Library
 
 4. Now, you can select the right port and upload the code, as shown in **Figure 16** and **Figure 18**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200_select_port.png" 
-  caption="Selecting the correct Serial Port" 
-   width="100%"
-/>
+> **Image:** Selecting the correct Serial Port
 
 Before uploading your sketch, short circuit **BOOT0** and **GND** pin and press the reset button. Then click the **Upload** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200-boot0-for-flashing.svg" 
-  caption="Force ESP32 download mode" 
-   width="40%"
-/>
+> **Image:** Force ESP32 download mode
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200_uploading.png" 
-  caption="Uploading the RAK16002 sample code" 
-   width="100%"
-/>
+> **Image:** Uploading the RAK16002 sample code
 
 After a successful upload, open the Arduino Serial Monitor by clicking **Tools** -> **Serial Monitor** and check the charge, capacity, and charge percentage.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11200_serial_logs.png" 
-  caption="RAK16002 serial monitor" 
-   width="100%"
-/>
+> **Image:** RAK16002 serial monitor
 
 :::tip NOTE
 If you experience any error in compiling an example sketch, check the updated code for the RAK16002 WisBlock Core Module that can be found on the [RAK16002 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK16002_Coulomb).
 :::
 
-
 #### RAK16002 in RAK11310 WisBlock Core Guide
-
 
 ##### Arduino Setup
 
@@ -546,11 +459,7 @@ If you experience any error in compiling an example sketch, check the updated co
 
 Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) to find the RAK11310 in the Arduino Boards Manager.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11300_board.png" 
-  caption="Selecting RAK11300 as WisBlock Core" 
-   width="100%"
-/>
+> **Image:** Selecting RAK11300 as WisBlock Core
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -620,7 +529,6 @@ void setup(void)
   ltc2941.setAccumulatedCharge(42352); // Set the current battery level to 1800 mAh.
 
   attachInterrupt(digitalPinToInterrupt(INTERRUPT_PIN), interruptRoutine, FALLING);
-
 
   ltc2941.setBatteryAlert( VBAT_3_0_V );
 
@@ -700,40 +608,21 @@ void interruptRoutine()
 
 3. Once the example sketch is open, install the **GROVE-Coulomb_Counter** library by clicking the red-highlighted link, as shown in **Figure 21** and **Figure 22**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11300_library.png" 
-  caption="Install GROVE-Coulomb_Counter Library" 
-   width="100%"
-/>
+> **Image:** Install GROVE-Coulomb_Counter Library
 
 Click on the **Install** button to finish library installation.
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11300_library_install.png" 
-  caption="Install GROVE-Coulomb_Counter Library" 
-   width="100%"
-/>
+
+> **Image:** Install GROVE-Coulomb_Counter Library
 
 4. Now, you can select the correct port and upload the code, as shown in **Figure 23** and **Figure 24**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11300_select_port.png" 
-  caption="Selecting the correct Serial Port" 
-   width="100%"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11300_uploading.png" 
-  caption="Uploading the RAK16002 Sample code" 
-   width="100%"
-/>
+> **Image:** Uploading the RAK16002 Sample code
 
 After a successful upload, open the Arduino Serial Monitor by clicking **Tools** -> **Serial Monitor** and check the charge, capacity, and charge percentage.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak16002/quickstart/rak11300_serial_logs.png" 
-  caption="RAK16002 serial monitor" 
-   width="100%"
-/>
+> **Image:** RAK16002 serial monitor
 
 :::tip NOTE
 If you experience any error in compiling an example sketch, execute the following steps:
@@ -743,4 +632,3 @@ If you experience any error in compiling an example sketch, execute the followin
 2. Check the updated code for the RAK16002 WisBlock Core Module that can be found on the [RAK16002 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK16002_Coulomb).
 :::
 
-<RkBottomNav/>

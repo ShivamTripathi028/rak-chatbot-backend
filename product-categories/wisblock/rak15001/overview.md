@@ -12,8 +12,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK15001 WisBlock Flash Module
 
 Thank you for choosing **RAK15001 WisBlock Flash Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -34,22 +32,22 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-The RAK15001 is a NOR flash module with a 16&nbsp;MBit (2&nbsp;MByte) nonvolatile memory. It uses GD25Q16CNIG (16&nbsp;Mbit) from GigaDevice with standard SPI interface. In this large memory, you can save big data that your applications need to access frequently, like conversion tables, lookup tables or images, and even sound files. Compared to the EEPROM module, the RAK15001 Flash Memory module has fewer write/erase cycles, so it is not ideal as storage for constantly changing data like for sensor readings.
+The RAK15001 is a NOR flash module with a 16 MBit (2 MByte) nonvolatile memory. It uses GD25Q16CNIG (16 Mbit) from GigaDevice with standard SPI interface. In this large memory, you can save big data that your applications need to access frequently, like conversion tables, lookup tables or images, and even sound files. Compared to the EEPROM module, the RAK15001 Flash Memory module has fewer write/erase cycles, so it is not ideal as storage for constantly changing data like for sensor readings.
 
 ## Product Features
 
 * **Sensor specifications**
-    * 16&nbsp;Mbit (2&nbsp;MByte) capacity
+    * 16 Mbit (2 MByte) capacity
     * SPI interface: SCLK, CS#, SI, SO, WP#, HOLD#
     * Software/Hardware write protection
     * GigaDevice GD25Q16 chip
-    * Full voltage range: **2.7~3.6&nbsp;V**
-    * Standby current less than 5&nbsp;uA
-    * Temperature range: **-40&nbsp;°C to +85&nbsp;°C**
+    * Full voltage range: **2.7~3.6 V**
+    * Standby current less than 5 uA
+    * Temperature range: **-40 °C to +85 °C**
     * Chipset: GigaDevice GD25Q16CNIG
 
 * **Module Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -59,4 +57,3 @@ To use a **RAK15001**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

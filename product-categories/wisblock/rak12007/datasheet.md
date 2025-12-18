@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12007 WisBlock Ultrasonic Sensor Module Datasheet
 
 ## Overview
@@ -23,14 +20,13 @@ RAK12007 is an ultrasonic sensor module based on the CS100, an industrial-grade 
 
 For an ultrasonic detector, there are two main parts: **Emitter** and **Detector**. The emitter transmits an ultrasonic sound wave, and the detector receives back the signal from the emitter reflected by an object. By calculating the travel time and the speed of sound, the distance of the object can be determined.
 
-
 ### Features
 
-* Detect Range: 2&nbsp;cm to 4&nbsp;m
-* 3.3&nbsp;V Power supply
-* Standby Current: < 170&nbsp;uA
+* Detect Range: 2 cm to 4 m
+* 3.3 V Power supply
+* Standby Current: < 170 uA
 * Chipset: angoSense CS100
-* **Module size**: 25 x 48&nbsp;mm
+* **Module size**: 25 x 48 mm
 
 ## Specifications
 
@@ -38,37 +34,19 @@ For an ultrasonic detector, there are two main parts: **Emitter** and **Detector
 
 **Figure 1** shows the operation of the RAK12007 Ultrasonic Sensor Module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-waves.png"
-  width="50%"
-  caption="RAK12007 Ultrasonic Sensor Operation"
-/>
-
+> **Image:** RAK12007 Ultrasonic Sensor Operation
 
 **Figure 2** and **Figure 3** display the RAK12007 front view (top) and bottom view, respectively.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-top.svg"
-  width="40%"
-  caption="RAK12007 Top View"
-/>
+> **Image:** RAK12007 Top View
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-bottom.svg"
-  width="40%"
-  caption="RAK12007 Bottom View"
-/>
-
+> **Image:** RAK12007 Bottom View
 
 #### Mounting
 
 The RAK12007 WisBlock Ultrasonic Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 4** shows the mounting mechanism of the RAK12007 on a WisBlock Base module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-mounting.png"
-  width="50%"
-  caption="RAK12007 Mounting"
-/>
+> **Image:** RAK12007 Mounting
 
 ### Hardware
 
@@ -80,17 +58,11 @@ The hardware specification is categorized into five parts. It shows the chipset 
 | --------- | ----------- |
 | angoSense | CS100       |
 
-
 #### Pin Definition
 
 The RAK12007 WisBlock module has a 40-pin WisConnector that is compatible with the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 5**
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-pinout.svg"
-  width="80%"
-  caption="RAK12007 WisBlock Ultrasonic Sensor Module Pinout"
-/>
+> **Image:** RAK12007 WisBlock Ultrasonic Sensor Module Pinout
 
 :::tip NOTE
 
@@ -108,8 +80,8 @@ The RAK12007 WisBlock module has a 40-pin WisConnector that is compatible with t
 | V<sub>POR</sub>       | Power-on reset voltage                      |       |   1   |  1.3  |   V   |
 | I<sub>DD</sub>        | Capacitive Sensing Active                   |   -   |  500  |  750  |  uA   |
 | I<sub>DSLEEP_3V</sub> | Deep Sleep State current                    |   -   |   5   |   -   |  uA   |
-| I<sub>STBY_DEF</sub>  | Standby state active 70&nbsp;ms cycle time  |       |  120  |  170  |  uA   |
-| I<sub>STBY_LP</sub>   | Standby state active 140&nbsp;ms cycle time |       |  50   |       |  uA   |
+| I<sub>STBY_DEF</sub>  | Standby state active 70 ms cycle time  |       |  120  |  170  |  uA   |
+| I<sub>STBY_LP</sub>   | Standby state active 140 ms cycle time |       |  50   |       |  uA   |
 
 #### Mechanical Characteristics
 
@@ -117,40 +89,19 @@ The RAK12007 WisBlock module has a 40-pin WisConnector that is compatible with t
 
 **Figure 6** shows the dimensions and the mechanic drawing of the RAK12007 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-dimensions.svg"
-  width="80%"
-  caption="RAK12007 WisBlock Ultrasonic Sensor Mechanic Drawing"
-/>
+> **Image:** RAK12007 WisBlock Ultrasonic Sensor Mechanic Drawing
 
 **Figure 7** and **Figure 8** show the mounting holes location and diameter of RAK12007 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-pwb-1.png"
-  width="100%"
-  caption="RAK12007 Mounting Holes Location and Diameter"
-/>
+> **Image:** RAK12007 Mounting Holes Location and Diameter
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/rak12007-pwb-2.png"
-  width="100%"
-  caption="RAK12007 Mounting Holes Location and Diameter"
-/>
+> **Image:** RAK12007 Mounting Holes Location and Diameter
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/connector-schematic.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/datasheet/footprint.png"
-  width="100%"
-  caption="RAK12007 WisBlock Ultrasonic Sensor Schematic"
-/>
+> **Image:** RAK12007 WisBlock Ultrasonic Sensor Schematic
 
-<RkBottomNav/>

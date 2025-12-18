@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK1921 WisBlock OLED Display
 
 Thank you for choosing **RAK1921 WisBlock OLED Display** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -34,12 +30,10 @@ For All WisBlock Core Modules:
 
 **RAK1921** is a **WisBlock Display** module, which extends the **WisBlock** system with an OLED display. A ready to use SW library and tutorial makes it easy to visualize data of your **WisBlock** solution.
 
-
-
 ## Product Features
 
 * **Module specifications**
-    * 0.96&nbsp;in OLED display
+    * 0.96 in OLED display
     * 128x64 pixel resolution
     * Bright white color on black background
     * I2C interface
@@ -51,22 +45,17 @@ For All WisBlock Core Modules:
     * Chipset: Solomon Systech Limited SSD1306
 
 * **Size**
-    * 27.8 x 27.3&nbsp;mm
+    * 27.8 x 27.3 mm
 
 ## Prerequisites
 
 To use a **RAK1921**, you need at least a **WisBlock Base** to plug the module in. **WisBlock Base** is the power supply for the **RAK1921** module. Furthermore, you need a **WisBlock Core** module to use the sensor.
 
-**RAK1921** does not occupy the **WisBlock IO** slot of the **WisBlock Base**. Instead, it is plugged into a separate connector. This connector is a standard 2.54&nbsp;mm header and needs to be soldered to the **WisBlock Base** board.
+**RAK1921** does not occupy the **WisBlock IO** slot of the **WisBlock Base**. Instead, it is plugged into a separate connector. This connector is a standard 2.54 mm header and needs to be soldered to the **WisBlock Base** board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1921/datasheet/interface.png"
-  width="30%"
-  caption="I2C pin header in the RAK5005-O"
-/>
+> **Image:** I2C pin header in the RAK5005-O
 
 :::warning
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

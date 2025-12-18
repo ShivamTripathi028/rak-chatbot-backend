@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # WisBlock Movement Detection Kit Datasheet
 
 ## Overview
@@ -53,12 +49,7 @@ Depending on the use case, this kit supports a variety of connectivity options, 
 
 The WisBlock IoT Education Kit - Movement Detection includes the following modules:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/3_movement_kit_2.png" 
-  figureCount="1"
-  caption="Modules of the WisBlock IoT Education Kit - Movement Detection" 
-   width="80%"
-/>
+> **Image:** Modules of the WisBlock IoT Education Kit - Movement Detection
 
 ### Hardware
 
@@ -110,5 +101,3 @@ The cellular modules support different cellular protocols, as shown in the table
 
 The WisBlock IoT Education Kit - Movement Detection is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
-
-<RkBottomNav/>

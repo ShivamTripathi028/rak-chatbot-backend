@@ -13,8 +13,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3372 WisBlock LPWAN Module
 
 Thank you for choosing **RAK3372 WisBlock LPWAN Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,25 +27,24 @@ Thank you for choosing **RAK3372 WisBlock LPWAN Module** in your awesome IoT pro
 
 The RAK3372 WisBlock Core module is a <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/" target="_blank">RAK3172 LoRa module</a> with an expansion PCB and connectors compatible with the WisBlock Base. It allows an easy way to access the pins of the RAK3172 module, simplifying development and testing processes.
 
-The module itself comprises a RAK3172 as its main component. The RAK3372 is based on the STM32WLE5CCU6 LoRa SoC transceiver chip. It features ultra-low power consumption of less than 2.0&nbsp;uA during sleep mode with configurable high LoRa output RF power up to 22&nbsp;dBm during transmission mode.
+The module itself comprises a RAK3172 as its main component. The RAK3372 is based on the STM32WLE5CCU6 LoRa SoC transceiver chip. It features ultra-low power consumption of less than 2.0 uA during sleep mode with configurable high LoRa output RF power up to 22 dBm during transmission mode.
 
 Additionally, RAK3372 complies with LoRaWAN 1.0.3 protocols and supports LoRa point-to-point communication.
-
 
 ## Product Features
 
 - Based on <a href="https://www.st.com/resource/en/datasheet/stm32wle5cc.pdf" target="_blank">STM32WLE5CCU6</a>
 - **I/O ports**: UART/I2C/GPIO
-- **Temperature range**: -70°&nbsp;C to +85°&nbsp;C
-- **Supply voltage**: 2.0 ~ 3.6&nbsp;V
-- Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz Bandwidth
-- Ultra-Low Power Consumption of less than 2.0&nbsp;uA in sleep mode
-- LoRa PA Boost mode with 22&nbsp;dBm output power
+- **Temperature range**: -70° C to +85° C
+- **Supply voltage**: 2.0 ~ 3.6 V
+- Low-Power Wireless Systems with 7.8 kHz to 500 kHz Bandwidth
+- Ultra-Low Power Consumption of less than 2.0 uA in sleep mode
+- LoRa PA Boost mode with 22 dBm output power
 - Serial Wire Debug (SWD) interface
-- **Module size**: 20&nbsp;mm x 30&nbsp;mm
+- **Module size**: 20 mm x 30 mm
 
 :::warning
-- RAK3372 WB_IO3 (WisBlock IO Pin 3) is connected to PB12 of the RAK3172 module. This pin is internally connected to a 10&nbsp;kΩ resistor as mentioned on the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/#pin-definition" target="_blank">pin definition table of the RAK3172 datasheet</a>. Other WisBlock modules that use this pin will have possible conflict.
+- RAK3372 WB_IO3 (WisBlock IO Pin 3) is connected to PB12 of the RAK3172 module. This pin is internally connected to a 10 kΩ resistor as mentioned on the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/#pin-definition" target="_blank">pin definition table of the RAK3172 datasheet</a>. Other WisBlock modules that use this pin will have possible conflict.
 :::
 
 ## Prerequisites
@@ -64,4 +61,3 @@ For CE and FCC certifications we provide an AT command guide.
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

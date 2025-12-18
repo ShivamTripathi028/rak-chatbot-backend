@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12015 WisBlock Vibration Detection Sensor Module
 
 Thank you for choosing **RAK12015 WisBlock Vibration Detection Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -33,16 +31,15 @@ Thank you for choosing **RAK12015 WisBlock Vibration Detection Sensor Module** i
 
 The RAK12015, a part of WisBlock Sensor, is a Vibration Detection Module that uses a high-precision sensor, the ANT-801S. This sensor is capable of detecting micro shocks or vibration without direction limits.
 
-
 ## Product Features
 
 * **Sensor Specifications**
     * Vibration Detection
-    * 3.3&nbsp;V Power Supply
+    * 3.3 V Power Supply
     * Chipset: ANT-801S
 
 * **Module Size**
-    * 15&nbsp;mm x 25&nbsp;mm
+    * 15 mm x 25 mm
 
 ## Prerequisites
 
@@ -52,5 +49,3 @@ To use a **RAK12015**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-<RkBottomNav/>

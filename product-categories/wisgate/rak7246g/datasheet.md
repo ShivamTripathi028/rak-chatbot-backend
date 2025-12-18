@@ -12,9 +12,6 @@ sidebar_label: Datasheet
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7246G WisGate Developer D0 Gateway Datasheet
 
@@ -33,10 +30,9 @@ The RAK7246G Developer is an ideal choice for prototype design, concept verifica
 - Uses an SX1308 baseband processor with dual **SX1257**, full 8 uplink channels, and 1 downlink channel gateway
 - Built-in Ublox **MAX-7Q GPS** module
 - The pre-installed radiator guarantees the stable thermal performance
-- Tx max 20&nbsp;dBm, Rx min -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
+- Tx max 20 dBm, Rx min -139 dBm @ SF12, BW 125 kHz
 - Covers the entirety of the LoRa high-frequency band space: RU864, IN865, EU868, US915, AU915, KR920, AS923
-- Power supply 5&nbsp;V / 2.5&nbsp;A (power adapter sold separately)
-
+- Power supply 5 V / 2.5 A (power adapter sold separately)
 
 ## Specifications
 
@@ -46,29 +42,17 @@ The overview covers the RAK7246G board overview and the block diagram that shows
 
 #### Board Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/board-overview/dqtuzznrpsuevoizzgvc.png"
-  width="100%"
-  caption="uFL Connectors for LoRa and GPS"
-/>
+> **Image:** uFL Connectors for LoRa and GPS
 
 The interfaces of the RAK7246G are shown in **Figure 2**. The TF card slot is used for the SD card that houses the firmware (based on Raspbian OS). You have two SMA connectors for the LoRa and GPS antennas. There are 3 ports on the side, which are part of the Raspberry Pi Zero W board, which from left to right are mini HDMI, USB MicroB, and another USB MicroB/Power (only use this to power the device with the included adapter or an equivalent one).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/board-overview/dimensions.png"
-  width="100%"
-  caption="Hardware interfaces"
-/>
+> **Image:** Hardware interfaces
 
 #### Board Dimensions
 
 Both the RAK2246 and Raspberry Pi have the same board dimensions: **30 x 65 mm**. As for the size of the gateway with the casing, refer to **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/board-overview/ifljf8dbokouw7ppnudi.png"
-  width="80%"
-  caption="Casing dimension"
-/>
+> **Image:** Casing dimension
 
 #### Block Diagram
 
@@ -76,11 +60,7 @@ Both the RAK2246 and Raspberry Pi have the same board dimensions: **30 x 65 mm**
 
 The concentrator is available with an SPI interface:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/interfaces/qdr3oj29xkjdfu0a3bys.png"
-  width="80%"
-  caption="RAK2246 bottom view"
-/>
+> **Image:** RAK2246 bottom view
 
 ##### SX1308
 
@@ -94,11 +74,7 @@ The control of the SX1308 by the host system (PC, MCU) is made using a Hardware 
 
 It is highly recommended to utilize the latest HAL as provided by Semtech on [https://github.com/Lora-net](https://github.com/Lora-net).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/interfaces/block-diagram.png"
-  width="100%"
-  caption="SX1308 block diagram"
-/>
+> **Image:** SX1308 block diagram
 
 The SX1308 digital baseband chip contains 10 programmable reception paths. Those paths have differentiated levels of programmability and allow for different use cases. It is important to understand the differences between those demodulation paths to make the best possible use of the system.
 
@@ -116,7 +92,7 @@ These channels are connected to one SX1257. The channel bandwidth is 125 kHz and
 
 Several packets using different data rates (different SF) may be demodulated simultaneously even on the same channel. Those channels are intended to be used for a massive asynchronous star network of thousands of sensor nodes. Each sensor may use a random channel (from IF0 to IF7) and a different data rate for any transmission.
 
-Sensors located near the gateway will typically use the highest possible data rate in the fixed 125 kHz channel bandwidth (e.g. 6&nbsp;kbit/s) while sensors located far away will use a lower data rate down to 300&nbsp;bit/s (the minimum LoRa data rate in a 125 kHz channel).
+Sensors located near the gateway will typically use the highest possible data rate in the fixed 125 kHz channel bandwidth (e.g. 6 kbit/s) while sensors located far away will use a lower data rate down to 300 bit/s (the minimum LoRa data rate in a 125 kHz channel).
 
 The SX1308 digital baseband chip scans the 8 channels (IF0 to IF7) for preambles of all data rates at all times.
 
@@ -126,19 +102,13 @@ The SX1308 can detect simultaneously preambles corresponding to all data rates o
 
 The unique multi-data-rate multi-channel demodulation capacity SF7 to SF12 and of channels IF0 to IF7 allows innovative network architectures to be implemented.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/interfaces/jlyqgowwfeidn4k49cy3.png"
-  width="100%"
-  caption="LoRa Channel"
-/>
+> **Image:** LoRa Channel
 
 ### Hardware
 
 The hardware specification is categorized into four parts. It includes the interfacing, pinouts, and their corresponding functionalities and diagram. It also presents the features of RAK7246G and its parameters.
 
-
 #### Interfaces
-
 
 ##### External Module Interfaces
 
@@ -160,11 +130,7 @@ There are two digital IO pins, which give the user an interface to reset the GPS
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/pin-definition/e7ik5kliydnba3jh6ogy.png"
-  width="80%"
-  caption="RAK7246G Pinout Diagram"
-/>
+> **Image:** RAK7246G Pinout Diagram
 
 | **Pin** | **Name**    | **Description**                                                                                        |
 | ------- | ----------- | ------------------------------------------------------------------------------------------------------ |
@@ -215,18 +181,29 @@ The following table shows the available features of the RAK7246G WisGate Develop
 
 | **Feature**           | **Specifications**                                                                                                                                                                                                                                                                |
 | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Computing             | • Raspberry Pi Zero Wireless (BCM2835, ARMv7) <br />• **Memory:** 512MB <br />• Storage: SD card slot                                                                                                                                                                                 |
-| WiFi Feature          | • **Frequency:** 2.400-2.4835&nbsp;GHz (802.11b/g/n) <br />• **RX Sensitivity:** -99&nbsp;dBm <br />• **TX Power:** 21 dBm                                                                                                                                                            |
-| LoRa Feature          | • RAK2246 LoRaWAN Concentrator <br />• Semtech SX1308 with dual SX1257 <br />• Up to 8 uplink and 1 downlink channels <br />• RX Sensitivity: **-139&nbsp;dBm** <br />• TX Power: **20 dBm (Max)** <br />• Frequency bands supported: RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923 |
-| Power Supply          | • DC 5V / 2.5&nbsp;A                                                                                                                                                                                                                                                              |
-| Power Consumption     | • 5&nbsp;W (average)                                                                                                                                                                                                                                                              |
-| Antennas              | • **LoRa**: RP-SMA Female Connector <br />• **GPS**: SMA Female<br /> • **WiFi**: Internal Antenna                                                                                                                                                                                    |
+| Computing             | • Raspberry Pi Zero Wireless (BCM2835, ARMv7) 
+• **Memory:** 512MB 
+• Storage: SD card slot                                                                                                                                                                                 |
+| WiFi Feature          | • **Frequency:** 2.400-2.4835 GHz (802.11b/g/n) 
+• **RX Sensitivity:** -99 dBm 
+• **TX Power:** 21 dBm                                                                                                                                                            |
+| LoRa Feature          | • RAK2246 LoRaWAN Concentrator 
+• Semtech SX1308 with dual SX1257 
+• Up to 8 uplink and 1 downlink channels 
+• RX Sensitivity: **-139 dBm** 
+• TX Power: **20 dBm (Max)** 
+• Frequency bands supported: RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923 |
+| Power Supply          | • DC 5V / 2.5 A                                                                                                                                                                                                                                                              |
+| Power Consumption     | • 5 W (average)                                                                                                                                                                                                                                                              |
+| Antennas              | • **LoRa**: RP-SMA Female Connector 
+• **GPS**: SMA Female
+ • **WiFi**: Internal Antenna                                                                                                                                                                                    |
 | LEDs                  | • POWER/STATUS LED                                                                                                                                                                                                                                                                |
 | Ingress Protection    | • IP30                                                                                                                                                                                                                                                                            |
 | Enclosure Material    | • Plastic                                                                                                                                                                                                                                                                         |
-| Weight                | • 300&nbsp;g                                                                                                                                                                                                                                                                      |
-| Dimension             | • 96&nbsp;mm x 66&nbsp;mm x 47&nbsp;mm                                                                                                                                                                                                                                            |
-| Operating Temperature | • -10˚&nbsp;C to 65˚&nbsp;C                                                                                                                                                                                                                                                       |
+| Weight                | • 300 g                                                                                                                                                                                                                                                                      |
+| Dimension             | • 96 mm x 66 mm x 47 mm                                                                                                                                                                                                                                            |
+| Operating Temperature | • -10˚ C to 65˚ C                                                                                                                                                                                                                                                       |
 
 #### RF Characteristics
 
@@ -234,9 +211,10 @@ The following table shows the available features of the RAK7246G WisGate Develop
 
 | **Feature**              | **Specifications**                                               |
 | ------------------------ | ---------------------------------------------------------------- |
-| **Operating Frequency**  | • EU433, CN470, EU868, US915 <br/> • AS923, AU915, KR920, IN865 |
-| **Transmit Power**       | 27&nbsp;dBm (Max)                                                |
-| **Receiver Sensitivity** | -142&nbsp;dBm (Min)                                              |
+| **Operating Frequency**  | • EU433, CN470, EU868, US915 
+ • AS923, AU915, KR920, IN865 |
+| **Transmit Power**       | 27 dBm (Max)                                                |
+| **Receiver Sensitivity** | -142 dBm (Min)                                              |
 
 ##### Transmitter RF
 
@@ -253,14 +231,15 @@ The RAK2246 has excellent transmitter performance. It is highly recommended to u
 | 14              | 0            | 20                               |
 | 15              | 0            | 21                               |
 
-**T=25°&nbsp;C, VDD=5&nbsp;V (Typ.) if nothing else stated**
+**T=25° C, VDD=5 V (Typ.) if nothing else stated**
 
 | **Parameter**                                                | **Condition**                    | **Min** | **Typ.** | **Max** | **Unit** |
 | ------------------------------------------------------------ | -------------------------------- | ------- | -------- | ------- | -------- |
 | Frequency Range                                              |                                  | 863     |          | 870     | MHz      |
 | Modulation Techniques                                        | FSK/LoRa                         |         |          |         |          |
-| TX Frequency Variation vs. Temperature                       | Power Level Setting: 20&nbsp;dBm | -3      |          | +3      | kHz      |
-| [TX Power Variation](TX Power Variation)<br /> vs. Temperature |                                  | -5      |          | +5      | dB       |
+| TX Frequency Variation vs. Temperature                       | Power Level Setting: 20 dBm | -3      |          | +3      | kHz      |
+| [TX Power Variation](TX Power Variation)
+ vs. Temperature |                                  | -5      |          | +5      | dB       |
 | TX Power Variation                                           |                                  | -1.5    |          | +1.5    | dB       |
 
 :::tip NOTE
@@ -288,17 +267,13 @@ This section introduces the key components in the RAK2246 to help developers to 
 
 **1. DC-DC regulator**
 
-The system power supply is provided by an external 5&nbsp;V<sub>DC</sub> power supply. All the key components and related clock crystals are powered by two DC-DC regulators (MP1496) which output 1.8&nbsp;V and 3.3&nbsp;V to meet normal working conditions. The MP1496 is a high-frequency, synchronous, rectified, step-down, switch-mode converter with built-in power MOSFETs. It offers a very compact solution to achieve a 2&nbsp;A continuous output current with excellent load and line regulation over a wide input supply range.
+The system power supply is provided by an external 5 V<sub>DC</sub> power supply. All the key components and related clock crystals are powered by two DC-DC regulators (MP1496) which output 1.8 V and 3.3 V to meet normal working conditions. The MP1496 is a high-frequency, synchronous, rectified, step-down, switch-mode converter with built-in power MOSFETs. It offers a very compact solution to achieve a 2 A continuous output current with excellent load and line regulation over a wide input supply range.
 
 **2. FEM**
 
-The FEM chosen is a SKYWORKS SKY66422, which integrates a PA, LNA, and a switch. It can achieve a 20&nbsp;dBm max output power to deliver sufficient RX performance. The frequency range it can cover is 860&nbsp;MHZ ~ 930&nbsp;MHz.
+The FEM chosen is a SKYWORKS SKY66422, which integrates a PA, LNA, and a switch. It can achieve a 20 dBm max output power to deliver sufficient RX performance. The frequency range it can cover is 860 MHZ ~ 930 MHz.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/qbxfrqry28q2p8ozhicz.png"
-  width="80%"
-  caption="System Architecture"
-/>
+> **Image:** System Architecture
 
 ##### Wi-Fi
 
@@ -306,9 +281,13 @@ The FEM chosen is a SKYWORKS SKY66422, which integrates a PA, LNA, and a switch.
 | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Wireless Standard**                                                                          | IEEE 802.11b/g/n                                                                                                                                                                                                                                                                                                          |
 | **Operating Frequency**                                                                        | **ISM band**: 2.412~2.472(GHz)                                                                                                                                                                                                                                                                                            |
-| **Operation Channels**                                                                         | 2.4&nbsp;GHz: 1-13                                                                                                                                                                                                                                                                                                        |
-| **Transmit Power** (The max. power may be different depending on local regulations) -per chain | - **802.11b** - **@1&nbsp;Mbps** : 19&nbsp;dBm, **@11&nbsp;Mbps** : 19&nbsp;dBm<br />- **802.11g** - **@6&nbsp;Mbps** : 18&nbsp;dBm, **@54&nbsp;Mbps** : 16&nbsp;dBm<br />- **802.11n (2.4G)** - **@MCS0 (HT20)** : 18&nbsp;dBm, **@MCS7 (HT20)** : 16&nbsp;dBm,**@MCS0 (HT40)** : 17&nbsp;dBm, **@MCS7 (HT40)** :15&nbsp;dBm |
-| **Receiver Sensitivity** (Typical)                                                             | - **802.11b** - **@1Mbps** : -95 dBm, **@11Mbps** : -88 dBm<br />- **802.11g** - **@6Mbps** : -90&nbsp;dBm, **@54&nbsp;Mbps** : -75&nbsp;dBm<br />- **802.11n (2.4G)** - **@MCS0 (HT20)** : -89&nbsp;dBm, **@MCS7(HT20)** : -72&nbsp;dBm,**@MCS0(HT40)** : -86&nbsp;dBm, **@MCS7(HT40)** : -68&nbsp;dBm                       |
+| **Operation Channels**                                                                         | 2.4 GHz: 1-13                                                                                                                                                                                                                                                                                                        |
+| **Transmit Power** (The max. power may be different depending on local regulations) -per chain | - **802.11b** - **@1 Mbps** : 19 dBm, **@11 Mbps** : 19 dBm
+- **802.11g** - **@6 Mbps** : 18 dBm, **@54 Mbps** : 16 dBm
+- **802.11n (2.4G)** - **@MCS0 (HT20)** : 18 dBm, **@MCS7 (HT20)** : 16 dBm,**@MCS0 (HT40)** : 17 dBm, **@MCS7 (HT40)** :15 dBm |
+| **Receiver Sensitivity** (Typical)                                                             | - **802.11b** - **@1Mbps** : -95 dBm, **@11Mbps** : -88 dBm
+- **802.11g** - **@6Mbps** : -90 dBm, **@54 Mbps** : -75 dBm
+- **802.11n (2.4G)** - **@MCS0 (HT20)** : -89 dBm, **@MCS7(HT20)** : -72 dBm,**@MCS0(HT40)** : -86 dBm, **@MCS7(HT40)** : -68 dBm                       |
 
 ### Software
 
@@ -331,17 +310,13 @@ LoRaWAN networks are typically star or multiple-star networks, where a gateway r
 
 Due to the long-range, LoRa provides the connection between the end-nodes and the gateway (RAK2246) is always a direct link. Repeaters are not common in a LoRaWAN network.
 
-Depending on the used spreading factor and signal bandwidth, different data rates (0.3&nbsp;kbps to ~22&nbsp;kbps) and sensitivities down to -142.5&nbsp;dBm are possible. Spreading factor and signal bandwidth are a trade-off between data rate and communication range.
+Depending on the used spreading factor and signal bandwidth, different data rates (0.3 kbps to ~22 kbps) and sensitivities down to -142.5 dBm are possible. Spreading factor and signal bandwidth are a trade-off between data rate and communication range.
 
 ##### Overview
 
 The RAK2246 can receive on different frequency channels at the same time and can demodulate the LoRa signal without knowledge of the used spreading factor of the sending node. Thus, any gateway using it as its concentrator module has these inherent benefits as well.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7246g/datasheet/systems-network-approach/f333yrqj2l328fhmkpaf.png"
-  width="70%"
-  caption="System Architecture"
-/>
+> **Image:** System Architecture
 
 Because the combination of spreading factors and signal bandwidths results in different data rates, the use of “Dynamic Data-Rate Adaption” becomes possible. That means that LoRa nodes a large distance away from the gateway can use higher spreading factors and therefore have a lower data rate. LoRa nodes that are closer to the concentrator can use lower spreading factors and therefore can increase their data rate.
 

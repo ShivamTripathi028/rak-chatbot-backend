@@ -11,31 +11,19 @@ keywords:
 sidebar_label: LNS and CUPS Configuration
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisgateOS LNS and CUPS Configuration
 
 This document shows how to connect the WisGate Edge Gateway with the WisGateOS to The Things Network via Basics Station, either using LNS or CUPS.
 
 If you already have a TTN account, you can use your The Things ID credentials and log in to the [TTNv3](https://eu1.cloud.thethings.network/console).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.1.the-things.png"
-  width="100%"
-  caption="The Things Stack Home Page"
-/>
-
+> **Image:** The Things Stack Home Page
 
 ## Register Gateway in TTNv3
 
 1. If you haven't registered your commercial gateway, click **Register a gateway**. But if you have already registered your gateway before, go to **Gateways** and click **+ Add gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.2.console-page.png"
-  width="100%"
-  caption="Console Page After a Successful Login"
-/>
+> **Image:** Console Page After a Successful Login
 
 2. Fill in the necessary information:
 
@@ -49,20 +37,11 @@ If you already have a TTN account, you can use your The Things ID credentials an
 
 The other settings are optional and can be changed to satisfy your requirements.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.3.adding-gateway.png"
-  width="100%"
-  caption="Adding a Gateway"
-/>
+> **Image:** Adding a Gateway
 
 1. Scroll down and click **Create gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.4.register-gateway.png"
-  width="100%"
-  caption="Register the Gateway"
-/>
+> **Image:** Register the Gateway
 
 TTNv3 supports TLS server authentication and Client token, which requires a trust file and a key file in configuring the gateway to successfully connect it to the network. You can connect also the gateway to TTN V3 by using LNS or CUPS Server.
 
@@ -74,38 +53,19 @@ If you are going to use LNS server to connect to TTN V3, you need to generate a 
 
 1. To generate a key file, from the **Overview page** of the registered Gateway, you need to navigate to **API keys**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.5.overview-page.png"
-  width="100%"
-  caption="Overview Page"
-/>
+> **Image:** Overview Page
 
 2. In the **API keys page**, choose **+ Add API key**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.6.key-page.png"
-  width="100%"
-  caption="API Key Page"
-/>
+> **Image:** API Key Page
 
 3. The **Name field** is the name of the key, and you can type a name of your taste (for example: LNS_key). Then choose **Grant individual rights** and select **Link as Gateway to a Gateway for traffic exchange, i.e. read uplink and write downlink**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.7.api-lns-key.png"
-  width="100%"
-  caption="Generating an API LNS Key"
-/>
+> **Image:** Generating an API LNS Key
 
 4. To generate the key, choose **Create API key**. A window will pop up, telling you to copy the generated key. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.8.generated-key.png"
-  width="70%"
-  caption="Generated API LNS Key"
-/>
-
+> **Image:** Generated API LNS Key
 
 :::warning
 
@@ -114,19 +74,13 @@ The generated key must be copied and saved to a .txt file (or other), as it won�
 
 5. Click **I have copied the key** to proceed. 
 
-
 ### Configure the Gateway to Use LNS Server
 
 1. To configure the gateway, access your gateway via the Web UI. 
 
 2. By default, the gateway is configured to work as Network server. You need to set the gateway to work as Basics Station in the **Lora Network** menu: **LoRa Network** > **Network Settings** > **Mode** drop-down menu > **Basics Station**. 
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.9.working.mode.png"
-  width="100%"
-  caption="Changing the Working Mode"
-/>
+> **Image:** Changing the Working Mode
 
 3. To set the changes, you need to select **Switch mode**. After that, the **Basics Station Configuration** pane settings will show up. 
 
@@ -153,22 +107,13 @@ Authorization: LNS_API_KEY
 You need to replace **LNS_API_KEY** with the key generated previously. There should be a “space” between **Authorization:** and **LNS_API_KEY**, as shown in the example.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.10.basic-station.png"
-  width="100%"
-  caption="LoRa Basics Station Settings"
-/>
+> **Image:** LoRa Basics Station Settings
 
 5. To save the changes, click **Save & Apply**.
 
 If everything is configured right, the gateway should be connected to TTNv3 as Basics Station:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.11.successful-connection.png"
-  width="100%"
-  caption="Successful Connection"
-/>
-
+> **Image:** Successful Connection
 
 ## CUPS 
 
@@ -176,38 +121,19 @@ If everything is configured right, the gateway should be connected to TTNv3 as B
 
 1. Since CUPS automatically configures LNS, you need to generate two API keys: one for CUPS and one for LNS. The key can be generated from the TTN v3 **Overview page** > **API keys**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.12.overview-page.png"
-  width="100%"
-  caption="Overview Page"
-/>
+> **Image:** Overview Page
 
 2. On the **API keys page**, choose **+ Add API key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.13.api-key-page.png"
-  width="100%"
-  caption="API Key Page"
-/>
+> **Image:** API Key Page
 
 3. In the **Name field**, type the name of their LNS key (for example - LNS_key). Choose **Grant individual rights**, then select **Link as Gateway to a Gateway for traffic exchange, i.e. read uplink and write downlink**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.14.lns-api-key.png"
-  width="100%"
-  caption="Generating a LNS API Key"
-/>
+> **Image:** Generating a LNS API Key
 
 4. To generate the key, choose **Create API key**. The following window will pop up, telling you to copy the generated key. 
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.15.generated-key.png"
-  width="70%"
-  caption="Copying the Generated Key"
-/>
-
+> **Image:** Copying the Generated Key
 
 :::warning
 
@@ -224,12 +150,7 @@ The key must be copied and saved to a .txt file (or other), as it won’t be abl
 
 **·**     **Edit basic gateway settings**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.16.generating-cups.png"
-  width="100%"
-  caption="Generating a CUPS Generated Key"
-/>
-
+> **Image:** Generating a CUPS Generated Key
 
 :::warning
 
@@ -240,16 +161,9 @@ The generated key must be copied and saved to a .txt file (or other), as it won�
 
 8. Click on **General settings** and scroll down to **LoRa Basics Station LNS Authentication Key** and paste the copied **LNS** key there.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.17.lns-authentication.png"
-  width="100%"
-  caption="Configuring the LNS Authentication Key"
-/>
+> **Image:** Configuring the LNS Authentication Key
 
 9. To save the changes, click **Save changes**.
-
-
 
 ### Configure the Gateway to Use CUPS Server
 
@@ -257,11 +171,7 @@ The generated key must be copied and saved to a .txt file (or other), as it won�
 
 2. Configuring the gateway to work as Basics Station can be done in the LoRa Network menu: **LoRa Network** > **Network Settings** > **Mode** drop-down menu > **Basics Station**. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.18.working-mode.png"
-  width="100%"
-  caption="Changing the Working Mode"
-/>
+> **Image:** Changing the Working Mode
 
 3. Select **Switch mode** to apply the change. After that, the **Basics Station Configuration** pane settings will show up. 
 
@@ -280,26 +190,16 @@ Example:
 Authorization: CUPS_API_KEY
 ```
 
-
 :::tip NOTE
 
 You need to replace **CUPS_API_KEY** with the key generated previously. There should be a “space” between **Authorization:** and **CUPS_API_KEY**, as shown in the example.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.19.basic-station.png"
-  width="100%"
-  caption="LoRa Basics Station Settings"
-/>
+> **Image:** LoRa Basics Station Settings
 
 5. To save the changes, click **Save & Apply**.
 
 If everything is configured right, the gateway should be connected to TTNv3 as Basics Station:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument7/30.20.successful-connection.png"
-  width="100%"
-  caption="Successful Connection"
-/>
+> **Image:** Successful Connection
 
-<RkBottomNav/>

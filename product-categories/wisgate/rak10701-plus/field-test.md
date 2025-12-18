@@ -18,10 +18,6 @@ tags:
 date: 2025-05-23
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkImage from '@site/src/components/Image'
-
-
 # Conduct Field Tests With RAK10701-Plus Field Tester for LoRaWAN
 
 This document outlines standard and scenario-based field testing workflows designed to accurately validate LoRaWAN coverage and network quality in real-world conditions.
@@ -31,33 +27,14 @@ This document outlines standard and scenario-based field testing workflows desig
 Before performing field testing, it’s important to understand how the Field Tester Plus operates under different conditions.
 After powering on and connecting to a LoRaWAN Network Server (LNS), the Field Tester Plus operates in one of two modes depending on your gateway setup:
 
-<table>
-  <thead>
-    <tr>
-      <th>Mode</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Field Tester Mode (Extension Installed)</b></td>
-      <td>Full metric reporting, including uplink and downlink RSSI/SNR, packet loss, and CSV report generation.</td>
-    </tr>
-    <tr>
-      <td><b>LinkCheck Mode (No Extension Installed)</b></td>
-      <td>Limited to Downlink RSSI/SNR and gateway count only. No uplink analysis or CSV export available.</td>
-    </tr>
-    </tbody>
-</table>
+| Mode | Description |
+| --- | --- |
+| Field Tester Mode (Extension Installed) | Full metric reporting, including uplink and downlink RSSI/SNR, packet loss, and CSV report generation. |
+| LinkCheck Mode (No Extension Installed) | Limited to Downlink RSSI/SNR and gateway count only. No uplink analysis or CSV export available. |
 
 The following workflow summarizes the field testing preparation and execution:
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/field-test/field-tester-workflow.png"
-  width="45%"
-  caption="Field Tester Workflow"
-/>
+> **Image:** Field Tester Workflow
 
 ## Standard Testing Procedure
 
@@ -89,8 +66,8 @@ Before beginning field tests, confirm the following:
 
 - **Uplink Metrics**: RSSI, SNR, Packet Loss, Data Rate.
 - **Downlink Metrics**: RSSI, SNR, Packet Loss, Data Rate.
-- **MAX Distance**: Estimated distance to the farthest gateway (requires GPS; minimum resolution is 250&nbsp;meters).
-- **MIN Distance**: Estimated distance to the nearest gateway (requires GPS; minimum resolution is 250&nbsp;meters).
+- **MAX Distance**: Estimated distance to the farthest gateway (requires GPS; minimum resolution is 250 meters).
+- **MIN Distance**: Estimated distance to the nearest gateway (requires GPS; minimum resolution is 250 meters).
 - **Gateway Count**: Number of gateways that successfully received the last uplink.
 - **Location**: GPS coordinates (if GPS available) or manually entered Location Label for indoor or GPS-denied environments.
 
@@ -98,11 +75,7 @@ Before beginning field tests, confirm the following:
 You can also monitor real-time test data through the **Field Test Data Processor Extension** on your WisGateOS 2 gateway, which provides a broader view including all recent packets, signal quality, and heatmap visualization.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/field-test/field-tester-data-overview.png"
-  width="100%"
-  caption="Field Tester Data Overview"
-/>
+> **Image:** Field Tester Data Overview
 
 ### Manual Labeling (Optional)
 
@@ -128,125 +101,40 @@ After completing field testing, you can export the structured test data for furt
 2. Go to **Device Overview** page and click the **Export** button located in the top-right corner.
 3. Download the generated CSV report.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/field-test/field-tester-csv-file.png"
-  width="100%"
-  caption="Field Tester CSV File"
-/>
+> **Image:** Field Tester CSV File
 
 **Contents of the CSV Report**
 
 Each row in the CSV file corresponds to a **labeled test point.**
 
-<table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>label</b></td>
-      <td>Location label manually entered.</td>
-    </tr>
-    <tr>
-      <td><b>time</b></td>
-      <td>UTC timestamp when the data was recorded.</td>
-    </tr>
-    <tr>
-      <td><b>rssi</b></td>
-      <td>Uplink signal strength (Received Signal Strength Indicator).</td>
-    </tr>
-    <tr>
-      <td><b>snr</b></td>
-      <td>Uplink signal-to-noise ratio.</td>
-    </tr>
-    <tr>
-      <td><b>signal_quality</b></td>
-      <td>Qualitative signal evaluation (e.g., Excellent, Good, Poor).</td>
-    </tr>
-    <tr>
-      <td><b>dr</b></td>
-      <td>LoRaWAN data rate used during transmission.</td>
-    </tr>
-    <tr>
-      <td><b>region</b></td>
-      <td>LoRaWAN frequency band (e.g., EU868, US915).</td>
-    </tr>
-    <tr>
-      <td><b>total receive</b></td>
-      <td>Number of uplink packets received.</td>
-    </tr>
-    <tr>
-      <td><b>total send</b></td>
-      <td>Number of uplink packets sent.</td>
-    </tr>
-    <tr>
-      <td><b>packet loss rate</b></td>
-      <td>Percentage of lost packets.</td>
-    </tr>
-    <tr>
-      <td><b>latitude</b></td>
-      <td>GPS latitude (if available).</td>
-    </tr>
-    <tr>
-      <td><b>longitude</b></td>
-      <td>GPS longitude (if available).</td>
-    </tr>
-    <tr>
-      <td><b>gwCount</b></td>
-      <td>Number of gateways that successfully received the uplink.</td>
-    </tr>
-    <tr>
-      <td><b>num_1_gateway_eui</b></td>
-      <td>EUI of the nearest receiving gateway.</td>
-    </tr>
-    <tr>
-      <td><b>num_1_gateway_distance</b></td>
-      <td>Estimated distance to the nearest gateway (requires GPS, minimum resolution: 250&nbsp;meters).</td>
-    </tr>
-    <tr>
-      <td><b>Label Final PLR</b></td>
-      <td>Final packet loss rate calculated after completing the label cycle.</td>
-    </tr>
-    </tbody>
-</table>
+| Field | Description |
+| --- | --- |
+| label | Location label manually entered. |
+| time | UTC timestamp when the data was recorded. |
+| rssi | Uplink signal strength (Received Signal Strength Indicator). |
+| snr | Uplink signal-to-noise ratio. |
+| signal_quality | Qualitative signal evaluation (e.g., Excellent, Good, Poor). |
+| dr | LoRaWAN data rate used during transmission. |
+| region | LoRaWAN frequency band (e.g., EU868, US915). |
+| total receive | Number of uplink packets received. |
+| total send | Number of uplink packets sent. |
+| packet loss rate | Percentage of lost packets. |
+| latitude | GPS latitude (if available). |
+| longitude | GPS longitude (if available). |
+| gwCount | Number of gateways that successfully received the uplink. |
+| num_1_gateway_eui | EUI of the nearest receiving gateway. |
+| num_1_gateway_distance | Estimated distance to the nearest gateway (requires GPS, minimum resolution: 250 meters). |
+| Label Final PLR | Final packet loss rate calculated after completing the label cycle. |
 
 #### Signal Quality Reference
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/field-test/signal-quality-reference.png"
-  width="100%"
-  caption="Signal Quality Reference"
-/>
+> **Image:** Signal Quality Reference
 
-<table>
-  <thead>
-    <tr>
-      <th>Metric</th>
-      <th>Ideal Range</th>
-      <th>When to Take Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>RSSI (Received Signal Strength Indicator)</b></td>
-      <td>-30&nbsp;dBm to -90&nbsp;dBm</td>
-      <td>If below -120&nbsp;dBm, signal is very weak and likely unusable → Consider adding a gateway or adjusting placement</td>
-    </tr>
-    <tr>
-      <td><b>SNR (Signal-to-Noise Ratio)</b></td>
-      <td>Greater than 0&nbsp;dB</td>
-      <td>If below 0&nbsp;dB, especially -10&nbsp;dB or worse, interference is likely → Check for RF noise or obstructions.</td>
-    </tr>
-    <tr>
-      <td><b>Packet Loss Rate</b></td>
-      <td>≤ 5&nbsp;%</td>
-      <td>If above 20%, this indicates unstable connectivity → Improve antenna setup or enhance coverage area.</td>
-    </tr>
-    </tbody>
-</table>
+| Metric | Ideal Range | When to Take Action |
+| --- | --- | --- |
+| RSSI (Received Signal Strength Indicator) | -30 dBm to -90 dBm | If below -120 dBm, signal is very weak and likely unusable → Consider adding a gateway or adjusting placement |
+| SNR (Signal-to-Noise Ratio) | Greater than 0 dB | If below 0 dB, especially -10 dB or worse, interference is likely → Check for RF noise or obstructions. |
+| Packet Loss Rate | ≤ 5 % | If above 20%, this indicates unstable connectivity → Improve antenna setup or enhance coverage area. |
 
 ## Scenario-Based Field Testing
 
@@ -262,8 +150,8 @@ At each candidate site:
 1. Place the Field Tester Plus stationary position.
 2. Transmit at least 50 uplinks (automatic or manual).
 3. Record the following key metrics:
-    - **RSSI** (Target: > -90&nbsp;dBm)
-    - **SNR** (Target: > 0&nbsp;dB)
+    - **RSSI** (Target: > -90 dBm)
+    - **SNR** (Target: > 0 dB)
     - **Packet Loss** (Threshold: < 5%)
 
 **Data Analysis**
@@ -273,32 +161,11 @@ At each candidate site:
 
 **Recommendations Based on Results**
 
-<table>
-  <thead>
-    <tr>
-      <th>Issue</th>
-      <th>Possible Cause</th>
-      <th>Recommended Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Weak signal (RSSI < -120&nbsp;dBm)</b></td>
-      <td>Excessive distance from the gateway</td>
-      <td>Install a new gateway closer to the affected coverage area</td>
-    </tr>
-    <tr>
-      <td><b>High interference (SNR < -10&nbsp;dB)</b></td>
-      <td>Environmental RF noise or obstacles</td>
-      <td>Change frequency or relocate the gateway</td>
-    </tr>
-    <tr>
-      <td><b>High packet loss (>20&nbsp;%)</b></td>
-      <td>Obstructed signal path or poor backhaul connectivity</td>
-      <td>Deploy additional gateways or optimize the placement of the existing gateway</td>
-    </tr>
-    </tbody>
-</table>
+| Issue | Possible Cause | Recommended Action |
+| --- | --- | --- |
+| Weak signal (RSSI < -120 dBm) | Excessive distance from the gateway | Install a new gateway closer to the affected coverage area |
+| High interference (SNR < -10 dB) | Environmental RF noise or obstacles | Change frequency or relocate the gateway |
+| High packet loss (>20 %) | Obstructed signal path or poor backhaul connectivity | Deploy additional gateways or optimize the placement of the existing gateway |
 
 ### Post-Deployment Coverage Validation
 
@@ -316,8 +183,8 @@ Verify that installed gateways provide reliable coverage across the operational 
 3. **For critical zones** (Optional Best Practice):
     - Conduct measurements at different times of the day—morning, afternoon, and peak hours—to capture signal variations.
 4. **Record the following key metrics**:
-    - **RSSI** (Target: > -90&nbsp;dBm)
-    - **SNR** (Target: > 0&nbsp;dB)
+    - **RSSI** (Target: > -90 dBm)
+    - **SNR** (Target: > 0 dB)
     - **Packet Loss Rate** (Threshold: < 5%)
 
 **Data Analysis**
@@ -326,34 +193,11 @@ Verify that installed gateways provide reliable coverage across the operational 
 
 **Recommendations Based on Results**
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Finding</th>
-      <th>Interpretation</th>
-      <th>Recommended Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Low RSSI (Weak Signal)</b></td>
-      <td>Gateway coverage is insufficient</td>
-      <td>Reposition the gateway or deploy a repeater</td>
-    </tr>
-    <tr>
-      <td><b>Poor SNR (High Interference)</b></td>
-      <td>Signal is blocked or distorted by obstacles</td>
-      <td>Investigate the surroundings, adjust the frequency, or reposition the gateway</td>
-    </tr>
-    <tr>
-      <td><b>High Packet Loss</b></td>
-      <td>Fluctuating or unstable connections</td>
-      <td>Enable ADR or lower the data rate (e.g., DR3 → DR2)</td>
-    </tr>
-    </tbody>
-</table>
-
+| Finding | Interpretation | Recommended Action |
+| --- | --- | --- |
+| Low RSSI (Weak Signal) | Gateway coverage is insufficient | Reposition the gateway or deploy a repeater |
+| Poor SNR (High Interference) | Signal is blocked or distorted by obstacles | Investigate the surroundings, adjust the frequency, or reposition the gateway |
+| High Packet Loss | Fluctuating or unstable connections | Enable ADR or lower the data rate (e.g., DR3 → DR2) |
 
 :::tip NOTE
 After adjusting the network (moving gateway, adjusting power, etc.), repeat the testing cycle to validate performance improvements.
@@ -366,41 +210,18 @@ Determine the maximum effective communication distance from a gateway under real
 **Radial Testing Pattern**
 1. Start at the gateway's location (0 meters).
 2. Walk outward along different radial paths from the gateway.
-3. Maintain a consistent walking speed (~1&nbsp;m/s) and antenna orientation.
+3. Maintain a consistent walking speed (~1 m/s) and antenna orientation.
 
 **Real-Time Monitoring:**
 - **Distance**: Measures via GPS (if available) or through manual tracking.
-- **RSSI**: Triggers an alert if it drops below –120&nbsp;dBm.
+- **RSSI**: Triggers an alert if it drops below –120 dBm.
 - **Packet Loss Rate**: Triggers an alert if it exceeds 20%.
 
 **Recommendations Based on Results**
 
+| Problem | Cause | Solution |
+| --- | --- | --- |
+| RSSI < -120 dBm | Signal strength is too weak | Increase transmission power or antenna gain |
+| Packet Loss Rate > 20 % | Instability in the communication link | Reduce the data rate (e.g., DR1 to DR0) |
+| Join Failures | Gateway is too far from the device | Deploy more gateways to improve coverage density |
 
-<table>
-  <thead>
-    <tr>
-      <th>Problem</th>
-      <th>Cause</th>
-      <th>Solution</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>RSSI < -120&nbsp;dBm</b></td>
-      <td>Signal strength is too weak</td>
-      <td>Increase transmission power or antenna gain</td>
-    </tr>
-    <tr>
-      <td><b>Packet Loss Rate > 20&nbsp;%</b></td>
-      <td>Instability in the communication link</td>
-      <td>Reduce the data rate (e.g., DR1 to DR0)</td>
-    </tr>
-    <tr>
-      <td><b>Join Failures</b></td>
-      <td>Gateway is too far from the device</td>
-      <td>Deploy more gateways to improve coverage density</td>
-    </tr>
-    </tbody>
-</table>
-
-<RkBottomNav/>

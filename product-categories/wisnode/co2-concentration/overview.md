@@ -14,8 +14,6 @@ image: "https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # CO<sub>2</sub> Concentration Solution
 
 Thank you for choosing the **CO<sub>2</sub> Concentration Monitoring Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -23,7 +21,6 @@ Thank you for choosing the **CO<sub>2</sub> Concentration Monitoring Solution** 
 - [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisnode/co2-concentration/quickstart/)
 - [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisnode/co2-concentration/lorawan-network-server-guide/)
 - [Datasheet](https://docs.rakwireless.com/product-categories/wisnode/co2-concentration/datasheet/)
-
 
 ## Solution Description
 
@@ -50,31 +47,10 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 
 ### Package Inclusion
 
-<table>
-  <thead>
-    <tr>
-      <th>Device List</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
-      <td>Sensor Hub + Sensor Hub Installation Kit</td>
-    </tr>
-    <tr>
-      <td>1 x CO<sub>2</sub> Concentration Sensor <br/> 1 x Sensor Probe IO</td>
-      <td>Sensor Probe IO + CO<sub>2</sub> Sensor</td>
-    </tr>
-    <tr>
-      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
-      <td>Sensor Hub Power Adapter + Power Cable</td>
-    </tr>
-    <tr>
-      <td>1 x Cable Tie</td>
-      <td>For wiring or fixing</td>
-    </tr>
-  </tbody>
-</table>
+| Device List | Description |
+| --- | --- |
+| 1 x Sensor Hub1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
+| 1 x CO2Concentration Sensor1 x Sensor Probe IO | Sensor Probe IO + CO2Sensor |
+| 1 x Power Adapter1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
+| 1 x Cable Tie | For wiring or fixing |
 
-<RkBottomNav/>

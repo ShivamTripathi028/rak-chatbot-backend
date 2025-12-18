@@ -20,12 +20,9 @@ slug: /product-categories/wisduo/rak4630-module/overview/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4630 WisDuo LoRaWAN+BLE Module
 
 Thank you for choosing the **RAK4630 WisDuo LoRaWAN+BLE Module** for your awesome IoT project! 🎉 To help you get started, we have provided all necessary documentation.
-
 
 * <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4630-module/quickstart/" target="_blank">Quick Start Guide</a>
 * <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4630-module/at-command-manual/" target="_blank">AT Command Manual</a>
@@ -52,18 +49,17 @@ The default firmware of the RAK4630 is built on RUI3 (RAKwireless Unified Interf
 - Easy-to-use AT Command set via UART interface
 - TCXO crystal for LoRa chip
 - IO ports: UART, I2C, GPIO, USB
-- Temperature range: -40°&nbsp;C to +85°&nbsp;C
-- Supply voltage: 2.0 ~ 3.6&nbsp;V
-- Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz bandwidth
-- Ultra-Low Power Consumption 4.23&nbsp;uA in sleep mode
-- LoRa PA Boost mode with 22&nbsp;dBm output power
-- BLE 5.0 (Tx power -20 to +4&nbsp;dBm in 4&nbsp;dB steps)
+- Temperature range: -40° C to +85° C
+- Supply voltage: 2.0 ~ 3.6 V
+- Low-Power Wireless Systems with 7.8 kHz to 500 kHz bandwidth
+- Ultra-Low Power Consumption 4.23 uA in sleep mode
+- LoRa PA Boost mode with 22 dBm output power
+- BLE 5.0 (Tx power -20 to +4 dBm in 4 dB steps)
 - Serial Wire Debug (SWD) interface
-- Module size: 15&nbsp;mm x 23&nbsp;mm x 3&nbsp;mm
+- Module size: 15 mm x 23 mm x 3 mm
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

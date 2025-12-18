@@ -10,10 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4631-R WisBlock LoRaWAN Module Datasheet
 
 ## Overview
@@ -22,24 +18,23 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 The RAK4631-R WisBlock Core module is a RAK4630 stamp module with an expansion PCB and connectors compatible with WisBlock Base. It allows an easy way to access the pins of the RAK4630 module to simplify development and testing processes.
 
-The module itself comprises a RAK4630 as its main component. The RAK4630 is a combination of an nRF52840 MCU and an SX1262 LoRa chip. It features ultra-low power consumption of 2.0&nbsp;uA during sleep mode, high LoRa output power up to 22&nbsp;dBm during a transmission mode, and the BLE interface with output power up to 4&nbsp;dBm.
+The module itself comprises a RAK4630 as its main component. The RAK4630 is a combination of an nRF52840 MCU and an SX1262 LoRa chip. It features ultra-low power consumption of 2.0 uA during sleep mode, high LoRa output power up to 22 dBm during a transmission mode, and the BLE interface with output power up to 4 dBm.
 
 Also, it complies with LoRaWAN 1.0.3 protocols and supports LoRa point-to-point communication. The RF communication characteristic of the module (LoRa + BLE) makes it suitable for a variety of applications in the IoT field, such as home automation, sensor networks, building automation, personal area networks applications (health/fitness sensors, and monitors, etc.).
-
 
 ### Features
 
 - TCXO crystal for LoRa chip
 - I/O ports: UART/I2C/GPIO/USB
 - SPI pins and optional NFC interface are accessible using WisBlock IO module
-- Temperature range: -40&nbsp;°C to +85&nbsp;°C
-- Supply voltage: 2.0 ~ 3.6&nbsp;V
-- Low-Power Wireless Systems with 7.8&nbsp;KHz to 500&nbsp;KHz Bandwidth
-- Ultra-Low Power Consumption 2.0&nbsp;uA in sleep mode
-- LoRa PA Boost mode with 22&nbsp;dBm output power
-- BLE5.0 (Tx power -20 to +4&nbsp;dBm in 4&nbsp;dB steps)
+- Temperature range: -40 °C to +85 °C
+- Supply voltage: 2.0 ~ 3.6 V
+- Low-Power Wireless Systems with 7.8 KHz to 500 KHz Bandwidth
+- Ultra-Low Power Consumption 2.0 uA in sleep mode
+- LoRa PA Boost mode with 22 dBm output power
+- BLE5.0 (Tx power -20 to +4 dBm in 4 dB steps)
 - Serial Wire Debug (SWD) interface
-- Module size: 20 x 30&nbsp;mm
+- Module size: 20 x 30 mm
 - Chipset: Nordic nRF52840, Semtech SX1262
 ## Specifications
 
@@ -49,29 +44,15 @@ The overview covers the RAK4631-R board overview and the mounting mechanics of t
 
 #### Board Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/rak4631overview.png"
-  width="65%"
-  caption="RAK4631-R Overview"
-/>
+> **Image:** RAK4631-R Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/rak4630-rak4631.png"
-  width="30%"
-  caption="RAK4630 in RAK4631-R WisBlock Core"
-/>
-
-
+> **Image:** RAK4630 in RAK4631-R WisBlock Core
 
 #### Mounting Sketch
 
 The RAK4631-R module is designed to work with Wisblock Base Boards. **Figure 3** shows how a RAK4631-R module should be mounted on top of the WisBlock RAK5005-O Base Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/mounting-sketch.png"
-  width="50%"
-  caption="RAK4631-R Mounting Sketch"
-/>
+> **Image:** RAK4631-R Mounting Sketch
 
 ### Hardware
 
@@ -113,7 +94,8 @@ Detailed information about the RAK4631-R BLE and LoRa antenna can be found on th
 | Australia     | AU915            | RAK4630(H)  |
 | Korea         | KR920            | RAK4630(H)  |
 | Asia          | AS923            | RAK4630(H)  |
-| China         | CN470 <br/> CN779 | RAK4630(L)  |
+| China         | CN470 
+ CN779 | RAK4630(L)  |
 
 #### Electrical Characteristics
 
@@ -121,13 +103,12 @@ Detailed information about the RAK4631-R BLE and LoRa antenna can be found on th
 
 | **Item**                     | **Power Consumption** | **Condition**                 |
 | ---------------------------- | --------------------- | ----------------------------- |
-| Tx mode LoRa @20&nbsp;dBm    | 12&nbsp;5mA           | LoRa @ PA_BOOST&BT sleep      |
-| Tx mode LoRa @17&nbsp;dBm    | 92&nbsp;mA            | LoRa @ PA_BOOST&BT sleep      |
-| Tx mode BT@4&nbsp;dBm        | 9&nbsp;mA             | BT Tx mode & Lora sleep       |
-| Rx mode LoRa @37.5&nbsp;kbps | 17&nbsp;mA            | LoRa @ Receive mode &BT sleep |
-| Rx mode BT@2&nbsp;Mbps       | 11.5&nbsp;mA          | BT Rx mode & Lora sleep       |
-| Sleep mode                   | 2.0&nbsp;uA           | LoRa&BT sleep                 |
-
+| Tx mode LoRa @20 dBm    | 12 5mA           | LoRa @ PA_BOOST&BT sleep      |
+| Tx mode LoRa @17 dBm    | 92 mA            | LoRa @ PA_BOOST&BT sleep      |
+| Tx mode BT@4 dBm        | 9 mA             | BT Tx mode & Lora sleep       |
+| Rx mode LoRa @37.5 kbps | 17 mA            | LoRa @ Receive mode &BT sleep |
+| Rx mode BT@2 Mbps       | 11.5 mA          | BT Rx mode & Lora sleep       |
+| Sleep mode                   | 2.0 uA           | LoRa&BT sleep                 |
 
 ##### Absolute Maximum Ratings
 
@@ -138,7 +119,6 @@ Detailed information about the RAK4631-R BLE and LoRa antenna can be found on th
 | VDD_NRF    | MCU power supply              | -0.3     | -        | 3.9      | V        |
 | VBUS       | USB supply voltage            | -0.3     | -        | 5.8      | V        |
 | VBAT_NRF   | MCU high voltage power supply | -0.3     | -        | 5.8      | V        |
-
 
 ##### Recommended Operating Conditions
 
@@ -152,11 +132,7 @@ Detailed information about the RAK4631-R BLE and LoRa antenna can be found on th
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/schematic.png"
-  width="100%"
-  caption="RAK4631-R Schematic Diagram"
-/>
+> **Image:** RAK4631-R Schematic Diagram
 
 - **WisConnector**: The breakout module allows the RAK4630 stamp module pinout to be transferred by the board-to-board WisConnector.
 
@@ -192,49 +168,24 @@ Important for successful SX1262 initialization:
 
 ##### Board Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/board-dimensions.jpg"
-  width="35%"
-  caption="Mechanical Dimensions"
-/>
+> **Image:** Mechanical Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/fxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
-
-
+> **Image:** WisConnector PCB footprint and recommendations
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_CE_Certification.zip',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_FCC_Certification.zip',
-    },
-    {
-        'kc': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_KC_Certification.pdf',
-    },
-    {
-        'rcm': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RCM_Certification.pdf',
-    },
-    {
-        'reach': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_REACH_Report.pdf',
-    },
-    {
-        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_RoHS_Report.pdf',
-    }
-    
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_CE_Certification.zip
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_FCC_Certification.zip
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_KC_Certification.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RCM_Certification.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK4630/Certification/RAK4630_RAK4631_RoHS_Report.pdf
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Payload Decoder
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK2560 WisNode Sensor Hub Payload Decoder
 
 ## Sensor Hub LoRaWAN Payload and NB IoT JSON Format
@@ -25,10 +21,15 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 | WisBlock Module | Sensor IC |             Sensor Type             |                                                                        Sensor Data Values                                                                         |
 |:---------------:|:---------:|:-----------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|     RAK1901     |   SHTC3   |      Temperature and Humidity       |                                       Temperature (-40°&nbsp;C to +125°&nbsp;C)<br/>Humidity (0&nbsp;to&nbsp;100%&nbsp;RH)                                        |
-|     RAK1902     |  KPS22HB  | Temperature and Barometric Pressure |                                      Temperature (-40°&nbsp;C to +85°&nbsp;C)<br/>Pressure (260&nbsp;to&nbsp;1260&nbsp;hPa)                                       |
+|     RAK1901     |   SHTC3   |      Temperature and Humidity       |                                       Temperature (-40° C to +125° C)
+Humidity (0 to 100% RH)                                        |
+|     RAK1902     |  KPS22HB  | Temperature and Barometric Pressure |                                      Temperature (-40° C to +85° C)
+Pressure (260 to 1260 hPa)                                       |
 |     RAK1904     |  LIS3DH   |         3-Axis Acceleration         |                                                                           3-Axis (XYZ)                                                                            |
-|     RAK1906     |  BME680   |            Environmental            | Temperature (-40°&nbsp;C to 85°&nbsp;C)<br/>Humidity (0&nbsp;to&nbsp;100%&nbsp;RH)<br/>Pressure (300&nbsp;to&nbsp;1100 hPa)<br/>Gas (0&nbsp;to&nbsp;500&nbsp;IAQ) |
+|     RAK1906     |  BME680   |            Environmental            | Temperature (-40° C to 85° C)
+Humidity (0 to 100% RH)
+Pressure (300 to 1100 hPa)
+Gas (0 to 500 IAQ) |
 
 The four (4) WisBlock modules will have four (4) sensor types as follows:
 
@@ -39,7 +40,7 @@ The four (4) WisBlock modules will have four (4) sensor types as follows:
 |  Pressure   | 0x66 |     2     |
 |   3-axis    | 0x71 |     6     |
 
-RAK Sensor Type is 1&nbsp;Byte, which uses the IPSO Object ID minus 3200 in the below conversion rule:
+RAK Sensor Type is 1 Byte, which uses the IPSO Object ID minus 3200 in the below conversion rule:
 
 ```
 RAK_DATA_TYPE = IPSO_OBJECT_ID - 3200
@@ -47,19 +48,19 @@ RAK_DATA_TYPE = IPSO_OBJECT_ID - 3200
 
 | Type                   | IPSO ID | RAK Data Type (Decimal) | RAK Data Type (Hex) | Data Size | Data Resolution per Bit          | Sensor Hub NB IoT Json |
 |------------------------|---------|-------------------------|---------------------|-----------|----------------------------------|------------------------|
-| Temperature sensor     | 3303    | 103                     | 0x67                | 2         | 0.1°&nbsp;C Signed MSB           | "Temperature"          |
+| Temperature sensor     | 3303    | 103                     | 0x67                | 2         | 0.1° C Signed MSB           | "Temperature"          |
 | Humidity sensor        | 3304    | 104                     | 0x68                | 1         | 0.1% Unsigned                    | "Humidity"             |
-| Accelerometer (3-Axis) | 3313    | 113                     | 0x71                | 6         | 0.001&nbsp;G Signed MSB per axis | "Accelerometer"        |
-| Barometer (Pressure)   | 3315    | 115                     | 0x73                | 2         | 0.1&nbsp;hPa Unsigned MSB        | "Barometer"            |
+| Accelerometer (3-Axis) | 3313    | 113                     | 0x71                | 6         | 0.001 G Signed MSB per axis | "Accelerometer"        |
+| Barometer (Pressure)   | 3315    | 115                     | 0x73                | 2         | 0.1 hPa Unsigned MSB        | "Barometer"            |
 
 ###  Sensor Hub
 
 | Type                   | RAK Data Type (Decimal) | RAK Data Type (Hex) | Data Size | Data Resolution per Bit          | Sensor Hub NB IoT Json |
 |------------------------| -------------------------|---------------------|-----------|----------------------------------|------------------------|
-| HUB Voltage            | 187                     | 0xBB                | 2         | 0.01&nbsp;V MAX: 655.32          | "HUB_Voltage"          |
-| X-Axis Gravity         | 27                      | 0x1B                | 2         | 1&nbsp;mg 2000 ~ -2000           | "X-gravity"            |
-| Y-Axis Gravity         | 28                      | 0x1C                | 2         | 1&nbsp;mg 2000 ~ -2000           | "Y-gravity"            |
-| Z-Axis Gravity         | 29                      | 0x1D                | 2         | 1&nbsp;mg 2000 ~ -2000           | "Z-gravity"            |
+| HUB Voltage            | 187                     | 0xBB                | 2         | 0.01 V MAX: 655.32          | "HUB_Voltage"          |
+| X-Axis Gravity         | 27                      | 0x1B                | 2         | 1 mg 2000 ~ -2000           | "X-gravity"            |
+| Y-Axis Gravity         | 28                      | 0x1C                | 2         | 1 mg 2000 ~ -2000           | "Y-gravity"            |
+| Z-Axis Gravity         | 29                      | 0x1D                | 2         | 1 mg 2000 ~ -2000           | "Z-gravity"            |
 
 ### RAKwireless Standardized Payload Decoder
 
@@ -195,7 +196,7 @@ function parseTriple(str, base) {
 ```
 </details>
 
-<b>Data Interpretation</b>
+**Data Interpretation**
 
 | Sensor Data Unit | ID (Channel) | Type   | Data    |
 |------------------|--------------|--------|---------|
@@ -207,7 +208,6 @@ function parseTriple(str, base) {
 | Air Pressure     | 1 Byte       | 1 Byte | 2 Bytes |
 
 With the defined data, here's how to interpret the payload received data:
-
 
 ### RK900-09 Weather Station Data Sample
 
@@ -551,7 +551,7 @@ print(value)
 
 </details>
 
-<b>Data Interpretation</b>
+**Data Interpretation**
 
 | Data Unit                     | ID (Channel) | Type   | Data    |
 |-------------------------------|--------------|--------|---------|
@@ -564,7 +564,6 @@ print(value)
 | Battery FW Version            | 1 Byte       | 1 Byte | 2 Bytes |
 
 With the defined data, here's how to interpret the payload received data:
-
 
 ### RAK9154 Solar Battery Data Sample
 
@@ -697,7 +696,7 @@ function parseTriple(str, base) {
 
 </details>
 
-<b>Data Interpretation</b>
+**Data Interpretation**
 
 | Sensor Data Unit | ID (Channel) | Type   | Data    |
 |------------------|--------------|--------|---------|
@@ -705,8 +704,6 @@ function parseTriple(str, base) {
 | Pyranometer      | 1 Byte       | 1 Byte | 2 Bytes |
 
 With the defined data, here's how to interpret the payload received data:
-
-
 
 ### RK200-03 Solar Pyranometer Data Sample
 
@@ -734,4 +731,3 @@ SN: 006f03
 0 x 1 (conversion factor) = 0 W/m2
 ```
 
-<RkBottomNav/>

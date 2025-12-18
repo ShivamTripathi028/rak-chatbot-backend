@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2305 WisBlock WiFi Interface Module
 
 Thank you for choosing **RAK2305 WisBlock WiFi Interface Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -36,19 +34,19 @@ Thank you for choosing **RAK2305 WisBlock WiFi Interface Module** in your awesom
 
 The RAK2305 module, a part of the WisBlock Wireless series, is designed to be part of a production-ready IoT solution in a modular way and must be combined with a WisBlock Core and a Base module.
 
-The RAK2305 module is a 2.4&nbsp;GHz Wi-Fi and Bluetooth in a single module. The core of the module is an ESP32-WROVER, which features a PCB antenna. This module is designed to be part of the Internet-of-Things (IoT) applications. It can function as a Central or Peripheral in a Bluetooth network. Internally, it supports SPI/I2C/UART interfaces.
+The RAK2305 module is a 2.4 GHz Wi-Fi and Bluetooth in a single module. The core of the module is an ESP32-WROVER, which features a PCB antenna. This module is designed to be part of the Internet-of-Things (IoT) applications. It can function as a Central or Peripheral in a Bluetooth network. Internally, it supports SPI/I2C/UART interfaces.
 
 ## Product Features
 
 * **Module specifications**
     * Espressif ESP32 WROVER
-    * 2.4&nbsp;GHz Wi-Fi and Bluetooth
+    * 2.4 GHz Wi-Fi and Bluetooth
     * Espressif AT command interface
     * Option to flash custom firmware
 * **Power consumption control**
     * The RAK2305 modules power supply can be controlled by the WisBlock Core MCU to reduce power consumption.
 * **Size**
-    * 35 x 25&nbsp;mm
+    * 35 x 25 mm
 
 ## Prerequisites
 
@@ -58,4 +56,3 @@ To use a **RAK2305**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

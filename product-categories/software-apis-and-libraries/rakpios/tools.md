@@ -8,22 +8,13 @@ keywords:
 sidebar_label: Tools
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAKPiOS Tools
 
 ## Raspberry Pi `raspi-config` Tool
 
 RAKPiOS is pre-installed with the official command-line utility tool for the Raspberry Pi OS, called `raspi-config`. This tool is used to configure various Raspberry Pi settings and options, such as system settings, interface settings, performance settings, and more.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/tools/raspi-config.png"
-  width="70%"
-  caption="raspi-config tool"
-/>
+> **Image:** raspi-config tool
 
 :::tip NOTE
 - `raspi-config` uses dhcpcd to manage network connections, while RAKPiOS uses NetworkManager to manage WiFi and 4G connections. If both of these tools are used to manage the same network interface, they may cause issues with IP address assignment and network connectivity.
@@ -52,7 +43,6 @@ exit 0
 
 Refer to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rakpios/mioty/" target="_blank">Miromico Miro EdgeCard mioty® Management</a> page.
 
-
 ## Deploy on Boot Folder
 
 RAKPiOS is built on the official Raspberry Pi OS image, with all changes made defined in the [stage2-rak](https://github.com/RAKWireless/rakpios/tree/arm64/stage2-rak) repo. This stage contains an **on boot** folder that allows users to create an image that can deploy Docker services on the first boot. The scripts required to implement this feature are included in the `.04-pre-install-containers` folder.
@@ -75,4 +65,3 @@ Some example scripts are also provided:
 5. Move the compressed images to the RAKPiOS build directory. You can also download the images provided - refer to `stage2-rak/.04-pre-install-containers/00-run.sh` for example.
 6. Use `docker load` to load the compressed images. Check `stage2-rak/.04-pre-install-containers/files/run-once-services/portainer.sh.sample`.
 
-<RkBottomNav/>

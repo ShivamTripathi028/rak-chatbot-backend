@@ -12,8 +12,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12012 WisBlock Heart Rate Sensor Module
 
 Thank you for choosing **RAK12012 WisBlock Heart Rate Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -30,15 +28,9 @@ Thank you for choosing **RAK12012 WisBlock Heart Rate Sensor Module** in your aw
 
 [Sample Code: RAK12012_HeartRate](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK12012_HeartRate)
 
-
-
-
-
-
 ## Product Description
 
 The RAK12012, a part of WisBlock Sensor, is an integrated pulse oximetry and heart-rate monitor module used for measuring person's heart rate and oxygen saturation. The sensor attached to this module is MAX30102 from Analog Devices.
-
 
 ## Product Features
 
@@ -47,13 +39,13 @@ The RAK12012, a part of WisBlock Sensor, is an integrated pulse oximetry and hea
     * Ultra-Low Power Operation
     * Robust Motion Artifact Resilience
     * Fast Data Output Capability
-    * -40&nbsp;°C to +85&nbsp;°C Operating Temperature Range
-    * 3.3&nbsp;V Power supply
-    * Operating Current: 0.7 - 1200&nbsp;uA
+    * -40 °C to +85 °C Operating Temperature Range
+    * 3.3 V Power supply
+    * Operating Current: 0.7 - 1200 uA
     * Chipset: Analog Devices MAX30102
 
 * **Module Size**
-    * 25&nbsp;mm x 35&nbsp;mm
+    * 25 mm x 35 mm
 
 ## Prerequisites
 
@@ -63,4 +55,3 @@ To use a **RAK12012**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

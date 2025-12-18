@@ -10,11 +10,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK5804 WisBlock Interface Extension Module Quick Start Guide
-
 
 ## Prerequisite
 
@@ -44,21 +40,9 @@ The RAK5804 module is designed as an IO extension module that allows you to conn
 
 The RAK5804 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_assembly.png" 
-  figureCount="1"  
-  caption="RAK5804 connection to WisBlock Base"
-  width="50%"
-/>
+> **Image:** RAK5804 connection to WisBlock Base
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_pinout.png"
-  figureCount="2"
-  caption="RAK5804 Pin Definition"
-  width="50%"
-/>
-
+> **Image:** RAK5804 Pin Definition
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -68,9 +52,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires are matching the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -96,43 +80,19 @@ These are the quick links that go directly to the software guide for the specifi
 
 ##### I2C Connection on RAK5804
 
-This is just an example and illustration on how to use the RAK5804 for external I2C sensors, modules, or devices. You can use any I2C device as long as it operates at 3.3&nbsp;V.
+This is just an example and illustration on how to use the RAK5804 for external I2C sensors, modules, or devices. You can use any I2C device as long as it operates at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_oled.png"
-  figureCount="3"
-  width="50%"
-  caption="Connecting the RAK5804 to the I2C pin of the module"
-/>
-
+> **Image:** Connecting the RAK5804 to the I2C pin of the module
 
 1. Select the RAK4631 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak4631-board.png"
-  figureCount="4"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
-
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 2. On the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. The Library Manager should open, then install the [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306) and the [Adafruit GFX](https://github.com/adafruit/Adafruit-GFX-Library) libraries, as shown in **Figure 5** and **Figure 6**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/ssd1306-lib.png"
-  figureCount="5"
-  width="70%"
-  caption="Installing the Adafruit SSD1306 library"
-/>
+> **Image:** Installing the Adafruit SSD1306 library
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/gfx-lib.png"
-  figureCount="6"
-  width="70%"
-  caption="Installing the Adafruit GFX library"
-/>
-
+> **Image:** Installing the Adafruit GFX library
 
 3. After successful installation of the libraries, you can now copy the following sample code into your Arduino IDE:
 
@@ -243,51 +203,25 @@ void loop() {
 
 4. Select the right Serial Port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak4631-i2c-selectport.png"
-  figureCount="7"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
-
+> **Image:** Selecting the correct Serial Port
 
 5. When you successfully uploaded the sample code, you will now be able to see the RAK logo displayed on your OLED screen, as shown in **Figure 8**, which means that the module is properly communicating with the WisBlock core using the I2C protocol.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak_oled.png"
-  figureCount="8"
-  width="20%"
-  caption="RAK logo displayed on OLED screen"
-/>
+> **Image:** RAK logo displayed on OLED screen
 
 ##### GPIO Connection on RAK5804
 
-This is just an example and illustration on how to use the GPIO pins of RAK5804 for external sensors, modules, or devices. There are four (4) GPIO pins available on the RAK5804. You can use any of the GPIO pins as long as your modules, sensors, or devices operate at 3.3&nbsp;V.
+This is just an example and illustration on how to use the GPIO pins of RAK5804 for external sensors, modules, or devices. There are four (4) GPIO pins available on the RAK5804. You can use any of the GPIO pins as long as your modules, sensors, or devices operate at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_dht11.png"
-  figureCount="9"
-  width="50%"
-  caption="Connecting the RAK5804 to the GPIO pin of the sensor module"
-/>
+> **Image:** Connecting the RAK5804 to the GPIO pin of the sensor module
 
 1. Select the RAK4631 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak4631-board.png"
-  figureCount="10"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 2. On the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. The Library Manager should open, then install the [Adafruit DHT Sensor](https://github.com/adafruit/DHT-sensor-library) library, as shown in **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/dht-lib.png"
-  figureCount="11"
-  width="70%"
-  caption="Installing the Adafruit DHT library"
-/>
+> **Image:** Installing the Adafruit DHT library
 
 3. After successful installation of the library, you can now copy the following sample code into your Arduino IDE:
 
@@ -340,42 +274,21 @@ void loop() {
 
 4. Select the right Serial Port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak4631-gpio-selectport.png"
-  figureCount="12"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 5. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to see the module's reading logs. If you see the logs, as shown in **Figure 13**, then your module or sensor is properly communicating to the WisBlock core using the Digital Interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/gpio-logs.png"
-  figureCount="13"
-  width="80%"
-  caption="DHT11 Temp & Humidity data logs"
-/>
-
+> **Image:** DHT11 Temp & Humidity data logs
 
 ##### Analog Input (ADC) Connection on RAK5804
 
-This is just an example and illustration on how to use the ADC pin of RAK5804 for external sensors, modules, or devices. There is only one (1) ADC pin available on the RAK5804 that you can use as long as your modules, sensors, or devices operate at 3.3&nbsp;V.
+This is just an example and illustration on how to use the ADC pin of RAK5804 for external sensors, modules, or devices. There is only one (1) ADC pin available on the RAK5804 that you can use as long as your modules, sensors, or devices operate at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_lm35.png"
-  figureCount="14"
-  width="50%"
-  caption="Connecting the RAK5804 to the ADC pin of the sensor module"
-/>
+> **Image:** Connecting the RAK5804 to the ADC pin of the sensor module
 
 1. Select the RAK4631 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak4631-board.png"
-  figureCount="15"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 2. Copy the following sample code into your Arduino IDE:
 
@@ -408,61 +321,29 @@ void loop() {
 
 3. Select the right Serial Port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak4631-adc-selectport.png"
-  figureCount="16"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 4. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to see the module's reading logs. If you see the logs, as shown in **Figure 17**, then your module or sensor is properly communicating to the WisBlock core using the Analog Interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/adc-logs.png"
-  figureCount="17"
-  width="70%"
-  caption="LM35 Temperature data logs"
-/>
-
+> **Image:** LM35 Temperature data logs
 
 #### RAK5804 in RAK11200 WisBlock Core Guide
 
 ##### I2C Connection on RAK5804
 
-This is just an example and illustration on how to use the RAK5804 for external I2C sensors, modules, or devices. You can use any I2C device as long as it operates at 3.3&nbsp;V.
+This is just an example and illustration on how to use the RAK5804 for external I2C sensors, modules, or devices. You can use any I2C device as long as it operates at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_oled.png"
-  figureCount="18"
-  width="50%"
-  caption="Connecting the RAK5804 to the I2C pin of the module"
-/>
+> **Image:** Connecting the RAK5804 to the I2C pin of the module
 
 1. Select the RAK11200 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11200-board.png"
-  figureCount="19"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 2. On the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. The Library Manager should open, then install the [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306) and the [Adafruit GFX](https://github.com/adafruit/Adafruit-GFX-Library) libraries, as shown in **Figure 20** and **Figure 21**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/ssd1306-lib.png"
-  figureCount="20"
-  width="70%"
-  caption="Installing the Adafruit SSD1306 library"
-/>
+> **Image:** Installing the Adafruit SSD1306 library
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/gfx-lib.png"
-  figureCount="21"
-  width="70%"
-  caption="Installing the Adafruit GFX library"
-/>
-
+> **Image:** Installing the Adafruit GFX library
 
 3. After successful installation of the libraries, you can now copy the following sample code into your Arduino IDE:
 
@@ -577,50 +458,25 @@ void loop() {
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11200-i2c-selectport.png"
-  figureCount="22"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 5. When you successfully uploaded the sample code, you will now be able to see the RAK logo displayed on your OLED screen, as shown in **Figure 23**, which means that the module is properly communicating with the WisBlock core using the I2C protocol.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak_oled.png"
-  figureCount="23"
-  width="20%"
-  caption="RAK logo displayed on OLED screen"
-/>
+> **Image:** RAK logo displayed on OLED screen
 
 ##### GPIO Connection on RAK5804
 
-This is just an example and illustration on how to use the GPIO pins of RAK5804 for external sensors, modules, or devices. There are four (4) GPIO pins available on the RAK5804. You can use any of the GPIO pins as long as your modules, sensors, or devices operate at 3.3&nbsp;V.
+This is just an example and illustration on how to use the GPIO pins of RAK5804 for external sensors, modules, or devices. There are four (4) GPIO pins available on the RAK5804. You can use any of the GPIO pins as long as your modules, sensors, or devices operate at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_dht11.png"
-  figureCount="24"
-  width="50%"
-  caption="Connecting the RAK5804 to the GPIO pin of the sensor module"
-/>
+> **Image:** Connecting the RAK5804 to the GPIO pin of the sensor module
 
 1. Select the RAK11200 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11200-board.png"
-  figureCount="25"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 2. On the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. The Library Manager should open, then install the [Adafruit DHT Sensor](https://github.com/adafruit/DHT-sensor-library) library, as shown in **Figure 26**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/dht-lib.png"
-  figureCount="26"
-  width="70%"
-  caption="Installing the Adafruit DHT library"
-/>
+> **Image:** Installing the Adafruit DHT library
 
 3. After successful installation of the library, you can now copy the following sample code into your Arduino IDE:
 
@@ -677,42 +533,21 @@ void loop() {
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11200-gpio-selectport.png"
-  figureCount="27"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
-
+> **Image:** Selecting the correct Serial Port
 
 5. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to see the module's reading logs. If you see the logs, as shown in **Figure 28**, then your module or sensor is properly communicating to the WisBlock core using the Digital Interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/gpio-logs.png"
-  figureCount="28"
-  width="80%"
-  caption="DHT11 Temp & Humidity data logs"
-/>
+> **Image:** DHT11 Temp & Humidity data logs
 
 ##### Analog Input (ADC) Connection on RAK5804
 
-This is just an example and illustration on how to use the ADC pin of RAK5804 for external sensors, modules, or devices. There is only one (1) ADC pin available on the RAK5804 that you can use as long as your modules, sensors, or devices operate at 3.3&nbsp;V.
+This is just an example and illustration on how to use the ADC pin of RAK5804 for external sensors, modules, or devices. There is only one (1) ADC pin available on the RAK5804 that you can use as long as your modules, sensors, or devices operate at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_lm35.png"
-  figureCount="29"
-  width="50%"
-  caption="Connecting the RAK5804 to the ADC pin of the sensor module"
-/>
+> **Image:** Connecting the RAK5804 to the ADC pin of the sensor module
 
 1. Select the RAK11200 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11200-board.png"
-  figureCount="30"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 2. Copy the following sample code into your Arduino IDE:
 
@@ -749,60 +584,29 @@ void loop() {
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11200-adc-selectport.png"
-  figureCount="31"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 4. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to see the module's reading logs. If you see the logs, as shown in **Figure 32**, then your module or sensor is properly communicating to the WisBlock core using the Analog Interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/adc-logs.png"
-  figureCount="32"
-  width="70%"
-  caption="LM35 Temperature data logs"
-/>
+> **Image:** LM35 Temperature data logs
 
 #### RAK5804 in RAK11310 WisBlock Core Guide
 
 ##### I2C Connection on RAK5804
 
-This is just an example and illustration on how to use the RAK5804 for external I2C sensors, modules, or devices. You can use any I2C device as long as it operates at 3.3&nbsp;V.
+This is just an example and illustration on how to use the RAK5804 for external I2C sensors, modules, or devices. You can use any I2C device as long as it operates at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_oled.png"
-  figureCount="33"
-  width="50%"
-  caption="Connecting the RAK5804 to the I2C pin of the module"
-/>
+> **Image:** Connecting the RAK5804 to the I2C pin of the module
 
 1. Select the RAK11310 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11310-board.png"
-  figureCount="34"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 2. On the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. The Library Manager should open, then install the [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306) and the [Adafruit GFX](https://github.com/adafruit/Adafruit-GFX-Library) libraries, as shown in **Figure 35** and **Figure 36**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/ssd1306-lib.png"
-  figureCount="35"
-  width="70%"
-  caption="Installing the Adafruit SSD1306 library"
-/>
+> **Image:** Installing the Adafruit SSD1306 library
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/gfx-lib.png"
-  figureCount="36"
-  width="70%"
-  caption="Installing the Adafruit GFX library"
-/>
-
+> **Image:** Installing the Adafruit GFX library
 
 3. After successful installation of the libraries, you can now copy the following sample code into your Arduino IDE:
 
@@ -913,50 +717,25 @@ void loop() {
 
 4. Select the right Serial Port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11310-i2c-selectport.png"
-  figureCount="37"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 5. When you successfully uploaded the sample code, you will now be able to see the RAK logo displayed on your OLED screen, as shown in **Figure 38**, which means that the module is properly communicating with the WisBlock core using the I2C protocol.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak_oled.png"
-  figureCount="38"
-  width="20%"
-  caption="RAK logo displayed on OLED screen"
-/>
+> **Image:** RAK logo displayed on OLED screen
 
 ##### GPIO Connection on RAK5804
 
-This is just an example and illustration on how to use the GPIO pins of RAK5804 for external sensors, modules, or devices. There are four (4) GPIO pins available on the RAK5804. You can use any of the GPIO pins as long as your modules, sensors, or devices operate at 3.3&nbsp;V.
+This is just an example and illustration on how to use the GPIO pins of RAK5804 for external sensors, modules, or devices. There are four (4) GPIO pins available on the RAK5804. You can use any of the GPIO pins as long as your modules, sensors, or devices operate at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_dht11.png"
-  figureCount="39"
-  width="50%"
-  caption="Connecting the RAK5804 to the GPIO pin of the sensor module"
-/>
+> **Image:** Connecting the RAK5804 to the GPIO pin of the sensor module
 
 1. Select the RAK11310 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11310-board.png"
-  figureCount="40"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 2. On the Arduino IDE, go to **Sketch > Include Library > Manage Libraries**. The Library Manager should open, then install the [Adafruit DHT Sensor](https://github.com/adafruit/DHT-sensor-library) library, as shown in **Figure 41**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/dht-lib.png"
-  figureCount="41"
-  width="70%"
-  caption="Installing the Adafruit DHT library"
-/>
+> **Image:** Installing the Adafruit DHT library
 
 3. After successful installation of the library, you can now copy the following sample code into your Arduino IDE:
 
@@ -1009,42 +788,21 @@ void loop() {
 
 4. Select the right Serial Port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11310-gpio-selectport.png"
-  figureCount="42"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 5. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to see the module's reading logs. If you see the logs, as shown in **Figure 43**, then your module or sensor is properly communicating to the WisBlock core using the Digital Interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/gpio-logs.png"
-  figureCount="43"
-  width="80%"
-  caption="DHT11 Temp & Humidity data logs"
-/>
-
+> **Image:** DHT11 Temp & Humidity data logs
 
 ##### Analog Input (ADC) Connection on RAK5804
 
-This is just an example and illustration on how to use the ADC pin of RAK5804 for external sensors, modules, or devices. There is only one (1) ADC pin available on the RAK5804 that you can use as long as your modules, sensors, or devices operate at 3.3&nbsp;V.
+This is just an example and illustration on how to use the ADC pin of RAK5804 for external sensors, modules, or devices. There is only one (1) ADC pin available on the RAK5804 that you can use as long as your modules, sensors, or devices operate at 3.3 V.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak5804_lm35.png"
-  figureCount="44"
-  width="50%"
-  caption="Connecting the RAK5804 to the ADC pin of the sensor module"
-/>
+> **Image:** Connecting the RAK5804 to the ADC pin of the sensor module
 
 1. Select the RAK11310 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11310-board.png"
-  figureCount="45"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 2. Copy the following sample code into your Arduino IDE:
 
@@ -1077,21 +835,9 @@ void loop() {
 
 3. Select the right Serial Port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/rak11310-adc-selectport.png"
-  figureCount="46"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 4. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to see the module's reading logs. If you see the logs, as shown in **Figure 47**, then your module or sensor is properly communicating to the WisBlock core using the Analog Interface.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5804/quickstart/adc-logs.png"
-  figureCount="47"  
-  width="70%"
-  caption="LM35 Temperature data logs"
-/>
+> **Image:** LM35 Temperature data logs
 
-
-<RkBottomNav/>

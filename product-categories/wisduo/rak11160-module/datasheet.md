@@ -25,10 +25,6 @@ slug: /product-categories/wisduo/rak11160-module/datasheet/
 date: 2025-04-24
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK11160 WisDuo LoRaWAN + BLE + WiFi Module Datasheet
 
 ## Overview
@@ -40,8 +36,10 @@ The RAK11160 is a low-power, long-range LoRaWAN module based on the STM32WLE5 MC
 By default, RAK11160 runs on RUI3 (RAKwireless Unified Interface) firmware, allowing standalone operation with custom firmware development via Arduino-compatible RUI3 APIs. Sensors and other external peripherals can be interfaced directly, eliminating the need for an additional MCU. Alternatively, the RAK11160 can be interfaced with an external host MCU using AT commands via UART.
 
 :::tip NOTE
-There are two variants available for the RAK11160 Module:<br/>
-(1) With MHF4 IPEX connector to connect external antennas<br/>
+There are two variants available for the RAK11160 Module:
+
+(1) With MHF4 IPEX connector to connect external antennas
+
 (2) No IPEX connector but with RF pinout to connect custom antenna
 :::
 
@@ -49,35 +47,35 @@ There are two variants available for the RAK11160 Module:<br/>
 
 - Based on **STM32WLE5**
 	- ARM 32-bit Cortex – M4
-	- 256&nbsp;kB Flash and 64&nbsp;kB SRAM
+	- 256 kB Flash and 64 kB SRAM
 	- **LoRaWAN 1.0.4** specification compliant
 	- **Supported bands**: EU433, CN470, IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 	- LoRaWAN Activation by OTAA/ABP
 	- LoRa Point-to-Point (P2P) communication
-	- Transmitter output power, programmable up to +22&nbsp;dBm
-	– 137&nbsp;dBm for LoRa (BW = 125&nbsp;kHz, SF = 12)
+	- Transmitter output power, programmable up to +22 dBm
+	– 137 dBm for LoRa (BW = 125 kHz, SF = 12)
 	- TCXO crystal
 - WiFi modem processor based on **Espressif ESP8684**
-	- 32-bit RISC-V single-core processor, up to 120&nbsp;MHz
-	- 576&nbsp;KB&nbsp;ROM
-	- 2&nbsp;MB Flash
-	- 272&nbsp;kB SRAM
+	- 32-bit RISC-V single-core processor, up to 120 MHz
+	- 576 KB ROM
+	- 2 MB Flash
+	- 272 kB SRAM
 	- BLE 5.0 support
 		- Bluetooth LE: Bluetooth 5.3 certified
-		- High power mode (20&nbsp;dBm)
-		- Speed: 125&nbsp;Kbps, 500&nbsp;Kbps, 1&nbsp;Mbps, 2&nbsp;Mbps
+		- High power mode (20 dBm)
+		- Speed: 125 Kbps, 500 Kbps, 1 Mbps, 2 Mbps
 	- WiFi support
 		- Complies with IEEE 802.11b/g/n
-		- Supports 20&nbsp;MHz bandwidth in 2.4&nbsp;GHz band
-		- 1T1R mode with data rate up to 72.2&nbsp;Mbps
+		- Supports 20 MHz bandwidth in 2.4 GHz band
+		- 1T1R mode with data rate up to 72.2 Mbps
 - Custom firmware using Arduino via RUI3 API
 - Easy-to-use AT Command set STM32WLE5 and LoRa settings via UART interface
 - Espressif AT command to set ESP8684 WiFi and BLE settings via UART interface (same as for STM32WLE5)
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10&nbsp;km with optimized antenna
-- Ultra-low-power consumption of ~2.8&nbsp;μA in sleep mode (ESP8684 powered down)
-- **Supply Voltage**: 1.8&nbsp;V ~ 3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C ~ 85°&nbsp;C
+- Long-range: greater than 10 km with optimized antenna
+- Ultra-low-power consumption of ~2.8 μA in sleep mode (ESP8684 powered down)
+- **Supply Voltage**: 1.8 V ~ 3.6 V
+- **Temperature range**: -40° C ~ 85° C
 
 ## Specifications
 
@@ -85,11 +83,7 @@ There are two variants available for the RAK11160 Module:<br/>
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/datasheet/block-diagram.png"
-  width="70%"
-  caption="RAK11160 system block diagram"
-/>
+> **Image:** RAK11160 system block diagram
 
 ### Hardware
 
@@ -111,25 +105,20 @@ The hardware specification is categorized into three parts: RF, electrical, and 
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/datasheet/rak11160-pinout.svg"
-  width="80%"
-  caption="RAK11160 module pinout diagram"
-/>
+> **Image:** RAK11160 module pinout diagram
 
 :::warning
 When using `RF_LoRa`, `RF_WIFI` pins for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF traces must be away from interference (switching nodes of DC-DC supplies, high-current/voltage pulses from controllers of inductive loads like motors, signal generators, etc.).
-- RF traces must have 50&nbsp;ohm impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF traces must have 50 ohm impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, place it close to the LoRa RF and BLE RF pins.
 - Ground plane optimization is critical for certain antenna types like monopoles.
 - The GND trace used for the RF return path must be directly connected to the GND plane and not treated as a thermal relief.
-- It is recommended that RF traces be routed in curves, not sharp 90&nbsp;degree angles.
+- It is recommended that RF traces be routed in curves, not sharp 90 degree angles.
 
 In addition, with our commitment to making IoT easy, we offer dedicated service for <a href="https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test" target="_blank">Antenna RF Design which includes PCB design, tuning, matching and RF testing</a>.
 :::
-
 
 | **Pin No.** | **Name**               | **Type** | **Description**                                                             |
 | ----------- | ---------------------- | -------- | --------------------------------------------------------------------------- |
@@ -185,92 +174,54 @@ In addition, with our commitment to making IoT easy, we offer dedicated service 
 
 The RAK11160 module supports the LoRaWAN bands, as shown in the table below. When buying an RAK11160 module, pay attention to specifying the correct core module, RAK11160 H/L, for your region. **H** denotes high-frequency regions and **L** denotes low-frequency regions.
 
-<table>
-  <thead>
-    <tr>
-      <th>Module</th>
-      <th>Region</th>
-      <th>Frequency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan = "2">RAK11160 (L)</td>
-      <td>Europe</td>
-      <td>EU433</td>
-    </tr>
-    <tr>
-      <td>China</td>
-      <td>CN470</td>
-    </tr>
-      <tr>
-      <td rowSpan = "7">RAK11160 (H)</td>
-      <td>Europe</td>
-      <td>EU868</td>
-    </tr>
-    <tr>
-      <td>North America</td>
-      <td>US915</td>
-    </tr>
-    <tr>
-      <td>Australia</td>
-      <td>AU915</td>
-    </tr>
-    <tr>
-      <td>Korea</td>
-      <td>KR920</td>
-    </tr>
-    <tr>
-      <td>Asia</td>
-      <td>AS923-1/2/3/4</td>
-    </tr>
-    <tr>
-      <td>India</td>
-      <td>IN865</td>
-    </tr>
-    <tr>
-      <td>Russia</td>
-      <td>RU864</td>
-    </tr>
-  </tbody>
-</table>
+| Module | Region | Frequency |
+| --- | --- | --- |
+| RAK11160 (L) | Europe | EU433 |
+| RAK11160 (L) | China | CN470 |
+| RAK11160 (H) | Europe | EU868 |
+| RAK11160 (H) | North America | US915 |
+| RAK11160 (H) | Australia | AU915 |
+| RAK11160 (H) | Korea | KR920 |
+| RAK11160 (H) | Asia | AS923-1/2/3/4 |
+| RAK11160 (H) | India | IN865 |
+| RAK11160 (H) | Russia | RU864 |
 
 ###### TX Power
 
-Transmitter output power, programmable up to +22&nbsp;dBm.
+Transmitter output power, programmable up to +22 dBm.
 
 ###### RX Sensitivity
 
-- -124&nbsp;dBm for LoRa（BW = 125&nbsp;kHz, SF = 7 ）
-- -121&nbsp;dBm for LoRa (BW = 250&nbsp;kHz, SF = 7)
-- –137&nbsp;dBm for LoRa (BW = 125&nbsp;kHz, SF = 12)
-- –134&nbsp;dBm for LoRa（BW = 250&nbsp;kHz, SF = 12）
+- -124 dBm for LoRa（BW = 125 kHz, SF = 7 ）
+- -121 dBm for LoRa (BW = 250 kHz, SF = 7)
+- –137 dBm for LoRa (BW = 125 kHz, SF = 12)
+- –134 dBm for LoRa（BW = 250 kHz, SF = 12）
 
 ##### WiFi
 
 ###### Operating Frequencies
 
-2412 ~ 2484&nbsp;MHz
+2412 ~ 2484 MHz
 
 ###### TX Power
 
-| Rate                  | Type&nbsp;(dBm) |
+| Rate                  | Type (dBm) |
 | --------------------- | --------------- |
-| 802.11b, 1&nbsp;Mbps  | 21.5            |
-| 802.11b, 11&nbsp;Mbps | 21.5            |
-| 802.11g, 6&nbsp;Mbps  | 21.5            |
-| 802.11g, 54&nbsp;Mbps | 19.5            |
+| 802.11b, 1 Mbps  | 21.5            |
+| 802.11b, 11 Mbps | 21.5            |
+| 802.11g, 6 Mbps  | 21.5            |
+| 802.11g, 54 Mbps | 19.5            |
 | 802.11n, HT20, MCS0   | 21.0            |
 | 802.11n, HT20, MCS7   | 19.0            |
 
 ###### RX Sensitivity
 
-| Rate                  | Type&nbsp;(dBm) |
+| Rate                  | Type (dBm) |
 | --------------------- | --------------- |
-| 802.11b, 1&nbsp;Mbps  | -99.0           |
-| 802.11b, 11&nbsp;Mbps | -90.0           |
-| 802.11g, 6&nbsp;Mbps  | -94.0           |
-| 802.11g, 54&nbsp;Mbps | -77.0           |
+| 802.11b, 1 Mbps  | -99.0           |
+| 802.11b, 11 Mbps | -90.0           |
+| 802.11g, 6 Mbps  | -94.0           |
+| 802.11g, 54 Mbps | -77.0           |
 | 802.11n, HT20, MCS0   | -92.5           |
 | 802.11n, HT20, MCS7   | -74.0           |
 
@@ -278,30 +229,29 @@ Transmitter output power, programmable up to +22&nbsp;dBm.
 
 ###### Operating Frequencies
 
-2402 ~ 2480&nbsp;MHz
+2402 ~ 2480 MHz
 
 ###### TX Power
 
-| Rate                  | Type&nbsp;(dBm) |
+| Rate                  | Type (dBm) |
 | --------------------- | --------------- |
-| 802.11b, 1&nbsp;Mbps  | 21.5            |
-| 802.11b, 11&nbsp;Mbps | 21.5            |
-| 802.11g, 6&nbsp;Mbps  | 21.5            |
-| 802.11g, 54&nbsp;Mbps | 19.5            |
+| 802.11b, 1 Mbps  | 21.5            |
+| 802.11b, 11 Mbps | 21.5            |
+| 802.11g, 6 Mbps  | 21.5            |
+| 802.11g, 54 Mbps | 19.5            |
 | 802.11n, HT20, MCS0   | 21.0            |
 | 802.11n, HT20, MCS7   | 19.0            |
 
 ###### RX Sensitivity
 
-| Rate                  | Type&nbsp;(dBm) |
+| Rate                  | Type (dBm) |
 | --------------------- | --------------- |
-| 802.11b, 1&nbsp;Mbps  | -99.0           |
-| 802.11b, 11&nbsp;Mbps | -90.0           |
-| 802.11g, 6&nbsp;Mbps  | -94.0           |
-| 802.11g, 54&nbsp;Mbps | -77.0           |
+| 802.11b, 1 Mbps  | -99.0           |
+| 802.11b, 11 Mbps | -90.0           |
+| 802.11g, 6 Mbps  | -94.0           |
+| 802.11g, 54 Mbps | -77.0           |
 | 802.11n, HT20, MCS0   | -92.5           |
 | 802.11n, HT20, MCS7   | -74.0           |
-
 
 #### Electrical Characteristics
 
@@ -313,52 +263,43 @@ Transmitter output power, programmable up to +22&nbsp;dBm.
 
 ##### Operating Current
 
-The current consumption measurements are taken with a 3.3&nbsp;V supply at 25°&nbsp;C of ambient
+The current consumption measurements are taken with a 3.3 V supply at 25° C of ambient
 temperature .
 
 |  Work Mode   |              Condition               | Peak Current | Unit  |
 | :----------: | :----------------------------------: | :----------: | :---: |
-|   WiFi TX    | 802.11b, 1&nbsp;Mbps, @ 22&nbsp;dBm  |     370      |  mA   |
-|              | 802.11g, 54&nbsp;Mbps, @ 20&nbsp;dBm |     320      |  mA   |
-|              |  802.11n, HT20, MCS7, @ 19&nbsp;dBm  |     300      |  mA   |
+|   WiFi TX    | 802.11b, 1 Mbps, @ 22 dBm  |     370      |  mA   |
+|              | 802.11g, 54 Mbps, @ 20 dBm |     320      |  mA   |
+|              |  802.11n, HT20, MCS7, @ 19 dBm  |     300      |  mA   |
 |   WiFi RX    |          802.11b/g/n, HT20           |      65      |  mA   |
-| Bluetooth TX |     Bluetooth LE @ 20.0&nbsp;dBm     |     320      |  mA   |
-|              |     Bluetooth LE @ 9.0&nbsp;dBm      |     190      |  mA   |
-|              |    Bluetooth LE @ –15.0&nbsp;dBm     |     150      |  mA   |
+| Bluetooth TX |     Bluetooth LE @ 20.0 dBm     |     320      |  mA   |
+|              |     Bluetooth LE @ 9.0 dBm      |     190      |  mA   |
+|              |    Bluetooth LE @ –15.0 dBm     |     150      |  mA   |
 | Bluetooth RX |             Bluetooth LE             |      62      |  mA   |
-|   Lora TX    |  +22&nbsp;dBm @ 868 ~ 915&nbsp;Mhz   |     120      |  mA   |
-|              |  +20&nbsp;dBm @ 868 ~ 915&nbsp;Mhz   |    107.5     |  mA   |
-|              |  +17&nbsp;dBm @ 868 ~ 915&nbsp;Mhz   |      98      |  mA   |
-|              |  +14&nbsp;dBm @ 868 ~ 915&nbsp;Mhz   |      92      |  mA   |
-|   Lora RX    |          LoRa 125&nbsp;kHz           |     5.46     |  mA   |
+|   Lora TX    |  +22 dBm @ 868 ~ 915 Mhz   |     120      |  mA   |
+|              |  +20 dBm @ 868 ~ 915 Mhz   |    107.5     |  mA   |
+|              |  +17 dBm @ 868 ~ 915 Mhz   |      98      |  mA   |
+|              |  +14 dBm @ 868 ~ 915 Mhz   |      92      |  mA   |
+|   Lora RX    |          LoRa 125 kHz           |     5.46     |  mA   |
 
 ##### Sleep Current
 
-The current consumption measurements are taken with a 3.3&nbsp;V supply at 25°&nbsp;C of ambient
+The current consumption measurements are taken with a 3.3 V supply at 25° C of ambient
 temperature. ESP8684 disabled.
 
 |       Feature       |                 Condition                  | Maximum | Unit  |
 | :-----------------: | :----------------------------------------: | :-----: | :---: |
 | Current Consumption | Supply current in Stop 1 mode RTC disabled |   2.8   |  μA   |
 
-
 #### Mechanical Characteristics
 
 ##### Module Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/datasheet/mechanical-drawing.png"
-  width="60%"
-  caption="RAK11160 board dimension"
-/>
+> **Image:** RAK11160 board dimension
 
 ##### Layout Recommendation
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/datasheet/pcb-footprint.png"
-  width="60%"
-  caption="RAK11160 PCB footprint and recommendations"
-/>
+> **Image:** RAK11160 PCB footprint and recommendations
 
 #### Environmental Characteristics
 
@@ -366,30 +307,26 @@ temperature. ESP8684 disabled.
 
 |        Feature        | Minimum | Typical | Maximum |   Unit   |
 | :-------------------: | :-----: | :-----: | :-----: | :------: |
-| Operating Temperature |   -40   |   25    |   85    | °&nbsp;C |
+| Operating Temperature |   -40   |   25    |   85    | ° C |
 
 ##### Storage Temperature
 
 |       Feature       | Minimum | Typical | Maximum |   Unit   |
 | :-----------------: | :-----: | :-----: | :-----: | :------: |
-| Storage Temperature |   -40   |    -    |   85    | °&nbsp;C |
+| Storage Temperature |   -40   |    -    |   85    | ° C |
 
 ##### Recommended Reflow Profile
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/datasheet/reflow.png"
-  width="70%"
-  caption="Reflow Profile for RAK11160"
-/>
+> **Image:** Reflow Profile for RAK11160
 
 Standard conditions for reflow soldering:
 
-- Pre-heating Ramp (A) (Initial temperature: 150°&nbsp;C): **1 ~ 2.5°&nbsp;C/sec**
-- Soaking Time (T2) (150 ~ 180°&nbsp;C): **60 ~ 100&nbsp;sec**
-- Peak Temperature (G): **230 ~ 250°&nbsp;C**
-- Reflow Time (T3) (> 220°&nbsp;C): **30 ~ 60&nbsp;sec**
-- Ramp-up Rate (B): **0 ~ 2.5°&nbsp;C/sec**
-- Ramp-down Rate (C): **1 ~ 3°&nbsp;C/sec**
+- Pre-heating Ramp (A) (Initial temperature: 150° C): **1 ~ 2.5° C/sec**
+- Soaking Time (T2) (150 ~ 180° C): **60 ~ 100 sec**
+- Peak Temperature (G): **230 ~ 250° C**
+- Reflow Time (T3) (> 220° C): **30 ~ 60 sec**
+- Ramp-up Rate (B): **0 ~ 2.5° C/sec**
+- Ramp-down Rate (C): **1 ~ 3° C/sec**
 
 ### Firmware
 
@@ -402,27 +339,16 @@ Download the latest RAK11160 WisDuo LPWAN Module firmware provided below. RAK111
 
 ### Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_CE_Certification.pdf'
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_FCC_Certification.pdf',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_ISED_Certification.pdf',
-    }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_ISED_Certification.pdf
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkCertificationIcons certifications={[
-  {
-      'ce': 'https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_CE_Certification.pdf',
-  }
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK11160/Certification/RAK11160_CE_Certification.pdf
 
-<RkBottomNav/>

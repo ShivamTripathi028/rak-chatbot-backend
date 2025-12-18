@@ -11,9 +11,6 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7258 WisGate Edge Lite
 
@@ -26,7 +23,6 @@ Thank you for choosing **RAK7258 WisGate Edge Lite** in your awesome IoT Project
 * [Use the MQTT Broker Like a Pro + Examples](https://learn.rakwireless.com/hc/en-us/articles/26688300221079-How-To-Use-the-MQTT-Broker-Like-a-Pro-Examples)
 * [AWS IoT Core Integration](https://learn.rakwireless.com/hc/en-us/articles/26662067838359-How-To-Configure-AWS-IoT-Core-Integration)
 * [RAK7258 Latest Firmware](https://downloads.rakwireless.com/LoRa/WisGateOS/WisGateOS_Latest_Firmware.zip)
-
 
 ## Product Description
 
@@ -41,7 +37,6 @@ The open source software for the management and configuration of this gateway de
 The Gateway has Line-of-Sight (LoS) ranges of up to **15 kilometers**, while for highly urbanized environments it can cover more than **2 kilometers**. It is a perfect solution for any LoRaWAN use case scenario.
 
 The RAK7258 WisGate Edge Lite package includes a LoRa antenna, mounting screws, and anchors. It is a full 8-channel Gateway with built-in Ethernet connectivity for a straightforward.
-
 
 ## Product Features
 

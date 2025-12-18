@@ -11,8 +11,6 @@ slug: /product-categories/wisduo/bastwan/overview/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3244 BastWAN Breakout Board
 
 Thank you for choosing **RAK3244 BastWAN** in your awesome IoT Project! 🎉 To help you get started, we have provided the necessary documentation for the product.
@@ -23,10 +21,9 @@ Thank you for choosing **RAK3244 BastWAN** in your awesome IoT Project! 🎉 To 
 - <a href="https://github.com/ElectronicCats/Bast-WAN" target="_blank">ElectronicCats BastWAN Repository</a>
 - <a href="https://downloads.rakwireless.com/3D_File/WisDuo/PWB-RAK3244%20BASTWAN.stp" target="_blank">RAK3244 BastWAN 3D Model</a>
 
-
 ## Product Description
 
-The **RAK3244 BastWAN Breakout Board** is designed to be compatible with the **Feather format** while leveraging the capabilities of the RAK4260 module. At its core, the board features the RAK4260, a module built around the ATSAMR34J18B SiP. This high level of integration delivers exceptional performance, including LoRa TX power of up to 20&nbsp;dBm.
+The **RAK3244 BastWAN Breakout Board** is designed to be compatible with the **Feather format** while leveraging the capabilities of the RAK4260 module. At its core, the board features the RAK4260, a module built around the ATSAMR34J18B SiP. This high level of integration delivers exceptional performance, including LoRa TX power of up to 20 dBm.
 
 A key feature of this breakout board is the ATECC606A **cryptographic co-processor**, which provides secure, hardware-based key storage. This sets the RAK3244 BastWAN apart from the RAK4200 and RAK4600 by adding an extra layer of security to future-proof your platform.
 
@@ -35,20 +32,19 @@ The board complies with LoRaWAN 1.0.2 specification, and it also supports LoRa P
 ## Product Features
 
 - Feather compatible with a feather-like weight of 5 grams
-- RAK4260 @ 48&nbsp;MHz with 3.3&nbsp;V logic/power
-- 256&nbsp;KB of FLASH + 32&nbsp;KB of RAM
-- 32.768&nbsp;kHz crystal for clock generation & RTC
-- 3.3&nbsp;V regulator with 500&nbsp;mA peak current output
+- RAK4260 @ 48 MHz with 3.3 V logic/power
+- 256 KB of FLASH + 32 KB of RAM
+- 32.768 kHz crystal for clock generation & RTC
+- 3.3 V regulator with 500 mA peak current output
 - USB native support, comes with USB bootloader and serial port debugging
 - Up to 20 GPIO pins
 - Hardware Serial, hardware I2C, hardware SPI support
 - PWM outputs on all pins
 - 6 x 12-bit analog inputs
 - 1 x 10-bit analog output (DAC)
-- Built-in 100&nbsp;mA LiPoly charging port, with LED indicator
+- Built-in 100 mA LiPoly charging port, with LED indicator
 - Programmable built-in LED for customized applications
 - Power/enable pin
 - Four (4) mounting holes
 - Reset button
 
-<RkBottomNav/>

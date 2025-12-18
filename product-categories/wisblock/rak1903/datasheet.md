@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK1903 WisBlock Ambient Light Sensor Module Datasheet
 
 ## Overview
@@ -22,27 +19,21 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 The RAK1903 WisBlock Ambient Light Sensor Module, part of the RAK Wireless Wisblock series, is a single-chip ambient light sensor, measuring the intensity of light in the visible range. The precise spectral response and strong IR rejection of the device enables the RAK1903 module to accurately measure the intensity of light as seen by human eyes regardless of light sources. The strong IR rejection also aids in maintaining high accuracy when the industrial design requires to mount the sensor under dark glass due to aesthetic reasons. The RAK1903 module is designed for systems that create light-based experiences for humans. It is an ideal replacement for photodiodes, photoresistors, or other ambient light sensors with less visible range matching and IR rejection.
 
 ### Features
-* **Measurement range**: 0.01 to 83865&nbsp;lux
+* **Measurement range**: 0.01 to 83865 lux
 * Optical filtering to match human eye
-* **Voltage Supply**: 3.3&nbsp;V
-* **Current Consumption**: 0.4&nbsp;uA to 3.7&nbsp;uA
+* **Voltage Supply**: 3.3 V
+* **Current Consumption**: 0.4 uA to 3.7 uA
 * **Chipset**: TI OPT3001DNPR
-* **Module size**: 10 x 10&nbsp;mm
+* **Module size**: 10 x 10 mm
 
 ## Specifications
 ### Overview
-
 
 #### Mounting
 
 **Figure 1** shows the mounting mechanism of the RAK1903 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK1903 module can be mounted on the slots: **A, C, D, E, & F**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1903/datasheet/rak19xx_mounting.png" 
-  figureCount="1"
-  caption="RAK1903 WisBlock Sensor Mounting" 
-   width="50%"
-/>
+> **Image:** RAK1903 WisBlock Sensor Mounting
 
 ### Hardware
 
@@ -57,12 +48,7 @@ The hardware specification is categorized into six parts. It shows the chipset o
 
 The RAK1903 WisBlock Ambient Light Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK1903 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1903/datasheet/rak1903_pinout.svg" 
-  figureCount="2"
-  caption="RAK1903 WisBlock Sensor connector pinout" 
-   width="60%"
-/>
+> **Image:** RAK1903 WisBlock Sensor connector pinout
 
 :::tip NOTE
 Only the **I2C** related pins, **INT** pins, **VDD**, and **GND** are connected to this module.
@@ -76,7 +62,6 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | WB_IO1 | WB_IO2 | WB_IO3 | WB_IO5 | WB_IO4 | WB_IO6 |
 
-
 #### Sensors
 ##### Ambient Light Sensor
 | Parameter                                                   | Test Condition                                                                                                   | Min. |     Typ.     |     Max.      |         Unit         |
@@ -84,14 +69,23 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | Peak irradiance spectral responsibility                     |                                                                                                                  |      |     550      |               |          nm          |
 | Resolution (LSB)                                            | Lowest full-scale range, RN[3:0] = 0000b                                                                         |      |     0.01     |               |         lux          |
 | Full-scale illuminance                                      |                                                                                                                  |      |   83865.6    |               |         lux          |
-| Measurement output result                                   | 0.64&nbsp;lux per ADC code <br /> 2620.90&nbsp;lux full-scale <br /> (RN[3:0] = 0110) <br /> 2000&nbsp;lux input | 2812 |     3125     |     3437      |      ADC codes       |
+| Measurement output result                                   | 0.64 lux per ADC code 
+ 2620.90 lux full-scale 
+ (RN[3:0] = 0110) 
+ 2000 lux input | 2812 |     3125     |     3437      |      ADC codes       |
 |                                                             |                                                                                                                  | 1800 |     2000     |     2200      |         lux          |
 | Relative accuracy between gain ranges                       |                                                                                                                  |      |     0.2%     |               |                      |
-| Infrared response (850&nbsp;nm)                             |                                                                                                                  |      |     0.2%     |               |                      |
-| Light source variation (incandescent, halogen, fluorescent) | Bare device <br /> no cover glass                                                                                |      |      4%      |               |                      |
-| Linearity                                                   | Input luminance > 40&nbsp;lux <br /> Input luminance < 40&nbsp;lux                                               |      | 2% <br /> 5% |               |                      |
-| Measured drift across temperature                           | Input luminance = 2000&nbsp;lux                                                                                  |      |     0.01     |               |         %/°C         |
-| Dark condition, ADC output                                  | 0.01&nbsp;lux per ADC code                                                                                       |      |  0 <br /> 0  | 3 <br /> 0.03 | ADC codes <br /> lux |
+| Infrared response (850 nm)                             |                                                                                                                  |      |     0.2%     |               |                      |
+| Light source variation (incandescent, halogen, fluorescent) | Bare device 
+ no cover glass                                                                                |      |      4%      |               |                      |
+| Linearity                                                   | Input luminance > 40 lux 
+ Input luminance < 40 lux                                               |      | 2% 
+ 5% |               |                      |
+| Measured drift across temperature                           | Input luminance = 2000 lux                                                                                  |      |     0.01     |               |         %/°C         |
+| Dark condition, ADC output                                  | 0.01 lux per ADC code                                                                                       |      |  0 
+ 0  | 3 
+ 0.03 | ADC codes 
+ lux |
 | Half-power angle                                            | 50% of full-power reading                                                                                        |      |      47      |               |       degrees        |
 
 #### Electrical Characteristics
@@ -101,7 +95,7 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | ---------------- | -------------------------------- | :---: | :---: | :---: | :---: |
 | V<sub>DD</sub>   | Power supply for the module      |  1.6  |  3.3  |  3.6  |   V   |
 | I<sub>shut</sub> | Shutdown current                 |   -   |  0.4  |   -   |  uA   |
-| I<sub>DD</sub>   | Active V<sub>DD</sub>=3.6&nbsp;V |   -   |  3.7  |   -   |  uA   |
+| I<sub>DD</sub>   | Active V<sub>DD</sub>=3.6 V |   -   |  3.7  |   -   |  uA   |
 
 #### Mechanical Characteristics
 
@@ -109,32 +103,15 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 
 **Figure 3** shows the dimensions and the mechanic drawing of the RAK1903 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1903/datasheet/rak19xx_mechanic_drawing.png" 
-  figureCount="3"
-  caption="RAK1903 WisBlock Sensor Mechanic Drawing" 
-   width="60%"
-/>
+> **Image:** RAK1903 WisBlock Sensor Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1903/datasheet/mxxs1003k6m.png" 
-  figureCount="4"
-  caption="WisConnector PCB footprint and recommendations" 
-   width="100%"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 Figure 5 shows the schematic of the RAK1903 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak1903/datasheet/rak1903-schematic.png" 
-  figureCount="5"
-  caption="RAK1903 WisBlock Sensor schematics" 
-   width="100%"
-/>
+> **Image:** RAK1903 WisBlock Sensor schematics
 
-
-<RkBottomNav/>

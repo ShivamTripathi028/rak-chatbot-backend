@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7394 WisGate Developer CM4 Datasheet
 
 ## Overview
@@ -49,9 +46,9 @@ By default, the CM4 comes with еMMC and the SD card can be used for additional 
 - Supports Cellular module (Quectel BG96 or EG95) for NB-IoT / LTE CAT-M1 / LTE CAT1 / LTE CAT4 (only in Cellular variant).
 - Built-in Ublox ZOE-M8Q GPS Module.
 - Built-in Heat Sink for thermal heat dissipation management.
-- Supports 5&nbsp;V / 3&nbsp;A and Power-Over-Ethernet (only in PoE variant) power supply.
+- Supports 5 V / 3 A and Power-Over-Ethernet (only in PoE variant) power supply.
 - IP30 housing.
-- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm @SF12, BW 125&nbsp;kHz.
+- TX power up to 27 dBm, RX sensitivity down to -139 dBm @SF12, BW 125 kHz.
 - LoRa Frequency band support: RU864, IN865, EU868, US915, AU915, KR920, AS923.
 - Includes Pi-ready 'ID EEPROM', GPIO setup, and device tree can be automatically configured from vendor information.
 - Supports a fully open-source LoRaWAN server.
@@ -68,33 +65,17 @@ The basic building blocks of the RAK7394 are summarized in **Figures 1-3**. A ke
 
 Higher-level protocol tasks and the processing of LoRa Frames are managed by the embedded host system (Raspberry Pi). Processed LoRa Frames are then forwarded to a LoRaWAN Server. The segmentation of protocol-related tasks is beyond the scope of this document.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/2.rak7394-structure.png"
-  width="70%"
-  caption="RAK7394 System Structure"
-/>
+> **Image:** RAK7394 System Structure
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/3.rak7394c-structure.png"
-  width="70%"
-  caption="RAK7394C System Structure"
-/>
+> **Image:** RAK7394C System Structure
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/4.rak7394p-structure.png"
-  width="70%"
-  caption="RAK7394P System Structure"
-/>
+> **Image:** RAK7394P System Structure
 
 #### Block Diagram
 
 The RAK7394 serves as the central hardware solution for all LoRa-based radio communication. It handles the transmission and reception of radio messages, while the processing of these messages and protocol-related tasks is performed by the embedded host system (Raspberry Pi 4). Processed radio messages are forwarded to a LoRaWAN server. The block diagram of the RAK7394 is illustrated in **Figure 4**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/7.block-diagram.png"
-  width="80%"
-  caption="RAK7394C Block Diagram"
-/>
+> **Image:** RAK7394C Block Diagram
 
 ##### RAK9003 Pi HAT
 
@@ -102,11 +83,7 @@ The RAK7394 serves as the central hardware solution for all LoRa-based radio com
 The specific segmentation of protocol-related tasks is beyond the scope of this document.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/8.rak9003.png"
-  width="60%"
-  caption="RPi to RAK9003"
-/>
+> **Image:** RPi to RAK9003
 
 ##### RAK2013 Cellular Pi HAT
 
@@ -114,11 +91,7 @@ The **RAK2013 Cellular Pi HAT** is an add-on board designed according to the Ras
 
 An additional feature of the board is the integrated audio codec and audio amplifier, which allow for VoLTE support. Thus, there is an earphone connector, MIC connector, and speaker connector with an audio amplifier.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/9.rak2013.png"
-  width="70%"
-  caption="RAKR314 to RAK2013"
-/>
+> **Image:** RAKR314 to RAK2013
 
 ### Hardware
 
@@ -126,17 +99,9 @@ An additional feature of the board is the integrated audio codec and audio ampli
 
 The interfaces of RAK7394 are shown in **Figures 7 and 8**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/5.rak7394-rak7394p-interfaces.png"
-  width="90%"
-  caption="RAK7394/RAK7394P Interfaces"
-/>
+> **Image:** RAK7394/RAK7394P Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/6.rak7394c-interfaces.png"
-  width="70%"
-  caption="RAK7394C Interfaces"
-/>
+> **Image:** RAK7394C Interfaces
 
 #### RF Characteristics
 
@@ -144,89 +109,28 @@ The interfaces of RAK7394 are shown in **Figures 7 and 8**.
 
 The RAK7394 models support all LoRaWAN bands.
 
-<table>
-    <thead>
-        <tr>
-            <th>Region</th>
-            <th>Frequency (MHz)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Europe</td>
-            <td>EU433</td>
-        </tr>
-        <tr>
-            <td>China</td>
-            <td>CN470</td>
-        </tr>
-        <tr>
-            <td>Russia</td>
-            <td>RU864</td>
-        </tr>
-        <tr>
-            <td>India</td>
-            <td>IN865</td>
-        </tr>
-        <tr>
-            <td>Europe</td>
-            <td>EU868</td>
-        </tr>
-        <tr>
-            <td>North America</td>
-            <td>US915</td>
-        </tr>
-        <tr>
-            <td>Australia</td>
-            <td>AU915</td>
-        </tr>
-        <tr>
-            <td>Korea</td>
-            <td>KR920</td>
-        </tr>
-        <tr>
-            <td>Asia</td>
-            <td>AS923</td>
-        </tr>
-    </tbody>
-</table>
-
+| Region | Frequency (MHz) |
+| --- | --- |
+| Europe | EU433 |
+| China | CN470 |
+| Russia | RU864 |
+| India | IN865 |
+| Europe | EU868 |
+| North America | US915 |
+| Australia | AU915 |
+| Korea | KR920 |
+| Asia | AS923 |
 
 ##### Cellular Frequency Bands (Only for RAK7394C)
 
-The Quectel EG95 is a series of LTE CAT4 modules specifically optimized for M2M and IoT applications. Utilizing 3GPP Rel. 11 LTE technology, it offers data rates of 150&nbsp;Mbps for downlink and 50&nbsp;Mbps for uplink.
+The Quectel EG95 is a series of LTE CAT4 modules specifically optimized for M2M and IoT applications. Utilizing 3GPP Rel. 11 LTE technology, it offers data rates of 150 Mbps for downlink and 50 Mbps for uplink.
 
-<table>
-    <thead>
-        <tr>
-            <th>Frequency</th>
-            <th>EG95-E</th>
-            <th>EG95-NA</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>LTE FDD</td>
-            <td>B1 / B3 / B7 / B8 / B20 / B28A</td>
-            <td>B2 / B4 / B5 / B12 / B13</td>
-        </tr>
-        <tr>
-            <td>WCDMA</td>
-            <td>B1 / B8</td>
-            <td>B2 / B4 / B5</td>
-        </tr>
-        <tr>
-            <td>GSM / EDGE</td>
-            <td>900 / 1800&nbsp;MHz</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Region</td>
-            <td>Europe</td>
-            <td>North America</td>
-        </tr>
-    </tbody>
-</table>
+| Frequency | EG95-E | EG95-NA |
+| --- | --- | --- |
+| LTE FDD | B1 / B3 / B7 / B8 / B20 / B28A | B2 / B4 / B5 / B12 / B13 |
+| WCDMA | B1 / B8 | B2 / B4 / B5 |
+| GSM / EDGE | 900 / 1800 MHz | - |
+| Region | Europe | North America |
 
 ##### LoRa RF Characteristics
 
@@ -234,198 +138,50 @@ The Quectel EG95 is a series of LTE CAT4 modules specifically optimized for M2M 
 
 The RAK7394 features excellent transmitter performance. It is highly recommended to use an optimized power level configuration, included as part of the HAL, to achieve balanced RF output power and current consumption.
 
-<table>
-    <thead>
-        <tr>
-            <th>PA Control</th>
-            <th>PWID Control</th>
-            <th>Power</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>0</td>
-            <td>10</td>
-            <td>-6&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td>13</td>
-            <td>-3&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td>17</td>
-            <td>0&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>0</td>
-            <td>20</td>
-            <td>4&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>0</td>
-            <td>8&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>10&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>4</td>
-            <td>12&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>7</td>
-            <td>14&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>9</td>
-            <td>16&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>10</td>
-            <td>17&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>12</td>
-            <td>19&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>13</td>
-            <td>20&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>16</td>
-            <td>23&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>18</td>
-            <td>25&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>20</td>
-            <td>26&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>22</td>
-            <td>27&nbsp;dBm</td>
-        </tr>
-    </tbody>
-</table>
+| PA Control | PWID Control | Power |
+| --- | --- | --- |
+| 0 | 10 | -6 dBm |
+| 0 | 13 | -3 dBm |
+| 0 | 17 | 0 dBm |
+| 0 | 20 | 4 dBm |
+| 1 | 0 | 8 dBm |
+| 1 | 2 | 10 dBm |
+| 1 | 4 | 12 dBm |
+| 1 | 7 | 14 dBm |
+| 1 | 9 | 16 dBm |
+| 1 | 10 | 17 dBm |
+| 1 | 12 | 19 dBm |
+| 1 | 13 | 20 dBm |
+| 1 | 16 | 23 dBm |
+| 1 | 18 | 25 dBm |
+| 1 | 20 | 26 dBm |
+| 1 | 22 | 27 dBm |
 
 :::tip NOTE
-- Typically, there is a ±1.5&nbsp;dBi variance between the actual test values and the table data.  
-- Unless otherwise specified, measurements are taken at T = 25°&nbsp;C and VDD = 5&nbsp;V (typical).
+- Typically, there is a ±1.5 dBi variance between the actual test values and the table data.  
+- Unless otherwise specified, measurements are taken at T = 25° C and VDD = 5 V (typical).
 :::
 
-<table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Condition</th>
-            <th>Min.</th>
-            <th>Typical</th>
-            <th>Max.</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Frequency Range</td>
-            <td>-</td>
-            <td>863&nbsp;MHz</td>
-            <td>-</td>
-            <td>870&nbsp;MHz</td>
-        </tr>
-        <tr>
-            <td>Modulation Techniques</td>
-            <td>FSK/LoRa</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>TX Frequency Variation vs. Temperature</td>
-            <td>Power Level Setting: 20</td>
-            <td>-3&nbsp;kHz</td>
-            <td>-</td>
-            <td>+3&nbsp;kHz</td>
-        </tr>
-        <tr>
-            <td>TX Power Variation vs. Temperature</td>
-            <td>Power Level Setting: 20</td>
-            <td>-5&nbsp;dBm</td>
-            <td>-</td>
-            <td>+5&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>TX Power Variation</td>
-            <td>-</td>
-            <td>-1.5&nbsp;dBm</td>
-            <td>-</td>
-            <td>+1.5&nbsp;dBm</td>
-        </tr>
-    </tbody>
-</table>
+| Parameter | Condition | Min. | Typical | Max. |
+| --- | --- | --- | --- | --- |
+| Frequency Range | - | 863 MHz | - | 870 MHz |
+| Modulation Techniques | FSK/LoRa | - | - | - |
+| TX Frequency Variation vs. Temperature | Power Level Setting: 20 | -3 kHz | - | +3 kHz |
+| TX Power Variation vs. Temperature | Power Level Setting: 20 | -5 dBm | - | +5 dBm |
+| TX Power Variation | - | -1.5 dBm | - | +1.5 dBm |
 
 ###### Receiver RF Characteristics
 
 It is highly recommended, to use optimized RSSI calibration values, which is part of the HAL v3.1. For both, Radio 1 and 2, the RSSI-Offset should be set at -169.0. The following table gives the typical sensitivity level of the RAK2287.
 
-<table>
-    <thead>
-        <tr>
-            <th>Signal Bandwidth (kHz)</th>
-            <th>Spreading Factor</th>
-            <th>Sensitivity (DBM)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>125</td>
-            <td>12</td>
-            <td>-139</td>
-        </tr>
-        <tr>
-            <td>125</td>
-            <td>7</td>
-            <td>-125</td>
-        </tr>
-        <tr>
-            <td>250</td>
-            <td>12</td>
-            <td>-136</td>
-        </tr>
-        <tr>
-            <td>250</td>
-            <td>7</td>
-            <td>-123</td>
-        </tr>
-        <tr>
-            <td>500</td>
-            <td>12</td>
-            <td>-134</td>
-        </tr>
-        <tr>
-            <td>500</td>
-            <td>7</td>
-            <td>-120</td>
-        </tr>
-    </tbody>
-</table>
-
+| Signal Bandwidth (kHz) | Spreading Factor | Sensitivity (DBM) |
+| --- | --- | --- |
+| 125 | 12 | -139 |
+| 125 | 7 | -125 |
+| 250 | 12 | -136 |
+| 250 | 7 | -123 |
+| 500 | 12 | -134 |
+| 500 | 7 | -120 |
 
 #### Antenna Specifications
 
@@ -433,355 +189,124 @@ It is highly recommended, to use optimized RSSI calibration values, which is par
 
 The LoRa Antenna with RP-SMA male connector is shown in **Figure 9**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/10.antenna.png"
-  width="50%"
-  caption="LoRa Antenna"
-/>
+> **Image:** LoRa Antenna
 
 ###### LoRa Antenna Dimensions
 
 The antenna's mechanical dimensions are shown in **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/11.antenna-dimensions.png"
-  width="40%"
-  caption="LoRa Antenna Dimensions"
-/>
+> **Image:** LoRa Antenna Dimensions
 
 ###### LoRa Antenna Parameters
 
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Specification</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Voltage Standard Wave Ratio (VSWR)</td>
-            <td>1.5:1</td>
-        </tr>
-        <tr>
-            <td>Gain</td>
-            <td>-2.0&nbsp;dBi</td>
-        </tr>
-        <tr>
-            <td>Working Temperature & Humidity</td>
-            <td>T:-35°&nbsp;C ~ +80°&nbsp;C, H: 0%&nbsp;RH ~ 95%&nbsp;RH</td>
-        </tr>
-        <tr>
-            <td>Storage Temperature & Humidity</td>
-            <td>T:-40°&nbsp;C ~ +85°&nbsp;C, H: 0%&nbsp;RH ~ 95%&nbsp;RH</td>
-        </tr>
-    </tbody>
-</table>
-
+| Item | Specification |
+| --- | --- |
+| Voltage Standard Wave Ratio (VSWR) | 1.5:1 |
+| Gain | -2.0 dBi |
+| Working Temperature & Humidity | T:-35° C ~ +80° C, H: 0% RH ~ 95% RH |
+| Storage Temperature & Humidity | T:-40° C ~ +85° C, H: 0% RH ~ 95% RH |
 
 ##### LTE Antenna
 
 For a built-in BG96, there is one LTE antenna and one GPS antenna. For module built-in EG91/EG95, there are two LTE antennas and no GPS antenna.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/12.lte-antenna.png"
-  width="45%"
-  caption="LTE Antenna"
-/>
+> **Image:** LTE Antenna
 
 ###### LTE Antenna Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/13.lte-antenna-dimensions.png"
-  width="45%"
-  caption="LTE Antenna Dimensions"
-/>
+> **Image:** LTE Antenna Dimensions
 
 ###### LTE Antenna Parameters
 
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Specification</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Frequency (MHz)</td>
-            <td>700 / 800 / 880 / 960 / 1710 / 1880 / 2170</td>
-        </tr>
-        <tr>
-            <td>Voltage Standard Wave Ratio (VSWR)</td>
-            <td>9.3 / 4.6 / 3.6 / 4.9 / 9.3 / 4.4 / 15</td>
-        </tr>
-        <tr>
-            <td>Gain</td>
-            <td>1.63 / 1.84 / 1.96 / 2.23 / 0.03 / 0.01 / 1.97</td>
-        </tr>
-        <tr>
-            <td>Working Temperature & Humidity</td>
-            <td>T:-35°&nbsp;C ~ +80°&nbsp;C, H: 0%&nbsp;RH ~ 95%&nbsp;RH</td>
-        </tr>
-        <tr>
-            <td>Storage Temperature & Humidity</td>
-            <td>T:-40°&nbsp;C ~ +85°&nbsp;C, H: 0%&nbsp;RH ~ 95%&nbsp;RH</td>
-        </tr>
-    </tbody>
-</table>
-
+| Item | Specification |
+| --- | --- |
+| Frequency (MHz) | 700 / 800 / 880 / 960 / 1710 / 1880 / 2170 |
+| Voltage Standard Wave Ratio (VSWR) | 9.3 / 4.6 / 3.6 / 4.9 / 9.3 / 4.4 / 15 |
+| Gain | 1.63 / 1.84 / 1.96 / 2.23 / 0.03 / 0.01 / 1.97 |
+| Working Temperature & Humidity | T:-35° C ~ +80° C, H: 0% RH ~ 95% RH |
+| Storage Temperature & Humidity | T:-40° C ~ +85° C, H: 0% RH ~ 95% RH |
 
 ##### GPS Antenna
 
 The GPS antenna with SMA Male Connector for Developer Gateway is shown in **Figure 13**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/14.gps-antenna.png"
-  width="40%"
-  caption="GPS Antenna"
-/>
+> **Image:** GPS Antenna
 
 ###### GPS Antenna Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/15.gps-antenna-dimensions.png"
-  width="50%"
-  caption="GPS Antenna Dimensions"
-/>
+> **Image:** GPS Antenna Dimensions
 
 ###### GPS Antenna Environmental Requirements
 
-<table>
-    <thead>
-        <tr>
-            <th>Conditions</th>
-            <th>Temperature</th>
-            <th>Humidity</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Working</td>
-            <td>-35°&nbsp;C to +80°&nbsp;C</td>
-            <td>0%&nbsp;RH ~ 95%&nbsp;RH</td>
-        </tr>
-        <tr>
-            <td>Storage</td>
-            <td>-40°&nbsp;C to +85°&nbsp;C</td>
-            <td>0%&nbsp;RH ~ 95%&nbsp;RH</td>
-        </tr>
-    </tbody>
-</table>
+| Conditions | Temperature | Humidity |
+| --- | --- | --- |
+| Working | -35° C to +80° C | 0% RH ~ 95% RH |
+| Storage | -40° C to +85° C | 0% RH ~ 95% RH |
 
 ###### GPS Antenna Parameters
 
-<table>
-    <thead>
-        <tr>
-            <th>Items</th>
-            <th>Specifications</th>
-            <th>PET</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Range of Receiving Frequency</td>
-            <td>1575.42±1.1</td>
-            <td>±2.5</td>
-        </tr>
-        <tr>
-            <td>Center Frequency (MHz) w/ 30&nbsp;mm2 GND plane</td>
-            <td>1575.42</td>
-            <td>±3.0</td>
-        </tr>
-        <tr>
-            <td>Bandwidth (MHz) (Return Loss ≤ -10&nbsp;dB)</td>
-            <td>≥10</td>
-            <td>±0.5</td>
-        </tr>
-        <tr>
-            <td>VSWR (in Center Frequency)</td>
-            <td>≤2.0</td>
-            <td>±0.5</td>
-        </tr>
-        <tr>
-            <td>Gain (Zenith) (dBi Typ.) w/ 70&nbsp;mm2 GND Plane</td>
-            <td>4.5</td>
-            <td>±0.5</td>
-        </tr>
-        <tr>
-            <td>Axial Ratio (dB) w/ 70&nbsp;mm2 GND Plane</td>
-            <td>3.0</td>
-            <td>±0.2</td>
-        </tr>
-        <tr>
-            <td>Polarization</td>
-            <td>Right-Handed Circular</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Impedance (Ω)</td>
-            <td>50</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Frequency Temperature Coefficient (ppm/ºC)</td>
-            <td>0±10</td>
-            <td>-</td>
-        </tr>
-    </tbody>
-</table>
+| Items | Specifications | PET |
+| --- | --- | --- |
+| Range of Receiving Frequency | 1575.42±1.1 | ±2.5 |
+| Center Frequency (MHz) w/ 30 mm2 GND plane | 1575.42 | ±3.0 |
+| Bandwidth (MHz) (Return Loss ≤ -10 dB) | ≥10 | ±0.5 |
+| VSWR (in Center Frequency) | ≤2.0 | ±0.5 |
+| Gain (Zenith) (dBi Typ.) w/ 70 mm2 GND Plane | 4.5 | ±0.5 |
+| Axial Ratio (dB) w/ 70 mm2 GND Plane | 3.0 | ±0.2 |
+| Polarization | Right-Handed Circular | - |
+| Impedance (Ω) | 50 | - |
+| Frequency Temperature Coefficient (ppm/ºC) | 0±10 | - |
 
 ##### Amplifier Specifications
 
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Specification</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Frequency Range</td>
-            <td>1575.42&nbsp;MHz</td>
-        </tr>
-        <tr>
-            <td>Gain</td>
-            <td>27&nbsp;dB</td>
-        </tr>
-        <tr>
-            <td>VSWR</td>
-            <td>≤ 2.0&nbsp;V</td>
-        </tr>
-        <tr>
-            <td>Noise Coefficient</td>
-            <td>≤ 2.0&nbsp;dBm</td>
-        </tr>
-        <tr>
-            <td>DC Voltage</td>
-            <td>3 ~ 5&nbsp;V</td>
-        </tr>
-        <tr>
-            <td>DC Current</td>
-            <td>5 ± 2&nbsp;mA</td>
-        </tr>
-    </tbody>
-</table>
+| Item | Specification |
+| --- | --- |
+| Frequency Range | 1575.42 MHz |
+| Gain | 27 dB |
+| VSWR | ≤ 2.0 V |
+| Noise Coefficient | ≤ 2.0 dBm |
+| DC Voltage | 3 ~ 5 V |
+| DC Current | 5 ± 2 mA |
 
 ##### Environmental Test Performance Specifications
 
-<table>
-    <thead>
-        <tr>
-            <th>Item</th>
-            <th>Normal Temp.</th>
-            <th>High Temp.</th>
-            <th>Low Temp.</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Amplifier Gain</td>
-            <td>27&nbsp;dB ± 2.0</td>
-            <td>27&nbsp;dB ± 2.0</td>
-            <td>27&nbsp;dB ± 2.0</td>
-        </tr>
-        <tr>
-            <td>VSWR</td>
-            <td>≤ 2.0</td>
-            <td>≤ 2.0</td>
-            <td>≤ 2.0</td>
-        </tr>
-        <tr>
-            <td>Noise Coefficient</td>
-            <td>≤ 2.0</td>
-            <td>≤ 2.0</td>
-            <td>≤ 2.0</td>
-        </tr>
-    </tbody>
-</table>
+| Item | Normal Temp. | High Temp. | Low Temp. |
+| --- | --- | --- | --- |
+| Amplifier Gain | 27 dB ± 2.0 | 27 dB ± 2.0 | 27 dB ± 2.0 |
+| VSWR | ≤ 2.0 | ≤ 2.0 | ≤ 2.0 |
+| Noise Coefficient | ≤ 2.0 | ≤ 2.0 | ≤ 2.0 |
 
 :::tip NOTE
-- **High-Temperature Test**: The device was placed in a chamber for 24 hours with the temperature set to 85°&nbsp;C and humidity at 95%&nbsp;RH. Afterward, the temperature was returned to normal for at least an hour. **The device showed no physical deformation.**
-- **Low-Temperature Test**: The device was placed in a chamber for 24 hours with the temperature set to -40°&nbsp;C. Afterward, the temperature was returned to normal for at least an hour. **The device showed no physical deformation.**
+- **High-Temperature Test**: The device was placed in a chamber for 24 hours with the temperature set to 85° C and humidity at 95% RH. Afterward, the temperature was returned to normal for at least an hour. **The device showed no physical deformation.**
+- **Low-Temperature Test**: The device was placed in a chamber for 24 hours with the temperature set to -40° C. Afterward, the temperature was returned to normal for at least an hour. **The device showed no physical deformation.**
 :::
 
 #### Electrical Requirements
 
-The RAK7394/RAK7394C/RAK7394P operates at 5&nbsp;V / 3&nbsp;A, which is provisioned through a USB Type-C port.
+The RAK7394/RAK7394C/RAK7394P operates at 5 V / 3 A, which is provisioned through a USB Type-C port.
 
-<table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Min.</th>
-            <th>Typical</th>
-            <th>Max.</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>LoRa Tx mode</td>
-            <td>-</td>
-            <td>-</td>
-            <td>950&nbsp;mA</td>
-        </tr>
-        <tr>
-            <td>Standby power</td>
-            <td>-</td>
-            <td>550&nbsp;mA</td>
-            <td>-</td>
-        </tr>
-        <tr>
-            <td>Burn test mode</td>
-            <td>-</td>
-            <td>-</td>
-            <td>940&nbsp;mA</td>
-        </tr>
-    </tbody>
-</table>
+| Parameter | Min. | Typical | Max. |
+| --- | --- | --- | --- |
+| LoRa Tx mode | - | - | 950 mA |
+| Standby power | - | 550 mA | - |
+| Burn test mode | - | - | 940 mA |
 
 #### Mechanical Dimension
 
-The outer dimension of RAK7394 is **92 x 68.3 x 57.2&nbsp;mm**.
+The outer dimension of RAK7394 is **92 x 68.3 x 57.2 mm**.
 
 :::tip NOTE
 The dimensions are identical for both the RAK7394C and RAK7394P variants.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7394/datasheet/1.dimensions.png"
-  width="40%"
-  caption="RAK7394/RAK7394C/RAK7394P Dimensions"
-/>
+> **Image:** RAK7394/RAK7394C/RAK7394P Dimensions
 
 #### Environmental Requirements
 
-<table>
-    <thead>
-        <tr>
-            <th>Parameter</th>
-            <th>Min.</th>
-            <th>Typical</th>
-            <th>Max.</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Operation Temperature Range</td>
-            <td>-10°&nbsp;C</td>
-            <td>+25°&nbsp;C</td>
-            <td>+55°&nbsp;C</td>
-        </tr>
-        <tr>
-            <td>Storage Temperature Range</td>
-            <td>-40°&nbsp;C</td>
-            <td>-</td>
-            <td>+85°&nbsp;C</td>
-        </tr>
-    </tbody>
-</table>
+| Parameter | Min. | Typical | Max. |
+| --- | --- | --- | --- |
+| Operation Temperature Range | -10° C | +25° C | +55° C |
+| Storage Temperature Range | -40° C | - | +85° C |
 
 #### Firmware/OS
 
@@ -789,4 +314,3 @@ The dimensions are identical for both the RAK7394C and RAK7394P variants.
 | :-----: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
 | v0.7.1  | [Download](https://downloads.rakwireless.com/LoRa/Software_Firmware/RAKPiOS/History-Version-Release/20230815-rakpios-0.7.1-RAK7394-arm64-lite.zip) |
 
-<RkBottomNav/>

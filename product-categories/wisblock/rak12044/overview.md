@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12044 WisBlock Hall Effect Sensor
 
 Thank you for choosing **RAK12044 WisBlock Hall Effect Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -36,13 +34,13 @@ RAK12044 is a WisBlock Hall Effect Sensor module that extends the WisBlock syste
 
 * **Sensor specifications**
     *  Based on DRV5056A4QDBZR
-    *  Magnetic sensitivity options：15&nbsp;mV/mT, 155-mT range
+    *  Magnetic sensitivity options：15 mV/mT, 155-mT range
     *  I2C digital interfaces
-    *  3.3&nbsp;V power supply
-    *  Operating Temperature Range：-40&nbsp;°C to +80&nbsp;°C
+    *  3.3 V power supply
+    *  Operating Temperature Range：-40 °C to +80 °C
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -52,4 +50,3 @@ To use a **RAK12044**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

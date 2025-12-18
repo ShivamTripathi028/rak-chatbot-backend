@@ -20,11 +20,6 @@ sidebar_label: Dashboard
 date: 2022-08-01
 ---
 
-
-
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Dashboard
 
 The **Dashboard** provides real-time monitoring of the gateway's performance and LoRa traffic statistics. This section offers an overview of key network metrics, helping users analyze the gateway's behavior, connected devices, and message traffic.
@@ -33,36 +28,34 @@ The **Dashboard** provides real-time monitoring of the gateway's performance and
 
 The **LoRa Statistics** page presents an organized view of essential LoRaWAN network parameters, displayed in multiple blocks to help users track packet transmissions, channel utilization, and traffic patterns.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-lorawan-statistics.png"
-  width="100%"
-  caption="LoRaWAN Statistics"
-/>
+> **Image:** LoRaWAN Statistics
 
-- **Packets**<br/>
+- **Packets**
+
   Displays the total number of **uplink (received)** and **downlink (transmitted)** packets handled by the gateway. This includes messages from devices connected to the gateway as well as any LoRa-enabled device within its coverage area.
-- **End devices**<br/>
+- **End devices**
+
   Shows the number of active end devices detected by the gateway:
   - **Active**: Devices that have transmitted data within the last hour.
   - **Busy**: Devices that have sent an average of **one uplink packet per minute** over the past 10 minutes.
-- **Channel Usage**<br/>
+- **Channel Usage**
+
   Visualizes frequency channel load. Green indicates low usage, while red signifies high congestion. Users can adjust the **Timespan** and **Range** filters to analyze specific timeframes.
-- **SNR & RSSI**<br/>
+- **SNR & RSSI**
+
   Displays **Signal-to-Noise Ratio (SNR)** and **Received Signal Strength Indicator (RSSI)** values across received packets. The data is presented in both bar graphs and pie charts for easy comparison.
-- **Uplink Traffic**<br/>
+- **Uplink Traffic**
+
   Tracks the **number of uplink packets per minute** and their corresponding airtime. The color-coded data rates (DR0–DR7) allow users to identify variations in network traffic. The **Timespan** filter lets users refine the displayed period.
-- **Downlink Traffic**<br/>
+- **Downlink Traffic**
+
   Similar to uplink traffic, this section displays **downlink packet transmission rates** and airtime. Users can adjust the **Timespan** to focus on specific intervals.
 
 ## Overview
 
 The **Overview** page provides a comprehensive snapshot of the gateway's current status, including hardware information, network configuration, system performance, and uptime. It allows users to quickly assess the health and connectivity of the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-overview.png"
-  width="100%"
-  caption="Overview"
-/>
+> **Image:** Overview
 
 **Basic Information**
 
@@ -71,7 +64,7 @@ The **Overview** page provides a comprehensive snapshot of the gateway's current
 - **EUI**: LoRa Gateway EUI identifier.
 - **REPORTED COORDINATES**: Coordinates of the gateway.
 - **MAC ADDRESS**: The MAC address used for network identification.
-- **FREQUENCY BAND**: Indicates the LoRa frequency band in use (e.g., 915&nbsp;MHz).
+- **FREQUENCY BAND**: Indicates the LoRa frequency band in use (e.g., 915 MHz).
 - **NUMBER OF CHANNELS**: Shows the number of LoRa channels supported.
 - **UPTIME**: Displays how long the device has been running continuously.
 - **LOCAL TIME**: The current system time on the gateway.
@@ -89,11 +82,7 @@ The **Overview** page provides a comprehensive snapshot of the gateway's current
 
 Allows users to capture and analyze LoRaWAN packets transmitted over the network for debugging and diagnostics.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/wisgate-packet-capture.png"
-  width="100%"
-  caption="Gateway Packet Capture page"
-/>
+> **Image:** Gateway Packet Capture page
 
 - **Pause/Restart session**: The button pauses or restarts the session.
 - **Download session**: The button downloads a `.json` file with packet data in it.
@@ -139,6 +128,4 @@ Available only on gateway models equipped with a GPS module. If GPS is not suppo
 + **GPS Not Locked, No PPS Output**: Show GPS has not acquired a fix, and no timing signal is present.
 + **No NMEA Output Detected**: Detect no GPS data; possible disconnection or hardware issue.
 + **NO. Of SATELLITES**: Indicates the number of satellites the GPS is currently receiving. More satellites generally mean stronger signals and higher positioning accuracy.
-
-<RkBottomNav/>
 

@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK5804 WisBlock Interface Extension Module
 
 Thank you for choosing **RAK5804 WisBlock Interface Extension Module** in your awesome IoT Project! To help you get started, we have provided you all the necessary documentation for your product.
@@ -27,7 +25,7 @@ Thank you for choosing **RAK5804 WisBlock Interface Extension Module** in your a
 
 **RAK5804 WisBlock Interface Extension Module** was designed to be part of a production-ready IoT solution in a modular way and must be combined with a WisBlock Core and a Base module.
 
-This module is designed as an IO extension module that allows you to connect your digital or analog devices or sensors to create a customized IoT solution. These sensors are connected through two expansion connectors: **J2** and **J3**. In order to provide power to peripheral devices, 3.3&nbsp;V can be obtained from these expansion connectors. Internal protections allow to shut down the power supply when a short circuit is detected in the peripheral devices. Overcurrent cases are protected through **internal PTC thermistors** in the power supply circuit.
+This module is designed as an IO extension module that allows you to connect your digital or analog devices or sensors to create a customized IoT solution. These sensors are connected through two expansion connectors: **J2** and **J3**. In order to provide power to peripheral devices, 3.3 V can be obtained from these expansion connectors. Internal protections allow to shut down the power supply when a short circuit is detected in the peripheral devices. Overcurrent cases are protected through **internal PTC thermistors** in the power supply circuit.
 
 In addition, the RAK5804 module also supports a USB interface, which can be used with RAK5005-O to access the USB port of MCU of the WisBlock Core module of the solution.
 
@@ -47,7 +45,7 @@ All external expansion interfaces of the RAK5804 module are equipped with TVS pr
     * PTC thermistor to prevent output power overload
 
 * **Size**
-    * **25&nbsp;mm x 15&nbsp;mm**
+    * **25 mm x 15 mm**
 
 ## Prerequisites
 
@@ -57,4 +55,3 @@ To use a **RAK5804**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19005 WisBlock Sensor Extension Cable Datasheet
 
 ## Overview
@@ -23,7 +20,7 @@ The RAK19005 is a **WisBlock Sensor Extension Cable** used to position small Wis
 
 ### Features
 
-* 120&nbsp;mm length
+* 120 mm length
 * All signals of the 24-pin Slot A to D connectors are available
 * Compatible with many WisBlock modules with 24-pin WisConnector
 * Easy click and use application
@@ -46,20 +43,11 @@ The hardware specification covers the mechanical characteristics and the schemat
 
 Figure 1 shows the dimensions and mechanical drawing of the RAK19005 Extension cable.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19005/datasheet/rak19005-detail.png"
-  width="100%"
-  caption="RAK19005 Sensor Extension Cable Mechanical Characteristics"
-/>
+> **Image:** RAK19005 Sensor Extension Cable Mechanical Characteristics
 
 #### Schematic Diagram
 
 Figure 2 shows the schematic diagram of RAK19005 Extension Cable.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak19005/datasheet/rak19005-schematic1.png"
-  width="100%"
-  caption="RAK19005 WisBlock Sensor Extension Cable Schematic"
-/>
+> **Image:** RAK19005 WisBlock Sensor Extension Cable Schematic
 
-<RkBottomNav/>

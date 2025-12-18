@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19006 WisBlock Wireless Charge Module
 
 Thank you for choosing **RAK19006 WisBlock Wireless Charge Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -37,7 +35,7 @@ For RAK11200 WisBlock Core:
 
 ## Product Description
 
-The RAK19006 WisBlock Wireless Charge Module is designed to be a part of the battery charger. It is highly efficient, Qi-compliant, and has a single-chip wireless power receiver and charger. It integrates the receiver and linear charger and supports up to 5&nbsp;W applications.
+The RAK19006 WisBlock Wireless Charge Module is designed to be a part of the battery charger. It is highly efficient, Qi-compliant, and has a single-chip wireless power receiver and charger. It integrates the receiver and linear charger and supports up to 5 W applications.
 
 This board can be connected with the WisBlock Base board like RAK5005-O through the IO slot or two pogo pins. The chip supports wireless charge and direct battery charging.
 
@@ -49,11 +47,11 @@ This board can be connected with the WisBlock Base board like RAK5005-O through 
     * Ultra-low leakage current without transmitter
     * Wireless and wired charge
     * OVP, OCP, and OTP protection
-    * Supports up to 5&nbsp;W applications
+    * Supports up to 5 W applications
     * Chipset: ConvenientPower CPS3008
 
 * **Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
@@ -63,4 +61,3 @@ To use a **RAK19006**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

@@ -20,9 +20,6 @@ sidebar_label: Quick Start Guide
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10701-P Field Tester Pro for LoRaWAN Quick Start Guide
 
 ## Prerequisites
@@ -50,11 +47,7 @@ It is mandatory that you are within the coverage of the LoRaWAN Gateway of the n
 
 The user interface of the RAK10701-P Field Tester Pro for LoRaWAN is via TFT Touchscreen LCD and one pushbutton at the side. There is also an external LoRA antenna port via RP-SMA connector and USB-C port for charging and configuration if connected to a PC.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/physical-interface.png"
-  width="50%"
-  caption="RAK10701-L front view with an LCD screen"
-/>
+> **Image:** RAK10701-L front view with an LCD screen
 
 :::tip NOTE
 You have to ensure that the LoRa antenna is attached before turning on the device.
@@ -62,36 +55,20 @@ You have to ensure that the LoRa antenna is attached before turning on the devic
 
 1. To turn on the device, you have to press and hold the button for at least five seconds.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/button.png"
-  width="35%"
-  caption="RAK10701-P button to turn on"
-/>
+> **Image:** RAK10701-P button to turn on
 
 :::tip NOTE
 The same button can be used to power off. You have to hold it as well for at least five seconds.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/power_off.png"
-  width="35%"
-  caption="RAK10701-P power off"
-/>
+> **Image:** RAK10701-P power off
 
 :::
 
 2. When the device initializes, it will show the RAK logo on the screen. If there is any initialization error, it will be shown on the upper right section of the screen as well. A properly working device should not have any errors shown.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701_boot.png"
-  width="35%"
-  caption="RAK10701-P power up successful"
-/>
+> **Image:** RAK10701-P power up successful
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/boot_unterface_error.png"
-  width="35%"
-  caption="GPS error on boot up sequence"
-/>
+> **Image:** GPS error on boot up sequence
 
 3. After the successful boot-up, the main home screen will be shown. Take note, that there will be no data at the first start of the device.
 
@@ -101,21 +78,13 @@ The field tester must be outside and has a clear view of the sky to get GPS coor
 If you are indoors, there will be no reception of the GPS signal. The latitude and longitude data will be empty.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/home_hotspot_empty.png"
-  width="35%"
-  caption="RAK10701-P Main Page waiting for valid data"
-/>
+> **Image:** RAK10701-P Main Page waiting for valid data
 
 4. Once fully powered on, the external button at the side can sleep or wake up the display on the LCD screen via a single press on it.
 
 5. If the device is connected via USB-C to a computer, then the button is pressed, it will not remove the display but will lock the screen (touch screen behavior is disabled).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lockscreen.png"
-  width="35%"
-  caption="RAK10701-P locked screen"
-/>
+> **Image:** RAK10701-P locked screen
 
 ### LoRaWAN Network Servers Guide for RAK10701-P Field Tester Pro
 
@@ -147,25 +116,13 @@ This guide is based on [disk19 guide for the Field Tester](https://github.com/di
 
 1. You need to register an account and then purchase data credits (DC) to use the network. If you are a new user, there are free data credits (DC) included in your new account to get you started quickly.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-login.png"
-  width="100%"
-  caption="Helium Console"
-/>
+> **Image:** Helium Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-home.png"
-  width="100%"
-  caption="Console Home Page"
-/>
+> **Image:** Console Home Page
 
 2. Once you are logged in, you can start adding your device. You have two ways to add a device as shown in the image.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-device-page.png"
-  width="100%"
-  caption="Adding Device"
-/>
+> **Image:** Adding Device
 
 3. The newly added device parameters will be shown. You have to put a device name and click save.
 
@@ -173,107 +130,51 @@ This guide is based on [disk19 guide for the Field Tester](https://github.com/di
 The DEVEUI, APPEUI, and APPKEY are important in this step. These values must be configured on your RAK10701-P device using WisToolBox which will be covered later in this guide.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-device-name.png"
-  width="100%"
-  caption="Configuring Device Name"
-/>
+> **Image:** Configuring Device Name
 
 4. The device will be added to the blockchain and it will show pending beside its name.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-pending.png"
-  width="100%"
-  caption="Pending Device Status"
-/>
+> **Image:** Pending Device Status
 
 5. While waiting for the device to be added to the blockchain, you can create a `Label`. This will allow you to group your device to have a common setting. This will be needed to attach the needed integrations to the backend server of `dev.disk91.com`. You have to click the folder with the + icon and add a `Label` name then click `Save Label`. The newly created label should now be shown in the `Devices` console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-label1.png"
-  width="100%"
-  caption="Add Label icon"
-/>
+> **Image:** Add Label icon
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-label2.png"
-  width="100%"
-  caption="Add Label Name"
-/>
+> **Image:** Add Label Name
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-label3.png"
-  width="100%"
-  caption="Label created successfully"
-/>
+> **Image:** Label created successfully
 
 6. Once the `Label` is created you have to associate it on the RAK10701 device. You can attach the `Label` on the device by clicking the **Add Label** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-attach-label1.png"
-  width="100%"
-  caption="Attach a label to the device"
-/>
+> **Image:** Attach a label to the device
 
 7. A pop-up will be shown and you have to select the correct `Label` created for RAK10701 then click **Add Label**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-attach-label2.png"
-  width="30%"
-  caption="Drop-down on label selection"
-/>
+> **Image:** Drop-down on label selection
 
 8. After successful attachment of `Label` on the devices, it should show one (1) device is under that `Label`. The device is properly labeled which is needed for the next steps - `Integrations` and `Flow`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-attach-label3.png"
-  width="100%"
-  caption="Label added on the RAK10701 device"
-/>
+> **Image:** Label added on the RAK10701 device
 
 9. To connect the backend server, you have to create an `Integration`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-create-integration1.png"
-  width="100%"
-  caption="Add integration"
-/>
+> **Image:** Add integration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-create-integration2.png"
-  width="100%"
-  caption="HTTP integration"
-/>
+> **Image:** HTTP integration
 
 10. Then you must proceed to steps 2 and 3 sections of the `Integration` settings. You have to select `POST` then on the Endpoint URL, you must put `https://dev.disk91.com/fieldtester/helium/v3`. It is also needed to put the integration name before the clicking Add integration button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-integration-details.png"
-  width="100%"
-  caption="Details of HTTP Integration"
-/>
+> **Image:** Details of HTTP Integration
 
 11. After preparing the device and the integration, you can now proceed with creating the flow to connect them. You have to click `Flows` and then the `+` icon on `NODES`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-flow1.png"
-  width="100%"
-  caption="Setting up the Flows"
-/>
+> **Image:** Setting up the Flows
 
 12. You must select `Labels` and `Integrations` and then drag the correct blocks on the flows canvas.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-flow2.png"
-  width="100%"
-  caption="Drag the rak10701-devices label"
-/>
+> **Image:** Drag the rak10701-devices label
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-flow3.png"
-  width="100%"
-  caption="Drag the RAK1070x_Integration"
-/>
+> **Image:** Drag the RAK1070x_Integration
 
 13. You then have to connect the `Label` block to the `Integration` block via the tiny connector indicated by the red arrows by using your mouse cursor and dragging the line connector.
 
@@ -281,41 +182,21 @@ The DEVEUI, APPEUI, and APPKEY are important in this step. These values must be 
 There is no need to save the changes created on the flows canvas since it is automatically saved as you do changes.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-flow4.png"
-  width="100%"
-  caption="Connecting Labels to Integrations"
-/>
+> **Image:** Connecting Labels to Integrations
 
 14. The final step in the setting up of the Helium Console for RAK10701 is the setting up of packets. You have to click on `Packets` and then the `Add New Packet Config` icon.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-packets1.png"
-  width="100%"
-  caption="Creating Packets"
-/>
+> **Image:** Creating Packets
 
 15. You must also input a name on the `Packet Config Name`, select `Multiple Packets` and drag the slider so it will show `All Available Packets`. Once done, you can now click on `+ Create Packet Config`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-packets2.png"
-  width="100%"
-  caption="Multiple packets configuration"
-/>
+> **Image:** Multiple packets configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-packets3.png"
-  width="100%"
-  caption="Successful packets creation"
-/>
+> **Image:** Successful packets creation
 
 16. You must associate the multiple packet setup with the `rak10701-devices` label. To do this, you have to go back on `Flows`, double-click on the `rak10701-devices` label, choose the `Packets` tab under rak10701-devices settings then enable `ALL Packets`. After this, you can now proceed with the configuration of RAK10701 using WisToolBox.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/helium-add-packets4.png"
-  width="100%"
-  caption="Attaching multiple packets to the rak10701-devices label"
-/>
+> **Image:** Attaching multiple packets to the rak10701-devices label
 
 17. You can now proceed on [device configuration](https://docs.rakwireless.com/product-categories/wisgate/rak10701-p/quickstart/#configuration-of-rak10701-p-using-wistoolbox) so that the proper EUIs and KEY will match the one in the Helium network.
 
@@ -325,171 +206,87 @@ This section shows how to use the RAK10701-P Field Tester Pro for LoRaWAN to The
 
 1. Log in to TTNv3. To do so, head to the TTNv3 [site](https://console.cloud.thethings.network/) and select your cluster. If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/image001.png"
-  width="100%"
-  caption="The Things Stack home page"
-/>
+> **Image:** The Things Stack home page
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/image002.png"
-  width="100%"
-  caption="Console page after a successful login"
-/>
-
+> **Image:** Console page after a successful login
 
 :::tip NOTE
 To connect RAK10701-P Field Tester Pro to TTNv3, you should already have connected a gateway in range to TTNv3. Or, you have to be sure that you are in the range of a public gateway.
 :::
 
-
-
 2. Now that you are logged in to the platform, the next step is to create an application. In your console, click **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-1.png"
-  width="100%"
-  caption="Create an application"
-/>
+> **Image:** Create an application
 
 3. To have an application registered, you need to input first the specific details and necessary information about your application then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-2.png"
-  width="100%"
-  caption="Creating an Application"
-/>
+> **Image:** Creating an Application
 
 4. If you had no error during the previous step, you should now be on the application console page. The next step is to **add end-devices to your TTN application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-3.png"
-  width="100%"
-  caption="Add end-devices to your TTN application"
-/>
+> **Image:** Add end-devices to your TTN application
 
 5. To register the RAK10701-P Field Tester Pro, you need to click **Manually** first.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-4.png"
-  width="100%"
-  caption="Adding end devices manually"
-/>
+> **Image:** Adding end devices manually
 
 6. Choose the following configurations in adding the end devices. You must choose the correct Frequency Plan and the LoRaWAN version must be 1.0.3.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-5.png"
-  width="100%"
-  caption="Configurations for adding end devices"
-/>
+> **Image:** Configurations for adding end devices
 
 7.  Click **Show advanced activation, LoRaWAN class, and cluster settings**, then select **Over the air action** (OTAA).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-6.png"
-  width="100%"
-  caption="OTAA settings"
-/>
+> **Image:** OTAA settings
 
 8. Then input the LoRaWAN OTAA parameters. For **AppEUI**, you may click **Fill with Zeros**. For **AppKey** and **DevEUI**, you can click **Generate**. Then the parameters will be automatically filled by the TTS platform. Finally, click **Register End Device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-7.png"
-  width="100%"
-  caption="Registering the end device"
-/>
+> **Image:** Registering the end device
 
 9. You should now be able to see the device on the TTN console after you fully register your device. Take note of these OTAA parameters, such as the `AppEUI`, `DevEUI`, and the `AppKey`, as they are needed in the configuration of the RAK10701-P Field Tester Pro hardware later on in this guide.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-8.png"
-  width="100%"
-  caption="OTAA device successfully registered to TTN"
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 10. After adding the device to the LoRaWAN application, link it to the backend server. The first step is to create an **API key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-api-icon.png"
-  width="100%"
-  caption="Creating API key"
-/>
+> **Image:** Creating API key
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-api-add.png"
-  width="100%"
-  caption="Creating API key"
-/>
+> **Image:** Creating API key
 
 11. Configure the API key parameters. You can put any names that will easily track your API. You have to set the expiration date as well. Then you must check `Write downlink application traffic`. After the configuration, you can now click `Create API key`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-api-info.png"
-  width="95%"
-  caption="API key parameters"
-/>
+> **Image:** API key parameters
 
 12. This step is critical. You need to copy the API key because this will be used on Webhook integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-api-key-copy.png"
-  width="70%"
-  caption="Copy API key"
-/>
+> **Image:** Copy API key
 
 13. With the API key created, you can proceed with creating the Webhook integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-webhook.png"
-  width="100%"
-  caption="Webhook Integration"
-/>
+> **Image:** Webhook Integration
 
 14. Select **Custom Webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-webhook-custom.png"
-  width="100%"
-  caption="Custom Webhook"
-/>
+> **Image:** Custom Webhook
 
 15. Configure the necessary parameters on the Webhook. You can select any name for the webhook. You then need to set the base URL going to disk19 server `https://dev.disk91.com/fieldtester/ttn/v3`, add the API key from the previous step and lastly put a check on the `Uplink message` under **Enabled event types**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-webhook-configuration.png"
-  width="90%"
-  caption="Webhook parameters"
-/>
+> **Image:** Webhook parameters
 
 16. After setting all the configurations, you can now add the webhook.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-webhook-add.png"
-  width="100%"
-  caption="Add Webhook"
-/>
+> **Image:** Add Webhook
 
 17. You should see now the newly created webhook.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak10701-webhook-list.png"
-  width="100%"
-  caption="Add Webhook"
-/>
+> **Image:** Add Webhook
 
 18. After adding the application, device, and webhook integration to the console, you have to configure the parameters in your device to match the parameters on the TTN console. You can use [WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/overview/) via USB connection or wirelessly via BLE. You can now proceed on the [RAK10701-P Configuration using WisToolBox](https://docs.rakwireless.com/product-categories/wisgate/rak10701-p/quickstart/#configuration-of-rak10701-p-using-wistoolbox). You also have the option to update device parameters directly via [RUI3 AT Commands](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/#lorawan-keys-and-ids) (if you prefer AT commands instead of WisToolBox).
 
 19. Once you configured the RAK10701-P with the correct Frequency Band and EUIs/Key by following the guide on the [RAK10701-P Configuration using WisToolBox](https://docs.rakwireless.com/product-categories/wisgate/rak10701-p/quickstart/#configuration-of-rak10701-p-using-wistoolbox), you should see the join request/accept, uplinks and downlinks to The Things Stack console. These uplinks contains the coordinates of the field tester and the downlinks contains the data calculated by the disk91 server. The uplink uses fport 1 and the downlink uses fport 2. To view the actual coordinates on the console, you need to add a payload decoder on your uplink data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/uplink-decoder.png"
-  width="100%"
-  caption="Adding Uplink Payload Decoder"
-/>
+> **Image:** Adding Uplink Payload Decoder
 
 Uplink payload decoder script.
-
 
 <details>
 <summary> Click to view the code</summary>
@@ -539,11 +336,7 @@ function Decoder(bytes, port) {
 
 20. With the correct payload decoder, you should now see GPS coordinates data which you can also use to other integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/console-data.png"
-  width="100%"
-  caption="Decoded payload and TTS console"
-/>
+> **Image:** Decoded payload and TTS console
 
 #### RAK10701-P Field Tester Pro Guide for Chirpstack
 
@@ -551,45 +344,25 @@ function Decoder(bytes, port) {
 
 There are two steps under the hood of the Field Tester. In step one, the Field Tester is sending out data packets over LoRaWAN. These packets are received by one or multiple gateways. These packets are forwarded from the LoRaWAN network server to another backend server. When the packets are forwarded, they include information about signal strength and the number of gateways that have received the packet.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/1_flow_1.png"
-  width="55%"
-  caption="Step 1 - Field Tester Sending Uplink Payload"
-/>
+> **Image:** Step 1 - Field Tester Sending Uplink Payload
 
 In the second step, the backend server is calculating the minimum and maximum distance between the Field Tester Pro and the gateways that received the data. Together with the minimum and maximum RSSI levels, this information is then sent back to the Field Tester Pro as a LoRaWAN downlink.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/2_flow_2.png"
-  width="55%"
-  caption="Step 2 - Backend Server Sending Useful Information as Downlink"
-/>
+> **Image:** Step 2 - Backend Server Sending Useful Information as Downlink
 
 To use Chirpstack for RAK10701-P, you must have a working installation of the Chirpstack LoRaWAN network server. It can be on a dedicated machine, Raspberry Pi, or in a cloud VPS instance. It should have a fixed IP address and port to where `Datacake.co` will connect to.
 
 1. To start with Chirpstack, you must create a device profile for your RAK10701-P Field Tester Pro device. You must select `LoRaWAN MAC version 1.0.3` which is the LoRaWAN specification version that the RAK10701 Field Tester supports.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/3_device_profile.png"
-  width="95%"
-  caption="Creating Device Profile in Chirpstack"
-/>
+> **Image:** Creating Device Profile in Chirpstack
 
 2. You must enable `Device supports OTAA` as the network join method as well.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/4_device_profile.png"
-  width="95%"
-  caption="Enable support for OTAA"
-/>
+> **Image:** Enable support for OTAA
 
 3. You can also include a custom javascript decoder under the `CODEC` tab. This will allow you to see the specific information transmitted by the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/5_device_profile.png"
-  width="95%"
-  caption="Custom Javascript Decoder for RAK10701 Field Mapper"
-/>
+> **Image:** Custom Javascript Decoder for RAK10701 Field Mapper
 
 Here's the complete decoder script:
 
@@ -651,105 +424,47 @@ This decoder script can be found on [RAKwireless Standardize Payload repository]
 
 4. After creating the device profile, you can now create an application and add the RAK10701 device. And then attached the `Device-profile` you created. You have to take note of the DEVEUI and APPKEY in this section. These parameters must match the ones in our RAK10701 Field Tester.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/6_create_application.png"
-  width="95%"
-  caption="Create application in Chirpstack"
-/>
+> **Image:** Create application in Chirpstack
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/7_create_device.png"
-  width="95%"
-  caption="Create device in Chirpstack."
-/>
+> **Image:** Create device in Chirpstack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/8_create_device_appkey.png"
-  width="95%"
-  caption="Device APPKEY"
-/>
+> **Image:** Device APPKEY
 
 5. You also need to secure that you have a Gateway registered in Chirpstack and with the correct Network Server profile.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/9_gateway.png"
-  width="95%"
-  caption="Gateways registered in Chripstack"
-/>
+> **Image:** Gateways registered in Chripstack
 
 6. The next step after setting up the network server, devices, and gateway, is the integration of the Chirpstack application to Datacake. You must choose HTTP, then click `Edit`. Then you have to use this endpoint going to datacake `https://api.datacake.co/integrations/lorawan/chirpstack/`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/10_integration_1.png"
-  width="95%"
-  caption="Creating integration"
-/>
+> **Image:** Creating integration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/10_integration_2.png"
-  width="95%"
-  caption="Creating endpoint for Datacake.co  "
-/>
+> **Image:** Creating endpoint for Datacake.co  
 
 7. The last step on the Chirpstack side, is the creation of the API key. This is needed to allow Datacake in sending downlink packets to the RAK10701 Field Tester. Make sure the key is copied and saved somewhere, it is only retrievable during the key creation. Copy the Token and save it in a text editor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/11_apikey_1.png"
-  width="95%"
-  caption="Creation of API Key"
-/>
+> **Image:** Creation of API Key
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/11_apikey_2.png"
-  width="95%"
-  caption="Creation of API Key"
-/>
+> **Image:** Creation of API Key
 
 8. You can now proceed on [Datacake](https://datacake.co/) and add a LoRaWAN device that will be linked to your RAK10701 created in ChirpStack. You have to create an account if you do not have one yet.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/12_datacake_init_1.png"
-  width="95%"
-  caption="Device list dashboard"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/12_datacake_init_2.png"
-  width="45%"
-  caption="Selecting LoRaWAN"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/12_datacake_init_3.png"
-  width="45%"
-  caption="Add new product"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/12_datacake_init_4.png"
-  width="45%"
-  caption="Selecting chirpstack"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/12_datacake_init_5.png"
-  width="45%"
-  caption="Adding device name"
-/>
+> **Image:** Device list dashboard
+
+> **Image:** Selecting LoRaWAN
+
+> **Image:** Add new product
+
+> **Image:** Selecting chirpstack
+
+> **Image:** Adding device name
 
 9. Next step is to enable the downlink. This is the step where you'll be needing the previously created API key in step 7 of this guide. Take note that the `ChirpStack URL` should be based on your deployed Chirpstack network server. After doing all configurations, click update and save.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/13_downlink_1.png"
-  width="95%"
-  caption="Configuration settings"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/13_downlink_2.png"
-  width="95%"
-  caption="Chirpstack downlink configuration"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/13_downlink_3.png"
-  width="55%"
-  caption="Chirpstack URL and API key"
-/>
+> **Image:** Configuration settings
+
+> **Image:** Chirpstack downlink configuration
+
+> **Image:** Chirpstack URL and API key
 
 10. Just below the `LoRaWAN` section in datacake.co, you'll see the `Payload Decoder`. This is a very critical step to ensure that all important data will be covered.
 
@@ -1048,12 +763,7 @@ The result of the decoding is then put into different data fields that are used 
 
 11. The next step is to create the different data fields that are filled by the data decoder. This is done in the Fields section of the device configuration, just below the data encoder section.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/14_datafield.png"
-  width="95%"
-  caption="Creation of data field"
-/>
-
+> **Image:** Creation of data field
 
 The following fields are required:
 
@@ -1079,23 +789,15 @@ There are more variables created by the decoder, but this is the minimum set req
 
 12. This is the most critical step so that the RAK10701 will be able to display the necessary details helpful in Field Testing the LoRaWAN network. This section is responsible for the "backend-server functions". In this step, we create the automatic downlink to the device that is executed every time a data packet from the RAK10701 Field Tester arrives. Take note that port number 2 is used by RAK10701 for downlinks and `Trigger on measurements` should be checked.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/15_add_dl_1.png"
-  width="95%"
-  caption="Chirpstack downlink configuration"
-/>
+> **Image:** Chirpstack downlink configuration
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/15_add_dl_2.png"
-  width="55%"
-  caption="Chirpstack downlink configuration"
-/>
+> **Image:** Chirpstack downlink configuration
 
 In this guide, the downlink is only created when the Field Tester is connected through a Chirpstack server. When TTN or Helium is used, the downlink would be created by the original backend server.
 
 This is controlled by the “Fields used” where you can see the IS_CHIRPSTACK.
 
-The Payload Encoder is preparing a downlink packet that will be sent back to the RAK10701 Field Tester. The downlink packet is only 6&nbsp;bytes large to avoid problems in LoRaWAN regions with limited downlink packet sizes.
+The Payload Encoder is preparing a downlink packet that will be sent back to the RAK10701 Field Tester. The downlink packet is only 6 bytes large to avoid problems in LoRaWAN regions with limited downlink packet sizes.
 
 This is the complete decoder script. The first byte is usually a counter, but it works well if the counter is ignored and always set to 1.
 
@@ -1142,19 +844,11 @@ In this document, you will find a step-by-step guide for performing a field mapp
 
 1. Forward a gateway to LORIOT, which will be the LNS (LoRa Network Server) for this use case. For registration of the gateway to LORIOT, you will need the gateway’s MAC and EUI, which can be found on the Overview page of WisGateOS 2.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/1. wisgate edges web ui.png"
-width="100%"
-caption="WisGate Edges web UI"
-/>
+> **Image:** WisGate Edges web UI
 
 2. Go to your LORIOT profile. From the menu on the left, navigate through **Networks** > **your_network** > **+Add Gateway**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/2. loriot console.png"
-width="100%"
-caption="LORIOT console"
-/>
+> **Image:** LORIOT console
 
 :::tip NOTE
 The LORIOT platform provides you with a **Sample Network** at the point of your profile creation. You can use it for free. If you wish to create a new one, or delete the provided one, you will need a paid plan to continue.
@@ -1162,40 +856,23 @@ The LORIOT platform provides you with a **Sample Network** at the point of your 
 
 3. For the base platform select **Basics Station Semtech**. You will be asked to provide eth0 MAC address and EUI, which you obtained in step 1. After filling in these values, press the **Register Basics Station Semtech gateway** at the bottom of the page.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/3. registering the gateway to loriot.png"
-width="100%"
-caption="Registering The Gateway To LORIOT"
-/>
+> **Image:** Registering The Gateway To LORIOT
 
 4. The last thing you need to do to connect your gateway with LORIOT LNS is to provide the Basics Station configuration to the gateway. This can be done by going to the gateway's **web UI** > **LoRa** > **Configuration** and doing a Basics station server setup.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/4. gateway configuration page.png"
-width="100%"
-caption="Gateway Configuration Page"
-/>
+> **Image:** Gateway Configuration Page
 
 You can find the Trust (CA Certificate), the Server URL, and the Server port in LORIOT by navigating to the newly registered **Gateway** > **Certificate**. Use the configuration provided by LORIOT as it may differ from the guide depending on your region.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/5. certificate.png"
-width="100%"
-caption="Certificate"
-/>
+> **Image:** Certificate
 
 5. If the steps are followed correctly, the gateway should show a **Connected** status.
-
 
 ##### Adding the Device and LORIOT to Datacake Integration
 
 1. Add the device to LORIOT. In the LORIOT platform, navigate to **Applications** > **your_application** and use the **Enroll Device** utility from the menu on the left. Fill out your Device EUI, Join (APP) EUI, and Application Key.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/6. adding the device to the loriot platform.png"
-width="100%"
-caption="Adding The Device To The LORIOT Platform"
-/>
+> **Image:** Adding The Device To The LORIOT Platform
 
 :::tip NOTE
 The LORIOT platform provides you with a **Sample Application** at the point of your profile creation. You can use it for free. If you wish to create a new one or delete the provided one, you will need a paid plan to continue.
@@ -1203,59 +880,31 @@ The LORIOT platform provides you with a **Sample Application** at the point of y
 
 2. Use the Output utility to set up the Datacake integration. For now, just give it a name. The Authorization requires additional settings that will not be covered by this guide. For more information regarding this process, refer to [Datacake's guide](https://docs.datacake.de/lorawan/lns/loriot).
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/7. add output.png"
-width="100%"
-caption="Add Output"
-/>
+> **Image:** Add Output
 
 3. Now, you need to add the device in Datacake. To register a new device, navigate to the **Devices** tab in your Datacake account. Click the **+Add Device** button.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/8. datacake platform.png"
-width="100%"
-caption="Datacake Platform"
-/>
+> **Image:** Datacake Platform
 
 4. Choose **New Product** under **Datacake Product**. Enter the device name in the **Product name** input box, and proceed by clicking **Next**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/9. add lorawan device 1.png"
-width="70%"
-caption="Add Lorawan Device 1"
-/>
+> **Image:** Add Lorawan Device 1
 
 5. Select **LORIOT** as the Network Server and click **Next**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/10. add lorawan device 2.png"
-width="70%"
-caption="Add Lorawan Device 2"
-/>
+> **Image:** Add Lorawan Device 2
 
 6. On the next page, you will have to enter the name and DEVEUI of the device. Select the plan for Datacake according to your needs and finish the device-adding procedure.
 
 7. Now, navigate to **Configuration** in the newly created device at Datacake and scroll down to the **Network Server** configuration. Click **Change**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/11. device network server configuration.png"
-width="100%"
-caption="Device Network Server Configuration"
-/>
+> **Image:** Device Network Server Configuration
 
 8. You will need the LORIOT Access Token, which is generated from the LORIOT console. Navigate to **LORIOT** > **Access Tokens** and copy the token to put it in Datacake.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/12. loriot access token.png"
-width="100%"
-caption="LORIOT Access Token"
-/>
+> **Image:** LORIOT Access Token
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/13. access token field in datacake.png"
-width="50%"
-caption="Access Token Field In Datacake"
-/>
+> **Image:** Access Token Field In Datacake
 
 You can generate a new access token or use the existing one.
 
@@ -1460,11 +1109,7 @@ function Decoder(bytes, fPort) {
 
 </details>
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/14. datacake payload decoder field.png"
-width="100%"
-caption="Datacake Payload Decoder Field"
-/>
+> **Image:** Datacake Payload Decoder Field
 
 2. After saving the payload decoder it is time to set the downlink payload encoder. Navigate to **Downlinks** and copy-paste the provided encoder in the field. Set the port to **2** and use the **IS_CHIRPSTACK** field to trigger the downlink.
 
@@ -1494,11 +1139,7 @@ function Encoder(measurements, port) {
 
 </details>
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/15. downlink configuration.png"
-width="50%"
-caption="Downlink Configuration"
-/>
+> **Image:** Downlink Configuration
 
 3. You should now be able to see the data from the downlink on your Field Tester's screen.
 
@@ -1510,69 +1151,37 @@ The Field Tester performs two steps:
 
 - In the first step, it sends data packets over LoRaWAN, which are then received by one or multiple gateways. These packets are forwarded by the LoRaWAN network server to a backend server, including information about signal strength and the number of gateways that received the packet.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/1_flow_1.png"
-  width="55%"
-  caption="Step 1 - Field Tester Sending Uplink Payload"
-/>
+> **Image:** Step 1 - Field Tester Sending Uplink Payload
 
 - In the second step, the backend server calculates the minimum and maximum distances from the Field Tester Pro to the gateways, along with the minimum and maximum RSSI levels, and sends information back to the Field Tester Pro as a LoRaWAN downlink.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/2_flow_2.png"
-  width="55%"
-  caption="Step 2 - Backend Server Sending Useful Information as Downlink"
-/>
+> **Image:** Step 2 - Backend Server Sending Useful Information as Downlink
 
 To use Chirpstack and NodeRED for RAK10701-P, you need a working Chirpstack LoRaWAN network server. This can be on a dedicated machine, a Raspberry Pi, or a cloud VPS. You also need NodeRED installed and connected to the Chirpstack MQTT broker.
 
 1. To start with Chirpstack, you must create a device profile for your RAK10701-P Field Tester Pro device. You must select `LoRaWAN MAC version 1.0.3` which is the LoRaWAN specification version that the RAK10701 Field Tester supports.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/3_device_profile.png"
-  width="80%"
-  caption="Creating Device Profile in Chirpstack"
-/>
+> **Image:** Creating Device Profile in Chirpstack
 
 2. You must enable `Device supports OTAA` as the network join method as well.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/4_device_profile.png"
-  width="80%"
-  caption="Enable support for OTAA"
-/>
+> **Image:** Enable support for OTAA
 
 3. Once done with the device profile, you can now create an application and add the RAK10701 device. And then attached the `Device-profile` you created. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/6_create_application.png"
-  width="80%"
-  caption="Create application in Chirpstack"
-/>
+> **Image:** Create application in Chirpstack
 
 :::tip NOTE  
 Take note of the DEVEUI and APPKEY in this section. These parameters must match the ones in our RAK10701 Field Tester.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/7_create_device.png"
-  width="80%"
-  caption="Create device in Chirpstack."
-/>
+> **Image:** Create device in Chirpstack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/8_create_device_appkey.png"
-  width="80%"
-  caption="Device APPKEY"
-/>
+> **Image:** Device APPKEY
 
 4. Make sure your Gateway is registered in Chirpstack with the correct Network Server profile.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/9_gateway.png"
-  width="80%"
-  caption="Gateways registered in Chripstack"
-/>
+> **Image:** Gateways registered in Chripstack
 
 5. After setting up the network server, devices, and gateway, install the NodeRED. This is required to run the backend server, which is in this case a NodeRED flow.
 
@@ -1587,19 +1196,11 @@ Take note of the DEVEUI and APPKEY in this section. These parameters must match 
   a. Before starting to set up the flow, the Field Tester Service node needs to be added to the NodeRED palette.    
   Use the top-right icon in NodeRED and select **Manage Palette** from the new menu:    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/manage-palette.png"
-  height="50%"
-  caption="Manage Palette"
-/>
+> **Image:** Manage Palette
 
   b. In the new window, select the **Install** tab and type ***`rakwireless/field-tester-server`*** in the search box. The node will show up in the search result. Install the node by clicking the **Install** button.    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/install-palette.png"
-  height="50%"
-  caption="Install Palette"
-/>
+> **Image:** Install Palette
 
   c. Once the node is installed, we can start to setup the NodeRED flow.
 
@@ -1607,49 +1208,30 @@ Take note of the DEVEUI and APPKEY in this section. These parameters must match 
   
   a. For Chirpstack V4 we need first an input node that can receive information from Chirpstacks MQTT broker. Pull the _**`mqtt in`**_ node from the left side bar to your flow:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/prepare-input.png"
-  width="50%"
-  caption="Prepare input node"
-/>
+> **Image:** Prepare input node
 
   b. Then set up the MQTT connection, double click the ***`mqtt in`*** node to open the setup window. Then click on the Server ***Edit*** icon.    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/mqtt-connect-1.png"
-  width="100%"
-  caption="Setup input node"
-/>
+> **Image:** Setup input node
 
   c. In the setup window, add your server connection in the **Connection** tab:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/mqtt-connect-2.png"
-  width="40%"
-  caption="Add MQTT Broker"
-/>
+> **Image:** Add MQTT Broker
 
   d. Server can be an URL or an IP address where your Chirpstack MQTT broker can be reached. This and the port number depends on your Chirpstack installation and MQTT settings.
 
   e. Next go to the **Security** tab and enter the required username and password. Again, this depends on your MQTT settings:    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/mqtt-connect-3.png"
-  width="40%"
-  caption="Add credentials"
-/>
+> **Image:** Add credentials
 
   f. To receive the data from the MQTT broker, we need to set up the topic we want to listen to. The first step is to get the ID of the application in Chirpstack:    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/get-cs-application-id.png"
-  width="50%"
-  caption="Get Chirpstack application ID"
-/>
+> **Image:** Get Chirpstack application ID
 
   g. Copy the application ID, to use it in the MQTT input node to set up the topic.
 
-  h. Open the MQTT input settings in the NodeRED flow by double clicking on the icon in the flow.<br />
+  h. Open the MQTT input settings in the NodeRED flow by double clicking on the icon in the flow.
+
   Then edit the topic field. The syntax is:    
   `application` = fixed        
   `application ID` = from the Chirpstack LNS application        
@@ -1662,11 +1244,7 @@ Take note of the DEVEUI and APPKEY in this section. These parameters must match 
 
   i. Select as **Output** the option **`a parsed JSON object`**.    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/setup-topic.png"
-  width="60%"
-  caption="Setup MQTT topic"
-/>
+> **Image:** Setup MQTT topic
 
 8. Set up the output node
 
@@ -1674,11 +1252,7 @@ Take note of the DEVEUI and APPKEY in this section. These parameters must match 
 
   b. Pull the _**`mqtt out`**_ node from the left side bar to your flow:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/prepare-output.png"
-  width="60%"
-  caption="Prepare output node"
-/>
+> **Image:** Prepare output node
 
   c. The only setup required is to select the same server that is used in the ***`mqtt in`*** node.
 
@@ -1688,19 +1262,11 @@ Take note of the DEVEUI and APPKEY in this section. These parameters must match 
 
   b. Pull the ***`field tester service`*** node from the left side bar to your flow:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/add-field-tester-service.png"
-  width="60%"
-  caption="Add Field Tester Service node"
-/>
+> **Image:** Add Field Tester Service node
 
   c. Double click on the new node to setup the parser:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/setup-parser.png"
-  width="60%"
-  caption="Set up the parser"
-/>
+> **Image:** Set up the parser
 
   For this example, the required parser is **Chirpstack v3 and v4**.
 
@@ -1713,30 +1279,20 @@ However, guides on how to use it with other LNS are not available at this time.
 
   - The last step is to connect the nodes:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/connect-nodes.png"
-  width="60%"
-  caption="Connect the node"
-/>
+> **Image:** Connect the node
 
   :::tip NOTE
   - For debugging, it will be helpful to add a debug output node to the flow. This helps to check whether the output of the parser is correct:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/prepare-debug.png"
-  width="60%"
-  caption="Device"
-/>
+> **Image:** Device
+
   :::
 
-  - Select **complete msg object** as output.<br />
+  - Select **complete msg object** as output.
+
   The result of parser can then be checked on the right side in the debug window:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/debug-flow.png"
-  width="100%"
-  caption="Device"
-/>
+> **Image:** Device
 
   That's all, a simple implementation of a backend server for the RAK10701 Field Tester with NodeRED.    
 
@@ -1754,35 +1310,19 @@ The Field Mapper should have the correct credentials to connect to the Helium Co
 
 2. Click the **CONNECT DEVICE** button to launch WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-connect.png"
-  width="85%"
-  caption="WisToolBox Desktop splash screen"
-/>
+> **Image:** WisToolBox Desktop splash screen
 
 3. Review the **Connection settings** parameters on the dashboard, then click on the **CONNECT** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-connect-settings.png"
-  width="85%"
-  caption="WisToolBox Desktop connection settings"
-/>
+> **Image:** WisToolBox Desktop connection settings
 
 4. On the WisToolBox Dashboard screen, select the RAK4630 module. This is the module inside the RAK10701-P Field Tester device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-module.png"
-  width="85%"
-  caption="Detected module by WisToolBox"
-/>
+> **Image:** Detected module by WisToolBox
 
 5. You can now update the APPEUI, DEVEUI, and APPKEY. It must be the same as the parameters you have in the [Setting up of Network Server](https://docs.rakwireless.com/product-categories/wisgate/rak10701-p/quickstart/#lorawan-network-servers-guide-for-rak10701-p-field-tester-pro). Then you can click **APPLY COMMANDS**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-parameters.png"
-  width="85%"
-  caption="Changing device parameters"
-/>
+> **Image:** Changing device parameters
 
 :::tip NOTE
 These are the only parameters that you need to change via WisToolBox. Other configurations like frequency plan, the interval of uplinks, TX power, and data rate can be done on the touchscreen of RAK10701.
@@ -1792,25 +1332,13 @@ For the frequency plan change, the device must be restarted to activate this new
 
 6. You will see the summary of commands that were applied successfully. If the update is unsuccessful, just resend the needed changes. After the successful update, click the **CLOSE** button to return to Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-config-success.png"
-  width="85%"
-  caption="Successful update of parameters"
-/>
+> **Image:** Successful update of parameters
 
 7. You can now remove the USB Type-C cable and proceed to the screen of RAK10701. You can click the settings icon and then update the frequency plan, the interval of uplinks, TX power, and data rate as needed. You can use the arrows for navigation and click `OK` to save changes.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/home_ui_settings.png"
-  width="35%"
-  caption="RAK10701-P settings button"
-/>
+> **Image:** RAK10701-P settings button
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/settings-parameters.png"
-  width="35%"
-  caption="Configurable parameters"
-/>
+> **Image:** Configurable parameters
 
 ### Miscellaneous
 
@@ -1827,17 +1355,9 @@ This section discusses the interfaces on the device's LCD and its pages.
 
 The RAK10701-P WisNode Field Tester has status indicators that show the current state of the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-status.png"
-  width="35%"
-  caption="Device status and indicator"
-/>
+> **Image:** Device status and indicator
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-status-indicator.png"
-  width="35%"
-  caption="Different device status"
-/>
+> **Image:** Different device status
 
 **Status:**
 
@@ -1852,61 +1372,29 @@ The RAK10701-P WisNode Field Tester has status indicators that show the current 
 The field tester has configurable parameters: Band, TX power, TX interval, backlight intensity, and DR. You can navigate the settings using the arrow widgets plus the back and ok buttons.
 The OTAA parameters APPEUI, DEVEUI, and APPKEY are also displayed but can't be changed on the touchscreen. WisToolBox or another Serial Port terminal tool is needed to send the AT commands to update the EUIs and key.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/home_ui_settings.png"
-  width="35%"
-  caption="Settings button"
-/>
+> **Image:** Settings button
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/settings-parameters-gw.png"
-  width="35%"
-  caption="Settings page"
-/>
+> **Image:** Settings page
 
 ##### Data Plots
 
 There are four different data plots on the field tester: **number of gateways**, **RSSI**, **SNR**, and **approximate distance**. These graphs are accessible by touching the respective icons assigned to the parameter.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-plots.png"
-  width="35%"
-  caption="Accessing different data plots"
-/>
+> **Image:** Accessing different data plots
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-distance.png"
-  width="35%"
-  caption="Distance plot"
-/>
+> **Image:** Distance plot
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-rssi.png"
-  width="35%"
-  caption="RSSI plot"
-/>
+> **Image:** RSSI plot
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-snr.png"
-  width="35%"
-  caption="SNR plot"
-/>
+> **Image:** SNR plot
 
 ##### GPS Data
 
 The main page shows the last GPS data captured by the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-gps-icon.png"
-  width="35%"
-  caption="GPS display"
-/>
+> **Image:** GPS display
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/lcd-gps-data.png"
-  width="35%"
-  caption="GPS data"
-/>
+> **Image:** GPS data
 
 #### Packet Frame Format
 
@@ -1914,7 +1402,7 @@ The Uplink packet format send on Fport 1:
 | Byte  | Usage                                                  |
 | ----- | ------------------------------------------------------ |
 | 0 - 5 | GSP position see here for details. Decoding see below  |
-| 6 - 7 | Altitude in meters + 1000&nbsp;m ( 1100 = 100&nbsp;m ) |
+| 6 - 7 | Altitude in meters + 1000 m ( 1100 = 100 m ) |
 | 8     | HDOP * 10 (11 = 1.1)                                   |
 | 9     | Sats in view                                           |
 
@@ -1924,13 +1412,13 @@ The downlink response format send on Fport 2:
 | Byte | Usage                               |
 | ---- | ----------------------------------- |
 | 0    | Sequence ID % 255                   |
-| 1    | Min Rssi + 200 (160 = -40&nbsp;dBm) |
-| 2    | Max Rssi + 200 (160 = -40&nbsp;dBm) |
-| 3    | Min Distance step 250&nbsp;m        |
-| 4    | Max Distance step 250&nbsp;m        |
+| 1    | Min Rssi + 200 (160 = -40 dBm) |
+| 2    | Max Rssi + 200 (160 = -40 dBm) |
+| 3    | Min Distance step 250 m        |
+| 4    | Max Distance step 250 m        |
 | 5    | Seen hotspot                        |
 
-The distance is calculated from the GPS position and the gateways position returned by LoRaWAN server meta-data. Under 250&nbsp;m value is 250&nbsp;m, over 32&nbsp;km value is 32&nbsp;km. 0 is considered as an invalid response.
+The distance is calculated from the GPS position and the gateways position returned by LoRaWAN server meta-data. Under 250 m value is 250 m, over 32 km value is 32 km. 0 is considered as an invalid response.
 
 The following integration and payload transformation allows to decode the gps position and report is to mapper.
 
@@ -1947,38 +1435,17 @@ It is recommended to update to the latest version of the firmware. To do this, d
 
 1. Drag the downloaded firmware to the WisToolBox custom firmware section.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-firmware.png"
-  width="85%"
-  caption="WisToolBox firmware"
-/>
+> **Image:** WisToolBox firmware
 
 2. After the firmware file is uploaded to the application, you can now select **UPGRADE DEVICE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-firmware-upgrade.png"
-  width="85%"
-  caption="Upload the latest firmware"
-/>
+> **Image:** Upload the latest firmware
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-firmware-upgrade2.png"
-  width="85%"
-  caption="Confirm upgrading of firmware"
-/>
+> **Image:** Confirm upgrading of firmware
 
 3. If all proceed with no error, you should see `Firmware update successful` notification, and the RAK10701-P will restart automatically.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-firmware-upgrade3.png"
-  width="85%"
-  caption="Ongoing upgrading of firmware"
-/>
+> **Image:** Ongoing upgrading of firmware
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-firmware-successful.png"
-  width="85%"
-  caption="Successful upload of latest firmware"
-/>
+> **Image:** Successful upload of latest firmware
 
-<RkBottomNav/>

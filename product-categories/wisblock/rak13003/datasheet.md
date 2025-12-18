@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13003 WisBlock IO Expansion Module Datasheet
 
 ## Overview
@@ -28,11 +25,10 @@ The RAK13003 is an IO expansion module that can be mounted to IO slot of WisBloc
 - Configurable Interrupt Output Pins
 - INTA and INTB can be configured to operate independently or together
 - External Reset Input
-- Low Standby Current: 1&nbsp;μA (max.)
-- Operating Voltage: 2.7&nbsp;V to 5.5&nbsp;V @ -40&nbsp;°C to +85&nbsp;°C
+- Low Standby Current: 1 μA (max.)
+- Operating Voltage: 2.7 V to 5.5 V @ -40 °C to +85 °C
 - Chipset: Microchip MCP23017
-- Module size: 25X35&nbsp;mm
-
+- Module size: 25X35 mm
 
 ## Specifications
 
@@ -42,11 +38,7 @@ The RAK13003 is an IO expansion module that can be mounted to IO slot of WisBloc
 
 The RAK13003 module can be mounted on the IO slots of the WisBlock Base board. Figure 1 shows the mounting mechanism of the RAK13003 on a WisBlock Base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/rak13003-mounting.png"
-  width="60%"
-  caption="RAK13003 WisBlock IO Expansion Module Mounting"
-/>
+> **Image:** RAK13003 WisBlock IO Expansion Module Mounting
 
 ### Hardware
 
@@ -62,11 +54,7 @@ The RAK13003 IO Expansion Module uses MCP23017 from Microchip.
 
 Figure 2 shows MCP23017 device addressing. Default A2, A1, and A0 are connected to ground. 7-Bits I2C address is 0x40.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/mcp23017-addressing.png"
-  width="60%"
-  caption="The MCP23017 device addressing"
-/>
+> **Image:** The MCP23017 device addressing
 
 #### Pin Definition
 
@@ -78,11 +66,7 @@ The RAK13003 WisBlock IO Expansion Module comprises a standard expansion. The ex
 - **SPI** not supported for RAK13003.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/rak13003_pinout.svg"
-  width="80%"
-  caption="RAK13003 WisBlock IO Expansion Module Pinout"
-/>
+> **Image:** RAK13003 WisBlock IO Expansion Module Pinout
 
 #### Electrical Characteristics
 
@@ -100,19 +84,11 @@ The RAK13003 WisBlock IO Expansion Module comprises a standard expansion. The ex
 
 Figure 4 shows the dimensions and the mechanic drawing of the RAK13003 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/mechanic-drawing.png"
-  width="70%"
-  caption="RAK13003 WisBlock IO Expansion Module Mechanic Drawing"
-/>
+> **Image:** RAK13003 WisBlock IO Expansion Module Mechanic Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/pcb-footprint.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
@@ -120,21 +96,11 @@ Figure 4 shows the dimensions and the mechanic drawing of the RAK13003 module.
 
 Figure 6 shows RAK13003 WisBlock IO Expansion Module schematic diagram. Default uses **3V3_S** for power supply.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/module-schematic.png"
-  width="100%"
-  caption="RAK13003 WisBlock IO Expansion Module Schematic"
-/>
+> **Image:** RAK13003 WisBlock IO Expansion Module Schematic
 
 ##### Device Address
 
 The Figure 7 shows device address bit2-bit0, default connected to ground.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13003/datasheet/device-address-a2-a0.png"
-  width="40%"
-  caption="RAK13003 Device Address A2-A0"
-/>
+> **Image:** RAK13003 Device Address A2-A0
 
-
-<RkBottomNav/>

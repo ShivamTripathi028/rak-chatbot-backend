@@ -21,9 +21,6 @@ date: 2021-04-12
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3172 WisDuo LoRaWAN Module Quick Start Guide
 
 This guide covers the following topics:
@@ -49,7 +46,8 @@ Before going through the installation guide for the RAK3172 WisDuo LoRaWAN Modul
 - Download and install the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino IDE</a>.
 
 :::warning
-_**If you are using Windows 10**_: <br/>
+_**If you are using Windows 10**_: 
+
 Do _**NOT**_ install the Arduino IDE from the Microsoft App Store. Instead, install the original Arduino IDE from the <a href="https://www.arduino.cc/en/software" target="_blank">Arduino official website</a>. The Arduino app from the Microsoft App Store has problems using third-party Board Support Packages.
 :::
 
@@ -95,31 +93,15 @@ Firmware updates are done via UART2 pins. If you connect the module to an extern
 An alternative option to update firmware, aside from UART2, is to use SWD pins (SWCLK and SWDIO). This method requires external tools like ST-LINK and RAKDAP1.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_bare_minimum_schematic.png"
-  width="80%"
-  caption="RAK3172 Minimum Schematic"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Minimum Schematic
 
 Ensure that the antenna is properly connected for a good LoRa signal.  Also note that powering the module without an antenna connected to the IPEX connector may damage the chip's RF section.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wisblock_antenna.png"
-  width="30%"
-  caption="LoRa Antenna"
-  zoomMode={true}
-/>
+> **Image:** LoRa Antenna
 
 RAK3172 has a module variant with an IPEX connector where you can connect the LoRa antenna, as shown in **Figure 3**. If your ordered RAK3172 module lacks an IPEX connector, ensure an external antenna connected to the **RF pin** (Pin 12) of the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_module_antenna.png"
-  width="30%"
-  caption="IPEX Connector of RAK3172 for LoRa Antenna"
-  zoomMode={true}
-/>
-
+> **Image:** IPEX Connector of RAK3172 for LoRa Antenna
 
 :::tip NOTE
 Detailed information about the RAK3172 LoRa antenna can be found on the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf" target="_blank">863-870 MHz antenna datasheet</a> or the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf" target="_blank">902-928 MHz antenna datasheet</a>.
@@ -132,7 +114,6 @@ When using the LoRa transceiver, ensure that an antenna is always connected.  Us
 #### Software Setup
 
 The default firmware of the RAK3172 is based on RUI3, which allows you to develop your own custom firmware to connect sensors and other peripherals. To develop custom firmware using the Arduino IDE, first add RAKwireless RUI STM32 boards to the Arduino board manager (as discussed in this guide).  Then, use <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/arduino-api/" target="_blank">RUI3 APIs</a> for your application. You can upload the custom firmware via UART. The RAK3172's AT commands remain available even with custom firmware compiled via RUI3; send AT commands via a UART2 connection.
-
 
 ##### RAK3172 RUI3 Board Support Package in Arduino IDE
 
@@ -147,21 +128,11 @@ Once the Arduino IDE is successfully installed, you can configure the IDE to add
 
 1. Open Arduino IDE and go to **File** > **Preferences**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/preferences.png"
-  width="100%"
-  caption="Arduino preferences"
-  zoomMode={true}
-/>
+> **Image:** Arduino preferences
 
 2. To add the RAK3172 to your Arduino Boards list, edit the **Additional Board Manager URLs**. Click the icon, as shown in **Figure 5**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/additional-boards.png"
-  width="80%"
-  caption="Modifying Additional Board Manager URLs"
-  zoomMode={true}
-/>
+> **Image:** Modifying Additional Board Manager URLs
 
 3. Copy the URL below and paste it into the field, as shown in **Figure 6**. If other URLs are already present, just add them on the next line. After adding the URL, click **OK**.
 
@@ -169,67 +140,37 @@ Once the Arduino IDE is successfully installed, you can configure the IDE to add
 https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_com_rui_index.json
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/preferences-url.png"
-  width="100%"
-  caption="Add additional board manager URLs"
-  zoomMode={true}
-/>
+> **Image:** Add additional board manager URLs
 
 4. Restart the Arduino IDE.
 
 5. Open the Boards Manager from the Tools Menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/boards-manager.png"
-  width="100%"
-  caption="Opening Arduino boards manager"
-  zoomMode={true}
-/>
+> **Image:** Opening Arduino boards manager
 
 6. Write `RAK` in the search bar, as shown in **Figure 8**. This will show the available RAKwireless module boards that you can add to your Arduino Board list.
 
 7. Click on the area highlighted in blue to select **RAKwireless RUI STM32 Boards**. Install the latest version of the  **RAKwireless RUI STM32 Boards** by clicking on **Install** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rui3-stm32.png"
-  width="80%"
-  caption="Installing RAKwireless RUI STM32 Boards"
-  zoomMode={true}
-/>
+> **Image:** Installing RAKwireless RUI STM32 Boards
 
 ##### Configure RAK3172 on Boards Manager
 
 8. Once the BSP is installed, select  **Tools** > **Boards Manager** > **RAKWireless RUI STM32 Modules** > **WisDuo RAK3172 Evaluation Board**. The RAK3172 Evaluation board uses the RAK3172 WisDuo Module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rui-stm32.png"
-  width="100%"
-  caption="Selecting RAK3172 Module"
-  zoomMode={true}
-/>
+> **Image:** Selecting RAK3172 Module
 
 ##### RAK3172 COM Port on Device Manager
 
 Connect the RAK3172 via UART and check RAK3172 COM Port using Windows **Device Manager**. Double-click the reset button if the module is not detected.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rui-port.png"
-  width="70%"
-  caption="Device manager ports (COM & LPT)"
-  zoomMode={true}
-/>
+> **Image:** Device manager ports (COM & LPT)
 
 ##### Compile an Example with Arduino LED Breathing
 
 1. After completing the steps for adding your RAK3172 to the Arduino IDE, you can now try to run a simple program to test your setup. You need to add two LEDs to the bare minimum schematic of the RAK3172 module, as shown in **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_bare_minimum_schematic_led.png"
-  width="90%"
-  caption="RAK3172 with two LEDs"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 with two LEDs
 
 2. Launch Arduino IDE and configure WisDuo RAK3172 Evaluation Board on board selection. See [**Figure 9**](#configure-rak3172-on-boards-manager).
 
@@ -237,55 +178,25 @@ Connect the RAK3172 via UART and check RAK3172 COM Port using Windows **Device M
 
 4. Open the **Tools** Menu and select a COM port. **COM28** is currently used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/select-port.png"
-  width="100%"
-  caption="Select COM port"
-  zoomMode={true}
-/>
+> **Image:** Select COM port
 
 5. You can see the serial monitor icon and click it to connect to the COM port.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/serial-mon.png"
-  width="100%"
-  caption="Open Arduino serial monitor"
-  zoomMode={true}
-/>
+> **Image:** Open Arduino serial monitor
 
 6. If the connection is successful, you can send AT Commands to RAK3172. For example: To check the RUI version, type `AT+VER=?` in the text area, then click on the **Send** button, as shown in **Figure 14**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/at-ver.png"
-  width="100%"
-  caption="Send AT command"
-  zoomMode={true}
-/>
+> **Image:** Send AT command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/arduino-console.png"
-  width="100%"
-  caption="Arduino serial monitor COM28"
-  zoomMode={true}
-/>
+> **Image:** Arduino serial monitor COM28
 
 7. Open **Arduino_Led_Breathing** example code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/led-example.png"
-  width="100%"
-  caption="Arduino Led Breathing example"
-  zoomMode={true}
-/>
+> **Image:** Arduino Led Breathing example
 
 8. Click on the **Verify** icon to check if you have successfully compiled the example code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/verify-code.png"
-  width="100%"
-  caption="Verify the example code"
-  zoomMode={true}
-/>
+> **Image:** Verify the example code
 
 9. Click the **Upload** icon to send the compiled firmware to your RAK3172 module.
 
@@ -295,21 +206,11 @@ The RAK3172 should automatically enter BOOT mode when the firmware is uploaded v
 If BOOT mode is not initiated, pull to ground the RESET pin twice (or double click the reset button if available) to force BOOT mode.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/upload-code.png"
-  width="100%"
-  caption="Upload the example code"
-  zoomMode={true}
-/>
+> **Image:** Upload the example code
 
 10. If the upload is successful, you will see the **Upgrade Complete** message.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/dev-prog.png"
-  width="100%"
-  caption="Device programmed successfully"
-  zoomMode={true}
-/>
+> **Image:** Device programmed successfully
 
 11. After device programming is complete, you will see the LEDs blinking.
 
@@ -317,17 +218,11 @@ If BOOT mode is not initiated, pull to ground the RESET pin twice (or double cli
 
 This section discusses how to use and access RAK3172 pins using the RUI3 API. It shows basic code examples for digital I/O, analog input, UART, and I2C.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172-pins.png"
-  width="90%"
-  caption="Available Peripherals and Digital I/O pins in RAK3172 module"
-  zoomMode={true}
-/>
+> **Image:** Available Peripherals and Digital I/O pins in RAK3172 module
 
 ###### How to Use Digital I/O
 
 You can use any of the pins below as a digital pin.
-
 
 | **Pin Name** | **Alternative Pin Usage** |
 | :----------: | :-----------------------: |
@@ -348,12 +243,7 @@ You can use any of the pins below as a digital pin.
 | PB6          | UART1_TX                  |
 | PB7          | UART1_RX                  |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172-io-pins.png"
-  width="100%"
-  caption="Available Digital I/O pins in RAK3172 module"
-  zoomMode={true}
-/>
+> **Image:** Available Digital I/O pins in RAK3172 module
 
 The pins listed below must not be used.
 
@@ -366,14 +256,12 @@ The pins listed below must not be used.
 | PB8          | RAK3172 Internal                                                                                                                                  |
 | PB12         | Internal 10k pull-up resistor for RAK3172 high frequency variant (8xx - 9xx Mhz) or pull-down resistor for RAK3172 low frequency variant (4xx Mhz)|
 
-
 - Use Arduino <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/" target="_blank">digitalRead</a> to read the value from a specified Digital I/O pin, either HIGH or LOW.
 - Use Arduino <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/" target="_blank">digitalWrite</a> to write a HIGH or a LOW value to a Digital I/O pin.
 
 :::tip NOTE
 The GPIO Pin Name is the one to be used on the digitalRead and digitalWrite and NOT the pin numbers.
 :::
-
 
 **Example code**
 
@@ -406,13 +294,7 @@ You can use any of the pins below as Analog Input.
 
 Use Arduino <a href="https://docs.arduino.cc/language-reference/en/functions/analog-io/analogRead/" target="_blank">analogRead</a> to read the value from the specified Analog Input pin.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172-adc-pins.png"
-  width="90%"
-  caption="Available Analog pins in RAK3172"
-  zoomMode={true}
-/>
-
+> **Image:** Available Analog pins in RAK3172
 
 **Example code**
 
@@ -440,18 +322,12 @@ void loop()
 
 There are two UART peripherals available on the RAK3172 module. There are also different <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/serial-operating-modes/" target="_blank">Serial Operating Modes</a> possible in RUI3, namely <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/binary-command-manual/" target="_blank">Binary Mode</a>, <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">AT Mode</a>, and <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/custom-mode/" target="_blank">Custom Mode</a>.
 
-
 | **Serial Port**   | **Serial Instance Assignment** | **Default Mode** |
 | :---------------: | :----------------------------: | :--------------: |
 | UART1 (pins 4, 5) | Serial1                        | Custom Mode      |
 | UART2 (pins 1, 2) | Serial                         | AT Command       |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172-uart-pins.png"
-  width="90%"
-  caption="Available UART pins in RAK3172"
-  zoomMode={true}
-/>
+> **Image:** Available UART pins in RAK3172
 
 **Example Code**
 
@@ -481,16 +357,9 @@ There is one I2C peripheral available on RAK3172.
 | PA12               | I2C_SCL          |
 | PA11               | I2C_SDA          |
 
-
 - Use Arduino <a href="https://www.arduino.cc/reference/en/language/functions/communication/wire/" target="_blank">Wire</a> library to communicate with I2C devices.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172-i2c-pins.png"
-  width="90%"
-  caption="Available I2C pins in RAK3172"
-  zoomMode={true}
-/>
+> **Image:** Available I2C pins in RAK3172
 
 **Example Code**
 
@@ -509,7 +378,6 @@ void setup()
   while (!Serial);
   Serial.println("\nI2C Scanner");
 }
-
 
 void loop()
 {
@@ -572,7 +440,6 @@ The Arduino Serial Monitor shows the I2C device found.
 
 If your RUI3 project uses SPI, then PA4 to PA7 pins are reserved for RUI3 SPI interface.
 
-
 :::tip NOTE
 PA13 and PA14 pins are reserved for SWD debug interface. Check the [Connect to the RAK3172](#connect-to-the-rak3172) section.
 :::
@@ -607,30 +474,15 @@ After configuring your gateway, you need to register it in TTNv3:
 
 2. Navigate to the **Console** page and click on **gateway** icon, as shown in **Figure 25**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/ttnv3-initial.png"
-  width="100%"
-  caption="TTNv3 gateway registration and configuration"
-  zoomMode={true}
-/>
+> **Image:** TTNv3 gateway registration and configuration
 
 3. On **General Settings**, enter the **Gateway ID**, **Gateway EUI**, and **Gateway Name**. This information is available in your LoRaWAN gateway configuration. Select the **Gateway Server address** according to the region where the LoRaWAN gateway will be installed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/ttnv3-gwconfig.png"
-  width="100%"
-  caption="TTNv3 gateway registration and configuration"
-  zoomMode={true}
-/>
+> **Image:** TTNv3 gateway registration and configuration
 
 4. Select the **Frequency plan** for your region (with used by TTN), then click on the **Create gateway** button. This will add a new gateway to TTNv3.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/ttnv3-add.png"
-  width="100%"
-  caption="TTNv3 add new Gateway"
-  zoomMode={true}
-/>
+> **Image:** TTNv3 add new Gateway
 
 ###### Register the Device on TTNv3
 
@@ -646,12 +498,7 @@ After a successful registration of the RAK3172 device on the LNS, you can now pr
 
 3. Open the example code under **RAK WisBlock RUI examples**: **File** -> **Examples** -> **RAK WisBlock RUI examples** -> **Example** -> **LoRaWan_OTAA**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/otaa-rak3172.png"
-  width="100%"
-  caption="OTAA LoRaWAN application example"
-  zoomMode={true}
-/>
+> **Image:** OTAA LoRaWAN application example
 
 4. In the example code, you need to modify the device EUI **OTAA_DEVEUI**, the application EUI **OTAA_APPEUI**, and the application key **OTAA_APPKEY**.
 
@@ -675,12 +522,7 @@ After a successful registration of the RAK3172 device on the LNS, you can now pr
 #define OTAA_APPKEY   {0xB4, 0x85, 0x7E, 0xFE, 0x1C, 0xB5, 0x15, 0xEB, 0x44, 0x61, 0x0D, 0x9B, 0x20, 0x6A, 0xF3, 0x3A}
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/lorawan_otaa_parameter.png"
-  width="100%"
-  caption="Configuring DEVEUI, APPEUI and APPKEY"
-  zoomMode={true}
-/>
+> **Image:** Configuring DEVEUI, APPEUI and APPKEY
 
 3. Depending on the regional band you selected, you might need to configure the sub-band of your RAK module to match the gateway and LoRaWAN network server. This is especially important for regional bands like US915, AU915, and CN470.
 
@@ -716,13 +558,7 @@ RAK3172 supports the following regions:
 * RAK_REGION_AS923-4 = 11
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/otaa-band.png"
-  width="100%"
-  caption="Updating to US915 and setting up channel mask"
-  zoomMode={true}
-/>
-
+> **Image:** Updating to US915 and setting up channel mask
 
 :::tip NOTE
 
@@ -734,39 +570,19 @@ RAK3172 supports the following regions:
 
 4. Open the **Tools** Menu and select a COM port. **COM28** is currently used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/select-port.png"
-  width="100%"
-  caption="Select COM port"
-  zoomMode={true}
-/>
+> **Image:** Select COM port
 
 5. The last step is to upload the code by clicking the **Upload** icon on Arduino IDE. Note that you should select the correct board and COM port.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/otaa-upload.png"
-  width="100%"
-  caption="Uploading the code"
-  zoomMode={true}
-/>
+> **Image:** Uploading the code
 
 6. You should now be able to see the console logs using the Arduino IDE's serial monitor.  Sometimes the COM port will disconnect, so you may not see the terminal output immediately. You can reconnect the module or try pressing the reset button to see the terminal output.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/serial-console.png"
-  width="90%"
-  caption="Arduino serial monitor logs"
-  zoomMode={true}
-/>
+> **Image:** Arduino serial monitor logs
 
 7. Check on the LoRaWAN network TTN console logs to see if your device has been successfully joined with the `join-request` and `join-accept` messages.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/ttn-log.png"
-  width="90%"
-  caption="TTN console log"
-  zoomMode={true}
-/>
+> **Image:** TTN console log
 
 The modified `LoRaWAN_OTAA` project is available below.
 
@@ -794,7 +610,6 @@ The modified `LoRaWAN_OTAA` project is available below.
 #define OTAA_DEVEUI   {0x70, 0xB3, 0xD5, 0x7E, 0xD0, 0x04, 0xF1, 0xC0}
 #define OTAA_APPEUI   {0x70, 0xB3, 0xD5, 0x7E, 0xD0,0x03, 0xAB, 0xA2}
 #define OTAA_APPKEY   {0xB4, 0x85, 0x7E, 0xFE, 0x1C, 0xB5, 0x15, 0xEB, 0x44, 0x61, 0x0D, 0x9B, 0x20, 0x6A, 0xF3, 0x3A}
-
 
 /** Packet buffer for sending */
 uint8_t collected_data[64] = { 0 };
@@ -860,7 +675,6 @@ void setup()
     Serial.printf("LoRaWan OTAA - set mask is incorrect! \r\n");
     return;
   }
-
 
   if (!api.lorawan.deviceClass.set(RAK_LORA_CLASS_A)) {
     Serial.printf("LoRaWan OTAA - set device class is incorrect! \r\n");
@@ -973,20 +787,15 @@ An alternative firmware update method, aside from UART2, is to use SWD pins (SWC
 
 1. Connect the RAK3172 to the serial port of a general-purpose computer (USB port) using a USB to UART TTL adapter like <a href="https://store.rakwireless.com/collections/accessories/products/daplink-tool" target="_blank">RAKDAP1</a>, as shown in **Figure 35**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_uart_connection.svg"
-  width="55%"
-  caption="RAK3172 Module Connection"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Module Connection
 
 2. Any serial communication tool can be used; but, it is recommended to use the <a href="https://downloads.rakwireless.com/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip" target="_blank">RAK Serial Port Tool</a>.
 
 3. Configure the serial communication tool by selecting the appropriate port detected by the computer and configure the link as follows:
 
- * Baud Rate: **115200&nbsp;baud**
- * Data Bits: **8&nbsp;bits**
- * Stop Bits: **1&nbsp;stop bit**
+ * Baud Rate: **115200 baud**
+ * Data Bits: **8 bits**
+ * Stop Bits: **1 stop bit**
  * Parity: **NONE**
 
 ##### RAK3172 Configuration for LoRaWAN or LoRa P2P
@@ -1019,12 +828,7 @@ In this guide, you will need a working gateway connected to TTN, or you must be 
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/4.ttn-context.png"
-  width="95%"
-  caption="RAK3172 EVB in the context of the TTN"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 EVB in the context of the TTN
 
 As shown in **Figure 36**, The Things Stack (TTN V3) is an open-source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments, as well as for small local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliance and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries</a>.
 
@@ -1036,81 +840,31 @@ The RAK3172 WisDuo Module can be part of this ecosystem as a device, and the obj
 
 1. The first step is to go to <a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network</a> and sign up an account shown in **Figure 37**. Then select a cluster as shown in **Figure 39**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_1.png"
-  width="100%"
-  caption="Signing up an account in TTN"
-  zoomMode={true}
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_2.png"
-  width="100%"
-  caption="Signing up an account in TTN"
-  zoomMode={true}
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_3.png"
-  width="100%"
-  caption="Selecting Cluster in TTN"
-  zoomMode={true}
-/>
+> **Image:** Selecting Cluster in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_4.png"
-  width="100%"
-  caption="Signing up through the Things ID"
-  zoomMode={true}
-/>
+> **Image:** Signing up through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_5.png"
-  width="100%"
-  caption="Creation of an account through the Things ID"
-  zoomMode={true}
-/>
+> **Image:** Creation of an account through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_6.png"
-  width="100%"
-  caption="Creation of an account through the Things ID"
-  zoomMode={true}
-/>
+> **Image:** Creation of an account through the Things ID
 
 You can use the same login credentials on TTN V2 if you have one. If you do not yet have an account, you need to create one.
 
 2. Now that you are logged in to the platform, the next step is to create an application. Click **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_7x.png"
-  width="100%"
-  caption="The Things Stack Platform"
-  zoomMode={true}
-/>
+> **Image:** The Things Stack Platform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_8x.png"
-  width="100%"
-  caption="Creating TTN application for your LoRaWAN devices"
-  zoomMode={true}
-/>
+> **Image:** Creating TTN application for your LoRaWAN devices
 
 3. To register an application, first input the specific details and necessary information, then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_7.png"
-  width="100%"
-  caption="Details of the TTN application"
-  zoomMode={true}
-/>
+> **Image:** Details of the TTN application
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_8.png"
-  width="80%"
-  caption="Details of the TTN application"
-  zoomMode={true}
-/>
+> **Image:** Details of the TTN application
 
 4. If you have no errors in the previous step, you should now be on the application console page. The next step is to add end devices to your TTN application.
 
@@ -1120,67 +874,27 @@ LoRaWAN specifications require that each end device be personalized and activate
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+ Register end device**, as shown in **Figure 47**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_9.png"
-  width="100%"
-  caption="Register end device"
-  zoomMode={true}
-/>
+> **Image:** Register end device
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_10.png"
-  width="100%"
-  caption="Enter end device specifics manually"
-  zoomMode={true}
-/>
+> **Image:** Enter end device specifics manually
 
 3. Next step is to set up **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported. Then provide the **JoinEUI** credentials by entering zeroes into it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_11.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_12.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_13.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_14.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 4. Then click **Show advanced activation, LoRaWAN class and cluster settings**. Configure the activation mode by selecting **Over the air activation (OTAA)** and Additional LoRaWAN class capabilities to **class A only**. Then click **Confirm**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_15.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_16.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. This will automatically generate the specific end-device ID of your board. Click **Generate** in **AppKey** tab under **Provisioning information** section. Then click **Register end device**.
 
@@ -1192,26 +906,11 @@ LoRaWAN specifications require that each end device be personalized and activate
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_17b.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_18b.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_19a.png"
-  width="90%"
-  caption="Register end device"
-  zoomMode={true}
-/>
+> **Image:** Register end device
 
 6. You should now be able to see the device on the TTN console after you fully register your device, as shown in **Figure 58**.
 
@@ -1224,12 +923,7 @@ LoRaWAN specifications require that each end device be personalized and activate
 - These parameters are always accessible on the device console page, as shown in **Figure 58**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/rak3172_new_20a.png"
-  width="100%"
-  caption="OTAA device successfully registered to TTN"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 ##### OTAA Configuration for TTN
 
@@ -1246,46 +940,21 @@ The **RAK3172** should have the correct OTAA credentials to connect to TTN. This
 
 2. Click **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Then select your target port where your **RAK3172** is connected. Once recognized, click **CONNECT**, as shown in **Figure 60**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once done, **RAK3172** will appear in the dashboard then select it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_4a.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Then click **PARAMETERS** configure your RAK3172.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 6. Click **Global settings** to set the network mode to **LoRaWAN** and join mode to **OTAA**. Make sure that the active region is using **EU868** for this configuration. If you wish to work on other regional bands, you can choose among active regions based on your location.
 
@@ -1293,35 +962,15 @@ The **RAK3172** should have the correct OTAA credentials to connect to TTN. This
 - LoRaWAN join mode: **OTAA**
 - LoRaWAN region: **EU868**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_6.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_7a.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
 7. Click **LoRaWAN keys, ID, EUI** to configure the **Application EUI (AppEUI)**, **Application key (AppKey)**, and **Device EUI (DevEUI)**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_7b.png"
-  width="90%"
-  caption="LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_8b.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 8. Then go back to the console where your RAK3172 end-device is created previously. Copy the credentials from there since it will be used in the WisToolBox dashboard. Once encoded into the dashboard, click **APPLY COMMAND** to update your device, as shown in **Figure 75**.
 
@@ -1331,110 +980,45 @@ The **RAK3172** should have the correct OTAA credentials to connect to TTN. This
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_9.png"
-  width="100%"
-  caption="Your created OTAA device from your console"
-  zoomMode={true}
-/>
+> **Image:** Your created OTAA device from your console
 
 - **For Application EUI (AppEUI)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_9a.png"
-  width="100%"
-  caption="Copying the AppEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_10a.png"
-  width="90%"
-  caption="Copying the AppEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppEUI credential from TTN to WisToolBox
 
 - **For Application key (AppKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_9b.png"
-  width="100%"
-  caption="Copying the AppKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_10b.png"
-  width="90%"
-  caption="Copying the AppKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppKey credential from TTN to WisToolBox
 
 - **For Device EUI (DevEUI)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_9c.png"
-  width="100%"
-  caption="Copying the DevEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the DevEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_10c.png"
-  width="90%"
-  caption="Copying the DevEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the DevEUI credential from TTN to WisToolBox
 
 - **WisToolBox Dashboard**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_10.png"
-  width="90%"
-  caption="Used credentials from your console in WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Used credentials from your console in WisToolBox dashboard
 
 9. Once done, you will see the summary of commands that is applied to your device. Then click **CLOSE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_11.png"
-  width="90%"
-  caption="Summary of commands"
-  zoomMode={true}
-/>
+> **Image:** Summary of commands
 
 10. Now, you will see it return to the dashboard with updated credentials of your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_12.png"
-  width="90%"
-  caption="Successfully configured OTAA device via WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Successfully configured OTAA device via WisToolBox dashboard
 
 11. After your device's credentials are updated, it can now join the network. To do this, you need to go to **Data on LoRa network** under **PARAMETERS**, and then click **JOIN NETWORK** under **LoRaWAN join settings**. After a few seconds, it will notify you that your OTAA device has already joined the TTN server. You can also access your TTN console if your device has successfully joined the TTN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_13.png"
-  width="90%"
-  caption="Joining mode of your OTAA device"
-  zoomMode={true}
-/>
+> **Image:** Joining mode of your OTAA device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_14.png"
-  width="90%"
-  caption="OTAA device successfully joined the TTN server"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the TTN server
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/wis_rak3172_new_15.png"
-  width="90%"
-  caption="OTAA device successfully joined the TTN server"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the TTN server
 
 ##### OTAA Configuration for TTN via WisToolBox Console
 
@@ -1444,69 +1028,29 @@ Here's another way of OTAA configuration using **WisToolBox Console**. Below are
 
 2. Click **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Select your target port where your **RAK3172** is connected. Once recognized, click **CONNECT**, as shown in **Figure 83**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once done, **RAK3172** will appear in the dashboard, then select it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-4.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Then click **ADVANCED**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 6. Once done, click **OPEN CONSOLE** to do the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-6.png"
-  width="90%"
-  caption="OPEN CONSOLE"
-  zoomMode={true}
-/>
+> **Image:** OPEN CONSOLE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-7.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-8.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
 7. To start the configuration, type `ATE` so you can echo the commands you input during your configuration. Then press **Enter**.
 
@@ -1530,49 +1074,19 @@ If there is no `OK` or any reply, check if the device is powered correctly. If y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-9a.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-9b.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-9c.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 8. Then configure the LoRaWAN join mode to **OTAA**. You can check what parameter you will input by typing **AT+NJM?** and then **Enter** into the console terminal. For **OTAA**, you should input **AT+NJM=1** and then press **Enter**, as shown in **Figure 92**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-10.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-11.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-12.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 9. Once done, set your LoRaWAN region to EU868. You can check what parameter you will input by typing `AT+BAND?` then **Enter** into the console terminal. For **EU868**, you should input **AT+BAND=4** then press **Enter**. If you wish to work on other regional bands, you may check the list of band parameter options below.
 
@@ -1608,177 +1122,61 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-13.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-14.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-15.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 10. Then next to this will be updating the OTAA credentials of your device. First on this list will be the **Application EUI (AppEUI)**. Go back to your console where your RAK3172 End device was created to copy the AppEUI credential, then paste it to the WisToolBox Console and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis_rak3172_new_w.png"
-  width="90%"
-  caption="Your created OTAA device from your TTN console"
-  zoomMode={true}
-/>
+> **Image:** Your created OTAA device from your TTN console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-16.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-17.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-18.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis_rak3172_new_x.png"
-  width="90%"
-  caption="Copying the AppEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-19.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 11. Once done, do the same procedure to **Application key (AppKey)** and **Device EUI (DevEUI)**.
 
 - **For Application key (AppKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-20.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-21.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-22.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis_rak3172_new_y.png"
-  width="90%"
-  caption="Copying the AppKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-23.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 - **For Device EUI (DevEUI)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-24.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-25.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis_rak3172_new_z.png"
-  width="90%"
-  caption="Copying the DevEUI credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the DevEUI credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-26.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 12. Once done, click **Dashboard** to check the updated credentials of your OTAA device. Click **PARAMETERS** to open the **Global Settings** and **LoRaWAN keys, ID, EUI**, and check whether these portions are updated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-27.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-28.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-29.png"
-  width="90%"
-  caption="PARAMETERS"
-  zoomMode={true}
-/>
+> **Image:** PARAMETERS
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-30a.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-30b.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI details"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI details
 
 13. Now you have a configured OTAA device using WisToolBox Console. You can now join the network using the WisToolBox console.
 
@@ -1808,47 +1206,17 @@ If the OTAA device failed to join, you need to check if your device is within re
 After checking all the things above, try to join again.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-34.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-35.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-36.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-37.png"
-  width="90%"
-  caption="Joining mode using WisToolBox Console"
-  zoomMode={true}
-/>
+> **Image:** Joining mode using WisToolBox Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-38.png"
-  width="90%"
-  caption="OTAA device successfully joined the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-39a.png"
-  width="90%"
-  caption="OTAA device successfully joined the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device successfully joined the network
 
 15. With the end-device properly joined to the TTN, you can now try to send some payload after a successful join. Send command format: **`AT+SEND=<port>:<payload>`**
 
@@ -1856,101 +1224,41 @@ After checking all the things above, try to join again.
 AT+SEND=2:12345678
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-40.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-41.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-42.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-43.png"
-  width="90%"
-  caption="OTAA device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** OTAA device sending payload to the network
 
 16. You can see the data sent by the RAK3172 module on the TTN device console *Live data* section. Also, the *Last seen* info should be a few seconds or minutes ago.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/conwis-rak3172-new-44a.png"
-  width="90%"
-  caption="OTAA Test Sample Data Sent Viewed in TTN"
-  zoomMode={true}
-/>
+> **Image:** OTAA Test Sample Data Sent Viewed in TTN
 
 ##### TTN ABP Device Registration
 
 1. To register an ABP device, go to your application console and select the application to which you want your device to be added. Then click **+ Register end device**, as shown in **Figure 129**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_1.png"
-  width="100%"
-  caption="Adding ABP Device"
-  zoomMode={true}
-/>
+> **Image:** Adding ABP Device
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_2.png"
-  width="100%"
-  caption="Enter end device specifics manually"
-  zoomMode={true}
-/>
+> **Image:** Enter end device specifics manually
 
 3. Next step is to set up **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_3.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_4.png"
-  width="80%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_5.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 4. Then click **Show advanced activation, LoRaWAN class and cluster settings**. Configure the activation mode by selecting **Activation by personalization (ABP)** and Additional LoRaWAN class capabilities to **class A only**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_6.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_7.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
 5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. This will automatically generate the specific End
 device ID of your board. Then click **Generate** under **Device address**, **AppSKey**, and **NwkSKey** under the Provisioning information section. Then click **Register end device**.
@@ -1961,56 +1269,21 @@ device ID of your board. Then click **Generate** under **Device address**, **App
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_8.png"
-  width="90%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_9.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_10.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_11.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_12.png"
-  width="100%"
-  caption="Setting up for your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up for your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_13.png"
-  width="100%"
-  caption="Register end device"
-  zoomMode={true}
-/>
+> **Image:** Register end device
 
 6. You should now be able to see the device on the TTN console after you fully register your device, as shown in **Figure 142**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abp_rak3172_new_14.png"
-  width="100%"
-  caption="ABP device successfully registered to TTN"
-  zoomMode={true}
-/>
+> **Image:** ABP device successfully registered to TTN
 
 ##### ABP Configuration for TTN
 
@@ -2027,37 +1300,17 @@ The **RAK3172** should have the correct ABP credentials to connect to TTN. This 
 
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Select your target port where your **RAK3172** is connected. Once recognized, click **CONNECT**, as shown in **Figure 145**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once done, **RAK3172** will appear in the dashboard, and then select it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_4a.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Then click **PARAMETERS** to do the configuration in your RAK3172.
 
@@ -2067,12 +1320,7 @@ The **RAK3172** should have the correct ABP credentials to connect to TTN. This 
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
  6. Click **Global settings** to set the network mode into **LoRaWAN** and join mode to **ABP**. Make sure that the active region is using **EU868** for this configuration. If you wish to work on other regional bands, you can choose among active regions based on your location.
 
@@ -2080,35 +1328,15 @@ The **RAK3172** should have the correct ABP credentials to connect to TTN. This 
 - LoRaWAN join mode: **ABP**
 - LoRaWAN region: **EU868**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_6.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_7a.png"
-  width="90%"
-  caption="Global settings"
-  zoomMode={true}
-/>
+> **Image:** Global settings
 
 7. Then click **LoRaWAN keys, ID, EUI** to configure the **Application session key (AppSKey)**, **Device address** and **Network session key (NwkSKey)**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_7b.png"
-  width="90%"
-  caption="LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_8a.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 8. Then go back to the console where your RAK3172 End device is created previously. Then copy all the credentials from there. Those will be the ones to be used also in the WisToolBox dashboard. Once encoded into the dashboard, click **APPLY COMMANDS** to update your device, as shown in **Figure 159**.
 
@@ -2118,87 +1346,37 @@ The **RAK3172** should have the correct ABP credentials to connect to TTN. This 
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_9.png"
-  width="100%"
-  caption="Your created ABP device from your console"
-  zoomMode={true}
-/>
+> **Image:** Your created ABP device from your console
 
 - **For Application session key (AppSKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_9a.png"
-  width="90%"
-  caption="Copying the AppSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_10a.png"
-  width="90%"
-  caption="Copying the AppSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppSKey credential from TTN to WisToolBox
 
 - **For Device address**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_9b.png"
-  width="90%"
-  caption="Copying the Device address credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the Device address credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_10b.png"
-  width="90%"
-  caption="Copying the Device address credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the Device address credential from TTN to WisToolBox
 
 - **For Network session key (NwkSKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_9c.png"
-  width="90%"
-  caption="Copying the NwkSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the NwkSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_10c.png"
-  width="90%"
-  caption="Copying the NwkSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the NwkSKey credential from TTN to WisToolBox
 
 - **WisToolBox Dashboard**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_10.png"
-  width="90%"
-  caption="Used credentials from your console in WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Used credentials from your console in WisToolBox dashboard
 
 9. Once done, you will see the summary of commands that is applied to your device. Then click **CLOSE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_11.png"
-  width="90%"
-  caption="Summary of commands"
-  zoomMode={true}
-/>
+> **Image:** Summary of commands
 
 10. Now, you will see it returns to the dashboard with updated credentials of your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpwis_rak3172_new_12.png"
-  width="90%"
-  caption="Successfully configured ABP device via WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Successfully configured ABP device via WisToolBox dashboard
 
 ##### ABP Configuration for TTN via WisToolBox Console
 
@@ -2208,69 +1386,29 @@ Here's another way of ABP configuration using **WisToolBox Console**. Below are 
 
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-1.png"
-  width="90%"
-  caption="CONNECT DEVICE"
-  zoomMode={true}
-/>
+> **Image:** CONNECT DEVICE
 
 3. Select your target port where your **RAK3172** is connected. Once recognized, click **CONNECT**, as shown in **Figure 164**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-2.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-3.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 4. Once done, **RAK3172** will appear in the dashboard, and then select it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-4.png"
-  width="90%"
-  caption="Device seen from WisToolBox dashboard"
-  zoomMode={true}
-/>
+> **Image:** Device seen from WisToolBox dashboard
 
 5. Then click **ADVANCED**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-5.png"
-  width="90%"
-  caption="Setting up your device"
-  zoomMode={true}
-/>
+> **Image:** Setting up your device
 
 6. Once done, click **OPEN CONSOLE** to do the configuration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-6.png"
-  width="90%"
-  caption="OPEN CONSOLE"
-  zoomMode={true}
-/>
+> **Image:** OPEN CONSOLE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-7.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-8.png"
-  width="90%"
-  caption="Opening the Console terminal of WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Opening the Console terminal of WisToolBox
 
 7. To start the configuration, type **ATE** so you can echo the commands you input during your configuration. Then press **Enter**.
 
@@ -2294,49 +1432,19 @@ If there is no `OK` or any reply, check if the device is powered correctly. If y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-9a.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-9b.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-9c.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 8. Then configure the LoRaWAN join mode to **ABP**. You can check what parameter you will input by typing **AT+NJM?**, and then **Enter** into the console terminal. For **ABP**, you should input **AT+NJM=0**, and then press **Enter** as shown in **Figure 173**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-10.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-11.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-12.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 9. Once done, set up your LoRaWAN region to EU868. You can check what parameter you will input by typing **AT+BAND?**, and then **Enter** into the console terminal. For **EU868**, you should input **AT+BAND=4** then press **Enter**. If you wish to work on other regional bands, you may check the list of band parameter options below.
 
@@ -2372,183 +1480,63 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-13.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-14.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-15.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 10. Then next to this will be updating the ABP credentials of your device. First to this will be the **Application session key (AppSKey)**. Go back to your console where your RAK3172 End device was created to copy the AppSKey credential then paste it to the WisToolBox Console then press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis_rak3172_new_w.png"
-  width="90%"
-  caption="Your created ABP device from your TTN console"
-  zoomMode={true}
-/>
+> **Image:** Your created ABP device from your TTN console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-16.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-17.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-18.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis_rak3172_new_x.png"
-  width="90%"
-  caption="Copying the AppSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the AppSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-19.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 11. Once done, do the same procedure to **Device address** and **Network session key (NwkSKey)**.
 
 - **For Device address**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-20.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-21.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-22.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis_rak3172_new_y.png"
-  width="90%"
-  caption="Copying the Device address credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the Device address credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-23.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 - **For Network session key (NwkSKey)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-24.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-25.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-26.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis_rak3172_new_z.png"
-  width="90%"
-  caption="Copying the NwkSKey credential from TTN to WisToolBox"
-  zoomMode={true}
-/>
+> **Image:** Copying the NwkSKey credential from TTN to WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-27.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
 12. Once done, click **Dashboard** to check the updated credentials of your ABP device. Click **PARAMETERS** to open the **Global Settings** and **LoRaWAN keys, ID, EUI**, and check whether these portions are updated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-28.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-29.png"
-  width="90%"
-  caption="Setting up your Console"
-  zoomMode={true}
-/>
+> **Image:** Setting up your Console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-30.png"
-  width="90%"
-  caption="PARAMETERS"
-  zoomMode={true}
-/>
+> **Image:** PARAMETERS
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-31a.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-31b.png"
-  width="90%"
-  caption="Global settings and LoRaWAN keys, ID, EUI details"
-  zoomMode={true}
-/>
+> **Image:** Global settings and LoRaWAN keys, ID, EUI details
 
 13. Now you have a configured ABP device using WisToolBox Console. **ABP-configured devices** are directly tied to the network once done with the above procedures so the joining procedure is not needed.
 
@@ -2558,54 +1546,23 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 AT+SEND=2:12345678
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-35.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-36.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-37.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-38.png"
-  width="90%"
-  caption="ABP device sending payload to the network"
-  zoomMode={true}
-/>
+> **Image:** ABP device sending payload to the network
 
 15. You can see the data sent by the RAK3172 module on the TTN device console *Live data* section. Also, the *Last seen* info should be a few seconds or minutes ago.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconwis-rak3172-new-39.png"
-  width="90%"
-  caption="ABP Test Sample Data Sent Viewed in TTN"
-  zoomMode={true}
-/>
+> **Image:** ABP Test Sample Data Sent Viewed in TTN
 
 ##### Connecting with ChirpStack
 
 This section shows how to connect the RAK3172 module to the ChirpStack platform.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/23.chirpstack-platform.png"
-  width="60%"
-  caption="RAK3172 Module in the Context of the ChirpStack Platform"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Module in the Context of the ChirpStack Platform
 
 The ChirpStack, previously known as the LoRaServer project, provides open-source components for building LoRaWAN networks. In the case of TTN, the RAK3172 module is located in the periphery and will transmit the data to the backend servers through a LoRa gateway. Learn more about <a href="https://www.chirpstack.io/" target="_blank">ChirpStack</a>.
 
@@ -2632,22 +1589,11 @@ The frequency band used in the demonstration is EU868. Use a high-frequency vers
 
 2. Go to the Application section, as shown in **Figure 206**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/24.chirpstack.png"
-  width="100%"
-  caption="Application Section"
-  zoomMode={true}
-/>
+> **Image:** Application Section
 
 3. By default, you should create a new application, although you can reuse existing ones. For this setup, create a new Application by clicking on the **CREATE** button and filling in the required parameters, as shown in **Figure 207** and **Figure 208**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/25.new-application.png"
-  width="100%"
-  caption="Creating a New Application"
-  zoomMode={true}
-/>
-
+> **Image:** Creating a New Application
 
 * For this setup, create an Application named **rak_node_test**.
 
@@ -2656,49 +1602,23 @@ ChirpStack LoraServer supports multiple system configurations, with only one by 
 * **Service profile**: Field is to select the system profile.
 * **Payload codec**: It is the parsing method for selecting load data, such as parsing LPP format data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/26.filling-parameters.png"
-  width="100%"
-  caption="Filling Parameters of an Application"
-  zoomMode={true}
-/>
+> **Image:** Filling Parameters of an Application
 
-<b>Register a New Device</b>
+**Register a New Device**
 
 1. Choose the **Application** created in the previous step, then select the **DEVICES** tab, as shown in **Figure 209** and **Figure 210**.
 
 2. Once done, click the **+ CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/27.application-available.png"
-  width="100%"
-  caption="List of Applications Created"
-  zoomMode={true}
-/>
+> **Image:** List of Applications Created
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/28.application-page.png"
-  width="100%"
-  caption="Device Tab of an Application"
-  zoomMode={true}
-/>
+> **Image:** Device Tab of an Application
 
 3. Once inside the **DEVICES** tab, create a new device (LoRaWAN node) by clicking on the **+ CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/29.adding-node.png"
-  width="100%"
-  caption="Add a New Device"
-  zoomMode={true}
-/>
+> **Image:** Add a New Device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/30.new-device-registration.png"
-  width="100%"
-  caption="Chirpstack Adding Node into the RAK3172 Module"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack Adding Node into the RAK3172 Module
 
 6. Once the node is created, fill in the necessary data. You can generate a Device EUI automatically by clicking the following icon, or you can write a correct Device EUI in the edit box.
 
@@ -2718,54 +1638,27 @@ Device profiles **DeviceProfile_OTAA** and **DeviceProfile_ABP** are only availa
 If you have your own Chirpstack installation, you can set up the device profile with `LoRaWAN MAC version 1.0.4` and `LoRaWAN Regional Parameters revision B` to make it compatible with RAK3172.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/31.adding-parameters.png"
-  width="100%"
-  caption="Generate a New Device EUI "
-  zoomMode={true}
-/>
-
+> **Image:** Generate a New Device EUI 
 
 ##### Chirpstack OTAA Device Registration
 
 1. If you have selected **DeviceProfile_OTAA**, as shown in **Figure 214**, then after the device is created, an Application Key must be also created for this device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/32.otaa.png"
-  width="100%"
-  caption="Chirpstack OTAA Activation"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA Activation
 
 2. A previously created Application Key can be entered here, or a new one can be generated automatically by clicking the icon highlighted in red in **Figure 215**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/33.otaa-set-device-keys.png"
-  width="100%"
-  caption="Chirpstack OTAA Set Application Keys"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA Set Application Keys
 
 3. Once the Application Key is added to the form, the process can be finalized by clicking on the **SET DEVICE-KEYS** button.
 
 * As shown in **Figure 216**, a new device should be listed in the **DEVICES** tab. The most important parameters, such as the **Device EUI**, are shown in the summary.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/34.set-device-eui.png"
-  width="100%"
-  caption="Chirpstack OTAA List of Device in the Device Tab"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack OTAA List of Device in the Device Tab
 
 4. To end the process, it is a good practice to review that the Application Key is properly associated with this device. The Application Key can be verified in the **KEYS (OTAA)** tab, as shown in **Figure 217**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/35.application-key.png"
-  width="100%"
-  caption="Application Key Associated with the New Device"
-  zoomMode={true}
-/>
+> **Image:** Application Key Associated with the New Device
 
 :::tip NOTE
 
@@ -2798,12 +1691,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, you 
 If there is no `OK` or any reply, you need to check if the wiring of your UART lines is correct and if the baud is correctly configured to 115200. Also, you can check if the device is powered correctly. If you are getting power from a USB port, ensure that you have a good USB cable.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/atstart.png"
-  width="90%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the OTAA LoRaWAN parameters in RAK3172:
 
@@ -2862,14 +1750,7 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
-
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/otaaconfig.png"
-  width="90%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 3. After the configuration of the LoRaWAN parameters, the next step is to set up the DevEUI and AppKey. You need the use the values from the Chirpstack device console.
 
@@ -2899,12 +1780,7 @@ Set the Application Key.
 AT+APPKEY=F921D50CD7D02EE3C5E6142154F274B2
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/chirp_otaa_eui.png"
-  width="90%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 4. After EUI and key configuration, the device can now join the network and send some payload.
 
@@ -2943,27 +1819,15 @@ AT+SEND=2:12345678
 
 Send command format: **`AT+SEND=<port>:<payload>`**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/chirp_otaa_send.png"
-  width="90%"
-  caption="OTAA Test Sample Data Sent via RAK Serial Port Tool"
-  zoomMode={true}
-/>
+> **Image:** OTAA Test Sample Data Sent via RAK Serial Port Tool
 
 On the ChirpStack platform, you should see the join and uplink messages in the **LORAWAN FRAMES** tab, as shown in **Figure 222**. By convention, messages sent from nodes to gateways are considered as **Uplinks** while messages sent by gateways to nodes are considered as **Downlinks**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/41.message-received.png"
-  width="100%"
-  caption="Chirpstack Data Received Preview"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack Data Received Preview
 
 ##### Chirpstack ABP Device Registration
 
 1. During the registration of a new device, if you select **DeviceProfile_ABP**, as shown in **Figure 223**, then the ChirpStack platform will assume that this device will join the LoRaWAN network using the ABP mode.
-
 
 :::tip NOTE
 
@@ -2971,13 +1835,7 @@ Tick the checkbox **Disable counting frame verification**. During the test, when
 
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/42.configuring-device-abp.png"
-  width="100%"
-  caption="ChirpStack Console, Configuring a Device"
-  zoomMode={true}
-/>
+> **Image:** ChirpStack Console, Configuring a Device
 
 2. After selecting the ABP mode, the following parameters appear in the **ACTIVATION** tab:
 
@@ -2987,15 +1845,9 @@ Then, you can see that there are some parameters for ABP in the **ACTIVATION** i
   * **Network Session Key**
   * **Application Session Key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/43.abp-activation-parameters.png"
-  width="100%"
-  caption="Chirpstack ABP Activation Parameters Needed"
-  zoomMode={true}
-/>
+> **Image:** Chirpstack ABP Activation Parameters Needed
 
 3. The parameters can be generated as random numbers by the platform or can be set with user values. Once these parameters are filled in properly, the process is completed by clicking on the **ACTIVATE DEVICE** button.
-
 
 ##### ABP Configuration for Chirpstack
 
@@ -3020,12 +1872,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, you 
 If there is no `OK` or any reply, you need to check if the wiring of your UART lines is correct and if the baud is correctly configured to 115200. Also, you can check if the device is powered correctly. If you are getting power from a USB port, ensure that you have a good USB cable.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/atstart.png"
-  width="90%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 2. The next step is to configure the ABP LoRaWAN parameters in RAK3172:
 
@@ -3084,14 +1931,7 @@ To illustrate, you can use sub-band 2 by sending the command `AT+MASK=0002`.
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
-
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/abpconfig.png"
-  width="90%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 3. After the configuration of the LoRaWAN parameters, the next step is to set up the device address and session keys. You need the use the values from the TTN device console.
 
@@ -3117,12 +1957,7 @@ Set the Network Session Key.
 AT+NWKSKEY=C280CB8D1DF688BC18601A97025C5488
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/chirp_abp_key.png"
-  width="90%"
-  caption="Configuring LoRa Parameters"
-  zoomMode={true}
-/>
+> **Image:** Configuring LoRa Parameters
 
 After EUI and keys configuration, the device can now join the network and send some payload.
 
@@ -3153,13 +1988,7 @@ AT+SEND=2:12341234
 ```
 Send command format: **`AT+SEND=<port>:<payload>`**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/chirp_abp_send.png"
-  width="90%"
-  caption="ABP Test Sample Data Sent via RAK Serial Port Tool"
-  zoomMode={true}
-/>
-
+> **Image:** ABP Test Sample Data Sent via RAK Serial Port Tool
 
 #### LoRa P2P Mode
 
@@ -3181,13 +2010,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, you 
 
 Try again `AT` and you should see it on the terminal followed by `OK`.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/p2p-1.png"
-  width="90%"
-  caption="at+version command response"
-  zoomMode={true}
-/>
+> **Image:** at+version command response
 
 1. In setting up the RAK3172 to work in LoRa P2P mode, you need to change the LoRa network work mode command on both RAK3172 modules.
 
@@ -3196,12 +2019,7 @@ AT+NWM=0
 ```
 `AT+NWM` parameter mode can be either 0=LoRa P2P or 1=LoRaWAN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/p2p-2.png"
-  width="90%"
-  caption="P2P Mode"
-  zoomMode={true}
-/>
+> **Image:** P2P Mode
 
 :::tip NOTE
 - The device will start automatically if you change modes from LoRaWAN to LoRa P2P and vice-versa.
@@ -3216,23 +2034,18 @@ AT+P2P=868000000:7:125:0:10:14
 
 For this P2P setup, the LoRa parameters are the following:
 
-- Link frequency: **868000000&nbsp;Hz**
+- Link frequency: **868000000 Hz**
 - Spreading factor: **7**
-- Bandwidth: **125&nbsp;kHz**
+- Bandwidth: **125 kHz**
 - Coding Rate: 0 = **4/5**
 - Preamble Length: **10**
-- Power: **14&nbsp;dBm**
+- Power: **14 dBm**
 
 :::tip NOTE
 Refer to the P2P Mode section of the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/at-command-manual" target="_blank">AT command documentation</a> to learn more about the definition of the parameters used and the individual commands if you want specific parameters changed.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/p2p-3.png"
-  width="90%"
-  caption="Configuring P2P in both RAK3172 Module"
-  zoomMode={true}
-/>
+> **Image:** Configuring P2P in both RAK3172 Module
 
 3. To set one module as the receiver (RX), you need to set the value of the P2P receive command.
 
@@ -3240,7 +2053,7 @@ Refer to the P2P Mode section of the <a href="https://docs.rakwireless.com/produ
 LoRa P2P default setting is Transmitter (TX) mode. This consumes lower power compared to Receiver (RX) mode where the radio is always listening for LoRa packets.
 :::
 
-a. P2P LoRa RX configurable duration value is from 1 to 65533&nbsp;ms. In this example, the device will listen and wait for LoRa P2P Packets for 30000&nbsp;ms or 30&nbsp;seconds. It will automatically disable RX mode and switch to TX mode after the timeout. If the device did not receive any packets within the time period, then the callback after timeout is `+EVT:RXP2P RECEIVE TIMEOUT`.
+a. P2P LoRa RX configurable duration value is from 1 to 65533 ms. In this example, the device will listen and wait for LoRa P2P Packets for 30000 ms or 30 seconds. It will automatically disable RX mode and switch to TX mode after the timeout. If the device did not receive any packets within the time period, then the callback after timeout is `+EVT:RXP2P RECEIVE TIMEOUT`.
 
 ```
 AT+PRECV=30000
@@ -3274,12 +2087,7 @@ AT+PSEND= <payload>
 - `<payload>`: 2 ~ 500 digit length, must be an even number of digits and character 0-9, a-f, A-F only, representing 1 ~ 256 hexadecimal numbers. For example, if the payload is like ` 0x03, 0xAA, 0x32`, then the AT command should be `AT+PSEND = 03AA32`.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/p2p-4.png"
-  width="90%"
-  caption="Configuring P2P in both RAK3172 Module"
-  zoomMode={true}
-/>
+> **Image:** Configuring P2P in both RAK3172 Module
 
 ## Miscellaneous
 
@@ -3355,40 +2163,19 @@ If your firmware upload always fails, check your current baud rate setting using
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/1.png"
-  width="80%"
-  caption="Device Firmware Upgrade Tool"
-  zoomMode={true}
-/>
+> **Image:** Device Firmware Upgrade Tool
 
 5.  Select the application firmware file of the module with the suffix **.bin**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/2.png"
-  width="80%"
-  caption="Select firmware"
-  zoomMode={true}
-/>
+> **Image:** Select firmware
 
 6.  Click the **Upgrade** button to upgrade the device. After the upgrade is complete, the RAK3172 will be ready to work with the new firmware.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/3.png"
-  width="80%"
-  caption="Firmware upgrading"
-  zoomMode={true}
-/>
+> **Image:** Firmware upgrading
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/4.png"
-  width="80%"
-  caption="Upgrade successful"
-  zoomMode={true}
-/>
+> **Image:** Upgrade successful
 
 ### Arduino Installation
 
 Refer to [Software section](#software).
 
-<RkBottomNav/>

@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # WisBlock Environment Sensor Kit
 
 Thank you for choosing the **WisBlock Environment Sensor Kit** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -51,4 +48,3 @@ With its flexible connectivity options, this kit can be easily integrated into e
     - (Optional) Cellular variant dependent on a country: two (2) <a href="https://store.rakwireless.com/products/rak5860-lte-nb-iot-extension-board" target="_blank">RAK5860</a> with 5G LTE NB-IoT capability and two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101" target="_blank">RAK13101</a> with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
-<RkBottomNav/>

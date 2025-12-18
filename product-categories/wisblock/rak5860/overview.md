@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK5860 WisBlock NB-IoT Interface Module
 
 Thank you for choosing **RAK5860 WisBlock NB-IoT Interface Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -51,7 +49,7 @@ RAK5860 is a WisBlock Wireless module that extends the WisBlock system with LTE 
     * The RAK5860 module's power supply can be controlled by the WisBlock Core MCU to reduce power consumption.
 
 * **Size**
-    * 35 x 25&nbsp;mm
+    * 35 x 25 mm
 
 ## Prerequisites
 
@@ -65,4 +63,3 @@ To use a **RAK5860**, you need at least a **WisBlock Base** to plug the module i
 * Make sure to fix the module with screws to ensure proper function.
 :::
 
-<RkBottomNav/>

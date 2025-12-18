@@ -10,9 +10,6 @@ sidebar_label: M310 System Test Report
 slug: /product-categories/5g/all-in-one-5g/m310-system-test-report/
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # All-in-One 5G. M310 System Test Report
 
 ## Overview
@@ -32,15 +29,10 @@ This test report applies to the All-in-One 5G and is mainly a test for LTE-relat
 
 ### Network Details
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/1.png"  
-width=" 60%" class="center" 
-/>
-
 ### Radio Configuration
 
 - **Band:** 48
-- **Bandwidth:** 20&nbsp;MHz
+- **Bandwidth:** 20 MHz
 - **EARFCN:** 55340
 - **Subframe Assignment:** 2 (DL:UL = 3:1)
 - **Special Subframe Patterns:** 7
@@ -49,13 +41,13 @@ width=" 60%" class="center"
 
 The following are key performance parameters for LTE field tests that must be considered for the task:
 
-- **RSRP:** The average power received from a single reference signal, with typical values ranging from -44&nbsp;dBm (good) to -140&nbsp;dBm (bad).
-- **RSRQ:** A measure of the quality of the received signal, with typical values ranging from -19.5&nbsp;dB (poor) to -3&nbsp;dB (good).
+- **RSRP:** The average power received from a single reference signal, with typical values ranging from -44 dBm (good) to -140 dBm (bad).
+- **RSRQ:** A measure of the quality of the received signal, with typical values ranging from -19.5 dB (poor) to -3 dB (good).
 - **SINR:** Signal-to-Interference-to-Noise Ratio, representing the ratio of signal power to noise power.
 
 Table below shows the values that are considered good and bad for the LTE signal strength:
 
-<b> RF Conditions </b>
+** RF Conditions **
 
 | Area | Description | RSRP (dBm)  | RSRQ (dB)  | SINR (dB) |
 |------|-------------|-------------|------------|-----------|
@@ -86,13 +78,16 @@ The tables below show the test cases and results of the Function and Performance
 
 | Test Case                                | Test Result                                                    |
 |------------------------------------------|----------------------------------------------------------------|
-| TC001_Performance_Uplink_TCP_Data        | 13&nbsp;Mbps                                                   |
-| TC002_Performance_Uplink_UDP_Data        | 13&nbsp;Mbps <br /> Average packet loss rate: 0.01%            |
-| TC003_Performance_Downlink_TCP_Data      | 102&nbsp;Mbps                                                  |
-| TC004_Performance_Downlink_UDP_Data      | 100&nbsp;Mbps <br /> Average packet loss rate: 0.01%           |
-| TC005_Performance_Ping_Average_Latency   | Minimum latency: 20&nbsp;ms <br /> Average latency: 31&nbsp;ms |
-| TC006_Performance_Attach Average_Latency | Average latency: 800&nbsp;ms                                   |
-| TC007_Performance_Max_Online_Users       | 32&nbsp;UE                                                     |
+| TC001_Performance_Uplink_TCP_Data        | 13 Mbps                                                   |
+| TC002_Performance_Uplink_UDP_Data        | 13 Mbps 
+ Average packet loss rate: 0.01%            |
+| TC003_Performance_Downlink_TCP_Data      | 102 Mbps                                                  |
+| TC004_Performance_Downlink_UDP_Data      | 100 Mbps 
+ Average packet loss rate: 0.01%           |
+| TC005_Performance_Ping_Average_Latency   | Minimum latency: 20 ms 
+ Average latency: 31 ms |
+| TC006_Performance_Attach Average_Latency | Average latency: 800 ms                                   |
+| TC007_Performance_Max_Online_Users       | 32 UE                                                     |
 
 ### CQT Tests
 
@@ -117,29 +112,15 @@ UE is attached to the network successfully, and the UE information is seen from 
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/2.png"  
-width=" 70%" 
-/>
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/3.png"  
-width=" 60%" 
-/>
-
 ### TC002 Function UE Detach
 
 #### Test Results
 
-UE is detached successfully from the network.<br />
+UE is detached successfully from the network.
+
    - Result: **Passed**
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/4.png"  
-width=" 70%" 
-/>
 
 ### TC003 Function UE Service Request
 
@@ -151,11 +132,6 @@ UE enters the idle state from the active state. When the UE has a data service r
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/5.png"  
-width=" 70%" 
-/>
-
 ### TC004 Function Paging
 
 #### Test Results
@@ -166,11 +142,6 @@ UE enters the idle state from the active state and the core successfully trigger
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/6.png"  
-width=" 70%" 
-/>
-
 ### TC005 Function Periodic TAU
 
 #### Test Results
@@ -180,11 +151,6 @@ When the UE accessed the LTE network, UE triggers TAU procedure periodically acc
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/7.png"  
-width=" 70%" 
-/>
-
 ### TC006 Function UE FTP Download
 
 #### Test Results
@@ -193,17 +159,7 @@ Download files from FTP server by FTP App, and the download process is normal.
 
    - Result: **Passed**
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/8.png"  
-width=" 30%" 
-/>
-
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/9.png"  
-width=" 100%" 
-/>
 
 ### TC007 Function UE FTP Upload
 
@@ -213,17 +169,7 @@ Upload files to FTP server by FTP App, the upload process is normal.
 
    - Result: **Passed**
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/10.png"  
-width=" 30%" 
-/>
-
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/11.png"  
-width=" 100%" 
-/>
 
 ### TC008 Function UE Voip Service
 
@@ -234,11 +180,6 @@ To test the VoIP, WeChat App was launched. The video call went smoothly.
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/12.png"  
-width=" 40%" 
-/>
-
 ### TC009 Function UE Stream Media Service
 
 #### Test Results
@@ -248,11 +189,6 @@ For media streaming, the YouTube App was launched. Watching the videos went smoo
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/13.png"  
-width=" 40%" 
-/>
-
 ## Performance Tests
 
 All performance test results are tested in places with very excellent signal strength and high SNR (Area A).
@@ -260,64 +196,39 @@ All performance test results are tested in places with very excellent signal str
 ### TC001 Performance Uplink TCP Data
 
 #### Test Results
-UE sends uplink TCP data packets to the FTP server. The peak rate is 13&nbsp;Mbps.
+UE sends uplink TCP data packets to the FTP server. The peak rate is 13 Mbps.
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/14.png"  
-width=" 100%" 
-/>
 
 ### TC002 Performance Uplink UDP Data
 
 #### Test Results
-UE sends uplink UDP data packets to the FTP server, the peak rate is about 13&nbsp;Mbps, and the average packet loss rate is about 0.01%.
+UE sends uplink UDP data packets to the FTP server, the peak rate is about 13 Mbps, and the average packet loss rate is about 0.01%.
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/15.png"  
-width=" 100%" 
-/>
 
 ### TC003 Performance Downlink TCP Data
 
 #### Test Results
-FTP server sends downlink TCP data packages to UE. The peak rate is 102&nbsp;Mbps.
+FTP server sends downlink TCP data packages to UE. The peak rate is 102 Mbps.
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/16.png"  
-width=" 100%" 
-/>
 
 ### TC004 Performance Downlink UDP Data
 
 #### Test Results
 
-FTP server sends downlink UDP data packages to UE. The peak rate is about 100&nbsp;Mbps, and the packet loss rate is about 0.01%.
+FTP server sends downlink UDP data packages to UE. The peak rate is about 100 Mbps, and the packet loss rate is about 0.01%.
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/17.png"  
-width=" 100%" 
-/>
 
 ### TC005 Performance Ping Average Latency
 
 #### Test Results
 
-The minimum latency is about 17&nbsp;ms, and the average latency is about 31&nbsp;ms.
+The minimum latency is about 17 ms, and the average latency is about 31 ms.
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/18.png"  
-width=" 60%" 
-/>
 
 ### TC006 Performance Attach Average Latency
 
@@ -327,14 +238,9 @@ Interval between UE sending ATTACH REQUEST message and sending ATTACH COMPLETE m
 
 #### Test Results
 
-The average latency of the Attach process is about 800&nbsp;ms.
+The average latency of the Attach process is about 800 ms.
 
 #### Test Captures
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/19.png"  
-width=" 100%" 
-/>
 
 ### TC007 Performance Max Online Users
 
@@ -342,171 +248,87 @@ This test case is designed to test the maximum number of online users for a sing
 
 #### Test Results
 
-   - Result: **32&nbsp;UE**
+   - Result: **32 UE**
 
 #### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/20.png"  
-width=" 100%" 
-/>
-
 ## CQT Tests
 To test the LTE field test parameters, the laboratory and outside area adjacent to the laboratory were selected to be the test areas. The location of the test areas is shown in the floor plan below.
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/21.png"  
-width=" 100%" 
-/>
 
 ### CQT Test at Area A
 
 The signal and SINR of Area A are both excellent. The signal strength and the SINR can be seen by testing the APP of UE.
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/22.png"  
-width=" 40%" 
-/>
-
 #### TC001 Coverage Ftp Upload Area A
 
-- Test result: 9&nbsp;Mbps
+- Test result: 9 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/23.png"  
-width=" 40%" 
-/>
 
 #### TC002 Coverage Ftp Download Area A
-- Test result: 88&nbsp;Mbps
+- Test result: 88 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/24.png"  
-width=" 40%" 
-/>
 
 #### TC003 Coverage Ping Area A
 
 - Test result:
-  - Minimum latency: ∼ 20&nbsp;ms
-  - Average latency: ∼ 32&nbsp;ms
+  - Minimum latency: ∼ 20 ms
+  - Average latency: ∼ 32 ms
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/25.png"  
-width=" 60%" 
-/>
 
 ### CQT Test at Area B
 
 The signal and SINR of Area B are good. The signal strength and the SINR can be seen by testing the APP of UE.
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/26.png"  
-width=" 40%" 
-/>
-
 #### TC001 Coverage Ftp Upload Area B
 
-- Test result: 6.5&nbsp;Mbps
+- Test result: 6.5 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/27.png"  
-width=" 40%" 
-/>
 
 #### TC002 Coverage Ftp Download Area B
 
-- Test result: 45&nbsp;Mbps
+- Test result: 45 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/28.png"  
-width=" 40%" 
-/>
 
 #### TC003 Coverage Ping Area B
 
 - Test result:
-  - Minimum latency: ∼ 24&nbsp;ms
-  - Average latency: ∼ 33&nbsp;ms
+  - Minimum latency: ∼ 24 ms
+  - Average latency: ∼ 33 ms
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/29.png"  
-width=" 60%" 
-/>
 
 ### CQT Test at Area C
 
 The signal and SINR of area C are moderate. The signal strength and the SINR can be seen by testing the APP of UE.
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/30.png"  
-width=" 40%" 
-/>
 
 #### TC001 Coverage Ftp Upload Area C
 
-- Test result: 2&nbsp;Mbps
+- Test result: 2 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/31.png"  
-width=" 40%" 
-/>
 
 #### TC002 Coverage Ftp Download Area C
 
-- Test results: 25&nbsp;Mbps
+- Test results: 25 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/32.png"  
-width=" 40%" 
-/>
 
 #### TC003 Coverage Ping Area C
 
 - Test result:
-  - Minimum latency: ∼ 18&nbsp;ms
-  - Average latency: ∼ 54&nbsp;ms
+  - Minimum latency: ∼ 18 ms
+  - Average latency: ∼ 54 ms
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/33.png"  
-width=" 60%" 
-/>
 
 ### CQT Test at Area D
 Signal and SINR of area D are poor. The signal strength and the SINR can be seen by testing the APP of UE.
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/34.png"  
-width=" 40%" 
-/>
-
 #### TC001 Coverage Ftp Upload Area D
 
-- Test result: 320&nbsp;kbps
+- Test result: 320 kbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/35.png"  
-width=" 40%" 
-/>
 
 #### TC002 Coverage Ftp Download Area D
 
-- Test result: 2.5&nbsp;Mbps
+- Test result: 2.5 Mbps
 - Test capture:
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/36.png"  
-width=" 40%" 
-/>
 
 ## Field Tests
 
@@ -514,49 +336,11 @@ We conducted coverage testing using the All-in-One 5G equipment in the laborator
 
 ### RSRP
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/37.png"  
-width=" 45%" 
-/>
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/38.png"  
-width=" 80%" 
-/>
-
 ### RSRQ
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/39.png"  
-width=" 45%" 
-/>
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/40.png"  
-width=" 80%" 
-/>
 
 ### SINR
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/41.png"  
-width=" 45%" 
-/>
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/42.png"  
-width=" 80%" 
-/>
 
 ### FTP Download
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/43.png"  
-width=" 45%" 
-/>
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/44.png"  
-width=" 80%" 
-/>
 
 ## Stability Test
 
@@ -566,15 +350,3 @@ With 32 users downloading tests simultaneously, we conducted continuous testing 
 
 ### Test Captures
 
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/45.png"  
-width=" 85%" 
-/>
-
-<RkImage
-img src="https://images.docs.rakwireless.com/5g/all-in-one-5g/test-report/46.png"  
-width=" 50%" 
-/>
-
-
-<RkBottomNav/>

@@ -12,9 +12,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK5010-BG95 WisTrio NB-IoT Tracker Pro Quick Start Guide
 
 ## Prerequisites
@@ -24,7 +21,7 @@ Before going through every step in the installation guide of the RAK5010-BG95 Wi
 1. [RAK5010-BG95 WisTrio NB-IoT Tracker Pro](https://store.rakwireless.com/products/rak5010-nb-iot-tracker?utm_source=RAK5010WisTrioNB-IoTTracker&utm_medium=Document&utm_campaign=BuyFromStore)
 2. USB-UART Module [(RAKDAP1 Tool)](https://docs.rakwireless.com//product-categories/accessories/rakdap1/overview/)
 3. Jumper Wires
-4. Micro USB / 3.7&nbsp;V rechargeable battery / 5&nbsp;V Solar Panel Port
+4. Micro USB / 3.7 V rechargeable battery / 5 V Solar Panel Port
 5. JTAG Emulator
 
 :::tip NOTE
@@ -35,11 +32,7 @@ Before going through every step in the installation guide of the RAK5010-BG95 Wi
 
 ### Package Inclusions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/rzoescy4hwuxkrcayggx.jpg"
-  width="75%"
-  caption="Included Items in RAK5010-BG95 Package"
-/>
+> **Image:** Included Items in RAK5010-BG95 Package
 
 ## Product Configuration
 
@@ -55,41 +48,25 @@ There are three ways that you can check the logs for debugging purposes on your 
 
 1. If you want to check the logs of RAK5010-BG95 WisTrio NB-IoT Tracker Pro using this method, make sure you have connected the RAK5010-BG95 with your PC through JTAG as shown in **Figures 2** and **3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/rak5010tojlink.png"
-  width="75%"
-  caption="RAK5010-BG95 and PC Connection through JTAG"
-/>
+> **Image:** RAK5010-BG95 and PC Connection through JTAG
 
 :::warning
  You still have to connect the Micro USB Cable to the RAK5010-BG95 to power the board.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/jlinkdiagram.png"
-  width="55%"
-  caption="J-Link Connector to RAK5010"
-/>
+> **Image:** J-Link Connector to RAK5010
 
 :::warning
- VDD of RAK5010-BG95 is rated only to 1.8&nbsp;V. It must **not** be connected to 3.3&nbsp;V or 5&nbsp;V.
+ VDD of RAK5010-BG95 is rated only to 1.8 V. It must **not** be connected to 3.3 V or 5 V.
 :::
 
 1. Go to the official website of **Segger** where you can download the [J-Flash software](https://www.segger.com/products/debug-probes/j-link/tools/j-flash/about-j-flash/). Open the program **J-Link RTT Viewer V6.60f** and choose **USB** for the type of connection to J-Link. After which, press **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/xgdllxo7gb3ks0y3tbch.png"
-  width="100%"
-  caption="J-Link RTT Viewer"
-/>
+> **Image:** J-Link RTT Viewer
 
 3. Choose the device parameters as shown in **Figure 5** or the table provided, then press **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/wmoh5e7i8n6gxxr9h4o9.png"
-  width="80%"
-  caption="J-Link Target Device Settings"
-/>
+> **Image:** J-Link Target Device Settings
 
 | Parameter    | Data          |
 | ------------ | ------------- |
@@ -97,24 +74,16 @@ There are three ways that you can check the logs for debugging purposes on your 
 | Device       | nRF52840_xxAA |
 | Core         | Cortex-M4     |
 | NumCores     | 1             |
-| Flash Size   | 1028&nbsp;kB  |
-| RAM Size     | 256&nbsp;kB   |
+| Flash Size   | 1028 kB  |
+| RAM Size     | 256 kB   |
 
 4. Connect to your RAK5010-BG95 by navigating through **File>Connect** in the Main Menu. Alternatively, you could just press **F2** to do the same process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/jrqm79eoaojwuynzdu1t.png"
-  width="100%"
-  caption="Connecting in J-Link RTT Viewer"
-/>
+> **Image:** Connecting in J-Link RTT Viewer
 
 5. Once the connection is obtained, you should see the same log as shown in **Figure 7**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/uku52cmdo7ccdzwbwubz.png"
-  width="80%"
-  caption="J-Link RTT Viewer showing RAK5010-BG95 Logs"
-/>
+> **Image:** J-Link RTT Viewer showing RAK5010-BG95 Logs
 
 :::tip NOTE
  If there is no log after connecting successfully, you can try to reset RAK5010. Ensure that the micro USB is connected properly or check the connection of the JTAG.
@@ -124,11 +93,7 @@ There are three ways that you can check the logs for debugging purposes on your 
 
 1. If you want to check the log of RAK5010-BG95 through UART, you should make sure that RAK5010-BG95 has been connected to your PC through the USB-UART module correctly as shown in **Figure 8**. It is highly recommended to use RAKDAP1 as the USB to UART interface. [RAKDAP1 Tool](https://docs.rakwireless.com/product-categories/accessories/rakdap1/overview/) is compatible with other RAK devices and can be used as a debugger and programmer as well.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/7.jpg"
-  width="90%"
-  caption="RAK5010-BG95 and USB-UART Connection"
-/>
+> **Image:** RAK5010-BG95 and USB-UART Connection
 
 2. Open a serial port tool on your PC. If you don't have a serial port tool yet, download and install the RAK Serial Port Tool.
 
@@ -136,21 +101,13 @@ There are three ways that you can check the logs for debugging purposes on your 
 
 3. After pushing the RST button on RAK5010, you can see the following contents in the serial port tool as shown in **Figure 9**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/serialtool_connect.jpg"
-  width="80%"
-  caption="RAK Serial Port Tool"
-/>
+> **Image:** RAK Serial Port Tool
 
 #### Through Micro USB
 
 1. To start with, connect RAK5010-BG95 with your PC through micro USB/USB as shown in **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/cjkxyja4hkqovtiddklj.png"
-  width="60%"
-  caption="MicroUSB Interface for RAK5010"
-/>
+> **Image:** MicroUSB Interface for RAK5010
 
 2. Open the serial port tool on your PC.
 
@@ -162,19 +119,11 @@ There are three ways that you can check the logs for debugging purposes on your 
 
 3. After opening the Termite serial tool, configure its setting as shown in **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/gpubckbaii9vocy1h32u.png"
-  width="75%"
-  caption="Termite Configuration Enabling DTR"
-/>
+> **Image:** Termite Configuration Enabling DTR
 
 4. Now, the Termite app will connect with RAK5010-BG95 automatically. Then you can send AT commands and check the log in Termite.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/hqfcunna1swkknili72n.png"
-  width="75%"
-  caption="Checked Log in Termite"
-/>
+> **Image:** Checked Log in Termite
 
 ### Configuring RAK5010
 
@@ -194,37 +143,21 @@ You can configure your RAK5010-BG95 WisTrio NB-IoT Tracker Pro by sending AT Com
 at+version
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/13.jpg"
-  width="70%"
-  caption="AT command for Firmware Version"
-/>
+> **Image:** AT command for Firmware Version
 
 #### Through BLE
 
 1. To configure the RAK5010-BG95 WisTrio NB-IoT Tracker Pro through BLE, download and install **nRF Connect** developed by Nordic Semiconductor. The App is available both in App Store and Google Play Store.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/eponlb3piu1p6noof1np.png"
-  width="75%"
-  caption="nRF Connect App in Android and IOS"
-/>
+> **Image:** nRF Connect App in Android and IOS
 
 2. Make sure the Bluetooth on your mobile is turned on. Open the application and you will see all BLE devices in range in the scan list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/rwpeihuyflhu65gopfml.jpg"
-  width="40%"
-  caption="Available Bluetooth Devices in the Nordic App"
-/>
+> **Image:** Available Bluetooth Devices in the Nordic App
 
 3. Press the reset button on the RAK5010-BG95 Board and wait for a couple of seconds. Look for a BLE Device named **RUI-...** in the scan list of the app. Connect to this device and click **Nordic UART Service**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/nordic-uart-service-in-the-nordic-app.png"
-  width="80%"
-  caption="Nordic UART Service in the Nordic App"
-/>
+> **Image:** Nordic UART Service in the Nordic App
 
 :::warning
  By default, the BLE signal of the RAK5010-BG95 is turned off automatically if no connection is established after 60 seconds. Connect to the BLE signal of the RAK5010-BG95 immediately after pressing the reset button.
@@ -232,11 +165,7 @@ at+version
 
 4. Click the arrow marked by the red box, as shown in **Figure 17**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/r7j95cqwrevod7qtvcsv.jpg"
-  width="40%"
-  caption="RX Characteristic in the Nordic UART Service"
-/>
+> **Image:** RX Characteristic in the Nordic UART Service
 
 5. You can now send AT commands to the RAK5010. Meanwhile, you can also see log information in RTT Viewer as discussed in [Checking Device Logs](https://docs.rakwireless.com/product-categories/wistrio/rak5010/quickstart/#checking-device-logs).
 
@@ -246,19 +175,11 @@ at+version
 at+version
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/jficmu58afzs3r1hkw5h.png"
-  width="80%"
-  caption="Sending AT Command via Nordic App"
-/>
+> **Image:** Sending AT Command via Nordic App
 
 6. Then, you can see the version number in the RTT Viewer tool.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/nqqegmebbppnrcguzshh.png"
-  width="80%"
-  caption="Log Info in J-Link RTT Viewer"
-/>
+> **Image:** Log Info in J-Link RTT Viewer
 
 #### Through Micro USB
 
@@ -288,19 +209,11 @@ at+scan=cellular
  - Complete the details of the BG95-M3 TCP AT commands manual can be downloaded from the [Quectel website](https://www.quectel.com/product/lpwa-bg95-cat-m1-cat-nb2-egprs-series).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/24.jpg"
-  width="70%"
-  caption="Scanning for Cellular Networks"
-/>
+> **Image:** Scanning for Cellular Networks
 
 - Wait for about 30 seconds, then you will see the following output in the serial port tool the same as shown in **Figure 21**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/25.jpg"
-  width="70%"
-  caption="Scanned Cellular Network shown in Serial Port"
-/>
+> **Image:** Scanned Cellular Network shown in Serial Port
 
 - As you can see, the RAK5010-BG95 has scanned around the Cellular network and shown them in the serial port tool.
 
@@ -317,11 +230,7 @@ at+set_config=cellular:(AT+COPS=1,0,"CHINA MOBILE",0)
  - Complete the details of the BG95-M3 TCP AT commands manual can be downloaded from the [Quectel website](https://www.quectel.com/product/lpwa-bg95-cat-m1-cat-nb2-egprs-series).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/26.jpg"
-  width="70%"
-  caption="Configuring the Operator"
-/>
+> **Image:** Configuring the Operator
 
 Now, continue to configure the network:
 
@@ -338,17 +247,9 @@ at+set_config=cellular:(AT+QICSGP=1,1,"CMCC","","",1)
 at+set_config=cellular:(AT+QIACT=1)
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/27.jpg"
-  width="70%"
-  caption="Configuring the Cellular Network"
-/>
+> **Image:** Configuring the Cellular Network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/28.jpg"
-  width="70%"
-  caption="Configuring the Cellular Network"
-/>
+> **Image:** Configuring the Cellular Network
 
 - Then, set the IP address of the server which will receive the packet sent from RAK5010.
 
@@ -360,11 +261,7 @@ at+set_config=cellular:118.31.121.60:12111:CHINA MOBILE:CMCC:CMNET:0
  This IP address is just used for example. For your configuration, use your server IP address.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/29.jpg"
-  width="70%"
-  caption="Configuring the IP Address of the Server"
-/>
+> **Image:** Configuring the IP Address of the Server
 
 - Next, try sending a packet manually over Cellular. Use the following command to send data over Cellular:
 
@@ -372,21 +269,13 @@ at+set_config=cellular:118.31.121.60:12111:CHINA MOBILE:CMCC:CMNET:0
 at+send=cellular:XXX
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/30.jpg"
-  width="70%"
-  caption="Sending Data over Cellular"
-/>
+> **Image:** Sending Data over Cellular
 
 - As you can see, the data sent is **123456**.
 
 Now, check it on the receiving server:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/muvnk5vma57gwns6apo9.jpg"
-  width="75%"
-  caption="Received Data shown in the terminal"
-/>
+> **Image:** Received Data shown in the terminal
 
 ```
 rak2016@iZbp1980wxsue6enel4qc0Z:/home/rak2001$ tail -f rak12111
@@ -407,11 +296,7 @@ In this section, you will be connecting and sending data with cellular network, 
 at+set_config=cellular:118.31.121.60:12111:CHINA MOBILE:CMCC:CMNET:0
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/32.jpg"
-  width="70%"
-  caption="Configuring the Cellular Network Parameters"
-/>
+> **Image:** Configuring the Cellular Network Parameters
 
 - Then, set the interval for sending the loop as shown in **Figure 29**.
 
@@ -423,11 +308,7 @@ at+set_config=cellular:send_interval:1:180000
  - During sleep (LEDs are all off), you cannot send any AT command to the RAK5010-BG95 module. You need to restart your device and before going to sleep, you must send the command `at+set_config=cellular:send_interval:0:180000` to go back to normal mode.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/33.jpg"
-  width="70%"
-  caption="Setting the Loop Intervals"
-/>
+> **Image:** Setting the Loop Intervals
 
 As you can see, the setting means that you open the sending loop and the interval time at 180 seconds. To know more details about the command, refer to the [AT Command Manual](https://docs.rakwireless.com/product-categories/wistrio/rak5010/at-command-manual/).
 
@@ -437,21 +318,13 @@ As you can see, the setting means that you open the sending loop and the interva
 at+set_config=device:restart
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/34.jpg"
-  width="70%"
-  caption="Restarting your RAK5010"
-/>
+> **Image:** Restarting your RAK5010
 
 After restarting, the RAK5010-BG95 will automatically connect to the Cellular Network you set and send a looping packet of sensor data. Every time it sends a packet, RAK5010-BG95 will sleep for 180 seconds, which you just set, after which it will wake up and search for a GPS, build a new packet, and send it out.
 
 - You will see a continuous loop as shown in **Figure 31**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/35.jpg"
-  width="70%"
-  caption="Continuous Loop seen in The Serial Tool"
-/>
+> **Image:** Continuous Loop seen in The Serial Tool
 
 - RAK5010-BG95 will send sensor data automatically in a loop. You can check the data in the receiving server:
 
@@ -506,19 +379,11 @@ An easy and quick way to get started with your RAK5010-BG95 is by using pre-comp
 1. Go to the official website of **Segger**, and download the J-Flash software.
     - [J-Flash](https://www.segger.com/products/debug-probes/j-link/tools/j-flash/about-j-flash/)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/rhblajzhsv9pb1fdos3h.png"
-  width="100%"
-  caption="Segger Official Website"
-/>
+> **Image:** Segger Official Website
 
 2. Download the software that corresponds to your operating system. In this guide, Windows is used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/etylt7rqrbcjedteqhqc.png"
-  width="100%"
-  caption="J-link Software in different platforms"
-/>
+> **Image:** J-link Software in different platforms
 
 3. After you have downloaded your corresponding software, install it and wait for a couple of minutes.
 
@@ -526,77 +391,41 @@ An easy and quick way to get started with your RAK5010-BG95 is by using pre-comp
 
 1. Upon opening the software, you will be greeted with a pop-up window. Choose **Create a new project**, then click **Start J-Flash**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/qbhdb7hj0cfq0cghohxx.jpg"
-  width="100%"
-  caption="J-flash Interface"
-/>
+> **Image:** J-flash Interface
 
 2. You will be then prompted to configure your new project. Select the Target Device by clicking the box highlighted in red as shown in **Figure 35**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/sccml4h6imieppibarpy.png"
-  width="100%"
-  caption="Configuring the Project"
-/>
+> **Image:** Configuring the Project
 
 3. Select the Manufacturer to **Nordic Semi** and Device **nRF52840_xxAA**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/h3wken4r8z0rfbznrgrc.png"
-  width="100%"
-  caption="Selecting the Device"
-/>
+> **Image:** Selecting the Device
 
 4. Select the Target Interface to **SWD** and the Speed (kHz) to **4000**. Press **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/hil2ag7u5vavbgpluu1c.png"
-  width="100%"
-  caption="Target Interface and Speed (kHz)"
-/>
+> **Image:** Target Interface and Speed (kHz)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/s91d5tazgtvl1lgihina.jpg"
-  width="100%"
-  caption="Created Project Successfully"
-/>
+> **Image:** Created Project Successfully
 
 #### Connecting the RAK5010 with JTAG
 
 1. Connect your RAK5010-BG95 to your PC through JTAG as shown in **Figure 39**. The pinout diagram and connection to Jlink can be found on the [Datasheet](https://docs.rakwireless.com/product-categories/wistrio/rak5010/datasheet/#pin-definition).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/hx3crsaspcr2aadaesnc.jpg"
-  width="35%"
-  caption="RAK5010-BG95 and JTAG Hardware Interface"
-/>
+> **Image:** RAK5010-BG95 and JTAG Hardware Interface
 
 2. Download the latest pre-compiled firmware from the [RAKwireless Downloads](https://downloads.rakwireless.com/#Cellular/RAK5010/Firmware/) and extract it to your PC.
 
 3. In the J-Flash software Menu Bar, choose **Target** > **Connect**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/wcw1maqbahdyhqm5hdb6.png"
-  width="100%"
-  caption="Successfully Created Project"
-/>
+> **Image:** Successfully Created Project
 
 4. Now, choose the demo firmware that you have downloaded.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/iyk5ueztu9i3eul8jp6z.png"
-  width="100%"
-  caption="Selecting the Hex File"
-/>
+> **Image:** Selecting the Hex File
 
 5. Select **Target** -> **Production Programming** to start the flashing process, and wait for a couple of minutes.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/wechf9fckqgvlw46bfqe.jpg"
-  width="100%"
-  caption="Connect with the RAK5010"
-/>
+> **Image:** Connect with the RAK5010
 
 ### Upgrading Firmware through DFU using BLE
 
@@ -606,11 +435,7 @@ An easy and quick way to get started with your RAK5010-BG95 is by using pre-comp
 
 2. Make sure the Bluetooth on your mobile is turned on. Open the **nRF Connect** Mobile application, and you will see all BLE devices in range in the scan list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/mnzoayqdsaquxxdimpnw.jpg"
-  width="45%"
-  caption="Available Bluetooth Devices in the Nordic App"
-/>
+> **Image:** Available Bluetooth Devices in the Nordic App
 
 3. Press the reset button on the RAK5010-BG95 and wait for a couple of seconds. Look for a BLE Device named **RUI-...** in the scan list of the app. Connect to this device and click **Nordic UART Service**.
 
@@ -618,59 +443,29 @@ An easy and quick way to get started with your RAK5010-BG95 is by using pre-comp
  This will be only visible for 60 seconds. More information about the Bluetooth connection guide can be found in the [Bluetooth Connection Modes](https://docs.rakwireless.com/product-categories/wistrio/rak5010/quickstart/#bluetooth-connection-modes) section.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/wwbnonxp1ugf6jtckbm6.png"
-  width="80%"
-  caption="Secure DFU Service in the Nordic App"
-/>
+> **Image:** Secure DFU Service in the Nordic App
 
 4. Choose **Secure DFU Service** and click the button highlighted in red as shown in **Figure 45**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/qxw4hh00xqmcv85df1f7.png"
-  width="80%"
-  caption="Buttonless DFU"
-/>
+> **Image:** Buttonless DFU
 
 5. Click the arrow highlighted in red as shown in **Figure 46**. A **Write Value** window pop-up, then press **Send**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/xb1hntew7qrbct9et5hz.png"
-  width="80%"
-  caption="Resetting the Bootloader via Bluetooth"
-/>
+> **Image:** Resetting the Bootloader via Bluetooth
 
 6. Now, the RAK5010-BG95 is now working in DFU Mode. In the application, you will see the default status overview of RAK5010.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/qmi89z3vqxvukvbiodnc.jpg"
-  width="40%"
-  caption="RAK5010-BG95 Default Status Overview after Resetting"
-/>
+> **Image:** RAK5010-BG95 Default Status Overview after Resetting
 
 7. In the list of devices, find a BLE signal named **DfuTarg** and connect.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/g2v0fkj63cbuwtt24mht.jpg"
-  width="40%"
-  caption="RAK5010-BG95 Default Bluetooth ID after Resetting"
-/>
+> **Image:** RAK5010-BG95 Default Bluetooth ID after Resetting
 
 8. After connecting, select the **DFU Icon**. Select the **Distribution packet (ZIP)** and press **OK**. This will then prompt you to select the zip file of the firmware that you have downloaded.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/pqnewr61x87nv5nrxovs.png"
-  width="80%"
-  caption="Distribution Packet File Type under DFU"
-/>
+> **Image:** Distribution Packet File Type under DFU
 
 9. Then, it will automatically start to upgrade the firmware of your RAK5010-BG95 through DFU over BLE. After upgrading, it will restart and the DFU connection will be disconnected. Now, you can use your RAK5010-BG95 with the latest firmware.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak5010/quickstart/nzilnqodbz6x33uvnpp4.jpg"
-  width="40%"
-  caption="DFU Upgrading of RAK5010-BG95 Firmware via BLE"
-/>
+> **Image:** DFU Upgrading of RAK5010-BG95 Firmware via BLE
 
-
-<RkBottomNav/>

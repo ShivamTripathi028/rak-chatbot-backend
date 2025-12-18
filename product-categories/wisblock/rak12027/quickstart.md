@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12027 WisBlock Earthquake Sensor Module Quick Start Guide
 
 ## Prerequisite
@@ -49,24 +46,15 @@ Do not use the sensor in safety devices or for applications in which the sensor 
 
 RAK12027 module can be connected to the sensor's slot of [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) to communicate with the WisBlock Core, as shown in **Figure 1**. It will work on **SLOT C to F**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak12027-assembly.png"
-  width="70%"
-  caption="RAK12027 connection to WisBlock Base"
-/>
-
+> **Image:** RAK12027 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for Slots A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+As shown in **Figure 2**, the location for Slots A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/mounting-mechanism.png"
-  width="50%"
-  caption="RAK12027 connection to WisBlock Base"
-/>
+> **Image:** RAK12027 connection to WisBlock Base
 
 ##### Disassembling
 
@@ -74,27 +62,15 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/detaching-module.png"
-  width="60%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK12027 uses I2C communication lines, and it can cause possible conflict, especially on some IO modules.
@@ -104,9 +80,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base Board. Not all batteries have the same wiring.
 :::
 
@@ -120,27 +96,15 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 **RAK4631 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak4631-board.png"
-  width="90%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 **RAK11200 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak11200-board.png"
-  width="90%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 **RAK11310 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak11310-board.png"
-  width="90%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 3. Next, copy the following sample code into your Arduino IDE:
 
@@ -228,24 +192,15 @@ void loop()
 ```
 </details>
 
-
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for your WisBlock Core Module that can be found on the [RAK12027 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/sensors/RAK12027_Earthquake). This sample code in GitHub will work on all WisBlock Core.
 :::
 
 4. Once the example code is open, install the [RAK12027-D7S](https://github.com/RAKWireless/RAK12027-D7S) library by clicking the yellow-highlighted link, as shown in **Figure 9** and **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak12027-lib.png"
-  width="90%"
-  caption="Accessing the library used for RAK12027 Module"
-/>
+> **Image:** Accessing the library used for RAK12027 Module
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak12027-libinstall.png"
-  width="65%"
-  caption="Installing the compatible library for RAK12027 Module"
-/>
+> **Image:** Installing the compatible library for RAK12027 Module
 
 5. After the successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
@@ -253,17 +208,9 @@ If you experience any error in compiling the example sketch, check the updated c
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak4631-selectport.png"
-  width="90%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak4631-upload.png"
-  width="90%"
-  caption="Uploading the RAK12027 example code"
-/>
+> **Image:** Uploading the RAK12027 example code
 
 6. When you have successfully uploaded the example sketch, open the serial monitor of the Arduino IDE and set the baud rate correctly. Try to shake the sensor and you will then see the sensor's output as shown in **Figure 13**. Therefore, your RAK12027 is properly communicating with the WisBlock core.
 
@@ -272,10 +219,5 @@ If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the *
 - After powering up the sensor is calibrating itself, and during this time, the sensor **MUST NOT** be moved.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/quickstart/rak12027-logs.png"
-  width="80%"
-  caption="RAK12027 Earthquake Sensor serial readings"
-/>
+> **Image:** RAK12027 Earthquake Sensor serial readings
 
-<RkBottomNav/>

@@ -9,17 +9,13 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg19/5dbi_antenna.pn
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # 902-928 MHz 5 dBi Fiberglass Antenna Datasheet
 
 ## Overview
 
-The 5&nbsp;dBi Fiberglass antenna is an outdoor, high-performance antenna, designed to withstand harsh outdoor conditions. It is specially designed for LoRa in the 902-928&nbsp;MHz band – US915, AU915, AS923, and KR920.
+The 5 dBi Fiberglass antenna is an outdoor, high-performance antenna, designed to withstand harsh outdoor conditions. It is specially designed for LoRa in the 902-928 MHz band – US915, AU915, AS923, and KR920.
 The antenna connector is one with the antenna body - this design further increases the resistance of the antenna to external conditions.
-With a length of only 480&nbsp;mm, this antenna will be the best fit for your LPWAN gateway or outdoor deployed RAK Hotspot.
+With a length of only 480 mm, this antenna will be the best fit for your LPWAN gateway or outdoor deployed RAK Hotspot.
 
 :::tip NOTE
 This antenna is designed to be directly mounted on the enclosure of the Gateway. It is suitable for the following RAK products:
@@ -35,39 +31,36 @@ The antenna is also compatible with the following:
 
 ## Features
 
-- Frequency: 902-928&nbsp;MHz
-- Gain: 5&nbsp;dBi
+- Frequency: 902-928 MHz
+- Gain: 5 dBi
 - VSWR: ≤ 1.47
 - Beamwidth: 360°
-- Impedance: 50&nbsp;Ω
+- Impedance: 50 Ω
 - Polarization: Vertical
 - Radome Body: Fiberglass
 - Connector: N-Type Male
-- Dimensions: Փ 27.0&nbsp;mm x 480.0&nbsp;mm
-- Operation Temperature: -40&nbsp;°C ~ +75&nbsp;°C
-- Storage Temperature: -40&nbsp;°C ~ +85&nbsp;°C
+- Dimensions: Փ 27.0 mm x 480.0 mm
+- Operation Temperature: -40 °C ~ +75 °C
+- Storage Temperature: -40 °C ~ +85 °C
 - IP67 rated
 
-
-
 ## Specifications
-
 
 | Parameter              | Value                          |
 | ---------------------- | ------------------------------ |
 | Model                  | RAKARG19                       |
-| Frequency Range        | 902 ~ 928&nbsp;MHz             |
-| Peak Gain              | 5&nbsp;dBi                   |
+| Frequency Range        | 902 ~ 928 MHz             |
+| Peak Gain              | 5 dBi                   |
 | VSWR                   | ≤ 1.47                         |
 | Efficiency             | ≤ 84%                          |
-| Feed Impedance         | 50&nbsp;Ω                      |
+| Feed Impedance         | 50 Ω                      |
 | Radiation Pattern      | Omnidirectional                |
 | Polarization           | Vertical                       |
 | Cover Material (Color) | Fiberglass (White)             |
 | Connector Type         | N-type male                    |
-| Dimensions (mm)        | Փ 27.0&nbsp;mm x 480.0&nbsp;mm |
-| Operation Temp (°C)    | -40&nbsp;°C ~ +75&nbsp;°C      |
-| Storage Temperature    | -40&nbsp;°C ~ +85&nbsp;°C      |
+| Dimensions (mm)        | Փ 27.0 mm x 480.0 mm |
+| Operation Temp (°C)    | -40 °C ~ +75 °C      |
+| Storage Temperature    | -40 °C ~ +85 °C      |
 | Humidity Range         | 5% ~ 95%                       |
 
 ### VSWR and Return Loss
@@ -77,11 +70,7 @@ The antenna is also compatible with the following:
 | 902 MHz         | 1.47 | -14.4            |
 | 928 MHz         | 1.46 | -14.5            |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg19/2.png"
-  width="80%"
-  caption="RAKARG19 VSWR Graph"
-/>
+> **Image:** RAKARG19 VSWR Graph
 
 ### Peak Gain & Efficiency
 
@@ -103,21 +92,11 @@ The antenna is also compatible with the following:
 | 928             | 5.0        | 84             |
 |                 | Average:   | 83.64          |
 
-
 ### Radiation Patterns
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg19/3.png"
-  width="90%"
-  caption="RAKARG19 Radiation Patterns"
-/>
+> **Image:** RAKARG19 Radiation Patterns
 
 ### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg19/4.png"
-  width="100%"
-  caption="RAKARG19 mechanical specifications"
-/>
+> **Image:** RAKARG19 mechanical specifications
 
-<RkBottomNav/>

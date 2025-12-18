@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14003 WisBlock LED Bar Graph Module Datasheet
 
 ## Overview
@@ -26,29 +23,21 @@ RAK14003 is an LED Bar Graph that is part of WisBlock Display modules. It consis
 - LED Bar Graph module
 - 5 green color LEDs, 3 yellow color LEDs，and 2 red color LEDs
 - Each LED can be controlled separately
-- 3.3&nbsp;V Power supply
+- 3.3 V Power supply
 - Chipset: Microchip MCP23017, Hongke Lighting KEM-102510A-RYG
-- Module size: 25 x 45&nbsp;mm
+- Module size: 25 x 45 mm
 
 ## Specifications
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/rak14003_overview.png"
-  width="50%"
-  caption="RAK14003 Front and Back View"
-/>
+> **Image:** RAK14003 Front and Back View
 
 #### Mounting
 
 The RAK14003 module can be mounted on the IO slot of the WisBlock Base board. **Figure 2** shows the mounting mechanism of the RAK14003 on a WisBlock Base module, such as the RAK5005-O.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/mounting-mechanism.png"
-  width="70%"
-  caption="RAK14003 Mounting Mechanism on a WisBlock Base Module"
-/>
+> **Image:** RAK14003 Mounting Mechanism on a WisBlock Base Module
 
 ### Hardware
 
@@ -59,16 +48,11 @@ The hardware specification is categorized into four parts. It discusses the pino
 | -------------------------- | -------------------------- |
 | Microchip, Hongke Lighting | MCP23017, KEM-102510A-RYG  |
 
-
 #### Pin Definition
 
 The RAK14003 module has a 40-pin WisConnector that is compatible to the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/rak14003_pinout.svg"
-  width="80%"
-  caption="RAK14003 Pinout Schematic"
-/>
+> **Image:** RAK14003 Pinout Schematic
 
 :::tip NOTE
 - Only **I2C** related pin, **RESET**, **3V3_S**, and **GND** are connected to the WisConnector.
@@ -94,100 +78,20 @@ This section shows the maximum and minimum ratings of the RAK14003 module and it
 
 ##### LED Parameters
 
-Table below shows the LED parameters. Color Code & Chip Characteristic: (Test Condition: IF=20&nbsp;mA)
+Table below shows the LED parameters. Color Code & Chip Characteristic: (Test Condition: IF=20 mA)
 
-<table>
-<thead>
-  <tr>
-    <th>Emitting Color</th>
-    <th colspan="2">Peak Wavelength</th>
-    <th colspan="2">Forward Voltage</th>
-    <th>Luminous Intensity <p>IF=20&nbsp;mA (mcd)</p></th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td></td>
-    <td>(λp)</td>
-    <td>Δλ</td>
-    <td>Typ</td>
-    <td>Max</td>
-    <td>Max</td>
-  </tr>
-  <tr>
-    <td>Amber</td>
-    <td>605-615</td>
-    <td>30</td>
-    <td>1.9</td>
-    <td>2.4</td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td>Super Green</td>
-    <td>565-575</td>
-    <td>30</td>
-    <td>1.9</td>
-    <td>2.4</td>
-    <td>80</td>
-  </tr>
-  <tr>
-    <td>Super Red</td>
-    <td>625-640</td>
-    <td>20</td>
-    <td>1.8</td>
-    <td>2.3</td>
-    <td>100</td>
-  </tr>
-  <tr>
-    <td>High Red</td>
-    <td>640-660</td>
-    <td>20</td>
-    <td>1.8</td>
-    <td>2.3</td>
-    <td>12</td>
-  </tr>
-  <tr>
-    <td>Yellow Green </td>
-    <td>570-580</td>
-    <td>30</td>
-    <td>2.0</td>
-    <td>2.5</td>
-    <td>45</td>
-  </tr>
-  <tr>
-    <td>Yellow</td>
-    <td>590-600</td>
-    <td>35</td>
-    <td>2.0</td>
-    <td>2.5</td>
-    <td>60</td>
-  </tr>
-  <tr>
-    <td>Blue</td>
-    <td>465-475</td>
-    <td>40</td>
-    <td>3.0</td>
-    <td>3.5</td>
-    <td>200</td>
-  </tr>
-  <tr>
-    <td>Pure Green</td>
-    <td>515-525</td>
-    <td>40</td>
-    <td>3.0</td>
-    <td>3.5</td>
-    <td>600</td>
-  </tr>
-  <tr>
-    <td>White</td>
-    <td></td>
-    <td></td>
-    <td>3.0</td>
-    <td>3.5</td>
-    <td>180</td>
-  </tr>
-</tbody>
-</table>
+| Emitting Color | Peak Wavelength | Forward Voltage | Luminous IntensityIF=20 mA (mcd) |  |  |
+| --- | --- | --- | --- | --- | --- |
+|  | (λp) | Δλ | Typ | Max | Max |
+| Amber | 605-615 | 30 | 1.9 | 2.4 | 30 |
+| Super Green | 565-575 | 30 | 1.9 | 2.4 | 80 |
+| Super Red | 625-640 | 20 | 1.8 | 2.3 | 100 |
+| High Red | 640-660 | 20 | 1.8 | 2.3 | 12 |
+| Yellow Green | 570-580 | 30 | 2.0 | 2.5 | 45 |
+| Yellow | 590-600 | 35 | 2.0 | 2.5 | 60 |
+| Blue | 465-475 | 40 | 3.0 | 3.5 | 200 |
+| Pure Green | 515-525 | 40 | 3.0 | 3.5 | 600 |
+| White |  |  | 3.0 | 3.5 | 180 |
 
 #### Mechanical Characteristics
 
@@ -195,49 +99,29 @@ Table below shows the LED parameters. Color Code & Chip Characteristic: (Test Co
 
 **Figure 4** shows the mechanical dimensions of the RAK14003 Module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/mechanical-dimensions.png"
-  width="75%"
-  caption="RAK14003 Mechanical Dimensions"
-/>
+> **Image:** RAK14003 Mechanical Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/wisconnector-pcb.png"
-  width="100%"
-  caption="WisConnector PCB Footprint and Recommendations"
-/>
+> **Image:** WisConnector PCB Footprint and Recommendations
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK14003 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/rak14003-schematic.png"
-  width="100%"
-  caption="RAK14003 WisBlock Module Schematics"
-/>
+> **Image:** RAK14003 WisBlock Module Schematics
 
 ##### I/O Expander and LED Bar
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/io-expander.png"
-  width="100%"
-  caption="RAK14003 I/O Expander and LED Bar"
-/>
+> **Image:** RAK14003 I/O Expander and LED Bar
 
 :::tip NOTE
-- The current-limiting resistances are 68&nbsp;Ω.
+- The current-limiting resistances are 68 Ω.
 :::
 
 ##### Device Address Select
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/i2c-address.png"
-  width="30%"
-  caption="I2C Address Select"
-/>
+> **Image:** I2C Address Select
 
 :::tip NOTE
 - You can change the I2C slave address. The default 7-bit I2C address is **0x24**.
@@ -247,10 +131,5 @@ Table below shows the LED parameters. Color Code & Chip Characteristic: (Test Co
 
 The I2C Pull-up resistors already exist on the WisBlock Base, such as the RAK5005-O, not on the RAK14003 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14003/datasheet/i2c-pullup.png"
-  width="30%"
-  caption="I2C Pull-up Resistance"
-/>
+> **Image:** I2C Pull-up Resistance
 
-<RkBottomNav/>

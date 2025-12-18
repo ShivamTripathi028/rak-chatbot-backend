@@ -12,9 +12,6 @@ sidebar_label: Product Overview
 date: 2021-08-10
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK12006 WisBlock PIR Sensor Module
 
 Thank you for choosing **RAK12006 WisBlock PIR Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -41,11 +38,11 @@ The RAK12006 is a Pyroelectric Infrared Radial (PIR) module. It is designed to d
     * Digital Signal Processing
     * Built-in filter, screens interference from other frequencies
     * Schmitt Trigger Output REL
-    * 3.3&nbsp;V Power supply
+    * 3.3 V Power supply
     * Chipset: Senba Sensing Technology AM312
 
 * **Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
@@ -55,4 +52,3 @@ To use a **RAK12006**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

@@ -18,18 +18,15 @@ slug: /product-categories/wisduo/rak3272s-breakout-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3272S Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-**RAK3272S Breakout Board** is designed to provide easy access to the board's pins, streamlining development and testing. Its footprint enables the RAK3172 stamp module pins to be routed to 2.54&nbsp;mm headers.
+**RAK3272S Breakout Board** is designed to provide easy access to the board's pins, streamlining development and testing. Its footprint enables the RAK3172 stamp module pins to be routed to 2.54 mm headers.
 
-The board itself has the RAK3172 at its core, integrating a **STM32WLE5CC** chip. It has an ultra-low power consumption of 1.69&nbsp;uA in sleep mode.
+The board itself has the RAK3172 at its core, integrating a **STM32WLE5CC** chip. It has an ultra-low power consumption of 1.69 uA in sleep mode.
 
 This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It also supports LoRa Point-to-Point (P2P) communication mode, which helps you in implementing your own customized LoRa network quickly.
 
@@ -39,11 +36,10 @@ This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It 
 - Custom firmware using Arduino via RUI3 API
 - I/O ports: UART/I2C/GPIO/SPI
 - Serial Wire Debug (SWD) interface
-- Module size: 25.4&nbsp;mm x 32.3&nbsp;mm
-- Ultra-low-power consumption of 1.69&nbsp;uA in sleep mode
-- Supply Voltage: 2.0&nbsp;V ~ 3.6&nbsp;V
-- Temperature Range: -20°&nbsp;C ~ 85°&nbsp;C
-
+- Module size: 25.4 mm x 32.3 mm
+- Ultra-low-power consumption of 1.69 uA in sleep mode
+- Supply Voltage: 2.0 V ~ 3.6 V
+- Temperature Range: -20° C ~ 85° C
 
 ## Specifications
 
@@ -51,18 +47,11 @@ This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It 
 
 The top view of the RAK3272S Breakout Board is shown in **Figure 1**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s.png"
-  width="50%"
-  caption="RAK3272S Top and Bottom View"
-  zoomMode={true}
-/>
+> **Image:** RAK3272S Top and Bottom View
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It discusses the interfacing, pinouts, and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters of the board, including the tabular data of the functionalities and standard values.
-
 
 #### Interface
 
@@ -95,12 +84,7 @@ Only one I2C and SPI interface of RAK3272S:
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s-pinout.png"
-  width="60%"
-  caption="RAK3272S Breakout Board Pinout"
-  zoomMode={true}
-/>
+> **Image:** RAK3272S Breakout Board Pinout
 
 The tables below show the pin definition of the RAK3272S Breakout Board:
 
@@ -162,7 +146,7 @@ The RAK3272S module supports the LoRaWAN bands listed in the table below. When p
 
 |      Feature      | Condition |               Minimum               | Typical | Maximum | Unit  |
 | :---------------: | :-------: | :---------------------------------: | :-----: | :-----: | :---: |
-| Operating Current |  TX Mode  | 87 @&nbsp;20&nbsp;dBm, 868&nbsp;MHz |    -    |    -    |  mA   |
+| Operating Current |  TX Mode  | 87 @ 20 dBm, 868 MHz |    -    |    -    |  mA   |
 |                   |  RX Mode  |                5.22                 |    -    |    -    |  mA   |
 |   Sleep Current   |   EU868   |                  -                  |  1.69   |    -    |  uA   |
 |                   |   CN470   |                  -                  |  1.69   |    -    |  uA   |
@@ -175,24 +159,13 @@ The RAK3272S module supports the LoRaWAN bands listed in the table below. When p
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s-schematic.png"
-  width="80%"
-  caption="RAK3272S Schematic Diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK3272S Schematic Diagram
 
 #### Mechanical Characteristics
 
 **Figure 4** show RAK3272S board dimensions.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272s-breakout-board/datasheet/rak3272s-mechanical-dimensions.png"
-  width="40%"
-  caption="RAK3272S Mechanical Dimensions"
-  zoomMode={true}
-/>
-
+> **Image:** RAK3272S Mechanical Dimensions
 
 ### Software
 
@@ -234,4 +207,3 @@ For CE and FCC certifications we provide an AT command guide.
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

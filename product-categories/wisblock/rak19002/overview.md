@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19002 WisBlock Boost Module
 
 Thank you for choosing **RAK19002 WisBlock Boost Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -33,17 +31,17 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-The RAK19002 is a step-up boost regulator module, part of the RAKwireless WisBlock Series. The module can supply 12&nbsp;V/50&nbsp;mA and could be mounted on WisSensor slot of RAK5005-O. The output voltage of the module is controlled by **WisBlock Core** IO pin.
+The RAK19002 is a step-up boost regulator module, part of the RAKwireless WisBlock Series. The module can supply 12 V/50 mA and could be mounted on WisSensor slot of RAK5005-O. The output voltage of the module is controlled by **WisBlock Core** IO pin.
 ## Product Features
 
 * TPS61046 step-up boost converter
-* Input voltage: 3.3&nbsp;V
-* Output voltage: 12&nbsp;V
-* Up to 85% efficiency at 3.6&nbsp;V input and 12&nbsp;V output
-* ±2&nbsp;% output voltage accuracy
-* 50&nbsp;mA output current
+* Input voltage: 3.3 V
+* Output voltage: 12 V
+* Up to 85% efficiency at 3.6 V input and 12 V output
+* ±2 % output voltage accuracy
+* 50 mA output current
 * Chipset: Texas Instruments TPS61046
-* Module size: 10 x 10&nbsp;mm
+* Module size: 10 x 10 mm
 
 ## Prerequisites
 
@@ -53,4 +51,3 @@ To use a **RAK19002**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

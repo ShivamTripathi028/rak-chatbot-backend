@@ -11,8 +11,6 @@ slug: /product-categories/wisduo/rak3272-sip-breakout-board/at-command-manual/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3272-SiP Breakout Board AT Command Manual
 
 ## Introduction
@@ -27,9 +25,7 @@ The RAK3272-SiP Breakout Board default firmware is based on <a href="https://doc
 
 The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation.</a>
 
-
 :::tip NOTE
 In addition, aside on UART2, AT commands can also be interfaced via UART1 in J4 header **Pin 5 (UART1_RX)** and **Pin 6 (UART1_TX)**. You can configure the settings of UART1 and UART2 interfaces via <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#rak-unified-interface-v3-rui3-serial-operating-modes" target="_blank">RUI3 Serial Operating Modes</a>.
 :::
 
-<RkBottomNav/>

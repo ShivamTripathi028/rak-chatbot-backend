@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK15006 WisBlock 512kByte FRAM Module
 
 Thank you for choosing **RAK15006 WisBlock 512kByte FRAM Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,21 +35,21 @@ RAK15006 is a WisBlock 512kByte FRAM module that extends the WisBlock system wit
 ## Product Features
 
 * **Sensor specifications**
-    *  Temperature Range：-40&nbsp;°C to +85&nbsp;°C
-    *  SPI compatible digital interface, supports 40&nbsp;MHz
-    *  Operating power supply current: 2.6&nbsp;mA (Max @ 40&nbsp;MHz)
-    *  Standby current: 50&nbsp;uA (Max)
-    *  Sleep current: 8&nbsp;uA (Max)
+    *  Temperature Range：-40 °C to +85 °C
+    *  SPI compatible digital interface, supports 40 MHz
+    *  Operating power supply current: 2.6 mA (Max @ 40 MHz)
+    *  Standby current: 50 uA (Max)
+    *  Sleep current: 8 uA (Max)
     *  524,288 words x 8 bits
     *  High Reliability：
        - Read/write endurance：10,000,000,000,000/byte
        - Data retention：
-           - 10 years(+85&nbsp;°C)
-           - 95 years(+55&nbsp;°C)
-           - Over 200 years（+35&nbsp;°C）
+           - 10 years(+85 °C)
+           - 95 years(+55 °C)
+           - Over 200 years（+35 °C）
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -62,4 +59,3 @@ To use a **RAK15006**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

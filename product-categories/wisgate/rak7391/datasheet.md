@@ -9,21 +9,15 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK7391 WisGate Connect Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK7391 WisGate Connect is a Raspberry Pi CM4-based gateway designed to support various radio and WisBlock modules. It features multiple interfaces to accommodate the diverse needs of developers, including HDMI, Ethernet, USB, mPCIe, CSI, DSI, M.2, WisBlock, PoE, and Raspberry Pi HAT. Additionally, it can serve as a basic LoRaWAN gateway, supporting up to four (4) separate modules. This allows for configurations such as a 16-channel sub-GHz LoRaWAN gateway and a 2.4&nbsp;GHz LoRaWAN gateway operating on the same device.
+The RAK7391 WisGate Connect is a Raspberry Pi CM4-based gateway designed to support various radio and WisBlock modules. It features multiple interfaces to accommodate the diverse needs of developers, including HDMI, Ethernet, USB, mPCIe, CSI, DSI, M.2, WisBlock, PoE, and Raspberry Pi HAT. Additionally, it can serve as a basic LoRaWAN gateway, supporting up to four (4) separate modules. This allows for configurations such as a 16-channel sub-GHz LoRaWAN gateway and a 2.4 GHz LoRaWAN gateway operating on the same device.
 
 The RAK7391 provides flexible power supply options, including a DC terminal, a Phoenix terminal, and optional PoE support. It features a fan interface for CPU cooling, with control based on the CPU temperature. The device also monitors its power supply, and its ultracapacitors ensure backup power during a failure. This enables the system to send notifications or handle brief power interruptions seamlessly.
-
 
 ### Features
 
@@ -32,15 +26,15 @@ The RAK7391 provides flexible power supply options, including a DC terminal, a P
 - Accepts the complete range of CM4 modules
 - Flexible power supply modes such as DC terminal, Phoenix terminal, and POE (Optional)
 - HDMI 2.0 connector
-- 1&nbsp;GB Ethernet with PoE support (Optional)
-- 2.5&nbsp;GB Ethernet without PoE support (Optional)
+- 1 GB Ethernet with PoE support (Optional)
+- 2.5 GB Ethernet without PoE support (Optional)
 - USB2.0 + 2x USB3.0
 - Type-C USB socket for updating the CM4
 - Micro SD card socket for CM4 Lite modules
-- Standard fan connector, compatible with 5&nbsp;V and 12&nbsp;V fans (jumper cap configuration)
-- External power connector (+5&nbsp;V, +12&nbsp;V with PoE)
-- MIPI DSI display FPC connectors (22 pins 0.5&nbsp;mm pitch cable)
-- 2x MIPI CSI-2 camera FPC connectors (22 pins 0.5&nbsp;mm pitch cable)
+- Standard fan connector, compatible with 5 V and 12 V fans (jumper cap configuration)
+- External power connector (+5 V, +12 V with PoE)
+- MIPI DSI display FPC connectors (22 pins 0.5 mm pitch cable)
+- 2x MIPI CSI-2 camera FPC connectors (22 pins 0.5 mm pitch cable)
 - Raspberry Pi HAT connector
 - PoE support via an optional module
 - Debug UART port
@@ -56,17 +50,12 @@ A custom distribution for the WisGate Connect, called RAKPiOS, has been develope
 
 You can easily deploy several IoT services from a curated list of docker containers available from the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7391/datasheet/1.software-structure.png"
-  width="70%"
-  caption="Software structure"
-/>
-
+> **Image:** Software structure
 
 ### Typical Application
 
 - LoRaWAN gateway (multichannel and multiband)
-- Industrial gateway leveraging existing WisBlock modules (ModBUS, 4-20&nbsp;mA, 0-5&nbsp;V, and general IO)
+- Industrial gateway leveraging existing WisBlock modules (ModBUS, 4-20 mA, 0-5 V, and general IO)
 - Edge gateway or standalone gateway
 - Development platform for new products
 
@@ -74,13 +63,7 @@ You can easily deploy several IoT services from a curated list of docker contain
 
 ### Overview
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7391/datasheet/2.block-diagram.png"
-  width="70%"
-  caption="RAK7391 block diagram"
-/>
-
+> **Image:** RAK7391 block diagram
 
 ### Hardware
 
@@ -97,25 +80,25 @@ The hardware specification is divided into three (3) parts:
 | Feature    | Value                               |
 |------------|-------------------------------------|
 | DC inputs  | 3 (DC jack, Phoenix connector, PoE) |
-| DC voltage | 10-28&nbsp;V                        |
+| DC voltage | 10-28 V                        |
 | PoE        | Active IEEE 802.3at or IEEE 802.3bt |
 
 #####  Wireless (Optional)
 
 | Feature                          | Value                |
 |----------------------------------|----------------------|
-| Wireless 2.4&nbsp;GHz generation | WiFi 5               |
-| Wireless 2.4&nbsp;GHz standards  | IEEE 802.11 b/g/n/ac |
-| Wireless 5.0&nbsp;GHz generation | WiFi 5               |
-| Wireless 5.0&nbsp;GHz standards  | IEEE 802.11 b/g/n/ac |
+| Wireless 2.4 GHz generation | WiFi 5               |
+| Wireless 2.4 GHz standards  | IEEE 802.11 b/g/n/ac |
+| Wireless 5.0 GHz generation | WiFi 5               |
+| Wireless 5.0 GHz standards  | IEEE 802.11 b/g/n/ac |
 | Bluetooth Low Energy             | 5.0                  |
 
 ##### Ethernet
 
 | Feature                   | Value           |
 |---------------------------|-----------------|
-| 1&nbsp;GB Ethernet Port   | 1 (PoE enabled) |
-| 2.5&nbsp;GB Ethernet Port | 1               |
+| 1 GB Ethernet Port   | 1 (PoE enabled) |
+| 2.5 GB Ethernet Port | 1               |
 
 #####  Peripherals
 
@@ -123,7 +106,7 @@ The hardware specification is divided into three (3) parts:
 |----------------------------|------------------------------------------------------------------------------------|
 | mPCIe slots                | 3 (USB, SPI, I2C, UART, and PCIe interfaces)                                       |
 | M.2 slots                  | 1 (B-key, USB, and PCIe interfaces)                                                |
-| WisBlock IO slots          | 2, more than 20 compatible modules (0-5&nbsp;V, 4-20&nbsp;mA, ModBUS, LinBUS, I/O) |
+| WisBlock IO slots          | 2, more than 20 compatible modules (0-5 V, 4-20 mA, ModBUS, LinBUS, I/O) |
 | USB3 ports                 | 2                                                                                  |
 | USB2 ports                 | 1                                                                                  |
 | HDMI ports                 | 1                                                                                  |
@@ -139,8 +122,7 @@ The hardware specification is divided into three (3) parts:
 | PCB temperature monitor | Yes                                                                                 |
 | Real-time clock         | Yes                                                                                 |
 | Onboard buzzer          | Yes                                                                                 |
-| Operating temperature   | -20º&nbsp;C to 85º&nbsp;C (except for USB3 and Buzzer which are rated 0-70º&nbsp;C) |
-
+| Operating temperature   | -20º C to 85º C (except for USB3 and Buzzer which are rated 0-70º C) |
 
 ##### CM4 Module Connectors
 
@@ -149,47 +131,46 @@ The RAK7391 is based on Raspberry Pi CM4. The following table shows the CPU feat
 | Feature               | Description                       |
 |-----------------------|-----------------------------------|
 | CPU                   | Broadcom BCM2711                  |
-| Architecture          | ARMv8 Cortex-A72 64&nbsp;bits     |
+| Architecture          | ARMv8 Cortex-A72 64 bits     |
 | CPU core count        | 4                                 |
-| CPU nominal frequency | 1.5&nbsp;GHz                      |
+| CPU nominal frequency | 1.5 GHz                      |
 | Operating system      | RAK Pi OS                         |
-| RAM                   | 1, 2, 4, or 8&nbsp;GB DDR4        |
-| Storage               | 8, 16, or 32&nbsp;eMMC (Optional) |
+| RAM                   | 1, 2, 4, or 8 GB DDR4        |
+| Storage               | 8, 16, or 32 eMMC (Optional) |
 
 ##### PSU Input
 
 You can choose between three main power supply solutions:
 
-- 2.1 x 5.5&nbsp;mm DC input, center positive, 10-28&nbsp;V<sub>DC</sub>
-- Phoenix terminal input, 10-28&nbsp;V<sub>DC</sub>
-- Active IEEE 802.3at or IEEE 802.3bt on 1&nbsp;GbE connector
+- 2.1 x 5.5 mm DC input, center positive, 10-28 V<sub>DC</sub>
+- Phoenix terminal input, 10-28 V<sub>DC</sub>
+- Active IEEE 802.3at or IEEE 802.3bt on 1 GbE connector
 
 :::tip NOTE
 You can only use one of the previous power supply ways at the same time.
 :::
 
+The exact current required from the +12 V PSU is dependent on the application and what is connected to the RAK7391. It is recommended to budget 25 W for the CM4.
 
-The exact current required from the +12&nbsp;V PSU is dependent on the application and what is connected to the RAK7391. It is recommended to budget 25&nbsp;W for the CM4.
-
-Under normal circumstances, it can provide 5&nbsp;V<sub>out</sub>. If you want to supply 12&nbsp;V<sub>out</sub> from the different PSU connectors on the board, you have to use PoE to feed the board with 12&nbsp;V<sub>DCin</sub>.
+Under normal circumstances, it can provide 5 V<sub>out</sub>. If you want to supply 12 V<sub>out</sub> from the different PSU connectors on the board, you have to use PoE to feed the board with 12 V<sub>DCin</sub>.
 
 :::tip NOTE
-The 12&nbsp;V<sub>DCout</sub> connectors in the board are directly connected to the power supply. Use only 12&nbsp;V<sub>DC</sub> adapters when powering 12&nbsp;V devices from the board.
+The 12 V<sub>DCout</sub> connectors in the board are directly connected to the power supply. Use only 12 V<sub>DC</sub> adapters when powering 12 V devices from the board.
 :::
 
 ##### Full-Sized HDMI 2.0 Connector
 
-The CM4 handles most of the interfacing for the HDMI interface, with most signals directly connected to the CM4. The current for the HDMI interface is limited to 500&nbsp;mA.
+The CM4 handles most of the interfacing for the HDMI interface, with most signals directly connected to the CM4. The current for the HDMI interface is limited to 500 mA.
 
 ##### Ethernet
 
-The RAK7391 features two Ethernet ports: one 1&nbsp;Gb port that supports PoE and one 2.5&nbsp;Gb port that does not support PoE. To enable the PoE function, the RAK PoE module must be installed.
+The RAK7391 features two Ethernet ports: one 1 Gb port that supports PoE and one 2.5 Gb port that does not support PoE. To enable the PoE function, the RAK PoE module must be installed.
 
-The CM4 module includes a built-in 1&nbsp;Gb Ethernet interface. For high-speed network requirements, the 2.5&nbsp;Gb Ethernet port can be utilized. This 2.5&nbsp;Gb Ethernet port connects to the PCI bus, which is shared with other components such as USB 3.0, Mini PCIe slot #3, and the M.2 slot. The actual maximum speed depends on CPU usage and the other peripherals connected to the board. Under normal usage and without modifying the CM4 configuration, speeds of 1.8–2.0&nbsp;Gbps can typically be achieved.
+The CM4 module includes a built-in 1 Gb Ethernet interface. For high-speed network requirements, the 2.5 Gb Ethernet port can be utilized. This 2.5 Gb Ethernet port connects to the PCI bus, which is shared with other components such as USB 3.0, Mini PCIe slot #3, and the M.2 slot. The actual maximum speed depends on CPU usage and the other peripherals connected to the board. Under normal usage and without modifying the CM4 configuration, speeds of 1.8–2.0 Gbps can typically be achieved.
 
 ##### PoE HAT
 
-If you want to use the PoE function of RAK7391, you need to have the RAK PoE module. The RAK7391 has an onboard PoE Hat interface. The PoE module supports both 802.3AT and 802.3BT standards to meet the different needs. The PoE input voltage ranges from 42&nbsp;V to 57&nbsp;V. AT module max output is 12&nbsp;V 2.5&nbsp;A (30&nbsp;W), and BT max output is 12&nbsp;V 6&nbsp;A (72&nbsp;W).
+If you want to use the PoE function of RAK7391, you need to have the RAK PoE module. The RAK7391 has an onboard PoE Hat interface. The PoE module supports both 802.3AT and 802.3BT standards to meet the different needs. The PoE input voltage ranges from 42 V to 57 V. AT module max output is 12 V 2.5 A (30 W), and BT max output is 12 V 6 A (72 W).
 
 ##### USB 2.0 Hub
 
@@ -200,7 +181,7 @@ The RAK7391 board includes two (2) onboard USB 2.0 hubs, which expand a single U
 - Two ports are connected to the WisBlock slots.  
 - The remaining two ports are converted to UART and connected to the WisBlock interfaces.  
 
-There is an internal current limit switch to provide VBUS to the USB connectors. The current limit is set to approximately 500&nbsp;mA.
+There is an internal current limit switch to provide VBUS to the USB connectors. The current limit is set to approximately 500 mA.
 
 ##### USB 3.0 Hub
 
@@ -212,7 +193,7 @@ The RAK7391 board features an onboard PCIe to USB 3.0 hub that provides four (4)
 
 Note that the PCIe line is shared with the 2.5 Gb Ethernet port, as well as with modules connected to mPCIe slot #3 and the M.2 slot.
 
-There is an internal current limit switch to provide VBUS to the USB connectors. The current limit is set to approximately 1&nbsp;A.
+There is an internal current limit switch to provide VBUS to the USB connectors. The current limit is set to approximately 1 A.
 
 ##### USB Type-C Connector
 
@@ -226,17 +207,17 @@ The micro SD Card socket is a **PUSH-PUSH** socket. To release the micro SD Card
 
 ##### Fan Connector
 
-This connector supports standard fans with PWM drive and tachometer output. The fan is controlled via I2C using an EMC2301 driver. It is compatible with both 5&nbsp;V and 12&nbsp;V fans, selectable through an optional jumper cap.
+This connector supports standard fans with PWM drive and tachometer output. The fan is controlled via I2C using an EMC2301 driver. It is compatible with both 5 V and 12 V fans, selectable through an optional jumper cap.
 
-If you only have a 2-wire fan, you can also use it by connecting it to the 5&nbsp;V-GND connectors.
+If you only have a 2-wire fan, you can also use it by connecting it to the 5 V-GND connectors.
 
 ##### DSI Display Connectors (22 Pin 0.5 mm Pitch Cable)
 
-The DSI 4-channel interface is routed to separate 22-way 0.5&nbsp;mm pitch connectors, identical to those on the CMIO board but different from the Raspberry Pi 4 Model B. To use a Raspberry Pi 4 Model B display, an adapter board will be required.
+The DSI 4-channel interface is routed to separate 22-way 0.5 mm pitch connectors, identical to those on the CMIO board but different from the Raspberry Pi 4 Model B. To use a Raspberry Pi 4 Model B display, an adapter board will be required.
 
 ##### Dual CSI-2 Display Connectors (22 Pin 0.5 mm Pitch Cable)
 
-Both CSI-2 interfaces (2-channel and 4-channel) are routed to separate 22-way 0.5&nbsp;mm pitch connectors. These connectors are the same as those on the CMIO board but differ from the Raspberry Pi 4 Model B. To use a Raspberry Pi 4 Model B camera, an adapter board is required.
+Both CSI-2 interfaces (2-channel and 4-channel) are routed to separate 22-way 0.5 mm pitch connectors. These connectors are the same as those on the CMIO board but differ from the Raspberry Pi 4 Model B. To use a Raspberry Pi 4 Model B camera, an adapter board is required.
 
 ##### Raspberry Pi HAT Connector
 
@@ -263,14 +244,14 @@ The J39 header can be optionally used to set some specific configurations:
 
 ##### CM4 IO Voltage Selection
 
-By default, the RAK7391 board sets the CM4 IO voltage to +3.3&nbsp;V through R11. To change the IO voltage to +1.8&nbsp;V, move R11 to the R12 position.
+By default, the RAK7391 board sets the CM4 IO voltage to +3.3 V through R11. To change the IO voltage to +1.8 V, move R11 to the R12 position.
 
 ##### I2C
 
 GPIO2 and GPIO3 are used for the I2C interface (i2c1) and are connected to onboard I2C devices as well as external I2C interfaces (WisBlock, Raspberry Pi HAT, mPCIe slots). If an external I2C device conflicts with the address of an onboard I2C device, the external I2C bus can be reassigned by making the following changes:  
 
-1. Move the 0&nbsp;Ω resistors from R718 and R719 to R716 and R717.  
-2. Increase the values of R720 and R721 to 4.7&nbsp;kΩ.  
+1. Move the 0 Ω resistors from R718 and R719 to R716 and R717.  
+2. Increase the values of R720 and R721 to 4.7 kΩ.  
 3. Remove R722 and R723.  
 
 After these modifications, external I2C devices will be controlled via i2c3 (GPIO4 and GPIO5), while internal devices (RTC, ADC, GPIO Expanders) will remain on i2c1.
@@ -335,17 +316,22 @@ The RAK7391 has three (3) mPCIe interfaces, which can connect different products
 
 | Socket   | Primary Use | Secondary Use                                                   | Compatible Modules                                                                                                                                          |
 |----------|-------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| mPCIe #1 | LoRaWAN     | Zigbee                                                          | RAK2247-USB/SPI, RAK2287-USB/SPI, RAK5146-USB/SPI<br />USB-based  Zigbee module (TBD)                                                                       |
-| mPCIe #2 | LoRaWAN     | Zigbee, 4G                                                      | RAK2247-USB/SPI, RAK2287-USB/SPI, RAK5146-USB/SPI, RAK8213-USB<br  />Quectel LTE EC25<br />USB-based Zigbee module (TBD)                                    |
-| mPCIe #3 | 4G          | WiFi6, GbE, IA, SATA (via PCIe)<br />Adapters to M.2 A+E boards | RAK8213-USB<br />Hailo-8, Google Coral TPU<br />IO Crest 4  SATA<br />I210AT GbE<br />MiniPCIe to M.2 Key-E adapters<br  />AX210 and AX211 (via an adapter) |
+| mPCIe #1 | LoRaWAN     | Zigbee                                                          | RAK2247-USB/SPI, RAK2287-USB/SPI, RAK5146-USB/SPI
+USB-based  Zigbee module (TBD)                                                                       |
+| mPCIe #2 | LoRaWAN     | Zigbee, 4G                                                      | RAK2247-USB/SPI, RAK2287-USB/SPI, RAK5146-USB/SPI, RAK8213-USB
+Quectel LTE EC25
+USB-based Zigbee module (TBD)                                    |
+| mPCIe #3 | 4G          | WiFi6, GbE, IA, SATA (via PCIe)
+Adapters to M.2 A+E boards | RAK8213-USB
+Hailo-8, Google Coral TPU
+IO Crest 4  SATA
+I210AT GbE
+MiniPCIe to M.2 Key-E adapters
+AX210 and AX211 (via an adapter) |
 
 The mPCIe interfaces schematic:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7391/datasheet/3.schematic-mpcie.png"
-  width="100%"
-  caption="mPCIe Schematic"
-/>
+> **Image:** mPCIe Schematic
 
   * SPI0.0 (`/dev/spidev0.0`) is available on slot #1.
   * SPI0.1 (`/dev/spidev0.1`) is available on slot #2.
@@ -374,7 +360,9 @@ The RAK7391 features an M.2 B-key interface that provides PCIe and USB 3.0 signa
 
 | Socket | Primary Use | Secondary Use | Compatible Modules                                                   |
 |--------|-------------|---------------|----------------------------------------------------------------------|
-| M.2    | NVMe Drive  | SATA 5G       | Any M.2 B-Key NVMe drive<br />Quectel RM510Q<br />JMB585-based  SATA |
+| M.2    | NVMe Drive  | SATA 5G       | Any M.2 B-Key NVMe drive
+Quectel RM510Q
+JMB585-based  SATA |
 
 ##### WisBlock IO Slots
 
@@ -382,27 +370,14 @@ The WisBlock IO interface is a standard, open interface defined by RAK. It is co
 
 #### Mechanical Characteristics
 
-The RAK7391 board uses a standard VIA Mini-ITX form factor. The board is 170&nbsp;mm x 170&nbsp;mm with four (4) support holes.
+The RAK7391 board uses a standard VIA Mini-ITX form factor. The board is 170 mm x 170 mm with four (4) support holes.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7391/datasheet/4.mechanical.png"
-  width="100%"
-  caption="Mechanical drawing"
-/>
-
+> **Image:** Mechanical drawing
 
 ### Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK7391/Certification/RAK7391_CE_Certification.pdf',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7391/Certification/RAK7391_FCC_Certification.pdf',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK7391/Certification/RAK7391_ISED_Certification.pdf',
-    },
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7391/Certification/RAK7391_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7391/Certification/RAK7391_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK7391/Certification/RAK7391_ISED_Certification.pdf
 
-<RkBottomNav/>

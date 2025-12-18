@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2011 WisLink Cellular BG96 Arduino Shield Datasheet
 
 ## Overview
@@ -49,33 +46,17 @@ RAK2011 can be used as a development platform in tandem with external microcontr
 
 **Figure 1** shows part identification on the top view of RAK2011 WisLink Cellular BG96 Arduino Shield.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/rak2011-top-view.svg"
-  width="70%"
-  caption="RAK2011 WisLink Cellular BG96 Arduino Shield Top View"
-/>
+> **Image:** RAK2011 WisLink Cellular BG96 Arduino Shield Top View
 
 The underside and dimension of the RAK2011 are shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/rak2011-bottom-view.svg"
-  width="60%"
-  caption="RAK2011 WisLink Cellular BG96 Arduino Shield Bottom View"
-/>
-
+> **Image:** RAK2011 WisLink Cellular BG96 Arduino Shield Bottom View
 
 #### Functional Diagram
 
 The block diagram in **Figure 3** shows the internal architecture and external interfaces.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/functional-diagram.svg"
-  width="100%"
-  caption="RAK2011 Functional Diagram"
-/>
-
+> **Image:** RAK2011 Functional Diagram
 
 ### Hardware
 
@@ -87,7 +68,7 @@ The RAK2011 is built around the Quectel BG96 LPWA IoT cellular module and provid
 
 - Micro-B USB
 - Micro SIM Card Slot
-- Arduino Headers (UART1, UART3, RESET, PWRKEY, STATUS, AP_READY, DTR, RI, PSM_IDC, W_DISABLE, 5&nbsp;V, 3.3&nbsp;V)
+- Arduino Headers (UART1, UART3, RESET, PWRKEY, STATUS, AP_READY, DTR, RI, PSM_IDC, W_DISABLE, 5 V, 3.3 V)
 - 2x4 PCM Voice Headers (I2C, I2S)
 - 2x3 Digital/Analog I/O Headers (ADC0, ADC1, GPIO0, GPIO1)
 - 1x4 Debug UART Header (UART2)
@@ -99,7 +80,7 @@ It has two push buttons to allow the user to power on/off and reset the board:
 
 It has two SMA antenna connectors:
 - Cellular (LTE/GSM) Antenna (3GPP Bands) – UART1
-- GPS Antenna (1575.42±1.023&nbsp;MHz) – UART3
+- GPS Antenna (1575.42±1.023 MHz) – UART3
 
 ##### Operating Modes
 
@@ -122,7 +103,6 @@ BG96 module may negotiate with the network, via non-access stratum signaling, th
 
 `AT+CFUN` command can set the BG96 module into a minimum functionality mode without removing the power supply. In this case, both RF function and (U)SIM card will be disabled.
 
-
 **5. Sleep Mode**
 
 In this mode, the current consumption of the BG96 module will be reduced to a lower level. During this mode, the BG96 module can still receive paging messages, SMS and TCP/UDP data from the network.
@@ -139,48 +119,33 @@ In this mode, the power management unit shuts down the power supply. The softwar
 
 A standard Micro-B USB compliant with the USB 2.0 standard specification is used to provide an interface to connect to a PC for control of BG96 cellular modem and firmware upgrade.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/micro-usb-interface.svg"
-  width="50%"
-  caption="Micro-USB Interface"
-/>
+> **Image:** Micro-USB Interface
 
 The Micro-B USB pin definition is shown below:
 
 | Pin | Description          |
 | --- | -------------------- |
-| 1   | USB_VBUS (+5&nbsp;V) |
+| 1   | USB_VBUS (+5 V) |
 | 2   | USB_DM               |
 | 3   | USB_DP               |
 | 4   | N/C                  |
 | 5   | GND                  |
 
-
 ##### USB Boot Jumper
 
 A standard two (2) pin USB Boot header (when closed) is used to force the RAK2011 to boot from USB port for performing a firmware upgrade.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/usb-boot-jumper.svg"
-  width="50%"
-  caption="USB Boot Jumper"
-/>
-
+> **Image:** USB Boot Jumper
 
 ##### PWRKEY Push Button
 
-PWRKEY push button is used to turn on/off the BG96 module. To turn on the BG96 module, push the PWRKEY button for at least 100&nbsp;ms. The STATUS pin from Arduino header will output HIGH. To turn off the BG96 module, push PWRKEY button for at least 650&nbsp;ms. STATUS pin from Arduino header will output LOW.
+PWRKEY push button is used to turn on/off the BG96 module. To turn on the BG96 module, push the PWRKEY button for at least 100 ms. The STATUS pin from Arduino header will output HIGH. To turn off the BG96 module, push PWRKEY button for at least 650 ms. STATUS pin from Arduino header will output LOW.
 
 ##### RESET Push Button
 
-The RESET push button is used to reset the BG96 module. To reset the BG96 module, push the RESET button between 150&nbsp;ms and 460&nbsp;ms.
+The RESET push button is used to reset the BG96 module. To reset the BG96 module, push the RESET button between 150 ms and 460 ms.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/pwrkey-reset-button.svg"
-  width="50%"
-  caption="PWRKEY and RESET Push Button"
-/>
+> **Image:** PWRKEY and RESET Push Button
 
 ##### LED Indicators
 
@@ -195,20 +160,13 @@ Three LEDs are used to indicate the operating status. Below are the functions of
 🔵 **Blue LED**
   - NETLIGHT: Indicates network activity status.
 
-
 #### Pin Definition
 
 ##### Arduino Header
 
 The mapping of Arduino headers on the RAK2011 WisLink Cellular BG96 Arduino Shield is shown in **Figure 7**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/arduino-headers.svg"
-  width="80%"
-  caption="Pin Configurations for the Arduino headers"
-/>
-
+> **Image:** Pin Configurations for the Arduino headers
 
 | Name      | Pin | I/O | Description                                 |
 | --------- | --- | --- | ------------------------------------------- |
@@ -225,259 +183,82 @@ The mapping of Arduino headers on the RAK2011 WisLink Cellular BG96 Arduino Shie
 | UART3_RXD | D11 | D0  | Transmit GPS data                           |
 | UART3_TXD | D12 | D1  | Receive GPS data                            |
 
+- UART1 interface supports 9600, 19200, 38400, 57600, 115200, 230400, 460800, and 921600 baud rates, and the default is 115200 bps. It is used for cellular (LTE/GSM) data transmission and AT command communication.
 
-- UART1 interface supports 9600, 19200, 38400, 57600, 115200, 230400, 460800, and 921600 baud rates, and the default is 115200&nbsp;bps. It is used for cellular (LTE/GSM) data transmission and AT command communication.
-
-- UART3 interface supports 115200&nbsp;bps baud rate. It is used for outputting GPS data and NEMA sentences.
+- UART3 interface supports 115200 bps baud rate. It is used for outputting GPS data and NEMA sentences.
 
 ##### PCM Voice Header
 
-A standard 2x4 (2.54&nbsp;mm) male header is used to provide one Pulse Code Modulation (PCM) digital interface and one I2C interface to the external CODEC extension board.
+A standard 2x4 (2.54 mm) male header is used to provide one Pulse Code Modulation (PCM) digital interface and one I2C interface to the external CODEC extension board.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/pcm-voice-header.svg"
-  width="50%"
-  caption="PCM Voice Header"
-/>
+> **Image:** PCM Voice Header
 
 PCM voice header pin definition is shown in the table below:
 
-
-<table>
-<thead>
-  <tr>
-    <th> Name </th>
-    <th> Pin </th>
-    <th> I/O </th>
-    <th> Description </th>
-    <th> Comments </th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>I2C_SCL</td>
-            <td>1</td>
-            <td>OD</td>
-            <td>I2C serial clock</td>
-            <td rowspan='2'> External pull-up resistor is required. 1.8&nbsp;V only. Keep this open if unused. </td>
-        </tr>
-        <tr>
-            <td>I2C_SDA</td>
-            <td>2</td>
-            <td>OD</td>
-            <td>I2C serial data</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>PCM_SYNC</td>
-            <td>3</td>
-            <td>DO</td>
-            <td>PCM frame sync output</td>
-            <td rowspan='4'> 1.8&nbsp;V power domain. Keep this open if unused. </td>
-        </tr>
-        <tr>
-            <td>PCM_CLK</td>
-            <td>4</td>
-            <td>DO</td>
-            <td>PCM clock output</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>PCM_IN</td>
-            <td>5</td>
-            <td>DI</td>
-            <td>PCM data input</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>PCM_OUT</td>
-            <td>6</td>
-            <td>DO</td>
-            <td>PCM data output</td>
-            <td> </td>
-        </tr>
-</tbody>
-</table>
+| Name | Pin | I/O | Description | Comments |  |
+| --- | --- | --- | --- | --- | --- |
+| I2C_SCL | 1 | OD | I2C serial clock | External pull-up resistor is required. 1.8 V only. Keep this open if unused. |  |
+| I2C_SDA | 2 | OD | I2C serial data | External pull-up resistor is required. 1.8 V only. Keep this open if unused. |  |
+| PCM_SYNC | 3 | DO | PCM frame sync output | 1.8 V power domain. Keep this open if unused. |  |
+| PCM_CLK | 4 | DO | PCM clock output | 1.8 V power domain. Keep this open if unused. |  |
+| PCM_IN | 5 | DI | PCM data input | 1.8 V power domain. Keep this open if unused. |  |
+| PCM_OUT | 6 | DO | PCM data output | 1.8 V power domain. Keep this open if unused. |  |
 
 The reference design for the external CODEC extension board is shown in **Figure 9**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/codec-extension.svg"
-  width="60%"
-  caption="External CODEC Extension Board"
-/>
-
-
+> **Image:** External CODEC Extension Board
 
 ##### Analog Input & Digital I/O Header
 
-A standard 2x3 (2.54&nbsp;mm) male header is used to provide two (2) analog input (ADC0 and ADC1) and two (2) digital input and output port pins (GPIO0 and GPIO1) to an optional external extension board for additional features that may utilize these analog Input and digital I/O port pins. The analog input and digital I/O header pin layout are in **Figure 10**.
+A standard 2x3 (2.54 mm) male header is used to provide two (2) analog input (ADC0 and ADC1) and two (2) digital input and output port pins (GPIO0 and GPIO1) to an optional external extension board for additional features that may utilize these analog Input and digital I/O port pins. The analog input and digital I/O header pin layout are in **Figure 10**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/analog-digital-header.svg"
-  width="50%"
-  caption="Analog Input & Digital I/O Header"
-/>
+> **Image:** Analog Input & Digital I/O Header
 
 The analog Input/Digital I/O header signal definition is shown in the table below:
 
-
-
-<table>
-<thead>
-  <tr>
-    <th> Name </th>
-    <th> Pin </th>
-    <th> I/O </th>
-    <th> Description </th>
-    <th> DC Characteristics </th>
-    <th> Comments </th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>GPIO0</td>
-            <td>1</td>
-            <td rowspan='2'>IO</td>
-            <td rowspan='2'> General Purpose Input/Output</td>
-            <td rowspan='2'> V<sub>OLmax</sub>=0.45&nbsp;V <br /> V<sub>OHmin</sub>=1.35&nbsp;V <br /> V<sub>ILmin</sub>=0.3&nbsp;V <br /> V<sub>ILmax</sub>=0.6&nbsp;V <br /> V<sub>IHmin</sub>=1.2&nbsp;V <br /> V<sub>IHmax</sub>=2.0&nbsp;V <br /> </td>
-            <td>1.8&nbsp;V power domain. Keep this open if unused.</td>
-        </tr>
-        <tr>
-            <td>GPIO1</td>
-            <td>2</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>ADC0</td>
-            <td>3</td>
-            <td rowspan='2'> AI </td>
-            <td rowspan='2'> General Purpose Analog to Digital Converter </td>
-            <td rowspan='2'> Voltage Range: 0.3&nbsp;V to 1.8&nbsp;V <br /> 15-bit resolution </td>
-            <td rowspan='2'> Keep this open if unused. </td>
-        </tr>
-        <tr>
-            <td>ADC1</td>
-            <td>4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-</tbody>
-</table>
+| Name | Pin | I/O | Description | DC Characteristics | Comments |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GPIO0 | 1 | IO | General Purpose Input/Output | VOLmax=0.45 VVOHmin=1.35 VVILmin=0.3 VVILmax=0.6 VVIHmin=1.2 VVIHmax=2.0 V | 1.8 V power domain. Keep this open if unused. |  |  |  |  |
+| GPIO1 | 2 | IO | General Purpose Input/Output | VOLmax=0.45 VVOHmin=1.35 VVILmin=0.3 VVILmax=0.6 VVIHmin=1.2 VVIHmax=2.0 V |  |  |  |  |  |
+| ADC0 | 3 | AI | General Purpose Analog to Digital Converter | Voltage Range: 0.3 V to 1.8 V15-bit resolution | Keep this open if unused. |  |  |  |  |
+| ADC1 | 4 | AI | General Purpose Analog to Digital Converter | Voltage Range: 0.3 V to 1.8 V15-bit resolution | Keep this open if unused. |  |  |  |  |
 
 ##### Debug Header
 
-A standard 1x4 (2.54&nbsp;mm) male header is used to provide a serial port (UART2) interface for debug and log output at 115200&nbsp;bps baud rate. The debug header pin definition is shown in **Figure 11**.
+A standard 1x4 (2.54 mm) male header is used to provide a serial port (UART2) interface for debug and log output at 115200 bps baud rate. The debug header pin definition is shown in **Figure 11**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/debug-header.svg"
-  width="50%"
-  caption="Debug Header"
-/>
+> **Image:** Debug Header
 
 The analog Input/Digital I/O header signal definition is shown in the table below:
 
-<table>
-<thead>
-  <tr>
-    <th> Name </th>
-    <th> Pin </th>
-    <th> I/O </th>
-    <th> Description </th>
-    <th> DC Characteristics </th>
-    <th> Comments </th>
-  </tr>
-</thead>
-<tbody>
-        <tr>
-            <td>DB_G_RXD</td>
-            <td>2</td>
-            <td>di</td>
-            <td> Receive Data</td>
-            <td> V<sub>ILmin</sub>=0.3&nbsp;V <br /> V<sub>ILmax</sub>=0.6&nbsp;V <br /> V<sub>IHmin</sub>=1.2&nbsp;V <br /> V<sub>IHmax</sub>=2.0&nbsp;V <br /> </td>
-            <td>1.8&nbsp;V power domain. Keep this open if unused.</td>
-        </tr>
-        <tr>
-            <td>DBG_TXD</td>
-            <td>3</td>
-            <td>DO</td>
-            <td>Transmit Data</td>
-            <td> V<sub>OLmmin</sub>=0&nbsp;V <br /> V<sub>OLmax</sub>=0.45&nbsp;V <br /> V<sub>OHmin</sub>=1.35&nbsp;V <br /> V<sub>OHmax</sub>=1.83&nbsp;V </td>
-            <td>1.8&nbsp;V power domain. Keep this open if unused.</td>
-        </tr>
-        <tr>
-            <td>ADC0</td>
-            <td>3</td>
-            <td rowspan='2'> AI </td>
-            <td rowspan='2'> General Purpose Analog to Digital Converter </td>
-            <td rowspan='2'> Voltage Range: 0.3&nbsp;V to 1.8&nbsp;V <br /> 15-bit resolution </td>
-            <td rowspan='2'> Keep this open if unused. </td>
-        </tr>
-        <tr>
-            <td>ADC1</td>
-            <td>4</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-</tbody>
-</table>
-
+| Name | Pin | I/O | Description | DC Characteristics | Comments |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| DB_G_RXD | 2 | di | Receive Data | VILmin=0.3 VVILmax=0.6 VVIHmin=1.2 VVIHmax=2.0 V | 1.8 V power domain. Keep this open if unused. |  |  |  |  |
+| DBG_TXD | 3 | DO | Transmit Data | VOLmmin=0 VVOLmax=0.45 VVOHmin=1.35 VVOHmax=1.83 V | 1.8 V power domain. Keep this open if unused. |  |  |  |  |
+| ADC0 | 3 | AI | General Purpose Analog to Digital Converter | Voltage Range: 0.3 V to 1.8 V15-bit resolution | Keep this open if unused. |  |  |  |  |
+| ADC1 | 4 | AI | General Purpose Analog to Digital Converter | Voltage Range: 0.3 V to 1.8 V15-bit resolution | Keep this open if unused. |  |  |  |  |
 
 #### Antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/lte-gnss-antenna.svg"
-  width="70%"
-  caption="RAK2011 LTE and GNSS Antenna"
-/>
-
-
+> **Image:** RAK2011 LTE and GNSS Antenna
 
 ##### Cellular (LTE/GSM)
 
 ###### Overview
 
-The cellular (LTE/GSM) antenna for the RAK2011 covers the working frequency band from 824&nbsp;MHz to 2690&nbsp;MHz.
+The cellular (LTE/GSM) antenna for the RAK2011 covers the working frequency band from 824 MHz to 2690 MHz.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/cellular-antenna.png"
-  width="50%"
-  caption="Cellular Antenna"
-/>
-
+> **Image:** Cellular Antenna
 
 ###### Antenna Dimension
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/cellular-antenna-dimension.svg"
-  width="60%"
-  caption="Cellular Antenna Dimension"
-/>
-
+> **Image:** Cellular Antenna Dimension
 
 ###### Antenna Parameter
 
 The Voltage Standard Wave Radio (VSWR) plot is shown in **Figure 15**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/cellular-antenna-parameter.png"
-  width="80%"
-  caption="Cellular (LTE/GSM) Antenna Parameter"
-/>
+> **Image:** Cellular (LTE/GSM) Antenna Parameter
 
 The VSWR data is shown in the table below:
 
@@ -493,47 +274,19 @@ The VSWR data is shown in the table below:
 
 The Smith plot is shown in **Figure 16**.
 
-
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/smith-plot.png"
-  width="80%"
-  caption="Smith Plot"
-/>
-
+> **Image:** Smith Plot
 
 ###### Radiation Pattern on H-Plane
 
-
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/h-plane.png"
-  width="80%"
-  caption="Radiation Pattern on H-Plane"
-/>
-
-
+> **Image:** Radiation Pattern on H-Plane
 
 ###### Radiation Pattern on E1-Plane
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/e1-plane.png"
-  width="80%"
-  caption="Radiation Pattern on E1-Plane"
-/>
-
+> **Image:** Radiation Pattern on E1-Plane
 
 ###### Radiation Pattern on E2-Plane
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/e2-plane.png"
-  width="80%"
-  caption="Radiation Pattern on E2-Plane"
-/>
-
-
+> **Image:** Radiation Pattern on E2-Plane
 
 ###### UGain and Efficiency Table
 
@@ -575,23 +328,11 @@ The Smith plot is shown in **Figure 16**.
 
 The GPS antenna for RAK2011 is shown in **Figure 20**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/gps-antenna.png"
-  width="50%"
-  caption="GPS Antenna"
-/>
-
+> **Image:** GPS Antenna
 
 ###### GPS Antenna Dimensions
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/gps-antenna-dimensions.svg"
-  width="70%"
-  caption="GPS Antenna Dimensions"
-/>
-
+> **Image:** GPS Antenna Dimensions
 
 ###### GPS Environmental Requirements
 
@@ -599,23 +340,21 @@ The antenna environmental requirements are listed in the table below:
 
 | Conditions | Temperature               | Humidity |
 | ---------- | ------------------------- | -------- |
-| Working    | -35&nbsp;°C ~ +80&nbsp;°C | 0% ~ 95% |
-| Storage    | -40&nbsp;°C ~ +85&nbsp;°C | 0% ~ 95% |
-
+| Working    | -35 °C ~ +80 °C | 0% ~ 95% |
+| Storage    | -40 °C ~ +85 °C | 0% ~ 95% |
 
 ###### GPS Antenna Parameter
 
 The GPS Antenna specifications and Post Environmental Tolerance (PET) are listed in the table below:
 
-
 | Item                                             | Specifications        | PET  |
 | ------------------------------------------------ | --------------------- | ---- |
 | Range of Receiving Frequency                     | 1575.42±1.1           | ±2.5 |
-| Center Frequency (MHz) w/ 30&nbsp;mm2 GND plane  | 1575.42               | ±3.0 |
-| Bandwidth (MHz) (Return Loss ≤ -10&nbsp;dB)      | ≥10                   | ±0.5 |
+| Center Frequency (MHz) w/ 30 mm2 GND plane  | 1575.42               | ±3.0 |
+| Bandwidth (MHz) (Return Loss ≤ -10 dB)      | ≥10                   | ±0.5 |
 | VSWR (in Center Frequency)                       | ≤2.0                  | ±0.5 |
-| Gain (Zenith) (dBi Typ) w/ 70&nbsp;mm2 GND Plane | 4.5                   | ±0.5 |
-| Axial Ratio (dB) w/ 70&nbsp;mm2 GND Plane        | 3.0                   | ±0.2 |
+| Gain (Zenith) (dBi Typ) w/ 70 mm2 GND Plane | 4.5                   | ±0.5 |
+| Axial Ratio (dB) w/ 70 mm2 GND Plane        | 3.0                   | ±0.2 |
 | Polarization                                     | Right-Handed Circular | -    |
 | Impedance (Ω)                                    | 50                    | -    |
 | Frequency/Temperature Coefficient (ppm/ºC)       | 0±10                  | -    |
@@ -624,26 +363,26 @@ Amplifier Specifications are listed in the table below:
 
 | Item              | Specifications   |
 | ----------------- | ---------------- |
-| Frequency Range   | 1575.42&nbsp;MHz |
-| Gain              | 27&nbsp;dB       |
-| VSWR              | ≤ 2.0&nbsp;V     |
-| Noise Coefficient | ≤ 2.0&nbsp;dBm   |
-| DC Voltage        | 3 ~ 5&nbsp;V     |
-| DC Current        | 5 ± 2&nbsp;mA    |
+| Frequency Range   | 1575.42 MHz |
+| Gain              | 27 dB       |
+| VSWR              | ≤ 2.0 V     |
+| Noise Coefficient | ≤ 2.0 dBm   |
+| DC Voltage        | 3 ~ 5 V     |
+| DC Current        | 5 ± 2 mA    |
 
 Environmental test performance specifications are listed below:
 
 | Item              | Normal Temp.     | High Temp.       | Low Temp.        |
 | ----------------- | ---------------- | ---------------- | ---------------- |
-| Amplifier Gain    | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 |
+| Amplifier Gain    | 27 dB ± 2.0 | 27 dB ± 2.0 | 27 dB ± 2.0 |
 | VSWR              | ≤ 2.0            | ≤ 2.0            | ≤ 2.0            |
 | Noise Coefficient | ≤ 2.0            | ≤ 2.0            | ≤ 2.0            |
 
 :::tip NOTE
 
-- **High Temperature Test**: Soak in temperature (85°&nbsp;C) and humidity (95%) chamber for 24-hour and return to normal temperature (at least for 1- hour) without visual shape change.
+- **High Temperature Test**: Soak in temperature (85° C) and humidity (95%) chamber for 24-hour and return to normal temperature (at least for 1- hour) without visual shape change.
 
-- **Low Temperature Test**: Soak in temperature (-40°&nbsp;C) chamber for 24-hour and return to normal temperature (at least for 1-hour) without visual shape change.
+- **Low Temperature Test**: Soak in temperature (-40° C) chamber for 24-hour and return to normal temperature (at least for 1-hour) without visual shape change.
 
 :::
 
@@ -670,60 +409,32 @@ The table below lists all the supported cellular (LTE/GSM) operating frequencies
 | B28          | 703 ~ 748      | 758 ~ 803     |
 | B39          | 1880 ~ 1920    | 1880 ~ 1920   |
 
-
 #### Electrical Characteristics
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/rak2011-schematic.png"
-  width="100%"
-  caption="RAK2011 Schematic Diagram"
-/>
+> **Image:** RAK2011 Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/power-schematic.png"
-  width="100%"
-  caption="RAK2011 Power Schematic"
-/>
+> **Image:** RAK2011 Power Schematic
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/bg96-module-schematic.png"
-  width="100%"
-  caption="BG96 Module Schematic"
-/>
+> **Image:** BG96 Module Schematic
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/usim-schematic.png"
-  width="100%"
-  caption="USIM Schematic"
-/>
+> **Image:** USIM Schematic
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/voltage-transform.png"
-  width="100%"
-  caption="Voltage Transform"
-/>
+> **Image:** Voltage Transform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/datasheet/usb-to-uart.png"
-  width="100%"
-  caption="USB to UART Schematic"
-/>
-
+> **Image:** USB to UART Schematic
 
 ##### Power Requirements
 
-The RAK2011 can be powered by +5&nbsp;V from an MCU baseboard via Arduino header (POWER) if used as an Arduino Shield. It can also be powered by +5&nbsp;V out of Micro-B USB if used as a standalone modem.
-
+The RAK2011 can be powered by +5 V from an MCU baseboard via Arduino header (POWER) if used as an Arduino Shield. It can also be powered by +5 V out of Micro-B USB if used as a standalone modem.
 
 | Parameter              | Min.       | Max.        |
 | ---------------------- | ---------- | ----------- |
-| Power Supply Voltage   | 3.7&nbsp;V | 5.5&nbsp;V  |
-| Current Consumption    | -          | 500&nbsp;mA |
-| Digital Input Voltage  | 0&nbsp;V   | IOREF       |
-| Digital Output Voltage | 0&nbsp;V   | IOREF       |
-
+| Power Supply Voltage   | 3.7 V | 5.5 V  |
+| Current Consumption    | -          | 500 mA |
+| Digital Input Voltage  | 0 V   | IOREF       |
+| Digital Output Voltage | 0 V   | IOREF       |
 
 #### Environmental Characteristics
 
@@ -731,14 +442,7 @@ The table below lists the operation and storage temperature requirements:
 
 | Parameter             | Min.        | Typical     | Max.        |
 | --------------------- | ----------- | ----------- | ----------- |
-| Operation Temp. Range | -35°&nbsp;C | +25°&nbsp;C | +75°&nbsp;C |
-| Extended Temp. Range  | -40°&nbsp;C | -           | +85°&nbsp;C |
-| Storage Temp. Range   | -40°&nbsp;C | -           | +90°&nbsp;C |
+| Operation Temp. Range | -35° C | +25° C | +75° C |
+| Extended Temp. Range  | -40° C | -           | +85° C |
+| Storage Temp. Range   | -40° C | -           | +90° C |
 
-
-
-
-
-
-
-<RkBottomNav/>

@@ -24,10 +24,6 @@ sidebar_label: Datasheet
 date: 2025-05-23
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK3312 WisBlock LoRaWAN Module Datasheet
 
 ## Overview
@@ -42,14 +38,14 @@ The module supports custom firmware development using the Arduino framework and 
 
 - Based on **Espressif ESP32-S3**
 	- Xtensa® 32-bit LX7 dual-core microprocessor
-	- 16&nbsp;MB Flash
-	- 512&nbsp;kB SRAM
-	- 512&nbsp;kB RAM
-	- 8&nbsp;MB PSRAM
-	- 16&nbsp;kB RTC SRAM
+	- 16 MB Flash
+	- 512 kB SRAM
+	- 512 kB RAM
+	- 8 MB PSRAM
+	- 16 kB RTC SRAM
 - LoRa transceiver **Semtech SX1262**
 	- LoRa and LoRaWAN support
-	- Frequency support from 863&nbsp;MHz to 928&nbsp;MHz
+	- Frequency support from 863 MHz to 928 MHz
 - Compliant with the **LoRaWAN 1.0.2** (LoRaWAN **BasicModem** support in preparation)
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -58,9 +54,9 @@ The module supports custom firmware development using the Arduino framework and 
 - WiFi support
 - Custom firmware using Arduino
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10&nbsp;km with optimized antenna
-- **Supply Voltage**: 3.0&nbsp;V\~3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C\~65°&nbsp;C
+- Long-range: greater than 10 km with optimized antenna
+- **Supply Voltage**: 3.0 V\~3.6 V
+- **Temperature range**: -40° C\~65° C
 
 ## Specifications
 
@@ -68,21 +64,13 @@ The module supports custom firmware development using the Arduino framework and 
 
 The overview covers the RAK3312 board overview and the mounting mechanics of the board into the base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/datasheet/rak3112-block-diagram.png"
-  width="100%"
-  caption="RAK3312 internal system block diagram"
-/>
+> **Image:** RAK3312 internal system block diagram
 
 #### Mounting Sketch
 
 The RAK3312 module is designed to work with the RAK19007 base board. **Figure 2** shows how a RAK3312 module should be mounted on top of the RAK19007.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/mounting-sketch.png"
-  width="50%"
-  caption="RAK3312 mounting sketch"
-/>
+> **Image:** RAK3312 mounting sketch
 
 ### Hardware
 
@@ -157,115 +145,77 @@ The RAK3312 WisBlock Core module supports various LoRaWAN bands, as listed in th
 - **RAK3312 (L)** for low-frequency regions
 - **RAK3312 (H)** for high-frequency regions
 
-<table>
-  <thead>
-    <tr>
-      <th>Module</th>
-      <th>Region</th>
-      <th>Frequency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan = "2">RAK3312 (L)</td>
-      <td>Europe</td>
-      <td>EU433</td>
-    </tr>
-    <tr>
-      <td>China</td>
-      <td>CN470</td>
-    </tr>
-      <tr>
-      <td rowSpan = "7">RAK3312 (H)</td>
-      <td>Europe</td>
-      <td>EU868</td>
-    </tr>
-    <tr>
-      <td>North America</td>
-      <td>US915</td>
-    </tr>
-    <tr>
-      <td>Australia</td>
-      <td>AU915</td>
-    </tr>
-    <tr>
-      <td>Korea</td>
-      <td>KR920</td>
-    </tr>
-    <tr>
-      <td>Asia</td>
-      <td>AS923-1/2/3/4</td>
-    </tr>
-    <tr>
-      <td>India</td>
-      <td>IN865</td>
-    </tr>
-    <tr>
-      <td>Russia</td>
-      <td>RU864</td>
-    </tr>
-  </tbody>
-</table>
+| Module | Region | Frequency |
+| --- | --- | --- |
+| RAK3312 (L) | Europe | EU433 |
+| RAK3312 (L) | China | CN470 |
+| RAK3312 (H) | Europe | EU868 |
+| RAK3312 (H) | North America | US915 |
+| RAK3312 (H) | Australia | AU915 |
+| RAK3312 (H) | Korea | KR920 |
+| RAK3312 (H) | Asia | AS923-1/2/3/4 |
+| RAK3312 (H) | India | IN865 |
+| RAK3312 (H) | Russia | RU864 |
 
-- **TX Power**: Transmitter output power is programmable up to +22&nbsp;dBm.
+- **TX Power**: Transmitter output power is programmable up to +22 dBm.
 
 - **RX Sensitivity**
-  - -124&nbsp;dBm for LoRa（BW = 125&nbsp;kHz, SF = 7 ）
-  - -121&nbsp;dBm for LoRa (BW = 250&nbsp;kHz, SF = 7)
-  - –137&nbsp;dBm for LoRa (BW = 125&nbsp;kHz, SF = 12)
-  - –134&nbsp;dBm for LoRa（BW = 250&nbsp;kHz, SF = 12）
+  - -124 dBm for LoRa（BW = 125 kHz, SF = 7 ）
+  - -121 dBm for LoRa (BW = 250 kHz, SF = 7)
+  - –137 dBm for LoRa (BW = 125 kHz, SF = 12)
+  - –134 dBm for LoRa（BW = 250 kHz, SF = 12）
 
 ##### WiFi
 
-- **Operating Frequencies**: 2412\~2484&nbsp;MHz
+- **Operating Frequencies**: 2412\~2484 MHz
 
 - **TX Power**
 
 | Rate                  | Value         |
 | --------------------- | ------------- |
-| 802.11b, 1&nbsp;Mbps  | 21.0&nbsp;dBm |
-| 802.11b, 11&nbsp;Mbps | 21.0&nbsp;dBm |
-| 802.11g, 6&nbsp;Mbps  | 20.5&nbsp;dBm |
-| 802.11g, 54&nbsp;Mbps | 19.0&nbsp;dBm |
-| 802.11n, HT20, MCS0   | 19.5&nbsp;dBm |
-| 802.11n, HT20, MCS7   | 18.5&nbsp;dBm |
-| 802.11n, HT40, MCS0   | 19.5&nbsp;dBm |
-| 802.11n, HT40, MCS7   | 18.0&nbsp;dBm |
+| 802.11b, 1 Mbps  | 21.0 dBm |
+| 802.11b, 11 Mbps | 21.0 dBm |
+| 802.11g, 6 Mbps  | 20.5 dBm |
+| 802.11g, 54 Mbps | 19.0 dBm |
+| 802.11n, HT20, MCS0   | 19.5 dBm |
+| 802.11n, HT20, MCS7   | 18.5 dBm |
+| 802.11n, HT40, MCS0   | 19.5 dBm |
+| 802.11n, HT40, MCS7   | 18.0 dBm |
 
 - **RX Sensitivity**
 
 | Rate                  | Value          |
 | --------------------- | -------------- |
-| 802.11b, 1&nbsp;Mbps  | –98.4&nbsp;dBm |
-| 802.11b, 11&nbsp;Mbps | -88.6&nbsp;dBm |
-| 802.11g, 6&nbsp;Mbps  | –93.2&nbsp;dBm |
-| 802.11g, 54&nbsp;Mbps | –76.5&nbsp;dBm |
-| 802.11n, HT20, MCS0   | –92.6&nbsp;dBm |
-| 802.11n, HT20, MCS7   | –74.2&nbsp;dBm |
-| 802.11n, HT40, MCS0   | –90.0&nbsp;dBm |
-| 802.11n, HT40, MCS7   | –71.4&nbsp;dBm |
+| 802.11b, 1 Mbps  | –98.4 dBm |
+| 802.11b, 11 Mbps | -88.6 dBm |
+| 802.11g, 6 Mbps  | –93.2 dBm |
+| 802.11g, 54 Mbps | –76.5 dBm |
+| 802.11n, HT20, MCS0   | –92.6 dBm |
+| 802.11n, HT20, MCS7   | –74.2 dBm |
+| 802.11n, HT40, MCS0   | –90.0 dBm |
+| 802.11n, HT40, MCS7   | –71.4 dBm |
 
 ##### Bluetooth
 
-- **Operating Frequencies**: 2402\~2480&nbsp;MHz
+- **Operating Frequencies**: 2402\~2480 MHz
 
 - **TX Power**
 
 | Rate                   | Value                                         |
 | ---------------------- | --------------------------------------------- |
-| 802.11b, 1&nbsp;Mbps   | Programmable from -24&nbsp;dBm to 20&nbsp;dBm |
-| 802.11b, 2&nbsp;Mbps   | Programmable from -24&nbsp;dBm to 20&nbsp;dBm |
-| 802.11g, 125&nbsp;kbps | Programmable from -24&nbsp;dBm to 20&nbsp;dBm |
-| 802.11g, 500&nbsp;Kbps | Programmable from -24&nbsp;dBm to 20&nbsp;dBm |
+| 802.11b, 1 Mbps   | Programmable from -24 dBm to 20 dBm |
+| 802.11b, 2 Mbps   | Programmable from -24 dBm to 20 dBm |
+| 802.11g, 125 kbps | Programmable from -24 dBm to 20 dBm |
+| 802.11g, 500 Kbps | Programmable from -24 dBm to 20 dBm |
 
 - **RX Sensitivity**
 
 | Rate                   | Value          |
 | ---------------------- | -------------- |
-| 802.11b, 1&nbsp;Mbps   | –97.5&nbsp;dBm |
-| 802.11b, 2&nbsp;Mbps   | –93.5&nbsp;dBm |
-| 802.11g, 125&nbsp;Kbps | -94.0&nbsp;dBm |
-| 802.11g, 250&nbsp;Kbps | -77.0&nbsp;dBm |
+| 802.11b, 1 Mbps   | –97.5 dBm |
+| 802.11b, 2 Mbps   | –93.5 dBm |
+| 802.11g, 125 Kbps | -94.0 dBm |
+| 802.11g, 250 Kbps | -77.0 dBm |
 
 #### Electrical Characteristics
 
@@ -277,25 +227,25 @@ The RAK3312 WisBlock Core module supports various LoRaWAN bands, as listed in th
 
 ##### Operating Current
 
-The current consumption measurements are taken with a 3.3&nbsp;V supply at an ambient temperature of 25°&nbsp;C.
+The current consumption measurements are taken with a 3.3 V supply at an ambient temperature of 25° C.
 
 | Work Mode |              Condition               | Peak Current | Unit  |
 | :-------: | :----------------------------------: | :----------: | :---: |
-|  WiFi TX  | 802.11b, 1&nbsp;Mbps, @ 21&nbsp;dBm  |     340      |  mA   |
-|           | 802.11g, 54&nbsp;Mbps, @ 19&nbsp;dBm |     291      |  mA   |
-|           | 802.11n, HT20, MCS7, @ 18.5&nbsp;dBm |     283      |  mA   |
-|           |  802.11n, HT40, MCS7, @ 18&nbsp;dBm  |     286      |  mA   |
+|  WiFi TX  | 802.11b, 1 Mbps, @ 21 dBm  |     340      |  mA   |
+|           | 802.11g, 54 Mbps, @ 19 dBm |     291      |  mA   |
+|           | 802.11n, HT20, MCS7, @ 18.5 dBm |     283      |  mA   |
+|           |  802.11n, HT40, MCS7, @ 18 dBm  |     286      |  mA   |
 |  WiFi RX  |          802.11b/g/n, HT20           |      88      |  mA   |
 |           |            802.11n, HT40             |      91      |  mA   |
-|  Lora TX  |   +22&nbsp;dBm @ 868\~915&nbsp;Mhz   |     140      |  mA   |
-|           |   +20&nbsp;dBm @ 868\~915&nbsp;Mhz   |    127.5     |  mA   |
-|           |   +17&nbsp;dBm @ 868\~915&nbsp;Mhz   |     118      |  mA   |
-|           |   +14&nbsp;dBm @ 868\~915&nbsp;Mhz   |     112      |  mA   |
-|  Lora RX  |          LoRa 125&nbsp;kHz           |    25.46     |  mA   |
+|  Lora TX  |   +22 dBm @ 868\~915 Mhz   |     140      |  mA   |
+|           |   +20 dBm @ 868\~915 Mhz   |    127.5     |  mA   |
+|           |   +17 dBm @ 868\~915 Mhz   |     118      |  mA   |
+|           |   +14 dBm @ 868\~915 Mhz   |     112      |  mA   |
+|  Lora RX  |          LoRa 125 kHz           |    25.46     |  mA   |
 
 ##### Sleep Current
 
-The current consumption measurements are taken with a 3.3&nbsp;V supply at 25°&nbsp;C of ambient temperature.
+The current consumption measurements are taken with a 3.3 V supply at 25° C of ambient temperature.
 
 |   Feature   |                              Condition                              | Maximum | Unit  |
 | :---------: | :-----------------------------------------------------------------: | :-----: | :---: |
@@ -306,11 +256,7 @@ The current consumption measurements are taken with a 3.3&nbsp;V supply at 25°&
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak3312/rak3312-schematic.svg"
-  width="100%"
-  caption="RAK3312 Schematic"
-/>
+> **Image:** RAK3312 Schematic
 
 **WisConnector**: The breakout module enables the RAK3312 stamp module's pinout to be accessed through the board-to-board WisConnector
 
@@ -322,31 +268,23 @@ The current consumption measurements are taken with a 3.3&nbsp;V supply at 25°&
 
 |        Feature        | Minimum | Typical | Maximum |   Unit   |
 | :-------------------: | :-----: | :-----: | :-----: | :------: |
-| Operating Temperature |   -40   |   25    |   85    | °&nbsp;C |
+| Operating Temperature |   -40   |   25    |   85    | ° C |
 
 ##### Storage Temperature
 
 |       Feature       | Minimum | Typical | Maximum |   Unit   |
 | :-----------------: | :-----: | :-----: | :-----: | :------: |
-| Storage Temperature |   -40   |    -    |   85    | °&nbsp;C |
+| Storage Temperature |   -40   |    -    |   85    | ° C |
 
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/board-dimensions.jpg"
-  width="35%"
-  caption="Mechanical Dimensions"
-/>
+> **Image:** Mechanical Dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/fxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 ### Firmware
 
@@ -354,4 +292,3 @@ The RAK3312 does not come with default firmware. You have to develop your applic
 
 For firmware development guide, refer to <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3312/quickstart/#software-setup" target="_blank">RAK3312 Quick Start Guide</a>
 
-<RkBottomNav/>

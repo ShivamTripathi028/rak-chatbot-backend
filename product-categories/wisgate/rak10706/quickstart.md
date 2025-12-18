@@ -14,9 +14,6 @@ sidebar_label: Quick Start Guide
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10706 Signal Meter for LoRa Quick Start Guide
 
 ## Prerequisites
@@ -44,14 +41,11 @@ Serial Terminal Application, for example <a href="https://freeware.the-meiers.or
 
 One of the advantages of the RAK10706 Signal Meter is that there is no backend installations required on LoRaWAN servers (e.g., Helium, TTN, Chirpstack) in LinkCheck Packet mode. It works with any LoRaWAN server, such as AWS IoT Core or Actility.
 
-The RAK10706 uses LinkCheckReq to gather information about the connection to the gateway(s). This helps monitor connectivity. With LinkCheck, the LoRaWAN server reports the number of gateways and the demodulation margin. The demodulation margin is calculated by the LoRaWAN server. It provides insights into the received signal quality. A higher margin indicates better signal quality.<br/>
+The RAK10706 uses LinkCheckReq to gather information about the connection to the gateway(s). This helps monitor connectivity. With LinkCheck, the LoRaWAN server reports the number of gateways and the demodulation margin. The demodulation margin is calculated by the LoRaWAN server. It provides insights into the received signal quality. A higher margin indicates better signal quality.
+
 Extract from the LoRaWAN 1.0.3 Specification:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/lorawan-linkcheck.png"
-  width="80%"
-  caption="LinkCheck explanation"
-/>
+> **Image:** LinkCheck explanation
 
 ## Typical Test Scenarios
 
@@ -82,11 +76,7 @@ This is a very basic test that only shows whether the device is in range from an
 
 The user interface of the RAK10706 Signal Meter for LoRa is via OLED display and one pushbutton at the side. There is also an external LoRA antenna port via RP-SMA connector and USB-C port for charging and configuration if connected to a PC.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/physical-interface.png"
-  width="40%"
-  caption="RAK10706 view"
-/>
+> **Image:** RAK10706 view
 
 :::tip NOTE
 You have to ensure that the LoRa antenna is attached before turning the device on.
@@ -94,11 +84,7 @@ You have to ensure that the LoRa antenna is attached before turning the device o
 
 1. To turn on the device, move the switch to the **ON** position (**ON** is marked with a circle above the switch).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/power-switch.png"
-  width="40%"
-  caption="RAK10706 switch to turn on and off"
-/>
+> **Image:** RAK10706 switch to turn on and off
 
 2. When the device initializes, it will show the initialization info on the screen.
 
@@ -106,19 +92,11 @@ You have to ensure that the LoRa antenna is attached before turning the device o
 If there is any initialization error, it will be shown. A properly working device should not have any errors shown.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706_boot.png"
-  width="35%"
-  caption="RAK10706 power up"
-/>
+> **Image:** RAK10706 power up
 
 3. After the successful boot-up, the main home screen will be shown. Take note, that there will be no data at the first start of the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/rak10706_home.png"
-  width="35%"
-  caption="RAK10706 power up successful"
-/>
+> **Image:** RAK10706 power up successful
 
 :::tip NOTE
 By default, the Signal Meter is in LoRaWAN LinkCheck test mode. Follow the steps below to register the device on a LoRaWAN server.
@@ -136,29 +114,17 @@ The Signal Meter is compatible with any network server. By default, the device o
 With WisToolBox connected, it will show the device as a RAK4630 module.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-connect.png"
-  width="100%"
-  caption="RAK10706 on WisToolBox"
-/>
+> **Image:** RAK10706 on WisToolBox
 
 2. Go to **Parameters** to retrieve the LoRaWAN credentials from **LoRaWAN keys, ID, EUI** dropdown.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-credentials.png"
-  width="100%"
-  caption="RAK10706 on WisToolBox"
-/>
+> **Image:** RAK10706 on WisToolBox
 
 3. Take note of the Application EUI, Application Key, and Device EUI. These are later required for registering the device on a LoRaWAN server.
 
 4. Open the **Global Settings** dropdown and set the LoRaWAN region you want to use with the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-region.png"
-  width="100%"
-  caption="RAK10706 on WisToolBox"
-/>
+> **Image:** RAK10706 on WisToolBox
 
 #### Device Configuration of RAK10706 via Serial Terminal Application
 
@@ -170,11 +136,7 @@ When using a Serial Terminal application like CoolTerm, connect the terminal to 
 
 3. Send the command `ATC+STATUS=?` to get the **DevEUI**, **AppEUI** and **AppKey** for later use.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/coolterm-credentials.png"
-  width="100%"
-  caption="RAK10706 on Serial Terminal Application"
-/>
+> **Image:** RAK10706 on Serial Terminal Application
 
 #### LoRaWAN Server Configuration for RAK10706 Signal Meter
 
@@ -183,8 +145,6 @@ You can check each guide on how to use the RAK10706 Signal Meter for LoRa in the
 - [The Things Network](#rak10706-signal-meter-guide-for-the-things-network)
 - [Chirpstack](#rak10706-signal-meter-guide-for-chirpstack)
 - [Loriot](#rak10706-signal-meter-guide-for-loriot)
-
-
 
 :::tip NOTE
 - For other network servers the procedure is very similar.
@@ -197,39 +157,21 @@ This section shows how to use the RAK10706 Signal Meter for LoRa with The Things
 
 1. Log in to TTNv3 by visiting the TTNv3 [site](https://console.cloud.thethings.network/) and selecting your cluster. If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/image001.png"
-  width="100%"
-  caption="The Things Stack home page"
-/>
+> **Image:** The Things Stack home page
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/image002.png"
-  width="100%"
-  caption="Console page after a successful login"
-/>
-
+> **Image:** Console page after a successful login
 
 :::tip NOTE
 To connect RAK10706 Signal Meter to TTNv3, you should already have connected a gateway in range to TTNv3. Or, you have to be sure that you are in the range of a public gateway.
 :::
 
-
 2. After logging in to the platform, create an application by clicking **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-1.png"
-  width="100%"
-  caption="Create an application"
-/>
+> **Image:** Create an application
 
 3. To register an application, input specific details and necessary information about your application, and then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-2.png"
-  width="100%"
-  caption="Creating an Application"
-/>
+> **Image:** Creating an Application
 
 :::tip NOTE
 If you had no error during the previous step, you should now be on the application console page.
@@ -237,51 +179,27 @@ If you had no error during the previous step, you should now be on the applicati
 
 4. Next is to add end-devices to your TTN application, then click **+Add end device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-3.png"
-  width="100%"
-  caption="Add end-devices to your TTN application"
-/>
+> **Image:** Add end-devices to your TTN application
 
 5. Register the RAK10706 Signal Meter by clicking the **Manually** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-4.png"
-  width="100%"
-  caption="Adding end devices manually"
-/>
+> **Image:** Adding end devices manually
 
 6. Choose the following configurations in adding the end devices. You must choose the correct Frequency Plan, and the LoRaWAN version must be 1.0.3.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-5.png"
-  width="100%"
-  caption="Configurations for adding end devices"
-/>
+> **Image:** Configurations for adding end devices
 
 7. Click **Show advanced activation, LoRaWAN class, and cluster settings**, then select **Over the air action (OTAA)**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-6.png"
-  width="100%"
-  caption="OTAA settings"
-/>
+> **Image:** OTAA settings
 
 8. Then input the LoRaWAN OTAA parameters you retrieved before from the device. Finally, click **Register End Device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-7.png"
-  width="100%"
-  caption="Registering the end device"
-/>
+> **Image:** Registering the end device
 
 9. You should now be able to see the device on the TTN console after you fully register your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/rak4631-ttnv3-8.png"
-  width="100%"
-  caption="OTAA device successfully registered to TTN"
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 10. After adding the application and device, you should see the join request/accept, uplinks, and downlinks in The Things Stack console.
 
@@ -291,47 +209,23 @@ To use Chirpstack for RAK10706, you must have a working installation of the Chir
 
 1. To start with Chirpstack, you must create a device profile for your RAK10706 Signal Meter device. Select **LoRaWAN MAC version 1.0.4**, the version supported by the RAK10706 Signal Meter.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/3_device_profile.png"
-  width="95%"
-  caption="Creating Device Profile in Chirpstack"
-/>
+> **Image:** Creating Device Profile in Chirpstack
 
 2. Next, go to the **JOIN (OTAA / ABP)** tab, and enable **Device supports OTAA**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/4_device_profile.png"
-  width="95%"
-  caption="Enable support for OTAA"
-/>
+> **Image:** Enable support for OTAA
 
 3. After creating the device profile, you can now create an application and add the RAK10706 device. And then attached the `Device-profile` you created. Use the DevEUI and AppEUI you have retrieved from the RAK10706 before.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/6_create_application.png"
-  width="95%"
-  caption="Create application in Chirpstack"
-/>
+> **Image:** Create application in Chirpstack
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/7_create_device.png"
-  width="95%"
-  caption="Create device in Chirpstack."
-/>
+> **Image:** Create device in Chirpstack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/8_create_device_appkey.png"
-  width="95%"
-  caption="Device APPKEY"
-/>
+> **Image:** Device APPKEY
 
 5. You also need to secure that you have a Gateway registered in Chirpstack and with the correct Network Server profile.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/9_gateway.png"
-  width="95%"
-  caption="Gateways registered in Chripstack"
-/>
+> **Image:** Gateways registered in Chripstack
 
 #### RAK10706 Signal Meter Guide for LORIOT
 
@@ -347,19 +241,11 @@ This section provides a step-by-step guide for performing a field mapping test u
 
 1. Forward a gateway to LORIOT, which will be the LNS (LoRa Network Server) for this use case. To register the gateway to LORIOT, you will need the gateway’s MAC and EUI, which can be found on the [WisGateOS 2 Overview page](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/).
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/1. wisgate edges web ui.png"
-width="100%"
-caption="WisGate Edges web UI"
-/>
+> **Image:** WisGate Edges web UI
 
 2. Go to your LORIOT profile. From the menu on the left, navigate through **Networks** > **your_network** > **+Add Gateway**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/2. loriot console.png"
-width="100%"
-caption="LORIOT console"
-/>
+> **Image:** LORIOT console
 
 :::tip NOTE
 The LORIOT platform provides you with a **Sample Network** at the point of your profile creation. You can use it for free. If you wish to create a new one, or delete the provided one, you will need a paid plan to continue.
@@ -367,42 +253,25 @@ The LORIOT platform provides you with a **Sample Network** at the point of your 
 
 3. For the base platform, select **Basics Station Semtech**. You will be asked to provide eth0 MAC address and EUI, which you obtained in **step 1**. After filling in these values, press the **Register Basics Station Semtech gateway** at the bottom of the page.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/3. registering the gateway to loriot.png"
-width="100%"
-caption="Registering The Gateway To LORIOT"
-/>
+> **Image:** Registering The Gateway To LORIOT
 
 4. The last thing you need to do to connect your gateway with LORIOT LNS is to provide the Basics Station configuration to the gateway. Navigate to **LoRa** > **Configuration**, click **Basics station**, and then complete the **Basic Station server setup**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/4. gateway configuration page.png"
-width="100%"
-caption="Gateway Configuration Page"
-/>
+> **Image:** Gateway Configuration Page
 
 You can find the Trust (CA Certificate), Server URL, and Server port in LORIOT under the **Gateway** > **Certificate**. Use the configuration provided by LORIOT, as it may differ based on your region.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/5. certificate.png"
-width="100%"
-caption="Certificate"
-/>
+> **Image:** Certificate
 
 :::tip NOTE
 If the steps are followed correctly, the gateway should show a **Connected** status.
 :::
 
-
 ##### Adding the Device to LORIOT
 
 1. Add the device to LORIOT. In the LORIOT platform, navigate to **Applications** > **your_application** and use the **Enroll Device** utility from the menu on the left. Fill out your Device EUI, Join (APP) EUI, and Application Key.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/6. adding the device to the loriot platform.png"
-width="100%"
-caption="Adding The Device To The LORIOT Platform"
-/>
+> **Image:** Adding The Device To The LORIOT Platform
 
 :::tip NOTE
 The LORIOT platform provides you with a **Sample Application** at the point of your profile creation. You can use it for free. If you wish to create a new one or delete the provided one, you will need a paid plan to continue.
@@ -414,90 +283,32 @@ The LORIOT platform provides you with a **Sample Application** at the point of y
 
 The button on the side of the RAK10706 has different functions, depending on the status of the device.
 
-- <b>Inactive UI Settings</b>
+- **Inactive UI Settings**
 
 Generic function of the button if the Settings UI is not active
 
-<table>
-  <tbody>
-    <tr>
-      <td>Long Press</td>
-      <td>switch off / on the display for power savings</td>
-    </tr>
-    <tr>
-      <td>Single click</td>
-      <td>no function</td>
-    </tr>
-    <tr>
-      <td>Double click</td>
-      <td>enter the Settings UI (stops the testing mode, no more test packets are sent and received packets are ignored)</td>
-    </tr>
-    <tr>
-      <td>3 clicks</td>
-      <td>Force a downlink packet to be sent</td>
-    </tr>
-    <tr>
-      <td>4 clicks</td>
-      <td>Force multiple downlink packets with DR sweep. Sending starts with the lowest possible data rate and increases the data rate with each packet until the highest possible data rate has been reached.</td>
-    </tr>
-    <tr>
-      <td>5 clicks</td>
-      <td>no function (to avoid accidental reset of device)</td>
-    </tr>
-    <tr>
-      <td>6 clicks</td>
-      <td>Reset the device</td>
-    </tr>
-    <tr>
-      <td>7 clicks</td>
-      <td>Enter Bootloader Mode for firmware upgrades</td>
-    </tr>
-  </tbody>
-</table>
+| Long Press | switch off / on the display for power savings |
+| --- | --- |
+| Single click | no function |
+| Double click | enter the Settings UI (stops the testing mode, no more test packets are sent and received packets are ignored) |
+| 3 clicks | Force a downlink packet to be sent |
+| 4 clicks | Force multiple downlink packets with DR sweep. Sending starts with the lowest possible data rate and increases the data rate with each packet until the highest possible data rate has been reached. |
+| 5 clicks | no function (to avoid accidental reset of device) |
+| 6 clicks | Reset the device |
+| 7 clicks | Enter Bootloader Mode for firmware upgrades |
 
-- <b>Active UI Settings</b>
+- **Active UI Settings**
 
 When the UI is active, the button change to different functions.
 
-<table>
-  <tbody>
-    <tr>
-      <td>Single click</td>
-      <td>go up one level in the UI. If the top level is reached, the UI will be closed, and if required, changes are saved on the device.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Double click</td>
-      <td>change or select the second menu item.</td>
-      <td>select the next item from a list of options</td>
-    </tr>
-    <tr>
-      <td>3 clicks</td>
-      <td>change or select the third menu item.</td>
-      <td>select the previous item from a list of options</td>
-    </tr>
-    <tr>
-      <td>4 clicks</td>
-      <td>change or select the forth menu item.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>5 clicks</td>
-      <td>change or select the fifth menu item.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>6 clicks</td>
-      <td>change or select the sixth menu item.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>7 clicks</td>
-      <td>change or select the seventh menu item.</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+| Single click | go up one level in the UI. If the top level is reached, the UI will be closed, and if required, changes are saved on the device. |  |
+| --- | --- | --- |
+| Double click | change or select the second menu item. | select the next item from a list of options |
+| 3 clicks | change or select the third menu item. | select the previous item from a list of options |
+| 4 clicks | change or select the forth menu item. |  |
+| 5 clicks | change or select the fifth menu item. |  |
+| 6 clicks | change or select the sixth menu item. |  |
+| 7 clicks | change or select the seventh menu item. |  |
 
 #### Change Settings On-the-Fly
 
@@ -517,11 +328,7 @@ Overview of all settings levels:
 - (4) Change test mode (LoRaWAN, LoRa P2P, Field Tester and Field Tester V2)
 - (5) Change LoRa P2P or LoRaWAN settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-top.png"
-  width="25%"
-  caption="Top Level"
-/>
+> **Image:** Top Level
 
 :::tip NOTE
 The device may reset when leaving the settings if the test mode has been changed.
@@ -531,11 +338,7 @@ The device may reset when leaving the settings if the test mode has been changed
 
 - Current test settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-top-info.png"
-  width="25%"
-  caption="Current test settings"
-/>
+> **Image:** Current test settings
 
 ##### Device Settings
 
@@ -545,23 +348,14 @@ The device may reset when leaving the settings if the test mode has been changed
 - (4) Enable/Disable display saver (toggle)
   - Display Saver On turns off the display after 1 minute. The display can be reactivated with a single button click.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-dev-setting-top.png"
-  width="25%"
-  caption="Device settings"
-/>
-
+> **Image:** Device settings
 
 ###### Send Interval
 
 - (2) 10 seconds more
 - (3) 10 seconds less
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-dev-setting-interval.png"
-  width="25%"
-  caption="Send interval"
-/>
+> **Image:** Send interval
 
 ##### Test Mode
 
@@ -570,11 +364,7 @@ The device may reset when leaving the settings if the test mode has been changed
 - (4) Field Tester compatible test mode. Has limited functionality and requires back-end. For details, see [RAK10701 Field Tester Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak10701-l/quickstart/).
 - (5) Field Tester Plus compatible test mode. Has limited functionality and requires back-end. For details, see [RAK10701 Field Tester Plus Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/quickstart/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-mode-top.png"
-  width="25%"
-  caption="Test Mode"
-/>
+> **Image:** Test Mode
 
 ##### LoRaWAN Setting for LoRaWAN Test Modes
 
@@ -583,54 +373,34 @@ The device may reset when leaving the settings if the test mode has been changed
 - (4) Change TX power
 - (5) Change LoRaWAN region
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lorawan-top.png"
-  width="25%"
-  caption="LoRaWAN settings"
-/>
+> **Image:** LoRaWAN settings
 
 ###### ADR
 
 - (2) ADR on/off (toggle)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lorawan-adr.png"
-  width="25%"
-  caption="ADR settings"
-/>
+> **Image:** ADR settings
 
 ###### DR
 
 - (2) Select next higher data rate
 - (3) Select next lower data rate
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lorawan-dr.png"
-  width="25%"
-  caption="DR settings"
-/>
+> **Image:** DR settings
 
 ###### TX
 
 - (2) Select next lower TX power
 - (3) Select next higher TX power
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lorawan-tx.png"
-  width="25%"
-  caption="DR settings"
-/>
+> **Image:** DR settings
 
 ###### Region
 
 - (2) Select next region
 - (3) Select previous
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lorawan-region.png"
-  width="25%"
-  caption="LoRaWAN region selection"
-/>
+> **Image:** LoRaWAN region selection
 
 ##### LoRa P2P Setting for LoRa P2P Test Modes
 
@@ -640,62 +410,38 @@ The device may reset when leaving the settings if the test mode has been changed
 - (5) Change coding rate
 - (6) Change TX power
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lora-top.png"
-  width="25%"
-  caption="LoRa P2P settings"
-/>
+> **Image:** LoRa P2P settings
 
 ###### Send Frequency
 
-- (2) 0.1&nbsp;MHz up
-- (3) 0.1&nbsp;MHz down
+- (2) 0.1 MHz up
+- (3) 0.1 MHz down
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lora-freq.png"
-  width="25%"
-  caption="Send frequency"
-/>
+> **Image:** Send frequency
 
 ###### Spreading Factor
 - (2) Select next higher SF
 - (3) Select next lower SF
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lora-sf.png"
-  width="25%"
-  caption="SF settings"
-/>
+> **Image:** SF settings
 
 ###### Bandwidth
 - (2) Select next higher BW
 - (3) Select next lower BW
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lora-bw.png"
-  width="25%"
-  caption="BW settings"
-/>
+> **Image:** BW settings
 
 ###### Coding Rate
 - (2) Select next higher CR
 - (3) Select next lower CR
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lora-cr.png"
-  width="25%"
-  caption="CR settings"
-/>
+> **Image:** CR settings
 
 ###### TX Power
 - (2) Select next higher TX power
 - (3) Select next lower TX power
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/ui-lora-tx.png"
-  width="25%"
-  caption="TX power settings"
-/>
+> **Image:** TX power settings
 
 ### Custom AT Commands
 
@@ -720,35 +466,13 @@ The device might reboot after this command, if it was not already in P2P mode.
 
 Next, the LoRa P2P parameters need to be set up. In this example, the device is being set to the following:
 
-<table>
-  <tbody>
-    <tr>
-      <td>Frequency</td>
-      <td>916100000&nbsp;Hz</td>
-    </tr>
-    <tr>
-      <td>Bandwidth</td>
-      <td>125&nbsp;kHz</td>
-    </tr>
-    <tr>
-      <td>Spreading Factor</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>Coding Rate</td>
-      <td>45387</td>
-    </tr>
-    <tr>
-      <td>Preamble Length</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>TX power</td>
-      <td>5&nbsp;dBm</td>
-    </tr>
-  </tbody>
-</table>
-
+| Frequency | 916100000 Hz |
+| --- | --- |
+| Bandwidth | 125 kHz |
+| Spreading Factor | 7 |
+| Coding Rate | 45387 |
+| Preamble Length | 8 |
+| TX power | 5 dBm |
 
 ```
 AT+PRECV=0
@@ -847,11 +571,7 @@ If the setup of all devices is the same and a packet is received, the display wi
 - RSSI
 - SNR
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/lora-p2p-rx.png"
-  width="35%"
-  caption="LoRa P2P RX"
-/>
+> **Image:** LoRa P2P RX
 
 :::tip NOTE
 An uplink can be manually triggered by pushing the button three times.
@@ -859,11 +579,7 @@ An uplink can be manually triggered by pushing the button three times.
 
 After a packet is sent, the display shown in **Figure 49** will appear.:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/lora-p2p-tx.png"
-  width="35%"
-  caption="LoRa P2P RX"
-/>
+> **Image:** LoRa P2P RX
 
 #### LoRaWAN LinkCheck
 
@@ -875,12 +591,7 @@ After the device has joined the network, it will send confirmed packets with Lin
 - Number of sent and lost packets
 - RSSI and SNR of the received packet
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/lpw-linkcheck-ok.png"
-  width="35%"
-  caption="LoRaWAN LinkCheckAns"
-/>
+> **Image:** LoRaWAN LinkCheckAns
 
 If the device is out of range of the gateways (after having previously joined), it will show an error message if the LoRaWAN server did respond to the LinkCheck request:
 - Linkcheck result
@@ -888,11 +599,7 @@ If the device is out of range of the gateways (after having previously joined), 
 - Error value
 - DR of the sent packet
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/lpw-linkcheck-nok.png"
-  width="35%"
-  caption="LoRaWAN no LinkCheckAns"
-/>
+> **Image:** LoRaWAN no LinkCheckAns
 
 :::tip NOTE
 - An uplink can be manually triggered by pushing the button three times.
@@ -908,35 +615,19 @@ After the device has joined the network, it will send confirmed packets with loc
 - Min and Max calculated distance between the tester and the gateways
 - Number of sent packets and number of lost packets
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/fieldtester-ok.png"
-  width="35%"
-  caption="Fieldtester display"
-/>
+> **Image:** Fieldtester display
 
 Before sending an uplink packet, the tester will try to acquire a location.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/fieldtester-get-location.png"
-  width="35%"
-  caption="Fieldtester location acquisition"
-/>
+> **Image:** Fieldtester location acquisition
 
 If a location fix can be acquired, an uplink packet will be sent, followed by waiting for the downlink packet from the backend server. The display's headline will show an _**O**_ to indicate that a location was acquired.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/fieldtester-ok.png"
-  width="35%"
-  caption="Fieldtester location fix"
-/>
+> **Image:** Fieldtester location fix
 
 If no location fix can be acquired, an error will be displayed and no packet will be sent. The display's headline will show an _**X**_ to indicate that no location was acquired.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/fieldtester-no-location.png"
-  width="35%"
-  caption="Fieldtester location failure"
-/>
+> **Image:** Fieldtester location failure
 
 :::tip NOTE
 - An uplink can be manually triggered by pushing the button three times.
@@ -972,67 +663,18 @@ When in Linkcheck mode for LoRaWAN, the log file has the following format:
 
 `time;Mode;Gw;RX RSSI;RX SNR;Demod;TX DR;Lost`
 
-<table>
-  <thead>
-    <tr>
-      <th>PARAMETER</th>
-      <th>DECSRIPTION</th>
-      <th>VALUES</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`time`</td>
-      <td>Time stamp (available if LNS has provided the time or if a RTC module is attached)</td>
-      <td>2024-10-07 14:35:204</td>
-    </tr>
-    <tr>
-      <td>`Mode`</td>
-      <td>0 for LinkCheck mode</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <td>`Gw`</td>
-      <td>Number of gateways</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>`Lat`</td>
-      <td>Latitude (if location is active and location fix)</td>
-      <td>14.521355</td>
-    </tr>
-    <tr>
-      <td>`Lng`</td>
-      <td>Longitude (if location is active and location fix)</td>
-      <td>121.10688</td>
-    </tr>
-    <tr>
-      <td>`RX RSSI`</td>
-      <td>RSSI of downlink</td>
-      <td>-91</td>
-    </tr>
-    <tr>
-      <td>`RX SNR`</td>
-      <td>SNR of downlink</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <td>`Demod`</td>
-      <td>Demodulation value</td>
-      <td>29</td>
-    </tr>
-    <tr>
-      <td>`TX DR`</td>
-      <td>TX datarate</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>`Lost`</td>
-      <td>Number of lost packets</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
+| PARAMETER | DECSRIPTION | VALUES |
+| --- | --- | --- |
+| `time` | Time stamp (available if LNS has provided the time or if a RTC module is attached) | 2024-10-07 14:35:204 |
+| `Mode` | 0 for LinkCheck mode | 0 |
+| `Gw` | Number of gateways | 1 |
+| `Lat` | Latitude (if location is active and location fix) | 14.521355 |
+| `Lng` | Longitude (if location is active and location fix) | 121.10688 |
+| `RX RSSI` | RSSI of downlink | -91 |
+| `RX SNR` | SNR of downlink | 8 |
+| `Demod` | Demodulation value | 29 |
+| `TX DR` | TX datarate | 3 |
+| `Lost` | Number of lost packets | 0 |
 
 ----
 
@@ -1042,77 +684,21 @@ When in FieldTester mode for LoRaWAN, the log file has the following format:
 
 `time;Mode;Gw;Lat;Lng;min RSSI;max RSSI;RX RSSI;RX SNR;min Dist;max Dist;TX DR`
 
-<table>
-  <thead>
-    <tr>
-      <th>PARAMETER</th>
-      <th>DECSRIPTION</th>
-      <th>VALUES</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`time`</td>
-      <td>Time stamp (available if LNS has provided the time or if a RTC module is attached)</td>
-      <td>2024-10-07 14:39:00</td>
-    </tr>
-    <tr>
-      <td>`Mode`</td>
-      <td>2 for FieldTester mode</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <td>`Gw`</td>
-      <td>Number of gateways</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>`Lat`</td>
-      <td>Latitude (can be 0.0 if no location fix, e.g. indoor testing)</td>
-      <td>14.521355</td>
-    </tr>
-    <tr>
-      <td>`Lng`</td>
-      <td>Longitude (can be 0.0 if no location fix, e.g. indoor testing)</td>
-      <td>121.10688</td>
-    </tr>
-    <tr>
-      <td>`min RSSI`</td>
-      <td>Minimum RSSI seen by gateways</td>
-      <td>-50</td>
-    </tr>
-    <tr>
-      <td>`max RSSI`</td>
-      <td>Maximum RSSI seen by gateways</td>
-      <td>-50</td>
-    </tr>
-    <tr>
-      <td>`RX RSSI`</td>
-      <td>RSSI of downlink</td>
-      <td>-59</td>
-    </tr>
-    <tr>
-      <td>`RX SNR`</td>
-      <td>SNR of downlink</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <td>`min Dist`</td>
-      <td>Minimum distance to gateway(s)</td>
-      <td>250</td>
-    </tr>
-    <tr>
-      <td>`max Dist`</td>
-      <td>Maximum distance to gateway(s)</td>
-      <td>250</td>
-    </tr>
-    <tr>
-      <td>`TX DR`</td>
-      <td>TX datarate</td>
-      <td>5</td>
-    </tr>
-  </tbody>
-</table>
+| PARAMETER | DECSRIPTION | VALUES |
+| --- | --- | --- |
+| `time` | Time stamp (available if LNS has provided the time or if a RTC module is attached) | 2024-10-07 14:39:00 |
+| `Mode` | 2 for FieldTester mode | 2 |
+| `Gw` | Number of gateways | 1 |
+| `Lat` | Latitude (can be 0.0 if no location fix, e.g. indoor testing) | 14.521355 |
+| `Lng` | Longitude (can be 0.0 if no location fix, e.g. indoor testing) | 121.10688 |
+| `min RSSI` | Minimum RSSI seen by gateways | -50 |
+| `max RSSI` | Maximum RSSI seen by gateways | -50 |
+| `RX RSSI` | RSSI of downlink | -59 |
+| `RX SNR` | SNR of downlink | 7 |
+| `min Dist` | Minimum distance to gateway(s) | 250 |
+| `max Dist` | Maximum distance to gateway(s) | 250 |
+| `TX DR` | TX datarate | 5 |
+
 ----
 
 #### P2P Mode Log Format
@@ -1127,47 +713,14 @@ When in Linkcheck mode for LoRaWAN, the log file has the following format:
 
 `time;Mode;RX RSSI;RX SNR`
 
-<table>
-  <thead>
-    <tr>
-      <th>PARAMETER</th>
-      <th>DECSRIPTION</th>
-      <th>VALUES</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>`time`</td>
-      <td>Time stamp (available if LNS has provided the time or if a RTC module is attached)</td>
-      <td>2024-10-07 14:51:21</td>
-    </tr>
-    <tr>
-      <td>`Mode`</td>
-      <td>1 for LinkCheck mode</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <td>`Lat`</td>
-      <td>Latitude (if location is active and location fix)</td>
-      <td>14.521355</td>
-    </tr>
-    <tr>
-      <td>`Lng`</td>
-      <td>Longitude (if location is active and location fix)</td>
-      <td>121.10688</td>
-    </tr>
-    <tr>
-      <td>`RX RSSI`</td>
-      <td>RSSI of downlink</td>
-      <td>-38</td>
-    </tr>
-    <tr>
-      <td>`RX SNR`</td>
-      <td>SNR of downlink</td>
-      <td>12</td>
-    </tr>
-  </tbody>
-</table>
+| PARAMETER | DECSRIPTION | VALUES |
+| --- | --- | --- |
+| `time` | Time stamp (available if LNS has provided the time or if a RTC module is attached) | 2024-10-07 14:51:21 |
+| `Mode` | 1 for LinkCheck mode | 1 |
+| `Lat` | Latitude (if location is active and location fix) | 14.521355 |
+| `Lng` | Longitude (if location is active and location fix) | 121.10688 |
+| `RX RSSI` | RSSI of downlink | -38 |
+| `RX SNR` | SNR of downlink | 12 |
 
 ### Miscellaneous
 
@@ -1177,40 +730,19 @@ It is recommended to update to the latest version of the firmware. To do this, d
 
 1. Drag the downloaded firmware to the WisToolBox custom firmware section.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701/quickstart/wistoolbox-firmware.png"
-  width="85%"
-  caption="WisToolBox firmware"
-/>
+> **Image:** WisToolBox firmware
 
 2. After the firmware file is uploaded to the application, you can now select **UPGRADE DEVICE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-firmware-upgrade.png"
-  width="85%"
-  caption="Upload the latest firmware"
-/>
+> **Image:** Upload the latest firmware
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-firmware-upgrade2.png"
-  width="85%"
-  caption="Confirm upgrading of firmware"
-/>
+> **Image:** Confirm upgrading of firmware
 
 :::tip NOTE
 If all proceed with no error, you should see a **Firmware update successful** notification, and the RAK10706 device will restart automatically.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-firmware-upgrade3.png"
-  width="85%"
-  caption="Ongoing upgrading of firmware"
-/>
+> **Image:** Ongoing upgrading of firmware
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10706/wistoolbox-firmware-success.png"
-  width="85%"
-  caption="Successful upload of latest firmware"
-/>
+> **Image:** Successful upload of latest firmware
 
-<RkBottomNav/>

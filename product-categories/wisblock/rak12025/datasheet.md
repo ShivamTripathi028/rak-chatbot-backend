@@ -10,19 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK12025 WisBlock Gyroscope Sensor Module Datasheet
 
 ## Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12025/datasheet/rak12025_module.png"
-  width="40%"
-  caption="RAK12025 WisBlock Gyroscope Sensor Module"
-/>
+> **Image:** RAK12025 WisBlock Gyroscope Sensor Module
 
 ### Description
 
@@ -30,15 +22,14 @@ RAK12025 is a gyroscope module, part of the RAKWireless WisBlock Sensor series. 
 
 ### Features
 * **Gyroscope  module**
-* **Selectable full scale**: (245/500/2000&nbsp;dps)
+* **Selectable full scale**: (245/500/2000 dps)
 * **I2C interface**
 * **16-bit rate value data output**
 * **8-bit temperature data output**
-* **Module size**: 10 x 10&nbsp;mm
-* **Power Supply Voltage**: 3.3&nbsp;V
-* **Current Consumption**: 5&nbsp;uA - 6.1&nbsp;mA
+* **Module size**: 10 x 10 mm
+* **Power Supply Voltage**: 3.3 V
+* **Current Consumption**: 5 uA - 6.1 mA
 * **Chipset**: STMicroelectronics I3G4250D
-
 
 ## Specifications
 ### Overview
@@ -51,16 +42,11 @@ RAK12025 is a gyroscope module, part of the RAKWireless WisBlock Sensor series. 
 RAK12025 has two digital output lines, so you need two GPIOs from WisBlock Core. It means RAK12025 should be used on a sensor slot with two available GPIOs. However, WB_IO2 is used to control 3V3_S. Hence, RAK12025 is used only on slots without WB_IO2 like sensor slots C and D on WisBlock Base board.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12025/datasheet/rak12025_mounting.png"
-  width="50%"
-  caption="Mounting of RAK12025"
-/>
+> **Image:** Mounting of RAK12025
 
 ### Hardware
 
 The hardware specification is categorized into six (6) parts. It shows the chipset of the module and discusses the pinouts, sensors, and the corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK12025 WisBlock Gyroscope Sensor Module.
-
 
 #### Chipset
 | Vendor             | Part number |
@@ -75,11 +61,7 @@ The RAK12025 WisBlock Gyroscope Sensor Module comprises a standard WisBlock conn
 **I2C** related pin, **INT2**, **INT1**, **3V3_S**, and **GND** are connected to Wisblock connector.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12025/datasheet/rak12025_pinouts.svg"
-  width="60%"
-  caption="RAK12025 pinouts"
-/>
+> **Image:** RAK12025 pinouts
 
 If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse depends on what slot the module is plugged in. The following table shows the default IO used for different slots:
 
@@ -103,26 +85,25 @@ When using INT2, the default IOs used for different slots is shown in the table 
 | FS     | Measurement Range                      | User-selectable                 |        |      ±245       |        |      dps      |
 |        |                                        | User-selectable                 |        |      ±500       |        |      dps      |
 |        |                                        | User-selectable                 |        |      ±2000      |        |      dps      |
-| So     | Sensitivity                            | FS bit = 245&nbsp;dps           |  7.4   |      8.75       |  10.1  |  mdps/digit   |
-|        |                                        | FS bit = 500&nbsp;dps           |  14.8  |      17.50      |  19.8  |  mdps/digit   |
-|        |                                        | FS bit = 2000&nbsp;dps          |  59.2  |       70        |  79.3  |  mdps/digit   |
-| SoDr   | Sensitivity change vs. Temperature     | From -40&nbsp;°C to +85&nbsp;°C |        |       ±2        |        |       %       |
-| DVoff  | Digital zero-rate level                | FS = 245&nbsp;dps               |  -25   |       ±10       |  +25   |      dps      |
-|        |                                        | FS = 500&nbsp;dps               | -37.5  |       ±15       | +37.5  |      dps      |
-|        |                                        | FS = 2000&nbsp;dps              | -187.5 |       ±75       | +187.5 |      dps      |
-| OffDr  | Zero-rate level change vs. Temperature | FS = 245&nbsp;dps               |        |      ±0.03      |        |    dps/°C     |
+| So     | Sensitivity                            | FS bit = 245 dps           |  7.4   |      8.75       |  10.1  |  mdps/digit   |
+|        |                                        | FS bit = 500 dps           |  14.8  |      17.50      |  19.8  |  mdps/digit   |
+|        |                                        | FS bit = 2000 dps          |  59.2  |       70        |  79.3  |  mdps/digit   |
+| SoDr   | Sensitivity change vs. Temperature     | From -40 °C to +85 °C |        |       ±2        |        |       %       |
+| DVoff  | Digital zero-rate level                | FS = 245 dps               |  -25   |       ±10       |  +25   |      dps      |
+|        |                                        | FS = 500 dps               | -37.5  |       ±15       | +37.5  |      dps      |
+|        |                                        | FS = 2000 dps              | -187.5 |       ±75       | +187.5 |      dps      |
+| OffDr  | Zero-rate level change vs. Temperature | FS = 245 dps               |        |      ±0.03      |        |    dps/°C     |
 | NL     | Non-linearity                          | Best fit straight line          |   -5   |       0.2       |   +5   |    dps/°C     |
-| DST    | Self-test output change                | FS = 245&nbsp;dps               |        |       130       |        |      dps      |
-|        |                                        | FS = 500&nbsp;dps               |        |       200       |        |      dps      |
-|        |                                        | FS = 2000&nbsp;dps              |        |       530       |        |      dps      |
-| Rn     | Rate noise density                     | BW = 50&nbsp;Hz                 |        |      0.03       |        | dps/sqrt (Hz) |
+| DST    | Self-test output change                | FS = 245 dps               |        |       130       |        |      dps      |
+|        |                                        | FS = 500 dps               |        |       200       |        |      dps      |
+|        |                                        | FS = 2000 dps              |        |       530       |        |      dps      |
+| Rn     | Rate noise density                     | BW = 50 Hz                 |        |      0.03       |        | dps/sqrt (Hz) |
 | ODR    | Digital output data rate               |                                 |        | 105/208/420/840 |        |      Hz       |
 | Top    | Operating temperature range            |                                 |  -40   |                 |  +85   |      °C       |
 
-
 #### Electrical Characteristics
 
-- @ Vdd = 3.0&nbsp;V, T = +25&nbsp;°C, unless otherwise noted.
+- @ Vdd = 3.0 V, T = +25 °C, unless otherwise noted.
 
 | Symbol | Description                       | Condition                            | Min.  | Typ.  | Max.  | Unit  |
 | ------ | --------------------------------- | ------------------------------------ | :---: | :---: | :---: | :---: |
@@ -132,35 +113,19 @@ When using INT2, the default IOs used for different slots is shown in the table 
 | IddPdn | Supply current in power-down mode | Power-down mode                      |       |   5   |       |  uA   |
 | Top    | Operating temperature range       |                                      |  -40  |       |  +85  |  °C   |
 
-
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK12025 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12025/datasheet/rak12025_mechanic_drawing.png"
-  width="60%"
-  caption="RAK12025 mechanical dimensions"
-/>
+> **Image:** RAK12025 mechanical dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12025/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
+> **Image:** RAK12025 schematic diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12025/datasheet/rak12025_schematics.png"
-  width="100%"
-  caption="RAK12025 schematic diagram"
-/>
-
-
-<RkBottomNav/>

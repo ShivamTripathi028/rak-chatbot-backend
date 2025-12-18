@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK831 WisLink LPWAN Concentrator
 
 Thank you for choosing **RAK831 WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -18,7 +16,6 @@ Thank you for choosing **RAK831 WisLink LPWAN Concentrator** in your awesome IoT
 * [Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak831/datasheet/)
 * [Source Code Repository](https://github.com/RAKWireless/rak_common_for_gateway)
 * [RAK831 ready to flash Firmware](https://downloads.rakwireless.com/LoRa/RAK2245-Pi-HAT/Firmware/RAK2245_Latest_Firmware.zip)
-
 
 ## Product Description
 
@@ -34,16 +31,14 @@ End-point nodes (e.g. sensor nodes) can change the frequency with each transmiss
 
 Applications possible with the RAK831 include Smart Metering, Wireless Star Networks, Home, Building, Industrial automation, Remote Control, Wireless Sensors Network, M2M, IoT and Wireless Alarm and Security Systems.
 
-
-
 ## Product Features
 
-- **Compact size** 80&nbsp;mm x 50&nbsp;mm x 5&nbsp;mm
+- **Compact size** 80 mm x 50 mm x 5 mm
 - LoRaWAN modulation technology
-- **Frequency bands**: 433&nbsp;MHz, 470&nbsp;MHz, 868&nbsp;MHz, 915&nbsp;MHz
+- **Frequency bands**: 433 MHz, 470 MHz, 868 MHz, 915 MHz
 - Orthogonal spreading factors
-- **Minimum Sensitivity**: -142.5&nbsp;dBm
-- **Maximum Link Allotment**: 162&nbsp;dB
+- **Minimum Sensitivity**: -142.5 dBm
+- **Maximum Link Allotment**: 162 dB
 - SPI interface
 - SX1301 base band processor
 - Emulates up to forty-nine (49) LoRa demodulators
@@ -51,10 +46,9 @@ Applications possible with the RAK831 include Smart Metering, Wireless Star Netw
 - One (1) (G) FSK demodulator
 - Two (2) SX1257 Tx/Rx front-ends High frequency
 - Two (2) x SX1255 Tx/Rx front-ends low frequency
-- **Supply voltage**: 5&nbsp;V<sub>DC</sub>
+- **Supply voltage**: 5 V<sub>DC</sub>
 - Optimized RF Interface 50
-- Up to 23&nbsp;dBm output power
+- Up to 23 dBm output power
 - Optional GPS receiver
-- **Line of Sight Range**: up to 15&nbsp;kilometers
+- **Line of Sight Range**: up to 15 kilometers
 
-<RkBottomNav/>

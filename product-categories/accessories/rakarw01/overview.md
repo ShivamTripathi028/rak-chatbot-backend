@@ -8,18 +8,16 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # 2.4 GHz Wi-Fi Fiberglass Antenna
 
-Thank you for choosing **2.4&nbsp;GHz Wi-FI Fiberglass Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
+Thank you for choosing **2.4 GHz Wi-FI Fiberglass Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [Datasheet](https://docs.rakwireless.com/product-categories/accessories/rakarw01/datasheet/)
 
 ## Product Features
 
-- Frequency range: 2400 ~ 2500&nbsp;MHz
-- Max gain: 2&nbsp;dBi
+- Frequency range: 2400 ~ 2500 MHz
+- Max gain: 2 dBi
 - VSWR: ≤2
 - High efficiency
 - N-type male connector
@@ -28,4 +26,3 @@ Thank you for choosing **2.4&nbsp;GHz Wi-FI Fiberglass Antenna** in your awesome
 - Omnidirectional
 - Outdoor use
 
-<RkBottomNav/>

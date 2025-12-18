@@ -19,9 +19,6 @@ slug: /product-categories/wisduo/rak11161-breakout-board/at-command-manual/
 date: 2025-08-05
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11161 WisDuo LoRaWAN + BLE + WiFi Module AT Command Manual
 
 ## Overview
@@ -38,4 +35,3 @@ The complete list of commands can be found in <a href="https://docs.rakwireless.
 
 The Espressif AT command manual can be found on Espressif's website in the <a href="https://docs.espressif.com/projects/esp-at/en/latest/esp32/AT_Command_Set/index.html" target="_blank">ESP-AT User Guide.</a>
 
-<RkBottomNav/>

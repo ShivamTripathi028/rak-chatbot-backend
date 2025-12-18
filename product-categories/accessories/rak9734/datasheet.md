@@ -9,9 +9,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Pulsar Cable LMR400 Datasheet
 
 ## Overview
@@ -22,9 +19,9 @@ The Pulsar cable is a high grade cable, suitable for all gateways from the **Wis
 
 ### Features
 
--   Cable length variants: 5&nbsp;m
+-   Cable length variants: 5 m
 -   Connector: RP-SMA male to N-type male
--   Frequency Range: 0~6&nbsp;GHz
+-   Frequency Range: 0~6 GHz
 -   Cable type: LMR400
 -   VSWR: ≤ 1.5
 
@@ -33,44 +30,36 @@ The Pulsar cable is a high grade cable, suitable for all gateways from the **Wis
 | Feature                          | Specifications             |
 |----------------------------------|----------------------------|
 | Model                            | Pulsar cable               |
-| Frequency range                  | 0~6&nbsp;GHz               |
+| Frequency range                  | 0~6 GHz               |
 | VSWR                             | ≤ 1.5                      |
-| Length                           | 5&nbsp;m                   |
+| Length                           | 5 m                   |
 | Cable type                       | LMR400                     |
-| Impedance                        | 50&nbsp;Ohms               |
+| Impedance                        | 50 Ohms               |
 | Color                            | Black                      |
 | Connector type                   | RP-SMA male to N-type male |
-| Operation temperature (°&nbsp;C) | -40°&nbsp;C ~ +85°&nbsp;C  |
+| Operation temperature (° C) | -40° C ~ +85° C  |
 | Humidity range                   | 5% ~ 95%                   |
 
 ### Power Loss Report
 
-| Frequency          | 5&nbsp;m length |
+| Frequency          | 5 m length |
 |--------------------|-----------------|
-| 433 - 435&nbsp;MHz | ≤ 0.65&nbsp;dB  |
-| 470 - 510&nbsp;MHz | ≤ 0.70&nbsp;dB  |
-| 863 - 870&nbsp;MHz | ≤ 0.85&nbsp;dB  |
-| 902 - 930&nbsp;MHz | ≤ 0.90&nbsp;dB  |
-| 2.4&nbsp;GHz       | ≤ 1.30&nbsp;dB  |
-| 4&nbsp;GHz         | ≤ 2.15&nbsp;dB  |
+| 433 - 435 MHz | ≤ 0.65 dB  |
+| 470 - 510 MHz | ≤ 0.70 dB  |
+| 863 - 870 MHz | ≤ 0.85 dB  |
+| 902 - 930 MHz | ≤ 0.90 dB  |
+| 2.4 GHz       | ≤ 1.30 dB  |
+| 4 GHz         | ≤ 2.15 dB  |
 
 ### Mechanical Characteristics
 
 #### Connectors
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rak9734/2.png"
-  width="45%"
-  caption="Connector Types"
-/>
+> **Image:** Connector Types
 
 #### Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rak9734/3.png"
-  width="80%"
-  caption="Pulsar Cable Dimensions"
-/>
+> **Image:** Pulsar Cable Dimensions
 
 Where:
 
@@ -79,4 +68,3 @@ Where:
 - 3 - LMR400 cable
 - 4 - Ø13x25 heat shrinkable adhesive tube
 
-<RkBottomNav/>

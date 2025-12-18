@@ -15,51 +15,20 @@ tags:
 date: 2025-05-23
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10701-Plus Field Tester for LoRaWAN
 
 **Quick Navigation**
 
 This section introduces the Field Tester Plus device, its key features, system components, and how it integrates into LoRaWAN testing workflows. Here's the list of guides to help you quickly find the information you need:
 
-<table>
-  <thead>
-    <tr>
-      <th>Guide</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b><a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/network-setup/" target="_blank">Pre-Test Network Setup</a></b></td>
-      <td>Step-by-step instructions to set up the Field Tester Plus device, gateway, and network environment before testing.</td>
-    </tr>
-    <tr>
-      <td><b><a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/field-test/" target="_blank">Conduct Field Tests with Field Tester Plus</a></b></td>
-      <td>Detailed workflows for performing field tests, analyzing real-time metrics, and exporting structured reports.</td>
-    </tr>
-    <tr>
-      <td><b><a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/firmware-update/" target="_blank">Firmware Update</a></b></td>
-      <td>How to upgrade the device firmware via USB or Bluetooth to access new features and performance improvements.</td>
-    </tr>
-    <tr>
-      <td><b><a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/datasheet/" target="_blank">Datasheet</a></b></td>
-      <td>Technical specifications, device interfaces, electrical characteristics, and environmental parameters.</td>
-    </tr>
-    <tr>
-      <td><b><a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/faqs-troubleshooting/" target="_blank">FAQs & Troubleshooting</a></b></td>
-      <td>Solutions to common issues, explanations of key concepts, and guidance for optimizing test results.</td>
-    </tr>
-    <tr>
-      <td><b><a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/glossary/" target="_blank">Glossary of Key Terms</a></b></td>
-      <td>Quick reference for important terms and metrics used throughout the guide.</td>
-    </tr>
-  </tbody>
-</table>
-
-
+| Guide | Definition |
+| --- | --- |
+| Pre-Test Network Setup | Step-by-step instructions to set up the Field Tester Plus device, gateway, and network environment before testing. |
+| Conduct Field Tests with Field Tester Plus | Detailed workflows for performing field tests, analyzing real-time metrics, and exporting structured reports. |
+| Firmware Update | How to upgrade the device firmware via USB or Bluetooth to access new features and performance improvements. |
+| Datasheet | Technical specifications, device interfaces, electrical characteristics, and environmental parameters. |
+| FAQs & Troubleshooting | Solutions to common issues, explanations of key concepts, and guidance for optimizing test results. |
+| Glossary of Key Terms | Quick reference for important terms and metrics used throughout the guide. |
 
 ## What is Field Tester Plus？
 
@@ -76,51 +45,31 @@ In addition, it integrates seamlessly with the **Field Test Data Processor Exten
 - Real-time graphical display of **RSSI** and **SNR** for signal monitoring.
 - Proprietary **packet loss calculation** for accurate coverage evaluation.
 - Supports **manual location labeling** and **structured CSV data export**.
-- Powered by a **3200&nbsp;mAh** rechargeable battery (USB Type-C charging).
+- Powered by a **3200 mAh** rechargeable battery (USB Type-C charging).
 - **External LoRa antenna** for improved performance.
 - **OTAA** activation and **Class A** device operation.
 - **BLE support** for wireless configuration and firmware upgrades via **WisToolBox Mobile App**.
 
-
 ### System Components
 
-<table>
-  <thead>
-    <tr>
-      <th>Component</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Field Tester Plus</b></td>
-      <td>A handheld LoRaWAN end device that sends uplinks and displays real-time metrics like RSSI and SNR.</td>
-    </tr>
-    <tr>
-      <td><b>LoRaWAN Gateway</b></td>
-      <td>Receives uplinks and forwarders them to the configured LoRaWAN Network Server (LNS).<br/><b>Supported LNS options include:</b><ul><li>Built-in LNS (on RAK WisGateOS 2)</li><li>The Things Network (TTN) / The Things Industries (TTI)</li><li>ChirpStack v3 / v4</li><li>AWS IoT Core for LoRaWAN</li></ul></td>
-    </tr>
-    <tr>
-      <td><b>Field Test Data Processor Extension</b></td>
-      <td>Installs on your RAK gateway to enable <b>local signal processing</b>. It computes key quality metrics—such as RSSI, SNR, and packet loss—and exports structured test reports (e.g., CSV), <b>without relying on any cloud integration.</b></td>
-    </tr>
-    </tbody>
-</table>
-
+| Component | Description |
+| --- | --- |
+| Field Tester Plus | A handheld LoRaWAN end device that sends uplinks and displays real-time metrics like RSSI and SNR. |
+| LoRaWAN Gateway | Receives uplinks and forwarders them to the configured LoRaWAN Network Server (LNS).Supported LNS options include:Built-in LNS (on RAK WisGateOS 2)The Things Network (TTN) / The Things Industries (TTI)ChirpStack v3 / v4AWS IoT Core for LoRaWAN |
+| Field Test Data Processor Extension | Installs on your RAK gateway to enablelocal signal processing. It computes key quality metrics—such as RSSI, SNR, and packet loss—and exports structured test reports (e.g., CSV),without relying on any cloud integration. |
 
 ## How It Works?
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/overview/field-tester-roadmap.png"
-  width="100%"
-  caption="Field Tester Roadmap"
-/>
+> **Image:** Field Tester Roadmap
 
-1. **Field Testing**<br/>The Field Tester Plus sends uplinks at regular intervals, containing GPS or manually labeled location data.
+1. **Field Testing**
+The Field Tester Plus sends uplinks at regular intervals, containing GPS or manually labeled location data.
 
-2. **Network Server Forwarding**<br/>Nearby LoRaWAN gateways receive the uplinks and forward them to the configured LNS (e.g., TTN, ChirpStack, AWS IoT Core, or the built-in LNS in RAK gateways).
+2. **Network Server Forwarding**
+Nearby LoRaWAN gateways receive the uplinks and forward them to the configured LNS (e.g., TTN, ChirpStack, AWS IoT Core, or the built-in LNS in RAK gateways).
 
-3. **Data Processing with Extension**<br/>If the gateway is a RAK model running **WisGateOS 2** and has the **Field Test Data Processor Extension** installed, it will subscribe to uplink messages via MQTT and perform local analysis. This enables:
+3. **Data Processing with Extension**
+If the gateway is a RAK model running **WisGateOS 2** and has the **Field Test Data Processor Extension** installed, it will subscribe to uplink messages via MQTT and perform local analysis. This enables:
    
     <ul><li>Real-time metric calculation for both uplink and downlink (RSSI, SNR, packet loss, gateway info)</li><li>Exportable CSV reports</li><li>Heatmap visualization of signal metrics (RSSI, SNR)</li></ul>
 
@@ -128,7 +77,8 @@ In addition, it integrates seamlessly with the **Field Test Data Processor Exten
 Without the Extension, signal analysis is limited to basic downlink responses only (see **Work Modes** below).
 :::
 
-4. **Data Viewing**<br/>Depending on your configuration, test results can be:
+4. **Data Viewing**
+Depending on your configuration, test results can be:
    
     <ul><li>Realtime display directly on the device screen</li><li>Exported as structured CSV logs (with Extension)</li><li>Visualized as heatmaps (with Extension)</li><li>Sent to external application servers (with LNS integration)</li></ul>
 
@@ -136,25 +86,10 @@ Without the Extension, signal analysis is limited to basic downlink responses on
 
 Field Tester Plus offers two operational modes, depending on whether the Field Test Data Processor Extension is installed and properly connected:
 
-<table>
-  <thead>
-    <tr>
-      <th>Mode</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Field Tester Mode</b></td>
-      <td>Full-feature mode. The gateway runs the Field Test Data Processor Extension, which analyzes uplinks locally via MQTT and feeds results back to the device.<br/> Displays both <b>uplink and downlink metrics</b>, including <b>RSSI, SNR, packet loss</b>, distance (if GPS is available), and allows <b>CSV export</b> and heatmap generation.</td>
-    </tr>
-    <tr>
-      <td><b>LinkCheck Mode</b></td>
-      <td>Basic mode. The device has joined an LNS, but no Extension is installed or configured.<br/> Only basic downlink information is shown: <b>RSSI, SNR</b>, and <b>number of receiving gateways</b>, based on LinkCheck MAC responses. No uplink metrics or CSV export is available.</td>
-    </tr>
-    </tbody>
-</table>
-
+| Mode | Description |
+| --- | --- |
+| Field Tester Mode | Full-feature mode. The gateway runs the Field Test Data Processor Extension, which analyzes uplinks locally via MQTT and feeds results back to the device.Displays bothuplink and downlink metrics, includingRSSI, SNR, packet loss, distance (if GPS is available), and allowsCSV exportand heatmap generation. |
+| LinkCheck Mode | Basic mode. The device has joined an LNS, but no Extension is installed or configured.Only basic downlink information is shown:RSSI, SNR, andnumber of receiving gateways, based on LinkCheck MAC responses. No uplink metrics or CSV export is available. |
 
 ## Why Use Field Tester Plus?
 
@@ -175,4 +110,3 @@ Field Tester Plus is ideal for a variety of real-world LoRaWAN validation scenar
 - **Indoor Signal Validation**: Test network performance in buildings such as factories, offices, or underground areas where GPS is unavailable.
 - **Pre-Deployment Testing**: Evaluate signal quality before installing a gateway to ensure proper placement and optimal coverage.
 
-<RkBottomNav/>

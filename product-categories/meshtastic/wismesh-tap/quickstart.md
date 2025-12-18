@@ -13,9 +13,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisMesh TAP Quick Start Guide
 
 WisMesh TAP is an all-in-one Meshtastic node with on-screen keyboard that allows you to send messages over Meshtastic without your phone.
@@ -67,7 +64,7 @@ Make sure that you have installed one of these applications, as they are require
 
 ### Hardware Setup
 
-The WisMesh TAP comes fully assembled with an internal battery. However, it is recommended to fully recharge the battery before switching the device on. It supports Li-Ion batteries, 5&nbsp;V (e.g. from solar panel) supply, a 320x240 TFT touchscreen, and an on-screen keyboard.
+The WisMesh TAP comes fully assembled with an internal battery. However, it is recommended to fully recharge the battery before switching the device on. It supports Li-Ion batteries, 5 V (e.g. from solar panel) supply, a 320x240 TFT touchscreen, and an on-screen keyboard.
 
 WisMesh TAP also includes all GPIOs on pin headers, and an integrated GNSS location chip.
 
@@ -79,7 +76,7 @@ The WisMesh TAP has a USB-C connector for recharging the device.
 
 #### Recharge the Battery
 
-To recharge the device, plug a USB-C cable into the device and connected it to a 5&nbsp;V 2&nbsp;A USB wall charger. Recharging the battery via a USB port on your computer is not recommended due to the potential low current output.
+To recharge the device, plug a USB-C cable into the device and connected it to a 5 V 2 A USB wall charger. Recharging the battery via a USB port on your computer is not recommended due to the potential low current output.
 
 #### Antenna
 
@@ -95,7 +92,7 @@ To be sure to run the latest version of the Meshtastic firmware, we advice you t
 
 The firmware for this device is not yet released in the official Meshtastic Channel. Check with Meshtastic for the **`firmware-rak10701-w.x.yy.zzzzzzz.uf2`**
 
-<b>Flashing the WisMesh TAP firmware:</b>
+**Flashing the WisMesh TAP firmware:**
 
 The WisMesh TAP comes pre-flashed with the Meshtastic firmware. If you encounter problems, update the Meshtastic firmware to the latest version.
 
@@ -107,36 +104,19 @@ For the setup of the WisMesh TAP for the Meshtastic network, follow the <a href=
 
 - You can navigate through the usual Meshtastic screens by swiping on the display to the left or right:    
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tap-slide-through.png"
-  width="50%"
-  caption="WisMesh TAP Slide through"
-/>
+> **Image:** WisMesh TAP Slide through
 
 - To send messages, swipe up on the screen:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tap-slide-up.png"
-  width="50%"
-  caption="WisMesh TAP Slide through"
-/>
+> **Image:** WisMesh TAP Slide through
 
 - Double tap on **Broadcast** or select one of the preset receivers:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tap-double-tap.png"
-  width="50%"
-  caption="WisMesh TAP Slide through"
-/>
+> **Image:** WisMesh TAP Slide through
 
 - Start typing the message:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-tap-type.png"
-  width="50%"
-  caption="WisMesh TAP Slide through"
-/>
+> **Image:** WisMesh TAP Slide through
 
 - Send the message with the RETURN key on the screen.
 
-<RkBottomNav/>

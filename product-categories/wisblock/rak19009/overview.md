@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19009 WisBlock Mini Base Board with Power Slot
 
 Thank you for choosing **RAK19009 WisBlock Mini Base Board with Power Slot** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,7 +23,7 @@ Thank you for choosing **RAK19009 WisBlock Mini Base Board with Power Slot** in 
 
 ## Product Description
 
-**RAK19009** is a **WisBlock Base** board that connects **WisBlock Core**, **WisBlock Power Module**, and **WisBlock Modules**. It has one slot reserved for the WisBlock Core module, one slot for the WisBlock Power module, and two Slot C-D for WisBlock Modules. The WisBlock Core and the Wisblock Power module are attached on the top side and the WisBlock Modules are attached to the bottom side of the RAK19009 WisBlock Base board. Slot C holds modules up to 23&nbsp;mm in size, while Slot D supports 10&nbsp;mm WisBlock Modules. Also, there are two **2.54&nbsp;mm pitch headers** for extension interface with **BOOT**, **I2C**, and **UART** pins.
+**RAK19009** is a **WisBlock Base** board that connects **WisBlock Core**, **WisBlock Power Module**, and **WisBlock Modules**. It has one slot reserved for the WisBlock Core module, one slot for the WisBlock Power module, and two Slot C-D for WisBlock Modules. The WisBlock Core and the Wisblock Power module are attached on the top side and the WisBlock Modules are attached to the bottom side of the RAK19009 WisBlock Base board. Slot C holds modules up to 23 mm in size, while Slot D supports 10 mm WisBlock Modules. Also, there are two **2.54 mm pitch headers** for extension interface with **BOOT**, **I2C**, and **UART** pins.
 
 WisBlock Modules are connected to the RAK19009 WisBlock Base board via **high-speed board to board connectors**. They provide secure and reliable interconnection to ensure the signal integrity of each data bus. A set of screws are used for fixing the modules, which makes it reliable even in an environment with lots of vibrations.
 
@@ -43,7 +41,7 @@ Using **RAK19009** as your WisBlock Base board, you can make your project compac
 * Supports multiple types of low-power MCUs
 * Supports multiple types of sensors - a single board can support a combination of two
   different types of sensors
-* **Size:** A compact size of 30 x 37&nbsp;mm, which lets you create solutions that fit into smallest housings
+* **Size:** A compact size of 30 x 37 mm, which lets you create solutions that fit into smallest housings
 
 ## Prerequisites
 
@@ -56,4 +54,3 @@ To use a **RAK19009** WisBlock Mini Base Board with Power Slot, you need a **Wis
 
 :::
 
-<RkBottomNav/>

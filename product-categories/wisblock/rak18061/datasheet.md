@@ -12,10 +12,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK18061 WisBlock Audio Mono Amplifier Module Datasheet
 
 ## Overview
@@ -32,50 +28,37 @@ The RAK18061 can drive the speaker to play audio through the input I2S signals. 
     - Audio mono amplifier
     - Amplifier power can be selected by a solder bridge
     - I2S interface for data and I2C interface for control
-    - 5.6&nbsp;W at 1% THD+N into 4-Ω load from 4.2&nbsp;V supply
+    - 5.6 W at 1% THD+N into 4-Ω load from 4.2 V supply
     - High-efficiency Class-H boost converter
     - Built-in speaker sense and automatic gain control
     - Thermal, short-circuit, and under-voltage protection
 
 * **Module Size**
-    * 25 x 35&nbsp;mm
+    * 25 x 35 mm
 
 ## Specifications
 
-
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061-front-back.png"
-  width="60%"
-  caption="RAK18061 WisBlock Audio Mono Amplifier Module top and bottom view"
-/>
+> **Image:** RAK18061 WisBlock Audio Mono Amplifier Module top and bottom view
+
 #### Mounting
 
 ##### Mounting to WisBlock Base
 
 Just like other WisBlock modules with a standard WisBlock IO connector, RAK18061  can be mounted to the IO slot of any WisBlock Base board. **Figure 2** shows the mounting mechanism of the RAK18061 on a WisBase module, such as the **RAK19007**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061_mount_to_wisbase.png"
-  width="60%"
-  caption="RAK18061 mounted to the WisBlock Base"
-/>
+> **Image:** RAK18061 mounted to the WisBlock Base
 
 ##### Mounting to WisBlock Audio Stack
 
-With the 3&nbsp;mm spacer, the RAK18061 can be mounted to the WisBlock Audio Stack. **Figure 3** shows the mounting mechanism of the RAK18061 on the WisBlock Audio Stack.
+With the 3 mm spacer, the RAK18061 can be mounted to the WisBlock Audio Stack. **Figure 3** shows the mounting mechanism of the RAK18061 on the WisBlock Audio Stack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061_mount_to_wisblock_audio_stack.png"
-  width="60%"
-  caption="RAK18061 mounted to the WisBlock Audio Stack"
-/>
+> **Image:** RAK18061 mounted to the WisBlock Audio Stack
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It shows the chipset of the module and discusses the pinouts and their corresponding functions and diagrams. It also covers the acoustic, electrical, and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK18061 Audio Mono Amplifier Module.
-
 
 #### Chipset
 
@@ -89,12 +72,7 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 The RAK18061 WisBlock module comprises a standard IO slot connector. The 40-pin WisBlock IO Slot Connector allows the RAK18061 module to be mounted to a WisBlock baseboard, such as the RAK5005-O. The pin order of the connector and the pinout definition is shown in **Figure 4**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061-pinouts.png"
-  width="60%"
-  caption="RAK18061 WisIO Connector pinout"
-/>
+> **Image:** RAK18061 WisIO Connector pinout
 
 :::tip NOTE
 - **3V3_S** and **GND** are the power supply pins from the WisBlock Base. **3V3_S**, **VBAT**, and **VBUS** can be selected by the solder bridge as the amplifier power. **3V3_S** is always needed for digital power input.
@@ -107,12 +85,7 @@ The RAK18061 WisBlock module comprises a standard IO slot connector. The 40-pin 
 
 The RAK18061 WisBlock module comprises a board-to-board (BTB) connector. The BTB connector allows the RAK18061 module to be stacked with other WisBlock Audio modules, such as the RAK18080 (DSP board) and the RAK18003 (Audio Interposer board). The pin order of the connector and the pinout definition is shown in **Figure 5**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061_btb_connector_pinout.png"
-  width="40%"
-  caption="RAK18061 BTB Connector pinout"
-/>
+> **Image:** RAK18061 BTB Connector pinout
 
 :::tip NOTE
 - **3V3**, **VBAT**, **VBUS**, and **GND** are power supply pins from the Interposer board. **3V3**, **VBAT**, and **VBUS** can be selected by the solder bridge as the amplifier power. **3V3** is always needed for digital power input.
@@ -126,7 +99,6 @@ The RAK18061 WisBlock module comprises a board-to-board (BTB) connector. The BTB
 
 The table below shows the acoustic and electrical characteristics of the RAK18061 AMP Module:
 
-
 | Symbol          | Description                                                            | Min. | Nom.   | Max. | Unit  |
 | --------------- | ---------------------------------------------------------------------- | ---- | ------ | ---- | ----- |
 | V<sub>BUS</sub> | USB or POE supply from WisBase                                         | 2.9  | 5      | 5.5  | V     |
@@ -136,9 +108,9 @@ The table below shows the acoustic and electrical characteristics of the RAK1806
 | I1              | Boost converter current limit (default)                                | -    | 3      | -    | A     |
 | I2              | Class-D output current limit                                           | -    | 4      | -    | A     |
 | RL              | Load resistance (Load spec resistance)                                 | 3.6  | 8      | -    | Ω     |
-| THD+N           | THD+N @ 1&nbsp;kHz, Po = 3&nbsp;W）RL = 8&nbsp;Ω                       | -    | 0.0043 | -    | %     |
-| SNR             | Referenced to 1% THD+N at output, A-weighted, RL = 8&nbsp;Ω            | -    | 110.6  | -    | dB(A) |
-| Pm              | Max output power @ (3&nbsp;A current limit, THD+N = 1%, 8&nbsp;Ω load) | -    | 3.7    | -    | W     |
+| THD+N           | THD+N @ 1 kHz, Po = 3 W）RL = 8 Ω                       | -    | 0.0043 | -    | %     |
+| SNR             | Referenced to 1% THD+N at output, A-weighted, RL = 8 Ω            | -    | 110.6  | -    | dB(A) |
+| Pm              | Max output power @ (3 A current limit, THD+N = 1%, 8 Ω load) | -    | 3.7    | -    | W     |
 | Top             | Operating temperature range                                            | -40  | -      | +85  | ℃     |
 
 #### Mechanical Characteristic
@@ -147,19 +119,11 @@ The table below shows the acoustic and electrical characteristics of the RAK1806
 
 **Figure 6** shows the dimensions and the mechanical drawing of the RAK18061 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061_mechanic_drawing.png"
-  width="70%"
-  caption="RAK18061 WisBlock AMP Module mechanical drawing"
-/>
+> **Image:** RAK18061 WisBlock AMP Module mechanical drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/mxxs1003k6m.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
@@ -167,31 +131,22 @@ The table below shows the acoustic and electrical characteristics of the RAK1806
 
 TAS2560 needs three power supplies. Analog supply voltage and I/O supply voltage are fixed on RAK18061. The amplifier input power supply can be selected via solder bridges (SB1, SB2, SB3, or SB4).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061_wisblock_dsp_connector_power_select.png"
-  width="100%"
-  caption="RAK18061 WisBlock Connector, AMP/DSP Board Connector, and Power Select schematic diagram"
-/>
+> **Image:** RAK18061 WisBlock Connector, AMP/DSP Board Connector, and Power Select schematic diagram
 
 The power supply needs to be selected according to the desired speaker output power:
 
-- **3V3** from the WisBlock Base (maximum output current of 750&nbsp;mA)
-- **V<sub>BAT</sub>** from the WisBlock Base (maximum output current of 1&nbsp;A)
-- **V<sub>BUS</sub>** from the WisBlock Base (maximum output current of about 1.25&nbsp;A)
+- **3V3** from the WisBlock Base (maximum output current of 750 mA)
+- **V<sub>BAT</sub>** from the WisBlock Base (maximum output current of 1 A)
+- **V<sub>BUS</sub>** from the WisBlock Base (maximum output current of about 1.25 A)
 - **EX_Power** from an external power supply from J12
 
 :::tip NOTE
 If you want to achieve a higher speaker output power, use **EX_Power**.
-  - Voltage at EX_Power should not exceed 5.5&nbsp;V.
+  - Voltage at EX_Power should not exceed 5.5 V.
   - Current of EX_Power should be higher than the speaker output power.
 :::
 
 ##### Left and Right Channels
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18061/datasheet/rak18061_left_right_channel.png"
-  width="100%"
-  caption="RAK18061 Left and Right Channel Amplifier schematic diagram"
-/>
+> **Image:** RAK18061 Left and Right Channel Amplifier schematic diagram
 
-<RkBottomNav/>

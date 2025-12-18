@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19015 WisBlock Battery Power Slot Module
 
 Thank you for choosing **RAK19015 WisBlock Battery Power Slot Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -23,12 +21,11 @@ Thank you for choosing **RAK19015 WisBlock Battery Power Slot Module** in your a
 * [RAK19015 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK19015.stp)
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 
-
 ## Product Description
 
 The **RAK19015 WisBlock Battery Power Slot Module** is a power board that consists of a battery connector, reset push button, and two LEDs. It is designed to be used with WisBlock Base Board with Power Slot via the 40-pin WisBlock connector.
 
-RAK19015 is optimized to support very low-power applications since it only has a Li-Ion battery and 3.3&nbsp;V switching regulator in the circuit removing unnecessary components that consume extra current consumption.
+RAK19015 is optimized to support very low-power applications since it only has a Li-Ion battery and 3.3 V switching regulator in the circuit removing unnecessary components that consume extra current consumption.
 
 ## Product Features
 
@@ -36,7 +33,7 @@ RAK19015 is optimized to support very low-power applications since it only has a
 * High-efficiency switching regulator
 * Optimized for low-power devices
 * **Size**
-    * 30 x 20&nbsp;mm
+    * 30 x 20 mm
 
 ## Prerequisites
 
@@ -44,9 +41,8 @@ To use a **RAK19015**, you need at least a **WisBlock Base** Board with Power Sl
 
 :::warning
 - Improper handling of the battery can be harmful.
-- 3.7 ~ 4.2&nbsp;V Li-Ion batteries are primarily supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- 3.7 ~ 4.2 V Li-Ion batteries are primarily supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - Make sure the battery wires, both rechargeable and non-rechargeable, match the polarity on the RAK19015 board. Not all batteries have the same wiring.
 - Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

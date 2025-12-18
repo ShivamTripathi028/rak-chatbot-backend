@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2171 WisNode TrackIt
 
 Thank you for choosing **RAK2171 WisNode TrackIt** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -31,12 +29,11 @@ RAK2171 supports multiple working modes and notification options. When used with
 - MT2523 with built-in Bluetooth and GPS
 - SX1262 LoRa chip
 - Built-in accelerometer
-- Built-in battery: 400&nbsp;mAh
+- Built-in battery: 400 mAh
 - Charger with a magnetic plate
-- Small size: 42 x 42 x 18&nbsp;mm
-- Low weight: 25&nbsp;g
-- Operating temperature: -20°&nbsp;C to +60°&nbsp;C
+- Small size: 42 x 42 x 18 mm
+- Low weight: 25 g
+- Operating temperature: -20° C to +60° C
 - IP65 rating
 - Android and iOS application for easy management, configuration, and location tracking
 
-<RkBottomNav/>

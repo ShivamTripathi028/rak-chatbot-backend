@@ -1,4 +1,4 @@
-import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 
 # AT Command Manual (Cellular)
 
@@ -63,7 +63,11 @@ The command shows the product information.
 
 | Command                         | Input Parameter | Return Value                                              | Return Code |
 | ------------------------------- | --------------- | --------------------------------------------------------- | ----------- |
-| `ATCELL+ATI` <br /> `ATCELL+ATI=` | -               | ATI <br /> Quectel <br /> BG96 <br /> Revision: BG96MAR02A07M1G | OK / ERROR  |
+| `ATCELL+ATI` 
+ `ATCELL+ATI=` | -               | ATI 
+ Quectel 
+ BG96 
+ Revision: BG96MAR02A07M1G | OK / ERROR  |
 
 ### ATCELL+AT&F
 
@@ -73,7 +77,8 @@ The command resets AT command settings to their factory default.
 
 | Command                             | Input Parameter | Return Value | Return Code |
 | ----------------------------------- | --------------- | ------------ | ----------- |
-| `ATCELL+AT&F0` <br /> `ATCELL+AT&F0=` | -               | -            | OK / ERROR  |
+| `ATCELL+AT&F0` 
+ `ATCELL+AT&F0=` | -               | -            | OK / ERROR  |
 
 ### ATCELL+QCFG
 
@@ -276,11 +281,16 @@ The command can be used to configure the `<APN>`, `<username>`, `<password>`, an
 
 It is highly recommended to see the *BG96_TCP/IP_AT_Commands_Manual_V1.0.pdf* to get complete details.
 
-`<contextID>` Integer type. The context ID. The range is 1-16. <br />
-`<context_type>` Integer type. The protocol type. `1` = IPV4 or `2` = IPV6 <br />
-`<APN>` String type. The access point name. <br />
-`<username>` String type. The username. <br />
-`<password>` String type. The password. <br />
+`<contextID>` Integer type. The context ID. The range is 1-16. 
+
+`<context_type>` Integer type. The protocol type. `1` = IPV4 or `2` = IPV6 
+
+`<APN>` String type. The access point name. 
+
+`<username>` String type. The username. 
+
+`<password>` String type. The password. 
+
 `<authentication>` Integer type. The authentication methods = `0 = NONE`, `1 = PAP`, `2 = CHAP` or `3 = PAP or CHAP` 
 
 **Examples:**
@@ -354,7 +364,6 @@ OK
 Description: Enter PIN
 
 The command is used to enter a password or query whether or not the module requires a password which is necessary before it can be operated. The password may be (U)SIM PIN, (U)SIM PUK, PH-SIM PIN, etc.
-
 
 | Command         | Input Parameter | Return Value    | Return Code |
 | --------------- | --------------- | --------------- | ----------- |
@@ -434,16 +443,20 @@ Before activating a PDP context via AT+QIACT, the context should be configured b
 
 | Command                          | Input Parameter  | Return Value                                                                                           | Return Code |
 | -------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------ | ----------- |
-| `ATCELL+QIACT?`                  | -                | Returns current available context <br />`+QIACT: <contextID>,<context_state>,<context_type>,<ipaddress>` | OK          |
+| `ATCELL+QIACT?`                  | -                | Returns current available context 
+`+QIACT: <contextID>,<context_state>,<context_type>,<ipaddress>` | OK          |
 | `ATCELL+QIACT=?`                 | -                | `+QIACT: (1-16)`                                                                                       | OK          |
 | `ATCELL+QIACT=<Input Parameter>` | < *contextID* >    | -                                                                                                      | OK / ERROR  |
 
 It is highly recommended to see the *BG96_TCP/IP_AT_Commands_Manual_V1.0.pdf* to get complete details.
 
-`<contextID>` Integer type. The context ID. The range is 1-16. <br />
-`<context_state>` Integer type. The context type. `0` = Deactivated or `1` = Activated <br />
-`<context_type>` Integer type. The protocol type. `1` = IPV4 or `2` = IPV6 <br />
-`<ipaddress>` String type. The username. <br />
+`<contextID>` Integer type. The context ID. The range is 1-16. 
+
+`<context_state>` Integer type. The context type. `0` = Deactivated or `1` = Activated 
+
+`<context_type>` Integer type. The protocol type. `1` = IPV4 or `2` = IPV6 
+
+`<ipaddress>` String type. The username. 
 
 **Examples:**
 
@@ -521,12 +534,15 @@ This command is used to send hex string data. It cannot be applied for “UDP SE
 | Command                             | Input Parameter            | Return Value                      | Return Code                          |
 | ----------------------------------- | -------------------------- | ----------------------------------| ------------------------------------ |
 | `ATCELL+QISENDEX=?`                 | -                          | `+QISENDEX: (0-11),<hex_string>)` | OK                                   |
-| `ATCELL+QISENDEX=<Input Parameter>` | `<connectID>,<hex_string>` | -                                 |  SEND OK <br /> SEND FAIL <br /> ERROR   |
+| `ATCELL+QISENDEX=<Input Parameter>` | `<connectID>,<hex_string>` | -                                 |  SEND OK 
+ SEND FAIL 
+ ERROR   |
 
 It is highly recommended to see the *BG96_TCP/IP_AT_Commands_Manual_V1.0.pdf* to get complete details.
 
-`<connectID>` Integer type. The socket service index. The range is 0-11 <br />
-`<hex_string>` String type. Hex string. The max length is 512&nbsp;bytes <br />
+`<connectID>` Integer type. The socket service index. The range is 0-11 
+
+`<hex_string>` String type. Hex string. The max length is 512 bytes 
 
 **Examples:**
 
@@ -590,8 +606,18 @@ The command is used to configure the parameters for HTTP(S) server, including co
 
 | Command                          | Input Parameter  | Return Value                                                                                                                                                                                                                           | Return Code |
 | -------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `ATCELL+QHTTPCFG=?`              | -                | `+QHTTPCFG: "contextid",(1-16)`<br />`+QHTTPCFG: "requestheader",(0,1)`<br />`+QHTTPCFG: "responseheader",(0,1)`<br />`+QHTTPCFG: "prefix",<ip_prefix>,<prefix_length>`<br />`+QHTTPCFG: "sslctxid",(0-5)`<br />`+QHTTPCFG: "contenttype",(0-3)` | OK          |
-| `ATCELL+QHTTPCFG?`               | -                | `+QHTTPCFG: "contextid",1`<br />`+QHTTPCFG: "requestheader",0`<br />`+QHTTPCFG: "responseheader",0`<br />`+QHTTPCFG: "prefix","64:FF9B:0:0:0:0:0:0",96`<br />`+QHTTPCFG: "sslctxid",1`<br />`+QHTTPCFG: "contenttype",0`                         | OK / ERROR  |
+| `ATCELL+QHTTPCFG=?`              | -                | `+QHTTPCFG: "contextid",(1-16)`
+`+QHTTPCFG: "requestheader",(0,1)`
+`+QHTTPCFG: "responseheader",(0,1)`
+`+QHTTPCFG: "prefix",<ip_prefix>,<prefix_length>`
+`+QHTTPCFG: "sslctxid",(0-5)`
+`+QHTTPCFG: "contenttype",(0-3)` | OK          |
+| `ATCELL+QHTTPCFG?`               | -                | `+QHTTPCFG: "contextid",1`
+`+QHTTPCFG: "requestheader",0`
+`+QHTTPCFG: "responseheader",0`
+`+QHTTPCFG: "prefix","64:FF9B:0:0:0:0:0:0",96`
+`+QHTTPCFG: "sslctxid",1`
+`+QHTTPCFG: "contenttype",0`                         | OK / ERROR  |
 
 It is highly recommended to see the *BG96_HTTP(S)_AT_Commands_Manual_V1.0.pdf* to get complete details.
 
@@ -691,8 +717,10 @@ The command is used to query the Send and Get Request to HTTPS Server.
 
 It is highly recommended to see the *BG96_HTTP(S)_AT_Commands_Manual_V1.0.pdf* to get complete details.
 
-`<rsptime>` Integer type. The range is 1-65535, and the default value is 60. Unit: second. It is used to configure the timeout for the HTTP(S) GET respons <br />
-`<data_length>` Integer type. The length of HTTP(S) request information, including HTTP(S) request header and HTTP(S) request body. The range is 1-2048. Unit: byte. <br />
+`<rsptime>` Integer type. The range is 1-65535, and the default value is 60. Unit: second. It is used to configure the timeout for the HTTP(S) GET respons 
+
+`<data_length>` Integer type. The length of HTTP(S) request information, including HTTP(S) request header and HTTP(S) request body. The range is 1-2048. Unit: byte. 
+
 `<input_time>` Integer type. The maximum time for inputting HTTP(S) requestinformation. The range is 1-65535, and the default value is 60. Unit: second.
 
 **Examples:**
@@ -885,4 +913,3 @@ AT+QFDEL=?
 
 OK
 ```
-<RkBottomNav/>

@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Firmware Upgrade Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7431 WisNode Bridge Serial Firmware Upgrade Guide
 
 For the RAK7201 to work properly, the latest firmware must be installed.
@@ -30,11 +27,7 @@ To upgrade the firmware of the RAK7431 WisNode Bridge Serial the following will 
 
 1. Download the RAK DFU Tool for your Operating System.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/firmware-upgrade-guide/1.rak-dfu-tool-download.png"
-  width="100%"
-  caption="RAK DFU Tool download"
-/>
+> **Image:** RAK DFU Tool download
 
 2. Download the latest Firmware.
 
@@ -51,11 +44,7 @@ Select the correct file corresponding to the LoRaWAN band that your device is wo
 
 - Under Windows you should see it like this:
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/firmware-upgrade-guide/2.com-port-check.png"
-  width="70%"
-  caption="COM port check"
-/>
+> **Image:** COM port check
 
 - Under MacOS and Linux you can check by running the `lsusb` command in the terminal.
 
@@ -63,10 +52,5 @@ src="https://images.docs.rakwireless.com/wisnode/rak7431/firmware-upgrade-guide/
 5. Select the correct COM port and Firmware version (HB, MB, or LB).
 6. Click the **Upgrade** button to start the process. Wait until the flash is complete. Do not interrupt the process.
 
-<RkImage
-src="https://images.docs.rakwireless.com/wisnode/rak7431/firmware-upgrade-guide/3.rak-dfu-tool.png"
-  width="70%"
-  caption="RAK DFU Tool"
-/>
+> **Image:** RAK DFU Tool
 
-<RkBottomNav/>

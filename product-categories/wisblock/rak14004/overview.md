@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14004 WisBlock Keypad Module
 
 Thank you for choosing **RAK14004 WisBlock Keypad Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -42,11 +40,11 @@ The RAK14004 module is designed as an IO extension module that allows to add a k
 * **Module Specifications**
 
     * Up to 8 x 8 buttons using scan matrix arrangement
-    * 3.3&nbsp;V Power supply
+    * 3.3 V Power supply
     * Chipset: Microchip ATMEGA328PB-AU
 
 * **Size**
-    * 35&nbsp;mm x 25&nbsp;mm
+    * 35 mm x 25 mm
 
 ## Prerequisites
 
@@ -56,4 +54,3 @@ To use a **RAK14004**, you need to connect an external keypad board module like 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

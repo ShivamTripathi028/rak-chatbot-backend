@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAKARJ18 916MHz Yellow Antenna
 
 Thank you for choosing **RAKARJ18 916MHz Yellow Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -22,11 +20,10 @@ HWR Series ½-wave center-fed dipole antennas deliver outstanding performance in
 
 ## Product Features
 
-- Frequency Range: 900~930&nbsp;MHz
-- Peak Gain: 1.2&nbsp;dBi
+- Frequency Range: 900~930 MHz
+- Peak Gain: 1.2 dBi
 - VSWR: ≤2.0
 - Internal counterpoise
 - Tilts and rotates
 - Internal O-ring seal on connector
 
-<RkBottomNav/>

@@ -10,9 +10,6 @@ sidebar_label: Datasheet
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7243 WisGate Developer D3 Datasheet
 
@@ -31,13 +28,12 @@ Pilot Gateway Pro is ideal for prototyping, proof-of-concept demonstration, or e
 - **SX1301 baseband processor**, emulates 49 x LoRa demodulators 10 programmable parallel demodulation paths, supports 8 uplinks channel and 1 downlink channel
 - Built-in **Ublox MAX-7Q GPS Module**
 - Built-in heat sink for thermal heat dissipation management
-- Supports 5&nbsp;V / 2.5&nbsp;A power supply
-- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm@SF12, BW 125&nbsp;kHz
+- Supports 5 V / 2.5 A power supply
+- TX power up to 27 dBm, RX sensitivity down to -139 dBm@SF12, BW 125 kHz
 - Frequency band support: EU433, CN470, RU864, IN865, EU868, US915, AU915, KR920, AS923
 - Housing with top cover, body, bottom cover with riveted motherboard standoff
 - Includes Pi ready **ID EEPROM**, **GPIO** setup, and a device tree that  can be automatically configured from vendor information
 - Supports fully open-source code connected to a LoRaWAN server
-
 
 ## Specifications
 
@@ -47,11 +43,7 @@ The overview covers the board overview of RAK7243 and its block diagram that dis
 
 #### Board Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/1.board-overview.png"
-  width="75%"
-  caption="RAK7243 outer dimensions"
-/>
+> **Image:** RAK7243 outer dimensions
 
 #### Block Diagram
 
@@ -59,12 +51,7 @@ The overview covers the board overview of RAK7243 and its block diagram that dis
 
 The concrete segmentation of the protocol-related tasks is outside the scope of this document.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/2.system-structure.png"
-  width="100%"
-  caption="RAK7243 WisGate Developer D3+ Gateway system structure"
-/>
-
+> **Image:** RAK7243 WisGate Developer D3+ Gateway system structure
 
 ### Hardware
 
@@ -72,12 +59,7 @@ The hardware specification is categorized into seven parts. It discusses the int
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/3.interfacing.png"
-  width="80%"
-  caption="RAK7243 Interfaces"
-/>
-
+> **Image:** RAK7243 Interfaces
 
 #### Pin Definition
 
@@ -85,16 +67,11 @@ The RAK7243 WisGate Developer D3 Gateway is composed of the LPWAN Concentrator R
 
 ##### RAK2245 Pi HAT
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/4.rak2245-pi-hat.png"
-  width="35%"
-  caption="RAK2245 Pi HAT"
-/>
+> **Image:** RAK2245 Pi HAT
 
 RAK2245 Pi HAT is an LPWAN Concentrator board that follows the Pi HAT standard and can be mounted to a Pi board with a 40-pin connector.
 
 - For detailed information about the RAK2245, go to the [RAK2245 Pi HAT Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak2245-pi-hat/datasheet/).
-
 
 #### RF Characteristics
 
@@ -104,7 +81,8 @@ The pilot gateway supports all LoRaWAN frequency channels shown below. The opera
 
 |    Region     | Frequency (MHz)  |
 | :-----------: | :--------------: |
-|    Europe     | EU433 <br /> EU868 |
+|    Europe     | EU433 
+ EU868 |
 |     China     |      CN470       |
 | North America |      US915       |
 |     Asia      |      AS923       |
@@ -112,9 +90,6 @@ The pilot gateway supports all LoRaWAN frequency channels shown below. The opera
 |     Korea     |      KR920       |
 |     India     |      IN865       |
 |    Russia     |      RU864       |
-
-
-
 
 #### LoRa
 
@@ -142,23 +117,19 @@ The RAK2245 has an excellent transmitter performance. It is highly recommended t
 |     3      |      3      |     13      |    0     |              26              |
 |     3      |      3      |     14      |    0     |              27              |
 
-
-
-- T=25&nbsp;℃, VDD=5&nbsp;V (Typ.) if nothing else is stated.
-
+- T=25 ℃, VDD=5 V (Typ.) if nothing else is stated.
 
 |                Parameter                |        Condition        |      Min      | Typ.  |      Max       |
 | :-------------------------------------: | :---------------------: | :-----------: | :---: | :------------: |
-|             Frequency Range             |            -            | 863&nbsp;Mhz  |   -   |  870&nbsp;Mhz  |
+|             Frequency Range             |            -            | 863 Mhz  |   -   |  870 Mhz  |
 |          Modulation Techniques          |        FSK/LoRa         |       -       |   -   |       -        |
-| TX Frequency Variations vs. Temperature | Power Level Setting: 20 |  -3&nbsp;kHz  |   -   |  +3&nbsp;kHz   |
-|   TX Power Variation vs. Temperature    | Power Level Setting: 20 |  -5&nbsp;dBm  |   -   |  +5&nbsp;dBm   |
-|           TX Power Variation            |            -            | -1.5&nbsp;dBm |   -   | >+1.5&nbsp;dBm |
+| TX Frequency Variations vs. Temperature | Power Level Setting: 20 |  -3 kHz  |   -   |  +3 kHz   |
+|   TX Power Variation vs. Temperature    | Power Level Setting: 20 |  -5 dBm  |   -   |  +5 dBm   |
+|           TX Power Variation            |            -            | -1.5 dBm |   -   | >+1.5 dBm |
 
 ##### Receiver RF
 
 It is highly recommended, to use optimized RSSI calibration values, which is part of the HAL v3.1. For both, Radio 1 and 2, the RSSI-Offset should be set - 169.0. The following table gives the typical sensitivity level of the RAK2245.
-
 
 | Signal Bandwidth (kHz) | Spreading Factor | Sensitivity (dBm) |
 | :--------------------: | :--------------: | :---------------: |
@@ -169,128 +140,97 @@ It is highly recommended, to use optimized RSSI calibration values, which is par
 |          500           |        12        |       -134        |
 |          500           |        7         |       -120        |
 
-
 #### Antenna Specifications
 
 ##### LoRa
 
 The LoRa Antenna with RP-SMA male connector is shown in **Figure 7**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/7.lora-antenna.png"
-  width="60%"
-  caption="LoRa antenna overview"
-/>
-
+> **Image:** LoRa antenna overview
 
 ###### Antenna Dimensions
 
 The antenna's mechanical dimensions are shown in **Figure 8**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/8.antenna-dimension.png"
-  width="60%"
-  caption="LoRa antenna dimension in mm"
-/>
-
+> **Image:** LoRa antenna dimension in mm
 
 ###### Antenna Parameters
-
 
 |               Items                |              Specifications              |
 | :--------------------------------: | :--------------------------------------: |
 | Voltage Standard Wave Ratio (VSWR) |                  1.5:1                   |
-|                Gain                |              -2.0&nbsp;dBi               |
-|   Working Temperature & Humidity   | T:-35&nbsp;ºC ~ +80&nbsp;ºC, H: 0% ~ 95% |
-|   Storage Temperature & Humidity   | T:-40&nbsp;ºC ~ +85&nbsp;ºC, H: 0% ~ 95% |
-
+|                Gain                |              -2.0 dBi               |
+|   Working Temperature & Humidity   | T:-35 ºC ~ +80 ºC, H: 0% ~ 95% |
+|   Storage Temperature & Humidity   | T:-40 ºC ~ +85 ºC, H: 0% ~ 95% |
 
 ##### GPS
 
 The GPS antenna with SMA Male Connector for Developer Gateway is shown in **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/11.gps-antenna.png"
-  width="60%"
-  caption="GPS antenna"
-/>
+> **Image:** GPS antenna
 
 ###### GPS Antenna Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7243/datasheet/12.gps-antenna-dimensions.png"
-  width="70%"
-  caption="GPS antenna dimensions"
-/>
-
+> **Image:** GPS antenna dimensions
 
 ###### GPS Environmental Requirements
 
 | Conditions |        Temperature        | Humidity |
 | :--------: | :-----------------------: | :------: |
-|  Working   | -35&nbsp;ºC ~ +80&nbsp;ºC | 0% ~ 95% |
-|  Storage   | -40&nbsp;ºC ~ +85&nbsp;ºC | 0% ~ 95% |
-
+|  Working   | -35 ºC ~ +80 ºC | 0% ~ 95% |
+|  Storage   | -40 ºC ~ +85 ºC | 0% ~ 95% |
 
 ###### GPS Antenna Parameters
 
-
-<b> Antenna Specifications </b>
+** Antenna Specifications **
 
 |                       Item                        |    Specifications     |  PET  |
 | :-----------------------------------------------: | :-------------------: | :---: |
 |           Range of Receiving Frequency            |      1575.42±1.1      | ±2.5  |
-|  Center Frequency (MHz) w/ 30&nbsp;mm2 GND plane  |          ≥10          | ±0.5  |
-|    Bandwidth (MHz) (Return Loss ≤ -10&nbsp;dB)    |      1575.42±1.1      | ±2.5  |
+|  Center Frequency (MHz) w/ 30 mm2 GND plane  |          ≥10          | ±0.5  |
+|    Bandwidth (MHz) (Return Loss ≤ -10 dB)    |      1575.42±1.1      | ±2.5  |
 |            VSWR (in Center Frequency)             |         ≤2.0          | ±0.5  |
-| Gain (Zenith) (dBi Typ.) w/ 70&nbsp;mm2 GND Plane |          4.5          | ±2.5  |
-|     Axial Ratio (dB) w/ 70&nbsp;mm2 GND Plane     |          3.0          | ±0.2  |
+| Gain (Zenith) (dBi Typ.) w/ 70 mm2 GND Plane |          4.5          | ±2.5  |
+|     Axial Ratio (dB) w/ 70 mm2 GND Plane     |          3.0          | ±0.2  |
 |                   Polarization                    | Right-handed circular |   -   |
 |                   Impedance (Ω)                   |          50           |   -   |
 |    Frequency Temperature Coefficient (ppm/ºC)     |         0±10          |   -   |
 
-<br />
-
-<b> Amplifier Specifications </b>
+** Amplifier Specifications **
 
 |       Item        |  Specifications  |
 | :---------------: | :--------------: |
-|  Frequency range  | 1575.42&nbsp;MHz |
-|       Gain        |   27&nbsp;dBi    |
+|  Frequency range  | 1575.42 MHz |
+|       Gain        |   27 dBi    |
 |       VSWR        |     ≤ 2.0 V      |
-| Noise coefficient |  ≤ 2.0&nbsp;dBm  |
-|    DC voltage     |   3 ~ 5&nbsp;V   |
-|    DC current     |  5 ± 2&nbsp;mA   |
+| Noise coefficient |  ≤ 2.0 dBm  |
+|    DC voltage     |   3 ~ 5 V   |
+|    DC current     |  5 ± 2 mA   |
 
-
-<br />
-
-<b> Environmental Test Performance Specifications </b>
+** Environmental Test Performance Specifications **
 
 |       Item        |   Normal Temp.   |  High Temp (1)*  |  Low Temp (2)*   |
 | :---------------: | :--------------: | :--------------: | :--------------: |
-|  Amplifier gain   | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 |
+|  Amplifier gain   | 27 dB ± 2.0 | 27 dB ± 2.0 | 27 dB ± 2.0 |
 |       VSWR        |      ≤ 2.0       |      ≤ 2.0       |      ≤ 2.0       |
 | Noise coefficient |      ≤ 2.0       |      ≤ 2.0       |      ≤ 2.0       |
 
 :::tip NOTE
 
-- **High-temperature test**: soap in temperature (85&nbsp;ºC) and humidity (95%) chamber for 24 hours and return to normal temperature (at least for 1 hour) without visual shape change.
-- **Low-temperature test**: soap in temperature (-40&nbsp;ºC) chamber for 24 hours and return to normal temperature (at least for 1 hour) without visual shape change.
+- **High-temperature test**: soap in temperature (85 ºC) and humidity (95%) chamber for 24 hours and return to normal temperature (at least for 1 hour) without visual shape change.
+- **Low-temperature test**: soap in temperature (-40 ºC) chamber for 24 hours and return to normal temperature (at least for 1 hour) without visual shape change.
 
 :::
 
-
-
 #### Electrical Characteristics
 
-The Pilot Gateway operates at 5&nbsp;V / 2.5&nbsp;A. It can be powered by micro USB with 5&nbsp;V.
+The Pilot Gateway operates at 5 V / 2.5 A. It can be powered by micro USB with 5 V.
 
 |         Parameter          | Min.  |   Typical   |     Max.     |
 | :------------------------: | :---: | :---------: | :----------: |
-|   Current in CAT M mode    |   -   | 300&nbsp;mA |      -       |
-| Current in GSM mode (peak) |   -   |      -      | 3500&nbsp;mA |
-|       Cellular power       |   -   | 10&nbsp;mA  |      -       |
+|   Current in CAT M mode    |   -   | 300 mA |      -       |
+| Current in GSM mode (peak) |   -   |      -      | 3500 mA |
+|       Cellular power       |   -   | 10 mA  |      -       |
 
 #### Environmental Characteristics
 
@@ -298,10 +238,9 @@ The table below lists the operation and storage temperature requirements:
 
 |          Parameter          |  Min.  | Typical |     Max.     |
 | :-------------------------: | :----: | :-----: | :----------: |
-| Operation Temperature Range | -20&nbsp;ºC |  25&nbsp;ºC  |      -       |
-| Extended Temperature Range  | -40&nbsp;ºC |    -    | 3500&nbsp;mA |
-|  Storage Temperature Range  | -50&nbsp;ºC |    -    |      -       |
-
+| Operation Temperature Range | -20 ºC |  25 ºC  |      -       |
+| Extended Temperature Range  | -40 ºC |    -    | 3500 mA |
+|  Storage Temperature Range  | -50 ºC |    -    |      -       |
 
 ## Firmware
 

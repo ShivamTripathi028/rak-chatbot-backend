@@ -1,41 +1,37 @@
-# config.py
 import os
 from pathlib import Path
 
-# --- Core Directories and Paths ---
+# --- Core Directories ---
 BASE_DIR = Path(__file__).parent.resolve()
 DATA_DIRECTORY = BASE_DIR / "product-categories"
 CHROMA_BASE_PERSIST_DIR = BASE_DIR / "new_rak_category_dbs"
 
-# --- Logging Configuration ---
+# --- Logging ---
 EVAL_LOG_FILE = BASE_DIR / 'automated_evaluation_log.txt'
 CHATBOT_LOG_FILE = BASE_DIR / 'rak_chatbot_ui.log'
-
-# --- Evaluation and Results Files ---
 EVAL_DATASET_JSON = BASE_DIR / "evaluation_dataset.json"
 EVAL_RESULTS_CSV = BASE_DIR / "automated_evaluation_results.csv"
 
 # --- Model Configuration ---
+# BGE-Base: Fast, standard 512 token context.
 EMBEDDING_MODEL_NAME = "BAAI/bge-base-en-v1.5"
-
-# --- LLM Configuration (OPTIMIZED) ---
-# OPENAI_MODEL_NAME = "gpt-5-nano-2025-08-07"
 OPENAI_MODEL_NAME = "gpt-4.1-nano-2025-04-14"
 
-# --- RAG Pipeline Parameters (OPTIMIZED) ---
-# Reduced 'Initial K' prevents the Reranker from processing too many documents.
-# Switched to 'bge-reranker-base'. 'Large' is too slow for CPU inference.
-BEST_INITIAL_K = 35 
-BEST_FINAL_K = 20
-BEST_RERANKER_MODEL = "BAAI/bge-reranker-base"
+# --- RAG Pipeline Parameters ---
+# Reduced to 1500 to fit BGE-Base's 512 token limit safely.
+CHUNK_SIZE = 1500
+CHUNK_OVERLAP = 300
 
-# --- Database & Data Processing Parameters ---
-CHUNK_SIZE = 1000
-CHUNK_OVERLAP = 350
+# Retrieval Settings
+BEST_INITIAL_K = 20  # Increased K to retrieve more small chunks
+BEST_FINAL_K = 7
+BEST_RERANKER_MODEL = "BAAI/bge-reranker-base" 
+
+# --- System ---
 GLOBAL_DB_NAME = "all_rak_global_db"
-MAX_WORKERS_DATA_PROCESSING = os.cpu_count()
+MAX_WORKERS_DATA_PROCESSING = os.cpu_count() 
 
-# --- End of Life (EOL) Product List ---
+# --- EOL Products List ---
 EOL_PRODUCTS = [
     'RAK7240', 'RAK7289', 'RAK7249', 'RAK7258', 'RAK7268', 'RAK10701-P',
     'RAK7243', 'RAK7243C', 'RAK7244', 'RAK7244C', 'RAK7246G',

@@ -9,41 +9,33 @@ image: "https://images.docs.rakwireless.com/accessories/rakarj15/white-868mhz-an
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAKARJ15 868MHz White Blade Antenna Datasheet
 ## Overview
 
 ### Features
 
-- Frequency Range: 863~870&nbsp;MHz
-- Max Gain: 2.8&nbsp;dBi
+- Frequency Range: 863~870 MHz
+- Max Gain: 2.8 dBi
 - VSWR: ≤ 1.3
 - High efficiency
 - Vertically polarized
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj15/white-868mhz-antenna-features.png"
-  width="70%"
-  caption="RAKARJ15 Antenna Overview"
-/>
+> **Image:** RAKARJ15 Antenna Overview
 
 ## Specifications
 
 | **Model**                  | RAKARJ15                      |
 | :------------------------- | ----------------------------- |
-| **Frequency Range**        | 863&nbsp;MHz~870&nbsp;MHz     |
-| **Peak Gain**              | 2.8&nbsp;dBi                  |
+| **Frequency Range**        | 863 MHz~870 MHz     |
+| **Peak Gain**              | 2.8 dBi                  |
 | **VSWR**                   | ≤ 1.3                         |
 | **Efficiency**             | >80%                          |
-| **Feed Impedance**         | 50&nbsp;Ω                     |
+| **Feed Impedance**         | 50 Ω                     |
 | **Polarization**           | Vertical                      |
 | **Cover Material (color)** | Plastic (White)               |
 | **Connector Type**         | RP-SMA                        |
-| **Dimensions (mm)**        | Փ13.0&nbsp;mm x 198.0&nbsp;mm |
-| **Operation Temp (°C)**    | -30&nbsp;°C ~ +75&nbsp;°C     |
+| **Dimensions (mm)**        | Փ13.0 mm x 198.0 mm |
+| **Operation Temp (°C)**    | -30 °C ~ +75 °C     |
 | **Humidity Range**         | 5%~95%                        |
 
 ### S11 & VSWR
@@ -53,11 +45,7 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 |     **863MHz**     | -20.6 | 1.20 |
 |     **870MHz**     | -17.6 | 1.30 |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj15/white-868mhz-antenna-vser.png"
-  width="70%"
-  caption="S11 and VSWR Graph"
-/>
+> **Image:** S11 and VSWR Graph
 
 ### Peak Gain & Efficiency
 
@@ -75,18 +63,9 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 ### Radiation Patterns
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj15/white-868mhz-antenna-radiation-patterns.png"
-  width="70%"
-  caption="Radiation Patterns"
-/>
+> **Image:** Radiation Patterns
 
 ### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarj15/white-868mhz-antenna-mechanical-specifications.png"
-  width="80%"
-  caption="Mechanical Specifications"
-/>
+> **Image:** Mechanical Specifications
 
-<RkBottomNav/>

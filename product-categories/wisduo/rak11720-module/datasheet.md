@@ -11,10 +11,6 @@ slug: /product-categories/wisduo/rak11720-module/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK11720 WisDuo LPWAN+BLE Module Datasheet
 
 ## Overview
@@ -26,8 +22,10 @@ RAK11720 is a low-power, long-range LoRaWAN module based on the Ambiq Apollo3 Bl
 The default RAK11720 firmware is based on RUI3 (RAKwireless Unified Interface). This allows easy use as a standalone module by developing custom firmware via Arduino-compatible RUI3 APIs.  Sensors and other external peripherals can be interfaced directly, eliminating the need for an additional MCU.  Additionally, RAK11720 can be interfaced with an external host MCU using AT commands via UART or a BLE connection.
 
 :::tip NOTE
-There are two variants available for the RAK11720 Module:<br/>
-(1) With MHF4 IPEX connector to connect external antennas<br/>
+There are two variants available for the RAK11720 Module:
+
+(1) With MHF4 IPEX connector to connect external antennas
+
 (2) No IPEX connector but with RF pinout to connect custom antenna
 :::
 
@@ -35,7 +33,7 @@ There are two variants available for the RAK11720 Module:<br/>
 
 - Based on **AMA3B1KK-KBR-B0** and **SX1262**
 - ARM Cortex-M4F
-- 1&nbsp;MB Flash and 348&nbsp;KB SRAM
+- 1 MB Flash and 348 KB SRAM
 - **LoRaWAN 1.0.3** specification compliant
 - **Supported bands**: EU433, CN470, IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -43,10 +41,10 @@ There are two variants available for the RAK11720 Module:<br/>
 - Custom firmware using Arduino via RUI3 API
 - Easy-to-use AT Command set via UART interface
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range - greater than 10&nbsp;km with optimized antenna
-- Ultra-low-power consumption of 2.37&nbsp;μA in sleep mode
-- **Supply Voltage**: 1.8&nbsp;V ~ 3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C ~ 85°&nbsp;C
+- Long-range - greater than 10 km with optimized antenna
+- Ultra-low-power consumption of 2.37 μA in sleep mode
+- **Supply Voltage**: 1.8 V ~ 3.6 V
+- **Temperature range**: -40° C ~ 85° C
 
 ## Specifications
 
@@ -54,12 +52,7 @@ There are two variants available for the RAK11720 Module:<br/>
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/datasheet/block-diagram.png"
-  width="55%"
-  caption="RAK11720 System Block Diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK11720 System Block Diagram
 
 ### Hardware
 
@@ -86,26 +79,20 @@ The hardware specification is categorized into three parts: RF, electrical, and 
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/datasheet/rak11720-pinout diagram.svg"
-  width="55%"
-  caption="RAK11720 Pin Illustration"
-  zoomMode={true}
-/>
+> **Image:** RAK11720 Pin Illustration
 
 :::warning
 When using `LORA RF` and `BLE RF` pins for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF traces must be away from interference (switching nodes of DC-DC supplies, high-current/voltage pulses from controllers of inductive loads like motors, signal generators, etc.).
-- RF traces must have 50&nbsp;ohm impedance.  It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF traces must have 50 ohm impedance.  It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, place it close to the LoRa RF and BLE RF pins.
 - Ground plane optimization is critical for certain antenna types like monopoles.
 - The GND trace used for the RF return path must be directly connected to the GND plane and not treated as a thermal relief.
-- It is recommended that RF traces be routed in curves, not sharp 90&nbsp;degree angles.
+- It is recommended that RF traces be routed in curves, not sharp 90 degree angles.
 
 In addition, with our commitment to making IoT easy, we offer dedicated service for <a href="https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test" target="_blank">Antenna RF Design which includes PCB design, tuning, matching and RF testing</a>.
 :::
-
 
 | **Pin No.** | **Name**      | **Type** | **Description**                                                         |
 |-------------|---------------|----------|-------------------------------------------------------------------------|
@@ -148,56 +135,17 @@ In addition, with our commitment to making IoT easy, we offer dedicated service 
 
 The RAK11720 module supports the LoRaWAN bands, as shown in the table below. When buying an RAK11720 module, pay attention to specifying the correct core module, RAK11720 H/L, for your region. **H** denotes high-frequency regions and **L** denotes low-frequency regions.
 
-<table>
-  <thead>
-    <tr>
-      <th>Module</th>
-      <th>Region</th>
-      <th>Frequency</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan = "2">RAK11720 (L)</td>
-      <td>Europe</td>
-      <td>EU433</td>
-    </tr>
-    <tr>
-      <td>China</td>
-      <td>CN470</td>
-    </tr>
-      <tr>
-      <td rowSpan = "7">RAK11720 (H)</td>
-      <td>Europe</td>
-      <td>EU868</td>
-    </tr>
-    <tr>
-      <td>North America</td>
-      <td>US915</td>
-    </tr>
-    <tr>
-      <td>Australia</td>
-      <td>AU915</td>
-    </tr>
-    <tr>
-      <td>Korea</td>
-      <td>KR920</td>
-    </tr>
-    <tr>
-      <td>Asia</td>
-      <td>AS923-1/2/3/4</td>
-    </tr>
-    <tr>
-      <td>India</td>
-      <td>IN865</td>
-    </tr>
-    <tr>
-      <td>Russia</td>
-      <td>RU864</td>
-    </tr>
-  </tbody>
-</table>
-
+| Module | Region | Frequency |
+| --- | --- | --- |
+| RAK11720 (L) | Europe | EU433 |
+| RAK11720 (L) | China | CN470 |
+| RAK11720 (H) | Europe | EU868 |
+| RAK11720 (H) | North America | US915 |
+| RAK11720 (H) | Australia | AU915 |
+| RAK11720 (H) | Korea | KR920 |
+| RAK11720 (H) | Asia | AS923-1/2/3/4 |
+| RAK11720 (H) | India | IN865 |
+| RAK11720 (H) | Russia | RU864 |
 
 #### Electrical Characteristics
 
@@ -211,12 +159,12 @@ The RAK11720 module supports the LoRaWAN bands, as shown in the table below. Whe
 
 |      Feature      |  Condition   | Minimum |               Typical               | Maximum | Unit |
 |:-----------------:|:------------:|:-------:|:-----------------------------------:|:-------:|:----:|
-| Operating Current | BLE TX Mode  |    -    |         12.7 @4.0&nbsp;dBm          |    -    |  mA  |
-|                   | LORA TX Mode |    -    | 87 @&nbsp;20&nbsp;dBm, 868&nbsp;MHz |    -    |  mA  |
+| Operating Current | BLE TX Mode  |    -    |         12.7 @4.0 dBm          |    -    |  mA  |
+|                   | LORA TX Mode |    -    | 87 @ 20 dBm, 868 MHz |    -    |  mA  |
 
 ##### Sleep Current
 
-|       Feature       | Condition | Minimum (2.1&nbsp;V) | Typical (3.3&nbsp;V) | Maximum | Unit |
+|       Feature       | Condition | Minimum (2.1 V) | Typical (3.3 V) | Maximum | Unit |
 |:-------------------:|:---------:|:--------------------:|:--------------------:|:-------:|:----:|
 | Current Consumption |   EU868   |          -           |         2.37         |    -    |  μA  |
 |                     |   US915   |          -           |         2.37         |    -    |  μA  |
@@ -226,21 +174,11 @@ The RAK11720 module supports the LoRaWAN bands, as shown in the table below. Whe
 
 ##### Module Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/datasheet/mechanical_drawing.png"
-  width="60%"
-  caption="Board dimension"
-  zoomMode={true}
-/>
+> **Image:** Board dimension
 
 ##### Layout Recommendation
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/datasheet/pcb_footprint.png"
-  width="80%"
-  caption="PCB footprint and recommendations"
-  zoomMode={true}
-/>
+> **Image:** PCB footprint and recommendations
 
 #### Environmental Characteristics
 
@@ -248,31 +186,26 @@ The RAK11720 module supports the LoRaWAN bands, as shown in the table below. Whe
 
 |        Feature        | Minimum | Typical | Maximum |   Unit   |
 |:---------------------:|:-------:|:-------:|:-------:|:--------:|
-| Operating Temperature |   -40   |   25    |   85    | °&nbsp;C |
+| Operating Temperature |   -40   |   25    |   85    | ° C |
 
 ##### Storage Temperature
 
 |       Feature       | Minimum | Typical | Maximum |   Unit   |
 |:-------------------:|:-------:|:-------:|:-------:|:--------:|
-| Storage Temperature |   -40   |    -    |   85    | °&nbsp;C |
+| Storage Temperature |   -40   |    -    |   85    | ° C |
 
 ##### Recommended Reflow Profile
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/datasheet/reflow.png"
-  width="70%"
-  caption="Reflow Profile for RAK11720"
-  zoomMode={true}
-/>
+> **Image:** Reflow Profile for RAK11720
 
 Standard conditions for reflow soldering:
 
-- Pre-heating Ramp (A) (Initial temperature: 150°&nbsp;C): **1 ~ 2.5°&nbsp;C/sec**
-- Soaking Time (T2) (150 ~ 180°&nbsp;C): **60 ~ 100&nbsp;sec**
-- Peak Temperature (G): **230 ~ 250°&nbsp;C**
-- Reflow Time (T3) (> 220°&nbsp;C): **30 ~ 60&nbsp;sec**
-- Ramp-up Rate (B): **0 ~ 2.5°&nbsp;C/sec**
-- Ramp-down Rate (C): **1 ~ 3°&nbsp;C/sec**
+- Pre-heating Ramp (A) (Initial temperature: 150° C): **1 ~ 2.5° C/sec**
+- Soaking Time (T2) (150 ~ 180° C): **60 ~ 100 sec**
+- Peak Temperature (G): **230 ~ 250° C**
+- Reflow Time (T3) (> 220° C): **30 ~ 60 sec**
+- Ramp-up Rate (B): **0 ~ 2.5° C/sec**
+- Ramp-down Rate (C): **1 ~ 3° C/sec**
 
 ### Firmware
 
@@ -286,27 +219,15 @@ Download the latest RAK11720 WisDuo LPWAN Module firmware provided below. RAK117
 
 ### Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_CE_Certification.pdf',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_FCC_Certification.pdf',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_ISED_Certification.pdf',
-    },
-    {
-        'rcm': 'https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_RCM_Certification.pdf',
-    },
-    {
-        'anatel': 'https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_ANATEL_Certification.pdf',
-    },
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_ISED_Certification.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_RCM_Certification.pdf
+- **ANATEL:** https://downloads.rakwireless.com/LoRa/RAK11720/Certification/RAK11720_ANATEL_Certification.pdf
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

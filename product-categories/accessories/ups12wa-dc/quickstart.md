@@ -9,23 +9,15 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # 12WA-DC Mini UPS Quick Start Guide
 
 ## Connecting 12WA-DC Mini UPS and RAK7268
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/ups-12wa-dc/connection.png"
-  width="70%"
-  caption="UPS 12WA-DC Mini and RAK7268 Connection"
-/>
+> **Image:** UPS 12WA-DC Mini and RAK7268 Connection
 
-1. Connect the DC 12&nbsp;V adapter to the 12WA-DC Mini UPS 5.5 x 2.1&nbsp;mm input port.
+1. Connect the DC 12 V adapter to the 12WA-DC Mini UPS 5.5 x 2.1 mm input port.
 2. Connect the 12WA-DC Mini UPS DC output port to the RAK7268 DC input port.
 3. Turn on the 12WA-DC Mini UPS by pressing the ON button. 
-
 
 :::tip NOTE
 - Fully charge the 12WA-DC Mini UPS before using it for the first time.
@@ -39,11 +31,10 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 When the 12WA-DC Mini UPS is stored, the self-discharge rate is affected by the ambient temperature. Remove it from the RAK7268 and fully charge it if it will not be used for a long time. Then turn it off and store it in a cool, dry place.
 The 12WA-DC Mini UPS should not be stored without charging for more than the time indicated below:
 
-- Storage for 1 month: -20°&nbsp;C ~ 45°&nbsp;C
-- Storage for 3 months: -20°&nbsp;C ~ 35°&nbsp;C
+- Storage for 1 month: -20° C ~ 45° C
+- Storage for 3 months: -20° C ~ 35° C
 
-In addition, charge the UPS regularly (once every 3~5 months) to prevent excessive discharge. An excessive discharge will affect the battery’s performance and function. The charging time is approximately 3.5 hours, and the voltage is maintained between 11.1&nbsp;V ~ 12.6&nbsp;V.
-
+In addition, charge the UPS regularly (once every 3~5 months) to prevent excessive discharge. An excessive discharge will affect the battery’s performance and function. The charging time is approximately 3.5 hours, and the voltage is maintained between 11.1 V ~ 12.6 V.
 
 ## Safety Warning
 
@@ -56,4 +47,3 @@ In addition, charge the UPS regularly (once every 3~5 months) to prevent excessi
 - Keep the 12WA-DC Mini UPS out of reach of children.
 :::
 
-<RkBottomNav/>

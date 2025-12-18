@@ -11,16 +11,13 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock Agriculture Kit Datasheet
 
 ## Overview
 
 ### Description
 
-The **WisBlock Agriculture Kit** is a comprehensive and customizable IoT kit optimized for agricultural applications. This kit includes a range of sensors designed specifically for agriculture, including soil, light, and environmental sensors. Additionally, the kit also has common interfaces like SDI-12, 4-20&nbsp;mA, and RS485, providing a versatile platform for monitoring and controlling agricultural conditions.
+The **WisBlock Agriculture Kit** is a comprehensive and customizable IoT kit optimized for agricultural applications. This kit includes a range of sensors designed specifically for agriculture, including soil, light, and environmental sensors. Additionally, the kit also has common interfaces like SDI-12, 4-20 mA, and RS485, providing a versatile platform for monitoring and controlling agricultural conditions.
 
 The kit is designed for easy integration with other WisBlock modules. It also supports different connectivity options like LoRaWAN, BLE, LTE-M, and NB-IoT. The said options enable you to choose the most suitable connectivity for your specific use case. With this kit, you can easily monitor soil moisture, light levels, temperature, and humidity remotely. Moreover, it can receive real-time alerts, and take appropriate action to optimize crop yields and resource use.
 
@@ -42,7 +39,7 @@ The kit is designed for easy integration with other WisBlock modules. It also su
     - Two <a href="https://store.rakwireless.com/products/rak1906-bme680-environment-sensor?utm_source=RAK1906&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK1906 Environmental Sensors</a> 
     - Two <a href="https://store.rakwireless.com/products/rain-sensor-rak12005-module-and-rak12030-sensor?utm_source=RAK12005&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK12005/RAK12030 Rain Sensors</a> 
     - Two <a href="https://store.rakwireless.com/products/rak5802-rs485-interface?utm_source=RAK5802&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK5802 RS485 Interface Modules</a> 
-    - Two <a href="https://store.rakwireless.com/products/rak5801-4-20ma-interface?utm_source=RAK5801&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK5801 4-20&nbsp;mA Interface Modules</a> 
+    - Two <a href="https://store.rakwireless.com/products/rak5801-4-20ma-interface?utm_source=RAK5801&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK5801 4-20 mA Interface Modules</a> 
     - Two <a href="https://store.rakwireless.com/products/sdi-12-interface-rak13010?utm_source=RAK13010&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK13010 SDI-12 Interface Modules</a> 
     - LoRaWAN supported bands: RU864, IN865, EU868, AU915, US915, KR920, and AS923  
     - Select a cellular variant that is applicable for your region:  
@@ -56,11 +53,7 @@ The kit is designed for easy integration with other WisBlock modules. It also su
 
 The WisBlock Agriculture Kit includes the following modules:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/7_agriculture_kit_2.png"
-  width="80%"
-  caption="Modules of the WisBlock Agriculture Kit"
-/>
+> **Image:** Modules of the WisBlock Agriculture Kit
 
 ### Hardware
 
@@ -69,7 +62,6 @@ The WisBlock Agriculture Kit includes the following modules:
 WisBlock Kits require WisBlock Base and WisBlock Core to be useful for any IoT application. The sensor and IO modules included in the kit will not work without the base and core.
 
 The table shows the base and core included in the kit.
-
 
 | RAK Model                                                                                                                                                                                                  | Function      | Feature                                                               |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | --------------------------------------------------------------------- |
@@ -104,7 +96,6 @@ Check individual modules for their specific requirements, like needed batteries 
 | <a href="https://store.rakwireless.com/products/rak5801-4-20ma-interface?utm_source=RAK5801&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK5801</a>                          | 4-20 mA              | LM2902        | STMicroelectronics    |
 | <a href="https://store.rakwireless.com/products/sdi-12-interface-rak13010?utm_source=RAK13010&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK13010</a>                       | SDI-12               | --            | RAKwireless           |
 
-
 #### WisBlock Cellular Modules
 
 The cellular modules support different cellular protocols, as shown in the table.
@@ -118,5 +109,3 @@ The cellular modules support different cellular protocols, as shown in the table
 
 The **WisBlock Agriculture Kit** is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
-
-<RkBottomNav/>

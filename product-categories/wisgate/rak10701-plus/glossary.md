@@ -14,152 +14,50 @@ tags:
   - field tester plus
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Field Tester Plus Glossary of Key Terms
 
 Quickly look up important terms and definitions used throughout this guide for easier understanding and navigation.
 
 ## Work Modes
 
-<table>
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Field Tester Mode</b></td>
-      <td>Full-featured mode after joining an LNS and integrating the Field Test Data Processor Extension. Displays both uplink and downlink metrics, including RSSI, SNR, packet loss, distance, and supports CSV export.</td>
-    </tr>
-    <tr>
-      <td><b>LinkCheck Mode</b></td>
-      <td>Basic mode when joined to an LNS but Field Test Extension is not installed or not properly configured. Only downlink RSSI, SNR, and gateway count are displayed.</td>
-    </tr>
-  </tbody>
-</table>
+| Term | Definition |
+| --- | --- |
+| Field Tester Mode | Full-featured mode after joining an LNS and integrating the Field Test Data Processor Extension. Displays both uplink and downlink metrics, including RSSI, SNR, packet loss, distance, and supports CSV export. |
+| LinkCheck Mode | Basic mode when joined to an LNS but Field Test Extension is not installed or not properly configured. Only downlink RSSI, SNR, and gateway count are displayed. |
 
 ## LoRa Metrics
 
-<table>
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Uplink RSSI</b></td>
-      <td>Signal strength measured at the gateway from the Field Tester Plus's uplink.</td>
-    </tr>
-    <tr>
-      <td><b>Uplink SNR</b></td>
-      <td>Signal-to-noise ratio of the uplink, measured at the gateway.</td>
-    </tr>
-    <tr>
-      <td><b>Downlink RSSI</b></td>
-      <td>Signal strength received by the device from the gateway (based on LinkCheck response).</td>
-    </tr>
-    <tr>
-      <td><b>Downlink SNR</b></td>
-      <td>Signal-to-noise ratio of the downlink, measured by the Field Tester Plus.</td>
-    </tr>
-    <tr>
-      <td><b>Packet Loss Rate (Uplink)</b></td>
-      <td>Percentage of lost uplink packets, calculated from frame counter gaps.</td>
-    </tr>
-    <tr>
-      <td><b>Packet Loss Rate (Downlink)</b></td>
-      <td>Loss percentage based on missing LinkCheck responses.</td>
-    </tr>
-    <tr>
-      <td><b>Number of Gateways</b></td>
-      <td>Number of gateways that received the last uplink.</td>
-    </tr>
-    <tr>
-      <td><b>Gateway EUI</b></td>
-      <td>Shortened EUI (unique ID) of the nearest receiving gateway.</td>
-    </tr>
-  </tbody>
-</table>
+| Term | Definition |
+| --- | --- |
+| Uplink RSSI | Signal strength measured at the gateway from the Field Tester Plus's uplink. |
+| Uplink SNR | Signal-to-noise ratio of the uplink, measured at the gateway. |
+| Downlink RSSI | Signal strength received by the device from the gateway (based on LinkCheck response). |
+| Downlink SNR | Signal-to-noise ratio of the downlink, measured by the Field Tester Plus. |
+| Packet Loss Rate (Uplink) | Percentage of lost uplink packets, calculated from frame counter gaps. |
+| Packet Loss Rate (Downlink) | Loss percentage based on missing LinkCheck responses. |
+| Number of Gateways | Number of gateways that received the last uplink. |
+| Gateway EUI | Shortened EUI (unique ID) of the nearest receiving gateway. |
 
 ## Location and Distance
 
-
-<table>
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Definition</th>
-      <th>Dependencies</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Max Distance / Min Distance</b></td>
-      <td>Estimated distance to the farthest/nearest gateway, based on GPS.</td>
-      <td>Requires GPS and gateway location data.</td>
-    </tr>
-    <tr>
-      <td><b>Latitude / Longitude</b></td>
-      <td>Real-time geographic coordinates obtained by the device.</td>
-      <td>Requires outdoor environment and GPS fix.</td>
-    </tr>
-    <tr>
-      <td><b>Location Label</b></td>
-      <td>Manual tag entered to label test points (alternative to GPS indoors).</td>
-      <td>User-defined input.</td>
-    </tr>
-  </tbody>
-</table>
+| Term | Definition | Dependencies |
+| --- | --- | --- |
+| Max Distance / Min Distance | Estimated distance to the farthest/nearest gateway, based on GPS. | Requires GPS and gateway location data. |
+| Latitude / Longitude | Real-time geographic coordinates obtained by the device. | Requires outdoor environment and GPS fix. |
+| Location Label | Manual tag entered to label test points (alternative to GPS indoors). | User-defined input. |
 
 ## Device Status
 
-<table>
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Last Refresh</b></td>
-      <td>Time since the last successfully processed uplink.</td>
-    </tr>
-    <tr>
-      <td><b>Battery Level</b></td>
-      <td>Displays the device's current battery percentage. Recommended to recharge when low.</td>
-    </tr>
-  </tbody>
-</table>
+| Term | Definition |
+| --- | --- |
+| Last Refresh | Time since the last successfully processed uplink. |
+| Battery Level | Displays the device's current battery percentage. Recommended to recharge when low. |
 
 ## User Actions
 
-<table>
-  <thead>
-    <tr>
-      <th>Term</th>
-      <th>Definition</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Stop/Start Sending</b></td>
-      <td>Pause or resume automatic uplinks via the pause icon.</td>
-    </tr>
-    <tr>
-      <td><b>Location Tagging (Label)</b></td>
-      <td>Manually set a label for the test point to enable CSV recording.</td>
-    </tr>
-    <tr>
-      <td><b>Force Uplink</b></td>
-      <td>Double-press the side button to send an immediate uplink outside the scheduled interval.</td>
-    </tr>
-  </tbody>
-</table>
+| Term | Definition |
+| --- | --- |
+| Stop/Start Sending | Pause or resume automatic uplinks via the pause icon. |
+| Location Tagging (Label) | Manually set a label for the test point to enable CSV recording. |
+| Force Uplink | Double-press the side button to send an immediate uplink outside the scheduled interval. |
 
-<RkBottomNav/>

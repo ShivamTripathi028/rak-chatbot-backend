@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13004 WisBlock PWM Expander Module
 
 Thank you for choosing **RAK13004 WisBlock PWM Expander Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -35,19 +33,18 @@ For All WisBlock Core Modules:
 
 The RAK13004 is a PWM expander module that can be mounted to the IO slot of WisBlock Base board. It can be controlled 16-channel LED, and the module uses PCA9685 from NXP, I2C interface.
 
-
 ## Product Features
 
 - 16 LED drivers connector
-- 1&nbsp;MHz Fast-mode Plus compatible I2C-bus interface
+- 1 MHz Fast-mode Plus compatible I2C-bus interface
 - 4096-step (12-bit) linear programable brightness per LED
-- LED output frequency typically varies from 24&nbsp;Hz to 1526&nbsp;Hz
+- LED output frequency typically varies from 24 Hz to 1526 Hz
 - Supports hot insertion
 - Low Standby Current
-- 5.5&nbsp;V tolerant inputs
-- Operating Voltage: 2.3&nbsp;V to 5.5&nbsp;V @ -40&nbsp;°C to +85&nbsp;°C
+- 5.5 V tolerant inputs
+- Operating Voltage: 2.3 V to 5.5 V @ -40 °C to +85 °C
 - Chipset:  NXP Semiconductors PCA9685
-- Module size: 25X35&nbsp;mm
+- Module size: 25X35 mm
 
 ## Prerequisites
 
@@ -57,4 +54,3 @@ To use a **RAK13004**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

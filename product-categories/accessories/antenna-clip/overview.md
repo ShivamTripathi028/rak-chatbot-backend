@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Antenna Clip
 
 Thank you for choosing **Antenna Clip** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -32,4 +30,3 @@ The product comes in pairs (two in a package) to ensure secure attachment even f
 - Non-slip grip
 - Durable and stable
 
-<RkBottomNav/>

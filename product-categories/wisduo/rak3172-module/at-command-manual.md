@@ -19,9 +19,6 @@ slug: /product-categories/wisduo/rak3172-module/at-command-manual/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3172 WisDuo LoRaWAN Module AT Command Manual
 
 ## Introduction
@@ -29,8 +26,6 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 The RAK3172 WisDuo module is based on the STM32WLE5CC chip and is designed to simplify LoRaWAN and LoRa point-to-point (P2P) communication. To integrate LoRa technology into your projects, the RAK3172 is implemented with an easy-to-use UART communication interface where you can send AT commands. Through these AT commands, you can set the parameters needed for LoRa P2P and LoRaWAN communication. You can also use any microcontroller with a UART interface to control the RAK3172 module.
 
 The UART serial communication is exposed on the UART2 (also identified as the **LPUART1 port**), through **Pin 2 (TX2)** and **Pin 1 (RX2)**. The default parameters of the UART2 communication are **115200 / 8-N-1**. The firmware upgrade is also possible through this port. To familiarize yourself with the pin distribution of this module and find a schematic circuit of a reference application, refer to the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-module/datasheet/#rak3172-wisduo-lpwan-module-datasheet" target="_blank">RAK3172 Module Datasheet</a>.
-
-
 
 ### Links to Quick Start Guide
 
@@ -59,5 +54,3 @@ In addition, aside on UART2, AT commands can also be interfaced via UART1 **Pin 
 - If the host microcontroller code is based on this old firmware, we have a <a href="https://learn.rakwireless.com/hc/en-us/articles/26687498449559-AT-Command-Migration-Guide-of-RAK3172-to-RUI3-RAKwireless-Unified-Interface-V3" target="_blank">RAK3172 AT Command migration guide</a> that explain in detail the few differences between the two AT commands set.
 :::
 
-
-<RkBottomNav/>

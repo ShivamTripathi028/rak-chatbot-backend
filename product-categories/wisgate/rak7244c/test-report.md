@@ -10,9 +10,6 @@ sidebar_label: Test Report
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # Environment Test Report
 
@@ -42,29 +39,13 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 ## Pictures of the Test Equipment
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/1.png"
-  width="50%"
-  caption="Multi-channel temperature tester"
-/>
+> **Image:** Multi-channel temperature tester
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/2.png"
-  width="50%"
-  caption="RAK7244C"
-/>
+> **Image:** RAK7244C
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/3.png"
-  width="50%"
-  caption="Environmental test chamber"
-/>
+> **Image:** Environmental test chamber
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/4.png"
-  width="50%"
-  caption="LoRa nodes"
-/>
+> **Image:** LoRa nodes
 
 ## Test Requirements
 
@@ -105,11 +86,7 @@ c. The LAN port and Wi-Fi work well.
 | ch7    | Heat dissipation aluminum of RAK2245                       | WHITE    | 103.1º C        |
 | ch8    | The internal temperature of the environmental test chamber | DARK RED | 85.3º C         |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/5.png"
-  width="75%"
-  caption="Temperature monitoring points"
-/>
+> **Image:** Temperature monitoring points
 
 ## Test Results
 
@@ -120,29 +97,13 @@ c. The LAN port and Wi-Fi work well.
 | High-temperature storage | The DUT can power up and login via SSH.                                   | PASS       |
 | High-temperature work    | Can send and receive LoRa packets normally and the Wi-Fi also works well. | PASS       |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/6.png"
-  width="75%"
-  caption="Send and receive LoRa packets at -40º C"
-/>
+> **Image:** Send and receive LoRa packets at -40º C
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/7.png"
-  width="75%"
-  caption="Send and receive packets at 85º C"
-/>
+> **Image:** Send and receive packets at 85º C
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/8.png"
-  width="75%"
-  caption="Wi-Fi works well at -40º C"
-/>
+> **Image:** Wi-Fi works well at -40º C
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7244c/testing-report/9.png"
-  width="75%"
-  caption="Wi-Fi works well at 85º C"
-/>
+> **Image:** Wi-Fi works well at 85º C
 
 ## Test Date and Location
 

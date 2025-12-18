@@ -10,12 +10,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK14001 WisBlock RGB LED Module Quick Start Guide
-
-
 
 ## Prerequisite
 
@@ -43,7 +38,7 @@ Before going through each and every step on using the RAK14001 WisBlock module, 
 
 ### Hardware Setup
 
-The RAK14001 is an RGB LED module that is capable of driving RGB LEDs with up to 20&nbsp;mA per segment via the I2C interface. The main component of this module is the NCP5623B from On Semiconductors. This IC has a built−in DC/DC converter that works as a high-efficiency charge pump providing the required DC voltage for all three LED segments. There is also an IREF pin that provides the reference current based on the internal band−gap voltage reference to control the output current flowing in the LED.
+The RAK14001 is an RGB LED module that is capable of driving RGB LEDs with up to 20 mA per segment via the I2C interface. The main component of this module is the NCP5623B from On Semiconductors. This IC has a built−in DC/DC converter that works as a high-efficiency charge pump providing the required DC voltage for all three LED segments. There is also an IREF pin that provides the reference current based on the internal band−gap voltage reference to control the output current flowing in the LED.
 
 For more information about RAK14001, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak14001/datasheet/).
 
@@ -53,13 +48,7 @@ For more information about RAK14001, refer to the [Datasheet](https://docs.rakwi
 
 The RAK14001 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/mounting-mechanism.png"
-  figureCount="1"
-  width="60%"
-  caption="RAK14001 mounting connection to WisBlock Base module"
-/>
-
+> **Image:** RAK14001 mounting connection to WisBlock Base module
 
 ##### Disassembling Procedure
 
@@ -67,30 +56,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. Remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/removing_screw.png"
-  figureCount="2"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/detach_silkscreen.png"
-  figureCount="3"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 4**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/detach_module.png"
-  figureCount="4"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -118,12 +92,7 @@ These are the quick links that go directly to the software guide for the specifi
 
 1. Select the RAK4631 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/rak4631-board.png"
-  figureCount="5"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 2. Copy the following sample code into your Arduino IDE.
 
@@ -249,19 +218,9 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 6** and **Figure 7**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/select-port.png"
-  figureCount="6"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/upload.png"
-  figureCount="7"
-  width="100%"
-  caption="Uploading the RAK14001 Sample code"
-/>
+> **Image:** Uploading the RAK14001 Sample code
 
 4. When you successfully uploaded the example sketch, you'll now be able to see the RAK14001 RGB LED Module emits various colors of light. The three primary colors—red, green, and blue—are mixed to compose all kinds of colors by brightness, so you can see colorful light that gradually dim.
 
@@ -271,12 +230,7 @@ If you experience any error in compiling the example sketch, check the updated c
 
 1. Select the RAK11200 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/rak11200-board.png"
-  figureCount="8" 
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 2. Add the [RAK14001-NCP5623-Library](https://github.com/RAKWireless/RAK14001-NCP5623-Library) then copy the following sample code into your Arduino IDE.
 
@@ -407,19 +361,9 @@ If you experience any error in compiling the example sketch, check the updated c
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/rak11200-select-port.png"
- figureCount="9" 
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/upload.png"
-  figureCount="10"
-  width="100%"
-  caption="Uploading the RAK14001 Sample code"
-/>
+> **Image:** Uploading the RAK14001 Sample code
 
 4. When you successfully uploaded the example sketch, you'll now be able to see the RAK14001 RGB LED Module emits various colors of light. The three primary colors—red, green, and blue—are mixed to compose all kinds of colors by brightness, so you can see colorful light that gradually dim.
 
@@ -429,12 +373,7 @@ RAK11200 requires the **Boot0** pin to be configured properly first before uploa
 
 1. Select the RAK11310 WisBlock Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/rak11310-board.png"
-  figureCount="11"
-  width="100%"
-  caption="Selecting RAK11310 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11310 as WisBlock Core
 
 2. Copy the following sample code into your Arduino IDE.
 
@@ -561,13 +500,7 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Select the right port and upload the code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak14001/quickstart/rak11310-selectport.png"
-  figureCount="12"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
 4. When you successfully uploaded the example sketch, you'll now be able to see the RAK14001 RGB LED Module emits various colors of light. The three primary colors—red, green, and blue—are mixed to compose all kinds of colors by brightness, so you can see colorful light that gradually dim.
 
-<RkBottomNav/>

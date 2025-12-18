@@ -9,16 +9,13 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg14/antenna-overvie
 sidebar_label: Datasheet
 ---
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # 902-928MHz 5.8dBi Fiberglass Antenna Datasheet
 
 ## Features
 
-- Frequency range: 902 ~ 930&nbsp;MHz
-- Max gain: 5.8&nbsp;dBi
+- Frequency range: 902 ~ 930 MHz
+- Max gain: 5.8 dBi
 - VSWR: ≤ 2.0
 - High Efficiency
 - Radome Body: **Fiberglass**
@@ -27,12 +24,7 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 - Easy to mount with the included Installation kit
 - Outdoor use
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg14/antenna-overview.png"
-  width="70%"
-  caption="RAKARG14 Overview"
-/>
+> **Image:** RAKARG14 Overview
 
 ## Specifications
 
@@ -43,50 +35,42 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 | Parameter              | Value                          |
 | ---------------------- | ------------------------------ |
 | Model                  | RAKARG14                       |
-| Frequency Range        | 902 ~ 930&nbsp;MHz             |
-| Peak Gain              | 5.8&nbsp;dBi                   |
+| Frequency Range        | 902 ~ 930 MHz             |
+| Peak Gain              | 5.8 dBi                   |
 | VSWR                   | ≤ 2.0                          |
 | Efficiency             | ≤ 79%                          |
-| Feed Impedance         | 50&nbsp;Ω                      |
+| Feed Impedance         | 50 Ω                      |
 | Radiation Pattern      | Omnidirectional                |
 | Polarization           | Vertical                       |
 | Cover Material (color) | Fiberglass (white)             |
 | Connector Type         | N-type male                    |
-| Dimensions (mm)        | Փ 29.8&nbsp;mm x 800.0&nbsp;mm |
-
+| Dimensions (mm)        | Փ 29.8 mm x 800.0 mm |
 
 #### Environmental Characteristics
 
-<b>Operation Environment</b>
+**Operation Environment**
 
 | Parameter   | Value                     |
 | ----------- | ------------------------- |
-| Temperature | -20&nbsp;°C ~ +65&nbsp;°C |
+| Temperature | -20 °C ~ +65 °C |
 | Humidity    | 5% ~ 95%                  |
 
-<b>Storage environment </b>
+**Storage environment **
 
 | Parameter   | Value                     |
 | ----------- | ------------------------- |
-| Temperature | -30&nbsp;°C ~ +75&nbsp;°C |
+| Temperature | -30 °C ~ +75 °C |
 | Humidity    | 5% ~ 95%                  |
-
 
 #### VSWR
 
 | Frequency (MHz) | VSWR |
 | --------------- | ---- |
-| 900&nbsp;MHz    | 1.32 |
-| 902&nbsp;MHz    | 1.33 |
-| 930&nbsp;MHz    | 1.47 |
+| 900 MHz    | 1.32 |
+| 902 MHz    | 1.33 |
+| 930 MHz    | 1.47 |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg14/vswr.png"
-  width="80%"
-  caption="RAKARG14 VSWR Graph"
-/>
-
+> **Image:** RAKARG14 VSWR Graph
 
 #### Peak Gain & Efficiency
 
@@ -109,24 +93,11 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 | 930             | 5.7        | 78.16          |
 |                 | Average:   | 71.73          |
 
-
 #### Radiation Patterns
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg14/radiation-patterns.png"
-  width="70%"
-  caption="RAKARG14 Radiation Patterns"
-/>
-
+> **Image:** RAKARG14 Radiation Patterns
 
 #### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/rakarg14/mechanical-characteristics.png"
-  width="80%"
-  caption="RAKARG14 Mechanical Characteristics"
-/>
+> **Image:** RAKARG14 Mechanical Characteristics
 
-
-
-<RkBottomNav/>

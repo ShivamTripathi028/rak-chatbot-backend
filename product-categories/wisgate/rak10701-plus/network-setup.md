@@ -17,9 +17,6 @@ tags:
 date: 2025-05-23
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkImage from '@site/src/components/Image'
-
 # RAK10701-Plus Field Tester for LoRaWAN Network Setup
 
 Before conducting any field tests, it’s essential to set up the Field Tester Plus, configure your LoRaWAN gateway, and ensure all system components are properly connected.
@@ -57,11 +54,7 @@ This section describes the basic parameter settings that can be configured direc
 1. Connect the **LoRa Sub-GHz antenna** (RP-SMA connector) to the device.
 2. Press and hold the **side button for 5 seconds** to turn on the Field Tester Plus.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/power-on-screen.png"
-  width="50%"
-  caption="Power On Screen"
-/>
+> **Image:** Power On Screen
 
 3. Once powered on, the main screen will appear.
 
@@ -69,19 +62,11 @@ This section describes the basic parameter settings that can be configured direc
 No data will be shown on first boot until a valid uplink occurs.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-main-screen.png"
-  width="50%"
-  caption="Field Tester Main Screen"
-/>
+> **Image:** Field Tester Main Screen
 
 4. Tap the gear icon on the screen to open the **SETTINGS** menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-settings.png"
-  width="50%"
-  caption="Field Tester Settings"
-/>
+> **Image:** Field Tester Settings
 
 5. Use the touch controls to adjust LoRa parameters (e.g., Band, DR, TX Power).
 
@@ -91,60 +76,20 @@ No data will be shown on first boot until a valid uplink occurs.
 
   **Editable Parameters:**
 
-  <table>
-    <thead>
-      <tr>
-        <th>Setting</th>
-        <th>Description</th>
-        <th>Values / Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><h3>Location Labeling</h3></td>
-        <td>Set a test point label (important for CSV export)</td>
-        <td><b>Default</b>: NULL<br/><b>Max Length</b>: 6 characters</td>
-      </tr>
-      <tr>
-        <td><h3>Band</h3></td>
-        <td>LoRaWAN regional frequency band</td>
-        <td>RU864, IN865, EU868, US915, AU915, KR920, AS923-1/2/3/4</td>
-      </tr>
-      <tr>
-        <td><h3>DR (Data Rate)</h3></td>
-        <td>Affects signal range (lower DR = longer range)</td>
-        <td>The available DR options vary by LoRaWAN regional frequency band.</td>
-      </tr>
-      <tr>
-        <td><h3>TX Power</h3></td>
-        <td>Transmission power level</td>
-        <td>The available TX Power options vary by LoRaWAN regional frequency band.</td>
-      </tr>
-      <tr>
-        <td><h3>TX Interval</h3></td>
-        <td>Time between uplinks</td>
-        <td>6-3600&nbsp;s</td>
-      </tr>
-      <tr>
-        <td><h3>Backlight</h3></td>
-        <td>Screen brightness</td>
-        <td>0-10</td>
-      </tr>
-      <tr>
-        <td><h3>ADR</h3></td>
-        <td>Enable/disable Adaptive Data Rate</td>
-        <td>ON/OFF</td>
-      </tr>
-    </tbody>
-  </table>
+  
+| Setting | Description | Values / Notes |
+| --- | --- | --- |
+| Location Labeling | Set a test point label (important for CSV export) | Default: NULLMax Length: 6 characters |
+| Band | LoRaWAN regional frequency band | RU864, IN865, EU868, US915, AU915, KR920, AS923-1/2/3/4 |
+| DR (Data Rate) | Affects signal range (lower DR = longer range) | The available DR options vary by LoRaWAN regional frequency band. |
+| TX Power | Transmission power level | The available TX Power options vary by LoRaWAN regional frequency band. |
+| TX Interval | Time between uplinks | 6-3600 s |
+| Backlight | Screen brightness | 0-10 |
+| ADR | Enable/disable Adaptive Data Rate | ON/OFF |
 
 6.  After configuration, tap **OK** twice to save and exit.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-apply-changes.png"
-  width="50%"
-  caption="Field Tester Apply Changes"
-/>
+> **Image:** Field Tester Apply Changes
 
 ### LoRaWAN OTAA Credentials Setup
 
@@ -178,11 +123,7 @@ The Field Tester Plus supports two configuration methods for setting DevEUI, App
 1. Connect the Field Tester Plus to your PC using a USB Type-C cable.
 2. Launch **WisToolBox for Desktop** and click **CONNECT** to establish a connection with the Field Tester Plus.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/wistoolbox-connection-settings.png"
-  width="100%"
-  caption="WisToolBox Connection Settings"
-/>
+> **Image:** WisToolBox Connection Settings
 
 :::tip NOTE
 If the connection fails, refer to the <a href="https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-desktop/#wistoolbox-dashboard" target="_blank">WisToolBox for Desktop | Installation and Setup Guide</a>.
@@ -190,49 +131,19 @@ If the connection fails, refer to the <a href="https://docs.rakwireless.com/prod
 
 3. Select the device and navigate to the **ADVANCED** tab.
 
+> **Image:** Field Tester Connected To WisToolBox
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-connected-to-wistoolbox.png"
-  width="100%"
-  caption="Field Tester Connected To WisToolBox"
-/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-advanced-commands.png"
-  width="100%"
-  caption="Field Tester Advanced Commands"
-/>
+> **Image:** Field Tester Advanced Commands
 
 4. Click **OPEN CONSOLE**, then enter the following AT commands:
 
-<table>
-  <thead>
-    <tr>
-      <th>Command</th>
-      <th>Value Format</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><h3>AT+DEVEUI=</h3></td>
-      <td>8 bytes (64-bit hex, e.g. 70B3D57ED0012345)</td>
-    </tr>
-    <tr>
-      <td><h3>AT+APPEUI=</h3></td>
-      <td>8 bytes (64-bit hex)</td>
-    </tr>
-    <tr>
-      <td><h3>AT+APPKEY=</h3></td>
-      <td>16 bytes (128-bit hex)</td>
-    </tr>
-    </tbody>
-</table>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/wistoolbox-at-command-console.png"
-  width="100%"
-  caption="WisToolBox AT Command Console"
-/>
+| Command | Value Format |
+| --- | --- |
+| AT+DEVEUI= | 8 bytes (64-bit hex, e.g. 70B3D57ED0012345) |
+| AT+APPEUI= | 8 bytes (64-bit hex) |
+| AT+APPKEY= | 16 bytes (128-bit hex) |
 
+> **Image:** WisToolBox AT Command Console
 
 ## Field Test Data Processor Extension Installation
 
@@ -242,11 +153,7 @@ The extension communicates with LoRaWAN Network Servers via **MQTT (subscribe/pu
 
 1. **RAK Gateways Built-in LNS**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/built-in-lns-setup.png"
-  width="80%"
-  caption="Built-in LNS Setup"
-/>
+> **Image:** Built-in LNS Setup
 
 In this setup:
 
@@ -256,11 +163,7 @@ In this setup:
 
 2. **External LNS** (e.g., ChirpStack, TTN, AWS IoT Core)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/external-lns-setup.png"
-  width="80%"
-  caption="External LNS Setup"
-/>
+> **Image:** External LNS Setup
 
 In this setup:
 
@@ -273,11 +176,7 @@ In this setup:
 - **Field Tester Plus Bundle**: The included gateway comes pre-installed with the Field Test Data Processor Extension.
 - **Other RAK WisGateOS 2 gateways**: Manually install the extension via the WisGateOS 2 web interface. See: <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#how-to-add-an-extension" target="_blank">How to Add an Extension</a>.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/wisgateos-2-extensions-menu.png"
-  width="100%"
-  caption="WisGateOS 2 Extensions Menu"
-/>
+> **Image:** WisGateOS 2 Extensions Menu
 
 ## Set Up the Gateway and the Field Tester Plus for Your LNS
 
@@ -296,19 +195,11 @@ This section demonstrates how to connect your RAK gateway to a LoRaWAN Network S
 1. Log into the WisGateOS 2 web UI. Navigate to **LoRa > Configuration**.
 2. In the **Work Mode** section, select **Built-in Network Server**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/lora-configuration-work-mode.png"
-  width="55%"
-  caption="LoRa Configuration Work Mode"
-/>
+> **Image:** LoRa Configuration Work Mode
 
 3. Select the log level and frequency band.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/log-frequency-band-configuration.png"
-  width="100%"
-  caption="Log And Frequency Band Configuration"
-/>
+> **Image:** Log And Frequency Band Configuration
 
 :::tip NOTE
 Make sure the frequency band configured on the gateway matches the **LoRaWAN Band setting** of your **Field Tester Plus**.
@@ -319,19 +210,11 @@ Make sure the frequency band configured on the gateway matches the **LoRaWAN Ban
 1. Ensure your gateway is configured to use the **Built-in LNS**. Navigate to **LoRa** > **Applications** tab.
 2. Click the **Add application** button (or the **add one now** link).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/built-lns-application-menu.png"
-  width="100%"
-  caption="Built LNS Application Menu"
-/>
+> **Image:** Built LNS Application Menu
 
 3. You will be redirected to the application configuration page. Fill in the following fields:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/new-application-fields.png"
-  width="100%"
-  caption="New Application Data Fields"
-/>
+> **Image:** New Application Data Fields
 
 - **Application name**: Name of the application.
 - **Application description**: Description of the application (optional).
@@ -346,23 +229,14 @@ Make sure the frequency band configured on the gateway matches the **LoRaWAN Ban
 Refer to the  <a href="https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/network-setup/#field-tester-plus-configuration" target="_blank">Field Tester Plus Configuration</a> section for matching AppKey and AppEUI setup.
 :::
 
-
 4. Click **Save Application** to complete the creation.
 5. Once the application is saved, navigate to: **Your Application** > **Configuration**. Click **End Devices** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/application-end-devices-menu.png"
-  width="100%"
-  caption="Application End Devices Menu"
-/>
+> **Image:** Application End Devices Menu
 
 6. In the End device information interface, fill in the following information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/end-device-otaa-configuration.png"
-  width="100%"
-  caption="End Device OTAA Configuration"
-/>
+> **Image:** End Device OTAA Configuration
 
 - **Activation Mode**: Select OTAA. This value needs to be consistent with the value from the end device.
 - **End device (group) name**: Name of the end device (group).
@@ -377,21 +251,13 @@ Refer to the  <a href="https://docs.rakwireless.com/product-categories/wisgate/r
 - Correct devices will appear under the **End devices list.**
 - Duplicate devices will appear under **End devices with error** for correction.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/adding-new-end-device.png"
-  width="100%"
-  caption="Add New End Device"
-/>
+> **Image:** Add New End Device
 
 9. Click **Add end devices** to add the Field Tester Plus to the application.
 
 Once registered, the Field Tester Plus will begin sending periodic uplinks to the Built-in LNS.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/end-device-field-tester-added.png"
-  width="100%"
-  caption="End Device Field Tester Added"
-/>
+> **Image:** End Device Field Tester Added
 
 The device is currently operating in **LinkCheck Mode**, as the Field Test Data Processor Extension has not yet been configured.
 In this mode, the device screen will only display:
@@ -399,14 +265,9 @@ In this mode, the device screen will only display:
 - **Downlink RSSI/SNR**
 - **Number of responding gateways**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-linkcheck-mode.png"
-  width="60%"
-  caption="Field Tester LinkCheck Mode"
-/>
+> **Image:** Field Tester LinkCheck Mode
 
 Next, install and configure the Field Test Data Processor Extension to enable full metric reporting (uplinks, packet loss, CSV export).
-
 
 #### Configure Field Test Data Processor Extension for Built-in LNS
 
@@ -424,93 +285,54 @@ Make sure the frequency band configured on the gateway matches the LoRaWAN Band 
 
 To complete the TTN gateway setup, follow the instructions in <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/lorawan-network-server-guide/#the-things-network-ttn" target="_blank">RAK7289V2 LoRaWAN Network Server Guide |  The Things Network (TTN)</a>.
 
-
 #### Register Field Tester Plus on TTN
 
 To connect your Field Tester Plus to **The Things Network (TTN)**, a community-based LoRaWAN Network Server (LNS), visit the TTN Console at: https://console.cloud.thethings.network/
 
 1. Choose the appropriate **cluster** for your region. You can either select your country or manually choose the nearest TTN cluster.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-cluster-selection.png"
-  width="100%"
-  caption="The Things Network Cluster Selection"
-/>
+> **Image:** The Things Network Cluster Selection
 
 2. On the homepage, click **Applications** > **+ Add application**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-add-application.png"
-  width="100%"
-  caption="The Things Network Add Application"
-/>
+> **Image:** The Things Network Add Application
 
 3. Add **Application ID**, **Application name**, and **Description** then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-create-application.png"
-  width="100%"
-  caption="The Things Network Create Application"
-/>
+> **Image:** The Things Network Create Application
 
 4. Click **Register end device** within your newly created application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-register-end-device.png"
-  width="100%"
-  caption="The Things Network Register End Device"
-/>
+> **Image:** The Things Network Register End Device
 
 5. Choose **Enter end device specifics manually**. This will allow you to add the **Frequency plan, LoRaWAN version, Regional Parameters version**, and **JoinEUI**. The values of these parameters depend on the hardware you use. If your device has a preconfigured **JoinEUI**, you must use it. Click **Confirm** after putting all the details.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-joineui-and-parameters.png"
-  width="100%"
-  caption="The Things Network JoinEUI and Parameters"
-/>
+> **Image:** The Things Network JoinEUI and Parameters
 
 6. After confirming the **JoinEUI**, you can proceed on adding other OTAA parameters—**DevEUI** and **AppKey**. Use the **Generate** button if these parameters are not available with the device. Otherwise, use the OTAA parameters provided with the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-deveui-and-appkey.png"
-  width="100%"
-  caption="The Things Network DevEUI and AppKey"
-/>
+> **Image:** The Things Network DevEUI and AppKey
 
 7. After you register the device, it will be added to the LoRaWAN application.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-device-added-succesfully.png"
-  width="100%"
-  caption="The Things Network Device Added Successfully"
-/>
+> **Image:** The Things Network Device Added Successfully
 
 8. Restart the Field Tester Plus. Once registered and connected, it will begin sending periodic uplinks to the TTN LNS.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/the-things-network-live-data.png"
-  width="100%"
-  caption="The Things Network Live Data"
-/>
+> **Image:** The Things Network Live Data
 
 The device is currently operating in **LinkCheck Mode**, as the Field Test Data Processor Extension has not yet been configured.
 In this mode, the device screen will only display:
 - **Downlink RSSI/SNR**
 - **Number of responding gateways**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-uncomplete-menu.png"
-  width="60%"
-  caption="Field Tester Uncomplete Menu"
-/>
+> **Image:** Field Tester Uncomplete Menu
 
 Next, install and configure the Field Test Data Processor Extension to enable full metric reporting (uplinks, packet loss, CSV export).
 
 #### Configure the Field Test Data Processor Extension for TTN
 
 For detailed steps on configuring the Field Test Data Processor Extension for the TTN, refer to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later/#the-things-network" target="_blank">WisGateOS 2 Extension > Field Test Data Processor > TTN</a>
-
 
 ### ChirpStack v3
 
@@ -528,27 +350,15 @@ IP address of ChirpStack: `8080`
 - **Username/email:** admin
 - **Password:** admin
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/33.png"
-  width="55%"
-  caption="ChirpStack Login page"
-/>
+> **Image:** ChirpStack Login page
 
 3. Create a Service Profile (Required Before Gateway Registration). In the left sidebar, go to Service-profiles.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/34.png"
-  width="100%"
-  caption="Create a Service Profile"
-/>
+> **Image:** Create a Service Profile
 
 4. Click **+ CREATE** and fill in the following parameters:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/35.png"
-  width="100%"
-  caption="Fill in Service Profile"
-/>
+> **Image:** Fill in Service Profile
 
 - **Service-profile name:** Provide a descriptive name
 - **Network-server:** build_in_ns
@@ -558,35 +368,19 @@ IP address of ChirpStack: `8080`
 
 5. Once completed, click **CREATE SERVICE PROFILE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/36.png"
-  width="100%"
-  caption="Create Service Profile"
-/>
+> **Image:** Create Service Profile
 
 6. In the left sidebar, go to **Gateways**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/37.png"
-  width="100%"
-  caption="ChirpStack Application Dashboard"
-/>
+> **Image:** ChirpStack Application Dashboard
 
 7. Click **+ CREATE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/38.png"
-  width="100%"
-  caption="Connect gateway on ChirpStack"
-/>
+> **Image:** Connect gateway on ChirpStack
 
 8. Under the **General** section, fill in the following fields:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/39.png"
-  width="100%"
-  caption="Fill in the gateway details"
-/>
+> **Image:** Fill in the gateway details
 
 - **Gateway name:** A unique name for the gateway
 - **Gateway Description:** A short description for identification
@@ -596,30 +390,18 @@ IP address of ChirpStack: `8080`
 9. Click **CREATE GATEWAY** to finish the registration.
 10. Open your browser and go to the IP address of the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/40.png"
-  width="100%"
-  caption="WisGate Login Interface"
-/>
+> **Image:** WisGate Login Interface
 
 11. Login using the credentials you set during the initial setup.
 12. In the left sidebar, go to **LoRa**.
 13. Under **Work Mode**, select **Packet forwarder**.
 14. Click **Choose from the available protocols** to expand the protocol options. Change the **Protocol** to **LoRa Gateway MQTT Bridge**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/41.png"
-  width="100%"
-  caption="Choose LoRa Gateway MQTT Bridge"
-/>
+> **Image:** Choose LoRa Gateway MQTT Bridge
 
 15. Set the following parameters:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/42.png"
-  width="100%"
-  caption="Set LoRa Gateway MQTT Bridge Parameters"
-/>
+> **Image:** Set LoRa Gateway MQTT Bridge Parameters
 
 - **MQTT Protocol:** (Choose either of the following)
     - **MQTT for ChirpStack 3.x (JSON)**
@@ -631,29 +413,17 @@ IP address of ChirpStack: `8080`
 
 If everything is set correctly, the gateway will display as online. You can click the gateway name to inspect the gateway traffic.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/43.png"
-  width="100%"
-  caption="Save changed on ChirpStack"
-/>
+> **Image:** Save changed on ChirpStack
 
 #### Register Field Tester Plus on ChirpStack v3
 
 1. Log in to your Chirpstack account and on the main dashboard page click **Device-profiles**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/44.png"
-  width="100%"
-  caption="Device profile"
-/>
+> **Image:** Device profile
 
 2. Click **+ CREATE** and fill in the following parameters:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/45.png"
-  width="100%"
-  caption="Add Device profile information"
-/>
+> **Image:** Add Device profile information
 
 - **Device-profile name:** Provide a descriptive name
 - **Network-server:** build_in_ns
@@ -665,52 +435,28 @@ If everything is set correctly, the gateway will display as online. You can clic
 
 3. Go to the **Join (OTAA / ABP)** tab. Check the option: **Device supports OTAA**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/46.png"
-  width="100%"
-  caption="Check Device supports OTAA*"
-/>
+> **Image:** Check Device supports OTAA*
 
 4. Click **CREATE DEVICE PROFILE**.
 5. In the left sidebar, go to **Applications**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/47.png"
-  width="100%"
-  caption="ChirpStack Application"
-/>
+> **Image:** ChirpStack Application
 
 6. Click **+ CREATE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/48.png"
-  width="100%"
-  caption="Add Application information"
-/>
+> **Image:** Add Application information
 
 7. Fill in the application parameters, then click **CREATE APPLICATION**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/49.png"
-  width="100%"
-  caption="Fill in the application parameters"
-/>
+> **Image:** Fill in the application parameters
 
 8. Click the name of the application you just created.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/50.png"
-  width="100%"
-  caption="Click the name of the application"
-/>
+> **Image:** Click the name of the application
 
 9. Click **+ CREATE** to register a new device, and fill in the device parameters:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/51.png"
-  width="100%"
-  caption="Register a new device"
-/>
+> **Image:** Register a new device
 
 - **Device name:** A unique name for the device
 - **Device description:** A short description
@@ -718,32 +464,20 @@ If everything is set correctly, the gateway will display as online. You can clic
 - **Device-profile:** Select the device profile you created earlier
 10. After saving by clicking **CREATE**, go to the **KEYS (OTAA)** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/52.png"
-  width="100%"
-  caption="ChirpStack OTAA key"
-/>
+> **Image:** ChirpStack OTAA key
 
 11. Enter the **Application Key** associated with your Field Tester Plus device, then click **SET DEVICE KEYS**.
 
 Once registered, the Field Tester Plus will begin sending periodic uplinks to the Chirpstack v3 LNS.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/53.png"
-  width="100%"
-  caption="Enter Application Key"
-/>
+> **Image:** Enter Application Key
 
 The device is currently operating in **LinkCheck Mode**, as the Field Test Data Processor Extension has not yet been configured.
 In this mode, the device screen will only display:
 - **Downlink RSSI/SNR**
 - **Number of responding gateways**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/network-setup/ft-linkcheck-mode.png"
-  width="55%"
-  caption="Field Tester LinkCheck Mode"
-/>
+> **Image:** Field Tester LinkCheck Mode
 
 Next, install and configure the Field Test Data Processor Extension to enable full metric reporting (uplinks, packet loss, CSV export).
 
@@ -761,96 +495,55 @@ This section explains how to connect and configure a RAK gateway with ChirpStack
 Make sure the frequency band configured on the gateway matches the LoRaWAN Band setting of your Field Tester Plus.
 :::
 
-
 To complete the ChirpStack v4 gateway setup, follow the instructions in <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7289v2/lorawan-network-server-guide/#chirpstack" target="_blank">RAK7289V2 LoRaWAN Network Server Guide |  ChirpStack v4.</a>
 
 #### Register Field Tester Plus on ChirpStack v4
 
 1. Log in to your Chirpstack account and on the main dashboard page click **Applications.**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-application-dashboard.png"
-  width="100%"
-  caption="ChirpStack Application Dashboard"
-/>
+> **Image:** ChirpStack Application Dashboard
 
 2. Click **Add application** and fill in the required fields:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-add-application.png"
-  width="100%"
-  caption="ChirpStack Add Application"
-/>
+> **Image:** ChirpStack Add Application
 
 3. Click **Submit** to create the application.
 
 4. Go to **Device Profiles** and click **Add device profile.**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-add-device-profile.png"
-  width="100%"
-  caption="ChirpStack Add Device Profile"
-/>
+> **Image:** ChirpStack Add Device Profile
 
 5. Configure the profile to match your device's specifications:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-match-device-specifications.png"
-  width="100%"
-  caption="ChirpStack Match Device Specifications"
-/>
+> **Image:** ChirpStack Match Device Specifications
 
 6. In the device profile configuration, go to the **Join (OTAA / ABP)** tab.
 7. Enable the **Device supports OTAA** option and click **Submit** to save the device profile.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-enable-support-otaa.png"
-  width="100%"
-  caption="ChirpStack Enable Support OTAA"
-/>
+> **Image:** ChirpStack Enable Support OTAA
 
 8. Navigate to the **Applications > your application** and click **Add device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-add-device-on-applications.png"
-  width="100%"
-  caption="ChirpStack Add Device on Applications"
-/>
+> **Image:** ChirpStack Add Device on Applications
 
 9. On the Add Device page, you must enter the device details, including **Name, Description, Device EUI, Join EUI**, and **Device Profile**. You can use the **Generate** button for the **Device EUI** and **Join EUI** if these values are not available with the device. Otherwise, use the OTAA parameters provided by the device. After entering all required information, click **Submit** to complete the process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-fill-device-information.png"
-  width="100%"
-  caption="ChirpStack Fill Device Information"
-/>
+> **Image:** ChirpStack Fill Device Information
 
 10. The next step is to provide the **Application Key**. Use the key provided with the device, if available; otherwise, click the Generate button to create one. After entering the **Application Key**, click **Submit** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/chirpstack-add-application-key.png"
-  width="100%"
-  caption="ChirpStack Add Application Key"
-/>
+> **Image:** ChirpStack Add Application Key
 
 Once registered, the Field Tester Plus will begin sending periodic uplinks to the Chirpstack v4 LNS.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/sending-periodic-uplinks-to-chripstack.png"
-  width="100%"
-  caption="Sending Periodic Uplinks to ChripStack"
-/>
+> **Image:** Sending Periodic Uplinks to ChripStack
 
 The device is currently operating in **LinkCheck Mode**, as the Field Test Data Processor Extension has not yet been configured.
 In this mode, the device screen will only display:
 - **Downlink RSSI/SNR**
 - **Number of responding gateways**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-only-displays-rssi-and-snr.png"
-  width="60%"
-  caption="Field Tester Only Displays RSSI and SNR"
-/>
+> **Image:** Field Tester Only Displays RSSI and SNR
 
 Next, install and configure the Field Test Data Processor Extension to enable full metric reporting (uplinks, packet loss, CSV export).
 
@@ -885,20 +578,12 @@ To allow **AWS IoT Core for LoRaWAN** to forward device data to AWS services (vi
     - If none fit your device or region, click Add device profile and configure custom parameters.
     - Example: For AS923-1, set parameters accordingly.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/aws-add-device-profile.png"
-  width="100%"
-  caption="AWS Add Device Profile"
-/>
+> **Image:** AWS Add Device Profile
 
 4. Click **Add device profile** to save.
 5. In the **Service Profiles** section, click **Add service profile** and configure service parameters (default values are generally acceptable).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/aws-add-service-profile.png"
-  width="100%"
-  caption="AWS Add Service Profile"
-/>
+> **Image:** AWS Add Service Profile
 
 6. Once you have created appropriate Device and Service Profiles, proceed to set up a destination for device traffic.
 
@@ -916,11 +601,7 @@ To use the Field Tester Extension with AWS IoT Core for LoRaWAN, you must associ
 7. In the **Permissions** section, choose **Select an existing service role** and select the <a href="https://docs.google.com/document/d/1-rhXw2Zwb8cTQPsnSTE_mpa5e3dalNT6/edit#heading=h.5uqr7h5v8y76" target="_blank">IAM role</a> you had created earlier, from the drop-down.
 8. Choose **Add Destination**. You will see a message ***Destination added***, indicating the destination has been successfully added.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/aws-add-destination.png"
-  width="70%"
-  caption="AWS Add Destination"
-/>
+> **Image:** AWS Add Destination
 
 ##### Register Device
 
@@ -934,33 +615,20 @@ To use the Field Tester Extension with AWS IoT Core for LoRaWAN, you must associ
 8. Under Profiles, select the **Device Profile** and **Service Profile** you created earlier.
 9. Under **Destination**, choose the one previously created.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/aws-configure-lorawan-device.png"
-  width="100%"
-  caption="AWS Configure LoRaWAN Device"
-/>
+> **Image:** AWS Configure LoRaWAN Device
 
 10. Click **Next**, then **Add device** to complete registration.
 
 Once registered, the Field Tester Plus will begin sending periodic uplinks to the AWS IoT Core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/aws-field-tester-configuration-completed.png"
-  width="100%"
-  caption="AWS Field Tester Configuration Completed"
-/>
+> **Image:** AWS Field Tester Configuration Completed
 
 The device is currently operating in **LinkCheck Mode**, as the Field Test Data Processor Extension has not yet been configured.
 In this mode, the device screen will only display:
 - **Downlink RSSI/SNR**
 - **Number of responding gateways**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak10701-plus/network-setup/field-tester-only-displays-rssi-and-snr.png"
-  width="60%"
-  caption="Field Tester Only Displays RSSI and SNR"
-/>
+> **Image:** Field Tester Only Displays RSSI and SNR
 
 Next, install and configure the Field Test Data Processor Extension to enable full metric reporting (uplinks, packet loss, CSV export).
 
@@ -980,19 +648,11 @@ Make sure the frequency band configured on the gateway matches the LoRaWAN Band 
 
 1. Log in to your organization’s TTS Console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-login-page.png"
-  width="100%"
-  caption="TTI Login page"
-/>
+> **Image:** TTI Login page
 
 2. To register a gateway, go to **Gateways** > **+ Register gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-register-gateway.png"
-  width="100%"
-  caption="Register gateway on TTI"
-/>
+> **Image:** Register gateway on TTI
 
 3. You will be redirected to the Register gateway page.
 4. In the Gateway EUI field, type the EUI of the gateway.
@@ -1002,61 +662,37 @@ Make sure the frequency band configured on the gateway matches the LoRaWAN Band 
 - Optionally, log in to the gateway's Web UI and navigate to **Dashboard** > **Overview**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-gateway-eui-field.png"
-  width="100%"
-  caption="Type EUI of the gateway on TTI"
-/>
+> **Image:** Type EUI of the gateway on TTI
 
 5. After typing the EUI, click on **Confirm**. Additional fields will pop up. Fill in the following information:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-confirm-eui.png"
-  width="100%"
-  caption="Confirm EUI"
-/>
+> **Image:** Confirm EUI
 
 - **Gateway ID:** The unique ID of your gateway in the Network.  The ID must contain only lowercase letters, numbers, and dashes (-).
 - **Gateway name:** Optionally, you can type a name for your gateway.
 - **Frequency plan:** The frequency plan used by the gateway.
 
 :::tip NOTE
-The other settings are optional and can be changed to satisfy your requirements. For this tutorial, we will use Australia 915-928&nbsp;MHz, FSB 2 (used by TTN).
+The other settings are optional and can be changed to satisfy your requirements. For this tutorial, we will use Australia 915-928 MHz, FSB 2 (used by TTN).
 :::
 
 6. To register your gateway, click **Register gateway**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-click-register-gateway.png"
-  width="100%"
-  caption="Register gateway"
-/>
+> **Image:** Register gateway
 
 7. TTNv3 supports TLS server authentication and Client token, which requires a trust file and a key file to configure the gateway to successfully connect it to the network. To generate a key file, from the **Overview** page of the registered gateway navigate to API keys.https://console.cloud.thethings.network/
 
 8. On the **API keys** page, choose **+ Add API key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-add-api-key.png"
-  width="100%"
-  caption="Click Add API key"
-/>
+> **Image:** Click Add API key
 
 9. In the **Name** field, type the name of your key (for example - mykey). Choose **Grant individual rights** and select **Link as Gateway to a Gateway for traffic exchange, i.e. write uplink and read downlink**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-add-key-name.png"
-  width="100%"
-  caption="Choose Grant individual rights"
-/>
+> **Image:** Choose Grant individual rights
 
 10. To generate the key, choose **Create API key**. The following window will pop up, telling you to copy the key you just generated.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-create-api-key.png"
-  width="55%"
-  caption="Click on Create API key"
-/>
+> **Image:** Click on Create API key
 
 :::warning
 Copy the key and save it in a .txt file (or other), because you won’t be able to view or copy your key after that.
@@ -1065,19 +701,11 @@ Copy the key and save it in a .txt file (or other), because you won’t be able 
 11. Click **I have copied the key** to proceed.
 12. To configure the gateway, access it via the Web UI. Navigate to **LoRa** > **Configuration** > **Work mode** and select **Basics station**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-configure-gateway.png"
-  width="100%"
-  caption="Configure gateway"
-/>
+> **Image:** Configure gateway
 
 13. Expand the Basics Station settings by clicking **Configure Basics Station server setup** and configure the following parameters:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-configure-basic-station.png"
-  width="100%"
-  caption="Configure Basics Station server setup"
-/>
+> **Image:** Configure Basics Station server setup
 
 - **Basics Station Server Type**: For server type, choose LNS Server.
 - **Server URL**: You can find it in The Things Stack (TTS) Console, under your registered gateway’s **left-hand menu** > **General settings** > **Gateway Server address**.
@@ -1093,87 +721,47 @@ Copy the key and save it in a .txt file (or other), because you won’t be able 
 
 If everything is set correctly, you can see the gateway is connected to TTNv3.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-save-changes.png"
-  width="100%"
-  caption="Save changes"
-/>
+> **Image:** Save changes
 
 #### Register Field Tester Plus on TTI
 
 1. Log in to your organization’s TTS Console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-login-page.png"
-  width="100%"
-  caption="The Things Stack Login page"
-/>
+> **Image:** The Things Stack Login page
 
 2. To create an application, go to **Applications** > **+ Add application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-login-page.png"
-  width="100%"
-  caption="Create an application"
-/>
+> **Image:** Create an application
 
 3. Add **Application ID**, **Application name** and **Description** then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-register-gateway.png"
-  width="100%"
-  caption="Register gateway"
-/>
+> **Image:** Register gateway
 
 4. Click **Register end device** within your newly created application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-gateway-eui-field.png"
-  width="100%"
-  caption="Register end device"
-/>
+> **Image:** Register end device
 
 5. Choose **Enter end device specifics manually**. This will allow you to add the **Frequency plan, LoRaWAN version, Regional Parameters version** and **JoinEUI**. The values of these parameters depend on the hardware you use. If your device has a preconfigured JoinEUI, you must use it. Click **Confirm** after putting all the details.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-register-end-device.png"
-  width="100%"
-  caption="Enter end device specifics"
-/>
+> **Image:** Enter end device specifics
 
 6. After confirming the **JoinEUI**, you can proceed on adding other OTAA parameters – **DevEUI** and **AppKey**. You can use the **Generate** button if these parameters are not provided in the device. Else, you must use OTAA parameters are provided in the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-add-otaa-parameters.png"
-  width="100%"
-  caption="Add OTAA parameters"
-/>
+> **Image:** Add OTAA parameters
 
 7. After you register the device, it will be added on the LoRaWAN Application. Restart the Field Tester Plus and it will join the network and begin sending regular uplinks.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-send-regular-uplinks.png"
-  width="100%"
-  caption="Regular Uplinks"
-/>
+> **Image:** Regular Uplinks
 
 Once registered, the Field Tester Plus will begin sending periodic uplinks to the TTN LNS.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-send-periodinc-uplink.png"
-  width="100%"
-  caption="Periodic Uplinks"
-/>
+> **Image:** Periodic Uplinks
 
 The device is currently operating in ****, as the Field Test Data Processor Extension has not yet been configured. In this mode, the device screen will only display:
 - **Downlink RSSI/SNR**
 - **Number of responding gateways**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak10701-plus/tti/tti-linkcheck-mode.png"
-  width="55%"
-  caption="Field Tester LinkCheck Mode"
-/>
+> **Image:** Field Tester LinkCheck Mode
 
 Next, install and configure the Field Test Data Processor Extension to enable full metric reporting (uplinks, packet loss, CSV export).
 
@@ -1181,4 +769,3 @@ Next, install and configure the Field Test Data Processor Extension to enable fu
 
 For detailed steps on configuring the Field Test Data Processor Extension for the TTI, refer to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later/#the-things-industries" target="_blank">WisGateOS 2 Extension > Field Test Data Processor > TTI</a>.
 
-<RkBottomNav/>

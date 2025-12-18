@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7201V2 WisNode Button 4K
 
 Thank you for choosing **RAK7201V2 WisNode Button 4K** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -31,12 +29,11 @@ With its long-range wireless connectivity, impressive battery life, and four pro
 
 - Four (4) Buttons with LED indicator
 - Based on the **RAK3172** module
-- **Product Size:** 43x57x15&nbsp;mm
+- **Product Size:** 43x57x15 mm
 - **LoRaWAN** 1.0.3 specification-compliant
-- **Battery:** 400&nbsp;mAh
+- **Battery:** 400 mAh
 - Battery **Over Current Protection** and **Over-Temperature Protection**
-- **Power Consumption:** Sleep mode is 6.25&nbsp;uA @ 4.2&nbsp;V
-- **Operating Temperature:** -10º&nbsp;C to 60º&nbsp;C
+- **Power Consumption:** Sleep mode is 6.25 uA @ 4.2 V
+- **Operating Temperature:** -10º C to 60º C
 - **Working Environment:** Indoor
 
-<RkBottomNav/>

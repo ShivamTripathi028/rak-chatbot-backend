@@ -11,8 +11,6 @@ slug: /product-categories/wisduo/rak11721-breakout-board/at-command-manual/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11721 WisDuo Breakout Board AT Command Manual
 
 ## Overview
@@ -27,4 +25,3 @@ The RAK11721 default firmware is based on <a href="https://docs.rakwireless.com/
 
 The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation</a>.
 
-<RkBottomNav/>

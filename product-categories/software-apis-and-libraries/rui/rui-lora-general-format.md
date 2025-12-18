@@ -1,5 +1,4 @@
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RUI LoRa General Format
 
@@ -119,7 +118,9 @@ RUI_RETURN_STATUS rui_lora_send(uint8_t port,uint8_t* data,uint8_t len)
 | @brief | rui_lora send | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | __uint8_t port__: send data port <br /> __uint8_t* data__: send data string <br /> __uint8_t len__: send data length | 
+| **@param** | __uint8_t port__: send data port 
+ __uint8_t* data__: send data string 
+ __uint8_t len__: send data length | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
 
 ---
@@ -178,7 +179,6 @@ RUI_RETURN_STATUS rui_lora_set_app_eui(uint8_t *app_eui)
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
 | **@param** | __uint8_t *app eui__: the application EUI. | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
-
 
 ---
 
@@ -247,7 +247,8 @@ RUI_RETURN_STATUS rui_lora_set_channel_mask(uint8_t channel, uint8_t on_off)
 | @brief | This API is used to turn a certain channel on or off. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **uint8_t channel**: the channel number you want to set. <br /> **uint8_t on_off**: turn on or turn off. | 
+| **@param** | **uint8_t channel**: the channel number you want to set. 
+ **uint8_t on_off**: turn on or turn off. | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. |
 
 ---
@@ -346,7 +347,8 @@ rui_lora_set_send_interval(RUI_LORA_AUTO_SEND_MODE mode,uint16_t interval_time);
 | @brief | This API is used to set the interval time of sending data. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | <a href="/RUI/rui-lora-general-format/#rui-lora-auto-send-mode.html" target="blank">RUI_LORA_AUTO_SEND_MODE</a> mode: lora auto send mode, refer to RUI. <br /> **uint16_t app_interval**:  the interval time of sending data. (unit: **s**) | 
+| **@param** | <a href="/RUI/rui-lora-general-format/#rui-lora-auto-send-mode.html" target="blank">RUI_LORA_AUTO_SEND_MODE</a> mode: lora auto send mode, refer to RUI. 
+ **uint16_t app_interval**:  the interval time of sending data. (unit: **s**) | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
 
 ---
@@ -388,7 +390,8 @@ RUI_RETURN_STATUS rui_lora_get_status(bool IsPrint,RUI_LORA_STATUS_T *status);
 | @brief | This API is used to get all status about LoRa. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **bool IsPrint**: whether print parameters through serial <br /> <a href="/RUI/rui-lora-general-format/#rui-lora-status.html" target="blank">RUI_LORA_STATUS_T</a> *status: the status about LoRa | 
+| **@param** | **bool IsPrint**: whether print parameters through serial 
+ <a href="/RUI/rui-lora-general-format/#rui-lora-status.html" target="blank">RUI_LORA_STATUS_T</a> *status: the status about LoRa | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
 
 ---
@@ -404,7 +407,6 @@ RUI_RETURN_STATUS rui_get_channel_list(void);
 | **@return**     | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
 | **@param** | NULL | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module | 
-
 
 ---
 
@@ -431,7 +433,12 @@ RUI_RETURN_STATUS rui_lorap2p_config(uint32_t Frequency,uint8_t  Spreadfact,uint
 | @brief | This API is used to config LoRaP2P parameters. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **Frequency**: Frequency in Hz <br /> **Spreadfact**:  Spreadfactare limited to the 6-12 range <br /> **Bandwidth**: Bandwidth limited to the 0-2 range <br /> **Codingrate**: Codingrate limited to the 1-4 range <br /> **Preamlen**: Preamlen limited to the 2-66535 range <br /> **Powerdbm**: Powerdbm limited to the 0-20 range. | 
+| **@param** | **Frequency**: Frequency in Hz 
+ **Spreadfact**:  Spreadfactare limited to the 6-12 range 
+ **Bandwidth**: Bandwidth limited to the 0-2 range 
+ **Codingrate**: Codingrate limited to the 1-4 range 
+ **Preamlen**: Preamlen limited to the 2-66535 range 
+ **Powerdbm**: Powerdbm limited to the 0-20 range. | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
 
 ---
@@ -445,7 +452,8 @@ RUI_RETURN_STATUS rui_lorap2p_send(uint8_t* data,uint16_t len);
 | @brief | This API is used to send data by LoRaP2P mode. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **data**: data package <br /> **len**: data size | 
+| **@param** | **data**: data package 
+ **len**: data size | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module | 
 
 ---
@@ -475,7 +483,8 @@ RUI_RETURN_STATUS rui_lorajoin_register_callback(lorajoin callback);
 | @brief | This API is used to register a callback function for LoRaWAN join, so that application can start LoRaWAN function. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **lorajoin callback**: the callback function for LoRaWAN join successed. <br /> **status**: 1 -> join succeed, 0 -> join fail. | 
+| **@param** | **lorajoin callback**: the callback function for LoRaWAN join successed. 
+ **status**: 1 -> join succeed, 0 -> join fail. | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
 
 ---
@@ -490,7 +499,8 @@ RUI_RETURN_STATUS rui_lorasend_complete_register_callback(lorasend callback);
 | @brief | This API is used to register a callback function for LoRaWAN send complete,so that application can start LoRaWAN function. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **lorasend callback**: the callback function. <br /> **RUI_MCPS_T type**: the packet type | 
+| **@param** | **lorasend callback**: the callback function. 
+ **RUI_MCPS_T type**: the packet type | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module. | 
 
 ---
@@ -518,8 +528,7 @@ RUI_RETURN_STATUS rui_lora_get_dr(uint8_t* dr, uint16_t* lengthM)
 | **@brief** | This API is used to get current Data rate and Payload Size | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | __uint8_t* dr__: current DR <br /> __uint16_t* lengthM__: Maximum Acceptable size | 
+| **@param** | __uint8_t* dr__: current DR 
+ __uint16_t* lengthM__: Maximum Acceptable size | 
 | **@module** | RAK811, RAK4200, and RAK4600 core module | 
 
-
-<RkBottomNav/>

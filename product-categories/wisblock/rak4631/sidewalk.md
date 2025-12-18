@@ -18,9 +18,6 @@ date: 2020-09-18
 sidebar_label: Amazon Sidewalk Starter Kit
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4631 WisBlock LoRaWAN Module Amazon Sidewalk Starter Kit
 
 The Sidewalk Starter Kit simplifies the setup and testing of a RAKwireless device with Amazon Sidewalk. It comes with all of the necessary hardware, including a temperature and humidity sensor. There are also tools for flashing the Amazon Sidewalk firmware onto the device.
@@ -38,7 +35,6 @@ For development, any Sidewalk gateway functionality might be used outside of the
 :::tip NOTE
 To connect the device to the Sidewalk network, an Amazon Sidewalk compatible device is required. Check the [Amazon Sidewalk Documentation](https://docs.sidewalk.amazon/introduction/sidewalk-gateways.html) for more information.
 :::
-
 
 This guide will help you test a RAK4630-based device with Amazon Sidewalk, including sensor data visualization in AWS. It offers fast access to connect the RAK4630 to Amazon Sidewalk. Also, it comes with pre-compiled firmware that you can flash on our WisBlock Core module.
 
@@ -110,62 +106,34 @@ You can sign in to your new account by using the email address and password you 
 2. Sign in to the AWS Management Console as the account owner by choosing Root user.
 3. Go to Identity and Access Management (IAM).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-1.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 4. Click **Users** then **Create user**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-2.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 5. Enter your **user name**, then **Next**.
 6. Under **Set permissions**, navigate to the following fields, then click **Next**:
    - **Permissions options**: Select **Attach policies directly**.
    - **Permission policies**: Choose **AdministratorAccess**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-3.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 7. Once done setting up the user details and permission, you will be redirected to **Review and create** page. Check the details, and then click **Create user**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-4.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 8. Select the user you just created and click the **Security credentials** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-5.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 9. Under the **Access keys** section, click **Create access key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-6.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 10. In the **Use case** page, select **Command Line Interface (CLI)**, then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-7.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 <!-- Where's the Description tag? -->
 
@@ -173,11 +141,7 @@ You can sign in to your new account by using the email address and password you 
 12. Click **Create access key**.
 13. Download the generated *.csv* file with the access key. This key will be needed later.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-8.png"
-  width="100%"
-  caption="AWS Admin User Creation"
-/>
+> **Image:** AWS Admin User Creation
 
 #### Deployment of the Infrastructure and the Device Profile
 
@@ -266,11 +230,7 @@ Ensure that **USERNAME** and **PASSWORD** have been changed to your login creden
 python3 env_check.py
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/python-1.png"
-  width="45%"
-  caption="Environment Test Script"
-/>
+> **Image:** Environment Test Script
 
 7. Run a deployment script.
 
@@ -278,11 +238,7 @@ python3 env_check.py
 python3 ApplicationServerDeployment/deploy_stack.py
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/python-2.png"
-  width="65%"
-  caption="Deployment of Sidewalk Stack"
-/>
+> **Image:** Deployment of Sidewalk Stack
 
 #### Create the Device Profile
 
@@ -293,43 +249,23 @@ You can create a device profile on your own or let the system create it for you.
 1. Login to AWS as the admin user.
 2. Make sure to set the region to **us-east-1**, and click **IoT Core**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-9.png"
-  width="100%"
-  caption="Device Profile Creation"
-/>
+> **Image:** Device Profile Creation
 
 3. Navigate to **LPWAN devices** > **Devices** > **Add device profile**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-10.png"
-  width="100%"
-  caption="Device Profile Creation"
-/>
+> **Image:** Device Profile Creation
 
 4. Enter your profile name, then click **Submit**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-11.png"
-  width="100%"
-  caption="Device Profile Creation"
-/>
+> **Image:** Device Profile Creation
 
 5. You should see the newly added device profile.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-12.png"
-  width="100%"
-  caption="Device Profile Creation"
-/>
+> **Image:** Device Profile Creation
 
 6. Copy the **Profile ID** to the **config.yaml**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/yaml-1.png"
-  width="75%"
-  caption="Device Profile Creation"
-/>
+> **Image:** Device Profile Creation
 
 #### Create the Device Provisioning Key
 
@@ -368,19 +304,11 @@ INFO:root:Done!
 
 3. Login to AWS as the admin user. Make sure to set the region to **us-east-1**, then click **IoT Core**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-13.png"
-  width="100%"
-  caption="Device provisioning"
-/>
+> **Image:** Device provisioning
 
 4. For provisioning and managing all your Sidewalk devices, navigate to **LPWAN devices** > **Devices** > **Sidewalk**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/aws-14.png"
-  width="100%"
-  caption="Provisioned devices"
-/>
+> **Image:** Provisioned devices
 
 You should see the provisioned devices in the Sidewalk Devices section.
 
@@ -389,27 +317,15 @@ You should see the provisioned devices in the Sidewalk Devices section.
 1. Login to AWS as the admin user.
 2. Make sure to set the region to **us-east-1**, then click **IoT Core**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/lambda-14.png"
-  width="100%"
-  caption="Lambda"
-/>
+> **Image:** Lambda
 
 3. Click **SidewalkUplinkLambda**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/lambda-15.png"
-  width="100%"
-  caption="SidewalkUplinkLambda"
-/>
+> **Image:** SidewalkUplinkLambda
 
 4. Replace the contents in `uplink_lambda_handler.py` with the following code:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/lambda-16.png"
-  width="100%"
-  caption="SidewalkUplinkLambda"
-/>
+> **Image:** SidewalkUplinkLambda
 
 ```python
 # Copyright 2023 Amazon.com, Inc. or its affiliates. All Rights Reserved.
@@ -443,7 +359,6 @@ from sidewalk_devices_handler import SidewalkDevicesHandler
 
 device_handler: Final = SidewalkDevicesHandler()
 measurement_handler: Final = MeasurementsHandler()
-
 
 def decode_payload_rak(payload):
     try:
@@ -482,7 +397,6 @@ def send_payload_to_downlink_lambda(command: str, wireless_device_id: str, butto
     response_body = response["Payload"].read().decode()
     print(f'Response from SidewalkDownlinkLambda: {response_body}')
     return response_body
-
 
 def lambda_handler(event, context):
     """
@@ -654,57 +568,33 @@ def lambda_handler(event, context):
 
 5. Click **Deploy**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/lambda-17.png"
-  width="100%"
-  caption="Deploy Lambda"
-/>
+> **Image:** Deploy Lambda
 
 #### Monitor the Device Using the Application
 
 1. Ensure the device is powered on and registered with AWS Sidewalk.
 2. Open the Sensor Monitoring APP URL generated in step _**Deployment of the Infrastructure and the Device Profile**_
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/applic-1.png"
-  width="100%"
-  caption="Sensor Monitoring APP"
-/>
+> **Image:** Sensor Monitoring APP
 
 3. Enter the username and password that was setup in the `config.yaml` file.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/applic-2.png"
-  width="100%"
-  caption="Login"
-/>
+> **Image:** Login
 
 #### Registration Status and Upload History of the Device
 
 1. Login to AWS as the admin user.
 2. Make sure to set the region to **`us-east-1`**, then click **DynamoDB**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/registration-1.png"
-  width="100%"
-  caption="Open DynamoDB"
-/>
+> **Image:** Open DynamoDB
 
 3. Navigate through **Tables** > **SidewalkDevices** > **Explore table items**, then check registration status.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/registration-2.png"
-  width="100%"
-  caption="Status"
-/>
+> **Image:** Status
 
 4.  To check the upload history, head on to **Tables** > **SidewalkMeasurements** and then click **Explore table items**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/registration-3.png"
-  width="100%"
-  caption="History"
-/>
+> **Image:** History
 
 ### Device Setup
 
@@ -717,11 +607,7 @@ Flash the Sidewalk Starter Kit with the example firmware and device credentials.
 The RAKDAP1 device is used to flash firmware and provision keys to the RAK4630 module.
 The programming pins of the WisBlock RAK4631 Core module are exposed on one side. The following is the link between the RAKDAP1 and the RAK4631:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/rakdap1.png"
-  width="50%"
-  caption="RAK4630 and RAKDAP1 Connection"
-/>
+> **Image:** RAK4630 and RAKDAP1 Connection
 
 The WisBlock modules must be powered by a battery or via a USB connector to avoid problems during the process.
 
@@ -737,19 +623,11 @@ RAKDAP1 requires a Python 3 installation before it can be used. Download the lat
 2.  Once downloaded, start the installation process.
 3.  Make sure to check the Add python.exe to PATH. Otherwise, you will have to add it manually later.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/python-3.png"
-  width="50%"
-  caption="Python Installation"
-/>
+> **Image:** Python Installation
 
 4.	Wait until the installation is finished.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/sidewalk/python-4.png"
-  width="50%"
-  caption="Python Installation"
-/>
+> **Image:** Python Installation
 
 5. After the installation is complete, open the command prompt window. Use the following command to verify the versions of Python and pip3:
 
@@ -897,5 +775,3 @@ The source code for the RAK4631 Sidewalk Starter Kit is available as open source
 
 To install the necessary development tools, refer to the installation guides available in the [Amazon Sidewalk Documentation.](https://docs.sidewalk.amazon/introduction/sidewalk-gateways.html)
 
-
-<RkBottomNav/>

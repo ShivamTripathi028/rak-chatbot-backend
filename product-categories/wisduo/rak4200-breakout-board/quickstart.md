@@ -11,9 +11,6 @@ slug: /product-categories/wisduo/rak4200-breakout-board/quickstart/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4200 WisDuo Breakout Board Quick Start Guide
 
 ## Prerequisites
@@ -39,7 +36,6 @@ Before going through the steps in the installation guide of the RAK4200 Breakout
 - LoRa antenna
 - Dupont lines (18x)
 
-
 ## Product Configuration
 
 ### Interface with RAK4200 Breakout Board
@@ -52,12 +48,7 @@ Before powering the RAK4200 Breakout Board, ensure the included LoRa antenna is 
 
 2. Connect the USB-to-UART adapter to the pin header on the RAK4200 using 4 DuPont lines. Refer to **Figure 1** for proper wiring instructions.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/connection.png"
-  width="100%"
-  caption="Power up and interface with the board"
-  zoomMode={true}
-/>
+> **Image:** Power up and interface with the board
 
 3. Open the Device Manager by pressing `Windows` + `R`, typing `devmgmt.msc`, and pressing Enter. Alternatively, you can search for `devmgmt.msc` in the **Start Menu**.
 
@@ -67,21 +58,11 @@ Windows 10 should recognize the board and automatically install drivers. However
 
 4. Look for **Ports (COM & LPT)** and locate the entry named **USB-SERIAL CH340**. Note the COM port number, as you will need it to connect to the board. If you have a different model, the name should still include **USB-SERIAL** in some form.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/select-port.png"
-  width="70%"
-  caption="COM Port settings"
-  zoomMode={true}
-/>
+> **Image:** COM Port settings
 
 5. Open the RAK Serial Port Tool. Select the COM Port number (the one you noted in the previous step) and set the **Baud Rate to 115200**. Click **OPEN**, and you should be connected to the board and be able to send commands.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/conect-device.png"
-  width="80%"
-  caption="Configure the RAK Serial Port Tool"
-  zoomMode={true}
-/>
+> **Image:** Configure the RAK Serial Port Tool
 
 ### Connect with The Things Network (TTN)
 
@@ -91,39 +72,19 @@ In this section, you will connect the RAK4200 Breakout Board to **The Things Net
 
 1. If you don't have an account yet, head on to the <a href="https://www.thethingsnetwork.org/" target="_blank">TTN site</a> and create one. Once done, log in to your account and go to the console. See the highlighted box in **Figure 4**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/ttn-homepage.png"
-  width="100%"
-  caption="The Things Network Home Page"
-  zoomMode={true}
-/>
+> **Image:** The Things Network Home Page
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/ttn-console.png"
-  width="100%"
-  caption="TTN Console Page"
-  zoomMode={true}
-/>
+> **Image:** TTN Console Page
 
 2. Choose **APPLICATIONS**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/add-application.png"
-  width="100%"
-  caption="Application Page"
-  zoomMode={true}
-/>
+> **Image:** Application Page
 
 #### Add an Application
 
 3. Click the **add application** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/application-input.png"
-  width="100%"
-  caption="Add an Application"
-  zoomMode={true}
-/>
+> **Image:** Add an Application
 
 :::tip NOTE
 Here are the key points to consider when adding an application to TTN:
@@ -136,32 +97,17 @@ Here are the key points to consider when adding an application to TTN:
 
 4. After filling in the necessary information, press the **Add application**. If the page is the same as shown in **Figure 8**, then you have successfully registered your application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/app-overview.png"
-  width="100%"
-  caption="Application Overview"
-  zoomMode={true}
-/>
+> **Image:** Application Overview
 
 ##### Register Device
 
 4. Scroll down to the **Devices** section, or click the **Devices** button at the top.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/dev-section.png"
-  width="100%"
-  caption="Device Section"
-  zoomMode={true}
-/>
+> **Image:** Device Section
 
 6. Click **Register device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/add-device.png"
-  width="100%"
-  caption="Add your Device"
-  zoomMode={true}
-/>
+> **Image:** Add your Device
 
 :::tip NOTE
 Here are the key points to remember when registering your device:
@@ -172,27 +118,15 @@ Here are the key points to remember when registering your device:
 
 7. Fill in the **Device ID** and **Device EUI** fields (you can generate a random Device EUI by clicking the arrows). Leave the other fields unchanged and click **Register**. Your device will now be registered under the corresponding application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/dev-overview2.png"
-  width="100%"
-  caption="Device Overview"
-  zoomMode={true}
-/>
+> **Image:** Device Overview
 
 Depending on the authentication method you are using, proceed to either the **OTAA Mode** or **ABP Mode** section.
-
-
 
 #### OTAA Mode
 
 When setting up a new device in TTN, the default join mode is **OTAA**. For configuration, you will need the following three parameters: **Device EUI**, **Application EUI**, and **App Key**. These can be obtained from the **Overview page**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/ttn-dev-overview.png"
-  width="100%"
-  caption="Device Overview Parameters"
-  zoomMode={true}
-/>
+> **Image:** Device Overview Parameters
 
 :::tip NOTE
 - As an example, join in **OTAA mode**, using the **EU868 frequency**, with the default LoRa class set to **Class A**.
@@ -218,12 +152,7 @@ at+set_config=lora:class:0
 at+set_config=lora:region:EU868
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/otaa-serial1.png"
-  width="45%"
-  caption="AT Command for OTAA Join Mode, Class and Region"
-  zoomMode={true}
-/>
+> **Image:** AT Command for OTAA Join Mode, Class and Region
 
 :::tip NOTE
 Execute the following commands one by one, in the given order.
@@ -251,12 +180,7 @@ at+set_config=lora:app_eui:XXXX
 at+set_config=lora:app_key:XXXX
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/otaa-serial2.png"
-  width="45%"
-  caption="AT Command for OTAA Device EUI, Application EUI and Application Key"
-  zoomMode={true}
-/>
+> **Image:** AT Command for OTAA Device EUI, Application EUI and Application Key
 
 7. Reboot the RAK4200 Breakout Board to save the parameters.
 
@@ -270,12 +194,7 @@ at+set_config=device:restart
 at+join
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/otaa-join.png"
-  width="45%"
-  caption="AT Command for OTAA LoRa Join via RAK Serial Port Tool"
-  zoomMode={true}
-/>
+> **Image:** AT Command for OTAA LoRa Join via RAK Serial Port Tool
 
 9. After joining in OTAA mode successfully, try to send data from the RAK4200 Breakout Board to TTN:
 
@@ -283,21 +202,11 @@ at+join
 at+send=lora:2:1234567890
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/otaa-send-data.jpg"
-  width="45%"
-  caption="OTAA Test Sample Data Sent via RAK Serial Port Tool"
-  zoomMode={true}
-/>
+> **Image:** OTAA Test Sample Data Sent via RAK Serial Port Tool
 
 You will see the data sent from the RAK4200 Breakout Board on the TTN website, as shown in **Figure 17**:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/ttn-traffic.png"
-  width="100%"
-  caption="OTAA Test Sample Data Sent Viewed in The Things Network"
-  zoomMode={true}
-/>
+> **Image:** OTAA Test Sample Data Sent Viewed in The Things Network
 
 ## Miscellaneous
 
@@ -316,7 +225,6 @@ In the following sections, two (2) options for flashing new firmware in a RAK420
 #### Firmware Upgrade Through DAPLink
 
 Refer to <a href="https://docs.rakwireless.com/product-categories/accessories/rakdap1/quickstart/" target="_blank">RAKDAP1 Flash and Debug Tool Quickstart Guide</a>.
-
 
 #### Firmware Upgrade Through UART1
 
@@ -339,36 +247,15 @@ Follow this procedure to upgrade the firmware in Device Firmware Upgrade (DFU) m
 
 4. Open the RAK Device Firmware Upgrade (DFU) tool. Select the serial port and baud rate of the module, and then click on the **Select Port** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/device-firmware-tool.png"
-  width="70%"
-  caption="Device Firmware Upgrade Tool"
-  zoomMode={true}
-/>
+> **Image:** Device Firmware Upgrade Tool
 
 5. Click on the **Select Firmware** button and choose the application firmware file of the module with the suffix `. bin`.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/select-firmware.png"
-  width="70%"
-  caption="Select firmware"
-  zoomMode={true}
-/>
+> **Image:** Select firmware
 
 6. Click on the **Upgrade** button to upgrade the device. After the upgrade is complete, the RAK4200 module is now ready to work with the new firmware.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/firmware-upgrading.png"
-  width="70%"
-  caption="Firmware upgrade"
-  zoomMode={true}
-/>
+> **Image:** Firmware upgrade
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-breakout-board/quickstart/upgrade-success.png"
-  width="70%"
-  caption="Upgrade successful"
-  zoomMode={true}
-/>
+> **Image:** Upgrade successful
 
-<RkBottomNav/>

@@ -12,9 +12,6 @@ sidebar_label: Quick Start Guide
 slug: /product-categories/5g/all-in-one-5g/quickstart/
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # All-in-One 5G Quick Start Guide
 
 A simple configuration guide for developers, private LTE & 5G, and some other usage.
@@ -30,11 +27,7 @@ A good GPS signal is required to activate and run 4G and 5G radios.
 3. Then, connect the GPS antenna to the device.
 4. Place the antenna outside the window to get a good GPS signal.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/1.all-in-one-5g.png"
-  width="50%"
-  caption="All-in-One 5G"
-/>
+> **Image:** All-in-One 5G
 
 :::warning
 Attach the antenna first before powering on the device.
@@ -57,65 +50,30 @@ There are four (4) major scenarios you can use the RAK M310/M320 device for. The
 
 This section describes the basic configuration to connect eNodeB and gNodeB to your own EPC/5GC. After the configuration, the eNodeB and gNodeB should start serving.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/2.with-external-epc-5gc.png"
-  width="80%"
-  caption="Connect RAK M310/M32 to external EPC/5GC"
-/>
+> **Image:** Connect RAK M310/M32 to external EPC/5GC
 
 Listed in the table are the parameters to consider for the configuration:
 
-<table>
-  <thead><tr>
-    <th>Item</th>
-    <th>Parameter</th>
-    <th>Description</th>
-  </tr></thead>
-<tbody>
-  <tr>
-    <td rowspan = "2">IP Address</td>
-    <td>OAMP IP</td>
-    <td>OAM uses a separate IP address to access the local web, e.g., 192.168.150.123/124</td>
-  </tr>
-  <tr>
-    <td>Core IP</td>
-    <td>MME IP for 4G eNodeB, AMF IP for 5G gNodeB – planned by the user</td>
-  </tr>
-    <tr>
-    <td rowspan = "3">Cell Parameters</td>
-    <td>PLMN</td>
-    <td>Planned by the user</td>
-  </tr>
-  <tr>
-    <td>TAC</td>
-    <td>Planned by the user</td>
-  </tr>
-  <tr>
-    <td>Cell ID</td>
-    <td>Planned by the user</td>
-  </tr>
-  <tr>
-    <td>NTP Server</td>
-    <td>NTP Server Address</td>
-    <td>Planned by the user. NTP is required to activate and run 4G eNodeB and 5G gNodeB</td>
-  </tr>
-</tbody>
-</table>
+| Item | Parameter | Description |
+| --- | --- | --- |
+| IP Address | OAMP IP | OAM uses a separate IP address to access the local web, e.g., 192.168.150.123/124 |
+| IP Address | Core IP | MME IP for 4G eNodeB, AMF IP for 5G gNodeB – planned by the user |
+| Cell Parameters | PLMN | Planned by the user |
+| Cell Parameters | TAC | Planned by the user |
+| Cell Parameters | Cell ID | Planned by the user |
+| NTP Server | NTP Server Address | Planned by the user. NTP is required to activate and run 4G eNodeB and 5G gNodeB |
 
 To configure RAK M310/M320 with your own EPC/5GC:
 
-**1. Prepare your PC or laptop’s network to access the RAK M310/M320 local web.** <br /> Configure the ethernet port to the subnet `192.168.150.0/24` to access eNodeB or gNodeB local web management, bridged by a router/switch or connected directly.
+**1. Prepare your PC or laptop’s network to access the RAK M310/M320 local web.** 
+ Configure the ethernet port to the subnet `192.168.150.0/24` to access eNodeB or gNodeB local web management, bridged by a router/switch or connected directly.
 
 :::tip NOTE
 - RAK M310&M320 4G eNodeB: `192.168.150.1/24`
 - RAK M320 5G gNodeB: `192.168.150.7/24`
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/3.network-connection.png"
-  width="80%"
-  caption="Network connection"
-/>
+> **Image:** Network connection
 
 **2. Log in to eNodeB/gNodeB local web using the default credentials.**
   - RAK M310&M320 4G eNodeB
@@ -131,68 +89,52 @@ To configure RAK M310/M320 with your own EPC/5GC:
 It is recommended to use Chrome browser to achieve the best effect.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/4.login-page.png"
-  width="100%"
-  caption="Login page"
-/>
+> **Image:** Login page
 
-**3. Configure eNodeB S1 or gNodeB N2 interface network according to your requirement.** <br />
+**3. Configure eNodeB S1 or gNodeB N2 interface network according to your requirement.** 
+
 Mostly the eNodeB's S1 and/or gNodeB's N2 interface are required to have a static IP address connected to your EPC and/or 5GC. Dynamic IP address allocated by DHCP is also supported, all depend on your network requirement.
 
-<b>eNodeB S1 Configuration</b>
+**eNodeB S1 Configuration**
 
 - **S1 Interface with Static IP**
 
-  a. Log in to eNodeB local web via `https://192.168.150.1` <br />
+  a. Log in to eNodeB local web via `https://192.168.150.1` 
+
   b. Navigate to **Network** > **WAN/LAN/VLAN** and click the **edit** button under **WAN Config** in the **Operate** column.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/5.wan-config.png"
-    width="100%"
-    caption="WAN Configuration Static IP"
-  />
+  
+> **Image:** WAN Configuration Static IP
 
   c. The **Edit** window pops up. Select **Static IP** in **IP** **Access Mode**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/6.enodeb-static-ip.png"
-    width="100%"
-    caption="eNodeB Static IP"
-  />
+  
+> **Image:** eNodeB Static IP
 
   d. Then edit the static **IP Address**, **Netmask**, and **Gateway** for the eNodeB S1 port.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/7.edit-static.png"
-    width="45%"
-    caption="Static IP Configuration"
-  />
+  
+> **Image:** Static IP Configuration
 
   e. Click **OK** and then save the configuration.
 
 - **S1 Interface with Dynamic IP**
 
-  a. Log in to eNodeB local web via `https://192.168.150.1`. <br />
+  a. Log in to eNodeB local web via `https://192.168.150.1`. 
+
   b. Navigate to **Network** > **WAN/LAN/VLAN** and click the **edit** button under **WAN Config**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/8.wan-config.png"
-    width="100%"
-    caption="WAN Configuration Dynamic IP"
-  />
+  
+> **Image:** WAN Configuration Dynamic IP
 
   c. The **Edit** window pops up. Select **DHCP** in **IP** **Access Mode** to enable the DHCP client on the eNodeB WAN port.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/9.enodeb-dhcp-config.png"
-    width="45%"
-    caption="eNodeB DHCP Configuration"
-  />
+  
+> **Image:** eNodeB DHCP Configuration
 
   d. Click **OK** and then save the configuration.
 
-<b>gNode N2 Configuration</b>
+**gNode N2 Configuration**
 
 - **N2 Interface with Static IP**
 
@@ -203,211 +145,154 @@ Mostly the eNodeB's S1 and/or gNodeB's N2 interface are required to have a stati
 
   b. Navigate to **Network** > **WAN/VLAN** and click **open** under **WAN List > WAN Card1** to expand the list.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/10.click-open.png"
-    width="100%"
-    caption="Expand WAN Cards"
-  />
+  
+> **Image:** Expand WAN Cards
 
   c. **WAN IPv4 table** shows up, then click the **Edit** button under **Operate**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/11.wan-ipv4-config.png"
-    width="100%"
-    caption="Edit WAN IPv4 Table"
-  />
+  
+> **Image:** Edit WAN IPv4 Table
 
   d. The **Edit** window pops up. Select **Static IP** in the **Addressing Mode** and **Ng** in the **Port Type** field, then edit the following fields as well for the gNodeB S2 port:
      - **IP Address**
      - **Netmask**
      - **Gateway**
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/12.static-ip-config.png"
-    width="45%"
-    caption="Static IP Configuration"
-  />
+  
+> **Image:** Static IP Configuration
 
   f. Lastly, click **OK** then **save** the configuration.
 
-
 - **N2 Interface with Dynamic IP**
 
-  a. Log in to gNodeB local web via `http://192.168.150.7`. <br />
+  a. Log in to gNodeB local web via `http://192.168.150.7`. 
+
   b. Navigate to **Network** > **WAN/VLAN** and click **open** under **WAN List > WAN Card1** to expand the list.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/13.click-open.png"
-    width="100%"
-    caption="Expand WAN Card"
-  />
+  
+> **Image:** Expand WAN Card
 
   c. **WAN IPv4 table** shows up, then click the **Edit** button under **Operate**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/14.wan-ipv4-config.png"
-    width="100%"
-    caption="WAN IPv4 Table Configuration"
-  />
+  
+> **Image:** WAN IPv4 Table Configuration
 
   d. The **Edit** window pops up, and then select **DHCP** in the **Addressing Mode** field and **Ng** in the **Port Type** field.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/15.gnode-dhcp-config.png"
-    width="100%"
-    caption="gNodeB DHCP Configuration"
-  />
+  
+> **Image:** gNodeB DHCP Configuration
 
   f. Then click **OK** and **save** the configuration.
 
-**4. Configure PLMN, TAC, Cell ID, MME, and AMF IP address.** <br />
+**4. Configure PLMN, TAC, Cell ID, MME, and AMF IP address.** 
+
 Configure your eNodeB and gNodeB with planned TAC, PLMN, MME, and AMF IP address to connect your own EPC and 5GC. These parameters depend on your network requirements.
 
-<b>eNodeB Configuration</b>
+**eNodeB Configuration**
 
-  a. Log in to eNodeB local web via `https://192.168.150.1` <br />
+  a. Log in to eNodeB local web via `https://192.168.150.1` 
+
   b. Navigate to the **Quick Setting** page and then configure the following parameters:
    - PLMN
    - TAC
    - Country code
    - MME IP
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/16.quick-setting-parameters.png"
-    width="100%"
-    caption="Quick Setting Parameters"
-  />
+  
+> **Image:** Quick Setting Parameters
 
   c. Scroll down, and under **Cell Quick Setting**, configure the **Cell ID** and set the **RF Status** field to **ON**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/17.cell-quick-setting.png"
-    width="100%"
-    caption="Cell Quick Setting Parameters"
-  />
+  
+> **Image:** Cell Quick Setting Parameters
 
   d. Lastly, **Save** the eNodeB configuration.
 
-<b>gNodeB Configuration</b>
+**gNodeB Configuration**
 
 - **PLMN**
 
-  a. Log in to gNodeB local web via `http://192.165.150.7`. <br />
+  a. Log in to gNodeB local web via `http://192.165.150.7`. 
+
   b. Navigate to **NR Setting**, select **PLMN**, and click the **Edit** button under the **Operate** column.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/18.plmn.png"
-    width="100%"
-    caption="Edit PLMN Identity Info List"
-  />
+  
+> **Image:** Edit PLMN Identity Info List
 
   c. An **Edit** window will pop up. Edit the **Cell ID** and **TAC**, then click **OK**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/19.cell-id-tac.png"
-    width="100%"
-    caption="Configure Cell ID and TAC"
-  />
+  
+> **Image:** Configure Cell ID and TAC
 
   d. The **PLMN List** will show up, then click the **Edit** button under the **Operate** column.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/20.plmn-list.png"
-    width="100%"
-    caption="PLMN List"
-  />
+  
+> **Image:** PLMN List
 
   e. Another **Edit** button appears, then edit the **PLMNID**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/21.plmnid.png"
-    width="100%"
-    caption="Configure PLMNID"
-  />
+  
+> **Image:** Configure PLMNID
 
 - **AMF IP Address**
 
   a. Under the **NR Setting**, select **Advanced** and then click the plus icon beside **CU** to show the CU fields.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/22.adv-setting-config.png"
-    width="100%"
-    caption="Advanced Setting Configuration"
-  />
+  
+> **Image:** Advanced Setting Configuration
 
   b. Scroll down and look for **AMF IP**, then click the **Add** icon.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/23.add-amf-ip.png"
-    width="100%"
-    caption="Add AMF IP"
-  />
+  
+> **Image:** Add AMF IP
 
   c. The **Add** window pops up, then add the **AMF IP** and **PLMN**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/24.config-amf-ip.png"
-    width="100%"
-    caption="Configure AMF IP and PLMN"
-  />
+  
+> **Image:** Configure AMF IP and PLMN
 
   d. Once done, click **OK** and **save** the configuration.
 
-**5. Configure the NTP Server.** <br />
+**5. Configure the NTP Server.** 
+
 NTP is required to activate and run 4G eNodeB and 5G gNodeB. Without any reachable NTP servers, the eNodeB and gNodeB cannot be activated successfully.
 
-<b>eNodeB NTP Server Address</b>
+**eNodeB NTP Server Address**
 
-  a. Navigate to **System** then to the **NTP** page. <br />
+  a. Navigate to **System** then to the **NTP** page. 
+
   b. Tick the slider to turn on the **NTP Servers** and edit the **NTP servers’ IP addresses** and **Port** fields. Then click **Save**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/25.enodeb-ntp-servers.png"
-    width="100%"
-    caption="eNodeB NTP Servers"
-  />
+  
+> **Image:** eNodeB NTP Servers
 
-<b>gNodeB NTP Server Address</b>
+**gNodeB NTP Server Address**
 
-  a. Navigate to **System** then to the **NTP** page. <br />
+  a. Navigate to **System** then to the **NTP** page. 
+
   b. In the **Enable** field, select **ON** and then edit the **NTP servers’ IP addresses**.
 
-  <RkImage
-    src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/26.gnodeb-ntp-servers.png"
-    width="100%"
-    caption="gNodeB NTP Servers"
-  />
+  
+> **Image:** gNodeB NTP Servers
 
   c. Once done, click OK and save the configuration.
 
 **6. Reboot to use the new configuration.**
 
-<b>eNodeB Reboot</b>
+**eNodeB Reboot**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/27.enodeb-reboot.png"
-  width="100%"
-  caption="eNodeB Reboot"
-/>
+> **Image:** eNodeB Reboot
 
-<b>gNodeB Reboot</b>
+**gNodeB Reboot**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/28.gnodeb-reboot.png"
-  width="100%"
-  caption="gNodeB Reboot"
-/>
+> **Image:** gNodeB Reboot
 
 ### Configuration with Magma Inside
 
 **Scenario 2.** RAK M310/M320 as an All-in-One device, running with RAK open-source Magma AGW.
 RAK M310/M320 has a built-in open-source Magma AGW installation package inside.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/29.with-magma-agw-inside.png"
-  width="80%"
-  caption="RAK M310/M320 as an All-in-One device"
-/>
+> **Image:** RAK M310/M320 as an All-in-One device
 
 You can log in and install the package manually with the following steps:
 
@@ -439,11 +324,7 @@ After installing the Magma AGW, the eNodeB and gNodeB will start serving automat
 
 **Scenario 3.** RAK M310/M320 as an All-in-One device, running with RAK open-source Open5GS.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/30.with-open5gs-inside.png"
-  width="80%"
-  caption="RAK M310/M320 with open-source Open5GS inside"
-/>
+> **Image:** RAK M310/M320 with open-source Open5GS inside
 
 RAK M310/M320 has a built-in open-source Open5GS installation package inside. You can log in and install the package manually with the following steps:
 
@@ -479,11 +360,7 @@ After installing the Open5GS, the eNodeB and gNodeB will automatically start ser
 If you want to install your own EPC or 5GC onto RAK M310/M320 CM4 Module, make sure that it is compatible with Raspberry CM4.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/31.with-customers-epc-5gc-inside.png"
-  width="80%"
-  caption="RAK M310/M320 with EPC/5GC on open hardware CM4"
-/>
+> **Image:** RAK M310/M320 with EPC/5GC on open hardware CM4
 
 There are four major steps to install your own EPC or 5GC onto RAK M310/M320's CM4 Module:
 
@@ -504,11 +381,7 @@ Prepare the network to access to M310/M320 CM4 module. RAK M310 & M320 CM4 modul
 
 You need to configure your PC or laptop's ethernet port to subnet `192.168.150.0/24` to SSH access to CM4, bridged by a router/switch or connected directly. The network connection may look like this:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/32.network-connection.png"
-  width="80%"
-  caption="Network connection"
-/>
+> **Image:** Network connection
 
 :::tip NOTE
 If the device is installed with the built-in Magma AGW or Open5GS, the CM4's static IP address has changed to `192.168.151.100/24`, then you need to configure the PC or laptop's IP to `192.168.151.0/24` to access to CM4.
@@ -530,22 +403,17 @@ RAK M320 is integrated with a 4G eNodeB and a 5G gNodeB. If you want 5G gNodeB o
 2. Navigate to the **Quick Setting** page.
 3. Scroll down to the **Cell Quick Setting**, then set the **RF Status** to **OFF**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/quickstart/33.rf-stat-off.png"
-  width="100%"
-  caption="Disable 4G"
-/>
+> **Image:** Disable 4G
 
 4. After that, click **Save** to save the configuration.
 
 ## Mobile Phone Access to Network
 
-**Using your own EPC or 5GC**: <br />
+**Using your own EPC or 5GC**: 
+
 You should insert SIM cards managed by yourself into the mobile phones and other end devices, whether configuring the phones or devices to access the network depends on your requirements.
 
-**Using RAK M310/M320 built-in Magma AGW or Open5GS**: <br />
+**Using RAK M310/M320 built-in Magma AGW or Open5GS**: 
+
 Before mobile phones or other devices access the network, it is required to insert the SIM cards provided by RAK into mobile phones or other end devices, and add an APN named with the internet, and select the network 00101 at the first access.
 
-
-
-<RkBottomNav/>

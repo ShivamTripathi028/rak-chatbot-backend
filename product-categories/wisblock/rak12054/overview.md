@@ -10,8 +10,6 @@ keywords:
     - AS5600-ASOT
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12054 WisBlock Encoder Sensor
 
 Thank you for choosing **RAK12054 WisBlock Encoder Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -35,11 +33,11 @@ RAK12054 is a WisBlock Encoder Sensor module that extends the WisBlock system wi
     *  Simple user-programmable start and stop positions over the I2C interface
     *  Maximum angle programmable from 18° up to 360°
     *  Automatic magnet detection
-    *  3.3&nbsp;V power supply
-    *  Operating temperature range：-40&nbsp;°C to +85&nbsp;°C
+    *  3.3 V power supply
+    *  Operating temperature range：-40 °C to +85 °C
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -49,4 +47,3 @@ To use a **RAK12054**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

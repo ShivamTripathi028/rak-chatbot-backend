@@ -12,9 +12,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2171 Quick Start Guide
 
 ## Prerequisites
@@ -29,15 +26,11 @@ Before going through each and every step in the guide of the RAK2171 WisNode Tra
 
 ### What’s Included in the Package?
 
-- 2&nbsp;pcs RAK2171 WisNode TrackIt
-- 2&nbsp;pcs Charging cable with magnetic plate
-- 2&nbsp;pcs Protective silicone case
+- 2 pcs RAK2171 WisNode TrackIt
+- 2 pcs Charging cable with magnetic plate
+- 2 pcs Protective silicone case
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/1.png"
-  caption="Inclusion list"
-  width="50%"
-/>
+> **Image:** Inclusion list
 
 ## Product Configuration
 
@@ -52,74 +45,42 @@ To fully utilize the WisNode TrackIt and the TrackIt App in this mode, you need 
 
 In this mode, the WisNode TrackIt is configured via the TrackIt application on your phone. The TrackIt application automatically registers the RAK2171 trackers in the WisGate Edge gateways' Built-in Network Server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/2.png"
-  caption="LoRaWAN mode"
-  width="50%"
-/>
+> **Image:** LoRaWAN mode
 
 1. Download and install the [**TrackIt App**](https://play.google.com/store/apps/details?id=com.rak.wisnodetrackit&hl=en_US&gl=US) on your smartphone.
 2. Turn on the Bluetooth on tour smartphone.
 3. Start the **TrackIt App**. Location permission may be requested, allow it.
 4. Agree with the **Terms and Conditions** and the **Privacy Policy**, and press the **Sign in with RAK ID** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/3.jpg"
-  caption="Welcome screen"
-  width="30%"
-/>
+> **Image:** Welcome screen
 
 5. Sign in with your RAK ID or sign up for a new RAK ID if you don’t have an account. If you do not have a RAK ID, press the **Create new** link and fill the needed information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/sign-in.png"
-  caption="Sign in screen"
-  width="70%"
-/>
+> **Image:** Sign in screen
 
 6. After you log in, the App will prompt you to add a tracker. To start the pairing process, press the **+ ADD TRACKER** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/pairing.png"
-  caption="Add tracker and Start Pairing screen"
-  width="70%"
-/>
+> **Image:** Add tracker and Start Pairing screen
 
 7. Hold the **Power button** of your RAK2171 for 3 seconds to turn it on. If the device was turned on previously, you may need to restart it, as the Bluetooth is available for pairing for 3 minutes.
 
 8. Press the **Start Pairing** in the app. An information screen will be displayed to inform you of the process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/8.jpg"
-  caption="Pairing screen"
-  width="30%"
-/>
+> **Image:** Pairing screen
 
 If the tracker is turned off or the Bluetooth pair period has expired, you will see a **Tracker not found** message. Restart the tracker and try again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/9.jpg"
-  caption="Pairing screen"
-  width="30%"
-/>
+> **Image:** Pairing screen
 
 9. After successful pairing, you will see a configuration screen, where you will be able to change the tracker's default name and the working mode. This section is for the LoRaWAN mode, so press the LoRaWAN button to change the mode from LoRa P2P to LoRaWAN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/setup-process.png"
-  caption="Set up screen"
-  width="70%"
-/>
+> **Image:** Set up screen
 
 10. You will see two options: **RAK Embedded NS** and **Third Party NS**. For this mode, press **RAK Embedded NS**.
 
 11. Confirm that the gateway is powered and ready by pressing the **GATEWAY ON** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/12.jpg"
-  caption="Gateway on confirmation"
-  width="30%"
-/>
+> **Image:** Gateway on confirmation
 
 12. You will be prompted to connect to the Wi-Fi AP of your RAK gateway. Press the **GO TO WI-FI SETTINGS** button. You will be redirected to your phone's Wi-Fi settings, where you need to find the RAK WisGate Edge gateway Wi Fi AP and connect to it. You will be promoted for the gateway's login credentials.
 
@@ -127,83 +88,46 @@ If the tracker is turned off or the Bluetooth pair period has expired, you will 
   - Username: **root**
   - Password: **root**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/connecting-wifi.png"
-  caption="Connect to the gateway's Wi-Fi screen"
-  width="70%"
-/>
+> **Image:** Connect to the gateway's Wi-Fi screen
 
 13. After successful login, the TrackIt app will create an application in the gateway's built-In NS and will register the TrackIt device automatically. Once you are done, press the **VIEW ON MAP** button to see the WisNode TrackIt location on the application map.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/map.png"
-  caption="Successful connection screen"  
-  width="70%"
-/>
+> **Image:** Successful connection screen
 
 ### LoRa Peer-to-Peer (P2P) Mode
 
 In this mode, no LoRaWAN gateway is needed, but you need at least two RAK2171 devices. One of the trackers is permanently connected via Bluetooth to the TrackIt App on your smartphone and acts a **Host**. The other tracker/s is/are registered as **Client** and send their data to the Host tracker.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/17.png"
-  caption="P2P mode"
-  width="60%"
-/>
+> **Image:** P2P mode
 
 1. Download and install the [**TrackIt App**](https://play.google.com/store/apps/details?id=com.rak.wisnodetrackit&hl=en_US&gl=US) on your smartphone.
 2. Turn on the Bluetooth on tour smartphone.
 3. Start the **TrackIt App**. Location permission may be requested, allow it.
 4. Agree with the **Terms and Conditions** and the **Privacy Policy**, and press the **Sign in with RAK ID** button.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/3.jpg"
-  caption="Welcome screen"
-  width="30%"
-/>
+> **Image:** Welcome screen
 
 5. Sign in with your RAK ID or sign up for a new RAK ID if you don’t have an account. If you do not have a RAK ID, press the **Create new** link and fill the needed information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/sign-in.png"
-  caption="Sign in screen"
-  width="70%"
-/>
+> **Image:** Sign in screen
 
 6. After you log in, the App will prompt you to add a tracker. To start the pairing process, press the **+ ADD TRACKER** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/pairing.png"
-  caption="Add tracker and Start Pairing screen"
-  width="70%"
-/>
+> **Image:** Add tracker and Start Pairing screen
 
 7. Hold the **Power button** of your RAK2171 for 3 seconds to turn it on. If the device was turned on previously, you may need to restart it, as the Bluetooth is available for pairing for 3 minutes.
 
 8. Press the **Start Pairing** in the app. An information screen will be displayed to inform you of the process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/8.jpg"
-  caption="Pairing screen"
-  width="30%"
-/>
+> **Image:** Pairing screen
 
 If the tracker is turned off or the Bluetooth pair period has expired, you will see a **Tracker not found** message. Restart the tracker and try again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/9.jpg"
-  caption="Pairing screen"
-  width="30%"
-/>
+> **Image:** Pairing screen
 
 10. After successful pairing, you will see a configuration screen, where you will be able to change the tracker's default name and the working mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/10.jpg"
-  caption="Set up screen"
-  width="30%"
-/>
+> **Image:** Set up screen
 
 11. Select the LoRa P2P mode and press **ADD**. Your tracker is now added as a **Host**, then press the **VIEW ON MAP** button to see its location. As the Host should be always connected to your smartphone, this is also your position.
 
@@ -211,83 +135,46 @@ If the tracker is turned off or the Bluetooth pair period has expired, you will 
 The first Tracker you add will act as a **Host**. All other trackers added will be **Clients**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/1819.png"
-  caption="Host tracker is added"
-  width="70%"
-/>
+> **Image:** Host tracker is added
 
 12. To add a **Client** tracker, press the **+** button on the map. The adding process is the same as for the **Host**.  If you go to the map and slide up the menu at the bottom, you will see the registered trackers, their role, and battery status.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/2021.png"
-  caption="Client tracker is added and Registered Trackers List"
-  width="70%"
-/>
-
+> **Image:** Client tracker is added and Registered Trackers List
 
 ### Third-Party LoRaWAN Network Server (LNS) Mode
 
 In this mode, any LoRaWAN NS can be used (TTN, Helium, or other). The RAK TrackIt App acts only as a configuration tool for the trackers, no map or location data is available in the App.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/22.png"
-  caption="Client tracker is added and Registered Trackers List"
-  width="80%"
-/>
+> **Image:** Client tracker is added and Registered Trackers List
 
 1. Download and install the [**TrackIt App**](https://play.google.com/store/apps/details?id=com.rak.wisnodetrackit&hl=en_US&gl=US) on your smartphone.
 2. Turn on the Bluetooth on tour smartphone.
 3. Start the **TrackIt App**. Location permission may be requested, allow it.
 4. Agree with the **Terms and Conditions** and the **Privacy Policy**, and press the **Sign in with RAK ID** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/3.jpg"
-  caption="Welcome screen"
-  width="30%"
-/>
+> **Image:** Welcome screen
 
 5. Sign in with your RAK ID or sign up for a new RAK ID if you don’t have an account. If you do not have a RAK ID, press the **Create new** link and fill the needed information.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/sign-in.png"
-  caption="Sign in screen"
-  width="70%"
-/>
+> **Image:** Sign in screen
 
 6. After you log in, the App will prompt you to add a tracker. To start the pairing process, press the **+ ADD TRACKER** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/pairing.png"
-  caption="Add tracker and Start Pairing screen"
-  width="70%"
-/>
+> **Image:** Add tracker and Start Pairing screen
 
 7. Hold the **Power button** of your RAK2171 for 3 seconds to turn it on. If the device was turned on previously, you may need to restart it, as the Bluetooth is available for pairing for 3 minutes.
 
 8. Press the **Start Pairing** in the app. An information screen will be displayed to inform you of the process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/8.jpg"
-  caption="Pairing screen"
-  width="30%"
-/>
+> **Image:** Pairing screen
 
 If the tracker is turned off or the Bluetooth pair period has expired, you will see a **Tracker not found** message. Restart the tracker and try again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/9.jpg"
-  caption="Pairing screen"
-  width="30%"
-/>
+> **Image:** Pairing screen
 
 9. After successful pairing, you will see a configuration screen, where you will be able to change the tracker's default name and the working mode. Press the LoRaWAN button to change the mode from LoRa P2P to LoRaWAN.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/setup-process.png"
-  caption="Set up screen"
-  width="70%"
-/>
+> **Image:** Set up screen
 
 10. You will see two options: **RAK Embedded NS** and **Third Party NS**. For this mode, press **Third Party NS**.
 
@@ -298,54 +185,27 @@ If the tracker is turned off or the Bluetooth pair period has expired, you will 
 * All LoRaWAN bands will be added with next firmware updates.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/2324.png"
-  caption="Third Party NS Set up screen"
-  width="70%"
-/>
+> **Image:** Third Party NS Set up screen
 
 12. Press **CONFIRM** to choose the selected LoRaWAN region. Then, press **CONTINUE**.
 13. A notification will be displayed, that in Third-party LNS mode the device's position data will be not available on the TrackIt App's map as the data will be sent to the Third-party Network Server directly.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/rak2171/quickstart/25.jpg"
-  caption="Third Party NS Confirmation"
-  width="30%"
-/>
+> **Image:** Third Party NS Confirmation
 
 ## TrackIt LoRaWAN Payload
 
 TrackIt is the latest GPS LoRaWAN tracker by RAKwireless. The name hints what is the device’s purpose – to track something, whether it is a person, an asset, an animal, or anything else. In addition to the tracking application, the device can be used to send SOS or a 6-level alarm signal, based on movement, vibration, fall, etc. The different payloads of the device are explained in this section.
 
-
 ### Header/Payload Type/Message ID
 
-<table>
-  <thead>
-    <tr>
-      <th colSpan="2" rowSpan="1">1 byte</th>
-      <th colSpan="2" rowSpan="1">1 byte</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>HEADER</td>
-      <td>Payload time</td>
-      <td>Reserved</td>
-      <td>Message ID</td>
-    </tr>    
-    <tr>
-      <td>2 bits</td>
-      <td>6 bits</td>
-      <td>3 bits</td>
-      <td>5 bits</td>
-    </tr>
-  </tbody>
-</table>
+| 1 byte | 1 byte |  |  |
+| --- | --- | --- | --- |
+| HEADER | Payload time | Reserved | Message ID |
+| 2 bits | 6 bits | 3 bits | 5 bits |
 
 - **Header** - by default, the Header is 11.
 - **Payload type** – different payload types are explained in this table above.
-- **Message ID** – an internal counter for the message. The first 5&nbsp;bits are for the message ID. The other 3 are reserved.
+- **Message ID** – an internal counter for the message. The first 5 bits are for the message ID. The other 3 are reserved.
 
 ### Header/Payload Type
 
@@ -353,36 +213,12 @@ The different payload types that TrackIt can send are explained below. If the GP
 
 With 5 clicks on the power button, the device will start sending SOS messages. When the SOS is canceled, a message will also be sent.
 
-<table>
-  <tbody>
-    <tr>
-      <td>0b’1100 1010</td>
-      <td>No Location</td>
-      <td>0xCA</td>
-    </tr>
-    <tr>
-      <td>0b’1100 1011</td>
-      <td>Location</td>
-      <td>0xCB</td>
-    </tr>
-    <tr>
-      <td>0b’1100 1100</td>
-      <td>Send SOS</td>
-      <td>0xCC</td>
-    </tr>
-    <tr>
-      <td>0b’1100 1101</td>
-      <td>Cancel SOS</td>
-      <td>0xCD</td>
-    </tr>
-    <tr>
-      <td>0b’1100 1110</td>
-      <td>6-level alarm</td>
-      <td>0xCE</td>
-    </tr>
-  </tbody>
-</table>
-
+| 0b’1100 1010 | No Location | 0xCA |
+| --- | --- | --- |
+| 0b’1100 1011 | Location | 0xCB |
+| 0b’1100 1100 | Send SOS | 0xCC |
+| 0b’1100 1101 | Cancel SOS | 0xCD |
+| 0b’1100 1110 | 6-level alarm | 0xCE |
 
 #### Working Patterns in 6-level Alarm
 
@@ -401,13 +237,13 @@ The device will send **No location payload** when the GPS has no fix.
 |---------------------|------------|----------------|-----------|---------------|------------|
 | Header/Payload Type | Message ID | Application ID | Device ID | Battery Level | Time       |
 
-1. Header/Payload Type: 1&nbsp;byte
-2. Message ID: 1&nbsp;byte (3 reserved bits + 5 bits to be used for the ID)
-3. Application ID: 4&nbsp;bytes
-4. Device ID: 4&nbsp;bytes
-5. Battery: 1&nbsp;byte
-6. Time: 4&nbsp;bytes
-7. Status: 1&nbsp;byte – 8&nbsp;bits
+1. Header/Payload Type: 1 byte
+2. Message ID: 1 byte (3 reserved bits + 5 bits to be used for the ID)
+3. Application ID: 4 bytes
+4. Device ID: 4 bytes
+5. Battery: 1 byte
+6. Time: 4 bytes
+7. Status: 1 byte – 8 bits
 - Bit 0 – shows if Extended Prediction Orbit (EPO) worked. This allows the device to predict where satellites will be in the sky.
 - Bit 1 – shows if the device is charging.
 - Bit 2 and 3 show if there is GPS fix:
@@ -424,17 +260,17 @@ The device will send **Location payload** when the GPS has a fix.
  |---------------------|------------|----------------|-----------|------------|------------|------------------|---------|---------|------------|
  | Header/Payload Type | Message ID | Application ID | Device ID | Longitude  | Accuracy   | GPS Start Number | Battery | Time    | Status     |
 
-1. Header/Payload Type: 1&nbsp;byte
-2. Message ID: 1&nbsp;byte (3 reserved bits + 5&nbsp;bits to be used for the ID)
-3. Application ID: 4&nbsp;bytes
-4. Device ID: 4&nbsp;bytes
-5. Longitude: 4&nbsp;bytes
-6. Latitude: 4&nbsp;bytes
-7. Accuracy: 1&nbsp;byte
-8. GPS Start Number: 1&nbsp;byte
-9. Battery: 1&nbsp;byte
-10. Time: 4&nbsp;bytes
-11. Status: 1&nbsp;byte
+1. Header/Payload Type: 1 byte
+2. Message ID: 1 byte (3 reserved bits + 5 bits to be used for the ID)
+3. Application ID: 4 bytes
+4. Device ID: 4 bytes
+5. Longitude: 4 bytes
+6. Latitude: 4 bytes
+7. Accuracy: 1 byte
+8. GPS Start Number: 1 byte
+9. Battery: 1 byte
+10. Time: 4 bytes
+11. Status: 1 byte
 - Bit 0 – shows if Extended Prediction Orbit (EPO) worked. This allows the device to predict where satellites will be in the sky.
 - Bit 1 – shows if the device is charging
 - Bit 2 and 3 show if there is a GPS fix:
@@ -459,15 +295,15 @@ SOS type payload has two subtypes of payload – SOS without user data and SOS w
 |---------------------|------------|----------------|-----------|------------|------------|--------------|--------------|--------------|
 | Header/Payload Type | Message ID | Application ID | Device ID | Longitude  | Latitude   | Contact Name | Country Code | Phone Number |
 
-1. Header/Payload Type: 1&nbsp;byte
-2. Message ID: 1&nbsp;byte (3 reserved bits + 5&nbsp;bits to be used for the ID)
-3. Application ID: 4&nbsp;bytes
-4. Device ID: 4&nbsp;bytes
-5. Longitude: 4&nbsp;bytes
-6. Latitude: 4&nbsp;bytes
-7. User’s name: max length is 10&nbsp;bytes
-8. Country code: max length is 11&nbsp;bytes
-9. Phone number: max length is 11&nbsp;bytes
+1. Header/Payload Type: 1 byte
+2. Message ID: 1 byte (3 reserved bits + 5 bits to be used for the ID)
+3. Application ID: 4 bytes
+4. Device ID: 4 bytes
+5. Longitude: 4 bytes
+6. Latitude: 4 bytes
+7. User’s name: max length is 10 bytes
+8. Country code: max length is 11 bytes
+9. Phone number: max length is 11 bytes
 
 ### Cancel SOS Payload
 
@@ -477,10 +313,10 @@ This payload will be sent when the SOS is canceled. To cancel the SOS, the user 
  |---------------------|------------|----------------|-----------|
  | Header/Payload Type | Message ID | Application ID | Device ID |
 
-1. Header/Payload Type: 1&nbsp;byte
-2. Message ID: 1&nbsp;byte (3 reserved bits + 5&nbsp;bits to be used for the ID)
-3. Application ID: 4&nbsp;bytes
-4. Device ID: 4&nbsp;bytes
+1. Header/Payload Type: 1 byte
+2. Message ID: 1 byte (3 reserved bits + 5 bits to be used for the ID)
+3. Application ID: 4 bytes
+4. Device ID: 4 bytes
 
 ### 6-level Sensitivity Alarm Payload
 
@@ -497,10 +333,9 @@ The 6-level sensitivity alarm is configured in the application of the TrackIt. T
  |---------------------|------------|----------------|-----------|---------|
  | Header/Payload Type | Message ID | Application ID | Device ID | Level   |
 
-1. Header/Payload Type: 1&nbsp;byte
-2. Message ID: 1&nbsp;byte (3 reserved bits + 5&nbsp;bits to be used for the ID)
-3. Application ID: 4&nbsp;bytes
-4. Device ID: 4&nbsp;bytes
-5. Level: 1&nbsp;byte
+1. Header/Payload Type: 1 byte
+2. Message ID: 1 byte (3 reserved bits + 5 bits to be used for the ID)
+3. Application ID: 4 bytes
+4. Device ID: 4 bytes
+5. Level: 1 byte
 
-<RkBottomNav/>

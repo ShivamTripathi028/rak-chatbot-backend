@@ -10,9 +10,6 @@ image: https://images.docs.rakwireless.com/wisgate/rak7289/RAK7289.png
 sidebar_label: Product Overview
 ---
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7289 WisGate Edge Pro
 
@@ -24,7 +21,6 @@ Thank you for choosing **RAK7289 WisGate Edge Pro** in your awesome IoT project!
 * [Use the MQTT Broker Like a Pro + Examples](https://learn.rakwireless.com/hc/en-us/articles/26688300221079-How-To-Use-the-MQTT-Broker-Like-a-Pro-Examples)
 * [AWS IoT Core Integration](https://learn.rakwireless.com/hc/en-us/articles/26662067838359-How-To-Configure-AWS-IoT-Core-Integration)
 * [RAK7289 Latest Firmware](https://downloads.rakwireless.com/LoRa/WisGateOS/WisGateOS_Latest_Firmware.zip)
-
 
 ## Product Description
 
@@ -45,7 +41,7 @@ Thus, the RAK7289 is suited for any use case scenario, be it rapid deployment or
 - Dual LoRa Concentrators for up to **16 channels**
 - **Backhaul:** Wi-Fi, LTE, and Ethernet
 - GPS
-- Supports DC 12&nbsp;V or Solar power supply with Electricity monitoring (Solar Kit optional)
+- Supports DC 12 V or Solar power supply with Electricity monitoring (Solar Kit optional)
 - Internal antenna for Wi-Fi, GPS, and LTE, External antenna for LoRa
 - Dying-Gasp (optional)
 

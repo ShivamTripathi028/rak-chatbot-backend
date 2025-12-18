@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Datasheet
 ---
    
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # 100M PoE Injector Datasheet
 
@@ -22,37 +20,24 @@ The **100M RAK PoE injector, model R012-4800500** is a device that allows you to
 
 ### Product Features
 
-- Input: 100-240&nbsp;V<sub>AC</sub> (50~60&nbsp;Hz)
-- Output: 48.0&nbsp;V<sub>DC</sub> 0.5&nbsp;A
+- Input: 100-240 V<sub>AC</sub> (50~60 Hz)
+- Output: 48.0 V<sub>DC</sub> 0.5 A
 - Overcurrent protection
-- Supports 10/100&nbsp;Mbps Ethernet
+- Supports 10/100 Mbps Ethernet
 
 ## Specifications
 
-<RkImage
-   src="https://images.docs.rakwireless.com/accessories/poe-injector/poe-injector-1.png" 
-  width="80%"
-  caption="PoE Injector Front and Back View"
-/>
+> **Image:** PoE Injector Front and Back View
 
 ### Hardware
 
 #### Interfaces
 
-- 1x AC Input 100-240&nbsp;V power input
+- 1x AC Input 100-240 V power input
 
-<RkImage
-   src="https://images.docs.rakwireless.com/accessories/poe-injector/poe-injector-2.png"
-  width="35%"
-  caption="Power Input Interface"
-/>
+> **Image:** Power Input Interface
 
-
-<RkImage
-   src="https://images.docs.rakwireless.com/accessories/poe-injector/poe-injector-3.png"
-  width="35%"
-  caption="RJ45 PoE and LAN interface and pins"
-/>
+> **Image:** RJ45 PoE and LAN interface and pins
 
 - 1x PoE RJ45 connection to the PoE enabled device
 
@@ -73,8 +58,8 @@ The **100M RAK PoE injector, model R012-4800500** is a device that allows you to
 
 | Parameter     | Value                                                                                                                                        |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Input         | 100-240&nbsp;V<sub>AC</sub> (50~60&nbsp;Hz)                                                                                                  |
-| Output        | 48.0&nbsp;V<sub>DC</sub> 0.5&nbsp;A                                                                                                          |
+| Input         | 100-240 V<sub>AC</sub> (50~60 Hz)                                                                                                  |
+| Output        | 48.0 V<sub>DC</sub> 0.5 A                                                                                                          |
 | EMC standards | EN55032, EN55013, EN55024, EN55020, FCC Part 15 Class B, GB9254, GB17625.1, Tested according to EN61000-4-4, Tested according to EN61000-4-5 |
 
 #### Environmental requirements
@@ -82,12 +67,11 @@ The **100M RAK PoE injector, model R012-4800500** is a device that allows you to
 | Feature               | Specifications                                        |
 |-----------------------|-------------------------------------------------------|
 | Type of use           | Indoor environment                                    |
-| Operating temperature | 0 to 40˚&nbsp;C                                       |
-| Storage temperature   | -30˚&nbsp;C to 70˚&nbsp;C                             |
-| Operating humidity    | 35~90%&nbsp;RH non-condensing                         |
-| Storage humidity      | 10~95%&nbsp;RH non-condensing                         |
+| Operating temperature | 0 to 40˚ C                                       |
+| Storage temperature   | -30˚ C to 70˚ C                             |
+| Operating humidity    | 35~90% RH non-condensing                         |
+| Storage humidity      | 10~95% RH non-condensing                         |
 | Enclosure material    | Plastic                                               |
-| Weight                | 98&nbsp;g (±1&nbsp;g)                                 |
-| Dimensions            | 92.5&nbsp;mm x 47&nbsp;mm x 29.8&nbsp;mm (±1&nbsp;mm) |
+| Weight                | 98 g (±1 g)                                 |
+| Dimensions            | 92.5 mm x 47 mm x 29.8 mm (±1 mm) |
 
-<RkBottomNav/>

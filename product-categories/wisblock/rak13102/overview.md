@@ -12,8 +12,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13102 WisBlock Blues Notecarrier Module
 
 Thank you for choosing **RAK13102 WisBlock Blues Notecarrier Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -30,7 +28,6 @@ Thank you for choosing **RAK13102 WisBlock Blues Notecarrier Module** in your aw
 
 **WisBlock RAK13102 Blues NoteCarrier Module** is a part of the WisBlock Wireless series. It provides an interface to connect cellular Blues.IO Notecards to the WisBlock system.
 
-
 ## Product Features
 
 - M.2 Blues.IO Notecard connector
@@ -39,11 +36,11 @@ Thank you for choosing **RAK13102 WisBlock Blues Notecarrier Module** in your aw
 - Supports LTE-M, NB-IoT and GSM networks
 - IPEX connectors for the cellular and GNSS antenna
 - USB Type C debug and log output connector
-- EX_POWER connector for 5&nbsp;V supply (can supply the complete WisBlock solution)
+- EX_POWER connector for 5 V supply (can supply the complete WisBlock solution)
 - Nano SIM and ESIM options
 - Two WisBlock Sensor Slot connectors
-- 3.3&nbsp;V power supply (requires additional battery for operation)
-- Small size: 29&nbsp;mm x 50&nbsp;mm
+- 3.3 V power supply (requires additional battery for operation)
+- Small size: 29 mm x 50 mm
 
 ## Prerequisites
 
@@ -53,4 +50,3 @@ To use a **RAK13102**, you need at least a **WisBlock Base** with IO slot to plu
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

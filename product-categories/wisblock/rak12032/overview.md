@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12032 WisBlock 3-Axis Accelerometer Sensor
 
 Thank you for choosing **RAK12032 WisBlock 3-Axis Accelerometer Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -40,15 +38,15 @@ RAK12032 is a WisBlock 3-axis Accelerometer Sensor Module that extends the WisBl
     *  Based on ADXL313
     *  Measurement range：+/-0.5g, +/-1g, +/-2g, +/-4g
     *  High resolution (up to 13-bit)
-    *  Ultra-low power (scales automatically with data rate), as low as 30&nbsp;uA in measurement mode
-    *  Low noise performance: 150&nbsp;ug/Hz typical for X-Y axes
+    *  Ultra-low power (scales automatically with data rate), as low as 30 uA in measurement mode
+    *  Low noise performance: 150 ug/Hz typical for X-Y axes
     *  Built-in motion detection functions for activity/inactivity monitoring
     *  I2C digital interfaces
-    *  3.3&nbsp;V power supply
-    *  Operating temperature range: -40&nbsp;°C to +85&nbsp;°C
+    *  3.3 V power supply
+    *  Operating temperature range: -40 °C to +85 °C
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -58,4 +56,3 @@ To use a **RAK12032**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

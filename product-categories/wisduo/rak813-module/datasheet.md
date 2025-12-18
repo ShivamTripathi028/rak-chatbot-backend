@@ -10,13 +10,8 @@ sidebar_label: Datasheet
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK813 BLE+LoRa Module Datasheet
-
-
 
 ## Overview
 
@@ -36,18 +31,18 @@ RAK813 supports various protocols, including the newest BLE and LoRaWAN, where c
 
 - Base on nRF52832(BLE) and SX127X (LoRa)
 - Supports UART, SPI, I2C, and GPIOs Interface.
-- Small size and low power, sleep current down to 2&nbsp;uA
-- High receiver sensitivity: LoRa down to -146dBm, BLE down to -96&nbsp;dBm
-- Operates at a Temperature of -40&nbsp;°C to 85&nbsp;°C
-- TX Power: LoRa adjustable up to +14&nbsp;dBm high efficiency PA, max PA boost up to 20&nbsp;dBm, BLE -20 to +4&nbsp;dBm in 4 DB steps
+- Small size and low power, sleep current down to 2 uA
+- High receiver sensitivity: LoRa down to -146dBm, BLE down to -96 dBm
+- Operates at a Temperature of -40 °C to 85 °C
+- TX Power: LoRa adjustable up to +14 dBm high efficiency PA, max PA boost up to 20 dBm, BLE -20 to +4 dBm in 4 DB steps
 - Building in both TX and RX filter
 - Building in TCXO for high-frequency stability
-- Provides multiple band selection including 433/470/868/915 MHz for LoRa and 2.4&nbsp;GHz for BLE
-- Storage Temperature: -40&nbsp;°C to 85&nbsp;°C
+- Provides multiple band selection including 433/470/868/915 MHz for LoRa and 2.4 GHz for BLE
+- Storage Temperature: -40 °C to 85 °C
 - Supports LoRa Point-to-Point Communication in all the bands
 - FSK, GFSK, and LoRa Technology modulation
-- llP3 = -11&nbsp;dBm
-- Up to 15&nbsp;km coverage at suburban and up to 5&nbsp;km coverage at urban areas.
+- llP3 = -11 dBm
+- Up to 15 km coverage at suburban and up to 5 km coverage at urban areas.
 
 ## Specifications
 
@@ -55,56 +50,37 @@ RAK813 supports various protocols, including the newest BLE and LoRaWAN, where c
 
 The overview covers the RAK813 board overview with its corresponding outer dimensions. It also includes the block diagram and the system diagram of the module.
 
-
 #### Board Overview
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/board-overview/rak813-board-dimension.png"
-  width="40%"
-  caption="RAK813 Board Dimensions"
-/>
+> **Image:** RAK813 Board Dimensions
 
 #### Block Diagram
 
 The short-range technology nRF52832 (BLE) is paired with the Semtech's SX127x (LoRa) chipset making the RAK813 capable of long-distance wireless communication.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/interfaces/block-diagram.png"
-  width="80%"
-  caption="RAK813 Block Diagram"
-/>
+> **Image:** RAK813 Block Diagram
 
 #### System Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/interfaces/system-diagram.svg"
-  width="80%"
-  caption="System Diagram"
-/>
+> **Image:** System Diagram
 
 ### Hardware
 
 The hardware specification is categorized into five parts. It discusses the pinouts of the module and its corresponding functions and diagrams. It also covers the electrical, environmental, and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK813 Module.
 
-
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/pin-definition/rak813-pinout.svg"
-  width="70%"
-  caption="Pin Out Diagram for RAK813"
-/>
+> **Image:** Pin Out Diagram for RAK813
 
 :::warning
 When using `LORA_ANT` and `BLE_ANT` pins for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF trace must be away from interference (switching node of DC-DC supply, high current/voltage pulses from controllers of inductive load like motor, signal generators, etc.)
-- RF trace must have 50&nbsp;Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF trace must have 50 Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, make it close to the `LORA_ANT` and `BLE_ANT` pins.
 - Ground plane optimization is critical on certain antenna types like monopole.
 - GND trace used for RF path return must be directly connected to the GND plane and not be treated as thermal relief.
-- It is recommended for the RF trace to be routed in a curve and not in a sharp 90&nbsp;degrees.
+- It is recommended for the RF trace to be routed in a curve and not in a sharp 90 degrees.
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for [Antenna RF Design](https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test) which includes PCB design, tuning, matching, and RF testing.
 :::
@@ -166,23 +142,11 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/schematic/rak813-schematic1.png"
-  width="100%"
-  caption="RAK813 Schematic Diagram"
-/>
+> **Image:** RAK813 Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/schematic/rak813-schematic2.png"
-  width="100%"
-  caption="RAK813 Schematic Diagram"
-/>
+> **Image:** RAK813 Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/schematic/rak813-schematic3.png"
-  width="100%"
-  caption="RAK813 Schematic Diagram"
-/>
+> **Image:** RAK813 Schematic Diagram
 
 ##### Recommended Operation Rating
 
@@ -194,28 +158,19 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 
 | Condition  | Minimum          | Typical | Maximum | Unit |
 | :--------: | :--------------: | :-----: | :-----: | :--: |
-| TX Mode    | 30 (14&nbsp;dBm) |         |         | mA   |
+| TX Mode    | 30 (14 dBm) |         |         | mA   |
 | RX Mode    | 5.5              |         |         | mA   |
 | Sleep Mode | 7.2              |         |         | uA   |
 
 #### Mechanical Characteristics
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/mechanical-dimension/veq8asjwdqh1rpm9fape.svg"
-  width="65%"
-  caption="Mechanical Dimensions of RAK813"
-/>
+> **Image:** Mechanical Dimensions of RAK813
 
 #### Environmental Characteristics
 
 ##### Recommended Reflow Profile
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak813-module/datasheet/reflow-profile/reflow-profile.png"
-  width="70%"
-  caption="Reflow Profile for RAK813"
-/>
+> **Image:** Reflow Profile for RAK813
 
 ## Models / Bundles
 
@@ -223,5 +178,5 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 
 | Model Name | Operation Frequency                 | Output Power  |
 | :--------: | :---------------------------------: | :-----------: |
-| RAK813-HF  | 865-870&nbsp;MHz / 920~928&nbsp;MHz | 5-20&nbsp;dBm |
-| RAK813-LF  | 433-435&nbsp;MHz / 470~510&nbsp;MHz | 5-20&nbsp;dBm |
+| RAK813-HF  | 865-870 MHz / 920~928 MHz | 5-20 dBm |
+| RAK813-LF  | 433-435 MHz / 470~510 MHz | 5-20 dBm |

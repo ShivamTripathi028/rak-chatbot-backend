@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # LTE Outdoor Fiberglass Antenna
 
 Thank you for choosing **LTE Fiberglass Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -18,8 +16,8 @@ Thank you for choosing **LTE Fiberglass Antenna** in your awesome IoT Project! �
 
 ## Product Features
 
-- Frequency range: 698&nbsp;MHz - 960&nbsp;MHz / 1710&nbsp;MHz - 2690&nbsp;MHz
-- Max gain: 3&nbsp;dBi
+- Frequency range: 698 MHz - 960 MHz / 1710 MHz - 2690 MHz
+- Max gain: 3 dBi
 - VSWR: ≤3.00
 - High efficiency
 - Vertically polarized dipole
@@ -29,4 +27,3 @@ Thank you for choosing **LTE Fiberglass Antenna** in your awesome IoT Project! �
 - Omnidirectional
 - Outdoor use
 
-<RkBottomNav/>

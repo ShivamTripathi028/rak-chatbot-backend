@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock Biometric Monitoring Kit Quick Start Guide
 
 ## Prerequisite
@@ -50,11 +47,7 @@ The **WisBlock IoT Education Kit - Medical Kit** includes temperature and heart 
 
 - **Biometric Monitoring - RAK4631 + RAK12003 + RAK12012**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/med.png"
-  width="80%"
-  caption="RAK4631 + RAK12003 + RAK12012"
-/>
+> **Image:** RAK4631 + RAK12003 + RAK12012
 
 #### Assembly and Functionality Tests of WisBlock Medical Modules
 
@@ -71,77 +64,40 @@ This kit incorporates the WisBlock Medical modules listed below. Refer to the li
 
 The **Biometric Monitoring LoRaWAN Application** monitors an individual's temperature and heart rate. It employs the **RAK12003** temperature sensor based on **MLX90632** from Melexis. Also, it uses the **RAK12012** heart rate sensor based on the **MAX30102** chip from Analog Devices.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/med_2.png"
-  width="80%"
-  caption="Biometric Monitoring device"
-/>
+> **Image:** Biometric Monitoring device
+
  
 ###### Biometric Monitoring - TTN Registration
 
 1. The first step is to go to [The Things Network](https://www.thethingsnetwork.org/). If you don't have an account yet, sign up and then select a cluster.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_1.png"
-  width="90%"
-  caption="Signing up an account in TTN"
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_2.png"
-  width="90%"
-  caption="Signing up an account in TTN"
-/>
+> **Image:** Signing up an account in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_3.png"
-  width="90%"
-  caption="Selecting Cluster in TTN"
-/>
+> **Image:** Selecting Cluster in TTN
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_4.png"
-  width="90%"
-  caption="Signing up through the Things ID"
-/>
+> **Image:** Signing up through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_5.png"
-  width="90%"
-  caption="Creation of an account through the Things ID"
-/>
+> **Image:** Creation of an account through the Things ID
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_6.png"
-  width="90%"
-  caption="Creation of an account through the Things ID"
-/>
+> **Image:** Creation of an account through the Things ID
+
  
 
 You can use the same login credentials on the TTN V2 if you have one. If you have no account yet, you need to create one.
 
 2. Now that you are logged in to the platform, the next step is to create an application. Click **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_7.png"
-  width="90%"
-  caption="The Things Stack Platform"
-/>
+> **Image:** The Things Stack Platform
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_8.png"
-  width="90%"
-  caption="Creating TTN Application of your LoRaWAN devices"
-/>
+> **Image:** Creating TTN Application of your LoRaWAN devices
+
  
 
 3. To have an application registered, input first the specific details and necessary information about your application then click the **Create application** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_9.png"
-  width="70%"
-  caption="Details of the TTN application"
-/>
+> **Image:** Details of the TTN application
 
 :::tip NOTE
 
@@ -151,40 +107,23 @@ The details and information are dependent to what device you are using (for exam
 
 4. If errors didn't occur in the previous step, you should now be on the application console page.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_10a.png"
-  width="90%"
-  caption="Biometric Monitoring Application Console"
-/>
+> **Image:** Biometric Monitoring Application Console
 
 5. Once done with the TTN account creation, you may now proceed with the device registration.
-
 
 ###### Biometric Monitoring - Device Registration
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+ Register end device**, as shown below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_10.png"
-  width="90%"
-  caption="Register End Device"
-/>
+> **Image:** Register End Device
 
 2. To register the board, click **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_11.png"
-  width="60%"
-  caption="Enter end device specifics manually"
-/>
+> **Image:** Enter end device specifics manually
 
 3. Next step is to set up **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported. Then provide the **JoinEUI** credentials by entering zeroes into it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_13.png"
-  width="80%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
 4. Click **Show advanced activation, LoRaWAN class and cluster settings**, and then configure the following settings:
 
@@ -194,17 +133,9 @@ The details and information are dependent to what device you are using (for exam
 
 Under **Provisioning information**, click **Confirm**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_14.png"
-  width="80%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_15.png"
-  width="80%"
-  caption="Setting up your device"
-/>
+> **Image:** Setting up your device
 
 5. Once done, execute the following steps to register an end-device:
    - Provide the DevEUI credentials of your device in the **DevEUI** portion. It will automatically generate the specific end-device ID of the board.
@@ -218,12 +149,7 @@ Under **Provisioning information**, click **Confirm**.
 - The details under **End device ID** are dependent on what device you are using (for example, **biometric-monitoring**).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_19.png"
-  width="80%"
-  caption="Register End Device"
-/>
-
+> **Image:** Register End Device
 
 6. You should now be able to see the device on the TTN console after you fully register your device, as shown below.
 
@@ -233,11 +159,7 @@ Under **Provisioning information**, click **Confirm**.
 - These parameters are always accessible on the device console page.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_20.png"
-  width="90%"
-  caption="OTAA device successfully registered to TTN"
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 7. After creating the application and adding the device in TTN, you can proceed on the LoRaWAN Code uploading steps.
 
@@ -598,51 +520,29 @@ void send_lora_frame(void) {
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_20.png"
-  width="90%"
-  caption="OTAA device successfully registered to TTN"
-/>
+> **Image:** OTAA device successfully registered to TTN
 
 3. Once done with the code, you can now proceed to upload it to your device. On your desktop or laptop, select the RAK4631 board. To do so, navigate to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** > **WisBlock RAK4631**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_1.png"
-  width="90%"
-  caption="Selecting the RAK4631 board"
-/>
+> **Image:** Selecting the RAK4631 board
 
 4. Following the selection of your board, you must specify the specific port of your board. To accomplish this, navigate to **Tools** > **Port** > then the specific port on your board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_2.png"
-  width="90%"
-  caption="Selecting the port of RAK4631 board"
-/>
+> **Image:** Selecting the port of RAK4631 board
+
  
 5. You can now upload your code. Simply click the right arrow sign in the upper left corner of your Arduino IDE. The **Device programmed** notification will appear at the bottom.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_3.png"
-  width="90%"
-  caption="Uploading your code into your RAK4631 board"
-/>
+> **Image:** Uploading your code into your RAK4631 board
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_4.png"
-  width="90%"
-  caption="Arduino code is successfully uploaded into your RAK4631 board"
-/>
+> **Image:** Arduino code is successfully uploaded into your RAK4631 board
 
 ###### Biometric Monitoring via TTN
 
 1. To monitor the data of your **Biometric Monitoring** device via **TTN**, you need to go back to your TTN account where you created your application and registered your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_5.png"
-  width="90%"
-  caption="Biometric Monitoring device in TTN"
-/>
+> **Image:** Biometric Monitoring device in TTN
+
  
 2. Navigate to **Payload formatters** > **Formatter type** > **Custom Javascript formatter** > **Formatter code**. Replace the default code to decode the data from your device going to **TTN**. Click **Save changes**.
 
@@ -691,19 +591,12 @@ function Decoder(bytes, port)
 }
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_6a.png"
-  width="90%"
-  caption="Payload Formatter"
-/>
+> **Image:** Payload Formatter
+
  
 3. Then go back to the **Live data** of your device in TTN. You should now be seeing results from it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_rak12012_7a.png"
-  width="90%"
-  caption="Live data from your device in TTN"
-/>
+> **Image:** Live data from your device in TTN
 
 ###### Biometric Monitoring via qubitro
 
@@ -711,124 +604,67 @@ This section will guide you on how to integrate your application using qubitro.
 
 1. Go to [qubitro Portal](https://portal.qubitro.com/login) and create your account.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_1.png"
-  width="80%"
-  caption="Creating qubitro Account"
-/>
+> **Image:** Creating qubitro Account
 
 2. Once done with the account creation, log in to your **qubitro Account**. Click **New Project**, type in your biometric monitoring application's **Name** and **Description**, and then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_3.png"
-  width="80%"
-  caption="Creating New Project"
-/>
+> **Image:** Creating New Project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_4.png"
-  width="80%"
-  caption="Creating New Project"
-/>
+> **Image:** Creating New Project
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_5.png"
-  width="80%"
-  caption="Creating New Project"
-/>
-
+> **Image:** Creating New Project
 
 3. Head to your newly-created project, then click **New source**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_6.png"
-  width="80%"
-  caption="Adding New source"
-/>
+> **Image:** Adding New source
 
 4. Among the data sources, choose **The Things Stack**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_7.png"
-  width="80%"
-  caption="Choosing The Things Stack"
-/>
+> **Image:** Choosing The Things Stack
+
  
 5. For the **integration type**, choose **Import from network**, then copy and paste the **PROJECT ID** and **WEBHOOK SIGNING KEY** temporarily to Notepad. These credentials will be needed later. Then click **Go to project**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_8.png"
-  width="80%"
-  caption="Copying the credentials"
-/>
+> **Image:** Copying the credentials
+
  
 6. Then head back to your **TTN Application**, where you created your biometric monitoring application to add a webhook. To do this, click on your device, then go to **Integrations** > **Webhooks** > **+ Add webhook**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_9.png"
-  width="100%"
-  caption="Going to your TTN application for your Biometric Monitoring Application"
-/>
+> **Image:** Going to your TTN application for your Biometric Monitoring Application
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_10.png"
-  width="100%"
-  caption="Adding Webhook"
-/>
+
+> **Image:** Adding Webhook
+
  
 7. Choose **qubitro** as your webhook template.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_11.png"
-  width="90%"
-  caption="qubitro"
-/>
+> **Image:** qubitro
+
  
 8. Fill in the needed details, then click **Create qubitro webhook**.
    - **Webhook ID** - For this example, you can use **biometric-monitoring-application**.
    - **Project ID** - Paste the credential you copied from **Step 5**.
    - **Webhook Signing Key** - Paste the credential you copied from **Step 5**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_12.png"
-  width="90%"
-  caption="Creating qubitro webhook"
-/>
+> **Image:** Creating qubitro webhook
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_13.png"
-  width="100%"
-  caption="Added a qubitro webhook"
-/>
+> **Image:** Added a qubitro webhook
 
 9. After creating your webhook, go back to your **qubitro** platform to check the changes made. Refresh **qubitro** by clicking the **Refresh** button in the upper right corner of your screen. The platform now includes a newly added device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_14.png"
-  width="80%"
-  caption="Device successfully included in qubitro"
-/>
+> **Image:** Device successfully included in qubitro
+
  
 
 10. To add the decoder, go to **Functions** > **Create Function**. Then, under **Decoder Function**, click **Get started**. You will now redirect to **Function Configuration**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_15.png"
-  width="80%"
-  caption="Creating Function"
-/>
+> **Image:** Creating Function
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_16.png"
-  width="80%"
-  caption="Decoder Function"
-/>
+> **Image:** Decoder Function
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_17.png"
-  width="80%"
-  caption="Function Configuration"
-/>
+> **Image:** Function Configuration
+
  
 
 11. Under the **Formatter type**, choose **Custom Javascript formatter**. Then, under the **Formatter code**, you need to replace its default entry with the code below:
@@ -880,199 +716,114 @@ function Decoder(bytes, port)
 
 12. Once done, click **Save and complete**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_18a.png"
-  width="80%"
-  caption="Function Configuration"
-/>
+> **Image:** Function Configuration
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_19.png"
-  width="80%"
-  caption="Created Decoder Function"
-/>
+
+> **Image:** Created Decoder Function
+
  
 
 13. To check for the incoming data from your device, go to your device and click on the **Data** tab. You should now be seeing live data from your device. Click **Refresh** to gather the most recent data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_20.png"
-  width="90%"
-  caption="Data Tab"
-/>
+> **Image:** Data Tab
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_21a.png"
-  width="90%"
-  caption="Historical Data"
-/>
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_22a.png"
-  width="90%"
-  caption="Refreshing data to get newer ones"
-/>
+> **Image:** Historical Data
 
+> **Image:** Refreshing data to get newer ones
 
 14. To add a monitoring dashboard for the data from the biometric monitoring device, you need to go to **Home** which is located at the left top most part of your screen.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_23a.png"
-  width="90%"
-  caption="Creating dashboard for your Biometric Monitoring device"
-/>
+> **Image:** Creating dashboard for your Biometric Monitoring device
+
  
 15. Click **Dashboards** > **New dashboard** > **Create new**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_24.png"
-  width="90%"
-  caption="Creating dashboard for your Biometric Monitoring device"
-/>
+> **Image:** Creating dashboard for your Biometric Monitoring device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_25.png"
-  width="90%"
-  caption="Creating dashboard for your Biometric Monitoring device"
-/>
+> **Image:** Creating dashboard for your Biometric Monitoring device
+
  
 
 16. Fill in the **Create New Dashboard** section using the details of your device. For the **Tags**, input **Test**, then click **Create**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_26.png"
-  width="90%"
-  caption="Creating dashboard for your Biometric Monitoring device"
-/>
+> **Image:** Creating dashboard for your Biometric Monitoring device
+
  
 17. Once done, click on to your newly-created dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_27.png"
-  width="100%"
-  caption="Newly-created dashboard for your Biometric Monitoring device"
-/>
+> **Image:** Newly-created dashboard for your Biometric Monitoring device
+
  
 18. To add a widget for a specific parameter that needs to be monitored, go to **Edit** > **New widget**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_28.png"
-  width="100%"
-  caption="Adding a widget"
-/>
+> **Image:** Adding a widget
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_29.png"
-  width="100%"
-  caption="Adding a widget"
-/>
+
+> **Image:** Adding a widget
+
  
 19. Once done, you're now at the **Widget Configuration**. At the **WIDGET TYPE**, choose **Chart**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_30.png"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
+
  
 20. Provide the parameter's name under **SHOW WIDGET NAME**, then click **Add point +**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_31.png"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
+
  
 21. A **Connect Data Point** window will appear. Choose your **existing project**, **application** and the **specific parameter** you need to monitor in your dashboard. Once done, click **Save**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_32.png"
-  width="100%"
-  caption="Project selection"
-/>
+> **Image:** Project selection
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_33.png"
-  width="100%"
-  caption="Selected project"
-/>
+
+> **Image:** Selected project
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_34.png"
-  width="100%"
-  caption="Device selection"
-/>
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_35.png"
-  width="100%"
-  caption="Selected a device"
-/>
+> **Image:** Device selection
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_36.png"
-  width="100%"
-  caption="Data point selection"
-/>
+> **Image:** Selected a device
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_37.png"
-  width="100%"
-  caption="Selected data point"
-/>
+> **Image:** Data point selection
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_38.png"
-  width="100%"
-  caption="Save the data point"
-/>
+> **Image:** Selected data point
+
+> **Image:** Save the data point
+
  
 22. Your device should already have a preview of your data. Under **CHART TYPE** on the left side of your screen, choose **Line**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_40.png"
-  width="100%"
-  caption="Widget Configuration"
-/>
+> **Image:** Widget Configuration
 
 23. After that, go to **STANDARD OPTIONS** and select the appropriate unit for the parameter you want to monitor in the dashboard. Once finished, click **Save widget**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_41.png"
-  width="100%"
-  caption="Saving the changes made in your Widget Configuration"
-/>
+> **Image:** Saving the changes made in your Widget Configuration
+
  
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_42.png"
-  width="100%"
-  caption="Data points line graph"
-/>
+
+> **Image:** Data points line graph
+
  
 
 24. Click **Save changes** to include the parameter data. Then, you have the newly-made widget for your specific parameter.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_43.png"
-  width="100%"
-  caption="Save changes"
-/>
+> **Image:** Save changes
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_44.png"
-  width="100%"
-  caption="Newly-made widget"
-/>
+> **Image:** Newly-made widget
+
  
  
 25. Repeat from **Step 18-24** to add another widgets for other parameters.
 26. You now have a real-time monitoring dashboard for your biometric monitoring device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/qub_47a.png"
-  width="100%"
-  caption="Monitoring dashboard for your biometric monitoring device"
-/>
+> **Image:** Monitoring dashboard for your biometric monitoring device
+
  
 
 ## Miscellaneous
@@ -1081,71 +832,43 @@ function Decoder(bytes, port)
 
 1. Download the [Arduino IDE](https://www.arduino.cc/en/software) and install it on your PC or laptop. Choose the appropriate **Arduino IDE**, depending on your operating system.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_21.png"
-  width="80%"
-  caption="Download Options for the Arduino IDE"
-/>
+> **Image:** Download Options for the Arduino IDE
+
  
 
 2. Open the **Arduino IDE** and install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock using the `package_rakwireless_index.json` board installation package.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_22.png"
-  width="80%"
-  caption="Preference Set-Up"
-/>
+> **Image:** Preference Set-Up
+
  
 
 3. The WisBlock Core should now be available in the Arduino IDE; navigate to **File** > **Preference** to access it.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_23.png"
-  width="80%"
-  caption="Preference Window"
-/>
+> **Image:** Preference Window
+
  
 4. In the **Preference** window, look for **Additional Boards Manager URLs**, then click the icon on the right side. Copy and paste the link, then click **OK** > **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_24.png"
-  width="80%"
-  caption="RAKwireless Arduino BSP"
-/>
+> **Image:** RAKwireless Arduino BSP
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_25.png"
-  width="80%"
-  caption="Completing the setup of the RAKwireless BSP support for the Arduino Board Manager"
-/>
+> **Image:** Completing the setup of the RAKwireless BSP support for the Arduino Board Manager
+
  
 
 5. Go to **Tools** > **Board:XXXXX** > **Boards Manager**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_26.png"
-  width="80%"
-  caption="Opening the Boards Manager"
-/>
+> **Image:** Opening the Boards Manager
+
  
 6. Look for **RAKwireless Boards by RAKwireless** since you will be working on the **RAK4631 WisBlock Core**. Choose the latest version, then install it. Once done, close the **Board Manager**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_27.png"
-  width="80%"
-  caption="Installing the RAKwireless nRF Boards"
-/>
+> **Image:** Installing the RAKwireless nRF Boards
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/kit2_quickstart/ttn_kit_med_28.png"
-  width="80%"
-  caption="Successfully installed the RAKwireless nRF Boards"
-/>
+> **Image:** Successfully installed the RAKwireless nRF Boards
+
  
 
 :::tip NOTE
 Once done with the Arduino IDE installation, proceed to [LoRaWAN Code for Biometric Monitoring section](https://docs.rakwireless.com/product-categories/wisblock/kit2-biometric-monitoring/quickstart/#lorawan-code-for-biometric-monitoring).
 :::
 
-
-<RkBottomNav/>

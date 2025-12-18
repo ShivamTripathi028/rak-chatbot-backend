@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13300 WisBlock LPWAN Wireless Module
 
 Thank you for choosing **RAK13300 WisBlock LPWAN Wireless Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,13 +23,11 @@ Thank you for choosing **RAK13300 WisBlock LPWAN Wireless Module** in your aweso
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
 
-
 ## Product Description
 
 The RAK13300 is a LoRa module based on the SX1262 LoRa chip. It provides an easy-to-use, small-size, and low-power solution for long-range wireless data applications.
 
 The module complies with LoRaWAN standards and supports LoRa point-to-point communication. It can easily connect to different LoRaWAN server platforms like TheThingsNetwork (TTN), Chirpstack, Actility, etc.
-
 
 ## Product Features
 
@@ -42,11 +38,11 @@ The module complies with LoRaWAN standards and supports LoRa point-to-point comm
     * LoRaWAN Activation by OTAA/ABP
     * LoRa Point-to-Point (P2P) communication
     * Ultra-Low Power Consumption
-    * Supply Voltage: 2.0&nbsp;V ~ 3.6&nbsp;V
-    * Temperature Range: -40°&nbsp;C ~ 85°&nbsp;C
+    * Supply Voltage: 2.0 V ~ 3.6 V
+    * Temperature Range: -40° C ~ 85° C
 
 * **Module Size**
-    * 25&nbsp;mm x 35&nbsp;mm
+    * 25 mm x 35 mm
 
 ## Prerequisites
 
@@ -56,4 +52,3 @@ To use a **RAK13300**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

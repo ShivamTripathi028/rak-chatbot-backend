@@ -10,9 +10,6 @@ slug: /product-categories/wisduo/rak3172-sip/overview/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3172-SiP WisDuo LPWAN SiP
 
 Thank you for choosing **RAK3172-SiP WisDuo LPWAN SiP** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -49,14 +46,14 @@ The RAK3172-SiP does not have pre-flashed LoRaWAN credentials and you have to de
 - LoRa Point-to-Point (P2P) communication
 - Custom firmware using Arduino via RUI3 API
 - Easy-to-use AT Command set via UART interface
-- Long-range - up to 15&nbsp;km with optimized antenna
+- Long-range - up to 15 km with optimized antenna
 - ARM Cortex-M4 32-bit
-- 256&nbsp;kbytes flash memory with ECC
-- 64&nbsp;kbytes RAM
-- Ultra-low power consumption of less than 2&nbsp;μA in sleep mode
-- **Supply voltage**: 2.0&nbsp;V ~ 3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C ~ 85°&nbsp;C
-- **Size**: 12&nbsp;mm x 12&nbsp;mm x 1.22&nbsp;mm
+- 256 kbytes flash memory with ECC
+- 64 kbytes RAM
+- Ultra-low power consumption of less than 2 μA in sleep mode
+- **Supply voltage**: 2.0 V ~ 3.6 V
+- **Temperature range**: -40° C ~ 85° C
+- **Size**: 12 mm x 12 mm x 1.22 mm
 - **Package**: LGA73 type
 
 :::tip Note
@@ -64,4 +61,3 @@ For CE and FCC certifications we provide an AT command guide.
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

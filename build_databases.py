@@ -1,220 +1,127 @@
-# build_databases.py
 import os
 import shutil
 import time 
 import logging
+import psutil
 from pathlib import Path
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor
+from tqdm import tqdm
 
-import nltk
-import ssl
 import torch
-
-# --- SSL Context Fix ---
-try:
-    _create_unverified_https_context = ssl._create_unverified_context
-except AttributeError:
-    pass
-else:
-    ssl._create_default_https_context = _create_unverified_https_context
-
-# --- NLTK ---
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    print("Downloading required NLTK resource 'punkt'...")
-    nltk.download('punkt')
-    nltk.download('punkt_tab')
-
-# --- Local Imports ---
 import config
-from utils import load_and_parse_single_readme_file_with_metadata
+from utils import load_and_parse_file
 
-# --- LangChain Components ---
-from langchain_core.documents import Document
-from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
+from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 
-# --- Logging Setup ---
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
-def process_single_category_for_db(category_folder_path_str: str, root_dir_str: str):
-    """Processes all .md files in a single category folder."""
-    category_folder_path = Path(category_folder_path_str)
-    category_name = category_folder_path.name
-    logging.info(f"  [Worker] Processing category: {category_name}")
+def get_optimal_batch_size():
+    """Calculates optimal batch size. BGE-Base is lighter, we can be aggressive."""
+    total_ram_gb = psutil.virtual_memory().total / (1024 ** 3)
+    if total_ram_gb >= 16: return 256
+    elif total_ram_gb >= 8: return 128
+    else: return 64
+
+def process_file_wrapper(args):
+    file_path, root_dir, category = args
+    return load_and_parse_file(file_path, root_dir, category)
+
+def chunk_documents(documents):
+    # 1. Structural Split
+    headers_to_split_on = [("#", "Header 1"), ("##", "Header 2"), ("###", "Header 3")]
+    markdown_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=headers_to_split_on)
     
-    category_documents = []
-    
-    # --- UPDATED: Look for ANY .md file, not just README.md ---
-    md_files_in_category = list(category_folder_path.rglob("*.md"))
-    
-    for md_filepath in md_files_in_category:
-        # Filter out system files or hidden files
-        if ".DS_Store" in str(md_filepath) or md_filepath.name.startswith("._"):
-            continue
-            
-        # Optional: Skip specific files if needed (e.g., if you don't want to index 'index.md')
-        # if md_filepath.name == "index.md": continue 
-
-        docs = load_and_parse_single_readme_file_with_metadata(
-            str(md_filepath), root_dir_str, category_name
-        )
-        category_documents.extend(docs)
-        
-    logging.info(f"  [Worker] Finished category: {category_name}. Found {len(category_documents)} document sections.")
-    return category_name, category_documents
-
-def chunk_documents_for_db(documents: list[Document], category_name_for_log: str):
-    """Splits a list of documents into smaller chunks."""
-    if not documents:
-        logging.warning(f"No documents to chunk for {category_name_for_log}.")
-        return []
-    logging.info(f"\nChunking {len(documents)} document sections for '{category_name_for_log}'...")
+    # 2. Size Split (1500 chars for BGE-Base)
+    # Priority separators to keep code blocks and paragraphs whole
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=config.CHUNK_SIZE,
         chunk_overlap=config.CHUNK_OVERLAP,
-        separators=["\n\n", "\n", "## ", "### ", "#### ", ". ", "? ", "! ", " ", ""],
-        length_function=len,
-        is_separator_regex=False,
+        separators=["\n```", "\n\n", "\n", ". ", " ", ""]
     )
-    chunked_documents = text_splitter.split_documents(documents)
-    logging.info(f"Successfully split into {len(chunked_documents)} chunks for '{category_name_for_log}'.")
-    return chunked_documents
 
-def build_and_persist_db(chunks_to_embed: list[Document], db_persist_path: str, embedding_func, db_name_for_log: str):
-    """Builds and persists a ChromaDB vector store with batching."""
-    if not chunks_to_embed:
-        logging.warning(f"No chunks to embed for DB: {db_name_for_log} at {db_persist_path}. Skipping.")
-        return
-
-    if os.path.exists(db_persist_path):
-        logging.info(f"Deleting existing DB at {db_persist_path} to rebuild for {db_name_for_log}.")
-        shutil.rmtree(db_persist_path)
-    
-    os.makedirs(db_persist_path, exist_ok=True)
-
-    logging.info(f"Creating new vector store for '{db_name_for_log}' in: {db_persist_path}")
-    logging.info(f"Total chunks to embed: {len(chunks_to_embed)}")
-    
-    start_embed_time = time.time()
-    
-    # Batching to prevent SQLite limits
-    BATCH_SIZE = 4000
-    
-    try:
-        first_batch = chunks_to_embed[:BATCH_SIZE]
-        logging.info(f"  - Processing Batch 1/{len(chunks_to_embed)//BATCH_SIZE + 1} ({len(first_batch)} chunks)...")
+    final_chunks = []
+    for doc in documents:
+        header_splits = markdown_splitter.split_text(doc.page_content)
+        recursive_splits = text_splitter.split_documents(header_splits)
         
-        vector_store = Chroma.from_documents(
-            documents=first_batch,
-            embedding=embedding_func,
-            persist_directory=db_persist_path
-        )
-
-        if len(chunks_to_embed) > BATCH_SIZE:
-            for i in range(BATCH_SIZE, len(chunks_to_embed), BATCH_SIZE):
-                batch = chunks_to_embed[i : i + BATCH_SIZE]
-                batch_num = (i // BATCH_SIZE) + 1
-                logging.info(f"  - Processing Batch {batch_num}/{len(chunks_to_embed)//BATCH_SIZE + 1} ({len(batch)} chunks)...")
-                vector_store.add_documents(batch)
-                
-        end_embed_time = time.time()
-        logging.info(f"DB for '{db_name_for_log}' created. Embedding took {end_embed_time - start_embed_time:.2f} seconds.")
-    
-    except Exception as e:
-        logging.error(f"ERROR creating DB for '{db_name_for_log}': {e}", exc_info=True)
+        for split in recursive_splits:
+            split.metadata.update(doc.metadata)
+            if "title" in split.metadata:
+                 split.page_content = f"Product: {split.metadata['title']}\n\n{split.page_content}"
+            final_chunks.append(split)
+    return final_chunks
 
 if __name__ == "__main__":
-    overall_start_time = time.time()
-    logging.info("--- Starting Pre-Build of All Vector Databases ---")
-
-    if not os.path.exists(config.DATA_DIRECTORY):
-        logging.error(f"ERROR: Data directory '{config.DATA_DIRECTORY}' not found. Cannot build databases.")
-        exit()
-
-    # Clean up old databases
+    start_time = time.time()
+    
     if os.path.exists(config.CHROMA_BASE_PERSIST_DIR):
-        logging.info(f"Deleting old base DB directory: {config.CHROMA_BASE_PERSIST_DIR}")
         shutil.rmtree(config.CHROMA_BASE_PERSIST_DIR)
     os.makedirs(config.CHROMA_BASE_PERSIST_DIR, exist_ok=True)
-    
-    logging.info(f"Initializing embedding model: {config.EMBEDDING_MODEL_NAME}...")
 
-    # Hardware Detection
-    if torch.cuda.is_available():
-        device_type = "cuda"
-        logging.info("Hardware acceleration: NVIDIA CUDA detected.")
-    elif torch.backends.mps.is_available():
-        device_type = "mps"
-        logging.info("Hardware acceleration: Apple Metal (MPS) detected.")
-    else:
-        device_type = "cpu"
-        logging.info("Hardware acceleration: None. Using CPU (this might be slow).")
+    root_path = Path(config.DATA_DIRECTORY)
+    all_files = []
     
-    model_kwargs_embed = {'device': device_type} 
-    encode_kwargs_embed = {'normalize_embeddings': True} 
+    for f in root_path.glob("*.md"):
+        all_files.append((str(f), str(root_path), "Global"))
+        
+    for category_dir in [x for x in root_path.iterdir() if x.is_dir()]:
+        if category_dir.name.startswith('.'): continue
+        for f in category_dir.rglob("*.md"):
+            all_files.append((str(f), str(root_path), category_dir.name))
+
+    print(f"📂 Found {len(all_files)} Markdown files.")
+
+    print(f"⚙️  Processing files using {os.cpu_count()} CPU cores...")
+    with ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
+        results = list(tqdm(executor.map(process_file_wrapper, all_files), total=len(all_files)))
+
+    raw_docs = [item for sublist in results for item in sublist]
     
-    embedding_function = HuggingFaceEmbeddings(
+    print("✂️  Chunking documents...")
+    docs_by_category = {}
+    all_global_docs = []
+    
+    for doc in raw_docs:
+        cat = doc.metadata.get("category", "Global")
+        if cat not in docs_by_category: docs_by_category[cat] = []
+        docs_by_category[cat].append(doc)
+        all_global_docs.append(doc)
+
+    chunks_by_category = {}
+    for cat, docs in docs_by_category.items():
+        chunks_by_category[cat] = chunk_documents(docs)
+    
+    global_chunks = chunk_documents(all_global_docs)
+
+    print(f"🚀 Initializing {config.EMBEDDING_MODEL_NAME}...")
+    device = "mps" if torch.backends.mps.is_available() else "cpu"
+    print(f"   Using device: {device.upper()}")
+        
+    embedding_func = HuggingFaceEmbeddings(
         model_name=config.EMBEDDING_MODEL_NAME,
-        model_kwargs=model_kwargs_embed,
-        encode_kwargs=encode_kwargs_embed
+        model_kwargs={'device': device},
+        encode_kwargs={'normalize_embeddings': True}
     )
-    logging.info(f"Embedding model initialized on {device_type}.")
 
-    root_path = Path(config.DATA_DIRECTORY).resolve()
-    all_documents_for_global_db = [] 
-    category_specific_documents = {} 
-
-    # --- UPDATED: Process Root Markdown Files (looking for *.md) ---
-    root_md_files = list(root_path.glob("*.md"))
-    for root_file in root_md_files:
-        if root_file.name.startswith("._") or ".DS_Store" in str(root_file):
-            continue
-        logging.info(f"\nProcessing root file: {root_file.name}")
-        docs_root = load_and_parse_single_readme_file_with_metadata(
-            str(root_file), str(root_path), "_root_"
-        )
-        all_documents_for_global_db.extend(docs_root)
-        logging.info(f"Found {len(docs_root)} document sections in {root_file.name}.")
-
-    # Process Categories in Parallel
-    subfolders = [item for item in root_path.iterdir() if item.is_dir() and not item.name.startswith('.')]
+    BATCH_SIZE = get_optimal_batch_size()
+    print(f"⚡ Calculated Optimal Batch Size: {BATCH_SIZE}")
+    print("💾 Creating Vector Databases...")
     
-    if subfolders:
-        logging.info(f"\nStarting parallel processing for {len(subfolders)} categories...")
-        with ProcessPoolExecutor(max_workers=config.MAX_WORKERS_DATA_PROCESSING) as executor:
-            future_to_folder = {
-                executor.submit(process_single_category_for_db, str(folder_path), str(root_path)): folder_path 
-                for folder_path in subfolders
-            }
-            for future in as_completed(future_to_folder):
-                original_folder_path = future_to_folder[future]
-                try:
-                    category_name, docs_for_category = future.result()
-                    category_specific_documents[category_name] = docs_for_category
-                    all_documents_for_global_db.extend(docs_for_category) 
-                except Exception as exc:
-                    logging.error(f"Category {original_folder_path.name} generated an exception: {exc}", exc_info=True)
-        logging.info("Parallel category document loading complete.")
-    
-    # Build Category Databases
-    for category_name, docs_list in category_specific_documents.items():
-        logging.info(f"\n--- Building DB for Category: {category_name} ---")
-        db_name_sanitized = f"{category_name.lower().replace(' ', '_').replace('-', '_')}_db"
-        category_db_persist_path = str(config.CHROMA_BASE_PERSIST_DIR / db_name_sanitized)
-        chunks_for_category = chunk_documents_for_db(docs_list, category_name)
-        build_and_persist_db(chunks_for_category, category_db_persist_path, embedding_function, category_name)
+    def create_db(chunks, folder_name):
+        if not chunks: return
+        persist_path = config.CHROMA_BASE_PERSIST_DIR / folder_name
+        vectordb = Chroma(persist_directory=str(persist_path), embedding_function=embedding_func)
+        for i in tqdm(range(0, len(chunks), BATCH_SIZE), desc=folder_name, leave=False):
+            batch = chunks[i:i + BATCH_SIZE]
+            vectordb.add_documents(batch)
+            
+    for cat, chunks in chunks_by_category.items():
+        db_name = f"{cat.lower().replace(' ', '_').replace('-', '_')}_db"
+        create_db(chunks, db_name)
 
-    # Build Global Database
-    if all_documents_for_global_db:
-        logging.info("\n--- Building Global DB ('All Categories') ---")
-        global_db_persist_path = str(config.CHROMA_BASE_PERSIST_DIR / config.GLOBAL_DB_NAME)
-        chunks_for_global = chunk_documents_for_db(all_documents_for_global_db, "Global (All Categories)")
-        build_and_persist_db(chunks_for_global, global_db_persist_path, embedding_function, "Global (All Categories)")
-    else:
-        logging.warning("\nNo documents found to build the Global DB.")
-    
-    overall_end_time = time.time()
-    logging.info(f"\n--- All Vector Database Pre-Builds Complete in {overall_end_time - overall_start_time:.2f} seconds ---")
+    print(f"   -> Building '{config.GLOBAL_DB_NAME}' ({len(global_chunks)} chunks)...")
+    create_db(global_chunks, config.GLOBAL_DB_NAME)
+
+    print(f"\n✅ Done! Total time: {time.time() - start_time:.2f} seconds.")

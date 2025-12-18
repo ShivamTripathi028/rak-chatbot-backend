@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Installation Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Bobcat Outdoor Enclosure Kit Installation Guide
 
 In this guide, the process of assembling and mounting an outdoor case for the Bobcat Miner 300 will be shown step by step. Strict adherence to the steps guarantees a secured and durable outdoor casing.
@@ -30,23 +27,11 @@ The package includes all the necessary parts for this project, without the Bobca
 
 ## Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/bobcat_dimension_1.png"
-  width="60%"
-  caption="Bobcat Enclosure Kit Dimension"
-/>
+> **Image:** Bobcat Enclosure Kit Dimension
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/bobcat_dimension_2.png"
-  width="50%"
-  caption="Bobcat Enclosure Kit Dimension"
-/>
+> **Image:** Bobcat Enclosure Kit Dimension
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/bobcat_dimension_3.png"
-  width="50%"
-  caption="Bobcat Enclosure Kit Dimension"
-/>
+> **Image:** Bobcat Enclosure Kit Dimension
 
 ## Assembly
 
@@ -56,57 +41,27 @@ A detailed explanation of the procedure of putting the Bobcat Miner 300 inside t
 
 2. At the opening marked “LoRa1”, position and assemble the antenna connector. Use the remaining plugs to close the openings, as shown in Figure 4.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/1.positioning.png"
-  width="50%"
-  caption="Positioning of all the plugs"
-/>
+> **Image:** Positioning of all the plugs
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/antenna-connector-assembly.png"
-  width="60%"
-  caption="Assembling the antenna connector"
-/>
+> **Image:** Assembling the antenna connector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/covering-antenna-hole.png"
-  width="60%"
-  caption="Covering the second antenna hole"
-/>
+> **Image:** Covering the second antenna hole
 
 3. Fix the mounting plate of the Bobcat miner 300 to the aluminum plate inside the enclosure with two M3*6 screws.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/2.mounting-plate.png"
-  width="50%"
-  caption="Mounting plate inside the RAKBox-GW-4 enclosure"
-/>
+> **Image:** Mounting plate inside the RAKBox-GW-4 enclosure
 
 4. Position the Bobcat Miner 300 over the mounting plate, align the pegs of the miner with the holes on the plate and slide the device in place.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/3.securing-plate.png"
-  width="50%"
-  caption="Securing the miner to the plate"
-/>
+> **Image:** Securing the miner to the plate
 
 5. Plug the RJ45 and the DC plugs coming out from the PoE splitter to the corresponding ports of the miner and fix the PoE splitter on the left with zip ties.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/4.connecting-poe-splitter.png"
-  width="50%"
-  caption="Connecting the PoE splitter to the miner"
-/>
+> **Image:** Connecting the PoE splitter to the miner
 
 6. Connect the antenna connector of the enclosure to the antenna connector of the device, as shown in **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/5.connecting-antenna-connector.png"
-  width="55%"
-  caption="Connecting the antenna connector"
-/>
-
+> **Image:** Connecting the antenna connector
 
 :::tip NOTE
 Because of the different variants regarding the connector of the Bobcat Miner 300 (SMA or RP-SMA), an adapter is provided that will guarantee the compatibility of the enclosure to your miner regardless of the connector. When assembling your Outdoor Enclosure Kit, keep in mind that the adapter may be needed at this step.
@@ -114,22 +69,13 @@ Because of the different variants regarding the connector of the Bobcat Miner 30
 
 7. Fix the plate with the miner inside the enclosure with four M3*6 screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/6.fixing-miner.png"
-  width="40%"
-  caption="Fixing the miner inside the enclosure"
-/>
+> **Image:** Fixing the miner inside the enclosure
 
 8. Insert the Ethernet cable through the cable gland. Plug the RJ45 Network cable coming out from the cable gland to the PoE splitter's RJ45 port. Then, fasten the cable gland's body to the enclosure and tighten the lock nut.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/7.connecting-network-cable.png"
-  width="40%"
-  caption="Connecting the network cable"
-/>
+> **Image:** Connecting the network cable
 
 9. Close the top cover with twelve M4*12 screws.
-
 
 ## Installation
 
@@ -137,32 +83,19 @@ Instructions on mounting and securing the mounting kit to the enclosure and the 
 
 1. Fix the device bracket on the bottom of the enclosure with four M6*12 screws as shown in Figure 13.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/8.fixing-the-bracket.png"
-  width="50%"
-  caption="Fixing the bracket to the enclosure"
-/>
+> **Image:** Fixing the bracket to the enclosure
 
 2. Position and tighten the pole clamps together around the pole with bolts, washers, and nuts.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/9.pole-clamps.png"
-  width="60%"
-  caption="Positioning and fastening the pole clamps"
-/>
+> **Image:** Positioning and fastening the pole clamps
 
 :::tip NOTE
-The diameter of the pole that is supported by the brackets is 50-100&nbsp;mm. If the pole diameter is more than this value, the steel strips can be used. The standard mounting kit does not include steel strips. If needed, they should be purchased separately.
+The diameter of the pole that is supported by the brackets is 50-100 mm. If the pole diameter is more than this value, the steel strips can be used. The standard mounting kit does not include steel strips. If needed, they should be purchased separately.
 :::
 
 3. Hang up the enclosure and fasten it with two M6*12 screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/10.fixing-the-enclosure.png"
-  width="50%"
-  caption="Fixing the enclosure to the pole"
-/>
+> **Image:** Fixing the enclosure to the pole
 
 ## Connecting the PoE Adapter
 
@@ -170,40 +103,21 @@ The diameter of the pole that is supported by the brackets is 50-100&nbsp;mm. If
 2. Connect an Ethernet cable from your LAN network to the Ethernet port labeled LAN on the adapter.
 3. Connect one end of the power cord to the adapter. Connect the other end of the power cord to a power outlet.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/11.poe-adapter.png"
-  width="45%"
-  caption="PoE adapter"
-/>
+> **Image:** PoE adapter
 
 ## Weather Protection
 
 To better protect the Ethernet cable gland and the antenna connector from the weather, you need to cover them with PVC tape.
 
-1. Clean the surface area of the connector that will be wrapped. Wrap a layer of PVC tape with a 50% overlap according to the rotation direction of the connector. Continue wrapping the PVC tape to about 10&nbsp;mm below the end of the connector.
+1. Clean the surface area of the connector that will be wrapped. Wrap a layer of PVC tape with a 50% overlap according to the rotation direction of the connector. Continue wrapping the PVC tape to about 10 mm below the end of the connector.
 
+> **Image:** Wrapping with PVC tape
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/12.wrapping.png"
-  width="40%"
-  caption="Wrapping with PVC tape"
-/>
+2. Cut off about 50 cm waterproof tape. Stretch it to double the length. Wrap three layers around the connector with a 50% overlap. Hold the tape in place with your hand for a few seconds.
 
-2. Cut off about 50&nbsp;cm waterproof tape. Stretch it to double the length. Wrap three layers around the connector with a 50% overlap. Hold the tape in place with your hand for a few seconds.
-
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/13.waterproof-tape.png"
-  width="40%"
-  caption="Wrapping with waterproof tape"
-/>
+> **Image:** Wrapping with waterproof tape
 
 3. Wrap three additional layers with PVC tape with natural uncoiling force and a 50% overlap. Make sure to cover the head and the tail of the connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/bobcat-enclosure-kit/installation/14.pvc-wrapping.png"
-  width="40%"
-  caption="Final PVC wrapping"
-/>
+> **Image:** Final PVC wrapping
 
-
-<RkBottomNav/>

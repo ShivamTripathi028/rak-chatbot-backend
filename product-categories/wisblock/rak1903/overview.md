@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK1903 WisBlock Ambient Light Sensor Module
 
 Thank you for choosing **RAK1903 WisBlock Ambient Light Sensor Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -24,7 +22,6 @@ Thank you for choosing **RAK1903 WisBlock Ambient Light Sensor Module** in your 
 * [RAK1903 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK1903.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
-
 
 **Examples**
 
@@ -45,12 +42,12 @@ The RAK1903 WisBlock Ambient Light Sensor Module, part of the RAK Wireless Wisbl
 * **Sensor specifications**
     * 0.01 to 83865 lux measurement range
     * Optical filtering to match human eye
-    * Voltage Supply: 3.3&nbsp;V
-    * Current Consumption: 0.4&nbsp;uA to 3.7&nbsp;uA
+    * Voltage Supply: 3.3 V
+    * Current Consumption: 0.4 uA to 3.7 uA
     * Chipset: TI OPT3001DNPR
 
 * **Size**
-    * 10 x 10&nbsp;mm
+    * 10 x 10 mm
 
 ## Prerequisites
 
@@ -60,5 +57,3 @@ To use a **RAK1903**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-<RkBottomNav/>

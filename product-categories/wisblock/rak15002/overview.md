@@ -9,8 +9,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK15002 WisBlock Micro SD Card Module
 
 Thank you for choosing **RAK15002 WisBlock Micro SD Card Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentations for your product.
@@ -39,9 +37,9 @@ The RAK15002 is a Micro SD card module that can be mounted to the IO slot of the
 
 - Micro SD card socket
 - 4-lines SPI interface
-- 3.3&nbsp;V power supply
+- 3.3 V power supply
 - SD card insert detected
-- Module size: 25X35&nbsp;mm
+- Module size: 25X35 mm
 
 ## Prerequisites
 
@@ -51,4 +49,3 @@ To use a **RAK15002**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

@@ -10,10 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK5166 WisLink LPWAN Concentrator Datasheet
 
 ## Overview
@@ -32,13 +28,13 @@ It is capable of detecting an uninterrupted combination of packets at 8 differen
 - **SX1303 baseband processor** emulates 8 x 8 channels LoRa packet detectors
 - 8x SF5-SF12 LoRa demodulators
 - 8x SF5-SF10 LoRa demodulators
-- Gigh-speed 125/250/500&nbsp;kHz LoRa demodulator
+- Gigh-speed 125/250/500 kHz LoRa demodulator
 - (G)FSK demodulator
-- 3.3&nbsp;V **PCI Express M.2**
+- 3.3 V **PCI Express M.2**
 - Compatible with Type 3042 Socket 2 Key B-M PCIe-based WWAN Module
-- Tx power up to 27&nbsp;dBm
-- Rx sensitivity down to -139&nbsp;dBm @ SF12
-- BW 125&nbsp;kHz
+- Tx power up to 27 dBm
+- Rx sensitivity down to -139 dBm @ SF12
+- BW 125 kHz
 - Supports **global license-free frequency band** (EU868, IN865, RU864, US915, AU915, KR920, AS923-1/2/3/4)
 - Supports **USB** interfaces
 - Listen Before Talk
@@ -53,15 +49,11 @@ The overview shows the top and back views of the RAK5166 board. It also presents
 
 #### Board Overview
 
-RAK5166 is a compact LPWAN Gateway Module, making it suitable for integration in systems where mass and size constraints are essential. It has been designed with the PCI Express M.2 Type 3042 form factor in mind, so it can easily become a part of products that comply with the standard, where they allow cards with a thickness of at least 3.7&nbsp;mm.
+RAK5166 is a compact LPWAN Gateway Module, making it suitable for integration in systems where mass and size constraints are essential. It has been designed with the PCI Express M.2 Type 3042 form factor in mind, so it can easily become a part of products that comply with the standard, where they allow cards with a thickness of at least 3.7 mm.
 
 The board has two MHF4 IPEX connectors for the LoRa and GNSS antennas and a standard 75-pin connector (M.2) with Key B-M Dual Key IDs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5166/datasheet/rak5166_overview.png"
-  width="50%"
-  caption="RAK5166 Board Overview"
-/>
+> **Image:** RAK5166 Board Overview
 
 #### Block Diagram
 
@@ -69,11 +61,7 @@ The RAK5166 concentrator is equipped with one SX1303 chip and two SX1250. The fi
 
 Additional signal conditioning circuitry is implemented for PCI Express M.2 compliance, and two MHF4 IPEX connectors are available for external antenna integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5166/datasheet/rak5166-block-diagram.png"
-  width="80%"
-  caption="RAK5166 Block Diagram"
-/>
+> **Image:** RAK5166 Block Diagram
 
 ### Hardware
 
@@ -91,17 +79,13 @@ The hardware is categorized into seven (7) parts. It discusses the interfacing, 
 
 - **MCU RESET** - RAK5166 USB card includes the RESET active-low input signal to reset the MCU. SX1303’s RESET is controlled by MCU to reset the radio operations as specified by the SX1303 Specification.
 
-- **Antenna RF Interface** - The module has two RF interfaces over a standard MHF4 IPEX connector with a characteristic impedance of 50&nbsp;Ω. The RF port (J1) supports both Tx and Rx, providing the antenna interface for LoRa. The RF port (J2) provides the antenna interface for GPS.
+- **Antenna RF Interface** - The module has two RF interfaces over a standard MHF4 IPEX connector with a characteristic impedance of 50 Ω. The RF port (J1) supports both Tx and Rx, providing the antenna interface for LoRa. The RF port (J2) provides the antenna interface for GPS.
 
 #### Pin Definition
 
 ##### Pinout Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5166/datasheet/rak5166_pinout.png"
-  width="80%"
-  caption="RAK5166 Pinout Diagram"
-/>
+> **Image:** RAK5166 Pinout Diagram
 
 ##### Pinout Description
 
@@ -116,436 +100,69 @@ The hardware is categorized into seven (7) parts. It discusses the interfacing, 
 | PO   | Power output   |
 | NC   | No connection  |
 
-<table>
-    <thead>
-        <tr>
-            <th>Pin No.</th><th>RAK5166 Pin</th><th>Type</th><th>Description</th><th>Remarks</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td><td>NC (CONFIG_3=GND)</td>
-            <td> </td><td>No connection by default</td>
-            <td>Reserved for CONFIG_3</td>
-        </tr>
-        <tr>
-            <td>2</td><td>3.3&nbsp;V</td>
-            <td>PI</td>
-            <td>3.3&nbsp;V<sub>DC</sub> supply</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>3.3&nbsp;V</td>
-            <td>PI</td>
-            <td>3.3&nbsp;V<sub>DC</sub> supply</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>USB_D+</td>
-            <td>IO</td>
-            <td>USB differential data (+)</td>
-            <td>Require differential impedance of 90&nbsp;Ω</td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>USB_D-</td>
-            <td>IO</td>
-            <td>USB differential data (-)</td>
-            <td>Require differential impedance of 90&nbsp;Ω</td>
-        </tr>
-         <tr>
-            <td>10</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td rowSpan="1" colSpan="1"> <b>KEY-B Notch</b> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>20</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>21</td>
-            <td>NC (CONFIG_0=GND)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for CONFIG_0</td>
-        </tr>
-        <tr>
-            <td>22</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>23</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>24</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>25</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>26</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>27</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>28</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>29</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>30</td>
-            <td>NC (Optional: MCU_RESET)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for MCU_RESET</td>
-        </tr>
-        <tr>
-            <td>31</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>32</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>33</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>34</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>35</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>36</td>
-            <td>NC</td><td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>37</td>
-            <td>NC</td><td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>38</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>39</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>40</td>
-            <td>NC (Optional: I2C_SCL)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for connecting to GPS module ZOE-M8Q's I2C_SCL internally</td>
-        </tr>
-        <tr>
-            <td>41</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>42</td>
-            <td>NC (Optional: I2C_SDA)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for connecting to GPS module ZOE-M8Q's I2C_SDA internally</td>
-        </tr>
-        <tr>
-            <td>43</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>44</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>45</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>46</td>
-            <td>GPS_RESET</td>
-            <td>DI</td>
-            <td>GSP module ZOE-M8Q reset input</td>
-            <td>Active low, leave open if not in use</td>
-        </tr>
-        <tr>
-            <td>47</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>48</td>
-            <td>NC (Optional: 1PPS)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for GPS module  Time pulse output</td>
-        </tr>
-        <tr>
-            <td>49</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>50</td>
-            <td>MCU_RESET</td>
-            <td>DI</td>
-            <td>RESET signal for MCU of RAK5166</td>
-            <td>Active low</td>
-        </tr>
-        <tr>
-            <td>51</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>52</td>
-            <td>HOST_UART_RX</td>
-            <td>DO</td>
-            <td>HOST_UART_RX</td>
-            <td>Connect to GPS module ZOE-M8Q's UART_TX internally, leave open if not in use</td>
-        </tr>
-        <tr>
-            <td>53</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>54</td>
-            <td>HOST_UART_TX</td>
-            <td>DI</td>
-            <td>HOST_UART_TX</td>
-            <td>Connect to GPS module ZOE-M8Q's UART_RX internally, leave open if not in use</td>
-        </tr>
-        <tr>
-            <td>55</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>56</td>
-            <td>NC (Optional: 1PPS)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for GPS module  Time pulse output</td>
-        </tr>
-        <tr>
-            <td>57</td>
-            <td>GND</td>
-            <td> </td><td>Ground</td><td> </td>
-        </tr>
-        <tr>
-            <td>58</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td rowSpan="1" colSpan="1"> <b>KEY-M Notch</b> </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>67</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>68</td>
-            <td>NC</td>
-            <td> </td>
-            <td>No connection</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>69</td>
-            <td>NC (CONFIG_1=GND)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for CONFIG_1</td>
-        </tr>
-        <tr>
-            <td>70</td>
-            <td>3.3&nbsp;V</td>
-            <td>PI</td>
-            <td>3.3&nbsp;V<sub>DC</sub> supply</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>71</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>72</td>
-            <td>3.3&nbsp;V</td>
-            <td>PI</td>
-            <td>3.3&nbsp;V<sub>DC</sub> supply</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>73</td>
-            <td>GND</td>
-            <td> </td>
-            <td>Ground</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>74</td>
-            <td>3.3&nbsp;V</td>
-            <td>PI</td>
-            <td>3.3&nbsp;V<sub>DC</sub> supply</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>75</td>
-            <td>NC (CONFIG_2=GND)</td>
-            <td> </td>
-            <td>No connection by default</td>
-            <td>Reserved for CONFIG_2</td>
-        </tr>
-    </tbody>
-</table>
-
+| Pin No. | RAK5166 Pin | Type | Description | Remarks |
+| --- | --- | --- | --- | --- |
+| 1 | NC (CONFIG_3=GND) |  | No connection by default | Reserved for CONFIG_3 |
+| 2 | 3.3 V | PI | 3.3 VDCsupply |  |
+| 3 | GND |  | Ground |  |
+| 4 | 3.3 V | PI | 3.3 VDCsupply |  |
+| 5 | GND |  | Ground |  |
+| 6 | NC |  | No connection |  |
+| 7 | USB_D+ | IO | USB differential data (+) | Require differential impedance of 90 Ω |
+| 8 | NC |  | No connection |  |
+| 9 | USB_D- | IO | USB differential data (-) | Require differential impedance of 90 Ω |
+| 10 | NC |  | No connection |  |
+| 11 | GND |  | Ground |  |
+|  |  |  | KEY-B Notch |  |
+| 20 | NC |  | No connection |  |
+| 21 | NC (CONFIG_0=GND) |  | No connection by default | Reserved for CONFIG_0 |
+| 22 | NC |  | No connection |  |
+| 23 | NC |  | No connection |  |
+| 24 | NC |  | No connection |  |
+| 25 | NC |  | No connection |  |
+| 26 | NC |  | No connection |  |
+| 27 | GND |  | Ground |  |
+| 28 | NC |  | No connection |  |
+| 29 | NC |  | No connection |  |
+| 30 | NC (Optional: MCU_RESET) |  | No connection by default | Reserved for MCU_RESET |
+| 31 | NC |  | No connection |  |
+| 32 | NC |  | No connection |  |
+| 33 | GND |  | Ground |  |
+| 34 | NC |  | No connection |  |
+| 35 | NC |  | No connection |  |
+| 36 | NC |  | No connection |  |
+| 37 | NC |  | No connection |  |
+| 38 | NC |  | No connection |  |
+| 39 | GND |  | Ground |  |
+| 40 | NC (Optional: I2C_SCL) |  | No connection by default | Reserved for connecting to GPS module ZOE-M8Q's I2C_SCL internally |
+| 41 | NC |  | No connection |  |
+| 42 | NC (Optional: I2C_SDA) |  | No connection by default | Reserved for connecting to GPS module ZOE-M8Q's I2C_SDA internally |
+| 43 | NC |  | No connection |  |
+| 44 | NC |  | No connection |  |
+| 45 | GND |  | Ground |  |
+| 46 | GPS_RESET | DI | GSP module ZOE-M8Q reset input | Active low, leave open if not in use |
+| 47 | NC |  | No connection |  |
+| 48 | NC (Optional: 1PPS) |  | No connection by default | Reserved for GPS module Time pulse output |
+| 49 | NC |  | No connection |  |
+| 50 | MCU_RESET | DI | RESET signal for MCU of RAK5166 | Active low |
+| 51 | GND |  | Ground |  |
+| 52 | HOST_UART_RX | DO | HOST_UART_RX | Connect to GPS module ZOE-M8Q's UART_TX internally, leave open if not in use |
+| 53 | NC |  | No connection |  |
+| 54 | HOST_UART_TX | DI | HOST_UART_TX | Connect to GPS module ZOE-M8Q's UART_RX internally, leave open if not in use |
+| 55 | NC |  | No connection |  |
+| 56 | NC (Optional: 1PPS) |  | No connection by default | Reserved for GPS module Time pulse output |
+| 57 | GND |  | Ground |  |
+| 58 | NC |  | No connection |  |
+|  |  |  | KEY-M Notch |  |
+| 67 | NC |  | No connection |  |
+| 68 | NC |  | No connection |  |
+| 69 | NC (CONFIG_1=GND) |  | No connection by default | Reserved for CONFIG_1 |
+| 70 | 3.3 V | PI | 3.3 VDCsupply |  |
+| 71 | GND |  | Ground |  |
+| 72 | 3.3 V | PI | 3.3 VDCsupply |  |
+| 73 | GND |  | Ground |  |
+| 74 | 3.3 V | PI | 3.3 VDCsupply |  |
+| 75 | NC (CONFIG_2=GND) |  | No connection by default | Reserved for CONFIG_2 |
 
 #### RF Characteristics
 
@@ -586,12 +203,12 @@ The limiting values given below are following the Absolute Maximum Rating System
 
 | Symbol    | Description           | Condition                                  | Min         | Max        |
 |-----------|-----------------------|--------------------------------------------|-------------|------------|
-| 3V3       | Module supply voltage | Input DC voltage at 3V3 pins               | -0.3&nbsp;V | 3.6&nbsp;V |
-| USB       | USB D+/D- pins        | Input DC voltage at USB interface pins     | -           | 3.6&nbsp;V |
-| MCU_RESET | RAK5166 reset input   | Input DC voltage at RESET input pin        | -0.3&nbsp;V | 3.6&nbsp;V |
-| GPS_PPS   | GPS 1 PPS input       | Input DC voltage at GPS_PPS input pin      | -0.3&nbsp;V | 3.6&nbsp;V |
+| 3V3       | Module supply voltage | Input DC voltage at 3V3 pins               | -0.3 V | 3.6 V |
+| USB       | USB D+/D- pins        | Input DC voltage at USB interface pins     | -           | 3.6 V |
+| MCU_RESET | RAK5166 reset input   | Input DC voltage at RESET input pin        | -0.3 V | 3.6 V |
+| GPS_PPS   | GPS 1 PPS input       | Input DC voltage at GPS_PPS input pin      | -0.3 V | 3.6 V |
 | Rho_ANT   | Antenna ruggedness    | Output RF load mismatch ruggedness at ANT1 | -           | 10:1 VSWR  |
-| Tstg      | Storage temperature   |                                            | -40°&nbsp;C | 85°&nbsp;C |
+| Tstg      | Storage temperature   |                                            | -40° C | 85° C |
 
 :::warning
 The product is not protected against over voltage or reversed voltages. If necessary, voltage spikes exceeding the power supply voltage specification, given in the table above, must be limited to values within the specified boundaries by using appropriate protection devices.
@@ -601,8 +218,8 @@ The product is not protected against over voltage or reversed voltages. If neces
 
 | Parameter | Min | Typical | Max         | Remarks                                    |
 |-----------|-----|---------|-------------|--------------------------------------------|
-| ESD_HBM   |     |         | 1000&nbsp;V | Charged Device Model JESD22-C101 CLASS III |
-| ESD_CDM   |     |         | 1000&nbsp;V | Charged Device Model JESD22-C101 CLASS III |
+| ESD_HBM   |     |         | 1000 V | Charged Device Model JESD22-C101 CLASS III |
+| ESD_CDM   |     |         | 1000 V | Charged Device Model JESD22-C101 CLASS III |
 
 :::tip NOTE
 Although this module is designed to be as robust as possible, electrostatic discharge (ESD) can damage the module. This module must be protected at all times from ESD when handling or transporting. Static charges may easily produce potentials of several kilovolts on the human body or equipment, which can discharge without detection. Industry-standard ESD handling precautions should be used at all times.
@@ -612,8 +229,8 @@ Although this module is designed to be as robust as possible, electrostatic disc
 
 | Mode             | Condition                                                         | Min         | Typical      | Max         |
 |------------------|-------------------------------------------------------------------|-------------|--------------|-------------|
-| Active Mode (TX) | The power of the TX channel is 27&nbsp;dBm and 3.3&nbsp;V supply. | 511&nbsp;mA | 512&nbsp;mA  | 513&nbsp;mA |
-| Active Mode (RX) | TX disabled and RX enabled.                                       | 70&nbsp;mA  | 81.6&nbsp;mA | 101&nbsp;mA |
+| Active Mode (TX) | The power of the TX channel is 27 dBm and 3.3 V supply. | 511 mA | 512 mA  | 513 mA |
+| Active Mode (RX) | TX disabled and RX enabled.                                       | 70 mA  | 81.6 mA | 101 mA |
 
 ##### Power Supply Range
 
@@ -621,17 +238,13 @@ Input voltage at **3V3** must be above the normal operating range minimum limit 
 
 | Symbol | Parameter                             | Min      | Typical    | Max        |
 |--------|---------------------------------------|----------|------------|------------|
-| 3V3    | Module supply operating input voltage | 3&nbsp;V | 3.3&nbsp;V | 3.6&nbsp;V |
+| 3V3    | Module supply operating input voltage | 3 V | 3.3 V | 3.6 V |
 
 #### Mechanical Characteristics
 
-The board weighs 5.9&nbsp;grams, and it is 30&nbsp;mm wide and 42&nbsp;mm tall. The dimensions of the module fall completely within the PCI Express M.2 Card Electromechanical Specification, except for the card's thickness (3.7&nbsp;mm at its thickest).
+The board weighs 5.9 grams, and it is 30 mm wide and 42 mm tall. The dimensions of the module fall completely within the PCI Express M.2 Card Electromechanical Specification, except for the card's thickness (3.7 mm at its thickest).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5166/datasheet/rak5166_dimensions.png"
-  width="25%"
-  caption="RAK5166 Dimensions"
-/>
+> **Image:** RAK5166 Dimensions
 
 #### Environmental Requirements
 
@@ -639,21 +252,17 @@ The board weighs 5.9&nbsp;grams, and it is 30&nbsp;mm wide and 42&nbsp;mm tall. 
 
 | Parameter                    | Min         | Typical     | Max         | Remarks                                                                            |
 |------------------------------|-------------|-------------|-------------|------------------------------------------------------------------------------------|
-| Normal operating temperature | -40°&nbsp;C | +25°&nbsp;C | +85°&nbsp;C | Normal operating temperature range (fully functional and meet 3GPP specifications) |
+| Normal operating temperature | -40° C | +25° C | +85° C | Normal operating temperature range (fully functional and meet 3GPP specifications) |
 
 :::tip NOTE
-Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25°&nbsp;C. Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
+Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25° C. Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
 :::
 
 #### Schematic Diagram
 
-RAK5166 M.2 concentrator module was designed by RAKWireless for SX1303. The USB interface can be used on the M.2 connector. **Figure 5** shows the minimum application schematic of the RAK5166. You should use at least 3.3&nbsp;V / 1&nbsp;A DC power,  and connect the USB interface to the main processor.
+RAK5166 M.2 concentrator module was designed by RAKWireless for SX1303. The USB interface can be used on the M.2 connector. **Figure 5** shows the minimum application schematic of the RAK5166. You should use at least 3.3 V / 1 A DC power,  and connect the USB interface to the main processor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5166/datasheet/rak5166-schematic-diagram.png"
-  width="70%"
-  caption="RAK5166 Schematic Diagram"
-/>
+> **Image:** RAK5166 Schematic Diagram
 
 ## Models / Bundles
 
@@ -661,8 +270,10 @@ In general, the RAK5166's variation is defined as **RAK5166 - XYZ**, where **X**
 
 | Symbol                  | Description                |
 |-------------------------|----------------------------|
-| X - Supported region    | 1 - US915 <br/> 2 - EU868  |
-| Y - GPS Module          | 1 - GPS <br/> 2 - No GPS   |
+| X - Supported region    | 1 - US915 
+ 2 - EU868  |
+| Y - GPS Module          | 1 - GPS 
+ 2 - No GPS   |
 | Z - Additional features | 0 - No additional features |
 
 | Model       | Frequency | GPS |
@@ -672,4 +283,3 @@ In general, the RAK5166's variation is defined as **RAK5166 - XYZ**, where **X**
 | RAK5166-210 | EU868     | √   |
 | RAK5166-220 | EU868     |     |
 
-<RkBottomNav/>

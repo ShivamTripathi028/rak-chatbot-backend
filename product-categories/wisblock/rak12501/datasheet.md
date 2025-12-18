@@ -11,17 +11,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12501 WisBlock GNSS Location Module Datasheet
 
 ## Overview
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12501/datasheet/rak12501-location-module.png"
-  caption="RAK12501 WisBlock GNSS Location Module"
-  width="40%"
-/>
+
+> **Image:** RAK12501 WisBlock GNSS Location Module
 
 ### Description
 
@@ -33,19 +27,19 @@ Equipped with the Quectel L76K, the RAK12501 supports a wide variety of satellit
 
 * **Module Specification**
     * Uses the very accurate GNSS Module: **Quectel L76K**
-    * Location Accuracy of ±2.5&nbsp;meter
-    * Velocity Accuracy of ±0.1&nbsp;m/s
+    * Location Accuracy of ±2.5 meter
+    * Velocity Accuracy of ±0.1 m/s
     * GPS, GLONASS, QZSS, and BeiDou Satellite support
     * Serial communication to WisBlock Core support
-    * 1&nbsp;Hz Update Rate
+    * 1 Hz Update Rate
     * Location Fix:
-      * Cold Start: 35&nbsp;seconds
-      * Hot Start: 1&nbsp;second
-    * Operating Voltage: 3.3&nbsp;V
-    * Operating Current: < 25&nbsp;mA
+      * Cold Start: 35 seconds
+      * Hot Start: 1 second
+    * Operating Voltage: 3.3 V
+    * Operating Current: < 25 mA
 
 * **Size**
-    * Module Size: 10&nbsp;mm x 23&nbsp;mm
+    * Module Size: 10 mm x 23 mm
 
 ## Specifications
 
@@ -55,11 +49,7 @@ Equipped with the Quectel L76K, the RAK12501 supports a wide variety of satellit
 
 **Figure 2** shows the mounting mechanism of the RAK12501 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12501 module can be mounted on the slots: **SLOT A  or SLOT D**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12500/datasheet/rak12500-mounting.png"
-  caption="RAK12501 Module mounting mechanism"
-  width="60%"
-/>
+> **Image:** RAK12501 Module mounting mechanism
 
 ### Hardware
 
@@ -73,15 +63,11 @@ The RAK12501 utilizes a very accurate Quectel L76K chip. See the manufacturer's 
 | :-----: | :---------: |
 | Quectel |    L76K     |
 
-
 #### Pin Definition
 
 The RAK12501 WisBlock GNSS Location Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK12501 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12501/datasheet/rak12501-pin.png"
-  caption="RAK12501 GNSS Module pinout"
-  width="60%"
-/>
+
+> **Image:** RAK12501 GNSS Module pinout
 
 :::tip NOTE
 Only the UART related pins, VDD, and GND are connected to this module. WB_IO2 is used to control the power supply of the module.
@@ -100,33 +86,19 @@ The table below shows the recommended operating conditions for the RAK12501 WisB
 | I<sub>Tracking:</sub>   | Power Tracking              | -        | 18       | -        | mA       |
 | I<sub>Saving:</sub>     | Power Saving                | -        | 7        | -        | uA       |
 
-
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 **Figure 4** shows the dimensions and mechanical drawing of the RAK12501 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12501/datasheet/rak12501-board-dimensions.png"
-  caption="RAK12501 board dimensions"
-  width="60%"
-/>
+> **Image:** RAK12501 board dimensions
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12500/datasheet/mxxs1003k6m.png"
-  caption="WisConnector PCB footprint and recommendations"
-  width="100%"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12501/datasheet/rak12501-schematic.png"
-  caption="RAK12501 schematic diagram"
-  width="100%"
-/>
+> **Image:** RAK12501 schematic diagram
 
-<RkBottomNav/>

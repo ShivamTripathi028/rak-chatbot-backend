@@ -10,10 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK12027 WisBlock Earthquake Sensor Module Datasheet
 
 ## Overview
@@ -31,38 +27,26 @@ Do not use the sensor in safety devices or for applications in which the sensor 
 ### Features
 
   * Chipset: **Omron D7S**
-  * Voltage supply: **3.3&nbsp;V**
+  * Voltage supply: **3.3 V**
   * Using the SI value, which has a high correlation with the seismic intensity scale that indicates the magnitude of an earthquake, provides higher-precision judgment of seismic intensity scales
   * A higher degree of freedom for incorporation into devices and prolonged operation on battery power
   * The shutoff output terminal (INT1) operates equivalent to a conventional mechanical vibration sensor and ensures compatibility with mechanical vibration sensors
   * Collapse alarm integrated
   * I2C digital output interface
-  * Operating temperature: **-30°&nbsp;C ~ 70°&nbsp;C**
-  * Module size: 10 x 23&nbsp;mm
-
+  * Operating temperature: **-30° C ~ 70° C**
+  * Module size: 10 x 23 mm
 
 ## Specifications
 
 ### Overview
 
-<br/>
-<br/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/datasheet/rak12027.png"
-  width="30%"
-  caption="RAK12027 WisBlock Earthquake Sensor Module top and bottom view"
-/>
+> **Image:** RAK12027 WisBlock Earthquake Sensor Module top and bottom view
 
 #### Mounting
 
 **Figure 2** shows the mounting mechanism of the RAK12027 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12027 module can be mounted on the slots: **C, D, E, & F**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/datasheet/rak12027-mount.png"
-  width="50%"
-  caption="RAK12027 WisBlock Earthquake Sensor mounting"
-/>
+> **Image:** RAK12027 WisBlock Earthquake Sensor mounting
 
 ### Hardware
 
@@ -78,11 +62,7 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK12027 WisBlock Earthquake Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK12027 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/datasheet/rak12027-pinout.png"
-  width="70%"
-  caption="RAK12027 pinout diagram"
-/>
+> **Image:** RAK12027 pinout diagram
 
 :::tip NOTE
 - **I2C** related pin, **INT1**, **INT2**, **3V3_S**, and **GND** are connected to WisBlock connector.
@@ -97,13 +77,11 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | ------ | ------ | ------ | ------ |
 | IO3    | IO5    | IO4    | IO6    |
 
-
 **INT2 (Interrupt Pin 2)**
 
 | SLOT C | SLOT D | SLOT E | SLOT F |
 | ------ | ------ | ------ | ------ |
 | IO4    | IO6    | IO3    | IO5    |
-
 
 #### Electrical Characteristics
 
@@ -117,19 +95,11 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 
 **Figure 3** shows the dimensions and the mechanic drawing of the RAK12027 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/datasheet/rak12027-dim.png"
-  width="50%"
-  caption="RAK12027 mechanical dimensions"
-/>
+> **Image:** RAK12027 mechanical dimensions
 
 ##### WisBlock Connector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/datasheet/wisblock-conn.png"
-  width="100%"
-  caption="WisBlock Connector PCB footprint and recommendations"
-/>
+> **Image:** WisBlock Connector PCB footprint and recommendations
 
 #### Schematic Diagram
 
@@ -137,11 +107,5 @@ The default I2C address of the Earthquake sensor is **0x55**.
 
 Resistors **R6** and **R7** do not need to be mounted on the RAK12027 module due to the pull-up resistors already built-in on the WisBlock Base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12027/datasheet/rak12027-schem.jpg"
-  width="100%"
-  caption="RAK12027 schematic diagram"
-/>
+> **Image:** RAK12027 schematic diagram
 
-
-<RkBottomNav/>

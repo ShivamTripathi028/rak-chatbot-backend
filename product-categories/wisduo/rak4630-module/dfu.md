@@ -19,9 +19,6 @@ slug: /product-categories/wisduo/rak4630-module/dfu/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK4630 WisBlock LoRaWAN+BLE Module Firmware Update
 
 There will be situations where you need to update the firmware of your RAK4630.  Additionally, there are times when you may want to reload the firmware to ensure everything is properly configured. Updating the firmware of the RAK4630 WisDuo can be done via USB connection or wirelessly using BLE via OTA DFU (Over-the-Air Device Firmware Update). These methods are discussed in this guide.
@@ -53,21 +50,11 @@ You need a direct connection to the RAK4630's USB bus before proceeding with the
 1. Create a new folder in your `C:\` drive named `RAK4631-R Update`.
 2. Download the  <a href="https://github.com/NordicSemiconductor/pc-nrfutil/releases" target="_blank">nRFutil.exe</a> and the  <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK4631_latest_dfu_package.zip" target="_blank">latest DFU Package</a>. Once you downloaded both files, put them in the `RAK4631-R Update` folder you created as shown in Figure 1.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/x2_files_needed.png"
-  width="70%"
-  caption="nRFutil.exe and RAK4630 Latest Firmware"
-  zoomMode={true}
-/>
+> **Image:** nRFutil.exe and RAK4630 Latest Firmware
 
 3. Connect the RAK4630 via USB and check if the port is detected in Device Manager.  In this guide, it is detected as COM32. The COM port number may vary depending on the PC. If no port appears in Device Manager, try double-clicking the reset button and checking again.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/2_device_manager_port_update.png"
-  width="70%"
-  caption="Checking COM Port via Device Manager"
-  zoomMode={true}
-/>
+> **Image:** Checking COM Port via Device Manager
 
 4. After that, send the `AT+BOOT` command to the device via serial terminal software. Follow the <a href="#how-to-check-firmware-version-using-tera-term" target="_blank">guide on using Tera Term from the RAK4631-R documentation</a>, but instead of checking the firmware version, input `AT+BOOT`. You will see no reply as the module will restart; it will then be momentarily disconnected before re-establishing the connection to Tera Term.
 
@@ -81,12 +68,7 @@ Disconnect teh device from TeraTerm/Serial Terminal software or close it to free
 If `AT+BOOT` cannot be sent to the device, you can enable DFU mode via the UART2_TX pin. Connect the UART2_TX pin to GND, then reset the device to enter DFU mode.  Proceed to the next step and upload the firmware without the `AT+BOOT` command.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/x4_boot.png"
-  width="70%"
-  caption="AT+BOOT to Initialize Boot Mode"
-  zoomMode={true}
-/>
+> **Image:** AT+BOOT to Initialize Boot Mode
 
 5. After initiating Boot mode, execute the firmware update. Open the command prompt and navigate to the `RAK4631-R Update` folder. This folder contains the nRFutil and the latest firmware.  Input `cd C:/RAK4631-R Update/` followed by `nrfutil.exe dfu serial -pkg RAK4631_latest_dfu_package.zip -p COM32`. Ensure you have the correct `.zip` file name and `COM port number` to avoid errors.
 
@@ -94,21 +76,11 @@ If `AT+BOOT` cannot be sent to the device, you can enable DFU mode via the UART2
 Change the COM port number in the command to match your PC.  In this example, it is COM32, but it may differ on your PC.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/x5_sucesss_nrfutil.png"
-  width="90%"
-  caption="FW Update Using nRFutil"
-  zoomMode={true}
-/>
+> **Image:** FW Update Using nRFutil
 
 6. Check if the firmware successfully updated using the `AT+VER=?` command. Follow the <a href="#how-to-check-firmware-version-using-tera-term" target="_blank">guide on using Tera Term from the RAK4631-R documentation</a> to check the firmware version and confirm the device update.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/x6_version_check_ok.png"
-  width="70%"
-  caption="RAK4631-R Latest Firmware Version Check"
-  zoomMode={true}
-/>
+> **Image:** RAK4631-R Latest Firmware Version Check
 
 ### Linux
 
@@ -123,12 +95,7 @@ sudo apt-get install net-tools git curl python xclip python3-pip
 
 2. Verify that you have installed `Python 3.7` or later. Check your Python version, as shown in **Figure 6**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/python-version.png"
-  width="90%"
-  caption="Check Python version"
-  zoomMode={true}
-/>
+> **Image:** Check Python version
 
 3. Add `.local` folder to Linux `$PATH` variable.
 
@@ -156,19 +123,13 @@ sudo apt-get install minicom
 
 Enter the following code: `minicom -D /dev/ttyACM0`
 
-
 #### Execute the Firmware Update via USB
 
 1. Download the zip file  <a href="https://downloads.rakwireless.com/#RUI/V3/Image/" target="_blank">DFU Distribution Package</a>.
 
 When you plug the RAK4630 into a Linux computer via USB, the `dmesg` command will show the information **cdc_acm 1-1:1.0: ttyACM0: USB ACM device**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/dmesg-tty.png"
-  width="90%"
-  caption="Checking USB CDC device using dmesg command"
-  zoomMode={true}
-/>
+> **Image:** Checking USB CDC device using dmesg command
 
 In this case, the RAK4630 **USB CDC** device name is `/dev/ttyACM0`.
 
@@ -208,12 +169,7 @@ cd /Users/username/Downloads
 chmod +x nrfutil-mac.1
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/downloads-chmod-nrfutil.png"
-  width="60%"
-  caption="Download nrfutil for macOS"
-  zoomMode={true}
-/>
+> **Image:** Download nrfutil for macOS
 
 4. You also need to determine the RAK4630's port name using the command:
 
@@ -221,12 +177,7 @@ chmod +x nrfutil-mac.1
 ls /dev/cu.*
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/dfu/rak4631-r-port.png"
-  width="60%"
-  caption="Check the port"
-  zoomMode={true}
-/>
+> **Image:** Check the port
 
 5. Download the  <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK4631_latest_dfu_package.zip" target="_blank">RAK4630 Firmware</a>. Usually, the `RAK4631_latest_dfu_package.zip` file will go to the downloads folder.
 
@@ -255,12 +206,7 @@ This section covers how to update your RAK4630 firmware wirelessly via BLE. Firs
 - [DFU OTA Using iOS](#dfu-ota-using-ios)
 - [DFU OTA Using Android](#dfu-ota-using-android)
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/nordic-app.png"
-  width="60%"
-  caption="nRF Connect App available in Play Store and App Store"
-  zoomMode={true}
-/>
+> **Image:** nRF Connect App available in Play Store and App Store
 
 ### DFU OTA Using iOS
 
@@ -278,12 +224,7 @@ Make sure Bluetooth on your mobile device is turned on.
 
 3. Open the nRF Connect mobile application.  You will see all BLE devices in range in the scanner list.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/available-bluetooth-ios.png"
-  width="40%"
-  caption="Available Bluetooth Devices"
-  zoomMode={true}
-/>
+> **Image:** Available Bluetooth Devices
 
 4. Look for a BLE Device named **RAK.XXXXXX** in the scanner list of the app. Connect to this device and then click on the **Client** tab. Then, choose "**Secure DFU Service**".
 
@@ -291,61 +232,27 @@ Make sure Bluetooth on your mobile device is turned on.
 By default, the BLE signal of the RAK4630 turns off automatically if no connection is established after 60 seconds. Connect to **RAK.XXXXXX** immediately after pressing the reset button.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/secure-dfu-ios.png"
-  width="70%"
-  caption="Secure DFU service"
-  zoomMode={true}
-/>
+> **Image:** Secure DFU service
 
 5.  Click the button highlighted in red, as shown in **Figure 13**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/buttonless-dfu-ios.png"
-  width="40%"
-  caption="Buttonless DFU"
-  zoomMode={true}
-/>
+> **Image:** Buttonless DFU
 
 7. A **Write Value** window will pop up. Select **Bool** tab, move the switch from `False` to `True` then press the **Write** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/bootloader-reset-ios.png"
-  width="70%"
-  caption="Resetting the bootloader via Bluetooth"
-  zoomMode={true}
-/>
+> **Image:** Resetting the bootloader via Bluetooth
 
 8. Now, the RAK4630 is in DFU mode. In the application, you will see the default status overview of the RAK4630.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/default-bluetooth-id-ios.png"
-  width="40%"
-  caption="RAK4630 default status overview after resetting"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 default status overview after resetting
 
 9. In the Scanner list, find a BLE device named **DfuTarg** and then click the **Connect** button.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/default-status-overview-ios.png"
-  width="40%"
-  caption="RAK4630 Default Bluetooth ID after Resetting"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 Default Bluetooth ID after Resetting
 
 10. After connecting, select the **DFU** tab, then click **Open Document Picker**. This will prompt you to select the distribution packet zip file of the firmware you have downloaded. Press **OK**, and it will automatically start to upgrade the firmware of your RAK4630 through DFU over BLE.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/distribution-packet-file-ios.png"
-  width="40%"
-  caption="Distribution Packet File Type under DFU"
-  zoomMode={true}
-/>
-
+> **Image:** Distribution Packet File Type under DFU
 
 :::tip NOTE
 You can upload the distribution packet (ZIP) file to  <a href="https://www.icloud.com/" target="_blank">iCloud Services</a> and download it to your smartphone.
@@ -353,13 +260,7 @@ You can upload the distribution packet (ZIP) file to  <a href="https://www.iclou
 
 11. After upgrading, the module restarts, and the DFU connection disconnects. Now you can use your RAK4630 with the latest firmware.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/dfu-upgrade-ios.png"
-  width="100%"
-  caption="DFU upgrading of RAK4630 firmware via BLE"
-  zoomMode={true}
-/>
+> **Image:** DFU upgrading of RAK4630 firmware via BLE
 
 ### DFU OTA Using Android
 
@@ -377,12 +278,7 @@ Make sure Bluetooth on your mobile device is turned on.
 
 3. Open the nRF Connect mobile application.  The scanner list will show all BLE devices in range.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/available-bluetooth-android.png"
-  width="40%"
-  caption="Available Bluetooth Devices in the Nordic App"
-  zoomMode={true}
-/>
+> **Image:** Available Bluetooth Devices in the Nordic App
 
 4. Look for a BLE Device named **RAK.XXXXXX** in the scanner list of the app. Connect to this device and then click the **Client** tab. Then, choose **Secure DFU Services**.
 
@@ -390,65 +286,31 @@ Make sure Bluetooth on your mobile device is turned on.
 By default, the BLE signal of the RAK4630 turns off automatically if no connection is established after 60 seconds. Connect to **RAK.XXXXXX** immediately after pressing the reset button.
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/secure-dfu-nordic.png"
-  width="70%"
-  caption="Secure DFU service in the Nordic App"
-  zoomMode={true}
-/>
+> **Image:** Secure DFU service in the Nordic App
 
 5. Click the button highlighted in red, as shown in **Figure 21**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/buttonless-dfu-android.png"
-  width="40%"
-  caption="Buttonless DFU"
-  zoomMode={true}
-/>
+> **Image:** Buttonless DFU
 
 6. Click the arrow-up button highlighted in a red box.
 
 7. A **Write value** window will pop up. Press the **SEND** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/resetting-bootloader-android.png"
-  width="70%"
-  caption="Resetting the Bootloader via Bluetooth"
-  zoomMode={true}
-/>
+> **Image:** Resetting the Bootloader via Bluetooth
 
 8. Now, the RAK4630 is in DFU mode.  The application will show the default status overview of the RAK4630.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/default-status-overview-android.png"
-  width="40%"
-  caption="RAK4630 default status overview after resetting"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 default status overview after resetting
 
 9. In the Devices list, find a BLE device named **DfuTarg** and click on the **Connect** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/default-bluetooth-id-android.png"
-  width="40%"
-  caption="RAK4630 default Bluetooth ID after resetting"
-  zoomMode={true}
-/>
+> **Image:** RAK4630 default Bluetooth ID after resetting
 
 After connecting, click the **DFU** icon (highlighted in red in **Figure 25**).
 
 10. Select the **distribution packet (.ZIP)** and press **OK**. This will prompt you to select the downloaded firmware's ZIP file.  The RAK4630's firmware will then automatically upgrade via DFU over BLE.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/distribution-packet-file-android.png"
-  width="70%"
-  caption="Distribution packet file type under DFU"
-  zoomMode={true}
-/>
-
+> **Image:** Distribution packet file type under DFU
 
 :::tip NOTE
 You can upload the distribution packet (ZIP) file to Google Drive and download it to your smartphone.
@@ -456,12 +318,5 @@ You can upload the distribution packet (ZIP) file to Google Drive and download i
 
 11. After upgrading, the module restarts, and the DFU connection will be disconnected.  You can now use your RAK4630 with the latest firmware.
 
+> **Image:** DFU upgrading of RAK4630 firmware via BLE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4630-module/quickstart/dfu-upgrading-android.png"
-  width="40%"
-  caption="DFU upgrading of RAK4630 firmware via BLE"
-  zoomMode={true}
-/>
-
-<RkBottomNav/>

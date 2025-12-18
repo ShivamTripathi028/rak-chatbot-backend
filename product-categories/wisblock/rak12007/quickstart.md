@@ -10,11 +10,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12007 WisBlock Ultrasonic Sensor Module Quick Start Guide
-
 
 ## Prerequisite
 
@@ -33,7 +29,6 @@ Before going through each and every step on using the RAK12007 WisBlock Ultrason
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
-
 #### Software
 
 - Download and install [ArduinoIDE](https://www.arduino.cc/en/Main/Software).
@@ -47,23 +42,15 @@ The RAK12007, a part of WisBlock Sensor, is an ultrasonic sensor module based on
 
 The RAK12007 WisBlock Ultrasonic Sensor Module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/connection.png"
-  width="80%"
-  caption="RAK12007 Connection to WisBlock Base"
-/>
+> **Image:** RAK12007 Connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) to attach a WisBlock module. Once attached, carefully fix the module with three pieces of M1.2 x 3&nbsp;mm screws.
+As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) to attach a WisBlock module. Once attached, carefully fix the module with three pieces of M1.2 x 3 mm screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/mounting-mechanism.png"
-  width="70%"
-  caption="RAK12007 assembly to WisBlock Base"
-/>
+> **Image:** RAK12007 assembly to WisBlock Base
 
 ##### Disassembling
 
@@ -71,27 +58,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/removing_screw.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/detach_silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/detach_module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -101,9 +76,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -119,27 +94,15 @@ In this example, you will monitor the distance of the object in front of your RA
 
 **RAK4631 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak4631/quickstart/rak4631-arduino.svg"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
 **RAK11200 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/rak11200-arduino.svg"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
 **RAK11310 Board**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11310/quickstart/rak11310-arduino.svg"
-  width="100%"
-  caption="Selecting RAK11300 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11300 as WisBlock Core
 
 3. Copy the example code below:
 
@@ -287,23 +250,11 @@ void oled_init()
 
 4. Install the required libraries by pressing `Ctrl` and clicking each highlighted link, as shown in **Figure 9** to **Figure 11**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/library-highlight.svg"
-  width="100%"
-  caption="Links for required libraries"
-/>
+> **Image:** Links for required libraries
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/library2.svg"
-  width="100%"
-  caption="Installation of Adafruit GFX Library and Companion Library"
-/>
+> **Image:** Installation of Adafruit GFX Library and Companion Library
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/library.svg"
-  width="100%"
-  caption="Installation of Adafruit SSD1306 Library"
-/>
+> **Image:** Installation of Adafruit SSD1306 Library
 
 5. Then select the right Serial Port and upload the code, as shown in **Figure 12** and **Figure 13**.
 
@@ -311,32 +262,15 @@ void oled_init()
 RAK11200 requires the BOOT0 pin to be configured properly before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#install-rakwireless-esp32-bsp-on-arduino-boards-manager).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/select_port4631.svg"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/upload.svg"
-  width="100%"
-  caption="Uploading the sample code"
-/>
+> **Image:** Uploading the sample code
 
 6. When you have successfully uploaded the sample code, you should see the distance displayed on the RAK1921 WisBlock OLED Display, as shown in **Figure 14**. Then, you can open up your serial monitor to get the sensor reading, as shown in **Figure 15**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/display_distance.png"
-  width="40%"
-  caption="Distance shown in RAK1921 WisBlock OLED Display"
-/>
+> **Image:** Distance shown in RAK1921 WisBlock OLED Display
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12007/quickstart/serialport.svg"
-  width="100%"
-  caption="RAK12007 WisBlock Ultrasonic Module reading in Serial Monitor"
-/>
+> **Image:** RAK12007 WisBlock Ultrasonic Module reading in Serial Monitor
 
 You can try to point the sensor on any surface to detect the distance or put an object in front of the sensor.
 
-<RkBottomNav/>

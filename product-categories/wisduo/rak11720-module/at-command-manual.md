@@ -11,9 +11,6 @@ slug: /product-categories/wisduo/rak11720-module/at-command-manual/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11720 WisDuo LPWAN+BLE Module AT Command Manual
 
 ## Overview
@@ -26,5 +23,3 @@ The RAK11720 default firmware is based on <a href="https://docs.rakwireless.com/
 
 The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation</a>.
 
-
-<RkBottomNav/>

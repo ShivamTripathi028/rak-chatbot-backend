@@ -14,9 +14,6 @@ sidebar_label: Datasheet
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK10715 WisTrio LTE-M NB-IoT LoRaWAN Development Board Datasheet
 
 ## Overview
@@ -37,8 +34,8 @@ Overall, the RAK10715 is a powerful and flexible IoT device that provides a rang
 - Nordic nRF52840:
   - Ultra-low-power MCU
   - 32-bit ARM® Cortex-M4F CPU
-  - 4&nbsp;MHz CPU clock
-  - 1&nbsp;MB Flash, 256&nbsp;KB RAM
+  - 4 MHz CPU clock
+  - 1 MB Flash, 256 KB RAM
   - Wide range of connections:
     - I2C, SPI, Analog inputs,
     - Digital inputs and outputs
@@ -52,10 +49,10 @@ Overall, the RAK10715 is a powerful and flexible IoT device that provides a rang
   - Nano SIM and ESIM options
   - Supports LTE CAT M1 and LTE CAT NB2
   - GNSS location
-- Unify Enclosure 100x75x38&nbsp;mm
+- Unify Enclosure 100x75x38 mm
   - IP65 enclosure
   - Prepared for USB access and an external LTE antenna
-  - 3&nbsp;dBi external LTE antenna
+  - 3 dBi external LTE antenna
   - Matching SMA to IPEX connector
   - Internal LoRaWAN and BLE antenna on the mounting plate
   - Internal GNSS antenna
@@ -64,11 +61,7 @@ Overall, the RAK10715 is a powerful and flexible IoT device that provides a rang
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/rak10715-set.png"
-  width="60%"
-  caption="RAK10715 Complete Set"
-/>
+> **Image:** RAK10715 Complete Set
 
 ### Hardware
 
@@ -82,11 +75,7 @@ The RAK10715 is enclosed by a custom Unify Enclosure with holes for the followin
 - M8 circular connector for charging
 - SMA connector for cellular antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/m8.png"
-  width="25%"
-  caption="Circular M8 connector"
-/>
+> **Image:** Circular M8 connector
 
 | Pin | Wire Color on Breakout Cable | Usage                            |
 | --- | ---------------------------- | -------------------------------- |
@@ -94,21 +83,18 @@ The RAK10715 is enclosed by a custom Unify Enclosure with holes for the followin
 | 2   | NA                           | NA                               |
 | 3   | NA                           | NA                               |
 | 4   | NA                           | NA                               |
-| 5   | Red                          | Power (typical input 5.5&nbsp;V) |
+| 5   | Red                          | Power (typical input 5.5 V) |
 
 #### Modules Inside RAK10715
 
 RAK10715 is composed of several WisBlock modules, which include base, core, and wireless module boards.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/modules.png"
-  width="60%"
-  caption="WisBlock Modules inside RAK10715"
-/>
+> **Image:** WisBlock Modules inside RAK10715
 
 | Module                                                       | Chipset                                               | Description                                                           |
 | ------------------------------------------------------------ | ----------------------------------------------------- | --------------------------------------------------------------------- |
-| [RAK4631](https://docs.rakwireless.com/product-categories/wisblock/rak4631/datasheet/)   | nRF52840 (Nordic Semiconductor) <br /> SX1262 (Semtech) | WisBlock Core based on NRF52840 (MCU + BLE) and SX1262 (LoRa/LoRaWAN) |
+| [RAK4631](https://docs.rakwireless.com/product-categories/wisblock/rak4631/datasheet/)   | nRF52840 (Nordic Semiconductor) 
+ SX1262 (Semtech) | WisBlock Core based on NRF52840 (MCU + BLE) and SX1262 (LoRa/LoRaWAN) |
 | [RAK5860](https://docs.rakwireless.com/product-categories/wisblock/rak5860/datasheet/)   | BG77 (Quectel)                                        | WisBlock Cellular Wireless based on Quected BG77 NB-IoT and LTE-M     |
 | [RAK19007](https://docs.rakwireless.com/product-categories/wisblock/rak19007/datasheet/) | NA                                                    | WisBlock Base board with USB connector and Li-ion Charger             |
 
@@ -135,35 +121,23 @@ The Bluetooth functionality of RAK10715 is a feature built-in to the nRF52840 MC
 | Parameter          | Detail                                                 |
 | ------------------ | ------------------------------------------------------ |
 | BLE Protocol       | BLE 5.0                                                |
-| BLE Tx Power       | 8&nbsp;dBm max                                         |
-| BLE Rx Sensitivity | 95&nbsp;dBm @ 1&nbsp;Mbps BLE mode                     |
-| BLE Data Rate      | 2&nbsp;Mbps, 1&nbsp;Mbps, 500&nbsp;Kbps, 125&nbsp;Kbps |
+| BLE Tx Power       | 8 dBm max                                         |
+| BLE Rx Sensitivity | 95 dBm @ 1 Mbps BLE mode                     |
+| BLE Data Rate      | 2 Mbps, 1 Mbps, 500 Kbps, 125 Kbps |
 
 ###### LoRaWAN and BLE Antenna
 
-RAK10715 uses a WisBlock baseplate that has a built-in antenna for LoRa Sub-GHz antenna and 2.4&nbsp;GHz for Bluetooth BLE.
+RAK10715 uses a WisBlock baseplate that has a built-in antenna for LoRa Sub-GHz antenna and 2.4 GHz for Bluetooth BLE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/wisblock_baseplate.png"
-  width="40%"
-  caption="WisBlock Mounting Plate with Antenna"
-/>
+> **Image:** WisBlock Mounting Plate with Antenna
 
 The designs for 8xx and 9xx MHz are different to optimally achieve the best efficiency and range possible.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/wisblock-plate-antenna.png"
-  width="60%"
-  caption="8xx and 9xx MHz Marking"
-/>
+> **Image:** 8xx and 9xx MHz Marking
 
 These PCB antennas are connected to WisBlock Core via an IPEX connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/wisblock-plate-antenna-connect.png"
-  width="45%"
-  caption="IPEX Connector of the Antenna "
-/>
+> **Image:** IPEX Connector of the Antenna 
 
 You can check the complete [8xx MHz Antenna Datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/WisBlock%20Base%20Plate%20863-870Mhz%20Antenna%20Datasheet.pdf) and [9xx MHz Antenna Datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/WisBlock%20Base%20Plate%20902-928Mhz%20Antenna%20Datasheet.pdf) and get the more details.
 
@@ -181,8 +155,8 @@ RAK10715 supports LPWAN Cellular technologies like LTE-M and NB-IoT.
 
 | Item               | CAT M1                                       | CAT NB2                                        | CAT NB1                                    |
 | ------------------ | -------------------------------------------- | ---------------------------------------------- | ------------------------------------------ |
-| Data               | Max. 588&nbsp;kbps (DL)/ 1119&nbsp;kbps (UL) | Max. 127&nbsp;kbps (DL) / 158.5&nbsp;kbps (UL) | Max. 32&nbsp;kbps (DL) / 70&nbsp;kbps (DL) |
-| Output Power (Max) | 21&nbsp;dBm                                  | 21&nbsp;dBm                                    | 21&nbsp;dBm                                |
+| Data               | Max. 588 kbps (DL)/ 1119 kbps (UL) | Max. 127 kbps (DL) / 158.5 kbps (UL) | Max. 32 kbps (DL) / 70 kbps (DL) |
+| Output Power (Max) | 21 dBm                                  | 21 dBm                                    | 21 dBm                                |
 | VoLTE              | Supported                                    | Not Supported                                  | Not Supported                              |
 
 ###### Cellular Antenna
@@ -191,8 +165,8 @@ The dipole antenna for LTE-M and NB-IoT is externally connected via an SMA conne
 
 | Parameter             | Detail              |
 | --------------------- | ------------------- |
-| Frequency Range (MHz) | 600 - 6000&nbsp;MHz |
-| Peak Gain (dBi)       | -2.0 - 5.5&nbsp;dBi |
+| Frequency Range (MHz) | 600 - 6000 MHz |
+| Peak Gain (dBi)       | -2.0 - 5.5 dBi |
 | VSWR                  | < 3.5               |
 | Return Loss           | < 5.0               |
 | Polarization Mode     | Linear              |
@@ -201,20 +175,16 @@ The dipole antenna for LTE-M and NB-IoT is externally connected via an SMA conne
 
 ###### GPS Antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wistrio/rak10715/datasheet/gps-antenna.png"
-  width="50%"
-  caption="GPS Antenna"
-/>
+> **Image:** GPS Antenna
 
 | Item                                                           | Specifications        | PET  |
 | -------------------------------------------------------------- | --------------------- | ---- |
 | Range of Receiving Frequency                                   | 1575.42 ± 1.1         | ±2.5 |
-| Center Frequency (MHz) w/ 30&nbsp;mm<sup>2</sup> (2 GND plane) | 1575.42               | ±3.0 |
-| Bandwidth (MHz) (Return Loss ≤ -10&nbsp;dB)                    | ≥10                   | ±0.5 |
+| Center Frequency (MHz) w/ 30 mm<sup>2</sup> (2 GND plane) | 1575.42               | ±3.0 |
+| Bandwidth (MHz) (Return Loss ≤ -10 dB)                    | ≥10                   | ±0.5 |
 | VSWR (in center frequency)                                     | ≤1.5                  | ±0.5 |
-| Gain (Zenith) (dBi Typ.) w/ 70&nbsp;mm<sup>2</sup> GND Plane   | 4.5                   | ±0.5 |
-| Axial Ratio (dB) w/ 70&nbsp;mm<sup>2</sup> GND Plane           | 3.0                   | ±0.2 |
+| Gain (Zenith) (dBi Typ.) w/ 70 mm<sup>2</sup> GND Plane   | 4.5                   | ±0.5 |
+| Axial Ratio (dB) w/ 70 mm<sup>2</sup> GND Plane           | 3.0                   | ±0.2 |
 | Polarization                                                   | Right-Handed Circular |      |
 | Impedance (Ω)                                                  | 50                    |      |
 | Frequency Temperature Coefficient (ppm/ºC)                     | 0±10                  |      |
@@ -251,23 +221,23 @@ The USB connector can be used as a charging port as well as via the M8 circular 
 
 | Parameter        | Value                   |
 | ---------------- | ----------------------- |
-| Charging Voltage | 4.5&nbsp;V ~ 5.5&nbsp;V |
-| Charging Current | 500&nbsp;mA             |
+| Charging Voltage | 4.5 V ~ 5.5 V |
+| Charging Current | 500 mA             |
 
 A suitable Li-ion battery should have the following parameters:
 
 | Parameter         | Value       |
 | ----------------- | ----------- |
-| Standard Voltage  | 3.7&nbsp;V  |
-| Charging Voltage  | 4.2&nbsp;V  |
+| Standard Voltage  | 3.7 V  |
+| Charging Voltage  | 4.2 V  |
 | Capacity          | As required |
-| Discharge Current | 2&nbsp;A    |
+| Discharge Current | 2 A    |
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board, to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -277,10 +247,9 @@ The table below lists the operation and storage temperature requirements:
 
 |        Parameter        |     Min     |   Typical   |     Max     |
 | :---------------------: | :---------: | :---------: | :---------: |
-| Operational Temp. Range | -35°&nbsp;C | +25°&nbsp;C | +75°&nbsp;C |
-|  Extended Temp. Range   | -40°&nbsp;C | +25°&nbsp;C | +80°&nbsp;C |
-|   Storage Temp. Range   | -40°&nbsp;C | +25°&nbsp;C | +80°&nbsp;C |
-
+| Operational Temp. Range | -35° C | +25° C | +75° C |
+|  Extended Temp. Range   | -40° C | +25° C | +80° C |
+|   Storage Temp. Range   | -40° C | +25° C | +80° C |
 
 #### Mechanical Characteristics
 
@@ -292,5 +261,3 @@ The complete details of module dimensions and enclosure can be found on their sp
 - [RAK5860 WisBlock Wireless](https://docs.rakwireless.com/product-categories/wisblock/rak5860/datasheet/#board-dimensions)
 - [Outdoor Unify Enclosure 100x75x38](https://docs.rakwireless.com/product-categories/wisblock/rakbox-uo100x75x38/datasheet/#enclosure-mechanical-dimensions)
 
-
-<RkBottomNav/>

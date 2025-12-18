@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18000 WisBlock PDM Stereo Microphone Module
 
 Thank you for choosing **RAK18000 WisBlock PDM Stereo Microphone Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -48,16 +46,16 @@ The RAK18000 is a digital microphone module that is designed to detect sounds an
 ## Product Features
 
 * **Module specifications**
-    - Voltage Supply: 3.3&nbsp;V
-    - Current Consumption: 5&nbsp;µA to 650&nbsp;µA
+    - Voltage Supply: 3.3 V
+    - Current Consumption: 5 µA to 650 µA
     - Chipset: ST MP34DT06J
-    - 64&nbsp;dB signal-to-noise ratio
-    - –26&nbsp;dBFS ± 1&nbsp;dB sensitivity
+    - 64 dB signal-to-noise ratio
+    - –26 dBFS ± 1 dB sensitivity
     - Stereo microphone 2 x MP34DT06J
     - Low power consumption
 
 * **Size**
-    * 25 x 15&nbsp;mm
+    * 25 x 15 mm
 
 ## Prerequisites
 
@@ -67,5 +65,3 @@ To use a **RAK18000**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-<RkBottomNav/>

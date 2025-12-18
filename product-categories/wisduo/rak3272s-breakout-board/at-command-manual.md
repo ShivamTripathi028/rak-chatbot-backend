@@ -11,8 +11,6 @@ slug: /product-categories/wisduo/rak3272s-breakout-board/at-command-manual/
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3272S Breakout Board AT Command Manual
 
 ## Introduction
@@ -40,4 +38,3 @@ In addition, aside on UART2 pins, AT commands can also be interfaced via UART1_T
 - If the host microcontroller code is based on older firmware, the <a href="https://learn.rakwireless.com/hc/en-us/articles/26687498449559-AT-Command-Migration-Guide-of-RAK3172-to-RUI3-RAKwireless-Unified-Interface-V3/" target="_blank">RAK3172 AT Command Migration Guide</a> provides a detailed explanation of the key differences between the two AT command sets.
 :::
 
-<RkBottomNav/>

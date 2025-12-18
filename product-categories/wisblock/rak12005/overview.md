@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
-
 # RAK12005 WisBlock Rain Sensor Module
 
 Thank you for choosing **RAK12005 WisBlock Rain Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -40,14 +36,14 @@ RAK12005 WisBlock Rain Sensor Module also has a separate sensor PCB, the RAK1203
 ## Product Features
 
 * **Sensor specifications**
-    * 3.3&nbsp;V Power supply (disconnect option to save power)
+    * 3.3 V Power supply (disconnect option to save power)
     * Chipset: Microchip MCP606
     * Digital output
     * Configurable detection threshold via trimmer
-    * Separate sensor PCB RAK12030, size 25 x 35&nbsp;mm
+    * Separate sensor PCB RAK12030, size 25 x 35 mm
 
 * **Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
@@ -57,4 +53,3 @@ To use a **RAK12005**, you need at least a **RAK12030 Rain Sensing Pad** and a *
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

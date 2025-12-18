@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
  
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RAK10700 WisBlock GNSS Tracker for LoRaWAN Quick Start Guide
 
@@ -20,7 +18,6 @@ import RkBottomNav from '@site/src/components/Document/BottomNav'
 ### What Do You Need?
 
 Before going through each and every step in the installation guide of the GNSS Tracker, make sure to prepare the necessary items listed below:
-
 
 #### Hardware Tools
 
@@ -56,21 +53,16 @@ If the sending period is set too small (location cannot be fixed by the GNSS mod
 
 ### Battery Connection
 
-RAK10700 can be powered via the USB cable or Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 1**. The matching connector for the battery wires is an [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
+RAK10700 can be powered via the USB cable or Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 1**. The matching connector for the battery wires is an [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak5005-o/quickstart/battery-connect.png"
-  figureCount="1"
-  caption="Battery Connection" 
-   width="40%"
-/>
+> **Image:** Battery Connection
 
 :::warning 
 
 The RAK10700 does come without a battery. You need to add a rechargeable battery and connect it to the battery connector inside the enclosure.
 
 - Battery can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause fire.
 - Make sure the battery wires match the polarity on the RAK5005-O board used in the RAK10700. Not all batteries have the same wiring.
 
@@ -86,27 +78,17 @@ Once done, follow the listed steps to interface your GNSS Tracker with your comp
 
 1. Connect the GNSS Tracker to the USB port of a general-purpose computer using a standard **Micro - USB Cable**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/interfacing/1.interfacing.png" 
-  figureCount="2"
-  caption="GNSS Tracker Connection" 
-   width="55%"
-/>
+> **Image:** GNSS Tracker Connection
 
 2. Test if your GNSS Tracker can now communicate with the Serial Port Tool. Configure the serial communication tool by selecting the proper port and configuring the link as listed below, then click **Open**.
 
 * **COM**: Choose the COM Port associated with the GNSS Tracker from the previous step. For this tutorial, the COM Port is COM4.
-* Baud Rate: **115200&nbsp;bps**
-* Data Bits: **8&nbsp;bits**
-* Stop Bits: **1&nbsp;bit**
+* Baud Rate: **115200 bps**
+* Data Bits: **8 bits**
+* Stop Bits: **1 bit**
 * Parity: **NONE**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/interfacing/connection-settings.png" 
-  figureCount="3"
-  caption="Connecting to the Serial Port Tool" 
-   width="50%"
-/>
+> **Image:** Connecting to the Serial Port Tool
 
 3. Verify your connection to the GNSS Tracker by sending the AT Command `AT+VER?`. If the connection is successful, the firmware version of your GNSS Tracker should appear the same, as shown in **Figure 4**.
 
@@ -114,12 +96,8 @@ Once done, follow the listed steps to interface your GNSS Tracker with your comp
 AT+VER=?
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/interfacing/at-ver.png" 
-  figureCount="4"
-  caption="AT+Command Sample Serial Communication Test" 
-   width="50%"
-/>
+> **Image:** AT+Command Sample Serial Communication Test
+
  
 ### Connecting to the Helium Network
 
@@ -129,68 +107,34 @@ This section will focus on giving a brief guide on how to connect the GNSS Track
 
 1. Login or create your account on the [Helium console page](https://console.helium.com/).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/1.helium-console.png" 
-  figureCount="5"
-  caption="Helium console" 
-   width="85%"
-/>
+> **Image:** Helium console
 
 2. Once registered and logged in, you will end up at the home page where you can see your function tree on the left and your DC balance at the top, as well as several useful links.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/2.home.png" 
-  figureCount="6"
-  caption="Helium console home screen" 
-   width="100%"
-/>
+> **Image:** Helium console home screen
 
 3. Go to the **Devices** section in the function tree. If this is your first time doing this, there will be no devices registered. Click the **+ Add Device** button to get started.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/3.device-section.png" 
-  figureCount="7"
-  caption="Devices section" 
-   width="100%"
-/>
+> **Image:** Devices section
+
  
 4. A window will pop up with a set of fields containing the device parameters required for its registration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/4.add-device.png" 
-  figureCount="8"
-  caption="Adding a new device" 
-   width="60%"
-/>
+> **Image:** Adding a new device
 
 5. Fill in a name of your choosing. The **Dev EUI**, **App EUI**, and **App Key** will have random values generated for you by default. Press the eye icon to reveal the values. You can manually replace them with values of your own. For this tutorial, use the default values. Press the **Submit** button, and you are done.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/5.registered-device.png" 
-  figureCount="9"
-  caption="Helium devices" 
-   width="100%"
-/>
+> **Image:** Helium devices
 
 6. To see the decoded values in the Helium Console, create a **Flow** that decodes the data.
 
 - First, go to **Functions** in the Helium Console and create a new function. For the name, you can choose anything, the function type needs to be **Decoder**. For the format, choose **Cayenne LPP**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/5a-add-function.png" 
-  figureCount="10"
-  caption="Helium decoder" 
-   width="100%"
-/>
+> **Image:** Helium decoder
 
 - Next, go to **Flows** in the Helium Console and create a new flow. Connect your device to the flow that you just created.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/5b-add-flow.png" 
-  figureCount="11"
-  caption="Helium flow" 
-   width="100%"
-/>
+> **Image:** Helium flow
 
 7. Now, your GNSS Tracker is registered and is awaiting activation. For this to happen, you need to import the Dev EUI, App EUI, and App Key in the GNSS Tracker using the Serial Port Tool.
 
@@ -219,7 +163,6 @@ The different regions are selected by number:
 
 - Regional band and activation mode setting
 
-
 ```
 AT+NJM=1
 ```
@@ -231,7 +174,6 @@ AT+BAND=10
 - Enter the Dev UI
 
 Use the command below by replacing the XXXX with your Device EUI from the Helium console:
-
 
 ```
 AT+DEVEUI=XXXX
@@ -263,31 +205,15 @@ AT+JOIN=1:0:8:30
 
 Once the procedure is initiated and successfully completed, you will have a notification in the serial console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/5c-set-and-join.png" 
-  figureCount="12"
-  caption="GNSS Tracker OTAA Parameters and Successful Join" 
-   width="50%"
-/>
+> **Image:** GNSS Tracker OTAA Parameters and Successful Join
 
 If you take a look at the Helium console, you will also see the join request packets both in the graph and event log. Your node is now a part of the Helium Network.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/6.join.png" 
-  figureCount="13"
-  caption="Helium console live device data" 
-   width="80%"
-/>
-
+> **Image:** Helium console live device data
 
 If your GNSS Tracker can get a location fix, you can see the live data in the Helium Console Debug window.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-helium-network/7a-decoded-live.png" 
-  figureCount="14"
-  caption="Helium console decode live device data" 
-   width="80%"
-/>
+> **Image:** Helium console decode live device data
 
 ### Connecting to The Things Network V3 (TTNv3)
 
@@ -295,19 +221,9 @@ In this section, it will be shown how to connect GNSS Tracker to The Things Stac
 
 First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image001.png" 
-  figureCount="15"
-  caption="The Things Stack Home Page" 
-   width="100%"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image002.png" 
-  figureCount="16"
-  caption="Console Page after a successful login" 
-   width="100%"
-/>
+> **Image:** The Things Stack Home Page
 
+> **Image:** Console Page after a successful login
 
 :::tip NOTE
 - To connect GNSS Tracker to TTNv3, you should already have connected a gateway in range to TTNv3. Or, you have to be sure that you are in the range of a public gateway.
@@ -315,17 +231,11 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 - This tutorial is for the EU868 Frequency band.
 :::
 
-
 #### Adding an Application
 
 1. If you do not have created applications yet, to create an application, choose **Create an application**. If you have created applications before, navigate through **Go to applications** > **+ Add application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image003.png" 
-  figureCount="17"
-  caption="Create an application page" 
-   width="100%"
-/>
+> **Image:** Create an application page
 
 2. Fill in the needed information. After filling in, click **Create application**.
 
@@ -334,12 +244,7 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
    - **Application name** (optional) - This is the name of your application.
    - **Description** (optional) – Description of your application. Optional application description; can also be used to save notes about the application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image004.png" 
-  figureCount="18"
-  caption="Create an application page" 
-   width="100%"
-/>
+> **Image:** Create an application page
 
 #### OTAA Mode
 
@@ -347,32 +252,17 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
 1. From the Application Overview page, click on **+ Add end device**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image005.png" 
-  figureCount="19"
-  caption="Adding a device in OTAA mode" 
-   width="100%"
-/>
+> **Image:** Adding a device in OTAA mode
 
 2. Below the **Register end device** heading, you can find two options for registering a device. Choose **Manually**.
     - For Activation mode, choose **Over the air activation (OTAA)**.
     - For the LoRaWAN version, choose **MAC V1.0.2** (GNSS Tracker is LoRaWAN 1.0.2 fully compliant).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image006.png" 
-  figureCount="20"
-  caption="Registering the device in OTAA mode" 
-   width="100%"
-/>
+> **Image:** Registering the device in OTAA mode
 
 3. To get to the next step of the registration, click **Start**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image007.png" 
-  figureCount="21"
-  caption="Basic settings for OTAA mode" 
-   width="100%"
-/>
+> **Image:** Basic settings for OTAA mode
 
 4. Fill in the basic settings for the device:
 
@@ -383,13 +273,8 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
     AT+STATUS=?
     ```
    
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image007a.png" 
-  figureCount="22"
-  caption="AppEUI of the device" 
-   width="100%"
-/>
 
+> **Image:** AppEUI of the device
 
    - **DevEUI** - The unique identifier for this end device. It can be found on a sticker on the back of the device.
    - **End device name** (optional) - A unique, human-readable identifier for your device. You make it up, so be creative. Device IDs cannot be used by multiple devices within the same application.
@@ -397,27 +282,17 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
 5. Click **Network layer setting**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image008.png" 
-  figureCount="23"
-  caption="Network layer setting for OTAA mode" 
-   width="100%"
-/>
+> **Image:** Network layer setting for OTAA mode
 
 6. Here, you must configure the Network layer settings for the device:
 
-- **Frequency plan -** The frequency plan used by the end device. Note that, for this tutorial, the frequency plan used is Europe 863-870&nbsp;MHz (SF9 for RX2 – recommended).
+- **Frequency plan -** The frequency plan used by the end device. Note that, for this tutorial, the frequency plan used is Europe 863-870 MHz (SF9 for RX2 – recommended).
 - **Regional Parameters version** - The Regional Parameters specify frequency, dwell time, and other communication settings for different geographical areas. The Regional Parameters version is the version of the LoRa Alliance specification which your device supports. This should be provided by the device manufacturer in a datasheet. For this example, **PHY V1.0.2 REV A** is chosen.
 - **LoRaWAN class capabilities** – Here you can select if your device supports Class B, Class C, or both.
 
 7. In the **Advanced settings**, you can configure additional settings for your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image009.png" 
-  figureCount="24"
-  caption="Advanced network layer settings of the device" 
-   width="100%"
-/>
+> **Image:** Advanced network layer settings of the device
 
 :::tip NOTE
 
@@ -427,30 +302,15 @@ For this example, these settings will be left as default.
 
 8. Click **Join settings**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image010.png" 
-  figureCount="25"
-  caption="Join settings for OTAA mode" 
-   width="100%"
-/>
+> **Image:** Join settings for OTAA mode
 
 9. Fill in the **Application key** (AppKey) to secure communication between the end device and the application. The AppKey can be generated automatically by clicking the **Generate** button next to the **AppKey** field.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image011.png" 
-  figureCount="26"
-  caption="Generate the AppKey" 
-   width="100%"
-/>
+> **Image:** Generate the AppKey
 
 10. In the **Advanced settings**, you can configure more options about your device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image012.png" 
-  figureCount="27"
-  caption="Advanced join settings for OTAA mode" 
-   width="100%"
-/>
+> **Image:** Advanced join settings for OTAA mode
 
 :::tip NOTE
 
@@ -460,20 +320,13 @@ For this example, these settings will be left as default.
 
 11. Finally, to finish registering your device, click **Add end device**.
 
-
 ##### Configuring the Device in OTAA Mode
 
 1. For configuring the node, you will need the following three parameters: **Device EUI, Application EUI**, and **Application Key**. You can see them all on the **Device Overview** page. But since the two EUI's come with the device, you only need the Application Key from there.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image014.png" 
-  figureCount="28"
-  caption="OTAA device parameters" 
-   width="100%"
-/>
+> **Image:** OTAA device parameters
 
 2. Using the Serial Port Tool, set the join mode, device class, and your LoRaWAN region to your correct frequency band, with the following set of AT commands:
-
 
 - For the join mode (OTAA):
 
@@ -497,12 +350,7 @@ AT+BAND=5
 Remember to replace the **frequency band** with the one for your LoRaWAN region. Check first your [frequency plan](https://www.thethingsnetwork.org/docs/lorawan/frequencies-by-country.html).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image015.png" 
-  figureCount="29"
-  caption="Setting up the GNSS Tracker operation mode" 
-   width="50%"
-/>
+> **Image:** Setting up the GNSS Tracker operation mode
 
 :::tip NOTE
 The following tutorial is based on using the EU868 frequency band.
@@ -514,45 +362,25 @@ The following tutorial is based on using the EU868 frequency band.
 AT+APPKEY=XXXX
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/19.device-eui.png" 
-  figureCount="30"
-  caption="Setting up the GNSS Tracker OTAA parameters" 
-   width="50%"
-/>
+> **Image:** Setting up the GNSS Tracker OTAA parameters
 
 4. Finally, execute the join command:
 
 ```
 AT+JOIN=1:0:8:30
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/22.join-command.png" 
-  figureCount="31"
-  caption="Join command" 
-   width="50%"
-/>
 
+> **Image:** Join command
 
 If you get a response in the **Live data** feed in The Things Stack, it means your GNSS Tracker is successfully connected.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-ttn/image018.png" 
-  figureCount="32"
-  caption="Sending data to The Things Stack from GNSS Tracker" 
-   width="100%"
-/>
+> **Image:** Sending data to The Things Stack from GNSS Tracker
 
 ### Connecting with ChirpStack
 
 In this section, a practical exercise will be performed to show how to connect the GNSS Tracker to the ChirpStack platform.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/34.chirpstack-platform.png" 
-  figureCount="33"
-  caption="GNSS Tracker in the context of the ChirpStack platform" 
-   width="60%"
-/>
+> **Image:** GNSS Tracker in the context of the ChirpStack platform
 
 The ChirpStack, previously known as the LoRaServer project, provides open-source components for building LoRaWAN networks. Like the case of TTN, the GNSS Tracker is located in the periphery and transmits the data to the backend servers through a LoRa gateway. Learn more about [ChirpStack](https://www.chirpstack.io/).
 
@@ -572,7 +400,7 @@ In this section, you need the following requirements:
 
 Before you start, you must choose which mode you are going to use, whether in OTAA or ABP mode, to register the device to the network server.
 
-<b>Sign up and Log in</b>
+**Sign up and Log in**
 
 Sign in to Chirpstack with your username and password.
 
@@ -580,21 +408,11 @@ Sign in to Chirpstack with your username and password.
 
 1. Go to the Application section, as shown in **Figure 34**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/35.application-section.png" 
-  figureCount="34"
-  caption="Application Section of ChirpStack LoRaServer" 
-   width="100%"
-/>
+> **Image:** Application Section of ChirpStack LoRaServer
 
 2. By default, you should create a new Application, although you can reuse the existing ones. For this setup, create a new Application by clicking on the “**CREATE**” button, and filling the required parameters, as shown in **Figure 35** and **Figure 36**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/36.new-application.png" 
-  figureCount="35"
-  caption="Creating a New Application" 
-   width="100%"
-/>
+> **Image:** Creating a New Application
 
 * For this setup, create an Application named **RAK-PH-Testapp**. You can choose any name that fits better for you.
 
@@ -603,12 +421,7 @@ ChirpStack LoraServer supports multiple system configurations, with only one by 
 * **Service profile**: field is to select the system profile.
 * **Payload codec**: is the parsing method for selecting load data. Choose Cayenne LPP for the GNSS Tracker, because this format is used for the payload.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37.filling-parameters.png" 
-  figureCount="36"
-  caption="Filling Parameters of an Application" 
-   width="100%"
-/>
+> **Image:** Filling Parameters of an Application
 
 #### Create Device Profiles
 
@@ -618,12 +431,7 @@ Before you can add devices to the newly created application, you need to define 
 
 1. Go to **Device-profiles**, then click the **CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-create.png" 
-  figureCount="37"
-  caption="Filling Parameters of an Application" 
-   width="100%"
-/>
+> **Image:** Filling Parameters of an Application
 
 2. You will create two profiles. The only difference is the Join mode (OTAA or ABP).
 
@@ -638,41 +446,21 @@ Parameters for the Device Profile:
 | Max EIRP                             | Leave it a 0                                                           |
 | Uplink interval (seconds)            | Set to a value matching with the sending frequency of the GNSS Tracker |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-otaa-1.png" 
-  figureCount="38"
-  caption="Create Device Profile" 
-   width="100%"
-/>
+> **Image:** Create Device Profile
 
 3. Switch to **Join (OTAA/ABP)** tab. The only thing here is to check the **Device supports OTAA** check box.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-otaa-2.png" 
-  figureCount="39"
-  caption="Create Device Profile - Join Settings" 
-   width="100%"
-/>
+> **Image:** Create Device Profile - Join Settings
 
 4. Switch to the **CODEC** tab. Select Cayenne LPP as payload decoder, then click **CREATE DEVICE-PROFILE**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-codec.png" 
-  figureCount="40"
-  caption="Create Device Profile - Select Payload Decoder" 
-   width="100%"
-/>
+> **Image:** Create Device Profile - Select Payload Decoder
 
 ##### Create Profile for ABP Join Mode
 
 1. Go to **Device-profiles**, then click the **CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-create.png" 
-  figureCount="41"
-  caption="Filling Parameters of an Application" 
-   width="100%"
-/>
+> **Image:** Filling Parameters of an Application
 
 2. You will create two profiles. The only difference is the Join mode (OTAA or ABP).
 
@@ -687,62 +475,29 @@ Parameters for the Device Profile:
 | Max EIRP                             | Leave it a 0                                                           |
 | Uplink interval (seconds)            | Set to a value matching with the sending frequency of the GNSS Tracker |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-otaa-1.png" 
-  figureCount="42"
-  caption="Create Device Profile" 
-   width="100%"
-/>
+> **Image:** Create Device Profile
 
 3. Switch to **Join (OTAA/ABP)** tab. Make sure **Device supports OTAA** is not checked.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-abp-2.png" 
-  figureCount="43"
-  caption="Create Device Profile - Join Settings" 
-   width="100%"
-/>
+> **Image:** Create Device Profile - Join Settings
 
 4. Switch to the **CODEC** tab. Select Cayenne LPP as payload decoder, then click **CREATE DEVICE-PROFILE**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/37-a.device-profile-codec.png" 
-  figureCount="44"
-  caption="Create Device Profile - Select Payload Decoder" 
-   width="100%"
-/>
+> **Image:** Create Device Profile - Select Payload Decoder
 
 #### Register a New Device
 
 1. Choose the **Application** created in the previous step, then select the **DEVICES** tab, as shown in **Figure 45** and **Figure 46**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/38.application-available.png" 
-  figureCount="45"
-  caption="List of Applications Created" 
-   width="100%"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/39.application-page.png" 
-  figureCount="46"
-  caption="Device Tab of an Application" 
-   width="100%"
-/>
+> **Image:** List of Applications Created
+
+> **Image:** Device Tab of an Application
 
 2. Once inside of the DEVICE tab, create a new device (LoRa node) by clicking on the “**+ CREATE**” button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/40.adding-node.png" 
-  figureCount="47"
-  caption="Add a New Device at Device Tab" 
-   width="100%"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/connecting-to-chirpstack/41.new-device-registration.png" 
-  figureCount="48"
-  caption="New Device Registration Form" 
-   width="100%"
-/>
+> **Image:** Add a New Device at Device Tab
+
+> **Image:** New Device Registration Form
 
 3. Once the node is created, fill in the necessary data. You can generate a Device EUI automatically by clicking the following icon, or you can write a correct Device EUI in the edit box.
 
@@ -755,27 +510,13 @@ Parameters for the Device Profile:
 
 4. Get the DevEUI and AppKey from the GNSS Tracker using the command `AT+STATUS=?` using the Serial Port Tool
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/45a-get-from-device.png" 
-  figureCount="49"
-  caption="Get DevEUI and AppKey from the GNSS Tracker" 
-   width="50%"
-/>
+> **Image:** Get DevEUI and AppKey from the GNSS Tracker
 
 5. Enter the values in Chirpstack.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/46.device-eui.png" 
-  figureCount="50"
-  caption="Enter Device EUI" 
-   width="100%"
-/>
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/46b.application-key.png" 
-  figureCount="51"
-  caption="Enter Application Key" 
-   width="100%"
-/>
+> **Image:** Enter Device EUI
+
+> **Image:** Enter Application Key
 
 #### LoRaWAN Join Mode
 
@@ -793,13 +534,11 @@ Standard OTAA mode requires the **Device EUI**, **Application Key**, and the **A
 
 :::
 
-
 ###### Configure the OTAA Mode on the GNSS Tracker
 
 The GNSS Tracker supports a series of AT commands to configure its internal parameters and control the functionalities of the module.
 
 To set up the GNSS Tracker to join ChirpStack using OTAA, start by connecting the GNSS Tracker to the Computer (see **Figure 2**). Open the RAK Serial Port Tool and wait for the communication to start. It is recommended to test the serial communication by sending either of these two AT commands:
-
 
 ```
 AT+STATUS=?
@@ -834,7 +573,6 @@ AT+CLASS=A
 
 * Refer to the [GNSS Tracker Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak10700/datasheet/#rf-characteristics) for the list of supported frequencies.
 
-
 ```
 AT+BAND=10
 ```
@@ -850,13 +588,8 @@ AT+DEVEUI=000d75e6564dc103
 ```
 AT+APPKEY=56D622507C0F5017E4E87F7EDE7839D5
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/47.settings-mode.png" 
-  figureCount="52"
-  caption="Setting LoRa Application Key Parameter" 
-   width="40%"
-/>
 
+> **Image:** Setting LoRa Application Key Parameter
 
 :::tip NOTE
 After configuring all the parameters, you need to reset the GNSS Tracker to save the parameters.
@@ -870,21 +603,11 @@ AT+JOIN=1:0:8:30
 
 After 5 or 6 seconds, if the request is successfully received by a LoRa gateway, then you should see the messages shown in **Figure 53**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/53.otaa-join-chirpstack.png" 
-  figureCount="53"
-  caption="Chirpstack OTAA Join the Network via Serial Port Tool" 
-   width="40%"
-/>
+> **Image:** Chirpstack OTAA Join the Network via Serial Port Tool
 
 8. You can then see the **JoinRequest** and **JoinAccept** on the ChirpStack page.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/54.chirpstack-console.png" 
-  figureCount="54"
-  caption="Checking LoRaWAN Joint Request in Chirpstack OTAA Console" 
-   width="40%"
-/>
+> **Image:** Checking LoRaWAN Joint Request in Chirpstack OTAA Console
 
 9. On the ChirpStack platform, you should also see the messages in the LORAWAN FRAMES tab, as shown in **Figure 54**.
 
@@ -893,23 +616,11 @@ After 5 or 6 seconds, if the request is successfully received by a LoRa gateway,
 By convention, messages sent from nodes to gateways are considered as **Uplinks**, while messages sent by gateways to nodes are considered as **Downlinks**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/55.message-received.png" 
-  figureCount="55"
-  caption="Chirpstack Data Received Preview" 
-   width="40%"
-/>
-
+> **Image:** Chirpstack Data Received Preview
 
 As the payload decoder is set as Cayenne LPP in the device profile, the data is decoded and you can see the values when you open the received frame in the Chirpstack Device Data tab:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-otaa-mode/56.message-decoded.png" 
-  figureCount="56"
-  caption="Chirpstack Data Received Decoded Preview" 
-   width="100%"
-/>
-
+> **Image:** Chirpstack Data Received Decoded Preview
 
 ##### ABP Mode
 
@@ -923,20 +634,11 @@ Check **Disable counting frame verification**. During the test, when the module 
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-abp-mode/55.configuring-device-abp.png" 
-  figureCount="57"
-  caption="ChirpStack Console, Configuring a Device" 
-   width="100%"
-/>
+> **Image:** ChirpStack Console, Configuring a Device
 
 Next, get the Device Address, Application Session Key, and Network Session Key from the device using the Serial Port Tool.
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-abp-mode/55a-get-device.png" 
-  figureCount="58"
-  caption="ChirpStack Console, Configuring a Device" 
-   width="50%"
-/>
+
+> **Image:** ChirpStack Console, Configuring a Device
 
 In Chirpstack, after selecting the ABP mode, the following parameters appear in the Activation tab:
 
@@ -944,15 +646,9 @@ In Chirpstack, after selecting the ABP mode, the following parameters appear in 
 * Network Session Key
 * Application Session Key
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-abp-mode/56.abp-activation-parameters.png" 
-  figureCount="59"
-  caption="Chirpstack ABP Activation Parameters Needed" 
-   width="100%"
-/>
+> **Image:** Chirpstack ABP Activation Parameters Needed
 
 * Set the parameters with the values received from the device.
-
 
 ###### Configure the ABP Mode on the GNSS Tracker
 
@@ -1012,12 +708,8 @@ AT+NWKSKEY=C280CB8D1DF688BC18601A97025C5880
 ```
 AT+APPSKEY=4D42EC5CAF97F03D833CDAF5003F69E1
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-abp-mode/62.abp-session.png" 
-  figureCount="60"
-  caption="Setting LoRa Network Session Parameter" 
-   width="50%"
-/>
+
+> **Image:** Setting LoRa Network Session Parameter
 
 :::tip NOTE
 
@@ -1039,21 +731,11 @@ By using the ABP mode in the LoRaWAN protocol, it doesn’t require to join a ne
 
 8. Once the GNSS Tracker joined into a LoRaWAN network, it will start to send periodically the data collected from the GPS and other sensors. Then go to the ChirpStack platform to confirm that the messages are properly received, as shown in **Figure 61**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-abp-mode/55.message-received.png" 
-  figureCount="61"
-  caption="Data Collected in ChirpStack" 
-   width="100%"
-/>
+> **Image:** Data Collected in ChirpStack
 
 9. As the payload decoder is set as Cayenne LPP in the device profile, the data is decoded and you can see the values when you open the received frame in the Chirpstack Device Data tab:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/chirpstack-abp-mode/56.message-decoded.png" 
-  figureCount="62"
-  caption="Chirpstack Data Received Decoded Preview" 
-   width="100%"
-/>
+> **Image:** Chirpstack Data Received Decoded Preview
 
 ### Using LoRa P2P
 
@@ -1064,9 +746,9 @@ In this example we setup both devices to
 
 | Parameter | Value             |
 | --------- | ----------------- |
-| Frequency | 916100000&nbsp;Hz |
+| Frequency | 916100000 Hz |
 | SF        | 7                 |
-| BW        | 125&nbsp;kHz      |
+| BW        | 125 kHz      |
 | CR        | 4/5               |
 | PL        | 8                 |
 
@@ -1075,33 +757,18 @@ In this example we setup both devices to
 ```
 AT+P2P=916100000:7:125:0:8:22
 ```
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/lora-p2p/1-settings.png" 
-  figureCount="63"
-  caption="LoRa P2P Setup" 
-   width="50%"
-/>
+
+> **Image:** LoRa P2P Setup
 
 2. If the receiver is set up with the same parameters, it will receive the packets from the GNSS Tracker.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/lora-p2p/2-received.png" 
-  figureCount="64"
-  caption="LoRa P2P Data Received" 
-   width="50%"
-/>
+> **Image:** LoRa P2P Data Received
 
 3. The data is decoded in Cayenne LPP format and will require a decoder in your receiver module to get the values.
 
 The next paragraph is explaining the payload format. If your receiver is using firmware based on Arduino, you can use a Cayenne LPP Decoder library like the [CayenneLPPdec](https://github.com/gmag11/CayenneLPPdec) to decode the payload.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/lora-p2p/3-receiver-decoded.png" 
-  figureCount="65"
-  caption="LoRa P2P Received Decoded Preview" 
-   width="50%"
-/>
-
+> **Image:** LoRa P2P Received Decoded Preview
 
 ### Decoding the Payload
 
@@ -1127,7 +794,7 @@ Each data type can use 1 or more bytes to send the data according to the followi
 | Analog Output      | 3203 | 3   | 3   | 2         | 0.01 Signed                                                                                     |
 | Illuminance Sensor | 3301 | 101 | 65  | 2         | 1 Lux Unsigned MSB                                                                              |
 | Presence Sensor    | 3302 | 102 | 66  | 1         | 1                                                                                               |
-| Temperature Sensor | 3303 | 103 | 67  | 2         | 0.1&nbsp;°C Signed MSB                                                                          |
+| Temperature Sensor | 3303 | 103 | 67  | 2         | 0.1 °C Signed MSB                                                                          |
 | Humidity Sensor    | 3304 | 104 | 68  | 1         | 0.5 % Unsigned                                                                                  |
 | Accelerometer      | 3313 | 113 | 71  | 6         | 0.001 G Signed MSB per axis                                                                     |
 | Barometer          | 3315 | 115 | 73  | 2         | 0.1 hPa Unsigned MSB                                                                            |
@@ -1177,11 +844,9 @@ This application uses the RAK1904 acceleration sensor only for the detection of 
 
 #### Upgrading the Firmware / Custom Firmware
 
-
 ##### Upgrading the Firmware
 
 Before you start working with the GNSS Tracker, it is recommended to keep the GNSS Tracker updated to the latest version of the firmware. Download the latest [GNSS Tracker firmware](https://docs.rakwireless.com/product-categories/wisblock/rak10700/datasheet/#software).
-
 
 ##### Custom Firmware
 
@@ -1207,9 +872,9 @@ AT+NWM=0
 
 | Parameter | Value             |
 | --------- | ----------------- |
-| Frequency | 916100000&nbsp;Hz |
+| Frequency | 916100000 Hz |
 | SF        | 7                 |
-| BW        | 125&nbsp;kHz      |
+| BW        | 125 kHz      |
 | CR        | 4/5               |
 | PL        | 8                 |
 
@@ -1225,12 +890,7 @@ AT+PRECV=65534
 
 ##### Log Output on USB
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak10700/quickstart/lora-p2p/3-receiver-decoded.png" 
-  figureCount="66"
-  caption="LoRa P2P Received Decoded Preview" 
-   width="50%"
-/>
+> **Image:** LoRa P2P Received Decoded Preview
 
 ##### Source Code:
 
@@ -1384,4 +1044,3 @@ void lora_data_handler(void)
 }
 ```
 
-<RkBottomNav/>

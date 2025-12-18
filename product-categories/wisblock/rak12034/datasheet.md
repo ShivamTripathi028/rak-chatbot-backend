@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12034 WisBlock 9-Axis Accelerometer Module Datasheet
 
 ## Overview
@@ -40,27 +37,22 @@ Due to its small form factor and low-power consumption, it is ideal for smart we
 ### Features
 
 - Based on Bosch BMX160
-- Very low power consumption: typ. 1585&nbsp;μA in high performance mode
-- Selectable acceleration range: ±2&nbsp;g to ±16&nbsp;g
-- Gyroscope range: 125&nbsp;°/s to 2000&nbsp;°/s
-- Magnetic field range x/y ±1300&nbsp;μT, z ±2500&nbsp;μT
-- 3.3&nbsp;V Power supply
-- Operating temperature: -40&nbsp;°C ~ 105&nbsp;°C
+- Very low power consumption: typ. 1585 μA in high performance mode
+- Selectable acceleration range: ±2 g to ±16 g
+- Gyroscope range: 125 °/s to 2000 °/s
+- Magnetic field range x/y ±1300 μT, z ±2500 μT
+- 3.3 V Power supply
+- Operating temperature: -40 °C ~ 105 °C
 
 ## Specifications
 
 ### Overview
 
-
 #### Mounting
 
 The RAK12034 9-Axis Accelerometer Module can be mounted on the sensor slot of any WisBlock Base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12034/datasheet/mounting.png"
-  width="50%"
-  caption="RAK12034 WisBlock 9-Axis Accelerometer Module mounting"
-/>
+> **Image:** RAK12034 WisBlock 9-Axis Accelerometer Module mounting
 
 ### Hardware
 
@@ -72,11 +64,7 @@ The RAK12034 comprises a standard WisBlock Sensor connector. The WisBlock Sensor
 
 The pin order of the connector and the pinout definition are shown in **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12034/datasheet/rak12034-pinout.svg"
-  width="50%"
-  caption="RAK12034 WisBlock 9-Axis Accelerometer Module pinout"
-/>
+> **Image:** RAK12034 WisBlock 9-Axis Accelerometer Module pinout
 
 :::tip NOTE
 **I2C** related pins: **VCC** and **GND** are connected to WisBlock Sensor connector.
@@ -94,38 +82,20 @@ The pin order of the connector and the pinout definition are shown in **Figure 2
 
 ##### Board Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12034/datasheet/dimension.png"
-  width="60%"
-  caption="RAK12034 WisBlock 9-Axis Accelerometer Module mechanical drawing"
-/>
+> **Image:** RAK12034 WisBlock 9-Axis Accelerometer Module mechanical drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12034/datasheet/pcb-footprint.png"
-  width="100%"
-  caption="WisConnector PCB footprint and recommendations"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
 By default, the **AP_AD0** pin is connected to VCC. And the default I2C address of the 9-Axis accelerometer is 1101001.
 **R2** and **R3** are not needed in RAK12034 due to pull-up resistors existing on the WisBlock Base board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12034/datasheet/schematic.jpg"
-  width="100%"
-  caption="RAK12034 WisBlock 9-Axis Accelerometer Module schematic diagram"
-/>
+> **Image:** RAK12034 WisBlock 9-Axis Accelerometer Module schematic diagram
 
 #### Coordinate System
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12034/datasheet/coordinate.jpg"
-  width="40%"
-  caption="RAK12034 WisBlock 9-Axis Accelerometer Module coordinate system"
-/>
+> **Image:** RAK12034 WisBlock 9-Axis Accelerometer Module coordinate system
 
-
-<RkBottomNav/>

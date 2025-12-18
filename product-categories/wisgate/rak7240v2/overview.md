@@ -12,21 +12,17 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK7240V2/RAK7240CV2 WisGate Edge Prime
 
 Thank you for choosing **RAK7240V2/RAK7240CV2 WisGate Edge Prime** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary information for your product.
 
 **Product documentation**
 
-
 * [Quick Start Guide](/product-categories/wisgate/rak7240v2/quickstart/)
 * [LoRaWAN Network Server Guide](/product-categories/wisgate/rak7240v2/lorawan-network-server-guide/)
 * [Datasheet](/product-categories/wisgate/rak7240v2/datasheet/)
 
-For more related tutorials, you can refer to <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7240v2/quickstart/#tutorials" target="_blank">Quick Start Guide &gt;Tutorials</a>.
+For more related tutorials, you can refer to <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7240v2/quickstart/#tutorials" target="_blank">Quick Start Guide >Tutorials</a>.
 
 **Resources**
 
@@ -61,7 +57,7 @@ Its wide range of customization options allows for flexibility when deploying a 
 - GPS
 - Power variants:
   + PoE-only version
-  + DC-input version (supports 9–24&nbsp;V<sub>DC</sub>, RAK Battery Plus)
+  + DC-input version (supports 9–24 V<sub>DC</sub>, RAK Battery Plus)
 - External antennas for WiFi, GPS, LTE (optional, available with RAK7240CV2), and LoRa
 
 ### Software

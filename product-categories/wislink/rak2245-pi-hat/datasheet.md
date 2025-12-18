@@ -13,9 +13,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2245 Pi HAT WisLink LPWAN Concentrator Datasheet
 
 ## Overview
@@ -35,8 +32,8 @@ The RAK2245 Pi HAT is a complete and cost efficient gateway solution that can he
 - Integrated Ublox MAX-7Q GPS Module and heat sink
 - SX1301 base band processor, emulates 49 x LoRa demodulators, 10 parallel demodulation paths, supports 8 uplink / 1 downlink channels
 - Two (2) units of SX125x Tx/Rx front-ends for high/ low frequency
-- Supports 5&nbsp;V power supply, integrated level conversion circuit
-- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
+- Supports 5 V power supply, integrated level conversion circuit
+- TX power up to 27 dBm, RX sensitivity down to -139 dBm @ SF12, BW 125 kHz
 - Supports latest LoRaWAN 1.0.2 protocol
 - Supports global license-free frequency band (EU433, CN470, EU868, US915, AS923, AU915, KR920 and IN865)
 - Supports SPI, UART, I2C interface
@@ -49,21 +46,13 @@ The overview shows the top view of the RAK2245 Pi HAT board and its correspondin
 
 #### Board Overview
 
-**RAK2245 Pi HAT Module** with Raspberry Pi connector is shown above, it has outer dimensions of **56 x 65 x 22&nbsp;mm** (±2&nbsp;mm).
+**RAK2245 Pi HAT Module** with Raspberry Pi connector is shown above, it has outer dimensions of **56 x 65 x 22 mm** (±2 mm).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink/rak2245-pi-hat/datasheet/rak2245-dimensions.png"
-  width="80%"
-  caption="RAK2245 Pi HAT WisLink LPWAN Concentrator Dimensions"
-/>
+> **Image:** RAK2245 Pi HAT WisLink LPWAN Concentrator Dimensions
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink/rak2245-pi-hat/datasheet/rak2245-pihat-block-diagram.png"
-  width="100%"
-  caption="RAK2245 Pi Hat Block Diagram"
-/>
+> **Image:** RAK2245 Pi Hat Block Diagram
 
 ### Hardware
 
@@ -78,7 +67,7 @@ best possible use of the system.
 
 ##### Power Supply
 
-RAK2245 Pi HAT module is powered through **5&nbsp;V or 3.3&nbsp;V power pins**.
+RAK2245 Pi HAT module is powered through **5 V or 3.3 V power pins**.
 
 ##### SPI Interface
 
@@ -104,24 +93,20 @@ There are **three (3) Green LED** that indicate the status of PWR, TX, RX.
 
 ##### Antenna RF Interface
 
-The modules have two RF interfaces for LoRa and GPS antennas over the standard UFL connectors (Hirose U. FL-R-SMT). It has a characteristic impedance of 50&nbsp;Ω and supports both Tx and Rx via RF ports, providing the antenna interface.
+The modules have two RF interfaces for LoRa and GPS antennas over the standard UFL connectors (Hirose U. FL-R-SMT). It has a characteristic impedance of 50 Ω and supports both Tx and Rx via RF ports, providing the antenna interface.
 
 #### Pin Definition
 
 The pin connector of RAK2245 Pi HAT is located at the bottom side. Refer to the diagram and table below for the description and numbering of each pins.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink/rak2245-pi-hat/datasheet/rak2245-pihat-pin-definition.jpg"
-  width="80%"
-  caption="Pinout Diagram"
-/>
+> **Image:** Pinout Diagram
 
 | Pin |    Name     |                                                  Description                                                  |
 | :-: | :---------: | :-----------------------------------------------------------------------------------------------------------: |
-|  1  |    3.3V     |                                              3.3&nbsp;V Supply Voltage                                        |
-|  2  |     5V      |                                               5&nbsp;V Supply Voltage                                         |
+|  1  |    3.3V     |                                              3.3 V Supply Voltage                                        |
+|  2  |     5V      |                                               5 V Supply Voltage                                         |
 |  3  |     SDA     |                                    I²C SDA (Connect to GPS Module I²C_SDA)                                    |
-|  4  |     5V      |                                               5&nbsp;V Supply Voltage                                         |
+|  4  |     5V      |                                               5 V Supply Voltage                                         |
 |  5  |     SCL     |                                    I²C SCL (Connect to GPS Module I²C_SCL)                                    |
 |  6  |     GND     |                                                    Ground                                                     |
 |  7  |     NC      |                                                 No Connection                                                 |
@@ -134,7 +119,7 @@ The pin connector of RAK2245 Pi HAT is located at the bottom side. Refer to the 
 | 14  |     GND     |                                                    Ground                                                     |
 | 15  |     NC      |                                                 No Connection                                                 |
 | 16  |     NC      |                                                 No Connection                                                 |
-| 17  |    3.3V     |                                              3.3&nbsp;V Supply Voltage                                        |
+| 17  |    3.3V     |                                              3.3 V Supply Voltage                                        |
 | 18  |     NC      |                                                 No Connection                                                 |
 | 19  |  SPI_MOSI   |   It should be connected to RASPBERRY PI’s SPI_MOSI. This pin is connected to SX1301’s SPI_MOSI internally.   |
 | 20  |     GND     |                                                    Ground                                                     |
@@ -199,15 +184,15 @@ The RAK2245 Pi HAT has an excellent transmitter performance. It is highly recomm
 |     3      |      3      |     13      |    0     |             26              |
 |     3      |      3      |     14      |    0     |             27              |
 
-- At **T=25°&nbsp;C**, **Vdd = 5&nbsp;V** (Typical) if nothing else stated
+- At **T=25° C**, **Vdd = 5 V** (Typical) if nothing else stated
 
 |               Parameter               |        Condition        |   Min         | Typ. |   Max         |
 | :-----------------------------------: | :---------------------: | :-----------: | :--: | :-----------: |
-|            Frequency Range            |                         | 863&nbsp;MHz  |      | 870&nbsp;MHz  |
+|            Frequency Range            |                         | 863 MHz  |      | 870 MHz  |
 |         Modulation Techniques         |        FSK/LoRa         |               |      |               |
-| TX Frequency Variation vs Temperature | Power Level Setting: 20 |  -3&nbsp;kHz  |      |  +3&nbsp;kHz  |
-|   TX Power Variation vs Temperature   | Power Level Setting: 20 |  -5&nbsp;dBm  |      |  +5&nbsp;dbm  |
-|          TX Power Variation           |                         | -1.5&nbsp;dBm |      | +1.5&nbsp;dBm |
+| TX Frequency Variation vs Temperature | Power Level Setting: 20 |  -3 kHz  |      |  +3 kHz  |
+|   TX Power Variation vs Temperature   | Power Level Setting: 20 |  -5 dBm  |      |  +5 dbm  |
+|          TX Power Variation           |                         | -1.5 dBm |      | +1.5 dBm |
 
 ##### Receiver RF
 
@@ -232,12 +217,12 @@ The values and range given below are all in accordance with the Absolute Maximum
 
 | Parameter             | Description       | Min.        | Typ.       | Max          |
 | --------------------- | ----------------- | ----------- | ---------- | ------------ |
-| Supply Voltage (VDD)  | Input DC Voltage  | -0.3&nbsp;V | 5.0&nbsp;V | 5.5&nbsp;V   |
-| Operating Temperature | Temperature Range | -40°&nbsp;C | -          | +85°&nbsp;C  |
-| RF Input Power        |                   | -           | -          | -15&nbsp;dBm |
+| Supply Voltage (VDD)  | Input DC Voltage  | -0.3 V | 5.0 V | 5.5 V   |
+| Operating Temperature | Temperature Range | -40° C | -          | +85° C  |
+| RF Input Power        |                   | -           | -          | -15 dBm |
 
 :::tip NOTE
-With RF output power level above +15&nbsp;dBm a minimum distance to a transmitter should be 1&nbsp;m for avoiding too large input level.
+With RF output power level above +15 dBm a minimum distance to a transmitter should be 1 m for avoiding too large input level.
 :::
 
 ##### Maximum ESD
@@ -246,10 +231,10 @@ The table below lists the maximum ESD.
 
 | Parameter                                | Min | Typical | Max       | Remarks                                      |
 | ---------------------------------------- | --- | ------- | --------- | -------------------------------------------- |
-| ESD sensitivity for all pins except ANT1 |     |         | 1&nbsp;kV | Human Body Model according to JESD22-A114    |
-| ESD sensitivity for ANT1                 |     |         | 1&nbsp;kV | Human Body Model according to JESD22-A114    |
-| ESD immunity for ANT1                    |     |         | 4&nbsp;kV | Contact Discharge according to IEC 61000-4-2 |
-|                                          |     |         | 8&nbsp;kV | Air Discharge according to IEC 61000-4-2     |
+| ESD sensitivity for all pins except ANT1 |     |         | 1 kV | Human Body Model according to JESD22-A114    |
+| ESD sensitivity for ANT1                 |     |         | 1 kV | Human Body Model according to JESD22-A114    |
+| ESD immunity for ANT1                    |     |         | 4 kV | Contact Discharge according to IEC 61000-4-2 |
+|                                          |     |         | 8 kV | Air Discharge according to IEC 61000-4-2     |
 
 :::tip NOTE
 The module is an Electrostatic Sensitive Device and requires special precautions when handling.
@@ -259,8 +244,8 @@ The module is an Electrostatic Sensitive Device and requires special precautions
 
 | Mode             | Condition                  | Min | Typical     | Max |
 | ---------------- | -------------------------- | --- | ----------- | --- |
-| Active-Mode (TX) | TX Enabled and RX Disabled |     | 336&nbsp;mA |     |
-| Active-Mode (RX) | TX Disabled and RX Enabled |     | 360&nbsp;mA |     |
+| Active-Mode (TX) | TX Enabled and RX Disabled |     | 336 mA |     |
+| Active-Mode (RX) | TX Disabled and RX Enabled |     | 360 mA |     |
 
 #### Environmental Requirements
 
@@ -270,7 +255,7 @@ The table below lists the operation temperature range.
 
 | Parameter                    | Min.        | Typical     | Max         | Remarks                                        |
 | ---------------------------- | ----------- | ----------- | ----------- | ---------------------------------------------- |
-| Normal Operating Temperature | -40°&nbsp;C | +25°&nbsp;C | +85°&nbsp;C | Fully functional and meets 3GPP specifications |
+| Normal Operating Temperature | -40° C | +25° C | +85° C | Fully functional and meets 3GPP specifications |
 
 ### Firmware
 
@@ -280,16 +265,14 @@ Download the latest firmware of RAK2245 Pi HAT in the table provided below.
 | -------------- | ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | RAK2245 Pi Hat | Raspberry Pi 3B+ and 4   | V4.2.5R           | [Download](https://downloads.rakwireless.com/LoRa/RAK2245-Pi-HAT/Firmware/RAK2245_Latest_Firmware.zip)    |
 
-
 ## Models / Bundles
 
 ### Ordering Information
 
 | Part Number    | Package                                                            | Description                                               |
 | -------------- | ------------------------------------------------------------------ | --------------------------------------------------------- |
-| RAK2243-0X-R01 | 1x board, 1x LoRa Antenna and 1x GPS Active Antenna retail package | Supports 433 / 470 / 868 / 915 / 923 / 920 / 865&nbsp;MHz |
-| RAK2243-0X-C10 | 10-piece board and Antennas carton package                         | Supports 433 / 470 / 868 / 915 / 923 / 920 / 865&nbsp;MHz |
+| RAK2243-0X-R01 | 1x board, 1x LoRa Antenna and 1x GPS Active Antenna retail package | Supports 433 / 470 / 868 / 915 / 923 / 920 / 865 MHz |
+| RAK2243-0X-C10 | 10-piece board and Antennas carton package                         | Supports 433 / 470 / 868 / 915 / 923 / 920 / 865 MHz |
 
 ## Certification
 
-<RkBottomNav/>

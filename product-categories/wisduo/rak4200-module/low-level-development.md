@@ -9,9 +9,6 @@ sidebar_label: Low Level Development
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # LoRa Module Low Level Development
 
@@ -33,7 +30,7 @@ One of the essential aspects that allow customers to develop their own version o
 
 :::tip NOTE
 
-There are two versions of the RAK4200 module: One for the high-frequency bands (i.e. 915&nbsp;MHz, 866&nbsp;MHz) and one for the low-frequency bands (i.e.433&nbsp;MHz). RAK4200 shares the same hardware connections between high frequency and low frequency models.
+There are two versions of the RAK4200 module: One for the high-frequency bands (i.e. 915 MHz, 866 MHz) and one for the low-frequency bands (i.e.433 MHz). RAK4200 shares the same hardware connections between high frequency and low frequency models.
 
 :::
 
@@ -57,11 +54,7 @@ Once the porting protocol stack is ready, customers can focus on the development
 
 In any MCU, after the power is connected, the System bootloader is in charge to bootstrap all the necessary to set up the Interrupt Vector table, initialize variables, and jump to the address of the main() symbol.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/deep-development/boot-mode.png"
-  width="100%"
-  caption="The flash section is between the 0x0800 0000 and 0x080X 0000. The X depends on the different models of MCU"
-/>
+> **Image:** The flash section is between the 0x0800 0000 and 0x080X 0000. The X depends on the different models of MCU
 
 The RAK’s bootloader is stored in the internal flash section and has a size of 12K, located between 0x0800 0000 to 0x0800 2FFF. Its primary function is to write a new version of firmware received from the serial port into the flash memory section. The bootloader uses the Ymodem protocol and supervises internally the exceptions in the upgrade process. When the upgrade process is interrupted and restarted, the bootloader will detect abnormal events and enable the upgrade again.
 

@@ -11,69 +11,18 @@ keywords:
 sidebar_label: Payload Decoder
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK9154 Solar Battery Lite Data over SensorHub
 
 ## Solar Battery Data Unit Definition
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>RAK IPSO</th>
-      <th>Data type</th>
-      <th>Value Range</th>
-      <th>Unit</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Battery voltage</td>
-      <td>0xBA</td>
-      <td>U16</td>
-      <td>0-0x05&nbsp;DC (15.00&nbsp;V)</td>
-      <td>0.01&nbsp;V</td>
-    </tr>
-    <tr>
-      <td>Battery current</td>
-      <td>0xB9</td>
-      <td>S16</td>
-      <td>-150~150 (1.5&nbsp;A)</td>
-      <td>0.01&nbsp;A</td>
-    </tr>
-    <tr>
-      <td>SOC (State of charge)</td>
-      <td>0xB8</td>
-      <td>U16</td>
-      <td>1~100</td>
-      <td>0.01</td>
-    </tr>
-    <tr>
-      <td>Average Temperature</td>
-      <td>0x67</td>
-      <td>S16</td>
-      <td>-30~105</td>
-      <td>0.1°&nbsp;C</td>
-    </tr>
-    <tr>
-      <td>Battery Errors</td>
-      <td>0xF3</td>
-      <td>U16</td>
-      <td>Refer to below <br/> ErrorMessageTable</td>
-      <td>bit</td>
-    </tr>
-    <tr>
-      <td>BMS Firmware version</td>
-      <td>0xF3</td>
-      <td>U16</td>
-      <td>Vxx.xx</td>
-      <td>bit</td>
-    </tr>
-  </tbody>
-</table>
+| Name | RAK IPSO | Data type | Value Range | Unit |
+| --- | --- | --- | --- | --- |
+| Battery voltage | 0xBA | U16 | 0-0x05 DC (15.00 V) | 0.01 V |
+| Battery current | 0xB9 | S16 | -150~150 (1.5 A) | 0.01 A |
+| SOC (State of charge) | 0xB8 | U16 | 1~100 | 0.01 |
+| Average Temperature | 0x67 | S16 | -30~105 | 0.1° C |
+| Battery Errors | 0xF3 | U16 | Refer to belowErrorMessageTable | bit |
+| BMS Firmware version | 0xF3 | U16 | Vxx.xx | bit |
 
 ### Example:
 
@@ -97,132 +46,28 @@ The key **data** represents the SensorHub uplink payload transmitted over the Lo
 
 Below is an example of a SensorHub uplink payload for a Battery device, which contains 7 data units. The first data unit corresponds to the SensorHub serial number (SN), while the remaining 6 units provide battery status data.
 
+| Battery Data Unit | Uplink Payload |  |  |
+| --- | --- | --- | --- |
+| Serial Number | 1 Byte | 1 Byte | 3 Bytes |
+| Voltage | 1 Byte | 1 Byte | 2 Bytes |
+| Current | 1 Byte | 1 Byte | 2 Bytes |
+| State of Charge | 1 Byte | 1 Byte | 1 Byte |
+| Temperature | 1 Byte | 1 Byte | 2 Bytes |
+| Battery Error | 1 Byte | 1 Byte | 2 Bytes |
+| Battery FW Version | 1 Byte | 1 Byte | 2 Bytes |
 
-<table>
-  <thead>
-    <tr>
-      <th rowSpan="2">Battery Data Unit</th>
-      <th colSpan="3">Uplink Payload</th>
-    </tr>
-    <tr>
-      <th>ID</th>
-      <th>IPSO</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Serial Number</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>3 Bytes</td>
-    </tr>
-    <tr>
-      <td>Voltage</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>2 Bytes</td>
-    </tr>
-    <tr>
-      <td>Current</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>2 Bytes</td>
-    </tr>
-    <tr>
-      <td>State of Charge</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-    </tr>
-    <tr>
-      <td>Temperature</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>2 Bytes</td>
-    </tr>
-    <tr>
-      <td>Battery Error</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>2 Bytes</td>
-    </tr>
-    <tr>
-      <td>Battery FW Version</td>
-      <td>1 Byte</td>
-      <td>1 Byte</td>
-      <td>2 Bytes</td>
-    </tr>
-  </tbody>
-</table>
                                                                          
 ### Decoder:
 
-<table>
-  <thead>
-    <tr>
-      <th rowSpan="2">Battery Data Unit</th>
-      <th colSpan="3">Uplink Payload</th>
-      <th rowSpan="2">Decode Data</th>
-    </tr>
-    <tr>
-      <th>ID</th>
-      <th>IPSO</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Serial Number</td>
-      <td>00</td>
-      <td>7e</td>
-      <td>094807</td>
-      <td>94807</td>
-    </tr>
-    <tr>
-      <td>Voltage</td>
-      <td>15</td>
-      <td>ba</td>
-      <td>0464</td>
-      <td>11.24&nbsp;V</td>
-    </tr>
-    <tr>
-      <td>Current</td>
-      <td>16</td>
-      <td>b9</td>
-      <td>0043</td>
-      <td>0.67&nbsp;A</td>
-    </tr>
-    <tr>
-      <td>State of Charge</td>
-      <td>17</td>
-      <td>b8</td>
-      <td>45</td>
-      <td>69%</td>
-    </tr>
-    <tr>
-      <td>Temperature</td>
-      <td>18</td>
-      <td>67</td>
-      <td>00d2</td>
-      <td>21.0°&nbsp;C</td>
-    </tr>
-    <tr>
-      <td>Battery Error</td>
-      <td>19</td>
-      <td>f3</td>
-      <td>0000</td>
-      <td>no error</td>
-    </tr>
-    <tr>
-      <td>Battery FW Version</td>
-      <td>1a</td>
-      <td>f3</td>
-      <td>0002</td>
-      <td>V00.02</td>
-    </tr>
-  </tbody>
-</table>
+| Battery Data Unit | Uplink Payload | Decode Data |  |  |
+| --- | --- | --- | --- | --- |
+| Serial Number | 00 | 7e | 094807 | 94807 |
+| Voltage | 15 | ba | 0464 | 11.24 V |
+| Current | 16 | b9 | 0043 | 0.67 A |
+| State of Charge | 17 | b8 | 45 | 69% |
+| Temperature | 18 | 67 | 00d2 | 21.0° C |
+| Battery Error | 19 | f3 | 0000 | no error |
+| Battery FW Version | 1a | f3 | 0002 | V00.02 |
 
 Convert the sensor data from hexadecimal to decimal:
 
@@ -281,57 +126,16 @@ Battery FW Version = v00.02
 
 ## Error Message Table
 
-<table>
-  <thead>
-    <tr>
-      <th>Bit#</th>
-      <th>Description</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Bit0 ~ Bit5</td>
-      <td>Reserved</td>
-      <td>Reserved</td>
-    </tr>
-    <tr>
-      <td>Bit6</td>
-      <td>Over voltage protect</td>
-      <td>0 : normal <br/> 1 : fault</td>
-    </tr>
-    <tr>
-      <td>Bit7</td>
-      <td>Charge over current protect</td>
-      <td>0 : normal <br/> 1 : fault</td>
-    </tr>
-    <tr>
-      <td>Bit8</td>
-      <td>Charge low temperature protect</td>
-      <td>0 : normal <br/> 1 : fault</td>
-    </tr>
-    <tr>
-      <td>Bit9</td>
-      <td>Charge high temperature protect</td>
-      <td>0 : normal <br/> 1 : fault</td>
-    </tr>
-    <tr>
-      <td>Bit10</td>
-      <td>Charge short circuit protect</td>
-      <td>0 : normal <br/> 1 : fault</td>
-    </tr>
-    <tr>
-      <td>Bit11</td>
-      <td>Charge over current lock</td>
-      <td>0 : normal <br/> 1 : fault</td>
-    </tr>
-    <tr>
-      <td>Bit12 ~ Bit15</td>
-      <td>Reserved</td>
-      <td>Reserved</td>
-    </tr>
-  </tbody>
-</table>
+| Bit# | Description | Value |
+| --- | --- | --- |
+| Bit0 ~ Bit5 | Reserved | Reserved |
+| Bit6 | Over voltage protect | 0 : normal1 : fault |
+| Bit7 | Charge over current protect | 0 : normal1 : fault |
+| Bit8 | Charge low temperature protect | 0 : normal1 : fault |
+| Bit9 | Charge high temperature protect | 0 : normal1 : fault |
+| Bit10 | Charge short circuit protect | 0 : normal1 : fault |
+| Bit11 | Charge over current lock | 0 : normal1 : fault |
+| Bit12 ~ Bit15 | Reserved | Reserved |
 
 ## Decoder Sample Code
 
@@ -611,4 +415,3 @@ print(value)
 ```
 </details>
 
-<RkBottomNav/>

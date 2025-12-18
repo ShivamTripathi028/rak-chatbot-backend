@@ -10,10 +10,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK5146L WisLink LPWAN Concentrator Datasheet
 
 ## Overview
@@ -26,9 +22,9 @@ This module is an exceptional, complete, and cost-efficient gateway solution off
 ### Product Features
 
 - Designed based on **mPCI-e form factor**
-- **SX1303 baseband processor** emulates 8 x 8 channel LoRa packet detectors, 8 x SF5-SF12 LoRa demodulators, 8x SF5-SF10 LoRa demodulators, one 125/250/500&nbsp;kHz high-speed LoRa demodulator, and one (G) FSK demodulator
-- 3.3&nbsp;V **mPCI-e**, compatible with **3G/LTE card** of mPCI-e type
-- Tx power up to 17&nbsp;dBm, Rx sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
+- **SX1303 baseband processor** emulates 8 x 8 channel LoRa packet detectors, 8 x SF5-SF12 LoRa demodulators, 8x SF5-SF10 LoRa demodulators, one 125/250/500 kHz high-speed LoRa demodulator, and one (G) FSK demodulator
+- 3.3 V **mPCI-e**, compatible with **3G/LTE card** of mPCI-e type
+- Tx power up to 17 dBm, Rx sensitivity down to -139 dBm @ SF12, BW 125 kHz
 - Supports **global license-free frequency band** (EU433, CN470)
 - Supports optional **SPI/USB** interfaces
 - Listen Before Talk
@@ -43,26 +39,17 @@ The overview shows the front and back views of the RAK5146L board. It also prese
 
 #### Board Overview
 
-RAK5146L is a compact LPWAN gateway module, suitable for integration in systems where mass and size constraints are essential. It has been designed with the PCI Express Mini (mPCI-e) Card form factor in mind, so it can easily become a part of products that comply with the standard, which allow for cards with a thickness of at least 5.5&nbsp;mm.
+RAK5146L is a compact LPWAN gateway module, suitable for integration in systems where mass and size constraints are essential. It has been designed with the PCI Express Mini (mPCI-e) Card form factor in mind, so it can easily become a part of products that comply with the standard, which allow for cards with a thickness of at least 5.5 mm.
 
 The board has two UFL interfaces for the LoRa and GNSS antennas and a standard 52-pin connector (mPCIe).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5146l/datasheet/1.png"
-  width="50%"
-  caption="Board Overview"
-/>
-
+> **Image:** Board Overview
 
 #### Block Diagram
 
 The RAK5146L concentrator is equipped with one SX1303 chip and two SX1250. The first chip is utilized for the RF signal and the core of the device, while the latter provides the related LoRa modem and processing functionalities. Additional signal conditioning circuitry is implemented for PCI Express Mini Card compliance, and one UFL connectors are available for external antenna integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5146l/datasheet/2.png"
-  width="80%"
-  caption="Block Diagram"
-/>
+> **Image:** Block Diagram
 
 ### Hardware
 
@@ -80,18 +67,13 @@ The hardware section discusses the interfacing, pinouts, and its corresponding f
 - **GPS_PPS** - RAK5146 includes the GPS_PPS input for received packets time-stamped and Fine timestamp.
 
 - **RESET** - RAK5146 SPI card includes the RESET active-high input signal to reset the radio operations as specified by the SX1303 Specification. RAK5146 USB card’s RESET is controlled by MCU.
-- **Antenna RF Interface** - The module have one RF interface over a standard UFL connector (Hirose U. FL-R-SMT) with a characteristic impedance of 50&nbsp;Ω. The RF port (J1) supports both Tx and Rx, providing the antenna interface.
+- **Antenna RF Interface** - The module have one RF interface over a standard UFL connector (Hirose U. FL-R-SMT) with a characteristic impedance of 50 Ω. The RF port (J1) supports both Tx and Rx, providing the antenna interface.
 
 #### Pin Definition
 
 ##### Pinout Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5146l/datasheet/3.png"
-  width="80%"
-  caption="Pinout Diagram"
-/>
-
+> **Image:** Pinout Diagram
 
 #####  Pinout Description
 
@@ -109,7 +91,7 @@ The hardware section discusses the interfacing, pinouts, and its corresponding f
 | Pin No. | mPCie Pin Rev. 2.0 | RAK5146L Pin  | Type | Description                                 | Remarks                                                                      |
 | ------- | ------------------ | ------------- | ---- | ------------------------------------------- | ---------------------------------------------------------------------------- |
 | 1       | WAKE#              | SX1261_BUSY   | DO   | No connection by default                    | Reserved for future applications                                             |
-| 2       | 3.3Vaux            | 3V3           | PI   | 3.3&nbsp;V<sub>DC</sub> supply              |                                                                              |
+| 2       | 3.3Vaux            | 3V3           | PI   | 3.3 V<sub>DC</sub> supply              |                                                                              |
 | 3       | COEX1              | SX1261_DIO1   | IO   | No connection by default                    | Reserved for future applications                                             |
 | 4       | GND                | GND           |      | Ground                                      |                                                                              |
 | 5       | COEX2              | SX1261_DIO2   | IO   | No connection by default                    | Reserved for future applications                                             |
@@ -129,9 +111,9 @@ The hardware section discusses the interfacing, pinouts, and its corresponding f
 | 19      | RESERVED           | PPS           | DO   | Time pulse output                           | Leave open if not in use                                                     |
 | 20      | W_DISABLE#         | NC            |      | No connection                               |                                                                              |
 | 21      | GND                | GND           |      | Ground                                      |                                                                              |
-| 22      | PERST#             | SX1303_RESET  | DI   | RAK5146-SPI reset input                     | Active high, ≥100&nbsp;ns for SX1302 reset                                   |
+| 22      | PERST#             | SX1303_RESET  | DI   | RAK5146-SPI reset input                     | Active high, ≥100 ns for SX1302 reset                                   |
 | 23      | PERn0              | RESET_GPS     | DI   | GSP module ZOE-M8Q reset input              | Active low, leave open if not in use                                         |
-| 24      | 3.3Vaux            | 3v3           | PI   | 3.3&nbsp;V<sub>DC</sub> supply              |                                                                              |
+| 24      | 3.3Vaux            | 3v3           | PI   | 3.3 V<sub>DC</sub> supply              |                                                                              |
 | 25      | PERp0              | STANDBY_GPS   | DI   | GPS module ZOE-M8Q external interrupt input | Active low, leave open if not in use                                         |
 | 26      | GND                | GND           |      | Ground                                      |                                                                              |
 | 27      | GND                | GND           |      | Ground                                      |                                                                              |
@@ -143,12 +125,12 @@ The hardware section discusses the interfacing, pinouts, and its corresponding f
 | 33      | PETp0              | PI_UART_RX    | DO   | HOST UART_RX                                |                                                                              |
 | 34      | GND                | GND           |      | Ground                                      |                                                                              |
 | 35      | GND                | GND           |      | Ground                                      |                                                                              |
-| 36      | USB_D-             | USB_DM        | IO   | USB differential data (-)                   | Require differential impedance of 90&nbsp;Ω                                  |
+| 36      | USB_D-             | USB_DM        | IO   | USB differential data (-)                   | Require differential impedance of 90 Ω                                  |
 | 37      | GND                | GND           |      | Ground                                      |                                                                              |
-| 38      | USB_D+             | USB_DP        | IO   | USB differential data (+)                   | Require differential impedance of 90&nbsp;Ω                                  |
-| 39      | 3.3Vaux            | 3V3           | PI   | 3.3&nbsp;V<sub>DC</sub> supply              |                                                                              |
+| 38      | USB_D+             | USB_DP        | IO   | USB differential data (+)                   | Require differential impedance of 90 Ω                                  |
+| 39      | 3.3Vaux            | 3V3           | PI   | 3.3 V<sub>DC</sub> supply              |                                                                              |
 | 40      | GND                | GND           |      | Ground                                      |                                                                              |
-| 41      | 3.3Vaux            | 3V3           | Pi   | 3.3&nbsp;V<sub>DC</sub> supply              |                                                                              |
+| 41      | 3.3Vaux            | 3V3           | Pi   | 3.3 V<sub>DC</sub> supply              |                                                                              |
 | 42      | LED_WWAN#          | NC            |      | No connection                               |                                                                              |
 | 43      | GND                | GND           |      | Ground                                      |                                                                              |
 | 44      | LED_WLAN#          | NC            |      | No connection                               |                                                                              |
@@ -159,15 +141,11 @@ The hardware section discusses the interfacing, pinouts, and its corresponding f
 | 49      | RESERVED           | HOST_MOSI     | IO   | Host SPI MOSI                               |                                                                              |
 | 50      | GND                | GND           |      | Ground                                      |                                                                              |
 | 51      | RESERVED           | HOST_CSN      | IO   | Host SPI CSN                                |                                                                              |
-| 52      | 3.3Vaux            | 3V3           | PI   | 3.3&nbsp;V<sub>DC</sub> supply              |                                                                              |
+| 52      | 3.3Vaux            | 3V3           | PI   | 3.3 V<sub>DC</sub> supply              |                                                                              |
 
 #### LED Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5146l/datasheet/rak5146l_led.png"
-  width="75%"
-  caption="RAK5146L LED Definition"
-/>
+> **Image:** RAK5146L LED Definition
 
 #### RF Characteristics
 
@@ -201,14 +179,13 @@ The limiting values given below are following the Absolute Maximum Rating System
 
 | Symbol  | Description           | Condition                                  | Min         | Max        |
 | ------- | --------------------- | ------------------------------------------ | ----------- | ---------- |
-| 3.3Vaux | Module supply voltage | Input DC voltage at 3.3Vaux pins           | -0.3&nbsp;V | 3.6&nbsp;V |
-| USB     | USB D+/D- pins        | Input DC voltage at USB interface pins     | -           | 3.6&nbsp;V |
-| RESET   | RAK5146 reset input   | Input DC voltage at RESET input pin        | -0.3&nbsp;V | 3.6&nbsp;V |
-| SPI     | SPI interface         | Input DC voltage at SPI interface pin      | -0.3&nbsp;V | 3.6&nbsp;V |
-| GPS_PPS | GPS 1 PPS input       | Input DC voltage at GPS_PPS input pin      | -0.3&nbsp;V | 3.6&nbsp;V |
+| 3.3Vaux | Module supply voltage | Input DC voltage at 3.3Vaux pins           | -0.3 V | 3.6 V |
+| USB     | USB D+/D- pins        | Input DC voltage at USB interface pins     | -           | 3.6 V |
+| RESET   | RAK5146 reset input   | Input DC voltage at RESET input pin        | -0.3 V | 3.6 V |
+| SPI     | SPI interface         | Input DC voltage at SPI interface pin      | -0.3 V | 3.6 V |
+| GPS_PPS | GPS 1 PPS input       | Input DC voltage at GPS_PPS input pin      | -0.3 V | 3.6 V |
 | ho_ANT  | Antenna ruggedness    | Output RF load mismatch ruggedness at ANT1 | -           | 10:1 VSWR  |
-| Tstg    | Storage temperature   | -                                          | -40°&nbsp;C | 85°&nbsp;C |
-
+| Tstg    | Storage temperature   | -                                          | -40° C | 85° C |
 
 :::warning
 The product is not protected against over voltage or reversed voltages. If necessary, voltage spikes exceeding the power supply voltage specification, given in table above, must be limited to values within the specified boundaries by using appropriate protection devices.
@@ -218,8 +195,8 @@ The product is not protected against over voltage or reversed voltages. If neces
 
 | Parameter | Max         | Remarks                                    |
 | --------- | ----------- | ------------------------------------------ |
-| ESD_HBM   | 1000&nbsp;V | Charged Device Model JESD22-C101 CLASS III |
-| ESD_CDM   | 1000&nbsp;V | Charged Device Model JESD22-C101 CLASS III |
+| ESD_HBM   | 1000 V | Charged Device Model JESD22-C101 CLASS III |
+| ESD_CDM   | 1000 V | Charged Device Model JESD22-C101 CLASS III |
 
 :::tip NOTE
 Although this module is designed to be as robust as possible, electrostatic discharge (ESD) can damage this module. This module must be protected at all times from ESD when handling or transporting. Static charges may easily produce potentials of several kilovolts on the human body or equipment, which can discharge without detection. Industry-standard ESD handling precautions should be used at all times.
@@ -229,8 +206,8 @@ Although this module is designed to be as robust as possible, electrostatic disc
 
 | Mode             | Condition                                                         | Min | Typical | Max         |
 | ---------------- | ----------------------------------------------------------------- | --- | ------- | ----------- |
-| Active Mode (TX) | The power of the TX channel is 17&nbsp;dBm and 3.3&nbsp;V supply. | -   | -       | 753&nbsp;mA |
-| Active Mode (RX) | TX disabled and RX enabled.                                       | -   | -       | 170&nbsp;mA |
+| Active Mode (TX) | The power of the TX channel is 17 dBm and 3.3 V supply. | -   | -       | 753 mA |
+| Active Mode (RX) | TX disabled and RX enabled.                                       | -   | -       | 170 mA |
 
 ##### Power Supply Range
 
@@ -238,18 +215,13 @@ Input voltage at **3.3 Vaux** must be above the normal operating range minimum l
 
 | Symbol  | Parameter                             | Min      | Typical    | Max        |
 | ------- | ------------------------------------- | -------- | ---------- | ---------- |
-| 3.3Vaux | Module supply operating input voltage | 3&nbsp;V | 3.3&nbsp;V | 3.6&nbsp;V |
+| 3.3Vaux | Module supply operating input voltage | 3 V | 3.3 V | 3.6 V |
 
 #### Mechanical Characteristics
 
-The board weighs 16.3&nbsp;grams, it is 30&nbsp;mm wide and 50.96&nbsp;mm tall. The dimensions of the module fall completely within the **PCI Express Mini Card Electromechanical Specification**, except for the card's thickness (5.5&nbsp;mm at its thickest).
+The board weighs 16.3 grams, it is 30 mm wide and 50.96 mm tall. The dimensions of the module fall completely within the **PCI Express Mini Card Electromechanical Specification**, except for the card's thickness (5.5 mm at its thickest).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5146l/datasheet/4.png"
-  width="25%"
-  caption="Dimensions"
-/>
-
+> **Image:** Dimensions
 
 ####  Environmental Requirements
 
@@ -257,22 +229,17 @@ The board weighs 16.3&nbsp;grams, it is 30&nbsp;mm wide and 50.96&nbsp;mm tall. 
 
 | Parameter                    | Min         | Typical     | Max         | Remarks                                                                            |
 | ---------------------------- | ----------- | ----------- | ----------- | ---------------------------------------------------------------------------------- |
-| Normal operating temperature | -40°&nbsp;C | +25°&nbsp;C | +85°&nbsp;C | Normal operating temperature range (fully functional and meet 3GPP specifications) |
-
+| Normal operating temperature | -40° C | +25° C | +85° C | Normal operating temperature range (fully functional and meet 3GPP specifications) |
 
 :::tip NOTE
-Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25°&nbsp;C. Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
+Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25° C. Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
 :::
 
 #### Schematic Diagram
 
-RAK5146L concentrator module refers to Semtech's reference design for SX1303. The SPI interface can be used on the mPCIe connector. **Figure 6** shows the minimum application schematic of the RAK5146L. You should use at least 3.3&nbsp;V / 1&nbsp;A DC power, connect the SPI interface to the main processor.
+RAK5146L concentrator module refers to Semtech's reference design for SX1303. The SPI interface can be used on the mPCIe connector. **Figure 6** shows the minimum application schematic of the RAK5146L. You should use at least 3.3 V / 1 A DC power, connect the SPI interface to the main processor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wislink-lora/rak5146l/datasheet/5.png"
-  width="100%"
-  caption="Schematic diagram"
-/>
+> **Image:** Schematic diagram
 
 ## Models / Bundles
 
@@ -299,10 +266,6 @@ In general, the RAK5146L's variation is the defined as **RAK5146L - XYZ**, where
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK5146/Certification/RAK5146L_CE_Certification.pdf',
-    },
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK5146/Certification/RAK5146L_CE_Certification.pdf
 
-<RkBottomNav/>

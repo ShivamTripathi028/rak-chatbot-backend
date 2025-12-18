@@ -9,58 +9,46 @@ image: "https://images.docs.rakwireless.com/accessories/905000-905001/antenna_vi
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # 858-878MHz 8dBi Fiberglass Antenna Datasheet
 
 ## Overview
 
 ### Features
 
--   Frequency Range: 858~878&nbsp;MHz
--   Max Gain: 8.0&nbsp;dBi
+-   Frequency Range: 858~878 MHz
+-   Max Gain: 8.0 dBi
 -   VSWR: ≤ 1.5
 -   High efficiency
 -   Vertically polarized dipole
 -   Easy to mount with the included Installation kit
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/antenna_view.png"
-  width="70%"
-  caption="858~878MHz 8dBi Fiberglass Antenna Overview"
-/>
+> **Image:** 858~878MHz 8dBi Fiberglass Antenna Overview
 
 ## Specifications
 
 | Model                     | RAKARG16                       |
 | :------------------------ | ------------------------------ |
-| **Frequency Range**       | 858&nbsp;MHz~878&nbsp;MHz      |
-| **Peak Gain**             | 8.0&nbsp;dBi (±1d&nbsp;Bi)     |
+| **Frequency Range**       | 858 MHz~878 MHz      |
+| **Peak Gain**             | 8.0 dBi (±1d Bi)     |
 | **VSWR**                  | ≤ 1.5                          |
 | **Efficiency**            | ≤ 69%                          |
-| **Feed Impedance**        | 50&nbsp;Ω                      |
+| **Feed Impedance**        | 50 Ω                      |
 | **Polarization**          | Vertical                       |
 | **Cover Material(color)** | Fiberglass (White)             |
 | **Connector Type**        | N-type male                    |
-| **Dimensions (mm)**       | Փ25.0&nbsp;mm x 1300.0&nbsp;mm |
-| **Operation Temp (°C)**   | -30&nbsp;°C ~ +65&nbsp;°C      |
+| **Dimensions (mm)**       | Փ25.0 mm x 1300.0 mm |
+| **Operation Temp (°C)**   | -30 °C ~ +65 °C      |
 | **Humidity Range**        | 5%~95%                         |
 
 ### VSWR
 
 | **Frequency(MHz)** | VSWR |
 | :----------------: | ---- |
-|  **858&nbsp;MHZ**  | 1.32 |
-|  **868&nbsp;MHZ**  | 1.19 |
-|  **878&nbsp;MHz**  | 1.21 |
+|  **858 MHZ**  | 1.32 |
+|  **868 MHZ**  | 1.19 |
+|  **878 MHz**  | 1.21 |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/vswr.png"
-  width="70%"
-  caption="858~878MHz 8dBi Fiberglass Antenna VSWR graph"
-/>
+> **Image:** 858~878MHz 8dBi Fiberglass Antenna VSWR graph
 
 ### Peak Gain & Efficiency
 
@@ -75,42 +63,17 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 ### Radiation Patterns
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/858.png"
-  width="70%"
-  caption="Radiation pattern at 858MHz"
-/>
+> **Image:** Radiation pattern at 858MHz
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/863.png"
-  width="70%"
-  caption="Radiation pattern at 863MHz"
-/>
+> **Image:** Radiation pattern at 863MHz
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/868.png"
-  width="70%"
-  caption="Radiation pattern at 868MHz"
-/>
+> **Image:** Radiation pattern at 868MHz
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/873.png"
-  width="70%"
-  caption="Radiation pattern at 873MHz"
-/>
+> **Image:** Radiation pattern at 873MHz
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/878.png"
-  width="70%"
-  caption="Radiation pattern at 878MHz"
-/>
+> **Image:** Radiation pattern at 878MHz
 
 ### Mechanical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/accessories/905000-905001/8dbi_dimensions.png"
-  width="60%"
-  caption="858~878MHz 8dBi Fiberglass Antenna dimensions"
-/>
+> **Image:** 858~878MHz 8dBi Fiberglass Antenna dimensions
 
-<RkBottomNav/>

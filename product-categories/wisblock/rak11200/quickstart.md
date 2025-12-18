@@ -10,18 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11200 WisBlock WiFi Module Quick Start Guide
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/wisblock-assembly.png"
-  figureCount="1"
-  caption="WisBlock-Assembly" 
-   width="90%"
-/>
-
+> **Image:** WisBlock-Assembly
 
 ## Introduction
 
@@ -35,7 +26,7 @@ RAK11200 is the WisBlock Core board which consists of ESP32 WROVER. It supports 
 
 WisBlock is not only a functional test capable product in the product development verification stage but also industrial products oriented to mass production. It uses a high-speed connector to ensure the integrity of the signal. At the same time, it is equipped with a fastening screw, which can be used in a vibration environment. And WisBlock can be used reliably in various civil and industrial scenarios through rigorous reliability tests.
 
-WisBlock uses a compact stacked hardware design, which integrates various computing, connecting, and sensor circuits in the size of 60*30&nbsp;mm. The compact size makes it easy for users to build in various customized housings to achieve complete products. RAK also has a series of housings for WisBlock modules, which can meet the requirements of various protection levels.
+WisBlock uses a compact stacked hardware design, which integrates various computing, connecting, and sensor circuits in the size of 60*30 mm. The compact size makes it easy for users to build in various customized housings to achieve complete products. RAK also has a series of housings for WisBlock modules, which can meet the requirements of various protection levels.
 
 ## Safety Information
 
@@ -51,10 +42,10 @@ Read the following items carefully so that WisBlock can be used safely.
 :::warning
 
 - Battery can cause harm if not handled properly.
-- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.x
 - Make sure the battery wires match the polarity on the RAK WisBlock Base Board. Not all batteries have the same wiring.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 :::
 
 - There is already a bootloader in every WisBlock core board MCU when you receive the device so that you don't need to flash the bootloader again. Normally, you only need to use it directly or upload new code into it through Arduino IDE. If you accidentally erase the bootloader, contact [RAK forum](https://forum.rakwireless.com/).
@@ -110,76 +101,39 @@ Getting started with RAK11200 is simple and straightforward. The first thing you
 
 1. To add board support for RAK11200 on Arduino, start Arduino IDE and open the Preferences window (**File** > **Preferences**).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/01-add-bsp-url.png"
-  figureCount="2"
-  caption="Arduino File Preferences Window" 
-   width="30%"
-/>
+> **Image:** Arduino File Preferences Window
 
 2. In the **Preferences** window, look for **Additional Boards Manager URLs** and click the icon on the right side.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/02-add-bsp-url.png"
-  figureCount="3"
-  caption="Arduino Preferences" 
-   width="90%"
-/>
+> **Image:** Arduino Preferences
 
 3. Copy `https://raw.githubusercontent.com/RAKwireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_index.json` and paste it into the new window.
 
 - If there is already an URL from another manufacturer in that field, paste the above URL into a new line. Then press the **OK** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/03-add-bsp-url.png"
-  figureCount="4"
-  caption="Arduino Additional Boards Manager URLs" 
-   width="90%"
-/>
+> **Image:** Arduino Additional Boards Manager URLs
 
 4. Next, open the **Boards Manager** in the menu **Tools**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/04-add-bsp.png"
-  figureCount="5"
-  caption="Arduino Boards Manager" 
-   width="90%"
-/>
+> **Image:** Arduino Boards Manager
 
 5. Type **RAK** in the search bar. The RAKwireless WisBlock Core modules will be shown in the window.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/05-add-bsp.png"
-  figureCount="6"
-  caption="Arduino Tools Boards Manager" 
-   width="90%"
-/>
+> **Image:** Arduino Tools Boards Manager
 
 6. Select RAKwireless ESP32 Boards and click on **Install** button.
 
 _**Depending on your connection speed, the installation can take some time. Just be patient.**_
 
-
-
 ### Compiling a Project
 
 1. The compiling process is very easy, what you need to do is just to click the Verify/Compile button on Arduino IDE.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/ard-install-8.png"
-  figureCount="7"
-  caption="Arduino Verify/Compile" 
-   width="60%"
-/>
+> **Image:** Arduino Verify/Compile
 
 2. After compiling successfully, you can see some information in the output message area, and the state is "Done compiling.":
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/ard-done.png"
-  figureCount="8"
-  caption="Arduino Done compiling" 
-   width="100%"
-/>
+> **Image:** Arduino Done compiling
 
 Now, you can connect your WisBlock hardware with your PC, and upload the code into it.
 
@@ -187,12 +141,7 @@ Now, you can connect your WisBlock hardware with your PC, and upload the code in
 
 Make sure that your WisBlock hardware has been connected with your PC correctly, and your PC has recognized WisBlock hardware successfully. If it is, you can select the board and port now, as shown in Figure 9:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/ard-tools.png"
-  figureCount="9"
-  caption="Arduino Tools Configuration" 
-   width="100%"
-/>
+> **Image:** Arduino Tools Configuration
 
 1. Before uploading your sketch, short circuit BOOT0 and GND pin and press the reset button. Then click the Upload button using the configuration below.
 
@@ -200,12 +149,7 @@ Make sure that your WisBlock hardware has been connected with your PC correctly,
 Pin headers and jumpers are included on the RAK11200, which can be soldered to the WisBlock Base and help with BOOT0 pin accessibility.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/rak11200-boot0-for-flashing.png"
-  figureCount="10"
-  caption="Force ESP32 Download mode" 
-   width="50%"
-/>
+> **Image:** Force ESP32 Download mode
 
 ```
 Board:"Wiscore RAK11200 board"
@@ -218,12 +162,7 @@ Core Debug Level:"No"
 
 2. After uploading successfully, push the reset button. Then you can see some information, as shown in Figure 11 in the output message area. That means you've uploaded the code into RAK11200 successfully.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/ard-install-22.png"
-  figureCount="11"
-  caption="Arduino Done uploading" 
-   width="100%"
-/>
+> **Image:** Arduino Done uploading
 
 :::tip NOTE
 In case of upload error, the **Upload Speed** must be reduced.
@@ -243,7 +182,7 @@ It is not recommended to use the reserved GPIO pins. Some GPIO’s cannot be use
 
 - GPIO2 pin is used as a bootstrapping pin, and should be low to enter UART download mode. Make sure it is not pulled high by a peripheral device during boot or you will not be able to flash a firmware to the module.
 
-- GPIO12 is used as a bootstrapping pin to select the output voltage of an internal regulator which powers the flash chip (VDD_SDIO). This pin has an internal pulldown so if left unconnected it will read low at reset (selecting default 3.3&nbsp;V operation). Make sure it is not pulled high by a peripheral device during boot or the module might not be able to start.
+- GPIO12 is used as a bootstrapping pin to select the output voltage of an internal regulator which powers the flash chip (VDD_SDIO). This pin has an internal pulldown so if left unconnected it will read low at reset (selecting default 3.3 V operation). Make sure it is not pulled high by a peripheral device during boot or the module might not be able to start.
 
 - GPIO15 can be used to stop debug output on Serial during boot. If pulled low, there will be no output on the Serial port during the boot process. This can be helpful in battery-powered applications where you do not want to use the Serial port at all to reduce power consumption.
 
@@ -269,12 +208,7 @@ If you already installed the RAKwireless ESP32, then the BasicOTA sketch has als
 
 1. Open the Arduino IDE -> File -> Examples-> ArduinoOTA-> BasicOTA.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/arduino-ota-sketch.png"
-  figureCount="12"
-  caption="Arduino OTA Sketch" 
-   width="100%"
-/>
+> **Image:** Arduino OTA Sketch
 
 2. Modify the following two variables with your network credentials, so that RAK11200 can establish a WiFi connection with the existing network. Then save and upload the BasicOTA sketch.
 
@@ -316,12 +250,7 @@ The delay() for blinking builtin LED is not used because RAK11200 ESP32-WROVER p
 
 5. Open Arduino IDE and select Tools->Port->esp32-xxxx, as shown in Figure 13.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/arduino-ota-port.png"
-  figureCount="13"
-  caption="Arduino OTA WiFi Port" 
-   width="100%"
-/>
+> **Image:** Arduino OTA WiFi Port
 
 6. Finally, click on Upload button.
 
@@ -358,48 +287,23 @@ After installing the Visual Studio Code, you can search for PlatformIO and insta
 
 1. After installing PlatformIO, you can see the PlatformIO icon and click open.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/pio_open_pio_home.png"
-  figureCount="14"
-  caption="Visual Studio Code PlatformIO extension" 
-   width="90%"
-/>
+> **Image:** Visual Studio Code PlatformIO extension
 
 2. Open "Platforms" in PlatformIO and search for "Espressif" on Embedded tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/platformio_espressif.png"
-  figureCount="15"
-  caption="Espressif Platform" 
-   width="90%"
-/>
+> **Image:** Espressif Platform
 
 3. You can see there are several items, just click "Espressif 32" item and then "Install".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/platformio_espressif32.png"
-  figureCount="16"
-  caption="Espressif Framework" 
-   width="90%"
-/>
+> **Image:** Espressif Framework
 
 4. Before running the first RAK11200 project on the PlatformIO, you need to ensure that the framework-arduinoespressif32 is installed. Then import a minimal project named **arduino-blink**. On PIO Home, click on "Project Examples".
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/pio-open.png"
-  figureCount="17"
-  caption="PIO Project Examples" 
-   width="90%"
-/>
+> **Image:** PIO Project Examples
 
 5. On "Import Project Example" window type **arduino-blink** and then click on Import button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/pio-blink.png"
-  figureCount="18"
-  caption="PIO arduino-blink" 
-   width="90%"
-/>
+> **Image:** PIO arduino-blink
 
 ### Add WisBlock Core RAK11200 to the Platform
 1. Clone [WisBlock repository](https://github.com/RAKWireless/WisBlock).
@@ -429,8 +333,4 @@ Copy the folder **WisCore_RAK11200_Board** located on ***cloned_dir*\WisBlock\Pl
 
 The PlatformIO libraries are managed on a per-project basis. You install a library for a specific project and not for the entire IDE.
 Thus it is possible to have the same library working with different versions in two different projects.
-
-<RkBottomNav/>
-
-
 

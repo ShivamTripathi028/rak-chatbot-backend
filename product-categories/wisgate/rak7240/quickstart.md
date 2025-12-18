@@ -9,15 +9,10 @@ image: https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/rak7240.pn
 sidebar_label: Quick Start Guide
 ---
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7240 Quick Start Guide
 
 ## Prerequisites
-
-
 
 ### What Do You Need?
 
@@ -30,11 +25,7 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 
 ### What's Included in the Package?
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/2.package-contents.png"
-  width="80%"
-  caption="RAK7240 WisGate Edge Prime"
-/>
+> **Image:** RAK7240 WisGate Edge Prime
 
 :::tip NOTE
 The number of antennas depends on what you order. Refer to the store for more information.
@@ -54,66 +45,37 @@ There are two options for installing the RAK7240 WisGate Edge Prime Gateway:
 
 1. Fix the installation kit at the bottom of the device with four M5*8 screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/2.png"
-  width="50%"
-  caption="Fixing the Installation Kit to the RAK7240"
-/>
+> **Image:** Fixing the Installation Kit to the RAK7240
 
 2. Slide the steel band clamps through the rectangular hole of the installation kit. Wrap the band clamps around the pole, lock them, and then tighten the clamps using a screwdriver.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/3.png"
-  width="25%"
-  caption="Fixing the RAK7240 to a Pole"
-/>
+> **Image:** Fixing the RAK7240 to a Pole
 
 ##### Wall Mounting
 
-1. Use Ø5&nbsp;mm drill head and drill four (4) holes on the wall according to the dimension displayed in Figure 4. Plug the screw anchors in the wall.
+1. Use Ø5 mm drill head and drill four (4) holes on the wall according to the dimension displayed in Figure 4. Plug the screw anchors in the wall.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/4.png"
-  width="50%"
-  caption="RAK7240 wall mounting dimensions"
-/>
+> **Image:** RAK7240 wall mounting dimensions
 
 2. Using the tapping screws, attach the device to the wall.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/5.png"
-  width="50%"
-  caption="Fixing RAK7240 to a wall"
-/>
+> **Image:** Fixing RAK7240 to a wall
 
 #### Weather Protection
 
 To better protect the Ethernet cable gland and the antenna connector from the weather, you need to cover them with PVC tape.
 
-1. Clean the surface area of the connector that will be wrapped. Wrap a layer of PVC tape with a 50% overlap according to the rotation direction of the connector. Continue wrapping the PVC tape to about 10&nbsp;mm below the end of the connector.
+1. Clean the surface area of the connector that will be wrapped. Wrap a layer of PVC tape with a 50% overlap according to the rotation direction of the connector. Continue wrapping the PVC tape to about 10 mm below the end of the connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/6.png"
-  width="35%"
-  caption="Wrapping with PVC tape"
-/>
+> **Image:** Wrapping with PVC tape
 
-2. Cut off about 50&nbsp;cm waterproof tape. Stretch it to double the length, and wrap three layers around the connector with a 50% overlap. Hold the tape in place with your hand for a few seconds.
+2. Cut off about 50 cm waterproof tape. Stretch it to double the length, and wrap three layers around the connector with a 50% overlap. Hold the tape in place with your hand for a few seconds.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/7.png"
-  width="35%"
-  caption="Wrapping with waterproof tape"
-/>
+> **Image:** Wrapping with waterproof tape
 
 3. Wrap three additional layers with PVC tape with natural uncoiling force and a 50% overlap. Make sure to cover the head and the tail of the connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/installation/8.png"
-  width="35%"
-  caption="Final PVC wrapping"
-/>
-
+> **Image:** Final PVC wrapping
 
 ### Power on the Gateway
 
@@ -129,12 +91,7 @@ Do not power the device if any antenna port has been left open. In case you do n
 
 It is recommended to use a **CAT5 Cable** to provide power to the Gateway. Attach one end to the provided **PoE injector** and the other to the **Ethernet Port** (ETH) on the bottom of the casing.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/3.power-through-poe.png"
-  width="70%"
-  caption="Powering the Gateway using PoE"
-/>
-
+> **Image:** Powering the Gateway using PoE
 
 ### Access the Gateway
 
@@ -151,11 +108,7 @@ Using your preferred Web browser, input the aforementioned IP Address and you sh
 - **Username**: root
 - **Password**: root
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/4.access-through-apmode.png"
-  width="70%"
-  caption="Accessing the Gateway via Wi-Fi AP Mode"
-/>
+> **Image:** Accessing the Gateway via Wi-Fi AP Mode
 
 #### WAN Port (Ethernet)
 
@@ -163,52 +116,27 @@ Connect the Ethernet cable to the port marked “ETH” on the Gateway and the o
 
 The default IP is **169.254.X.X**. The last two segments(X.X) are mapped from the last four bits of the MAC address of your gateway. For example, the last four bits of the MAC address are 0F:01, and the IP address is 169.254.15.1. Make sure to manually set the address of your PC to one in the same network (for example 169.254.15.100). Use the same credentials for the Web UI as for AP mode.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/5.access-through-ethernet.png"
-  width="70%"
-  caption="Accessing the Gateway via WAN Port (Ethernet)"
-/>
-
-
+> **Image:** Accessing the Gateway via WAN Port (Ethernet)
 
 ### Access the Internet
 
 #### Connect through Wi-Fi
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/6.access-internet-wifi.png"
-  width="70%"
-  caption="Accessing the Internet using Wi-Fi"
-/>
+> **Image:** Accessing the Internet using Wi-Fi
 
 Go into the **Network>Wi-Fi Menu** and make sure to enable the **Wireless Client** as it is disabled initially. Enter or click "**Scan**" to choose your **ESSID**, select the right **Encryption** method and enter the correct **Key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/7.access-wifi-credentials.png"
-  width="60%"
-  caption="Connect through Wi-Fi Credentials"
-/>
+> **Image:** Connect through Wi-Fi Credentials
 
 :::tip NOTE
 Assuming you have entered the correct parameter values you should get an IP address assigned by your Wi-Fi router's (AP) built-in DHCP server. You can use this new IP address to log in via a web browser (same way as in AP mode).
 :::
 
-
 #### Connect through Ethernet/PoE
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/8.access-internet-ethernet.png"
-  width="70%"
-  caption="Accessing the Internet through Ethernet"
-/>
+> **Image:** Accessing the Internet through Ethernet
 
 Connect the Ethernet cable to the port marked “ETH” on the Gateway and the other end to the PoE port of the PoE injector. Connect the LAN port of the PoE injector to your router. The router’s DHCP server should assign an IP Address to the Gateway. You can change the default settings below if you wish (details in the User Manual).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7240/quickstart/9.access-ethernet-credentials.png"
-  width="60%"
-  caption="Connect through Ethernet Settings"
-/>
-
-
+> **Image:** Connect through Ethernet Settings
 

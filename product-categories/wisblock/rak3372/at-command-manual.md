@@ -10,9 +10,6 @@ keywords:
 sidebar_label: AT Command Manual
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3372 WisBlock LPWAN Module AT Command Manual
 
 ## Overview
@@ -26,10 +23,7 @@ The RAK3372 default firmware is based on <a href="https://docs.rakwireless.com/p
 
 The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation.</a>
 
-
 :::tip NOTE
 UART1 and UART2 modes of operation and its configuration can be found on <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#rak-unified-interface-v3-rui3-serial-operating-modes" target="_blank">RUI3 Serial Operating Modes</a>. Both UARTs can be configured in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/binary-command-manual/" target="_blank">Binary Mode</a> as well.
 :::
 
-
-<RkBottomNav/>

@@ -13,20 +13,13 @@ keywords:
 sidebar_label: LoRaWAN Network Server
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # CO<sub>2</sub> Concentration Solution LoRaWAN Network Server
 
 ## Network Server and Visualization Configuration
 
 This section outlines the operational steps for connecting the device to the network server in both the LoRaWAN and NB-IoT application scenarios.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f1application_scenarios.png"
-  width="100%"
-  caption="LoRaWAN Application Scenarios"
-/>
+> **Image:** LoRaWAN Application Scenarios
 
 ### LoRaWAN Application
 
@@ -36,11 +29,7 @@ The cloud network server deployment solution involves connecting the gateways an
 
 This section provides instructions on creating a Datacake visualization application using the TTN v3 cloud network server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f2cloudnetworkserver.png"
-  width="80%"
-  caption="Cloud network server deployment solution"
-/>
+> **Image:** Cloud network server deployment solution
 
 ##### Connect Gateway to TTN
 
@@ -50,37 +39,21 @@ In this section, the example will use the TTNv3 cloud server and RAK7289 V2 WisG
 
 1. Register an account and log in to the [TTN v3 website.](https://eu1.cloud.thethings.network/console/) If you already have a TTN account, you can log in with your **The Things ID** credentials.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f3co2solution_lns_ttn1.png"
-  width="60%"
-  caption="Log in to the TTN website"
-/>
+> **Image:** Log in to the TTN website
 
 2. Once logged into the site, click on **Register a gateway** to begin the registration process for a new gateway. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f4co2solution_lns_ttn2.png"
-  width="60%"
-  caption="TTN home page"
-/>
+> **Image:** TTN home page
 
 3. Input the Gateway EUI and then click on **Confirm** to proceed. 
 
 The Gateway EUI serves as a distinct 64-bit extended identifier for the gateway, accessible from the Overview page of the gateway management platform or from the label situated behind the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f5co2solution_lns_ttn3.png"
-  width="100%"
-  caption="Enter the Gateway EUI"
-/>
+> **Image:** Enter the Gateway EUI
 
 4. Choose the appropriate frequency plan used by the gateway, and click **Register gateway** to complete the registration process of the gateway.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f6co2solution_lns_ttn4.png"
-  width="100%"
-  caption="Configure the gateway frequency"
-/>
+> **Image:** Configure the gateway frequency
 
 **Generate Token**
 
@@ -88,27 +61,15 @@ TTNv3 supports TLS server authentication and client tokens, which require trust 
 
 1. To generate a key file, navigate to **API keys** from the **Overview** page of the registered gateway, then click on **Add API key**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f8co2solution_lns_ttn6.png"
-  width="100%"
-  caption="Add API keys"
-/>
+> **Image:** Add API keys
 
 2. In the **Add API key** page, set the **Name** field, tick of the checkboxes shown in **Figure 8**, then click **Create API key**. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f9co2solution_lns_ttn7.png"
-  width="100%"
-  caption="Configure the API Key"
-/>
+> **Image:** Configure the API Key
 
 3. A new window pops up with the generated key. Copy the new API key by clicking the icon and then the **I have copied the key** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f10co2solution_lns_ttn8.png"
-  width="60%"
-  caption="Copy and save the API Key"
-/>
+> **Image:** Copy and save the API Key
 
 **Register the Gateway**
 
@@ -121,60 +82,33 @@ TTNv3 supports TLS server authentication and client tokens, which require trust 
 - **Trust (CA Certificate)**: Download the [certificate](https://letsencrypt.org/certs/isrgrootx1.pem)
 - **Client Token**: Copied API Keys
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f11co2solution_lns_ttn9.png"
-  width="100%"
-  caption="Configure the gateway"
-/>
+> **Image:** Configure the gateway
 
 2. After saving the changes, return to the TTN gateway interface, and navigate to the **Gateways** tab to confirm that the gateway is now connected to TTNv3 as a Basics Station.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f12co2solution_lns_ttn10.png"
-  width="100%"
-  caption="Gateway connected successfully"
-/>
+> **Image:** Gateway connected successfully
 
 ##### Connect Sensor Hub to TTN
 
 1. Return to the TTNv3 homepage and select **Create an application** to add a node.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f13co2solution_lns_ttn11.png"
-  width="70%"
-  caption="Select Create application"
-/>
+> **Image:** Select Create application
 
 2. Click **+ Create application** to initiate the creation of a node.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f14co2solution_lns_ttn12.png"
-  width="100%"
-  caption="Create a new application"
-/>
+> **Image:** Create a new application
 
 3. Enter the desired **Application ID** in the provided field, then click on **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f15co2solution_lns_ttn13.png"
-  width="100%"
-  caption="Enter the application ID"
-/>
+> **Image:** Enter the application ID
+
 4. Click on the **+Register end device** button to add a new end device to the application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f16co2solution_lns_ttn14.png"
-  width="100%"
-  caption="Add the end device"
-/>
+> **Image:** Add the end device
 
 5. Set the parameters of the end device, as shown in **Figure 16**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f17co2solution_lns_ttn15.png"
-  width="100%"
-  caption="End device parameters"
-/>
+> **Image:** End device parameters
 
 - **JoinEUI**, **DevEUI**, and **AppKey** can be automatically generated by clicking **Generate** on the TTN web page or customized by the user.
 
@@ -184,19 +118,11 @@ Ensure that the three parameters - **JoinEUI**, **DevEUI**, and **AppKey** - are
 
 6. After completing the settings, return to the WisToolBox app, and click **JOIN NETWORK** to send the end device network access request.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f18co2solution_lns_ttn16.png"
-  width="25%"
-  caption="Sending end device network join request"
-/>
+> **Image:** Sending end device network join request
 
 7. As shown in **Figure 18**, the Sensor Hub has successfully joined the TTNv3 network server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f19co2solution_lns_ttn17.png"
-  width="100%"
-  caption="Successfully joined the TTNv3 network server"
-/>
+> **Image:** Successfully joined the TTNv3 network server
 
 ##### Visualize Data Through Datacake
 
@@ -206,133 +132,69 @@ Datacake is a versatile IoT platform. It offers a range of features tailored for
 
 1. In the TTN console, navigate to **Integrations** on the sidebar, proceed to the **Webhooks** section, and then click **+Add Webhooks** to set up an integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f20co2solution_lns_ttn18.png"
-  width="100%"
-  caption="Adding an integration"
-/>
+> **Image:** Adding an integration
 
 2. From the list of webhook templates, select the **Datacake** template.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f21co2solution_lns_ttn19.png"
-  width="100%"
-  caption="Select the Datacake template"
-/>
+> **Image:** Select the Datacake template
 
 3. Generate an API key for webhook authentication on Datacake. To get started, register a [Datacake](https://datacake.co/) account, and then log in.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f22co2solution_lns_dc1.png"
-  width="100%"
-  caption="Log in to the Datacake IoT platform"
-/>
+> **Image:** Log in to the Datacake IoT platform
 
 4. Navigate to the Datacake workspace. Select **Members** on the sidebar, and switch to the **API Users** tab, then click the **Add API User** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f23co2solution_lns_dc2.png"
-  width="100%"
-  caption="Add API User"
-/>
+> **Image:** Add API User
 
 5. Enter the name of the API User, for instance, **TTS API**. Set the relevant parameters accordingly and click **Save** to finalize the creation process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f24co2solution_lns_dc3.png"
-  width="60%"
-  caption="Set Parameters"
-/>
+> **Image:** Set Parameters
 
 6. Click the **Copy** button to copy the generated Datacake API Token.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f25co2solution_lns_dc4.png"
-  width="100%"
-  caption="Copy the generated Datacake API Token"
-/>
+> **Image:** Copy the generated Datacake API Token
 
 7. Back on the TTN website, enter **sensorhub** in the **Webhook ID** field (as an example), and paste the Datacake API Token you previously copied into the **Token** field. Click the **Create Datacake Webhook** button to generate the Datacake Webhook.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f26co2solution_lns_dc5.png"
-  width="100%"
-  caption="Create the Datacake Webhook"
-/>
+> **Image:** Create the Datacake Webhook
 
 **Add Sensor Hub to Datacake**
 
 1. To add a new device, select **Devices** in the sidebar and click the **+Add Device** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f27co2solution_lns_dc6.png"
-  width="100%"
-  caption="Add a Device"
-/>
+> **Image:** Add a Device
 
 2. Choose **LoRaWAN** from the options and click **Next** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f28co2solution_lns_dc7.png"
-  width="60%"
-  caption="Choose LoRaWAN connectivity"
-/>
+> **Image:** Choose LoRaWAN connectivity
 
 3. As the Sensor Hub is a new device, there is no pre-existing template. Create a template by clicking **New Product**, enter the **Product Name**, and click **Next** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f29co2solution_lns_dc8.png"
-  width="60%"
-  caption="Create a New Product"
-/>
+> **Image:** Create a New Product
 
 4. Choose a network server for your device. In this guide, select **The Things Stack V3**, then click **Next** to continue.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f30co2solution_lns_dc9.png"
-  width="60%"
-  caption="Select the Things Stack V3"
-/>
+> **Image:** Select the Things Stack V3
 
 5. In the **Step 3 Devices** tab, enter the device **DEVEUI** and **NAME** fields, and click **Next** to continue.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f31co2solution_lns_dc10.png"
-  width="60%"
-  caption="Add DEVEUI and Name"
-/>
+> **Image:** Add DEVEUI and Name
 
 6. In **Step 4 Plan**, select the preferred subscription plan, and click **Add 1 device** to add the device. For this example, choose **Free**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f32co2solution_lns_dc11.png"
-  width="60%"
-  caption="Select a subscription plan"
-/>
+> **Image:** Select a subscription plan
 
 7. The registered devices can now be viewed on the **Devices** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f33co2solution_lns_dc12.png"
-  width="100%"
-  caption="Registered device"
-/>
+> **Image:** Registered device
 
 **Create a Payloader Decoder**
 
 1. Click the successfully registered device and go to the **Configuration** tab. Scroll down to the **Payload Decoder** field, then copy and save the decoder code.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f34co2solution_lns_dc13.png"
-  width="100%"
-  caption="Configuration tab"
-/>
+> **Image:** Configuration tab
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f35co2solution_lns_dc14.png"
-  width="100%"
-  caption="Decoder code"
-/>
+> **Image:** Decoder code
 
 ````js
 function Decoder(bytes, port) {
@@ -359,19 +221,11 @@ return decoded;
 
 2. Displace the menu bar to the **+Add Field** section and click **+Add Field**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f36co2solution_lns_dc15.png"
-  width="100%"
-  caption="Add Field"
-/>
+> **Image:** Add Field
 
 3. The **Add Field** window appears. Fill out the fields shown in **Figure 36** to configure the stored data in the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f37co2solution_lns_dc16.png"
-  width="60%"
-  caption="Configuration fields"
-/>
+> **Image:** Configuration fields
 
 :::tip NOTE
 - Enter an appropriate name in the Name field.
@@ -382,37 +236,21 @@ return decoded;
 
 4. When completed, it will look the same, as shown in **Figure 37**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f38co2solution_lns_dc17.png"
-  width="100%"
-  caption="Successfully added fields"
-/>
+> **Image:** Successfully added fields
 
 **Create a Dashboard**
 
 1. To create a dashboard, toggle the **edit mode** switch on the **Dashboard** tab of the device in Datacake.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f39co2solution_lns_dc18.png"
-  width="100%"
-  caption="Turn on the edit mode switch"
-/>
+> **Image:** Turn on the edit mode switch
 
 2. Click **+Add Widget** to include a visualization widget.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f40co2solution_lns_dc19.png"
-  width="100%"
-  caption="Add visualization widget"
-/>
+> **Image:** Add visualization widget
 
 3. Select **Value** from the menu to create a new dashboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f41co2solution_lns_dc20.png"
-  width="60%"
-  caption="Select Value to create a new dashboard"
-/>
+> **Image:** Select Value to create a new dashboard
 
 :::tip NOTE
 You can select various types of widgets to accommodate different data formats.
@@ -420,35 +258,19 @@ You can select various types of widgets to accommodate different data formats.
 
 4. In the **Title** field under the **Basics** tab, name the widget, for example, *CO2 concentration*.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f43co2solution_lns_dc22.png"
-  width="60%"
-  caption="Name the Widget"
-/>
+> **Image:** Name the Widget
 
 5. Under the **Data** tab, click the Field dropdown arrow, select **CO2**, and set the unit to **ppm**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f42co2solution_lns_dc21.png"
-  width="60%"
-  caption="Setting Parameters"
-/>
+> **Image:** Setting Parameters
 
 6. Under the **Gauge** tab, select the gauge type and color, set the range of values for the widget, and then click **Save**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f44co2solution_lns_dc23.png"
-  width="60%"
-  caption="Set Gauge"
-/>
+> **Image:** Set Gauge
 
 7. When you finish adding the widgets, turn off the **edit mode** switch to save the edits.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f45co2solution_lns_dc24.png"
-  width="100%"
-  caption="Added Widget"
-/>
+> **Image:** Added Widget
 
 #### Built-In Network Server Setup
 
@@ -458,53 +280,29 @@ The built-in network server of the RAK gateway provides MQTT and HTTP integratio
 
 This section will use the public MQTT broker integration as an example to demonstrate how to use the built-in network server to create a visualization application on ThingsBoard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f46built-inserve-applicationflow.png"
-  width="80%"
-  caption="Gateway built-in NS application scenario"
-/>
+> **Image:** Gateway built-in NS application scenario
 
 ##### Configure the ThingsBoard
 
 1. Log in to [ThingsBoard.](https://thingsboard.cloud/login) If you don't have an account yet, [create one](https://thingsboard.cloud/signup) before proceeding.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f47co2solution_lns_tb1.png"
-  width="40%"
-  caption="ThingsBoard authentication page"
-/>
+> **Image:** ThingsBoard authentication page
 
 2. After successfully logging in, you will be directed to the ThingsBoard homepage.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f48co2solution_lns_tb2.png"
-  width="100%"
-  caption="ThingsBoard Homepage"
-/>
+> **Image:** ThingsBoard Homepage
 
 3. Navigate to the **Integration center > Data converter** menu bar to create a data converter for the uplink.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f49co2solution-lns-tb3.png"
-  width="100%"
-  caption="Create a Data Converter"
-/>
+> **Image:** Create a Data Converter
 
 4. Click on the **Add Data Converter** icon and choose the **Create new converter** option.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f50co2solution_lns_tb4.png"
-  width="40%"
-  caption="Create a new Converter"
-/>
+> **Image:** Create a new Converter
 
 5. Enter the name of the decoder in the **Name** field (for example, *Uplink decoder*), leave the **Type** field as **Uplink**, and select the **JavaScript** option.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f51co2solution_lns_tb5.png"
-  width="60%"
-  caption="Add the decoder code"
-/>
+> **Image:** Add the decoder code
 
 6. Edit the decoder code by copying the following code into the edit box. Then, click **Add** to include the uplink decoder.
 
@@ -551,46 +349,25 @@ return result;
 
 7. Navigate to the **Integration Center > Integrations** menu and click the **Add Integration** icon to add the MQTT integration.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f52co2solution_lns_tb6.png"
-  width="100%"
-  caption="Add the MQTT Integration"
-/>
+> **Image:** Add the MQTT Integration
 
 8. Enter the name of the integration (for example, *MQTT Integration*) in the **Name** field and select **MQTT** in the Type drop-down menu. Click **Next** to continue.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f53co2solution_lns_tb7.png"
-  width="60%"
-  caption="Basic Settings"
-/>
+> **Image:** Basic Settings
 
 9. In the **Uplink data converter** options, click **Select existing** to choose the previously created decoder (**Uplink Decoder**), then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f54co2solution_lns_tb8.png"
-  width="60%"
-  caption="Select the created decoder"
-/>
+> **Image:** Select the created decoder
 
 10. In the **Downlink data converter** interface, no configuration is necessary. Simply click **Skip** to bypass this setup.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f55co2solution_lns_tb9.png"
-  width="60%"
-  caption="WisGate OS Web Management Platform"
-/>
+> **Image:** WisGate OS Web Management Platform
 
 11. Configure connection options. **Host** is the MQTT broker address used for messages. The Host of the external MQTT broker used in this example is `broker.hivemq.com`. You can choose to use other brokers with a different Host.
 
-
 12. Enter the address `broker.hivemq.com` in the **Host** field, with the port number `1883`. Click the **Add topic filter** button to configure the subscription topic:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f56co2solution_lns_tb10.png"
-  width="60%"
-  caption="WisGate OS Web Management Platform"
-/>
+> **Image:** WisGate OS Web Management Platform
 
 ````
 application/{{ application_name }}/device/{{ device_EUI }}/join
@@ -609,19 +386,11 @@ Modify the parameter values corresponding to the topics based on the actual appl
 The values in the subscription topic must be all lowercase. For example, *application/1/device/0123456789abcdef/join*. 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f56-1co2solution_lns_tb10-1.png"
-  width="60%"
-  caption="WisGate OS Web Management Platform"
-/>
+> **Image:** WisGate OS Web Management Platform
 
 13.  After configuring the details, click on **Add** to save and complete the settings.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f56-2co2solution_lns_tb10-2.png"
-  width="100%"
-  caption="WisGate OS Web Management Platform"
-/>
+> **Image:** WisGate OS Web Management Platform
 
 ##### Configure the Gateway
 
@@ -629,46 +398,25 @@ This section will use [RAK7268 V2 WisGate Edge Lite 2](https://store.rakwireless
 
 1. To access the gateway web management platform, refer to the [WisGateOS V2 User Manual](https://docs.rakwireless.com.cn/product-categories/software-apis-and-libraries/wisgateos2/overview/) for details.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f57co2solution_lns_tb11.png"
-  width="80%"
-  caption="WisGate OS Web Management Platform"
-/>
+> **Image:** WisGate OS Web Management Platform
 
 2. After successfully logging in, navigate to the **LoRa®** menu in the left navigation tree. Set the **Work mode** of the gateway to **Built-in network server**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f58co2solution_lns_tb12.png"
-  width="100%"
-  caption="Set the Work mode of the gateway"
-/>
+> **Image:** Set the Work mode of the gateway
 
 3. Once done with the setting, click the **Applications** tab, then the **Add application** button. You can also click **add one now** text link to add a new application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f59co2solution_lns_tb13.png"
-  width="100%"
-  caption="Applications Tab"
-/>
+> **Image:** Applications Tab
 
 4. Configure the following information: **Application name**, **Application Description**, and **Application Type**.
 
 - **Unified Application key**: Choose this option if all devices will use the same application key. Once selected, a field for the application key appears, where you can manually type in an application key or click the **Autogenerate** button to generate one.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f60co2solution_lns_tb14.png"
-  width="60%"
-  caption="Unified Application Key"
-/>
+> **Image:** Unified Application Key
 
 - After enabling the Auto Add Device option, configure the **Application EUI option**. The value needs to be consistent with the node value. Once you have verified the application EUI and key, the device will be added automatically to the application.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f61co2solution_lns_tb15.png"
-  width="60%"
-  caption="Auto Add Device"
-/>
+> **Image:** Auto Add Device
 
 :::tip NOTE
 You can obtain the values by either querying the end device or generating it automatically and modifying the corresponding value of the device synchronously.  
@@ -676,21 +424,13 @@ You can obtain the values by either querying the end device or generating it aut
 
 - **Separate Application keys**: Each device has its own application key. Add the key when registering the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f62co2solution_lns_tb16.png"
-  width="60%"
-  caption="Add Application Key"
-/>
+> **Image:** Add Application Key
 
 5. Once you've completed the configuration, click on **Save Application** to add the new application.
 
 6. In the application list, locate the newly created application and navigate to the **End devices** tab. If you've enabled the **Auto Add Device** function, the device will be automatically registered upon the addition request.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f63co2solution_lns_tb17.png"
-  width="100%"
-  caption="End Devices Tab"
-/>
+> **Image:** End Devices Tab
 
 7. Click the **Add end device** button. In the **End device information** interface, fill in the following information:
 
@@ -703,19 +443,11 @@ You can obtain the values by either querying the end device or generating it aut
 - **Frame Counter Width:** Maintain the default value.
 - **LoRaWAN MAC Version:** The protocol version (V1.0.3) of the node.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f64co2solution_lns_tb18.png"
-  width="60%"
-  caption="Add new end devices"
-/>
+> **Image:** Add new end devices
 
 8. After completing, click **Add end devices** to proceed to the next step.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f64-1co2solution_lns_tb18-1.png"
-  width="70%"
-  caption="Add the device to the device list"
-/>
+> **Image:** Add the device to the device list
 
 9. In the **Adding end devices** interface, enter the device EUI in the **End Device EUI (main)** field and select the **Add to End Devices list** button. Then click **Add end devices** to complete adding the end device.
 
@@ -725,19 +457,11 @@ You can obtain the values by either querying the end device or generating it aut
 - If the EUI is incorrect, the device will be displayed in the **End devices with an error**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f65co2solution_lns_tb19.png"
-  width="70%"
-  caption="Complete the end device addition"
-/>
+> **Image:** Complete the end device addition
 
 10. Click the Add button to confirm adding the device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f66co2solution_lns_tb20.png"
-  width="60%"
-  caption="Confirm to add the end device"
-/>
+> **Image:** Confirm to add the end device
 
 11. When finished, you will enter the **End devices interface**, where you can see the created end device.
 
@@ -745,11 +469,7 @@ You can obtain the values by either querying the end device or generating it aut
 
 For specific configuration on how to connect SensorHub to the server, please refer to **SensorHub Network Configuration > LoRaWAN Application Scenario**. Once completed, the device will join the network. As shown in **Figure 69**, the end device SensorHub has successfully connected to the gateway's built-in server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f67co2solution_lns_tb21.png"
-  width="80%"
-  caption="End device  SensoHub has been connected"
-/>
+> **Image:** End device  SensoHub has been connected
 
 ##### Configure MQTT Integration
 
@@ -757,76 +477,43 @@ For specific configuration on how to connect SensorHub to the server, please ref
 
 2. Enable the **Enable Integration Interface** option and select **Generic MQTT** as the **Integration mode**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f68co2solution_lns_tb22.png"
-  width="60%"
-  caption="Set up MQTT integration"
-/>
+> **Image:** Set up MQTT integration
 
 3. In the **MQTT Broker Address** option, enter `broker.hivemq.com` then click **Save changes**.
 
 4. After the device has joined and has been sending uplink data, check the uplink data in **ThingsBoard > Integrations > Your Integration > Events**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f69co2solution_lns_tb23.png"
-  width="100%"
-  caption="View the gateway uplink data"
-/>
+> **Image:** View the gateway uplink data
 
 ##### Visualize Data Through ThingsBoard
 
 1. After creating the data converter, integrating, and obtaining some data in the **Event** tab, check the automatically created devices based on the decoder in the **Entities > Devices > Groups** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f70co2solution_lns_tb24.png"
-  width="100%"
-  caption="Check the device"
-/>
+> **Image:** Check the device
 
 2. Click the group named **All** in the **Device groups** menu to automatically create a decoder device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f71co2solution_lns_tb25.png"
-  width="100%"
-  caption="Automatically created decoder device"
-/>
+> **Image:** Automatically created decoder device
 
 3. Click the device, and navigate to the **Attributes** tab, and check on the node data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f72co2solution_lns_tb26.png"
-  width="100%"
-  caption="Node data"
-/>
+> **Image:** Node data
 
 4. To visualize the data, simply select the values you wish to display, then click the **Show on widget** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f73co2solution_lns_tb27.png"
-  width="100%"
-  caption="Select Widget"
-/>
+> **Image:** Select Widget
 
 5. On the next page, choose the desired widget for your data from the **Current bundle** drop-down menu. In this example, select **Outdoor Environment**, and then select the appropriate visualization chart by clicking the slide icon.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f74co2solution_lns_tb28.png"
-  width="100%"
-  caption="Select Widget"
-/>
+> **Image:** Select Widget
 
 6. After selecting the widget, click **Add to dashboard**.
 
 By default, the profile does not have a dashboard, so you need to select **Create new dashboard** and enter a name for the dashboard in the **New dashboard title** field, for example, *SensorHub_co2*.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f76co2solution_lns_tb30.png"
-  width="60%"
-  caption="Enter the dashboard name"
-/>
+> **Image:** Enter the dashboard name
 
 7. After setting the name of the dashboard, click the **Add** button to add more widgets. Alternatively, check the **Open dashboard** option to automatically open the created dashboard after adding the widget.
-
 
 :::tip NOTE
 If the **Open** dashboard option is not selected, users can still easily view the added widgets via **Dashboard groups > All > [Group Name]**.
@@ -848,11 +535,7 @@ If the **Open** dashboard option is not selected, users can still easily view th
 
 If the above settings are correct, the final visualization widget on the Dashboard should resemble **Figure 78**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f77co2solution_lns_tb31.png"
-  width="100%"
-  caption="Dashboard created"
-/>
+> **Image:** Dashboard created
 
 ### NB-IoT/LTE CAT-M1 Application
 
@@ -860,11 +543,7 @@ If the above settings are correct, the final visualization widget on the Dashboa
 
 In the **Network Server and Visualization Configuration** section, the server in the example has been set as a public MQTT broker: `broker.hivemq.com`. Refer to the corresponding section for details. Users can also choose other brokers or servers, such as AWS IoT Core (optional), according to actual usage scenarios.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f79nb-iotlte-cat-m1-application-scenari.png"
-  width="100%"
-  caption="NB-IoT/LTE CAT-M1 application scenario"
-/>
+> **Image:** NB-IoT/LTE CAT-M1 application scenario
 
 #### Visualize Data Through Datacake
 
@@ -876,86 +555,46 @@ To get started, create an account on the [official website](https://datacake.co/
 
 1. After logging in to your account, navigate to the **Devices** tab and click **+ Add Device** to proceed with adding the Sensor Hub end device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f80co2solution_nbi1.png"
-  width="100%"
-  caption="Devices Page"
-/>
+> **Image:** Devices Page
 
 2. Select the **API** option and click **Next** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f82co2solution_nbi3.png"
-  width="60%"
-  caption="Select API"
-/>
+> **Image:** Select API
 
 3. As the device is new and there's no ready-made template, choose **New Product** from the **Datacake Product** options. Enter the device name in the **Product Name** field, then click **Next** to proceed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f83co2solution_nbi4.png"
-  width="60%"
-  caption="Select New Product"
-/>
+> **Image:** Select New Product
 
 4. The **SERIAL NUMBER** field can be left blank. Datacake will randomly generate a serial number for the device, then click **Next**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f84co2solution_nbi5.png"
-  width="60%"
-  caption="Add Devices"
-/>
+> **Image:** Add Devices
 
 5. Select the preferred subscription plan, then click **Add 1 device**. For this example, choose **Free**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f85co2solution_nbi6.png"
-  width="60%"
-  caption="Select a subscription plan"
-/>
+> **Image:** Select a subscription plan
 
 6. The registered device can now be viewed on the **Devices** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f86co2solution_nbi7.png"
-  width="100%"
-  caption="Registered device"
-/>
+> **Image:** Registered device
 
 ##### MQTT Configuration
 
 1. Click the name of the device you just created in the list to enter the interface, then select the **Configuration** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f88co2solution_nbi9.png"
-  width="100%"
-  caption="Configuration tab"
-/>
+> **Image:** Configuration tab
 
 2. Scroll down to the **API Configuration** option and copy the **Serial number**. Save it locally for later use.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f89co2solution_nbi10.png"
-  width="100%"
-  caption="Copy the serial number"
-/>
+> **Image:** Copy the serial number
 
 3. Continue scrolling down to the **MQTT Configuration** option and configure the external MQTT Broker.
 4. Click **+Add new MQTT server** and configure the relevant parameters. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f90co2solution_nbi11.png"
-  width="100%"
-  caption="Configure the external MQTT Broker"
-/>
+> **Image:** Configure the external MQTT Broker
 
 5. Fill in the relevant information based on the actual server used, then click **Test Connection** to verify whether Datacake can successfully connect to the **MQTT Broker**. The information shown in **Figure 89** is just an example.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f91co2solution_nbi12.png"
-  width="60%"
-  caption="Configure the relevant parameters"
-/>
+> **Image:** Configure the relevant parameters
 
 :::tip NOTE
 If SSL/TLS encryption and authentication are set for more secure communication, ensure to configure them accordingly in this section. However, for this example, you can skip this option.
@@ -963,27 +602,15 @@ If SSL/TLS encryption and authentication are set for more secure communication, 
 
  6. If the connection is successful, you will see the message **Connection successful**. Click **Add MQTT Server** to complete the addition of the MQTT server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f92co2solution_nbi13.png"
-  width="100%"
-  caption="Connection established successfully"
-/>
+> **Image:** Connection established successfully
 
 7. After successfully adding the MQTT server, click on **+Add Uplink Decoder** to add a decoder.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f93co2solution_nbi14.png"
-  width="100%"
-  caption="Add MQTT Server"
-/>
+> **Image:** Add MQTT Server
 
 8. A new window will appear, and fill in the fields according to your project.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f94co2solution_nbi15.png"
-  width="60%"
-  caption="Add Uplink Decoder"
-/>
+> **Image:** Add Uplink Decoder
 
 - **Subscribe to topics**: Configure the subscription topics, that is, the value of the **Publish Topic** configured in the **Network Server and Visualization Configuration** section.
 - **Decoder function**: Copy the following decoding code and paste it into the **Decoder function** space.
@@ -1016,19 +643,11 @@ In the above code, make sure that the parameter **serial_number** (device: `ed02
 9. Once completed, click **Add uplink decoder**.
 10. In the **Fields** option, click **+Add Field**. In Datacake, the monitoring values of the devices will be stored in **Fields**. Each device can create a certain number of fields, also known as a *data point*.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f95co2solution_nbi16.png"
-  width="100%"
-  caption="Set the related parameters of the field"
-/>
+> **Image:** Set the related parameters of the field
 
 11. Set the necessary parameters of the Fields. For **Fields** with multiple data points, add them one by one. Once done, click **Add Field**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f95co2solution_nbi17.png"
-  width="60%"
-  caption="Set the related parameters of the field"
-/>
+> **Image:** Set the related parameters of the field
 
 :::tip NOTE
 The **Identifier** field will be automatically filled based on the name.
@@ -1036,11 +655,7 @@ The **Identifier** field will be automatically filled based on the name.
 
 12. Once the uplink data is received, the **Current value** column in the **Fields** list will display the current monitoring value from the sensor.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f96co2solution_nbi18.png"
-  width="100%"
-  caption="Added sensor monitoring values"
-/>
+> **Image:** Added sensor monitoring values
 
 ##### **Create a Dashboard to Visualize Data**
 
@@ -1049,34 +664,17 @@ The **Identifier** field will be automatically filled based on the name.
 1. On the device details page, navigate to the **Dashboard** tab, then toggle on the edit mode switch.
 2. Click on the **+ Add Widget** button to add a widget for visualizing data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f97co2solution_nbi19.png"
-  width="100%"
-  caption="Open the edit mode"
-/>
+> **Image:** Open the edit mode
 
 3. Choose what type of widgets you want to display. For this example, select Value to visualize the CO<sub>2</sub> values. 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f98co2solution_nbi20.png"
-  width="60%"
-  caption="Select and add widgets for visualizing data"
-/>
+> **Image:** Select and add widgets for visualizing data
 
 4. Click on the **Data** tab. Choose the field for visualization from the **Field** options and set the unit of the field, which is **ppm** in this example.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f99co2solution_nbi21.png"
-  width="60%"
-  caption="Select the visualization data field"
-/>
+> **Image:** Select the visualization data field
 
 5. After configuring the widget, click **Save**. Once done with the dashboard configuration, turn off the **edit mode** switch to save the settings.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/co2-concentration-monitoring/lorawan-network-server/f100co2solution_nbi22.png"
-  width="100%"
-  caption="CO2 data visualization"
-/>
+> **Image:** CO2 data visualization
 
-<RkBottomNav/>

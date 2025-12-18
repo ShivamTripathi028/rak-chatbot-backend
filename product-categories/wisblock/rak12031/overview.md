@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12031 WisBlock T-Beam-Fork Sensor Module
 
 Thank you for choosing **RAK12031 WisBlock T-Beam-Fork Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,7 +27,6 @@ Thank you for choosing **RAK12031 WisBlock T-Beam-Fork Sensor Module** in your a
 
 - [Sample Code: RAK12031_T_Fork_SX1041](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK12031_T_Fork_SX1041)
 
-
 ## Product Description
 
 RAK12031 is a WisBlock T-Beam-Fork (TBF) sensor module that is based on EE-SX1041 from Omron. It can detect the presence of small moving objects, measure the speed of rotation, linear motion, and more. RAK12031 is a separate TBF sensor and have two (2) connectors, which can be connected to the [RAK12028 TBF Connector module](https://docs.rakwireless.com/product-categories/wisblock/rak12028/overview/) or by using a [RAK19005 WisBlock Sensor Extension Cable](https://docs.rakwireless.com/product-categories/wisblock/rak19005/overview/) to connect it to the WisBlock Base.
@@ -37,16 +34,16 @@ RAK12031 is a WisBlock T-Beam-Fork (TBF) sensor module that is based on EE-SX104
 ## Product Features
 
 * **Module specifications**
-    * Operating Voltage: 3.3&nbsp;V
+    * Operating Voltage: 3.3 V
     * Chipset: Omron EE-SX1041
     * T-Fork module
     * Detect presence of small moving objects
     * Method for measurement velocity with grating
-    * Slot width: 5&nbsp;mm
-    * Slot depth: 8.2&nbsp;mm
+    * Slot width: 5 mm
+    * Slot depth: 8.2 mm
 
 * **Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
@@ -56,4 +53,3 @@ To use a **RAK12031**, you need to connect at least one (1) **RAK12028** TBF Con
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

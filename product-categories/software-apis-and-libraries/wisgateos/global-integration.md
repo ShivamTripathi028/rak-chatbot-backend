@@ -10,9 +10,6 @@ keywords:
 sidebar_label: Global Integration
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisgateOS Global Integration
 
 This tutorial covers a detailed look at one of the connectivity options of WisGateOS – Global integration. More specifically, two use cases is considered:
@@ -62,12 +59,7 @@ sudo apt-get update -y
 sudo apt-get install mosquitto
 ```
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.1.mosquitto-broker.png"
-  width="100%"
-  caption="Installing Mosquitto Broker"
-/>
+> **Image:** Installing Mosquitto Broker
 
 2. Generating the authentication files.
 
@@ -77,11 +69,7 @@ For self-signed server certificate mode TLS, you will need a **Server Certificat
 sudo apt-get install git
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.2.installing-git.png"
-  width="100%"
-  caption="Installing git"
-/>
+> **Image:** Installing git
 
 3. Now, you have to clone the tool and run the **generate-CA.sh** script. After the execution, the newly created files will be in the same directory as the script itself:
 
@@ -97,12 +85,7 @@ cd tools/TLS
 sudo ./generate-CA.sh
 ```
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.3.installing-git.png"
-  width="100%"
-  caption="Generating the Certificates"
-/>
+> **Image:** Generating the Certificates
 
 4. Set up the Mosquitto Broker
 
@@ -120,14 +103,9 @@ sudo cp raspberrypi.crt /etc/mosquitto/certs/
 sudo cp raspberrypi.key /etc/mosquitto/certs/
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.4.moving-certificates.png"
-  width="100%"
-  caption="Moving the Certificates"
-/>
+> **Image:** Moving the Certificates
 
 5. To finish the broker setup, you need to configure it. Navigate to **/etc/mosquitto/mosquitto.conf** with the command:
-
 
 ```
 sudo nano  /etc/mosquitto/mosquitto.conf  
@@ -142,12 +120,7 @@ The changes that need to be made in the file are listed in the table:
 | keyfile `/etc/mosquitto/certs/raspberrypi.key`  | This line will specify where the `raspberrypi.key` file is. It should be at the end of the file.                                               |
 | certfile `/etc/mosquitto/certs/raspberrypi.crt` | This line will specify where the `raspberrypi.crt` file is. It should be at the end of the file.                                               |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.5.mosquitto-configuration.png"
-  width="100%"
-  caption="Mosquitto Configuration"
-/>
+> **Image:** Mosquitto Configuration
 
 6. Restart the Mosquitto service to load the configuration file.
 
@@ -163,11 +136,7 @@ You need to provide the `ca.crt` file to the gateway that you want to connect to
 cat ca.crt
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.6.copy-the-certificate.png"
-  width="100%"
-  caption="Mosquitto Configuration"
-/>
+> **Image:** Mosquitto Configuration
 
 Make sure to copy only the certificate as even one extra symbol could make the certificate invalid.
 
@@ -183,12 +152,7 @@ Make sure to copy only the certificate as even one extra symbol could make the c
 
 - **CA Certificate** – Paste the copied CA Certificate. Make sure that there are no spaces before and after the certificate.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.7.global-integration.png"
-  width="100%"
-  caption="Global Integration setup"
-/>
+> **Image:** Global Integration setup
 
 9. Click **Save & Apply** and the configuration will be ready.
 
@@ -198,12 +162,7 @@ Make sure to copy only the certificate as even one extra symbol could make the c
 sudo apt-get install mosquitto-client
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.8.mosquitto-clients.png"
-  width="100%"
-  caption="Install Mosquitto Clients"
-/>
-
+> **Image:** Install Mosquitto Clients
 
  Now, use **mosquitto_sub** to subscribe to a topic and see if uplinks are received:
 
@@ -211,10 +170,5 @@ sudo apt-get install mosquitto-client
 mosquitto_sub -h <host’s IP> -p  8883 -t application/1/device/+/rx –cafile  /etc/mosquitto/ca-certificates/ca.crt 
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument8/36.9.received-uplinks.png"
-  width="100%"
-  caption="Received Uplinks from the End-Device"
-/>
+> **Image:** Received Uplinks from the End-Device
 
-<RkBottomNav/>

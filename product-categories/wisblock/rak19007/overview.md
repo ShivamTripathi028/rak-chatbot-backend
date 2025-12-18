@@ -20,12 +20,9 @@ date: 2021-04-07
 download: true
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK19007 WisBlock Base Board 2nd Gen
 
 Thank you for choosing **RAK19007 WisBlock Base Board 2nd Gen** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
-
 
 * [RAK19007 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak19007/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak19007/datasheet/)
@@ -35,10 +32,9 @@ Thank you for choosing **RAK19007 WisBlock Base Board 2nd Gen** in your awesome 
 * [24-Pin Female Connector 3D File (Sensor Slot)](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/F24S1003K6M.stp)
 * [40-Pin Female Connector 3D File (Core Slot)](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/F40S1003K6M.stp)
 
-
 ## Product Description
 
-**RAK19007** is a **WisBlock Base Board 2nd Gen** that connects **WisBlock Core**, **WisBlock IO**, and **WisBlock Modules**. It provides the power supply and interconnection to the modules attached to it. It has one slot reserved for the WisBlock Core module and four slots A-D for WisBlock modules. The WisBlock Core is attached on the top side, and the WisBlock modules are attached to the top or bottom side of the RAK19007. The Slot D holds modules up to 23&nbsp;mm in size, while slots A to C support 10&nbsp;mm WisBlock modules. Also, there are three **2.54&nbsp;mm pitch headers** for extension interface with **BOOT**, **GPIO**, **I2C**, and **UART** pins.
+**RAK19007** is a **WisBlock Base Board 2nd Gen** that connects **WisBlock Core**, **WisBlock IO**, and **WisBlock Modules**. It provides the power supply and interconnection to the modules attached to it. It has one slot reserved for the WisBlock Core module and four slots A-D for WisBlock modules. The WisBlock Core is attached on the top side, and the WisBlock modules are attached to the top or bottom side of the RAK19007. The Slot D holds modules up to 23 mm in size, while slots A to C support 10 mm WisBlock modules. Also, there are three **2.54 mm pitch headers** for extension interface with **BOOT**, **GPIO**, **I2C**, and **UART** pins.
 
 For convenience, there is a Type-C USB connector that is connected directly to WisBlock Core MCU’s USB port (if supported) or to a USB-UART converter depending on the WisBlock Core. It can be used for uploading firmware or serial communication. The USB-C connector is also used as a battery charging port.
 
@@ -52,8 +48,8 @@ You can also use a [RAK19005 WisBlock Sensor Extension Cable](https://store.rakw
 * 1 WisBlock compatible with IO slot
 * 4 WisBlock modules compatible with slots A-D
 * 1 Type-C USB port for programming and debugging
-* 3.7&nbsp;V Rechargeable battery connector
-* 5&nbsp;V Solar panel connector
+* 3.7 V Rechargeable battery connector
+* 5 V Solar panel connector
 * Four 4-pin header with BOOT, I2C, and UART pins accessible with solder contacts
 
 Additionally, it has two user-definable LEDs, one power supply/charging indicator LED, and a reset button.
@@ -68,27 +64,23 @@ Additionally, it has two user-definable LEDs, one power supply/charging indicato
 
 :::
 
-
-
 ## Product Features
 
 * **Power supply**
-    * Supports both 5&nbsp;V USB and 3.7&nbsp;V rechargeable battery as power supply
-    * 5&nbsp;V solar panel connector to recharge the battery in a remote solution
+    * Supports both 5 V USB and 3.7 V rechargeable battery as power supply
+    * 5 V solar panel connector to recharge the battery in a remote solution
     * Power consumption control
     * **RAK19007** has an electronic load switch to power the **WisBlock modules**. The power supply for the **WisBlock modules** boards can be controlled by the **WisBlock Core** modules application.
 
 * **Size**
-    * **RAK19007** has a size of only 30 x 60&nbsp;mm, which lets you create solutions that fit into the smallest housings.
-
+    * **RAK19007** has a size of only 30 x 60 mm, which lets you create solutions that fit into the smallest housings.
 
 ## Prerequisites
 
 WisBlock Base Board Gen2 is amazingly easy to use and requires only a Type-C USB cable to start developing with the system.
 
 :::warning
-- Only 3.7-4.2&nbsp;V Rechargeable Li-Ion batteries are supported. Do not use other types of batteries with the system.
-- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 3.7-4.2 V Rechargeable Li-Ion batteries are supported. Do not use other types of batteries with the system.
+- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
 :::
 
-<RkBottomNav/>

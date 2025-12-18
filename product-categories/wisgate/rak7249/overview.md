@@ -11,9 +11,6 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7249 WisGate Edge Max
 
@@ -26,7 +23,6 @@ Thank you for choosing **RAK7249 WisGate Edge Max** in your awesome IoT Project!
 * [Use the MQTT Broker Like a Pro + Examples](https://learn.rakwireless.com/hc/en-us/articles/26688300221079-How-To-Use-the-MQTT-Broker-Like-a-Pro-Examples)
 * [AWS IoT Core Integration](https://learn.rakwireless.com/hc/en-us/articles/26662067838359-How-To-Configure-AWS-IoT-Core-Integration)
 * [RAK7249 Latest Firmware](https://downloads.rakwireless.com/LoRa/WisGateOS/WisGateOS_Latest_Firmware.zip)
-
 
 ## Product Description
 

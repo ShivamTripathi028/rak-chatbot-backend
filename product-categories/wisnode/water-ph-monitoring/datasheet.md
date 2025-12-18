@@ -10,9 +10,6 @@ image: https://images.docs.rakwireless.com/wisnode/water-ph-monitoring/waterphso
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Water pH Monitoring Solution Datasheet
 
 ## Solution Overview
@@ -24,7 +21,6 @@ The Water pH Sensor Solution integrates the RAK Sensor Hub with the JXBS-4001-pH
 With the plug-and-play feature of the Sensor Hub, the Water pH Sensor Solution comes with pre-installed components ready for easy installation and connection. The sensor provides highly accurate water pH readings, with the Sensor Hub collecting and transmitting the data via LoRaWAN or NB-IoT/CAT M1.
 
 The Sensor Hub’s connectivity function allows for versatile data transmission to the cloud using the two most commonly used communication protocols in IoT. This versatility ensures that data is readily available for storage, visualization, and in-depth analysis, enabling informed decision-making based on comprehensive knowledge of water pH levels.
-
 
 ### Features
 
@@ -42,7 +38,6 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 - High Precision
 - Good waterproof performances
 
-
 ## Hardware Specifications
 
 ### Sensor Hub Specifications
@@ -57,71 +52,26 @@ If you need detailed information about the Sensor Hub, including technical speci
 
 **Water pH sensor (JXBS-4001- pH) datasheet**
 
-<table>
-  <tr>
-    <th colSpan="3">PARAMETER</th>
-    <th>CONTENT</th>
-  </tr>
-  <tr>
-    <td rowSpan="4">Transmitter</td>
-    <td colSpan="2">DC Power Supply</td>
-    <td>12&nbsp;V - 24&nbsp;V<sub>DC</sub></td>
-  </tr>
-  <tr>
-    <td colSpan="2">Power Consumption</td>
-    <td>≤ 0.15&nbsp;W (@12&nbsp;V<sub>DC</sub>, 25°&nbsp;C)</td>
-  </tr>
-  <tr>
-    <td colSpan="2">Output signal</td>
-    <td>485 / 4 - 20&nbsp;mA / 0 - 10&nbsp;V</td>
-  </tr>
-  <tr>
-    <td colSpan="2">Size</td>
-    <td>105&nbsp;mm × 86&nbsp;mm × 45.5&nbsp;mm</td>
-  </tr>
-  <tr>
-    <td rowSpan="9">Probe</td>
-    <td colSpan="2">Cable Length</td>
-    <td>5 meters (default)</td>
-  </tr>
-  <tr>
-    <td colSpan="2">Response Time</td>
-    <td>≤ 15&nbsp;s</td>
-  </tr>
-  <tr>
-    <td rowSpan="3">pH</td>
-    <td>Measuring Range</td>
-    <td>0 - 14&nbsp;pH</td>
-  </tr>
-  <tr>
-    <td>Measurement Precision</td>
-    <td>0.01&nbsp;pH</td>
-  </tr>
-  <tr>
-    <td>Resolution</td>
-    <td>± 0.5&nbsp;pH (default)</td>
-  </tr>
-  <tr>
-    <td rowSpan="3">Temperature</td>
-    <td>Measuring Range</td>
-    <td>-10°&nbsp;C - 80°&nbsp;C</td>
-  </tr>
-  <tr>
-    <td>Measurement Precision</td>
-    <td>0.1°&nbsp;C</td>
-  </tr>
-  <tr>
-    <td>Resolution</td>
-    <td>0.1°&nbsp;C</td>
-  </tr>
-</table>
-
+| PARAMETER | PARAMETER | PARAMETER | CONTENT |
+| --- | --- | --- | --- |
+| Transmitter | DC Power Supply | DC Power Supply | 12 V - 24 VDC |
+| Transmitter | Power Consumption | Power Consumption | ≤ 0.15 W (@12 VDC, 25° C) |
+| Transmitter | Output signal | Output signal | 485 / 4 - 20 mA / 0 - 10 V |
+| Transmitter | Size | Size | 105 mm × 86 mm × 45.5 mm |
+| Probe | Cable Length | Cable Length | 5 meters (default) |
+| Probe | Response Time | Response Time | ≤ 15 s |
+| Probe | pH | Measuring Range | 0 - 14 pH |
+| Probe | pH | Measurement Precision | 0.01 pH |
+| Probe | pH | Resolution | ± 0.5 pH (default) |
+| Probe | Temperature | Measuring Range | -10° C - 80° C |
+| Probe | Temperature | Measurement Precision | 0.1° C |
+| Probe | Temperature | Resolution | 0.1° C |
 
 ### Solar Cell System Specifications
 
 #### Definition of Terms
 
-<b>List of Abbreviations</b>
+**List of Abbreviations**
 
 | Abbreviation | Definition                  |
 |--------------|-----------------------------|
@@ -136,8 +86,7 @@ If you need detailed information about the Sensor Hub, including technical speci
 | OCV          | Open Circuit Voltage        |
 | SOC          | Stage of charge             |
 
-
-<b>Terminologies</b>
+**Terminologies**
 
 | Terminology     | Definition                                                                                                                                                                                                                                                                                                            |
 |-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -148,8 +97,16 @@ If you need detailed information about the Sensor Hub, including technical speci
 | Capacity        | The amount of electrical charge that a fully charged battery can store and subsequently provide to a device or system. It is typically measured in ampere-hours (Ah).                                                                                                                                                 |
 | Energy Capacity | The total amount of energy that a fully charged battery can deliver under specific conditions. It is typically measured in watt-hours (Wh) or kilowatt-hours (kWh).                                                                                                                                                   |
 | Rated Capacity  | The minimum capacity that a fully charged battery can deliver at the beginning of its life (BOL), typically measured under specific conditions such as a discharge rate of 1C (discharge C-rate).                                                                                                                     |
-| Units           | **V**: Volt, voltage<br/>**A**: Ampere, current<br/>**Ah**: Ampere-hour, charge<br/>**Wh**: Watt-hour, electrical energy<br/>**Ω**: Ohm, resistance<br/>**°&nbsp;C**: degrees Celsius, temperature<br/>**mm**: millimeter, length<br/>**s**: seconds, time <br/>**kg**: kilogram, weight<br/>**Hz**: Hertz, frequency |
-
+| Units           | **V**: Volt, voltage
+**A**: Ampere, current
+**Ah**: Ampere-hour, charge
+**Wh**: Watt-hour, electrical energy
+**Ω**: Ohm, resistance
+**° C**: degrees Celsius, temperature
+**mm**: millimeter, length
+**s**: seconds, time 
+**kg**: kilogram, weight
+**Hz**: Hertz, frequency |
 
 #### Main Specifications 
 
@@ -157,107 +114,52 @@ If you need detailed information about the Sensor Hub, including technical speci
 |----------------------------------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|
 | Battery Model                          | RAK9154                                                                                         |                                                                                  |
 | Battery Cell Model                     | Rechargeable cylindrical lithium-ion battery H18650CH                                           | H18650CH or equivalent product.                                                  |
-| Rated Capacity                         | 5200&nbsp;mAh                                                                                   |                                                                                  |
-| Rated Voltage                          | 10.8&nbsp;V                                                                                     | Single battery voltage 3.6&nbsp;V                                                |
-| Operating Voltage Range                | 9&nbsp;V ~ 12.6&nbsp;V                                                                            |                                                                                  |
-| Rated Power                            | 56.16&nbsp;Wh                                                                                   |                                                                                  |
-| SOC Transportation Range               | 50&nbsp;%                                                                                       |                                                                                  |
-| Operating Temperature                  | Charging temperature: 0°&nbsp;C ~ 45°&nbsp;C<br/>Discharge temperature: -20°&nbsp;C ~ 60°&nbsp;C    |                                                                                  |
-| Storage Temperature                    | -20°&nbsp;C ~ 60°&nbsp;C                                                                          | More than three months @25°&nbsp;C                                               |
-| Operating Humidity                     | 20~80°&nbsp;%RH                                                                                 |                                                                                  |
-| PV Input                               | 18°&nbsp;V/1.0°&nbsp;A                                                                          | Typical                                                                          |
-| Maximum PV Input Voltage               | 30&nbsp;V                                                                                       | Open circuit voltage                                                             |
-| Maximum Continuous Charging Current    | 0.2&nbsp;C (1.0&nbsp;A)                                                                         | Limited by solar charger                                                         |
-| Maximum Continuous Discharging current | 0.4&nbsp;C (2.0&nbsp;A)                                                                         |                                                                                  |
-| ∆ Voltage                              | ≤20&nbsp;mV                                                                                     | SOC 30&nbsp;% ~ 60&nbsp;%; rest for at least 2 hours after charging or discharging |
-| Weight                                 | 0.85&nbsp;Kg                                                                                    |                                                                                  |
-| Size                                   | Length: 180&nbsp;(±3)&nbsp;mm<br/>Width: 130&nbsp;(±3)&nbsp;mm<br/>Height: 60&nbsp;(±3)&nbsp;mm |                                                                                  |
+| Rated Capacity                         | 5200 mAh                                                                                   |                                                                                  |
+| Rated Voltage                          | 10.8 V                                                                                     | Single battery voltage 3.6 V                                                |
+| Operating Voltage Range                | 9 V ~ 12.6 V                                                                            |                                                                                  |
+| Rated Power                            | 56.16 Wh                                                                                   |                                                                                  |
+| SOC Transportation Range               | 50 %                                                                                       |                                                                                  |
+| Operating Temperature                  | Charging temperature: 0° C ~ 45° C
+Discharge temperature: -20° C ~ 60° C    |                                                                                  |
+| Storage Temperature                    | -20° C ~ 60° C                                                                          | More than three months @25° C                                               |
+| Operating Humidity                     | 20~80° %RH                                                                                 |                                                                                  |
+| PV Input                               | 18° V/1.0° A                                                                          | Typical                                                                          |
+| Maximum PV Input Voltage               | 30 V                                                                                       | Open circuit voltage                                                             |
+| Maximum Continuous Charging Current    | 0.2 C (1.0 A)                                                                         | Limited by solar charger                                                         |
+| Maximum Continuous Discharging current | 0.4 C (2.0 A)                                                                         |                                                                                  |
+| ∆ Voltage                              | ≤20 mV                                                                                     | SOC 30 % ~ 60 %; rest for at least 2 hours after charging or discharging |
+| Weight                                 | 0.85 Kg                                                                                    |                                                                                  |
+| Size                                   | Length: 180 (±3) mm
+Width: 130 (±3) mm
+Height: 60 (±3) mm |                                                                                  |
 
 #### Interfaces
 
 ##### Battery System Structure
 
-As illustrated in **Figure 2**, the RAK9154 battery system comprises two sets of three 2600&nbsp;mAh battery units connected in series. The system also incorporates one (1) BMS board integrated with an 18 V input solar charger.The RAK9154 battery system is depicted in **Figure 2**. This battery system comprises two sets of three 2600&nbsp;mAh battery cells connected in series, accompanied by a BMS board that integrates an 18&nbsp;V input solar charger.
+As illustrated in **Figure 2**, the RAK9154 battery system comprises two sets of three 2600 mAh battery units connected in series. The system also incorporates one (1) BMS board integrated with an 18 V input solar charger.The RAK9154 battery system is depicted in **Figure 2**. This battery system comprises two sets of three 2600 mAh battery cells connected in series, accompanied by a BMS board that integrates an 18 V input solar charger.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/water-ph-monitoring/datasheet/f2waterphsolution_dimensions.png"
-  width="60%"
-  caption="RAK9154 battery system"
-/>
+> **Image:** RAK9154 battery system
 
 #### Electrical Characteristics
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/water-ph-monitoring/datasheet/f3waterphsolution_bdiagram1.png"
-  width="60%"
-  caption="RAK9154 electrical schematic diagram"
-/>
+> **Image:** RAK9154 electrical schematic diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisnode/water-ph-monitoring/datasheet/f4waterphsolution_bdiagram2.png"
-  width="60%"
-  caption="System circuit schematic diagram"
-/>
+> **Image:** System circuit schematic diagram
 
-<table>
-  <thead>
-    <tr>
-      <th>Connector</th>
-      <th>Connector Socket Model</th>
-      <th>Connector Plug Model</th>
-      <th>Definition</th>
-      <th>Remark</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td rowSpan = "4">Gateway Load</td>
-      <td rowSpan = "4">SP1110/P4</td>
-      <td rowSpan = "4">SP1110/P4-N</td>
-      <td>Pin1: P+</td>
-      <td rowSpan = "4">SP11  <br/> IP67 <br/> Rated current 2&nbsp;A  <br/> Contact diameter 0.75&nbsp;mm * 4</td>
-    </tr>
-    <tr>
-      <td>Pin2: P-</td>
-    </tr>
-    <tr>
-      <td>Pin3: R485A</td>
-    </tr>
-    <tr>
-      <td>Pin4: RS485B</td>
-    </tr>
-    <tr>
-      <td rowSpan = "5">Sensor Hub Load</td>
-      <td rowSpan = "5">SP1110/P5</td>
-      <td rowSpan = "5">SP1110/P5-N</td>
-      <td>Pin1: P+</td>
-      <td rowSpan = "5">SP11  <br/> IP67 <br/> Rated current 2&nbsp;A  <br/> Contact diameter 0.75&nbsp;mm * 4</td>
-    </tr>
-    <tr>
-      <td>Pin2: P-</td>
-    </tr>
-    <tr>
-      <td>Pin3: TXD</td>
-    </tr>
-    <tr>
-      <td>Pin4: 3V3_In</td>
-    </tr>
-    <tr>
-      <td>Pin5: RXD</td>
-    </tr>
-    <tr>
-      <td rowSpan = "2">PV Input</td>
-      <td rowSpan = "2">SP1110/P2</td>
-      <td rowSpan = "2">SP1110/P2-N</td>
-      <td>Pin1: PV+</td>
-      <td rowSpan = "2">SP11  <br/> IP67 <br/> Rated current 1&nbsp;A  <br/> Contact diameter 0.75&nbsp;mm * 4</td>
-    </tr>
-    <tr>
-      <td>Pin1: PV-</td>
-    </tr>
-  </tbody>
-</table>
-
+| Connector | Connector Socket Model | Connector Plug Model | Definition | Remark |
+| --- | --- | --- | --- | --- |
+| Gateway Load | SP1110/P4 | SP1110/P4-N | Pin1: P+ | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Gateway Load | SP1110/P4 | SP1110/P4-N | Pin2: P- | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Gateway Load | SP1110/P4 | SP1110/P4-N | Pin3: R485A | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Gateway Load | SP1110/P4 | SP1110/P4-N | Pin4: RS485B | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Sensor Hub Load | SP1110/P5 | SP1110/P5-N | Pin1: P+ | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Sensor Hub Load | SP1110/P5 | SP1110/P5-N | Pin2: P- | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Sensor Hub Load | SP1110/P5 | SP1110/P5-N | Pin3: TXD | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Sensor Hub Load | SP1110/P5 | SP1110/P5-N | Pin4: 3V3_In | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| Sensor Hub Load | SP1110/P5 | SP1110/P5-N | Pin5: RXD | SP11IP67Rated current 2 AContact diameter 0.75 mm * 4 |
+| PV Input | SP1110/P2 | SP1110/P2-N | Pin1: PV+ | SP11IP67Rated current 1 AContact diameter 0.75 mm * 4 |
+| PV Input | SP1110/P2 | SP1110/P2-N | Pin1: PV- | SP11IP67Rated current 1 AContact diameter 0.75 mm * 4 |
 
 #### Sensor Characteristics
 
@@ -312,12 +214,14 @@ Store the module in a partially charged state, typically around 40% state of cha
 
 | Parameter   | Description                                              | Remark                                              |
 |-------------|----------------------------------------------------------|-----------------------------------------------------|
-| Temperature | -30°&nbsp;C to 50°&nbsp;C  <br/> 0°&nbsp;C to 25°&nbsp;C | Time period < 3 months <br/> Time period > 3 months |
-| Humidity    | 2&nbsp;%RH to 90&nbsp;%RH                                | < 85&nbsp;% Recommended                             |
+| Temperature | -30° C to 50° C  
+ 0° C to 25° C | Time period < 3 months 
+ Time period > 3 months |
+| Humidity    | 2 %RH to 90 %RH                                | < 85 % Recommended                             |
 
-- **Storage Environment**: Store the product in a clean, ventilated, and cool environment, avoiding direct sunlight, high temperatures, corrosive gases, severe vibration, mechanical shaking, and heavy pressure. Keep the product away from heat sources and store it at an altitude below 1500&nbsp;meters, maintaining atmospheric pressure between 86&nbsp;kPa and 106&nbsp;kPa.
+- **Storage Environment**: Store the product in a clean, ventilated, and cool environment, avoiding direct sunlight, high temperatures, corrosive gases, severe vibration, mechanical shaking, and heavy pressure. Keep the product away from heat sources and store it at an altitude below 1500 meters, maintaining atmospheric pressure between 86 kPa and 106 kPa.
 
-- **Maintenance**: Charge and discharge the device once a month while storing it at room temperature or in a dry and ventilated environment. If storing the device takes more than 30 days, adjust the SOC to 40&nbsp;% after charging. 
+- **Maintenance**: Charge and discharge the device once a month while storing it at room temperature or in a dry and ventilated environment. If storing the device takes more than 30 days, adjust the SOC to 40 % after charging. 
 
 The operation of the product must adhere to the provided operating instructions. Installation, maintenance, and usage of this product must strictly comply with relevant safety regulations.
 
@@ -332,4 +236,3 @@ The operation of the product must adhere to the provided operating instructions.
 -	Only professional technicians must handle the installation and maintenance of the battery system. All operations must strictly adhere to relevant safety regulations. Non-professionals are strictly prohibited from installing, maintaining, and misusing the battery system.
 :::
 
-<RkBottomNav/>

@@ -19,10 +19,6 @@ slug: /product-categories/wisduo/rak3172-evaluation-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK3172 Evaluation Board Datasheet
 
 ## Overview
@@ -42,12 +38,12 @@ This module complies with LoRaWAN 1.0.3 specifications (Classes A, B, and C). It
 - LoRa Point-to-Point (P2P) communication
 - Custom firmware using Arduino via RUI3 API
 - Easy to use AT command set via UART interface
-- Long-range - greater than 15&nbsp;km with optimized antenna
+- Long-range - greater than 15 km with optimized antenna
 - ARM Cortex-M4 32-bit
-- 256&nbsp;kbytes flash memory with ECC
-- 64&nbsp;kbytes RAM
-- **Supply Voltage**: 5&nbsp;V via USB or 3.7-4.2&nbsp;V using Li-Ion Battery
-- **Temperature Range**: -20°&nbsp;C ~ 70°&nbsp;C
+- 256 kbytes flash memory with ECC
+- 64 kbytes RAM
+- **Supply Voltage**: 5 V via USB or 3.7-4.2 V using Li-Ion Battery
+- **Temperature Range**: -20° C ~ 70° C
 
 ## Specifications
 
@@ -55,12 +51,7 @@ This section covers the hardware and software specifications for the RAK3172 Eva
 
 ### Overview
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/overview/rak3172e-front.svg"
-  width="50%"
-  caption="RAK3172 Evaluation Board Overview"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Evaluation Board Overview
 
 ### Hardware
 
@@ -68,35 +59,19 @@ The hardware specification is categorized into six parts.  It discusses the inte
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/interfaces/rak3172e-interface.svg"
-  width="80%"
-  caption="RAK3172 Evaluation Board Interfaces"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Evaluation Board Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/interfaces/rak3372.png"
-  width="30%"
-  caption="Parts RAK3372 Module"
-  zoomMode={true}
-/>
+> **Image:** Parts RAK3372 Module
 
 ##### RF Interface
 
 The RF Antenna of the RAK3172 Evaluation Board is connected to a standard iPEX antenna connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/interfaces/lora-pcb-antenna.png"
-  width="70%"
-  caption="RAK3172 LoRa antenna"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 LoRa antenna
 
 :::warning
 Make sure to install the LoRa antenna first before powering the RAK3172 Evaluation Board. Failure to do so can damage the board.
 :::
-
 
 ##### USB Interface
 
@@ -104,18 +79,13 @@ The Micro-B USB connector is compliant with the USB 2.0 specification. The pin d
 
 | **Pin Number** | **Pin Name** | **Description**             |
 | -------------- | ------------ | --------------------------- |
-| 1              | USB_VBUS     | (+5&nbsp;V) USB Bus Voltage |
+| 1              | USB_VBUS     | (+5 V) USB Bus Voltage |
 | 2              | USB_DM       | USB Bus D+ positive pin     |
 | 3              | USB_DP       | USB Bus D- negative pin     |
 | 4              | NC           | Not connected               |
 | 5              | GND          | Ground                      |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/interfaces/microb-usb.png"
-  width="25%"
-  caption="RAK3172 Micro-B USB connector"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Micro-B USB connector
 
 The USB data bus is connected to a **USB-SERIAL CH340** chip. The **CH340** is a series of USB bus adapters that provide a virtual serial interface over the USB bus.
 
@@ -125,16 +95,11 @@ The RAK3172 Evaluation Board can be powered by a battery via the P1 connector. T
 
 Use **Figure 6** as a guide to connect the battery. The pin highlighted in the yellow box with the triangle silkscreen mark indicates pin 1 (GND).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/interfaces/rak3172e-battery.png"
-  width="60%"
-  caption="RAK3172 EVB battery connector"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 EVB battery connector
 
-The pin definition of the RAK3172 Evaluation Board Li-Ion battery connector is shown in the table below. The matching connector for the battery wires is a <a href="https://www.jst-mfg.com/product/detail_e.php?series=199" target="_blank">JST PHR-2 2&nbsp;mm pitch female</a>.
+The pin definition of the RAK3172 Evaluation Board Li-Ion battery connector is shown in the table below. The matching connector for the battery wires is a <a href="https://www.jst-mfg.com/product/detail_e.php?series=199" target="_blank">JST PHR-2 2 mm pitch female</a>.
 
-<b> P1 Battery Connector </b>
+** P1 Battery Connector **
 
 | **Pin** | **Pin Name** | **Description**               |
 | ------- | ------------ | ----------------------------- |
@@ -145,33 +110,28 @@ The full specification of RAK3172 Evaluation Board battery is shown in the table
 
 | **No.** | **Item**                  | **Specification**                    |
 | ------- | ------------------------- | ------------------------------------ |
-| 1       | Charge Cut-off Voltage    | 4.2&nbsp;V                           |
-| 2       | Nominal Voltage           | 3.7&nbsp;V                           |
-| 3       | Discharge Cut-off Voltage | 2.75&nbsp;V                          |
-| 4       | Typical Capacity          | 2650&nbsp;mAh                        |
-| 5       | Max Discharge Current     | 0.5&nbsp;C at 25&nbsp;℃ to 45&nbsp;℃ |
-| 6       | PH Connector              | 2.0&nbsp;mm pitch                    |
-| 7       | Cable Length              | 110.0±3.0&nbsp;mm                    |
+| 1       | Charge Cut-off Voltage    | 4.2 V                           |
+| 2       | Nominal Voltage           | 3.7 V                           |
+| 3       | Discharge Cut-off Voltage | 2.75 V                          |
+| 4       | Typical Capacity          | 2650 mAh                        |
+| 5       | Max Discharge Current     | 0.5 C at 25 ℃ to 45 ℃ |
+| 6       | PH Connector              | 2.0 mm pitch                    |
+| 7       | Cable Length              | 110.0±3.0 mm                    |
 | 8       | Cable Color               | Red: VBAT, Black: GND                |
 
 :::tip NOTE
-The voltage of the Li-Ion battery **must not exceed 4.3&nbsp;V**. When connecting the battery make sure the polarity is correct. Not all connectors are wired the same.
+The voltage of the Li-Ion battery **must not exceed 4.3 V**. When connecting the battery make sure the polarity is correct. Not all connectors are wired the same.
 :::
 
 ##### Solar Panel Connector
 
-A 5&nbsp;V solar panel can be connected to the board via the P2 connector to charge the battery. The solar panel is not included in the RAK3172 Evaluation Board packaging. Use **Figure 7** as a guide to connect the solar panel. The pin highlighted in the yellow box with triangle silkscreen marking indicates pin 1 (5&nbsp;V solar panel positive).
+A 5 V solar panel can be connected to the board via the P2 connector to charge the battery. The solar panel is not included in the RAK3172 Evaluation Board packaging. Use **Figure 7** as a guide to connect the solar panel. The pin highlighted in the yellow box with triangle silkscreen marking indicates pin 1 (5 V solar panel positive).
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/interfaces/rak3172e-solar.png"
-  width="60%"
-  caption="RAK3172 EVB solar connector"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 EVB solar connector
 
-The pin definition of the RAK3172 Evaluation Board solar panel connector is shown in the table below. The matching connector for the solar panel wires is an <a href="https://www.jst-mfg.com/product/detail_e.php?series=287" target="_blank">JST ZHR-2 1.5&nbsp;mm pitch female</a>.
+The pin definition of the RAK3172 Evaluation Board solar panel connector is shown in the table below. The matching connector for the solar panel wires is an <a href="https://www.jst-mfg.com/product/detail_e.php?series=287" target="_blank">JST ZHR-2 1.5 mm pitch female</a>.
 
-<b> P2 Solar Panel connector </b>
+** P2 Solar Panel connector **
 
 | **Pin** | **Pin Name** | **Description**               |
 | ------- | ------------ | ----------------------------- |
@@ -182,14 +142,14 @@ The full specification of the Solar Panel for the RAK3172 Evaluation Board is sh
 
 | **No.** | **Item**        | **Specification**                                        |
 | ------- | --------------- | -------------------------------------------------------- |
-| 1       | Nominal Voltage | 5&nbsp;V                                                 |
-| 2       | Typical Current | 80&nbsp;mA                                               |
-| 3       | Size            | Length: 60&nbsp;mm, Width: 60&nbsp;mm, Height: 2&nbsp;mm |
-| 4       | Connector       | 1.5&nbsp;mm pitch                                        |
+| 1       | Nominal Voltage | 5 V                                                 |
+| 2       | Typical Current | 80 mA                                               |
+| 3       | Size            | Length: 60 mm, Width: 60 mm, Height: 2 mm |
+| 4       | Connector       | 1.5 mm pitch                                        |
 | 5       | Cable Color     | Red: C0NN_5V, Black: GND                                 |
 
 :::tip NOTE
-The output of the solar panel **must not exceed 5.5&nbsp;V**. Otherwise, it may cause permanent damage to the board.
+The output of the solar panel **must not exceed 5.5 V**. Otherwise, it may cause permanent damage to the board.
 :::
 
 ##### LEDs
@@ -206,7 +166,7 @@ The reset push button is connected to the NRST pin of the RAK3172. When pushed, 
 
 The following tables below show the pin definitions of the RAK3172 Evaluation Board:
 
-##### J10, J11, J12 2.54&nbsp;mm header
+##### J10, J11, J12 2.54 mm header
 
 ###### J10
 
@@ -227,7 +187,7 @@ The following tables below show the pin definitions of the RAK3172 Evaluation Bo
 | 4              | GND          | Ground                        |                         |
 
 :::tip NOTE
-3V3_S is another 3.3&nbsp;V power supply that can be turned on and off by the MCU. Set pin IO2 to `LOW`/`0` when the sensor is not in use to save power.
+3V3_S is another 3.3 V power supply that can be turned on and off by the MCU. Set pin IO2 to `LOW`/`0` when the sensor is not in use to save power.
 :::
 
 ###### J12
@@ -261,7 +221,7 @@ The RAK3172 supports two frequency variations: RAK3172(L) for low radio frequenc
 
 ##### Operating Voltage
 
-Power is supplied to the RAK3172 Evaluation Board via USB (5&nbsp;V) or a Li-Ion battery.
+Power is supplied to the RAK3172 Evaluation Board via USB (5 V) or a Li-Ion battery.
 
 The LDO regulator can operate on the following voltage range:
 
@@ -271,23 +231,13 @@ The LDO regulator can operate on the following voltage range:
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/schematic-diagram/schematic.png"
-  width="100%"
-  caption="RAK3172 Evaluation Board Schematic Diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Evaluation Board Schematic Diagram
 
 #### Mechanical Characteristics
 
 ##### Module Dimensions
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/datasheet/board-layout/mechanical-rak3372.png"
-  width="20%"
-  caption="RAK3172 Physical Dimension"
-  zoomMode={true}
-/>
+> **Image:** RAK3172 Physical Dimension
 
 #### Environmental Characteristics
 
@@ -338,6 +288,3 @@ For CE and FCC certifications we provide an AT command guide.
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-
-
-<RkBottomNav/>

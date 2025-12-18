@@ -10,11 +10,7 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12003 WisBlock Infrared Temperature Sensor Module Quick Start Guide
-
 
 ## Prerequisite
 
@@ -46,28 +42,20 @@ For more information about RAK12003, refer to the [Datasheet](https://docs.rakwi
 
 The RAK12003 module gives us information about:
 
-- Object temperatures between -20&nbsp;°C and 100&nbsp;°C
-- Accuracy ±0.2&nbsp;°C within the narrow object temperature range from 35&nbsp;°C to 42&nbsp;°C (medical applications)
+- Object temperatures between -20 °C and 100 °C
+- Accuracy ±0.2 °C within the narrow object temperature range from 35 °C to 42 °C (medical applications)
 
 RAK12003 module can be connected to the sensor's slot of [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) to communicate with the WisBlock Core, as shown in **Figure 1**. It will work on **SLOT A, C to F**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/rak12003_assembly.png"
-  width="100%"
-  caption="RAK12003 connection to WisBlock Base"
-/>
+> **Image:** RAK12003 connection to WisBlock Base
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for Slot A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+As shown in **Figure 2**, the location for Slot A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/rak12003_mounting.png"
-  width="70%"
-  caption="RAK12003 connection to WisBlock Base"
-/>
+> **Image:** RAK12003 connection to WisBlock Base
 
 ##### Disassembling
 
@@ -75,27 +63,15 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/16.removing-screws.png"
-  width="70%"
-  caption="Removing screws from the WisBlock module"
-/>
+> **Image:** Removing screws from the WisBlock module
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/17.detaching-silkscreen.png"
-  width="70%"
-  caption="Detaching silkscreen on the WisBlock module"
-/>
+> **Image:** Detaching silkscreen on the WisBlock module
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/18.detaching-module.png"
-  width="70%"
-  caption="Applying even forces on the proper location of a WisBlock module"
-/>
+> **Image:** Applying even forces on the proper location of a WisBlock module
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK12003 uses I2C communication lines, and it can cause possible conflict especially on some IO modules.
@@ -113,23 +89,11 @@ The RAK12003 WisBlock Infrared Temperature Sensor Module is part of the RAKwirel
 
 2. You need to select first the WisBlock Core you have, as shown in **Figure 6** to **Figure 8**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/rak4631_board.png"
-  width="100%"
-  caption="Selecting RAK4631 as WisBlock Core"
-/>
+> **Image:** Selecting RAK4631 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/rak11200_board.png"
-  width="100%"
-  caption="Selecting RAK11200 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11200 as WisBlock Core
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/rak11300_board.png"
-  width="100%"
-  caption="Selecting RAK11300 as WisBlock Core"
-/>
+> **Image:** Selecting RAK11300 as WisBlock Core
 
 3. Next, copy the following sample code into your Arduino IDE:
 
@@ -210,17 +174,9 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example code is open, install the [SparkFun MLX90632](https://github.com/sparkfun/SparkFun_MLX90632_Arduino_Library) library by clicking the yellow highlighted link, as shown in **Figure 9** and **Figure 10**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/sparkfun_done.png"
-  width="100%"
-  caption="Accessing the library used for RAK12003 Module"
-/>
+> **Image:** Accessing the library used for RAK12003 Module
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/sparkfun_lib.png"
-  width="100%"
-  caption="Installing the compatible library for RAK12003 Module"
-/>
+> **Image:** Installing the compatible library for RAK12003 Module
 
 5. After successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
@@ -228,24 +184,11 @@ If you experience any error in compiling the example sketch, check the updated c
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/select_port.png"
-  width="100%"
-  caption="Selecting the correct Serial Port"
-/>
+> **Image:** Selecting the correct Serial Port
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/upload.png"
-  width="100%"
-  caption="Uploading the RAK12003 example code"
-/>
+> **Image:** Uploading the RAK12003 example code
 
 6. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the sensor's reading logs. If you see the logs, as shown in **Figure 13**, then your RAK12003 is properly communicating to the WisBlock core.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak12003/quickstart/rak12003_logs.png"
-  width="100%"
-  caption="RAK12003 sensor data logs"
-/>
+> **Image:** RAK12003 sensor data logs
 
-<RkBottomNav/>

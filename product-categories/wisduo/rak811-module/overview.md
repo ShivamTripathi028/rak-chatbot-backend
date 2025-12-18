@@ -9,15 +9,10 @@ sidebar_label: Product Overview
 ---
 
     
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK811 WisDuo LPWAN Module
 
 Thank you for choosing **RAK811 WisDuo LPWAN Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
-
-
 
 * [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduo/rak811-module/quickstart/)
 * [AT Command Manual](https://docs.rakwireless.com/product-categories/wisduo/rak811-module/at-command-manual/)
@@ -37,8 +32,6 @@ This module complies with Class A & C of LoRaWAN 1.0.2 specifications. It can ea
 
 The RAK811 module is integrated with Semtech’s SX1276 and STM32. You can configure the mode and operation of the module using AT commands via a UART interface. RAK811 also offers low-power features, which are very suitable for battery-powered applications.
 
-
-
 ## Product Features
 
 - Based on **Semtech SX1276**
@@ -47,15 +40,15 @@ The RAK811 module is integrated with Semtech’s SX1276 and STM32. You can confi
 - LoRaWAN Activation by OTAA/ABP
 - LoRa Point-to-Point (P2P) communication
 - Easy to use AT Command Set via UART interface with configurable baud rate
-- Maximum output power 100&nbsp;mW (20&nbsp;dBm), adjustable from 5~20&nbsp;dBm
-- High sensitivity at -148&nbsp;dBm, enabling extremely long-range connectivity
-- Long-range - greater than 15&nbsp;km with optimized antenna
-- Low power consumption: 11&nbsp;μA on standby
-- Ultra-Low Power Consumption of 11.9&nbsp;μA (down to 1.11&nbsp;μA @ 2.1&nbsp;V) in sleep mode
-- Multi-channel, dual data buffer (256&nbsp;bytes each)
+- Maximum output power 100 mW (20 dBm), adjustable from 5~20 dBm
+- High sensitivity at -148 dBm, enabling extremely long-range connectivity
+- Long-range - greater than 15 km with optimized antenna
+- Low power consumption: 11 μA on standby
+- Ultra-Low Power Consumption of 11.9 μA (down to 1.11 μA @ 2.1 V) in sleep mode
+- Multi-channel, dual data buffer (256 bytes each)
 - LoRa/FSK/GFSK/OOK modulation, bidirectional two-way communication
 - Long battery life for battery-powered applications
-- LoRa technology is capable of demodulating 20&nbsp;dB below noise level which significantly improves immunity to interference when combined with integrated forward error
-- **Operating temperature**: -30°&nbsp;C ~ 85°&nbsp;C (industrial grade)
-- **Storage temperature**: -40°&nbsp;C ~ 85°&nbsp;C (non-condensing)
+- LoRa technology is capable of demodulating 20 dB below noise level which significantly improves immunity to interference when combined with integrated forward error
+- **Operating temperature**: -30° C ~ 85° C (industrial grade)
+- **Storage temperature**: -40° C ~ 85° C (non-condensing)
 

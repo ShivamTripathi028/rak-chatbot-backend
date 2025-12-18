@@ -10,8 +10,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock IoT Starter Kit
 
 Thank you for choosing **WisBlock IoT Starter Kit** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -48,5 +46,3 @@ With this kit, you can easily create custom IoT solutions for a variety of use c
         - Two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101?utm_source=RAK13101&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK13101</a> with GSM/GPRS capability
 - GPS built-in on cellular modules
 
-
-<RkBottomNav/>

@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18041 WisBlock Analog Microphone Module
 
 Thank you for choosing **RAK18041 WisBlock Analog Microphone Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,24 +22,22 @@ Thank you for choosing **RAK18041 WisBlock Analog Microphone Module** in your aw
 
 ## Product Description
 
-The RAK18041 is a WisBlock Analog Microphone Module that is based on **SHY-B9750MUP2.8-C1033**. This WisBlock Audio module is a unidirectional microphone that allows you to capture frequency waves from 100&nbsp;Hz up to 16000&nbsp;Hz from the external environment. This microphone needs to be interfaced with WisBlock Audio analog microphone driver such as RAK18040 to make it compatible with the WisBlock IO slot.
+The RAK18041 is a WisBlock Analog Microphone Module that is based on **SHY-B9750MUP2.8-C1033**. This WisBlock Audio module is a unidirectional microphone that allows you to capture frequency waves from 100 Hz up to 16000 Hz from the external environment. This microphone needs to be interfaced with WisBlock Audio analog microphone driver such as RAK18040 to make it compatible with the WisBlock IO slot.
 ## Product Features
 
 * **Module Specification**
     * Unidirectional Analog Microphone
-    * Sensitivity: 100&nbsp;Hz to 16,000&nbsp;Hz
+    * Sensitivity: 100 Hz to 16,000 Hz
     * Compatible with WisBlock Audio stack
 
 * **Module Size**
-    * 15 x 25&nbsp;mm
+    * 15 x 25 mm
 
 ## Prerequisites
 
 To use the **RAK18041 WisBlock Analog Microphone Module**, you need a **WisBlock Audio** analog microphone driver module such us RAK18040 to make the module compatible to WisBlock IO slot.
 
-
 :::warning
 Make sure to fix the module with screws to ensure proper function.
 :::
 
-<RkBottomNav/>

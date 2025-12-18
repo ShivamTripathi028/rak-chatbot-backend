@@ -11,7 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
  
-import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RAK17001 WisBlock H-Bridge Module
 
@@ -44,12 +43,12 @@ RAK17001 is a WisBlock H-Bridge module which extends the WisBlock system with a 
 
 * **Sensor specifications**
     *  DC motor drive module
-    *  Operating voltage from 1.8&nbsp;V to 10&nbsp;V
-    *  Maximum output current 2.6&nbsp;Arms
+    *  Operating voltage from 1.8 V to 10 V
+    *  Maximum output current 2.6 Arms
     *  Full protection set
 
 * **Size**
-    * 25 x 35&nbsp;mm
+    * 25 x 35 mm
 
 ## Prerequisites
 
@@ -59,6 +58,3 @@ To use a **RAK17001**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-
-
-<RkBottomNav/>

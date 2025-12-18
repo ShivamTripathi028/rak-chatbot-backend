@@ -33,9 +33,6 @@ sidebar_label: Datasheet
 date: 2022-01-12
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK2287/RAK5146 Pi HAT Datasheet
 
 ## Overview
@@ -58,21 +55,13 @@ This board integrates one (1) 40-pin female Pi HAT connector and one (1) mini PC
 
 RAK2287/RAK5146 Pi HAT integrates one (1) 40-pin female Pi HAT connector and one (1) PCIe connector. This makes it possible to connect RAK2287 or RAK5146 to Raspberry Pi.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wishat/rak2287/datasheet/3.block-diagram.png"
-  width="65%"
-  caption="RAK2287/RAK5146 Pi HAT Block Diagram"
-/>
+> **Image:** RAK2287/RAK5146 Pi HAT Block Diagram
 
 ### Hardware
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wishat/rak2287/datasheet/2.pin-definition.png"
-  width="65%"
-  caption="RAK2287/RAK5146 Pi HAT Pinout Diagram"
-/>
+> **Image:** RAK2287/RAK5146 Pi HAT Pinout Diagram
 
 | **Type** | **Description** |
 | -------- | --------------- |
@@ -85,20 +74,19 @@ RAK2287/RAK5146 Pi HAT integrates one (1) 40-pin female Pi HAT connector and one
 | PO       | Power output    |
 | NC       | No Connection   |
 
-
 | **Pin No.** | **Raspberry Pi 40-Pin Connector** | **RAK2287 Pi HAT Pin** | **Type** | **Remarks**                                                                                                              |
 | ----------- | --------------------------------- | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------ |
 | 1           | 3V3                               | NC                     | -        | No Connection                                                                                                            |
-| 2           | 5&nbsp;V                          | 5&nbsp;V               | PI       | 5&nbsp;V Input                                                                                                           |
+| 2           | 5 V                          | 5 V               | PI       | 5 V Input                                                                                                           |
 | 3           | GPIO2 (SDA1)                      | NC                     | -        | No Connection                                                                                                            |
-| 4           | 5&nbsp;V                          | 5&nbsp;V               | PI       | 5&nbsp;V Input                                                                                                           |
+| 4           | 5 V                          | 5 V               | PI       | 5 V Input                                                                                                           |
 | 5           | GPIO3 (SCL1)                      | NC                     | -        | No Connection                                                                                                            |
 | 6           | GND                               | GND                    | -        | Ground                                                                                                                   |
 | 7           | GPIO4 (GPIO_GCLK)                 | NC                     | -        | No Connection                                                                                                            |
 | 8           | GPIO14 (TXD0)                     | UART_RXD_ZOE-M8Q       | DI       | Connect RAK2287 built in GPS Module (ZOE-M8Q)’s UART_RXD                                                                 |
 | 9           | GND                               | GND                    | -        | Ground                                                                                                                   |
 | 10          | GPIO15 (RXD0)                     | UART_TXD_ZOE-M8Q       | DO       | Connect to RAK2287 built in GPS Module (ZOE-M8Q)’s UART_TXD                                                              |
-| 11          | GPIO17 (GPIO_GEN0)                | RESET_RAK2287          | DI       | Connect to SX1302’s RESET PIN, SX1302 reset input, Active high, ≥100&nbsp;ns for SX1302 reset                            |
+| 11          | GPIO17 (GPIO_GEN0)                | RESET_RAK2287          | DI       | Connect to SX1302’s RESET PIN, SX1302 reset input, Active high, ≥100 ns for SX1302 reset                            |
 | 12          | GPIO18 (GPIO_GEN1)                | NC                     | -        | No Connection                                                                                                            |
 | 13          | GPIO27 (GPIO_GEN2)                | NC                     | -        | No Connection                                                                                                            |
 | 14          | GND                               | GND                    | -        | Ground                                                                                                                   |
@@ -109,7 +97,8 @@ RAK2287/RAK5146 Pi HAT integrates one (1) 40-pin female Pi HAT connector and one
 | 19          | GPIO10 (SPI_MOSI)                 | SPI_MOSI               | DI       | Host SPI MOSI                                                                                                            |
 | 20          | GND                               | GND                    | -        | Ground                                                                                                                   |
 | 21          | GPIO9 (SPI_MISO)                  | SPI_MISO               | DO       | Host SPI MISO                                                                                                            |
-| 22          | GPIO25 (GPIO_GEN6)                | RESET_GPS_ZOE-M8Q      | DI       | Connect to RAK2287 built in GPS Module (ZOE-M8Q)’s <br /> RESET, GPS module ZOE-M8Q reset inputs, Active low               |
+| 22          | GPIO25 (GPIO_GEN6)                | RESET_GPS_ZOE-M8Q      | DI       | Connect to RAK2287 built in GPS Module (ZOE-M8Q)’s 
+ RESET, GPS module ZOE-M8Q reset inputs, Active low               |
 | 23          | GPIO11 (SPI_CLK)                  | SPI_CLK                | DI       | Host SPI CLK                                                                                                             |
 | 24          | GPIO8 (SPI_CE0_N)                 | SPI_CE                 | DI       | Host SPI CS                                                                                                              |
 | 25          | GND                               | GND                    | -        | Ground                                                                                                                   |
@@ -119,7 +108,8 @@ RAK2287/RAK5146 Pi HAT integrates one (1) 40-pin female Pi HAT connector and one
 | 29          | GPIO5                             | NC                     | -        | No Connection                                                                                                            |
 | 30          | GND                               | GND                    | -        | Ground                                                                                                                   |
 | 31          | GPIO6                             | NC                     | -        | No Connection                                                                                                            |
-| 32          | GPIO12                            | STANDBY_GPS_ZOE-M8Q    | DI       | Connect to RAK2287 built in GPS Module (ZOE-M8Q)’s <br /> STANDBY, GPS module ZOE-M8Q external interrupt input, Active low |
+| 32          | GPIO12                            | STANDBY_GPS_ZOE-M8Q    | DI       | Connect to RAK2287 built in GPS Module (ZOE-M8Q)’s 
+ STANDBY, GPS module ZOE-M8Q external interrupt input, Active low |
 | 33          | GPIO13                            | NC                     | -        | No Connection                                                                                                            |
 | 34          | GND                               | GND                    | -        | Ground                                                                                                                   |
 | 35          | GPIO19                            | NC                     | -        | No Connection                                                                                                            |
@@ -129,7 +119,6 @@ RAK2287/RAK5146 Pi HAT integrates one (1) 40-pin female Pi HAT connector and one
 | 39          | GND                               | GND                    | -        | Ground                                                                                                                   |
 | 40          | GPIO21                            | NC                     | -        | No Connection                                                                                                            |
 
-
 ## Models / Bundles
 
 ### Ordering Information
@@ -138,4 +127,3 @@ RAK2287/RAK5146 Pi HAT integrates one (1) 40-pin female Pi HAT connector and one
 | ---------------------- | ----------------------------------------------------------------------------- | -------------------- |
 | RAK2287/RAK5146 Pi HAT | PCIe to Pi HAT Convert Board for RAK2287 or RAK5146 module with SPI interface | RAK2287-S            |
 
-<RkBottomNav/>

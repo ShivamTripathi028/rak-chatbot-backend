@@ -11,10 +11,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK7289V2/RAK7289CV2 WisGate Edge Pro V2 Datasheet
 
 ## Overview
@@ -28,7 +24,7 @@ It supports up to 16 LoRa channels and offers multi-backhaul options with Ethern
 In addition, RAK7289V2 operates under <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview" target="_blank">WisGateOS 2</a>, which is built on the latest OpenWrt kernel. The OS Web UI features a new design and supports multiple extension installations, enabling remote management using <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisdm/overview" target="_blank">WisDM</a> for personalized gateway customization.
 
 :::warning
-This product is intended to be powered by 12&nbsp;V<sub>DC</sub> through a designated power port. The use of solar chargers is not recommended, as they may supply overvoltage, potentially damaging the device. We strongly discourage the use of such chargers with this product, and any damage incurred as a result will void the warranty.
+This product is intended to be powered by 12 V<sub>DC</sub> through a designated power port. The use of solar chargers is not recommended, as they may supply overvoltage, potentially damaging the device. We strongly discourage the use of such chargers with this product, and any damage incurred as a result will void the warranty.
 :::
 
 ### Features
@@ -40,7 +36,7 @@ This product is intended to be powered by 12&nbsp;V<sub>DC</sub> through a desig
 - Dual LoRa Concentrators for up to 16 channels
 - Backhaul: Wi-Fi, Ethernet, LTE (optional, available with RAK7289CV2)
 - GPS
-- Supports 12&nbsp;V<sub>DC</sub> or solar power supply with electricity monitoring (Solar Kit optional)
+- Supports 12 V<sub>DC</sub> or solar power supply with electricity monitoring (Solar Kit optional)
 - Internal antennas for Wi-Fi, GPS, and LTE
 - External antenna for LoRa
 - Dying-gasp (optional)
@@ -68,53 +64,39 @@ The overview presents the block diagram for the RAK7289V2/RAK7289CV2 that shows 
 
 #### Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289v2-rak7289cv2/datasheet/2.without-lte.png"
-  width="70%"
-  caption="RAK7289V2 Block Diagram"
-/>
+> **Image:** RAK7289V2 Block Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289v2-rak7289cv2/datasheet/1.with-lte.png"
-  width="70%"
-  caption="RAK7289CV2 Block Diagram"
-/>
-
+> **Image:** RAK7289CV2 Block Diagram
 
 #### Main Specifications
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Computing</td><td>MT7628, 128&nbsp;MB DDR2 RAM</td></tr>
-        <tr><td rowSpan="5">LoRa Features</td><td>SX1303 mPCIe card (connects maximum of two)</td></tr>
-        <tr><td>8 Channels (16 channels optional)</td></tr>
-        <tr><td>Frequency: EU868 / IN865 / US915 / AU915 / KR920 / AS923-1/2/3/4 / EU433 / CN470</td></tr>
-        <tr><td>Listen Before Talk</td></tr>
-        <tr><td>LoRa Radio: Refer to the <a href="#lora-radio-specifications">LoRa Radio Specifications</a> section for detailed information.</td></tr>
-        <tr><td rowSpan="4">Wi-Fi Features</td><td>Frequency: 2.4&nbsp;GHz (802.11b / g / n)</td></tr>
-        <tr><td>Operation Channels: 1-13 (2.4&nbsp;GHz)</td></tr>
-        <tr><td>2x2 MIMO</td></tr>
-        <tr><td>Wi-Fi Radio: Refer to the <a href="#wi-fi-radio-specifications">Wi-Fi Radio Specifications</a> section for detailed information.</td></tr>
-        <tr><td rowSpan="2">Cellular Features (available with RAK7289CV2)</td><td><b>Nano SIM Card:</b>12 x 9 x 0.67&nbsp;mm<br/>Supports Quectel EG95-E / EG95-NA / EC25-J / EC25-AU(IoT / M2M -optimized LTE Cat 4 Module)</td></tr>
-        <tr><td>LTE Radio: Refer to the <a href="#lte-radio-specifications-optional-available-with-rak7289cv2">LTE Radio Specifications</a> section for detailed information.</td></tr>
-        <tr><td>Power Supply</td><td>PoE (IEEE 802.3af) - 37~57&nbsp;V<sub>DC</sub><br/>12&nbsp;V<sub>DC</sub><br/>Compatible with RAK Battery Plus</td></tr>
-        <tr><td rowSpan="2">Antenna</td><td>LoRa: N-Type connector (one for the 8-channel gateway and two for the 16-channel gateway)</td></tr>
-        <tr><td>Wi-Fi / GPS / LTE: Internal antenna</td></tr>
-        <tr><td>Ingress protection</td><td>IP67</td></tr>
-        <tr><td>Enclosure material</td><td>Aluminium and plastic</td></tr>
-        <tr><td>Dimensions</td><td>240&nbsp;mm x 240&nbsp;mm x 89.5&nbsp;mm</td></tr>
-        <tr><td>Weight</td><td>4.6&nbsp;kg gateway only</td></tr>
-        <tr><td rowSpan="5">Operating Conditions</td><td>Operating temperature: ﹣40˚&nbsp;C to ﹢70˚&nbsp;C</td></tr>
-        <tr><td>Storage Temperature: ﹣40˚&nbsp;C to ﹢85˚&nbsp;C</td></tr>
-        <tr><td>Operating humidity: 0% to 95% (non-condensing)</td></tr>
-        <tr><td>Storage Humidity: 0% to 95% (non-condensing)</td></tr>
-        <tr><td>For environmental reliability test details: <a href="https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2%20Environmental%20Reliability%20Tests(no%20watermark).pdf" target="_blank">WisGate Edge Pro RAK7289V2/CV2 Environmental Reliability Test.</a></td></tr>
-        <tr><td>Installation Method</td><td>Pole or wall mounting</td></tr>
-</tbody>
-</table>
-
-
+| Feature | Specifications |
+| --- | --- |
+| Computing | MT7628, 128 MB DDR2 RAM |
+| LoRa Features | SX1303 mPCIe card (connects maximum of two) |
+| LoRa Features | 8 Channels (16 channels optional) |
+| LoRa Features | Frequency: EU868 / IN865 / US915 / AU915 / KR920 / AS923-1/2/3/4 / EU433 / CN470 |
+| LoRa Features | Listen Before Talk |
+| LoRa Features | LoRa Radio: Refer to theLoRa Radio Specificationssection for detailed information. |
+| Wi-Fi Features | Frequency: 2.4 GHz (802.11b / g / n) |
+| Wi-Fi Features | Operation Channels: 1-13 (2.4 GHz) |
+| Wi-Fi Features | 2x2 MIMO |
+| Wi-Fi Features | Wi-Fi Radio: Refer to theWi-Fi Radio Specificationssection for detailed information. |
+| Cellular Features (available with RAK7289CV2) | Nano SIM Card:12 x 9 x 0.67 mmSupports Quectel EG95-E / EG95-NA / EC25-J / EC25-AU(IoT / M2M -optimized LTE Cat 4 Module) |
+| Cellular Features (available with RAK7289CV2) | LTE Radio: Refer to theLTE Radio Specificationssection for detailed information. |
+| Power Supply | PoE (IEEE 802.3af) - 37~57 VDC12 VDCCompatible with RAK Battery Plus |
+| Antenna | LoRa: N-Type connector (one for the 8-channel gateway and two for the 16-channel gateway) |
+| Antenna | Wi-Fi / GPS / LTE: Internal antenna |
+| Ingress protection | IP67 |
+| Enclosure material | Aluminium and plastic |
+| Dimensions | 240 mm x 240 mm x 89.5 mm |
+| Weight | 4.6 kg gateway only |
+| Operating Conditions | Operating temperature: ﹣40˚ C to ﹢70˚ C |
+| Operating Conditions | Storage Temperature: ﹣40˚ C to ﹢85˚ C |
+| Operating Conditions | Operating humidity: 0% to 95% (non-condensing) |
+| Operating Conditions | Storage Humidity: 0% to 95% (non-condensing) |
+| Operating Conditions | For environmental reliability test details:WisGate Edge Pro RAK7289V2/CV2 Environmental Reliability Test. |
+| Installation Method | Pole or wall mounting |
 
 ### Hardware
 
@@ -122,141 +104,124 @@ The hardware specification details the interfacing of the RAK7289V2/RAK7289CV2 a
 
 #### Interfaces
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisgate/rak7289v2-rak7289cv2/datasheet/rak7289v2-interfaces.png"
-  width="80%"
-  caption="RAK7289V2/RAK7289CV2 Interfaces"
-/>
+> **Image:** RAK7289V2/RAK7289CV2 Interfaces
 
 ##### Interface Description
 
 | **Interface**              | **Description**                        | **Function**                                                                                                                                             |
 | -------------------------- | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **LoRa1 / LoRa2**          | LoRa Antenna Connectors                | N-Type connectors for external LoRa antennas. Required for LoRaWAN data transmission and reception.                                                      |
-| **ETH (PoE)**              | Ethernet Port (RJ45, 10/100&nbsp;Mbps) | Provides network backhaul via Ethernet. **PoE (Power over Ethernet)** allows the gateway to receive both power and data through a single Ethernet cable. |
-| **Additional Power Input** | Power Input                            | Accepts **12 V DC input**. <br />It is fully compatible with the **RAK Battery Plus**.                                                                   |
+| **ETH (PoE)**              | Ethernet Port (RJ45, 10/100 Mbps) | Provides network backhaul via Ethernet. **PoE (Power over Ethernet)** allows the gateway to receive both power and data through a single Ethernet cable. |
+| **Additional Power Input** | Power Input                            | Accepts **12 V DC input**. 
+It is fully compatible with the **RAK Battery Plus**.                                                                   |
 | **Reserved**               | Sealed Port (no function by default)   | Reserved for future use.                                                                                                                                 |
 | **Console**                | USB Type-C Port                        | Used for serial console access during debugging and firmware flashing.                                                                                   |
-| **Reset**                  | Reset Key                              | - **Short press**: Reboot the device.   <br />- **Long press (≥5 sec)**: Factory reset.                                                                  |
+| **Reset**                  | Reset Key                              | - **Short press**: Reboot the device.   
+- **Long press (≥5 sec)**: Factory reset.                                                                  |
 | **NanoSIM**                | NanoSIM Slot                           | Used for LTE connectivity. Required when using cellular backhaul. Included in all versions, even if LTE is not supported.                                |
-| **TF Card**                | MicroSD (TF) Card Slot                 | Includes a **16 GB pre-installed SD card** used for log storage and configuration. <br />**Do not remove during operation** to avoid data loss.          |
-| **LED Indicators**         | Status LEDs                            | - Power (PWR)   <br />- Ethernet (ETH)   <br />- LoRa1 & LoRa2   <br />- WLAN   <br />- LTE *(for LTE version)*   <br />                                 |
+| **TF Card**                | MicroSD (TF) Card Slot                 | Includes a **16 GB pre-installed SD card** used for log storage and configuration. 
+**Do not remove during operation** to avoid data loss.          |
+| **LED Indicators**         | Status LEDs                            | - Power (PWR)   
+- Ethernet (ETH)   
+- LoRa1 & LoRa2   
+- WLAN   
+- LTE *(for LTE version)*   
+                                 |
 
 ##### LED Indicators Details
 
-<table>
-    <thead><tr><th>LEDs</th><th>Status Indication Description</th></tr></thead>
-    <tbody>
-        <tr><td>LED 1 (PWR)</td><td>Power indicator: The LED is on when device power is on</td></tr>
-        <tr><td rowSpan="4">LED 2 (ETH)</td></tr>
-        <tr><td>ON: Link is up</td></tr>
-        <tr><td>OFF: Link is down</td></tr>
-        <tr><td>Flicker: Data transmitting and receiving</td></tr>
-        <tr><td rowSpan="4">LED 3 (LoRa 1)</td></tr>
-        <tr><td>ON: LoRa 1 is working</td></tr>
-        <tr><td>OFF: LoRa 1 is not working</td></tr>
-        <tr><td>Flicker: Indicate LoRa 1 Packet receiving and sending</td></tr>
-        <tr><td rowSpan="3">LED 4 (WLAN)</td></tr>
-        <tr><td>AP Mode:<ul><li>ON: The AP is up</li><li>Flicker: Data receiving and sending</li></ul></td></tr>
-        <tr><td>STA Mode:<ul><li>Slow flicker (1&nbsp;Hz): Disconnected</li><li>ON: Connected</li><li>Flicker: Data receiving and sending</li></ul></td></tr>
-        <tr><td rowSpan="3">LED 5 (LTE)</td></tr>
-        <tr><td>Slow Flicker (1800&nbsp;ms bright / 200&nbsp;ms  dark): Network searching</td></tr>
-        <tr><td>Slow flicker (200&nbsp;ms bright / 1800&nbsp;ms dark): Idle</td></tr>
-        <tr><td rowSpan="4">LED 6 (LoRa 2 for 16 channel)</td></tr>
-        <tr><td>ON: LoRa 2 is working</td></tr>
-        <tr><td>OFF: LoRa 2 is not working</td></tr>
-        <tr><td>Flicker: Indicate LoRa 2 Packet receiving and sending</td></tr>
- </tbody>
-</table>
-
+| LEDs | Status Indication Description |
+| --- | --- |
+| LED 1 (PWR) | Power indicator: The LED is on when device power is on |
+| LED 2 (ETH) | ON: Link is up |
+| LED 2 (ETH) | OFF: Link is down |
+| LED 2 (ETH) | Flicker: Data transmitting and receiving |
+| LED 3 (LoRa 1) | ON: LoRa 1 is working |
+| LED 3 (LoRa 1) | OFF: LoRa 1 is not working |
+| LED 3 (LoRa 1) | Flicker: Indicate LoRa 1 Packet receiving and sending |
+| LED 4 (WLAN) | AP Mode:ON: The AP is upFlicker: Data receiving and sending |
+| LED 4 (WLAN) | STA Mode:Slow flicker (1 Hz): DisconnectedON: ConnectedFlicker: Data receiving and sending |
+| LED 5 (LTE) | Slow Flicker (1800 ms bright / 200 ms dark): Network searching |
+| LED 5 (LTE) | Slow flicker (200 ms bright / 1800 ms dark): Idle |
+| LED 6 (LoRa 2 for 16 channel) | ON: LoRa 2 is working |
+| LED 6 (LoRa 2 for 16 channel) | OFF: LoRa 2 is not working |
+| LED 6 (LoRa 2 for 16 channel) | Flicker: Indicate LoRa 2 Packet receiving and sending |
 
 #### RF Specifications
 
 ##### LoRa Radio Specifications
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Operating Frequency</td><td>EU868 / IN865 / US915 / AU915 / KR920 / AS923-1/2/3/4 / EU433 / CN470</td></tr>
-        <tr><td>Transmit Power</td><td>27&nbsp;dBm (Max)</td></tr>
-        <tr><td>Receiver Sensitivity</td><td>-141&nbsp;dBm (Min)@SF12</td></tr>
-</tbody>
-</table>
-
-
+| Feature | Specifications |
+| --- | --- |
+| Operating Frequency | EU868 / IN865 / US915 / AU915 / KR920 / AS923-1/2/3/4 / EU433 / CN470 |
+| Transmit Power | 27 dBm (Max) |
+| Receiver Sensitivity | -141 dBm (Min)@SF12 |
 
 ##### Wi-Fi Radio Specifications
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-        <tr><td>Wireless Standard</td><td>IEEE 802.11b / g / n</td></tr>
-        <tr><td>Operating Frequency</td><td>ISM band: 2.412~2.472&nbsp;GHz</td></tr>
-        <tr><td>Operation Channels</td><td>2.4&nbsp;GHz: 1-13</td></tr>
-        <tr><td rowSpan="11">Transmit Power (The max power maybe different depending on local regulations) - per chain</td><td>802.11b</td></tr>
-        <tr><td>  19&nbsp;dBm @1&nbsp;Mbps</td></tr>
-        <tr><td>  19&nbsp;dBm @11&nbsp;Mbps</td></tr>
-        <tr><td>802.11g</td></tr>
-        <tr><td>  18&nbsp;dBm @6&nbsp;Mbps</td></tr>
-        <tr><td>  16&nbsp;dBm @54&nbsp;Mbps</td></tr>
-        <tr><td>  802.11n (2.4&nbsp;GHz)</td></tr>
-        <tr><td>  18&nbsp;dBm @MCS0 (HT20)</td></tr>
-        <tr><td>  16&nbsp;dBm @MCS7 (HT20)</td></tr>
-        <tr><td>  17&nbsp;dBm @MCS0 (HT40)</td></tr>
-        <tr><td>  15&nbsp;dBm @MCS7 (HT40)</td></tr>
-        <tr><td rowSpan="11">Receiver Sensitivity (Typical)</td><td>802.11b</td></tr>
-        <tr><td>  -95&nbsp;dBm @1&nbsp;Mbps</td></tr>
-        <tr><td>  -88&nbsp;dBm @11&nbsp;Mbps</td></tr>
-        <tr><td>802.11g</td></tr>
-        <tr><td>  -90&nbsp;dBm @6&nbsp;Mbps</td></tr>
-        <tr><td>  -75&nbsp;dBm @54&nbsp;Mbps</td></tr>
-        <tr><td>  802.11n (2.4&nbsp;GHz)</td></tr>
-        <tr><td>  -89&nbsp;dBm @MCS0 (HT20)</td></tr>
-        <tr><td>  -72&nbsp;dBm @MCS7 (HT20)</td></tr>
-        <tr><td>  -86&nbsp;dBm @MCS0 (HT40)</td></tr>
-        <tr><td> -68&nbsp;dBm @MCS7 (HT40)</td></tr>
- </tbody>
-</table>
-
+| Feature | Specifications |
+| --- | --- |
+| Wireless Standard | IEEE 802.11b / g / n |
+| Operating Frequency | ISM band: 2.412~2.472 GHz |
+| Operation Channels | 2.4 GHz: 1-13 |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11b |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @1 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 19 dBm @11 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11g |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @6 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @54 Mbps |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 802.11n (2.4 GHz) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 18 dBm @MCS0 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 16 dBm @MCS7 (HT20) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 17 dBm @MCS0 (HT40) |
+| Transmit Power (The max power maybe different depending on local regulations) - per chain | 15 dBm @MCS7 (HT40) |
+| Receiver Sensitivity (Typical) | 802.11b |
+| Receiver Sensitivity (Typical) | -95 dBm @1 Mbps |
+| Receiver Sensitivity (Typical) | -88 dBm @11 Mbps |
+| Receiver Sensitivity (Typical) | 802.11g |
+| Receiver Sensitivity (Typical) | -90 dBm @6 Mbps |
+| Receiver Sensitivity (Typical) | -75 dBm @54 Mbps |
+| Receiver Sensitivity (Typical) | 802.11n (2.4 GHz) |
+| Receiver Sensitivity (Typical) | -89 dBm @MCS0 (HT20) |
+| Receiver Sensitivity (Typical) | -72 dBm @MCS7 (HT20) |
+| Receiver Sensitivity (Typical) | -86 dBm @MCS0 (HT40) |
+| Receiver Sensitivity (Typical) | -68 dBm @MCS7 (HT40) |
 
 ##### LTE Radio Specifications (Optional, Available with RAK7289CV2)
 
-<table>
-    <thead><tr><th>Feature</th><th>Specifications</th></tr></thead>
-    <tbody>
-    <tr><td rowSpan="3">EG95-E for EMEA Region (Europe, Middle East, and Africa)</td><td>LTE FDD: B1/B3/B7/B8/B20/B28A</td></tr>
-    <tr><td>WCDMA: B1/B8</td></tr>
-    <tr><td>GSM/EDGE: B3/B8</td></tr>
-    <tr><td rowSpan="2">EG95-NA for North America Region</td><td>LTE FDD: B2/B4/B5/B12/B13</td></tr>
-    <tr><td>WCDMA: B2/B4/B5</td></tr>
-    <tr><td rowSpan="3">EC25-J for Japan Region</td><td>LTE FDD: B1 / B3 / B8 / B18 / B19 / B26</td></tr>
-    <tr><td>LTE TDD: B41</td></tr>
-    <tr><td>WCDMA: B1 / B6 / B8 /B19</td></tr>
-    <tr><td rowSpan="4">EC25-AU for Brazil Region</td><td>LTE-FDD: B1 / B2 / B3 / B4 / B5 / B7 / B8 / B28</td></tr>
-    <tr><td>LTE-TDD: B40</td></tr>
-    <tr><td>WCDMA: B1 / B2 / B5 / B8</td></tr>
-    <tr><td>GSM/EDGE: B2 / B3 / B5 / B8</td></tr>
-</tbody>
-</table>
+| Feature | Specifications |
+| --- | --- |
+| EG95-E for EMEA Region (Europe, Middle East, and Africa) | LTE FDD: B1/B3/B7/B8/B20/B28A |
+| EG95-E for EMEA Region (Europe, Middle East, and Africa) | WCDMA: B1/B8 |
+| EG95-E for EMEA Region (Europe, Middle East, and Africa) | GSM/EDGE: B3/B8 |
+| EG95-NA for North America Region | LTE FDD: B2/B4/B5/B12/B13 |
+| EG95-NA for North America Region | WCDMA: B2/B4/B5 |
+| EC25-J for Japan Region | LTE FDD: B1 / B3 / B8 / B18 / B19 / B26 |
+| EC25-J for Japan Region | LTE TDD: B41 |
+| EC25-J for Japan Region | WCDMA: B1 / B6 / B8 /B19 |
+| EC25-AU for Brazil Region | LTE-FDD: B1 / B2 / B3 / B4 / B5 / B7 / B8 / B28 |
+| EC25-AU for Brazil Region | LTE-TDD: B40 |
+| EC25-AU for Brazil Region | WCDMA: B1 / B2 / B5 / B8 |
+| EC25-AU for Brazil Region | GSM/EDGE: B2 / B3 / B5 / B8 |
 
 #### Power Supply Options
 
 The RAK7289V2/RAK7289CV2 supports the following power supply methods:
 
 - **PoE (Power over Ethernet):**
-   Via included PoE injector, supports IEEE 802.3af standard (input: 37–57&nbsp;V DC).
+   Via included PoE injector, supports IEEE 802.3af standard (input: 37–57 V DC).
 
-- **12&nbsp;V DC Input:**
+- **12 V DC Input:**
    Through the waterproof power connector, accepts 12 V regulated DC from an external power supply.
 
   :::warning
 
-  **Only use regulated 12&nbsp;V DC power sources.** Do not use solar chargers or non-certified adapters, as improper voltage may damage the device and void the warranty.
+  **Only use regulated 12 V DC power sources.** Do not use solar chargers or non-certified adapters, as improper voltage may damage the device and void the warranty.
 
   :::
 
 - **<a href="https://store.rakwireless.com/products/rak-battery-plus-rak9155?variant=42309251563718" target="_blank">RAK9155 Battery Plus</a> (Optional):**
-   Provides regulated 12&nbsp;V DC output and is designed for off-grid or solar-powered deployments. Purchased separately.
+   Provides regulated 12 V DC output and is designed for off-grid or solar-powered deployments. Purchased separately.
 
 :::tip NOTE
 
@@ -297,74 +262,40 @@ For more detailed information on software configurations and usage, refer to the
 |                                       | Firmware Updates                     | Over-the-air updates for easy firmware upgrades                                                                                       |
 |                                       | NTP                                  | Synchronizes the gateway system time for accurate timestamp recording                                                                 |
 
-
 ### Firmware
-
 
 |                 Model                 |                                            Source                                            |
 | :-----------------------------------: | :------------------------------------------------------------------------------------------: |
 | RAK7289V2/RAK7289CV2 WisGate Edge Pro | [Download](https://downloads.rakwireless.com/LoRa/WisGateOS2/WisGateOS2_Latest_Firmware.zip) |
 
-
 ## Models/Bundles
 
-<table class="q-table"><thead><tr><th>Part Number</th> <th >8 Channel SX1303</th> <th >16 Channel SX1303</th> <th >Cat4 Cellular</th> <th >GPS</th> <th >Wi-Fi</th> <th >Dying gasp</th></tr></thead> <tbody><tr><td>RAK7289CV2-XYZ</td> <td >√</td> <td ></td> <td >√</td> <td >√</td> <td >√</td> <td ></td></tr> <tr><td>RAK7289CV2-XYZ</td> <td ></td> <td >√</td> <td >√</td> <td >√</td> <td >√</td> <td ></td></tr> <tr><td>RAK7289CV2-XYZ</td> <td >√</td> <td ></td> <td >√</td> <td >√</td> <td >√</td> <td >√</td></tr> <tr><td>RAK7289CV2-XYZ</td> <td ></td> <td >√</td> <td >√</td> <td >√</td> <td >√</td> <td >√</td></tr> <tr><td>RAK7289V2-XYZ</td> <td >√</td> <td ></td> <td ></td> <td >√</td> <td >√</td> <td ></td></tr> <tr><td>RAK7289V2-XYZ</td> <td ></td> <td >√</td> <td ></td> <td >√</td> <td >√</td> <td ></td></tr> <tr><td>RAK7289V2-XYZ</td> <td >√</td> <td ></td> <td ></td> <td >√</td> <td >√</td> <td >√</td></tr> <tr><td>RAK7289V2-XYZ</td> <td ></td> <td >√</td> <td ></td> <td >√</td> <td >√</td> <td >√</td></tr></tbody></table>
-
-
+| Part Number | 8 Channel SX1303 | 16 Channel SX1303 | Cat4 Cellular | GPS | Wi-Fi | Dying gasp |
+| --- | --- | --- | --- | --- | --- | --- |
+| RAK7289CV2-XYZ | √ |  | √ | √ | √ |  |
+| RAK7289CV2-XYZ | √ |  | √ | √ | √ | √ |
+| RAK7289CV2-XYZ |  | √ | √ | √ | √ | √ |
+| RAK7289V2-XYZ | √ |  |  | √ | √ |  |
+| RAK7289V2-XYZ | √ |  |  | √ | √ | √ |
+| RAK7289V2-XYZ |  | √ |  | √ | √ | √ |
 
 ## Certification
 
-<RkCertificationIcons certifications={[
-  {
-'ce': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289V2_CE_Certification.pdf'
-},
-{
-'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_FCC_Certification.pdf'
-},
-{
-'ised': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_ISED_Certification.zip'
-},
-{
-'jrl': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_RAK7289V2_JRL_certification.pdf'
-},
-{
-'jtbl': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_JTBL_Certification.pdf'
-},
-{
-'kc': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289C_RAK7289V2_RAK7289CV2_KC_Certification.pdf'
-},
-{
-'ma': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289V2_MA_Certification.pdf'
-},
-{
-'nbtc': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_NBTC_Certification.pdf'
-},
-{
-'reach': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289_RAK7289CV2_RAK7289V2_REACH_Report.pdf'
-},
-{
-'red': 'https://downloads.rakwireless.com/LoRa/WisGate/Certification/WisGate_RED_Verification.pdf'
-},
-{
-'rohs': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289_RAK7289CV2_RAK7289V2_RoHS_Report.pdf'
-},
-{
-'rcm': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289V2_RCM_Certification.pdf'
-},
-{
-'rsm': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289CV2_RSM_Certification.pdf'
-},
-{
-'tdra': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_TDRA_Certification.pdf'
-},
-{
-'ukca': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289CV2_UKCA_Certification.pdf'
-},
-{
-'wpc': 'https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_WPC_Certification.pdf'
-},
-]} />
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289V2_CE_Certification.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_ISED_Certification.zip
+- **JRL:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_RAK7289V2_JRL_certification.pdf
+- **JTBL:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_JTBL_Certification.pdf
+- **KC:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289C_RAK7289V2_RAK7289CV2_KC_Certification.pdf
+- **MA:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289V2_MA_Certification.pdf
+- **NBTC:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_NBTC_Certification.pdf
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289_RAK7289CV2_RAK7289V2_REACH_Report.pdf
+- **RED:** https://downloads.rakwireless.com/LoRa/WisGate/Certification/WisGate_RED_Verification.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289_RAK7289CV2_RAK7289V2_RoHS_Report.pdf
+- **RCM:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289_RAK7289V2_RCM_Certification.pdf
+- **RSM:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289CV2_RSM_Certification.pdf
+- **TDRA:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_TDRA_Certification.pdf
+- **UKCA:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289C_RAK7289CV2_UKCA_Certification.pdf
+- **WPC:** https://downloads.rakwireless.com/LoRa/RAK7289V2/Certification/RAK7289CV2_WPC_Certification.pdf
 
-
-
-<RkBottomNav/>

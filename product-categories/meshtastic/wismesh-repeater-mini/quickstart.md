@@ -14,9 +14,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisMesh Repeater Mini Quick Start Guide
 
 WisMesh Repeater Mini is a solar-powered repeater that comes in a waterproof enclosure with a high-performance built-in antenna, making it deployable anywhere regardless of power availability or weather conditions.
@@ -69,21 +66,11 @@ To access the USB port, follow these simple steps:
 
 1. Remove the rubber plug on the side of the enclosure, as shown in **Figure 1**.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/hub-mini-usb-plug-1.png"
-  width="30%"
-  caption="Remove the rubber plug"
-/>
+> **Image:** Remove the rubber plug
 
 2. Access the USB port, as shown in **Figure 2**
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/hub-mini-usb-plug-2.png"
-  width="30%"
-  caption="Access the USB port"
-/>
+> **Image:** Access the USB port
 
 ## Product Configuration
 
@@ -99,12 +86,7 @@ The WisMesh Repeater Mini's internal battery is disconnect to avoid discharge of
 
 To connect the battery, open the enclosure lid and attach the battery cable to the battery connector on the WisBlock Base Board, as shown in **Figure 3**.
 
-<RkImage
-  zoomMode={true}
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-hub-mini-battery.png"
-  width="30%"
-  caption="WisMesh Repeater Mini connect the battery"
-/>
+> **Image:** WisMesh Repeater Mini connect the battery
 
 :::warning CAUTION
 Make sure the cable of the battery is plugged in the correct orientation.
@@ -134,7 +116,7 @@ For Firmware 1.3 and 2.0 (from November 1, 2022), the WisBlock Base board is aut
 
 - All the base boards with RAK4631: **`firmware-rak4631-w.x.yy.zzzzzzz.uf2`**
 
-<b>Flashing the WisMesh Repeater Mini Firmware:</b>
+**Flashing the WisMesh Repeater Mini Firmware:**
 
 The WisMesh Repeater Mini comes pre-flashed with the Meshtastic firmware. If problems occur, update the Meshtastic firmware to the latest version.
 
@@ -142,4 +124,3 @@ The WisMesh Repeater Mini comes pre-flashed with the Meshtastic firmware. If pro
 
 To set up the WisMesh Repeater Mini for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration/" target="_blank">configuration guide</a> in the Meshtastic documentation.
 
-<RkBottomNav/>

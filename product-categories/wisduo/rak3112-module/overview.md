@@ -20,9 +20,6 @@ slug: /product-categories/wisduo/rak3112-module/overview/
 date: 2025-06-06
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3112 WisDuo LPWAN+BLE+Wi-Fi Module
 
 Thank you for choosing **RAK3112 WisDuo LPWAN+BLE+Wi-Fi Module** for your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -44,14 +41,14 @@ There are two variants available for the RAK3112 Module:
 
 - Based on **Espressif ESP32-S3**
 	- Xtensa® 32-bit LX7 dual-core microprocessor
-	- 16&nbsp;MB Flash
-	- 512&nbsp;kB SRAM
-	- 512&nbsp;kB RAM
-	- 8&nbsp;MB PSRAM
-	- 16&nbsp;kB RTC SRAM
+	- 16 MB Flash
+	- 512 kB SRAM
+	- 512 kB RAM
+	- 8 MB PSRAM
+	- 16 kB RTC SRAM
 - LoRa transceiver **Semtech SX1262**
 	- LoRa and LoRaWAN support
-	- Frequency support from 863&nbsp;MHz to 928&nbsp;MHz
+	- Frequency support from 863 MHz to 928 MHz
 - **LoRaWAN 1.0.2** specification compliant (LoRaWAN **BasicModem** support in preparation)
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -60,8 +57,7 @@ There are two variants available for the RAK3112 Module:
 - Wi-Fi support
 - Custom firmware using Arduino
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10&nbsp;km with optimized antenna
-- **Supply Voltage**: 3.0&nbsp;V ~ 3.6&nbsp;V
-- **Temperature range**: -40°&nbsp;C ~ 65°&nbsp;C
+- Long-range: greater than 10 km with optimized antenna
+- **Supply Voltage**: 3.0 V ~ 3.6 V
+- **Temperature range**: -40° C ~ 65° C
 
-<RkBottomNav/>

@@ -8,8 +8,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock RAKBox-B5 Enclosure
 
 Thank you for choosing **RAKBox-B5** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -25,7 +23,6 @@ The enclosure is made of transparent acrylic material and has an open design. It
 
 ## Product Features
 
-- Dimensions W x L x H: 105&nbsp;mm x 75&nbsp;mm x 30&nbsp;mm
+- Dimensions W x L x H: 105 mm x 75 mm x 30 mm
 - Compatible with all WisBlock modules
 
-<RkBottomNav/>

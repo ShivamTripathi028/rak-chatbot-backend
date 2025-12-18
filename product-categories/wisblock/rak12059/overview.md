@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12059 WisBlock Liquid Level Sensor
 
 Thank you for choosing **RAK12059 WisBlock Liquid Level Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,15 +36,15 @@ RAK12059 is a WisBlock Liquid Level Sensor module that extends the WisBlock syst
 
 * **Sensor specifications**
     *  Active sensor length of MILONE eTape:
-        * 213&nbsp;mm (12110215TC-8TJ)
-        * 315&nbsp;mm (12110215TC-12TJ)
-        * 618&nbsp;mm (12110215TC-24TJ)
+        * 213 mm (12110215TC-8TJ)
+        * 315 mm (12110215TC-12TJ)
+        * 618 mm (12110215TC-24TJ)
     *  I2C interface
-    *  3.3&nbsp;V power supply
-    *  eTape operating temperature range：-9&nbsp;°C to +65&nbsp;°C
+    *  3.3 V power supply
+    *  eTape operating temperature range：-9 °C to +65 °C
 
 * **Size**
-    * 10 x 23&nbsp;mm
+    * 10 x 23 mm
 
 ## Prerequisites
 
@@ -56,4 +54,3 @@ To use a **RAK12059**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

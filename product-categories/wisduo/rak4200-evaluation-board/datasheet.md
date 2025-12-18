@@ -9,31 +9,27 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
-
 # RAK4200 Evaluation Board Datasheet
 
 ## Overview
 
 ### Description
 
-**RAK4200 Evaluation Board** is a WisBlock product consisting of [RAK4200 WisDuo LPWAN Module](https://store.rakwireless.com/products/rak4200-lora-module) and RAK5005 Base Board. You can use this development board to access all serial and GPIO ports for easy configuration. RAK4200 includes an STM32L071KB MCU and an SX1276 LoRa transceiver. This evaluation board uses a RAK4200 module which is a LoRa module that has an Ultra-Low Power Consumption of 9.40&nbsp;μA (down to 1.08&nbsp;μA @ 2.0&nbsp;V) in sleep mode and high LoRa output power up to 19&nbsp;dBm max in work mode. The module complies with the LoRaWAN 1.0.2 specification. It also supports LoRa P2P (Point-to-Point) communications. The module is suitable for various applications that require long-range data acquisition and low power consumption.
+**RAK4200 Evaluation Board** is a WisBlock product consisting of [RAK4200 WisDuo LPWAN Module](https://store.rakwireless.com/products/rak4200-lora-module) and RAK5005 Base Board. You can use this development board to access all serial and GPIO ports for easy configuration. RAK4200 includes an STM32L071KB MCU and an SX1276 LoRa transceiver. This evaluation board uses a RAK4200 module which is a LoRa module that has an Ultra-Low Power Consumption of 9.40 μA (down to 1.08 μA @ 2.0 V) in sleep mode and high LoRa output power up to 19 dBm max in work mode. The module complies with the LoRaWAN 1.0.2 specification. It also supports LoRa P2P (Point-to-Point) communications. The module is suitable for various applications that require long-range data acquisition and low power consumption.
 
 ### Features
 
 * LoRa module for Smart City, Smart Agriculture, Smart Industry
 * **I/O ports**: UART/I2C/GPIO/ADC
-* **Temperature range**: -40&nbsp;°C to +85&nbsp;°C
-* **Supply voltage**: 2.0 ~ 3.6&nbsp;V
-* **Frequency range**: 863–870&nbsp;MHz (EU) / 902–928&nbsp;MHz (US), ISM and SRD systems
-* Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz Bandwidth
-* Based on RAK4200 module with a sleep current consumption of 9.40&nbsp;μA (down to 1.08&nbsp;μA @ 2.0&nbsp;V)
+* **Temperature range**: -40 °C to +85 °C
+* **Supply voltage**: 2.0 ~ 3.6 V
+* **Frequency range**: 863–870 MHz (EU) / 902–928 MHz (US), ISM and SRD systems
+* Low-Power Wireless Systems with 7.8 kHz to 500 kHz Bandwidth
+* Based on RAK4200 module with a sleep current consumption of 9.40 μA (down to 1.08 μA @ 2.0 V)
 * **Core**: STM32L071 ARM 32-bit Cortex M0+ with MPU
-* Up to 128&nbsp;KB flash memory with ECC
-* 20&nbsp;KB RAM
-* 6&nbsp;KB of data EEPROM with ECC
+* Up to 128 KB flash memory with ECC
+* 20 KB RAM
+* 6 KB of data EEPROM with ECC
 
 ## Specifications
 
@@ -41,17 +37,9 @@ import RkCertificationIcons from '@site/src/components/CertificationPage/IconLis
 
 The RAK4200 Evaluation Board front view (top) and back view are shown in **Figure 1** and **Figure 2**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/21.0302_rak4200-evaluation-board.543.png"
-  width="50%"
-  caption="RAK4200 Evaluation Board front view"
-/>
+> **Image:** RAK4200 Evaluation Board front view
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/21.0302_rak4200-evaluation-board.544.png"
-  width="50%"
-  caption="RAK4200 Evaluation Board back view"
-/>
+> **Image:** RAK4200 Evaluation Board back view
 
 ### Hardware
 
@@ -61,11 +49,7 @@ The hardware specification is categorized into five parts. It discusses the inte
 
 RAK4201 is the WisBlock Core CPU module used on the RAK4200 Evaluation Board. **Figure 2** shows an overview of interfaces found on the RAK4200 Evaluation Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/rak4200-interfaces.svg"
-  width="80%"
-  caption="RAK4200 Evaluation Board Interface Overview"
-/>
+> **Image:** RAK4200 Evaluation Board Interface Overview
 
 ##### SWD Programming Interface
 
@@ -86,21 +70,13 @@ Refer to section [RAKDAP1-Flash-and-Debug-Tool](https://docs.rakwireless.com/pro
 
 Use **Figure 3** as a guide to connect RAKDAP1 on RAK4200 Evaluation Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/rak4200_dap.png"
-  width="65%"
-  caption="RAK4200 RAKDAP1 connection"
-/>
+> **Image:** RAK4200 RAKDAP1 connection
 
 ##### RF Interface
 
 The RF output pin of the RAK4200 Evaluation Board is connected to an external antenna through a standard iPEX antenna connector.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/lora-pcb-antenna.png"
-  width="70%"
-  caption="RAK4200 LoRa antenna"
-/>
+> **Image:** RAK4200 LoRa antenna
 
 :::warning
 Before powering the RAK4200 Evaluation Board, you should install the LoRa antenna first. Not doing so might damage the board.
@@ -112,23 +88,17 @@ The Micro-B USB connector is compliant with the USB 2.0 specification. The pin d
 
 | **Pin Number** | **Pin Name** | **Description**             |
 | -------------- | ------------ | --------------------------- |
-| 1              | USB_VBUS     | (+5&nbsp;V) USB Bus Voltage |
+| 1              | USB_VBUS     | (+5 V) USB Bus Voltage |
 | 2              | USB_DM       | USB Bus D+ positive pin     |
 | 3              | USB_DP       | USB Bus D- negative pin     |
 | 4              | NC           | Not connected               |
 | 5              | GND          | Ground                      |
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/microb-usb.png"
-  width="25%"
-  caption="RAK4200 Micro-B USB connector"
-/>
+> **Image:** RAK4200 Micro-B USB connector
 
 The USB data bus is connected to a **USB-SERIAL CH340** chip. The **CH340** is a series of USB bus adapters, that provides a virtual serial interface over the USB bus.
 
 #### Pin Definition
-
 
 :::tip NOTE
 The SWD pins PA13 and PA14 are reserved for STM MCU debugging and programming.
@@ -136,7 +106,7 @@ The SWD pins PA13 and PA14 are reserved for STM MCU debugging and programming.
 
 The following tables below shows the pin definitions of the RAK4200 Evaluation Board:
 
-##### J10, J11, J12 2.54&nbsp;mm header
+##### J10, J11, J12 2.54 mm header
 
 ##### J10
 
@@ -146,7 +116,6 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 2              | VDD           | Power supply generated by CPU module |                         |
 | 3              | TX1/USART2_TX | USART2 TX pin                        | PA2                     |
 | 4              | RX1/USART2_RX | USART2 RX pin                        | PA3                     |
-
 
 ##### J11
 
@@ -158,7 +127,7 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 4              | GND            | Ground                        |                         |
 
 :::tip NOTE
-3V3_S is another 3.3&nbsp;V power supply that can be controlled on/off by MCU. Set pin IO2=0 when the sensor is not in use to save power.
+3V3_S is another 3.3 V power supply that can be controlled on/off by MCU. Set pin IO2=0 when the sensor is not in use to save power.
 :::
 
 ##### LoRa Transceiver SX1276 Connection
@@ -185,8 +154,9 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | RX mode       |       L        |       H       |
 
 :::tip Logic Level Table
-- H level (1.8 - 5.0&nbsp;V)<br />
-- L level (0&nbsp;V)
+- H level (1.8 - 5.0 V)
+
+- L level (0 V)
 :::
 
 ##### J12
@@ -198,15 +168,9 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 3              | I2C1_SDA     | I2C data pin                         |           PB7           |
 | 4              | VDD          | Power supply generated by CPU module |                         |
 
-
 ##### IO Module Connector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/io-module-connector.png"
-  width="35%"
-  caption="RAK4200 IO Module Connector"
-/>
-
+> **Image:** RAK4200 IO Module Connector
 
 | **Pin Number** | **Pin Name**   | **Description**                                                                                            | **Microcontroller Pin** |
 | -------------- | -------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -214,8 +178,8 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 2              | VBAT           | Not connected                                                                                              |                         |
 | 3              | GND            | Ground                                                                                                     |                         |
 | 4              | GND            | Ground                                                                                                     |                         |
-| 5              | 3V3            | 3.3&nbsp;V power supply                                                                                    |                         |
-| 6              | 3V3_S          | 3.3&nbsp;V power supply can be shutdown by CPU module                                                      |                         |
+| 5              | 3V3            | 3.3 V power supply                                                                                    |                         |
+| 6              | 3V3_S          | 3.3 V power supply can be shutdown by CPU module                                                      |                         |
 | 7              | USB+           | Not connected                                                                                              |                         |
 | 8              | USB-           | Not connected                                                                                              |                         |
 | 9              | VBUS           | Not connected                                                                                              |                         |
@@ -226,8 +190,10 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 14             | LED1           | Red LED for battery charge indicator                                                                       |                         |
 | 15             | LED2           | Green LED for custom use                                                                                   | Not connected           |
 | 16             | LED3           | BLue LED for custom use                                                                                    | Not connected           |
-| 17             | VDD            | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
-| 18             | VDD            | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 17             | VDD            | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
+| 18             | VDD            | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 19             | I2C1_SDA       | I2C data  pin                                                                                              | PB7                     |
 | 20             | I2C1_SCL       | I2C clock pin                                                                                              | PB6                     |
 | 21             | AIN0/USART1_DE | Analog Input for ADC                                                                                       |                         |
@@ -253,13 +219,9 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 
 ##### Sensor Module Connector
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/sensor-module-connector.png"
-  width="35%"
-  caption="Sensor Module Connector"
-/>
+> **Image:** Sensor Module Connector
 
-<b>Slot A</b>
+**Slot A**
 
 | **Pin Number** | **Pin name**  | **Description**                                                                                | **Microcontroller Pin** |
 | -------------- | ------------- | ---------------------------------------------------------------------------------------------- | ----------------------- |
@@ -271,14 +233,16 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 6              | SPI1_MOSI     | SPI MOSI signal                                                                                | PA7                     |
 | 7              | I2C1_SCL      | I2C clock                                                                                      | PB6                     |
 | 8              | I2C1_SDA      | I2C data  pin                                                                                  | PB7                     |
-| 9              | VDD           | Controlled by CPU module.<br />Used to power sensor board if the MCU IO level is not 3.3&nbsp;V  |                         |
+| 9              | VDD           | Controlled by CPU module.
+Used to power sensor board if the MCU IO level is not 3.3 V  |                         |
 | 10             | IO2           | Power switch control of 3V3_S                                                                  |                         |
-| 11             | 3V3_S         | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 11             | 3V3_S         | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 12             | IO1/USART1_DE | General Purpose IO                                                                             | PA12                    |
 | 13             | NC            | Not connected                                                                                  |                         |
-| 14             | 3V3_S         | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 14             | 3V3_S         | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 15             | NC            | Not connected                                                                                  |                         |
-| 16             | VDD           | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 16             | VDD           | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 17             | NC            | Not connected                                                                                  |                         |
 | 18             | NC            | Not connected                                                                                  |                         |
 | 19             | NC            | Not connected                                                                                  |                         |
@@ -288,7 +252,7 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 23             | GND           | Ground                                                                                         |                         |
 | 24             | USART1_RX     | USART1 RX pin                                                                                  | PA10                    |
 
-<b>Slot B</b>
+**Slot B**
 
 | **Pin Number** | **Pin name**  | **Description**                                                                                | **Microcontroller Pin** |
 | -------------- | ------------- | ---------------------------------------------------------------------------------------------- | ----------------------- |
@@ -300,14 +264,16 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 6              | SPI1_MOSI     | SPI MOSI signal                                                                                | PA7                     |
 | 7              | I2C1_SCL      | I2C clock                                                                                      | PB6                     |
 | 8              | I2C1_SDA      | I2C data  pin                                                                                  | PB7                     |
-| 9              | VDD           | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 9              | VDD           | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 10             | IO1/USART1_DE | General Purpose IO                                                                             | PA12                    |
-| 11             | 3V3_S         | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 11             | 3V3_S         | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 12             | IO2           | Power switch control of 3V3_S                                                                  |                         |
 | 13             | NC            | Not connected                                                                                  |                         |
-| 14             | 3V3_S         | 3.3&nbsp;V power supply can be shutdown by CPU module                                          |                         |
+| 14             | 3V3_S         | 3.3 V power supply can be shutdown by CPU module                                          |                         |
 | 15             | NC            | Not connected                                                                                  |                         |
-| 16             | VDD           | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 16             | VDD           | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 17             | NC            | Not connected                                                                                  |                         |
 | 18             | NC            | Not connected                                                                                  |                         |
 | 19             | NC            | Not connected                                                                                  |                         |
@@ -317,7 +283,7 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 23             | GND           | Ground                                                                                         |                         |
 | 24             | NC            | Not connected                                                                                  |                         |
 
-<b>Slot C</b>
+**Slot C**
 
 | **Pin Number** | **Pin name** | **Description**                                                                                | **Microcontroller Pin** |
 | -------------- | ------------ | ---------------------------------------------------------------------------------------------- | ----------------------- |
@@ -329,14 +295,16 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 6              | SPI1_MOSI    | SPI MOSI signal                                                                                | PA7                     |
 | 7              | I2C1_SCL     | I2C clock pin                                                                                  | PB6                     |
 | 8              | I2C1_SDA     | I2C data  pin                                                                                  | PB7                     |
-| 9              | VDD          | Controlled by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 9              | VDD          | Controlled by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 10             | IO4          | General Purpose IO                                                                             |                         |
-| 11             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                         |                         |
+| 11             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                         |                         |
 | 12             | IO5          | General Purpose IO                                                                             | Not connected           |
 | 13             | NC           | Not connected                                                                                  |                         |
-| 14             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                         |                         |
+| 14             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                         |                         |
 | 15             | NC           | Not connected                                                                                  |                         |
-| 16             | VDD          | Controlled by CPU module.<br />Used to power sensor board if the MCU IO level is not 3.3&nbsp;V  |                         |
+| 16             | VDD          | Controlled by CPU module.
+Used to power sensor board if the MCU IO level is not 3.3 V  |                         |
 | 17             | NC           | Not connected                                                                                  |                         |
 | 18             | NC           | Not connected                                                                                  |                         |
 | 19             | NC           | Not connected                                                                                  |                         |
@@ -346,8 +314,7 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 23             | GND          | Ground                                                                                         |                         |
 | 24             | NC           | Not connected                                                                                  |                         |
 
-
-<b>Slot D</b>
+**Slot D**
 
 | **Pin Number** | **Pin name** | **Description**                                                                                            | **Microcontroller Pin** |
 | -------------- | ------------ | ---------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -359,14 +326,16 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 6              | SPI1_MOSI    | SPI MOSI signal                                                                                            | PA7                     |
 | 7              | I2C1_SCL     | I2C clock pin                                                                                              | PB6                     |
 | 8              | I2C1_SDA     | I2C data pin                                                                                               | PB7                     |
-| 9              | VDD          | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 9              | VDD          | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 10             | IO6          | General Purpose IO                                                                                         |                         |
-| 11             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                                     |                         |
+| 11             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                                     |                         |
 | 12             | IO5          | General Purpose IO                                                                                         |                         |
 | 13             | NC           | Not connected                                                                                              |                         |
-| 14             | 3V3_S        | 3.3&nbsp;V power supply, can be shutdown by CPU module                                                     |                         |
+| 14             | 3V3_S        | 3.3 V power supply, can be shutdown by CPU module                                                     |                         |
 | 15             | NC           | Not connected                                                                                              |                         |
-| 16             | VDD          | Power supply generated by CPU module.<br /> Used to power sensor board if the MCU IO level is not 3.3&nbsp;V |                         |
+| 16             | VDD          | Power supply generated by CPU module.
+ Used to power sensor board if the MCU IO level is not 3.3 V |                         |
 | 17             | NC           | Not connected                                                                                              |                         |
 | 18             | NC           | Not connected                                                                                              |                         |
 | 19             | NC           | Not connected                                                                                              |                         |
@@ -376,20 +345,15 @@ The following tables below shows the pin definitions of the RAK4200 Evaluation B
 | 23             | GND          | Ground                                                                                                     |                         |
 | 24             | NC           | Not connected                                                                                              |                         |
 
-
 ##### Battery Connector
 
 The RAK5005 WisBase board can be powered by a battery via a P1 connector, and the battery is not included on the RAK4200 Evaluation Board packaging.
 
 Use **Figure 8** as a guide to connect the battery. The red triangle indicates pin 1.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/rak4200-p1.png"
-  width="60%"
-  caption="RAK4200 EVB battery connector"
-/>
+> **Image:** RAK4200 EVB battery connector
 
-The pin definition of the RAK600 Evaluation Board Li-Ion battery connector is shown in the table below. The matching connector for the battery wires is an [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
+The pin definition of the RAK600 Evaluation Board Li-Ion battery connector is shown in the table below. The matching connector for the battery wires is an [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
 
 P1 Battery connector
 
@@ -400,35 +364,28 @@ P1 Battery connector
 
 The full specification of the RAK4200 Evaluation Board battery is shown in the table below.
 
-
 | **No.** | **Item**                  | **Specification**                    |
 | ------- | ------------------------- | ------------------------------------ |
-| 1       | Charge Cut-off Voltage    | 4.2&nbsp;V                           |
-| 2       | Nominal Voltage           | 3.7&nbsp;V                           |
-| 3       | Discharge Cut-off Voltage | 2.75&nbsp;V                          |
-| 4       | Typical Capacity          | 2650&nbsp;mAh                        |
-| 5       | Max Discharge Current     | 0.5&nbsp;C at 25&nbsp;℃ to 45&nbsp;℃ |
-| 6       | PH Connector              | 2.0&nbsp;mm pitch                    |
-| 7       | Cable Length              | 110.0±3.0&nbsp;mm                    |
+| 1       | Charge Cut-off Voltage    | 4.2 V                           |
+| 2       | Nominal Voltage           | 3.7 V                           |
+| 3       | Discharge Cut-off Voltage | 2.75 V                          |
+| 4       | Typical Capacity          | 2650 mAh                        |
+| 5       | Max Discharge Current     | 0.5 C at 25 ℃ to 45 ℃ |
+| 6       | PH Connector              | 2.0 mm pitch                    |
+| 7       | Cable Length              | 110.0±3.0 mm                    |
 | 8       | Cable Color               | Red: VBAT, Black: GND                |
 
-
-
 :::tip NOTE
-The voltage of the Li-Ion battery **must not exceed 4.3&nbsp;V**. When connecting the battery make sure the polarity is correct. Not all connectors are wired the same.
+The voltage of the Li-Ion battery **must not exceed 4.3 V**. When connecting the battery make sure the polarity is correct. Not all connectors are wired the same.
 :::
 
 ##### Solar Panel Connector
 
-A 5&nbsp;V solar panel can be connected to the board via a P2 connector to serve the purpose of charging the battery. The solar panel is not included on RAK4200 Evaluation Board packaging. Use **Figure 9** as a guide to connect the solar panel. The red triangle indicates pin 1.
+A 5 V solar panel can be connected to the board via a P2 connector to serve the purpose of charging the battery. The solar panel is not included on RAK4200 Evaluation Board packaging. Use **Figure 9** as a guide to connect the solar panel. The red triangle indicates pin 1.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/rak4200-p2.png"
-  width="60%"
-  caption="RAK4200 EVB solar connector"
-/>
+> **Image:** RAK4200 EVB solar connector
 
-The pin definition of the RAK4200 Evaluation Board solar panel connector is shown in the table below. The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287).
+The pin definition of the RAK4200 Evaluation Board solar panel connector is shown in the table below. The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287).
 
 P2 Solar Panel connector
 
@@ -439,17 +396,16 @@ P2 Solar Panel connector
 
 The full specification of the Solar Panel for the RAK4200 Evaluation Board is shown in the table below.
 
-
 | **No.** | **Item**        | **Specification**                                        |
 | ------- | --------------- | -------------------------------------------------------- |
-| 1       | Nominal Voltage | 5&nbsp;V                                                 |
-| 2       | Typical Current | 80&nbsp;mA                                               |
-| 3       | Size            | Length: 60&nbsp;mm, Width: 60&nbsp;mm, Height: 2&nbsp;mm |
-| 4       | Connector       | 1.5&nbsp;mm pitch                                        |
+| 1       | Nominal Voltage | 5 V                                                 |
+| 2       | Typical Current | 80 mA                                               |
+| 3       | Size            | Length: 60 mm, Width: 60 mm, Height: 2 mm |
+| 4       | Connector       | 1.5 mm pitch                                        |
 | 5       | Cable Color     | Red: C0NN_5V, Black: GND                                 |
 
 :::tip NOTE
-The output of the solar panel **must not exceed 5.5&nbsp;V**. Otherwise, it may cause permanent damage to the board.
+The output of the solar panel **must not exceed 5.5 V**. Otherwise, it may cause permanent damage to the board.
 :::
 
 ##### LEDs
@@ -483,9 +439,9 @@ The RAK4200 has two different models based on its frequency: RAK4200(L) for low 
 
 | Conditions                   | Current | Unit  |
 | :--------------------------- | :-----: | :---: |
-| Tx mode LoRa @17&nbsp;dBm    |   87    |  mA   |
-| Tx mode LoRa @19&nbsp;dBm    |   120   |  mA   |
-| Rx mode LoRa @37.5&nbsp;Kbps |   15    |  mA   |
+| Tx mode LoRa @17 dBm    |   87    |  mA   |
+| Tx mode LoRa @19 dBm    |   120   |  mA   |
+| Rx mode LoRa @37.5 Kbps |   15    |  mA   |
 
 ##### Absolute Maximum Ratings
 
@@ -503,14 +459,9 @@ Exposure to maximum rating conditions may affect device reliability.
 
 ##### Board Dimensions
 
-**Figure 10** shows the actual dimensions of the RAK4200 Evaluation Board measured in millimeters (mm). <br /><br />
+**Figure 10** shows the actual dimensions of the RAK4200 Evaluation Board measured in millimeters (mm). 
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak4200-evaluation-board/datasheet/rak4200-mechanical.png"
-  width="100%"
-  caption="RAK4200 Evaluation Board dimensions"
-/>
-
+> **Image:** RAK4200 Evaluation Board dimensions
 
 ### Software
 
@@ -530,27 +481,12 @@ The **hex file** contains both the bootloader and the application code. You need
 | ------- | ----------------------------------------------------------------------------------------------- |
 | RAK4200 | [Download](https://downloads.rakwireless.com/LoRa/RAK4200/Firmware/RAK4200_Latest_Firmware.zip) |
 
-
 ## Certification
 
+### Certifications
+- **CE:** https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_CE_Certification.zip
+- **REACH:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_REACH_Report.pdf
+- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_RoHS_Report.pdf
+- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_FCC_Certification.pdf
+- **ISED:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_ISED_Certification.pdf
 
-<RkCertificationIcons certifications={[
-    {
-        'ce': 'https://downloads.rakwireless.com/LoRa/RAK4200/Certification-Report/RAK4200H_CE_Certification.zip',
-    },
-    {
-        'reach': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_REACH_Report.pdf',
-    },
-    {
-        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_RoHS_Report.pdf',
-    },
-    {
-        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_FCC_Certification.pdf',
-    },
-    {
-        'ised': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_ISED_Certification.pdf',
-    },
-]} />
-
-
-<RkBottomNav/>

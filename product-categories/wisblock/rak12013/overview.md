@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK12013 WisBlock Radar Sensor Module
 
 Thank you for choosing **RAK12013 WisBlock Radar Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,10 +27,9 @@ Thank you for choosing **RAK12013 WisBlock Radar Sensor Module** in your awesome
 
 [Sample Code: RAK12013_Radar_3GHZ](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK12013_Radar_3GHZ)
 
-
 ## Product Description
 
-RAK12013 is a 3.2&nbsp;GHz microwave radar module based on RCWL-9196. It uses the Doppler radar effect to detect moving objects/motion using microwaves. The RCWL-9196 will transmit and receive a 3.2&nbsp;GHz radar signal and compare the difference between the two signals to determine whether the object is moving or not.
+RAK12013 is a 3.2 GHz microwave radar module based on RCWL-9196. It uses the Doppler radar effect to detect moving objects/motion using microwaves. The RCWL-9196 will transmit and receive a 3.2 GHz radar signal and compare the difference between the two signals to determine whether the object is moving or not.
 
 :::tip NOTE
 1. Radar signals don't interfere with other signals such as LoRa, WiFi, and Bluetooth; but multiple radar signals interfere with each other between single individuals over a distance greater than 1 meter.
@@ -42,17 +39,17 @@ RAK12013 is a 3.2&nbsp;GHz microwave radar module based on RCWL-9196. It uses th
 ## Product Features
 
 * **Module specifications**
-    * 3.3&nbsp;V Power Supply
-    * Current Consumption: < 3&nbsp;uA
+    * 3.3 V Power Supply
+    * Current Consumption: < 3 uA
     * Chipset: RCWL RCWL-9196
     * Motion Detection Module
     * Detection Distance: 5 - 7 meters
     * Detection Area: 360 degrees angle with no blind spot
-    * Frequency: 3.2&nbsp;GHz
+    * Frequency: 3.2 GHz
     * Trigger Way: repeat trigger
 
 * **Size**
-    * 25 x 35&nbsp;mm
+    * 25 x 35 mm
 
 ## Prerequisites
 
@@ -62,4 +59,3 @@ To use a **RAK12013**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

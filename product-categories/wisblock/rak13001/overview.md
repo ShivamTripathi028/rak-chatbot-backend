@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK13001 WisBlock Relay IO Module
 
 Thank you for choosing **RAK13001 WisBlock Relay IO Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -31,11 +28,9 @@ Thank you for choosing **RAK13001 WisBlock Relay IO Module** in your awesome IoT
 RAK13001 is a WisBlock Interface module which extends the WisBlock system to be used on isolated digital input and output applications. There is one digital output that is isolated by an electromechanical relay and one digital input isolated by an opto-couple. The isolated input can be configurated as wet contact (default mode) or dry contact. RAK13001 digital output is used to programmatically switch on/off devices operating at high voltage or current applications.
 
 :::warning
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/warning.png"
-  width="90%"
-  caption="Safety Precaution"
-/>
+
+> **Image:** Safety Precaution
+
 :::
 
 ## Product Features
@@ -44,13 +39,13 @@ RAK13001 is a WisBlock Interface module which extends the WisBlock system to be 
     * One relay isolated output
     * One opto-couple isolated input
     * The input supports wet contact(default mode) or dry contact
-    * The isolation between internal and external is up to 2500&nbsp;VDC
-    * The output of relay supports 30&nbsp;VDC/2&nbsp;A rating
-    * The input of opto-couple supports 12-24&nbsp;V
+    * The isolation between internal and external is up to 2500 VDC
+    * The output of relay supports 30 VDC/2 A rating
+    * The input of opto-couple supports 12-24 V
     * Chipset: HONGFA HF46F
 
 * **Size**
-    * 25 x 35&nbsp;mm
+    * 25 x 35 mm
 
 ## Prerequisites
 
@@ -60,4 +55,3 @@ To use a **RAK13001**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
-<RkBottomNav/>

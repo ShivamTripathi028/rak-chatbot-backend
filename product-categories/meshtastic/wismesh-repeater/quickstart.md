@@ -13,9 +13,6 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisMesh Repeater Quick Start Guide
 
 WisMesh Repeater is a solar-powered repeater that comes in a waterproof enclosure with a high-performance built-in antenna, making it deployable anywhere regardless of power availability or weather conditions.
@@ -62,11 +59,7 @@ Alternatively, the WisMesh Repeater has an USB connector in its unused battery c
 
 The location of the USB connector is shown in **Figure 5**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-hub-usb.png"
-  width="30%"
-  caption="WisMesh Repeater USB access"
-/>
+> **Image:** WisMesh Repeater USB access
 
 Make sure that you have installed one of these applications, as they are required for the configuration of the Meshtastic network.
 
@@ -84,11 +77,7 @@ The WisMesh Repeater has the option to power the device with four LiSoCl2 batter
 
 Connect the Solar Battery Lite to the WisMesh Repeater as shown in **Figure 6**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/meshtastic/wismesh-hub-solar.png"
-  width="30%"
-  caption="WisMesh Repeater connection to the Solar Battery"
-/>
+> **Image:** WisMesh Repeater connection to the Solar Battery
 
 :::tip NOTE
 The cable from the Solar Battery Lite can be plugged into any of the two connectors of the WisMesh Repeater.
@@ -119,7 +108,7 @@ For Firmware 1.3 and 2.0 (from November 1, 2022), the WisBlock Base board is aut
 - All the base boards with WisMesh Repeater: **`firmware-rak2560-w.x.yy.zzzzzzz.uf2`**
 - For WisMesh Repeater:  _**DO NOT USE**_ - **`firmware-rak4631_eink-w.x.yy.zzzzzzz.uf2`**
 
-<b>Flashing the WisMesh Repeater firmware:</b>
+**Flashing the WisMesh Repeater firmware:**
 
 The WisMesh Repeater comes pre-flashed with the Meshtastic firmware. If you encounter problems, update the Meshtastic firmware to the latest version.
 
@@ -127,4 +116,3 @@ The WisMesh Repeater comes pre-flashed with the Meshtastic firmware. If you enco
 
 For the setup of the WisMesh Repeater for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration" target="_blank">configuration guide</a> in the Meshtastic documentation.
 
-<RkBottomNav/>

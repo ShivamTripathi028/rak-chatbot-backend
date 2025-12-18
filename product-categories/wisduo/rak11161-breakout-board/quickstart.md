@@ -23,9 +23,6 @@ slug: /product-categories/wisduo/rak11161-breakout-board/quickstart/
 date: 2025-08-05
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11161 WisDuo LoRaWAN + BLE + WiFi Breakout Board Quick Start Guide
 
 This guide covers the following topics:
@@ -68,33 +65,17 @@ This section of the guide covers the following:
 
 The RAK11161 requires a few hardware connections to function properly. The bare minimum requirement is to have the power section properly configured, along with antennas and a UART connection for AT commands and firmware updates.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11161-breakout-board/rak11161-minimal.png"
-  width="60%"
-  caption="RAK11161 schematic"
-/>
+> **Image:** RAK11161 schematic
 
 Ensure the antennas are properly connected for a strong LoRa and BLE signal. Powering the module without an antenna connected to the IPEX MHF4 connectors can damage the RF section of the chip.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/ipex-mhf4-lora.png"
-  width="30%"
-  caption="LoRa antenna"
-/>
+> **Image:** LoRa antenna
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/ipex-mhf4-ble.png"
-  width="40%"
-  caption="WiFi/BLE antenna"
-/>
+> **Image:** WiFi/BLE antenna
 
 RAK11161 has a label on its sticker indicating where to connect the antennas, as illustrated in **Figure 4**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/rak11160_antenna_label.png"
-  width="30%"
-  caption="RAK11161 antenna label"
-/>
+> **Image:** RAK11161 antenna label
 
 :::tip NOTE
 - Detailed information about the RAK11161 LoRa IPEX MHF4 antenna can be found on the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf" target="_blank">863-870 MHz antenna datasheet</a> or the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf" target="_blank">902-928 MHz antenna datasheet</a>.
@@ -130,102 +111,54 @@ After successfully installing the Arduino IDE, configure it to add the RAK11161 
 
 1. Open Arduino IDE and go to **File** > **Preferences**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/preferences.png"
-  width="90%"
-  caption="Arduino Preferences"
-/>
+> **Image:** Arduino Preferences
 
 2. To add the RAK11161 to your Arduino Boards list, edit the **Additional Board Manager URLs** and click the icon, as shown in **Figure 6**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/additional-boards.png"
-  width="70%"
-  caption="Modify Additional Board Manager URLs"
-/>
+> **Image:** Modify Additional Board Manager URLs
 
 3. Copy the URL `https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_com_rui_index.json` and paste it on the field. If other URLs are already there, add this new URL on the next line. After adding the URL, click **OK**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/preferences-url.png"
-  width="90%"
-  caption="Add Additional Board Manager URLs"
-/>
+> **Image:** Add Additional Board Manager URLs
 
 4. Restart the Arduino IDE.
 5. Open the **Boards Manager** from the **Tools** menu.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/boards-manager.png"
-  width="90%"
-  caption="Open the Arduino Boards Manager"
-/>
+> **Image:** Open the Arduino Boards Manager
 
 6. Type `RAK` in the search bar, as shown in **Figure 9**. This will display the available **RAKwireless module boards** that can be added to your Arduino board list. Select and install the latest version of the **RAKwireless RUI STM32 Boards**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/installing-rak.png"
-  width="70%"
-  caption="Install RAKwireless RUI STM32 boards"
-/>
+> **Image:** Install RAKwireless RUI STM32 boards
 
 7. Once the BSP is installed, select **Tools** > **Boards Manager** > **RAKwireless RUI STM32 Modules** > **WisDuo RAK11161 Board**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/rui-nrf.png"
-  width="90%"
-  caption="Select RAK11161 Module"
-/>
+> **Image:** Select RAK11161 Module
 
 ##### Compile an Example with Arduino
 
 1. After adding the RAK11161 to the Arduino IDE, test your setup by running a simple program.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/rak11160_test_code.png"
-  width="50%"
-  caption="RAK11161 Test"
-/>
+> **Image:** RAK11161 Test
 
 2. Connect the RAK11161 via USB and check the RAK11161 COM port using Windows **Device Manager**. Double-check the USB cable and USB port if the module is not detected.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rui-port.png"
-  width="70%"
-  caption="Device Manager Ports (COM & LPT)"
-/>
+> **Image:** Device Manager Ports (COM & LPT)
 
 3. Choose RAK11161 in the board selection by navigating to **Tools** > **Boards Manager** and choosing **RAKwireless RUI STM32 Modules** > **WisDuo RAK11160 Board**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/rui-nrf.png"
-  width="90%"
-  caption="Select RAK11161 breakout board"
-/>
+> **Image:** Select RAK11161 breakout board
 
 4. Open the **Tools** menu and select a COM port. **COM27** is currently used.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/select-port.png"
-  width="90%"
-  caption="Select COM port"
-/>
+> **Image:** Select COM port
 
 5. Click on the **Serial Monitor** icon to connect to the COM port.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/serial-mon.png"
-  width="90%"
-  caption="Open Arduino serial monitor"
-/>
+> **Image:** Open Arduino serial monitor
 
 6. Once connected to the COM port, send AT commands to the RAK11161. For example, to check the RUI version, type `AT+VER=?` in the text field and press **Send**, as shown in **Figure 16**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/arduino-console.png"
-  width="90%"
-  caption="Arduino serial monitor COMx"
-/>
+> **Image:** Arduino serial monitor COMx
 
 7. Copy the example code below and paste it into Arduino IDE.
 
@@ -244,35 +177,19 @@ void loop() {
 ```
 </details>
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/hello-example.png"
-  width="50%"
-  caption="Example code"
-/>
+> **Image:** Example code
 
 8. Click the **Verify** button to compile and check for errors.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/verify-code.png"
-  width="50%"
-  caption="Verify the example code"
-/>
+> **Image:** Verify the example code
 
 9. When the compilation is complete, click the **Upload** button to flash the firmware to the RAK11161.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/upload-code.png"
-  width="50%"
-  caption="Upload the example code"
-/>
+> **Image:** Upload the example code
 
 10. Upon successful upload, the **Device programmed** message will appear.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/dev-prog.png"
-  width="90%"
-  caption="Device Programmed"
-/>
+> **Image:** Device Programmed
 
 :::tip NOTE
 - The RAK11161 should automatically enter BOOT mode when firmware is uploaded via the Arduino IDE.
@@ -281,11 +198,7 @@ void loop() {
 
 11. After the **Device Programmed** is completed, you will see the "Hello" message every 5 seconds in the console.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/log-output.png"
-  width="90%"
-  caption="Application log output"
-/>
+> **Image:** Application log output
 
 ##### RAK11161 IO Pins and Peripherals
 
@@ -350,7 +263,6 @@ void loop()
 ```
 </details>
 
-
 ###### RAK11161 Analog Input Pins
 
 Available Analog input Pins in RAK11161
@@ -396,10 +308,9 @@ void loop()
 ```
 </details>
 
-
 ###### RAK11161 Serial Interface Peripherals
 
-- <b> UART </b>
+- ** UART **
 
 There is one UART peripheral available on the RAK11161. There are also different [Serial Operating Modes](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/serial-operating-modes/) possible in RUI3, namely AT Mode, and Custom Mode.
 
@@ -424,9 +335,7 @@ void loop()
 ```
 </details>
 
-<br/>
-
-- <b> I2C </b>
+- ** I2C **
 
 | **I2C** | **ST_GPIO Header # - Pin #** | **GPIO** |
 |:--------|:-----------------------------|:--------:|
@@ -494,9 +403,7 @@ void loop()
 ```
 </details>
 
-<br/>
-
-- <b> SPI </b>
+- ** SPI **
 
 | **SPI** | **ST_GPIO Header # - Pin #** | **GPIO** |
 |:--------|:-----------------------------|:--------:|
@@ -535,11 +442,7 @@ This section shows how to connect the RAK11161 Breakout Board to the TTN platfor
 A working gateway connected to TTN is required, or the device must be within the coverage of a TTN community network.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/4.ttn-context.png"
-  width="100%"
-  caption="The Things Stack"
-/>
+> **Image:** The Things Stack
 
 As shown in **Figure 22**, The Things Stack (TTN V3) is an open-source LoRaWAN network server suitable for global, geo-distributed public and private deployments as well as for small local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliance and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries</a>.
 
@@ -551,69 +454,37 @@ The RAK11161 WisDuo Breakoout Board can be part of this ecosystem as a device, a
 
 a. Go to <a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network</a> and click on **Sign up**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_1.png"
-  width="100%"
-  caption="Sign up an account in TTN"
-/>
+> **Image:** Sign up an account in TTN
 
 b. Select a community type by clicking **Get started**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_2.png"
-  width="100%"
-  caption="TTN community type"
-/>
+> **Image:** TTN community type
 
 c. Sign up through The Things ID by clicking **Sign up for free**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_4.png"
-  width="100%"
-  caption="Sign up through The Things ID"
-/>
+> **Image:** Sign up through The Things ID
 
 d. Enter your details, agree to the Terms and Conditions, and click **Sign up to The Things ID**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_6.png"
-  width="100%"
-  caption="Enter account details"
-/>
+> **Image:** Enter account details
 
 e. Then, select a cluster as shown in **Figure 27**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_3.png"
-  width="100%"
-  caption="Select a cluster in TTN"
-/>
+> **Image:** Select a cluster in TTN
 
 Use the same login credentials on the TTN V2 if you have one. If you have no account yet, create one.
 
 2. Once logged in to the platform, create an application by clicking **Create an application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_8.png"
-  width="100%"
-  caption="Create a TTN application for your LoRaWAN devices"
-/>
+> **Image:** Create a TTN application for your LoRaWAN devices
 
 3. Navigate to the **Applications** tab.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_9.png"
-  width="100%"
-  caption="Details of the TTN application"
-/>
+> **Image:** Details of the TTN application
 
 4. Fill in the necessary information about your application, then click **Create application**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_10.png"
-  width="80%"
-  caption="TTN application"
-/>
+> **Image:** TTN application
 
 If you had no errors in the previous step, the application console page should now be visible. The next step is to add end-devices to your TTN application.
 
@@ -623,59 +494,31 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+Register end device**, as shown in **Figure 31**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_11.png"
-  width="100%"
-  caption="Register OTAA end-device"
-/>
+> **Image:** Register OTAA end-device
 
 2. Register the board by selecting **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_12.png"
-  width="100%"
-  caption="Enter OTAA end-device specifics manually"
-/>
+> **Image:** Enter OTAA end-device specifics manually
 
 3. Configure the **Frequency plan**, compatible **LoRaWAN version**, and supported **Regional Parameters version**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_14.png"
-  width="90%"
-  caption="OTAA Frequency plan setup"
-/>
+> **Image:** OTAA Frequency plan setup
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_15.png"
-  width="90%"
-  caption="OTAA LoRaWAN version setup"
-/>
+> **Image:** OTAA LoRaWAN version setup
 
 4. Set the **JoinEUI** by entering zeros into the field.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_16.png"
-  width="90%"
-  caption="OTAA JoinEUI setup"
-/>
+> **Image:** OTAA JoinEUI setup
 
 5. Click **Show advanced activation, LoRaWAN class and cluster settings**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_17.png"
-  width="90%"
-  caption="OTAA Show advanced activation"
-/>
+> **Image:** OTAA Show advanced activation
 
 6. Configure the following, then click **Confirm**.
   - Activation mode: **Over the air activation (OTAA)**
   - Additional LoRaWAN class capabilities: **None (class A only)**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_18.png"
-  width="90%"
-  caption="OTAA LoRaWAN class and cluster settings"
-/>
+> **Image:** OTAA LoRaWAN class and cluster settings
 
 7. Once completed, enter the device's DevEUI credential in the **DevEUI** field. This will automatically generate the specific end-device ID of your board.
 
@@ -684,27 +527,15 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 - The **AppEUI** is the same as **JoinEUI**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_19.png"
-  width="80%"
-  caption="OTAA DevEUI credential"
-/>
+> **Image:** OTAA DevEUI credential
 
 8. Click **Generate** under **AppKey**, as shown in **Figure 39**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_20.png"
-  width="80%"
-  caption="OTAA AppKey credential"
-/>
+> **Image:** OTAA AppKey credential
 
 9. Once done, click **Register end device** to complete the process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_21.png"
-  width="90%"
-  caption="Click Register end device"
-/>
+> **Image:** Click Register end device
 
 After completing the device registration, the device should appear on the TTN console, as shown in **Figure 41**.
 
@@ -714,11 +545,7 @@ After completing the device registration, the device should appear on the TTN co
 - These parameters are always accessible on the device console page, as shown in **Figure 41**.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_22.png"
-  width="100%"
-  caption="OTAA end-device successfully registered to TTN"
-/>
+> **Image:** OTAA end-device successfully registered to TTN
 
 ##### Upload OTAA LoRaWAN Example to RAK11161
 
@@ -730,11 +557,7 @@ If you use RAK11161 as a LoRaWAN modem with AT commands instead of a stand-alone
 
 1. Open the example code under **RAK WisBlock RUI examples**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/lorawan_example.png"
-  width="90%"
-  caption="OTAA LoRaWAN application example"
-/>
+> **Image:** OTAA LoRaWAN application example
 
 2. In the example code, modify the device EUI (**DevEUI**) and application key (**AppKey**).
 
@@ -752,11 +575,7 @@ If you use RAK11161 as a LoRaWAN modem with AT commands instead of a stand-alone
   uint8_t node_app_key[16] = {0xD9, 0xB8, 0x70, 0x18, 0x3E, 0xF1, 0x00, 0x1D, 0x1B, 0x4F, 0x2B, 0x4C, 0xBF, 0x60, 0xCA, 0x83};
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/lorawan_otaa_parameter.png"
-  width="90%"
-  caption="Update the OTAA, DevEUI, and AppKey"
-/>
+> **Image:** Update the OTAA, DevEUI, and AppKey
 
 3. This guide uses the EU868 regional band, so no changes are needed in the example code. For a different region, update the band in the code accordingly.
 
@@ -798,79 +617,42 @@ This is the additional code on how to do it:
 - If BOOT mode is not initiated, send `AT+BOOT` manually to force BOOT mode.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/lorawan_upload.png"
-  width="80%"
-  caption="Upload the OTAA example code"
-/>
+> **Image:** Upload the OTAA example code
 
 The terminal logs should now be visible in the Serial Monitor of the Arduino IDE. If the COM port disconnects, the terminal output may not appear immediately. Reconnecting the module or pressing the reset button can help restore the output.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/lorawan_logs.png"
-  width="65%"
-  caption="Terminal logs"
-/>
+> **Image:** Terminal logs
 
 5. Check the ***Live data*** section on the LoRaWAN network server to see if the device has successfully joined with the `join request` and `join accept` logs.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/ttn_success_uplink.png"
-  width="90%"
-  caption="OTAA live data on TTN"
-/>
+> **Image:** OTAA live data on TTN
 
 ##### TTN ABP Device Registration
 
 1. To register an ABP device, go to your application console and select the application to which you want your device to be added. Then click **+Register end device**, as shown in **Figure 47**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_1.png"
-  width="100%"
-  caption="Register ABP end-device"
-/>
+> **Image:** Register ABP end-device
 
 2. Register the board by selecting **Enter end device specifics manually**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_2.png"
-  width="100%"
-  caption="Enter ABP end-device specifics manually"
-/>
+> **Image:** Enter ABP end-device specifics manually
 
 3. Configure the **Frequency plan**, compatible **LoRaWAN version**, and supported **Regional Parameters version**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_4.png"
-  width="80%"
-  caption="ABP Frequency plan setup"
-/>
+> **Image:** ABP Frequency plan setup
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_5.png"
-  width="90%"
-  caption="ABP LoRaWAN version setup"
-/>
+> **Image:** ABP LoRaWAN version setup
 
 4. Click **Show advanced activation, LoRaWAN class and cluster settings**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_6.png"
-  width="90%"
-  caption="ABP Show advanced activation"
-/>
+> **Image:** ABP Show advanced activation
 
 5. Configure the following, then click **Confirm**.
   - Activation mode: **Activation by personalization (ABP)**
   - Additional LoRaWAN class capabilities: **None (class A only)**
   - Network defaults (tick off the box): Use network's default MAC settings
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_7.png"
-  width="90%"
-  caption="ABP LoRaWAN class and cluster settings"
-/>
+> **Image:** ABP LoRaWAN class and cluster settings
 
 6. Once completed, enter the device's DevEUI credentials in the **DevEUI** field. Alternatively, use the **Generate** button to create a DevEUI automatically.
 
@@ -878,47 +660,23 @@ The terminal logs should now be visible in the Serial Monitor of the Arduino IDE
 - The **DevEUI**, **Device address**, **AppKey**, and **NwkSKey** are hidden in this section as they are unique to each device. The **DevEUI** is specific to every RAK11161 device, while the **Device address**, **AppKey**, and **NwkSKey** should be generated individually for each device and application.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_9.png"
-  width="100%"
-  caption="ABP DevEUI credential"
-/>
+> **Image:** ABP DevEUI credential
 
 7. Click **Generate** under **Device address**, **AppSKey**, and **NwkSKey**, as shown in **Figure 54** to **Figure 56** respectively.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_10.png"
-  width="100%"
-  caption="ABP Device address"
-/>
+> **Image:** ABP Device address
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_11.png"
-  width="100%"
-  caption="ABP AppSKey credential"
-/>
+> **Image:** ABP AppSKey credential
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_12.png"
-  width="100%"
-  caption="ABP NwkSKey credential"
-/>
+> **Image:** ABP NwkSKey credential
 
 8. Once done, click **Register end device** to complete the process.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_13.png"
-  width="100%"
-  caption="Click Register end device"
-/>
+> **Image:** Click Register end device
 
 After completing the device registration, the device should appear on the TTN console, as shown in **Figure 58**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_rak11720_new_14.png"
-  width="100%"
-  caption="ABP end-device successfully registered to TTN"
-/>
+> **Image:** ABP end-device successfully registered to TTN
 
 ##### Upload ABP LoRaWAN Example to RAK11161
 
@@ -932,19 +690,11 @@ If you use RAK11161 as a LoRaWAN modem using AT commands instead of a stand-alon
 
 1. Open the example code under **RAK WisBlock RUI examples**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_lorawan_example.png"
-  width="100%"
-  caption="ABP LoRaWAN application example"
-/>
+> **Image:** ABP LoRaWAN application example
 
 2. In the example code, modify the device address (**DEVADDR**), application session key (**APPSKEY**), and network session key (**NWKSKEY**). All these parameters should match the ones generated on the LoRaWAN network server.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_lorawan_parameter.png"
-  width="90%"
-  caption="Update the DEVADDR, APPSKEY, and NWKSKEY"
-/>
+> **Image:** Update the DEVADDR, APPSKEY, and NWKSKEY
 
 3. This guide uses the EU868 regional band, so no changes are needed in the example code. For a different region, update the band in the code accordingly.
 
@@ -986,71 +736,39 @@ This is the additional code on how to do it.
 - If BOOT mode is not initiated, send `AT+BOOT` manually to force BOOT mode.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_lorawan_upload.png"
-  width="100%"
-  caption="Upload the ABP example code"
-/>
+> **Image:** Upload the ABP example code
 
 The terminal logs should now be visible in the Serial Monitor of the Arduino IDE. If the COM port disconnects, the terminal output may not appear immediately. Reconnecting the module or pressing the reset button can help restore the output.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_lorawan_logs.png"
-  width="100%"
-  caption="Terminal logs"
-/>
+> **Image:** Terminal logs
 
 5. Check the ***Live data*** section on the LoRaWAN network server if your device is able to send uplink packets.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_ttn_success_uplink.png"
-  width="90%"
-  caption="ABP live data on TTN"
-/>
+> **Image:** ABP live data on TTN
 
 6. On ABP, frame counters for both uplink and downlink need to be tracked by the device firmware. However, on RUI3 ABP, there is no tracking, and frame counts will go back to zero when the device resets. This will result in failures on uplinks and downlinks. To prevent this issue, enable the **Resets frame counters** option by following these steps:
 
 a. On The Things Network (TTN) Console and go to **General settings**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_general_setting.png"
-  width="80%"
-  caption="ABP General settings"
-/>
+> **Image:** ABP General settings
 
 b. Expand the **Network Layer** by clicking the **Expand** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_expand_network.png"
-  width="75%"
-  caption="ABP network layer expansion"
-/>
+> **Image:** ABP network layer expansion
 
 c. Click on the **Advanced MAC settings** dropdown.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_mac_setting.png"
-  width="75%"
-  caption="Advanced MAC settings"
-/>
+> **Image:** Advanced MAC settings
 
 d. Check `Resets frame counters`. With this enabled, all uplinks and downlinks will be successful even if the device resets/restarts.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abp_reset_framecounts.png"
-  width="60%"
-  caption="Resets Frame Counters"
-/>
+> **Image:** Resets Frame Counters
 
 #### Connect with ChirpStack
 
 This section shows how to connect the RAK11161 Breakout Board to the ChirpStack platform.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/23.chirpstack-platform.png"
-  width="60%"
-  caption="Connect RAK11161 to the ChirpStack platform"
-/>
+> **Image:** Connect RAK11161 to the ChirpStack platform
 
 The ChirpStack, previously known as the LoRaServer project, provides open-source components for building LoRaWAN networks. In the case of Chirpstack, the RAK11161 Breakout Board is located in the periphery and will transmit the data to the backend servers through a LoRaWAN gateway. Learn more about <a href="https://www.ChirpStack.io/" target="_blank">ChirpStack</a>.
 
@@ -1067,19 +785,11 @@ In this guide, it is assumed that you are using a RAK Gateway and its built-in C
 By default, creating a new application is recommended, but existing ones can also be reused.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/24.chirpstack.png"
-  width="100%"
-  caption="Applications section"
-/>
+> **Image:** Applications section
 
 Fill in the required parameters, as shown **Figure 70**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/25.new-application.png"
-  width="100%"
-  caption="Create a new application"
-/>
+> **Image:** Create a new application
 
 * For this setup, create an Application named **rak_node_test**.
 
@@ -1088,43 +798,23 @@ ChirpStack LoraServer supports multiple system configurations, with only one by 
 * **Service profile**: Field is to select the system profile.
 * **Payload codec**: The parsing method for processing payload data, such as parsing LPP format data.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/26.filling-parameters.png"
-  width="100%"
-  caption="Fill in the parameters of an application"
-/>
+> **Image:** Fill in the parameters of an application
 
-<b>Register a New Device</b>
+**Register a New Device**
 
 1. Choose the application created in the previous step, then select the **DEVICES** tab, as shown in **Figure 72** and **Figure 73**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/27.application-available.png"
-  width="100%"
-  caption="List of applications created"
-/>
+> **Image:** List of applications created
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/28.application-page.png"
-  width="100%"
-  caption="Application Device tab"
-/>
+> **Image:** Application Device tab
 
 2. Once inside the **DEVICE** tab, create a new device (LoRaWAN node) by clicking the **+CREATE** button.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/29.adding-node.png"
-  width="100%"
-  caption="Add a new device"
-/>
+> **Image:** Add a new device
 
 3. Once the node is created, fill in the necessary data. Click the icon to automatically generate a **Device EUI**, or manually enter the correct Device EUI in the edit box.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/30.new-device-registration.png"
-  width="100%"
-  caption="Add a node into the RAK11161 Breakout Board"
-/>
+> **Image:** Add a node into the RAK11161 Breakout Board
 
 Fill in the parameters requested:
 * **Device name and Device description**: These are descriptive texts about your device.
@@ -1134,51 +824,32 @@ Fill in the parameters requested:
   * If you want to join in ABP mode, select **DeviceProfile_ABP**.
 
 :::tip NOTE
-- Device profiles **DeviceProfile_OTAA** and **DeviceProfile_ABP** are only available if you are using the built-in ChirpStack LoRaWAN Server of RAK Gateways.<br/>
+- Device profiles **DeviceProfile_OTAA** and **DeviceProfile_ABP** are only available if you are using the built-in ChirpStack LoRaWAN Server of RAK Gateways.
+
 - If you have your own ChirpStack installation, set up the device profile with `LoRaWAN MAC version 1.0.4` and `LoRaWAN Regional Parameters revision B` to make it compatible with RAK11161.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/31.adding-parameters.png"
-  width="100%"
-  caption="Generate a new device EUI "
-/>
+> **Image:** Generate a new device EUI 
 
 ##### ChirpStack OTAA Device Registration
 
 1. If you have selected **DeviceProfile_OTAA**, as shown in **Figure 77**, after the device is created, an Application Key must be created for this device.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/32.otaa.png"
-  width="100%"
-  caption="ChirpStack OTAA activation"
-/>
+> **Image:** ChirpStack OTAA activation
 
 2. A previously created **Application Key** can be entered here, or a new one can be generated automatically by clicking the icon highlighted in red in **Figure 78**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/33.otaa-set-device-keys.png"
-  width="100%"
-  caption="ChirpStack OTAA set application keys"
-/>
+> **Image:** ChirpStack OTAA set application keys
 
 3. Once the **Application Key** is added to the form, the process can be finalized by clicking the **SET DEVICE-KEYS** button.
 
 * As shown in **Figure 79**, a new device should be listed in the **DEVICES** tab. The most important parameters, such as the **Device EUI**, are shown in the summary.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/34.set-device-eui.png"
-  width="100%"
-  caption="ChirpStack OTAA list of the device in the device tab"
-/>
+> **Image:** ChirpStack OTAA list of the device in the device tab
 
 4. To end the process, it is a good practice to review that the **Application Key** is properly associated with this device. The **Application Key** can be verified in the **KEYS (OTAA)** tab, as shown in **Figure 80**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/35.application-key.png"
-  width="100%"
-  caption="Application key associated with the new device"
-/>
+> **Image:** Application key associated with the new device
 
 5. After registering the RAK11161 in ChirpStack as an OTAA device, create a [custom firmware using the Arduino IDE for the RAK11161](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/quickstart/#uploading-otaa-lorawan-example-to-rak11160) or use [OTAA AT Commands](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/quickstart/#otaa-configuration-for-ttn-via-wistoolbox-console) with an external MCU host.
 
@@ -1194,23 +865,14 @@ Standard OTAA mode requires the **Device EUI**, **Application Key**, and **Appli
 Tick **Disable counting frame verification** to prevent synchronization issues during testing. When the module restarts, the frame counter resets to zero, which ChirpStack may interpret as a replay attack. While disabling this feature is safe for testing, ensure it is enabled in production. Note that in RAK11161, the frame counter resets upon reboot.
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/42.configuring-device-abp.png"
-  width="100%"
-  caption="Configure a device in the ChirpStack console"
-/>
+> **Image:** Configure a device in the ChirpStack console
 
 2. After selecting the ABP mode, the following parameters will appear under the **ACTIVATION** tab:
   - **Device Address**
   - **Network Session Key**
   - **Application Session Key**
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/43.abp-activation-parameters.png"
-  width="100%"
-  caption="ChirpStack ABP activation parameters"
-/>
+> **Image:** ChirpStack ABP activation parameters
 
 3. The parameters can be generated as random numbers by the platform or can be set with user values. Once these parameters are filled in properly, the process is completed by clicking on the **ACTIVATE DEVICE** button.
 4. After registering the RAK11161 in ChirpStack as an ABP device, create a [custom firmware using Arduino IDE for RAK11161](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/quickstart/#uploading-abp-lorawan-example-to-rak11160) or use [ABP AT Commands](https://docs.rakwireless.com/product-categories/wisduo/rak11161-breakout-board/quickstart/#abp-configuration-for-ttn-via-wistoolbox-console) with external MCU host.
@@ -1508,9 +1170,9 @@ The RAK11161 module can be configured using AT commands via the UART2 interface 
 
 UART Parameters for AT Commands:
 
-* Baud Rate: **115200&nbsp;baud** (Default but configurable)
-* Data Bits: **8&nbsp;bits**
-* Stop Bits: **1&nbsp;stop&nbsp;bit**
+* Baud Rate: **115200 baud** (Default but configurable)
+* Data Bits: **8 bits**
+* Stop Bits: **1 stop bit**
 * Parity: **NONE**
 
 #### OTAA Configuration for TTN via WisToolBox Console
@@ -1539,47 +1201,23 @@ If there is no `OK` or any reply, check if the device is powered correctly. If y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/conwis_rak4630_new_9a.png"
-  width="90%"
-  caption="Type a command to send"
-/>
+> **Image:** Type a command to send
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/conwis_rak4630_new_9b.png"
-  width="90%"
-  caption="Enable local echoing"
-/>
+> **Image:** Enable local echoing
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/conwis_rak4630_new_9c.png"
-  width="90%"
-  caption="Local echoing enabled"
-/>
+> **Image:** Local echoing enabled
 
 2. Set the LoRaWAN join mode to **OTAA**. To determine the required parameter, type `AT+NJM?` in the console terminal and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/conwis_rak4630_new_10.png"
-  width="90%"
-  caption="Join mode query"
-/>
+> **Image:** Join mode query
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/conwis_rak4630_new_11.png"
-  width="90%"
-  caption="Join mode options"
-/>
+> **Image:** Join mode options
 
 - For **OTAA**, input `AT+NJM=1` and then press **Enter** as shown in **Figure 88**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11160-module/quickstart/conwis_rak4630_new_12.png"
-  width="90%"
-  caption="OTAA join mode"
-/>
+> **Image:** OTAA join mode
 
-3. Once done, set the LoRaWAN region to EU868. To verify the required parameter, type `AT+BAND?` in the console terminal and press **Enter**. For **EU868**, enter `AT+BAND=4` and press **Enter**. For other regional bands, refer to the <b>List of band parameter options</b> table below.
+3. Once done, set the LoRaWAN region to EU868. To verify the required parameter, type `AT+BAND?` in the console terminal and press **Enter**. For **EU868**, enter `AT+BAND=4` and press **Enter**. For other regional bands, refer to the **List of band parameter options** table below.
 
 Set the frequency/region to EU868.
 
@@ -1593,7 +1231,7 @@ AT+BAND=4
 - To illustrate, use sub-band 2 by sending the command `AT+MASK=0002`.
 :::
 
-<b>List of band parameter options</b>
+**List of band parameter options**
 
 | Code | Regional Band |
 |:----:|:-------------:|
@@ -1610,145 +1248,72 @@ AT+BAND=4
 |  10  |    AS923-3    |
 |  11  |    AS923-4    |
 
+> **Image:** Frequency band query
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_13.png"
-  width="90%"
-  caption="Frequency band query"
-/>
+> **Image:** Frequency band options
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_14.png"
-  width="90%"
-  caption="Frequency band options"
-/>
+- For **EU868**, enter `AT+BAND=4` and press **Enter**. For other regional bands, refer to the **List of band parameter options** table below.
 
-- For **EU868**, enter `AT+BAND=4` and press **Enter**. For other regional bands, refer to the <b>List of band parameter options</b> table below.
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_15.png"
-  width="90%"
-  caption="EU868 frequency band"
-/>
+> **Image:** EU868 frequency band
 
 4. Update the OTAA credentials of the device. Open the console where the RAK11161 end device was created, copy the specific **Activation information** needed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis-rak4630-new-w.png"
-  width="90%"
-  caption="Your created OTAA device overview in the TTN Console"
-/>
+> **Image:** Your created OTAA device overview in the TTN Console
 
-<b>For the Application EUI (**AppEUI**)</b>
+**For the Application EUI (**AppEUI**)**
 
 a. Copy the AppEUI credential, as shown in **Figure 93**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis-rak4630-new-x.png"
-  width="90%"
-  caption="Copy the AppEUI credential from TTN"
-/>
+> **Image:** Copy the AppEUI credential from TTN
 
 b. Go to the WisToolBox console and write the appropriate AT command.
 - For the **AppEUI**, write the `AT+APPEUI` command, as shown in **Figure 94** to **Figure 96**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_16.png"
-  width="90%"
-  caption="Search for the AppSKey command"
-/>
+> **Image:** Search for the AppSKey command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_17.png"
-  width="90%"
-  caption="Insert AT+APPEUI command in the console"
-/>
+> **Image:** Insert AT+APPEUI command in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_18.png"
-  width="90%"
-  caption="AT+APPEUI in the console"
-/>
+> **Image:** AT+APPEUI in the console
 
 c. Paste the copied credential after the AT command into the WisToolBox console, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_19.png"
-  width="90%"
-  caption="Paste AppEUI credential from TTN to the console"
-/>
+> **Image:** Paste AppEUI credential from TTN to the console
 
 5. After adding the AppEUI credential, do the same procedure for the **Application key (AppKey)** and the **Device EUI (DevEUI)**.
 
-<b>For the Application key (**AppKey**)</b>
+**For the Application key (**AppKey**)**
 
 a. Copy the AppKey credential, as shown in **Figure 98**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis-rak4630-new-y.png"
-  width="90%"
-  caption="Copy the AppKey credential from TTN"
-/>
+> **Image:** Copy the AppKey credential from TTN
 
 b. Go to the WisToolBox console and write the `AT+APPKEY` command, as shown in **Figure 99** to **Figure 101**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_20.png"
-  width="90%"
-  caption="Search for the AppKey command"
-/>
+> **Image:** Search for the AppKey command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_21.png"
-  width="90%"
-  caption="Insert AT+APPKEY command in the console"
-/>
+> **Image:** Insert AT+APPKEY command in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_22.png"
-  width="90%"
-  caption="AT+APPKEY in the console"
-/>
+> **Image:** AT+APPKEY in the console
 
 c. Paste the copied credential after the AT command, as shown in **Figure 102**, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_23.png"
-  width="90%"
-  caption="Paste AppKey credential from TTN to the console"
-/>
+> **Image:** Paste AppKey credential from TTN to the console
 
-<b>For the Device EUI (**DevEUI**)</b>
+**For the Device EUI (**DevEUI**)**
 
 a. Copy the DevEUI credential, as shown in **Figure 103**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis-rak4630-new-z.png"
-  width="90%"
-  caption="Copy the DevEUI credential from TTN"
-/>
+> **Image:** Copy the DevEUI credential from TTN
 
 b. Go to the WisToolBox console and write the `AT+DEVEUI` command, as shown in **Figure 104** to **Figure 105**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_24.png"
-  width="90%"
-  caption="Search for the AT+DEVEUI command"
-/>
+> **Image:** Search for the AT+DEVEUI command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_25.png"
-  width="90%"
-  caption="AT+DEVEUI in the console"
-/>
+> **Image:** AT+DEVEUI in the console
 
 c. Paste the copied credential after the AT command, as shown in **Figure 106**, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_26.png"
-  width="90%"
-  caption="Paste DevEUI credential from TTN to the console"
-/>
+> **Image:** Paste DevEUI credential from TTN to the console
 
 6. With the OTAA device set up using the WisToolBox console, it is ready to join the network. Open the WisToolBox console, enter `AT+JOIN`, change it to `AT+JOIN=1`, and press **Enter** to initiate the connection.
 
@@ -1766,87 +1331,43 @@ Join command format: **`AT+JOIN=w:x:y:z`**
 |     y     |  Reattempt interval in seconds (7-255) - 8 is the default.   |
 |     z     |     Number of join attempts (0-255) - 0 is the default.      |
 
-After 5-6&nbsp;seconds, if the request is successfully received by a LoRa gateway, a `+EVT:JOINED` status reply will appear.
+After 5-6 seconds, if the request is successfully received by a LoRa gateway, a `+EVT:JOINED` status reply will appear.
 
 :::tip NOTE
 - If the OTAA device failed to join, check if your device is within reach of a working LoRaWAN gateway that is configured to connect to TTN. It is also important to check that all your OTAA parameters (DevEUI, APPEUI, and AppKey) are correct using the `AT+DevEUI=?`, `AT+APPEUI=?`, and `AT+AppKey=?` commands. Lastly, ensure that the antenna of your device is properly connected.
 - After checking all the things above, try to join again.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_34.png"
-  width="90%"
-  caption="Search for the AT+JOIN command"
-/>
+> **Image:** Search for the AT+JOIN command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_35.png"
-  width="90%"
-  caption="Insert AT+JOIN command in the console"
-/>
+> **Image:** Insert AT+JOIN command in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_36.png"
-  width="90%"
-  caption="AT+JOIN in the console"
-/>
+> **Image:** AT+JOIN in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_37.png"
-  width="90%"
-  caption="Join blocking mode"
-/>
+> **Image:** Join blocking mode
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_38.png"
-  width="90%"
-  caption="OTAA device successfully joined the network"
-/>
+> **Image:** OTAA device successfully joined the network
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/ttn_success_uplink.png"
-  width="90%"
-  caption="OTAA device join process displayed in TTN Live data"
-/>
+> **Image:** OTAA device join process displayed in TTN Live data
 
 7. With the end-device properly joined to the TTN, try to send some payload after a successful join.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_40.png"
-  width="90%"
-  caption="Search for the AT+SEND command"
-/>
+> **Image:** Search for the AT+SEND command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_41.png"
-  width="90%"
-  caption="Insert AT+SEND command in the console"
-/>
+> **Image:** Insert AT+SEND command in the console
 
 Send command format: **`AT+SEND=<port>:<payload>`**
 ```
 AT+SEND=2:12345678
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_42.png"
-  width="90%"
-  caption="Add the port and payload"
-/>
+> **Image:** Add the port and payload
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_43.png"
-  width="90%"
-  caption="Transmission log confirmation"
-/>
+> **Image:** Transmission log confirmation
 
 The data sent by the RAK11161 module appears in the ***Live data*** section of the TTN device console. Additionally, the ***Last seen*** timestamp should reflect activity from a few seconds or minutes ago.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/conwis_rak4630_new_44.png"
-  width="90%"
-  caption="OTAA test data sent and displayed in TTN Live data"
-/>
+> **Image:** OTAA test data sent and displayed in TTN Live data
 
 #### ABP Configuration for TTN via WisToolBox Console
 
@@ -1874,48 +1395,23 @@ If there is no `OK` or any reply, check if the device is powered correctly. If y
 
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_9a.png"
-  width="90%"
-  caption="Type a command to send"
-/>
+> **Image:** Type a command to send
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_9b.png"
-  width="90%"
-  caption="Enable local echoing"
-/>
+> **Image:** Enable local echoing
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_9c.png"
-  width="90%"
-  caption="Local echoing enabled"
-/>
+> **Image:** Local echoing enabled
 
 2. Set the LoRaWAN join mode to **ABP**. To determine the required parameter, type `AT+NJM?` in the console terminal and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_10.png"
-  width="90%"
-  caption="Join mode query"
-/>
+> **Image:** Join mode query
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_11.png"
-  width="90%"
-  caption="Join mode options"
-/>
+> **Image:** Join mode options
 
 - For **ABP**, input `AT+NJM=0` and then press **Enter**, as shown in **Figure 123**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_12.png"
-  width="90%"
-  caption="ABP join mode"
-/>
+> **Image:** ABP join mode
 
 3. Once done, set the LoRaWAN region to EU868. To verify the required parameter, type `AT+BAND?` in the console terminal and press **Enter**.
-
 
 ```
 AT+BAND=4
@@ -1927,7 +1423,7 @@ AT+BAND=4
 - To illustrate, use sub-band 2 by sending the command `AT+MASK=0002`.
 :::
 
-<b>List of band parameter options</b>
+**List of band parameter options**
 
 | Code | Regional Band |
 |:----:|:-------------:|
@@ -1944,190 +1440,93 @@ AT+BAND=4
 |  10  |    AS923-3    |
 |  11  |    AS923-4    |
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_13.png"
-  width="90%"
-  caption="Frequency band query"
-/>
+> **Image:** Frequency band query
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_14.png"
-  width="90%"
-  caption="Frequency band options"
-/>
+> **Image:** Frequency band options
 
-- For **EU868**, enter `AT+BAND=4` and press **Enter**. For other regional bands, refer to the <b>List of band parameter options</b> table below.
+- For **EU868**, enter `AT+BAND=4` and press **Enter**. For other regional bands, refer to the **List of band parameter options** table below.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_15.png"
-  width="90%"
-  caption="EU868 frequency band"
-/>
+> **Image:** EU868 frequency band
 
 4. Update the ABP credentials of the device. Open the console where the RAK11161 end device was created, copy the specific **Activation information** needed.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis-rak4630-new-w.png"
-  width="90%"
-  caption="Your created ABP device overview in the TTN Console"
-/>
+> **Image:** Your created ABP device overview in the TTN Console
 
-<b>For the Application session key (**AppSKey**)</b>
+**For the Application session key (**AppSKey**)**
 
 a. Copy the AppSKey credential, as shown in **Figure 128**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis-rak4630-new-x.png"
-  width="90%"
-  caption="Copy the AppSKey credential from TTN"
-/>
+> **Image:** Copy the AppSKey credential from TTN
 
 b. Go to the WisToolBox console and write the appropriate AT command.
 - For the **AppSKey**, write the `AT+APPSKEY` command, as shown in **Figure 129** to **Figure 131**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_16.png"
-  width="90%"
-  caption="Search for the AppSKey command"
-/>
+> **Image:** Search for the AppSKey command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_17.png"
-  width="90%"
-  caption="Insert AT+APPSKEY command in the console"
-/>
+> **Image:** Insert AT+APPSKEY command in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_18.png"
-  width="90%"
-  caption="AT+APPSKEY in the console"
-/>
+> **Image:** AT+APPSKEY in the console
 
 c. Paste the copied credential after the AT command into the WisToolBox console, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_19.png"
-  width="90%"
-  caption="Paste AppKey credential from TTN to the console"
-/>
+> **Image:** Paste AppKey credential from TTN to the console
 
 5. After adding the **AppSKey** credential, do the same procedure for the **Device address** and the Network session key (**NwkSKey**).
 
-<b>For **Device address**</b>
+**For **Device address****
 
 a. Copy the Device address, as shown in **Figure 133**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis-rak4630-new-y.png"
-  width="90%"
-  caption="Copy the Device Address credential from TTN"
-/>
+> **Image:** Copy the Device Address credential from TTN
 
 b. Go to the WisToolBox console and write the `AT+DEVADDR` command, as shown in **Figure 134** to **Figure 136**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_20.png"
-  width="90%"
-  caption="Search for the Device Address command"
-/>
+> **Image:** Search for the Device Address command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_21.png"
-  width="90%"
-  caption="Insert AT+DEVADDR command in the console"
-/>
+> **Image:** Insert AT+DEVADDR command in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_22.png"
-  width="90%"
-  caption="AT+DEVADDR in the console"
-/>
+> **Image:** AT+DEVADDR in the console
 
 c. Paste the copied credential after the AT command, as shown in **Figure 137**, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_23.png"
-  width="90%"
-  caption="Paste Device address from TTN to the console"
-/>
+> **Image:** Paste Device address from TTN to the console
 
-<b>For Network session key (**NwkSKey**)</b>
+**For Network session key (**NwkSKey**)**
 
 a. Copy the NwkSKey credential, as shown in **Figure 138**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis-rak4630-new-z.png"
-  width="90%"
-  caption="Copy the NwkSKey credential from TTN"
-/>
+> **Image:** Copy the NwkSKey credential from TTN
 
 b. Go to the WisToolBox console and write the `AT+NWKSKEY` command, as shown in **Figure 139** to **Figure 141**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_24.png"
-  width="90%"
-  caption="Search for the AT+NWKSKEY command"
-/>
+> **Image:** Search for the AT+NWKSKEY command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_25.png"
-  width="90%"
-  caption="Insert AT+NWKSKEY command in the console"
-/>
+> **Image:** Insert AT+NWKSKEY command in the console
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_26.png"
-  width="90%"
-  caption="AT+NWKSKEY in the console"
-/>
+> **Image:** AT+NWKSKEY in the console
 
 c. Paste the copied credential after the AT command, as shown in **Figure 142**, and press **Enter**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_27.png"
-  width="90%"
-  caption="Paste NwkSKey credential from TTN to the console"
-/>
+> **Image:** Paste NwkSKey credential from TTN to the console
 
 6. With the ABP device configured using the WisToolBox console, it is now directly connected to the network, eliminating the need for a joining procedure. To test data transmission, reopen the WisToolBox terminal console and send a payload to TTN.
 
+> **Image:** Search for the AT+SEND command
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_35.png"
-  width="90%"
-  caption="Search for the AT+SEND command"
-/>
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_36.png"
-  width="90%"
-  caption="Insert AT+SEND command in the console"
-/>
+> **Image:** Insert AT+SEND command in the console
 
 Send command format: **`AT+SEND=<port>:<payload>`**
 ```
 AT+SEND=2:12345678
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_37.png"
-  width="90%"
-  caption="Add the port and payload"
-/>
+> **Image:** Add the port and payload
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_38.png"
-  width="90%"
-  caption="Transmission log confirmation"
-/>
+> **Image:** Transmission log confirmation
 
 The data sent by the RAK11161 Breakout Board appears in the ***Live data*** section of the TTN device console. Additionally, the ***Last seen*** timestamp should reflect activity from a few seconds or minutes ago.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/abpconwis_rak4630_new_39.png"
-  width="90%"
-  caption="ABP test data sent and displayed in TTN Live data"
-/>
+> **Image:** ABP test data sent and displayed in TTN Live data
 
 ##### LoRa P2P Mode
 
@@ -2151,12 +1550,7 @@ You will receive `OK` when you input the two commands. After setting `ATE`, see 
 
 Try again `AT` and you should see it on the terminal followed by `OK`.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/p2p_at.png"
-  width="60%"
-  caption="AT command response"
-/>
+> **Image:** AT command response
 
 1. To set up the RAK11161 to work in LoRa P2P mode, input the work mode command on both RAK11161 Breakout Boards. If sending commands via USB, disconnecting and reconnecting the module may be necessary as it switches modes of operation.
 
@@ -2166,22 +1560,18 @@ AT+NWM=0
 
 2. For this P2P setup, the LoRa parameters are the following:
 
-- Link frequency: **868000000&nbsp;Hz**
+- Link frequency: **868000000 Hz**
 - Spreading factor: **7**
-- Bandwidth: **125&nbsp;kHz**
+- Bandwidth: **125 kHz**
 - Coding Rate: 0 = **4/5**
 - Preamble Length: **10**
-- Power: **14&nbsp;dBm**
+- Power: **14 dBm**
 
 ```
 AT+P2P=868000000:7:125:0:10:14
 ```
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/p2p_setup.png"
-  width="50%"
-  caption="P2P setup"
-/>
+> **Image:** P2P setup
 
 <!-- There seems to be no P2P mode section in the AT command manual page of RAK11161 yet. This comment and the comment tag on the NOTE will be removed once the P2P mode section will be added. -->
 
@@ -2209,12 +1599,7 @@ AT+PSEND=11223344
 
 :::
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/p2p_send.png"
-  width="90%"
-  caption="Sent and received P2P LoRa Packets"
-/>
+> **Image:** Sent and received P2P LoRa Packets
 
 ### WiFi Example with AT Commands
 
@@ -2363,36 +1748,19 @@ Refer to the table below:
 - Another option is to check if you selected the right COM port.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/1.png"
-  width="80%"
-  caption="RAK Device Firmware Upgrade Tool"
-/>
+> **Image:** RAK Device Firmware Upgrade Tool
 
 5. Select the application firmware file of the module with the suffix **.bin**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/2.png"
-  width="80%"
-  caption="Select firmware"
-/>
+> **Image:** Select firmware
 
 6. Click the **Upgrade** button to upgrade the device. After the upgrade is complete, the RAK11161 will be ready to work with the new firmware.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/3.png"
-  width="80%"
-  caption="Upgrade firmware"
-/>
+> **Image:** Upgrade firmware
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3172-module/quickstart/4.png"
-  width="80%"
-  caption="Upgrade successful"
-/>
+> **Image:** Upgrade successful
 
 ### Arduino Installation
 
 Refer to [Software section](#software).
 
-<RkBottomNav/>

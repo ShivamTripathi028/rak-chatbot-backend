@@ -10,17 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK18000 WisBlock PDM Stereo Microphone Module Datasheet
 
 ## Overview
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/rak18000_back_front.png" 
-  caption="RAK18000 PDM Stereo Microphone Module" 
-  width="40%"
-/>
+
+> **Image:** RAK18000 PDM Stereo Microphone Module
 
 ### Description
 
@@ -32,16 +26,16 @@ The RAK18000 is a digital microphone module that is designed to detect sounds an
 
 * **Module Specifications**
 
-    - Voltage Supply: 3.3&nbsp;V
-    - Current Consumption: 5&nbsp;µA to 650&nbsp;µA
+    - Voltage Supply: 3.3 V
+    - Current Consumption: 5 µA to 650 µA
     - Chipset: ST MP34DT06J
-    - 64&nbsp;dB signal-to-noise ratio
-    - –26&nbsp;dBFS ± 1&nbsp;dB sensitivity
+    - 64 dB signal-to-noise ratio
+    - –26 dBFS ± 1 dB sensitivity
     - Stereo microphone 2 x MP34DT06J
     - Low power consumption
 
 * **Size**
-    * 25 x 15&nbsp;mm
+    * 25 x 15 mm
 
 ## Specifications
 
@@ -51,11 +45,7 @@ The RAK18000 is a digital microphone module that is designed to detect sounds an
 
 The RAK18000 WisBlock PDM Stereo Microphone Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 2** shows the mounting mechanism of the RAK18000 on a WisBlock Base module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/rak18000_mounting.png" 
-  caption="RAK18000 PDM Stereo Microphone Module Mounting" 
-  width="50%"
-/>
+> **Image:** RAK18000 PDM Stereo Microphone Module Mounting
 
 ### Hardware
 
@@ -74,11 +64,7 @@ The RAK18000 WisBlock PDM Stereo Microphone Module comprises a standard WisBlock
 **DMIC1**, **DMCLK**, **3V3**, and **GND** are connected to WisConnector.
 :::
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/rak18000_pinout.svg" 
-  caption="RAK18000 PDM Stereo Microphone Module Pinout Diagram" 
-  width="60%"
-/>
+> **Image:** RAK18000 PDM Stereo Microphone Module Pinout Diagram
 
 #### Acoustic and Electrical Characteristics
 
@@ -100,19 +86,11 @@ The table below shows RAK18000 digital microphone module acoustic and electrical
 
 Figure 4 shows the dimensions and the mechanical drawing of the RAK18000 module.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/rak18000_mechanic_drawing.png" 
-  caption="RAK18000 PDM Stereo Microphone Module Mechanical Drawing" 
-  width="60%"
-/>
+> **Image:** RAK18000 PDM Stereo Microphone Module Mechanical Drawing
 
 ##### WisConnector PCB Layout
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/mxxs1003k6m.png" 
-  caption="WisConnector PCB footprint and recommendations" 
-  width="100%"
-/>
+> **Image:** WisConnector PCB footprint and recommendations
 
 #### Schematic Diagram
 
@@ -120,21 +98,11 @@ Figure 4 shows the dimensions and the mechanical drawing of the RAK18000 module.
 
 Figure 6 shows the WisConnector connection and the digital microphone data line connected to **IO3** and the clock line connected to **IO4**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/wisio-connection.png" 
-  figureCount="6"
-  caption="RAK18000 PDM Stereo Microphone Module Connection" 
-   width="80%"
-/>
+> **Image:** RAK18000 PDM Stereo Microphone Module Connection
 
 ##### Digital Microphone
 
 Figure 7 shows the schematic of RAK18000. The two digital microphones, left or right channel, can be switch through R6, R7, R8, and R9.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/rak18000/datasheet/digital-microphone.png" 
-  caption="RAK18000 PDM Stereo Microphone Module Schematic" 
-  width="100%"
-/>
+> **Image:** RAK18000 PDM Stereo Microphone Module Schematic
 
-<RkBottomNav/>

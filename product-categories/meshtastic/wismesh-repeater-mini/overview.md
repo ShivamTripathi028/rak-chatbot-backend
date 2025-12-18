@@ -14,8 +14,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Meshtastic WisMesh Repeater Mini
 
 Thank you for choosing **WisMesh Repeater Mini** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -26,7 +24,7 @@ This network is especially vital in scenarios where traditional communication sy
 
 The **WisMesh Repeater Mini** is the ready-to-use Meshtastic repeater, designed to enlarge the range of the Meshtastic LoRa Mesh network.
 
-The combination of a WisBlock Meshtastic Starter Kit, 3200&nbsp;mAh battery, and a Unify Enclosure with Solar Panel allow deployment in areas with no permanent power supply.
+The combination of a WisBlock Meshtastic Starter Kit, 3200 mAh battery, and a Unify Enclosure with Solar Panel allow deployment in areas with no permanent power supply.
 
 Make sure your network is always on with the WisMesh Repeater. This Meshtastic solar-powered repeater comes in a waterproof enclosure with a high-performance built-in antenna, making it deployable anywhere regardless of power availability or weather conditions.
 
@@ -41,4 +39,3 @@ Make sure your network is always on with the WisMesh Repeater. This Meshtastic s
 
 To get started with the WisMesh Repeater Mini, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Repeater%20Mini.pdf" target="_blank">WisMesh Repeater Mini Getting Started</a> guide.
 
-<RkBottomNav/>

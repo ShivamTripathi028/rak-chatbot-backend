@@ -11,9 +11,6 @@ keywords:
 sidebar_label: Datasheet
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # WisBlock Outdoor Location Tracker Kit Datasheet
 
 ## Overview
@@ -46,19 +43,13 @@ Multiple connectivity methods, including LoRaWAN, BLE, LTE-M, and NB-IoT, are su
       - Two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101?utm_source=RAK13101&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK13101</a> with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
-
 ## Specifications
 
 ### Overview
 
 The WisBlock Outdoor Location Tracker Kit includes the following modules:
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisblock/kits/10_outdoor_tracker_kit_2.png"
-  figureCount="1"
-  caption="Modules of the WisBlock Outdoor Location Tracker Kit" 
-   width="70%"
-/>
+> **Image:** Modules of the WisBlock Outdoor Location Tracker Kit
 
 ### Hardware
 
@@ -106,4 +97,3 @@ The cellular modules support different cellular protocols as shown in the follow
 
 The **WisBlock Industrial 4.0 Kit** is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
-<RkBottomNav/>

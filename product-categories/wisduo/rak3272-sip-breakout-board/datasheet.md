@@ -11,9 +11,6 @@ slug: /product-categories/wisduo/rak3272-sip-breakout-board/datasheet/
 download: true
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK3272-SiP Breakout Board Datasheet
 
 ## Overview
@@ -28,22 +25,22 @@ The board complies with Class A, B, & C of LoRaWAN 1.0.3 specifications and also
 
 ## Features
 
-- 32-bit Arm® Cortex®‐M4 48&nbsp;MHz MCU and sub-GHz Semtech SX126x radio
+- 32-bit Arm® Cortex®‐M4 48 MHz MCU and sub-GHz Semtech SX126x radio
 - Chipset STM32WLE5JC (single-core)
 - Two variants available
     - RAK3272-SiP (uses RFO_HP)
     - RAK3272LP-SiP (uses RFO_LP)
 - I/O ports: UART/I2C/GPIO/SPI
-- 32&nbsp;MHz TCXO and 32&nbsp;kHz xtal
+- 32 MHz TCXO and 32 kHz xtal
 - RUI3 API compatible
 - Custom firmware using Arduino via RUI3 API
 - Easy to use AT Command set via UART interface
 - Serial Wire Debug (SWD) interface
 - **LoRaWAN 1.0.3** specification compliant
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923
-- Supply voltage: 1.8&nbsp;V ~ 3.6&nbsp;V
-- Temperature range: -40°&nbsp;C ~ 85°&nbsp;C
-- Size: 25.4&nbsp;mm x 41.8&nbsp;mm
+- Supply voltage: 1.8 V ~ 3.6 V
+- Temperature range: -40° C ~ 85° C
+- Size: 25.4 mm x 41.8 mm
 
 ## Specifications
 
@@ -51,28 +48,15 @@ The board complies with Class A, B, & C of LoRaWAN 1.0.3 specifications and also
 
 The top view of the RAK3272-SiP and RAK3272LP-SiP Breakout Board are shown in **Figure 1**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/rak3172lp-sip breakout board.943.png"
-  width="55%"
-  caption="RAK3272-SiP and RAK3272LP-SiP Breakout Board top view"
-  zoomMode={true}
-/>
+> **Image:** RAK3272-SiP and RAK3272LP-SiP Breakout Board top view
 
 The bottom view of the RAK3272-SiP Breakout Board is shown in **Figure 2**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/rak3272-sip_breakout-board_back.png"
-  width="20%"
-  caption="RAK3272-SiP Breakout Board bottom view"
-  zoomMode={true}
-/>
+> **Image:** RAK3272-SiP Breakout Board bottom view
 
 ### Hardware
 
 The hardware specifications are divided into five sections, detailing interfacing, pinouts, and their corresponding functions with diagrams. They also include RF, electrical, and mechanical parameters, along with tabular data outlining the functionalities and standard values of the RAK3272-SiP Breakout Board.
-
 
 #### Interface
 
@@ -87,7 +71,6 @@ When programming via an <a href="https://www.st.com/en/development-tools/st-link
 
 For more information refer to the [Upload firmware using ST-Link](#upload-firmware-using-st-link) section.
 
-
 ##### UART Interface
 
 This board has two UART interfaces:
@@ -99,38 +82,21 @@ This board has two UART interfaces:
 
 **J2** is the RP-SMA antenna connector.
 
-
 :::warning
 Before powering the RAK3272-SiP Breakout Board, you should install the LoRa antenna first. Not doing so might damage the board.
 :::
 
 Ensure that you use a LoRa antenna with an RP-SMA male connector that is compatible with the selected LoRa frequency.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/lora-antenna.png"
-  width="40%"
-  caption="LoRa antenna with RP-SMA male connector"
-  zoomMode={true}
-/>
+> **Image:** LoRa antenna with RP-SMA male connector
 
 #### Pin Definition
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/rak3272-sip-pinout.png"
-  width="70%"
-  caption="RAK3272-SiP Breakout Board J3 and J4 header"
-  zoomMode={true}
-/>
+> **Image:** RAK3272-SiP Breakout Board J3 and J4 header
 
 The Pin 1 of the header is highlighted in a blue rectangle.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/rak3272-sip-pinout-back.png"
-  width="50%"
-  caption="RAK3272-SiP Breakout Board J5 to J8 header"
-  zoomMode={true}
-/>
-
+> **Image:** RAK3272-SiP Breakout Board J5 to J8 header
 
 ##### Pin on RAK3272-SiP Connection on UART-USB Adapter
 
@@ -138,13 +104,10 @@ The Pin 1 of the header is highlighted in a blue rectangle.
 | ------------------ | ------------------------------ |
 | PA2                | RX                             |
 | PA3                | TX                             |
-| 3V3                | 3.3&nbsp;V                     |
+| 3V3                | 3.3 V                     |
 | GND                | Ground                         |
 
-<br />
-
 The tables below show the header definitions of the RAK3272-SiP Breakout Board:
-
 
 ##### J3 Pin Definitions
 
@@ -159,7 +122,6 @@ The tables below show the header definitions of the RAK3272-SiP Breakout Board:
 | 7   | UART2_TX | UART2/LPUART1 Interface (AT Commands and FW Update) | PA2             |
 | 8   | UART2_RX | UART2/LPUART1 Interface (AT Commands and FW Update) | PA3             |
 | 9   | 3V3      | Power Supply                                        | -               |
-
 
 ##### J4 Pin Definitions
 
@@ -189,8 +151,6 @@ The tables below show the header definitions of the RAK3272-SiP Breakout Board:
 | 8   | PB9  | MCU pin PB9 | PB9             |
 | 9   | PB8  | MCU pin PB8 | PB8             |
 
-
-
 ##### J6 Pin Definitions
 
 | Pin | Name | Description  | RAK3272-SiP Pin |
@@ -204,7 +164,6 @@ The tables below show the header definitions of the RAK3272-SiP Breakout Board:
 | 7   | PB13 | MCU pin PB13 | PB13            |
 | 8   | PB14 | MCU pin PB14 | PB14            |
 | 9   | PA10 | GPIO or PIN_A3 | PA10           |
-
 
 ##### J7 Pin Definitions
 
@@ -228,8 +187,7 @@ The tables below show the header definitions of the RAK3272-SiP Breakout Board:
 
 #### RF Characteristics
 
-The RAK3272-SiP Breakout Board supports the LoRaWAN bands 863&nbsp;MHz to 930&nbsp;MHz
-
+The RAK3272-SiP Breakout Board supports the LoRaWAN bands 863 MHz to 930 MHz
 
 ##### Operating Frequencies
 
@@ -251,21 +209,13 @@ The RAK3272-SiP Breakout Board can use two different power supply regulators: **
 
 The use of **DCDC** is optional but improves the power efficiency. If you want to disable the **DCDC** mode, then you need to remove the L1 inductor, as shown in **Figure 6**.
 
-
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/ldo.png"
-  width="70%"
-  caption="RAK3272-SiP Breakout Board DCDC inductor"
-  zoomMode={true}
-/>
-
+> **Image:** RAK3272-SiP Breakout Board DCDC inductor
 
 ##### Absolute Maximum Ratings
 
 | Parameter    | Minimum     | Typical | Maximum | Unit      |
 | ------------ | ----------- | ------- | ------- | --------- |
-| VDD and GPIO | -0.3&nbsp;V |         | 3.9     | Volts (V) |
-
+| VDD and GPIO | -0.3 V |         | 3.9     | Volts (V) |
 
 ##### Operating Voltage
 
@@ -282,49 +232,36 @@ The use of **DCDC** is optional but improves the power efficiency. If you want t
 | VREF+                                | 2.0     |         | VDDA    | Volts (V) |
 | VREF+ (VDDA < 2V)                    | VDDA    |         | VDDA    | Volts (V) |
 
-
 ##### Operating Current
 
 ###### RAK3272-SiP (uses RFO_HP RF output)
 
 | Parameter  | Condition   | Current Consumption (Typical) |
 | ---------- | ----------- | ----------------------------- |
-| TX mode    | 20&nbsp;dBm | 87&nbsp;mA                    |
-| RX mode    | -           | 6.14&nbsp;mA                    |
-| Sleep mode | -           | 1.69&nbsp;uA                  |
+| TX mode    | 20 dBm | 87 mA                    |
+| RX mode    | -           | 6.14 mA                    |
+| Sleep mode | -           | 1.69 uA                  |
 
 ###### RAK3272LP-SiP (uses RFO_LP RF output)
 
 | Parameter  | Condition   | Current Consumption (Typical) |
 | ---------- | ----------- | ----------------------------- |
-| TX mode    | 14&nbsp;dBm | 39.1&nbsp;mA                  |
-|            | 12&nbsp;dBm | 33&nbsp;mA                    |
-|            | 10&nbsp;dBm | 28&nbsp;mA                    |
-|            | 8&nbsp;dBm  | 25&nbsp;mA                    |
-| RX mode    | -           | 9.69&nbsp;mA                  |
-| Sleep mode | -           | 2.1&nbsp;uA                   |
-
+| TX mode    | 14 dBm | 39.1 mA                  |
+|            | 12 dBm | 33 mA                    |
+|            | 10 dBm | 28 mA                    |
+|            | 8 dBm  | 25 mA                    |
+| RX mode    | -           | 9.69 mA                  |
+| Sleep mode | -           | 2.1 uA                   |
 
 ##### Schematic Diagram
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/rak3272-sip-sch.png"
-  width="100%"
-  caption="RAK3272-SiP schematic diagram"
-  zoomMode={true}
-/>
+> **Image:** RAK3272-SiP schematic diagram
 
 #### Mechanical Characteristics
 
 **Figure 8** illustrates the dimensions of the RAK3272-SiP Breakout Board.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/datasheet/dimensions.png"
-  width="40%"
-  caption="RAK3272-SiP Breakout Board mechanical dimensions"
-  zoomMode={true}
-/>
-
+> **Image:** RAK3272-SiP Breakout Board mechanical dimensions
 
 ### Software
 
@@ -334,19 +271,13 @@ The **bin file** contains only the application code and requires the **RAK DFU T
 
 The RAK3272-SiP Breakout Board uses UART2 serial pins to upload the latest firmware. Refer to the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3272-sip-breakout-board/quickstart/#connect-to-the-rak3272-sip-breakout-board" target="_blank">Connect to the RAK3272-SiP Breakout Board</a> section.
 
-
 #### Upload Firmware Using ST-Link
 
 The **hex file** contains both the bootloader and the application code.
 
 You need to use the <a href="https://wiki.st.com/stm32mpu/wiki/STM32CubeProgrammer" target="_blank">STM32CubeProgrammer</a> and the **ST-Link** tool <a href="https://learn.rakwireless.com/hc/en-us/articles/26687606549911-How-To-Guide-STM32CubeProgrammer-for-RAK-Modules" target="_blank">to upload the hex file</a>. Use the diagram shown in **Figure 9** to connect the **ST-Link**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-stlink.png"
-  width="70%"
-  caption="RAK3272-SiP Breakout Board ST-Link connection"
-  zoomMode={true}
-/>
+> **Image:** RAK3272-SiP Breakout Board ST-Link connection
 
 #### Firmware/OS
 
@@ -366,4 +297,3 @@ For CE and FCC certifications we provide an AT command guide.
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-<RkBottomNav/>

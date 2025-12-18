@@ -13,9 +13,6 @@ sidebar_label: NR Radio Configuration User Manual
 slug: /product-categories/5g/all-in-one-5g/nr-radio-configuration/
 ---
 
-import RkImage from '@site/src/components/Image'
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # All-in-One. 5G NR Radio Configuration
 
 This document describes the configuration of the integrated Next Generation Node B (gNB) for software version **BaiBBU_QSS_1.1.x**. It is a guide on how to configure the device after completing installation.
@@ -24,19 +21,15 @@ This document describes the configuration of the integrated Next Generation Node
 
 The All-in-One. 5G NR Next Generation Node B (gNB) is loaded with its own GUI for configuring its operating parameters. You can log in to the GUI either locally through the Local Maintenance Terminal (LMT), which is an Ethernet port, or remotely via an IP address.
 
-After the gNB is powered on, configure the gNB to start services and access UEs, providing voice and data service. When configuring a newly installed gNB, we recommend you follow the flow that is shown in **Figure&nbsp;1**.
+After the gNB is powered on, configure the gNB to start services and access UEs, providing voice and data service. When configuring a newly installed gNB, we recommend you follow the flow that is shown in **Figure 1**.
 
-<RkImage
-  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/1.gnb-configuration-flow.png"
-  width="40%"
-  caption="gNB Configuration Flow"
-/>
+> **Image:** gNB Configuration Flow
 
 Before configuring the device, data planning needs to be done first. The data to configure includes local parameters and network parameters. These parameters are either provided by the user or determined after negotiation with the customers.
 
-The data to prepare includes network parameters, cell parameters, protocol parameters, software version, etc., as shown in **Table&nbsp;1**.
+The data to prepare includes network parameters, cell parameters, protocol parameters, software version, etc., as shown in **Table 1**.
 
-<b> Table 1</b>: Data Planning
+** Table 1**: Data Planning
 
 | Item       | Parameter         | Description                     |
 |------------|-------------------|---------------------------------|
@@ -53,17 +46,17 @@ The data to prepare includes network parameters, cell parameters, protocol param
 
 ### Client Web Environmental Requirements
 
-<b> Table 2</b>: Client Environmental Requirements
+** Table 2**: Client Environmental Requirements
 
 | Item              | Description                                                                                    |
 |-------------------|------------------------------------------------------------------------------------------------|
-| CPU               | Intel core above 1&nbsp;GHz                                                                    |
+| CPU               | Intel core above 1 GHz                                                                    |
 | Memory            | At least 2G RAM                                                                                |
 | Hard disk         | At least 100 MB of storage space                                                               |
-| Operating system  | Microsoft: Windows XP, Windows Vista, Windows 7 or Windows10 <br /> Mac: MacOS X 10.5 or above |
+| Operating system  | Microsoft: Windows XP, Windows Vista, Windows 7 or Windows10 
+ Mac: MacOS X 10.5 or above |
 | Screen resolution | Above 1024 x 768                                                                               |
 | Browser           | Chrome 6 or higher                                                                             |
-
 
 ### Connect Client Web to Base Station
 
@@ -76,13 +69,9 @@ Before logging into the Web client, the client computer’s IP address needs to 
 1. Open **Control Panel** from the Start Menu, then go to **Network and Internet**.
 2. Choose **View network status and tasks,** and then click **Local Connectivity** in the resulting window.
 3. Within the **Status of Local Connectivity,** click on **Properties** to open the **Properties Local Connectivity** pop-up window.
-4. Choose **Internet Protocol Version (TCP/IPV4)** and click **Properties** to access the window, as shown in **Figure&nbsp;2**.
+4. Choose **Internet Protocol Version (TCP/IPV4)** and click **Properties** to access the window, as shown in **Figure 2**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/2.internet-protocol-version4.png"
-width="40%"
-caption="Internet Protocol Version4"
-/>
+> **Image:** Internet Protocol Version4
 
 Select either **Obtain an IP address automatically** or **Use the following IP address**:
 - If **Obtain an IP address automatically** is chosen, proceed to step 7
@@ -111,32 +100,27 @@ The default OAM IP address is `192.168.150.7/24`. If the gNB configures IP addre
 
 ### GUI Log In
 
-1. Open a web browser, and enter [http://192.168.150.7](http://192.168.150.7), as shown in **Figure&nbsp;3**.
+1. Open a web browser, and enter [http://192.168.150.7](http://192.168.150.7), as shown in **Figure 3**.
 
 :::tip NOTE
 This guide uses the initial IP address `192.168.150.7`. If the IP address is changed, log in through the new IP address.
 :::
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/3.gui-login.png"
-width="85%"
-caption="GUI Login"
-/>
+> **Image:** GUI Login
 
-2. Input user name, password, and click **Login**. The homepage is shown in **Figure&nbsp;4**.  <br />
-Default credentials: <br />
-username: `new_user` <br />
+2. Input user name, password, and click **Login**. The homepage is shown in **Figure 4**.  
+
+Default credentials: 
+
+username: `new_user` 
+
 password: `gNB@2014`
 
 :::tip NOTE
 For security reasons, you should change the password after you first log in rather than leaving the default value.
 :::
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/4.gui-homepage.png"
-width="85%"
-caption="GUI Homepage"
-/>
+> **Image:** GUI Homepage
 
 :::tip NOTE
 The menus and information may vary by product type or software version.
@@ -149,43 +133,41 @@ The homepage displays the navigation pane on the left, and shows the window for 
     - **IPsec status:** is an indicator which is configured according to the actual network environment.
     - **Overall Upgrade Status:** is the upgrade status indicator.
 
-For the second menu: **Basic Setting** and then **Alarm** is the menu displays the current alarms, as shown in **Figure&nbsp;5**.
+For the second menu: **Basic Setting** and then **Alarm** is the menu displays the current alarms, as shown in **Figure 5**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/5.current-alarm.png"
-width="85%"
-caption="Current Alarm"
-/>
+> **Image:** Current Alarm
 
 ## Basic Setting
 
 The quick settings determine important RF parameters. These parameters need to be planned in advance during the network planning stage.
 
-1. In the navigation column in the left, select **Basic Setting** and then **Quick Setting** to enter the quick setting page, as shown in **Figure&nbsp;6**.
+1. In the navigation column in the left, select **Basic Setting** and then **Quick Setting** to enter the quick setting page, as shown in **Figure 6**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/6.quick-setting.png"
-width="85%"
-caption="Quick Setting"
-/>
+> **Image:** Quick Setting
 
-2. Input quick setting parameters, the parameter descriptions are given in **Table&nbsp;3**.
+2. Input quick setting parameters, the parameter descriptions are given in **Table 3**.
 
-<b> Table 3</b>: Quick Setting Parameter Description
+** Table 3**: Quick Setting Parameter Description
 
 | Parameter               | Description                                                                                                                                                                                      |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Band                    | Operation frequency band, currently includes N48, N78                                                                                                                                            |
 | UL NRARFCN              | Uplink NR-ARFCN                                                                                                                                                                                  |
 | DL NRARFCN              | Downlink NR-ARFCN                                                                                                                                                                                |
-| PCI                     | Physical Cell ID (PCI) is allocated by the operator. It is an essential Layer 1 cell identity for each cell site in the network. Planning PCIs is crucial for QoS.  <br /> Range from 0 to 1007. |
-| TX Antenna Count        | The number of transmitting antennas. <br /> The gNB supports up to 2 TX antenna.                                                                                                                 |
-| RX Antenna Count        | The number of receiving antennas. <br /> The gNB supports up to 2 RX antennas.                                                                                                                   |
-| DL SubCarrierSpacing    | Downlink subcarrier spacing <br /> The gNB supports 30&nbsp;kHz in this version.                                                                                                                 |
+| PCI                     | Physical Cell ID (PCI) is allocated by the operator. It is an essential Layer 1 cell identity for each cell site in the network. Planning PCIs is crucial for QoS.  
+ Range from 0 to 1007. |
+| TX Antenna Count        | The number of transmitting antennas. 
+ The gNB supports up to 2 TX antenna.                                                                                                                 |
+| RX Antenna Count        | The number of receiving antennas. 
+ The gNB supports up to 2 RX antennas.                                                                                                                   |
+| DL SubCarrierSpacing    | Downlink subcarrier spacing 
+ The gNB supports 30 kHz in this version.                                                                                                                 |
 | DL CarrierBandWidth(RB) | Downlink carrier bandwidth                                                                                                                                                                       |
-| UL SubCarrierSpacing    | Uplink subcarrier spacing <br /> The gNB supports 30&nbsp;kHz in this version.                                                                                                                   |
+| UL SubCarrierSpacing    | Uplink subcarrier spacing 
+ The gNB supports 30 kHz in this version.                                                                                                                   |
 | UL CarrierBandWidth(RB) | Uplink carrier bandwidth                                                                                                                                                                         |
-| Power Modify            | Transmitted power <br /> Range from 0 to 43&nbsp;dBm.                                                                                                                                            |
+| Power Modify            | Transmitted power 
+ Range from 0 to 43 dBm.                                                                                                                                            |
 
 3. Click **Save** to complete the quick settings for the gNB.
 
@@ -195,19 +177,15 @@ caption="Quick Setting"
 
 This page includes the time zone and the NTP configuration, which are configured according to actual needs. If NTP is used by the gNB as an external clock source, up to five NTP servers are supported, one for master NTP service and the others for backup.
 
-1. In the navigation column on the left, select **System** and then **NTP** to enter the NTP setting page, as shown in **Figure&nbsp;7**. The page displays the current date and time.
+1. In the navigation column on the left, select **System** and then **NTP** to enter the NTP setting page, as shown in **Figure 7**. The page displays the current date and time.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/7.ntp-server-setting.png"
-width="85%"
-caption="NTP Server Setting"
-/>
+> **Image:** NTP Server Setting
 
 2. Select the Time Zone where the gNB is located.
 3. Select whether or not to enable the NTP function.
-4. Input NTP server parameters. The parameter description is shown in **Table&nbsp;4**.
+4. Input NTP server parameters. The parameter description is shown in **Table 4**.
 
-<b> Table 4</b>: NTP Server Parameter Description
+** Table 4**: NTP Server Parameter Description
 
 | Parameter  | Description                                                                                 |
 |------------|---------------------------------------------------------------------------------------------|
@@ -221,13 +199,9 @@ caption="NTP Server Setting"
 
 ### Log Configuration
 
-In the navigation column on the left, select **System** and then **Log** to enter the log level setting page, as shown in **Figure&nbsp;8**.
+In the navigation column on the left, select **System** and then **Log** to enter the log level setting page, as shown in **Figure 8**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/8.log-level-setting.png"
-width="85%"
-caption="Log Level Setting"
-/>
+> **Image:** Log Level Setting
 
 The gNB supports the log level setting for Media Access Control (MAC) log, Radio Link Control (RLC) log and RLCL.
 
@@ -249,13 +223,9 @@ Firmware upgrade may lead to the damage of the gNB file, contact the support eng
 
 #### Firmware Upgrade
 
-1. In the navigation column on the left, select **System** and then **Upgrade** to enter the upgrade page, as shown in **Figure&nbsp;9**.
+1. In the navigation column on the left, select **System** and then **Upgrade** to enter the upgrade page, as shown in **Figure 9**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/9.upgrade.png"
-width="85%"
-caption="Upgrade"
-/>
+> **Image:** Upgrade
 
 2. Get new version of firmware file and save it to your local computer.
 3. Select whether or not to preserve the current settings.
@@ -286,13 +256,9 @@ Other file will also upgrade by following these steps.
 
 ### Backup
 
-In the navigation column on the left, select **System** and then **Backup** to enter the backup page, as shown in **Figure&nbsp;10**.
+In the navigation column on the left, select **System** and then **Backup** to enter the backup page, as shown in **Figure 10**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/10.system-backup.png"
-width="85%"
-caption="System Backup"
-/>
+> **Image:** System Backup
 
 #### Backup Current Configuration
 
@@ -316,7 +282,8 @@ After the restore operation, the gNB will reboot immediately. Be careful when us
 :::
 
 1. Click **Restore Default Configuration**.
-2. In the pop-up download dialog box click **OK**, the base station will reboot immediately.<br />
+2. In the pop-up download dialog box click **OK**, the base station will reboot immediately.
+
 Wait for about three minutes, the base station will reboot completely.
 
 #### Import Configuration File
@@ -329,17 +296,13 @@ Wait for about three minutes, the base station will reboot completely.
 
 The gNB supports the tcpdump command to collect and analyze network data.
 
-1. In the navigation column on the left, select **System** and then **Diagnostics** to enter the diagnostics page, as shown in **Figure&nbsp;11**.
+1. In the navigation column on the left, select **System** and then **Diagnostics** to enter the diagnostics page, as shown in **Figure 11**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/11.diagnostics.png"
-width="85%"
-caption="Diagnostics"
-/>
+> **Image:** Diagnostics
 
-2. Input network diagnostics parameters, the parameter descriptions are shown in **Table&nbsp;5**.
+2. Input network diagnostics parameters, the parameter descriptions are shown in **Table 5**.
 
-<b> Table 5</b>: Parameter Description of tcpdump Command
+** Table 5**: Parameter Description of tcpdump Command
 
 | Parameter                 | Description                     |
 |---------------------------|---------------------------------|
@@ -350,8 +313,6 @@ caption="Diagnostics"
 3. Click **Start** to run the tcpdump command.
 4. Click **Stop** to stop running.
 5. Click **Get File** to download the file to the local computer.
-
-
 
 ### Reboot
 
@@ -370,259 +331,88 @@ Configuration of the network interface includes WAN, VLAN, IPsec, Differentiated
 
 The WAN interface is an external communication portal (Internet connection) to the core network. The only option for the Interface name field is WAN. The WAN interface supports the configuration of multiple VLANs.
 
-1. On the navigation column on the left, select **Network** and then **WAN/VLAN** to enter the WAN interface and VLAN configuration page, as shown in **Figure&nbsp;12**.
+1. On the navigation column on the left, select **Network** and then **WAN/VLAN** to enter the WAN interface and VLAN configuration page, as shown in **Figure 12**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/12.configure-wan-vlan.png"
-width="85%"
-caption="Configure WAN/VLAN"
-/>
+> **Image:** Configure WAN/VLAN
 
 :::tip NOTE
 In this software version, DPDK is not supported.
 :::
 
-2. Click `+` to add WAN card, as shown in **Figure&nbsp;13**.
+2. Click `+` to add WAN card, as shown in **Figure 13**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/13.add-wan-card.png"
-width="85%"
-caption="Add WAN Card"
-/>
+> **Image:** Add WAN Card
 
-3. Input parameters of the WAN card, as shown in **Table&nbsp;6**.
+3. Input parameters of the WAN card, as shown in **Table 6**.
 
-<b> Table 6</b>: WAN Card Parameter Description
+** Table 6**: WAN Card Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Index</td>
-      <td>The Index is generated automatically.</td>
-    </tr>
-    <tr>
-      <td>Enable</td>
-      <td>Enables or disables the port.</td>
-    </tr>
-    <tr>
-      <td>Name</td>
-      <td>Name</td>
-    </tr>
-    <tr>
-      <td>User Label</td>
-      <td>User Label</td>
-    </tr>
-    <tr>
-      <td>Max Bit Rate</td>
-      <td>
-        Select maximum bit rate of the port from the drop-down list. The units are in Mbit/s
-        <ul>
-          <li>10</li>
-          <li>100</li>
-          <li>1000</li>
-          <li>Auto</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>Mode</td>
-      <td>
-        Select the working mode of the port from the drop-down list:
-        <ul>
-          <li>Full</li>
-          <li>Half</li>
-          <li>Auto</li>
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Index | The Index is generated automatically. |
+| Enable | Enables or disables the port. |
+| Name | Name |
+| User Label | User Label |
+| Max Bit Rate | Select maximum bit rate of the port from the drop-down list. The units are in Mbit/s101001000Auto |
+| Mode | Select the working mode of the port from the drop-down list:FullHalfAuto |
 
-4. Click **Open** to display the attribute parameters of the WAN interface, as shown in **Figure&nbsp;14**.
+4. Click **Open** to display the attribute parameters of the WAN interface, as shown in **Figure 14**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/14.configure-wan-interface-attribute.png"
-width="85%"
-caption="Configure WAN Interface Attribute"
-/>
+> **Image:** Configure WAN Interface Attribute
 
 5. Configure IPv4, IPv6, or VLAN parameters based on the actual network deployment.
 
-##### &bull; IPv4
+##### • IPv4
 
-Click `+`  on **WAN IPv4 table** zone to display the IPv4 configuration parameters, as shown in **Figure&nbsp;15**.
+Click `+`  on **WAN IPv4 table** zone to display the IPv4 configuration parameters, as shown in **Figure 15**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/15.ipv4-configuration-parameters.png"
-width="85%"
-caption="IPv4 Configuration Parameters"
-/>
+> **Image:** IPv4 Configuration Parameters
 
-The description of IPv4 configuration parameters is shown in **Table&nbsp;7**.
+The description of IPv4 configuration parameters is shown in **Table 7**.
 
-<b> Table 7</b>: IPv4 Parameter Description
+** Table 7**: IPv4 Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Addressing Type</td>
-      <td>The interface protocol used by the WAN interface. It includes: <ul><li>DHCP: If DHCP is selected, no other parameter needs to be configured.</li>  <li>Static: If Static is selected, the IP address, gateway and subnet mask should be configured.</li>  </ul>  </td>
-    </tr>
-    <tr>
-      <td>Port Type</td>
-      <td>
-        WAN port type. According to the network plan, specify the usage of the port.
-        <ul>
-          <li>Ng</li>
-          <li>Xn</li>
-          <li>Ng</li>
-          <li>Xn</li>
-          <li>S1</li>
-          <li>X2</li>
-          <li>S1/X2</li>
-          <li>F1</li>
-          <li>E1</li>
-          <li>OAM</li>
-          <li>Other</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>IP</td>
-      <td>
-        When <b>Addressing Type</b> is set to <b>Static</b>, the parameter displays. <br /> The IP address of the WAN interface.
-      </td>
-    </tr>
-    <tr>
-      <td>Default Gateway</td>
-      <td>
-        When <b>Addressing Type</b> is set to <b>Static</b>, the parameter displays. <br /> The IP address of the default gateway.
-      </td>
-    </tr>
-    <tr>
-      <td>Subnet Mask</td>
-      <td>
-        When <b>Addressing Type</b> is set to <b>Static</b>, the parameter displays. <br /> The Subnet mask address of the IP address.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Addressing Type | The interface protocol used by the WAN interface. It includes:DHCP: If DHCP is selected, no other parameter needs to be configured.Static: If Static is selected, the IP address, gateway and subnet mask should be configured. |
+| Port Type | WAN port type. According to the network plan, specify the usage of the port.NgXnNgXnS1X2S1/X2F1E1OAMOther |
+| IP | WhenAddressing Typeis set toStatic, the parameter displays.The IP address of the WAN interface. |
+| Default Gateway | WhenAddressing Typeis set toStatic, the parameter displays.The IP address of the default gateway. |
+| Subnet Mask | WhenAddressing Typeis set toStatic, the parameter displays.The Subnet mask address of the IP address. |
 
+##### • IPv6
 
-##### &bull; IPv6
+Click `+` on **WAN IPv6 table** zone to display the IPv6 configuration parameters, as shown in **Figure 16**.
 
-Click `+` on **WAN IPv6 table** zone to display the IPv6 configuration parameters, as shown in **Figure&nbsp;16**.
+> **Image:** IPv6 Configuration Parameters
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/16.ipv6-configuration-parameters.png"
-width="85%"
-caption="IPv6 Configuration Parameters"
-/>
+The description of IPv6 configuration parameters is shown in **Table 8**.
 
-The description of IPv6 configuration parameters is shown in **Table&nbsp;8**.
+** Table 8**: IPv6 Parameter Description
 
-<b> Table 8</b>: IPv6 Parameter Description
+| Parameter | Description |
+| --- | --- |
+| Addressing Type | The interface protocol used by the WAN interface, includes:DHCPv6: If DHCP is selected, no other parameter needs to be configured.Static: If Static is selected, the IP address, gateway and subnet mask should be configured. |
+| Port Type | WAN port type. According to the network plan, specify the usage of the port.NgXnNgXnS1X2S1/X2F1E1OAMOther |
+| IP | WhenAddressing Typeis set toStatic, the parameter displays.The IP address of the WAN interface. |
+| Default Gateway | WhenAddressing Typeis set toStatic, the parameter displays.The IP address of the default gateway. |
+| Subnet Mask | WhenAddressing Typeis set toStatic, the parameter displays.The Subnet mask address of the IP address. |
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Addressing Type</td>
-      <td>The interface protocol used by the WAN interface, includes: <ul> <li>DHCPv6: If DHCP is selected, no other parameter needs to be configured.</li>   <li>Static: If Static is selected, the IP address, gateway and subnet mask should be configured.</li> </ul> </td>
-    </tr>
-    <tr>
-      <td>Port Type</td>
-      <td>
-      WAN port type. According to the network plan, specify the usage of the port.
-        <ul>
-          <li>Ng</li>
-          <li>Xn</li>
-          <li>Ng</li>
-          <li>Xn</li>
-          <li>S1</li>
-          <li>X2</li>
-          <li>S1/X2</li>
-          <li>F1</li>
-          <li>E1</li>
-          <li>OAM</li>
-          <li>Other</li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>IP</td>
-      <td>When <b>Addressing Type</b> is set to <b>Static</b>, the parameter displays. <br /> The IP address of the WAN interface. </td>
-    </tr>
-    <tr>
-      <td>Default Gateway</td>
-      <td>When <b>Addressing Type</b> is set to <b>Static</b>, the parameter displays. <br /> The IP address of the default gateway. </td>
-    </tr>
-      <tr>
-      <td>Subnet Mask</td>
-      <td>When <b>Addressing Type</b> is set to <b>Static</b>, the parameter displays. <br /> The Subnet mask address of the IP address. </td>
-    </tr>
-  </tbody>
-</table>
+##### • VLAN
 
-##### &bull; VLAN
+Click `+` on **WAN VLAN table** zone to display the VLAN configuration parameters, as shown in **Figure 17**.
 
-Click `+` on **WAN VLAN table** zone to display the VLAN configuration parameters, as shown in **Figure&nbsp;17**.
+> **Image:** VLAN Configuration Parameters
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/17.vlan-configuration-parameters.png"
-width="85%"
-caption="VLAN Configuration Parameters"
-/>
+The description of VLAN configuration parameters is shown in **Table 9**.
 
-The description of VLAN configuration parameters is shown in **Table&nbsp;9**.
+** Table 9**:  VLAN Parameter Description
 
-<b> Table 9</b>:  VLAN Parameter Description
-
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-<tbody>
-	<tr>
-		<td>Name</td>
-		<td>VLAN name</td>
-	</tr>
-	<tr>
-		<td>ID</td>
-		<td>VLAN ID</td>
-	</tr>
-	<tr>
-		<td>Enable</td>
-		<td>
-		Enables or disables VLAN
-			<ul>
-				<li>0: Disable</li>
-				<li>1: Enable</li>
-			</ul>
-		</td>
-	</tr>
-</tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Name | VLAN name |
+| ID | VLAN ID |
+| Enable | Enables or disables VLAN0: Disable1: Enable |
 
 6. Click **Save** to complete the WAN and VLAN configuration.
 
@@ -632,209 +422,112 @@ The security gateway (SeGW) can provide a security protocol at the network layer
 
 The gNB disables the IPsec by default.
 
-1. Select **Network** and then **IPsec** to enter the IPsec configuration page, as shown in **Figure&nbsp;18**.
+1. Select **Network** and then **IPsec** to enter the IPsec configuration page, as shown in **Figure 18**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/18.configure-ipsec.png"
-width="85%"
-caption="Configure IPsec"
-/>
+> **Image:** Configure IPsec
 
 2. Select enable or disable the IPsec function. The IPsec function is enabled by default.
 3. If the IPsec function is enabled, click `+` to add a IPsec tunnel.
-4. In **IPsec Tunnel List** area, click **Edit** to enter the edit dialog box, as shown in **Figure&nbsp;19**.
+4. In **IPsec Tunnel List** area, click **Edit** to enter the edit dialog box, as shown in **Figure 19**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/19.edit-ipsec-tunnel.png"
-width="85%"
-caption="Edit IPsec Tunnel"
-/>
+> **Image:** Edit IPsec Tunnel
 
-The description of basic parameters is shown in **Table&nbsp;10**.
+The description of basic parameters is shown in **Table 10**.
 
-<b> Table 10</b>:  IPsec Tunnel Basic Parameter Description
+** Table 10**:  IPsec Tunnel Basic Parameter Description
 
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-  <tbody>
-    <tr>
-      <td>Enabled</td>
-      <td>Enables or disables this IPsec tunnel.</td>
-    </tr>
-    <tr>
-      <td>LeftAuth</td>
-      <td>Local authentication type of the IPsec. Must be consistent with the security gateway side.<ul><li>PSK</li><li>PUBKEY</li> </ul> </td>
-    </tr>
-    <tr>
-      <td>RightAuth</td>
-      <td>Peer authentication type of the IPsec. Must be consistent with the security gateway side.<ul> <li>PSK</li><li>PUBKEY</li> </ul></td>
-    </tr>
-    <tr>
-      <td>Gateway</td>
-      <td>The security gateway (IPsec server) IP address. <br /> Make sure the IP address entered here matches the actual IP address on the security gateway side. </td>
-    </tr>
-    <tr>
-      <td>Right Subnet</td>
-      <td>IP address of the remote subnet, which must be consistent with the security gateway side. <br /> Message within this address range will be packed as a tunnel. </td>
-    </tr>
-    <tr>
-      <td>Right Id</td>
-      <td>Identification of the server end (0-48 digits string). <br /> It must be consistent with the security gateway side.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Enabled | Enables or disables this IPsec tunnel. |
+| LeftAuth | Local authentication type of the IPsec. Must be consistent with the security gateway side.PSKPUBKEY |
+| RightAuth | Peer authentication type of the IPsec. Must be consistent with the security gateway side.PSKPUBKEY |
+| Gateway | The security gateway (IPsec server) IP address.Make sure the IP address entered here matches the actual IP address on the security gateway side. |
+| Right Subnet | IP address of the remote subnet, which must be consistent with the security gateway side.Message within this address range will be packed as a tunnel. |
+| Right Id | Identification of the server end (0-48 digits string).It must be consistent with the security gateway side. |
 
 :::warning
-It is highly recommended that for the **Advanced Setting** fields you use the default values. Improper changes may lead to system malfunctions. <br /> Changes in the **LeftAuth** and **RightAuth** values are not recommended.
+It is highly recommended that for the **Advanced Setting** fields you use the default values. Improper changes may lead to system malfunctions. 
+ Changes in the **LeftAuth** and **RightAuth** values are not recommended.
 :::
 
 The **Advanced Setting** fields become particularly important to network operations as areas become denser with users.
 
-The description of advanced parameters is shown in **Table&nbsp;11**.
+The description of advanced parameters is shown in **Table 11**.
 
-<b> Table 11</b>:  Advanced Parameter Description of IPsec Tunnel Mode
+** Table 11**:  Advanced Parameter Description of IPsec Tunnel Mode
 
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-  <tbody>
-    <tr>
-      <td>Left Id</td>
-      <td>The Identification of the client end (0-48 digit string). <br /> It must be consistent with the security gateway side. If there is no security gateway left identifier, leave this field empty. </td>
-    </tr>
-    <tr>
-      <td>LeftCert</td>
-      <td>If set <b>LeftAuth</b> to <b>Pubkey</b>, the parameter needs to be set. Certificate name. On this version is clientCert.derpsk.  </td>
-    </tr>
-    <tr>
-      <td>LeftSourceIp</td>
-      <td>The Virtual address allocation assigned by the system. If absent, use the local IP address </td>
-    </tr>
-    <tr>
-      <td>Left Subnet</td>
-      <td>The IP address of the local subnet.</td>
-    </tr>
-    <tr>
-      <td>Fragmentation</td>
-      <td>
-      The type of fragmentation
-        <ul>
-          <li>YES</li>
-          <li>ACCEPT</li>
-          <li>FORCE</li>
-          <li>NO</li>
-        </ul>
-      </td>
-    </tr>
-		<tr>
-			<td>IKE Encryption</td>
-			<td>The Internet Key Exchange (IKE) encryption method. <br /> IKE is a protocol used to ensure security for virtual private network (VPN) negotiation and remote host or network access.<ul><li>AES128</li><li>AES256</li><li>3DES</li><li>DES</li></ul></td>
-		</tr>
-    <tr>
-			<td>IKE DH Group</td>
-			<td>IKE Diffie-Hellman (DF) groups set key size and strength used in the key exchange process. It enable devices to agree on a secret key without direct transmission while enhancing security in the IKE protocol.<ul><li>MODP768</li><li>MODP1024</li>	<li>MODP1536</li>	<li>MODP2048</li><li>MODP4096</li></ul></td>
-		</tr>
-    <tr>
-			<td>IKE Authentication</td>
-			<td>Authentication algorithm<ul><li>SHA1</li><li>SHA1_160</li><li>SHA256_96</li><li>SHA256</li></ul></td>
-		</tr>
-    <tr>
-			<td>ESP Encryption</td>
-			<td>Encapsulating Security Payload (ESP) – member of the IPsec protocol suite that provides origin authenticity, integrity, and confidentiality protection of packets.<ul><li>AES128</li><li>AES256</li><li>3DES</li><li>DES</li></ul></td>
-		</tr>
-    <tr>
-			<td>ESP DH Group</td>
-			<td>ESP Diffie-Hellman (DF) groups determine key size and strength for securing communication in the IPSec protocol. It enhancesencryption in a concise manner.	<ul><li>MODP768</li><li>MODP1024</li><li>MODP1536</li><li>MODP2048</li><li>MODP4096</li></ul></td>
-		</tr>
-    <tr>
-			<td>ESP Authentication</td>
-			<td>ESP Authentication algorithm<ul><li>SHA1</li><li>SHA1_160</li><li>SHA256_96</li><li>SHA256</li></ul></td>
-		</tr>
-		<tr>
-			<td>Key Life</td>
-			<td>IPsec security association (SA) renegotiation time. <br /> Format: Seconds, Minutes, Hours or Days. </td>
-		</tr>
-		<tr>
-			<td>IKELifeTime</td>
-			<td>IKE security association renegotiation time. <br />Format: Seconds, Minutes, Hours or Days. </td>
-		</tr>
-		<tr>
-			<td>RekeyMargin</td>
-			<td>Renegotiation time before the expiry of IKE life time (negotiate the IKE security association time before the expiry of IKE life time). <br />Format: Seconds, Minutes, Hours or Days.</td>
-		</tr>
-		<tr>
-			<td>Dpdaction</td>
-			<td>DPD stands for dead peer detection (DPD) protocol. Determines what action to take when a gateway exception occurs.<ul>	<li>None</li>	<li>Clear</li><li>Hold</li><li>Restart</li>	</ul>	</td>
-		</tr>
-		<tr>
-			<td>Dpddelay</td>
-			<td>Time interval for sending the DPD detection message. <br />Format: Seconds, Minutes, Hours or Days.</td>
-		</tr>
-		<tr>
-			<td>Left Interface</td>
-			<td>The interface on the gNB side.</td>
-		</tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Left Id | The Identification of the client end (0-48 digit string).It must be consistent with the security gateway side. If there is no security gateway left identifier, leave this field empty. |
+| LeftCert | If setLeftAuthtoPubkey, the parameter needs to be set. Certificate name. On this version is clientCert.derpsk. |
+| LeftSourceIp | The Virtual address allocation assigned by the system. If absent, use the local IP address |
+| Left Subnet | The IP address of the local subnet. |
+| Fragmentation | The type of fragmentationYESACCEPTFORCENO |
+| IKE Encryption | The Internet Key Exchange (IKE) encryption method.IKE is a protocol used to ensure security for virtual private network (VPN) negotiation and remote host or network access.AES128AES2563DESDES |
+| IKE DH Group | IKE Diffie-Hellman (DF) groups set key size and strength used in the key exchange process. It enable devices to agree on a secret key without direct transmission while enhancing security in the IKE protocol.MODP768MODP1024MODP1536MODP2048MODP4096 |
+| IKE Authentication | Authentication algorithmSHA1SHA1_160SHA256_96SHA256 |
+| ESP Encryption | Encapsulating Security Payload (ESP) – member of the IPsec protocol suite that provides origin authenticity, integrity, and confidentiality protection of packets.AES128AES2563DESDES |
+| ESP DH Group | ESP Diffie-Hellman (DF) groups determine key size and strength for securing communication in the IPSec protocol. It enhancesencryption in a concise manner.MODP768MODP1024MODP1536MODP2048MODP4096 |
+| ESP Authentication | ESP Authentication algorithmSHA1SHA1_160SHA256_96SHA256 |
+| Key Life | IPsec security association (SA) renegotiation time.Format: Seconds, Minutes, Hours or Days. |
+| IKELifeTime | IKE security association renegotiation time.Format: Seconds, Minutes, Hours or Days. |
+| RekeyMargin | Renegotiation time before the expiry of IKE life time (negotiate the IKE security association time before the expiry of IKE life time).Format: Seconds, Minutes, Hours or Days. |
+| Dpdaction | DPD stands for dead peer detection (DPD) protocol. Determines what action to take when a gateway exception occurs.NoneClearHoldRestart |
+| Dpddelay | Time interval for sending the DPD detection message.Format: Seconds, Minutes, Hours or Days. |
+| Left Interface | The interface on the gNB side. |
 
+5. Input strong WAN configuration parameters, as shown in **Table 12**.
 
-5. Input strong WAN configuration parameters, as shown in **Table&nbsp;12**.
-
-<b> Table 12</b>:  Strong WAN Parameter Description
+** Table 12**:  Strong WAN Parameter Description
 
 | Parameter               | Description                                                       |
 |-------------------------|-------------------------------------------------------------------|
-| IKE Debug Level         | IKE debug level <br /> Range: -1,0,1,2,3,4                        |
-| ESP Debug Level         | ESP debug level <br /> Range: -1,0,1,2,3,4                        |
-| CFG Debug Level         | CFG debug level <br /> Range: -1,0,1,2,3,4                        |
-| KNL Debug Level         | KNL debug level <br /> Range: -1,0,1,2,3,4                        |
-| MGR Debug Level         | MGR debug level <br /> Range: -1,0,1,2,3,4                        |
-| ASN Debug Level         | ASN debug level <br /> Range: -1,0,1,2,3,4                        |
-| CHD Debug Level         | CHD debug level <br /> Range: -1,0,1,2,3,4                        |
-| LIB Debug Level         | LIB debug level <br /> Range: -1,0,1,2,3,4                        |
+| IKE Debug Level         | IKE debug level 
+ Range: -1,0,1,2,3,4                        |
+| ESP Debug Level         | ESP debug level 
+ Range: -1,0,1,2,3,4                        |
+| CFG Debug Level         | CFG debug level 
+ Range: -1,0,1,2,3,4                        |
+| KNL Debug Level         | KNL debug level 
+ Range: -1,0,1,2,3,4                        |
+| MGR Debug Level         | MGR debug level 
+ Range: -1,0,1,2,3,4                        |
+| ASN Debug Level         | ASN debug level 
+ Range: -1,0,1,2,3,4                        |
+| CHD Debug Level         | CHD debug level 
+ Range: -1,0,1,2,3,4                        |
+| LIB Debug Level         | LIB debug level 
+ Range: -1,0,1,2,3,4                        |
 | Port                    | Port number                                                       |
 | Port NAT T              | NAT T port number                                                 |
 | Retry Initiate Interval | Retry initiate interval                                           |
-| MTU                     | Maximum transmission unit <br /> The maximum value is 9600 bytes. |
-| MCS                     | MCS <br /> Range: 0 9600 bytes                                    |
+| MTU                     | Maximum transmission unit 
+ The maximum value is 9600 bytes. |
+| MCS                     | MCS 
+ Range: 0 9600 bytes                                    |
 
 6. Click **Save** to complete the IPsec configuration.
 
 ### DSCP Configuration
 
-1. In the navigation column on the left, select **Network** and then **DSCP** to enter the DSCP configuration page, as shown in **Figure&nbsp;20**.
+1. In the navigation column on the left, select **Network** and then **DSCP** to enter the DSCP configuration page, as shown in **Figure 20**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/20.configure-dscp.png"
-width="85%"
-caption="Configure DSCP"
-/>
+> **Image:** Configure DSCP
 
-2. Click `+` to display DSCP adding window as shown in **Figure&nbsp;21**.
+2. Click `+` to display DSCP adding window as shown in **Figure 21**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/21.add-a-dscp.png"
-width="85%"
-caption="Add a DSCP"
-/>
+> **Image:** Add a DSCP
 
-3. Input DSCP parameters, as shown in **Table&nbsp;13**.
+3. Input DSCP parameters, as shown in **Table 13**.
 
-<b> Table 13</b>:  Strong WAN Parameter Description
+** Table 13**:  Strong WAN Parameter Description
 
 | Parameter     | Description                                                                                 |
 |---------------|---------------------------------------------------------------------------------------------|
-| DSCP          | DSCP code is used to differentiate the priority level. <br /> Range from 0 to 63 (integer). |
-| VLAN Priority | Vlan priority <br /> Range from 0 to 7 (integer).                                           |
+| DSCP          | DSCP code is used to differentiate the priority level. 
+ Range from 0 to 63 (integer). |
+| VLAN Priority | Vlan priority 
+ Range from 0 to 7 (integer).                                           |
 
 4. Click **Save** to complete the DSCP setting.
 
@@ -852,58 +545,27 @@ This version does not support this menu.
 
 This function is for users that need to configure static routing.
 
-1. In the navigation column on the left, select **Network** and then **Static Routing** to enter the static routing configuration page, as shown in **Figure&nbsp;22**.
+1. In the navigation column on the left, select **Network** and then **Static Routing** to enter the static routing configuration page, as shown in **Figure 22**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/22.configure-static-routing.png"
-width="85%"
-caption="Configure Static Routing"
-/>
+> **Image:** Configure Static Routing
 
 This page displays the static route list.
 
-2. Click `+` to display static configuration parameters, as shown in **Figure&nbsp;23**.
+2. Click `+` to display static configuration parameters, as shown in **Figure 23**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/23.add-static-route.png"
-width="85%"
-caption="Add Static Route"
-/>
+> **Image:** Add Static Route
 
-Input the configuration parameters of the static route, which are given in **Table&nbsp;14**.
+Input the configuration parameters of the static route, which are given in **Table 14**.
 
-<b> Table 14</b>: Static Route Parameter Description
+** Table 14**: Static Route Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>IP Address Version</td>
-      <td>Profit <ul><li>IPv4</li><li>IPv6</li></ul></td>
-    </tr>
-    <tr>
-      <td>Port Name</td>
-      <td>Port Name</td>
-    </tr>
-    <tr>
-      <td>Destination Network</td>
-      <td>The destination IP address. </td>
-    </tr>
-    <tr>
-      <td>Subnet Mask</td>
-      <td>The subnet mask of target IP address.</td>
-    </tr>
-    <tr>
-      <td>Default Gateway</td>
-      <td>The gateway IP address of target IP address.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| IP Address Version | ProfitIPv4IPv6 |
+| Port Name | Port Name |
+| Destination Network | The destination IP address. |
+| Subnet Mask | The subnet mask of target IP address. |
+| Default Gateway | The gateway IP address of target IP address. |
 
 4. Click **Save** to complete the static route configuration.
 
@@ -919,21 +581,19 @@ For the Network Management System (NMS), an operator can configure their own man
 
 After configuring NMS, you can log in to NMS to check whether the gNBs have been added or not. Once added, the gNB can be configured and managed on the NMS.
 
-1. In the left navigation column, select **BTS Setting** and then **Management Server** as shown in **Figure&nbsp;24**.
+1. In the left navigation column, select **BTS Setting** and then **Management Server** as shown in **Figure 24**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/24.configure-network-management-server.png"
-width="85%"
-caption="Configure Network Management Server"
-/>
+> **Image:** Configure Network Management Server
 
-2. Input the network management parameters, whose descriptions are given in **Table&nbsp;15**.
+2. Input the network management parameters, whose descriptions are given in **Table 15**.
 
-<b> Table 15</b>: Network Management Server Parameter Description
+** Table 15**: Network Management Server Parameter Description
 
 | Parameter         | Description                                                                                                                                                                                                                   |
 |-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Management Server | The URL of the management server. <br /> Example: [http://172.17.9.82:8080/smallcell/AcsService](http://172.17.9.82:8080/smallcell/AcsService) <br /> When the NMS is hosted in the cloud, the domain name is also supported. |
+| Management Server | The URL of the management server. 
+ Example: [http://172.17.9.82:8080/smallcell/AcsService](http://172.17.9.82:8080/smallcell/AcsService) 
+ When the NMS is hosted in the cloud, the domain name is also supported. |
 | Period            | The period of the gNB and the NMS, range from 1 to 65535. The units are in minutes.                                                                                                                                           |
 | OMC Vendor        | The vendor that provides the NMS.                                                                                                                                                                                             |
 
@@ -941,68 +601,26 @@ caption="Configure Network Management Server"
 
 ### Performance Management
 
-1. In the left navigation column, select **BTS Setting** and then **Performance Management** as shown in **Figure&nbsp;25**.
+1. In the left navigation column, select **BTS Setting** and then **Performance Management** as shown in **Figure 25**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/25.performance-management.png"
-width="85%"
-caption="Performance Management"
-/>
+> **Image:** Performance Management
 
-2. Input the performance management parameters, whose descriptions are given in in **Table&nbsp;16**.
+2. Input the performance management parameters, whose descriptions are given in in **Table 16**.
 
-<b> Table 16</b>: Performance Management Parameter Description
+** Table 16**: Performance Management Parameter Description
 
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>PM</td>
-			<td>Enables or disables performance management.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-		</tr>
-		<tr>
-			<td>Alise</td>
-			<td>Alise</td>
-		</tr>
-		<tr>
-			<td>URL</td>
-			<td><a href="http://localhost.net" target="_blank">http://localhost.net</a> </td>
-		</tr>
-		<tr>
-			<td>Username</td>
-			<td>Username</td>
-		</tr>
-		<tr>
-			<td>Password</td>
-			<td>Password</td>
-		</tr>
-		<tr>
-			<td>Periodic Upload Interval</td>
-			<td>Periodic upload interval</td>
-		</tr>
-		<tr>
-			<td>Periodic Upload Time</td>
-			<td>Periodic upload time</td>
-		</tr>
-		<tr>
-			<td>Replenish</td>
-			<td>Enables or disables replenish</td>
-		</tr>
-		<tr>
-			<td>Replenish Start Time</td>
-			<td>Replenish start time</td>
-		</tr>
-		<tr>
-			<td>Replenish End Time</td>
-			<td>Replenish end time</td>
-		</tr>
-	</tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| PM | Enables or disables performance management.ON: EnableOFF: Disable |
+| Alise | Alise |
+| URL | http://localhost.net |
+| Username | Username |
+| Password | Password |
+| Periodic Upload Interval | Periodic upload interval |
+| Periodic Upload Time | Periodic upload time |
+| Replenish | Enables or disables replenish |
+| Replenish Start Time | Replenish start time |
+| Replenish End Time | Replenish end time |
 
 3. Click **Save** to complete the performance management configuration.
 
@@ -1012,13 +630,9 @@ caption="Performance Management"
 
 This gNB supports GPS synchronization in this version.
 
-1. In the left navigation column, select **BTS Setting** and then **Sync Setting** to enter the synchronization configuration page, as shown in **Figure&nbsp;26**.
+1. In the left navigation column, select **BTS Setting** and then **Sync Setting** to enter the synchronization configuration page, as shown in **Figure 26**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/26.synchronization-mode-setting.png"
-width="85%"
-caption="Synchronization Mode Setting"
-/>
+> **Image:** Synchronization Mode Setting
 
 2. Select **GPS** source.
 -  GPS
@@ -1027,7 +641,7 @@ caption="Synchronization Mode Setting"
 -  GALILEO
 -  QZSS
 
-3. Input PPS time offset. Range is from 0 to 5,000,000&nbsp;ns.
+3. Input PPS time offset. Range is from 0 to 5,000,000 ns.
 4. Click **Save** to complete the synchronization setting.
 
 ### Energy Saving Configuration
@@ -1040,13 +654,9 @@ In this software version, energy saving is not be supported.
 
 The License Management menu may be used to import license files for optional features, such as regulatory certificates of authorization to operate. When imported, the files are stored in the gNB memory and shown in the License List area of this window.
 
-1. In the left navigation column, select **BTS Setting** and then **License Management** to enter the License Management page, as shown in **Figure&nbsp;27**.
+1. In the left navigation column, select **BTS Setting** and then **License Management** to enter the License Management page, as shown in **Figure 27**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/27.license-management.png"
-width="85%"
-caption="License Management"
-/>
+> **Image:** License Management
 
 Remain Time Indicates the remaining days of the License. If 0 is displayed, apply for a License and upload it to update it as soon as possible. Otherwise, the cell cannot be activated or user access is restricted.
 
@@ -1065,13 +675,9 @@ This version does not support the menu.
 
 ### Cell Management
 
-In the left navigation column, select **BTS Setting** and then **Device Topology** to enter the device topology page, as shown in **Figure&nbsp;28**.
+In the left navigation column, select **BTS Setting** and then **Device Topology** to enter the device topology page, as shown in **Figure 28**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/28.cell-management.png"
-width="85%"
-caption="Cell Management"
-/>
+> **Image:** Cell Management
 
 :::tip NOTE
 This version supports one cell.
@@ -1081,13 +687,9 @@ This version supports one cell.
 
 ### LTE Neighbor Frequency and Cell Configuration
 
-1. In the left navigation column, select **NR Setting** and then **LTE Freq/Cell** to enter the LTE neighbor frequency and cell configuration page, as shown in **Figure&nbsp;29**.
+1. In the left navigation column, select **NR Setting** and then **LTE Freq/Cell** to enter the LTE neighbor frequency and cell configuration page, as shown in **Figure 29**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/29.lte-neighbor-frequency-cell-settings.png"
-width="85%"
-caption="LTE Neighbor Frequency/Cell Settings"
-/>
+> **Image:** LTE Neighbor Frequency/Cell Settings
 
 :::tip NOTE
 Users can add, modify, and delete the LTE neighbor frequency and cell. Up to eight LTE neighbor frequencies and 16 LTE neighbor cells can be set.
@@ -1097,30 +699,40 @@ Users can add, modify, and delete the LTE neighbor frequency and cell. Up to eig
 
 #### LTE Neighbor Frequency
 
-3. In the neighbor frequency list, click `+` to enter the page for adding an LTE neighbor frequency. The parameter descriptions are given in **Table&nbsp;17**.
+3. In the neighbor frequency list, click `+` to enter the page for adding an LTE neighbor frequency. The parameter descriptions are given in **Table 17**.
 
-<b> Table 17</b>: LTE Neighbor Frequency Parameter Description
+** Table 17**: LTE Neighbor Frequency Parameter Description
 
 | Parameter                | Description                                                                                                                                                                                                                                                                                                                                                                         |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CarrierFreq              | The carrier frequency. <br /> Range is from 0 to 3279165 (integer).                                                                                                                                                                                                                                                                                                                 |
+| CarrierFreq              | The carrier frequency. 
+ Range is from 0 to 3279165 (integer).                                                                                                                                                                                                                                                                                                                 |
 | AllowdMeasBandWidth      | The allowable measurement of bandwidth.                                                                                                                                                                                                                                                                                                                                             |
-| PresAntenaPort1          | The current antenna port. <br /> Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                   |
-| Q_OffsetRange            | Indicates the difference in signal level between the serving and neighboring gNBs, as determined by the received signal level at the UE. If the received signal level is better from a neighboring gNB by at least this amount of difference in dB, the UE will reselect the other cell. <br /> The range is -24 to +24. A typical value is 0&nbsp;dB.                              |
-| WideBandRsrqMeas         | The RSRQ measurement of the bandwidth. <br /> Value is 0 or 1.                                                                                                                                                                                                                                                                                                                      |
-| CellReselection Priority | Priority of the cell reselection to cells at this frequency. <br /> Range is 0 to 7 (integer). A typical value is 4.                                                                                                                                                                                                                                                                |
-| ThreshXHigh              | The cell reselection threshold for higher priority inter-band frequency. It represents the access threshold level, at which the UE will leave the serving cell and reselect another cell at the target frequency. This occurs if the target frequency cell has a higher reselection priority than the serving cell. <br /> Range is 0 to 31&nbsp;dB. A typical value is 18&nbsp;dB. |
-| ThreshXLow               | The cell reselection threshold for lower priority inter-band frequency. It epresents the access threshold level at which the UE will leave the serving cell and reselect another cell at the target frequency. This occurs if the target frequency cell has an absolute priority lower than the serving cell. <br /> Range is 0 to 31&nbsp;dB. A typical value is 13&nbsp;dB.       |
-| QRxLevMin                | The minimum received signal level at which user equipment (UE) will detect a neighboring gNB’s signal. <br /> Range is from -70 to -22.                                                                                                                                                                                                                                             |
-| QQualMin                 | The minimum received signal quality. <br /> Range is from -34 to -3.                                                                                                                                                                                                                                                                                                                |
-| PMaxEUTRA                | The maximum transmit power that UEs in this cell are allowed to use in the uplink. <br /> Range is -30 to 33&nbsp;dBm. A typical value is 23&nbsp;dBm.                                                                                                                                                                                                                              |
+| PresAntenaPort1          | The current antenna port. 
+ Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                   |
+| Q_OffsetRange            | Indicates the difference in signal level between the serving and neighboring gNBs, as determined by the received signal level at the UE. If the received signal level is better from a neighboring gNB by at least this amount of difference in dB, the UE will reselect the other cell. 
+ The range is -24 to +24. A typical value is 0 dB.                              |
+| WideBandRsrqMeas         | The RSRQ measurement of the bandwidth. 
+ Value is 0 or 1.                                                                                                                                                                                                                                                                                                                      |
+| CellReselection Priority | Priority of the cell reselection to cells at this frequency. 
+ Range is 0 to 7 (integer). A typical value is 4.                                                                                                                                                                                                                                                                |
+| ThreshXHigh              | The cell reselection threshold for higher priority inter-band frequency. It represents the access threshold level, at which the UE will leave the serving cell and reselect another cell at the target frequency. This occurs if the target frequency cell has a higher reselection priority than the serving cell. 
+ Range is 0 to 31 dB. A typical value is 18 dB. |
+| ThreshXLow               | The cell reselection threshold for lower priority inter-band frequency. It epresents the access threshold level at which the UE will leave the serving cell and reselect another cell at the target frequency. This occurs if the target frequency cell has an absolute priority lower than the serving cell. 
+ Range is 0 to 31 dB. A typical value is 13 dB.       |
+| QRxLevMin                | The minimum received signal level at which user equipment (UE) will detect a neighboring gNB’s signal. 
+ Range is from -70 to -22.                                                                                                                                                                                                                                             |
+| QQualMin                 | The minimum received signal quality. 
+ Range is from -34 to -3.                                                                                                                                                                                                                                                                                                                |
+| PMaxEUTRA                | The maximum transmit power that UEs in this cell are allowed to use in the uplink. 
+ Range is -30 to 33 dBm. A typical value is 23 dBm.                                                                                                                                                                                                                              |
 | PLMNID                   | PLMN ID                                                                                                                                                                                                                                                                                                                                                                             |
 
 #### LTE Neighbor Cell
 
-4. In the neighbor cell list, click `+` to enter the page for adding a LTE neighbor cell, the parameter descriptions are given in **Table&nbsp;18**.
+4. In the neighbor cell list, click `+` to enter the page for adding a LTE neighbor cell, the parameter descriptions are given in **Table 18**.
 
-<b> Table 18</b>: LTE Neighbor Cell Parameter Description
+** Table 18**: LTE Neighbor Cell Parameter Description
 
 | Parameter           | Description                                                                                                                                                                                                                                                                                                                                                                                   |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1128,27 +740,33 @@ Users can add, modify, and delete the LTE neighbor frequency and cell. Up to eig
 | CID                 | Unique identification number for the Cell.                                                                                                                                                                                                                                                                                                                                                    |
 | EUTRACarrierARFC    | Frequency point of the neighbor cell.                                                                                                                                                                                                                                                                                                                                                         |
 | PhyCellID           | Physical Cell Identifier (PCI) of the neighbor cell.                                                                                                                                                                                                                                                                                                                                          |
-| QOffset             | Frequency offset this neighbor cell. Indicates the difference in signal level between the serving and this neighboring eNB, as determined by the received signal level at the UE. If the received signal level is better from a neighboring eNB by at least this amount of difference in dB, the UE will reselect this cell. <br /> Range is +24 to -24. <br /> A typical value is 0&nbsp;dB. |
-| QRxLevMinOffsetCell | Cell minimum received level offset. This parameter represents the cell’s minimum received level offset. It is used only when the UE resides in the VPLMN and cell selection is triggered due to periodic searches for high-priority PLMNS. <br /> Range is from 1 to 8.                                                                                                                       |
-| QQualMinOffsetCell  | Cell minimum received signal quality offset. This parameter represents the cell’s minimum received signal quality offset. <br /> Range is from 1 to 8.                                                                                                                                                                                                                                        |
-| CIO                 | Cell Individual Offset (CIO) is this neighbor gNB’s cell offset, which is one of the variables used to determine which gNB will best serve a given UE. <br /> Range is +24 to -24. A typical value is 0&nbsp;dB.                                                                                                                                                                              |
-| Blacklisted         | Blacklisted <br /> Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                                           |
-| TAC                 | Tracking Area Code (TAC) of this neighbor cell <br /> Range is from 0 to 16777215.                                                                                                                                                                                                                                                                                                            |
-| eNB Type            | eNB Type <br /> Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                                              |
-| eNB ID              | The global identity of the E-UTRAN cell <br /> Range is from 0 to 1048575.                                                                                                                                                                                                                                                                                                                    |
-| No Remove           | No remove identity <br /> ON or OFF.                                                                                                                                                                                                                                                                                                                                                          |
+| QOffset             | Frequency offset this neighbor cell. Indicates the difference in signal level between the serving and this neighboring eNB, as determined by the received signal level at the UE. If the received signal level is better from a neighboring eNB by at least this amount of difference in dB, the UE will reselect this cell. 
+ Range is +24 to -24. 
+ A typical value is 0 dB. |
+| QRxLevMinOffsetCell | Cell minimum received level offset. This parameter represents the cell’s minimum received level offset. It is used only when the UE resides in the VPLMN and cell selection is triggered due to periodic searches for high-priority PLMNS. 
+ Range is from 1 to 8.                                                                                                                       |
+| QQualMinOffsetCell  | Cell minimum received signal quality offset. This parameter represents the cell’s minimum received signal quality offset. 
+ Range is from 1 to 8.                                                                                                                                                                                                                                        |
+| CIO                 | Cell Individual Offset (CIO) is this neighbor gNB’s cell offset, which is one of the variables used to determine which gNB will best serve a given UE. 
+ Range is +24 to -24. A typical value is 0 dB.                                                                                                                                                                              |
+| Blacklisted         | Blacklisted 
+ Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                                           |
+| TAC                 | Tracking Area Code (TAC) of this neighbor cell 
+ Range is from 0 to 16777215.                                                                                                                                                                                                                                                                                                            |
+| eNB Type            | eNB Type 
+ Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                                              |
+| eNB ID              | The global identity of the E-UTRAN cell 
+ Range is from 0 to 1048575.                                                                                                                                                                                                                                                                                                                    |
+| No Remove           | No remove identity 
+ ON or OFF.                                                                                                                                                                                                                                                                                                                                                          |
 
 5. Click **Save** to complete the setting of the LTE neighbor frequencies and cells.
 
 ### NR Neighbor Frequency and Cell Configuration
 
-1. In the left navigation column, select **NR Setting** and then **NR Freq/Cell** to enter the NR neighbor frequency and cell configuration page, as shown in **Figure&nbsp;30**.
+1. In the left navigation column, select **NR Setting** and then **NR Freq/Cell** to enter the NR neighbor frequency and cell configuration page, as shown in **Figure 30**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/30.nr-neighbor-frequency-cell-settings.png"
-width="85%"
-caption="NR Neighbor Frequency/Cell Settings"
-/>
+> **Image:** NR Neighbor Frequency/Cell Settings
 
 :::tip NOTE
 Users can add, modify, and delete the NR neighbor frequency and cell.
@@ -1156,418 +774,209 @@ Users can add, modify, and delete the NR neighbor frequency and cell.
 
 #### Intra Frequency Measurement
 
-2. In the IntraFREQ Measurement list, click `+` to enter the page for adding an intra frequency measurement, the parameter descriptions are given in **Table&nbsp;19**.
+2. In the IntraFREQ Measurement list, click `+` to enter the page for adding an intra frequency measurement, the parameter descriptions are given in **Table 19**.
 
-<b> Table 19</b>: Intra Frequency Measurement Parameter Description
+** Table 19**: Intra Frequency Measurement Parameter Description
 
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>SSBlocksConsolidationRsrp</td>
-			<td>The consolidation of Synchronization Signal and PBCH block (SSB) blocks of Reference Signal Receiving Power (RSRP). <br /> Range is from 0 to 127. </td>
-		</tr>
-		<tr>
-			<td>SSBlocksConsolidationRsrq</td>
-			<td>The consolidation of SSB blocks of Reference Signal Receiving Quality (RSRQ). <br /> Range is from 0 to 127. </td>
-		</tr>
-		<tr>
-			<td>SSBlocksConsolidationSinr</td>
-			<td>The consolidation of SSB blocks of Signal to Interference plus Noise Ratio (SINR). <br /> Range is from 0 to 127.</td>
-		</tr>
-		<tr>
-			<td>NrofSSBlocksToAverage</td>
-			<td>This parameter indicates the signal quality of a cell in NR measurement of SSB. <br /> Range is from 2 to 16. </td>
-		</tr>
-		<tr>
-			<td>RsrpOffsetSSB</td>
-			<td>The SSB offset of RSRP. <br /> Range is from 0 to 30.</td>
-		</tr>
-		<tr>
-			<td>RsrqOffsetSSB</td>
-			<td>The SSB offset of RSRQ. <br /> Range is from 0 to 30. </td>
-		</tr>
-		<tr>
-			<td>SinrOffsetSSB</td>
-			<td>The SSB offset of SINR. <br /> Range is from 0 to 30. </td>
-		</tr>
-		<tr>
-			<td>RsrpOffsetCsiRs</td>
-			<td>The CSI-RS offset of RSRP. <br /> Range is from 0 to 30. </td>
-		</tr>
-		<tr>
-			<td>RsrqOffsetCsiRs</td>
-			<td>The CSI-RS offset of RSRQ. <br /> Range is from 0 to 30. </td>
-		</tr>
-		<tr>
-			<td>SinrOffsetCsiRs</td>
-			<td>The CSI-RS offset of SINR. <br /> Range is from 0 to 30. </td>
-		</tr>
-		<tr>
-			<td>BitmapType</td>
-			<td>Bitmap type <br /> Range is 0, 1, 2.  </td>
-		</tr>
-		<tr>
-			<td>Bitmap</td>
-			<td>Bitmap <br /> Range is from 0 to 18446744073709551615. </td>
-		</tr>
-		<tr>
-			<td>DeriveSSBIndexFromCell</td>
-			<td>Whether the frame boundaries of all cells at this frequency point are the same. Value is 0 or 1. </td>
-		</tr>
-		<tr>
-			<td>SSBFrequency</td>
-			<td>The frequency of SSB. <br /> Range is from 0 to 3279165. </td>
-		</tr>
-		<tr>
-			<td>SubcarrierSpacing</td>
-			<td>The space between subcarriers.  </td>
-		</tr>
-		<tr>
-			<td>Content Cell</td>
-			<td>The period of (SSB-based RRM Measurement Timing Configuration) SMTC.<ul><li>sf5</li><li>sf10</li><li>sf20</li><li>sf40</li><li>sf80</li><li>sf160</li></ul></td>
-		</tr>
-		<tr>
-			<td>SmtcOffset</td>
-			<td>The offset of SMTC. <br /> Range is from 0 to 159. </td>
-		</tr>
-		<tr>
-			<td>SmtcDuration</td>
-			<td>The duration time of SMTC. </td>
-		</tr>
-		<tr>
-			<td>PLMNID</td>
-			<td>PLMN ID</td>
-		</tr>
-	</tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| SSBlocksConsolidationRsrp | The consolidation of Synchronization Signal and PBCH block (SSB) blocks of Reference Signal Receiving Power (RSRP).Range is from 0 to 127. |
+| SSBlocksConsolidationRsrq | The consolidation of SSB blocks of Reference Signal Receiving Quality (RSRQ).Range is from 0 to 127. |
+| SSBlocksConsolidationSinr | The consolidation of SSB blocks of Signal to Interference plus Noise Ratio (SINR).Range is from 0 to 127. |
+| NrofSSBlocksToAverage | This parameter indicates the signal quality of a cell in NR measurement of SSB.Range is from 2 to 16. |
+| RsrpOffsetSSB | The SSB offset of RSRP.Range is from 0 to 30. |
+| RsrqOffsetSSB | The SSB offset of RSRQ.Range is from 0 to 30. |
+| SinrOffsetSSB | The SSB offset of SINR.Range is from 0 to 30. |
+| RsrpOffsetCsiRs | The CSI-RS offset of RSRP.Range is from 0 to 30. |
+| RsrqOffsetCsiRs | The CSI-RS offset of RSRQ.Range is from 0 to 30. |
+| SinrOffsetCsiRs | The CSI-RS offset of SINR.Range is from 0 to 30. |
+| BitmapType | Bitmap typeRange is 0, 1, 2. |
+| Bitmap | BitmapRange is from 0 to 18446744073709551615. |
+| DeriveSSBIndexFromCell | Whether the frame boundaries of all cells at this frequency point are the same. Value is 0 or 1. |
+| SSBFrequency | The frequency of SSB.Range is from 0 to 3279165. |
+| SubcarrierSpacing | The space between subcarriers. |
+| Content Cell | The period of (SSB-based RRM Measurement Timing Configuration) SMTC.sf5sf10sf20sf40sf80sf160 |
+| SmtcOffset | The offset of SMTC.Range is from 0 to 159. |
+| SmtcDuration | The duration time of SMTC. |
+| PLMNID | PLMN ID |
 
 #### Inter Frequency Measurement
 
-3. In the InterFREQ Measurement list, click `+` to enter the page for adding an inter frequency measurement, the parameter descriptions are given in **Table&nbsp;20**.
+3. In the InterFREQ Measurement list, click `+` to enter the page for adding an inter frequency measurement, the parameter descriptions are given in **Table 20**.
 
-<b> Table 20</b>: Inter Frequency Measurement Parameter Description
+** Table 20**: Inter Frequency Measurement Parameter Description
 
-<table>
-	<thead>
-		<tr>
-      <th>Parameter</th>
-      <th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-      <td>Enable</td>
-      <td>Enables or disables the inter frequency measurement function. <ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-		</tr>
-		<tr>
-      <td>SSBFrequency</td>
-      <td>The frequency of SSB. <br /> Range is from 0 to 3279165.</td>
-		</tr>
-    <tr>
-      <td>SubcarrierSpacing</td>
-      <td>The space between subcarriers.</td>
-    </tr>
-		<tr>
-      <td>SmtcPeriodicity</td>
-      <td>The period of (SSB-based RRM Measurement Timing Configuration) SMTC.<ul><li>sf5</li><li>sf10</li><li>sf20</li><li>sf40</li><li>sf80</li><li>sf160</li></ul></td>
-		</tr>
-    <tr>
-      <td>SmtcOffset</td>
-      <td>The offset of SMTC. <br /> Range is from 0 to 159. </td>
-    </tr>
-    <tr>
-      <td>SmtcDuration</td>
-      <td>The duration time of SMTC.</td>
-    </tr>
-    <tr>
-      <td>SSBlocksConsolidationRsrp</td>
-      <td>The consolidation of Synchronization Signal and PBCH block (SSB) blocks of Reference Signal Receiving Power (RSRP). <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>SSBlocksConsolidationRsrq</td>
-      <td>The consolidation of SSB blocks of Reference Signal Receiving Quality (RSRQ). <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>SSBlocksConsolidationSinr</td>
-      <td>The consolidation of SSB blocks of Signal to Interference plus Noise Ratio (SINR). <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>NrofSSBlocksToAverage</td>
-      <td>This parameter indicates the signal quality of a cell in NR measurement of SSB. <br /> Range is from 2 to 16.</td>
-    </tr>
-    <tr>
-      <td>RsrpOffsetSSB</td>
-      <td>The SSB offset of RSRP. <br /> Range is from 0 to 30.</td>
-    </tr>
-    <tr>
-      <td>RsrqOffsetSSB</td>
-      <td>The SSB offset of RSRQ. <br /> Range is from 0 to 30.</td>
-    </tr>
-    <tr>
-      <td>SinrOffsetSSB</td>
-      <td>The SSB offset of SINR. <br /> Range is from 0 to 30.</td>
-    </tr>
-    <tr>
-      <td>RsrpOffsetCsiRs</td>
-      <td>The CSI-RS offset of RSRP. <br /> Range is from 0 to 30.</td>
-    </tr>
-    <tr>
-      <td>RsrqOffsetCsiRs</td>
-      <td>The CSI-RS offset of RSRQ. <br /> Range is from 0 to 30.</td>
-    </tr>
-    <tr>
-      <td>SinrOffsetCsiRs</td>
-      <td>The CSI-RS offset of SINR. <br /> Range is from 0 to 30.</td>
-    </tr>
-    <tr>
-      <td>BitmapType</td>
-      <td>Bitmap type <br /> Values are 0, 1, 2.</td>
-    </tr>
-    <tr>
-      <td>Bitmap</td>
-      <td>Bitmap <br /> Range is from 0 to 18446744073709551615.</td>
-    </tr>
-    <tr>
-      <td>DeriveSSBIndexFromCell</td>
-      <td>Whether the frame boundaries of all cells at this frequency point are the same. <br /> Value is 0 or 1.</td>
-    </tr>
-    <tr>
-      <td>FreqBandIndicatorNR</td>
-      <td>The indicator of NR frequency bandwidth. <br /> Range is from 0 to 1024.</td>
-    </tr>
-    <tr>
-      <td>Offset To Point A</td>
-      <td>The offset of Point A. <br /> Range is from 0 to 2199.</td>
-    </tr>
-    <tr>
-      <td>SSB Sub Carrier Offset</td>
-      <td>The sub carrier offset of SSB. <br /> Range is from 0 to 31.</td>
-    </tr>
-    <tr>
-      <td>PLMNID</td>
-      <td>PLMN ID</td>
-    </tr>
-	</tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Enable | Enables or disables the inter frequency measurement function.ON: EnableOFF: Disable |
+| SSBFrequency | The frequency of SSB.Range is from 0 to 3279165. |
+| SubcarrierSpacing | The space between subcarriers. |
+| SmtcPeriodicity | The period of (SSB-based RRM Measurement Timing Configuration) SMTC.sf5sf10sf20sf40sf80sf160 |
+| SmtcOffset | The offset of SMTC.Range is from 0 to 159. |
+| SmtcDuration | The duration time of SMTC. |
+| SSBlocksConsolidationRsrp | The consolidation of Synchronization Signal and PBCH block (SSB) blocks of Reference Signal Receiving Power (RSRP).Range is from 0 to 127. |
+| SSBlocksConsolidationRsrq | The consolidation of SSB blocks of Reference Signal Receiving Quality (RSRQ).Range is from 0 to 127. |
+| SSBlocksConsolidationSinr | The consolidation of SSB blocks of Signal to Interference plus Noise Ratio (SINR).Range is from 0 to 127. |
+| NrofSSBlocksToAverage | This parameter indicates the signal quality of a cell in NR measurement of SSB.Range is from 2 to 16. |
+| RsrpOffsetSSB | The SSB offset of RSRP.Range is from 0 to 30. |
+| RsrqOffsetSSB | The SSB offset of RSRQ.Range is from 0 to 30. |
+| SinrOffsetSSB | The SSB offset of SINR.Range is from 0 to 30. |
+| RsrpOffsetCsiRs | The CSI-RS offset of RSRP.Range is from 0 to 30. |
+| RsrqOffsetCsiRs | The CSI-RS offset of RSRQ.Range is from 0 to 30. |
+| SinrOffsetCsiRs | The CSI-RS offset of SINR.Range is from 0 to 30. |
+| BitmapType | Bitmap typeValues are 0, 1, 2. |
+| Bitmap | BitmapRange is from 0 to 18446744073709551615. |
+| DeriveSSBIndexFromCell | Whether the frame boundaries of all cells at this frequency point are the same.Value is 0 or 1. |
+| FreqBandIndicatorNR | The indicator of NR frequency bandwidth.Range is from 0 to 1024. |
+| Offset To Point A | The offset of Point A.Range is from 0 to 2199. |
+| SSB Sub Carrier Offset | The sub carrier offset of SSB.Range is from 0 to 31. |
+| PLMNID | PLMN ID |
 
 #### NR Neighbor Cell
 
-4. In the Cell Neigh list, click `+` to enter the page for adding a neighbor cell, the parameter descriptions are given in **Table&nbsp;21**.
+4. In the Cell Neigh list, click `+` to enter the page for adding a neighbor cell, the parameter descriptions are given in **Table 21**.
 
-<b> Table 21</b>: Neighbor Cell Parameter Description
+** Table 21**: Neighbor Cell Parameter Description
 
 | Parameter                  | Description                                                                                                                                                                                                                                                                                                                                                                               |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PLMNID                     | PLMN ID                                                                                                                                                                                                                                                                                                                                                                                   |
 | CID                        | Unique identification number for the Cell.                                                                                                                                                                                                                                                                                                                                                |
 | NRARFCN                    | Frequency point of the neighbor cell.                                                                                                                                                                                                                                                                                                                                                     |
-| SSBFrequency               | The frequency of SSB. <br /> Range is from 0 to 3279165.                                                                                                                                                                                                                                                                                                                                  |
-| ReferenceSubcarrierSpacing | The space between reference subcarriers. <br /> Range is from 0 to 4.                                                                                                                                                                                                                                                                                                                     |
-| PhyCellID                  | Physical Cell Identifier (PCI) of the neighbor cell. <br /> Range is from 0 to 1007.                                                                                                                                                                                                                                                                                                      |
-| QOffset                    | Frequency offset of this neighbor cell. Indicates the difference in signal level between the serving and this neighboring eNB, as determined by the received signal level at the UE. If the received signal level is better from a neighboring eNB by at least this amount of difference in dB, the UE will reselect this cell. <br /> Range is +24 to -24. A typical value is 0&nbsp;dB. |
-| QRxLevMinOffsetCell        | Cell minimum received level offset. This parameter represents the cell’s minimum received level offset. It is used only when the UE resides in the VPLMN and cell selection is triggered due to periodic searches for high-priority PLMNS. <br /> Range is from 1 to 8.                                                                                                                   |
-| QQualMinOffsetCell         | Cell minimum received signal quality offset. This parameter represents the cell’s minimum received signal quality offset. <br /> Range is from 1 to 8.                                                                                                                                                                                                                                    |
-| CIO                        | Cell Individual Offset (CIO) is this neighbor eNB’s cell offset, which is one of the variables used to determine which eNB will best serve a given UE. <br /> Range is +24 to -24. A typical value is 0&nbsp;dB.                                                                                                                                                                          |
+| SSBFrequency               | The frequency of SSB. 
+ Range is from 0 to 3279165.                                                                                                                                                                                                                                                                                                                                  |
+| ReferenceSubcarrierSpacing | The space between reference subcarriers. 
+ Range is from 0 to 4.                                                                                                                                                                                                                                                                                                                     |
+| PhyCellID                  | Physical Cell Identifier (PCI) of the neighbor cell. 
+ Range is from 0 to 1007.                                                                                                                                                                                                                                                                                                      |
+| QOffset                    | Frequency offset of this neighbor cell. Indicates the difference in signal level between the serving and this neighboring eNB, as determined by the received signal level at the UE. If the received signal level is better from a neighboring eNB by at least this amount of difference in dB, the UE will reselect this cell. 
+ Range is +24 to -24. A typical value is 0 dB. |
+| QRxLevMinOffsetCell        | Cell minimum received level offset. This parameter represents the cell’s minimum received level offset. It is used only when the UE resides in the VPLMN and cell selection is triggered due to periodic searches for high-priority PLMNS. 
+ Range is from 1 to 8.                                                                                                                   |
+| QQualMinOffsetCell         | Cell minimum received signal quality offset. This parameter represents the cell’s minimum received signal quality offset. 
+ Range is from 1 to 8.                                                                                                                                                                                                                                    |
+| CIO                        | Cell Individual Offset (CIO) is this neighbor eNB’s cell offset, which is one of the variables used to determine which eNB will best serve a given UE. 
+ Range is +24 to -24. A typical value is 0 dB.                                                                                                                                                                          |
 | Blacklisted                | Blacklisted. Value is 0 or 1.                                                                                                                                                                                                                                                                                                                                                             |
-| TAC                        | Tracking Area Code (TAC) of this neighbor cell. <br /> Range is from 0 to 16777215.                                                                                                                                                                                                                                                                                                       |
+| TAC                        | Tracking Area Code (TAC) of this neighbor cell. 
+ Range is from 0 to 16777215.                                                                                                                                                                                                                                                                                                       |
 | No Remove                  | No remove identity. ON or OFF.                                                                                                                                                                                                                                                                                                                                                            |
 | gNBIdLength                | The length of the gNB ID.                                                                                                                                                                                                                                                                                                                                                                 |
-
 
 5. Click **Save** to complete the setting of the NR neighbor frequencies and cells.
 
 ### SIB Configuration
 
-In the left navigation column, select **NR Setting**, and then choose **SIB** to enter the SIB configuration page, as shown in **Figure&nbsp;31**.
+In the left navigation column, select **NR Setting**, and then choose **SIB** to enter the SIB configuration page, as shown in **Figure 31**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/31.sib-setting.png"
-width="85%"
-caption="SIB Setting"
-/>
+> **Image:** SIB Setting
 
 The gNB supports SIB1 to SIB5. The following tables outline the supported SIB parameters and their corresponding descriptions:
 
-<b> Table 22</b>: SIB1 Parameter Description
+** Table 22**: SIB1 Parameter Description
 
 | Parameter       | Description                                                                                                                                                                                                                                                             |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| QRxLevMinSIB1   | The minimum received level of SIB1. <br /> Range is from -70 to -22.                                                                                                                                                                                                    |
-| Qqualminoffset  | Cell minimum received signal quality offset. This parameter represents the cell’s minimum received signal quality offset. <br /> Range is from 1 to 8.                                                                                                                  |
-| QRxLevMinOffset | Cell minimum received level offset. This parameter represents the cell’s minimum received level offset. It is used only when the UE resides in the VPLMN and cell selection is triggered due to periodic searches for high-priority PLMNS. <br /> Range is from 1 to 8. |
-| QQualMinSIB1    | The minimum received signal quality of SIB1. <br /> Range is from -43 to -12.                                                                                                                                                                                           |
+| QRxLevMinSIB1   | The minimum received level of SIB1. 
+ Range is from -70 to -22.                                                                                                                                                                                                    |
+| Qqualminoffset  | Cell minimum received signal quality offset. This parameter represents the cell’s minimum received signal quality offset. 
+ Range is from 1 to 8.                                                                                                                  |
+| QRxLevMinOffset | Cell minimum received level offset. This parameter represents the cell’s minimum received level offset. It is used only when the UE resides in the VPLMN and cell selection is triggered due to periodic searches for high-priority PLMNS. 
+ Range is from 1 to 8. |
+| QQualMinSIB1    | The minimum received signal quality of SIB1. 
+ Range is from -43 to -12.                                                                                                                                                                                           |
 
-<b> Table 23</b>: SIB2 Parameter Description
+** Table 23**: SIB2 Parameter Description
 
 | Parameter               | Description                                                                                                                                                                                                                                                                                                                             |
 |-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Enable                  | Enables or disables SIB2.                                                                                                                                                                                                                                                                                                               |
-| Qhyst                   | Delay time for reselection. In general the value of the parameter is 2. <br /> Range is from 0 to 15. <br /> This parameter will overestimate the signal strength of the serving cell to delay the cell reselection.                                                                                                                    |
-| QRxLevMinSIB2           | The minimum received level of SIB2. <br /> Range is from -70 to -22.                                                                                                                                                                                                                                                                    |
-| SIntraSearchP           | The threshold of intra frequency measurement. <br /> Range is from 0 to 31.                                                                                                                                                                                                                                                             |
-| TReselectionNR          | Cell reselection timer for NR. <br /> Range is from 0 to 7.                                                                                                                                                                                                                                                                             |
-| CellReselectionPriority | Priority of the cell reselection to cells at this frequency. <br /> Range is 0 to 7 (integer).                                                                                                                                                                                                                                          |
-| ThreshServingLowP       | The lower priority reselection threshold of serving frequency point. This parameter indicates the threshold when the serving frequency point moves to a lower priority inter-frequency or an Inter-RAT. It applies to the scenario when the UE moves to a lower priority inter-frequency or an Inter-RAT. <br /> Range is from 0 to 31. |
+| Qhyst                   | Delay time for reselection. In general the value of the parameter is 2. 
+ Range is from 0 to 15. 
+ This parameter will overestimate the signal strength of the serving cell to delay the cell reselection.                                                                                                                    |
+| QRxLevMinSIB2           | The minimum received level of SIB2. 
+ Range is from -70 to -22.                                                                                                                                                                                                                                                                    |
+| SIntraSearchP           | The threshold of intra frequency measurement. 
+ Range is from 0 to 31.                                                                                                                                                                                                                                                             |
+| TReselectionNR          | Cell reselection timer for NR. 
+ Range is from 0 to 7.                                                                                                                                                                                                                                                                             |
+| CellReselectionPriority | Priority of the cell reselection to cells at this frequency. 
+ Range is 0 to 7 (integer).                                                                                                                                                                                                                                          |
+| ThreshServingLowP       | The lower priority reselection threshold of serving frequency point. This parameter indicates the threshold when the serving frequency point moves to a lower priority inter-frequency or an Inter-RAT. It applies to the scenario when the UE moves to a lower priority inter-frequency or an Inter-RAT. 
+ Range is from 0 to 31. |
 | DeriveSSBIndexFromCell  | Whether the frame boundaries of all cells at this frequency point are the same. Value is 0 or 1.                                                                                                                                                                                                                                        |
-| SIB2 valueTag           | The tag of SIB2 value. <br /> Range is from 0 to 31.                                                                                                                                                                                                                                                                                    |
+| SIB2 valueTag           | The tag of SIB2 value. 
+ Range is from 0 to 31.                                                                                                                                                                                                                                                                                    |
 
-<b> Table 24</b>: SIB3 Parameter Description
+** Table 24**: SIB3 Parameter Description
 
 | Parameter     | Description                                          |
 |---------------|------------------------------------------------------|
 | Enable        | Enables or disables SIB3                             |
-| SIB3 valueTag | The tag of SIB3 value. <br /> Range is from 0 to 31. |
+| SIB3 valueTag | The tag of SIB3 value. 
+ Range is from 0 to 31. |
 
-<b> Table 25</b>: SIB4 Parameter Description
+** Table 25**: SIB4 Parameter Description
 
 | Parameter     | Description                                   |
 |---------------|-----------------------------------------------|
 | Enable        | Enables or disables SIB3                      |
 | SIB3 valueTag | The tag of SIB3 value. Range is from 0 to 31. |
 
-<b> Table 26</b>: SIB5 Parameter Description
+** Table 26**: SIB5 Parameter Description
 
 | Parameter     | Description                                          |
 |---------------|------------------------------------------------------|
 | Enable        | Enables or disables SIB3                             |
-| SIB3 valueTag | The tag of SIB3 value. <br /> Range is from 0 to 31. |
+| SIB3 valueTag | The tag of SIB3 value. 
+ Range is from 0 to 31. |
 
 ### ANR Configuration
 
-1. In the left navigation column, select **NR Setting** and then **ANR** to enter the ANR configuration page, as shown in **Figure&nbsp;32**.
+1. In the left navigation column, select **NR Setting** and then **ANR** to enter the ANR configuration page, as shown in **Figure 32**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/32.anr-settings.png"
-width="85%"
-caption="ANR Settings"
-/>
+> **Image:** ANR Settings
 
-2. Input ANR parameters, the parameter descriptions are shown in **Table&nbsp;27**.
+2. Input ANR parameters, the parameter descriptions are shown in **Table 27**.
 
-<b> Table 27</b>: ANR Parameter Description
+** Table 27**: ANR Parameter Description
 
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-    <tr>
-      <td>Enable</td>
-      <td>Enables or disables the function. <ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>InterFeqEnable</td>
-      <td>Enables or disables the inter-frequency.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>EUTRANEnable</td>
-      <td>Enables or disables the EUTRAN.<ul> <li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>BiNRCellEnable</td>
-      <td>Enables or disables the BiNR cell.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>MRTriggerType</td>
-      <td>MR trigger type<ul><li>Event</li><li>Period</li></ul></td>
-    </tr>
-    <tr>
-      <td>AbsoluteThreshold</td>
-      <td>Absolute threshold <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>RelativeThreshold</td>
-      <td>Relative threshold <br /> Range is from -30 to 30.</td>
-    </tr>
-    <tr>
-      <td>AbsEnable</td>
-      <td>Enables or disables the Abs.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>KPIPeriod</td>
-      <td>The period of KPI. <br /> Range is from 0 to 3279165.</td>
-    </tr>
-    <tr>
-    <td>AutoAdjustEnable</td>
-    <td>Enables or disables the auto adaptive.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-    <td>AutoRemoveEnable</td>
-      <td>Enables or disables the auto remove.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>AutoRemovePeriod</td>
-      <td>The period of auto remove. <br /> Range is from 0 to 3279165.</td>
-    </tr>
-    <tr>
-      <td>AutoRemoveMaxCell</td>
-      <td>The maximum cells of auto remove. <br /> Range is from 0 to 65535</td>
-    </tr>
-    <tr>
-      <td>MaxHOtimes</td>
-      <td>The maximum handover time. <br /> Range is from 0 to 3279165.</td>
-    </tr>
-    <tr>
-      <td>MaxHOSuccess</td>
-      <td>The maximum successful handover time. <br /> Range is from 0 to 100.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Enable | Enables or disables the function.ON: EnableOFF: Disable |
+| InterFeqEnable | Enables or disables the inter-frequency.ON: EnableOFF: Disable |
+| EUTRANEnable | Enables or disables the EUTRAN.ON: EnableOFF: Disable |
+| BiNRCellEnable | Enables or disables the BiNR cell.ON: EnableOFF: Disable |
+| MRTriggerType | MR trigger typeEventPeriod |
+| AbsoluteThreshold | Absolute thresholdRange is from 0 to 127. |
+| RelativeThreshold | Relative thresholdRange is from -30 to 30. |
+| AbsEnable | Enables or disables the Abs.ON: EnableOFF: Disable |
+| KPIPeriod | The period of KPI.Range is from 0 to 3279165. |
+| AutoAdjustEnable | Enables or disables the auto adaptive.ON: EnableOFF: Disable |
+| AutoRemoveEnable | Enables or disables the auto remove.ON: EnableOFF: Disable |
+| AutoRemovePeriod | The period of auto remove.Range is from 0 to 3279165. |
+| AutoRemoveMaxCell | The maximum cells of auto remove.Range is from 0 to 65535 |
+| MaxHOtimes | The maximum handover time.Range is from 0 to 3279165. |
+| MaxHOSuccess | The maximum successful handover time.Range is from 0 to 100. |
 
 3. Click **Save** to complete the ANR setting.
-4. Input XN parameters, the parameter descriptions are shown in **Table&nbsp;28**.
+4. Input XN parameters, the parameter descriptions are shown in **Table 28**.
 
-<b> Table 28</b>: XN Parameter Description
+** Table 28**: XN Parameter Description
 
-<table>
-	<thead>
-		<tr>
-			<th>Parameter</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-  <tbody>
-    <tr>
-      <td>PLMNID</td>
-      <td>PLMN ID</td>
-    </tr>
-    <tr>
-      <td>RemoteAddress</td>
-      <td>The remote IP address.</td>
-    </tr>
-    <tr>
-      <td>XnLinkEnable</td>
-      <td>Enables or disables the XN link.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>XnHoEnable</td>
-      <td>Enables or disables the XN handover.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>BlackList IP</td>
-      <td>IP addresses of the blacklist.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| PLMNID | PLMN ID |
+| RemoteAddress | The remote IP address. |
+| XnLinkEnable | Enables or disables the XN link.ON: EnableOFF: Disable |
+| XnHoEnable | Enables or disables the XN handover.ON: EnableOFF: Disable |
+| BlackList IP | IP addresses of the blacklist. |
 
 ### XN Configuration
 
-1. In the left navigation column, select **NR Setting** and then **XN** to enter the XN configuration page, as shown in **Figure&nbsp;33**.
+1. In the left navigation column, select **NR Setting** and then **XN** to enter the XN configuration page, as shown in **Figure 33**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/33.xn-settings.png"
-width="85%"
-caption="XN Settings"
-/>
+> **Image:** XN Settings
 
 2. In the XN list, click `+` to pop up the XN configuration parameters.
 4. Click **OK** to complete the XN setting.
@@ -1575,16 +984,11 @@ caption="XN Settings"
 6. Input the IP addresses of the blacklist.
 7. Click **Save** to complete the blacklist setting.
 
-
 ### PCI Configuration
 
-1. In the left navigation column, select **NR Setting** and then **PCI** to enter the PCI configuration page, as shown in **Figure&nbsp;34**.
+1. In the left navigation column, select **NR Setting** and then **PCI** to enter the PCI configuration page, as shown in **Figure 34**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/34.pci-setting.png"
-width="85%"
-caption="PCI Setting"
-/>
+> **Image:** PCI Setting
 
 2. Select whether enable the PCI conflict detection function.
 3. Click **Save** to complete the PCI setting.
@@ -1598,12 +1002,14 @@ The process of a device moving from cell to cell and changing over from its serv
 
 #### Event Threshold
 
-The A1 event is triggered when the serving cell’s Reference Signal Received Power (RSRP) is better than the A1 threshold. The A1 event can be used to turn off certain inter-cell measurements. The conditions for entering A1 event are shown in **Formula&nbsp;1**, and the conditions for leaving A1 event are shown in **Formula&nbsp;2**.
+The A1 event is triggered when the serving cell’s Reference Signal Received Power (RSRP) is better than the A1 threshold. The A1 event can be used to turn off certain inter-cell measurements. The conditions for entering A1 event are shown in **Formula 1**, and the conditions for leaving A1 event are shown in **Formula 2**.
 
-**Formula&nbsp;1**: <br />
+**Formula 1**: 
+
 `(Ms - Hys) < Thresh`
 
-**Formula&nbsp;2**: <br />
+**Formula 2**: 
+
 `(Ms + Hys) < Thresh`
 
 :::tip NOTE
@@ -1611,102 +1017,38 @@ The A1 event is triggered when the serving cell’s Reference Signal Received Po
 threshold.
 :::
 
-1. In the A1 list, click `+` to display A1 event configuration parameters, which are shown in **Table&nbsp;29**.
+1. In the A1 list, click `+` to display A1 event configuration parameters, which are shown in **Table 29**.
 
-<b> Table 29</b>: A1 Event Threshold Parameter Description
+** Table 29**: A1 Event Threshold Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>A1</td>
-      <td>Enables or disables the A1 event.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>Threshold Trigger Type</td>
-      <td>The trigger type of the A1 threshold, including RSRP, RSRQ, and SINR.</td>
-    </tr>
-    <tr>
-      <td>A1 Threshold RSRP</td>
-      <td>The RSRP threshold value for triggering A1 event. <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>A1 Threshold RSRQ</td>
-      <td>The RSRQ threshold value for triggering A1 event. <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>A1 Threshold SINR</td>
-      <td>The SINR threshold value for triggering A1 event. <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>Report On leave</td>
-      <td>Indicator of A1 event on leave.
-      It indicates whether the UE initializes the measurement reporting process when cells in the Triggered List are in leaving state.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>Hysteresis</td>
-      <td>This parameter refers to the hysteresis (historical records) of the handover measurement event. The value is used to avoid the frequent triggering of cell handover evaluation due to the fluctuation in wireless signals. This setting tells the UE, if you hear another gNB with at least this amount of dB better, initiate a handover. The lower the number the sooner the handover is initiated. If set too low, it may cause the UE to ping-pong between gNBs. <br /> Range is from 0 to 30&nbsp;dB.  </td>
-    </tr>
-    <tr>
-      <td>Max Report Cells</td>
-      <td>The maximum cells of reported. <br /> Range is from 0 to 8.</td>
-    </tr>
-    <tr>
-      <td>Measure Purpose</td>
-      <td>Indicates the usage of configuring the A1 event. <br /> Range is from 0 to 100.<ol><li>Inter-frequency measurement </li>  <li>Inter-RAT EUTRA measurement. </li></ol>The customized measurement event is from 10.</td>
-    </tr>
-    <tr>
-      <td>Report Amount</td>
-      <td>The number of report. <br /> Range is from 1 to 100.</td>
-    </tr>
-    <tr>
-      <td>MaxNrofRSIndexToReport</td>
-      <td>The maximum number of RS measurement reports. <br /> Range is from 1 to 32.</td>
-    </tr>
-    <tr>
-      <td>Report Interval</td>
-      <td>The report interval of A1 event triggering report.</td>
-    </tr>
-    <tr>
-      <td>Report Quantity</td>
-      <td>The quantity of the measurement report.</td>
-    </tr>
-    <tr>
-      <td>Report Quantity RS IDX</td>
-      <td>The RS measurement report of the A1 event, including RSRP, RSRQ, and SINR.</td>
-    </tr>
-    <tr>
-      <td>Time To Trigger</td>
-      <td>Trigger time</td>
-    </tr>
-    <tr>
-      <td>RS Type</td>
-      <td>RS type, including SSB and CSI-RS.</td>
-    </tr>
-    <tr>
-      <td>Include Beam Measurements</td>
-      <td>Enables or disables the beam measurement indicator. <ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>PLMN</td>
-      <td>PLMN ID</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| A1 | Enables or disables the A1 event.ON: EnableOFF: Disable |
+| Threshold Trigger Type | The trigger type of the A1 threshold, including RSRP, RSRQ, and SINR. |
+| A1 Threshold RSRP | The RSRP threshold value for triggering A1 event.Range is from 0 to 127. |
+| A1 Threshold RSRQ | The RSRQ threshold value for triggering A1 event.Range is from 0 to 127. |
+| A1 Threshold SINR | The SINR threshold value for triggering A1 event.Range is from 0 to 127. |
+| Report On leave | Indicator of A1 event on leave. It indicates whether the UE initializes the measurement reporting process when cells in the Triggered List are in leaving state.ON: EnableOFF: Disable |
+| Hysteresis | This parameter refers to the hysteresis (historical records) of the handover measurement event. The value is used to avoid the frequent triggering of cell handover evaluation due to the fluctuation in wireless signals. This setting tells the UE, if you hear another gNB with at least this amount of dB better, initiate a handover. The lower the number the sooner the handover is initiated. If set too low, it may cause the UE to ping-pong between gNBs.Range is from 0 to 30 dB. |
+| Max Report Cells | The maximum cells of reported.Range is from 0 to 8. |
+| Measure Purpose | Indicates the usage of configuring the A1 event.Range is from 0 to 100.Inter-frequency measurementInter-RAT EUTRA measurement.The customized measurement event is from 10. |
+| Report Amount | The number of report.Range is from 1 to 100. |
+| MaxNrofRSIndexToReport | The maximum number of RS measurement reports.Range is from 1 to 32. |
+| Report Interval | The report interval of A1 event triggering report. |
+| Report Quantity | The quantity of the measurement report. |
+| Report Quantity RS IDX | The RS measurement report of the A1 event, including RSRP, RSRQ, and SINR. |
+| Time To Trigger | Trigger time |
+| RS Type | RS type, including SSB and CSI-RS. |
+| Include Beam Measurements | Enables or disables the beam measurement indicator.ON: EnableOFF: Disable |
+| PLMN | PLMN ID |
 
 2. Click **Save** to complete the A1 event threshold setting.
 
 #### A2 Event Threshold
 
-
 The A2 event is triggered when the serving cell’s Reference Signal Received Power (RSRP) is better than the A2 threshold.
 1. In the A2 list, click `+` to display A2 event configuration parameters.
-2. Input the value of A2 event, which is the same as A1 event, refer to **Table&nbsp;29**.
+2. Input the value of A2 event, which is the same as A1 event, refer to **Table 29**.
 3. Click **Save** to complete the A2 event threshold setting.
 
 #### A3 Event Threshold
@@ -1714,7 +1056,7 @@ The A2 event is triggered when the serving cell’s Reference Signal Received Po
 The A3 event is triggered when the neighbor cell becomes better than the serving cell by as much as the offset value. The offset can be either positive or negative.
 
 1. In the A3 list, click `+` to display A3 event configuration parameters.
-2. Input the value of A3 event, which is the same as A1 event, refer to **Table&nbsp;29**.
+2. Input the value of A3 event, which is the same as A1 event, refer to **Table 29**.
 3. Click **Save** to complete the A3 event threshold setting.
 
 #### A4 Event Threshold
@@ -1722,7 +1064,7 @@ The A3 event is triggered when the neighbor cell becomes better than the serving
 The A4 event is triggered when the neighbor cell becomes better than the serving cell by as much as the relative threshold value. A4 event is used to the handover based on coverage of intra-frequency and inter-frequency.
 
 1. In the A4 list, click `+` to display A4 event configuration parameters.
-2. Input the value of A4 event, which is the same as A1 event, refer to **Table&nbsp;29**.
+2. Input the value of A4 event, which is the same as A1 event, refer to **Table 29**.
 3. Click **Save** to complete the A4 event threshold setting.
 
 #### A5 Event Threshold
@@ -1730,84 +1072,33 @@ The A4 event is triggered when the neighbor cell becomes better than the serving
 The A5 event is triggered when the serving cell becomes worse than Threshold 1 while a neighbor cell becomes better than Threshold 2. A5 event can control the edge of handover out of the serving cell and the edge of handover in of the neighbor cell.
 
 1. In the A5 list, click `+` to display A5 event configuration parameters.
-2. Input the value of A5 event, which is the same as A1 event, refer to **Table&nbsp;29**.
+2. Input the value of A5 event, which is the same as A1 event, refer to **Table 29**.
 3. Click **Save** to complete the A4 event threshold setting.
 
 #### B1 Event Threshold
 
 The B1 Event Thresholds pertains the neighbor is better than the absolute threshold, which is used to measure the RAT cell with high priority.
 
-1. In the B1 list, click `+` to display B1 event configuration parameters, which are shown in **Table&nbsp;30**.
+1. In the B1 list, click `+` to display B1 event configuration parameters, which are shown in **Table 30**.
 
-<b> Table 30</b>: B1 Event Threshold Parameter Description
+** Table 30**: B1 Event Threshold Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>B1</td>
-      <td>Enables or disables the B1 event. <ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>Threshold Trigger Type</td>
-      <td>The trigger type of the B1 threshold, including RSRP, RSRQ, and SINR.</td>
-    </tr>
-    <tr>
-      <td>B1 Threshold1 EUTRA RSRP</td>
-      <td>The RSRP threshold value for triggering B1 event. <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>B1 Threshold1 EUTRA RSRQ</td>
-      <td>The RSRQ threshold value for triggering B1 event. RSRQ Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>B1 Threshold1 EUTRA SINR</td>
-      <td>The SINR threshold value for triggering B1 event. <br /> Range is from 0 to 127.</td>
-    </tr>
-    <tr>
-      <td>Hysteresis</td>
-      <td>This parameter refers to the hysteresis (historical records) of the handover measurement event. The value is used to avoid the frequent triggering of cell handover evaluation due to the fluctuation in wireless signals. This setting tells the UE, if you hear another gNB with at least this amount of dB better, initiate a handover. The lower the number the sooner the handover is initiated. If set too low, it may cause the UE to ping-pong between gNBs. <br /> Range is from 0 to 30&nbsp;dB.  </td>
-    </tr>
-    <tr>
-      <td>Max Report Cells</td>
-      <td>The maximum cells of reported. <br /> Range is from 0 to 8.</td>
-    </tr>
-    <tr>
-      <td>Measure Purpose</td>
-      <td>Indicates the usage of configuring the B1 event. <br /> Range is from 0 to 100.<ol><li>Inter-frequency measurement</li> <li>Inter-RAT EUTRA measurement.</li></ol> The customized measurement event is from 10.</td>
-    </tr>
-    <tr>
-      <td>Report Amount</td>
-      <td>The number of report. <br /> Range is from 1 to 100.</td>
-    </tr>
-    <tr>
-      <td>Report Interval</td>
-      <td>The report interval of B1 event triggering report</td>
-    </tr>
-    <tr>
-      <td>Time To Trigger</td>
-      <td>Length of time the target cell RSRP value is better than the serving cell before the UE initiates a handover request. </td>
-    </tr>
-    <tr>
-      <td>Report Quantity</td>
-      <td>The RS measurement report of the B1 event, including RSRP, RSRQ, and SINR.</td>
-    </tr>
-    <tr>
-      <td>Report On leave</td>
-      <td>Enables or disables the beam measurement indicator.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>PLMN</td>
-      <td>PLMN ID</td>
-    </tr>
-  </tbody>
-</table>
-
+| Parameter | Description |
+| --- | --- |
+| B1 | Enables or disables the B1 event.ON: EnableOFF: Disable |
+| Threshold Trigger Type | The trigger type of the B1 threshold, including RSRP, RSRQ, and SINR. |
+| B1 Threshold1 EUTRA RSRP | The RSRP threshold value for triggering B1 event.Range is from 0 to 127. |
+| B1 Threshold1 EUTRA RSRQ | The RSRQ threshold value for triggering B1 event. RSRQ Range is from 0 to 127. |
+| B1 Threshold1 EUTRA SINR | The SINR threshold value for triggering B1 event.Range is from 0 to 127. |
+| Hysteresis | This parameter refers to the hysteresis (historical records) of the handover measurement event. The value is used to avoid the frequent triggering of cell handover evaluation due to the fluctuation in wireless signals. This setting tells the UE, if you hear another gNB with at least this amount of dB better, initiate a handover. The lower the number the sooner the handover is initiated. If set too low, it may cause the UE to ping-pong between gNBs.Range is from 0 to 30 dB. |
+| Max Report Cells | The maximum cells of reported.Range is from 0 to 8. |
+| Measure Purpose | Indicates the usage of configuring the B1 event.Range is from 0 to 100.Inter-frequency measurementInter-RAT EUTRA measurement.The customized measurement event is from 10. |
+| Report Amount | The number of report.Range is from 1 to 100. |
+| Report Interval | The report interval of B1 event triggering report |
+| Time To Trigger | Length of time the target cell RSRP value is better than the serving cell before the UE initiates a handover request. |
+| Report Quantity | The RS measurement report of the B1 event, including RSRP, RSRQ, and SINR. |
+| Report On leave | Enables or disables the beam measurement indicator.ON: EnableOFF: Disable |
+| PLMN | PLMN ID |
 
 2. Click **Save** to complete the B1 event threshold setting.
 
@@ -1816,24 +1107,25 @@ The B1 Event Thresholds pertains the neighbor is better than the absolute thresh
 The B2 Event Thresholds pertains only to TD-SCDMA and GSM adjacent cells, not to adjacent LTE cells.
 
 1. In the B2 list, click `+` to display B2 event configuration parameters.
-2. Input the value of B2 event, which is the same as B1 event, refer to **Table&nbsp;30**.
+2. Input the value of B2 event, which is the same as B1 event, refer to **Table 30**.
 3. Click **Save** to complete the B2 event threshold setting.
 
 ### Period Measurement Parameter
 
-1. In the Period Measure list, click `+` to display period measurement configuration parameters, which are shown in **Table&nbsp;31**.
+1. In the Period Measure list, click `+` to display period measurement configuration parameters, which are shown in **Table 31**.
 
-<b> Table 31</b>: Period Measurement Parameter Description
+** Table 31**: Period Measurement Parameter Description
 
 | Parameter        | Description                                                                |
 |------------------|----------------------------------------------------------------------------|
 | Report Quantity  | The RS measurement report of the B1 event, including RSRP, RSRQ, and SINR. |
-| Max Report Cells | The maximum cells of reported. <br /> Range is from 0 to 8.                |
+| Max Report Cells | The maximum cells of reported. 
+ Range is from 0 to 8.                |
 | Report Interval  | The report interval of A1 event triggering report                          |
-| Report Amount    | The number of report. <br /> Range is from 1 to 100.                       |
+| Report Amount    | The number of report. 
+ Range is from 1 to 100.                       |
 
 2. Click **Save** to complete the period measurement setting
-
 
 #### Advanced Parameter Configuration
 
@@ -1841,9 +1133,9 @@ On the left navigation column, select **NR Setting** and then **Advanced** to en
 
 #### CU
 
-1. Click `+` in the front of **CU** to display CU configuration parameters, as shown in **Table&nbsp;32**.
+1. Click `+` in the front of **CU** to display CU configuration parameters, as shown in **Table 32**.
 
-<b> Table 32</b>: CU Parameter Description
+** Table 32**: CU Parameter Description
 
 | Parameter     | Description                                                                                                                        |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------|
@@ -1865,155 +1157,52 @@ On the left navigation column, select **NR Setting** and then **Advanced** to en
 
 #### DU
 
-1. Click `+` in the front of **DU** to display DU configuration parameters, as shown in **Table&nbsp;33**.
+1. Click `+` in the front of **DU** to display DU configuration parameters, as shown in **Table 33**.
 
-<b> Table 33</b>: DU Parameter Description
+** Table 33**: DU Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Offset To Point A</td>
-      <td>The offset to point A. The unit is RB. <br /> Range is from 0 to 2199.</td>
-    </tr>
-    <tr>
-      <td>SSB Sub Carrier Offset</td>
-      <td>The offset of SSB sub carrier. <br /> Range is from 0 to 31.</td>
-    </tr>
-    <tr>
-      <td>ReferenceSubcarrierSpacing</td>
-      <td>The space of reference sub carrier. <br /> Range is from 0 to 4.</td>
-    </tr>
-    <tr>
-      <td>PAT1 DL UL Trans Periodicity</td>
-      <td>Subframe ratio. The Uplink and downlink transmission period of PAT1. <br /> Range is from 0 to 7.</td>
-    </tr>
-    <tr>
-      <td>PAT1 of Downlink Slots</td>
-      <td>Subframe ratio. The downlink time slot configuration of PAT1. <br /> Range is from 0 to 320.</td>
-    </tr>
-    <tr>
-      <td>PAT1 of Downlink Symbols</td>
-      <td>Subframe ratio. The special time slot downlink symbol configuration of PAT1. <br /> Range is from 0 to 13.</td>
-    </tr>
-    <tr>
-      <td>PAT1 of Uplink Slots</td>
-      <td>Subframe ratio. The uplink time slot configuration of PAT1. <br /> Range is from 0 to 320.</td>
-    </tr>
-    <tr>
-      <td>PAT1 of Uplink Symbols</td>
-      <td>Subframe ratio. The special time slot uplink symbol configuration of PAT1. <br /> Range is from 0 to 13.</td>
-    </tr>
-    <tr>
-      <td>PAT2 DL UL Trans Periodicity</td>
-      <td>Subframe ratio. The Uplink and downlink transmission period of PAT2. <br /> Range is from 0 to 7.</td>
-    </tr>
-    <tr>
-      <td>PAT2 of Downlink Slots</td>
-      <td>Subframe ratio. The downlink time slot configuration of PAT2. <br /> Range is from 0 to 320.</td>
-    </tr>
-    <tr>
-      <td>PAT2 of Downlink Symbols</td>
-      <td>Subframe ratio. The special time slot downlink symbol configuration of PAT2. <br /> Range is from 0 to 13.</td>
-    </tr>
-    <tr>
-      <td>PAT2 of Uplink Slots</td>
-      <td>Subframe ratio. The uplink time slot configuration of PAT1. <br /> Range is from 0 to 320.</td>
-    </tr>
-    <tr>
-      <td>PAT2 of Uplink Symbols</td>
-      <td>Subframe ratio. The special time slot uplink symbol configuration of PAT1. <br /> Range is from 0 to 13.</td>
-    </tr>
-    <tr>
-      <td>Max DL HARQ ReTX</td>
-      <td>The maximum number of downlink HARQ retransmission. <br /> Range is from 0 to 4.</td>
-    </tr>
-    <tr>
-      <td>DL LA</td>
-      <td>Downlink AMC auto adaptive switch.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>Max UL HARQ ReTX</td>
-      <td>The maximum number of uplink HARQ retransmission. <br /> Range is from 0 to 4.</td>
-    </tr>
-    <tr>
-      <td>UL LA</td>
-      <td>Uplink AMC auto adaptive switch <ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>CsiRsReporting</td>
-      <td>CSI report switch.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>DU F1AP Local IP</td>
-      <td>The DU IP address in control plane of F1 interface.</td>
-      </tr>
-    <tr>
-      <td>DU F1U IP</td>
-      <td>The DU IP address in user plane of F1 interface.</td>
-      </tr>
-    <tr>
-      <td>DU F1AP Remote IP</td>
-      <td>The Remote IP address in control plane of F1 interface.</td>
-      </tr>
-    <tr>
-      <td>numForceGrant</td>
-      <td>(Reserved)</td>
-    </tr>
-    <tr>
-      <td>HealthTimeInterval</td>
-      <td>(Reserved)</td>
-    </tr>
-    <tr>
-      <td>PerfOptFlag</td>
-      <td>(Reserved)</td>
-    </tr>
-    <tr>
-      <td>CalcPaddingRateFlag</td>
-      <td>Calculate Padding rate flag</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Offset To Point A | The offset to point A. The unit is RB.Range is from 0 to 2199. |
+| SSB Sub Carrier Offset | The offset of SSB sub carrier.Range is from 0 to 31. |
+| ReferenceSubcarrierSpacing | The space of reference sub carrier.Range is from 0 to 4. |
+| PAT1 DL UL Trans Periodicity | Subframe ratio. The Uplink and downlink transmission period of PAT1.Range is from 0 to 7. |
+| PAT1 of Downlink Slots | Subframe ratio. The downlink time slot configuration of PAT1.Range is from 0 to 320. |
+| PAT1 of Downlink Symbols | Subframe ratio. The special time slot downlink symbol configuration of PAT1.Range is from 0 to 13. |
+| PAT1 of Uplink Slots | Subframe ratio. The uplink time slot configuration of PAT1.Range is from 0 to 320. |
+| PAT1 of Uplink Symbols | Subframe ratio. The special time slot uplink symbol configuration of PAT1.Range is from 0 to 13. |
+| PAT2 DL UL Trans Periodicity | Subframe ratio. The Uplink and downlink transmission period of PAT2.Range is from 0 to 7. |
+| PAT2 of Downlink Slots | Subframe ratio. The downlink time slot configuration of PAT2.Range is from 0 to 320. |
+| PAT2 of Downlink Symbols | Subframe ratio. The special time slot downlink symbol configuration of PAT2.Range is from 0 to 13. |
+| PAT2 of Uplink Slots | Subframe ratio. The uplink time slot configuration of PAT1.Range is from 0 to 320. |
+| PAT2 of Uplink Symbols | Subframe ratio. The special time slot uplink symbol configuration of PAT1.Range is from 0 to 13. |
+| Max DL HARQ ReTX | The maximum number of downlink HARQ retransmission.Range is from 0 to 4. |
+| DL LA | Downlink AMC auto adaptive switch.ON: EnableOFF: Disable |
+| Max UL HARQ ReTX | The maximum number of uplink HARQ retransmission.Range is from 0 to 4. |
+| UL LA | Uplink AMC auto adaptive switchON: EnableOFF: Disable |
+| CsiRsReporting | CSI report switch.ON: EnableOFF: Disable |
+| DU F1AP Local IP | The DU IP address in control plane of F1 interface. |
+| DU F1U IP | The DU IP address in user plane of F1 interface. |
+| DU F1AP Remote IP | The Remote IP address in control plane of F1 interface. |
+| numForceGrant | (Reserved) |
+| HealthTimeInterval | (Reserved) |
+| PerfOptFlag | (Reserved) |
+| CalcPaddingRateFlag | Calculate Padding rate flag |
 
 2. Click **Save** to complete the DU setting.
 
 #### SSB
 
-1. Click `+` in the front of **SSB** to display SSB configuration parameters, as shown in **Table&nbsp;34**.
+1. Click `+` in the front of **SSB** to display SSB configuration parameters, as shown in **Table 34**.
 
-<b> Table 34</b>: PCI Range Parameter Description
+** Table 34**: PCI Range Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>SSB Periodicity</td>
-      <td>The period of SSB. The unit is ms. <br /> Range is from 0 to 5</td>
-    </tr>
-    <tr>
-      <td>SSB Power</td>
-      <td>The transmission power of SSB. <br /> Range is from -60 to 50.</td>
-    </tr>
-    <tr>
-      <td>SSB Absolute Freq</td>
-      <td>The frequency point of SSB. <br /> Range is from 0 to 3279165.</td>
-    </tr>
-    <tr>
-      <td>SsbResourceReserved</td>
-      <td>The reserved resource of SSB.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| SSB Periodicity | The period of SSB. The unit is ms.Range is from 0 to 5 |
+| SSB Power | The transmission power of SSB.Range is from -60 to 50. |
+| SSB Absolute Freq | The frequency point of SSB.Range is from 0 to 3279165. |
+| SsbResourceReserved | The reserved resource of SSB.ON: EnableOFF: Disable |
 
 2. Click **Save** to complete the SSB setting.
 
@@ -2023,108 +1212,55 @@ On the left navigation column, select **NR Setting** and then **Advanced** to en
 In this software version, UL RSSI is not supported.
 :::
 
-
 #### DRX
 
-1. Click `+` in the front of **DRX** to display Discontinuous reception (DRX) configuration parameters, as shown in **Table&nbsp;35**.
+1. Click `+` in the front of **DRX** to display Discontinuous reception (DRX) configuration parameters, as shown in **Table 35**.
 
-<b> Table 35</b>: DRX Parameter Description
+** Table 35**: DRX Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DRXOnDurationTimer</td>
-      <td>The duration timer of DRX.</td>
-    </tr>
-    <tr>
-      <td>DRXInactivityTimer</td>
-      <td>The inactivity timer of DRX.</td>
-    </tr>
-    <tr>
-      <td>DRXHarqRttTimerDL</td>
-      <td>The number of symbols received in the downlink BWP transfer block. The retransmission of the downlink process will be scheduled after this timer ending. The scheduling window is within drX-RetransmissionTimerdl. <br /> Range is from 0 to 56. </td>
-    </tr>
-    <tr>
-      <td>DRXHarqRttTimerUL</td>
-      <td>The number of symbols received in the uplink BWP transfer block. The retransmission of the uplink process will be scheduled after this timer ending. The scheduling window is within drX-RetransmissionTimerUL. When the last symbol of PUSCH is sent, the drx-HARQ-RTT-TimerUL starts up. <br /> Range is from 0 to 56.</td>
-    </tr>
-    <tr>
-      <td>DRXRetransmissionTimerDL</td>
-      <td>The downlink retransmission timer of DRX.</td>
-    </tr>
-    <tr>
-      <td>DRXRetransmissionTimerUL</td>
-      <td>The uplink retransmission timer of DRX.</td>
-    </tr>
-    <tr>
-      <td>LongDRXCycle</td>
-      <td>Long DRX period</td>
-    </tr>
-    <tr>
-      <td>DRXStartOffset</td>
-      <td>Specify the start sub frame of the DRX period. <br /> Range is from 0 to 10239.</td>
-    </tr>
-    <tr>
-      <td>ShortDRXCycle</td>
-      <td>Short DRX period</td>
-    </tr>
-    <tr>
-      <td>ShortCycleTimer</td>
-      <td>The timer of DRX short period. <br /> Range is from 0 to 16.<ul><li>If the value is set to 1, it means 1 * ShortDRXCycle.</li><li>If the value is set to 1, it means 2 * ShortDRXCycle And so forth.</li></ul></td>
-    </tr>
-    <tr>
-      <td>DRXSlotOffset</td>
-      <td>DRX Slot offset <br /> Range is from 0 to 31.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| DRXOnDurationTimer | The duration timer of DRX. |
+| DRXInactivityTimer | The inactivity timer of DRX. |
+| DRXHarqRttTimerDL | The number of symbols received in the downlink BWP transfer block. The retransmission of the downlink process will be scheduled after this timer ending. The scheduling window is within drX-RetransmissionTimerdl.Range is from 0 to 56. |
+| DRXHarqRttTimerUL | The number of symbols received in the uplink BWP transfer block. The retransmission of the uplink process will be scheduled after this timer ending. The scheduling window is within drX-RetransmissionTimerUL. When the last symbol of PUSCH is sent, the drx-HARQ-RTT-TimerUL starts up.Range is from 0 to 56. |
+| DRXRetransmissionTimerDL | The downlink retransmission timer of DRX. |
+| DRXRetransmissionTimerUL | The uplink retransmission timer of DRX. |
+| LongDRXCycle | Long DRX period |
+| DRXStartOffset | Specify the start sub frame of the DRX period.Range is from 0 to 10239. |
+| ShortDRXCycle | Short DRX period |
+| ShortCycleTimer | The timer of DRX short period.Range is from 0 to 16.If the value is set to 1, it means 1 * ShortDRXCycle.If the value is set to 1, it means 2 * ShortDRXCycle And so forth. |
+| DRXSlotOffset | DRX Slot offsetRange is from 0 to 31. |
 
 2. Click **Save** to complete the DRX setting.
 
 #### Voice
 
-1. Click `+` in the front of **Voice** to display the voice configuration parameters, as shown in **Table&nbsp;36**.
+1. Click `+` in the front of **Voice** to display the voice configuration parameters, as shown in **Table 36**.
 
-<b> Table 36</b>: Voice Parameter Description
+** Table 36**: Voice Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>VONR</td>
-      <td>Voice Over NR<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>EPS Fallback Type</td>
-      <td>EPS fallback type, including five types.<ul><li>EPS Fallback Blind Red</li><li>EPS Fallback Meas Red</li><li>EPS Fallback Meas HO</li><li>PS Meas Red</li><li>PS Meas HO</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| VONR | Voice Over NRON: EnableOFF: Disable |
+| EPS Fallback Type | EPS fallback type, including five types.EPS Fallback Blind RedEPS Fallback Meas RedEPS Fallback Meas HOPS Meas RedPS Meas HO |
 
 2. Click **Save** to complete the voice setting.
 
 #### GNB
 
-1. Click `+` in the front of **GNB** to display the gNB configuration parameters, as shown in **Table&nbsp;37**.
+1. Click `+` in the front of **GNB** to display the gNB configuration parameters, as shown in **Table 37**.
 
-<b> Table 37</b>: GNB Parameter Description
+** Table 37**: GNB Parameter Description
 
 | Parameter     | Description                                          |
 |---------------|------------------------------------------------------|
-| GNB ID Length | The length of GNB ID. <br /> Range is from 22 to 32. |
-| GNB ID        | GNB ID <br /> Range is from 0 to 4294967295.         |
-| GNB Name      | GNB name <br /> Range is from 0 to 150 bytes.        |
+| GNB ID Length | The length of GNB ID. 
+ Range is from 22 to 32. |
+| GNB ID        | GNB ID 
+ Range is from 0 to 4294967295.         |
+| GNB Name      | GNB name 
+ Range is from 0 to 150 bytes.        |
 
 2. Click **Save** to complete the gNB setting.
 
@@ -2136,22 +1272,20 @@ In this software version, UL RSSI is not supported.
 
 ### PLMN Configuration
 
-1. In the left navigation column, select **NR Setting** and then **PLMN** to enter the PLMN configuration page, as shown in **Figure&nbsp;35**.
+1. In the left navigation column, select **NR Setting** and then **PLMN** to enter the PLMN configuration page, as shown in **Figure 35**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/35.plmn-settings.png"
-width="85%"
-caption="PLMN Settings"
-/>
+> **Image:** PLMN Settings
 
-2. Click `+` to display PLMN configuration parameters, as shown in **Table&nbsp;38**.
+2. Click `+` to display PLMN configuration parameters, as shown in **Table 38**.
 
-<b> Table 38</b>: PLMN Parameter Description
+** Table 38**: PLMN Parameter Description
 
 | Parameter | Description                                    |
 |-----------|------------------------------------------------|
-| Cell ID   | Cell ID <br /> Range is from 0 to 68719476735. |
-| TAC       | TAC <br /> Range is from 0 to 16777215.        |
+| Cell ID   | Cell ID 
+ Range is from 0 to 68719476735. |
+| TAC       | TAC 
+ Range is from 0 to 16777215.        |
 | Ranac     | Ranac                                          |
 
 3. Click **Save** to complete the PLMN setting.
@@ -2164,22 +1298,19 @@ In this software version, BWP is not supported.
 
 ### SCS Configuration
 
-1. In the left navigation column, select **NR Setting** and then **SCS** to enter the Sub-carrier Space (SCS) configuration page, as shown in **Figure&nbsp;36**.
+1. In the left navigation column, select **NR Setting** and then **SCS** to enter the Sub-carrier Space (SCS) configuration page, as shown in **Figure 36**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/36.scs-setting.png"
-width="85%"
-caption="SCS Setting"
-/>
+> **Image:** SCS Setting
 
-2. In the DL SCS list, click `+` to display the downlink SCS parameters, whose descriptions are shown in **Table&nbsp;39**.
+2. In the DL SCS list, click `+` to display the downlink SCS parameters, whose descriptions are shown in **Table 39**.
 
-<b> Table 39</b>: DL SCS Parameter Description
+** Table 39**: DL SCS Parameter Description
 
 | Parameter         | Description                                                                           |
 |-------------------|---------------------------------------------------------------------------------------|
-| SubcarrierSpacing | The sub carrier spacing is 30&nbsp;kHz.                                               |
-| CarrierBandwidth  | The bandwidth of the carrier. <br />  Values are 25, 52, 79, 106, 133, 160, 216, 273. |
+| SubcarrierSpacing | The sub carrier spacing is 30 kHz.                                               |
+| CarrierBandwidth  | The bandwidth of the carrier. 
+  Values are 25, 52, 79, 106, 133, 160, 216, 273. |
 
 :::tip NOTE
 The configuration of UL SCS is the same as DL SCS configuration.
@@ -2189,56 +1320,23 @@ The configuration of UL SCS is the same as DL SCS configuration.
 
 ### CSI Configuration
 
-1. In the left navigation column, select **NR Setting** and then **CSI** to enter the CSI configuration page, as shown in **Figure&nbsp;37**.
+1. In the left navigation column, select **NR Setting** and then **CSI** to enter the CSI configuration page, as shown in **Figure 37**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/37.csi-setting.png"
-width="85%"
-caption="CSI Setting"
-/>
+> **Image:** CSI Setting
 
-2. Click `+` to display CSI configuration parameters, the configuration parameter description is shown in **Table&nbsp;40**.
+2. Click `+` to display CSI configuration parameters, the configuration parameter description is shown in **Table 40**.
 
-<b> Table 40</b>: CSI Parameter Description
+** Table 40**: CSI Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Parameter</td>
-      <td>Description</td>
-    </tr>
-    <tr>
-      <td>Csi Report Periodicity</td>
-      <td>CSI report period</td>
-    </tr>
-    <tr>
-      <td>Nr Subband Size</td>
-      <td>NR sub-band size</td>
-    </tr>
-    <tr>
-      <td>Csi Report Config Type</td>
-      <td>The configuration type of the CSI report.<ul><li>Periodic</li><li>SemiPersistentOnPUCCH</li><li>SemiPersistentOnPUSCH</li><li>Aperiodic</li></ul></td>
-    </tr>
-    <tr>
-      <td>Csi Report Quantity</td>
-      <td>CSI report quantity</td>
-    </tr>
-    <tr>
-      <td>Freq Config Cqi Format Ind</td>
-      <td>CQI format<ul><li>widebandCQI</li><li>subbandCQI</li></ul></td>
-    </tr>
-    <tr>
-      <td>Freq Config Pmi Format Ind</td>
-      <td>PMI format<ul><li>widebandPMI</li><li>subbandPMI</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Parameter | Description |
+| Csi Report Periodicity | CSI report period |
+| Nr Subband Size | NR sub-band size |
+| Csi Report Config Type | The configuration type of the CSI report.PeriodicSemiPersistentOnPUCCHSemiPersistentOnPUSCHAperiodic |
+| Csi Report Quantity | CSI report quantity |
+| Freq Config Cqi Format Ind | CQI formatwidebandCQIsubbandCQI |
+| Freq Config Pmi Format Ind | PMI formatwidebandPMIsubbandPMI |
 
 3. Click **Save** to complete the CSI setting.
 
@@ -2248,277 +1346,112 @@ caption="CSI Setting"
 In this software version, SRS is not supported.
 :::
 
-
 ### PUSCH Configuration
 
-1. In the left navigation column, select **NR Setting** and then **PUSCH** to enter the PUSCH page, as shown in **Figure&nbsp;38**.
+1. In the left navigation column, select **NR Setting** and then **PUSCH** to enter the PUSCH page, as shown in **Figure 38**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/38.pusch-setting.png"
-width="85%"
-caption="PUSCH Setting"
-/>
+> **Image:** PUSCH Setting
 
 2. Input the value of **UlMcsLimit**. Range is from 0 to 28.
 3. Click **Save** to complete the PUSCH setting.
 
 ### PDSCH Configuration
 
-1. In the left navigation column, select **NR Setting** and then **PDSCH** to enter the PDSCH page, as shown in **Figure&nbsp;39**.
+1. In the left navigation column, select **NR Setting** and then **PDSCH** to enter the PDSCH page, as shown in **Figure 39**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/39.pdsch-setting.png"
-width="85%"
-caption="PDSCH Setting"
-/>
+> **Image:** PDSCH Setting
 
-2. Input PDSCH configuration parameters, whose descriptions are shown in **Table&nbsp;41**.
+2. Input PDSCH configuration parameters, whose descriptions are shown in **Table 41**.
 
-<b> Table 41</b>: PDSCH Parameter Description
+** Table 41**: PDSCH Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Power Control</td>
-      <td>Enables or disables the power control function.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>Power Control Value Start</td>
-      <td>The start value of power control. <br /> Range is from -6 to 6.</td>
-    </tr>
-    <tr>
-      <td>Power Control Value End</td>
-      <td>The end value of power control. <br /> Range is from -6 to 6.</td>
-    </tr>
-    <tr>
-      <td>DIMcsLimit</td>
-      <td>The limit of uplink MCS. <br /> Range is from 0 to 28.</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Power Control | Enables or disables the power control function.ON: EnableOFF: Disable |
+| Power Control Value Start | The start value of power control.Range is from -6 to 6. |
+| Power Control Value End | The end value of power control.Range is from -6 to 6. |
+| DIMcsLimit | The limit of uplink MCS.Range is from 0 to 28. |
 
 3. Click **Save** to complete the PDSCH setting.
 
 ### PUCCH Configuration
 
-1. In the left navigation column, select **NR Setting** and then **PUCCH** to enter the PUCCH page, as shown in **Figure&nbsp;40**.
+1. In the left navigation column, select **NR Setting** and then **PUCCH** to enter the PUCCH page, as shown in **Figure 40**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/40.pucch-setting.png"
-width="85%"
-caption="PUCCH Setting"
-/>
+> **Image:** PUCCH Setting
 
-2. Input PUCCH configuration parameters, which description is shown in **Table&nbsp;42**.
+2. Input PUCCH configuration parameters, which description is shown in **Table 42**.
 
-<b> Table 42</b>: PUCCH Parameter Description
+** Table 42**: PUCCH Parameter Description
 
-<table>
-  <thead>
-    <tr>
-    <th>Parameter</th>
-    <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>ClpcPucchEnable</td>
-      <td>Enables or disables Clpc PUCCH.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>ClpcPucchSinrEnable</td>
-      <td>Enables or disables Clpc PUCCH SINR.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-    <tr>
-      <td>ClpcPucchBlerEnable</td>
-      <td>Enables or disables Clpc PUCCH BLER.<ul><li>ON: Enable</li><li>OFF: Disable</li></ul></td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| ClpcPucchEnable | Enables or disables Clpc PUCCH.ON: EnableOFF: Disable |
+| ClpcPucchSinrEnable | Enables or disables Clpc PUCCH SINR.ON: EnableOFF: Disable |
+| ClpcPucchBlerEnable | Enables or disables Clpc PUCCH BLER.ON: EnableOFF: Disable |
 
 3. Click **Save** to complete the PUCCH setting.
 
 ### QoS Configuration
 
-1. In the left navigation column, select **NR Setting** and then **QoS** to enter the QoS configuration page, as shown in **Figure&nbsp;41**.
+1. In the left navigation column, select **NR Setting** and then **QoS** to enter the QoS configuration page, as shown in **Figure 41**.
 
-<RkImage
-src="https://images.docs.rakwireless.com/5g/all-in-one-5g/user-manual-nr/41.qos-setting.png"
-width="85%"
-caption="QoS Setting"
-/>
+> **Image:** QoS Setting
 
-2. In the QoS list, click `+` to display the QoS configuration parameters, whose descriptions are shown in **Table&nbsp;43**.
+2. In the QoS list, click `+` to display the QoS configuration parameters, whose descriptions are shown in **Table 43**.
 
-<b> Table 43</b>: QoS Parameter Description
+** Table 43**: QoS Parameter Description
 
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Enable</td>
-      <td>Enables or disables QoS function.</td>
-    </tr>
-    <tr>
-      <td>MappingDrbIndex</td>
-      <td>Index</td>
-    </tr>
-    <tr>
-      <td>5QI</td>
-      <td>5QI <br /> Range is from 1 to 255.</td>
-    </tr>
-    <tr>
-      <td>Type</td>
-      <td>GBR <br /> Non-GBR</td>
-    </tr>
-    <tr>
-      <td>Priority</td>
-      <td>Priority <br /> Range is from 1 to 16.</td>
-    </tr>
-    <tr>
-      <td>MinBr</td>
-      <td>MinBr</td>
-    </tr>
-    <tr>
-      <td>IsDefault</td>
-      <td>Whether the QoS is default.</td>
-    </tr>
-    <tr>
-      <td>UeInactivityTimerConifg</td>
-      <td>UE inactivity Timer</td>
-    </tr>
-    <tr>
-      <td>TReorderingPdcp</td>
-      <td>TReordering PDCP <br /> Range is from 0 to 35.</td>
-    </tr>
-    <tr>
-      <td>TReorderingUE</td>
-      <td>TReordering UE Range is from 0 to 35.</td>
-    </tr>
-    <tr>
-      <td>DiscardTimer</td>
-      <td>Discard timer</td>
-    </tr>
-    <tr>
-      <td>StatusReportRequired</td>
-      <td>Enables or disables report status.</td>
-    </tr>
-    <tr>
-      <td>PdcpSnSizeUl</td>
-      <td>Uplink PDCP SN size</td>
-    </tr>
-    <tr>
-      <td>PdcpSnSizeDl</td>
-      <td>Downlink PDCP SN size</td>
-    </tr>
-    <tr>
-      <td>Dscp</td>
-      <td>DSCP</td>
-    </tr>
-    <tr>
-      <td>RlcMode</td>
-      <td>RLC mode.UMAM</td>
-    </tr>
-    <tr>
-      <td>SnFieldLengthAmDl</td>
-      <td>Range is from 0 to 35.</td>
-    </tr>
-    <tr>
-      <td>SnFieldLengthAmUl</td>
-      <td>Range is from 0 to 35.</td>
-    </tr>
-    <tr>
-      <td>SnFieldLengthUmDl</td>
-      <td>Range is from 0 to 35.</td>
-    </tr>
-    <tr>
-      <td>SnFieldLengthUmUl</td>
-      <td>Range is from 0 to 35.</td>
-    </tr>
-    <tr>
-      <td>UlConfig</td>
-      <td>Uplink configuration <br /> Values are 0, 1, 2.</td>
-    </tr>
-    <tr>
-      <td>EnableRohc</td>
-      <td>Enables or disables ROHC.</td>
-    </tr>
-    <tr>
-      <td>RohcProfile0x0001</td>
-      <td>ROHC profile</td>
-    </tr>
-    <tr>
-      <td>RohcProfile0x0002</td>
-      <td>ROHC profile</td>
-    </tr>
-    <tr>
-      <td>RohcProfile0x0006</td>
-      <td>ROHC profile</td>
-    </tr>
-    <tr>
-      <td>PdcpDuplicationActivated</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>PrimaryPathDl</td>
-      <td>Downlink primary path</td>
-    </tr>
-    <tr>
-      <td>PrimaryPath</td>
-      <td>Whether the path is primary</td>
-    </tr>
-    <tr>
-      <td>UlDataSplitThreshold</td>
-      <td>Uplink data split threshold</td>
-    </tr>
-    <tr>
-      <td>DlDataSplitThreshold</td>
-      <td>Downlink data split threshold</td>
-    </tr>
-    <tr>
-      <td>AllowedIntegrityAlgo</td>
-      <td>Allowed integrity algorithm</td>
-    </tr>
-    <tr>
-      <td>LongDrxCycle</td>
-      <td>Long DRX cycle</td>
-    </tr>
-    <tr>
-      <td>ShortDrxCycle</td>
-      <td>Short DRX cycle</td>
-    </tr>
-    <tr>
-      <td>ShortDRXcycle</td>
-      <td>Short DRX cycle timer</td>
-    </tr>
-    <tr>
-      <td>DrbInactivityTimerConfig</td>
-      <td>DRB inactivity timer</td>
-    </tr>
-  </tbody>
-</table>
+| Parameter | Description |
+| --- | --- |
+| Enable | Enables or disables QoS function. |
+| MappingDrbIndex | Index |
+| 5QI | 5QIRange is from 1 to 255. |
+| Type | GBRNon-GBR |
+| Priority | PriorityRange is from 1 to 16. |
+| MinBr | MinBr |
+| IsDefault | Whether the QoS is default. |
+| UeInactivityTimerConifg | UE inactivity Timer |
+| TReorderingPdcp | TReordering PDCPRange is from 0 to 35. |
+| TReorderingUE | TReordering UE Range is from 0 to 35. |
+| DiscardTimer | Discard timer |
+| StatusReportRequired | Enables or disables report status. |
+| PdcpSnSizeUl | Uplink PDCP SN size |
+| PdcpSnSizeDl | Downlink PDCP SN size |
+| Dscp | DSCP |
+| RlcMode | RLC mode.UMAM |
+| SnFieldLengthAmDl | Range is from 0 to 35. |
+| SnFieldLengthAmUl | Range is from 0 to 35. |
+| SnFieldLengthUmDl | Range is from 0 to 35. |
+| SnFieldLengthUmUl | Range is from 0 to 35. |
+| UlConfig | Uplink configurationValues are 0, 1, 2. |
+| EnableRohc | Enables or disables ROHC. |
+| RohcProfile0x0001 | ROHC profile |
+| RohcProfile0x0002 | ROHC profile |
+| RohcProfile0x0006 | ROHC profile |
+| PdcpDuplicationActivated |  |
+| PrimaryPathDl | Downlink primary path |
+| PrimaryPath | Whether the path is primary |
+| UlDataSplitThreshold | Uplink data split threshold |
+| DlDataSplitThreshold | Downlink data split threshold |
+| AllowedIntegrityAlgo | Allowed integrity algorithm |
+| LongDrxCycle | Long DRX cycle |
+| ShortDrxCycle | Short DRX cycle |
+| ShortDRXcycle | Short DRX cycle timer |
+| DrbInactivityTimerConfig | DRB inactivity timer |
 
-3. In the SST list, click to display the SST configuration parameters, whose descriptions are shown in **Table&nbsp;44**.
+3. In the SST list, click to display the SST configuration parameters, whose descriptions are shown in **Table 44**.
 
-<b> Table 44</b>: SST Parameter Description
+** Table 44**: SST Parameter Description
 
 | Parameter           | Description                                                   |
 |---------------------|---------------------------------------------------------------|
 | SST                 | Enables or disables SST.                                      |
 | SstResourceType     | SST source type                                               |
-| MaxResourceReserved | The maximum reserved resource. <br /> Range is from 0 to 273. |
-| MinResourceReserved | The minimum reserved resource. <br /> Range is from 0 to 273. |
+| MaxResourceReserved | The maximum reserved resource. 
+ Range is from 0 to 273. |
+| MinResourceReserved | The minimum reserved resource. 
+ Range is from 0 to 273. |
 
 4. Click **Save** to complete the QoS setting.
 
@@ -2527,4 +1460,3 @@ caption="QoS Setting"
 In this software version, testMAC is not supported.
 :::
 
-<RkBottomNav/>

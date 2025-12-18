@@ -11,8 +11,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # RAK11200 WisBlock WiFi Module
 
 Thank you for choosing **RAK11200 WisBlock WiFi Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -27,16 +25,16 @@ Thank you for choosing **RAK11200 WisBlock WiFi Module** in your awesome IoT Pro
 
 ## Product Description
 
-**RAK11200** is a **WisBlock Core** module for RAK **WisBlock** based on Espressif ESP32-WROVER. It is a powerful, generic WiFi-BLE MCU module that targets a wide variety of applications. There are two CPU cores that can be individually controlled and the CPU clock frequency is adjustable from 80&nbsp;MHz to 240&nbsp;MHz. The low-power deep-sleep current consumption of the ESP32-WROVER is about 10&nbsp;uA. This makes the **RAK11200** an ultra-low-power communication solution. **RAK11200** can be comfortably programmed with the Arduino IDE or PlatformIO.
+**RAK11200** is a **WisBlock Core** module for RAK **WisBlock** based on Espressif ESP32-WROVER. It is a powerful, generic WiFi-BLE MCU module that targets a wide variety of applications. There are two CPU cores that can be individually controlled and the CPU clock frequency is adjustable from 80 MHz to 240 MHz. The low-power deep-sleep current consumption of the ESP32-WROVER is about 10 uA. This makes the **RAK11200** an ultra-low-power communication solution. **RAK11200** can be comfortably programmed with the Arduino IDE or PlatformIO.
 
 ## Product Features
 
 * Two low-power Xtensa® 32-bit LX6 microprocessors
-* Up to 240&nbsp;MHz CPU clock
+* Up to 240 MHz CPU clock
 * Built-in PCB antenna
-* 4&nbsp;MB External SPI Flash, 520&nbsp;KB RAM
-* 8&nbsp;MB SPI Pseudo static RAM (PSRAM)
-* WiFi 802.11 b/g/n (802.11n up to 150&nbsp;Mbps)
+* 4 MB External SPI Flash, 520 KB RAM
+* 8 MB SPI Pseudo static RAM (PSRAM)
+* WiFi 802.11 b/g/n (802.11n up to 150 Mbps)
 * Bluetooth v4.2 BR/EDR and BLE specification
 * Rich set of peripherals: RTC, UART, I2C, SPI, SD card interface
 * Low-power deep-sleep mode
@@ -51,5 +49,3 @@ To use a **RAK11200**, you need at least a **WisBlock Base** to plug the module 
 - Make sure to secure the module with the provided screws to ensure proper function.
 :::
 
-
-<RkBottomNav/>

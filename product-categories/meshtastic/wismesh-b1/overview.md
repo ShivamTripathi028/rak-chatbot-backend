@@ -14,8 +14,6 @@ keywords:
 sidebar_label: Product Overview
 ---
 
-import RkBottomNav from '@site/src/components/Document/BottomNav'
-
 # Meshtastic WisMesh Board ONE
 
 Thank you for choosing **WisMesh Board ONE** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -24,7 +22,7 @@ Thank you for choosing **WisMesh Board ONE** in your awesome IoT Project! 🎉 T
 
 This network is especially vital in scenarios where traditional communication systems fail, such as during disasters. Empowering individuals and groups within the HAM radio community and beyond, Meshtastic ensures connectivity when it's needed most.
 
-The WisMesh Board ONE is available in both as a development board and a ready-to-use device with an enclosure, built-in 1000&nbsp;mAh battery, and an SMA connector for LoRa antenna. Its BLE antenna is integrated on the board to save space.
+The WisMesh Board ONE is available in both as a development board and a ready-to-use device with an enclosure, built-in 1000 mAh battery, and an SMA connector for LoRa antenna. Its BLE antenna is integrated on the board to save space.
 
 This device is ideal for users seeking a compact Meshtastic node, featuring pin headers for easy expansion and access to all GPIOs and system buses. Powered by the WisBlock solution and built on the nRF52840 chip, it ranks as a top performer on the Meshtastic Community Approval list.
 
@@ -43,4 +41,3 @@ This device is ideal for users seeking a compact Meshtastic node, featuring pin 
 
 To get started with the WisMesh Board ONE, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Board%20ONE%20Pocket.pdf" target="_blank">WisMesh Board ONE Getting Started</a> guide.
 
-<RkBottomNav/>
