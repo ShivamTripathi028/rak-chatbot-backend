@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK1921 WisBlock OLED Display Quick Start Guide
 
 ## Prerequisite
@@ -44,15 +47,24 @@ RAK_PATCH script was tested only on Windows 10 and Ubuntu.
 
 Install [RAK_PATCH on PlatformIO](https://github.com/RAKWireless/WisBlock/blob/master/PlatformIO/README).
 
+
 ## Product Configuration
 
 ### Hardware Setup
 
-The RAK1921 module is compatible with WisBlock Base Boards. The WisBlock Base Board has a dedicated I2C port with a 2.54 mm header (J12) and RAK1921 is assembled, as shown in **Figure 1**. Also, RAK1921 is not compatible with the WisDuo Evaluation Boards (different pinout on the same header J12).
+The RAK1921 module is compatible with WisBlock Base Boards. The WisBlock Base Board has a dedicated I2C port with a 2.54&nbsp;mm header (J12) and RAK1921 is assembled, as shown in **Figure 1**. Also, RAK1921 is not compatible with the WisDuo Evaluation Boards (different pinout on the same header J12).
 
-> **Image:** RAK5005-O and RAK1921
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/exa-rak1921-rak1906-assy-2.png"
+  width="50%"
+  caption="RAK5005-O and RAK1921"
+/>
 
-> **Image:** RAK1921 Pin Definition
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak1921_pin_definition.png"
+  width="50%"
+  caption="RAK1921 Pin Definition"
+/>
 
 If you will connect other modules to the remaining WisBlock Base slots, refer to the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
 
@@ -61,10 +73,10 @@ Now, you can connect the battery (optional) and USB cable to start programming y
 :::warning
 
 - Battery can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause fire.
 - Make sure the battery wires match the polarity on the RAK WisBlock Base Board. Not all batteries have the same wiring.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 :::
 
 ### Initial Test of the RAK1921 WisBlock Module on Arduino
@@ -75,45 +87,93 @@ If you already installed the [RAKwireless Arduino BSP](https://docs.rakwireless.
 
 Selecting RAK4631 as WisBlock Core.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak4631_arduino.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
+<br />
 Selecting RAK11200 as WisBlock Core.
 
-> **Image:** Selecting RAK11200 as WisBlock Core
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak11200_arduino.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 Selecting RAK11310 as WisBlock Core.
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak11310_arduino.png"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 2. The [Basic Sample Code for RAK1921](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK1921_OLED_SSD1306) will work on all WisBlock Core. You can open the example codes depending on your WisBlock Core, as shown in **Figure 6** to **Figure 8**.
 
-> **Image:** Opening RAK1921 example for RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak4631-rak1921.png"
+  width="100%"
+  caption="Opening RAK1921 example for RAK4631 WisBlock Core"
+/>
 
-> **Image:** Opening RAK1921 example for RAK11200 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak11200-rak1921.png"
+  width="100%"
+  caption="Opening RAK1921 example for RAK11200 WisBlock Core"
+/>
 
-> **Image:** Opening RAK1921 example for RAK11310 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak11310-rak1921.png"
+  width="100%"
+  caption="Opening RAK1921 example for RAK11310 WisBlock Core"
+/>
 
 3. Before compiling the project, it is necessary to install the libraries. Just click on the links highlighted in red, as shown in **Figure 9**, to install each library.
 
-> **Image:** Install RAK1921 Example libraries
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak1921-library.png"
+  width="100%"
+  caption="Install RAK1921 Example libraries"
+/>
 
 4. Click on the **Install** button to install the **U8g2 Library**.
 
-> **Image:** Install U8g2 Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/u8g2-arduino.png"
+  width="80%"
+  caption="Install U8g2 Library"
+/>
 
 5. Click on the **Install** button to install the **Adafruit BME680 Library**.
 
-> **Image:** Install Adafruit BME680 Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/bme680-arduino.png"
+  width="80%"
+  caption="Install Adafruit BME680 Library"
+/>
 
 6. After successful installation of the library, you can now select the right port and upload the code, as shown in **Figure 12** to **Figure 14**.
 
 Click on **Tools** -> **Port** then select the correct COM port.
 
-> **Image:** Configuring RAK1921 example for RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak4631-config.png"
+  width="100%"
+  caption="Configuring RAK1921 example for RAK4631 WisBlock Core"
+/>
 
-> **Image:** Configuring RAK1921 example for RAK11200 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak11200-config.png"
+  width="100%"
+  caption="Configuring RAK1921 example for RAK11200 WisBlock Core"
+/>
 
-> **Image:** Configuring RAK1921 example for RAK11310 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/rak11310-config.png"
+  width="100%"
+  caption="Configuring RAK1921 example for RAK11310 WisBlock Core"
+/>
+
 
 #### Testing an Alternative OLED Library for RAK11200
 
@@ -123,13 +183,25 @@ Click on **Tools** -> **Port** then select the correct COM port.
 3. Open Arduino IDE then go to **Sketch** -> **Include Library** -> **Manage Library**.
 4. In the Library Manager text area, search for **esp32 oled**, then click the **Install** button.
 
-> **Image:** Install ThingPulse Library on Arduino
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/thingpulse-library.png"
+  width="80%"
+  caption="Install ThingPulse Library on Arduino"
+/>
 
 5. After successful installation of the library, open the **ThingPulse SimpleDemo example**.
 
-> **Image:** ThingPulse Example on Arduino
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/thingpulse-example.png"
+  width="100%"
+  caption="ThingPulse Example on Arduino"
+/>
 
-> **Image:** ThingPulse SimpleDemo on Arduino
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/thingpulse-demo.png"
+  width="100%"
+  caption="ThingPulse SimpleDemo on Arduino"
+/>
 
 You can check the other [SSD1306 examples](https://github.com/ThingPulse/esp8266-oled-ssd1306/tree/master/examples) in the ThingPulse repository.
 
@@ -139,7 +211,11 @@ You can import your ThingPulse arduino project to PlatformIO. To perform this te
 
 1. Open **PlatformIO** then **PIO Home**, and select **Import Arduino Project**, as shown in **Figure 18**.
 
-> **Image:** Import Arduino project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/pio-import.png"
+  width="100%"
+  caption="Import Arduino project"
+/>
 
 2. Configure **Import Arduino Project** parameters:
 
@@ -148,13 +224,26 @@ You can import your ThingPulse arduino project to PlatformIO. To perform this te
   - Choose the directory of your ThingPulse Arduino project to be imported (Label 3).
   - To finish import, click on **Import** button (Label 4).
 
-> **Image:** Configure Import parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/pio-import2.png"
+  width="60%"
+  caption="Configure Import parameters"
+/>
 
 3. Open the imported project and check the **platformio.ini** file. The parameter **libs_extra_dir** is your Arduino library directory.
 
-> **Image:** Configuration file platformio.ini
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/pio-ini.png"
+  width="100%"
+  caption="Configuration file platformio.ini"
+/>
 
 4. Build and flash your imported project. In case of upload error, check if your RAK11200 board is listed in **PIO Home** -> **Devices**.
 
-> **Image:** PIO Home Devices
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1921/quickstart/pio-devices.png"
+  width="100%"
+  caption="PIO Home Devices"
+/>
 
+<RkBottomNav/>

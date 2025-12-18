@@ -12,6 +12,9 @@ sidebar_label: Datasheet
 date: 2025-07-24
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock RAKBox-B6 Enclosure Datasheet
 
 RAKBox-B6 is an IP20-rated enclosure for indoor usage. It is designed specifically for WisBlock products.
@@ -27,13 +30,17 @@ RAKBox-B6 is an IP20-rated enclosure for indoor usage. It is designed specifical
 ## Mechanical Characteristics
 
 - Enclosure material: ABS UL94-HB
-- Dimensions: 84.5 mm x 84.5 mm x 36.7 mm (W x L x H)
-- Weight: approximately 56.6 g (without mounting plate)
-- Material thickness: 2.15 mm
+- Dimensions: 84.5&nbsp;mm x 84.5&nbsp;mm x 36.7&nbsp;mm (W x L x H)
+- Weight: approximately 56.6&nbsp;g (without mounting plate)
+- Material thickness: 2.15&nbsp;mm
 - Supports wall mounting
 - Ingress Protection: IP20
 
-> **Image:** WisBlock RAKBox-B6 Enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b6/rakbox-b6-enclosure.png"
+  width="40%"
+  caption="WisBlock RAKBox-B6 Enclosure"
+/>
 
 ## WisBlock Module Support
 
@@ -51,21 +58,42 @@ The enclosure is compatible with the following WisBlock Base Boards:
 
 Wall mount screws are included in the package.
 
-> **Image:** Mounting Kit
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b6/b6-assy-fig1-installation-kit.svg"
+  width="50%"
+  caption="Mounting Kit"
+/>
 
 ## Enclosure Dimensions
 
-> **Image:** Enclosure Dimensions (mm)
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b6/rakbox-b6-dimenstions.svg"
+  width="70%"
+  caption="Enclosure Dimensions (mm)"
+/>
 
 ## Location for USB and LED Openings
 
-> **Image:** USB and LED Opening Locations (mm)
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b6/rakbox-b6-usb-led.svg"
+  width="50%"
+  caption="USB and LED Opening Locations (mm)"
+/>
 
 ## Internal Mounting Point Positions
 
-> **Image:** Internal Mounting Points (mm)
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b6/rakbox-b6-mounting.svg"
+  width="50%"
+  caption="Internal Mounting Points (mm)"
+/>
 
 ## Mounting Plate Dimensions
 
-> **Image:** Mounting Plate Dimensions (mm)
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b6/rakbox-b6-mountingplate.svg"
+  width="50%"
+  caption="Mounting Plate Dimensions (mm)"
+/>
 
+<RkBottomNav/>

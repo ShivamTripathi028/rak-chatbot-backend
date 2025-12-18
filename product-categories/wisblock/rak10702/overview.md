@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK10702 WisBlock Indoor Comfort Node
 
 Thank you for choosing **RAK10702 WisBlock Indoor Comfort Node** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -30,11 +32,11 @@ It is a feature-packed air quality sensing device for application development. T
 
 - Supports sleep mode, low power consumption
 - **Nordic nRF52840 MCU** combined with the **Semtech SX1262** LoRa transceiver for powerful, yet low-power applications and additional BLE functionality.
-- **Sensirion SCD30 CO2 Sensor**: CO2 sensor with a measurement range from 400 ppm to 10,000 ppm and an accuracy of ±(30 ppm + 3%)
+- **Sensirion SCD30 CO2 Sensor**: CO2 sensor with a measurement range from 400&nbsp;ppm to 10,000&nbsp;ppm and an accuracy of ±(30&nbsp;ppm + 3%)
 - **Plantower PM sensor**: Particle Matter Sensor module allows to capture standard PM1.0, PM2.5, and PM10 values.
-- **Sensirion SGP40 VOC Sensor**: Detects a wide range of Volatile Organic Compounds (VOCs) with a measurement range of 0 to 1000 ppm (Ethanol in clean air), combined with the Sensorion VOC algorithms it delivers a VOC index from 0 to 500.
-- **Vishay Semiconductor VEML7700 Light Sensor**: Can measure light exposure with an ambient light range from 0 lx to about 120,000 lx with a resolution of 0.0036 lx.
-- **Sensirion SHTC3 Temperature and Humidity Sensor**: Low power T&H sensor with a temperature sensor accuracy of ±0.2° C, a temperature range from -40° C to +125° C, a humidity sensor accuracy of ±2.0% RH and a humidity range from 0 to 100%
+- **Sensirion SGP40 VOC Sensor**: Detects a wide range of Volatile Organic Compounds (VOCs) with a measurement range of 0 to 1000&nbsp;ppm (Ethanol in clean air), combined with the Sensorion VOC algorithms it delivers a VOC index from 0 to 500.
+- **Vishay Semiconductor VEML7700 Light Sensor**: Can measure light exposure with an ambient light range from 0 lx to about 120,000&nbsp;lx with a resolution of 0.0036 lx.
+- **Sensirion SHTC3 Temperature and Humidity Sensor**: Low power T&H sensor with a temperature sensor accuracy of ±0.2°&nbsp;C, a temperature range from -40°&nbsp;C to +125°&nbsp;C, a humidity sensor accuracy of ±2.0% RH and a humidity range from 0 to 100%
 - **Senba Technology AM312 PIR Sensor**: Detects occupancy and motion from infrared radiated objects.
 - **RGB LED**: Shows the air quality status in 3 levels.
 - **Micro Crystal RV-3028-C7 RTC Module**: Keeps the real-time accurate on the device.
@@ -44,7 +46,8 @@ It is a feature-packed air quality sensing device for application development. T
 - LoRa and BLE antenna are integrated inside the casing
 - Micro USB for configuration
 - Supports global license-free frequency band: RU864, IN865, EU868, RU864, US915, AU915, KR920, and AS923
-- (_**Optional**_) **E-Ink Display**: Shows the current values of all integrated sensors, with a resolution of 400x300 pixel
+- (_**Optional**_) **E-Ink Display**: Shows the current values of all integrated sensors, with a resolution of 400x300&nbsp;pixel
 - (_**Optional**_) **3D printed enclosure in SLS quality**: Perfect protection for the Indoor Comfort Node with a flexible mounting option
 - (_**Optional**_) **Open-sourced enclosure design for 3D printed enclosures**: Enclosure design available in different 3D formats to either print your enclosure or use it as a base for your enclosure design
 
+<RkBottomNav/>

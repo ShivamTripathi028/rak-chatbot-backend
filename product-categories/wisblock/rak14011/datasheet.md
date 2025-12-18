@@ -10,20 +10,25 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14011 WisBlock 4x4 Keypad Module Datasheet
 
 ## Overview
 
 ### Description
 
+
 **RAK14011 WisBlock 4x4 Keypad Module** was designed to be part of a production-ready IoT solution and must be combined with a [RAK14004 WisBlock Keypad Module](https://docs.rakwireless.com/product-categories/wisblock/rak14004/overview/).
+
 
 ### Features
 
 * **Module Specifications**
   * 4 x 4 matrix keypad
 * **Size**
-  * 43 mm x 55 mm
+  * 43&nbsp;mm x 55&nbsp;mm
 
 ## Specifications
 
@@ -31,7 +36,12 @@ sidebar_label: Datasheet
 
 The front (top) and bottom views of the RAK14011 are shown in **Figure 1**.
 
-> **Image:** RAK14011 top and bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14011/datasheet/rak14011_overview.png"
+  width="40%"
+  caption="RAK14011 top and bottom view"
+/>
+
 
 ### Hardware
 
@@ -43,9 +53,21 @@ The hardware specification shows the dimensions and schematic diagram of the RAK
 
 **Figure 2** shows the dimensions, mechanic drawing and four (4) mounting holes of the RAK14011 module.
 
-> **Image:** RAK14011 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14011/datasheet/image-20210728172006507.png"
+  width="50%"
+  caption="RAK14011 Mechanical Dimensions"
+/>
+
 
 #### Schematic Diagram
 
-> **Image:** RAK14011 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14011/datasheet/image-20210728172209108.png"
+  width="80%"
+  caption="RAK14011 Schematic Diagram"
+/>
 
+
+
+<RkBottomNav/>

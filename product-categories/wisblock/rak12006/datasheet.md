@@ -11,6 +11,9 @@ sidebar_label: Datasheet
 date: 2021-08-10
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12006 WisBlock PIR Sensor Module Datasheet
 
 ## Overview
@@ -24,9 +27,9 @@ The RAK12006 is a Pyroelectric Infrared Radial (PIR) module. It is designed to d
 - Digital signal processing
 - Built-in filter, screens interference from other frequencies
 - Schmitt Trigger Output REL
-- 3.3 V Power supply
+- 3.3&nbsp;V Power supply
 - Chipset: Senba Sensing Technology AM312
-- **Module size:** 15 X 25 mm
+- **Module size:** 15 X 25&nbsp;mm
 
 ## Specifications
 
@@ -36,7 +39,11 @@ The RAK12006 is a Pyroelectric Infrared Radial (PIR) module. It is designed to d
 
 The RAK12006 WisBlock PIR Sensor Module can be mounted on the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 1** shows the mounting mechanism of the RAK12006 on a WisBlock Base module.
 
-> **Image:** RAK12006 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12006/datasheet/mounting-mechanism.png"
+  width="50%"
+  caption="RAK12006 mounting mechanism on a WisBlock Base module"
+/>
 
 ### Hardware
 
@@ -52,14 +59,18 @@ The hardware specifications are categorized into five parts. It shows the chipse
 
 The RAK12006 module has a 40-pin WisConnector that is compatible with the WisBlock Base IO Slot. The pin order of the connector and the pinout definition are shown in **Figure 2**.
 
-> **Image:** RAK12006 Pinout Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12006/datasheet/rak12006_pinout.svg"
+  width="80%"
+  caption="RAK12006 Pinout Schematic"
+/>
 
 :::tip NOTE
 - Only **Digital OUT**, **3V3**, and **GND** are connected to WisConnector.
 
 - An optional **3V3_S** supply voltage can be used to turn ON or OFF the RAK12006 module through the IO2 pin. This can be helpful in low-power applications.
 
-- To disable the default **3V3** supply and use the alternative **3V3_S** supply source, the resistor jumper R1 must be 0 Ω and R2 must be NC (not connected).
+- To disable the default **3V3** supply and use the alternative **3V3_S** supply source, the resistor jumper R1 must be 0&nbsp;Ω and R2 must be NC (not connected).
 :::
 
 #### Electrical Characteristics
@@ -78,15 +89,28 @@ This section shows the maximum and minimum ratings of the RAK12006 module and it
 
 **Figure 3** shows the mechanical dimensions of the RAK12006 Module.
 
-> **Image:** RAK12006 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12006/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="RAK12006 Mechanical Dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12006/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
 
 #### Schematic Diagram
 
 **Figure 5** shows the schematic of the RAK12006 module.
 
-> **Image:** RAK12006 WisBlock PIR Module Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12006/datasheet/rak12006-schematic.png"
+  width="100%"
+  caption="RAK12006 WisBlock PIR Module Schematic"
+/>
 
+<RkBottomNav/>

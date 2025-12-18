@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5811 WisBlock 0-5V Interface Module Quick Start Guide
 
 ## Prerequisite
@@ -50,17 +53,27 @@ To give you a better understanding of how the RAK5811 Module works, the block di
 
 #### Block Diagram
 
-In the RAK5811 module, as shown in **Figure 1**, the 0-5 V input signal is connected to the operational amplifier by the R1/R2 voltage divider. The operational amplifier output is routed to an analog input of the MCU to be digitalized by an internal ADC.
+In the RAK5811 module, as shown in **Figure 1**, the 0-5&nbsp;V input signal is connected to the operational amplifier by the R1/R2 voltage divider. The operational amplifier output is routed to an analog input of the MCU to be digitalized by an internal ADC.
 
-> **Image:** RAK5811 Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak5811-block-diagram.png"
+  figureCount="1"
+  width="60%"
+  caption="RAK5811 Block Diagram"
+/>
 
 Once the signal is digitalized, you can recover the original voltage value by applying the following relation:
 
-> **Image:** RAK5811 Voltage divider relation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/voltage-divider.png"
+  figureCount="2"
+  width="25%"
+  caption="RAK5811 Voltage divider relation"
+/>
 
-Where Vout is the WisBlock Core read voltage, Vin is the analog input voltage (0-5 V). From the voltage divider R1 is 1 MΩ and R2 is 1.5 MΩ, so the final relationship is: **Vin = Vout / 0.6**.
+Where Vout is the WisBlock Core read voltage, Vin is the analog input voltage (0-5&nbsp;V). From the voltage divider R1 is 1&nbsp;MΩ and R2 is 1.5&nbsp;MΩ, so the final relationship is: **Vin = Vout / 0.6**.
 
-As shown in **Figure 1**, the module provides an output of 12 V to power industrial sensors. This 12 V output is controlled by a TPS60146 DC-DC booster. The **Enable** pin allows to control the output voltage of the booster module and sets the RAK5811 module into a low power consumption mode.
+As shown in **Figure 1**, the module provides an output of 12&nbsp;V to power industrial sensors. This 12&nbsp;V output is controlled by a TPS60146 DC-DC booster. The **Enable** pin allows to control the output voltage of the booster module and sets the RAK5811 module into a low power consumption mode.
 
 ### Hardware Setup
 
@@ -76,19 +89,34 @@ The RAK5811 module is part of the WisBlock Interface category, which connects to
 For detailed instructions, refer to the [WisBlock Installation Guide](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/).
 :::
 
-> **Image:** WisConnector and IO slot
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/wisconnector.png"
+  figureCount="3"
+  width="60%"
+  caption="WisConnector and IO slot"
+/>
 
 2. Always secure the RAK5811 module with **3 x M1.2 x3 pan head screws**, as shown in **Figure 4** below.
 
-> **Image:** RAK5811 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak5811_mounting.png"
+  figureCount="4"
+  width="60%"
+  caption="RAK5811 mounting mechanism on a WisBlock Base module"
+/>
 
 ##### RAK5811 Fast Crimping Terminal Mechanism
 
-The RAK5811 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20 AWG to 24 AWG. The usual stripping length is around 6 to 7 mm.
+The RAK5811 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20 AWG to 24 AWG. The usual stripping length is around 6 to 7&nbsp;mm.
 
 As shown in **Figure 5**, during the crimping process, you should first press down and maintain the spring head of the crimping terminal firmly, then insert the stripped cable head into the corresponding connector’s hole. Once inserted correctly, release the spring head, and the crimping process is completed.
 
-> **Image:** RAK5811 Crimping
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/crimping_process.png"
+  figureCount="5"
+  width="40%"
+  caption="RAK5811 Crimping"
+/>
 
 :::tip NOTE
 To learn more about the Pinout Diagram of the RAK5811 Module, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak5811/datasheet/#pin-definition).
@@ -100,15 +128,30 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. Remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/removing_screw.png"
+  figureCount="6"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/detach_silkscreen.png"
+  figureCount="7"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 8**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/detach_module.png"
+  figureCount="8"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -117,47 +160,100 @@ If you will connect other modules to the remaining WisBlock Base slots, check on
 :::warning
 
 - Battery can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause fire.
 - Make sure the battery wires match the polarity on the RAK WisBlock Base Board. Not all batteries have the same wiring.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 :::
 
 ### Software Configuration and Example
 
 #### Arduino Setup
 
-The RAK5811 module includes a 12 V voltage source which is controlled by the WisBlock Core module via the **Enable** pin of the WisBlock Base. This GPIO must be set to **HIGH** before sampling. The 12 V voltage source is also designed to provide the power supply to the operational amplifier of the module. Before connecting a sensor to the RAK5811 module, you must be sure that the sensor can safely operate at 5 V.
+The RAK5811 module includes a 12&nbsp;V voltage source which is controlled by the WisBlock Core module via the **Enable** pin of the WisBlock Base. This GPIO must be set to **HIGH** before sampling. The 12&nbsp;V voltage source is also designed to provide the power supply to the operational amplifier of the module. Before connecting a sensor to the RAK5811 module, you must be sure that the sensor can safely operate at 5&nbsp;V.
 
 If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index), the WisBlock Core and example code should now be available on the Arduino IDE.
 
 1. Select the WisBlock Core you have, as shown in **Figure 9** to **Figure 11**.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak4631_board.png"
+  figureCount="9"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
-> **Image:** Selecting RAK11200 as WisBlock Core
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak11200_board.png"
+  figureCount="10"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak11310_board.png"
+  figureCount="11"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 2. You can access the programming guide for the RAK5811 module by opening the example codes depending on your WisBlock Core, as shown in **Figure 12** to **Figure 14**.
 
-> **Image:** Opening RAK5811 example for RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/example_rak4631_rak5811.png"
+  figureCount="12"
+  width="100%"
+  caption="Opening RAK5811 example for RAK4631 WisBlock Core"
+/>
 
-> **Image:** Opening RAK5811 example for RAK11200 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/example_rak11200_rak5811.png"
+  figureCount="13"
+  width="100%"
+  caption="Opening RAK5811 example for RAK11200 WisBlock Core"
+/>
 
-> **Image:** Opening RAK5811 example for RAK11310 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/example_rak11310_rak5811.png"
+  figureCount="14"
+  width="100%"
+  caption="Opening RAK5811 example for RAK11310 WisBlock Core"
+/>
 
 3. After opening the example code, you can now select the right port and upload the code, as shown in **Figure 15** and **Figure 16**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak4631_select_port.png"
+  figureCount="15"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK5811 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak4631_upload.png"
+  figureCount="16"
+  width="100%"
+  caption="Uploading the RAK5811 example code"
+/>
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the ADC reading logs, as shown in **Figure 17** and **Figure 18**.
 
-> **Image:** RAK4631 and RAK5811 example log
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak4631_logs.png"
+  figureCount="17"
+  width="90%"
+  caption="RAK4631 and RAK5811 example log"
+/>
 
-> **Image:** RAK11200 and RAK5811 example log
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/rak11200_logs.png"
+  figureCount="18"
+  width="90%"
+  caption="RAK11200 and RAK5811 example log"
+/>
+
 
 #### PlatformIO Setup (Optional)
 
@@ -165,9 +261,14 @@ To develop using PlatformIO, you need to install the RAK_PATCH script as describ
 
 1. Open the [RAK5811 Arduino example](https://docs.rakwireless.com/product-categories/wisblock/rak5811/quickstart/#software-configuration-and-example). Then install the libraries, build the project, and save the sketch.
 
-2. Now launch open **Platformio** > **PIO Home** and click on **import Arduino project** button, as shown in **Figure 19**.
+2. Now launch open **Platformio** &gt; **PIO Home** and click on **import Arduino project** button, as shown in **Figure 19**.
 
-> **Image:** Import Arduino project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/pio-import.png"
+  figureCount="19"
+  width="100%"
+  caption="Import Arduino project"
+/>
 
 3. Configure **Import Arduino Project** parameters:
 
@@ -176,15 +277,30 @@ To develop using PlatformIO, you need to install the RAK_PATCH script as describ
   - Choose the directory of your Arduino project to be imported (Label 3).
   - To finish import, click on the **Import** button (Label 4).
 
-> **Image:** Configure Import parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/pio-import-config.png"
+  figureCount="20"
+  width="60%"
+  caption="Configure Import parameters"
+/>
 
 4. On the Trust author window, click **Yes**.
 
-> **Image:** Trust author window
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/pio-trust.png"
+  figureCount="21"
+  width="50%"
+  caption="Trust author window"
+/>
 
 Now, your project is imported successfully.
 
-> **Image:** Imported Arduino project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/imported_rak5811.png"
+  figureCount="22"
+  width="100%"
+  caption="Imported Arduino project"
+/>
 
 On the imported project, check the **platformio.ini** file:
 
@@ -202,7 +318,12 @@ upload_port = COM8
 
 If your project is running on Windows, use the Device Manager program to find correct the COM port allocated.
 
-> **Image:** Windows Device Manager Ports (COM & LPT)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/quickstart/dev_manager_rak11300.png"
+  figureCount="23"
+  width="70%"
+  caption="Windows Device Manager Ports (COM & LPT)"
+/>
 
 #### Code Explanation RAK4631 Example
 
@@ -282,6 +403,7 @@ for (i = 0; i < NO_OF_SAMPLES; i++)
 average_adc_raw = adc_raw / NO_OF_SAMPLES;
 ```
 
+
 ##### 1.4 Process ADC Samples
 
 - The function **`esp_adc_cal_raw_to_voltage(average_adc_raw)`** convert adc_raw value to voltage in mV.
@@ -299,3 +421,5 @@ ADC measurements will be noisier while WiFi is on, often due to poor power and/o
 ##### 1.5 ADC Calibration API
 Espressif provides a library (API) for ADC calibration that uses tables for comparison. You can find more details about ESP32 [ADC calibration](https://docs.espressif.com/projects/esp-idf/en/v5.1/esp32/api-reference/peripherals/adc_calibration.html) on Espressif ADC API.
 
+
+<RkBottomNav/>

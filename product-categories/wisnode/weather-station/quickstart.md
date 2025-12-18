@@ -12,13 +12,22 @@ image: https://images.docs.rakwireless.com/wisnode/environmental-monitoring/envi
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # Weather Station Monitoring Solution Quick Start Guide
 
 ## Prerequisites
 
 Before proceeding with each step for using the Weather Station Monitoring Solution, make sure to have all the necessary items listed below:
 
-> **Image:** Weather Station Solution Package Inclusion
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/0.sensor-hub-weather-station-solution-accessories.png"
+    width="80%"
+    caption="Weather Station Solution Package Inclusion"
+  zoomMode={true}
+/>
 
 ### Hardware Tools
 
@@ -41,45 +50,85 @@ If the selected solution utilizes the NB-IoT/LTE CAT-M wireless communication mo
 
 1. Remove the back cover by unscrewing the four screws with a cross screwdriver.
 
-> **Image:** Remove the back cover
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/1.sim-card-insertion.png"
+width="20%"
+caption="Remove the back cover"
+  zoomMode={true}
+/>
 
 2. Insert the SIM card into the groove, then gently push it into the card slot.
 
-> **Image:** Insert the SIM card
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/2.sim-card-insertion.png"
+width="40%"
+caption="Insert the SIM card"
+  zoomMode={true}
+/>
 
 #### Sensor Hub Mounting
 
 ##### Wall Mounting
 
-1. Use a 5 mm drill bit to drill holes in the wall, then insert the screw anchors into the holes.
+1. Use a 5&nbsp;mm drill bit to drill holes in the wall, then insert the screw anchors into the holes.
 
-> **Image:** Installation preparation
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/3.sensor-hub-installation.png"
+width="80%"
+caption="Installation preparation"
+  zoomMode={true}
+/>
 
 2. Secure the mounting bracket to the wall by using self-tapping screws.
 
-> **Image:** Secure the mounting bracket
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/4.sensor-hub-installation.png"
+width="30%"
+caption="Secure the mounting bracket"
+  zoomMode={true}
+/>
 
 3. Align the device's hanging tab with the slots on the bracket, and then insert the tab into the slots. Pull the device downwards until it snaps into place.
 
-> **Image:** Align the device with the hanging tabs
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/5.sensor-hub-installation.png"
+width="40%"
+caption="Align the device with the hanging tabs"
+  zoomMode={true}
+/>
 
 ##### Pole Mounting
 
 1. Secure the mounting bracket to the pole using a steel strap.
 
-> **Image:** Fix the mounting bracket
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/6.pole-mounting.png"
+width="20%"
+caption="Fix the mounting bracket"
+  zoomMode={true}
+/>
 
 :::tip NOTE
-Mount the bracket on a pole with a 50-80 mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
+Mount the bracket on a pole with a 50-80&nbsp;mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
 :::
 
 2. Align the hanging tab of the device with the slots on the bracket, then insert the tab into the slots. Gently pull the device downwards until it securely snaps in place.
 
-> **Image:** Device installation
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/7.pole-mounting.png"
+width="40%"
+caption="Device installation"
+  zoomMode={true}
+/>
 
 3. Insert a security screw at the top to fasten the device and the bracket together.
 
-> **Image:** Fasten the device and the bracket
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/8.pole-mounting.png"
+width="20%"
+caption="Fasten the device and the bracket"
+  zoomMode={true}
+/>
 
 ## RAK2560 WisNode Sensor Hub + Micro Weather Sensor Setup
 
@@ -89,22 +138,37 @@ Mount the bracket on a pole with a 50-80 mm diameter. For larger poles, use a b
 
 2. Connect the micro weather sensor and the communication cable. Align the grooves of the connectors and insert the cable connector into the sensor connector.
 
-> **Image:** Insert the Cable Connector into the Sensor Connector
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/9.installation-of-micro-weather-sensor.png"
+width="40%"
+caption="Insert the Cable Connector into the Sensor Connector"
+  zoomMode={true}
+/>
 
 3. After inserting, tighten the locking nut.
 
 4. Fix the sensor to the mounting bracket using the provided wing screws. When installing the sensor, ensure that the indicator on the sensor corresponds to the geographical north.
 
-> **Image:** Fix the Sensor to the Mounting Bracket
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/10.installation-of-micro-weather-sensor.jpg"
+width="40%"
+caption="Fix the Sensor to the Mounting Bracket"
+  zoomMode={true}
+/>
 
-> **Image:** Indicator
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/11.installation-of-micro-weather-sensor.png"
+width="30%"
+caption="Indicator"
+  zoomMode={true}
+/>
 
 5. Fix the mounting bracket to the pole.
 
 :::tip NOTE
 **Precautions during mounting:**
 - Check regularly to ensure that the sensor is not disturbed by other running equipment that may not fully comply with the general standards, such as radio/radar transmitters, ship engines, and motors.
-- Do not mount the sensor on the same plane as any radar scanning devices, and keep a distance of at least 2 meters between them.
+- Do not mount the sensor on the same plane as any radar scanning devices, and keep a distance of at least 2&nbsp;meters between them.
 - When mounting the sensor, keep it at a certain distance from the radio receiving antennas around.
 - Avoid nearby structures, such as trees, utility poles, and tall buildings, which can generate an eddying flow that affects the accuracy of the ultrasonic sensor.
 - When mounting the sensor on a building, the ideal mounting height should be 1.5 times the height of the building.
@@ -119,39 +183,74 @@ The micro weather sensor comes pre-assembled with Sensor Probe IO by default at 
 2. Align the white dot symbol on the Sensor Probe IO SP11 connector plug with the white dot symbol on the Sensor Hub SP11 connector socket and push the plug firmly into the socket.
 3. Once connected, tighten the locking nut to secure the SPI connection. The Sensor Probe IO can connect to any Sensor Hub SP11 connector port. Refer to the actual use and connect to the appropriate port, as shown in **Figure 13**.
 
-> **Image:** Connect the Sensor Probe IO
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/12.connect-sensor-probe-io-and-sensor-hub.png"
+width="45%"
+caption="Connect the Sensor Probe IO"
+  zoomMode={true}
+/>
 
-> **Image:** Installation completed
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/13.connect-sensor-probe-io-and-sensor-hub.png"
+width="40%"
+caption="Installation completed"
+  zoomMode={true}
+/>
 
 ## Power Supply Setup
 
-The Sensor Hub relies on the Sensor Probe IO for connectivity to the micro weather sensors. Consequently, it cannot be powered by batteries alone and requires a connection to either a solar panel or a 12 V<sub>DC</sub> power supply for operation.
+The Sensor Hub relies on the Sensor Probe IO for connectivity to the micro weather sensors. Consequently, it cannot be powered by batteries alone and requires a connection to either a solar panel or a 12&nbsp;V<sub>DC</sub> power supply for operation.
 
 ### RAK9154 Solar Battery Installation
 
 :::tip NOTE
-Mount the bracket on a pole with a 50-80 mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
+Mount the bracket on a pole with a 50-80&nbsp;mm diameter. For larger poles, use a bigger steel strap. The standard kit does not include a larger steel strap. Purchase separately if needed.
 :::
 
 1. Secure the mounting bracket on the pole with two steel straps.
 
-> **Image:** Secure the mounting bracket
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/14.connect-solar-panel-system.png"
+width="20%"
+caption="Secure the mounting bracket"
+  zoomMode={true}
+/>
 
 2. Attach the mounting plate to the RAK9154 with two (2) M3 screws.
 
-> **Image:** Attach the mounting plate
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/15.connect-solar-panel-system.png"
+width="40%"
+caption="Attach the mounting plate"
+  zoomMode={true}
+/>
 
 3. Install the RAK9154 to the back of the solar panel with four (4) screws and nuts.
 
-> **Image:** Attach RAK9154 to solar panel
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/16.connect-solar-panel-system.png"
+width="40%"
+caption="Attach RAK9154 to solar panel"
+  zoomMode={true}
+/>
 
-4. Connect the cable of the solar panel to the **PV input** connector of RAK9154. Install two (2) M6 screws to the mounting plate with a clearance of about 3 mm.
+4. Connect the cable of the solar panel to the **PV input** connector of RAK9154. Install two (2) M6 screws to the mounting plate with a clearance of about 3&nbsp;mm.
 
-> **Image:** Connector the RAK9154
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/17.connect-solar-panel-system.png"
+width="40%"
+caption="Connector the RAK9154"
+  zoomMode={true}
+/>
 
 5. Suspend the solar panel on the mounting bracket, adjust its angle and direction, and then tighten the two (2) M6 screws along with the remaining two screws.
 
-> **Image:** Install the solar panel combination
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/18.connect-solar-panel-system.png"
+width="40%"
+caption="Install the solar panel combination"
+  zoomMode={true}
+/>
 
 6. Connect Sensor Hub and RAK9154. Use a cable to link the remaining connection port of the Sensor Hub to the lithium battery Output 1 SP11 connection port of RAK9154.
 
@@ -159,21 +258,37 @@ Mount the bracket on a pole with a 50-80 mm diameter. For larger poles, use a b
 When connecting to RAK9154, ensure that the Sensor Hub is connected to the Output 1 connection port.
 :::
 
-> **Image:** Connect the Sensor Hub and RAK9154
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/connect-sensorhub-rak9154.png"
+width="60%"
+caption="Connect the Sensor Hub and RAK9154"
+  zoomMode={true}
+/>
 
 7. Once the connection is complete, the Sensor Hub is ready to be powered up.
 
-### 12 V<sub>DC</sub> Power Supply Installation
+### 12&nbsp;V<sub>DC</sub> Power Supply Installation
 
 1. Connect the power adapter to the external power cable of Sensor Hub using a circular DC connector.
 
-> **Image:** Power Adapter Connection
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/21.connect-the-12-vdc-power-supply.png"
+width="40%"
+caption="Power Adapter Connection"
+  zoomMode={true}
+/>
 
 2. Connect the external power cable to the Sensor Hub using the SP11 connector.
 3. Align the white dot mark on the SP11 connector plug of the external power cable with the white dot mark on the Sensor Hub SP11 connector socket, and push the plug firmly into the socket.
 4. After the plug and socket are connected, tighten the locking nut to secure the connection of the SP11 connector. The external power cable can connect to any Sensor Hub connection port.
 
-> **Image:** Connect the external power cable
+
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/22.connect-the-12-vdc-power-supply.png"
+width="40%"
+caption="Connect the external power cable"
+  zoomMode={true}
+/>
 
 ## Software Configuration Guide
 
@@ -184,7 +299,7 @@ When connecting to RAK9154, ensure that the Sensor Hub is connected to the Outpu
 After installing all hardware components, connect the power supply. If the power supply consists of a solar panel and a battery, the device will power on automatically once all hardware has been installed.
 
 :::warning
-To prevent damage to the device, refrain from powering up the Sensor Hub before connecting it to the sensor. It is advisable to use the 12 V<sub>DC</sub> adapter provided with the Sensor Hub for optimal performance.
+To prevent damage to the device, refrain from powering up the Sensor Hub before connecting it to the sensor. It is advisable to use the 12&nbsp;V<sub>DC</sub> adapter provided with the Sensor Hub for optimal performance.
 :::
 
 #### Connect Sensor Hub to WisToolBox
@@ -193,33 +308,68 @@ To prevent damage to the device, refrain from powering up the Sensor Hub before 
 
 2. Initiate the app and confirm that NFC and Bluetooth are enabled on your mobile device. Click on **START**.
 
-> **Image:** Start App
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/1.start-app.png"
+width="40%"
+caption="Start App"
+  zoomMode={true}
+/>
 
 3. On the **Select connection mode** menu, choose **NFC Activation**.
 
-> **Image:** Select NFC Activation
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/2.select-nfc-activation.png"
+width="40%"
+caption="Select NFC Activation"
+  zoomMode={true}
+/>
 
 4. Select the **Sensor HUB** option in the device selection interface to establish a connection.
 
-> **Image:** Select Sensor Hub
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/3.select-sensor-hub.png"
+width="40%"
+caption="Select Sensor Hub"
+  zoomMode={true}
+/>
 
 5. Click the **CONNECT** button to initiate the scanning process for devices.
 
-> **Image:** Click on the CONNECT button
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/4.click-on-the-connect-button.png"
+width="40%"
+caption="Click on the CONNECT button"
+  zoomMode={true}
+/>
 
 6. Hold your mobile device close to the **N** symbol on the Sensor Hub device.
 
-> **Image:** Scanning in progress
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/5.scanning-in-progress.png"
+width="40%"
+caption="Scanning in progress"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 The detection of the Sensor Hub device indicates that the device has been successfully powered up.
 :::
 
-> **Image:** Scan Successful
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/6.scan-successful.png"
+width="40%"
+caption="Scan Successful"
+  zoomMode={true}
+/>
 
 7. After the connection is established, there will be a synchronization of device data. This process may take some time.
 
-> **Image:** Sync Device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/7.sync-device.png"
+width="40%"
+caption="Sync Device"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 - By default, if no connection is established within 30 seconds, the BLE broadcast of the Sensor Hub will automatically shut down. To establish a connection, connect the RAK device immediately after turning on the power or restart the power.
@@ -228,19 +378,39 @@ The detection of the Sensor Hub device indicates that the device has been succes
 
 8. Upon completion of data synchronization, the app will automatically transition to the **SENSOR HUB INFO** page.
 
-> **Image:** SENSOR HUB INFO page
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/8.sensor-hub-info-page.png"
+width="40%"
+caption="SENSOR HUB INFO page"
+  zoomMode={true}
+/>
 
 9. While on the **SENSOR HUB INFO** page, configure the Uplink Settings according to the selected network.
 
-> **Image:** Uplink Settings option
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/9.uplink-settings-option.png"
+width="40%"
+caption="Uplink Settings option"
+  zoomMode={true}
+/>
 
 10. Once configured, click **SAVE SELECTION**, and then the **APPLY** button to implement the configuration options.
 
-> **Image:** Apply the configuration options
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/10.apply-the-configuration-options.png"
+width="40%"
+caption="Apply the configuration options"
+  zoomMode={true}
+/>
 
 After a few seconds, the synchronization progress will be completed, concluding this process.
 
-> **Image:** Commands applied successfully
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/11.commands-applied-successfully.png"
+width="40%"
+caption="Commands applied successfully"
+  zoomMode={true}
+/>
 
 ### Sensor Hub Network Configuration
 
@@ -252,21 +422,29 @@ Refer to the **Connect the Gateway to the Server** and **Connect Sensor Hub to t
 
 1. Click the **LORA & LORAWAN PARAMETERS** tab. Configure the following parameters:
 
-- **Global settings**
+- <b>Global settings</b>
 
-> **Image:** Global Settings
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/12.global-settings.png"
+width="40%"
+caption="Global Settings"
+  zoomMode={true}
+/>
 
 - **Join mode**: Configure the Join mode based on the device's network access mode: **Over-The-Air Activation (OTAA)** or **Activation By Personalization (ABP)**. Make sure it matches the join mode registered on the network server.
 - **Active region**: Set the Active region to the device's frequency plan. Ensure that it is consistent with the gateway and device frequency plan registered on the network server.
 
 Supported frequency bands include CN470, RU864, IN865, EU868, US915, AU915, KR920, AS923-1/2/3/4.
 
-**LoRaWAN keys, ID, EUI**
+<b>LoRaWAN keys, ID, EUI</b>
 
 - For the **OTAA join mode**, configure the following parameters: **Application EUI**, **Application key**, and **Device EUI**.
 
-  
-> **Image:** OTAA join mode configuration
+  <RkImage
+  src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/13.otaa-join-mode-configuration.png"
+  width="40%"
+  caption="OTAA join mode configuration"
+  />
 
   - **Application EUI**: Confirm that it matches the device's Application EUI as registered in the network server.
   - **Application key**: Verify its alignment with the device's Application key registered in the network server. Click **GENERATE KEY** to create a new key if needed.
@@ -274,11 +452,22 @@ Supported frequency bands include CN470, RU864, IN865, EU868, US915, AU915, KR92
 
 - For the ABP join mode, configure the required parameters: **Application session key**, **Device address**, and **Network session key**. 
 
-> **Image:** ABP join mode
 
-- **Data on LoRa® network**
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/14.abp-join-mode.png.jpg"
+    width="40%"
+    caption="ABP join mode"
+  zoomMode={true}
+/>
 
-> **Image:** Data on LoRa® network
+- <b>Data on LoRa® network</b>
+
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/15.data-on-lora-network.png"
+width="40%"
+caption="Data on LoRa® network"
+  zoomMode={true}
+/>
 
   * **Confirm mode**: Message confirmation mode.
   * **Enable auto join**: Determine whether to activate automatic network access. When enabled, the device will join the network automatically upon powering up.
@@ -288,7 +477,12 @@ Supported frequency bands include CN470, RU864, IN865, EU868, US915, AU915, KR92
 
 2. After clicking **JOIN NETWORK**, a **Message sent** message will appear, indicating that the join network command has been sent.
 
-> **Image:** Join the Network
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/16.join-the-network.png"
+width="40%"
+caption="Join the Network"
+  zoomMode={true}
+/>
 
 #### NB-IoT/LTE CAT-M1 Configuration
 
@@ -296,21 +490,30 @@ This section primarily introduces the configuration of LTE-M network parameters.
 
 1. Click the **LTE-M PARAMETERS** tab and check the following parameters to ensure that the network is working properly.
 
-> **Image:** View the LTE-M Parameters tab
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/17.view-the-nb-iot-parameters-tab-parameters.png"
+width="40%"
+caption="View the LTE-M Parameters tab"
+  zoomMode={true}
+/>
 
-**LTE-M Network**
+<b>LTE-M Network</b>
 
 - **OPERATOR**: Shows the Network operator. If the operator's name is displayed, it indicates that the device has recognized the SIM card.
 For example, *CHINAMOBILE*.
 
-**IP Network**
+<b>IP Network</b>
 
 - **STATUS**: If the status is **Activated**, it signifies that the network of the SIM card is functioning normally.
 
 2. Select the **Application** option to configure the cellular network parameters.
  
- 
-> **Image:** Configure the cellular network parameters
+ <RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/18.configure-the-cellular-network-parameters.png"
+width="60%"
+caption="Configure the cellular network parameters"
+  zoomMode={true}
+/>
 
 - **Service**: Choose a service, either AWS IoT Core or Generic MQTT. For this guide, use Generic MQTT as an example.
 - **Server address**: Input the server address. Using the external MQTT broker as an example, enter `broker.hivemq.com`. Enter the address based on your specific use case.
@@ -324,12 +527,21 @@ For example, *CHINAMOBILE*.
 
 3. Following the configuration, click **APPLY** in the command list at the bottom of the interface to implement the changes. If the message **All commands applied successfully** appears, it indicates a successful configuration modification.
  
-
-> **Image:** Apply the modified configuration
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/19.apply-the-modified-configuration.png"
+width="70%"
+caption="Apply the modified configuration"
+  zoomMode={true}
+/>
 
 4. When configured correctly and successfully connected to the server, the **Connection Status** will display as **connected**.
 
-> **Image:** Successfully connected to the server
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/20.successfully-connected-to-the-server.png"
+width="40%"
+caption="Successfully connected to the server"
+  zoomMode={true}
+/>
 
 ### Sensor Configuration
 
@@ -337,11 +549,21 @@ This section details the configuration process of the weather sensor. It shows h
 
 1. To start with, click the **SENSOR PROBE** tab to display the connected weather stations on the interface. 
 
-> **Image:** Weather Station sensor
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/21.weather-station-sensor.png"
+width="40%"
+caption="Weather Station sensor"
+  zoomMode={true}
+/>
 
 2. Click the dropdown arrow to expand the details of the weather station sensor.
 
-> **Image:** Sensor details
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/22.sensor-details.png"
+width="40%"
+caption="Sensor details"
+  zoomMode={true}
+/>
 
 - **Wind speed**
 - **Wind direction**
@@ -351,18 +573,28 @@ This section details the configuration process of the weather sensor. It shows h
 - **FETCH DATA**: Update the monitoring data from the sensor.
 - **Device details**
 
-> **Image:** Sensor details
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/23.sensor-details.png"
+width="40%"
+caption="Sensor details"
+  zoomMode={true}
+/>
 
 For this example, fetch the data of the Wind speed and set the parameters by then choosing the Wind speed feature. 
 
 3. Configure the periodic uplink data sending, thresholds, and other relevant information for the sensor.
 
-> **Image:** Set the sensor parameters
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/24.set-the-sensor-parameters.png"
+width="40%"
+caption="Set the sensor parameters"
+  zoomMode={true}
+/>
 
 - **Sensor data**: Data provided by the sensor.
 - **FETCH DATA**: Update the latest sensor data.
 - **Send uplink if value changes**: Send uplink data if the sensor data changes.
-- **Sensor interval(s)**: The payload sending interval in seconds. It determines how often the sensor sends uplink data to the server, with a range interval from 60~86,400 seconds. Set this parameter when the **Send periodic uplink** is enabled.
+- **Sensor interval(s)**: The payload sending interval in seconds. It determines how often the sensor sends uplink data to the server, with a range interval from 60~86,400&nbsp;seconds. Set this parameter when the **Send periodic uplink** is enabled.
 - **Send periodic uplink**: Send uplink data periodically based on the sensor interval.
 - **Lower threshold**: Specifies the minimum acceptable value.
 - **Send uplink if below threshold**: Trigger the transmission of uplink data if the value falls below the lower threshold.
@@ -373,15 +605,26 @@ For this example, fetch the data of the Wind speed and set the parameters by the
 
 4. After completing the modifications, a message **Commands in queue** will appear at the bottom of the interface. Click **APPLY** to send the parameter update commands.
 
-> **Image:** Apply commands
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/25.apply-commands.png"
+width="40%"
+caption="Apply commands"
+  zoomMode={true}
+/>
 
 5. When the message **All commands applied successfully**, appears on the interface, it indicates that the parameter update commands have been successfully sent.
 
-> **Image:** Commands applied successfully
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/weather-station/quickstart/26.commands-applied-successfully.png"
+width="40%"
+caption="Commands applied successfully"
+  zoomMode={true}
+/>
 
-**Other Operations**
+<b>Other Operations</b>
 
 - **REMOVE SENSOR PROBE**: Detach the sensor.
 - **RESTORE TO DEFAULT SETTINGS**: Reset the Sensor Probe to its default settings.
 - **UPGRADE SENSOR PROBE**: Upgrade the firmware of the Sensor Probe.
 
+<RkBottomNav/>

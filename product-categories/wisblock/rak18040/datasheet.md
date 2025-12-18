@@ -12,6 +12,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK18040 WisBlock Audio Analog Microphone to I2S Module Datasheet
 
 ## Overview
@@ -30,13 +34,17 @@ sidebar_label: Datasheet
     - Supports two (2) analog microphones
 
 * **Module Size**
-    * 25 x 35 mm
+    * 25 x 35&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK18040 WisBlock Audio Analog Microphone to I2S Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18040/datasheet/rak18040.png"
+  width="60%"
+  caption="RAK18040 WisBlock Audio Analog Microphone to I2S Module"
+/>
 
 ### Hardware
 
@@ -52,7 +60,11 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 ##### WisBlock Connector
 
-> **Image:** RAK18040 WisBlock Connector pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18040/datasheet/rak18040-pinout.png"
+  width="70%"
+  caption="RAK18040 WisBlock Connector pinout"
+/>
 
 #### Acoustic and Electrical Characteristics
 
@@ -65,7 +77,7 @@ This table shows the RAK18040 WisBlock Audio Analog Microphone to I2S Module ele
 | 3V3_S/3V3 | Digital supply voltage                                                                                               | 3    | 3.3  | 3.6  | V    |
 | MICBIas   | Output voltage for analog MIC                                                                                        | 2.1  | -    | 2.8  | V    |
 | THD+N     | Digital supply voltage                                                                                               | -    | -80  | -92  | dB   |
-| SNR       | Reference = VOUT(0 dBFS), A-Weighted, MIC Input, MIC Gain = 0 dB, fs = 8 KHz, Mono Differential Input | -    | 101  | -    | dB   |
+| SNR       | Reference = VOUT(0&nbsp;dBFS), A-Weighted, MIC Input, MIC Gain = 0&nbsp;dB, fs = 8&nbsp;KHz, Mono Differential Input | -    | 101  | -    | dB   |
 
 #### Mechanical Characteristic
 
@@ -73,19 +85,36 @@ This table shows the RAK18040 WisBlock Audio Analog Microphone to I2S Module ele
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK18040 module.
 
-> **Image:** RAK18040 WisBlock DSP Module Mechanical Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18040/datasheet/rak18040_mechanic_drawing.png"
+  width="70%"
+  caption="RAK18040 WisBlock DSP Module Mechanical Drawing"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18040/datasheet/mxxs1003k6m.png"
+  width="80%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
 ##### WisBlock, Interposer, AMP and MIC Connectors, and LDO
 
-> **Image:** WisBlock, Interposer, AMP and MIC Connectors, and LDO
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18040/datasheet/rak18040_wisblock_interposer_amp_mic_ldo.png"
+  width="100%"
+  caption="WisBlock, Interposer, AMP and MIC Connectors, and LDO"
+/>
 
 ##### ADC and Analog Filter
 
-> **Image:** ADC and Analog Filter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18040/datasheet/rak18040_adc_analog_filter.png"
+  width="100%"
+  caption="ADC and Analog Filter"
+/>
 
+<RkBottomNav/>

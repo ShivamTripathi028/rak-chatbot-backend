@@ -10,25 +10,28 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19004 WisBlock Green Power Module Datasheet
 
 ## Overview
 
 ### Description
 
-RAK19004 is a WisBlock Power module that can harness and convert green power such as wind power, hydroelectric power, or solar power into fixed 5 V output. The module uses a TPS55165-Q1 from Texas Instruments, which is a DC-DC buck-boost converter. Upon startup, the module can have a stable 5 V output from a varying input voltage of 2 V-36 V, and its output current can also be as high as 1 A.
+RAK19004 is a WisBlock Power module that can harness and convert green power such as wind power, hydroelectric power, or solar power into fixed 5&nbsp;V output. The module uses a TPS55165-Q1 from Texas Instruments, which is a DC-DC buck-boost converter. Upon startup, the module can have a stable 5&nbsp;V output from a varying input voltage of 2&nbsp;V-36&nbsp;V, and its output current can also be as high as 1&nbsp;A.
 
 :::tip NOTE
-- The module has a minimum input voltage of 5.3 V for a startup.
+- The module has a minimum input voltage of 5.3&nbsp;V for a startup.
 - RAK19004 doesn't have a WisConnector just like the other WisBlock modules, but it is an external module with four (4) mounting holes, so you can place the module in the position that you want.
 :::
 
 ### Features
 
-- 5 V Power Output
-- 2 V-36 V Power Input
+- 5&nbsp;V Power Output
+- 2&nbsp;V-36&nbsp;V Power Input
 - Chipset: Texas Instruments TPS55165-Q1
-- Module size: 15 X 25 mm
+- Module size: 15 X 25&nbsp;mm
 
 ## Specifications
 
@@ -50,8 +53,8 @@ The hardware specification is categorized into four parts. It discusses the pino
 #### Pin Definition
 
 The RAK19004 have two (2) connectors:
-- Through-hole connector with a 2.0 mm pitch for the **Power Input**.
-- SMD connector with a 1.5 mm pitch for the **5V Output**.
+- Through-hole connector with a 2.0&nbsp;mm pitch for the **Power Input**.
+- SMD connector with a 1.5&nbsp;mm pitch for the **5V Output**.
 
 :::warning
 **ENSURE** to check correctly the polarity of the cable plugged into the Power Input connector.
@@ -81,7 +84,11 @@ This section shows the maximum and minimum ratings of the RAK19004 module and it
 
 The board dimensions of the RAK19004 module are shown in **Figure 1** below.
 
-> **Image:** RAK19004 Board Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19004/datasheet/board-dimensions.png"
+  width="40%"
+  caption="RAK19004 Board Dimensions"
+/>
 
 :::warning
 **ENSURE** to check correctly the polarity of the cable plugged into the Power Input connector.
@@ -98,23 +105,38 @@ The board dimensions of the RAK19004 module are shown in **Figure 1** below.
 
 **Figure 2** shows the schematic of the RAK19004 module.
 
-> **Image:** RAK19004 WisBlock Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19004/datasheet/rak19004-schematic.png"
+  width="100%"
+  caption="RAK19004 WisBlock Module Schematics"
+/>
 
 ##### Reverse Connection Protection
 
 Even if the input is reversed, there will be no damage to the device.
 
-> **Image:** RAK19004 Reverse Protection Diode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19004/datasheet/reverse-protect.png"
+  width="35%"
+  caption="RAK19004 Reverse Protection Diode"
+/>
 
 ##### Buck-Boost Converter
 
 RAK19004 module uses a TPS55165-Q1 Buck-boost converter.
 
-> **Image:** RAK19004 Buck-Boost Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19004/datasheet/buck-boost.png"
+  width="80%"
+  caption="RAK19004 Buck-Boost Schematic"
+/>
 
 ##### Extended Functions Select
 
 Extended Functions can be selected by placing resistors as an option.
 
-> **Image:** RAK19004 Extended Function Select
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19004/datasheet/function-select.png"
+  width="80%"
+  caption="RAK19004 Extended Function Select"
+/>

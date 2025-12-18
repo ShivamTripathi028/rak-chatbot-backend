@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13009 WisBlock QWIIC Module
 
 Thank you for choosing **RAK13009 WisBlock QWIIC** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -23,6 +25,8 @@ Thank you for choosing **RAK13009 WisBlock QWIIC** in your awesome IoT Project! 
 * [24-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
 
+
+
 ## Product Description
 
 The RAK13009 is a QWIIC module, which is a part of the RAKWireless WisBlock Interface series. This module has two connectors: one for the WisBlock sensor and then for the standard QWIIC interface. By using this module, you can plug any QWIIC interface module into the WisBlock sensor and use it just like any other WisBlock sensor.
@@ -34,7 +38,7 @@ The RAK13009 is a QWIIC module, which is a part of the RAKWireless WisBlock Inte
     * Standard QWIIC interface
 
 * **Module Size**
-    * 10 mm x 10 mm
+    * 10&nbsp;mm x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -44,3 +48,4 @@ To use a **RAK13009**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

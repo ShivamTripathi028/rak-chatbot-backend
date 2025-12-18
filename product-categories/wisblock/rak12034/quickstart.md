@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12034 WisBlock 9-Axis Accelerometer Module Quick Start Guide
 
 ## Prerequisite
@@ -28,6 +31,7 @@ Before going through each and every step on using the RAK12034 9-Axis Accelerome
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
+
 #### Software
 
 - Download and install the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
@@ -41,15 +45,23 @@ The RAK12034 is a 9-Axis Sensor module, part of the RAKWireless WisBlock Sensor 
 
 The RAK12034 9-Axis Sensor can be mounted on the sensor slot of the WisBlock Base board, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK12034 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/connection.png"
+  width="60%"
+  caption="RAK12034 connection to WisBlock Base"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for the sensor slots is properly marked by silkscreen. Follow carefully the procedure defined in [RAK5005-O module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with three pieces of M1.2 x 3 mm screws.
+As shown in **Figure 2**, the location for the sensor slots is properly marked by silkscreen. Follow carefully the procedure defined in [RAK5005-O module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with three pieces of M1.2 x 3&nbsp;mm screws.
 
-> **Image:** RAK12034 assembly to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/mounting.png"
+  width="50%"
+  caption="RAK12034 assembly to WisBlock Base"
+/>
 
 ##### Disassembling
 
@@ -57,15 +69,27 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -76,9 +100,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 :::warning
 
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the RAK5005-O board. Not all batteries have the same wiring.
 
 :::
@@ -89,11 +113,23 @@ In this example, you will be able to get all the data from the sensor.
 
 1. You need to select first the WisBlock Core you have, as shown in **Figure 6** to **Figure 8**.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/selectboard4631.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/selectboard11200.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/selectboard11300.png"
+  width="100%"
+  caption="Selecting RAK11300 as WisBlock Core"
+/>
 
 2. Copy the example code below:
 
@@ -159,6 +195,7 @@ void setup() {
   uint8_t PMU_Status = 0;
   bmx160.readReg(0x03, &PMU_Status, 1);
   Serial.printf("PMU_Status=%x\r\n", PMU_Status);
+
 
   bmx160.InterruptConfig(HIGH_G_INT, HIGH_G_THRESHOLD);//Enable HIGH_G_Interrupt ands et the accelerometer threshold
 
@@ -238,17 +275,33 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Go to **Menu Bar** > **Sketch** > **Include Library** > **Manage Libraries**, as shown in **Figure 9**.
 
-> **Image:** Navigating to Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/manage-library.png"
+  width="100%"
+  caption="Navigating to Library Manager"
+/>
 
 4. Type **RAK12034** in the search box, and install the library, as shown in **Figure 10**.
 
-> **Image:** RAK12034 library installation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/library.png"
+  width="80%"
+  caption="RAK12034 library installation"
+/>
 
 5. Select the right serial port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
-> **Image:** Selecting the correct serial port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/select-port.png"
+  width="100%"
+  caption="Selecting the correct serial port"
+/>
 
-> **Image:** Uploading the sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/upload.png"
+  width="100%"
+  caption="Uploading the sample code"
+/>
 
 :::tip NOTE
 RAK11200 requires the BOOT0 pin to be configured properly before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
@@ -256,5 +309,10 @@ RAK11200 requires the BOOT0 pin to be configured properly before uploading. If n
 
 6. When you have successfully uploaded the sample code, you may open up your serial monitor, as shown in **Figure 13**.
 
-> **Image:** RAK12034 all data in serial monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12034/quickstart/serial-monitor.png"
+  width="80%"
+  caption="RAK12034 all data in serial monitor"
+/>
 
+<RkBottomNav/>

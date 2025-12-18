@@ -20,6 +20,9 @@ tags:
   - quickstart
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisMesh Pod Quick Start Guide
 
 The WisMesh Pod is your go-to device for ready-to-use and long-lasting connectivity, ideal for users seeking a hassle-free Meshtastic node. This device is powered by the efficient WisDuo module based on the nRF52840, a top performer on the Meshtastic Community Approval list.
@@ -28,7 +31,7 @@ Its integrated location tracking and acceleration sensors can provide accurate l
 
 ## Product Features
 
-- Robust 1000 mAh built-in battery
+- Robust 1000&nbsp;mAh built-in battery
 - Antenna: Internal antennas for LoRa, BLE, and GNSS
 - Efficiency: Utilizes the most power-efficient solution in the Meshtastic community
 - Integrated acceleration sensor based on the ST LIS3DH
@@ -74,9 +77,10 @@ However, to connect the device to the Meshtastic network, you will have to confi
 Make sure that you have installed one of these applications, as they are required for configuring the Meshtastic network.
 ::::
 
+
 ## Hardware Details
 
-The WisMesh Pod comes fully assembled with an internal battery. However, it is recommended to fully recharge the battery before switching the device on. It is powered by its internal 1000 mAh battery and features a multi-function button, three LEDs and a USB-C connector for recharging.
+The WisMesh Pod comes fully assembled with an internal battery. However, it is recommended to fully recharge the battery before switching the device on. It is powered by its internal 1000&nbsp;mAh battery and features a multi-function button, three LEDs and a USB-C connector for recharging.
 
 :::info
 The enclosure cannot be opened without damaging the device.
@@ -98,7 +102,7 @@ The device can be charged even if it is switched off.
 ### Button
 
 The side button on the device is multifunctional:
-- Long press (> 3 seconds): Powers the device on or off The green heartbeat LED indicates power status.
+- Long press (> 3&nbsp;seconds): Powers the device on or off The green heartbeat LED indicates power status.
 - Short press to reset the device.
 - Double short press to switch into bootloader/DFU mode to enable firmware updates over the USB connector.
 
@@ -106,12 +110,16 @@ The side button on the device is multifunctional:
 This button is _**not**_ a user button. It is only for the above mentioned functions.
 :::
 
-> **Image:** WisMesh Pod On/Off button
+<RkImage
+  src="https://images.docs.rakwireless.com/meshtastic/wismesh-pod-button.png"
+  width="50%"
+  caption="WisMesh Pod On/Off button"
+/>
 
 ### USB port
 
 The USB port is a USB-C connector for recharging the battery, flashing, and debugging the Meshtastic firmware.
-It is recommended to use a 5 V 0.5 A USB charger to recharge the battery.
+It is recommended to use a 5&nbsp;V 0.5&nbsp;A USB charger to recharge the battery.
 
 ### Antenna
 
@@ -123,11 +131,19 @@ The device is built with a hard shell that cannot be opened and an additional ru
 
 Enclosure dimensions without rubber casing:
 
-> **Image:** WisMesh Pod dimensions of hard shell
+<RkImage
+  src="https://images.docs.rakwireless.com/meshtastic/wismesh-pod-enclosure.png"
+  width="50%"
+  caption="WisMesh Pod dimensions of hard shell"
+/>
 
 Enclosure dimensions with rubber casing:
 
-> **Image:** WisMesh Pod dimensions with rubber enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/meshtastic/wismesh-pod-rubber.png"
+  width="50%"
+  caption="WisMesh Pod dimensions with rubber enclosure"
+/>
 
 ## Software Setup
 
@@ -138,10 +154,11 @@ For Firmware 1.3 and 2.0 (from November 1, 2022), the WisMesh Pod is autodetecte
 - For WisMesh Pod **`firmware-rak4631-w.x.yy.zzzzzzz.uf2`**
 :::
 
-**Flashing the WisMesh Pod Firmware:**
+<b>Flashing the WisMesh Pod Firmware:</b>
 
 The WisMesh Pod comes pre-flashed with the Meshtastic firmware. If you encounter problems, update the Meshtastic firmware to the latest version.
 - <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/nrf52" target="_blank">Guide to flash nRF52 devices</a> (link goes to Meshtastic.org)
 
 For the setup of the WisMesh Pod for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration/" target="_blank">configuration guide</a> in the Meshtastic documentation.
 
+<RkBottomNav/>

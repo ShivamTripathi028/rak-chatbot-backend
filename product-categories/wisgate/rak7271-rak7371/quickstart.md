@@ -13,6 +13,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7271/RAK7371 Quick Start Guide
 
 ## Prerequisites
@@ -34,7 +37,12 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 2. 1pc USB Type C to A Cable
 3. 1pc LoRa Antenna
 
-> **Image:** Package Content
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/1.package-content.png"
+  width="60%"
+  caption="Package Content"
+/>
+
 
 ## Product Configuration
 
@@ -49,11 +57,19 @@ It is assumed that your Raspberry Pi has already been installed with an [OS](htt
 
 1. Connect the WisGate Developer Base using the included cable: insert the Type-C end into the Developer Base and the Type-A end into one of the Raspberry Pi's USB ports.
 
-> **Image:** Connect the WisGate Developer Base to the Raspberry Pi
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/2.connecting-to-raspberry-pi.png"
+  width="50%"
+  caption="Connect the WisGate Developer Base to the Raspberry Pi"
+/>
 
 2. After connecting the Developer Base to the Pi, the Power Led will be steady green. This means that the Base is properly powered.
 
-> **Image:** Power On the Developer Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/3.power-on.png"
+  width="30%"
+  caption="Power On the Developer Base"
+/>
 
 3. Check if the base is properly connected by running this command on the CLI:
 
@@ -63,7 +79,12 @@ lsusb
 
 4. In the output, you should see a **STMicroelectronics Virtual COM Port** line. This means your RAK WisGate Developer Base is properly connoted to the Raspberry Pi.
 
-> **Image:** Check the Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/4.checking-connection.png"
+  width="60%"
+  caption="Check the Connection"
+/>
+
 
 ```
 pi@raspberrypi:~ $ lsusb
@@ -111,7 +132,11 @@ sudo ./install.sh
 - Select ***9. RAK2287 USB*** if you are using the WisGate Developer Base **RAK7271**.
 - Choose ***10. RAK5146 USB*** if you are using the WisGate Developer Base **RAK7371**.
 
-> **Image:** Select the Concentrator Model
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/5.selecting-concentrator-model.png"
+  width="50%"
+  caption="Select the Concentrator Model"
+/>
 
 :::tip NOTE
 
@@ -127,7 +152,12 @@ sudo ./install.sh --chirpstack=not_install
 
 5. After a few minutes, the installation will be completed.
 
-> **Image:** Successful Installation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/6.successful-installation.png"
+  width="60%"
+  caption="Successful Installation"
+/>
+
 
 ```
 Copy sys_config file success!
@@ -145,7 +175,11 @@ pi@raspberrypi:~/rak_common_for_gateway $
 
 Connect the two devices using the included USB cable to the host PC. It is recommended to use **Ubuntu 18.04 LTS** as the operating system.
 
-> **Image:** Connect the WisGate Developer Base to the Host
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/7.base-to-host.png"
+  width="60%"
+  caption="Connect the WisGate Developer Base to the Host"
+/>
 
 #### Software Installation
 
@@ -187,7 +221,11 @@ cd sx1302_hal-2.0.1
 sudo make
 ```
 
-> **Image:** Install the Software
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/8.install-software.png"
+  width="80%"
+  caption="Install the Software"
+/>
 
 After the compilation is complete, configure the correct channel plan by setting the appropriate `global_conf.json` file for the packet forwarder.
 
@@ -203,7 +241,11 @@ After the compilation is complete, configure the correct channel plan by setting
    ls -l
    ```
 
-> **Image:** List the Content of the Folder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/9.listing-the-content.png"
+  width="80%"
+  caption="List the Content of the Folder"
+/>
 
 8. You can see that there is a different example configuration files for different LoRaWAN bands and different types of concentrators. In this setup, you are using RAK Developer Base, which is the USB, and the EU868 band. Run this command to rename the correct file to `global_conf.json`:
 
@@ -211,7 +253,11 @@ After the compilation is complete, configure the correct channel plan by setting
  cp global_conf.json.sx1250.EU868.USB global_conf.json
 ```
 
-> **Image:** List the Content of the Folder After Renaming
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/10.after-renaming.png"
+  width="80%"
+  caption="List the Content of the Folder After Renaming"
+/>
 
 9. Start the packet forwarder process to bridge the LoRaWAN radio component with the Network Server.
 
@@ -219,7 +265,11 @@ After the compilation is complete, configure the correct channel plan by setting
 sudo ./lora_pkt_fwd
 ```
 
-> **Image:** Start the Packet Forwarder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/11.starting-packet-forwarder.png"
+  width="80%"
+  caption="Start the Packet Forwarder"
+/>
 
 10. At the end of this example, you can see the concentrator's EUI. Save it somewhere as it will be needed to register your gateway in the Network Server later.
 
@@ -229,7 +279,12 @@ You can also retrieve the EUI using the `chip_id` tool located in the `util_chip
 sudo ./chip_id -u -d /dev/ttyACM0
 ```
 
-> **Image:** Concentrator EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/12.concentrator-eui.png"
+  width="80%"
+  caption="Concentrator EUI"
+/>
+
 
 ##### For RAK7371 WisGate Developer Base with RAK5146 Inside
 
@@ -261,7 +316,11 @@ cd sx1302_hal
 sudo make
 ```
 
-> **Image:** Install the Software
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/13.install-software.png"
+  width="80%"
+  caption="Install the Software"
+/>
 
 5. Open the Packet forwarder folder with the following command:
 
@@ -275,7 +334,11 @@ cd packet_forwarder
 ls -l
 ```
 
-> **Image:** List the Content of the Folder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/14.listing-the-content.png"
+  width="80%"
+  caption="List the Content of the Folder"
+/>
 
 7. You will find different example configuration files for various LoRaWAN bands and concentrator types. For this setup, you are using the RAK Developer Base (USB) with the EU868 band. Run the following command to rename the appropriate file to `global_conf.json`.
 
@@ -283,7 +346,12 @@ ls -l
  cp global_conf.json.sx1250.EU868.USB global_conf.json
 ```
 
-> **Image:** List the Content of the Folder After Renaming
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/15.after-renaming.png"
+  width="80%"
+  caption="List the Content of the Folder After Renaming"
+/>
 
 8. Start the packet forwarder process to bridge the LoRaWAN radio component with the Network Server.
 
@@ -291,7 +359,11 @@ ls -l
 sudo ./lora_pkt_fwd
 ```
 
-> **Image:** Start the Packet Forwarder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/16.starting-packet-forwarder.png"
+  width="80%"
+  caption="Start the Packet Forwarder"
+/>
 
 9. At this stage, you can view the concentrator's EUI. Be sure to save it, as it will be required to register your gateway in the Network Server later.
 
@@ -301,7 +373,13 @@ You can also retrieve the EUI using the `chip_id` tool located in the `util_chip
 sudo ./chip_id -u -d /dev/ttyACM0
 ```
 
-> **Image:** Concentrator EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/17.concentrator-eui.png"
+  width="80%"
+  caption="Concentrator EUI"
+/>
+
+
 
 #### Connect to The Things Network V3 (TTNv3)
 
@@ -315,27 +393,51 @@ Connecting to TTN is straightforward using the RAKwireless scripts.
 sudo gateway-config
 ```
 
-> **Image:** Open the Configuration Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/18.configuration-tool.png"
+  width="60%"
+  caption="Open the Configuration Tool"
+/>
 
 2. Select the option **2 Setup RAK Gateway Channel Plan**.
 
-> **Image:** Make a Selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/19.selection.png"
+  width="60%"
+  caption="Make a Selection"
+/>
 
 3. On the next window, choose the option **1 Server is TTN**.
 
-> **Image:** Select the Server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/20.server.png"
+  width="60%"
+  caption="Select the Server"
+/>
 
 4. Select the correct band.
 
-> **Image:** Select the Channel Plan
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/21.channel.png"
+  width="60%"
+  caption="Select the Channel Plan"
+/>
 
 5. Select option **4 Edit packet-forwarder config**.
 
-> **Image:** Configuration Options
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/22.configuration-options.png"
+  width="60%"
+  caption="Configuration Options"
+/>
 
 6. Based on your location, set the appropriate TTN address for the packet forwarder. The configuration file will open for editing.
 
-> **Image:** File Content Configuration 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/23.file-content.png"
+  width="80%"
+  caption="File Content Configuration "
+/>
 
 7. Find the **"gateway_conf"** section:
 
@@ -354,13 +456,21 @@ sudo gateway-config
   eu1.cloud.thethings.network
 ```
 
-> **Image:** Change the server address
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/24.server-address.png"
+  width="60%"
+  caption="Change the server address"
+/>
 
 9. To save the changes, press **Ctrl+X** and then confirm by pressing **Y**.
 
 10.  Restart the packet forwarder by choosing the **Option 3**.
 
-> **Image:** Restart the Packet Forwarder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/25.restart.png"
+  width="60%"
+  caption="Restart the Packet Forwarder"
+/>
 
 11. Quit to exit from the configuration menu.
 
@@ -372,7 +482,11 @@ Now, you have a fully working gateway that is configured to use TTN as Network S
 sudo gateway-version
 ```
 
-> **Image:** Get the Gateway's EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/26.gateway-eui.png"
+  width="80%"
+  caption="Get the Gateway's EUI"
+/>
 
 ```
 pi@rak-gateway:~ $ sudo gateway-version
@@ -384,9 +498,19 @@ pi@rak-gateway:~ $
 
 13. Open the TTN website in your browser, login, and navigate to the console page. Click on **+Add Gateway button**.
 
-> **Image:** Add the Gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/27.add-gateway.png"
+  width="100%"
+  caption="Add the Gateway"
+/>
 
 14. Enter the EUI along with the required details such as description and channel plan. If you have followed the steps correctly, your gateway will appear as connected and show activity.
 
-> **Image:** Registered Gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7271-rak7371/quickstart/28.register-gateway.png"
+  width="100%"
+  caption="Registered Gateway"
+/>
 
+
+<RkBottomNav/>

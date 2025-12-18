@@ -8,6 +8,10 @@ keywords:
 sidebar_label: Service Management with Portainer
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # Service Management with Portainer
 
 Docker is an open-source platform for developing, deploying, and managing containerized applications. Docker CE is pre-installed in RAKPiOS version 20.10.17, build 100c701. The user `rak` is added to the `docker` group, allowing the user to run any `docker` command from his or her account.
@@ -48,7 +52,11 @@ If there is no local copy of the Portainer image, it will take some time to pull
 
 This Portainer service uses an app template provided by RAKwireless, but you are free to modify or replace it with your own. You can also create custom templates manually or from an existing stack. Once logged in to Portainer's web UI, click the "App Template" tab to see a curated list of Docker container templates. Select any template, make any necessary changes to the environment variables, and launch the services.
 
-> **Image:** Portainer Application Templates
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/portainer/portainer-app-template.png"
+  width="70%"
+  caption="Portainer Application Templates"
+/>
 
 ## Services Available
 
@@ -64,7 +72,7 @@ Templates are provided for the two main existing LoRaWAN packet forwarder servic
 
 In a docker container, this service deploys a LoRaWAN gateway that runs Semtech's BasicsTM Station Packet Forward protocol. The Basics™ Station protocol enables LoRa gateways to communicate with the cloud in a reliable and secure manner, and it is quickly becoming the standard Packet Forward protocol used by most LoRaWAN operators.
 
-This service supports all RAKwireless LoRa concentrators except the RAK2247 USB version and RAK5148 2.4 GHz LoRaWAN concentrator (Use UDP Packet Forwarder service for those).
+This service supports all RAKwireless LoRa concentrators except the RAK2247 USB version and RAK5148 2.4&nbsp;GHz LoRaWAN concentrator (Use UDP Packet Forwarder service for those).
 
 To check the service documentation, visit the [Basics™ Station Packet Forward protocol using Docker repository](https://github.com/xoseperez/basicstation).
 
@@ -72,9 +80,10 @@ To check the service documentation, visit the [Basics™ Station Packet Forward 
 
 The [Semtech's UDP Packet Forwarder](https://github.com/lora-net/packet_forwarder) is the original LoRaWAN packet forwarder, connecting to servers via the Semtech protocol over UDP. It deploys a LoRaWAN gateway running the UDP Packet Forwarder protocol in a docker container, and this service has been tested with The Things Stack Community Edition (TTSCE or TTNv3).
 
-This service supports all RAKwireless LoRa concentrators, both USB and SPI versions, sub-GHz or 2.4 GHz LoRaWAN concentrators.
+This service supports all RAKwireless LoRa concentrators, both USB and SPI versions, sub-GHz or 2.4&nbsp;GHz LoRaWAN concentrators.
 
 To check the service documentation, visit the [UDP Packet Forwarder for Docker repository](https://github.com/RAKWireless/udp-packet-forwarder).
+
 
 ### LoRaWAN Network Server
 
@@ -115,3 +124,5 @@ A customized Node-RED Docker image with some pre-installed nodes is already prov
 
 In addition, there are some example flows for you to play with. The source code for these nodes is available in the [Rakwireless' Node-RED node repository](https://github.com/RAKWireless/node-red-nodes).
 
+
+<RkBottomNav/>

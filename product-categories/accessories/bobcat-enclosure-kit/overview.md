@@ -9,12 +9,15 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Bobcat Outdoor Enclosure Kit
 
 Thank you for choosing **Bobcat Outdoor Enclosure Kit** in your awesome IoT project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
 
 * [Installation Guide](https://docs.rakwireless.com/product-categories/accessories/bobcat-enclosure-kit/installation-guide/)
 * [Solar Shield Installation Guide](https://docs.rakwireless.com/product-categories/accessories/bobcat-enclosure-kit/solar-shield-guide/)
+
 
 ## Product Description
 
@@ -30,6 +33,7 @@ Combined with one of our fiberglass antennas, this kit allows you to better posi
 - Antenna cable type RG316, with N-type female to RP-SMA male connectors for LoRa antenna.
 - RP-SMA female to SMA male adapter
 - RAKBox-GW-4
-- Maximum ambient temperature +40° C
+- Maximum ambient temperature +40°&nbsp;C
 - IP67 Rated
 
+<RkBottomNav/>

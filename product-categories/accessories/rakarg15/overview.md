@@ -8,6 +8,10 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg15/antenna-overvie
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # 900-930MHz 8dBi Fiberglass Antenna
 
 Thank you for choosing **RAKARG15 900-930MHz 8dBi Fiberglass Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -16,10 +20,12 @@ Thank you for choosing **RAKARG15 900-930MHz 8dBi Fiberglass Antenna** in your a
 
 ## Product Features
 
--   Frequency Range: 900~930 MHz
--   Max Gain: 8.0 dBi
+-   Frequency Range: 900~930&nbsp;MHz
+-   Max Gain: 8.0&nbsp;dBi
 -   VSWR: ≤ 1.5
 -   High efficiency
 -   Vertically polarized dipole
 -   Easy to mount with the included Installation kit
 
+
+<RkBottomNav/>

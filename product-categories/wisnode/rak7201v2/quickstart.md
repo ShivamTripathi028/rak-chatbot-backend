@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7201V2 WisNode Button 4K Quick Start Guide
 
 ## Prerequisites
@@ -35,24 +38,45 @@ For you to be able to interface with the RAK7201V2 WisNode Button 4K with your W
 
 1. Connect your RAK7201V2 WisNode Button 4K to your Windows machine using the provided Micro USB cable.
 
-> **Image:** RAK7201V2 WisNode Button 4k to laptop connection
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/1.laptop-connection.png"
+    width="50%"
+    caption="RAK7201V2 WisNode Button 4k to laptop connection"
+/>
 
 2. Open the RAK Serial Port Tool.
 
-> **Image:** RAK Serial Port Tool
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/2.rak-serial-tool.png"
+    width="80%"
+    caption="RAK Serial Port Tool"
+/>
 
 3. To choose the correct COM Port number for your device, go to your **Device Manager** by pressing the **Windows key + R** and type **devmgmt.msc**. You can also search for the Device Manager in the Start menu.
 4. Once opened, look for **Ports (COM & LPT)** and find the name **USB-SERIAL CH340**. The COM Port Number differs, and in this guide, it is **COM4**.
 
-> **Image:** Device Manager
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/3.device-manager.png"
+    width="35%"
+    caption="Device Manager"
+/>
 
 5. Choose the correct COM port number from the device manager and the correct baud rate, then click **Open**. The default baud rate of the WisNode Button 4K is **115200 bps**.
 
-> **Image:** Correct COM port and baud rate are chosen
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/4.com-port.png"
+    width="80%"
+    caption="Correct COM port and baud rate are chosen"
+/>
 
 6. To check if the latest firmware version is in use, send the `AT+VER=?` command. If your device is not running the latest firmware, you need to upgrade it, following the [Firmware Upgrade Guide](https://docs.rakwireless.com/product-categories/wisnode/rak7201v2/firmware-upgrade-guide).
 
-> **Image:** Checking the firmware version
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/5.check-firmware.png"
+    width="80%"
+    caption="Checking the firmware version"
+/>
+
 
 ### Connecting to the Built-In Network Server
 
@@ -76,29 +100,59 @@ The following guide showcases the Web UI of WisGateOS 2 which is run by WisGate 
 
 1. Login into the gateway via the Web UI and select the **Application** tab in the **LoRa** menu.
 
-> **Image:** Application menu in the web UI of the gateway
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/6.app-menu.png"
+    width="100%"
+    caption="Application menu in the web UI of the gateway"
+/>
+
 
 2. Click the **Add application** button and fill out the Application name. Select **Unified Application key** as **Application Type** and use the **Autogenerate** button to generate an **Application Key** and **Application EUI**.
 
-> **Image:** Creating an application
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/7.com-port.png"
+    width="100%"
+    caption="Creating an application"
+/>
 
 #### Adding the Device to the Application
 
 1. In the created application, click on the **End device** tab and then the **Add end device** button.
 
-> **Image:** Application edit
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/8.app-edit.png"
+    width="100%"
+    caption="Application edit"
+/>
+
 
 2. Fill out the **End device name** and the **LoRaWAN MAC Version** (V1.0.3 is the correct one for RAK7201V2). Click on the **Add end devices**.
 
-> **Image:** Adding the device
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/9.add-device.png"
+    width="100%"
+    caption="Adding the device"
+/>
+
 
 3. Input the **End Device EUI** of your device and then click **Add to "End Devices list"**.
 
-> **Image:** Configuring the device's setings
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/10.add-device.png"
+    width="100%"
+    caption="Configuring the device's setings"
+/>
+
 
 4. You will see the device in the **End devices list** and the **Add end devices** button will allow you to register your end device in the application.
 
-> **Image:** The device is registered
+
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/11.add-device.png"
+    width="100%"
+    caption="The device is registered"
+/>
+
 
 #### Configuring the Button in OTAA Mode
 
@@ -134,11 +188,17 @@ AT+APPEUI=bf3112d69fxxxxxx
 AT+APPKEY=ea980d6f2e42772550c66ec265xxxxxx
 ```
 
-> **Image:** Configuring RAK7201V2 in OTAA mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/12.configure-otaa.png"
+    width="80%"
+    caption="Configuring RAK7201V2 in OTAA mode"
+/>
+
 
 :::tip NOTE
 The Keys and EUIs shown here are just examples, use the ones generated by your system or corresponding to your device.
 :::
+
 
 2. To connect to the LoRaWAN Network after the configuration, the device must be restarted. The restart command is as follows:
 
@@ -148,15 +208,30 @@ ATZ
 
 3. After the restart, you need to issue `AT+JOIN` to join the LoRaWAN network. If all the settings are configured correctly, an `+EVT:JOINED` message will be displayed in the RAK Serial Port Tool.
 
-> **Image:** The device has restarted and connected to the LoRaWAN Network
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/13.restart-connect.png"
+    width="80%"
+    caption="The device has restarted and connected to the LoRaWAN Network"
+/>
+
 
 4. After the successful connection, the data obtained from pressing the buttons will be transmitted to the application server of the gateway.
 
-> **Image:** Successful operation of the buttons
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/14.buttons-operation.png"
+    width="80%"
+    caption="Successful operation of the buttons"
+/>
+
 
 5. The received data from RAK7201V2 can be seen in the web UI of the gateway under **Application > Device > Live Device Data**.
 
-> **Image:** Received data
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/15.received-data.png"
+    width="100%"
+    caption="Received data"
+/>
+
 
 #### Configuring the Button in ABP Mode
 
@@ -164,12 +239,21 @@ To use the RAK7201V2 in ABP mode, a change of the activation method is needed.
 
 1. Go to the **Device Configuration** in the gateway, and select the **ABP Join mode**.
 
-> **Image:** Changing the activation method
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/16.change-activation-method.png"
+    width="100%"
+    caption="Changing the activation method"
+/>
+
 
 2. The following fields appear: **Device Address**, **Application Session Key**, and **Network Session Key**. Enter the **Device Address** manually, and it should be in **HEX format** and 8 digits long.
 3. To generate the needed keys automatically, click the **Autogenerate** button next to the Application Session key and Network Session Key fields. Click **Save & Apply**.
 
-> **Image:** Changing the activation method
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/17.abp-mode.png"
+    width="100%"
+    caption="Changing the activation method"
+/>
 
 4. To set the RAK7201V2 in ABP work mode, the following AT commands must be executed in the RAK Serial Port Tool:
 
@@ -197,11 +281,16 @@ AT+APPSKEY=bfb959106b004e5a32d8dde9fexxxxxx
 AT+NWKSKEY=0a8139122e9e9011c049bcc575xxxxxx
 ```
 
-> **Image:** Configure the RAK7201V2 in ABP mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/18.configure-in-abp.png"
+    width="80%"
+    caption="Configure the RAK7201V2 in ABP mode"
+/>
 
 :::tip NOTE
 The Keys and EUIs shown are just examples. Use the ones generated by your system or corresponding to your device.
 :::
+
 
 5. To connect to the LoRaWAN Network after the configuration, the device must be restarted. The restart command is as follows:
 
@@ -211,7 +300,11 @@ ATZ
 
 6. After the restart, the device will be ready to send the information through the LoRaWAN Network.
 
-> **Image:** Configure the RAK7201V2 in ABP mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/19.restart-device.png"
+    width="80%"
+    caption="Configure the RAK7201V2 in ABP mode"
+/>
 
 :::tip NOTE
 There is no Join procedure in ABP mode. To be sure that the Button can send data, you need to press the buttons and see if you have uplinks in the Live Device Data field of the device in the gateway.
@@ -219,11 +312,20 @@ There is no Join procedure in ABP mode. To be sure that the Button can send data
 
 7. To test the ABP mode, press the buttons of the device.
 
-> **Image:** Testing the ABP mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/20.abp-test.png"
+    width="80%"
+    caption="Testing the ABP mode"
+/>
 
 8. The received data from RAK7201V2 can be seen in the web UI of the gateway under **Application > Device > Live Device Data**.
 
-> **Image:** Received data
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/21.received-data.png"
+    width="100%"
+    caption="Received data"
+/>
+
 
 #### Customize the Data Sent
 
@@ -292,7 +394,12 @@ Set the HeartBeat to one hour using the command:
 AT+HEARTBEAT=1
 ```
 
-> **Image:** Set the HeartBeat interval
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/22.heartbeat-interval.png"
+    width="80%"
+    caption="Set the HeartBeat interval"
+/>
+
 
 The HeartBeat message data format is as follows:
 
@@ -306,7 +413,13 @@ The battery level is represented in percentage form in hexadecimal format.
 
 If the payload message of the HeartBeat is 48 61, it represents 96% battery level.
 
-> **Image:** HeartBeat message in the Live Device Data
+
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/23.hearbeat-message.png"
+    width="100%"
+    caption="HeartBeat message in the Live Device Data"
+/>
+
 
 The device will automatically send a low-voltage alarm signal when the battery power is below 20% and again when it is below 10%.
 
@@ -327,7 +440,13 @@ Two restart options are available:
 ATZ
 ```
 
-> **Image:** Restarting with an AT command
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/quickstart/24.restart-at-command.png"
+    width="80%"
+    caption="Restarting with an AT command"
+/>
+
+
 
 2. Hold **Key 2** for three (3) seconds. When held, the blue LED will stay lit. It will turn off when the device is restarted.
 
@@ -338,3 +457,4 @@ After restarting the device either manually or through the AT command, the RAK72
 The device will make three attempts to join the network. If the first three attempts fail, the red LED on button 4 will flash for a second. If all three attempts are unsuccessful, the device must be restarted either manually or through the AT command to make a new attempt.
 :::
 
+<RkBottomNav/>

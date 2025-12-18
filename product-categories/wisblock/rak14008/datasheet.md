@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14008 WisBlock Gesture Sensor Module Datasheet
 
 ## Overview
@@ -21,19 +24,19 @@ RAK14008 is a gesture sensor module based on PAJ7620U2. It is designed for gestu
 ### Features
 
 - Gesture speed:
-    - 60-600 °/s in Normal Mode
-    - 60-1200 °/s in Gaming Mode
+    - 60-600&nbsp;°/s in Normal Mode
+    - 60-1200&nbsp;°/s in Gaming Mode
 - On-board low noise high PSRR voltage regulator
 - Flexible power saving scheme
 - I2C interface up to 400 Kbit/s
 - Ambient light immunity
 - Ambient light noise cancellation
-- VBAT：3.2-5.5 V
-- VCC：2.8-3.3 V
+- VBAT：3.2-5.5&nbsp;V
+- VCC：2.8-3.3&nbsp;V
 - Chipset: PixArt Imaging PAJ7620U2
-- Operating Temperature: -40° C ~ 85° C
-- Storage Temperature :-40° C ~ 125° C
-- Module size: 25 X 15 mm
+- Operating Temperature: -40°&nbsp;C ~ 85°&nbsp;C
+- Storage Temperature :-40°&nbsp;C ~ 125°&nbsp;C
+- Module size: 25 X 15&nbsp;mm
 
 ## Specifications
 
@@ -43,7 +46,12 @@ RAK14008 is a gesture sensor module based on PAJ7620U2. It is designed for gestu
 
 The RAK14008 WisBlock Gesture Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 1** shows the mounting mechanism of the RAK14008 on a WisBlock Base module.
 
-> **Image:** RAK14008 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/mounting-mechanism.png"
+  figureCount="1"
+  caption="RAK14008 mounting mechanism on a WisBlock Base module" 
+   width="60%"
+/>
 
 ### Hardware
 
@@ -59,7 +67,12 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 The RAK14008 WisBlock Gesture Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK14008 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-> **Image:** RAK14008 Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008_pinout.svg"
+  figureCount="2"
+  caption="RAK14008 Pinout Diagram" 
+   width="70%"
+/>
 
 :::tip NOTE
 - Only **I2C** related pin, **LDO_EN**, **INT_N**, **VBAT**, **3V3_S**, and **GND** are connected to the WisConnector.
@@ -83,33 +96,65 @@ This section shows the maximum and minimum ratings of the RAK14008 module and it
 
 The mechanical dimensions of the RAK14008 module are shown in **Figure 3** below.
 
-> **Image:** RAK14008 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/mech-dimensions.png"
+  figureCount="3"
+  caption="RAK14008 mechanical dimensions" 
+   width="75%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/wisconnector-pcb.png"
+  figureCount="4"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
 **Figure 5** shows the schematic of the RAK14008 module.
 
-> **Image:** RAK14008 WisBlock Module schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008-schematic.png"
+  figureCount="5"
+  caption="RAK14008 WisBlock Module schematic" 
+   width="100%"
+/>
 
 ##### VBAT to VLED
 
-> **Image:** VBAT to VLED
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/vbatvled.png"
+  figureCount="6"
+  caption="VBAT to VLED" 
+   width="50%"
+/>
 
 ##### PAJ7620U2 Related Circuits
 
 **R6** and **R8** resistors already exist on the WisBlock Base board and are not mounted on the RAK14008 module.
 
-> **Image:** PAJ7620U2 related circuits
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/relatedcircuits.png"
+  figureCount="7"
+  caption="PAJ7620U2 related circuits" 
+   width="50%"
+/>
 
 #### Gesture Direction
 
-> **Image:** RAK14008 default direction
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008-gesture.png"
+  figureCount="8"
+  caption="RAK14008 default direction" 
+   width="30%"
+/>
 
 The gesture result mapping table for up/down/right/left is shown in the table below:
+
+
 
 |               |        | ![rak14008-gesture-1.png](https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008-gesture-1.png) | ![rak14008-gesture.png](https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008-gesture.png) | ![rak14008-gesture-2.png](https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008-gesture-2.png) | ![rak14008-gesture-3.png](https://images.docs.rakwireless.com/wisblock/rak14008/datasheet/rak14008-gesture-3.png) |
 |---------------|--------|:-----------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------:|
@@ -118,3 +163,4 @@ The gesture result mapping table for up/down/right/left is shown in the table be
 | Bank0_Rcg0x43 | Bit[2] |                                                       Left                                                        |                                                     Down                                                      |                                                       Right                                                       |                                                        Up                                                         |
 | Bank0_Rcg0x43 | Bit[3] |                                                       Right                                                       |                                                      Up                                                       |                                                       Left                                                        |                                                       Down                                                        |
 
+<RkBottomNav/>

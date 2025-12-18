@@ -12,6 +12,8 @@ date: 2025-07-24
 
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock RAKBox-B6 Enclosure
 
 Thank you for choosing **RAKBox-B6** for your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -32,8 +34,9 @@ Designed with usability in mind, the RAKBox-B6 supports wall mounting with screw
 
 - Enclosure material: ABS UL94-HB
 - IP20-rated
-- Dimensions: 84.5 mm x 84.5 mm x 36.7 mm (W x L x H)
+- Dimensions: 84.5&nbsp;mm x 84.5&nbsp;mm x 36.7&nbsp;mm (W x L x H)
 - Supports WisBlock Base RAK19007
 - Supports WisBlock Base RAK19003
 - Lid to close USB access
 
+<RkBottomNav/>

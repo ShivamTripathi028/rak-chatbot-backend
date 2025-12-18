@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12020 WisBlock Light Sensor
 
 Thank you for choosing **RAK12020 WisBlock Light Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -34,11 +36,11 @@ The ambient light intensity data is interfaced via I2C. Additionally, RAK12020 c
     *  Approximates human eye response
     *  I2C Interface
     *  Two internal interrupt source
-    *  Low power 3.0 uA sleep state
-    *  3.3 V power supply
+    *  Low power 3.0&nbsp;uA sleep state
+    *  3.3&nbsp;V power supply
 
 * **Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -48,3 +50,4 @@ To use a **RAK12020**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

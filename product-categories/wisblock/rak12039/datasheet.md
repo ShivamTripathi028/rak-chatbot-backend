@@ -10,13 +10,16 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12039 WisBlock Particle Matter Sensor Module Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK12039 is a Particle Matter Sensor module that is part of the RAKWireless WisBlock Sensor series. It is based on PMSA003I digital particle concentration sensor, which obtains the number of suspended particles in the air. It is interfaced via I2C bus and allows you to capture standard PM1.0, PM2.5, and PM10 values, as well as, a number of particles in micrometer on a 0.1 L particle standard volume.
+The RAK12039 is a Particle Matter Sensor module that is part of the RAKWireless WisBlock Sensor series. It is based on PMSA003I digital particle concentration sensor, which obtains the number of suspended particles in the air. It is interfaced via I2C bus and allows you to capture standard PM1.0, PM2.5, and PM10 values, as well as, a number of particles in micrometer on a 0.1&nbsp;L particle standard volume.
 
 ### Features
 
@@ -26,32 +29,48 @@ The RAK12039 is a Particle Matter Sensor module that is part of the RAKWireless 
     + **1.0~2.5 Micrometer（μm)**
     + **2.5~10 Micrometer（μm)**
   * I2C Interface
-  * Power supply voltage：**5.0 V (on-board boost converter)**
-  * Interface voltage: **3.3 V**
-  * Active current: **< 100 mA**
-  * Standby current: **< 200 uA**
-  * Operating temperature: **-10° C ~ 60° C**
-  * Storage temperature: **-40° C ~ 80° C**
-  * Module size: **25 x 15 mm**
-  * Particle Matter PMSA003I size: **38 x 35 x 12 mm**
+  * Power supply voltage：**5.0&nbsp;V (on-board boost converter)**
+  * Interface voltage: **3.3&nbsp;V**
+  * Active current: **< 100&nbsp;mA**
+  * Standby current: **< 200&nbsp;uA**
+  * Operating temperature: **-10°&nbsp;C ~ 60°&nbsp;C**
+  * Storage temperature: **-40°&nbsp;C ~ 80°&nbsp;C**
+  * Module size: **25 x 15&nbsp;mm**
+  * Particle Matter PMSA003I size: **38 x 35 x 12&nbsp;mm**
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK12039 WisBlock Particle Matter Sensor Module - Top View
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/rak12039-top.png"
+  figureCount="1"
+  caption="RAK12039 WisBlock Particle Matter Sensor Module - Top View" 
+   width="60%"
+/>
 
-> **Image:** RAK12039 WisBlock Particle Matter Sensor Module - Bottom View
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/rak12039-bottom.png"
+  figureCount="2"
+  caption="RAK12039 WisBlock Particle Matter Sensor Module - Bottom View" 
+   width="60%"
+/>
 
 #### Mounting
 
 The RAK12039 WisBlock Particle Matter Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 3** shows the mounting mechanism of the RAK12039 on a WisBlock Base module.
 
-> **Image:** RAK12039 WisBlock Particle Matter Sensor mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/rak12039_mounting.png"
+  figureCount="3"
+  caption="RAK12039 WisBlock Particle Matter Sensor mounting" 
+   width="50%"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It shows the chipset of the module and discusses the pinouts and their corresponding functions and diagrams. It also covers the electrical and mechanical characteristics that include the tabular data of the functionalities and standard values of the RAK12039 WisBlock Particle Matter Sensor Module.
+
 
 ####  Chipset
 
@@ -67,7 +86,13 @@ The RAK12039 WisBlock Particle Matter Sensor Module comprises a standard 40-pin 
  **VBAT**, **3V3_S**, **GND**, **I2C** pins, **RESET**, and **SET**  are connected to 40-pin WisConnector.
 :::
 
-> **Image:** RAK12039 WisBlock Particle Matter Sensor pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/rak12039_pinout.png"
+  figureCount="4"
+  caption="RAK12039 WisBlock Particle Matter Sensor pinout" 
+   width="65%"
+/>
+
 
 #### Electrical Characteristics
 
@@ -85,17 +110,32 @@ The RAK12039 WisBlock Particle Matter Sensor Module comprises a standard 40-pin 
 
 **Figure 5** shows the dimensions and the mechanic drawing of the RAK12039 module.
 
-> **Image:** RAK12039 WisBlock Particle Matter Sensor Module mechanic drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/rak12039_mechanic_drawing.png"
+  figureCount="5"
+  caption="RAK12039 WisBlock Particle Matter Sensor Module mechanic drawing" 
+   width="80%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/mxxs1003k6m.png"
+  figureCount="6"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
 The I2C address of RAK12039 is 0x12. R10 and R11 do not need to be mounted on the RAK12039 due to the pull-up resistors already on the WisBlock Base board.
 
-> **Image:** RAK12039 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12039/datasheet/schematic.png"
+  figureCount="7"
+  caption="RAK12039 schematic diagram" 
+   width="100%"
+/>
 
 ####  PMSA003I Installation Notes
 
@@ -104,5 +144,6 @@ The I2C address of RAK12039 is 0x12. R10 and R11 do not need to be mounted on th
 3) The blowhole in the shell of the host should not be smaller than the inlet.
 4) The sensor should not be installed in the airflow way of the air cleaner or should be shielded by some structure.
 5) When the sensor is used for outdoor fixed equipment, the equipment should be completed with protection from the sandstorm, rain, snow, etc.
-6) The two screw holes can be used for positioning and fixing. For fixing holes, the screw depth can reach 3.4 mm, and the other should not exceed 1.9 mm.
+6) The two screw holes can be used for positioning and fixing. For fixing holes, the screw depth can reach 3.4&nbsp;mm, and the other should not exceed 1.9&nbsp;mm.
 
+<RkBottomNav/>

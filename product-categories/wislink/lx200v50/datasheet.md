@@ -10,6 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
+
 # LX200V50 WisLink 1000 Mbps PLC Module + EVB Datasheet
 
 ## Overview
@@ -21,14 +26,14 @@ sidebar_label: Datasheet
 ### Features
 
 - HomePlug® AV2 compliant:
-   - AV2 30 MHz and 67 MHz MIMO profiles
-   - AV2 30 MHz and 67 MHz SISO profiles
+   - AV2 30&nbsp;MHz and 67&nbsp;MHz MIMO profiles
+   - AV2 30&nbsp;MHz and 67&nbsp;MHz SISO profiles
    - Power Save Mode
 - IEEE 1901, IEEE 1905.1, and HomePlug AV compliant
 - Coexistence with HomePlug 1.0/Turbo nodes
 - Integrated MAC/PHY, analog front end, and line driver
 - Supports RGMII/RMII Ethernet with both MAC and PHY mode
-- Internal DDR2 16 MB memory
+- Internal DDR2 16&nbsp;MB memory
 - HomePlug AV2 compliant PHY:
    - Supports OFDM 4096/1024/256/64/16/8-QAM, QPSK, BPSK, ROBO, HS-ROBO, Mini-ROBO
    - Supports Line-Neutral/Line-Ground 2x2 MIMO with beam-forming
@@ -47,20 +52,26 @@ sidebar_label: Datasheet
 For optimal performance and extended device lifespan, use active or passive cooling such as fans or heatsinks to regulate chip temperature during operation.
 :::
 
+
 ## Specifications
 
 ### Overview
 
 #### Block Diagram
 
-> **Image:** Block diagram
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/block-diagram.png"
+  width="90%"
+  caption="Block diagram"
+/>
 
 #### Parameters
 
 | Parameter                     | Value                 |
 | ----------------------------- | --------------------- |
-| Max. data rate                | 1000 Mbps        |
-| DC interface                  | 4.75 V~36 V |
+| Max. data rate                | 1000&nbsp;Mbps        |
+| DC interface                  | 4.75&nbsp;V~36&nbsp;V |
 | V50 supported unit connection | 6~8                   |
 
 #### Applications
@@ -76,19 +87,27 @@ For optimal performance and extended device lifespan, use active or passive cool
 - Network and interactive online gaming
 - Security Hy-Fi cameras
 
+
+
+
 ### Hardware
 
-The hardware specification is categorized into five parts. It shows the interfacing and the pinouts of the board and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters of the LX200V50 WisLink 1000 Mbps PLC Module + EVB.
+The hardware specification is categorized into five parts. It shows the interfacing and the pinouts of the board and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters of the LX200V50 WisLink 1000&nbsp;Mbps PLC Module + EVB.
+
 
 #### Interfaces
 
 ##### Evaluation Board (EVB)
 
-The EVB can be used for the customer's product development and testing, and can also be used as a part of the research and development of products. The baseboard is designed for all the external interface circuits required by the module, including coupling parts such as 3.3 V buck, Ethernet RJ45, PLC coupling transmission transformer, and other interfaces. It is mainly the interface. The structure of each product is different. The auxiliary interface evaluation board is designed to be convenient for testing.
+The EVB can be used for the customer's product development and testing, and can also be used as a part of the research and development of products. The baseboard is designed for all the external interface circuits required by the module, including coupling parts such as 3.3&nbsp;V buck, Ethernet RJ45, PLC coupling transmission transformer, and other interfaces. It is mainly the interface. The structure of each product is different. The auxiliary interface evaluation board is designed to be convenient for testing.
 
 **Figure 2** shows the interfaces of the evaluation board.
 
-> **Image:** Baseplate interfaces and top view
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/baseplate-interfaces.png"
+  width="80%"
+  caption="Baseplate interfaces and top view"
+/>
 
 #### Pin Definition
 
@@ -104,9 +123,16 @@ The EVB can be used for the customer's product development and testing, and can 
 | O+  | Differential output + |
 | PI  | Power input           |
 
+
+
 ##### J13 Pin Definition
 
-> **Image:** J13 pin order
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/j13.png"
+  width="50%"
+  caption="J13 pin order"
+/>
+
 
 | Pin No. | Name   | Direction | Description                                  |
 | ------- | ------ | --------- | -------------------------------------------- |
@@ -127,20 +153,29 @@ The EVB can be used for the customer's product development and testing, and can 
 | 15      | RX0-   | I         | MIMO Differential input for MIMO Channel #0  |
 | 16      | RXO+   | I         | MIMO Differential input for MIMO Channel #0  |
 
+
+
 ##### J14 Pin Definition
 
-> **Image:** J14 pin order
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/j14.png"
+  width="50%"
+  caption="J14 pin order"
+/>
+
+
 
 | Pin No. | Name     | Direction | Description                                               |
 | ------- | -------- | --------- | --------------------------------------------------------- |
-| 1       | TD3-     | I/O-      | Media-dependent interface 3, 100 Ω transmission line |
-| 2       | TD3+     | I/O+      | Media-dependent interface 3, 100 Ω transmission line |
-| 3       | TD2-     | I/O-      | Media-dependent interface 2, 100 Ω transmission line |
-| 4       | TD2+     | I/O+      | Media-dependent interface 2, 100 Ω transmission line |
-| 5       | TD1-     | I/O-      | Media-dependent interface 1, 100 Ω transmission line |
-| 6       | TD1+     | I/O+      | Media-dependent interface 1, 100 Ω transmission line |
-| 7       | TD0-     | I/O-      | Media-dependent interface 0, 100 Ω transmission line |
-| 8       | TD0+     | I/O+      | Media-dependent interface 0, 100 Ω transmission line |
+| 1       | TD3-     | I/O-      | Media-dependent interface 3, 100&nbsp;Ω transmission line |
+| 2       | TD3+     | I/O+      | Media-dependent interface 3, 100&nbsp;Ω transmission line |
+| 3       | TD2-     | I/O-      | Media-dependent interface 2, 100&nbsp;Ω transmission line |
+| 4       | TD2+     | I/O+      | Media-dependent interface 2, 100&nbsp;Ω transmission line |
+| 5       | TD1-     | I/O-      | Media-dependent interface 1, 100&nbsp;Ω transmission line |
+| 6       | TD1+     | I/O+      | Media-dependent interface 1, 100&nbsp;Ω transmission line |
+| 7       | TD0-     | I/O-      | Media-dependent interface 0, 100&nbsp;Ω transmission line |
+| 8       | TD0+     | I/O+      | Media-dependent interface 0, 100&nbsp;Ω transmission line |
 | 9       | 3.3VPS   | PI        | Power supply                                              |
 | 10      | 3.3VPS   | PI        | Power supply                                              |
 | 11      | GND      | -         | Ground connection                                         |
@@ -150,21 +185,24 @@ The EVB can be used for the customer's product development and testing, and can 
 | 15      | GPIO[10] | IO        | General Purpose I/O, Power LED Red                        |
 | 16      | RESET_L  | I         | QCA7550 reset (low active)                                |
 
+
+
 #### Electrical Characteristics
+
 
 ##### Absolute Maximum Ratings
 
 | Parameter            | Symbol | Min. | Typ. | Max. | Unit     |
 | -------------------- | ------ | ---- | ---- | ---- | -------- |
 | Supply input voltage | 3.3VPS | -2.7 | 3.3  | 5.5  | V        |
-| Storage temperature  | Tstore | -40  | 25   | 150  | ° C |
+| Storage temperature  | Tstore | -40  | 25   | 150  | °&nbsp;C |
 
 ##### Operation and Storage Temperatures
 
 | Parameter             | Symbol | Min. | Typ. | Max. | Unit     |
 | --------------------- | ------ | ---- | ---- | ---- | -------- |
-| Storage temperature   | Tstore | -40  | 25   | 150  | ° C |
-| Operating temperature | Ta     | -40  | 25   | 80   | ° C |
+| Storage temperature   | Tstore | -40  | 25   | 150  | °&nbsp;C |
+| Operating temperature | Ta     | -40  | 25   | 80   | °&nbsp;C |
 
 ##### DC Characteristics
 
@@ -176,37 +214,74 @@ The EVB can be used for the customer's product development and testing, and can 
 | High-level output voltage | VOH    | 2.4  | -    | V    |
 | GPIO low-level current    | IOGPIO | -12  | 12   | mA   |
 
+
 #### Mechanical Characteristics
 
-All dimensions are measured in mm. The tolerance value is ±0.05 mm.
+All dimensions are measured in mm. The tolerance value is ±0.05&nbsp;mm.
 
 ##### Module Dimensions
 
-> **Image:** Module dimensions
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/module-dimension.png"
+  width="70%"
+  caption="Module dimensions"
+/>
 
 ##### Pin Dimensions
 
-> **Image:** Pin dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/pin-dimension.png"
+  width="70%"
+  caption="Pin dimensions"
+/>
+
 
 ##### Baseplate Dimensions
 
-> **Image:** Baseplate dimensions and bottom view
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/baseplate-dimension.png"
+  width="60%"
+  caption="Baseplate dimensions and bottom view"
+/>
+
+
 
 #### Schematic Diagram
 
 ##### Power Supply
 
-The board provides two power supply modes: DC power interface and Micro USB interface. The voltage input range of the DC interface is 4.75~36 V. The power supply is converted to the 3.3 V voltage required by the module through DC-DC. **Figure 8** shows the schematic diagram of the EVB's power supply.
+The board provides two power supply modes: DC power interface and Micro USB interface. The voltage input range of the DC interface is 4.75~36&nbsp;V. The power supply is converted to the 3.3&nbsp;V voltage required by the module through DC-DC. **Figure 8** shows the schematic diagram of the EVB's power supply.
 
-> **Image:** Power supply schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/power-supply.png"
+  width="100%"
+  caption="Power supply schematics"
+/>
+
 
 ##### Ethernet and LEDs
 
-> **Image:** Ethernet and LEDs
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v50/datasheet/ethernet-leds.png"
+  width="100%"
+  caption="Ethernet and LEDs"
+/>
+
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/PLC/LX200V50/Certification/RAK_PLC_LX200V50_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/PLC/LX200V50/Certification/RAK_PLC_LX200V50_FCC_Certification.pdf
 
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/PLC/LX200V50/Certification/RAK_PLC_LX200V50_CE_Certification.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/PLC/LX200V50/Certification/RAK_PLC_LX200V50_FCC_Certification.pdf',
+    },
+    
+    
+]} />
+
+<RkBottomNav/>

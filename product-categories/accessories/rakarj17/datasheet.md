@@ -31,44 +31,56 @@ sidebar_label: Datasheet
 date: 2020-10-01
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAKARJ17 868MHz Black Blade Antenna Datasheet
 
 ## Overview
 
 ### Features
 
-- Frequency Range: 863~870 MHz
-- Max Gain: 2.8 dBi
+- Frequency Range: 863~870&nbsp;MHz
+- Max Gain: 2.8&nbsp;dBi
 - VSWR: ≤ 1.3
 - High efficiency
 - Vertically polarized
 
-> **Image:** RAKARJ17 Antenna Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj17/black-868mhz-antenna-features.png"
+  width="70%"
+  caption="RAKARJ17 Antenna Overview"
+/>
 
 ## Specifications
 
 | **Model**                  | RAKARJ17                      |
 | :------------------------- | ----------------------------- |
-| **Frequency Range**        | 863 MHz~870 MHz     |
-| **Peak Gain**              | 2.8 dBi                  |
+| **Frequency Range**        | 863&nbsp;MHz~870&nbsp;MHz     |
+| **Peak Gain**              | 2.8&nbsp;dBi                  |
 | **VSWR**                   | ≤ 1.5                         |
 | **Efficiency**             | >80%                          |
-| **Feed Impedance**         | 50 Ω                     |
+| **Feed Impedance**         | 50&nbsp;Ω                     |
 | **Polarization**           | Vertical                      |
 | **Cover material (color)** | Plastic (Black)               |
 | **Connector type**         | RP-SMA                        |
-| **Dimensions (mm)**        | Փ13.0 mm x 198.0 mm |
-| **Operation Temp (°C)**    | -30 °C ~ +75 °C     |
+| **Dimensions (mm)**        | Փ13.0&nbsp;mm x 198.0&nbsp;mm |
+| **Operation Temp (°C)**    | -30&nbsp;°C ~ +75&nbsp;°C     |
 | **Humidity range**         | 5%~95%                        |
 
 ### S11 & VSWR
 
 | **Frequency(MHz)** | S11   | VSWR |
 | :----------------: | ----- | ---- |
-|  **863 MHz**  | -20.6 | 1.20 |
-|  **928 MHz**  | -17.6 | 1.30 |
+|  **863&nbsp;MHz**  | -20.6 | 1.20 |
+|  **928&nbsp;MHz**  | -17.6 | 1.30 |
 
-> **Image:** S11 & VSWR Graph
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj17/black-868mhz-antenna-vser.png"
+  width="70%"
+  caption="S11 & VSWR Graph"
+/>
 
 ### Peak Gain & Efficiency
 
@@ -86,9 +98,18 @@ date: 2020-10-01
 
 ### Radiation Patterns
 
-> **Image:** Radiation Patterns
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj17/black-868mhz-antenna-radiation-patterns.png"
+  width="70%"
+  caption="Radiation Patterns"
+/>
 
 ### Mechanical Characteristics
 
-> **Image:** Mechanical Specifications
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj17/black-868mhz-antenna-mechanical-specifications.png"
+  width="80%"
+  caption="Mechanical Specifications"
+/>
 
+<RkBottomNav/>

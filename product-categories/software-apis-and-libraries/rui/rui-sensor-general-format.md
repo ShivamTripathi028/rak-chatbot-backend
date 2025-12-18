@@ -1,4 +1,5 @@
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RUI Sensor General Format
 
@@ -27,6 +28,7 @@ typedef struct GGAData
 }RUI_GGA_Data;
 ```
 
+
 ## RUI GPS Get
 
 ```c
@@ -51,3 +53,5 @@ RUI_RETURN_STATUS rui_gps_set_mode(DRIVER_MODE mode)
 | **@param**  | [DRIVER_MODE mode](#driver-mode): the GPS module’s work mode.                                                         |
 | **@module** | RAK5010 and RAK8212                                                                                                      |
 
+
+<RkBottomNav/>

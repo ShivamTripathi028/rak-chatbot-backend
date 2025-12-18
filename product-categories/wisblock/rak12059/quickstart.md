@@ -10,7 +10,11 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12059 WisBlock Liquid Level Sensor Quick Start Guide
+
 
 ## Prerequisite
 
@@ -40,15 +44,25 @@ The WisBlock Sensor RAK12059 is a liquid-level measurement sensor. It uses MILON
 
 The RAK12059 WisBlock Liquid Level Sensor Module can be mounted on the sensor slots of the WisBlock Base board, as shown in **Figure 1**. It will work on SLOT A, C, D, E and F. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK12059 Connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/connection.png"
+  figureCount="1"
+  caption="RAK12059 Connection to WisBlock Base" 
+   width="80%"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for the sensors slots are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with three pieces of M1.2 x 3 mm screws.
+As shown in **Figure 2**, the location for the sensors slots are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with three pieces of M1.2 x 3&nbsp;mm screws.
 
-> **Image:** RAK12059 assembly to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/mounting-mechanism.png"
+  figureCount="2"
+  caption="RAK12059 assembly to WisBlock Base" 
+   width="70%"
+/>
 
 ##### Disassembling
 
@@ -56,15 +70,30 @@ The procedure for disassembling any type of WisBlock module is the same.
 
 1. To begin disassembling, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/removing_screw.png"
+  figureCount="3"
+  caption="Removing screws from the WisBlock module" 
+   width="70%"
+/>
 
 2. After removing the screws, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/detach_silkscreen.png"
+  figureCount="4"
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="70%"
+/>
 
 3. Detach the module from the base board by applying forcer to the module at the position of the connector, as shown in **Figure 5**.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/detach_module.png"
+  figureCount="5"
+  caption="Applying even forces on the proper location of a WisBlock module" 
+   width="70%"
+/>
 
 :::tip NOTE
 
@@ -75,9 +104,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and, eventually, other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and, eventually, other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -93,15 +122,30 @@ In this example, you will monitor the level of the liquid where the MILONE eTape
 
 **RAK4631 Board**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/selectboard4631.png"
+  figureCount="6"
+  caption="Selecting RAK4631 as WisBlock Core" 
+   width="100%"
+/>
 
 **RAK11200 Board**
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/selectboard11200.png"
+  figureCount="7"
+  caption="Selecting RAK11200 as WisBlock Core" 
+   width="100%"
+/>
 
 **RAK11310 Board**
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/selectboard11300.png"
+  figureCount="8"
+  caption="Selecting RAK11300 as WisBlock Core" 
+   width="100%"
+/>
 
 3. Copy the example code below:
 
@@ -128,6 +172,7 @@ RAK_ADC_SGM58031 sgm58031(SGM58031_SDA_ADDRESS);
 #define ALERT_PIN     WB_IO1  //SlotA installation, please do not use it on SLOTB
 //#define ALERT_PIN   WB_IO3  //SlotC installation.
 //#define ALERT_PIN   WB_IO5  //SlotD installation.
+
 
 #define EPISON 1e-7
 
@@ -198,6 +243,9 @@ void setup()
   delay(1000);
 }
 
+
+
+
 void get_liquid_distance(uint16_t resistance_max, uint16_t resistance, uint8_t length, uint16_t ref)
 {
   float gVoltage = sgm58031.getVoltage();
@@ -216,6 +264,8 @@ void get_liquid_distance(uint16_t resistance_max, uint16_t resistance, uint8_t l
   float distance_cm = distance_inch * 2.54;
   Serial.printf("distance:%0.2f inch   %0.2f cm \r\n", distance_inch, distance_cm);
 }
+
+
 
 void loop()
 {
@@ -245,9 +295,19 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Install the required libraries. Click the highlighted links, as shown in **Figure 9** and **Figure 10**.
 
-> **Image:** Link for required libraries
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/library-highlight.png"
+  figureCount="9"
+  caption="Link for required libraries" 
+   width="80%"
+/>
 
-> **Image:** RAKwireless ADC SGM58031 library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/library.png"
+  figureCount="10"
+  caption="RAKwireless ADC SGM58031 library" 
+   width="70%"
+/>
 
 5. After successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
@@ -255,11 +315,27 @@ If you experience any error in compiling the example sketch, check the updated c
 RAK11200 requires the BOOT0 pin to be configured properly before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/select_port4631.png"
+  figureCount="11"
+  caption="Selecting the correct Serial Port" 
+   width="80%"
+/>
 
-> **Image:** Uploading the sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/upload.png"
+  figureCount="12"
+  caption="Uploading the sample code" 
+   width="80%"
+/>
 
 6. When you have successfully uploaded the sample code, you should see the distance output on the Serial Terminal, as shown in **Figure 13**.
 
-> **Image:** RAK12059 Module reading in Serial Monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12059/quickstart/serialport.png"
+  figureCount="13"
+  caption="RAK12059 Module reading in Serial Monitor" 
+   width="60%"
+/>
 
+<RkBottomNav/>

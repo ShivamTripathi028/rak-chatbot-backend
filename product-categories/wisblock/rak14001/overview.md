@@ -11,6 +11,10 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
+
 # RAK14001 WisBlock RGB LED Module
 
 Thank you for choosing **RAK14001 WisBlock RGB LED Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -31,12 +35,12 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-The RAK14001 is an RGB LED module that can be mounted to the IO slot of the WisBlock Base board. It is capable of driving RGB LEDs with up to 20 mA per segment via the I2C interface. The main component of this module is the NCP5623B from On Semiconductors. This IC has a built−in DC/DC converter that works as a high-efficiency charge pump providing the required DC voltage for all three LED segments. There is also an **IREF** pin that provides the reference current based on the internal band−gap voltage reference to control the output current flowing in the LED.
+The RAK14001 is an RGB LED module that can be mounted to the IO slot of the WisBlock Base board. It is capable of driving RGB LEDs with up to 20&nbsp;mA per segment via the I2C interface. The main component of this module is the NCP5623B from On Semiconductors. This IC has a built−in DC/DC converter that works as a high-efficiency charge pump providing the required DC voltage for all three LED segments. There is also an **IREF** pin that provides the reference current based on the internal band−gap voltage reference to control the output current flowing in the LED.
 
 ## Product Features
 
 * **Module specifications**
-    * 2.7 V - 4.2 V input voltage range
+    * 2.7&nbsp;V - 4.2&nbsp;V input voltage range
     * RGB Function Fully Supported
     * Programmable Integrated Gradual Dimming
     * Support I2C Protocol
@@ -44,7 +48,7 @@ The RAK14001 is an RGB LED module that can be mounted to the IO slot of the WisB
     * Chipset: On Semiconductors NCP5623B
 
 * **Size**
-    * 25 x 35 mm
+    * 25 x 35&nbsp;mm
 
 ## Prerequisites
 
@@ -54,3 +58,4 @@ To use a **RAK14001**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

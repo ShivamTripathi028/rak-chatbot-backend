@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13800 WisBlock Ethernet Module Quick Start Guide
 
 ## Prerequisite
@@ -34,13 +37,13 @@ Before going through each and every step on using the RAK13800 WisBlock module, 
 
 Based on the choice of the WisBlock Core, select a Development Environment:
 
-**Programming via Arduino IDE**
+<b>Programming via Arduino IDE</b>
 - [RAKwireless BSP support for Arduino](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index)
+<br/>In Arduino IDE, once you installed the BSP, the examples for WisBlock Core will be automatically included on the list of examples.
 
-In Arduino IDE, once you installed the BSP, the examples for WisBlock Core will be automatically included on the list of examples.
-
-**Programming via PlatformIO IDE:**
+<b>Programming via PlatformIO IDE:</b>
 - [RAKwireless WisBlock modules in PlatformIO](https://github.com/RAKWireless/WisBlock/blob/master/PlatformIO/README)
+
 
 ## Product Configuration
 
@@ -54,9 +57,14 @@ To use RAK13800 in your project, you need to connect a [Wisblock Core](https://d
 RAK13800 can be POE enabled by mounting its daughter power board [WisBlock RAK19018 POE Module](https://docs.rakwireless.com/product-categories/wisblock/rak19018/overview/).
 :::
 
-> **Image:** RAK13800 Connection to WisBlock Base Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/rak13800_connection.png"
+  width="60%"
+  caption="RAK13800 Connection to WisBlock Base Board"
+/>
 
 For more information about RAK13800, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak13800/datasheet/).
+
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -64,7 +72,12 @@ For more information about RAK13800, refer to the [Datasheet](https://docs.rakwi
 
 Always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK13800 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/mounting-mechanism.png"
+  width="60%"
+  caption="RAK13800 mounting connection to WisBlock Base module"
+/>
+
 
 ##### Disassembling Procedure
 
@@ -72,23 +85,37 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
 :::
 
+
 ### Software Configuration and Example
 
 In the following example, you will be using the RAK13800 HTTP Client example. This example sends an HTTP request to `google.com` and prints the output on the console.
+
 
 #### RAK13800 WisBlock Core Guide
 
@@ -100,7 +127,11 @@ In the following example, you will be using the RAK13800 HTTP Client example. Th
 - For **RAK11200**: `Tools` ->`Boards Manager` -> `RAKwireless ESP32 modules` -> `WisCore RAK11200 Board`
 - For **RAK11300**: `Tools` ->`Boards Manager` -> `Rakwireless Raspberry Pi modules` -> `WisBlock RAK11300`
 
-> **Image:** Selecting WisBlock RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/board-manager-rak4631.png"
+  width="100%"
+  caption="Selecting WisBlock RAK4631 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. The sample code will work on all **WisBlock Core**:
 
@@ -262,15 +293,29 @@ void loop()
 
 3. Install the required library using **Arduino Library Manager**, as shown in **Figure 7**. On Arduino, select `Sketch` -> `Include Library` -> `Manage Libraries...`.
 
-> **Image:** Installing the RAK13800 Library using Arduino library manager
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/rak13800-library.png"
+  width="80%"
+  caption="Installing the RAK13800 Library using Arduino library manager"
+/>
 
 Make sure you have installed the latest version of the [RAKWireless library for the RAK13800 Ethernet Module](https://github.com/RAKWireless/RAK13800-W5100S).
 
 4. After a successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 8** and **Figure 9**.
 
-> **Image:** Selecting the correct serial port
 
-> **Image:** Uploading the RAK13800 Sketch
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/rak4631-port.png"
+  width="100%"
+  caption="Selecting the correct serial port"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/rak4631-upload.png"
+  width="100%"
+  caption="Uploading the RAK13800 Sketch"
+/>
 
 :::tip NOTE
 RAK11200 WisBlock WiFi module requires the BOOT0 pin to be configured properly before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
@@ -278,9 +323,19 @@ RAK11200 WisBlock WiFi module requires the BOOT0 pin to be configured properly b
 
 Before uploading your sketch on RAK11200, short circuit **BOOT0** and **GND** pins and press the reset button.
 
-> **Image:** RAK11200 download mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/rak11200-boot0.jpg"
+  width="80%"
+  caption="RAK11200 download mode"
+/>
 
 5. When you have successfully uploaded the example sketch, check the Arduino console, as shown in  **Figure 11**.
 
-> **Image:** RAK13800 HTTP client console output log
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/quickstart/rak13800-logs.png"
+  width="100%"
+  caption="RAK13800 HTTP client console output log"
+/>
 
+
+<RkBottomNav/>

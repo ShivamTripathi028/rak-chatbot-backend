@@ -10,6 +10,10 @@ image: "https://images.docs.rakwireless.com/accessories/gps-spd/lightning_arrest
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # GPS SPD Datasheet
 
 ## Overview
@@ -24,9 +28,9 @@ By adopting a high pass filter, this product can effectively suppress the low-fr
 ### Features
 
 - Connector Type: **N-type male to N-type female**
-- Impedance: **50 Ω**
-- Frequency Range: **1500-1650 MHz**
-- Power Loss: **≤ 0.3 dB**
+- Impedance: **50&nbsp;Ω**
+- Frequency Range: **1500-1650&nbsp;MHz**
+- Power Loss: **≤ 0.3&nbsp;dB**
 - Ingress Protection: **IP65**
 
 ## Specifications
@@ -37,21 +41,21 @@ By adopting a high pass filter, this product can effectively suppress the low-fr
 
 | Parameter                   | Value                                               | Remarks                  |
 | --------------------------- | --------------------------------------------------- | ------------------------ |
-| Impedance                   | 50 Ω                                           |                          |
-| Working frequency           | 1500 MHz ~ 1650 MHz                       |                          |
+| Impedance                   | 50&nbsp;Ω                                           |                          |
+| Working frequency           | 1500&nbsp;MHz ~ 1650&nbsp;MHz                       |                          |
 | VSWR                        | ≤ 1.2                                               |                          |
-| Power loss                  | ≤ 0.3 dB                                       |                          |
-| RF power                    | < 50 W                                         |                          |
-| DC pass voltage             | 6 V                                            |                          |
-| DC through current          | 500 mA                                         |                          |
-| Nominal discharge current   | 10 kA                                          | 8/20 µs             |
-| Maximum discharge current   | 20 kA                                          | 8/20 µs             |
-| Limit voltage               | ≤ 15 V                                         | 10 kA, 8/20 µs |
+| Power loss                  | ≤ 0.3&nbsp;dB                                       |                          |
+| RF power                    | < 50&nbsp;W                                         |                          |
+| DC pass voltage             | 6&nbsp;V                                            |                          |
+| DC through current          | 500&nbsp;mA                                         |                          |
+| Nominal discharge current   | 10&nbsp;kA                                          | 8/20&nbsp;µs             |
+| Maximum discharge current   | 20&nbsp;kA                                          | 8/20&nbsp;µs             |
+| Limit voltage               | ≤ 15&nbsp;V                                         | 10&nbsp;kA, 8/20&nbsp;µs |
 | Waterproof grade IP value   | IP65                                                | GB 4208                  |
 | Interface form              | Surge Side: N-type Female: Device Side: N-type Male |                          |
 | Ground cable specifications | Yellow and Green two-color 10 AWG                   |                          |
 | Grounding method            | Through the N-head nut crimping                     |                          |
-| Weight                      | ≤ 200 g                                        |                          |
+| Weight                      | ≤ 200&nbsp;g                                        |                          |
 
 #### Environmental Characteristics
 
@@ -59,17 +63,17 @@ Operation environment:
 
 | Parameter            | Value                      |
 | -------------------- | -------------------------- |
-| Ambient temperature  | -40° ~ 70° C          |
+| Ambient temperature  | -40° ~ 70°&nbsp;C          |
 | Relative humidity    | 5% ~ 95%                   |
-| Atmospheric pressure | 70 kPa ~ 106 kPa |
+| Atmospheric pressure | 70&nbsp;kPa ~ 106&nbsp;kPa |
 
 Storage environment:
 
 | Parameter            | Value                      |
 | -------------------- | -------------------------- |
-| Ambient temperature  | --40° ~ 80° C      |
+| Ambient temperature  | --40° ~ 80°&nbsp;C      |
 | Relative humidity    | 5% ~ 95%                   |
-| Atmospheric pressure | 70 kPa ~ 106 kPa |
+| Atmospheric pressure | 70&nbsp;kPa ~ 106&nbsp;kPa |
 
 #### Standards
 
@@ -81,9 +85,22 @@ Storage environment:
 
 #### Mechanical Characteristics
 
-> **Image:** Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/gps-spd/1.png"
+  width="60%"
+  caption="Mechanical Dimensions"
+/>
 
-> **Image:** Grounding Cable
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/gps-spd/2.png"
+  width="60%"
+  caption="Grounding Cable"
+/>
 
-> **Image:** Typical Use
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/gps-spd/3.png"
+  width="60%"
+  caption="Typical Use"
+/>
 
+<RkBottomNav/>

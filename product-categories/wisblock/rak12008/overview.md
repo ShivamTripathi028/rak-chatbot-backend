@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12008 WisBlock CO2 Sensor
 
 Thank you for choosing **RAK12008 WisBlock CO2 Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -43,10 +45,10 @@ A ready-to-use software library and tutorial is included, making it simple to bu
     *  Measurement range：0 to 100 vol%
     *  Accuracy：0.5 vol% + 3% （0 to 25 vol%）；1 vol% + 3%（0 to 100 vol%）
     *  Built-in temperature sensor
-    *  Operating temperature range：20 °C to +85 °C
+    *  Operating temperature range：20&nbsp;°C to +85&nbsp;°C
 
 * **Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -58,3 +60,4 @@ To use a **RAK12008**, you need at least a **WisBlock Base** to plug the module 
 - Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

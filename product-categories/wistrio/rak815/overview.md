@@ -12,6 +12,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK815 WisTrio LPWAN Tracker
 
 Thank you for choosing **RAK815 WisTrio LPWAN Tracker** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -36,5 +38,6 @@ Overall, this LoRa device has various functionalities designed in a single board
 - Dedicated battery connector
 - **Interface**: Micro USB for charging and configuration
 - Equipped with MEMS and HT sensors + I2C LCD expansion
-- **Operation Temperature**: -20 ºC ~ 60 ºC
+- **Operation Temperature**: -20&nbsp;ºC ~ 60&nbsp;ºC
 
+<RkBottomNav/>

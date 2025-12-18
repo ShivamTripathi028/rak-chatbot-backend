@@ -10,7 +10,11 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18000 WisBlock PDM Stereo Microphone Module Quick Start Guide
+
 
 ## Prerequisite
 
@@ -42,15 +46,25 @@ For more information about RAK18000, refer to the [Datasheet](https://docs.rakwi
 
 RAK18000 module can be connected to the IO slot of WisBlock Base to communicate with the WisBlock Core. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK18000 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak18000_assembly.png" 
+  figureCount="1"
+  caption="RAK18000 connection to WisBlock Base" 
+   width="70%"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
+As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
 
-> **Image:** RAK18000 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak18000_mounting.png" 
+  figureCount="2"
+  caption="RAK18000 connection to WisBlock Base" 
+   width="70%"
+/>
 
 ##### Disassembling
 
@@ -58,15 +72,30 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. Remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/16.removing-screws.png" 
+  figureCount="3"
+  caption="Removing screws from the WisBlock module" 
+   width="70%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/17.detaching-silkscreen.png" 
+  figureCount="4"
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/18.detaching-module.png" 
+  figureCount="5"
+  caption="Applying even forces on the proper location of a WisBlock module" 
+   width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK18000 uses the IOx signals as PDM communication lines, and it can cause possible conflict especially on other WisBlock Modules connected to Slot A to D of the WisBlock Base.
@@ -76,9 +105,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -94,15 +123,30 @@ The RAK18000 is based on two MP34DT06J microphone modules. The RAK18000 is a dig
 
 **RAK4631 Board**
 
-> **Image:** Selecting RAK4631 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak4631_board.png" 
+  figureCount="6"
+  caption="Selecting RAK4631 as the WisBlock Core" 
+   width="100%"
+/>
 
 **RAK11200 Board**
 
-> **Image:** Selecting RAK11200 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak11200_board.png" 
+  figureCount="7"
+  caption="Selecting RAK11200 as the WisBlock Core" 
+   width="100%"
+/>
 
 **RAK11310 Board**
 
-> **Image:** Selecting RAK11300 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak11300_board.png" 
+  figureCount="8"
+  caption="Selecting RAK11300 as the WisBlock Core" 
+   width="100%"
+/>
 
 3. The Basic Sample Code for RAK18000 in Github will work depending on your WisBlock Core. You can open the example codes as shown in **Figure 9** to **Figure 11**.
 
@@ -110,19 +154,34 @@ The RAK18000 is based on two MP34DT06J microphone modules. The RAK18000 is a dig
 
 - [RAK18000 Sample code](https://github.com/RAKWireless/WisBlock/tree/6a8b314f979f6a0c316b38b309d9fc6cd5c9a077/examples/RAK4630/sensors/RAK18000_Stereo) for RAK4631
 
-> **Image:** Opening the RAK18000 example code for the RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak4631_example.png" 
+  figureCount="9"
+  caption="Opening the RAK18000 example code for the RAK4631 WisBlock Core" 
+   width="100%"
+/>
 
 **Using RAK11200 WisBlock Core**
 
 - [RAK18000 Sample code](https://github.com/RAKWireless/WisBlock/tree/6a8b314f979f6a0c316b38b309d9fc6cd5c9a077/examples/RAK11200/IO/RAK18000_Stereo) for RAK11200
 
-> **Image:** Opening RAK18000 example code for RAK11200 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak11200_example.png" 
+  figureCount="10"
+  caption="Opening RAK18000 example code for RAK11200 WisBlock Core" 
+   width="100%"
+/>
 
 **Using RAK11300 WisBlock Core**
 
 - [RAK18000 Sample code](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11300/IO/RAK18000_Stereo) for RAK11300
 
-> **Image:** Opening RAK18000 example code for RAK11300 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak11300_example.png" 
+  figureCount="11"
+  caption="Opening RAK18000 example code for RAK11300 WisBlock Core" 
+   width="100%"
+/>
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for your WisBlock Core Module that can be found on the **RAK18000 WisBlock Example Code Repository** and this sample code in Github will work depending on your WisBlock Core.
@@ -138,11 +197,30 @@ If you experience any error in compiling the example sketch, check the updated c
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak18000_select_port.png" 
+  figureCount="12"
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
-> **Image:** Uploading the RAK18000 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak18000_upload.png" 
+  figureCount="13"
+  caption="Uploading the RAK18000 example code" 
+   width="100%"
+/>
 
-5. When you successfully uploaded the example sketch, open the Serial Plotter of the Arduino IDE to see the sensor's reading logs. To test the sound detection, you can download a sound generating app on your smartphone and sweep frequencies from 1000 Hz to 10000 Hz. If you see the logs, as shown in **Figure 14**, then your RAK18000 is properly communicating to the WisBlock core.
+5. When you successfully uploaded the example sketch, open the Serial Plotter of the Arduino IDE to see the sensor's reading logs. To test the sound detection, you can download a sound generating app on your smartphone and sweep frequencies from 1000&nbsp;Hz to 10000&nbsp;Hz. If you see the logs, as shown in **Figure 14**, then your RAK18000 is properly communicating to the WisBlock core.
 
-> **Image:** RAK18000 audio data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18000/quickstart/rak18000_logs.png" 
+  figureCount="14"
+  caption="RAK18000 audio data logs" 
+   width="100%"
+/>
+
+
+<RkBottomNav/>
+
 

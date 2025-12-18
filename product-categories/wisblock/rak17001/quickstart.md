@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK17001 WisBlock H-Bridge Module Quick Start Guide
 
 ## Prerequisite
@@ -39,7 +42,7 @@ Before going through each and every step on using the RAK17001 WisBlock H-Bridge
 
 RAK17001 is a WisBlock Motor Control Module that extends the WisBlock system to be used on controlling DC motor. It has a single H-bridge configuration motor driver that is ideal for low voltage DC motor and battery powered applications. It can get power from the battery of the WisBlock Base or externally via the RAK17001 terminal connector.
 
-By setting the right jumper on the 3-pin header, you can select where you want to get the power source. The 3-pin header is located on the side of the terminal connector. It can allow up to 2.6 A with built-in overcurrent and overtemperature protection.
+By setting the right jumper on the 3-pin header, you can select where you want to get the power source. The 3-pin header is located on the side of the terminal connector. It can allow up to 2.6&nbsp;A with built-in overcurrent and overtemperature protection.
 
 For more information about RAK17001, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak17001/datasheet/).
 
@@ -48,24 +51,33 @@ For more information about RAK17001, refer to the [Datasheet](https://docs.rakwi
 :::warning 
 
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 
 :::
 
 You need to set a header jumper and short VM and BAT. This is to enable power from the battery of the WisBlock module. You can connect one DC motor via A1 and A2 pin of the terminal block.
-
-> **Image:** RAK17001 Powered by WisBlock Battery
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/rak17001_batt_supply.png" 
+  figureCount="1"
+  caption="RAK17001 Powered by WisBlock Battery" 
+   width="30%"
+/>
 
 #### Motor Driven by the External VIN
 
 You need to set header jumper and short VM and VIN to enable power from the external power source. The external power source can be a different battery pack or an independent DC power supply.
 
-Connect this power source to the supply voltage terminals VIN and GND of RAK17001. Make sure that the voltage terminals are suitable for the range from 1.8 V to 10 V. Once done on the setup, you can connect one DC motor via A1 and A2 pin of the terminal block.
+Connect this power source to the supply voltage terminals VIN and GND of RAK17001. Make sure that the voltage terminals are suitable for the range from 1.8&nbsp;V to 10&nbsp;V. Once done on the setup, you can connect one DC motor via A1 and A2 pin of the terminal block.
 
-> **Image:** RAK17001 Powered by External Voltage Source
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/rak17001_vin_supply.png" 
+  figureCount="2"
+  caption="RAK17001 Powered by External Voltage Source" 
+   width="30%"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -73,7 +85,12 @@ Connect this power source to the supply voltage terminals VIN and GND of RAK1700
 
 The RAK17001 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK17001 mounting connection to a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/rak17001_mounting.png" 
+  figureCount="3"
+  caption="RAK17001 mounting connection to a WisBlock Base module" 
+   width="60%"
+/>
 
 ##### Disassembling Procedure
 
@@ -81,15 +98,30 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. To begin disassembling, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/16.removing-screws.png" 
+  figureCount="4"
+  caption="Removing screws from the WisBlock module" 
+   width="70%"
+/>
 
 2. After removing the screws, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/17.detaching-silkscreen.png" 
+  figureCount="5"
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="70%"
+/>
 
 3. Detach the module from the baseboard by applying force to the module at the position of the connector, as shown in **Figure 6**.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/18.detaching-module.png" 
+  figureCount="6"
+  caption="Applying even forces on the proper location of a WisBlock module" 
+   width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -107,7 +139,12 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 
 1. To begin with the Arduino setup, you need to select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/rak4631-board.png" 
+  figureCount="7"
+  caption="Selecting RAK4631 as the WisBlock Core" 
+   width="80%"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. This example code comes from the [RAK17001 WisBlock example repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK4630/IO/RAK17001_HBridge_STSPIN250/RAK17001_HBridge_STSPIN250.ino) which demonstrates basic usage of RAK17001 module.
 
@@ -134,6 +171,7 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 #define STSPIN250_EN           WB_IO6
 #define FAULT_CHECK_COUNT      4             // if four protection interrupts detected within 5 seconds, Sensor may be thermal shutdown or Overcurrent and short-circuit protections
 #define FAULT_CHECK_INTERVAL   5000          //value in [ms] ,
+
 
 TimerEvent_t appTimer;
 static uint32_t timers_init(void);
@@ -243,12 +281,14 @@ void loop()
   }
 }
 
+
 void motor_interrupt() {
   old_time = new_time;
   new_time = millis();
   if (new_time - old_time >= 100)
     InterruptCount++;
 }
+
 
 /**@brief Function for handling user timerout event.
 */
@@ -282,15 +322,29 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 8** and **Figure 9**.
 
-> **Image:** Selecting the correct Serial Port
-
-> **Image:** Uploading the RAK17001 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/select-port.png" 
+  figureCount="8"
+  caption="Selecting the correct Serial Port" 
+   width="80%"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/upload.png" 
+  figureCount="9"
+  caption="Uploading the RAK17001 Sample code" 
+   width="80%"
+/>
 
 4. When you have successfully uploaded the example sketch, you'll now see that the motor will start spinning and reversing direction repeatedly.
 
 The direction is based on how the wires of DC motor is connected. It should be connected to the A1 and A2 pin of RAK17001 terminal block. You can reverse the direction by interchanging the wire connection.
 
-> **Image:** Serial monitor logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/logs.png" 
+  figureCount="10"
+  caption="Serial monitor logs" 
+   width="60%"
+/>
 
 #### RAK17001 in RAK11200 WisBlock Core Guide
 
@@ -300,7 +354,12 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 
 1. To start with the Arduino setup, you need to select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/rak11200-board.png" 
+  figureCount="11"
+  caption="Selecting RAK11200 as the WisBlock Core" 
+   width="80%"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. This example code comes from the [RAK17001 WisBlock example repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK11200/IO/RAK17001_HBridge_STSPIN250/RAK17001_HBridge_STSPIN250.ino) which demonstrates basic usage of RAK17001 module.
 
@@ -475,15 +534,30 @@ If you experience any error in compiling the example sketch, check the updated c
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/port_esp32.png" 
+  figureCount="12"
+  caption="Selecting the correct Serial Port" 
+   width="80%"
+/>
 
-> **Image:** Uploading the RAK17001 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/upload_esp32.png" 
+  figureCount="13"
+  caption="Uploading the RAK17001 Sample code" 
+   width="80%"
+/>
 
 4. When you have successfully uploaded the example sketch, you'll now see that the motor will start spinning and reversing direction repeatedly.
 
 The direction is based on how the wires of DC motor is connected. It should be connected to the A1 and A2 pin of RAK17001 terminal block. You can reverse the direction by interchanging the wire connection.
 
-> **Image:** Serial monitor logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/logs.png" 
+  figureCount="14"
+  caption="Serial monitor logs" 
+   width="60%"
+/>
 
 #### RAK17001 in RAK11310 WisBlock Core Guide
 
@@ -493,7 +567,12 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 
 1. To begin with the Arduino setup, you need to select the RAK11310 WisBlock Core.
 
-> **Image:** Selecting RAK11310 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/rak11310-board.png" 
+  figureCount="15"
+  caption="Selecting RAK11310 as the WisBlock Core" 
+   width="100%"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. This example code comes from the [RAK17001 WisBlock example repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK11300/IO/RAK17001_HBridge_STSPIN250/RAK17001_HBridge_STSPIN250.ino) which demonstrates basic usage of RAK17001 module.
 
@@ -520,6 +599,7 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 #define STSPIN250_EN           WB_IO6
 #define FAULT_CHECK_COUNT      4             // if four protection interrupts detected within 5 seconds, Sensor may be thermal shutdown or Overcurrent and short-circuit protections
 #define FAULT_CHECK_INTERVAL   5000          //value in [ms] ,
+
 
 TimerEvent_t appTimer;
 static uint32_t timers_init(void);
@@ -629,12 +709,14 @@ void loop()
   }
 }
 
+
 void motor_interrupt() {
   old_time = new_time;
   new_time = millis();
   if (new_time - old_time >= 100)
     InterruptCount++;
 }
+
 
 /**@brief Function for handling user timerout event.
 */
@@ -669,13 +751,29 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 16** and **Figure 17**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/port_rak11310.png" 
+  figureCount="16"
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
-> **Image:** Uploading the RAK17001 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/upload_rak11310.png" 
+  figureCount="17"
+  caption="Uploading the RAK17001 Sample code" 
+   width="100%"
+/>
 
 4. When you have successfully uploaded the example sketch, you'll now see that the motor will start spinning and reversing direction repeatedly.
 
 The direction is based on how the wires of DC motor is connected. It should be connected to the A1 and A2 pin of RAK17001 terminal block. You can reverse the direction by interchanging the wire connection.
 
-> **Image:** Serial monitor logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/quickstart/logs.png" 
+  figureCount="18"
+  caption="Serial monitor logs" 
+   width="100%"
+/>
 
+<RkBottomNav/>

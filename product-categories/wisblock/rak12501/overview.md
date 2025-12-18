@@ -10,6 +10,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12501 WisBlock GNSS Location Module
 
 Thank you for choosing **RAK12501 WisBlock GNSS Location Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -39,16 +41,16 @@ Equipped with the Quectel L76K, the RAK12501 supports a wide variety of satellit
 * **Module Specification**
     * Uses the very accurate GNSS Module: **Quectel L76K**
     * Location Accuracy of ±2.5 meter
-    * Velocity Accuracy of ±0.1 m/s
+    * Velocity Accuracy of ±0.1&nbsp;m/s
     * GPS, GLONASS, QZSS, and BeiDou Satellite support
     * Serial communication to WisBlock Core support
-    * 1 Hz Update Rate
+    * 1&nbsp;Hz Update Rate
     * 35 seconds Location Fix from Cold Start, 1 second from Hot Start
-    * Operating Voltage: 3.3 V
-    * Operating Current: < 25 mA
+    * Operating Voltage: 3.3&nbsp;V
+    * Operating Current: < 25&nbsp;mA
 
 * **Size**
-    * Module Size: 10 mm x 23 mm
+    * Module Size: 10&nbsp;mm x 23&nbsp;mm
 
 ## Prerequisites
 
@@ -58,3 +60,4 @@ To use the **RAK12501 WisBlock GNSS Location Module**, you need a **WisBlock Bas
 Make sure to fix the module with the matching screws to ensure intact placement and connection.
 :::
 
+<RkBottomNav/>

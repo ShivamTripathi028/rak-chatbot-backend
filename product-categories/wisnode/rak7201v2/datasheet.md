@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7201V2 WisNode Button 4K Datasheet
 
 ## Overview
@@ -20,18 +23,23 @@ The **RAK7201V2 WisNode Button 4K** is a remote wireless trigger device. It supp
 
 With its long-range wireless connectivity, impressive battery life, and four programmable buttons, this device is suitable for a wide range of applications. The Button is suitable for a variety of Smart Home applications, including entertainment system control, light control, an alarm snooze button, and a remote trigger.
 
-> **Image:** RAK7201V2 WisNode Button 4k
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/datasheet/rak7201v2.png"
+    width="40%"
+    caption="RAK7201V2 WisNode Button 4k"
+/>
+
 
 ### Features
 
 - Four (4) Buttons with LED indicator
 - Based on the **RAK3172** module
-- **Product Size:** 43x57x15 mm
+- **Product Size:** 43x57x15&nbsp;mm
 - **LoRaWAN** 1.0.3 specification-compliant
-- **Battery:** 400 mAh
+- **Battery:** 400&nbsp;mAh
 - Battery **Over Current Protection** and **Over-Temperature Protection**
-- **Power Consumption:** Sleep mode is 6.25 uA @ 4.2 V
-- **Operating Temperature:** -10º C to 60º C
+- **Power Consumption:** Sleep mode is 6.25&nbsp;uA @ 4.2&nbsp;V
+- **Operating Temperature:** -10º&nbsp;C to 60º&nbsp;C
 - **Working Environment:** Indoor
 
 ## Specifications
@@ -41,22 +49,28 @@ With its long-range wireless connectivity, impressive battery life, and four pro
 | Parameter             | Value                                                                          |
 | --------------------- | ------------------------------------------------------------------------------ |
 | LoRa protocol         | LoRaWAN 1.0.3, Class A                                                         |
-| LoRa TX power (max.)  | 19.2 dBm @ 868 MHz, 18.6 dBm @ 915 MHz                     |
-| LoRa RX sensitivity   | -136 dBm                                                                  |
+| LoRa TX power (max.)  | 19.2&nbsp;dBm @ 868&nbsp;MHz, 18.6&nbsp;dBm @ 915&nbsp;MHz                     |
+| LoRa RX sensitivity   | -136&nbsp;dBm                                                                  |
 | LoRa antenna          | FPC Antenna                                                                    |
-| Battery capacity      | 400 mAh                                                                   |
-| Charge current        | 320 mA / 5 V                                                         |
+| Battery capacity      | 400&nbsp;mAh                                                                   |
+| Charge current        | 320&nbsp;mA / 5&nbsp;V                                                         |
 | Battery lifetime      | 1 year                                                                         |
-| Sleep current         | 6.25 uA @ 4.2 V                                                      |
-| Operating temperature | Charging: 10º C to 45º C 
- Discharging: -10º C to 60º C |
-| Storage temperature   | -20º C to 60º C                                                      |
-| Operating humidity    | 5-95% RH (non-condensing)                                                 |
-| Storage humidity      | 5-95% RH (non-condensing)                                                 |
-| Dimensions            | 43x57x15 mm                                                               |
+| Sleep current         | 6.25&nbsp;uA @ 4.2&nbsp;V                                                      |
+| Operating temperature | Charging: 10º&nbsp;C to 45º&nbsp;C <br /> Discharging: -10º&nbsp;C to 60º&nbsp;C |
+| Storage temperature   | -20º&nbsp;C to&nbsp;60º C                                                      |
+| Operating humidity    | 5-95%&nbsp;RH (non-condensing)                                                 |
+| Storage humidity      | 5-95%&nbsp;RH (non-condensing)                                                 |
+| Dimensions            | 43x57x15&nbsp;mm                                                               |
 | Mounting              | Sticker                                                                        |
 
-> **Image:** Typical Deployment Scenario
+<br />
+
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/datasheet/2.deployment.png"
+    width="90%"
+    caption="Typical Deployment Scenario"
+/>
+
 
 ### Hardware
 
@@ -67,8 +81,8 @@ The **RAK7201V2 WisNode 4K button** supports **Power Path Management (PPM)**, **
 | Parameter           | Value                        |
 | ------------------- | ---------------------------- |
 | LoRa Protocol       | LoRaWAN 1.0.3                |
-| LoRa TX Power       | 19.2 dBm @ 868 MHz |
-| LoRa RX Sensitivity | -136 dBm                |
+| LoRa TX Power       | 19.2&nbsp;dBm @ 868&nbsp;MHz |
+| LoRa RX Sensitivity | -136&nbsp;dBm                |
 | LoRa Antenna        | FPC antenna                  |
 
 The RAK7201V2 supports different LoRaWAN frequency bands for different country regions.
@@ -84,7 +98,12 @@ The RAK7201V2 supports different LoRaWAN frequency bands for different country r
 
 #### Actuators
 
-> **Image:** RAK7201V2 Buttons and LEDs
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7201v2/datasheet/3.buttons-leds.png"
+    width="60%"
+    caption="RAK7201V2 Buttons and LEDs"
+/>
+
 
 ##### Buttons
 
@@ -94,10 +113,10 @@ RAK7201 has four (4) buttons, all of which can be configured to execute defined 
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Button 1 | Long press **button 1** for three seconds to send a join request. Short-press **button 1** to send button 1 data. The data can be personalized with an AT command.                                            |
 | Button 2 | Long-press **button 2** for three seconds to reset the device. Short-press **button 2** to send button 2 data. The data can be personalized with an AT command.                                               |
-| Button 3 | Long-press **button 3** to display the battery level (blue LED battery indicator<sup>***1***</sup>). Short-press **button 3** to send button 3 data. The data can be personalized with an AT command. |
+| Button 3 | Long-press **button 3** to display the battery level (blue LED battery indicator<sup><b><i>1</i></b></sup>). Short-press **button 3** to send button 3 data. The data can be personalized with an AT command. |
 | Button 4 | Short-press **button 4** to send button 4 data. The data can be personalized with an AT command.                                                                                                              |
 
-<sup>***1***</sup>The percentage charge is identified by the number of lit blue LEDs. Each LED represents 25% of the battery charge. 1 lit blue LED indicates a 1–25% charge, two lit blue LEDs indicate a 26–50% charge, and so on.
+<sup><b><i>1</i></b></sup>The percentage charge is identified by the number of lit blue LEDs. Each LED represents 25% of the battery charge. 1 lit blue LED indicates a 1–25% charge, two lit blue LEDs indicate a 26–50% charge, and so on.
 
 ##### LEDs
 
@@ -116,6 +135,7 @@ There are four RGB LEDs, one per button. The following table shows the LEDs' sta
 
 RAK7201V2 has a standard Micro USB port on the side, that adheres to the USB 2.0 specification. This port is used as both a configuration interface and for charging the battery.
 
+
 #### Electrical Characteristics
 
 The following are the electrical characteristics of RAK7201V2 WisNode Button 4K.
@@ -126,24 +146,25 @@ Power consumption:
 
 | Parameter                   | Value                                     |
 | --------------------------- | ----------------------------------------- |
-| Operating current (Tx Mode) | 87 mA (19.2 dBm @ 868 MHz) |
-| Sleep current               | 6.25 uA                              |
+| Operating current (Tx Mode) | 87&nbsp;mA (19.2&nbsp;dBm @ 868&nbsp;MHz) |
+| Sleep current               | 6.25&nbsp;uA                              |
 
 :::tip NOTE
 Operating current depends on factors such as transmit power, SF, and payload length.
 :::
 
+
 #### Battery Specification
 
-The RAK7201V2 comes with a 400 mAh rechargeable LiPo battery inside. In need of replacement, adhere to the specification.
+The RAK7201V2 comes with a 400&nbsp;mAh rechargeable LiPo battery inside. In need of replacement, adhere to the specification.
 
 | Parameter               | Value                                                                       |
 | ----------------------- | --------------------------------------------------------------------------- |
-| Nominal Battery Voltage | 3.7 V                                                                  |
-| Nominal Capacity        | 400 mAh                                                                |
-| Temperature Range       | Charging: 10º C ~ 45º C  
- Discharge: -10º C ~ 60º C |
-| Battery Dimensions      | 5.7 mm x 21 mm x 37 mm.5                                     |
+| Nominal Battery Voltage | 3.7&nbsp;V                                                                  |
+| Nominal Capacity        | 400&nbsp;mAh                                                                |
+| Temperature Range       | Charging: 10º&nbsp;C ~ 45º&nbsp;C  <br /> Discharge: -10º&nbsp;C ~ 60º&nbsp;C |
+| Battery Dimensions      | 5.7&nbsp;mm x 21&nbsp;mm x 37&nbsp;mm.5                                     |
+
 
 ### Firmware
 
@@ -159,3 +180,5 @@ The RAK7201V2 supports LoRaWAN and P2P work modes. LoRaWAN-supported modes are O
 | --------- | ----------------------------------------------------------- |
 | RAK7201V2 | 4 keys LoRaWAN button (EU868/IN865/AU915/US915/KR920/AS923) |
 
+
+<RkBottomNav/>

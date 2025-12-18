@@ -10,39 +10,55 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK1901 WisBlock Temperature and Humidity Sensor Datasheet
 
 ## Overview
 
-> **Image:** RAK1901 WisBlock Sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1901/datasheet/rak1901.svg"
+  figureCount="1"
+  caption="RAK1901 WisBlock Sensor" 
+   width="50%"
+/>
 
 ### Description
 
 RAK1901 is a WisBlock Sensor that extends the WisBlock system with a Sensirion SHTC3 temperature and humidity sensor. A ready-to-use SW library and tutorial make it easy to build up an environmental temperature and humidity data acquisition system.
 
 ### Features
-* **Temperature sensor accuracy**: ±0.2° C
-* **Temperature range**:  -40° C to +125° C
+* **Temperature sensor accuracy**: ±0.2°&nbsp;C
+* **Temperature range**:  -40°&nbsp;C to +125°&nbsp;C
 * **Humidity sensor accuracy**:±2.0% RH
 * **Humidity range**:0 to 100%
-* **Voltage Supply**: 3.3 V
-* **Current Consumption**: 0.3 uA to 270 uA
+* **Voltage Supply**: 3.3&nbsp;V
+* **Current Consumption**: 0.3&nbsp;uA to 270&nbsp;uA
 * **Chipset**: Sensirion SHTC3
-* **Module size**: 10 x 10 mm
+* **Module size**: 10 x 10&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
+
+
 #### Mounting
 
 **Figure 2** shows the mounting mechanism of the RAK1901 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK1901 module can be mounted on the slots: **A, B, C, D, E, & F**.
 
-> **Image:** RAK1901 WisBlock Sensor Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1901/datasheet/rak19xx_mounting.png"
+  figureCount="2"
+  caption="RAK1901 WisBlock Sensor Mounting" 
+   width="50%"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into six parts. It shows the chipset of the module and discusses the pinouts, sensors, and the corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK1901 WisBlock Temperature and Humidity Sensor.
+
 
 #### Chipset
 | Vendor    | Part number |
@@ -53,7 +69,12 @@ The hardware specification is categorized into six parts. It shows the chipset o
 
 The RAK1901 WisBlock Temperature and Humidity Sensor comprises a standard WisBlock connector. The WisBlock connector allows the RAK1901 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-> **Image:** RAK1901 WisBlock Sensor Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1901/datasheet/rak1901_pinout.svg"
+  figureCount="3"
+  caption="RAK1901 WisBlock Sensor Pinout Diagram" 
+   width="60%"
+/>
 
 :::tip NOTE
 Only the **I2C** related pins, **VDD** and **GND** are connected to this module.
@@ -65,6 +86,7 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | ------ | ------ | ------ | ------ | ------ | ------ |
 | WB_IO1 | WB_IO2 | WB_IO3 | WB_IO5 | WB_IO4 | WB_IO6 |
 
+
 #### Sensors
 ##### Temperature Sensor
 
@@ -74,8 +96,8 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | Repeatability      |     -      |     0.1     |  °C   |
 | Resolution         |     -      |    0.01     |  °C   |
 | Specified Range    |     -      | -40 to +125 |  °C   |
-| Response Time      |   τ 63%    |  <5 to 30   |   s   |
-| Long-term Drift    |    Typ.    |    <0.2     | °C/y  |
+| Response Time      |   τ 63%    |  &lt;5 to 30   |   s   |
+| Long-term Drift    |    Typ.    |    &lt;0.2     | °C/y  |
 
 ###### Humidity Sensor
 | Parameter          | Conditions |  Value   | Units |
@@ -86,7 +108,7 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | Hysteresis         |     -      |    ±1    |  %RH  |
 | Specified Range    |  extended  | 0 to 100 |  %RH  |
 | Response Time      |   τ 63%    |    8     |   s   |
-| Long-term Drift    |    Typ.    |  <0.25   | %RH/y |
+| Long-term Drift    |    Typ.    |  &lt;0.25   | %RH/y |
 
 #### Electrical Characteristics
 ##### Recommended Operating Conditions
@@ -97,20 +119,40 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 | I<sub>DD</sub>    | Measure current (normal mode)    |  -  | 430  |     |  uA  |
 | I<sub>DD</sub>    | Measure current (low-power mode) |  -  | 270  |  -  |  uA  |
 
+
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK1901 module.
 
-> **Image:** RAK1901 WisBlock Sensor Mechanic Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1901/datasheet/rak19xx_mechanic_drawing.png"
+  figureCount="4"
+  caption="RAK1901 WisBlock Sensor Mechanic Drawing" 
+   width="60%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1901/datasheet/mxxs1003k6m.png"
+  figureCount="5"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
+
 
 #### Schematic Diagram
 **Figure 5** shows the schematic of the RAK1901 module.
 
-> **Image:** RAK1901 WisBlock Sensor schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1901/datasheet/rak1901-schematic.png"
+  figureCount="6"
+  caption="RAK1901 WisBlock Sensor schematics" 
+   width="100%"
+/>
+
+
+<RkBottomNav/>
 

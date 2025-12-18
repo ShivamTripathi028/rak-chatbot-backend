@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK17000 Quick Start Guide
 
 ## Prerequisite
@@ -39,7 +42,7 @@ Before going through each and every step on using the RAK17000 WisBlock Motor Co
 
 ### Hardware Setup
 
-RAK17000 is a WisBlock Motor Control Module that extends the WisBlock system to be used on controlling motors. It has a dual H-bridge configuration motor driver that can support two DC motors or one stepper motor. It can get power from the battery of the WisBlock Base or externally via the RAK17000 terminal connector. By setting the right jumper on the 3-pin header on the side of the terminal connector, you can select where you want to get the power source. It can allow up to 1.5 A per channel, but thermal management must be implemented.
+RAK17000 is a WisBlock Motor Control Module that extends the WisBlock system to be used on controlling motors. It has a dual H-bridge configuration motor driver that can support two DC motors or one stepper motor. It can get power from the battery of the WisBlock Base or externally via the RAK17000 terminal connector. By setting the right jumper on the 3-pin header on the side of the terminal connector, you can select where you want to get the power source. It can allow up to 1.5&nbsp;A per channel, but thermal management must be implemented.
 
 For more information about RAK17000, refer to the [Datasheet](datasheet.md).
 
@@ -48,24 +51,32 @@ For more information about RAK17000, refer to the [Datasheet](datasheet.md).
 :::warning
 
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 
 :::
 
 You need to set a header jumper and short VM and BAT to enable power from the battery of the WisBlock module. You can connect up to two DC motors by using channels A and B. To use channel A, connect the DC motor on A1 and A2. To use channel B, connect the DC motor on B1 and B2. You need to use both channels if you are driving a stepper motor.
 
-> **Image:** RAK17000 Powered by WisBlock Battery
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/rak17000_bat.svg"
+  width="30%"
+  caption="RAK17000 Powered by WisBlock Battery"
+/>
 
 #### Motor Driven by the External VIN
 
-You need to set header jumper and short VM and VIN to enable power from the external power source. The external power source can be a different battery pack or an independent DC power supply. Connect this power source to the supply voltage terminals VIN and GND of RAK17000 that can allow the voltage range from 2.7 V to 10.8 V. Once done on the setup, you can connect up to two DC motors by using channels A and B.
+You need to set header jumper and short VM and VIN to enable power from the external power source. The external power source can be a different battery pack or an independent DC power supply. Connect this power source to the supply voltage terminals VIN and GND of RAK17000 that can allow the voltage range from 2.7&nbsp;V to 10.8&nbsp;V. Once done on the setup, you can connect up to two DC motors by using channels A and B.
 
 To use channel A, connect the DC motor on A1 and A2. To use channel B, connect the DC motor on B1 and B2. You need to use both channels if you are driving a stepper motor.
 
-> **Image:** RAK17000 Powered by External Voltage Source
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/rak17000_vin.svg"
+  width="30%"
+  caption="RAK17000 Powered by External Voltage Source"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -73,15 +84,23 @@ To use channel A, connect the DC motor on A1 and A2. To use channel B, connect t
 
 The RAK17000 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK17000 mounting connection to a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/rak17000_mounting.png"
+  width="60%"
+  caption="RAK17000 mounting connection to a WisBlock Base module"
+/>
 
 ##### RAK17000 Connector Crimping Mechanism
 
-The RAK17000 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20 AWG to 24 AWG. The usual stripping length is around 6 to 7 mm.
+The RAK17000 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20&nbsp;AWG to 24&nbsp;AWG. The usual stripping length is around 6 to 7&nbsp;mm.
 
 As shown in **Figure 4**, during the crimping process, you should first press down and maintain the spring head of the crimping terminal firmly, then insert the stripped cable head into the corresponding connector’s hole. Once inserted correctly, release the spring head, and the crimping process is completed.
 
-> **Image:** RAK17000 Module Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/crimping_process.png"
+  width="40%"
+  caption="RAK17000 Module Connector"
+/>
 
 ##### Disassembling Procedure
 
@@ -89,15 +108,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/16.removing-screws.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/17.detaching-silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 8**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/18.detaching-module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -121,7 +152,11 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 
 1. First, you need to select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as the WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. This example code comes from the [RAK17000 WisBlock example repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK4630/IO/RAK17000_Motor_Driver_DRV8833/RAK17000_Motor_Driver_DRV8833.ino) which controls two DC motors.
 
@@ -197,6 +232,7 @@ void loop()
 
 </details>
 
+
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK4631 WisBlock Core Module that can be found on the [RAK17000 Motor Driver Example WisBlock Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK4630/IO/RAK17000_Motor_Driver_DRV8833).
 
@@ -205,9 +241,17 @@ The basic example code for stepper motor control can be found on the [RAK17000 W
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 9** and **Figure 10**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/port.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK17000 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/upload.png"
+  width="100%"
+  caption="Uploading the RAK17000 Sample code"
+/>
 
 4. When you successfully uploaded the example sketch, you'll now see that the motor will start spinning and reversing direction repeatedly.
 
@@ -219,7 +263,11 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 
 1. First, you need to select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as the WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. This example code comes from the [RAK17000 WisBlock example repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK11200/IO/RAK17000_Motor_Driver_DRV8833/RAK17000_Motor_Driver_DRV8833.ino) which controls two DC motors.
 
@@ -323,6 +371,7 @@ void loop()
 
 </details>
 
+
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK11200 WisBlock Core Module that can be found on the [RAK17000 Motor Driver Example WisBlock Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11200/IO/RAK17000_Motor_Driver_DRV8833).
 
@@ -335,9 +384,17 @@ The basic example code for stepper motor control can be found on the [RAK17000 W
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/port_esp32.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK17000 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/upload_esp32.png"
+  width="100%"
+  caption="Uploading the RAK17000 Sample code"
+/>
 
 4. When you successfully uploaded the example sketch, you'll now see that the motor will start spinning and reversing direction repeatedly.
 
@@ -349,7 +406,11 @@ After doing the hardware setup, this example code will work both for WisBlock ba
 
 1. First, you need to select the RAK11310 WisBlock Core.
 
-> **Image:** Selecting RAK11310 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/rak11310-board.png"
+  width="100%"
+  caption="Selecting RAK11310 as the WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE. This example code comes from the [RAK17000 WisBlock example repository](https://github.com/RAKWireless/WisBlock/blob/master/examples/RAK11300/IO/RAK17000_Motor_Driver_DRV8833/RAK17000_Motor_Driver_DRV8833.ino) which controls two DC motors.
 
@@ -425,15 +486,25 @@ void loop()
 
 </details>
 
+
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK11310 WisBlock Core Module that can be found on the [RAK17000 Motor Driver Example WisBlock Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11310/IO/RAK17000_Motor_Driver_DRV8833).
 :::
 
 3. Then you can now select the right port and upload the code, as shown in **Figure 15** and **Figure 16**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/port_rak11310.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK17000 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17000/quickstart/upload_rak11310.png"
+  width="100%"
+  caption="Uploading the RAK17000 Sample code"
+/>
 
 4. When you successfully uploaded the example sketch, you'll now see that the motor will start spinning and reversing direction repeatedly.
 
+<RkBottomNav/>

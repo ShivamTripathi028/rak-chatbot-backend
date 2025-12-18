@@ -11,13 +11,19 @@ keywords:
 sidebar_label: Installation Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
  
 # Installation Guide
 
 ## Package Contents
 
-> **Image:** Medium WisBlock Unify Enclosure package content
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/package-content1.png" 
+  figureCount="1"
+  caption="Medium WisBlock Unify Enclosure package content" 
+   width="65%"
+/>
  
 
 | Number | Name        | Quantity | Material        | Color         |
@@ -27,6 +33,7 @@ sidebar_label: Installation Guide
 | 3      | Gasket      | 1        | Silicone        | Black         |
 | 4      | Screw       | 4-6      | Stainless steel |               |
 
+
 ## Assembly Guide
 
 1. **Prepare the Lid and Gasket.**
@@ -35,8 +42,12 @@ First, install the rubber gasket in the groove of the top cover, as shown in **F
 
 Before assembly, check if the gasket is installed correctly. The rubber gasket helps seal the enclosure properly and protects it from dust and water.
 
-> **Image:** Installing the rubber gasket
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/rubber-gasket.png" 
+  figureCount="2"
+  caption="Installing the rubber gasket" 
+   width="50%"
+/>
  
 2. **Choose the Internal Mounting Plate.**
 
@@ -49,8 +60,12 @@ Next is to prepare the mounting plate. There are two types of mounting plates:
 
 The plain mounting plate has no holes, except for mounting holes to the enclosure. It is designed to be customized depending on the circuit board to be placed in the enclosure.
 
-> **Image:** Plain mounting plate
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/plain-plate.png" 
+  figureCount="3"
+  caption="Plain mounting plate" 
+   width="50%"
+/>
  
 **WisBlock Bespoke Mounting Plate**
 
@@ -62,47 +77,81 @@ The following guide shows what to cut depending on the WisBlock Base board.
 For the cutting reference, the red line is the cut-out area.
 :::
 
-> **Image:** Cutting-out excess parts of the WisBlock Internal mounting plate
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/cut-out.png" 
+  figureCount="4"
+  caption="Cutting-out excess parts of the WisBlock Internal mounting plate" 
+   width="35%"
+/>
  
 **RAK5005-O**
 
-> **Image:** RAK5005-O WisBlock Base board cut-out area
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/rak5005-o.png" 
+  figureCount="5"
+  caption="RAK5005-O WisBlock Base board cut-out area" 
+   width="70%"
+/>
 
 **RAK19007**
 
-> **Image:** RAK19007 WisBlock Base board cut-out area
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/rak19007.png" 
+  figureCount="6"
+  caption="RAK19007 WisBlock Base board cut-out area" 
+   width="70%"
+/>
  
 **RAK19003**
 
-> **Image:** RAK19003 WisBlock Base board cut-out area
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/rak19003.png" 
+  figureCount="7"
+  caption="RAK19003 WisBlock Base board cut-out area" 
+   width="70%"
+/>
 
 **RAK19001**
 
-> **Image:** RAK19001 WisBlock Base board cut-out area
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/rak19001.png" 
+  figureCount="8"
+  caption="RAK19001 WisBlock Base board cut-out area" 
+   width="70%"
+/>
  
 3. **Screw the WisBlock to Internal Mounting Plate.**
 
-After cutting the Internal Mount Plate, install the WisBlock Base board onto the Internal Mount Plate with 2.2*5 mm self-tapping screws, as shown in **Figure 9**.
+After cutting the Internal Mount Plate, install the WisBlock Base board onto the Internal Mount Plate with 2.2*5&nbsp;mm self-tapping screws, as shown in **Figure 9**.
 
-> **Image:** Installing WisBlock Base board on Internal Mount Plate
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/baseboard-plate.png" 
+  figureCount="9"
+  caption="Installing WisBlock Base board on Internal Mount Plate" 
+   width="50%"
+/>
  
 4. **Attach the Mounting Plate to the Enclosure.**
 
-Then, install the WisBlock Internal Mount Plate to the base of the enclosure using four (4) pieces of M3*4 mm Countersunk head screws, as shown in **Figure 10**.
+Then, install the WisBlock Internal Mount Plate to the base of the enclosure using four (4) pieces of M3*4&nbsp;mm Countersunk head screws, as shown in **Figure 10**.
 
-> **Image:** Installing Internal Mount Plate to the enclosure
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/plate-enclosure.png" 
+  figureCount="10"
+  caption="Installing Internal Mount Plate to the enclosure" 
+   width="50%"
+/>
  
 5. **Cover the Enclosure with Lid.**
 
-Finally, close the WisBlock Unify Enclosure with the top lid using six (6) pieces of M4 x 8 mm head screw with a washer, as shown in **Figure 11**.
+Finally, close the WisBlock Unify Enclosure with the top lid using six (6) pieces of M4 x 8&nbsp;mm head screw with a washer, as shown in **Figure 11**.
 
-> **Image:** Closing the WisBlock Unify Enclosure
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/close-enclosure.png" 
+  figureCount="11"
+  caption="Closing the WisBlock Unify Enclosure" 
+   width="50%"
+/>
  
 
 ## Mounting Guide
@@ -110,75 +159,115 @@ Finally, close the WisBlock Unify Enclosure with the top lid using six (6) piece
 After full assembly of the enclosure, the next step is to choose the right mounting accessory for your application.
 Each mount accessory has a mark indicated by a capital letter, as shown in **Figure 12**, and each WisBlock Unify Enclosure has several fixed positions, which are indicated by a mark of numerals, as shown in **Figure 13**. The medium-sized WisBlock Unify Enclosure has only six (6) fixed positions.
 
-> **Image:** Mount accessories marked with letters
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/mount-letter.png" 
+  figureCount="12"
+  caption="Mount accessories marked with letters" 
+   width="30%"
+/>
  
-
-> **Image:** WisBlock Unify Enclosure marked with numerals
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/enclosure-number.png" 
+  figureCount="13"
+  caption="WisBlock Unify Enclosure marked with numerals" 
+   width="30%"
+/>
  
 ### Pole Mount Vertical (Type A)
 
 1. For vertical pole mount, use two (2) pieces of mount accessories, which has an indicated mark of the letter **A**, as shown in **Figure 14**.
 
-> **Image:** Mount accessory marked with the letter A
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/pole-vertical-a.png" 
+  figureCount="14"
+  caption="Mount accessory marked with the letter A" 
+   width="40%"
+/>
  
-2. Fix the pole mounts marked with the letter **A** on the WisBlock Unify Enclosure using four (4) pieces of M3*8 mm Head screw with a washer. Place it on fixed positions number **1 & 4** of the enclosure, as shown in **Figure 15**.
+2. Fix the pole mounts marked with the letter **A** on the WisBlock Unify Enclosure using four (4) pieces of M3*8&nbsp;mm Head screw with a washer. Place it on fixed positions number **1 & 4** of the enclosure, as shown in **Figure 15**.
 
-> **Image:** Fixing the pole mount on the enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/pole-mount-vertical1.png" 
+  figureCount="15"
+  caption="Fixing the pole mount on the enclosure" 
+   width="40%"
+/>
 
 |  Size   | Fix Position |
 | :-----: | :----------: |
 | Medium  |    1 & 4     |
 
-3. After fixing the mounts on the enclosure, place the WisBlock Unify Enclosure onto the pole by using two (2) steel strips (65-89 mm), as shown in **Figure 16**.
+3. After fixing the mounts on the enclosure, place the WisBlock Unify Enclosure onto the pole by using two (2) steel strips (65-89&nbsp;mm), as shown in **Figure 16**.
 
 :::tip NOTE
-The steel strips **ONLY** support 65-89 mm diameter of the pole.
+The steel strips **ONLY** support 65-89&nbsp;mm diameter of the pole.
 :::
 
-> **Image:** Fixing the enclosure on the pole
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/vertical-pole.png" 
+  figureCount="16"
+  caption="Fixing the enclosure on the pole" 
+   width="20%"
+/>
  
 
 ### Pole Mount Overlap Horizontal (Type C)
 
 1. For horizontal pole mount overlap, use two (2) pieces of mount accessories, which has an indicated mark of the letter **C**, as shown in **Figure 17**.
 
-> **Image:** Mount accessory marked with the letter C
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/pole-overlap-c.png" 
+  figureCount="17"
+  caption="Mount accessory marked with the letter C" 
+   width="40%"
+/>
  
-2. Fix the pole mounts marked with the letter **C** on the WisBlock Unify Enclosure using four (4) pieces of M3*8 mm Head screw with a washer. Place it on fixed positions between number **2 & 3** or **5 & 6**  of the enclosure, in **Figure 18**.
+2. Fix the pole mounts marked with the letter **C** on the WisBlock Unify Enclosure using four (4) pieces of M3*8&nbsp;mm Head screw with a washer. Place it on fixed positions between number **2 & 3** or **5 & 6**  of the enclosure, in **Figure 18**.
 
-> **Image:** Fixing the pole mount on the enclosure
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/pole-overlap1.png" 
+  figureCount="18"
+  caption="Fixing the pole mount on the enclosure" 
+   width="40%"
+/>
  
 
 |  Size   | Fix Position             |
 | :-----: | :----------------------: |
 | Medium  |  Between 2 & 3 or 5 & 6 |
 
-3. After fixing the mounts on the enclosure, place the WisBlock Unify Enclosure onto the pole by using two (2) steel strips (65-89 mm), as shown in **Figure 19**.
+3. After fixing the mounts on the enclosure, place the WisBlock Unify Enclosure onto the pole by using two (2) steel strips (65-89&nbsp;mm), as shown in **Figure 19**.
 
 :::tip NOTE
-The steel strips **ONLY** support 65-89 mm diameter of the pole.
+The steel strips **ONLY** support 65-89&nbsp;mm diameter of the pole.
 :::
 
-> **Image:** Fixing the enclosure on the pole
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/pole-overlap-enclosure.png" 
+  figureCount="19"
+  caption="Fixing the enclosure on the pole" 
+   width="50%"
+/>
  
 ### Wall Mount (Type D)
 
 1. For wall mount, use two (2) pieces of mount accessories with an indicator marked with the letter **D**, as shown in **Figure 20**.
 
-> **Image:** Mount accessory marked with the letter D
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/wall-mount-d.png" 
+  figureCount="20"
+  caption="Mount accessory marked with the letter D" 
+   width="40%"
+/>
  
-2. Fix the wall mounts marked with the letter **D** on the WisBlock Unify Enclosure using four (4) pieces of M3*8 mm head screw with a washer. Place it on fix positions number **1 & 4** or **2 & 6** or **3 & 6** of the enclosure, as shown in **Figure 21**.
+2. Fix the wall mounts marked with the letter **D** on the WisBlock Unify Enclosure using four (4) pieces of M3*8&nbsp;mm head screw with a washer. Place it on fix positions number **1 & 4** or **2 & 6** or **3 & 6** of the enclosure, as shown in **Figure 21**.
 
-> **Image:** Fixing the wall mount on the enclosure
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/wall-mount1.png" 
+  figureCount="21"
+  caption="Fixing the wall mount on the enclosure" 
+   width="40%"
+/>
  
 
 | Size   | Fix Position            |
@@ -187,25 +276,37 @@ The steel strips **ONLY** support 65-89 mm diameter of the pole.
 
 3. Lastly, follow the steps below, as also shown in **Figure 22**:
 
-- **Step 1**: Use a Φ5 mm drill head to drill holes in the wall. Drill at least 55-60 mm in depth.
+- **Step 1**: Use a Φ5&nbsp;mm drill head to drill holes in the wall. Drill at least 55-60&nbsp;mm in depth.
 - **Step 2**: Plug the screw anchors into the drilled holes. You can use a hammer to plug it in. It helps the screws to have a secure fit on the wall.
-- **Step 3**: Fix the WisBlock Unify Enclosure on the wall using two (2) pieces of ST3.5*35 mm tapping screws.
+- **Step 3**: Fix the WisBlock Unify Enclosure on the wall using two (2) pieces of ST3.5*35&nbsp;mm tapping screws.
 
-> **Image:** Fixing the enclosure on the wall
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/wall-enclosure.png" 
+  figureCount="22"
+  caption="Fixing the enclosure on the wall" 
+   width="40%"
+/>
  
 
 ### Belt Clip Mount (Type E)
 
 1. For belt clip mount, use one (1) piece of mount accessory with an indicator marked with the letter **E**, as shown in **Figure 23**.
 
-> **Image:** Mount accessory marked with the letter E
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/belt-clip-e.png" 
+  figureCount="23"
+  caption="Mount accessory marked with the letter E" 
+   width="30%"
+/>
  
-2. Fix the belt clip mount marked with the letter **E** on the WisBlock Unify Enclosure using two (2) pieces of M3*8 mm Head screw with washer. Place it on fixed positions number **1 or 4** of the enclosure, as shown in **Figure 24**.
+2. Fix the belt clip mount marked with the letter **E** on the WisBlock Unify Enclosure using two (2) pieces of M3*8&nbsp;mm Head screw with washer. Place it on fixed positions number **1 or 4** of the enclosure, as shown in **Figure 24**.
 
-> **Image:** Fixing the belt clip mount on the enclosure
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/belt-clip1.png" 
+  figureCount="24"
+  caption="Fixing the belt clip mount on the enclosure" 
+   width="40%"
+/>
  
 | Size   | Fix Position |
 | :----: | :----------: |
@@ -213,22 +314,39 @@ The steel strips **ONLY** support 65-89 mm diameter of the pole.
 
 3. Lastly, clip the unify enclosure on the belt directly, as shown in **Figure 25**.
 
-> **Image:** Fixing the enclosure on the belt clip
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/belt-clip-enclosure.png" 
+  figureCount="25"
+  caption="Fixing the enclosure on the belt clip" 
+   width="30%"
+/>
  
 ### DIN Mount (Type F)
 
 1. For DIN mount, use two (2) pieces of mount accessories with an indicator marked with the letter **F**, as shown in **Figure 26**.
 
-> **Image:** Mount accessory marked with the letter F
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/din-mount-f.png" 
+  figureCount="26"
+  caption="Mount accessory marked with the letter F" 
+   width="50%"
+/>
  
-2. Fix the DIN mount marked with the letter **F** on the WisBlock Unify Enclosure using four (4) pieces of M3*8 mm Head screw with the washer. Place it on fixed positions number **1 & 4** or **2 & 6** of the enclosure, as shown in **Figure 27** and **Figure 28**.
+2. Fix the DIN mount marked with the letter **F** on the WisBlock Unify Enclosure using four (4) pieces of M3*8&nbsp;mm Head screw with the washer. Place it on fixed positions number **1 & 4** or **2 & 6** of the enclosure, as shown in **Figure 27** and **Figure 28**.
 
-> **Image:** Fixing the DIN mount on the enclosure's position number 1 & 4
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/din-mount1.png" 
+  figureCount="27"
+  caption="Fixing the DIN mount on the enclosure's position number 1 & 4" 
+   width="40%"
+/>
 
-> **Image:** Fixing the DIN mount on the enclosure's position number 2 & 6
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/din-mount2.png" 
+  figureCount="28"
+  caption="Fixing the DIN mount on the enclosure's position number 2 & 6" 
+   width="40%"
+/> 
  
 | Size   | Fix Position         |
 | :----: | :------------------: |
@@ -236,8 +354,12 @@ The steel strips **ONLY** support 65-89 mm diameter of the pole.
 
 3. Lastly, clamp the buckle of the DIN mount kit at one end on the edge of the DIN rail, then rotate and press the enclosure to clamp the other end, as shown in **Figure 29**.
 
-> **Image:** Fixing the enclosure on the DIN rail
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/din-mount-enclosure.png" 
+  figureCount="29"
+  caption="Fixing the enclosure on the DIN rail" 
+   width="50%"
+/> 
  
 ### Magnet Mount (Type G)
 
@@ -247,13 +369,21 @@ The steel strips **ONLY** support 65-89 mm diameter of the pole.
 - The quantity of magnets to be used will depend on the weight of the device and enclosure.
 :::
 
-> **Image:** Mount accessory marked with the letter G
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/magnet-mount-g.png" 
+  figureCount="30"
+  caption="Mount accessory marked with the letter G" 
+   width="30%"
+/> 
  
- 
-2. Fix the magnet mount marked with the letter **G** on the WisBlock Unify Enclosure using one (1) to eight (8) pieces of M3*8 mm Head screw with washer. Place it on fixed positions number **1 to 6** of the enclosure as shown in **Figure 31**.
+2. Fix the magnet mount marked with the letter **G** on the WisBlock Unify Enclosure using one (1) to eight (8) pieces of M3*8&nbsp;mm Head screw with washer. Place it on fixed positions number **1 to 6** of the enclosure as shown in **Figure 31**.
 
-> **Image:** Fixing the magnet mount on the enclosure
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/magnet-mount1.png" 
+  figureCount="31"
+  caption="Fixing the magnet mount on the enclosure" 
+   width="40%"
+/> 
  
 
 | Size   | Fix Position   |
@@ -275,16 +405,21 @@ Confirm the number of magnets according to the weight of the device. The medium 
 - Do not put the magnet close to the computer and other electronic equipment susceptible to the magnetic field, otherwise, it may cause electronic equipment-related failure.
 :::
 
-> **Image:** Fixing the magnet mount on the enclosure
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/magnet-mount2.png" 
+  figureCount="32"
+  caption="Fixing the magnet mount on the enclosure" 
+   width="40%"
+/> 
  
 
 - The magnet should be ordered separately. Consult before placing an order.
 
 |  No.  |  Diameter  | Thickness | Material |    Adsorption    |
 | :---: | :--------: | :-------: | :------: | :--------------: |
-|   1   | 20 mm | 3 mm |  NdFeB   | 2800 Gauss (TBD) |
-|   2   | 20 mm | 5 mm |  NdFeB   | 3100 Gauss (TBD) |
+|   1   | 20&nbsp;mm | 3&nbsp;mm |  NdFeB   | 2800 Gauss (TBD) |
+|   2   | 20&nbsp;mm | 5&nbsp;mm |  NdFeB   | 3100 Gauss (TBD) |
+
 
 :::warning  
 Handle with care to avoid personal injury or damage to the magnet.
@@ -292,20 +427,32 @@ Handle with care to avoid personal injury or damage to the magnet.
 
 4. Lastly, attach the unify enclosure to a metallic surface. Be careful not to pinch your fingers due to the high magnetism.
 
-> **Image:** Fixing the enclosure onto the metal surface
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/magnet-mount-enclosure.png" 
+  figureCount="33"
+  caption="Fixing the enclosure onto the metal surface" 
+   width="40%"
+/> 
 
 ### Belt Loop Mount (Type H)
 
 1. For belt loop mount, use two (2) pieces of mount accessories with an indicator marked with the letter **H**, as shown in **Figure 34**.
 
-> **Image:** Mount accessory marked with the letter H
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/belt-loop-h.png" 
+  figureCount="34"
+  caption="Mount accessory marked with the letter H" 
+   width="40%"
+/> 
  
- 
-2. Fix the belt loop mount marked with the letter **H** on the WisBlock Unify Enclosure using four (4) pieces of M3*8 mm Head screw with a washer. Place it on fixed positions number **1 to 6** of the enclosure, as shown in **Figure 35**.
+2. Fix the belt loop mount marked with the letter **H** on the WisBlock Unify Enclosure using four (4) pieces of M3*8&nbsp;mm Head screw with a washer. Place it on fixed positions number **1 to 6** of the enclosure, as shown in **Figure 35**.
 
-> **Image:** Fixing the belt loop mount on the enclosure
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/belt-loop1.png" 
+  figureCount="35"
+  caption="Fixing the belt loop mount on the enclosure" 
+   width="40%"
+/> 
  
 
 | Size   | Fix Position |
@@ -314,47 +461,74 @@ Handle with care to avoid personal injury or damage to the magnet.
 
 3. Lastly, thread the belt through the hole of the unify enclosure, as shown in **Figure 36**.
 
-> **Image:** Fixing the enclosure on the belt thread
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/belt-loop-enclosure.png" 
+  figureCount="36"
+  caption="Fixing the enclosure on the belt thread" 
+   width="40%"
+/> 
  
 
 ### Label Mount (Type I)
 
 1. For label mount, use one (1) piece of mount accessory with an indicator marked with the letter **I**, as shown in **Figure 37**.
 
-> **Image:** Mount accessory marked with the letter I
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/label-mount-i.png" 
+  figureCount="37"
+  caption="Mount accessory marked with the letter I" 
+   width="30%"
+/> 
  
- 
-2. Fix the label mount marked with the letter **I** on the WisBlock Unify Enclosure using two (2) pieces of M3*8 mm head screw with the washer. Place it on fixed position numbers **1 to 6** of the enclosure, as shown in **Figure 38**.
+2. Fix the label mount marked with the letter **I** on the WisBlock Unify Enclosure using two (2) pieces of M3*8&nbsp;mm head screw with the washer. Place it on fixed position numbers **1 to 6** of the enclosure, as shown in **Figure 38**.
 
-> **Image:** Fixing the label mount on the enclosure
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/label-mount1.png" 
+  figureCount="38"
+  caption="Fixing the label mount on the enclosure" 
+   width="40%"
+/> 
  
 
 | Size   | Fix Position |
 | :----: | :----------: |
 | Medium |    1 - 6     |
 
-3. Lastly, you can paste a 30 x 18 mm Fillet R4 label in the label zone, as shown in **Figure 39** and **Figure 40**.
+3. Lastly, you can paste a 30 x 18&nbsp;mm Fillet R4 label in the label zone, as shown in **Figure 39** and **Figure 40**.
 
-> **Image:** Label dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/label-size.png" 
+  figureCount="39"
+  caption="Label dimension" 
+   width="50%"
+/> 
  
- 
-
-> **Image:** Attaching the label on the enclosure
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/label-mount-enclosure.png" 
+  figureCount="40"
+  caption="Attaching the label on the enclosure" 
+   width="25%"
+/> 
  
 ### Hook Loop Mount (Type J)
 
 1. For hook loop mount, use one (1) piece of mount accessory with an indicator marked with the letter **J**, as shown in **Figure 41**.
 
-> **Image:** Mount accessory marked with the letter J
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/hook-loop-j.png" 
+  figureCount="41"
+  caption="Mount accessory marked with the letter J" 
+   width="30%"
+/> 
  
- 
-2. Fix the hook loop mount marked with the letter **J** on the WisBlock Unify Enclosure using two (2) pieces of M3*8 mm Head screw with washer. Place it on fixed position number **1 or 4** of the enclosure, as shown in **Figure 42**.
+2. Fix the hook loop mount marked with the letter **J** on the WisBlock Unify Enclosure using two (2) pieces of M3*8&nbsp;mm Head screw with washer. Place it on fixed position number **1 or 4** of the enclosure, as shown in **Figure 42**.
 
-> **Image:** Fixing the hook loop mount on the enclosure
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/hook-loop1.png" 
+  figureCount="42"
+  caption="Fixing the hook loop mount on the enclosure" 
+   width="40%"
+/> 
  
 
 | Size   | Fix Position |
@@ -363,7 +537,12 @@ Handle with care to avoid personal injury or damage to the magnet.
 
 3. Lastly, hang the unify enclosure directly on a hook.
 
-> **Image:** Fixing the enclosure on the hook
- 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/installation/hook-loop-enclosure.png" 
+  figureCount="43"
+  caption="Fixing the enclosure on the hook" 
+   width="20%"
+/> 
  
 
+<RkBottomNav/>

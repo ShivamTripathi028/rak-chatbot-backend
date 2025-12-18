@@ -13,6 +13,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Repeater
 
 Thank you for choosing **WisMesh Repeater** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -33,3 +35,4 @@ Make sure your network is always on with the WisMesh Repeater. This Meshtastic s
 
 To get started with the WisMesh Repeater, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Repeater.pdf" target="_blank">WisMesh Repeater Getting Started</a> guide.
 
+<RkBottomNav/>

@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK12005 WisBlock Rain Sensor Module Quick Start Guide
 
 ## Prerequisite
@@ -47,19 +51,31 @@ The RAK12005 module gives information about:
 
 - Rain/Water Detect - measures resistance changes caused by water or condensed fog.
 
-> **Image:** Rain Sensor mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/rain-connection.png"
+  width="80%"
+  caption="Rain Sensor mounting connection to WisBlock Base module"
+/>
 
 #### RAK12030 Sensing Pad
 
 The sensor contains a sensing pad that you can place the sensor exposed under the open sky where it can be affected by rainfall and keep your WisBlock solution in a dry place or inside a waterproof enclosure.
 
-> **Image:** RAK12030 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/rak12030_module.png"
+  width="30%"
+  caption="RAK12030 Module"
+/>
 
 #### RAK12005 Sensor Module
 
 The RAK12005 module produces an output voltage depending on the resistance of the sensing pad. The signal from the sensing pad is fed to an MCP606 Comparator to digitize it then the comparator output is tied to the IO pin on the WisConnector. The module also has a built-in potentiometer for sensitivity adjustment of the digital output. Keep the RAK12005 in a dry place or inside a waterproof enclosure, just make sure not to wet this part of the module.
 
-> **Image:** RAK12005 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/rak12005-hardware.png"
+  width="40%"
+  caption="RAK12005 Module"
+/>
 
 #### Installation
 
@@ -67,7 +83,11 @@ The RAK12005 module produces an output voltage depending on the resistance of th
 
 The RAK12005 module can be mounted on the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board, as shown in **Figure 4**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK12005 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/mounting-mechanism.png"
+  width="60%"
+  caption="RAK12005 mounting connection to WisBlock Base module"
+/>
 
 ##### Disassembling Procedure
 
@@ -75,15 +95,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 7**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -93,9 +125,9 @@ Now, you can connect the battery (optional) and USB cable to start programming y
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -115,15 +147,27 @@ For RAK12005, the accessible pin assignments are defined as follows in the Ardui
 
 **RAK4631 Board**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 **RAK11200 Board**
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 **RAK11310 Board**
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/rak11310-board.png"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 3. Next, copy the following sample code into your Arduino IDE.
 
@@ -176,9 +220,18 @@ If you experience any error in compiling the example sketch, check the updated c
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/select-port.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK12005 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/quickstart/upload.png"
+  width="100%"
+  caption="Uploading the RAK12005 Sample code"
+/>
 
 5. When you successfully uploaded the example sketch, you'll now be able to test the RAK12005 Rain Sensor module. Try pouring water on the copper traces of the RAK12030 and you'll be able to see that the blue and green LED of the WisBlock solution lights up when there is a presence of water, and then switched off when there is no presence of water or dry.
 
+<RkBottomNav/>

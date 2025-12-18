@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2247 Pi HAT Datasheet
 
 ## Overview
@@ -30,6 +33,7 @@ Moreover, there is a **GPS** on the HAT that enhances your RAK2247 with localiza
 
 - One (1) [RAK2247 Pi HAT](https://store.rakwireless.com/products/rak2247-pi-hat?utm_source=RAK2247PiHAT&utm_medium=Document&utm_campaign=BuyFromStore)
 
+
 ## Specifications
 
 ### Overview
@@ -38,13 +42,21 @@ Moreover, there is a **GPS** on the HAT that enhances your RAK2247 with localiza
 
 The RAK2247 Pi HAT maps the RAK2247 pins from the 52-pin mPCIe connector to the 40-pin Raspberry Pi connector. Refer to the block diagram in figure 1 below and the pin mapping table in the following section – Pin Definition.
 
-> **Image:** RAK2247 Pi HAT Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wishat/rak2247/datasheet/block-diagram.png"
+  width="60%"
+  caption="RAK2247 Pi HAT Block Diagram"
+/>
 
 ### Hardware
 
 #### Pin Definition
 
-> **Image:** RAK2247 Pi HAT Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wishat/rak2247/datasheet/pinout_diagram.png"
+  width="70%"
+  caption="RAK2247 Pi HAT Pinout Diagram"
+/>
 
 The following tables show the pin definitions and the description of the RAK2247 Pi HAT on the 40-Pin Pi HAT connector:
 
@@ -59,19 +71,20 @@ The following tables show the pin definitions and the description of the RAK2247
 | PO       | Power input     |
 | NC       | No Connection   |
 
+
 | **Pin No.** | **Raspberry Pi 40-Pin Connector** | **RAK2247 Pi HAT PIN** | **I/O** | **Remarks**                                                                                                               |
 | ----------- | --------------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
 | 1           | 3V3                               | NC                     |         | No Connection                                                                                                             |
-| 2           | 5 V                          | 5 V               | PI      | 5 V Input                                                                                                            |
+| 2           | 5&nbsp;V                          | 5&nbsp;V               | PI      | 5&nbsp;V Input                                                                                                            |
 | 3           | GPIO2 (SDA1)                      | I2C_SDA                | IO      | HOST SDA, Connect RAK2247 Pi HAT built in GPS Module (MAX-7Q)’s SDA                                                       |
-| 4           | 5 V                          | 5 V               | PI      | 5 V Input                                                                                                            |
+| 4           | 5&nbsp;V                          | 5&nbsp;V               | PI      | 5&nbsp;V Input                                                                                                            |
 | 5           | GPIO3 (SCL1)                      | I2C_SCL                | IO      | HOST SCL, Connect RAK2247 Pi HAT built in GPS Module (MAX-7Q)’s SCL                                                       |
 | 6           | GND                               | GND                    |         | Ground                                                                                                                    |
 | 7           | GPIO4 (GPIO_GCLK)                 | NC                     |         | No Connection                                                                                                             |
 | 8           | GPIO14 (TXD0)                     | UART_RXD_ MAX-7Q       | DI      | Connect RAK2247 Pi HAT built in GPS Module (MAX-7Q)’s UART_RXD                                                            |
 | 9           | GND                               | GND                    |         | Ground                                                                                                                    |
 | 10          | GPIO15 (RXD0)                     | UART_TXD_ MAX-7Q       | DO      | Connect to RAK2247 Pi HAT built in GPS Module (MAX-7Q)’s UART_TXD                                                         |
-| 11          | GPIO17 (GPIO_GEN0)                | RESET_RAK2247          | DI      | Connect to SX1301’s RESET PIN, SX1301 reset input, Active high, ≥100 ns for SX1301 reset                             |
+| 11          | GPIO17 (GPIO_GEN0)                | RESET_RAK2247          | DI      | Connect to SX1301’s RESET PIN, SX1301 reset input, Active high, ≥100&nbsp;ns for SX1301 reset                             |
 | 12          | GPIO18 (GPIO_GEN1)                | NC                     |         | No Connection                                                                                                             |
 | 13          | GPIO27 (GPIO_GEN2)                | NC                     |         | No Connection                                                                                                             |
 | 14          | GND                               | GND                    |         | Ground                                                                                                                    |
@@ -102,9 +115,11 @@ The following tables show the pin definitions and the description of the RAK2247
 | 39          | GND                               | GND                    |         | Ground                                                                                                                    |
 | 40          | GPIO21                            | NC                     |         | No Connection                                                                                                             |
 
+
 ## Ordering Information
 
 | **Model**      | **Description**                                                            | **Supported Module** |
 | -------------- | -------------------------------------------------------------------------- | -------------------- |
 | RAK2247 Pi HAT | mPCIe to 40-pin Pi HAT Convert Board for RAK2247 module with SPI interface | RAK2247 SPI module   |
 
+<RkBottomNav/>

@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18040 WisBlock Audio Analog Microphone to I2S Module
 
 Thank you for choosing **RAK18040 WisBlock Audio Analog Microphone to I2S Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -36,7 +38,7 @@ Thank you for choosing **RAK18040 WisBlock Audio Analog Microphone to I2S Module
     - Supports two (2) analog microphones
 
 * **Module Size**
-    * 25 x 35 mm
+    * 25 x 35&nbsp;mm
 
 ## Prerequisites
 
@@ -46,3 +48,4 @@ To use a **RAK18040**, you will need a **WisBlock Core**, **WisBlock Base**, and
 Make sure to fix the module with screws to ensure proper function.
 :::
 
+<RkBottomNav/>

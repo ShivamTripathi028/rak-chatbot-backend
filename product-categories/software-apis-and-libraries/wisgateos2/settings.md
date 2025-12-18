@@ -25,6 +25,11 @@ sidebar_label: System Settings
 date: 2022-08-01
 ---
 
+
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # System Settings
 
 In the **Settings** section, you can manage and configure various settings of the gateway, including changing its name, setting up system logs, synchronizing time, managing backups and restores, accessing files, and customizing user preferences.
@@ -37,7 +42,11 @@ The **General Settings** tab provides options to modify the gateway's name, conf
 
 The default gateway name can be updated to improve identification within a network.
 
-> **Image:** Changing the gateway name
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/change-name.png"
+  width="80%"
+  caption="Changing the gateway name"
+/>
 
 1. Navigate to **Settings** > **General settings**.
 2. Enter the desired name in the **Name** field.
@@ -47,7 +56,11 @@ The default gateway name can be updated to improve identification within a netwo
 
 The **System Log** settings allow management of log storage and forwarding logs to an external server for **monitoring, troubleshooting, and long-term analysis**.
 
-> **Image:** Configure the System Log
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/setup-syslog.png"
+  width="80%"
+  caption="Configure the System Log"
+/>
 
 1. Navigate to **Settings** > **General settings**.
 2. **Set Log Buffer Size:** Enter the maximum log buffer size (
@@ -68,7 +81,11 @@ The **System Log** settings allow management of log storage and forwarding logs 
 
 The gateway supports **Network Time Protocol (NTP)** to maintain accurate system time.
 
-> **Image:** Time synchronization
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/time-sync.png"
+  width="80%"
+  caption="Time synchronization"
+/>
 
 1. Navigate to **Settings** > **General settings**.
 2. Toggle **Enable NTP client** to activate time synchronization.
@@ -81,7 +98,11 @@ The gateway supports **Network Time Protocol (NTP)** to maintain accurate system
 
 This option restarts the gateway. **All unsaved changes will be lost** during the reboot.
 
-> **Image:** Reboot the Gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/reboot-gateway.png"
+  width="80%"
+  caption="Reboot the Gateway"
+/>
 
 1. Navigate to **Settings** > **General settings**.
 2. Click the **Reboot** button.
@@ -95,7 +116,11 @@ This tab enables **backup**, **restore**, or **reset** of the gateway settings t
 
 Creating a **backup of the current gateway configuration** allows restoration when necessary. For added security, the backup file can be **encrypted with a password**.
 
-> **Image:** Backup configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/backup.png"
+  width="100%"
+  caption="Backup configuration"
+/>
 
 1. Navigate to **Settings** > **Backup and Restore**.
 2. (Optional) **Enable Backup Encryption:**
@@ -108,7 +133,11 @@ Creating a **backup of the current gateway configuration** allows restoration wh
 
 Restoring a backup reverts the gateway settings to the state saved in the selected archive.
 
-> **Image:** Restore configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/restore.png"
+  width="100%"
+  caption="Restore configuration"
+/>
 
 :::warning IMPORTANT
 Restoring a backup will overwrite the current settings. Make sure the correct file is used.
@@ -129,7 +158,11 @@ Restoring a backup will overwrite the current settings. Make sure the correct fi
 
 Resets the gateway to its original factory settings, permanently erasing all configurations.
 
-> **Image:** Reset to factory defaults
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/reset.png"
+  width="100%"
+  caption="Reset to factory defaults"
+/>
 
 :::warning IMPORTANT
 This action is **irreversible**. Ensure you have a backup before proceeding.
@@ -144,7 +177,11 @@ This action is **irreversible**. Ensure you have a backup before proceeding.
 
 The **File Browser** allows you to access the gateway’s file system directly through the Web UI, making it easy to view or download files. It provides access to system log files, firmware images, configuration data, and other stored resources.
 
-> **Image:** File browser tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/settings/settings-file-browser.png"
+  width="100%"
+  caption="File browser tab"
+/>
 
 1. Navigate to **Settings** > **File Browser** > **mnt** > **mmcblk0p1**.
 2. Select the target folder, enter it, then click and download the file.
@@ -159,11 +196,19 @@ To modify your preferences, navigate to the **User Preferences** option in the b
 
 1. In the bottom-left corner, choose **User preferences** to set your personal preferences for the gateway.
 
-> **Image:** User button
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/user-preferences/user-button.png"
+  width="40%"
+  caption="User button"
+/>
 
 2. Selecting this option will redirect you to the **User Preferences** page.
 
-> **Image:** User preferences
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/user-preferences/user-preferences.png"
+  width="80%"
+  caption="User preferences"
+/>
 
 ### Available Settings
 
@@ -175,3 +220,4 @@ To modify your preferences, navigate to the **User Preferences** option in the b
 
 To log out of the Web UI, click **Logout** in the bottom-left corner.
 
+<RkBottomNav/>

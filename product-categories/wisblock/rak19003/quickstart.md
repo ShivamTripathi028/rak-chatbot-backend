@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19003 WisBlock Mini Base Board Quick Start Guide
 
 This guide introduces the RAK19003 WisBlock Base Board and how to use it.
@@ -33,12 +36,13 @@ It is highly recommended to also check the dedicated Quick Start Guide that you 
 
 Based on the choice of the WisBlock Core, select a Development Environment:
 
-**Programming via Arduino IDE**
+<b>Programming via Arduino IDE</b>
 - [RAKwireless BSP support for Arduino](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index)
 In Arduino IDE, once you installed the BSP, the examples for WisBlock Core will be automatically included on the list of examples.
 
-**Programming via PlatformIO IDE:**
+<b>Programming via PlatformIO IDE:</b>
 - [RAKwireless WisBlock modules in PlatformIO](https://github.com/RAKWireless/WisBlock/blob/master/PlatformIO/README)
+
 
 ## Product Configuration
 
@@ -50,7 +54,12 @@ To give you a better understanding of how the WisBlock Base works, the block dia
 
 The block diagram is shown in **Figure 1** that shows the internal architecture and external interfaces of the RAK19003 board.
 
-> **Image:** RAK19003 WisBlock Base block diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/datasheet/block-diagram.svg"
+  figureCount="1"
+  caption="RAK19003 WisBlock Base block diagram" 
+   width="90%"
+/>
 
 The MCU in the WisBlock Core module offers the I2C, UART, and SPI data buses to the sensor modules. Through these buses, the MCU can control and retrieve data from the sensors.
 
@@ -60,16 +69,22 @@ Some MCU IO pins have an alternate function. In this case, you have the option t
 
 #### Power Supply Diagram of RAK19003
 
-> **Image:** Power Supply Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/rak19003-ps.png"
+  figureCount="2"
+  caption="Power Supply Block Diagram" 
+   width="90%"
+/>
 
 The RAK19003 is designed to be powered by a battery and provides the charger circuitry for **lithium batteries**. The charger circuitry can be connected to a wall outlet charger through the Type-C USB connector, or the specific connector for a solar panel.
 
-A high-efficiency step-down converter with a low quiescent current is used for generating 3.3 V. This 3.3 V power supply drives the consumption of the WisBlock Core module and the sensor modules. The max current supported by the 3.3 V LDO is 750 mA.
+A high-efficiency step-down converter with a low quiescent current is used for generating 3.3&nbsp;V. This 3.3&nbsp;V power supply drives the consumption of the WisBlock Core module and the sensor modules. The max current supported by the 3.3&nbsp;V LDO is 750&nbsp;mA.
 
-3V3_S is another 3.3 V power supply, it can be controlled by the MCU in order to disconnect the power sensors during idle periods to save power. 3V3_S is controlled by an IO2 pin on the WisBlock Core board.
+3V3_S is another 3.3&nbsp;V power supply, it can be controlled by the MCU in order to disconnect the power sensors during idle periods to save power. 3V3_S is controlled by an IO2 pin on the WisBlock Core board.
 
 - Set **IO2=1**, 3V3_S is on.
 - Set **IO2=0**, 3V3_S is off.
+
 
 ### Hardware Setup
 
@@ -89,35 +104,75 @@ This guide uses two arrows. Refer to **Figure 3** for its representation.
 
 :::
 
-> **Image:** Notation within the guide
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/1.arrows.png"
+  figureCount="3"
+  caption="Notation within the guide" 
+   width="50%"
+/>
 
 1. Align the connectors. Keep the header parallel and place it lightly in the corresponding lap joint of the socket.
 
-> **Image:** Alignment of WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/2.alignment.png"
+  figureCount="4"
+  caption="Alignment of WisConnector" 
+   width="75%"
+/>
 
 2. Fit the connector. Tilt one end of the connector (header) less than 20 degrees, while do not apply force during this process, gently place the other end in parallel.
 
-> **Image:** Fit the WisConnector’s header inside of the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/3.header-to-socket.png"
+  figureCount="5"
+  caption="Fit the WisConnector’s header inside of the socket" 
+   width="75%"
+/>
 
 3. After the above alignment steps, the header and socket are matched but still not buckled.
 
-> **Image:** WisConnector’s header matched inside of the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/4.header-matched.png"
+  figureCount="6"
+  caption="WisConnector’s header matched inside of the socket" 
+   width="75%"
+/>
 
 4. Apply forces evenly by pressing in parallel, then there will be a sound confirming the completion of the buckling.
 
-> **Image:** Apply forces to buckle the heard to the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/5.buckle-the-head.png"
+  figureCount="7"
+  caption="Apply forces to buckle the heard to the socket" 
+   width="75%"
+/>
 
 5. In the process of buckling and applying force, avoid the application of uneven force on both sides.
 
-> **Image:** Avoid applying uneven forces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/6.uneven-forces.png"
+  figureCount="8"
+  caption="Avoid applying uneven forces" 
+   width="75%"
+/>
 
 6. When the buckling process is completed, check that the header and socket are kept in parallel.
 
-> **Image:** Correct way to buckle the WisConnector’s header to the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/7.buckle-header-to-socket.png"
+  figureCount="9"
+  caption="Correct way to buckle the WisConnector’s header to the socket" 
+   width="75%"
+/>
 
 7. If after buckling, the header and socket are not in a parallel state (not fully assembled in one place), then press the even force on both sides of the long side to complete the correct buckling.
 
-> **Image:** WisConnector’s header is not parallel to the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/8.not-parallel.png"
+  figureCount="10"
+  caption="WisConnector’s header is not parallel to the socket" 
+   width="75%"
+/>
 
 8. When the aforementioned steps are not completed yet, do not apply force to buckle. Otherwise, there will be a risk to damage the connector. When the connector cannot be smoothly buckled down, repeat the alignment step.
 
@@ -125,19 +180,39 @@ This guide uses two arrows. Refer to **Figure 3** for its representation.
 
 1. To disconnect the header from the socket, pull out in parallel with even forces.
 
-> **Image:** Correct way: Applying even forces to detach the header from the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/9.detach-header.png"
+  figureCount="11"
+  caption="Correct way: Applying even forces to detach the header from the socket" 
+   width="75%"
+/>
 
 2. Avoid pulling out the header asymmetrically in the long-side direction.
 
-> **Image:** Wrong way: Applying uneven forces to detach the header from the socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/10.wrong-way-of-detaching.png"
+  figureCount="12"
+  caption="Wrong way: Applying uneven forces to detach the header from the socket" 
+   width="60%"
+/>
 
 3. The short-side of the connector can be pulled out asymmetrically, but apply the force vertically and avoid rotating the header.
 
-> **Image:** Wrong way: Do not rotate the header
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/11.dont-rotate.png"
+  figureCount="13"
+  caption="Wrong way: Do not rotate the header" 
+   width="60%"
+/>
 
 4. Avoid applying forces in a single corner.
 
-> **Image:** Wrong way: Do not apply force in a single corner of the header
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/12.dont-apply-force.png"
+  figureCount="14"
+  caption="Wrong way: Do not apply force in a single corner of the header" 
+   width="55%"
+/>
 
 #####  Assembling a WisBlock Module
 
@@ -145,40 +220,72 @@ This guide uses two arrows. Refer to **Figure 3** for its representation.
 
 A WisBlock Core module is designed to be installed on the CPU slot of the RAK19003 Base Board. As shown in **Figure 15**, the location is properly marked by silkscreen. Follow carefully the procedure defined in [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19003/quickstart/#attaching-a-wisconnector) section in order to attach a Core module.
 
-Once attached, fix the module  with one or more pieces of M1.2 x 3 mm screws depending on the WisBlock Core.
+Once attached, fix the module  with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the WisBlock Core.
 
-> **Image:** WisBlock Core silkscreen on the RAK19003 Base Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/rak19003-top-assembly.png"
+  figureCount="15"
+  caption="WisBlock Core silkscreen on the RAK19003 Base Board" 
+   width="40%"
+/>
 
 ###### WisBlock Sensor
 
-A WisBlock Sensor module is designed to be installed on the Sensor slot of the RAK19003 Base Board. There are two (2) available sensor slots in the RAK19003 Base Board. As shown in **Figure 16**, the location of the slots is properly marked by silkscreen. Follow carefully the procedure of the section, [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19003/quickstart/#attaching-a-wisconnector), to attach a WisBlock Sensor module. Once attached, fix the module with an M1.2 x 3 mm screw.
+A WisBlock Sensor module is designed to be installed on the Sensor slot of the RAK19003 Base Board. There are two (2) available sensor slots in the RAK19003 Base Board. As shown in **Figure 16**, the location of the slots is properly marked by silkscreen. Follow carefully the procedure of the section, [attaching a WisConnector](https://docs.rakwireless.com/product-categories/wisblock/rak19003/quickstart/#attaching-a-wisconnector), to attach a WisBlock Sensor module. Once attached, fix the module with an M1.2 x 3&nbsp;mm screw.
 
-> **Image:** WisBlock Sensor silkscreen on the RAK19003 Base Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/rak19003-bottom-assembly.png"
+  figureCount="16"
+  caption="WisBlock Sensor silkscreen on the RAK19003 Base Board" 
+   width="40%"
+/>
+
 
 ##### Disassembling a WisBlock Module
 
 1. The procedure to disassemble any type of WisBlock modules is the same. As shown in **Figure 17**, first, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/rak19003-top-remove.png"
+  figureCount="17"
+  caption="Removing screws from the WisBlock module" 
+   width="40%"
+/>
 
 2. Once the screws are removed, on the PCB of a WisBlock module, there is a silkscreen that shows the correct location where force can be applied. By applying even force under the marked area, the module can be detached from the Base Board. See **Figure 18** and **Figure 19**.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/17.detaching-silkscreen.png"
+  figureCount="18"
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="75%"
+/>
 
-> **Image:** Applying even forces on the proper location of a WisBlock module to detach the module from the Base Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/quickstart/18.detaching-module.png"
+  figureCount="19"
+  caption="Applying even forces on the proper location of a WisBlock module to detach the module from the Base Board" 
+   width="65%"
+/>
+
 
 #### Battery Connection
 
-RAK19003 can be powered via the USB cable or Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 20**. The matching connector for the battery wires is a [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
+RAK19003 can be powered via the USB cable or Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 20**. The matching connector for the battery wires is a [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199).
 
-> **Image:** Battery Connector Pin Order
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/datasheet/battery-connector.svg"
+  figureCount="20"
+  caption="Battery Connector Pin Order" 
+   width="50%"
+/>
 
-The battery can be recharged as well via a small Solar Panel, as shown in **Figure 21**. The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287). The GND pin of [Battery Connector](https://docs.rakwireless.com/product-categories/wisblock/rak19003/datasheet/#battery-connector) is located on edge of the board.
+The battery can be recharged as well via a small Solar Panel, as shown in **Figure 21**. The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287). The GND pin of [Battery Connector](https://docs.rakwireless.com/product-categories/wisblock/rak19003/datasheet/#battery-connector) is located on edge of the board.
 
 :::warning
 
 - Battery can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause fire.
 - Make sure the battery wires match the polarity on the RAK19003 board. Not all batteries have the same wiring.
 
@@ -186,11 +293,18 @@ The battery can be recharged as well via a small Solar Panel, as shown in **Figu
 
 #### Solar Panel Connection
 
-> **Image:** Solar Panel Connector VIN and GND
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/datasheet/solar-panel.svg"
+  figureCount="21"
+  caption="Solar Panel Connector VIN and GND" 
+   width="45%"
+/>
+
+
 
 :::warning 
 
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - The GND pin of the Solar Panel Connector is located on edge of the board. Make sure the Solar Panel wires are matching the polarity on the RAK19003 board.
 
 :::
@@ -207,4 +321,7 @@ Before you continue, you should have either an [Arduino BSP](https://github.com/
 To quickly build your IoT device with less hassle, example codes for WisBlock Core are provided.
 
 You can access the codes on the [WisBlock Example code repository](https://github.com/RAKWireless/WisBlock/tree/master/examples). The example codes on folder `common` are compatible with RAK4631, RAK11200, and RAK11310 WisBlock cores.
+
+<RkBottomNav/>
+
 

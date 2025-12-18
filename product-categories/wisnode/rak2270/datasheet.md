@@ -11,6 +11,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK2270 Sticker Tracker Datasheet
 
 ## Overview
@@ -19,9 +23,10 @@ sidebar_label: Datasheet
 
 **RAK2270 Sticker Tracker** is a battery-powered LoRaWAN tracker with a label-like form factor powered by STM32WLE5. It’s compact; simply tear, peel, and stick RAK2270 to any product to virtually track its location in real time by leveraging the location estimator functionality of the Helium network server. It is activated using a Ri sensor, making it buttonless for ease of use.
 
-With its built-in temperature sensor, it measures temperatures ranging from -20° C to +60° C with a temperature resolution of 0.1° C while simultaneously uploading the data to the server. It also includes an integrated 3-axis accelerometer that automatically adjusts the device positioning frequency. Because it detects whether the device is stationary or moving, it reduces device usage time.
+With its built-in temperature sensor, it measures temperatures ranging from -20°&nbsp;C to +60°&nbsp;C with a temperature resolution of 0.1°&nbsp;C while simultaneously uploading the data to the server. It also includes an integrated 3-axis accelerometer that automatically adjusts the device positioning frequency. Because it detects whether the device is stationary or moving, it reduces device usage time.
 
 Data, such as time, temperature, and motion state, remains safe and stored in an EEPROM storage space with a storage capacity of up to 64KB. Data can be saved locally when out of coverage and retained when coverage is restored. RAK2270 supports various LoRaWAN bands, including IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4.
+
 
 ### Features
 
@@ -29,19 +34,20 @@ Data, such as time, temperature, and motion state, remains safe and stored in an
 - Location based on LoRaWAN
 - Real-time location tracking
 - Utilizes the **Location Estimator** functionality of the Helium network server
-- Up to **64 KB EEPROM** storage space
+- Up to **64&nbsp;KB EEPROM** storage space
 - Built-in temperature sensor
-  - Temperature measurement: **-20° C** ~ **+60° C**
-  - Temperature resolution: **0.1° C**
-  - Operating temperature: **-20° C** ~ **+60° C**
+  - Temperature measurement: **-20°&nbsp;C** ~ **+60°&nbsp;C**
+  - Temperature resolution: **0.1°&nbsp;C**
+  - Operating temperature: **-20°&nbsp;C** ~ **+60°&nbsp;C**
 - Built-in 3-axis accelerometer that auto-adjusts the positioning frequency
-- Antenna gain: **2.0 dBi**
-- Maximum output power: **22 dBm**
+- Antenna gain: **2.0&nbsp;dBi**
+- Maximum output power: **22&nbsp;dBm**
 - Battery-operated:
   - Type: **LiMnO<sub>2</sub>**
-  - Battery capacity: **600 mAh**
+  - Battery capacity: **600&nbsp;mAh**
 - LoRaWAN supported bands: IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
-- Compact size for easy attachment to any product: **85 mm x 118 mm x 1.5 mm**
+- Compact size for easy attachment to any product: **85&nbsp;mm x 118&nbsp;mm x 1.5&nbsp;mm**
+
 
 ## Specifications
 
@@ -54,9 +60,13 @@ RAK2270 integrates one RAK3172-SiP, one LIS3DHTR, one LiMnO<sub>2</sub> battery,
 - The RAK3172-SiP provides the required LoRa modem and processing functions.
 - The LIS3DHTR is used to determine the frequency of data transmission based on motion state judgment.
 - EEPROM is used for local data storage.
-- The LiMnO<sub>2</sub> battery powers the system with a nominal capacity of 600 mAh.
+- The LiMnO<sub>2</sub> battery powers the system with a nominal capacity of 600&nbsp;mAh.
 
-> **Image:** RAK2270 Sticker Tracker Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2270/datasheet/block-diagram.png"
+  width="70%"
+  caption="RAK2270 Sticker Tracker Block Diagram"
+/>
 
 ### Hardware
 
@@ -70,15 +80,14 @@ RAK2270 integrates one RAK3172-SiP, one LIS3DHTR, one LiMnO<sub>2</sub> battery,
 
 | Parameter                | Values                                                                                                                              |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Temperature              | Measurement Range: -20° C ~ +60° C 
- Resolution: 0.1° C 
- Operating Temperature: -20° C ~ +60° C |
+| Temperature              | Measurement Range: -20°&nbsp;C ~ +60°&nbsp;C <br /> Resolution: 0.1°&nbsp;C <br /> Operating Temperature: -20°&nbsp;C ~ +60°&nbsp;C |
 | Battery Type             | LiMnO<sub>2</sub>                                                                                                                   |
-| Nominal Battery Capacity | 600 mAh                                                                                                                        |
-| Antenna Gain             | 2.0 dBi                                                                                                                        |
-| Maximum Output Power     | 22 dBm                                                                                                                          |
-| Module Size              | 85 mm x 118 mm x 1.5 mm                                                                                              |
+| Nominal Battery Capacity | 600&nbsp;mAh                                                                                                                        |
+| Antenna Gain             | 2.0&nbsp;dBi                                                                                                                        |
+| Maximum Output Power     | 22&nbsp;dBm                                                                                                                          |
+| Module Size              | 85&nbsp;mm x 118&nbsp;mm x 1.5&nbsp;mm                                                                                              |
 | Activation Method        | Ri sensor (buttonless)                                                                                                              |
+
 
 #### RF Characteristics
 ##### Operating Frequencies
@@ -95,10 +104,20 @@ The table below shows the supported LoRaWAN Bands of the RAK2270 Sticker Tracker
 | India         | IN865           |
 | Russia        | RU864           |
 
+
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK2270/Certification/RAK2270_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2270/Certification/RAK2270_FCC_Certification.pdf
-- **ISED:** https://downloads.rakwireless.com/LoRa/RAK2270/Certification/RAK2270_ISED_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/RAK2270/Certification/RAK2270_CE_Certification.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2270/Certification/RAK2270_FCC_Certification.pdf',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/RAK2270/Certification/RAK2270_ISED_Certification.pdf',
+    }
+]} />
 
+
+<RkBottomNav/>

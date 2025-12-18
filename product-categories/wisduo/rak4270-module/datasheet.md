@@ -9,7 +9,11 @@ image: https://images.docs.rakwireless.com/wisduo/rak4270-module/RAK4270-Module.
 sidebar_label: Datasheet
 ---
 
+
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK4270 WisDuo LPWAN Module Datasheet
 
@@ -17,28 +21,33 @@ sidebar_label: Datasheet
 
 ### Description
 
-The RAK4270 LoRa Module includes an **STM32L071 MCU** and an **SX1262** LoRa chip, which supports eight (8) spreading factors (SF5 ~ SF12) and signal bandwidth that can be adjusted between 7.8 kHz to 500 kHz. It has Ultra-Low Power Consumption of 2.31 μA (down to 1.61 μA @ 2.0 V) in sleep mode, but during the Transmit Mode, it can reach the maximum output power of 22 dBm. As a receiver, it can achieve a sensitivity of -148 dBm.
+The RAK4270 LoRa Module includes an **STM32L071 MCU** and an **SX1262** LoRa chip, which supports eight (8) spreading factors (SF5 ~ SF12) and signal bandwidth that can be adjusted between 7.8&nbsp;kHz to 500&nbsp;kHz. It has Ultra-Low Power Consumption of 2.31&nbsp;μA (down to 1.61&nbsp;μA @ 2.0&nbsp;V) in sleep mode, but during the Transmit Mode, it can reach the maximum output power of 22&nbsp;dBm. As a receiver, it can achieve a sensitivity of -148&nbsp;dBm.
 
 The module complies with Class A and C of LoRaWAN 1.0.2 specifications, and it also supports LoRa Point-to-Point (P2P) communications. The module is suitable for various applications that require long-range data acquisition and low power consumption, such as smart meters, supply chain and logistics tracking, agricultural sensors, and smart cities.
 
 You can configure the mode and operation of the RAK4270 module using [RAK4270 AT Commands](https://docs.rakwireless.com/product-categories/wisduo/rak4270-module/at-command-manual/) via a UART interface. Also, it offers low-power features that are very suitable for battery-powered applications.
 
+
 ### Product Features
 
 - LoRa module is suitable for applications in Smart City, Smart Agriculture, Smart Industry
-- Compact form factor: **15 x 15.5 x 2.5 mm** (LxWxH)
+- Compact form factor: **15 x 15.5 x 2.5&nbsp;mm** (LxWxH)
 - 20 pin stamp pad for PCB SMT board-to-board soldering
 - I/O ports: **UART/I2C/GPIO/ADC**
 - AT commands control interface
-- Temperature range: **-30° C to +85° C**
-- Supply voltage: **2.0 to 3.6 V**
+- Temperature range: **-30°&nbsp;C to +85°&nbsp;C**
+- Supply voltage: **2.0 to 3.6&nbsp;V**
 - **Supported bands**: (EU433, CN470, IN865, EU868, AU915, US915, KR920, and AS923-1/2/3/4)
-- LoRa bandwidth range of 7.8 kHz to 500 kHz, SF5 to SF12, BR=0.018~62.5 kb/s
-- Ultra-Low Power Consumption of 2.31 μA (down to 1.61 μA @ 2.0 V) in sleep mode
+- LoRa bandwidth range of 7.8&nbsp;kHz to 500&nbsp;kHz, SF5 to SF12, BR=0.018~62.5&nbsp;kb/s
+- Ultra-Low Power Consumption of 2.31&nbsp;μA (down to 1.61&nbsp;μA @ 2.0&nbsp;V) in sleep mode
 - ARM Cortex-M0+ 32-bit RISC core
-- 128 kbytes flash memory with ECC
-- 20 kbytes RAM
-- 6 kbytes of data EEPROM with ECC
+- 128&nbsp;kbytes flash memory with ECC
+- 20&nbsp;kbytes RAM
+- 6&nbsp;kbytes of data EEPROM with ECC
+
+
+
+
 
 ## Specifications
 
@@ -48,15 +57,24 @@ The overview shows the module top view and its block diagram where the core and 
 
 #### Board Overview
 
-**Figure 1** shows the top view of the RAK4270 LoRa module. The dimensions of the module are 15 x 15.5 x 2.5 mm
+**Figure 1** shows the top view of the RAK4270 LoRa module. The dimensions of the module are 15 x 15.5 x 2.5&nbsp;mm
 
-> **Image:** RAK4270 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/1.rak4270.png"
+  width="50%"
+  caption="RAK4270 Module"
+/>
+
 
 #### Block Diagram
 
 The block diagram representing the RAK4270 LoRa module is shown in **Figure 2**. External interfaces are outlined in the diagram.
 
-> **Image:** RAK4270 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/2.block-diagram.png"
+  width="60%"
+  caption="RAK4270 Module"
+/>
 
 ### Hardware
 
@@ -70,17 +88,22 @@ The hardware specification discusses the interfaces, pinouts and its correspondi
 
 #### Pin Definition
 
-> **Image:** RAK4270 Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/6.pinout.png"
+  width="60%"
+  caption="RAK4270 Pinout"
+/>
+
 
 :::warning
 When using `RF` pin for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF trace must be away from interference (switching node of DC-DC supply, high current/voltage pulses from controllers of inductive load like motor, signal generators, etc.)
-- RF trace must have 50 Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF trace must have 50&nbsp;Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, make it close to the `RF` pin.
 - Ground plane optimization is critical on certain antenna types like monopole.
 - GND trace used for RF path return must be directly connected to the GND plane and not be treated as thermal relief.
-- It is recommended for the RF trace to be routed in a curve and not in a sharp 90 degrees.
+- It is recommended for the RF trace to be routed in a curve and not in a sharp 90&nbsp;degrees.
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for [Antenna RF Design](https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test) which includes PCB design, tuning, matching, and RF testing.
 :::
@@ -106,7 +129,8 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 | 17  | PA8           | I/O  | GPIO                                                              | MCO, EVENTOUT, USART1_CK, I2C3_SCL                              |
 | 18  | MCU_NRST      | I/O  | MCU reset (STM32L071KBU6 NRST)                                    |                                                                 |
 | 19  | GND           |      | Ground                                                            | Ground                                                          |
-| 20  | VDD           |      | DC3V3                                                             | Supply voltage 2.0~3.3 V                                   |
+| 20  | VDD           |      | DC3V3                                                             | Supply voltage 2.0~3.3&nbsp;V                                   |
+
 
 ##### LoRa Transceiver IC Connection to RAK4270 Internal STM32
 
@@ -129,9 +153,9 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 | 1          | 0        | RX mode       |
 | 0          | 1        | TX mode       |
 
-:::tip Note
- - Set Dio2AsRfSwitchControl = false
 
+:::tip Note
+ - Set Dio2AsRfSwitchControl = false<br />
  - Set Dio3AsTxcoControl = enable
 :::
 
@@ -139,44 +163,92 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 
 To upgrade the firmware, the SWD (Serial Wire Debug) interface must be used. A 5-pin JLINK cable has to be connected to the SWD port. These pins are 3v3, GND, SWDIO, SWCLK, and MCU_NRST.
 
+
 ##### UARTS Ports
 
 There are two UART ports on the RAK4270 module. UART2 (pin1 and pin2) can be used as the AT command port, while UART1 (pin4 and pin5) can be used both as AT command port and firmware upgrade port. It is recommended to connect the UART2 port to an external MCU and reserve UART1 for debugging and or future firmware upgrade purposes.
 
 ##### I2C Port
 
-The RAK4270 exposes an I2C port, in which the SDA line is assigned to pin9, and the SCL line is assigned to pin10. This I2C port allows you to control additional slave sensors with the RAK4270 using the I2C protocol. The RAK4270 will be the master. If the I2C port is used, then external pull-up resistors must be added to the SDA and SCL lines. The recommended value of the resistors is 10 kΩ. You can develop your own firmware or use the [RUI (RAKwireless Unified Interface) Online compiler](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui/) to use this port.
+The RAK4270 exposes an I2C port, in which the SDA line is assigned to pin9, and the SCL line is assigned to pin10. This I2C port allows you to control additional slave sensors with the RAK4270 using the I2C protocol. The RAK4270 will be the master. If the I2C port is used, then external pull-up resistors must be added to the SDA and SCL lines. The recommended value of the resistors is 10&nbsp;kΩ. You can develop your own firmware or use the [RUI (RAKwireless Unified Interface) Online compiler](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui/) to use this port.
 
 ##### RF Port
 
-The RAK4270 module exposes two types of RF antenna: IPEX and PAD. The most straightforward way is to use the IPEX antenna port. In such a case, you just connect the antenna to the IPEX connector on the module directly. On the other hand, for specific needs, you can design a PCB trace antenna, Chip antenna, SMA antenna, or spring type antenna. In the latter case, you should use the PAD-type antenna port exposed by this module. The external antenna should be matched to the 50 Ω RF transmission line.
+The RAK4270 module exposes two types of RF antenna: IPEX and PAD. The most straightforward way is to use the IPEX antenna port. In such a case, you just connect the antenna to the IPEX connector on the module directly. On the other hand, for specific needs, you can design a PCB trace antenna, Chip antenna, SMA antenna, or spring type antenna. In the latter case, you should use the PAD-type antenna port exposed by this module. The external antenna should be matched to the 50&nbsp;Ω RF transmission line.
 
 ##### VDD Power In
 
-It is recommended to add four decoupling capacitors near the RAK4270 power supply pins. The recommended values of the capacitors are two 10 uF and two 100 nF connected in parallel.
+It is recommended to add four decoupling capacitors near the RAK4270 power supply pins. The recommended values of the capacitors are two 10&nbsp;uF and two 100&nbsp;nF connected in parallel.
 
-> **Image:** RAK4270 VDD port
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/5.vdd-port.png"
+  width="25%"
+  caption="RAK4270 VDD port"
+/>
 
 #### RF Characteristics
 
 ##### Operating Frequencies
 
-| Module | Region | Frequency |
-| --- | --- | --- |
-| RAK4270(L) | Europe | EU433 |
-| RAK4270(L) | China | CN470 |
-| RAK4270(H) | Europe | EU868 |
-| RAK4270(H) | North America | US915 |
-| RAK4270(H) | Australia | AU915 |
-| RAK4270(H) | Korea | KR920 |
-| RAK4270(H) | Asia | AS923 |
-| RAK4270(H) | India | IN865 |
+<table style={{ textAlign: 'center' }}>
+
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Region</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <tr>
+      <td rowSpan="2">RAK4270(L)</td>
+      <td>Europe</td>
+      <td>EU433</td>
+    </tr>
+    <tr>
+      <td>China</td>
+      <td>CN470</td>
+    </tr>
+    <tr>
+      <td rowSpan="6">RAK4270(H)</td>
+      <td>Europe</td>
+      <td>EU868</td>
+    </tr>
+    <tr>
+      <td>North America</td>
+      <td>US915</td>
+    </tr>
+    <tr>
+      <td>Australia</td>
+      <td>AU915</td>
+    </tr>
+    <tr>
+      <td>Korea</td>
+      <td>KR920</td>
+    </tr>
+    <tr>
+      <td>Asia</td>
+      <td>AS923</td>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>IN865</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Electrical Characteristics
 
 ##### Schematic Diagram
 
-> **Image:** RAK4270 Schematic Diagram
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/10.schematic.png"
+  width="100%"
+  caption="RAK4270 Schematic Diagram"
+/>
 
 ##### Operating Voltage
 
@@ -188,7 +260,7 @@ It is recommended to add four decoupling capacitors near the RAK4270 power suppl
 
 | Feature           | Condition | Minimum                             | Typical | Maximum | Unit |
 | :---------------: | :-------: | :---------------------------------: | :-----: | :-----: | :--: |
-| Operating Current | TX Mode   | 35.4 (@ 1 dBm SF7 868Mhz) |         |         | mA   |
+| Operating Current | TX Mode   | 35.4 (@&nbsp;1&nbsp;dBm SF7 868Mhz) |         |         | mA   |
 |                   | RX Mode   | 15.8                                |         |         | mA   |
 
 ##### Sleep Current
@@ -202,11 +274,19 @@ It is recommended to add four decoupling capacitors near the RAK4270 power suppl
 
 ##### Dimensions
 
-> **Image:** RAK4270 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/7.dimensions.png"
+  width="50%"
+  caption="RAK4270 Mechanical Dimensions"
+/>
 
 ##### Recommended Footprint
 
-> **Image:** RAK4270 Recommended PCB footprint
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/8.pcb-footprint.png"
+  width="50%"
+  caption="RAK4270 Recommended PCB footprint"
+/>
 
 #### Environmental Characteristics
 
@@ -226,16 +306,20 @@ It is recommended to add four decoupling capacitors near the RAK4270 power suppl
 
 - MSL Rating : Class 3
 
-> **Image:** RAK4270 Recommended Reflow Profile
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/datasheet/9.reflow.png"
+  width="50%"
+  caption="RAK4270 Recommended Reflow Profile"
+/>
 
 Standard conditions for reflow soldering:
 
-- Pre-heating Ramp (A) (Initial temperature: 150 ℃): **1~2.5 ℃/sec**
-- Soaking Time (T2) (150~180 ℃): **60~100 sec**
-- Peak Temperature (G): **230~250 ℃**
-- Reflow Time (T3) (>220 ℃): **30~60 sec**
-- Ramp-up Rate (B): **0~2.5 ℃/sec**
-- Ramp-down Rate (C): **1~3 ℃/sec**
+- Pre-heating Ramp (A) (Initial temperature: 150&nbsp;℃): **1~2.5&nbsp;℃/sec**
+- Soaking Time (T2) (150~180&nbsp;℃): **60~100&nbsp;sec**
+- Peak Temperature (G): **230~250&nbsp;℃**
+- Reflow Time (T3) (>220&nbsp;℃): **30~60&nbsp;sec**
+- Ramp-up Rate (B): **0~2.5&nbsp;℃/sec**
+- Ramp-down Rate (C): **1~3&nbsp;℃/sec**
 
 ### Software
 
@@ -254,5 +338,6 @@ The **hex file** contains both the bootloader and the application code. You need
 | Model   | Version   | Source                                                                                          |
 | :-----: | :-------: | :---------------------------------------------------------------------------------------------: |
 | RAK4270 | V3.3.0.18 | [Download](https://downloads.rakwireless.com/LoRa/RAK4270/Firmware/RAK4270_Latest_Firmware.zip) |
+
 
 <!-- ## Certification -->

@@ -9,6 +9,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2247 Pi HAT
 Thank you for choosing **RAK2247 Pi HAT** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
@@ -32,3 +34,4 @@ Moreover, there is a **GPS** on the HAT that enhances your RAK2247 with localiza
 
 - One (1) [RAK2247 Pi HAT](https://store.rakwireless.com/products/rak2247-pi-hat?utm_source=RAK2247PiHAT&utm_medium=Document&utm_campaign=BuyFromStore)
 
+<RkBottomNav/>

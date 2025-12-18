@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5802 WisBlock RS485 Interface Module Datasheet
 
 ## Overview
@@ -20,9 +23,10 @@ The RAK5802 WisBlock Interface module was designed to be part of a production-re
 
 The RAK5802 is an RS485 Modbus extension module that allows you to provide IoT connectivity to a new/existing solution with an RS485 interface. This module converts the RS485 signals into UART signals. These signals are collected by an MCU located inside of a WisBlock Core module for further data transmission.
 
-The RAK5802 module features one RS485 interface. Inside, a protection circuity is added to protect against ESD hazards. The RAK5802 module complies with the IEC61000-4-2 standard and can protect up to 18 kV HBM ESD.
+The RAK5802 module features one RS485 interface. Inside, a protection circuity is added to protect against ESD hazards. The RAK5802 module complies with the IEC61000-4-2 standard and can protect up to 18&nbsp;kV HBM ESD.
 
 In addition, the RAK5802 supports one I2C interface, customers can use this I2C interface to connect external sensors.
+
 
 ### Features
 
@@ -33,9 +37,9 @@ In addition, the RAK5802 supports one I2C interface, customers can use this I2C 
 * Low power consumption mode. The module can be powered off by the WisBlock Core module for saving energy during idle periods.
 * Reserved I2C expansion interface
 * In the field fast crimping terminals
-* Designed with 18 kV ESD protection level
+* Designed with 18&nbsp;kV ESD protection level
 * Chipset: 3PEAK TP8485E
-* Small dimensions of 35 mm x 25 mm
+* Small dimensions of 35&nbsp;mm x 25&nbsp;mm
 
 ## Specifications
 
@@ -44,7 +48,12 @@ In addition, the RAK5802 supports one I2C interface, customers can use this I2C 
 #### Block Diagram
 **Figure 1** shows the block diagram of the RAK5802 module. Internally, the RS485 converter translates the RS422 electrical differential signal into the UART signal. This component can be disabled by the Enable signal through the MCU in order to save power during idle periods.
 
-> **Image:** RAK5802 block diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5802/datasheet/block-diagram.png" 
+  figureCount="1"
+  caption="RAK5802 block diagram" 
+   width="50%"
+/>
 
 ### Hardware
 
@@ -60,7 +69,12 @@ The hardware specification is categorized into four parts. It discusses the pino
 
 **Figure 2** shows the pin number of the sensor connector of the RAK5802 module.
 
-> **Image:** RAK5802 sensor connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5802/datasheet/rak5802-pinout.png" 
+  figureCount="2"
+  caption="RAK5802 sensor connector" 
+   width="60%"
+/>
 
 The pin definition of the sensor connector is described in the table below:
 
@@ -75,11 +89,17 @@ The pin definition of the sensor connector is described in the table below:
 | 7              | SDA for I2C interface                  |
 | 8              | SCL for I2C interface                  |
 
+
 #####  WisBlock Interface Connector
 
 **Figure 3** shows the pin order of the IO connector on the module. Through this connector, the RAK5802 module is attached to the WisBoard baseboard.
 
-> **Image:** RAK5802 internal WisBlock Interface connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5802/datasheet/wisconnector-pins.png" 
+  figureCount="3"
+  caption="RAK5802 internal WisBlock Interface connector" 
+   width="50%"
+/>
 
 The table below shows the functionalities of each pin of the WisBlock Interface connector:
 
@@ -87,7 +107,7 @@ The table below shows the functionalities of each pin of the WisBlock Interface 
 | -------------- | -------------------- | -------------- | ---------------- |
 | 1              | Battery power        | 2              | Battery power    |
 | 3              | GND                  | 4              | GND              |
-| 5              | NC, reserved for 3V3 | 6              | 3.3 V power |
+| 5              | NC, reserved for 3V3 | 6              | 3.3&nbsp;V power |
 | 7              | NC                   | 8              | NC               |
 | 9              | NC                   | 10             | NC               |
 | 11             | NC                   | 12             | NC               |
@@ -117,26 +137,42 @@ The table below shows the functionalities of each pin of the WisBlock Interface 
 | TEMP       | Working temperature         | -30      |          | 65       | °C       |
 | Storage    | Storage Temperature         | -40      |          | 85       | °C       |
 
+
 ##### Recommended Operating Conditions
 
 | **Symbol** | **Description**             | **Min.** | **Nom.** | **Max.** | **Unit** |
 | ---------- | --------------------------- | -------- | -------- | -------- | -------- |
 | VBAT       | Power supply for the module | 2.6      |          | 4.2      | V        |
-| 3V3        | 3.3 V power supply     | 3.0      | 3.3      | 3.6      | V        |
+| 3V3        | 3.3&nbsp;V power supply     | 3.0      | 3.3      | 3.6      | V        |
 
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
-> **Image:** RAK5802 dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5802/datasheet/board-dimensions.png" 
+  figureCount="4"
+  caption="RAK5802 dimensions" 
+   width="80%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5802/datasheet/mxxs1003k6m.png" 
+  figureCount="5"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK5802 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5802/datasheet/schematic.png" 
+  figureCount="6"
+  caption="RAK5802 schematic diagram" 
+   width="100%"
+/>
 
 ## RAK5802 and WisBlock Compatibility
 
@@ -151,3 +187,6 @@ In the ecosystem of WisBlock, the philosophy is to allow you to combine a WisBlo
 |                      | RAK4261                        | RAK5802 is compatible with RAK4261 WisBlock Core module.               |
 |                      | RAK4601                        | RAK5802 is compatible with RAK4601 WisBlock Core module.               |
 
+
+
+<RkBottomNav/>

@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK16000 WisBlock DC Current Module Quick Start Guide
 
 ## Prerequisite
@@ -27,6 +30,7 @@ Before going through each and every step on using the RAK16000 WisBlock module, 
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
+
 #### Software
 
 ##### Arduino
@@ -38,7 +42,7 @@ Before going through each and every step on using the RAK16000 WisBlock module, 
 
 ### Hardware Setup
 
-RAK16000 is a part of the WisBlock Sensor Series that is capable of measuring DC current in the range of 0 to 3 A in a voltage range of 0 to 26 V. With the two measured DC values, you get the power consumption by multiplying the current and voltage. Additionally, this module uses the INA219BID from Texas Instruments that offers high accuracy maximum rate of 0.5% over temperature.
+RAK16000 is a part of the WisBlock Sensor Series that is capable of measuring DC current in the range of 0 to 3&nbsp;A in a voltage range of 0 to 26&nbsp;V. With the two measured DC values, you get the power consumption by multiplying the current and voltage. Additionally, this module uses the INA219BID from Texas Instruments that offers high accuracy maximum rate of 0.5% over temperature.
 
 The current measurement method used is the high-side, where the shunt resistor is placed between the power supply and the load. This method allows the RAK16000 to measure both the circulating current and the voltage across the load.
 
@@ -46,7 +50,11 @@ For more information about the RAK16000, refer to the [Datasheet](https://docs.r
 
 #### Pin Definition
 
-> **Image:** RAK16000 Pin Definition
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak16000-pinout.png" 
+  caption="RAK16000 Pin Definition" 
+   width="80%"
+/>
 
 :::tip NOTE
 - **GND** Connect to ground pin.
@@ -58,9 +66,16 @@ For more information about the RAK16000, refer to the [Datasheet](https://docs.r
 
 ##### Assembling Procedure
 
-As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
+As shown in **Figure 2**, the location for the IO slot is properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
 
-> **Image:** RAK16000 mounting connection to WisBlock Base module
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/mounting-mechanism.png" 
+  caption="RAK16000 mounting connection to WisBlock Base module" 
+   width="60%"
+/>
+
+
 
 ##### Disassembling Procedure
 
@@ -68,15 +83,28 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. Remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/16.removing-screws.png" 
+  caption="Removing screws from the WisBlock module" 
+   width="70%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/17.detaching-silkscreen.png" 
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/18.detaching-module.png" 
+  caption="Applying even forces on the proper location of a WisBlock module" 
+   width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -86,9 +114,9 @@ Now, you can connect the battery (optional) and USB cable to start programming y
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -102,15 +130,27 @@ Now, you can connect the battery (optional) and USB cable to start programming y
 
 **RAK4631 Board**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak4631-board.png" 
+  caption="Selecting RAK4631 as WisBlock Core" 
+   width="100%"
+/>
 
 **RAK11200 Board**
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak11200-board.png" 
+  caption="Selecting RAK11200 as WisBlock Core" 
+   width="100%"
+/>
 
 **RAK11310**
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak11310-board.png" 
+  caption="Selecting RAK11310 as WisBlock Core" 
+   width="100%"
+/>
 
 3. Copy the following sample code into your Arduino IDE:
 
@@ -235,11 +275,19 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example sketch is open, install the [INA219_WE](https://github.com/wollewald/INA219_WE) library by clicking the yellow-highlighted link, as shown in **Figure 9** and **Figure 10**.
 
-> **Image:** Install INA219_WE Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak4631-ina219.png" 
+  caption="Install INA219_WE Library" 
+   width="100%"
+/>
 
 Click on the **Install** button to finish library installation.
 
-> **Image:** Arduino Library Manager INA219_WE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak4631-library-manager.png" 
+  caption="Arduino Library Manager INA219_WE" 
+   width="100%"
+/>
 
 5. Select the right port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
@@ -247,11 +295,27 @@ Click on the **Install** button to finish library installation.
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak4631-select-port.png" 
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
-> **Image:** Uploading the RAK16000 Sample code
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak4631-upload.png" 
+  caption="Uploading the RAK16000 Sample code" 
+   width="100%"
+/>
 
 6. After successful upload, open Arduino Serial Monitor and check the current current consumption and load voltage.
 
-> **Image:** RAK16000 Serial Monitor
 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16000/quickstart/rak4630_logs.png" 
+  caption="RAK16000 Serial Monitor" 
+   width="90%"
+/>
+
+
+<RkBottomNav/>

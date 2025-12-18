@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK12010 WisBlock Ambient Light Sensor Module
 
 Thank you for choosing **RAK12010 WisBlock Ambient Light Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -36,15 +39,15 @@ RAK12010 is a WisBlock Sensor that extends the WisBlock system to have ambient l
 * **Module Specifications**
     * Ambient Light Sensor (ALS) module
     * Digital 16-bit resolution sensor
-    * **Ambient Light Range:** 0 lx to about 120,000 lx
-    * **Ambient Light Resolution:** 0.0036 lx
+    * **Ambient Light Range:** 0&nbsp;lx to about 120,000&nbsp;lx
+    * **Ambient Light Resolution:** 0.0036&nbsp;lx
     * Excellent temperature compensation
-    * 3.3 V Power Supply
-    * Current Consumption: < 2 - 45 uA
+    * 3.3&nbsp;V Power Supply
+    * Current Consumption: < 2 - 45&nbsp;uA
     * Chipset: Vishay Semiconductors VEML7700
 
 * **Module Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -54,3 +57,4 @@ To use a **RAK12010**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

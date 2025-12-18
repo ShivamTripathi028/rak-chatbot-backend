@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12500 WisBlock GNSS Location Module
 
 Thank you for choosing **RAK12500 WisBlock GNSS Location Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -41,23 +43,25 @@ The RAK12500 uses the u-blox ZOE-M8Q module. It supports a wide variety of satel
 * **Module Specification**
     * Uses the very accurate GNSS Module: **u-blox ZOE-M8Q chip**
     * Location Accuracy of ±2.5 meter
-    * Velocity Accuracy of ±0.05 m/s
+    * Velocity Accuracy of ±0.05&nbsp;m/s
     * GPS, GLONASS, QZSS, and BeiDou Satellite support
     * Serial and I2C communication to WisBlock Core support
-    * 10 Hz Update Rate
+    * 10&nbsp;Hz Update Rate
     * 29 seconds Location Fix from Cold Start, 1 second from Hot Start
-    * Operating Voltage: 3.3 V
-    * Operating Current: < 15 µA
+    * Operating Voltage: 3.3&nbsp;V
+    * Operating Current: < 15&nbsp;µA
     * Chipset: u-blox ZOE-M8Q
 
 * **Size**
-    * Module Size: 10 mm x 23 mm
+    * Module Size: 10&nbsp;mm x 23&nbsp;mm
 
 ## Prerequisites
 
 To use the **RAK12500 WisBlock GNSS Location Module**, you need a **Wisblock Base** to plug the module in. The **Wisblock Base** provides power supply to the **RAK12500** GNSS Location Module. Also, you need a **WisBlock Core** to control your module.
 
+
 :::warning
 Make sure to fix the module with the matching screws to ensure intact placement and connection.
 :::
 
+<RkBottomNav/>

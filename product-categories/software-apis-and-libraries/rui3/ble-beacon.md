@@ -1,4 +1,6 @@
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # BLE Beacon
 
@@ -13,15 +15,27 @@ This project is available on Arduino IDE **RAK WisBlock RUI examples**.
 
 1. Launch Arduino IDE then go to: **File** -> **Examples** -> **RAK WisBlock RUI examples** -> **Example** -> **BLE_Beacon**.
 
-> **Image:** RAK WisBlock RUI BLE Beacon example
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-beacon-arduino.png"
+  width="100%"
+  caption="RAK WisBlock RUI BLE Beacon example"
+/>
 
 2. Once the example code is open, you can now select the correct serial port, as shown in **Figure 2**.
 
-> **Image:** Selecting the correct serial port
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/arduino-port.png"
+  width="100%"
+  caption="Selecting the correct serial port"
+/>
 
 3. The last step is to upload the code by clicking the highlighted **Upload** icon.
 
-> **Image:** Uploading the BLE Beacon example code
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/beacon-upload.png"
+  width="100%"
+  caption="Uploading the BLE Beacon example code"
+/>
 
 ## Example details
 
@@ -80,5 +94,10 @@ To send a beacon using RUI3 API you need to switch to [Beacon mode](https://docs
 
 You can scan the beacons sent by the `BLE_Beacon` project using the [nRF Connect for Mobile](https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-mobile) tool.
 
-> **Image:** nRF Connect for Mobile tool scan
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/beacon.png"
+  width="40%"
+  caption="nRF Connect for Mobile tool scan"
+/>
 
+<RkBottomNav/>

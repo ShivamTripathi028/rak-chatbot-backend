@@ -12,6 +12,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2245 Stamp WisLink LPWAN Concentrator
 
 Thank you for choosing **RAK2245 Stamp WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -24,7 +26,7 @@ Thank you for choosing **RAK2245 Stamp WisLink LPWAN Concentrator** in your awes
 
 The **RAK2245 Stamp WisLink LPWAN Concentrator** is a complete and cost efficient gateway solution base on Semtech SX1301 fully utilizing the LoRa System. This LPWAN Concentrator module supports eight channels and is available for all LoRaWAN international standard bands.
 
-The Stamp form factor feature enables easy integration into the system's main board, providing LoRaWAN functionality. This ultra compact module measures just 60 x 30 x 14.9 mm, believed to be the world’s smallest gateway module which has a built-in GPS chip. It comes with a mounted heat-sink that improves the thermal heat dissipation and overall performance of the device.
+The Stamp form factor feature enables easy integration into the system's main board, providing LoRaWAN functionality. This ultra compact module measures just 60 x 30 x 14.9&nbsp;mm, believed to be the world’s smallest gateway module which has a built-in GPS chip. It comes with a mounted heat-sink that improves the thermal heat dissipation and overall performance of the device.
 
 Overall, this gateway module is the most economical way to create different solutions like smart grids, intelligent farms and other IoT applications. It is also ideal for manufacturing small series that can expand into more applications.
 
@@ -33,10 +35,11 @@ Overall, this gateway module is the most economical way to create different solu
 - Compatible with Stamp Edition specifications with mounted heat-sink
 - SX1301 base band processor, emulates 49 x LoRa demodulators 10 parallel demodulation paths, support 8 uplinks channel, 1 downlink channel
 - 2 x SX125X TX/RX front-ends high/ low frequency
-- Supports 5 V power supply, integrated level conversion circuit
-- TX power up to 27 dBm, RX sensitivity down to - 139 dBm @ SF12, BW 125 KHz
+- Supports 5&nbsp;V power supply, integrated level conversion circuit
+- TX power up to 27&nbsp;dBm, RX sensitivity down to - 139&nbsp;dBm @ SF12, BW 125&nbsp;KHz
 - Supports the LoRaWAN 1.0.2 protocol
 - Supports global license-free frequency band (EU433, CN470, IN865, EU868, US915, AU915, KR920,  and AS923)
 - Supports SPI interface
 - Integrated the Ublox MAX-7Q GPS Module
 
+<RkBottomNav/>

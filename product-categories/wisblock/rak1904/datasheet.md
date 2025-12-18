@@ -10,38 +10,53 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK1904 WisBlock 3-Axis Acceleration Sensor Module Datasheet
 
 ## Overview
 
-> **Image:** RAK1904 WisBlock Sensor Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1904/datasheet/rak1904-front-back.png"
+  figureCount="1"
+  caption="RAK1904 WisBlock Sensor Mounting" 
+   width="50%"
+/>
 
 ### Description
 
 RAK1904 is a WisBlock Sensor that extends the WisBlock system with an ST LIS3DH 3-axis acceleration sensor. A ready-to-use SW library and tutorial make it easy to build up a motion detection and acceleration data acquisition system. It has an ultra-low-power high-performance three-axis linear accelerometer with a digital I2C interface. The device features ultra-low-power operational modes that allow advanced power saving and smart embedded functions.
 
-The accelerometer of the RAK1904 module can be dynamically configured to work in the scales of ±2g/±4g/±8g/±16g and is capable of measuring accelerations with output data rates from 1 Hz to 5.3 kHz.
+The accelerometer of the RAK1904 module can be dynamically configured to work in the scales of ±2g/±4g/±8g/±16g and is capable of measuring accelerations with output data rates from 1&nbsp;Hz to 5.3&nbsp;kHz.
 
 ### Features
 * **User selectable scales**: ±2g/±4g/±8g/±16g
-* **Data acquisition rates**: from 1 Hz to 5.3 kHz
-* **Voltage Supply**: 3.3 V
-* **Current Consumption**: 0.5 uA to 11 uA
+* **Data acquisition rates**: from 1&nbsp;Hz to 5.3&nbsp;kHz
+* **Voltage Supply**: 3.3&nbsp;V
+* **Current Consumption**: 0.5&nbsp;uA to 11&nbsp;uA
 * **Chipset**: ST LIS3DH
-* **Module size**: 10 x 10 mm
+* **Module size**: 10 x 10&nbsp;mm
 
 ## Specifications
 ### Overview
+
 
 #### Mounting
 
 **Figure 2** shows the mounting mechanism of the RAK1904 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK1904 module can be mounted on the slots: **A, C, D, E, & F**.
 
-> **Image:** RAK1904 WisBlock Sensor Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1904/datasheet/rak19xx_mounting.png"
+  figureCount="2"
+  caption="RAK1904 WisBlock Sensor Mounting" 
+   width="50%"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into six parts. It shows the chipset of the module and discusses the pinouts, sensors, and the corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK1904 WisBlock 3-axis Acceleration Sensor Module.
+
 
 #### Chipset
 | Vendor | Part number |
@@ -52,7 +67,12 @@ The hardware specification is categorized into six parts. It shows the chipset o
 
 The RAK1904 WisBlock 3-axis Acceleration Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK1904 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-> **Image:** RAK1904 WisBlock Sensor Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1904/datasheet/rak1904-pinout-diagram.png"
+  figureCount="3"
+  caption="RAK1904 WisBlock Sensor Pinout Diagram" 
+   width="50%"
+/>
 
 :::tip NOTE
 - Only the I2C related pins, interrupt pins, VDD, and GND are connected to this module.
@@ -77,30 +97,18 @@ If there are other sensor modules connected on the base other than RAK1904 and a
 |        |                   | FS bit set to 01                              |       | ±4.0  |       |    g     |
 |        |                   | FS bit set to 10                              |       | ±8.0  |       |    g     |
 |        |                   | FS bit set to 10                              |       | ±16.0 |       |    g     |
-| So     | Sensitivity       | FS bit set to 00  
- High-resolution mode |       |   1   |       | mg/digit |
-|        |                   | FS bit set to 00  
- Normal mode          |       |   4   |       | mg/digit |
-|        |                   | FS bit set to 00  
- Low-power mode       |       |  16   |       | mg/digit |
-|        |                   | FS bit set to 01  
- High-resolution mode |       |   2   |       | mg/digit |
-|        |                   | FS bit set to 01  
- Normal mode          |       |   8   |       | mg/digit |
-|        |                   | FS bit set to 01  
- Low-power mode       |       |  32   |       | mg/digit |
-|        |                   | FS bit set to 10  
- High-resolution mode |       |   4   |       | mg/digit |
-|        |                   | FS bit set to 10  
- Normal mode          |       |  16   |       | mg/digit |
-|        |                   | FS bit set to 10  
- Low-power mode       |       |  64   |       | mg/digit |
-|        |                   | FS bit set to 11  
- High-resolution mode |       |  12   |       | mg/digit |
-|        |                   | FS bit set to 11  
- Normal mode          |       |  48   |       | mg/digit |
-|        |                   | FS bit set to 11  
- Low-power mode       |       |  192  |       | mg/digit |
+| So     | Sensitivity       | FS bit set to 00  <br /> High-resolution mode |       |   1   |       | mg/digit |
+|        |                   | FS bit set to 00  <br /> Normal mode          |       |   4   |       | mg/digit |
+|        |                   | FS bit set to 00  <br /> Low-power mode       |       |  16   |       | mg/digit |
+|        |                   | FS bit set to 01  <br /> High-resolution mode |       |   2   |       | mg/digit |
+|        |                   | FS bit set to 01  <br /> Normal mode          |       |   8   |       | mg/digit |
+|        |                   | FS bit set to 01  <br /> Low-power mode       |       |  32   |       | mg/digit |
+|        |                   | FS bit set to 10  <br /> High-resolution mode |       |   4   |       | mg/digit |
+|        |                   | FS bit set to 10  <br /> Normal mode          |       |  16   |       | mg/digit |
+|        |                   | FS bit set to 10  <br /> Low-power mode       |       |  64   |       | mg/digit |
+|        |                   | FS bit set to 11  <br /> High-resolution mode |       |  12   |       | mg/digit |
+|        |                   | FS bit set to 11  <br /> Normal mode          |       |  48   |       | mg/digit |
+|        |                   | FS bit set to 11  <br /> Low-power mode       |       |  192  |       | mg/digit |
 
 #### Electrical Characteristics
 ##### Recommended Operating Conditions
@@ -109,8 +117,8 @@ If there are other sensor modules connected on the base other than RAK1904 and a
 | --------------- | --------------------------- | :---: | :---: | :---: | :---: |
 | V<sub>DD</sub>  | Power supply for the module | 1.71  |  3.3  |  3.6  |   V   |
 | I<sub>pdn</sub> | Power-down current          |   -   |  0.5  |   -   |  uA   |
-| I<sub>DD </sub> | @50 Hz                 |   -   |  11   |   -   |  uA   |
-| I<sub>DD </sub> | @1 Hz                  |   -   |   2   |   -   |  uA   |
+| I<sub>DD </sub> | @50&nbsp;Hz                 |   -   |  11   |   -   |  uA   |
+| I<sub>DD </sub> | @1&nbsp;Hz                  |   -   |   2   |   -   |  uA   |
 
 #### Mechanical Characteristics
 
@@ -118,14 +126,32 @@ If there are other sensor modules connected on the base other than RAK1904 and a
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK1904 module.
 
-> **Image:** RAK1904 WisBlock Sensor Mechanic Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1904/datasheet/rak19xx_mechanic_drawing.png"
+  figureCount="4"
+  caption="RAK1904 WisBlock Sensor Mechanic Drawing" 
+   width="60%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1904/datasheet/mxxs1003k6m.png"
+  figureCount="5"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 Figure 6 shows the schematic of the RAK1904 module.
 
-> **Image:** RAK1904 WisBlock Sensor schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1904/datasheet/rak1904-schematics.png"
+  figureCount="6"
+  caption="RAK1904 WisBlock Sensor schematics" 
+   width="100%"
+/>
 
+
+
+<RkBottomNav/>

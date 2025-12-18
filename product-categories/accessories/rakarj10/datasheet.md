@@ -9,16 +9,24 @@ image: "https://images.docs.rakwireless.com/accessories/rakarj10/black_antenna_o
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAKARJ10 902~930 MHz Black Plastic Antenna Datasheet
 
 ## Overview
 
-> **Image:** RAKARJ10 Antenna Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj10/black_antenna_overview_900.png"
+  width="20%"
+  caption="RAKARJ10 Antenna Overview"
+/>
 
 ### Features
 
-- Frequency Range: 902-930 MHz
-- Max Gain: 2 dBi
+- Frequency Range: 902-930&nbsp;MHz
+- Max Gain: 2&nbsp;dBi
 - High efficiency
 - Linear polarized monopole
 
@@ -27,16 +35,16 @@ sidebar_label: Datasheet
 | Parameter               | Value                     |
 | ----------------------- | ------------------------- |
 | Model                   | RAKARJ10                  |
-| Frequency Range         | 902-930 MHz          |
-| Gain                    | 2 dBi                |
+| Frequency Range         | 902-930&nbsp;MHz          |
+| Gain                    | 2&nbsp;dBi                |
 | VSWR                    | ≤ 2.5                     |
-| Impedance               | 50 Ω                 |
+| Impedance               | 50&nbsp;Ω                 |
 | Polarization            | Linear                    |
-| Power                   | 50 W                 |
+| Power                   | 50&nbsp;W                 |
 | Connector               | RP-SMA Male               |
-| Dimensions              | L: 109 ±4 mm    |
-| Operational temperature | -40˚ C ~ +65˚ C |
-| Storage temperature     | -40˚ C ~ +80˚ C |
+| Dimensions              | L: 109&nbsp;±4&nbsp;mm    |
+| Operational temperature | -40˚&nbsp;C ~ +65˚&nbsp;C |
+| Storage temperature     | -40˚&nbsp;C ~ +80˚&nbsp;C |
 
 ### VSWR and Return Loss
 
@@ -45,7 +53,11 @@ sidebar_label: Datasheet
 | **902**         | 1.24 | -19.40           |
 | **928**         | 1.43 | -15.04           |
 
-> **Image:** VSWR Graph
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj10/black_antenna_vswr_900.png"
+  width="70%"
+  caption="VSWR Graph"
+/>
 
 ### Peak Gain & Efficiency
 
@@ -68,9 +80,18 @@ sidebar_label: Datasheet
 
 ### Radiation Patterns
 
-> **Image:** Radiation Patterns
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj10/black_antenna_radiation_pattern_900.png"
+  width="70%"
+  caption="Radiation Patterns"
+/>
 
 ### Mechanical Characteristics
 
-> **Image:** Mechanical Specifications
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarj10/black_antenna_mechanical_specification_900.png"
+  width="70%"
+  caption="Mechanical Specifications"
+/>
 
+<RkBottomNav/>

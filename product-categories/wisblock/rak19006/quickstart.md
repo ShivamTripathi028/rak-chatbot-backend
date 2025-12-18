@@ -10,7 +10,11 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19006 WisBlock Wireless Charge Module Quick Start Guide
+
 
 ## Prerequisite
 
@@ -38,21 +42,29 @@ Before going through each and every step on using the RAK19006 WisBlock module, 
 
 ### Hardware Setup
 
-The RAK19006 WisBlock Wireless Charge Module is designed to be a part of the battery charger. It is highly efficient, Qi-compliant, and has a single-chip wireless power receiver and charger. It also integrates the receiver and linear charger and supports up to 5 W applications.
+The RAK19006 WisBlock Wireless Charge Module is designed to be a part of the battery charger. It is highly efficient, Qi-compliant, and has a single-chip wireless power receiver and charger. It also integrates the receiver and linear charger and supports up to 5&nbsp;W applications.
 
 For more information about RAK19006, refer to the [Datasheet](datasheet.md).
 
 #### RAK19006 Connection to WisBlock Base
 
-> **Image:** RAK19006 Pinout and Connector assignments
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-pinout.png"
+  width="60%"
+  caption="RAK19006 Pinout and Connector assignments"
+/>
 
 :::tip NOTE
-The RAK19006 supports wireless battery charge via coil attached to the connector for coil, as shown in **Figure 1**. The module has a 5 V output voltage that can be accessed via the JST connector and can be interfaced to the Solar Panel connector of the WisBlock Base to charge the Li-Ion/LiPo battery connected to WisBlock Base.
+The RAK19006 supports wireless battery charge via coil attached to the connector for coil, as shown in **Figure 1**. The module has a 5&nbsp;V output voltage that can be accessed via the JST connector and can be interfaced to the Solar Panel connector of the WisBlock Base to charge the Li-Ion/LiPo battery connected to WisBlock Base.
 :::
 
 #### Coil Placement on Wireless Charging Pad
 
-> **Image:** Coil proper placement on top of the Wireless Charging Pad
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/wireless-charger.png"
+  width="60%"
+  caption="Coil proper placement on top of the Wireless Charging Pad"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -60,7 +72,12 @@ The RAK19006 supports wireless battery charge via coil attached to the connector
 
 The RAK19006 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK19006 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/mounting-mechanism.png"
+  width="60%"
+  caption="RAK19006 mounting connection to WisBlock Base module"
+/>
+
 
 ##### Disassembling Procedure
 
@@ -68,15 +85,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -86,9 +115,9 @@ Now, you can connect the battery and USB cable to start programming your WisBloc
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires are matching the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -96,7 +125,11 @@ Now, you can connect the battery and USB cable to start programming your WisBloc
 
 In the following example, you will be using the RAK19006 for the battery charging and will show the power voltage on the [RAK1921 WisBlock OLED Display](https://store.rakwireless.com/products/rak1921-oled-display-panel?_pos=1&_sid=202e07a15&_ss=r).
 
-> **Image:** RAK19006 and RAK1921 connection to WisBlock Base Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/wisblock-connection.png"
+  width="70%"
+  caption="RAK19006 and RAK1921 connection to WisBlock Base Module"
+/>
 
 These are the quick links that go directly to the software guide for the specific WisBlock Core module you use:
 
@@ -110,7 +143,11 @@ These are the quick links that go directly to the software guide for the specifi
 
 1. First, you need to select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE.
 
@@ -262,25 +299,46 @@ void get_BATvoltage()
 
 </details>
 
+
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK4631 WisBlock Core Module that can be found on the [RAK19006 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK4630/IO/RAK19006_WirelessCharger).
 :::
 
 3. Once the example code is open, install the [U8g2](https://github.com/olikraus/U8g2_Arduino) library by clicking the yellow highlighted link, as shown in **Figure 9** and **Figure 10**.
 
-> **Image:** Accessing the library used for RAK19006 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-lib.png"
+  width="100%"
+  caption="Accessing the library used for RAK19006 Module"
+/>
 
-> **Image:** Installing the compatible library for RAK19006 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-libinstall.png"
+  width="70%"
+  caption="Installing the compatible library for RAK19006 Module"
+/>
 
 4. Then you can now select the right port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/select-port.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK19006 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/upload.png"
+  width="100%"
+  caption="Uploading the RAK19006 Sample code"
+/>
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK19006 reading logs, as shown in **Figure 13**. You will be able to see the battery voltage both on the Serial Monitor and OLED Display.
 
-> **Image:** RAK19006 Reading logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/logs.png"
+  width="50%"
+  caption="RAK19006 Reading logs"
+/>
 
 #### RAK19006 in RAK11200 WisBlock Core Guide
 
@@ -288,7 +346,11 @@ If you experience any error in compiling the example sketch, check the updated c
 
 1. First, you need to select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -448,9 +510,17 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Once the example code is open, install the [U8g2](https://github.com/olikraus/U8g2_Arduino) library by clicking the yellow highlighted link, as shown in **Figure 15** and **Figure 16**.
 
-> **Image:** Accessing the library used for RAK19006 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-lib.png"
+  width="100%"
+  caption="Accessing the library used for RAK19006 Module"
+/>
 
-> **Image:** Installing the compatible library for RAK19006 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-libinstall.png"
+  width="70%"
+  caption="Installing the compatible library for RAK19006 Module"
+/>
 
 4. Then you can now select the right port and upload the code, as shown in **Figure 17** and **Figure 18**.
 
@@ -458,13 +528,25 @@ If you experience any error in compiling the example sketch, check the updated c
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak11200-select-port.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK19006 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak11200-upload.png"
+  width="100%"
+  caption="Uploading the RAK19006 Sample code"
+/>
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK19006 reading logs, as shown in **Figure 19**. You will be able to see the battery voltage both on the Serial Monitor and OLED Display.
 
-> **Image:** RAK19006 Reading logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/logs.png"
+  width="50%"
+  caption="RAK19006 Reading logs"
+/>
 
 #### RAK19006 in RAK11310 WisBlock Core Guide
 
@@ -472,7 +554,11 @@ RAK11200 requires the **Boot0** pin to be configured properly first before uploa
 
 1. First, you need to select the RAK11310 WisBlock Core.
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak11310-board.png"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -629,17 +715,39 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Once the example code is open, install the [U8g2](https://github.com/olikraus/U8g2_Arduino) library by clicking the yellow highlighted link, as shown in **Figure 21** and **Figure 22**.
 
-> **Image:** Accessing the library used for RAK19006 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-lib.png"
+  width="100%"
+  caption="Accessing the library used for RAK19006 Module"
+/>
 
-> **Image:** Installing the compatible library for RAK19006 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak19006-libinstall.png"
+  width="70%"
+  caption="Installing the compatible library for RAK19006 Module"
+/>
 
 4. Then you can now select the right port and upload the code, as shown in **Figure 23** and **Figure 24**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak11310-selectport.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK19006 Sample code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/rak11310-upload.png"
+  width="100%"
+  caption="Uploading the RAK19006 Sample code"
+/>
 
 4.  When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK19006 reading logs, as shown in **Figure 25**. You will be able to see the battery voltage both on the Serial Monitor and OLED Display.
 
-> **Image:** RAK19006 Reading logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19006/quickstart/logs.png"
+  width="50%"
+  caption="RAK19006 Reading logs"
+/>
 
+
+<RkBottomNav/>

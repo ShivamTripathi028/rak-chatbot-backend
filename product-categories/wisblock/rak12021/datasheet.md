@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12021 WisBlock RGB Sensor Module Datasheet
 
 ## Overview
@@ -24,22 +27,27 @@ RAK12021 is a WisBlock RGB Sensor that extends the WisBlock system which is base
 * Color light sensing with IR-Blocking filter
 * Proximity detection
 * Maskable light and proximity interrupt
-* Low power (2.5 uA sleep current)
+* Low power (2.5&nbsp;uA sleep current)
 * I2C interface
-* 3.3 V power supply
-* Current Consumption: 2.5 uA - 235 uA
+* 3.3&nbsp;V power supply
+* Current Consumption: 2.5&nbsp;uA - 235&nbsp;uA
 * Chipset: AMS TCS37725FN
-* **Module size**: 10 x 10 mm
+* **Module size**: 10 x 10&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
+
 #### Mounting
 
 **Figure 1** shows the mounting mechanism of the RAK12021 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12021 module can be mounted on the slots: **A, C, D, E, & F**.
 
-> **Image:** RAK12021 mounting mechanism
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12021/datasheet/rak12021-mounting.png"
+  width="50%"
+  caption="RAK12021 mounting mechanism"
+/>
 
 ### Hardware
 
@@ -55,7 +63,11 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 The RAK12021 WisBlock RGB Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK12021 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-> **Image:** RAK12021 pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12021/datasheet/rak12021_pinout.svg"
+  width="60%"
+  caption="RAK12021 pinout"
+/>
 
 If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse depends on what slot the module is plugged in. The following table shows the default IO used for different slots:
 
@@ -97,11 +109,19 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 
 **Figure 3** shows the dimensions and the mechanic drawing of the RAK12021 module.
 
-> **Image:** RAK12021 mechanical drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12021/datasheet/rak12021-mechdrawing.png"
+  width="60%"
+  caption="RAK12021 mechanical drawing"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12021/datasheet/rak12021-wisconnector.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
@@ -109,5 +129,12 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 
 **D1** is the external IR LED for proximity detection.
 
-> **Image:** RAK12021 schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12021/datasheet/rak12021-schematic.png"
+  width="100%"
+  caption="RAK12021 schematics"
+/>
 
+
+
+<RkBottomNav/>

@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12017 WisBlock IR Detection Sensor Module Datasheet
 
 ## Overview
@@ -18,15 +21,16 @@ sidebar_label: Datasheet
 
 The RAK12017 is an IR detection module. This module uses ITR20001 optical switch from Everlight to detect whether the IR Signal reflects. Sample applications of this module are: to identify if an object is approaching and check changes between black and white lines.
 
+
 ### Features
 
 - Detect whether IR Signal is reflected back
-- λP=940 nm
-- 3.3 V Power supply
-- Current Consumption: < 21 mA
+- λP=940&nbsp;nm
+- 3.3&nbsp;V Power supply
+- Current Consumption: < 21&nbsp;mA
 - Chipset: Everlight ITR20001
-- Infrared Line Tracking Range: 1 cm to 5 cm
-- Module Size: 15 mm x 25 mm
+- Infrared Line Tracking Range: 1&nbsp;cm to 5&nbsp;cm
+- Module Size: 15&nbsp;mm x 25&nbsp;mm
 
 ## Specifications
 
@@ -36,7 +40,11 @@ The RAK12017 is an IR detection module. This module uses ITR20001 optical switch
 
 The RAK12017 WisBlock IR Detection Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 1** shows the mounting mechanism of the RAK12017 on a WisBlock Base module.
 
-> **Image:** RAK12017 WisBlock IR Detection Module Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12017/datasheet/mounting.png"
+  width="60%"
+  caption="RAK12017 WisBlock IR Detection Module Mounting"
+/>
 
 :::tip NOTE
 - RAK12017 has a connector(default NC), and if you need to get the module out of WisBlock Base board, you can solder it with cable and [RAK13003 WisBlock IO Expansion Module](https://store.rakwireless.com/products/io-expansion-module-rak13003) to position the module however you like.
@@ -59,10 +67,15 @@ The RAK12017 WisBlock IR Detection Sensor Module comprises a standard WisBlock c
 - **3V3_S**, **GND**, **AIN1**, **OUT** are connected to WisConnector.
 :::
 
- 
-> **Image:** RAK12017 WisBlock IR Detection Module Pinout
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12017/datasheet/rak12017_pinouts.svg"
+  width="80%"
+  caption="RAK12017 WisBlock IR Detection Module Pinout"
+/>
+
 
 #### Electrical Characteristics
+
 
 | Symbol   | Description            | Min. | Nom. | Max. | Unit |
 | -------- | ---------------------- | ---- | ---- | ---- | ---- |
@@ -81,16 +94,29 @@ The RAK12017 WisBlock IR Detection Sensor Module comprises a standard WisBlock c
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK12017 module.
 
- 
-> **Image:** RAK12017 WisBlock IR Detection Module Dimensions
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12017/datasheet/mechanical-drawing.png"
+  width="60%"
+  caption="RAK12017 WisBlock IR Detection Module Dimensions"
+/>
+
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12017/datasheet/pcb_footprint.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
+
 
 #### Schematic Diagram
 
-> **Image:** WisConnector and RAK12017 Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12017/datasheet/schematic.png"
+  width="75%"
+  caption="WisConnector and RAK12017 Schematic"
+/>
 
 :::tip NOTE
 - **3V3_S** is supported by WisBase.
@@ -102,3 +128,7 @@ The RAK12017 WisBlock IR Detection Sensor Module comprises a standard WisBlock c
 :::
 ​
 
+
+
+
+<RkBottomNav/>

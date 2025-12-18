@@ -14,6 +14,10 @@ tags:
     - datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK13302 WisBlock LPWAN Wireless Module Datasheet
 
 ## Overview
@@ -32,13 +36,13 @@ The module is compatible with the RAK6421 RPi WisBlock HAT and WisBlock Base Boa
 
 - Based on Semtech SX1262 LoRa chip and SKY66122 booster chip
 - LoRaWAN Specification compatible
-- Supports 902-928 MHz
+- Supports 902-928&nbsp;MHz
 - LoRaWAN Activation by OTAA/ABP
 - LoRa Point-to-Point (P2P) communication
 - Ultra-Low Power Consumption
-- Supply Voltage: 5 V
-- Temperature Range: -40° C ~ 85° C
-- Module Size: 25 mm x 35 mm
+- Supply Voltage: 5&nbsp;V
+- Temperature Range: -40°&nbsp;C ~ 85°&nbsp;C
+- Module Size: 25&nbsp;mm x 35&nbsp;mm
 
 ## Specifications
 
@@ -48,7 +52,11 @@ The module is compatible with the RAK6421 RPi WisBlock HAT and WisBlock Base Boa
 
 The RAK13302 WisBlock LPWAN can be mounted to the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK13302 on a WisBlock Base board, such as the [RAK19007](https://docs.rakwireless.com/product-categories/wisblock/rak19007/overview/).
 
-> **Image:** RAK13302 Wireless Module mounting mechanism
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/mount-rak13302.png"
+  caption="RAK13302 Wireless Module mounting mechanism"
+  width="60%"
+/>
 
 ### Hardware
 
@@ -62,7 +70,7 @@ The hardware specification is categorized into five parts. It shows the pinouts 
 | Sky     | SKY66122    |
 
 :::warning
-Due to the high power RF signal output, the module requires as supply through USB on the WisBlock Base Board or an external 5 V supply voltage.
+Due to the high power RF signal output, the module requires as supply through USB on the WisBlock Base Board or an external 5&nbsp;V supply voltage.
 :::
 
 #### Pin Definition
@@ -72,10 +80,14 @@ The RAK13302 WisBlock LPWAN comprises a standard WisIO connector. The WisIO conn
 :::tip NOTE
 
 **SPI** related pin, **NRESET**, **ANT_SW**，**DIO1**，**BUSY**, **EX_5V**, **VBAT**, **3V3**, and **GND** are connected to WisIO connector.
-EX_5V is for an external 5 V power supply for the booster.
+EX_5V is for an external 5&nbsp;V power supply for the booster.
 :::
 
-> **Image:** RAK13302 Wireless Module pinouts
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-pinout.png"
+  caption="RAK13302 Wireless Module pinouts"
+  width="80%"
+/>
 
 #### Power Selector Jumper
 
@@ -83,36 +95,45 @@ The 3-pin jumper header is to select the supply source for the booster chip.
 
 | Jumprer Position  | Supply Source                           |
 | :---------------: | --------------------------------------- |
-| IN_5V to 5 V | Supply from WisBlock Base Board Battery |
-| EX_5V to 5 V | Supply from Jx connector                |
+| IN_5V to 5&nbsp;V | Supply from WisBlock Base Board Battery |
+| EX_5V to 5&nbsp;V | Supply from Jx connector                |
 
 :::tip NOTE
 If the supply is through EX_5V, the whole WisBlock Base Board can be supplied through this source.
 :::
 
-> **Image:** RAK13302 5 V supply selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-supply.png"
+  caption="RAK13302 5&nbsp;V supply selection"
+  width="80%"
+/>
 
 **External power supply cable connections:**
 
-> **Image:** RAK13302 5 V supply selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-power-cable.png"
+  caption="RAK13302 5&nbsp;V supply selection"
+  width="80%"
+/>
+
 
 #### RF Characteristics
 
 ##### Operating Frequencies
 
-The RAK13302 supports LoRa 902-928 MHz frequencies.
+The RAK13302 supports LoRa 902-928&nbsp;MHz frequencies.
 
 #### Electrical Characteristics
 
 | **Symbol** | **Description**                | **Min.** | **Nom.** | **Max.** | **Unit** |
 | :--------: | ------------------------------ | :------: | :------: | :------: | :------: |
 |    VBAT    | Power supply from battery      |   3.0    |    -     |   4.2    |    V     |
-|    3V3     | 3.3 V from base board     |    -     |   3.3    |    -     |    V     |
-|   EX_5V    | External 5 V power supply |    -     |    5     |    -     |    V     |
+|    3V3     | 3.3&nbsp;V from base board     |    -     |   3.3    |    -     |    V     |
+|   EX_5V    | External 5&nbsp;V power supply |    -     |    5     |    -     |    V     |
 
 ### Transmit Power VS Peak Current
 
-| SX1262 Config (dBm) | Peak Current @5 V (mA) | Output Power (dBm) |
+| SX1262 Config (dBm) | Peak Current @5&nbsp;V (mA) | Output Power (dBm) |
 | :-----------------: | :-------------------------: | :----------------: |
 |         22          |            1000             |        30.0        |
 |         19          |             740             |        27.0        |
@@ -125,7 +146,7 @@ The RAK13302 supports LoRa 902-928 MHz frequencies.
 
 ###  RX sensitivity VS Average Current
 
-| SX1262 Config @125 kHz | Average Current @5 V (mA) | RX Sensitivity (dBm) |
+| SX1262 Config @125&nbsp;kHz | Average Current @5&nbsp;V (mA) | RX Sensitivity (dBm) |
 | :-------------------------: | :----------------------------: | :------------------: |
 |             SF7             |               12               |         -125         |
 |             SF8             |               12               |         -128         |
@@ -140,41 +161,80 @@ The RAK13302 supports LoRa 902-928 MHz frequencies.
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK13302 module.
 
-> **Image:** RAK13302 Wireless Module dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-dimensions.png"
+  caption="RAK13302 Wireless Module dimensions"
+  width="70%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/wisconnector-pcb-footprint.png"
+  caption="WisConnector PCB Footprint and Recommendations"
+  width="100%"
+/>
+
 
 #### Schematic Diagram
 
-> **Image:** RAK13302 Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-schematic.svg"
+  figureCount="5"
+  caption="RAK13302 Schematic"
+   width="100%"
+/>
 
 ##### Connector
 
-> **Image:** RAK13302 Module WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-module-pinout.png"
+  caption="RAK13302 Module WisConnector"
+  width="60%"
+/>
 
 ##### SX1262
 
-> **Image:** RAK13302 Module SX1262
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/sx162.png"
+  caption="RAK13302 Module SX1262"
+  width="100%"
+/>
 
 #### PA
 
-> **Image:** RAK13302 Amplifier
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-amplifier.png"
+  caption="RAK13302 Amplifier"
+  width="80%"
+/>
 
 #### Boost
 
-> **Image:** RAK13302 5 V booster
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-5v-booster.png"
+  caption="RAK13302 5&nbsp;V booster"
+  width="60%"
+/>
 
 #### Connector for External 5V
 
-> **Image:** RAK13302 5 V external connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-5v-connector.png"
+  caption="RAK13302 5&nbsp;V external connector"
+  width="60%"
+/>
 
 #### Pin Header for Power Selection
 
-> **Image:** RAK13302 5 V selector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-5v-selector.png"
+  caption="RAK13302 5&nbsp;V selector"
+  width="60%"
+/>
 
 :::tip NOTE
 If the supply is through EX_5V, the whole WisBlock Base Board can be supplied through this source.
 :::
 
+<RkBottomNav/>

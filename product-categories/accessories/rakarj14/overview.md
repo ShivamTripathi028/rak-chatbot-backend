@@ -8,6 +8,10 @@ image: "https://images.docs.rakwireless.com/accessories/rakarj14/white-915mhz-an
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAKARJ14 915MHz White Blade Antenna
 
 Thank you for choosing **RAKARJ14 915MHz White Blade Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -16,9 +20,11 @@ Thank you for choosing **RAKARJ14 915MHz White Blade Antenna** in your awesome I
 
 ## Product Features
 
-- Frequency Range: 902~928 MHz
-- Max Gain: 2.3 dBi
+- Frequency Range: 902~928&nbsp;MHz
+- Max Gain: 2.3&nbsp;dBi
 - VSWR: ≤ 1.5
 - High efficiency
 - Vertically polarized
 
+
+<RkBottomNav/>

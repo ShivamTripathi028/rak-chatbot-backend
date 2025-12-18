@@ -9,35 +9,43 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg15/antenna-overvie
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # 900-930MHz 8dBi Fiberglass Antenna Datasheet
 
 ## Overview
 
 ### Features
 
--   Frequency Range: 900~930 MHz
--   Max Gain: 8.0 dBi
+-   Frequency Range: 900~930&nbsp;MHz
+-   Max Gain: 8.0&nbsp;dBi
 -   VSWR: ≤ 1.5
 -   High efficiency
 -   Vertically polarized dipole
 -   Easy to mount with the included Installation kit
 
-> **Image:** RAKARG15 Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/antenna-overview.png"
+  width="70%"
+  caption="RAKARG15 Overview"
+/>
 
 ## Specifications
 
 | Model                     | RAKARG15                      |
 | :------------------------ | ----------------------------- |
-| **Frequency Range**       | 900 MHz~930 MHz     |
-| **Peak Gain**             | 8.0 dBi                  |
+| **Frequency Range**       | 900&nbsp;MHz~930&nbsp;MHz     |
+| **Peak Gain**             | 8.0&nbsp;dBi                  |
 | **VSWR**                  | ≤ 1.5                         |
 | **Efficiency**            | ≤65%                          |
-| **Feed Impedance**        | 50 Ω                     |
+| **Feed Impedance**        | 50&nbsp;Ω                     |
 | **Polarization**          | Vertical                      |
 | **Cover material(color)** | Fiberglass (White)           |
 | **Connector type**        | N-type male                   |
-| **Dimensions (mm)**       | Փ25.0 mm x 900.0 mm |
-| **Operation Temp (°C)**   | -30 °C ~ +65 °C     |
+| **Dimensions (mm)**       | Փ25.0&nbsp;mm x 900.0&nbsp;mm |
+| **Operation Temp (°C)**   | -30&nbsp;°C ~ +65&nbsp;°C     |
 | **Humidity range**        | 5%~95%                        |
 
 ### VSWR
@@ -48,7 +56,11 @@ sidebar_label: Datasheet
 |     **910MHZ**     | 1.20 |
 |     **928MHz**     | 1.17 |
 
-> **Image:** RAKARG15 VSWR graph
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/vswr.png"
+  width="70%"
+  caption="RAKARG15 VSWR graph"
+/>
 
 ### Peak Gain & Efficiency
 
@@ -65,15 +77,37 @@ sidebar_label: Datasheet
 
 ### Radiation Patterns
 
-> **Image:** Radiation pattern at 900MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/900.png"
+  width="70%"
+  caption="Radiation pattern at 900MHz"
+/>
 
-> **Image:** Radiation pattern at 910MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/910.png"
+  width="70%"
+  caption="Radiation pattern at 910MHz"
+/>
 
-> **Image:** Radiation pattern at 920MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/920.png"
+  width="70%"
+  caption="Radiation pattern at 920MHz"
+/>
 
-> **Image:** Radiation pattern at 930MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/930.png"
+  width="70%"
+  caption="Radiation pattern at 930MHz"
+/>
+
 
 ### Mechanical Characteristics
 
-> **Image:** RAKARG15 Antenna dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg15/8dbi_dimensions.png"
+  width="60%"
+  caption="RAKARG15 Antenna dimensions"
+/>
 
+<RkBottomNav/>

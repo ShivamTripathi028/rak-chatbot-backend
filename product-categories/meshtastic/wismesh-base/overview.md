@@ -18,6 +18,8 @@ date: 2024-07-23
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Base Board
 
 Thank you for choosing **RAKwireless Meshtastic device** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -47,3 +49,4 @@ For information on older board versions, check the referring datasheet:
 - Onboard GNSS location module
 - Onboard acceleration sensor
 
+<RkBottomNav/>

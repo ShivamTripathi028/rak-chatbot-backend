@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK16001 WisBlock ADC Module Quick Start Guide
 
 ## Prerequisite
@@ -40,7 +43,12 @@ The RAK16001 is an Analog-to-Digital (ADC) module, which uses an ADS7830 from Te
 
 For more information about RAK16001, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak16001/datasheet/).
 
-> **Image:** RAK16001 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak16001-assembly.png" 
+  figureCount="1"
+  caption="RAK16001 connection to WisBlock Base" 
+   width="50%"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -48,7 +56,12 @@ For more information about RAK16001, refer to the [Datasheet](https://docs.rakwi
 
 The RAK16001 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 2**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK16001 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/mounting-mechanism.png" 
+  figureCount="2"
+  caption="RAK16001 mounting connection to WisBlock Base module" 
+   width="60%"
+/>
 
 ##### Disassembling
 
@@ -56,15 +69,30 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. Remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/removing-screws.png" 
+  figureCount="3"
+  caption="Removing screws from the WisBlock module" 
+   width="70%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/detach_silkscreen.png" 
+  figureCount="4"
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/detach_module.png" 
+  figureCount="5"
+  caption="Applying even forces on the proper location of a WisBlock module" 
+   width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK16001 uses I2C communication lines, and it can cause possible conflict, especially on some IO modules.
@@ -80,11 +108,26 @@ If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWir
 
 1. You need to select first the WisBlock Core you have, as shown in **Figure 6** to **Figure 8**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak4631-board.png" 
+  figureCount="6"
+  caption="Selecting RAK4631 as WisBlock Core" 
+   width="100%"
+/>
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak11200-board.png" 
+  figureCount="7"
+  caption="Selecting RAK11200 as WisBlock Core" 
+   width="100%"
+/>
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak11310-board.png" 
+  figureCount="8"
+  caption="Selecting RAK11310 as WisBlock Core" 
+   width="100%"
+/>
 
 2. Copy the following sample code into your Arduino IDE.
 
@@ -190,9 +233,19 @@ And these sample codes in Github will work on all WisBlock Core.
 
 3. Once the example code is open, install the [RAK ADS7830](https://github.com/RAKWireless/RAK-ADS7830-Library) library by clicking the yellow highlighted link, as shown in **Figure 9** and **Figure 10**.
 
-> **Image:** Accessing the library used for RAK16001 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak16001-lib.png" 
+  figureCount="9"
+  caption="Accessing the library used for RAK16001 Module" 
+   width="100%"
+/>
 
-> **Image:** Installing the compatible library for RAK16001 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak16001-libinstall.png" 
+  figureCount="10"
+  caption="Installing the compatible library for RAK16001 Module" 
+   width="70%"
+/>
 
 4. After successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 11** and **Figure 12**.
 
@@ -200,11 +253,28 @@ And these sample codes in Github will work on all WisBlock Core.
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak4631-selectport.png" 
+  figureCount="11"
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
-> **Image:** Uploading the RAK16001 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak4631-upload.png" 
+  figureCount="12"
+  caption="Uploading the RAK16001 example code" 
+   width="100%"
+/>
 
 5. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the modules' reading logs. If you see the logs, as shown in **Figure 13**, then your RAK16001 is properly communicating to the WisBlock core.
 
-> **Image:** RAK16001 ADC Module data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/quickstart/rak16001-logs.png" 
+  figureCount="13"
+  caption="RAK16001 ADC Module data logs" 
+   width="80%"
+/>
 
+
+<RkBottomNav/>

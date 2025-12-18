@@ -12,23 +12,26 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18041 WisBlock Analog Microphone Module Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK18041 is a WisBlock Analog Microphone Module that is based on **SHY-B9750MUP2.8-C1033**. This WisBlock Audio module is a unidirectional microphone that allows you to capture frequency waves from 100 Hz up to 16,000 Hz from the external environment. This microphone needs to be interfaced with WisBlock Audio analog microphone driver such as RAK18040 to make it compatible with the WisBlock IO slot.
+The RAK18041 is a WisBlock Analog Microphone Module that is based on **SHY-B9750MUP2.8-C1033**. This WisBlock Audio module is a unidirectional microphone that allows you to capture frequency waves from 100&nbsp;Hz up to 16,000&nbsp;Hz from the external environment. This microphone needs to be interfaced with WisBlock Audio analog microphone driver such as RAK18040 to make it compatible with the WisBlock IO slot.
 
 ### Features
 
 * **Module Specification**
     * Unidirectional Analog Microphone
-    * Sensitivity: 100 Hz to 16,000 Hz
+    * Sensitivity: 100&nbsp;Hz to 16,000&nbsp;Hz
     * Compatible with WisBlock Audio stack
 
 * **Module Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Specifications
 
@@ -38,11 +41,16 @@ The RAK18041 is a WisBlock Analog Microphone Module that is based on **SHY-B9750
 
 The RAK18041 WisBlock Analog Microphone Module can be mounted to the WisBlock Audio stack. It cannot be interfaced directly with the WisBlock IO slot.
 
-> **Image:** RAK18041 mounted to the WisBlock Audio stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18041/datasheet/rak18041_mounting.png"
+  width="60%"
+  caption="RAK18041 mounted to the WisBlock Audio stack"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It shows the chipset of the module and discusses the pinouts and their corresponding functions and diagrams. It also covers the acoustics, electrical, and mechanical characteristics that include the tabular data of the functionalities and standard values of the RAK18041 WisBlock Audio Analog Microphone.
+
 
 #### Chipset
 
@@ -54,7 +62,11 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 The RAK18041 WisBlock Analog Microphone Module comprises a 5-pin connector that connects to compatible analog microphone driver modules like RAK18040
 
-> **Image:** RAK18041 pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18041/datasheet/pin-diagram.png"
+  width="40%"
+  caption="RAK18041 pinout diagram"
+/>
 
 #### Electrical Characteristics
 
@@ -73,11 +85,20 @@ This table shows RAK18041 Analog Microphone Module acoustic and electrical chara
 
 **Figure 3** shows the dimensions and mechanical drawing of the RAK18041 module.
 
-> **Image:** RAK18041 Module mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18041/datasheet/board-dimensions.png"
+  width="40%"
+  caption="RAK18041 Module mechanical dimensions"
+/>
 
 #### Schematic Diagram
 
 **Figure 4** shows the schematic diagram of the RAK18041 Module. It consists of the pinouts of both the RAK18041 Module and the analog microphone.
 
-> **Image:** RAK18041 Module schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18041/datasheet/schematic.png"
+  width="60%"
+  caption="RAK18041 Module schematic"
+/>
 
+<RkBottomNav/>

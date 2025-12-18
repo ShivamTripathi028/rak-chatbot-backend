@@ -10,15 +10,20 @@ keywords:
 sidebar_label: Demo and Example
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK4631-R WisBlock LoRaWAN Module Demo and Example
 
 This section assumes that you are already checked the [RAK4631-R Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/) and are already familiar with the hardware and software components of the RAK4631-R. If not yet, it is highly encouraged that you check the [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/) first. There are many things you can do with RAK4631-R and the WisBlock ecosystem.
 
 In this section, both examples for basic LoRaWAN and BLE applications are covered:
 
+
 * [LoRaWAN Application Example](#lorawan-example)
 * [BLE Application Example](#ble-example)
 * [Measure Battery Level Over BLE](#measure-battery-level-over-ble-example)
+
 
 ## LoRaWAN Example
 
@@ -61,39 +66,75 @@ This initial guide uses the LoRaWAN built-in network server of RAK7268, but you 
 
 Once you have a working RAK7268, you need to ensure that you use the built-in LoRaWAN network server(LNS). You can do this by configuring the gateway to network server mode. You need to click **LoRa Network** then select **Network Settings**.
 
-> **Image:** RAK7268 LoRa Network Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/lora_network_setting.png"
+  width="80%"
+  caption="RAK7268 LoRa Network Settings"
+/>
 
 You need to select on the **mode** dropdown list **Network Server** and take note of the **Region**. The **Region** should be the same on the RAK4631-R code that you will compile in the later section of this guide. The region of the LoRaWAN gateway and LNS used in this guide is US915.
 
-> **Image:** RAK7268 Network Server Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/mode_network_server.png"
+  width="80%"
+  caption="RAK7268 Network Server Mode"
+/>
 
 After configuring the gateway to use a built-in LoRaWAN network server(LNS), you need to add an application to the network server and register a device. You need to click **Application**, which will show all the LoRaWAN applications you have if there are any.
 
-> **Image:** Accessing Application Console in the Network Server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/add_application.png"
+  width="80%"
+  caption="Accessing Application Console in the Network Server"
+/>
 
 You need to put a meaningful name for your application. For this illustration, the **RAK4631-R** is used, and then, you should select **Unified Application Key**. You can click **Add** and **Save & Apply** to proceed with the configuration of the application.
 
-> **Image:** Adding Application to the LoRaWAN network server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/add_application_name.png"
+  width="80%"
+  caption="Adding Application to the LoRaWAN network server"
+/>
 
 Another important parameter in a LoRaWAN application is the **Application Key**, which is used in **OTAA** activation. You can manually add one, but it is advisable to let the network server generate it by clicking the generate icon button. You can also add a description to your application. After having the **Application Key**, you can now click **Save & Apply**.
 
-> **Image:** Configure Application Key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/add_application_key.png"
+  width="80%"
+  caption="Configure Application Key"
+/>
 
 The new application will now be added to the application list of your network server. To register your RAK4631-R WisBlock Core as a device in that application, you need to click edit to access the application console.
 
-> **Image:** Access the LoRaWAN Application Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/accessing_the_application.png"
+  width="80%"
+  caption="Access the LoRaWAN Application Console"
+/>
 
 To register your RAK4631-R WisBlock Core, you need to add its device EUI (DEVEUI) on the application console. This must be unique, and it is highly encouraged that you use the DEVEUI printed in the sticker of your RAK4631-R module. You then need to click the **Add** button to proceed with the next configurations.
 
-> **Image:** Adding Device to the Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/add_device.png"
+  width="80%"
+  caption="Adding Device to the Application"
+/>
 
 The next step is to configure the other important parameters related to LoRaWAN. You need to put a name on your device and for this case, it is **RAK4631-R**. Three parameters in this list that must be the same as your RAK4631-R code are the **Class**, **Join Mode**, and **Application Key**. On the example Arduino code in the later part of this guide, Class is default to A and Join Mode to OTAA, so you will only need to modify in the code the application key. Lastly, the **LoRaWAN MAC Version** must be **1.0.3**. After setting up all these parameters, you must click **Save & Apply**.
 
-> **Image:** Configuration of the RAK4631-R as OTAA Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/device_configuration.png"
+  width="80%"
+  caption="Configuration of the RAK4631-R as OTAA Device"
+/>
 
 The device will now be shown as a device in your application. The next step is to prepare the RAK4631-R WisBlock Core module so that it can match all the parameters in the network server.
 
-> **Image:** RAK4631-R Registered on the Network Server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/device_registered.png"
+  width="80%"
+  caption="RAK4631-R Registered on the Network Server"
+/>
 
 ### Preparing the modules RAK1901 and RAK1902 to be connected to RAK4631-R
 
@@ -115,21 +156,37 @@ After you connect the modules to the WisBlock Base, you need to add the required
 
 To add the needed libraries, you need to open Arduino IDE and click **Sketch**, **Include Library**, then **Add .ZIP Library**.
 
-> **Image:** Adding RAK Libraries to Arduino IDE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/1_add_library.png"
+  width="65%"
+  caption="Adding RAK Libraries to Arduino IDE"
+/>
 
 You have to navigate on the directory where you downloaded the libraries mentioned in the previous step. You have to add both of these zip files.
 
-> **Image:** Adding RAK Libraries to Arduino IDE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/2_select_zip.png"
+  width="65%"
+  caption="Adding RAK Libraries to Arduino IDE"
+/>
 
 If both libraries are successfully added, you should be able to see the example sketches for these two WisBlock modules available now in your Arduino IDE.
 
-> **Image:** Adding RAK Libraries to Arduino IDE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/3_example_shown.png"
+  width="65%"
+  caption="Adding RAK Libraries to Arduino IDE"
+/>
 
 ### Uploading LoRaWAN example to RAK4631-R
 
 After successfully doing the previous steps above, you can now proceed with running the LoRaWAN application example **Smart_Farm**. You can access this example code under **RAK WisBlock RUI examples**.
 
-> **Image:** Opening Smart_Farm LoRaWAN Application Example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/4_open_smart_farm.png"
+  width="80%"
+  caption="Opening Smart_Farm LoRaWAN Application Example"
+/>
 
 You can check the LoRaWAN application example code **Smart_Farm** on how it is structured and get familiar with it. There are a few things you need to modify in the code so that your RAK4631-R WisBlock Core can connect successfully to your gateway and network server.
 
@@ -174,9 +231,17 @@ RAK4631-R supports the following regions:
 
 After configuring the important LoRaWAN parameters in code, you need to ensure that you selected the **RAK4631-R WisBlock Core** and connected to the right **COM port**. If you do not see **RAK4631-R** in your board selection, you must check the [Software Initial Guide](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/#rak4631-r-board-support-package-in-arduino-ide) from the quick start guide.
 
-> **Image:** Selecting RAK4631-R in the Board Selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/select_board.png"
+  width="80%"
+  caption="Selecting RAK4631-R in the Board Selection"
+/>
 
-> **Image:** Selecting the COM Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/select_port.png"
+  width="80%"
+  caption="Selecting the COM Port"
+/>
 
 The last step is to upload the code by clicking the **Upload** icon. Then you must see **Done uploading** if everything is successful.
 
@@ -186,15 +251,27 @@ RAK4631-R should automatically go to BOOT mode when the firmware is uploaded via
 If BOOT mode is not initiated, pull to ground the RESET pin twice (or double click the reset button if available) to force BOOT mode.
 :::
 
-> **Image:** Successful Upload
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/5_successful_upload.png"
+  width="80%"
+  caption="Successful Upload"
+/>
 
 You should now be able to see the terminal logs in the Serial Monitor of Arduino IDE. Sometimes COM port will be disconnected so you won't be able to see immediately the terminal output. You can reconnect the module or try to push the reset button on the WisBlock Base to update the terminal output.
 
-> **Image:** Terminal Logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/6_terminal_logs.png"
+  width="80%"
+  caption="Terminal Logs"
+/>
 
 You can also check on the LoRaWAN network server of RAK7268 that your device is now activated.
 
-> **Image:** RAK4631-R Activated in the LoRaWAN Network Server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/examples/device_connected.png"
+  width="80%"
+  caption="RAK4631-R Activated in the LoRaWAN Network Server"
+/>
 
 ## BLE Example
 
@@ -203,14 +280,24 @@ You can also check on the LoRaWAN network server of RAK7268 that your device is 
 1. Open **Application_Scenario** then click **BLE** -> **Environment_Detect.** Example: Environment_Detect.
 2. Click the **Verify icon** to verify the sample code then the **Upload icon** to upload the sample code.
 
-> **Image:** Open the Application Scenario
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture38.jpg"
+  width="80%"
+  caption="Open the Application Scenario"
+/>
+
 
 ### Download nRF Connect Mobile Application Over BLE
 
 1.  Download and install [nRF Connect](https://apps.apple.com/us/app/nrf-connect/id1054362403?ls=1) for Mobile developed by Nordic Semiconductor.
 2.  The App is available in App Store.
 
-> **Image:** nRF Connect for Mobile
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture39.png"
+  width="60%"
+  caption="nRF Connect for Mobile"
+/>
 
 :::tip NOTE
 Download the nRF Connect Mobile Application for your iOS Phone [here](https://apps.apple.com/us/app/nrf-connect/id1054362403?ls=1)
@@ -220,6 +307,7 @@ Download the nRF Connect Mobile Application for your iOS Phone [here](https://ap
 4. Open the **nRF Connect** Mobile application, and you will see all BLE devices in range in the scan list.
 5. Press the reset button on the RAK4631-R and wait for a couple of seconds. Look for a BLE Device named "RAK" in the scan list of the app. Connect to this device, click **“Client"**, and choose **“Temperature Measurement".**
 
+
 :::tip NOTE
 This will be only visible for 60 seconds.
 
@@ -227,17 +315,29 @@ By default, the BLE signal of the RAK4631-R  is turned off automatically if no c
 
 :::
 
-> **Image:** RAK device with Temperature Measurement
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture40.png"
+  width="60%"
+  caption="RAK device with Temperature Measurement"
+/>
 
 6.  Choose Temperature Measurement and click the button highlighted in red, as shown in Figure 22.
 7.  It can be observed that values are updating data every 2 seconds.
 
-> **Image:** Temperature Measurement Value
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture41.png"
+  width="60%"
+  caption="Temperature Measurement Value"
+/>
 
 8.  You can see the **Serial Monitor** icon and click it to connect the COM port.
 9.  If the connection is successful and you will see the **TEMPERATURE MEASUREMENT 'Notify' Enabled** and notify value are updating data every 2 seconds.
 
-> **Image:** Updating the Temperature Measurement 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture44.jpg"
+  width="80%"
+  caption="Updating the Temperature Measurement "
+/>
 
 ##  Device Firmware Upgrade (DFU) Over BLE in Arduino IDE
 
@@ -256,9 +356,19 @@ void setup()
 
 3. Click the **Verify** icon to verify the sample code after the process is completed.
 
-> **Image:** Open the RAK4631 Example
 
-> **Image:** Compile the RAK4631 Example
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture45.jpg"
+  width="80%"
+  caption="Open the RAK4631 Example"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture46.jpg"
+  width="80%"
+  caption="Compile the RAK4631 Example"
+/>
 
 :::tip NOTE
 The .zip file generated upon compilation can be found in a specific directory depending on your computer OS.
@@ -272,7 +382,11 @@ For macOS, you can find it in this path, `/var/folders/h8/gftf60cn2znct5wjwkwlxd
 The `/var` is under the `private` hidden folder. To access it, you have to open Finder in macOS, and press in your keyboard SHIFT+COMMAND+G and then you need to input directly the `/var` in the search textbox.
 :::
 
-> **Image:** DFU file as RAK4631.ino.zip on Windows OS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture47.jpg"
+  width="60%"
+  caption="DFU file as RAK4631.ino.zip on Windows OS"
+/>
 
 ### Download DFU Package and Open nRF Toolbox
 
@@ -287,17 +401,29 @@ You can upload the RAK4631.ino (ZIP) file to [iCloud Services](https://www.iclou
 
 :::
 
-> **Image:** Device Firmware Upgrade
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture48.jpg"
+  width="40%"
+  caption="Device Firmware Upgrade"
+/>
 
 ### Connect to DFU Mode and Upgrade Firmware
 
 1. In the nRF Toolbox DFU mode to connect and scan BLE Device named **"RAK.XXXXXX”** in the scan list of the app.
 
-> **Image:** Connect DFU mode and Scan BLE device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture50.png"
+  width="60%"
+  caption="Connect DFU mode and Scan BLE device"
+/>
 
 2. After connecting, click to **Browse.** Select the **RAK4631.ino (ZIP)** and press **OK.** This will then prompt you to select the zip file of the firmware that you have downloaded.
 
-> **Image:** DFU mode Connect to scan BLE device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture54.png"
+  width="60%"
+  caption="DFU mode Connect to scan BLE device"
+/>
 
 :::tip NOTE
 You can upload the **RAK4631.ino (ZIP)** file **to iCloud Services and** download it to your smartphone.
@@ -306,11 +432,19 @@ https://www.icloud.com/
 
 3. Then, click to Update the firmware of your RAK4631-R through DFU over BLE. After upgrading, it will restart, and the DFU connection will be disconnected. Now, you can use your RAK4631-R with the latest firmware.
 
-> **Image:** Update RAK4631-R Firmware via BLE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture56.png"
+  width="80%"
+  caption="Update RAK4631-R Firmware via BLE"
+/>
 
 4. Open the **Serial Monitor icon** and click it to connect COM port, the console will print **"Example : New Version 2.0.0".**
 
-> **Image:** Serial Monitor log
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture57.jpg"
+  width="80%"
+  caption="Serial Monitor log"
+/>
 
 ## Measure Battery Level Over BLE
 
@@ -321,7 +455,11 @@ https://www.icloud.com/
 * WisBlock Sensor RAK1902(optional)
 * A Rechargeable Battery 18650 4200mAh
 
-> **Image:** RAK4631-R with RAK5005-O HW Baseboard and Rechargeable Battery 18650
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture58.jpg"
+  width="50%"
+  caption="RAK4631-R with RAK5005-O HW Baseboard and Rechargeable Battery 18650"
+/>
 
 ### Connect to UART Mode and Measure the Battery Level Over BLE
 
@@ -330,25 +468,51 @@ https://www.icloud.com/
 3. Refer to the [Download DFU package and Open nRF Toolbox](#download-dfu-package-and-open-nrf-toolbox) and open the nRF Toolbox Mobile application. You will see Universal Asynchronous Receiver /Transmitter(UART) in the support list.
 4.  Make sure the Bluetooth on your mobile is turned on.
 
-> **Image:** Universal Asynchronous Receiver /Transmitter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture59.jpg"
+  width="30%"
+  caption="Universal Asynchronous Receiver /Transmitter"
+/>
 
 5. In the nRF Toolbox UART mode, scan and connect to a BLE Device named **"RAK.XXXXXX”** in the scan list of the app.
 
-> **Image:** Connect UART mode and Scan BLE device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture62.png"
+  width="60%"
+  caption="Connect UART mode and Scan BLE device"
+/>
 
 6. After connecting, click **Bluetooth Paring Request to Pair** and click the empty icon to create a new command.
 
-> **Image:** Click Bluetooth Paring Request to Pair
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture64.png"
+  width="60%"
+  caption="Click Bluetooth Paring Request to Pair"
+/>
 
 7. Input AT Commands `at+bat=?` and **return** to do Carriage Return then click **Done**. Follow the steps; otherwise, it will send the incorrect commands.
 
-> **Image:** AT Commands with AT+BAT=?
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture66.png"
+  width="60%"
+  caption="AT Commands with AT+BAT=?"
+/>
 
 8. Click the **ARROW icon** to **create** a new icon as `at+bat=?`.
 
-> **Image:** Click the ARROW icon to create a new one
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture68.png"
+  width="60%"
+  caption="Click the ARROW icon to create a new one"
+/>
 
 9. Click the **ARROW** icon and switch to **Logs** to check **AT+BAT=Values** are received or not.
 
-> **Image:** Click the ARROW icon to Check Battery Level in Logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631-r/quickstart/picture70.png"
+  width="60%"
+  caption="Click the ARROW icon to Check Battery Level in Logs"
+/>
 
+
+<RkBottomNav/>

@@ -19,6 +19,9 @@ sidebar_label: LoRaWAN Network Server Guide
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7268 LoRaWAN Network Server Guide
 
@@ -35,6 +38,7 @@ The high-level steps to get started with AWS IoT Core for LoRaWAN are as follows
   b.	Set up a Destination to which device traffic will be routed and processed by a rule.
 
 These steps are detailed below.  For additional details, refer to the [AWS LoRaWAN developer guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan.html).
+
 
 ### Add the Gateway to AWS IoT
 
@@ -57,6 +61,7 @@ Follow the instructions in the section Add an IAM role to allow the Configuratio
 
 To register the Gateway with AWS IoT Core for LoRaWAN, follow the steps in this [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-onboard-gateway-add.html) under the section Add a gateway using the console.
 
+
 ### Add a LoRaWAN Device to AWS IoT
 
 #### Preparation
@@ -64,6 +69,7 @@ To register the Gateway with AWS IoT Core for LoRaWAN, follow the steps in this 
 - Refer to the datasheet to learn more about [RAK4631 WisBlock LPWAN Module](https://docs.rakwireless.com/product-categories/wisblock/rak4631/datasheet/#overview).
 - Refer to the instructions in the section Before onboarding your wireless device in the [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-onboard-end-devices.html).
 - Then follow the instructions in the section Add your wireless device to AWS IoT Core for [LoRaWAN](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-end-devices-add.html).
+
 
 #### Verify Profiles
 
@@ -84,9 +90,14 @@ For more information, refer to the [online guide](https://docs.aws.amazon.com/io
 * Additional Software Reference:
   * [Forum](https://forum.rakwireless.com/?utm_source=Docs&utm_medium=Docsheader&utm_campaign=RAKDocs)
 
+
 #### Configuring the Gateway Device with WisGateOS 1
 
-> **Image:** RAK7268 With WisGate OS 1 LoRaGateway Setting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/1.rak7268-product-label.png"
+  width="60%"
+  caption="RAK7268 With WisGate OS 1 LoRaGateway Setting"
+/>
 
 By default, the Gateway will work in Wi-Fi AP Mode which means that you can find an SSID named like "RAK7268_XXXX" on your PC's Wi-Fi Network List. "XXXX" is the last two bytes of the Gateway MAC address. To access the Web Management Platform, input the IP Address: 192.168.230.1 in your Web browser.
 
@@ -96,13 +107,21 @@ Using your preferred Web browser, input the aforementioned IP Address and you sh
 *	Username: root
 * Password: root
 
-> **Image:** Web User Interface Log-in
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/2.log-in-interface.png"
+  width="100%"
+  caption="Web User Interface Log-in"
+/>
 
 The first firmware version that supports AWS IoT Core for LoRaWAN is 1.2.0065_Release_r209, it can be verified on Status -> Overview -> System -> Firmware Version.
 
 Navigate to System -> Backup/Flash Firmware -> Flash new firmware image, and upgrade the firmware.
 
-> **Image:** Upgrade the Firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/3.firmware-upgrade.png"
+  width="100%"
+  caption="Upgrade the Firmware"
+/>
 
 **Configure Network Mode to Basic Station**
 
@@ -110,18 +129,32 @@ Navigate to System -> Backup/Flash Firmware -> Flash new firmware image, and upg
 2.	change Mode in LoRaWAN Network Settings to Basic Station.
 3.	Select LNS Server from Server, then select TLS Server and Client Authentication from Authentication Mode.
 
-> **Image:** Configure Network Mode to Basic Station
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/4.network-settings.png"
+  width="100%"
+  caption="Configure Network Mode to Basic Station"
+/>
 
 **Configure URI, Port and Authentication Mode**
 
-> **Image:** Configure URI, Port and Authentication Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/5.basic-station-configuration.png"
+  width="100%"
+  caption="Configure URI, Port and Authentication Mode"
+/>
+
 
 #### Connect the Gateway and Verify the Connection Status
 Follow the instructions in the [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-gateway-connection-status.html) to connect your gateway to AWS IoT Core for LoRaWAN.
 
 To verify the connection status, refer to the instructions in the section **Check gateway connection status using the console**
 
-> **Image:** Gateway Connection status
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/6.gateway-connection-status.png"
+  width="100%"
+  caption="Gateway Connection status"
+/>
 
 ### Add End Device
 
@@ -137,17 +170,29 @@ This section shows an example of how to join the AWS IoT LoRaWAN server
 
 1. Add Device Profile
 
-> **Image:** Add the Device Profile
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/7.add-device-profile.png"
+  width="70%"
+  caption="Add the Device Profile"
+/>
 
 2.	Add Service Profile
 
-> **Image:** Add the Service Profile
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/8.add-service-profile.png"
+  width="70%"
+  caption="Add the Service Profile"
+/>
 
 3.	Add Destination
 
 Before adding the destination, follow the Add IAM role for Destination to AWS IoT Core for LoRaWAN section to configure IAM policy and role.
 
-> **Image:** Add Destination
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/9.add-destination.png"
+  width="70%"
+  caption="Add Destination"
+/>
 
 4.	Add Device
 
@@ -169,11 +214,23 @@ AT+APPKEY=00000000000000000000000000000000
 OK
 ```
 
-> **Image:** LoRaWAN Specifications and Wireless Device Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/10.lorawan-specifications.png"
+  width="70%"
+  caption="LoRaWAN Specifications and Wireless Device Configuration"
+/>
 
-> **Image:** Choose a Wireless Device Profile
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/11.wireless-device-profile.png"
+  width="70%"
+  caption="Choose a Wireless Device Profile"
+/>
 
-> **Image:** Choose a Destination
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/12.choose-a-destination.png"
+  width="70%"
+  caption="Choose a Destination"
+/>
 
 5.	Join the AWS IoT LoRaWAN server
 
@@ -195,7 +252,11 @@ AT+SEND=12:112233
 OK
 ```
 
-> **Image:** Uplink Received
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/13.uplink-received.png"
+  width="100%"
+  caption="Uplink Received"
+/>
 
 #### Connect the device and verify the connection status
 Follow the instructions in the [online guide](https://docs.aws.amazon.com/iot/latest/developerguide/connect-iot-lorawan-device-connection-status.html) to connect your device to AWS IoT Core for LoRaWAN.
@@ -208,7 +269,12 @@ Once setup is completed, provisioned OTAA devices can join the network and start
 
 Instructions for a sample Hello World application are given below, assuming that the device has joined and is capable of sending uplink traffic.  The architecture for this sample application is:
 
-> **Image:** Send Uplink Architecture
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/14.send-uplink-architecture.png"
+  width="100%"
+  caption="Send Uplink Architecture"
+/>
 
 #### Create lambda function for destination rule
 
@@ -342,6 +408,8 @@ def lambda_handler(event, context):
         }
     ```
 
+
+
 #### Create the Destination Rule
 
 In this section, create the IoT rule that forwards the device payload to your application.  This rule is associated with the destination created earlier in Set up a Destination for Device Traffic section.
@@ -382,6 +450,7 @@ You can now check that the decoded data is received and republished by AWS by tr
     "temperature": 27.2
     }
 ```
+
 
 ```json
  project/sensor/decoded    February 09, 2021, 14:47:21 (UTC+0800)
@@ -432,6 +501,7 @@ You will be using the Amazon Simple Notification Service to send text messages (
    - Under Endpoint, enter the previously validated phone number to receive the SMS alerts.
    - Choose Create subscription. You should see a "_**Subscription to text_topic created successfully**_" message.
 
+
 ##### Add a Rule for Amazon SNS Notification
 
 Now, add a new rule to send an Amazon SNS notification when certain conditions are met in a decoded message.
@@ -452,6 +522,7 @@ Now, add a new rule to send an Amazon SNS notification when certain conditions a
 11. Under **Choose or create a role to grant AWS IoT access to perform this action**, choose **Create role**.
 12. Enter a name for the role and choose **Add action**.
 13. Choose **Create rule**.  You should see a "**Success**" message, indicating that the rule has been created.
+
 
 ##### Test the Rule for Amazon SNS Notification
 
@@ -480,7 +551,12 @@ This section shows how to send downlink payload from AWS IoT LoRaWAN Server to e
     - Subscribe to the wildcard topic '#" to receive messages from all topics.
     - Specify the topic to `**cmd/downlink/{WirelessDeviceId}**` and a base64-encoded message.
 
-> **Image:** Specify a Topic
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/15.specify-a-topic.png"
+  width="100%"
+  caption="Specify a Topic"
+/>
 
 4. You should see traffic on AWS similar, as shown below:
 
@@ -501,7 +577,12 @@ This section shows how to send downlink payload from AWS IoT LoRaWAN Server to e
         }
     ```
 
-> **Image:** Traffic on AWS
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/aws/16.traffic-on-aws.png"
+  width="100%"
+  caption="Traffic on AWS"
+/>
 
 5. You should see traffic on your console of end device similar, as shown below.
 
@@ -516,7 +597,7 @@ You will use IoT Analytics to visually display data via graphs if there is a nee
 
 ###### Create an IoT Analytics Rule
 
-** Create a Rule First **
+<b> Create a Rule First </b>
 
 1. Navigate to the [AWS IoT console](http://console.aws.amazon.com/iot).
 2. In the navigation pane, choose **Act** and then, choose **Rules**.
@@ -535,9 +616,10 @@ You will use IoT Analytics to visually display data via graphs if there is a nee
 12. Once the Quick Create Finished message is displayed, choose **Add action**.
 13. Choose **Create rule**. You should see a Success message, indicating that the rule has been created.
 
+
 ###### Configure AWS IoT Analytics
 
-** Set up AWS IoT Analytics **
+<b> Set up AWS IoT Analytics </b>
 
 1. Go to the [AWS IoT Analytics console](http://console.aws.amazon.com/iotanalytics).
 2. In the navigation panel, choose **Datasets**.
@@ -549,6 +631,7 @@ You will use IoT Analytics to visually display data via graphs if there is a nee
   ```
 6. Under Schedule, choose **Add schedule**.
 7. Under Frequency, choose **Every 1 minute**, and then click **Save**.
+
 
 ###### Configure Amazon QuickSight
 
@@ -587,7 +670,11 @@ In this section, it will be shown how to connect RAK7268 WisGate Edge Lite 2 to 
 
 To login into the TTNv3, head on [here](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-> **Image:** The Things Stack Home Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/1.the-things-stack-home-page.png"
+  width="100%"
+  caption="The Things Stack Home Page"
+/>
 
 :::tip NOTE
 This tutorial is for the EU868 Frequency band.
@@ -597,13 +684,21 @@ This tutorial is for the EU868 Frequency band.
 
 1. To register a commercial gateway, choose **Register a gateway** (for new users that do not already have a registered gateway) or go to **Gateways** > **+ Add gateway** (for users that have registered gateways before).
 
-> **Image:** Console Page after successful login
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/2.console-page-after-successful-login.png"
+  width="100%"
+  caption="Console Page after successful login"
+/>
 
 2. You will be redirected to the **Register gateway** page.
 
 3. In the **Gateway EUI** field type the EUI of the gateway. The gateway's EUI can be found either on the sticker on the casing or by going to the **LoRa Network Settings** page in the **LoRa Gateway** menu accessible via the Web UI. Instructions on how to access your gateway via Web UI can be found in the product's [Quickstart Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7268/quickstart/#access-the-gateway).
 
-> **Image:** Register gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/3.register-gateway.png"
+  width="100%"
+  caption="Register gateway"
+/>
 
 4. After typing the EUI, click on **Confirm**. Additional fields will pop up. Fill in the following information:
 
@@ -619,11 +714,19 @@ For this tutorial, we will use Europe 863-870 MHz (SF12 for RX2).
 
 - The other settings are optional and can be changed to satisfy your requirements.
 
-> **Image:** Add a gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/4.add-a-gateway.png"
+  width="100%"
+  caption="Add a gateway"
+/>
 
 5. To register your gateway click **Register gateway**.
 
-> **Image:** Successfully added gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/5.successfully-added-gateway.png"
+  width="100%"
+  caption="Successfully added gateway"
+/>
 
 TTNv3 supports TLS server authentication and Client token, which requires a trust file and a key file to configure the Gateway to successfully connect it to the network.
 
@@ -631,19 +734,35 @@ TTNv3 supports TLS server authentication and Client token, which requires a trus
 
 1. To generate a key file, from the **Overview page** of the registered Gateway navigate to **API keys**.
 
-> **Image:** Overview page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/6.overview-page.png"
+  width="100%"
+  caption="Overview page"
+/>
 
 2. On the **API keys page**, choose **+ Add API key**.
 
-> **Image:** API key page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/7.api-key-page.png"
+  width="100%"
+  caption="API key page"
+/>
 
 3. In the **Name field** type the name of your key (for example - mykey). Choose **Grant individual rights** and select **Link as Gateway to a Gateway for traffic exchange, i.e. read uplink and write downlink**.
 
-> **Image:** Generate an API key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/8.generate-an-api-key.png"
+  width="100%"
+  caption="Generate an API key"
+/>
 
 4. To generate the key, choose **Create API key**. The following window will pop up, telling you to copy the key you just generated.
 
-> **Image:** Copy the generated key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/9.copy-the-generated-key.png"
+  width="60%"
+  caption="Copy the generated key"
+/>
 
 :::warning
 Copy the key and save it in a .txt file (or other), because you won’t be able to view or copy your key after that.
@@ -657,7 +776,11 @@ Copy the key and save it in a .txt file (or other), because you won’t be able 
 
 2. Navigate to **LoRa Network** > **Network Settings** > **Mode** drop-down menu > choose **Basics Station**.
 
-> **Image:** Change the work mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/10.change-the-work-mode.png"
+  width="100%"
+  caption="Change the work mode"
+/>
 
 3. Select **Switch mode** to apply the change. After that, the **Basics Station Configuration** pane settings will show up. To connect the Gateway to TTNv3, the following parameters must be configured:
 
@@ -676,13 +799,21 @@ Authorization: YOUR_API_KEY
 Replace **YOUR_API_KEY** with the key generated previously. Have in mind that there should be a “space” between **Authorization:** and **YOUR_API_KEY**, as shown in the example.
 :::
 
-> **Image:** LoRa Basics Station settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/11.lora-basics-station-settings.png"
+  width="100%"
+  caption="LoRa Basics Station settings"
+/>
 
 4. To save the changes click **Save & Apply**.
 
 You can now see that your gateway is connected to TTNv3 as Basics Station:
 
-> **Image:** Successful connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/ttn/12.successful-connection.png"
+  width="100%"
+  caption="Successful connection"
+/>
 
 ## LORIOT
 
@@ -706,15 +837,27 @@ LORIOT provides an easy-to-use software platform that enables you to build, oper
 
 1. Log into your LORIOT account.
 
-> **Image:** LORIOT Homepage
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/1.homepage.png"
+  width="100%"
+  caption="LORIOT Homepage"
+/>
 
 2. Go to the **Networks** tab of the main menu on the left. You have the option to select **Simple network**, which is automatically generated when you create your account, or you can create a new one to use. For a beginner, it will be easier to use the **Simple network**.
 
-> **Image:** Networks List
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/2.networks.png"
+  width="100%"
+  caption="Networks List"
+/>
 
 3. Open the network by clicking once on its name. Then, click the **+ Add Gateway** button.
 
-> **Image:** Adding a gateway to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/3.adding-gateway.png"
+  width="100%"
+  caption="Adding a gateway to the network"
+/>
 
 4. In the list of gateways, find and select RAK7249.
 
@@ -722,11 +865,19 @@ LORIOT provides an easy-to-use software platform that enables you to build, oper
 If you are using another model gateway from the WisGate Edge series, you still need to select RAK7249 in this list. This won't affect the performance in any way.
 :::
 
-> **Image:** Selecting RAK7249
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/4.selecting-rak7249.png"
+  width="100%"
+  caption="Selecting RAK7249"
+/>
 
 5. Now, you need to connect to your gateway via SSH. As mentioned, this tutorial will be done with the PuTTY SSH client. Open PuTTY and enter the IP address of your gateway. If your gateway is in AP mode, the address will be **192.168.230.1**.
 
-> **Image:** PuTTY Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/5.putty.png"
+  width="60%"
+  caption="PuTTY Configuration"
+/>
 
 6. Log in with your root credentials.
 
@@ -745,13 +896,22 @@ The output should be similar to the following:
 eth0      Link encap:Ethernet  HWaddr 60:C5:A8:XX:XX:XX
 ```
 
-> **Image:** Getting the MAC address of the gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/6.mac-address.png"
+  width="60%"
+  caption="Getting the MAC address of the gateway"
+/>
 
 7. Copy the MAC address and fill it out in the registration form for the gateway in LORIOT. Scroll down and press the **Register RAK7249 gateway** button.
 
-> **Image:** Filling out the MAC address
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/7.filling-out.png"
+  width="100%"
+  caption="Filling out the MAC address"
+/>
 
 8. The gateway is now registered and you need to add a security layer to the connection. It is provided by LORIOT's Gateway Software. To get it installed, run the following set of commands in the PuTTY.
+
 
 ```
 cd /tmp
@@ -773,11 +933,19 @@ chmod +x loriot-install.sh
 /etc/init.d/sx130x_lora_pkt_fwd disable; /etc/init.d/loriot-gw enable; reboot now
 ```
 
-> **Image:** Installing LORIOT software
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/8.installing.png"
+  width="60%"
+  caption="Installing LORIOT software"
+/>
 
 Your gateway is now registered and connected to LORIOT.
 
-> **Image:** Successful Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7268/lorawan-network-server-guide/loriot/9.successful-connection.png"
+  width="100%"
+  caption="Successful Connection"
+/>
 
 ## ThingPark by Actility
 

@@ -25,6 +25,8 @@ date: 2023-02-23
 sidebar_label: Overview Page
 slug: /product-categories/5g/all-in-one-5g/overview/
 ---
+import RkImage from '@site/src/components/Image'
+
 
 # All-in-One 5G
 
@@ -47,8 +49,8 @@ All-in-One 5G is an indoor device which integrates all the AGW, LTE, 5G NR, and 
 - AGW, LTE, 5G NR, and LoRa all in one
 - Low-power ARM platform
 - 4G RAM+ 32G eMMC
-- 2.5 GbE RJ45 Port with PoE++ (802.3bt)
-- 24 dBm RF Tx power
+- 2.5&nbsp;GbE RJ45 Port with PoE++ (802.3bt)
+- 24&nbsp;dBm RF Tx power
 - Built-in antennas
 - 3GPP B48 LTE
 - 3GPP n48 5G NR

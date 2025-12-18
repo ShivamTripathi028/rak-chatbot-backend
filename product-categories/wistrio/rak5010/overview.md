@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5010-BG95 WisTrio NB-IoT Tracker Pro
 
 Thank you for choosing **RAK5010-BG95 WisTrio NB-IoT Tracker Pro** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,10 +40,12 @@ This board is particularly suitable to be used as a quick testing and prototypin
 
 - **Quectel BG95-M3** with LTE CAT M1, LTE NB1, EGPRS, and GNSS
 - **Nordic nRF52840**, with BLE 5.0 and long-range BLE
-- nRF52840 integrates the ultra-low-power microcontroller ARM Cortex-M4 (64 Mhz)
+- nRF52840 integrates the ultra-low-power microcontroller ARM Cortex-M4 (64&nbsp;Mhz)
 - Built-in humidity and temperature sensor, pressure sensor, 3-axis motion sensor, and ambient light sensor
 - iPEX connectors for the LoRa and GPS antenna and an on-board ceramic antenna for the BLE
 - Nano SIM and ESIM options
-- Can be powered by either Micro USB, 3.7 V rechargeable battery, or a 5 V Solar Panel port
+- Can be powered by either Micro USB, 3.7&nbsp;V rechargeable battery, or a 5&nbsp;V Solar Panel port
 - Multiple interfaces, I2C, UART, GPIO, and ADC
 
+
+<RkBottomNav/>

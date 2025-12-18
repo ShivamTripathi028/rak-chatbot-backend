@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK2461 WisNode Bridge IO Lite Datasheet
 
 ## Overview
@@ -18,7 +22,7 @@ sidebar_label: Datasheet
 
 The **RAK2461 WisNode Bridge IO Lite** bridges different Digital Inputs, Outputs (Relay), and RS-485 communication to LoRaWAN® for industrial applications. The device relays data using the LoRaWAN network as a means of wirelessly transmitting to and from the end devices.
 
-It is an ideal solution for seamless LoRaWAN communication within industrial environments. Engineered with industrial-grade reliability and based on the RAK3172-T LoRaWAN module, the RAK2461 ensures long-range connectivity, even in extreme temperatures from -20° C to +70° C.
+It is an ideal solution for seamless LoRaWAN communication within industrial environments. Engineered with industrial-grade reliability and based on the RAK3172-T LoRaWAN module, the RAK2461 ensures long-range connectivity, even in extreme temperatures from -20°&nbsp;C to +70°&nbsp;C.
 
 This device can operate on all LoRaWAN bands within the standard parameters set by the LoRa Alliance. It offers versatile mounting options for easy installation in any environment, whether for industrial automation or smart city infrastructure. Together with a <a href="https://docs.rakwireless.com/product-categories/wisgate/" target="_blank"> RAK Gateway </a>, building a wireless industrial system or extending an existing one can be easy and quick. Moreover, the RAK2461 offers unparalleled performance and durability.
 
@@ -29,6 +33,7 @@ The device comes in two variants:
 | RAK2461 | RS485-DIx4-DOx1 | One RS485 interface, four digital inputs(DI), one digital output(DO) |
 | RAK2461 | RS485-DOx4      | One RS485 interface, four digital outputs(DO)                        |
 
+
 ### Features
 
 - **Regional Parameters Version:** RP001-1.0.3
@@ -37,8 +42,8 @@ The device comes in two variants:
 - One (1) **RS-485 host port**
 - Four (4) **Relay NC/NO port** (optional)
 - Four (4) **Photocoupler DI ports** and one (1) **Relay NC/NO port** (optional)
-- **Power input:** 9 V ~ 24 V
-- **Power output:** 9 V ~ 24 V (depending on the input)
+- **Power input:** 9&nbsp;V ~ 24&nbsp;V
+- **Power output:** 9&nbsp;V ~ 24&nbsp;V (depending on the input)
 - Based on the RAK3172-T module
 - Wall and DIN rail mounting
 
@@ -48,35 +53,22 @@ The device comes in two variants:
 
 | Parameter               | Specifications                                                                                                                                                                                                       |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| LoRa Feature            | Regional Parameters Version: RP001-1.0.3 
- Protocol stack: LoRaWAN 1.0.3 
- Frequency: EU868 / IN865 / RU864 / US915 / AU915 / KR920 / AS923 / CN470 
- LoRaWAN mode: Class C 
- Tx power: 22 dBm |
-| RS485 Feature           | Data rate: 9600 
- Carrying capacity: Up to 32 devices 
- Protection:  
- 18 kV HBM protection 
- 13 kV IEC61000-4-2 contact discharge 
- 4 kV IEC61000-4-4 fast transient burst       |
-| Power Supply            | 9-24 VDC input 
- 5 V for USB Type-C                                                                                                                                                                         |
-| Input Voltage           | 9 V ~ 24 V                                                                                                                                                                                                 |
-| Output Voltage          | 9 V ~ 24 V (depending on the input)                                                                                                                                                                        |
-| Rated Power             | DI type: 1 W 
- DO type (Relay): 2 W                                                                                                                                                                    |
+| LoRa Feature            | Regional Parameters Version: RP001-1.0.3 <br/> Protocol stack: LoRaWAN 1.0.3 <br/> Frequency: EU868 / IN865 / RU864 / US915 / AU915 / KR920 / AS923 / CN470 <br/> LoRaWAN mode: Class C <br/> Tx power: 22&nbsp;dBm |
+| RS485 Feature           | Data rate: 9600 <br/> Carrying capacity: Up to 32 devices <br/> Protection:  <br/> 18&nbsp;kV HBM protection <br/> 13&nbsp;kV IEC61000-4-2 contact discharge <br/> 4&nbsp;kV IEC61000-4-4 fast transient burst       |
+| Power Supply            | 9-24 VDC input <br/> 5&nbsp;V for USB Type-C                                                                                                                                                                         |
+| Input Voltage           | 9&nbsp;V ~ 24&nbsp;V                                                                                                                                                                                                 |
+| Output Voltage          | 9&nbsp;V ~ 24&nbsp;V (depending on the input)                                                                                                                                                                        |
+| Rated Power             | DI type: 1&nbsp;W <br/> DO type (Relay): 2&nbsp;W                                                                                                                                                                    |
 | Configuration Interface | USB Type-C                                                                                                                                                                                                           |
-| LED Indicator           | Power LED 
- Data LED                                                                                                                                                                                             |
+| LED Indicator           | Power LED <br/> Data LED                                                                                                                                                                                             |
 | Antenna                 | RP-SMA external omnidirectional LoRa antenna                                                                                                                                                                         |
 | Ingress Protection      | IP31                                                                                                                                                                                                                 |
 | Enclosure Material      | Metal                                                                                                                                                                                                                |
-| Dimensions              | 93.6 mm × 100.3 mm × 24 mm                                                                                                                                                                            |
-| Operating Conditions    | Operating Temperature: -20° C to +70° C 
-Storage temperature: -20° C to +70° C 
-Operating humidity: 0 - 90% RH 
-Storage humidity: 0 - 90% RH                               |
+| Dimensions              | 93.6&nbsp;mm × 100.3&nbsp;mm × 24&nbsp;mm                                                                                                                                                                            |
+| Operating Conditions    | Operating Temperature: -20°&nbsp;C to +70°&nbsp;C <br/>Storage temperature: -20°&nbsp;C to +70°&nbsp;C <br/>Operating humidity: 0 - 90%&nbsp;RH <br/>Storage humidity: 0 - 90%&nbsp;RH                               |
 | Installation method     | Wall or DIN rail                                                                                                                                                                                                     |
+
+
 
 ### Hardware
 
@@ -84,18 +76,21 @@ The hardware specification describes the device's interfaces and parameters.
 
 #### Interfaces
 
-> **Image:** RAK2461 WisNode Bridge IO Lite interfaces top (DO and DI)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2461/datasheet/rak2461_top.png"
+  caption="RAK2461 WisNode Bridge IO Lite interfaces top (DO and DI)"
+  width="70%"
+/>
 
 ##### Power Interfaces
 
-RAK2461 WisNode Bridge IO can be powered by a DC power supply (9 V ~ 24 V) through the Vin, the voltage must be stable. This power supply also used to power sensors or devices connected to the Vout.
+RAK2461 WisNode Bridge IO can be powered by a DC power supply (9&nbsp;V ~ 24&nbsp;V) through the Vin, the voltage must be stable. This power supply also used to power sensors or devices connected to the Vout.
 
 | Interfaces | Description                                                                                          |
 |------------|------------------------------------------------------------------------------------------------------|
-| Vin        | Stable voltage input: 9 V ~ 24 V                                                           |
+| Vin        | Stable voltage input: 9&nbsp;V ~ 24&nbsp;V                                                           |
 | GND        | Ground, Vin and GND form a voltage input loop                                                        |
-| Vout       | Voltage output: 9 V ~ 24 V (depending on the input) 
- Vout output is controlled by MCU |
+| Vout       | Voltage output: 9&nbsp;V ~ 24&nbsp;V (depending on the input) <br/> Vout output is controlled by MCU |
 | GND        | Ground, Vout and GND form a voltage output loop                                                      |
 
 ##### Console
@@ -111,8 +106,7 @@ The USB type-C port of the device is used for configuration. For configuration p
 | LEDs | Status Indication Description                                        |
 |------|----------------------------------------------------------------------|
 | PWR  | Static on - System works. PWR is controlled by MCU.                  |
-| Data | Flicker - Data is being transferred 
- Off - No data transmission |
+| Data | Flicker - Data is being transferred <br/> Off - No data transmission |
 
 ##### LoRa
 
@@ -121,39 +115,44 @@ LoRa antenna interface. RP-SMA external omnidirectional antenna.
 #### Data Interfaces
 
 - **RS-485 interface**: RS-485 master baud rate is 9600. Multiple devices can be connected, but for more than 5 devices the recommended length is 30 m.
-- **Relay (DO)**: The maximum voltage is 240 V. You can choose between NC and NO based on the use case. (DC - 30 V / 3 A, AC - 250 V / 3 A).
-- **Photocoupler (DI)**: By default, DI supports Dry Contact. If Wet Contact is required, you can contact RAK technical support. The maximum input voltage should be 5 V and the DI COM should be connected to the negative pole. 
+- **Relay (DO)**: The maximum voltage is 240 V. You can choose between NC and NO based on the use case. (DC - 30&nbsp;V / 3&nbsp;A, AC - 250&nbsp;V / 3&nbsp;A).
+- **Photocoupler (DI)**: By default, DI supports Dry Contact. If Wet Contact is required, you can contact RAK technical support. The maximum input voltage should be 5&nbsp;V and the DI COM should be connected to the negative pole. 
 
 ##### RAK2461-RS485-DOx4
 
-> **Image:** RAK2461 WisNode Bridge IO Lite interfaces bottom (RS485-DOx4)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2461/datasheet/rak2461_bottom_1.png"
+  caption="RAK2461 WisNode Bridge IO Lite interfaces bottom (RS485-DOx4)"
+  width="70%"
+/>
 
 | Interfaces            | Description                                                   |
 |-----------------------|---------------------------------------------------------------|
 | RS485_A               | RS485 Data +                                                  |
 | RS485_B               | RS485 Data -                                                  |
-| DO1 / DO2 / DO3 / DO4 | NO: Normally Open 
- COM: Common 
- NC: Normally Closed |
+| DO1 / DO2 / DO3 / DO4 | NO: Normally Open <br/> COM: Common <br/> NC: Normally Closed |
 | GND                   | Ground                                                        |
-| 12 V_Out         | Voltage output: 12 V / 500 mA                       |
+| 12&nbsp;V_Out         | Voltage output: 12&nbsp;V / 500&nbsp;mA                       |
 
 ##### RAK2461-RS485-DIx4-DOx1
 
-> **Image:** RAK2461 WisNode Bridge IO Lite interfaces bottom (RS485-DIx4-DOx1)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2461/datasheet/rak2461_bottom_2.png"
+  caption="RAK2461 WisNode Bridge IO Lite interfaces bottom (RS485-DIx4-DOx1)"
+  width="70%"
+/>
 
 | Interfaces            | Description                                                   |
 |-----------------------|---------------------------------------------------------------|
 | RS485_A               | RS485 Data +                                                  |
 | RS485_B               | RS485 Data -                                                  |
-| DI1 / DI2 / DI3 / DI4 | IN: Signal input 
- COM: Common                            |
-| DO                    | NO: Normally Open 
- COM: Common 
- NC: Normally Closed |
-| 5 V_Out          | Voltage output: 5 V / 500 mA                        |
+| DI1 / DI2 / DI3 / DI4 | IN: Signal input <br/> COM: Common                            |
+| DO                    | NO: Normally Open <br/> COM: Common <br/> NC: Normally Closed |
+| 5&nbsp;V_Out          | Voltage output: 5&nbsp;V / 500&nbsp;mA                        |
 | GND                   | Ground                                                        |
-| 12 V_Out         | Voltage output: 12 V / 500 mA                       |
+| 12&nbsp;V_Out         | Voltage output: 12&nbsp;V / 500&nbsp;mA                       |
+
+
 
 ## Models/Bundles
 
@@ -164,8 +163,16 @@ LoRa antenna interface. RP-SMA external omnidirectional antenna.
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK2461/Certification/RAK2461_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2461/Certification/RAK2461_FCC_Certification.pdf
-- **ISED:** https://downloads.rakwireless.com/LoRa/RAK2461/Certification/RAK2461_ISED_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/RAK2461/Certification/RAK2461_CE_Certification.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2461/Certification/RAK2461_FCC_Certification.pdf',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/RAK2461/Certification/RAK2461_ISED_Certification.pdf',
+    }
+]} />
 
+<RkBottomNav/>

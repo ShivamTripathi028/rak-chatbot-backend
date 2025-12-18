@@ -15,6 +15,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5205 WisTrio LPWAN Tracker Datasheet
 
 ## Overview
@@ -33,9 +36,9 @@ This is the ideal LPWAN tracker board with a built-in sensor available on the ma
 - Built-in environmental **sensor BME680** (gas, pressure, humidity, temperature) and **3-axis MEMS sensor LIS3DH** (accelerometer)
 - **SMA/iPEX antenna** optional for LoRa and GPS
 - Supports latest LoRaWAN 1.0.2 protocol, activation by OTAA/ABP
-- Supports programmable bit rate up to 300 kbps
-- Supports rechargeable battery through micro USB or 5 V solar charging ports
-- Supports sleep mode, the power consumption down to 14.5 μA
+- Supports programmable bit rate up to 300&nbsp;kbps
+- Supports rechargeable battery through micro USB or 5&nbsp;V solar charging ports
+- Supports sleep mode, the power consumption down to 14.5&nbsp;μA
 - Supports global license-free ISM band: EU433, CN470, EU868, US915, AS923, AU915, KR920 and IN865
 - Supports I2C, GPIOs, UART, and ADC interfaces.
 
@@ -49,11 +52,20 @@ The overview covers the RAK5205 WisTrio board top view and also, its block diagr
 
 Figure 1 shows the top view and external interfaces of the RAK5205 LPWAN tracker board.
 
-> **Image:** RAK5205 WisTrio LPWAN Tracker Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-lpwan-tracker-interfaces.png"
+  width="60%"
+  caption="RAK5205 WisTrio LPWAN Tracker Interfaces"
+/>
 
 The dimension and the bottom view of the board are shown below. Sensor ICs are also labeled for your reference.
 
-> **Image:** RAK5205 Dimension and Sensors Available
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-dimension-and-sensors-available.png"
+  width="50%"
+  caption="RAK5205 Dimension and Sensors Available"
+/>
+
 
 ### Hardware
 
@@ -63,7 +75,11 @@ The hardware specification is categorized into eight parts. It discusses the int
 
 ##### Functional Diagram
 
-> **Image:** RAK5205 Functional Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-functional-diagram.png"
+  width="80%"
+  caption="RAK5205 Functional Diagram"
+/>
 
 It is built around RAK811 module and compatible with 96Boards. It provides the following interfaces, headers, jumpers, button and connectors:
 
@@ -85,11 +101,15 @@ It is built around RAK811 module and compatible with 96Boards. It provides the f
 
 A Standard Micro-B USB compliant with USB 2.0 standard specification is used to provide an interface to connect to a PC for control of the board and firmware upgrade.The Micro-B USB pin definition is shown below:
 
-> **Image:** Micro USB Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/micro-usb-pinout.png"
+  width="20%"
+  caption="Micro USB Pinout"
+/>
 
 | Pin | Description          |
 | --- | -------------------- |
-| 1   | USB_VBUS (+5 V) |
+| 1   | USB_VBUS (+5&nbsp;V) |
 | 2   | USB_DM               |
 | 3   | USB_DP               |
 | 4   | NC                   |
@@ -111,27 +131,26 @@ Reset Push Button is used to reset the RAK811 module. To reset the module, push 
 
 Here are the six connectors for RAK5205 tracker board: **P1**, **P2**, **J11**, **J12**, **J22**, and **J25**
 
-- **P1** 
-
+- **P1** <br />
 Li-ion Battery Connector: Pin1 connected to VBATT, Pin2 connected to GND
 
-- **P2** 
-
+- **P2** <br />
 Solar Cell Interface: Pin1 connected to VBUS, Pin2 connected to GND
 
-- **J11** 
-
+- **J11** <br />
 Pin1 is connected to VBUS. Pin2 is connected to VBIN. J11 should be closed when no battery is connected, and it should be open when a battery is connected.
 
-- **J12** 
-
+- **J12** <br />
 Pin1 is connected to BOOT0. Pin2 is connected to VDD. To flash a firmware, connect Pin1 and Pin2 with a jumper and reset the device. For normal operation, remove the jumper.
 
-- **J22** 
-
+- **J22** <br />
 The 30 pins follow the 96Board pin definition.
 
-> **Image:** RAK5205 Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-pinout-diagram.png"
+  width="60%"
+  caption="RAK5205 Pinout Diagram"
+/>
 
 | Pin | Pin Name  | Description                                                                                                                                                                         |
 | --- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -145,8 +164,8 @@ The 30 pins follow the 96Board pin definition.
 | 8   | NC        | No Connection                                                                                                                                                                       |
 | 9   | GND       | Ground                                                                                                                                                                              |
 | 10  | GND       | Ground                                                                                                                                                                              |
-| 11  | VCCIN     | 5 V out                                                                                                                                                                        |
-| 12  | VCC_3V3   | 3.3 V out                                                                                                                                                                      |
+| 11  | VCCIN     | 5&nbsp;V out                                                                                                                                                                        |
+| 12  | VCC_3V3   | 3.3&nbsp;V out                                                                                                                                                                      |
 | 13  | PA8       | GPIO Pin. This pin can be controlled via AT Command or RUI with GPIO number 5. (On RAK811(L) low frequency based boards like EU433, this is mapped to STM32 pin PB13).              |
 | 14  | PB3       | GPIO Pin. This pin can be controlled via AT Command or RUI with GPIO number 15. (On RAK811(L) low frequency based boards like EU433, this is mapped to STM32 pin PA3).              |
 | 15  | NC        | No Connection                                                                                                                                                                       |
@@ -166,8 +185,7 @@ The 30 pins follow the 96Board pin definition.
 | 29  | RST       | Reset Pin                                                                                                                                                                           |
 | 30  | NC        | No Connection                                                                                                                                                                       |
 
-- **J25** 
-
+- **J25** <br />
 To connect the serial output to the USB connector, RX and RxCP must be connected. To connect the Serial output to the UART pins on the J22 connector, RX and RX1 must be connected.
 
 #### RF Characteristics
@@ -194,40 +212,62 @@ The board supports all LoRaWAN frequency channels as stated in the table below w
 
 The LoRa Antenna and Interfaces are shown in Figure 6:
 
-> **Image:** RP-SMA Male Connector of LoRa Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rp-sma-male-connector-of-lora®-antenna.jpg"
+  width="45%"
+  caption="RP-SMA Male Connector of LoRa Antenna"
+/>
 
 Here is the iPEX LoRa Antenna Interface:
 
-> **Image:** iPex Antenna Interface for LoRa Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/ipex-antenna-interface-for-lora®-antenna.jpg"
+  width="60%"
+  caption="iPex Antenna Interface for LoRa Antenna"
+/>
 
 ###### LoRa Antenna Dimension
 
-> **Image:** LoRa Antenna Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/lora®-antenna-dimension.jpg"
+  width="50%"
+  caption="LoRa Antenna Dimension"
+/>
 
 ###### LoRa Antenna Parameters
 
 | Parameters                         | Specifications                                                                                                         |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
 | VSWR (Voltage Standard Wave Ratio) | 1.5:1                                                                                                                  |
-| Gain                               | 2.0 dBm                                                                                                           |
-| Temperature                        | • Working Temperature: T:-35 °C ~ +80 °C 
- • Storage Temperature: -40 °C ~ +85 °C |
-| Humidity                           | • Working Humidity: 0% ~ 95% 
- • Storage Humidity: 0% ~ 95%                                           |
+| Gain                               | 2.0&nbsp;dBm                                                                                                           |
+| Temperature                        | &#8226; Working Temperature: T:-35&nbsp;°C ~ +80&nbsp;°C <br /> &#8226; Storage Temperature: -40&nbsp;°C ~ +85&nbsp;°C |
+| Humidity                           | &#8226; Working Humidity: 0% ~ 95% <br /> &#8226; Storage Humidity: 0% ~ 95%                                           |
 
 ##### GPS Antenna
 
 The GPS antenna and interfaces for RAK5205 tracker board are shown in Figure 9:
 
-> **Image:** SMA Female Interface for GPS
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/sma-female-interface-for-gps.jpg"
+  width="60%"
+  caption="SMA Female Interface for GPS"
+/>
 
 Here is the iPEX GPS Antenna interface:
 
-> **Image:** iPex Interface for GPS Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/ipex-interface-for-gps-antenna.jpg"
+  width="60%"
+  caption="iPex Interface for GPS Antenna"
+/>
 
 ###### GPS Antenna Dimensions
 
-> **Image:** GPS Antenna Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/gps-antenna-dimension.jpg"
+  width="50%"
+  caption="GPS Antenna Dimension"
+/>
 
 ###### GPS Environmental Requirements
 
@@ -235,19 +275,19 @@ The antenna environmental requirements are listed in the table below:
 
 | Conditions | Temperature               | Humidity |
 | ---------- | ------------------------- | -------- |
-| Working    | -35 °C ~ +80 °C | 0% ~ 95% |
-| Storage    | -40 °C ~ +85 °C | 0% ~ 95% |
+| Working    | -35&nbsp;°C ~ +80&nbsp;°C | 0% ~ 95% |
+| Storage    | -40&nbsp;°C ~ +85&nbsp;°C | 0% ~ 95% |
 
 ###### GPS Antenna Parameter
 
 | Item                                             | Specifications       | PET  |
 | ------------------------------------------------ | -------------------- | ---- |
 | Range of Receiving Frequency                     | 1575.42±1.1          | ±2.5 |
-| Center Frequency (MHz) w/ 30 mm2 GND plane  | 1575.42              | ±3.0 |
-| Bandwidth (MHz) (Return Loss ≤ -10 dB)      | ≥10                  | ±0.5 |
+| Center Frequency (MHz) w/ 30&nbsp;mm2 GND plane  | 1575.42              | ±3.0 |
+| Bandwidth (MHz) (Return Loss ≤ -10&nbsp;dB)      | ≥10                  | ±0.5 |
 | VSWR (in Center Frequency)                       | ≤2.0                 | ±0.5 |
-| Gain (Zenith) (dBi Typ) w/ 70 mm2 GND Plane | 4.5                  | ±0.5 |
-| Axial Ratio (dB) w/ 70 mm2 GND Plane        | 3.0                  | ±0.2 |
+| Gain (Zenith) (dBi Typ) w/ 70&nbsp;mm2 GND Plane | 4.5                  | ±0.5 |
+| Axial Ratio (dB) w/ 70&nbsp;mm2 GND Plane        | 3.0                  | ±0.2 |
 | Polarization                                     | Righ-Handle Circular | -    |
 | Impedance (Ω)                                    | 50                   | -    |
 | Frequency Temperature Coefficient (ppm/°C)       | 0 ±10                | -    |
@@ -256,24 +296,23 @@ Amplifier Specifications are listed in the table below:
 
 | Item              | Specifications   |
 | ----------------- | ---------------- |
-| Frequency Range   | 1575.42 MHz |
-| Gain              | 27 dB       |
-| VSWR              | ≤ 2.0 V     |
-| Noise Coefficient | ≤ 2.0 dBm   |
-| DC Voltage        | 3 ~ 5 V     |
-| DC Current        | 5 ± 2 mA    |
+| Frequency Range   | 1575.42&nbsp;MHz |
+| Gain              | 27&nbsp;dB       |
+| VSWR              | ≤ 2.0&nbsp;V     |
+| Noise Coefficient | ≤ 2.0&nbsp;dBm   |
+| DC Voltage        | 3 ~ 5&nbsp;V     |
+| DC Current        | 5 ± 2&nbsp;mA    |
 
 Environmental test performance specifications are listed below:
 
 | Item              | Normal Temp.     | High Temp.       | Low Temp.        |
 | ----------------- | ---------------- | ---------------- | ---------------- |
-| Amplifier Gain    | 27 dB ± 2.0 | 27 dB ± 2.0 | 27 dB ± 2.0 |
+| Amplifier Gain    | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 |
 | VSWR              | ≤ 2.0            | ≤ 2.0            | ≤ 2.0            |
 | Noise Coefficient | ≤ 2.0            | ≤ 2.0            | ≤ 2.0            |
 
 :::tip NOTE
-**High Temperature Test**: Soap in temperature (85 °C) and humidity (95%) chamber for 24-hour and return normal temperature (at least for 1-hour) without visual shape change.
- **Low Temperature Test**: Soap in temperature (-40 °C) chamber for 24-hour and return to normal temperature (at least for 1-hour) without visual shape change.
+**High Temperature Test**: Soap in temperature (85&nbsp;°C) and humidity (95%) chamber for 24-hour and return normal temperature (at least for 1-hour) without visual shape change.<br /> **Low Temperature Test**: Soap in temperature (-40&nbsp;°C) chamber for 24-hour and return to normal temperature (at least for 1-hour) without visual shape change.
 :::
 
 #### Electrical Characteristics
@@ -286,18 +325,26 @@ The board supports to enabling the GPS low-power mode. It has a 3-axis MEMS Sens
 
 | Mode        | Power Consumption                                   |
 | ----------- | --------------------------------------------------- |
-| Sleep Mode  | 14.5 µA (Minimum)                              |
-| Normal Mode | 174 mA (Maximum) @ 20 dBm and GPS Enabled |
+| Sleep Mode  | 14.5&nbsp;µA (Minimum)                              |
+| Normal Mode | 174&nbsp;mA (Maximum) @ 20&nbsp;dBm and GPS Enabled |
 
 ###### Power Requirements
 
-The RAK5205 LoRa Tracker Board has an operating voltage of 3.7 V. It can be powered by micro USB with 5 V Max.
+The RAK5205 LoRa Tracker Board has an operating voltage of 3.7&nbsp;V. It can be powered by micro USB with 5&nbsp;V Max.
 
-> **Image:** Powered by Micro USB
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/powered-by-micro-usb.png"
+  width="60%"
+  caption="Powered by Micro USB"
+/>
 
-The board can also be powered by a 3.7 V Li-Ion battery. You can connect a 5 V solar panel charger to recharge the Li-Ion battery.
+The board can also be powered by a 3.7&nbsp;V Li-Ion battery. You can connect a 5&nbsp;V solar panel charger to recharge the Li-Ion battery.
 
-> **Image:** RAK5205 With 5V Solar Panel, Plastic Enclosure, and Li-ion Battery
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-with-5v-solar-panel-plastic-enclosure-and-li-ion-battery.png"
+  width="50%"
+  caption="RAK5205 With 5V Solar Panel, Plastic Enclosure, and Li-ion Battery"
+/>
 
 #### Environmental Requirements
 
@@ -305,21 +352,38 @@ The table below lists the operation and storage temperature requirements:
 
 | Parameter             | Min.        | Typical     | Max.        |
 | --------------------- | ----------- | ----------- | ----------- |
-| Operation Temp. Range | -35 °C | +25 °C | +60 °C |
-| Extended Temp. Range  | -40 °C | -           | +80 °C |
-| Storage Temp. Range   | -40 °C | -           | +80 °C |
+| Operation Temp. Range | -35&nbsp;°C | +25&nbsp;°C | +60&nbsp;°C |
+| Extended Temp. Range  | -40&nbsp;°C | -           | +80&nbsp;°C |
+| Storage Temp. Range   | -40&nbsp;°C | -           | +80&nbsp;°C |
 
 #### Mechanical Characteristics
 
-> **Image:** RAK5205 Detailed Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-detailed-dimensions.jpg"
+  width="75%"
+  caption="RAK5205 Detailed Dimensions"
+/>
 
 #### Schematic Diagram
 
-> **Image:** Schematic Diagram - 1
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-vc-1.png"
+  width="100%"
+  caption="Schematic Diagram - 1"
+/>
 
-> **Image:** Schematic Diagram - 2
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-vc-2.png"
+  width="100%"
+  caption="Schematic Diagram - 2"
+/>
 
-> **Image:** Schematic Diagram - 3
+<RkImage
+  src="https://images.docs.rakwireless.com/wistrio/rak7205-5205/datasheet/rak5205-vc-3.png"
+  width="100%"
+  caption="Schematic Diagram - 3"
+/>
+
 
 ### Firmware
 
@@ -330,3 +394,4 @@ Download the supported firmware of RAK5205 in the table provided below.
 | RAK5205 - H | EU868 / US915 / AU915 / KR920 / IN865 | V3.0.0.14.H.R | [Download](https://downloads.rakwireless.com/LoRa/RAK7205-Tracker/Firmware/RAK5205_7205_H_Latest_Firmware.zip) |
 | RAK5205 - L | EU433 / CN470                         | V3.0.0.14.L.R | [Download](https://downloads.rakwireless.com/LoRa/RAK7205-Tracker/Firmware/RAK5205_7205_L_Latest_Firmware.zip) |
 
+<RkBottomNav/>

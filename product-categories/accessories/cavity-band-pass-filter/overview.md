@@ -17,12 +17,15 @@ sidebar_label: Product Overview
 date: 2025-10-09
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK Outdoor Cavity Band-Pass Filter
 
 Thank you for choosing **RAK Outdoor Cavity Band-Pass Filter** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [Datasheet](https://docs.rakwireless.com/product-categories/accessories/cavity-band-pass-filter/datasheet/?intsource=docs_center&intmedium=organic&intcampaign=rak_outdoor_cavity_band-pass_filter_documentation_product_overview_page&intterm=datasheet&intcontent=documentation_link)
 * [Installation Guide](https://docs.rakwireless.com/product-categories/accessories/cavity-band-pass-filter/installation-guide/?intsource=docs_center&intmedium=organic&intcampaign=rak_outdoor_cavity_band-pass_filter_documentation_product_overview_page&intterm=installation_guide&intcontent=documentation_link)
+
 
 ## Product Description
 
@@ -32,8 +35,8 @@ The filter is based on a high-Q resonant cavity design, isolating the target fre
 
 ## Product Features
 
-- **High out-of-band rejection**: >75 dB attenuation to suppress LTE, 5G, radar, and other signals.
-- **Low insertion loss**: 2.0–3.2 dB (model dependent), preserving LoRa signal strength.
+- **High out-of-band rejection**: >75&nbsp;dB attenuation to suppress LTE, 5G, radar, and other signals.
+- **Low insertion loss**: 2.0–3.2&nbsp;dB (model dependent), preserving LoRa signal strength.
 - **Easy integration**: Standard N-Female connectors, no adapters required.
 - **Available frequency variants**: EU868, US915, IN865, RU864, AU915, KR920, AS923-1/2/3/4, CN470.
 
@@ -44,3 +47,4 @@ The filter is based on a high-Q resonant cavity design, isolating the target fre
 - WisGate Connect **RAK7393** (coming soon)
 - Compatible with other gateways using N-Female RF connectors
 
+<RkBottomNav/>

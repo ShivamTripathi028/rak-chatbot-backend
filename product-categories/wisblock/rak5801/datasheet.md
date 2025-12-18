@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5801 WisBlock 4-20mA Interface Module Datasheet
 
 ## Overview
@@ -18,24 +21,24 @@ sidebar_label: Datasheet
 
 The RAK5801 WisBlock Interface module was designed to be part of a production-ready IoT solution in a modular way and must be combined with a WisBlock Core and a Base module.
 
-The RAK5801 is a 4-20 mA current loop extension module that allows the users to make an IoT solution for analog sensors with a 4-20 mA interface. This module converts the 4-20 mA current signal into voltage range supported by the WisBlock Core module (MCU) for further digitalization and data transmission.
+The RAK5801 is a 4-20&nbsp;mA current loop extension module that allows the users to make an IoT solution for analog sensors with a 4-20&nbsp;mA interface. This module converts the 4-20&nbsp;mA current signal into voltage range supported by the WisBlock Core module (MCU) for further digitalization and data transmission.
 
-The RAK5801 module features two input channels of 4-20 mA. Inside, a high-precision operational amplifier is used for signal amplification and conversion and supports a wide range of operating temperatures.
+The RAK5801 module features two input channels of 4-20&nbsp;mA. Inside, a high-precision operational amplifier is used for signal amplification and conversion and supports a wide range of operating temperatures.
 
-This module integrates a 12 V power supply, which can be used to power external sensors. The RAK5801 can be connected to 2-wire, 3-wire, or 4-wire types of 4-20 mA sensor. The module external interface is reached by a fast crimping terminal that allows connection for the 4-20 mA sensors (including power) and to the I2C bus. The fast crimping terminals can be used without the need of special tools, which simplifies the installation process on the field.
+This module integrates a 12&nbsp;V power supply, which can be used to power external sensors. The RAK5801 can be connected to 2-wire, 3-wire, or 4-wire types of 4-20&nbsp;mA sensor. The module external interface is reached by a fast crimping terminal that allows connection for the 4-20&nbsp;mA sensors (including power) and to the I2C bus. The fast crimping terminals can be used without the need of special tools, which simplifies the installation process on the field.
 
 ### Features
 
-- Two 4-20 mA analog inputs
+- Two 4-20&nbsp;mA analog inputs
 - Compatible with multiple WisBlock Core modules, such as RAK4631
-- 0.1 mA conversion accuracy
+- 0.1&nbsp;mA conversion accuracy
 - Supports low power consumption mode. The module can be powered off by the WisBlock Core module for saving energy during idle periods.
-- 12 V output to  power external sensors
+- 12&nbsp;V output to  power external sensors
 - Reserved I2C expansion interface
 - Fast crimping terminals
-- Designed with a 2 kV ESD protection level
+- Designed with a 2&nbsp;kV ESD protection level
 - Chipset: STMicroelectronics LM2902
-- Small dimensions of 35 mm x 25 mm
+- Small dimensions of 35&nbsp;mm x 25&nbsp;mm
 
 ## Specifications
 
@@ -43,11 +46,18 @@ This module integrates a 12 V power supply, which can be used to power external
 
 The overview discusses the block diagram of the board. It also shows the installation mechanism on how to mount the board into the baseboard.
 
+
 #### Block Diagram
 
-The RAK5801 module was designed to convert 4-20 mA current signals into voltage signals by applying a sampling resistor. As shown in **Figure 1**, the input current signal from the sensor is conditioned by an operational amplifier to match the level supported by the ADC input of an MCU where the signal is digitized.
+The RAK5801 module was designed to convert 4-20&nbsp;mA current signals into voltage signals by applying a sampling resistor. As shown in **Figure 1**, the input current signal from the sensor is conditioned by an operational amplifier to match the level supported by the ADC input of an MCU where the signal is digitized.
 
-> **Image:** RAK5801 Block Diagram
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/rak5801-block-diagram.png" 
+  figureCount="1"
+  caption="RAK5801 Block Diagram" 
+   width="70%"
+/>
 
 Once the signal is digitalized, you can recover the original current value by applying the following formula:
 
@@ -55,7 +65,7 @@ Once the signal is digitalized, you can recover the original current value by ap
 
 Where **U** is the ADC reading and **I** the sensor current.
 
-As shown in **Figure 1**, the module provides an output of 12 V for powering passive 4-20 mA sensors. This 12 V output is boosted by an internal DC-DC booster. The enable pin allows to control the power conversion module and set the RAK5801 module into a low power consumption mode.
+As shown in **Figure 1**, the module provides an output of 12&nbsp;V for powering passive 4-20&nbsp;mA sensors. This 12&nbsp;V output is boosted by an internal DC-DC booster. The enable pin allows to control the power conversion module and set the RAK5801 module into a low power consumption mode.
 
 ### Hardware
 
@@ -69,29 +79,35 @@ The hardware specification is categorized into four parts. It discusses the pino
 
 #### Device Specification
 
-The following table shows the parameters and the description of the RAK5801 WisBlock 4-20 mA Interface Module:
+The following table shows the parameters and the description of the RAK5801 WisBlock 4-20&nbsp;mA Interface Module:
 
 | **Parameter**                    | **Description**                                                         |
 | -------------------------------- | ----------------------------------------------------------------------- |
-| Analog Input Interface           | 2 channels of 4-20 mA                                              |
-| Analog Sampling Resolution       | 0.005 mA                                                           |
+| Analog Input Interface           | 2 channels of 4-20&nbsp;mA                                              |
+| Analog Sampling Resolution       | 0.005&nbsp;mA                                                           |
 | Analog Sampling Accuracy         | 1%                                                                      |
-| Analog Maximum Input Current     | 25 mA (There is a risk to burn the circuit surpassing this limit.) |
-| Analog Port ESD Protection Level | 2 kV HBM                                                           |
-| Current Sampling Resistor        | 49.9 Ω                                                             |
+| Analog Maximum Input Current     | 25&nbsp;mA (There is a risk to burn the circuit surpassing this limit.) |
+| Analog Port ESD Protection Level | 2&nbsp;kV HBM                                                           |
+| Current Sampling Resistor        | 49.9&nbsp;Ω                                                             |
 | Operational Amplifier Gain       | 3.0                                                                     |
-| Input Voltage                    | 3.0-3.6 V                                                          |
-| Output Voltage                   | 12 V                                                               |
-| Output Current                   | Maximum 30 mA                                                      |
-| Operating Temperature            | -30 °C ~ 65 °C                                                |
-| Storage Temperature              | -40 °C ~ 85 °C                                                |
-| Module Dimensions                | 35x25 mm                                                           |
+| Input Voltage                    | 3.0-3.6&nbsp;V                                                          |
+| Output Voltage                   | 12&nbsp;V                                                               |
+| Output Current                   | Maximum 30&nbsp;mA                                                      |
+| Operating Temperature            | -30&nbsp;°C ~ 65&nbsp;°C                                                |
+| Storage Temperature              | -40&nbsp;°C ~ 85&nbsp;°C                                                |
+| Module Dimensions                | 35x25&nbsp;mm                                                           |
+
 
 #### Pin Definition
 
 This section covers the pin number of the sensor connector, the definition, and the functionalities of each pin shown in a tabular representation.
 
-> **Image:** RAK5801 Sensor Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/rak5801_pinout.png" 
+  figureCount="2"
+  caption="RAK5801 Sensor Connector" 
+   width="60%"
+/>
 
 :::tip NOTE
 **A0** cannot be used as an analog input channel by default because it is used for measuring battery voltage. But if you need to use **A0**, there are few hardware modifications needed to configure.
@@ -102,7 +118,12 @@ To enable **A0** as an additional channel:
 2. On RAK5801, remove the 0 Ohm resistor in **R94** and put it to **R95**. See **Figure 3**.
 :::
 
-> **Image:** A0 Hardware Modifications
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/rak5801-a0.png" 
+  figureCount="3"
+  caption="A0 Hardware Modifications" 
+   width="50%"
+/>
 
 | **Pin Number** | **Function Description**              |
 | -------------- | ------------------------------------- |
@@ -110,14 +131,21 @@ To enable **A0** as an additional channel:
 | 2              | SDA of the I2C interface              |
 | 3              | 3V3 output                            |
 | 4              | VBAT, Battery output                  |
-| 5              | 12 V output for external sensors |
+| 5              | 12&nbsp;V output for external sensors |
 | 6              | GND                                   |
 | 7              | Analog input 0                        |
 | 8              | Analog input 1                        |
 
+
 **Figure 4** shows the pin order for the IO connector of the module. Through this connector, the RAK5801 module is attached to the WisBoard baseboard.
 
-> **Image:** RAK5801 Internal WisIO Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/rak5801-internal-wisio-connector.svg" 
+  figureCount="4"
+  caption="RAK5801 Internal WisIO Connector" 
+   width="60%"
+/>
+
 
 The functionalities of each pin of the WisIO connector are tabulated below:
 
@@ -154,15 +182,30 @@ This signal controls the dc-dc power supply on RAK5801, before capturing the ana
 
 Refer to **Figure 5** below for the mechanical dimensions of the RAK5801 module.
 
-> **Image:** RAK5801 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/mechanical-dimensions.png" 
+  figureCount="5"
+  caption="RAK5801 Mechanical Dimensions" 
+   width="80%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/mxxs1003k6m.png" 
+  figureCount="6"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK5801 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/schematic.png" 
+  figureCount="7"
+  caption="RAK5801 Schematic Diagram" 
+   width="100%"
+/>
 
 ## WisBlock Compatibility
 
@@ -177,12 +220,12 @@ Since a WisBlock module can be combined with a variety of different functional m
 |                      | RAK4261              | Refer to Note 3 for hardware adaptions to the RAK5005-O and RAK5801.           |
 
 :::tip NOTE
-** 1. The RAK5801+RAK4601 ** 
+<b> 1. The RAK5801+RAK4601 </b> 
 The RAK5801 is not compatible with RAK4601. The main reason is that RAK4601 doesn’t expose any ADC pin through the RAK5005-O baseboard.
 :::
 
 :::tip NOTE
-** 2. RAK5801+RAK4202+RAK5005-O **
+<b> 2. RAK5801+RAK4202+RAK5005-O </b>
 
 In order to combine a RAK5801 module, a RAK4202 (WisBlock Core module), and the RAK5005-O, the following modification must be introduced:
 - In RAK5005-O, remove the R7 resistor, as shown in **Figure 8**.
@@ -192,13 +235,23 @@ This combination has the following restriction:
 - The adapted RAK5005-O module will not be able to sense the battery voltage anymore.
 :::
 
-> **Image:** R7 on RAK5005-O
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/r7.png" 
+  figureCount="8"
+  caption="R7 on RAK5005-O" 
+   width="50%"
+/>
 
-> **Image:** R94 and R95 on RAK5801
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/datasheet/r94.png" 
+  figureCount="9"
+  caption="R94 and R95 on RAK5801" 
+   width="50%"
+/>
 
 :::tip NOTE
 
-** 3. RAK5801+RAK4261+RAK5005-O **
+<b> 3. RAK5801+RAK4261+RAK5005-O </b>
 
 In order to combine a RAK5801 module, a RAK4261(WisBlock Core module), and the RAK5005-O, the following modification must be introduced:
 
@@ -209,3 +262,4 @@ This combination has the following restriction:
 - The adapted RAK5005-O module will not be able to sense the battery voltage anymore.
 :::
 
+<RkBottomNav/>

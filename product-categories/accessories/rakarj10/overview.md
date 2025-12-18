@@ -8,6 +8,10 @@ image: "https://images.docs.rakwireless.com/accessories/rakarj10/black_antenna_o
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAKARJ10 902-930 MHz Black Plastic Antenna
 
 Thank you for choosing **RAKARJ10 902-930 MHz Black Plastic Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -16,8 +20,10 @@ Thank you for choosing **RAKARJ10 902-930 MHz Black Plastic Antenna** in your aw
 
 ## Product Features
 
-- Frequency Range: 902-930 MHz
-- Max Gain: 2 dBi
+- Frequency Range: 902-930&nbsp;MHz
+- Max Gain: 2&nbsp;dBi
 - High efficiency
 - Linear polarized monopole
 
+
+<RkBottomNav/>

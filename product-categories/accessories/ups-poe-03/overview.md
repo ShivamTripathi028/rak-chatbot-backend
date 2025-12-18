@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
  
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 
 # UPS PoE-03
 
@@ -26,17 +28,19 @@ This product powers the RAK7268 Indoor Gateway and RAK7289 Outdoor Gateway witho
 
 ## Product Features
 
-- Input：100-240 V<sub>AC</sub> (50~60 Hz)
+- Input：100-240&nbsp;V<sub>AC</sub> (50~60&nbsp;Hz)
 - Output:
-  - 48 V<sub>DC</sub> 0.23 A
-  - 9~12 V<sub>DC</sub> 3 A
-  - 5 V<sub>DC</sub> 1.5 A
+  - 48&nbsp;V<sub>DC</sub> 0.23&nbsp;A
+  - 9~12&nbsp;V<sub>DC</sub> 3&nbsp;A
+  - 5&nbsp;V<sub>DC</sub> 1.5&nbsp;A
 - Supports intelligent recognition of adapter power capability
 - Supports overcurrent buck regulation
 - Supports adjustment of small current charging based on voltage drop switching, with small switching changes and short switching time
 - Supports low battery warning signal for lithium batteries, external power supply, or lithium battery power supply warning signal
 - The internal lithium battery pack has comprehensive protection against overcharging, discharging, overcurrent, short circuit
 - Support hardware, MCU control, and other multiple protection
-- Net Weight：265 g
-- Dimension: 105 x 105 x 27.5 mm
+- Net Weight：265&nbsp;g
+- Dimension: 105 x 105 x 27.5&nbsp;mm
 
+
+<RkBottomNav/>

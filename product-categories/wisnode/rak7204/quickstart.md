@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7204 Quick Start Guide
 
 ## Prerequisites
@@ -31,7 +34,7 @@ Before going through each and every step in the installation guide of the RAK720
 
 - 1pc - RAK7204 WisNode Sense Home
 - 1pc - LoRa Antenna
-- 1pc - 3500 mAh Lithium Battery
+- 1pc - 3500&nbsp;mAh Lithium Battery
 
 ## Product Configuration
 
@@ -45,19 +48,31 @@ The included battery is **non rechargeable**. Please do note that when configuri
 
 - Connect your RAK7204 WisNode Sense Home in your Windows Machine using the provided micro-usb cable.
 
-> **Image:** RAK7204 WisNode Sense Home to Laptop Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/rak7204-pc.png"
+  width="70%"
+  caption="RAK7204 WisNode Sense Home to Laptop Connection"
+/>
 
 :::warning
-The pin distance of the battery connector is **2.0 mm**. Reverse connection or short circuit may damage the device and may cause overheating and combustion of the battery. Therefore, when replacing the battery, it is necessary to strictly confirm whether the positive and negative poles of the connector are correct.
+The pin distance of the battery connector is **2.0&nbsp;mm**. Reverse connection or short circuit may damage the device and may cause overheating and combustion of the battery. Therefore, when replacing the battery, it is necessary to strictly confirm whether the positive and negative poles of the connector are correct.
 :::
 
 - Open the RAK Serial Port Tool :
 
-> **Image:** RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/rak-serial-port-tool.png"
+  width="90%"
+  caption="RAK Serial Port Tool"
+/>
 
 - In choosing the correct COM Port number for your device. Go to your Device Manager by pressing : Windows + R and type `devmgmt.msc` or search in the Start Menu
 
-> **Image:** Device Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device-manager.png"
+  width="75%"
+  caption="Device Manager"
+/>
 
 - Look for Ports (COM & LPT) and Find the name Silicon Labs CP210x USB to UART Bridge and take note of the COM Port Number.
 
@@ -67,9 +82,17 @@ If you didn't find any Port with the name Silicon Labs CP210x USB to UART Bridge
 
 - Choose the Correct Port Number from the device manager and the Correct Baudrate then click Open:
 
-> **Image:** Correct Port Number and Correct Baud rate
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/port-number.png"
+  width="90%"
+  caption="Correct Port Number and Correct Baud rate"
+/>
 
-> **Image:** Connection Success
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/connection-sucessfully.png"
+  width="90%"
+  caption="Connection Success"
+/>
 
 ### Connecting to Helium (The People's Network)
 
@@ -79,23 +102,45 @@ This section will focus on giving a brief guide on how to connect the RAK7204 to
 
 Log in or create your [Helium account](https://www.helium.com/console).
 
-> **Image:** Helium console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/helium_console.png"
+  width="70%"
+  caption="Helium console"
+/>
 
 Once registered/logged in, you will end up at the home page where you can see your function tree on the left and your DC balance at the tops as well as a number of useful links.
 
-> **Image:** Helium console home screen
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/helium_home_page.png"
+  width="80%"
+  caption="Helium console home screen"
+/>
 
 Go to the **Devices** section in the function tree. If this is your first time doing this there will be no devices registered. Click the **+ Add Device** button to get started.
 
-> **Image:** Helium devices
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/no_device.png"
+  width="80%"
+  caption="Helium devices"
+/>
 
 A window will pop up with a set of field containing the device parameters required for its registration.
 
-> **Image:** Add a new device
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/add_device.png"
+  width="60%"
+  caption="Add a new device"
+/>
 
 Fill in a name of your choosing. The **Dev EUI**, **App EUI**, and **App Key** will have random values generated for you by default. Press the eye icon to reveal the values. You can manually replace them with values of your own. For this tutorial, use the default values. Press the **Submit** button, and you are done.
 
-> **Image:** Helium devices
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/registered_device.png"
+  width="80%"
+  caption="Helium devices"
+/>
 
 Now your RAK7204 is registered and is awaiting activation. For this to happen, you need to import the Dev EUI, App EUI and App Key in the RAK7204 using the [RAK Serial Port Tool](https://downloads.rakwireless.com/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip).
 
@@ -112,6 +157,7 @@ at+set_config=lora:join_mode:0
 ```
 at+set_config=lora:region:EU868
 ```
+
 
 - Enter the Dev UI
 
@@ -149,11 +195,19 @@ at+join
 
 You output should resemble the one in Figure 11:
 
-> **Image:** RAK7204 EUIs and key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/euis_and_keys.png"
+  width="70%"
+  caption="RAK7204 EUIs and key"
+/>
 
 If you take a look at the Helium console, you will also see the join request packets both in the graph and event log. Your node is now a part of the Helium Network.
 
-> **Image:** Helium console live device data
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/joined_device.png"
+  width="100%"
+  caption="Helium console live device data"
+/>
 
 ### Configuring the Built-in Server
 
@@ -161,41 +215,77 @@ The procedure for connecting the RAK7204 to the Built-in Server is straightforwa
 
 1. Open a browser and access the Web UI of your WisGate Edge Gateway by entering its IP address in the browser address bar. You will be greeted by the Log in screen. The default user name/password are both **"root".**
 
-> **Image:** Built-in Server Log in screen
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/login_screen.png"
+  width="100%"
+  caption="Built-in Server Log in screen"
+/>
 
 Once you have logged in make sure you are in Network Server mode. By default the gateway is working in this mode, so if this is the first time you are configuring it it should already be set. If this is nit the case go to the Network Server menu, the Network Settings sub menu and select the Network Server option in the Mode drop-down menu:
 
-> **Image:** Network Server mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/network_server_mode.png"
+  width="100%"
+  caption="Network Server mode"
+/>
 
 2. Start the Device registration process by going to the Application sub menu in the LoRa Network section and creating an application. Enter a name in the field, leave the default type and press "Save & Apply"
 
-> **Image:** Creating your application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/create_application.png"
+  width="100%"
+  caption="Creating your application"
+/>
 
 In the following screen you will see fields for the application parameters.
 
 In the Application Configuration sub-window enable the "Auto Add LoRa Device" functionality. Generate a random Application EUI and Application Key via the green arrow button next to the text fields. Note these down as you will need them for the RAK7204 configuration.
 
-> **Image:** Application configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/configure_application.png"
+  width="100%"
+  caption="Application configuration"
+/>
 
 Move to the Payload Formats sub-window and set the payload format to "CayenneLPP" via the drop down menu. This is the format that the RAK7204 uses, thus enabling this functionality will allow you to see the parsed data in the Application Server. Finally enable the "Only forward the parsed data object" functionality, press the "Save & Apply" button to finalize the configuration changes.
 
-> **Image:** Payload Format
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/payload_format.png"
+  width="100%"
+  caption="Payload Format"
+/>
 
 3. Now that your application has been created you need to go to the device section by pressing the "Edit " button.
 
-> **Image:** Editing an application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/edit_application.png"
+  width="100%"
+  caption="Editing an application"
+/>
 
 Now you are in the "Devices" section and you can add a device by entering its Device EUI, which you can find on a sticker on the back of the RAK7204. Press the "Add" button to proceed.
 
-> **Image:** Adding a device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/add_device.png"
+  width="100%"
+  caption="Adding a device"
+/>
 
 In the configuration screen enter a name for your device and leave the rest of the parameters with their default values (the Description is optional). Finish by pressing the "Save & Apply" button.
 
-> **Image:** Device parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_parameters.png"
+  width="100%"
+  caption="Device parameters"
+/>
 
 Your Device is now added to the Built-in server and you should see it in the "Devices" section.
 
-> **Image:** Devices section
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_selection.png"
+  width="100%"
+  caption="Devices section"
+/>
 
 Next you need to import the same configuration in the RAK7204.
 
@@ -209,7 +299,11 @@ Open a terminal and check your firmware version using the command:
 at+version
 ```
 
-> **Image:** Firmware version
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/firmware_version.png"
+  width="70%"
+  caption="Firmware version"
+/>
 
 If there is a newer firmware version at the [link](https://docs.rakwireless.com/product-categories/wisnode/rak7204/datasheet/#software), update using this [procedure](#burning-the-firmware).
 
@@ -235,7 +329,11 @@ at+set_config=lora:app_eui:xxxx
 at+set_config=lora:app_key:xxxx
 ```
 
-> **Image:** Importing EUIs and Key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/import_euis_keys.png"
+  width="70%"
+  caption="Importing EUIs and Key"
+/>
 
 2. Set the activation parameters (**LoRa Region**, **Device Class**, **Activation Mode**). This example will use the **EU868** regional band, **class A**, **OTAA** activation mode.
 
@@ -263,17 +361,34 @@ After executing the last command the node will automatically start the join proc
 at+join
 ```
 
-> **Image:** Activation parameters
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/activation_parameters.png"
+  width="70%"
+  caption="Activation parameters"
+/>
 
 Upon successful registration the following response will be shown in the Serial Tool.
 
-> **Image:** Successful Device Join
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/sucess_device_join.png"
+  width="70%"
+  caption="Successful Device Join"
+/>
 
 If you check the Devices Section and the Live Device Data in the Devices section you should see the device being online for some time and also some packets, in this case the Join request and an uplink packet where the data is visible in a human readable format (as we chose the Cayenne payload format)
 
-> **Image:** Device up-time
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_up_time.png"
+  width="100%"
+  caption="Device up-time"
+/>
 
-> **Image:** Device real time packets
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_realtime_packets.png"
+  width="100%"
+  caption="Device real time packets"
+/>
 
 Your RAK7204 is now connected to the Built-in server and transmitting data over regular intervals.
 
@@ -285,9 +400,20 @@ In this section, it will be shown how to connect RAK7204 WisNode Sense Home to T
 
 First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-> **Image:** The Things Stack Home Page
 
-> **Image:** Console Page after successful login
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/tts_home_page.png"
+  width="100%"
+  caption="The Things Stack Home Page"
+/>
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/sucess_login.png"
+  width="100%"
+  caption="Console Page after successful login"
+/>
+
 
 :::tip NOTE
 - To connect RAK7204 WisNode Sense Home to TTNv3, you should already have connected a gateway in range to TTNv2 or TTNv3, or you have to be sure that you are in the range of a public gateway.
@@ -299,7 +425,12 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
 1. If you do not have created applications yet, to create an application, choose **Create an application**. If you have created applications before, navigate through **Go to applications** > **+ Add application**.
 
-> **Image:** Create an application page
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/create_app_page.png"
+  width="100%"
+  caption="Create an application page"
+/>
 
 2. Fill in the needed information:
 
@@ -311,7 +442,12 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
    - **Description** (optional) – Description of your application. Optional application description; can also be used to save notes about the application.
 
-> **Image:** Application Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/app_overview.png"
+  width="100%"
+  caption="Application Overview"
+/>
+
 
 #### OTAA Mode
 
@@ -319,17 +455,29 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
 1. From the Application Overview page, click on **+ Add end device**.
 
-> **Image:** Adding a device in OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/add_device_otaa.png"
+  width="100%"
+  caption="Adding a device in OTAA mode"
+/>
 
 2. Below the **Register end device** heading, you can find two options for registering a device. Choose **Manually**.
     - For Activation mode, choose **Over the air activation (OTAA)**
     - For the LoRaWAN version, choose **MAC V1.0.2** (RAK7204 is LoRaWAN 1.0.2 fully compliant).
 
-> **Image:** Registering the device in OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/registering_device_otaa.png"
+  width="100%"
+  caption="Registering the device in OTAA mode"
+/>
 
 3. To get to the next step of the registration, click **Start**.
 
-> **Image:** Basic settings for OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/settings_otaa_mode.png"
+  width="100%"
+  caption="Basic settings for OTAA mode"
+/>
 
 4. Fill in the Basic settings for the device:
 
@@ -341,7 +489,12 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
     at+get_config=lora:status
     ```
 
-> **Image:** AppEUI of the device
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_appeui.png"
+    width="90%"
+    caption="AppEUI of the device"
+/>
+
 
    - **DevEUI** - The unique identifier for this end device. It can be found on a sticker on the back of the device.
    - **End device name** (optional) - A unique, human-readable identifier for your device. You make it up, so be creative. Device IDs cannot be used by multiple devices within the same application.
@@ -349,11 +502,15 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
 5. Click **Network layer setting**.
 
-> **Image:** Network layer setting for OTAA mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/network_setting_otaa_mode.png"
+    width="100%"
+    caption="Network layer setting for OTAA mode"
+/>
 
 6. Here you must configure the Network layer settings for the device:
 
-- **Frequency plan -** The frequency plan used by the end device. Note that, for this tutorial, the frequency plan used is Europe 863-870 MHz (SF9 for RX2 – recommended).
+- **Frequency plan -** The frequency plan used by the end device. Note that, for this tutorial, the frequency plan used is Europe 863-870&nbsp;MHz (SF9 for RX2 – recommended).
 
 - **Regional Parameters version** - The Regional Parameters specify frequency, dwell time, and other communication settings for different geographical areas. The Regional Parameters version is the version of the LoRa Alliance specification which your device supports. This should be provided by the device manufacturer in a datasheet. For this example, **PHY V1.0.2 REV B** is chosen.
 
@@ -361,7 +518,11 @@ First, log in to the TTNv3. To do so, head to the TTNv3 [site](https://eu1.cloud
 
 7. In **Advanced settings**, you can configure additional settings for your device.
 
-> **Image:** Advanced network layer settings of the device
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_networks_layer_settings.png"
+    width="100%"
+    caption="Advanced network layer settings of the device"
+/>
 
 :::tip NOTE
 
@@ -371,15 +532,27 @@ For this example, these settings will be left as default.
 
 8. Click **Join settings**.
 
-> **Image:** Join settings for OTAA mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/join_settings_otaa.png"
+    width="100%"
+    caption="Join settings for OTAA mode"
+/>
 
 9. Fill in the **Application key** (AppKey) to secure communication between the end device and the application. The AppKey can be generated automatically by clicking the **Generate** button next to the **AppKey** field.
 
-> **Image:** Generate the AppKey
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/generate_appkey.png"
+    width="100%"
+    caption="Generate the AppKey"
+/>
 
 10. In the **Advanced settings**, you can configure more options about your device.
 
-> **Image:** Advanced join settings for OTAA mode
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/appid_settings.png"
+    width="100%"
+    caption="Advanced join settings for OTAA mode"
+/>
 
 :::tip NOTE
 
@@ -389,13 +562,19 @@ For this example, these settings will be left as default.
 
 11. Finally, to finish registering your device, click **Add end device**.
 
+
 ##### Configuring the Device in OTAA Mode
 
 1. For configuring the node, you will need the following three parameters: **Device EUI, Application EUI**, and **Application Key**. You can see them all on the **Device Overview** page. But since the two EUI's come with the device, you only need the Application Key from there.
 
-> **Image:** OTAA device parameters
+<RkImage
+    src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/rak7204_parameters.png"
+    width="100%"
+    caption="OTAA device parameters"
+/>
 
 2. Using the RAK Serial Port Tool, set the join mode, device class, and your LoRaWAN region to your correct frequency band, with the following set of AT commands:
+
 
 - For the join mode (OTAA):
 
@@ -419,7 +598,11 @@ at+set_config=lora:region:EU868
 Remember to replace the **frequency band** with the one for your LoRaWAN region. Check first your [frequency plan](https://www.thethingsnetwork.org/docs/lorawan/frequencies-by-country.html).
 :::
 
-> **Image:** Setting up the RAK7204 WisNode Sense Home operation mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/setup_rak7204_operation_mode.png"
+  width="90%"
+  caption="Setting up the RAK7204 WisNode Sense Home operation mode"
+/>
 
 :::tip NOTE
 The following tutorial is based on using the EU868 frequency band.
@@ -427,11 +610,16 @@ The following tutorial is based on using the EU868 frequency band.
 
 3. Now that those parameters are set, enter the **App Key**, using the command below. Remember to replace the **"XXXX"** with the corresponding parameter value for your particular case.
 
+
 ```
 at+set_config=lora:app_key:XXXX
 ```
 
-> **Image:** Setting up the RAK7204 WisNode Sense Home OTAA parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/rak7204_appkey_parameters.png"
+  width="90%"
+  caption="Setting up the RAK7204 WisNode Sense Home OTAA parameters"
+/>
 
 4. Finally, execute the join command:
 
@@ -439,11 +627,20 @@ at+set_config=lora:app_key:XXXX
 at+join
 ```
 
-> **Image:** Join command
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/join_command.png"
+  width="90%"
+  caption="Join command"
+/>
 
 If you get a response in the **Live data** feed in The Things Stack, it means your RAK7204 is successfully connected!
 
-> **Image:** Sending data to The Things Stack from RAK7204 WisNode Sense Home
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/sending_data_rak7204.png"
+  width="100%"
+  caption="Sending data to The Things Stack from RAK7204 WisNode Sense Home"
+/>
+
 
 ### Connecting to ChirpStack
 
@@ -458,25 +655,49 @@ In this section, it is assumed that you are using RAK Gateway and its built-in C
 1. Open the web page of the ChirpStack which you want to connect with and login.
 2. By default, there is already one or more items in this page, you can use it or create a new item. Now, let’s create a new item by clicking the “**CREATE**” button, then filling them in.
 
-> **Image:** ChirpStack Applications
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/chirpstack_app.png"
+  width="100%"
+  caption="ChirpStack Applications"
+/>
 
 3. Fill up the necessary information then Click "**CREATE APPLICATION**”.
 
-> **Image:** Creating the Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/ch_creating_app.png"
+  width="100%"
+  caption="Creating the Application"
+/>
 
 4. Click the new item name “**RAKwireless_Test_Application**”:
 
-> **Image:** Applications page in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/app_page.png"
+  width="100%"
+  caption="Applications page in ChirpStack"
+/>
 
-> **Image:** RAKwireless Test Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/test_application.png"
+  width="100%"
+  caption="RAKwireless Test Application"
+/>
 
 5. Add a Node device into ChirpStack by clicking the “**CREATE**” button:
 
-> **Image:** Adding a Node Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/test_application.png"
+  width="100%"
+  caption="Adding a Node Device"
+/>
 
 6. Fill them in. You can generate a **Device EUI** automatically by clicking the Device EUI icon, or you can write the correct Device EUI in the edit box.
 
-> **Image:** Filling the Device Parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/fill_device_parameters.png"
+  width="100%"
+  caption="Filling the Device Parameters"
+/>
 
 :::tip NOTE
 If you want to join in OTAA mode, select “DeviceProfile_OTAA” in the “Device-profile” item. If you want to join in ABP mode and CN470 frequency, then, select “DeviceProfile_ABP_CN470” in the “Device-Profile” item. If you want to join in ABP mode and other frequencies except AS923 and CN470, you should select “DeviceProfile_ABP” in the “Device-profile” item.
@@ -486,21 +707,37 @@ If you want to join in OTAA mode, select “DeviceProfile_OTAA” in the “Devi
 
 1. To join ChirpStack in OTAA mode, select “**DeviceProfile_OTAA**”.
 
-> **Image:** Selecting OTAA Activation Mode in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/select_otaa_activation_chirpstack.png"
+  width="100%"
+  caption="Selecting OTAA Activation Mode in ChirpStack"
+/>
 
 2. Press “**CREATE DEVICE**” button. You may write the application key by yourself or generate it automatically by clicking the icon highlighted in the image.
 
-> **Image:** Application Key Generation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/app_key_generation.png"
+  width="100%"
+  caption="Application Key Generation"
+/>
 
 3. Click "**SET DEVICE KEYS**” button. Now, you’ve completed the configuration on ChirpStack.
 
 - The Device EUI which was set in the previous section to your RAK7204 WisNode Sense Home as "dev_eui" is the same in the image highlighted below.
 
-> **Image:** Device EUI Code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/insert_device_eui.png"
+  width="100%"
+  caption="Device EUI Code"
+/>
 
 - Same with the Application Key, which was set in the previous section as "app_key" is the same with the image highlighted.
 
-> **Image:** Application Key LoRaWAN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/app_key_lorawan.png"
+  width="100%"
+  caption="Application Key LoRaWAN"
+/>
 
 :::tip NOTE
 The Application EUI which was into RAK7204 WisNode Sense Home as “app_eui” is not needed for ChirpStack.
@@ -512,7 +749,11 @@ The Application EUI which was into RAK7204 WisNode Sense Home as “app_eui” i
 at+version
 ```
 
-> **Image:** RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/serial_port_tool.png"
+  width="45%"
+  caption="RAK Serial Port Tool"
+/>
 
 - Now, let us join our RAK7204 WisNode Sense Home using the OTAA activation mode.
 
@@ -526,7 +767,11 @@ at+set_config=lora:join_mode:0
 at+set_config-lora:class:0
 ```
 
-> **Image:** Setting of LoRaWAN mode and class
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/settings_lorawan_class.jpg"
+  width="90%"
+  caption="Setting of LoRaWAN mode and class"
+/>
 
 6. Type the following AT command to set the: **Frequency/Region, Device EUI, Application EUI and Application Key.** Remember to replace the **"XXXX"** with the corresponding parameter value for your particular case:
 
@@ -546,9 +791,17 @@ at+set_config=lora:app_eui:XXXX
 at+set_config=lora:app_key:XXXX
 ```
 
-> **Image:** Setting of Frequency and Device EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/frequency_and_device_eui.jpg"
+  width="90%"
+  caption="Setting of Frequency and Device EUI"
+/>
 
-> **Image:** Setting of Application EUI and Key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/app_eui_key.jpg"
+  width="90%"
+  caption="Setting of Application EUI and Key"
+/>
 
 7. Then, **join** in OTAA mode.
 
@@ -556,13 +809,21 @@ at+set_config=lora:app_key:XXXX
 at+join
 ```
 
-> **Image:** Joining in OTAA
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/join_otaa.png"
+  width="45%"
+  caption="Joining in OTAA"
+/>
 
 - **Joined Successfully! :tada:**
 
 8. You can view the "**JoinRequest**" and "**JoinAccept**" on ChirpStack page:
 
-> **Image:** Join Request of the Device in the ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/request_device_chirpstack.png"
+  width="100%"
+  caption="Join Request of the Device in the ChirpStack"
+/>
 
 9. Let’s try sending data from our RAK7204 WisNode Sense Home to the ChirpStack by typing the command below in the serial port.
 
@@ -570,11 +831,19 @@ at+join
 at+send=lora:2:1234567890
 ```
 
-> **Image:** Sending Data to ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/sending_data_chirpstack.png"
+  width="45%"
+  caption="Sending Data to ChirpStack"
+/>
 
 - You can see the message on ChirpStack page:
 
-> **Image:** Message Received in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/request_device_chirpstack.png"
+  width="100%"
+  caption="Message Received in ChirpStack"
+/>
 
 #### ABP Mode
 
@@ -584,34 +853,66 @@ at+send=lora:2:1234567890
  Frequency AS923 in ABP Mode is not supported in ChirpStack
 :::
 
-> **Image:** Switching to ABP Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/abp_mode.png"
+  width="100%"
+  caption="Switching to ABP Mode"
+/>
 
 2. Then you can see that there are some parameters for ABP in the “**ACTIVATION**” item:
 
-> **Image:** ABP Parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/abp_parameters.png"
+  width="100%"
+  caption="ABP Parameters"
+/>
 
 3. Next, let’s use these parameters to set WisNode LoRa by using **AT command**. Let's join in **ABP** mode and set **EU868** frequency as an example.
 4. If the join mode is not in ABP, just set the LoRa join mode to **ABP** and LoRa class to **Class A** by typing the following commands in RAK Serial Port Tool
 
-> **Image:** Setting of LoRaWAN Mode and Class
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/abp_parameters.png"
+  width="100%"
+  caption="Setting of LoRaWAN Mode and Class"
+/>
 
 5. Type the following AT command to set your respective: **Frequency/Region**, **Device Address**, **Network Session Key** and **App Session Key**.
 
-> **Image:** Setting of Frequency and Device Address
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/frequency_device_adress.jpg"
+  width="90%"
+  caption="Setting of Frequency and Device Address"
+/>
 
-> **Image:** Setting of Device EUI and Network Session Key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/device_eui_network_key.jpg"
+  width="90%"
+  caption="Setting of Device EUI and Network Session Key"
+/>
 
 6. Then, **join** in ABP mode.
 
-> **Image:** Joining of ABP
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/joining_abp.jpg"
+  width="45%"
+  caption="Joining of ABP"
+/>
 
 - Now, try sending data from our WisNode LoRa to the Chirpstack
 
-> **Image:** Sending Data to ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/sending_data_abp.png"
+  width="45%"
+  caption="Sending Data to ChirpStack"
+/>
 
 - You can see the data which is just sent from RAK7204 WisNode Sense Home on ChirpStack page:
 
-> **Image:** Message Status in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/status_chirpstack.png"
+  width="100%"
+  caption="Message Status in ChirpStack"
+/>
 
 ### Decoding Sensor Data on ChirpStack and TTN
 
@@ -620,15 +921,27 @@ In the previous section, we have successfully sent some raw data from our RAK720
 
 Let's take this data for example:
 
-> **Image:** Received Raw Data in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/received_data_ttn.jpg"
+  width="80%"
+  caption="Received Raw Data in TTN"
+/>
 
-> **Image:** Actual Data sent to Cayenne
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/data_sent_to_cayenne.jpg"
+  width="80%"
+  caption="Actual Data sent to Cayenne"
+/>
 
 For this example, the payload is : **08 02 01 63 07 68 4B 06 73 25 9E 02 67 01 15 04 02 22 72 04 02 22 72**
 
 Now lets analyze each data , which is in Hexadecimal Format. We will be using the data mentioned above as an example. We will convert the Hexadecimal Data into Decimal Data using this [converter](https://www.rapidtables.com/convert/number/hex-to-decimal.html?x=FF) in order to be able to understand it.
 
-> **Image:** Hexadecimal to Decimal converter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/hexadecimal_to_decimal.jpg"
+  width="40%"
+  caption="Hexadecimal to Decimal converter"
+/>
 
 ##### 1. Battery Voltage
 | Parameter | Hex Data | Decimal Equivalent | Multiplier | True Value |
@@ -645,6 +958,7 @@ Example Data: **07 68 4B**
 | Data flag | 07 68 |  |  |  |
 | Humidity | 4B | 75 | 0.5 % Unsigned | 37.5 % RH |
 
+
 ##### 3. Pressure Data
 
 Example Data: **06 73 25 9E**
@@ -654,6 +968,7 @@ Example Data: **06 73 25 9E**
 | Data flag | 06 73 |  |  |  |
 | Pressure | 25 9E | 9630 | 0.1 hPa Unsigned MSB | 963.0 hPa |
 
+
 ##### 4. Temperature Data
 
 Example Data:  **02 67 01 15**
@@ -662,6 +977,7 @@ Example Data:  **02 67 01 15**
 | ---- | ---- | ---- | ---- | ---- |
 | Data flag | 02 67 |  |  |  |
 | Temperature | 01 15 | 277 | 0.1 °C Signed MSB | 27.7℃ |
+
 
 ##### 5. Gas Resistance Data
 
@@ -682,6 +998,7 @@ For further details about the LPP format, you can take a look at this **[link.](
 
 <details>
 <summary> Click to view the code</summary>
+
 
 ```js
 // ttn application function to decode uplink data.
@@ -812,15 +1129,28 @@ function rakSensorDataDecode(hexStr) {
 ```
 </details>
 
-> **Image:** Github Page for the Decoding Function
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/github_decoding_function.png"
+  width="100%"
+  caption="Github Page for the Decoding Function"
+/>
 
 2. From your TTN console, go to application page and click the "**Payload Formats**" tab as shown in the image below.
 
-> **Image:** Payload Format at TTN Application Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/payload_at_ttn.jpg"
+  width="80%"
+  caption="Payload Format at TTN Application Page"
+/>
 
 3. Next, select "**Payload Format**" as "**Custom**". Then, from the decoder tab, copy and paste the decoder function from **step 1**.
 
-> **Image:** Decoder Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/decoder_function.jpg"
+  width="80%"
+  caption="Decoder Function"
+/>
 
 ##### Testing the Validity of Decoding Sensor Data in TTN
 
@@ -828,7 +1158,11 @@ function rakSensorDataDecode(hexStr) {
 
 **08 02 01 63 07 68 4B 06 73 25 9E 02 67 01 15 04 02 22 72 04 02 22 72**
 
-> **Image:** Testing Payload Data
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/test_payload_data.jpg"
+  width="80%"
+  caption="Testing Payload Data"
+/>
 
 2. Then, click "**Test**" and it will generate a code with the decoded data as shown in the image above.
 
@@ -836,13 +1170,20 @@ function rakSensorDataDecode(hexStr) {
 
 After gateway and node go online, click the uplink data record from the application data tab to check the decode status. From the image below, we can see the data decoded successfully in TTN.
 
-> **Image:** Uplink Decoded Data
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/uplink_decoded_data.jpg"
+  width="100%"
+  caption="Uplink Decoded Data"
+/>
+
 
 #### Decoding Sensor Data in ChirpStack
 
 ##### Input Decoding Function in ChirpStack
 
 1. To start with, download the decoding function through this **[link](https://github.com/RAKWireless/RUI_LoRa_node_payload_decoder/blob/master/RUISensorDataDecoder_for_ChirpStack.js)**.
+
+
 
 <details>
 <summary> Click to view the code </summary>
@@ -978,11 +1319,19 @@ function rakSensorDataDecode(hexStr) {
 
 2. From to your ChirpStack, go to application page and click the "**APPLICATION CONFIGURATION**" tab as shown in the image below.
 
-> **Image:** Application Configuration Tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/app_configuration_tab.jpg"
+  width="100%"
+  caption="Application Configuration Tab"
+/>
 
 3. Next, select "**Payload codec**" as "**Custom JavaScript codec functions**". Then, from the decoder tab, copy and paste the decoder function from **step 1**.
 
-> **Image:** Decoded Function in Chirpstack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/decoded_function_cs.jpg"
+  width="80%"
+  caption="Decoded Function in Chirpstack"
+/>
 
 4. Then, click ‘**UPDATE APPLICATION**’ button to save decoding function.
 
@@ -990,7 +1339,11 @@ function rakSensorDataDecode(hexStr) {
 
 After gateway and node go online, click the uplink data record from the application data at "**LIVE DEVICE DATA**" tab to check the decode status. From the image below, we can see the data decoded successfully in ChirpStack.
 
-> **Image:** Decode Status in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/decoded_status_cs.jpg"
+  width="80%"
+  caption="Decode Status in ChirpStack"
+/>
 
 ### LoRa P2P Mode
 
@@ -1004,14 +1357,22 @@ The setup process for the RAK7204 WisNode Sense Home in LoRaP2P Mode is just the
 at+set_config=lora:work_mode:1
 ```
 
-> **Image:** LoRaP2P Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/lorap2p_mode.jpg"
+  width="45%"
+  caption="LoRaP2P Mode"
+/>
 
 Then configure LoRaP2P parameters for both of them as follow for example:
 ```sh
 at+set_config=lorap2p:869525000:7:0:1:5:5
 ```
 
-> **Image:** LoRaP2P Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/lorap2p_configuration.jpg"
+  width="90%"
+  caption="LoRaP2P Configuration"
+/>
 
 OK! Try to send a message from RAK7204 WisNode Sense Home - 2 (the right one) to RAK7204 WisNode Sense Home - 1 (the left one):
 
@@ -1019,11 +1380,19 @@ OK! Try to send a message from RAK7204 WisNode Sense Home - 2 (the right one) to
 at+send=lorap2p:1234567890
 ```
 
-> **Image:** Test Message Sent
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/test_message_sent.jpg"
+  width="90%"
+  caption="Test Message Sent"
+/>
 
 **Success!** You can send more messages:
 
-> **Image:** Test Message Sent
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/message_sent.jpg"
+  width="90%"
+  caption="Test Message Sent"
+/>
 
 Similarly, you can send message from RAK7204 WisNode Sense Home-1 to RAK7204 WisNode Sense Home-2 surely. Just try it freely. Great! We’ve done it, and that’s all about how to use
 LoRaP2P on RAK811 WisNode.
@@ -1048,8 +1417,7 @@ There is also an AT command which is used to set the DataRate(DR):
 
 | AT Command | Description |
 | ---- | ---- |
-| `at+set_config=lora:dr:X` | Set the DR of LoRa Node. 
-**• X** : the number of DR. Generally, the value of X can be 0~5. More details, please check the LoRaWAN 1.0.2 specification. |
+| `at+set_config=lora:dr:X` | Set the DR of LoRa Node. <br />**• X** : the number of DR. Generally, the value of X can be 0~5. More details, please check the LoRaWAN 1.0.2 specification. |
 
 For example, if you want to set the current DR to DR0, you just do as follow:
 ```sh
@@ -1067,17 +1435,33 @@ You can burn the bootloader in your RAK7204 WisNode Sense Home by following the 
 
 1. Download and Install the [**STM32CubeProgrammer**](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stm32cubeprog.html#overview) Software from STMicroelectronics on your Windows PC.
 
-> **Image:** STM32CubeProg Download Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/stm32_download_page.jpg"
+  width="100%"
+  caption="STM32CubeProg Download Page"
+/>
 
 2. Insert the provided jumper on the Boot line pins ("BOOT" pin and "VDD"), shorting them . Also, make sure that the RX pin of J25 is connected to the RXCP pin.
 
-> **Image:** Boot Line shorted using the Jumper Pins
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/jumper-pins.png"
+  width="50%"
+  caption="Boot Line shorted using the Jumper Pins"
+/>
 
 3. Connect the RAK7204 WisNode Sense Home on your Windows PC's USB Interface and press the RST Button or power it on again.  Open the STM32CubeProgrammer Software and Select UART type.
 
-> **Image:** USB Interface
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/rak7204-pc.png"
+  width="70%"
+  caption="USB Interface"
+/>
 
-> **Image:** UART Settings in STM32CubeProgrammer
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/uart_settings.jpg"
+  width="100%"
+  caption="UART Settings in STM32CubeProgrammer"
+/>
 
 4. Choose the appropriate port number in the **COM Port** field.
 
@@ -1085,12 +1469,22 @@ You can burn the bootloader in your RAK7204 WisNode Sense Home by following the 
 
 - If you didn't properly set your RAK7204 WisNode Sense Home to work in BOOT Mode, you will see the following information in the Log Section of the Software:
 
-> **Image:** Errors Occurred During Connecting
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/errors_ocurred.jpg"
+  width="100%"
+  caption="Errors Occurred During Connecting"
+/>
 
 - If this happens, Close the STM32CubeProgrammer and go back to the section above and set your RAK7204 WisNode Sense Home to work in **Boot Mode** again.
 - If all works well, You will then see the following log:
 
-> **Image:** Successful Connection Log to your Device
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/connection_to_device.jpg"
+  width="100%"
+  caption="Successful Connection Log to your Device"
+/>
 
 Now that you have successfully connected your RAK7204 WisNode Sense Home to the STM32CubeProgrammer Tool, let's burn the Bootloader into the RAK7204 WisNode Sense Home.
 
@@ -1098,19 +1492,35 @@ Now that you have successfully connected your RAK7204 WisNode Sense Home to the 
 
 7. In the STM32CubeProgrammer, Click the "Erase Chip" button to erase all the data on RAK7204 WisNode Sense Home:
 
-> **Image:** Erasing the Data in the Chip
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/erasing_data_on_chip.jpg"
+  width="100%"
+  caption="Erasing the Data in the Chip"
+/>
 
 8. Click "Open File" and select the correct Bootloader file that you have just downloaded.
 
-> **Image:** Opening the Bootloader file
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/opening_bootloader.jpg"
+  width="100%"
+  caption="Opening the Bootloader file"
+/>
 
 9. Click the "Download" Button to start the burning process.
 
-> **Image:** Downloading of Bootloader to the device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/downloading_bootloader.jpg"
+  width="100%"
+  caption="Downloading of Bootloader to the device"
+/>
 
 10. After a couple of seconds, you will see the following window telling that you have successfully burned the Bootloader to your RAK7204 WisNode Sense Home!
 
-> **Image:** Successfully Burned the Bootloader to the device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/burned_bootloader.jpg"
+  width="100%"
+  caption="Successfully Burned the Bootloader to the device"
+/>
 
 11. “Disconnect” and close the “STM32CubeProgrammer” tool.
 
@@ -1133,11 +1543,19 @@ If the firmware version of your **RAK7204 WisNode Sense Home**  is newer than V3
 at+set_config=device:boot
 ```
 
-> **Image:** Entering Boot Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/entering_boot_mode.jpg"
+  width="80%"
+  caption="Entering Boot Mode"
+/>
 
 - Download the [RAK Device Firmware Upgrade (DFU) Tool](https://downloads.rakwireless.com/#LoRa/Tools/RAK_Device_Firmware_Upgrade_tool/) from the RAKwireless website.
 
-> **Image:** Device Firmware Upgrade Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/rak-upgrade-tool.png"
+  width="75%"
+  caption="Device Firmware Upgrade Tool"
+/>
 
 - Download the [latest firmware](https://downloads.rakwireless.com/#LoRa/RAK7204/Firmware/) for the RAK7204 WisNode Sense Home
 
@@ -1150,13 +1568,26 @@ Visit this [article](https://www.thethingsnetwork.org/docs/lorawan/frequencies-b
 
 - Select the application firmware file of the module with the suffix ". bin".
 
-> **Image:** Select firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/choose-firmware.png"
+  width="75%"
+  caption="Select firmware"
+/>
 
 - Click the "upgrade" button to upgrade the device. After the upgrade is complete, the RAK7204 is now ready to work with the new firmware.
 
-> **Image:** Firmware upgrading
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/upgrade-firmware.png"
+  width="75%"
+  caption="Firmware upgrading"
+/>
 
-> **Image:** Upgrade successful
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/upgrade-successful.png"
+  width="75%"
+  caption="Upgrade successful"
+/>
+
 
 - Now, **CLOSE** the upgrade tool and and proceed to the next section.
 
@@ -1164,7 +1595,12 @@ Visit this [article](https://www.thethingsnetwork.org/docs/lorawan/frequencies-b
 
 In order for you to check if you have successfully installed the firmware on your RAK7204 WisNode Sense Home, open the Serial Port tool again. Press the "Reset button" or type the command below. If everything works  perfectly, you should see the following message below:
 
-> **Image:**  Restarting Your Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/quickstart/restaring_device.jpg"
+  width="45%"
+  caption=" Restarting Your Device"
+/>
 
 This information means that you have uploaded the Firmware successfully!
 
+<RkBottomNav/>

@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 #  RAK7267 WisGate Soho Pro
 
 Thank you for choosing **RAK7267 WisGate Soho Pro** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary information for your product.
@@ -47,7 +50,7 @@ In addition, RAK7267 operates under <a href="https://docs.rakwireless.com/produc
 - LoRa Concentrator for up to **8 channels**
 - Backhaul: Wi-Fi and LTE
 - GPS
-- Supports 9~36 VDC power supply and RAK Solar Battery Kit
+- Supports 9~36&nbsp;VDC power supply and RAK Solar Battery Kit
 - Internal antenna for LoRa, LTE, Wi-Fi, and GPS
 
 ### Software
@@ -130,149 +133,18 @@ The following table provides a comparative summary of RAK commercial gateways. I
 | **Product Image**                | <img src="https://images.docs.rakwireless.com/wisgate/rak7240-v2/rak7240v2.png" alt="RAK7240V2/RAK7240CV2" style={{zoom:'15%'}} />                                                                                                                                          | <img src="https://images.docs.rakwireless.com/wisgate/rak7267/rak7267.png" alt="RAK7267" style={{zoom:'15%'}} />                                                                                                                                                            | <img src="https://images.docs.rakwireless.com/wisgate/rak7285/rak7285.png" alt="RAK7285/RAK7285C" style={{zoom:'15%'}} />                                                                                                                                                   | <img src="https://images.docs.rakwireless.com/wisgate/rak7289v2-rak7289cv2/rak7289v2.png" alt="RAK7289V2/RAK7289CV2" style={{zoom:'15%'}} />                                                                                                                                |
 | **Gateway Category**             | Outdoor LoRaWAN Gateway                                                                                                                                                                                                                                                     | Outdoor LoRaWAN Gateway                                                                                                                                                                                                                                                     | Outdoor LoRaWAN Gateway                                                                                                                                                                                                                                                     | Outdoor LoRaWAN Gateway                                                                                                                                                                                                                                                     |
 | **OS**                           | WisGateOS 2                                                                                                                                                                                                                                                                 | WisGateOS 2                                                                                                                                                                                                                                                                 | WisGateOS 2                                                                                                                                                                                                                                                                 | WisGateOS 2                                                                                                                                                                                                                                                                 |
-| **LoRa Feature**                 | <ul><li>SX1303 LoRa Core
-8 Channels /16 Channels
-</li><li>RX Sensitivity:
-﹣139 dBm (Min)
-</li><li>TX Power:
-27 dBm (Max)</li></ul>                                                                                                            | <ul><li>SX1303 LoRa Core
-8 Channels
-</li><li>RX Sensitivity:
-﹣140 dBm (Min)
-</li><li>TX Power:
-27 dBm (Max)
-Listen Before Talk</li></ul>                                                                                                  | <ul><li>SX1303 LoRa Core
-8 Channels in full-duplex
-</li><li>RX Sensitivity:
-﹣139 dBm (Min)
-</li><li>TX Power:
-30 dBm (Max)
-Listen Before Talk</li></ul>                                                                                   | <ul><li>SX1303 LoRa Core
-8 Channels /16 Channels
-</li><li>RX Sensitivity:
-﹣139 dBm (Min)
-</li><li>TX Power:
-27 dBm (Max)
-Listen Before Talk</li></ul>                                                                                     |
-| **Cellular Feature**             | Available with RAK7240CV2
-(for the 8-channel variant)
-IoT/M2M-optimized LTE Cat 4 Module
-Supports:
-EG95-E
-EG95-NA                                                                                                                                       | IoT/M2M -LTE Cat 1 Module
-Supports:
-EG915U-EU
-EG915U-LA
-EG915Q-NA
-                                                                                                                                                                                      | Available with RAK7285C
-IoT/M2M-optimized LTE Cat 4 Module
-Supports:
-EG95-E
-EG95-NA
-EC25-AU
-                                                                                                                                                        | Available with RAK7289CV2
-IoT/M2M-optimized LTE Cat 4 Module
-Supports:
-EG95-E
-EG95-NA
-EC25-J
-EC25
-                                                                                                                                              |
-| **Wi-Fi Feature**                | <ul><li>Frequency:
-2.4 GHz (802.11b/g/n)
-</li><li>Operation Channels:
-2.4 GHz: 1-13</li></ul>                                                                                                                                                         | <ul><li>Frequency:
-2.4 GHz (802.11b/g/n)
-</li><li>Operation Channels:
-2.4 GHz: 1-13</li></ul>                                                                                                                                                         | <ul><li>Frequency:
-2.4 GHz (802.11b/g/n)
-</li><li>Operation Channels:
-2.4 GHz: 1-13</li></ul>                                                                                                                                                         | <ul><li>Frequency:
-2.4 GHz (802.11b/g/n)
-</li><li>Operation Channels:
-2.4 GHz: 1-13</li></ul>                                                                                                                                                         |
-| **Frequency Band**               | EU868
-IN865
-RU864
-US915
-AU915
-KR920
-AS923-1/2/3/4
-EU433
-CN470                                                                                                                                                                               | EU868
-IN865
-RU864
-US915
-AU915
-KR920
-AS923-1/2/3/4                                                                                                                                                                                                   | US915
-AU915                                                                                                                                                                                                                                                             | EU868
-IN865
-US915
-AU915
-KR920
-AS923-1/2/3/4
-EU433
-CN470                                                                                                                                                                                         |
-| **Network Connectivity**         | Ethernet
-Wi-Fi
-LTE                                                                                                                                                                                                                                                  | Wi-Fi
-LTE                                                                                                                                                                                                                                                               | Ethernet
-Wi-Fi
-LTE                                                                                                                                                                                                                                                  | Ethernet
-Wi-Fi
-LTE                                                                                                                                                                                                                                                  |
+| **LoRa Feature**                 | <ul><li>SX1303 LoRa Core<br/>8 Channels /16 Channels<br/></li><li>RX Sensitivity:<br/>﹣139&nbsp;dBm (Min)<br/></li><li>TX Power:<br/>27&nbsp;dBm (Max)</li></ul>                                                                                                            | <ul><li>SX1303 LoRa Core<br/>8 Channels<br/></li><li>RX Sensitivity:<br/>﹣140&nbsp;dBm (Min)<br/></li><li>TX Power:<br/>27&nbsp;dBm (Max)<br/>Listen Before Talk</li></ul>                                                                                                  | <ul><li>SX1303 LoRa Core<br/>8 Channels in full-duplex<br/></li><li>RX Sensitivity:<br/>﹣139&nbsp;dBm (Min)<br/></li><li>TX Power:<br/>30&nbsp;dBm (Max)<br/>Listen Before Talk</li></ul>                                                                                   | <ul><li>SX1303 LoRa Core<br/>8 Channels /16 Channels<br/></li><li>RX Sensitivity:<br/>﹣139&nbsp;dBm (Min)<br/></li><li>TX Power:<br/>27&nbsp;dBm (Max)<br/>Listen Before Talk</li></ul>                                                                                     |
+| **Cellular Feature**             | Available with RAK7240CV2<br/>(for the 8-channel variant)<br/>IoT/M2M-optimized LTE Cat 4 Module<br/>Supports:<br/>EG95-E<br/>EG95-NA                                                                                                                                       | IoT/M2M -LTE Cat 1 Module<br/>Supports:<br/>EG915U-EU<br/>EG915U-LA<br/>EG915Q-NA<br/>                                                                                                                                                                                      | Available with RAK7285C<br/>IoT/M2M-optimized LTE Cat 4 Module<br/>Supports:<br/>EG95-E<br/>EG95-NA<br/>EC25-AU<br/>                                                                                                                                                        | Available with RAK7289CV2<br/>IoT/M2M-optimized LTE Cat 4 Module<br/>Supports:<br/>EG95-E<br/>EG95-NA<br/>EC25-J<br/>EC25<br/>                                                                                                                                              |
+| **Wi-Fi Feature**                | <ul><li>Frequency:<br/>2.4&nbsp;GHz (802.11b/g/n)<br/></li><li>Operation Channels:<br/>2.4&nbsp;GHz: 1-13</li></ul>                                                                                                                                                         | <ul><li>Frequency:<br/>2.4&nbsp;GHz (802.11b/g/n)<br/></li><li>Operation Channels:<br/>2.4&nbsp;GHz: 1-13</li></ul>                                                                                                                                                         | <ul><li>Frequency:<br/>2.4&nbsp;GHz (802.11b/g/n)<br/></li><li>Operation Channels:<br/>2.4&nbsp;GHz: 1-13</li></ul>                                                                                                                                                         | <ul><li>Frequency:<br/>2.4&nbsp;GHz (802.11b/g/n)<br/></li><li>Operation Channels:<br/>2.4&nbsp;GHz: 1-13</li></ul>                                                                                                                                                         |
+| **Frequency Band**               | EU868<br/>IN865<br/>RU864<br/>US915<br/>AU915<br/>KR920<br/>AS923-1/2/3/4<br/>EU433<br/>CN470                                                                                                                                                                               | EU868<br/>IN865<br/>RU864<br/>US915<br/>AU915<br/>KR920<br/>AS923-1/2/3/4                                                                                                                                                                                                   | US915<br/>AU915                                                                                                                                                                                                                                                             | EU868<br/>IN865<br/>US915<br/>AU915<br/>KR920<br/>AS923-1/2/3/4<br/>EU433<br/>CN470                                                                                                                                                                                         |
+| **Network Connectivity**         | Ethernet<br/>Wi-Fi<br/>LTE                                                                                                                                                                                                                                                  | Wi-Fi<br/>LTE                                                                                                                                                                                                                                                               | Ethernet<br/>Wi-Fi<br/>LTE                                                                                                                                                                                                                                                  | Ethernet<br/>Wi-Fi<br/>LTE                                                                                                                                                                                                                                                  |
 | **GPS**                          | Supports GPS                                                                                                                                                                                                                                                                | Supports GPS                                                                                                                                                                                                                                                                | Supports GPS                                                                                                                                                                                                                                                                | Supports GPS                                                                                                                                                                                                                                                                |
-| **Antenna**                      | **LoRa/Wi-Fi/LTE/GPS**:
-External antenna
-N-Type connector                                                                                                                                                                                                           | **LoRa/Wi-Fi/LTE/GPS**: Internal antenna                                                                                                                                                                                                                                    | **LoRa/Wi-Fi/LTE/GPS**:
-External antenna
-N-Type connector                                                                                                                                                                                                           | **LoRa**:
-External antenna
-N-Type connector
-**Wi-Fi/LTE/GPS**:
-Internal antenna                                                                                                                                                                             |
-| **Power Pupply**                 | PoE (IEEE 802.3af) : 42\~57 V<sub>DC</sub>
-9\~24 V<sub>DC</sub>
-Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                                | 9\~36 V<sub>DC</sub>
-Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                                                                                    | PoE (IEEE 802.3at): 42\~57 V<sub>DC</sub>
-9\~36 V<sub>DC</sub>
-Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                                 | PoE (IEEE 802.3af): 37\~57 V<sub>DC</sub>
-12 V<sub>DC</sub>
-
-Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                               |
+| **Antenna**                      | **LoRa/Wi-Fi/LTE/GPS**:<br/>External antenna<br/>N-Type connector                                                                                                                                                                                                           | **LoRa/Wi-Fi/LTE/GPS**: Internal antenna                                                                                                                                                                                                                                    | **LoRa/Wi-Fi/LTE/GPS**:<br/>External antenna<br/>N-Type connector                                                                                                                                                                                                           | **LoRa**:<br/>External antenna<br/>N-Type connector<br/>**Wi-Fi/LTE/GPS**:<br/>Internal antenna                                                                                                                                                                             |
+| **Power Pupply**                 | PoE (IEEE 802.3af) : 42\~57&nbsp;V<sub>DC</sub><br/>9\~24&nbsp;V<sub>DC</sub><br/>Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                                | 9\~36&nbsp;V<sub>DC</sub><br/>Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                                                                                    | PoE (IEEE 802.3at): 42\~57&nbsp;V<sub>DC</sub><br/>9\~36&nbsp;V<sub>DC</sub><br/>Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                                 | PoE (IEEE 802.3af): 37\~57&nbsp;V<sub>DC</sub><br/>12&nbsp;V<sub>DC</sub><br/><br/>Compatible with [RAK Solar Battery Kit](https://docs.rakwireless.com/product-categories/accessories/rak9155/overview/#product-description)                                               |
 | **Ingress Protection**           | IP65                                                                                                                                                                                                                                                                        | IP67                                                                                                                                                                                                                                                                        | IP67                                                                                                                                                                                                                                                                        | IP67                                                                                                                                                                                                                                                                        |
 | **Enclosure Material**           | Aluminum                                                                                                                                                                                                                                                                    | ABS plastic                                                                                                                                                                                                                                                                 | Aluminum                                                                                                                                                                                                                                                                    | Aluminium and plastic                                                                                                                                                                                                                                                       |
-| **Dimension**
-(Gateway only) | 224 mm x 121 mm x 42 mm                                                                                                                                                                                                                                      | 180 mm x 130 mm x 60 mm                                                                                                                                                                                                                                      | 310 mm x 290 mm x 146 mm                                                                                                                                                                                                                                     | 240 mm x 240 mm x 89.5 mm                                                                                                                                                                                                                                    |
-| **Operating Condition**          | <ul><li>Operating Temperature:
-﹣30° C to ﹢55° C
-</li><li>Storage Temperature:
-﹣40° C to ﹢85° C
-</li><li>Operating Humidity:
-0\~95% RH non-condensing
-</li><li>Storage Humidity:
-0~95% RH non-condensing</li></ul> | <ul><li>Operating Temperature:
-﹣30° C to ﹢55° C
-</li><li>Storage Temperature:
-﹣40° C to ﹢85° C
-</li><li>Operating Humidity:
-0\~95% RH non-condensing
-</li><li>Storage Humidity:
-0~95% RH non-condensing</li></ul> | <ul><li>Operating Temperature:
-﹣30° C to ﹢55° C
-</li><li>Storage Temperature:
-﹣40° C to ﹢85° C
-</li><li>Operating Humidity:
-0\~95% RH non-condensing
-</li><li>Storage Humidity:
-0~95% RH non-condensing</li></ul> | <ul><li>Operating Temperature:
-﹣30° C to ﹢55° C
-</li><li>Storage Temperature:
-﹣40° C to ﹢85° C
-</li><li>Operating Humidity:
-0\~95% RH non-condensing
-</li><li>Storage Humidity:
-0~95% RH non-condensing</li></ul> |
+| **Dimension**<br/>(Gateway only) | 224&nbsp;mm x 121&nbsp;mm x 42&nbsp;mm                                                                                                                                                                                                                                      | 180&nbsp;mm x 130&nbsp;mm x 60&nbsp;mm                                                                                                                                                                                                                                      | 310&nbsp;mm x 290&nbsp;mm x 146&nbsp;mm                                                                                                                                                                                                                                     | 240&nbsp;mm x 240&nbsp;mm x 89.5&nbsp;mm                                                                                                                                                                                                                                    |
+| **Operating Condition**          | <ul><li>Operating Temperature:<br/>﹣30°&nbsp;C to ﹢55°&nbsp;C<br/></li><li>Storage Temperature:<br/>﹣40°&nbsp;C to ﹢85°&nbsp;C<br/></li><li>Operating Humidity:<br/>0\~95%&nbsp;RH non-condensing<br/></li><li>Storage Humidity:<br/>0~95%&nbsp;RH non-condensing</li></ul> | <ul><li>Operating Temperature:<br/>﹣30°&nbsp;C to ﹢55°&nbsp;C<br/></li><li>Storage Temperature:<br/>﹣40°&nbsp;C to ﹢85°&nbsp;C<br/></li><li>Operating Humidity:<br/>0\~95%&nbsp;RH non-condensing<br/></li><li>Storage Humidity:<br/>0~95%&nbsp;RH non-condensing</li></ul> | <ul><li>Operating Temperature:<br/>﹣30°&nbsp;C to ﹢55°&nbsp;C<br/></li><li>Storage Temperature:<br/>﹣40°&nbsp;C to ﹢85°&nbsp;C<br/></li><li>Operating Humidity:<br/>0\~95%&nbsp;RH non-condensing<br/></li><li>Storage Humidity:<br/>0~95%&nbsp;RH non-condensing</li></ul> | <ul><li>Operating Temperature:<br/>﹣30°&nbsp;C to ﹢55°&nbsp;C<br/></li><li>Storage Temperature:<br/>﹣40°&nbsp;C to ﹢85°&nbsp;C<br/></li><li>Operating Humidity:<br/>0\~95%&nbsp;RH non-condensing<br/></li><li>Storage Humidity:<br/>0~95%&nbsp;RH non-condensing</li></ul> |
 | **Installation Method**          | Pole or wall mounting                                                                                                                                                                                                                                                       | Pole mounting (other options available per request)                                                                                                                                                                                                                         | Pole or wall mounting                                                                                                                                                                                                                                                       | Pole or wall mounting                                                                                                                                                                                                                                                       |
 
+<RkBottomNav/>

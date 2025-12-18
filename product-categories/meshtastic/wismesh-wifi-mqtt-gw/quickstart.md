@@ -18,6 +18,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisMesh WiFi MQTT Gateway
 
 The WisMesh WiFi MQTT Gateway connects your Meshtastic devices to the cloud, enabling communication with either the Meshtastic MQTT broker or your own MQTT broker. It supports sending sensor data, location information, and text messages.
@@ -30,9 +33,14 @@ The original device featured the WisBlock RAK11200 Core module with Meshtastic f
 
 With the update to **WisMesh WiFi MQTT Gateway V2**, the device uses the WisBlock RAK3312 Core module with Meshtastic firmware, integrated WiFi, BLE and a LoRa transceiver. 
 
-> **Image:** WisMesh WiFi MQTT Gateway V2
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/wismesh-wifi-gateway.png"
+  width="50%"
+  caption="WisMesh WiFi MQTT Gateway V2"
+/>
 
-The device comes in a Unify 100x75x38 mm enclosure, offering a variety of mounting options.
+The device comes in a Unify 100x75x38&nbsp;mm enclosure, offering a variety of mounting options.
 
 :::tip NOTE
 For more details about the mounting options of the WisMesh WiFi MQTT Gateway, refer to the <a href="https://docs.rakwireless.com/product-categories/wisblock/rakbox-accessories/overview/" target="_blank">Unify Enclosure mounting accessories</a>.
@@ -47,6 +55,8 @@ You can also refer to the following guides:
 <div class="flex items-center flex-col align-center gap-2">
   <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-basic-device-setup/" class="no-underline text-white bg-rak-primary px-[15px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Basic Device Setup </a>
 </div>
+
+<br/>
 
 <div class="flex items-center flex-col align-center gap-2">
   <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-gateway-setup/" class="no-underline text-white bg-rak-primary px-[25px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Gateway Setup </a>
@@ -92,25 +102,35 @@ To access the USB connector, unscrew the mounting plate inside the enclosure and
 
 ### Hardware Setup
 
-The WisMesh WiFi MQTT Gateway comes fully assembled. It is also available in the <a href="https://store.rakwireless.com/products/unify-enclosure-ip65-100-75-38mm" target="_blank">Unify Enclosure IP67 100x75x38 mm</a>.
+The WisMesh WiFi MQTT Gateway comes fully assembled. It is also available in the <a href="https://store.rakwireless.com/products/unify-enclosure-ip65-100-75-38mm" target="_blank">Unify Enclosure IP67 100x75x38&nbsp;mm</a>.
 
-> **Image:** WisMesh WiFi MQTT Gateway in the Unify Enclosure 100x75x38mm
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/wifi-gw-enclosure.png"
+  width="50%"
+  caption="WisMesh WiFi MQTT Gateway in the Unify Enclosure 100x75x38mm"
+/>
 
 #### Power Supply
 
 The WisMesh WiFi MQTT Gateway supports two power supply options:
 
 **1. USB connector**    
-To power the device via USB, connect it to a wall adapter or a similar power source using a USB-C cable. The power source must provide 5 V and 1.5 A.
+To power the device via USB, connect it to a wall adapter or a similar power source using a USB-C cable. The power source must provide 5&nbsp;V and 1.5&nbsp;A.
 
 :::tip NOTE
 When using the USB connector for power supply, the enclosure is no longer waterproof.
 :::
 
 **2. 5-pin M8 connector**    
-The enclosure features a waterproof 5-pin connector, allowing the device to be powered from any 5 V, 1.5 A power supply. To supply through the M8 connector, use the included cable stub and connect the red and black wires to the power source.
+The enclosure features a waterproof 5-pin connector, allowing the device to be powered from any 5&nbsp;V, 1.5&nbsp;A power supply. To supply through the M8 connector, use the included cable stub and connect the red and black wires to the power source.
 
-> **Image:** WisMesh WiFi MQTT Gateway M8 power supply connection
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/wifi-gw-power.png"
+  width="50%"
+  caption="WisMesh WiFi MQTT Gateway M8 power supply connection"
+/>
 
 #### Antennas
 
@@ -131,13 +151,14 @@ For Firmware 1.3 and 2.0 (from November 1, 2022), the WisBlock Base board is aut
 - Meshtastic WiFi MQTT Gateway with RAK11200: **`firmware-rak11200-w.x.yy.zzzzzzz.bin`**
 - Meshtastic WiFi MQTT Gateway V2 with RAK3312: **`firmware-rak3312-w.x.yy.zzzzzzz.bin`**
 
-**Flashing the WisMesh WiFi MQTT Gateway Firmware:**
+<b>Flashing the WisMesh WiFi MQTT Gateway Firmware:</b>
 
 The WisMesh WiFi MQTT Gateway comes pre-flashed with the Meshtastic firmware. If problems occur, update the Meshtastic firmware to the latest version.
 
 - <a href="https://meshtastic.org/docs/getting-started/flashing-firmware/esp32/" target="_blank">Guide to flash ESP32 devices</a>. (link goes to Meshtastic.org)
 
 To set up the WisMesh WiFi MQTT Gateway for the Meshtastic network, follow the <a href="https://meshtastic.org/docs/configuration/" target="_blank">configuration guide</a> in the Meshtastic documentation.
+
 
 ## Tutorial - Meshtastic MQTT Gateway Setup
 
@@ -147,7 +168,12 @@ The Meshtastic MQTT Gateway comes pre-flashed with Meshtastic firmware, but its 
 
 To set up the device, connect the Meshtastic Gateway by selecting it on the Meshtastic app.
 
-> **Image:** WisMesh devices in the Meshtastic Mobile App
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-device-list.png"
+  width="30%"
+  caption="WisMesh devices in the Meshtastic Mobile App"
+/>
 
 :::tip NOTE
 - Set all devices to the same _**Region**_ and _**Channel**_.
@@ -155,13 +181,23 @@ To set up the device, connect the Meshtastic Gateway by selecting it on the Mesh
 - If required, a RAK12501 GNSS module can be added to sensor Slot A.
 :::
 
-> **Image:** Setup fixed location
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-fixed-location.png"
+  width="30%"
+  caption="Setup fixed location"
+/>
 
 ### Gateway Connections
 
 1. Connect the gateway to the internet. In this case, the RAK3312 or RAK11200 with its built-in WiFi will be used.
 
-> **Image:** WiFi setup
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-wifi-network.png"
+  width="30%"
+  caption="WiFi setup"
+/>
 
 :::warning IMPORTANT
 Below are the options for connecting the gateway through WiFi:
@@ -175,7 +211,12 @@ Once connected to the WiFi network, the device's IP address will be shown in the
 
 2. Set up the connection to the MQTT broker.
 
-> **Image:** MQTT setup
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-mqtt-settings.png"
+  width="30%"
+  caption="MQTT setup"
+/>
 
 :::tip NOTE
 - The MQTT broker used here is the free MQTT broker provided by Meshtastic. You can find the URL, address, username, and password in the <a href="https://meshtastic.org/docs" target="_blank">Meshtastic documentation</a>.
@@ -188,3 +229,5 @@ Once connected to the WiFi network, the device's IP address will be shown in the
 A more comprehensive guide for the Meshtastic Gateway can be found in the <a href="https://github.com/beegee-tokyo/Meshtastic-Sensor-Network" target="_blank">Meshtastic-Sensor-Network</a> PoC. This includes setting up multiple sensor nodes, retrieving the sensor data from the MQTT broker, and visualizing the data in Grafana.
 :::
 
+
+<RkBottomNav/>

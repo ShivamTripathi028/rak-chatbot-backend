@@ -8,6 +8,9 @@ keywords:
 sidebar_label: Mobile Version
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisToolBox for Mobile
 
 ## Installation
@@ -39,7 +42,12 @@ The WisToolBox Mobile application is currently available for RAK463x RUI3 device
 2. Press the reset button on the RAK device and click on the **CONNECT DEVICE** button.
 3. Press the **ALLOW** button to turn on BLE and start the scan. Look for a BLE Device named **RAK.XXXXXX** in the scan list of the app.
 
-> **Image:** WisToolBox Mobile connect device
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/mobile-connect-1-2.png"
+  width="100%"
+  caption="WisToolBox Mobile connect device"
+/>
+
 
 :::tip NOTE
 By default, the BLE advertising of the RAK device is turned off automatically if no connection is established after 30 seconds. Connect to the RAK device immediately after pressing the reset button.
@@ -50,15 +58,29 @@ Some Android smartphones require GPS enabled to permit connection to BLE. When G
 
 3. When the RAK device is found, connect and pair the device by clicking the green button. Then wait for data synchronization.
 
-> **Image:** WisToolBox Mobile BLE scan
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/ble-scan-3-4.png"
+  width="100%"
+  caption="WisToolBox Mobile BLE scan"
+/>
 
 4. When the Data synchronization is completed, you will see the **DEVICE INFO** screen.
 
-> **Image:** WisToolBox Mobile BLE is connected
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/ble-sync-5-6.png"
+  width="100%"
+  caption="WisToolBox Mobile BLE is connected"
+/>
 
 6. In case of an error, it will show **No devices found**, as seen in **Figure 4**. Then you need to redo the steps again from step 1.
 
-> **Image:** WisToolBox Mobile BLE scan error
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/ble-scan-error.png"
+  width="70%"
+  caption="WisToolBox Mobile BLE scan error"
+/>
+
 
 ## Create RAK ID Profile
 
@@ -66,11 +88,19 @@ It is recommended to create a **RAK ID** profile. Your **RAK ID** profile will b
 
 1. First, click on the **More** menu icon, and select **Sign in**.
 
-> **Image:** WisToolBox Mobile RAK ID menu
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/rak-id-1-2.png"
+  width="100%"
+  caption="WisToolBox Mobile RAK ID menu"
+/>
 
 2. Lastly, click on the **SIGN IN WITH RAK ID** button.
 
-> **Image:** WisToolBox Mobile create RAK ID profile
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/create-id.png"
+  width="70%"
+  caption="WisToolBox Mobile create RAK ID profile"
+/>
 
 ## Parameters
 
@@ -78,33 +108,58 @@ It is recommended to create a **RAK ID** profile. Your **RAK ID** profile will b
 
 **Figure 7** shows the **Global Settings** parameters section.
 
-> **Image:** WisToolBox Global Settings parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/global-param.png"
+  width="70%"
+  caption="WisToolBox Global Settings parameters"
+/>
 
 ###  LoRaWAN Keys, ID, EUI Parameters
 
 **Figure 8** shows the **LoRaWAN keys, ID, EUI** parameters section.
 
-> **Image:** WisToolBox LoRaWAN Keys, ID, EUI parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/keys-param.png"
+  width="70%"
+  caption="WisToolBox LoRaWAN Keys, ID, EUI parameters"
+/>
 
 If you change the value of any parameter, then you have a new command in a queue, and a button will appear. 
 
 1. Click on the button to update the new value on the RAK device.
 
-> **Image:** WisToolBox Command in queue
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/cmd-queue.png"
+  width="70%"
+  caption="WisToolBox Command in queue"
+/>
 
 2. Now wait up to a minute for command reply.
 
-> **Image:** WisToolBox Applying Command progress
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/apply-progress.png"
+  width="70%"
+  caption="WisToolBox Applying Command progress"
+/>
 
 ## Advanced Mode Commands
 
 1. The Advanced Mode commands are available from the **DEVICE INFO** menu shown in **Figure 11**.
 
-> **Image:** WisToolBox Mobile Advanced commands menu
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/adv-menu.png"
+  width="70%"
+  caption="WisToolBox Mobile Advanced commands menu"
+/>
 
 2. Click on **Advanced Mode Commands** button to check the Advanced commands.
 
-> **Image:** WisToolBox Mobile Advanced commands
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/adv-1-2.png"
+  width="100%"
+  caption="WisToolBox Mobile Advanced commands"
+/>
+
 
 ## WisToolBox Mobile Templates
 
@@ -112,43 +167,84 @@ You can save the LoRa parameters used in your application in a template. It is a
 
 1. To create a new template, select **Templates** icon, then click on **NEW TEMPLATE** button.
 
-> **Image:** WisToolBox Mobile Templates
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/mobile-template.png"
+  width="70%"
+  caption="WisToolBox Mobile Templates"
+/>
 
 2. Type a Template name on the text area, then click on **NEXT** button.
 
-> **Image:** WisToolBox Mobile template name
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/template-name.png"
+  width="70%"
+  caption="WisToolBox Mobile template name"
+/>
 
 3. On the Template device list, choose **RAK4630**, then click on the **CREATE TEMPLATE** button. The RAK3172 modules are not supported by WisToolBox mobile.
 
-> **Image:** WisToolBox Mobile new template
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/template-device.png"
+  width="70%"
+  caption="WisToolBox Mobile new template"
+/>
 
 4. In **Figure 16**, the template named `otaa_us915` was created. The parameters screen shows all available LoRa parameters for the template.
 
-> **Image:** WisToolBox Mobile Template parameter
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/template-params.png"
+  width="70%"
+  caption="WisToolBox Mobile Template parameter"
+/>
 
 5. To select a specific parameter set, click on some icons highlighted in red.
 
-> **Image:** WisToolBox Mobile select parameter
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/template-select.png"
+  width="70%"
+  caption="WisToolBox Mobile select parameter"
+/>
 
 6. The screen below shows the Global settings parameters for **`otaa_us915`** template. After filling all the parameters, click on the **SAVE TEMPLATE** button.
 
-> **Image:** WisToolBox Mobile fill Global settings params
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/global-settings.png"
+  width="70%"
+  caption="WisToolBox Mobile fill Global settings params"
+/>
 
 7. The saved template `otaa_us915` appears listed, as seen in **Figure 19**.
 
-> **Image:** WisToolBox Mobile saved templates
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/saved-templates.png"
+  width="70%"
+  caption="WisToolBox Mobile saved templates"
+/>
 
 ## WisToolBox Firmware
 
 1. To select the Firmware menu, click the **More** menu, as shown in **Figure 20**.
 
-> **Image:** WisToolBox Mobile More menu
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/more-menu.png"
+  width="70%"
+  caption="WisToolBox Mobile More menu"
+/>
 
 2. The **Information and Settings** screen shows if there are any firmware updates. Click on **Update Available** to get more information.
 
-> **Image:** WisToolBox Mobile Information and Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/fw-menu.png"
+  width="70%"
+  caption="WisToolBox Mobile Information and Settings"
+/>
 
 3. New firmware version details are displayed. Click on the **UPDATE NOW** button to flash the newer version.
 
-> **Image:** WisToolBox Mobile Firmware Update
+<RkImage
+  src="https://images.docs.rakwireless.com/software-tools/wistoolbox/mobile/fw-update.png"
+  width="70%"
+  caption="WisToolBox Mobile Firmware Update"
+/>
 
+<RkBottomNav/>

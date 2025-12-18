@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock Environment Sensor Kit Datasheet
 
 ## Overview
@@ -46,13 +49,19 @@ With its flexible connectivity options, this kit can be easily integrated into e
     - (Optional) Cellular variant dependent on a country: two (2) <a href="https://store.rakwireless.com/products/rak5860-lte-nb-iot-extension-board" target="_blank">RAK5860</a> with 5G LTE NB-IoT capability and two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101" target="_blank">RAK13101</a> with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
+
 ## Specifications
 
 ### Overview
 
 The WisBlock Environment Sensor Kit includes the following modules:
 
-> **Image:** Modules of the WisBlock Environment Sensor Kit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kits/11_environment_kit_2.png"
+  figureCount="1"
+  caption="Modules of the WisBlock Environment Sensor Kit" 
+   width="80%"
+/>
 
 ### Hardware
 
@@ -93,6 +102,7 @@ Check the specific requirements and limitations for each module, including neces
 | <a href="https://docs.rakwireless.com/product-categories/wisblock/rak12039" target="_blank">RAK12039</a> | Particle matter sensor      | PMSA003I     | Plantower             |
 | <a href="https://docs.rakwireless.com/product-categories/wisblock/rak12047" target="_blank">RAK12047</a> | VOC Sensor                  | SGP40        | Sensirion             |
 
+
 #### WisBlock Cellular Modules
 
 The cellular modules support various cellular protocols, as detailed in the following table.
@@ -106,3 +116,6 @@ The cellular modules support various cellular protocols, as detailed in the foll
 
 The **WisBlock Environment Sensor Kit** is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
+
+
+<RkBottomNav/>

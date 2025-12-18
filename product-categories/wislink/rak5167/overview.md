@@ -9,6 +9,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5167 WisLink LPWAN Concentrator
 
 Thank you for choosing **RAK5167 WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,15 +31,16 @@ It is capable of detecting an uninterrupted combination of packets at 8 differen
 - **SX1303 baseband processor** emulates 8 x 8 channels LoRa packet detectors
 - 8x SF5-SF12 LoRa demodulators
 - 8x SF5-SF10 LoRa demodulators
-- High-speed 125/250/500 kHz LoRa demodulator
+- High-speed 125/250/500&nbsp;kHz LoRa demodulator
 - (G)FSK demodulator.
-- 3.3 V **PCI Express M.2**
+- 3.3&nbsp;V **PCI Express M.2**
 - Compatible with Type 2280 Socket 2 Key B-M PCIe-based WWAN Module
-- Tx power up to 27 dBm
-- Rx sensitivity down to -139 dBm @ SF12, BW 125 kHz
+- Tx power up to 27&nbsp;dBm
+- Rx sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
 - Supports **global license-free frequency band** (EU868, IN865, RU864, US915, AU915, KR920, AS923-1/2/3/4)
 - Supports **USB** interfaces
 - Listen Before Talk
 - Fine Timestamp
 - Built-in **ZOE-M8Q** GPS module
 
+<RkBottomNav/>

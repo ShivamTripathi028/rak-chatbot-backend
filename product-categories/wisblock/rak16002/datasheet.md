@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK16002 WisBlock Coulomb Sensor Module Datasheet
 
 ## Overview
@@ -32,28 +35,36 @@ The precision coulomb counter integrates current through an internal sense resis
 
   * Based on LTC2941IDCB
   * Indicates accumulated battery charge and discharge
-  * ±1 A Sense current range
+  * ±1&nbsp;A Sense current range
   * I2C interface
   * High accuracy analog integration
   * 1% Charge accuracy
   * Configurable alert output/charge complete input
-  * 2.7 V to 5.5 V Operating range
-  * Quiescent current less than 100 µA
-  * Operating temperature: -40 °C ~ 85 °C
-  * Storage temperature :-65 °C ~ 150 °C
-  * 15 mm x 25 mm
+  * 2.7&nbsp;V to 5.5&nbsp;V Operating range
+  * Quiescent current less than 100&nbsp;µA
+  * Operating temperature: -40&nbsp;°C ~ 85&nbsp;°C
+  * Storage temperature :-65&nbsp;°C ~ 150&nbsp;°C
+  * 15&nbsp;mm x 25&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK16002 top and back view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/rak16002_overview.png" 
+  caption="RAK16002 top and back view" 
+   width="30%"
+/>
 
 #### Mounting
 
 The RAK16002 Coulomb module can be mounted to the IO slot of the WisBase board. **Figure 2** shows the mounting mechanism of the RAK16002 on a WisBase module, such as the RAK5005-O.
 
-> **Image:** RAK16002 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/image-20210225140433974.png" 
+  caption="RAK16002 mounting mechanism on a WisBlock Base module" 
+   width="60%"
+/>
 
 ### Hardware
 
@@ -69,7 +80,12 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK16002 WisBlock Coulomb Sensor Module comprises a standard 40-pin WisConnector compatible with the WisBlock Base IO Slot. The WisConnector allows the RAK16002 Coulomb sensor module to be mounted to a WisBlock Base board, such as RAK5005-O. The pin order of the connector and the pinout definition is shown in **Figure 3.**
 
-> **Image:** RAK16002 WisBlock Coulomb Sensor Module pinout
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/378444333-rak16002_pinouts.svg" 
+  caption="RAK16002 WisBlock Coulomb Sensor Module pinout" 
+   width="60%"
+/>
 
 :::tip NOTE
 
@@ -88,8 +104,9 @@ This section shows the maximum and minimum ratings of the RAK16002 module and it
 | V<sub>BAT</sub>    | Supply Voltage                 |                                           | 2.7     |         | 5.5     | V    |
 | I<sub>SUPPLY</sub> | Supply Current                 | Device On                                 |         |         | 120     | uA   |
 |                    |                                | Shutdown                                  |         |         | 2.5     | uA   |
-|                    |                                | Shutdown, V<sub>SENSE+</sub> <=4.2 V |         |         | 1       | uA   |
+|                    |                                | Shutdown, V<sub>SENSE+</sub> &lt;=4.2&nbsp;V |         |         | 1       | uA   |
 | V<sub>UVLO</sub>   | Undervoltage Lockout Threshold | V<sub>SENSE+ Falling</sub>                | 2.5     | 2.6     | 2.7     | V    |
+
 
 #### Mechanical Characteristics
 
@@ -97,11 +114,19 @@ This section shows the maximum and minimum ratings of the RAK16002 module and it
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK16002 module.
 
-> **Image:** RAK16002 WisBlock Coulomb Sensor Module mechanic drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/image-20210225140446062.png" 
+  caption="RAK16002 WisBlock Coulomb Sensor Module mechanic drawing" 
+   width="80%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/image-20201228093039748.png" 
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
@@ -126,7 +151,7 @@ The I2C address of LTC2941IDCB is 0x64. R3 and R4 already exist on WisBase. R3 a
 
 :::
 
-** For example **
+<b> For example </b>
 
 If you want to use the internal battery and the external charge/load, you should do the following (Refer to **Figure 7**.):
 - short J2-2 and J2-3;
@@ -135,13 +160,28 @@ If you want to use the internal battery and the external charge/load, you should
 - connect the external charge-/load- to J3-2;
 - connect the internal battery to P1.
 
-> **Image:** RAK16002 main circuit
 
-> **Image:** RAK16002 jumper and battery connectors
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/rak16002_main_circuit.png" 
+  caption="RAK16002 main circuit" 
+   width="80%"
+/>
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/rak16002_jumper.svg" 
+  caption="RAK16002 jumper and battery connectors" 
+   width="40%"
+/>
 
 ##### Full Schematic
 
 **Figure 8** shows the complete schematic of the RAK16002 module.
 
-> **Image:** RAK16002 WisBlock Coulomb Sensor Module schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16002/datasheet/rak16002_schematic.png" 
+  caption="RAK16002 WisBlock Coulomb Sensor Module schematic" 
+   width="100%"
+/>
 
+<RkBottomNav/>

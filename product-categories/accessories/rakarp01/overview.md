@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # 860-930MHz 12dBi Directional Antenna
 
 Thank you for choosing **860-930MHz 12dBi Directional Antenna** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -20,14 +22,15 @@ RAKARP01 is a high-gain directional antenna is the latest in the RAKwireless LPW
 
 ## Product Features
 
-- Frequency range: 860 ~ 930 MHz
-- Peak gain: 12 dBi
+- Frequency range: 860 ~ 930&nbsp;MHz
+- Peak gain: 12&nbsp;dBi
 - VSWR: ≤ 1.5
-- Dimensions: 750x280x125 mm
-- Impedance: 50 Ω
+- Dimensions: 750x280x125&nbsp;mm
+- Impedance: 50&nbsp;Ω
 
 ## Package Inclusion
 
-- 1x 12 dBi Directional Antenna
+- 1x 12&nbsp;dBi Directional Antenna
 - 1x Mounting Kit
 
+<RkBottomNav/>

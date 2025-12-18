@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Installation Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK RPi DIY Gateway Kit Installation Guide
 
 ## Kit Inclusion
@@ -31,15 +34,26 @@ The RAK RPi DIY Gateway Kit includes all required parts (**except for the Raspbe
 The RAK RPi DIY Gateway Kit is designed to work specifically with **Raspberry Pi 4**, which is **NOT** included in the kit. You need to provide it yourself.
 :::
 
+
 ## Assembly Guide
 
-1. Mount the Raspberry Pi 4 to the bottom plate and secure it with the 12 mm spacers (x4). The holes on the plate match the holes on the Raspberry Pi 4.
+1. Mount the Raspberry Pi 4 to the bottom plate and secure it with the 12&nbsp;mm spacers (x4). The holes on the plate match the holes on the Raspberry Pi 4.
 
-> **Image:** Mount the Raspberry Pi 4 on the bottom plate
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/1.mount-raspberry.png"
+  width="60%"
+  caption="Mount the Raspberry Pi 4 on the bottom plate"
+/>
 
 2. Attach the bottom plate to the enclosure by first fitting the ports in their respective holes and then fitting the rest of the enclosure by a slight backward movement. Secure the plate to the enclosure by using four of the flathead bolts.
 
-> **Image:** Attach the bottom plate to the enclosure
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/2.attach-bottom-plate.png"
+  width="60%"
+  caption="Attach the bottom plate to the enclosure"
+/>
 
 :::tip NOTE
 Skip the following step if the version of your kit is the non-cellular one, and head directly to **Step 4**.
@@ -49,19 +63,35 @@ Skip the following step if the version of your kit is the non-cellular one, and 
 
 - Fix both RP-SMA Female connectors on the lower holes of the enclosure by using the included washers and nuts. After the connectors are fixed, gently press the IPEX to the RF connector on the RAK2013 WisLink Cellular HAT until they click on place. Finally, mount the RAK2013 on the Raspberry Pi 4.
 
-> **Image:** Mounting the RAK2013
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/3.mounting-rak2013.png"
+  width="60%"
+  caption="Mounting the RAK2013"
+/>
 
-- Secure the RAK2013 by using the 10 mm spacers (x4).
+- Secure the RAK2013 by using the 10&nbsp;mm spacers (x4).
 
-> **Image:** Securing the RAK2013
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/4.secure-rak2013.png"
+  width="60%"
+  caption="Securing the RAK2013"
+/>
 
-4. Mount the RAK5146 WisLink LPWAN Concentrator to the RAK2287 / RAK5146 Pi HAT by aligning and inserting the RAK5146 concentrator into the mPCIe slot (under a 45-degree angle) of the RAK2287 / RAK5146 Pi HAT. Make sure the card fits snugly into the connector. Gently press it down and fasten it with two (2) screws, the screw holes on the concentrator should match the ones on the Pi HAT. Use the roundhead bolts (2 mm in outside diameter).
+4. Mount the RAK5146 WisLink LPWAN Concentrator to the RAK2287 / RAK5146 Pi HAT by aligning and inserting the RAK5146 concentrator into the mPCIe slot (under a 45-degree angle) of the RAK2287 / RAK5146 Pi HAT. Make sure the card fits snugly into the connector. Gently press it down and fasten it with two (2) screws, the screw holes on the concentrator should match the ones on the Pi HAT. Use the roundhead bolts (2&nbsp;mm in outside diameter).
 
-> **Image:** Mounting the concentrator to the Pi HAT
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/5.mount-concentrator.png"
+  width="60%"
+  caption="Mounting the concentrator to the Pi HAT"
+/>
 
-5. Mount the RAK2287 / RAK5146 Pi HAT with the attached concentrator on top of the RAK2013 WisLink Cellular HAT (in the cellular variant) or directly on the Raspberry Pi 4 (in the non-cellular variant). Secure the Pi HAT with 4 roundhead bolts (2.5 mm in outside diameter).
+5. Mount the RAK2287 / RAK5146 Pi HAT with the attached concentrator on top of the RAK2013 WisLink Cellular HAT (in the cellular variant) or directly on the Raspberry Pi 4 (in the non-cellular variant). Secure the Pi HAT with 4 roundhead bolts (2.5&nbsp;mm in outside diameter).
 
-> **Image:** Mounting the Pi HAT to the assembly
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/6.mount-pi-hat.png"
+  width="60%"
+  caption="Mounting the Pi HAT to the assembly"
+/>
 
 6. Before mounting the RAK5146 LPWAN concentrator, fix RP-SMA Female and SMA Female connectors on the upper holes of the enclosure by using the included washers and nuts.
 
@@ -69,17 +99,30 @@ Skip the following step if the version of your kit is the non-cellular one, and 
 The RP-SMA Female connector is for the LoRa IPEX connector of the RAK5146 LPWAN concentrator and the SMA Female connector is the GPS concentrator connector. The concentrator connectors are labeled, make sure to not mix them.
 :::
 
-> **Image:** Mounted concentrator
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/7.mounted-concentrator.png"
+  width="60%"
+  caption="Mounted concentrator"
+/>
 
 7. To close the enclosure, attach the top heatsink plate on top using four flathead bolts.
 
-> **Image:**  Mounting top heatsink cover on the enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/8.heatsink.png"
+  width="60%"
+  caption=" Mounting top heatsink cover on the enclosure"
+/>
 
 8. Attach the LoRa, GPS, and LTE (only in the Cellular variant) antennas to the DIY gateway by screwing them to the corresponding connectors on the side.
 
-> **Image:** Mounting the antennas
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak-rpi-diy-gateway-kit/9.mount-antennas.png"
+  width="60%"
+  caption="Mounting the antennas"
+/>
 
 ## Flashing the Firmware
 
 The assembly is complete. You are now ready to flash the SD card. Follow the guide on how to flash the latest RAK5146 Pi HAT firmware.
 
+<RkBottomNav/>

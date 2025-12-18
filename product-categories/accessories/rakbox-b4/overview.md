@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock RAKBox-B4 Enclosure
 
 Thank you for choosing **RAKBox-B4** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -24,6 +26,7 @@ The enclosure is a small, lightweight, yet very rigid design. Perfect for setups
 ## Product Features
 
 - IP67 rated
-- Dimensions W x L x H: 168 mm (include mount ears) x 120 mm x 55 mm
+- Dimensions W x L x H: 168&nbsp;mm (include mount ears) x 120&nbsp;mm x 55&nbsp;mm
 - Logo customization possibility
 
+<RkBottomNav/>

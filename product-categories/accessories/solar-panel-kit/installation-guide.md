@@ -13,11 +13,20 @@ keywords:
 sidebar_label: Installation Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Solar Panel Kit for Battery Plus Installation Guide
 
 ## Package Inclusion
 
-> **Image:** Package inclusion
+<br/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/solar-panel-kit-for-battery-plus/installation-guide/1-package-inclusion.png"
+  width="50%"
+  caption="Package inclusion"
+/>
 
 ## Solar Panel Orientation
 
@@ -29,26 +38,47 @@ The placement and orientation of solar panels are as important as the type of so
 ## Installation Guide
 
 :::tip NOTE
-The pole's diameter supported by the brackets is 76-140 mm. RAK does not offer brackets for wider poles, so if the pole diameter is less than this value, rubber pads can be added to it.
+The pole's diameter supported by the brackets is 76-140&nbsp;mm. RAK does not offer brackets for wider poles, so if the pole diameter is less than this value, rubber pads can be added to it.
 :::
 
 1. Fix the short-angle steel pieces on the back of the solar panel with two M8*15 bolts each.
 
-> **Image:** Fixing the short angle steel pieces
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/solar-panel-kit-for-battery-plus/installation-guide/2-fixing-the-short-angle-steel-pieces.png"
+  width="50%"
+  caption="Fixing the short angle steel pieces"
+/>
 
 2. Fix the long-angle steel pieces on the back of the solar panel with two M8*15 bolts each.
 
-> **Image:** Fixing the long angle steel pieces
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/solar-panel-kit-for-battery-plus/installation-guide/3-fixing-the-long-angle-steel-pieces.png"
+  width="50%"
+  caption="Fixing the long angle steel pieces"
+/>
 
 3. Fix the bracket on the back of the solar panel using four M8*15 bolts.
 
-> **Image:** Fixing the bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/solar-panel-kit-for-battery-plus/installation-guide/4-fixing-the-bracket.png"
+  width="50%"
+  caption="Fixing the bracket"
+/>
 
 4. Install the solar panel on the pole using the U-shape bracket bolts and nuts.
 
-> **Image:** Installing the panel on the pole
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/solar-panel-kit-for-battery-plus/installation-guide/5-installing-the-panel-on-the-pole.png"
+  width="40%"
+  caption="Installing the panel on the pole"
+/>
 
 5. This is how it looks like once the installation of the Solar Panel Kit for Battery Plus is completed.
 
-> **Image:** Completed installation
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/solar-panel-kit-for-battery-plus/installation-guide/6-completed-installation.png"
+  width="30%"
+  caption="Completed installation"
+/>
 
+<RkBottomNav/>

@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18033 WisBlock Audio Stereo Microphone Header Module Datasheet
 
 ## Overview
@@ -25,13 +28,17 @@ RAK18033 is a WisBlock Audio Stereo Microphone Header module that allows you to 
     * Compatible with WisBlock Audio PDM Microphones
 
 * **Module size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK18033 WisBlock Audio Stereo Microphone Header Module top and bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/rak18033.png"
+  width="40%"
+  caption="RAK18033 WisBlock Audio Stereo Microphone Header Module top and bottom view"
+/>
 
 #### Mounting
 
@@ -39,13 +46,21 @@ RAK18033 is a WisBlock Audio Stereo Microphone Header module that allows you to 
 
 **Figure 2** shows the mounting mechanism of the RAK18033 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK18033 module can be mounted on the IO slots.
 
-> **Image:** RAK18033 mounted to the WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/rak18033-mount.png"
+  width="50%"
+  caption="RAK18033 mounted to the WisBlock Base"
+/>
 
 ##### Mount to WisBlock Audio Stack
 
 With the use of WisBlock Audio Spacer, the RAK18033 can be mounted to any other WisBlock Audio module. **Figure 3** shows the mounting mechanism of the RAK18033 on a Wisblock Audio Stack.
 
-> **Image:** RAK18033 mounted to the WisBlock Audio Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/rak18033-audiostack.png"
+  width="50%"
+  caption="RAK18033 mounted to the WisBlock Audio Stack"
+/>
 
 ### Hardware
 
@@ -57,7 +72,11 @@ The hardware specification is categorized into four (4) parts. It shows the pino
 
 The RAK18033 WisBlock Audio Stereo Microphone comprises a standard WisBlock connector. The WisBlock connector allows the RAK18033 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 4**.
 
-> **Image:** RAK18033 WisBlock Module pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/rak18033-pinouts.png"
+  width="70%"
+  caption="RAK18033 WisBlock Module pinout diagram"
+/>
 
 :::tip NOTE
 - **3V3** and **GND** are power supply from the WisBlock Base.
@@ -71,15 +90,29 @@ The RAK18033 WisBlock Audio Stereo Microphone comprises a standard WisBlock conn
 
 **Figure 5** shows the dimensions and the mechanical drawing of the RAK18033 module.
 
-> **Image:** RAK18033 WisBlock Sensor mechanical drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/rak18033-dim.png"
+  width="80%"
+  caption="RAK18033 WisBlock Sensor mechanical drawing"
+/>
 
 ##### WisBlock Connector PCB Layout
 
-> **Image:** WisBlock Connector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/wisblock-conn.png"
+  width="100%"
+  caption="WisBlock Connector PCB footprint and recommendations"
+/>
+
 
 #### Schematic Diagram
 
 **Figure 7** below shows the full schematic diagram of the RAK18033 Audio Stereo Microphone Header module.
 
-> **Image:** RAK18033 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18033/datasheet/rak18033-schem.png"
+  width="100%"
+  caption="RAK18033 schematic diagram"
+/>
 
+<RkBottomNav/>

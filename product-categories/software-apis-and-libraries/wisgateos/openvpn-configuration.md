@@ -7,9 +7,13 @@ keywords:
 sidebar_label: OpenVPN Configuration
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisgateOS OpenVPN Configuration
 
 This detailed explanation assumes that you already have an AWS EC2 Instance with Ubuntu Server 18.04 LTS running on it.
+
 
 ## Install OpenVPN
 
@@ -93,13 +97,24 @@ sudo nano /etc/openvpn/server/config.ovpn
 You need to change the local private_address IP with their private AWS IP.
 :::
 
-> **Image:** AWS Instance Private IP
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.1.aws-instance.png"
+  width="100%"
+  caption="AWS Instance Private IP"
+/>
+
 
 :::tip NOTE
 You have to add an inbound rule in the AWS Security Group for UDP port 1194.
 :::
 
-> **Image:** Security Group Inbound Rules
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.2.security-group.png"
+  width="100%"
+  caption="Security Group Inbound Rules"
+/>
+
 
 ```
 # openvpn server
@@ -134,11 +149,13 @@ script-security 2
 
 - Create and fill in the `interface-up.sh`. This is a script that will create the virtual **tap** interface:
 
+
 ```
 sudo nano /etc/openvpn/server/interface-up.sh
 ```
 
 - The content must be filled in the file.
+
 
 ```
 #!/bin/sh
@@ -219,7 +236,13 @@ The **`<ca>`**, **`<cert>`**, and **`<key>`** in the configuration file are the 
 
 - Open a text editor in your PC and copy the following template, then change the *`public_address`* IP with their **Amazon Instance Public IP**. Each certificate must be added in its corresponding section by copying the content from the locations mentioned above and replacing the corresponding section in the template.
 
-> **Image:** AWS Instance Public IP
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.3.aws.instance.ip.png"
+  width="100%"
+  caption="AWS Instance Public IP"
+/>
+
 
 ```
 dev tap
@@ -259,29 +282,59 @@ MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCud0+r5W5uMVYDOc/HwurpeVrHU94H
 </key>
 ```
 
+
+
 - Save the file with the name **management_client.ovpn**.
 
 - Download and install [OpenVPN Client](https://openvpn.net/community-downloads/). After the installation, you can start the OpenVPN GUI Client. You will see an icon in the taskbar.
 
-> **Image:** OpenVPN Taskbar Icon
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.4.taskbar.png"
+  width="50%"
+  caption="OpenVPN Taskbar Icon"
+/>
+
 
 - Right-click **Import file...**. Navigate to the **`management_client.ovpn`** file and open it.
 
-> **Image:** Importing OpenVPN Client File
 
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.5.client-file.png"
+  width="100%"
+  caption="Importing OpenVPN Client File"
+/>
       
 
 - You have to make sure to go into the OpenVPN menu again and press **Connect** (it will not initiate automatically).
 
-> **Image:** OpenVPN Connection Initiation
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.6.connection-initiation.png"
+  width="50%"
+  caption="OpenVPN Connection Initiation"
+/>
+
 
 - If everything is set up properly, there will be a connection log window that will disappear after the procedure runs through.
 
-> **Image:** OpenVPN Connection Log
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.7.connection-log.png"
+  width="70%"
+  caption="OpenVPN Connection Log"
+/>
+
 
 - The OpenVPN should now be in green, meaning the connection is successful.
 
-> **Image:** Successful Connection Log
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.8.successful-connection.png"
+  width="30%"
+  caption="Successful Connection Log"
+/>
+
+
 
 - You can check which clients are currently connected to the OpenVPN Server and their corresponding IP addresses by executing the following command in your Ubuntu console:
 
@@ -289,7 +342,11 @@ MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCud0+r5W5uMVYDOc/HwurpeVrHU94H
 sudo nano /etc/openvpn/server/ip_pool.txt
 ```
 
-> **Image:** Successful Connection Log
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.9.connected-client.png"
+  width="70%"
+  caption="Successful Connection Log"
+/>
 
 There should be only one client and its IP address visible now. This is the PC connected to the OpenVPN Server. Later, the gateway also should be visible.
 
@@ -307,15 +364,32 @@ Once you have assembled the certificates into a single file, it needs to import 
 
 - OpenVPN is configured in the **Services** > **OpenVPN Tunnels** menu. Enter a name and press the **Add** button.
 
-> **Image:** Creating an OpenVPN Tunnel
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.10.openvpn-tunnel.png"
+  width="100%"
+  caption="Creating an OpenVPN Tunnel"
+/>
+
 
 - In the next window, copy and paste the content of the file they created at the beginning of the previous steps (step 7) and click **Save & Apply**.
 
-> **Image:** Importing the OpenVPN Certificate Data
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.11.importing-openvpn.png"
+  width="100%"
+  caption="Importing the OpenVPN Certificate Data"
+/>
+
 
 - By default, after creating the tunnel, it should be enabled. You can check that in the windows.
 
-> **Image:** Enabling OpenVPN
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.12.enabling-openvpn.png"
+  width="100%"
+  caption="Enabling OpenVPN"
+/>
+
 
 - Check again in the client list file on the OpenVPN server for the IP address of the gateway with the command:
 
@@ -323,7 +397,12 @@ Once you have assembled the certificates into a single file, it needs to import 
 sudo nano /etc/openvpn/server/ip_pool.txt
 ```
 
-> **Image:** OpenVPN Connected Client 2
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument6/41.13.connected-openvpn.png"
+  width="70%"
+  caption="OpenVPN Connected Client 2"
+/>
 
 The IP address of the gateway should be in the second entry.
 
@@ -331,3 +410,4 @@ The IP address of the gateway should be in the second entry.
 
 Now, you can remotely access the gateway using the IP address assigned to it by the OpenVPN Server. This can be utilized for an SSH2 connection, the Web UI (via a browser), and many other applications.
 
+<RkBottomNav/>

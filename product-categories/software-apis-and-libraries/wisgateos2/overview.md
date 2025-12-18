@@ -30,6 +30,11 @@ sidebar_label: Overview
 date: 2022-04-07
 ---
 
+
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisGateOS 2 User Manual
 
 Before using WisGateOS 2, ensure that your gateway has been physically installed and connected to a power source. Follow the setup instructions in the user manual for installation, powering on, and logging in to the Web UI.
@@ -79,3 +84,4 @@ You can explore detailed release notes to track changes across versions.
 Want to receive updates directly in your inbox?
 [Subscribe to our product update mailing list](https://docs.rakwireless.com/release-notes/) to be notified about the latest WisGateOS 2 releases.
 
+<RkBottomNav/>

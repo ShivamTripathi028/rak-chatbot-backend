@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12002 WisBlock RTC Module Quick Start Guide
 
 ## Prerequisite
@@ -41,14 +44,22 @@ The RAK12002 is a Real-Time Clock module, part of the RAKwireless WisBlock Serie
 
 For more information about RAK12002, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak12002/datasheet/).
 
-> **Image:** RAK12002 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/rak12002_assembly.png"
+  width="60%"
+  caption="RAK12002 connection to WisBlock Base"
+/>
 
 :::tip NOTE
 - You can connect the RAK12002 to any of the WisBlock Base Board Slot A to D.
 - RAK12002 has a built-in supercapacitor that can provide up to 7 days of extra timing capability in case the Li-Ion Battery is drained or disconnected.
 :::
 
-> **Image:** RAK12002 connection to WisBlock Base Slots A to D
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/rak12002_slotatod.png"
+  width="50%"
+  caption="RAK12002 connection to WisBlock Base Slots A to D"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -56,7 +67,11 @@ For more information about RAK12002, refer to the [Datasheet](https://docs.rakwi
 
 The RAK12002 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using the compatible screws.
 
-> **Image:** RAK12002 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/mounting.png"
+  width="60%"
+  caption="RAK12002 mounting connection to WisBlock Base module"
+/>
 
 ##### Disassembling Procedure
 
@@ -64,15 +79,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -88,7 +115,11 @@ In the following example, you will be using the [RAK12002 WisBlock RTC Module](h
 
 1. First, you need to select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE.
 
@@ -165,27 +196,55 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Click the link to locate the library.
 
-> **Image:** Locating the required library in the Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/add_library.png"
+  width="100%"
+  caption="Locating the required library in the Library Manager"
+/>
 
 4. Install the required library, as shown in **Figure 9**.
 
-> **Image:** Installing the Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/install_library.png"
+  width="100%"
+  caption="Installing the Library"
+/>
 
 5. Select the correct port and upload your code, as shown in **Figure 10** and **Figure 11**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/select_port.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/uploading.png"
+  width="100%"
+  caption="Uploading code"
+/>
 
 6. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK12002 date/time logs, as shown in **Figure 12**. You will be able to see the Time and Date in the Serial Monitor.
 
-> **Image:** RAK12002 date/time logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/serial-monitor.png"
+  width="100%"
+  caption="RAK12002 date/time logs"
+/>
 
 7. You can set the time and date in the code, as shown in **Figure 13** and **Figure 14**.
 
-> **Image:** Code for setting the time and date in RAK12002
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/set-time-and-date.png"
+  width="50%"
+  caption="Code for setting the time and date in RAK12002"
+/>
 
-> **Image:** Time and Date format
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/time-and-date-format.png"
+  width="50%"
+  caption="Time and Date format"
+/>
 
 #### RAK12002 in RAK11200 WisBlock Core Guide
 
@@ -193,7 +252,11 @@ If you experience any error in compiling the example sketch, check the updated c
 
 1. Select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/rak11200_board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE.
 
@@ -270,17 +333,33 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Click the link to locate the library.
 
-> **Image:** Locating the required library in the Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/adding_library11200.png"
+  width="100%"
+  caption="Locating the required library in the Library Manager"
+/>
 
 4. Install the required library, as shown in **Figure 17**.
 
-> **Image:** Installing the Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/library_install11200.png"
+  width="100%"
+  caption="Installing the Library"
+/>
 
 5. Select the correct port and upload your code, as shown in **Figure 18** and **Figure 19**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/select_port11200.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/upload11200.png"
+  width="100%"
+  caption="Uploading code"
+/>
 
 :::tip NOTE
 RAK11200 requires the BOOT0 pin to be configured properly before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
@@ -288,13 +367,25 @@ RAK11200 requires the BOOT0 pin to be configured properly before uploading. If n
 
 6. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK12002 date/time logs, as shown in **Figure 20**. You will be able to see the Time and Date in the Serial Monitor.
 
-> **Image:** RAK12002 date/time logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/serial_monitor11200.png"
+  width="100%"
+  caption="RAK12002 date/time logs"
+/>
 
 7. You can set the time and date in the code, as shown in **Figure 21** and **Figure 22**.
 
-> **Image:** Code for setting the time and date in RAK12002
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/set-time-and-date.png"
+  width="50%"
+  caption="Code for setting the time and date in RAK12002"
+/>
 
-> **Image:** Time and Date format
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/time-and-date-format.png"
+  width="50%"
+  caption="Time and Date format"
+/>
 
 #### RAK12002 in RAK11300 WisBlock Core Guide
 
@@ -302,7 +393,11 @@ RAK11200 requires the BOOT0 pin to be configured properly before uploading. If n
 
 1. Select the RAK11300 WisBlock Core, as shown in **Figure 23**.
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/rak11300_board.png"
+  width="100%"
+  caption="Selecting RAK11300 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE:
 
@@ -375,25 +470,54 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Click the link to locate the library, as shown in **Figure 24**.
 
-> **Image:** Locating the required library in the Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/adding_library11300.png"
+  width="100%"
+  caption="Locating the required library in the Library Manager"
+/>
 
 4. Install the required library, as shown in **Figure 25**.
 
-> **Image:** Installing the Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/library_install11300.png"
+  width="100%"
+  caption="Installing the Library"
+/>
 
 5. Select the correct port and upload your code, as shown in **Figure 26** and **Figure 27**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/select_port11300.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/upload11300.png"
+  width="100%"
+  caption="Uploading code"
+/>
 
 6. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK12002 date/time logs, as shown in **Figure 28**. You will be able to see the Time and Date in the Serial Monitor.
 
-> **Image:** RAK12002 date/time logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/serial_monitor11200.png"
+  width="100%"
+  caption="RAK12002 date/time logs"
+/>
 
 7. You can set the time and date in the code, as shown in **Figure 29** and **Figure 30**.
 
-> **Image:** Code for setting the time and date in RAK12002
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/set-time-and-date.png"
+  width="50%"
+  caption="Code for setting the time and date in RAK12002"
+/>
 
-> **Image:** Time and Date format
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12002/quickstart/time-and-date-format.png"
+  width="50%"
+  caption="Time and Date format"
+/>
 
+<RkBottomNav/>

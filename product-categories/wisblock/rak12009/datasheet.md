@@ -10,23 +10,26 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12009 WisBlock MQ3 Alcohol Gas Sensor Module Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK12009 is an Alcohol Gas Sensor module, part of the RAKWireless WisBlock Sensor Series. The sensor used in this module is the MQ-3B from Zhengzhou Winsen Electronics. This sensor is capable of detecting alcohol gas in the air with an alcohol concentration detection range of 25 to 500 ppm.
+The RAK12009 is an Alcohol Gas Sensor module, part of the RAKWireless WisBlock Sensor Series. The sensor used in this module is the MQ-3B from Zhengzhou Winsen Electronics. This sensor is capable of detecting alcohol gas in the air with an alcohol concentration detection range of 25 to 500&nbsp;ppm.
 
 ### Features
 
 * MQ-3B Alcohol Gas Sensor
 * Alert Function
 * I2C Interface, 7-bit I2C Address: 0x54
-* Detection Range: 25 to 500 ppm (Alcohol Gas)
-* 3.3 V or VBAT Power Supply
+* Detection Range: 25 to 500&nbsp;ppm (Alcohol Gas)
+* 3.3&nbsp;V or VBAT Power Supply
 * Chipset: Winsen MQ-3B
-* **Module size**: 25 x 35 mm
+* **Module size**: 25 x 35&nbsp;mm
 
 ## Specifications
 
@@ -36,7 +39,11 @@ The RAK12009 is an Alcohol Gas Sensor module, part of the RAKWireless WisBlock S
 
 The RAK12009 WisBlock MQ3 Alcohol Gas Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 1** shows the mounting mechanism of the RAK12009 on a WisBlock Base module.
 
-> **Image:** RAK12009 WisBlock MQ3 Alcohol Gas Sensor Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/sensor-mounting.png"
+  width="60%"
+  caption="RAK12009 WisBlock MQ3 Alcohol Gas Sensor Mounting"
+/>
 
 ### Hardware
 
@@ -54,10 +61,14 @@ The RAK12009 WisBlock MQ3 Alcohol Gas Sensor Module comprises a standard WisBloc
 
 :::tip NOTE
 - **I2C** related pins, **ALERT**, **EN**, **VBAT**, **3V3**, and **GND** are connected to WisConnector.
-- **VBAT** is the battery voltage input, max voltage is 4.2 V.
+- **VBAT** is the battery voltage input, max voltage is 4.2&nbsp;V.
 :::
 
-> **Image:** RAK12009 WisBlock MQ3 Alcohol Sensor Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/sensor-pinout.svg"
+  width="80%"
+  caption="RAK12009 WisBlock MQ3 Alcohol Sensor Pinout"
+/>
 
 #### Electrical Characteristics
 
@@ -69,17 +80,25 @@ The RAK12009 WisBlock MQ3 Alcohol Gas Sensor Module comprises a standard WisBloc
 | VCCIO  | Digital IO Power Supply      | -    | 3.3  | -    | V    |
 | VCC    | ADC to I2C Chip Power Supply | -    | 5    | -    | V    |
 
+
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 **Figure 3** shows the dimensions and the mechanic drawing of the RAK12009 module.
-
-> **Image:** RAK12009 WisBlock MQ3 Alcohol Sensor Module Mechanic Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/mechanic-drawing.png"
+  width="80%"
+  caption="RAK12009 WisBlock MQ3 Alcohol Sensor Module Mechanic Drawing"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/connector-footprint.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
 
 #### Schematic Diagram
 
@@ -87,36 +106,55 @@ The RAK12009 WisBlock MQ3 Alcohol Gas Sensor Module comprises a standard WisBloc
 
 **Figure 5** shows RAK12009 step-up power supply circuit.
 
-* **VBAT** Battery voltage (max voltage is 4.2 V)
+* **VBAT** Battery voltage (max voltage is 4.2&nbsp;V)
 * **EN** Power enable pin (active high). This pin is connected to **IO6** of WisBlock Core.
 
-> **Image:** RAK12009 WisBlock MQ3 Alcohol Sensor Module Power Supply
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/power-supply.png"
+  width="100%"
+  caption="RAK12009 WisBlock MQ3 Alcohol Sensor Module Power Supply"
+/>
 
 ##### Alcohol Detector Circuit
 
 **Figure 6** shows the alcohol detector circuit.
 
 * **U2** is the MQ-3B Alcohol sensor.
-* The pin 2 voltage (5 V) is used to supply standard working temperature to the sensor.
+* The pin 2 voltage (5&nbsp;V) is used to supply standard working temperature to the sensor.
 * **AOUT** is the voltage of load resistance R12 which is in series with sensor.
-* The pin 1 and pin 3 voltage (5 V) supply the detect voltage to load resistance R12.
-* **U3** is a 12-bit analog-to-digital converter with alert function. The **U3** power supply is 5 V.
+* The pin 1 and pin 3 voltage (5&nbsp;V) supply the detect voltage to load resistance R12.
+* **U3** is a 12-bit analog-to-digital converter with alert function. The **U3** power supply is 5&nbsp;V.
 
-> **Image:** RAK12009 WisBlock MQ3 Alcohol Sensor Module Detector Circuit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/detector-circuit.png"
+  width="100%"
+  caption="RAK12009 WisBlock MQ3 Alcohol Sensor Module Detector Circuit"
+/>
 
 ##### Voltage Level Shifter Circuit
 
-The 40-pin WisConnector voltage level is 3.3 V, while U2 and U3 levels are 5 V. To interface the different voltage levels between 40-pin WisConnector and Alcohol detector circuit, the RAK12009 uses a built-in voltage level shifter circuit.
+The 40-pin WisConnector voltage level is 3.3&nbsp;V, while U2 and U3 levels are 5&nbsp;V. To interface the different voltage levels between 40-pin WisConnector and Alcohol detector circuit, the RAK12009 uses a built-in voltage level shifter circuit.
 
-> **Image:** Voltage Level Shifter Circuit
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/shifter-circuit.png"
+  width="60%"
+  caption="Voltage Level Shifter Circuit"
+/>
+
 
 ##### I2C Address
 
 The I2C address of the Analog-to-Digital converter chip of RAK12009 can be selected via resistor jumpers, as shown in **Figure 8**.
 
-> **Image:**  RAK12009 Alcohol Sensor Module I2C Address configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/address-conf.png"
+  width="50%"
+  caption=" RAK12009 Alcohol Sensor Module I2C Address configuration"
+/>
 
 The I2C address is configured by the ADR1 and ADR0 address selection inputs, as shown below.
+
 
 | **ADR1**  | **ADR0**  |  **Slave Address [A6-A0]** |
 |:---------:|:---------:|:--------------------------:|
@@ -130,20 +168,30 @@ The I2C address is configured by the ADR1 and ADR0 address selection inputs, as 
 | VA        | GND       |1011001                     |
 | VA        | VA        |1011010                     |
 
+
 :::tip NOTE
 - The default 7-bit I2C address is 1010101 = 0x55. The selection input is ADR1 and ADR0 resistor jumper connected to **GND**.
-- **VA** is **U4** ADC121C021 Analog Power Supply (+5 V).
+- **VA** is **U4** ADC121C021 Analog Power Supply (+5&nbsp;V).
 :::
 
 ##### Full Schematic
 
-> **Image:** RAK12009 complete schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/complete-schematic.png"
+  width="100%"
+  caption="RAK12009 complete schematic"
+/>
+
 
 ##### J2 Connector Pinout
 
 RAK12009 has an additional J2 connector to provide an extra interface to the module. This connector separates the sensor module from the WisBlock Base, to fits with maker requirements. The pinout of J2 connector is shown in **Figure 10**.
 
-> **Image:** J2 Connector Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12004/datasheet/j2-connector.png"
+  width="40%"
+  caption="J2 Connector Pinout"
+/>
 
 ##### WisConnector
 
@@ -154,5 +202,10 @@ RAK12009 has an additional J2 connector to provide an extra interface to the mod
 * **EN** is a power enable pin.
 * **ALERT** is an analog-to-digital converter alert pin.
 
-> **Image:** RAK12009 Module 40-pin WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12009/datasheet/wisconnector.png"
+  width="40%"
+  caption="RAK12009 Module 40-pin WisConnector"
+/>
 
+<RkBottomNav/>

@@ -11,6 +11,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # WisBlock Indoor Location Tracker Kit Datasheet
 
 ## Overview
@@ -42,13 +46,18 @@ In addition to its powerful tracking capabilities, the WisBlock Indoor Location 
         - Two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101?utm_source=RAK13101&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK13101</a> with GSM/GPRS capability
 - GPS built-in on Cellular modules (only works outdoor)  
 
+
 ## Specifications
 
 ### Overview
 
 The WisBlock Indoor Location Tracker Kit includes the following modules:
 
-> **Image:** Modules of the WisBlock Indoor Location Tracker Kit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kits/9_indoor_tracker_kit_2.png"
+  width="70%"
+  caption="Modules of the WisBlock Indoor Location Tracker Kit"
+/>
 
 ### Hardware
 
@@ -94,4 +103,6 @@ The cellular modules support different cellular protocols, as shown in the table
 #### Interconnections
 
 The **WisBlock Indoor Location Tracker Kit** is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
+
+<RkBottomNav/>
 

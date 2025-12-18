@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Board ONE Datasheet
 
 ## Overview
@@ -28,8 +31,8 @@ For additional details about Meshtastic, please visit the official website: <a h
 - Based on the RAK4630
 - Supports LoRa and Bluetooth
 - Compatible with Meshtastic firmware
-- Compatible with 5 V solar panels
-- Supports 3.7 V rechargeable lithium batteries
+- Compatible with 5&nbsp;V solar panels
+- Supports 3.7&nbsp;V rechargeable lithium batteries
 - Standard Type-C connector for debugging and charging
 - 1.3-inch OLED display
 - Battery charging indicator light (red), two general indicator lights (green and red)
@@ -37,21 +40,41 @@ For additional details about Meshtastic, please visit the official website: <a h
 - Integrated PCB Bluetooth antenna
 - MHF1 IPEX connector for LoRa antenna
 - Sensor slot for GPS module (RAK12500)
-- Compact size: 34.4 mm x 60.8 mm
+- Compact size: 34.4&nbsp;mm x 60.8&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** WisMesh Board ONE top view
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-top.png"
+  width="50%"
+  caption="WisMesh Board ONE top view"
+/>
 
-> **Image:** WisMesh Board ONE bottom view
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-bottom.png"
+  width="50%"
+  caption="WisMesh Board ONE bottom view"
+/>
 
 #### Block Diagram
 
-> **Image:** WisMesh Board ONE powertree
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-powertree.png"
+  width="100%"
+  caption="WisMesh Board ONE powertree"
+/>
 
-> **Image:** WisMesh Board ONE signal block diagram
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-signal-block-diagram.png"
+  width="100%"
+  caption="WisMesh Board ONE signal block diagram"
+/>
 
 ### Electrical Characteristics
 
@@ -65,6 +88,7 @@ The Absolute Maximum Ratings of the device are shown in the table below. The str
 3. Exposure to maximum rating conditions may affect the device reliability.
 :::
 
+
 | **Ratings**                             | Maximum Value   | Unit |
 |-----------------------------------------|-----------------|------|
 | Power supply on the USB port (**VBUS**) | –0.3 to 5.5     | V    |
@@ -72,6 +96,7 @@ The Absolute Maximum Ratings of the device are shown in the table below. The str
 | Solar panel voltage (**CONN_S**)        | –0.3 to 5.5     | V    |
 | IOs of WisBlock connector               | –0.3 to VDD+0.3 | V    |
 | ESD                                     | 2000            | V    |
+
 
 :::warning
 The WisMesh Board ONE, as any electronic equipment, is sensitive to **electrostatic discharge (ESD)**. Improper handling can cause permanent damage to the module.
@@ -89,7 +114,7 @@ The WisMesh Board ONE, as any electronic equipment, is sensitive to **electrosta
 
 #### Battery Connector
 
-The WisMesh Board ONE can be powered by a rechargeable battery, connected to the **P2 connector**. The nominal operating voltage of the battery should be within the range shown in the following table. The matching connector for the battery wires is an <a href="https://www.jst-mfg.com/product/detail_e.php?series=199" target="_blank">JST PHR-2 2 mm pitch female</a>.
+The WisMesh Board ONE can be powered by a rechargeable battery, connected to the **P2 connector**. The nominal operating voltage of the battery should be within the range shown in the following table. The matching connector for the battery wires is an <a href="https://www.jst-mfg.com/product/detail_e.php?series=199" target="_blank">JST PHR-2 2&nbsp;mm pitch female</a>.
 
 :::tip NOTE
 Depending on the regional requirements, the WisMesh Board ONE can have a two pin (US) or a three pin (EU) battery connector. In case the three pin connector is on the board, only batteries with an integratec NTC temperature sensor and a three wire cable can be connected and charged.
@@ -103,17 +128,18 @@ The Type-C USB connector is used as a charging port. The voltage and current fed
 
 | **Parameter**    | **Value**        |
 |------------------|------------------|
-| Charging voltage | 4.5 – 5.5 V |
-| Charging current | 440 mA      |
+| Charging voltage | 4.5 – 5.5&nbsp;V |
+| Charging current | 440&nbsp;mA      |
 
 A suitable Li-ion battery should have the following parameters as shown in the table below:
 
 | **Parameter**     | **Value**            |
 |-------------------|----------------------|
-| Standard voltage  | 3.7 V           |
-| Charging voltage  | 4.2 V           |
+| Standard voltage  | 3.7&nbsp;V           |
+| Charging voltage  | 4.2&nbsp;V           |
 | Capacity          | As required          |
-| Discharge current | At least 500 mA |
+| Discharge current | At least 500&nbsp;mA |
+
 
 :::tip NOTE
 Do not use a non-rechargeable battery.
@@ -121,7 +147,7 @@ Do not use a non-rechargeable battery.
 
 #### Solar Panel Connector
 
-A 5 V solar panel can be connected to the board via the **P1 connector**. The solar panel can also be used to charge the Li-ion battery. The matching connector for the solar panel wires is an <a href="https://www.jst-mfg.com/product/detail_e.php?series=287" target="_blank">JST ZHR-2 1.5 mm pitch female</a>.
+A 5&nbsp;V solar panel can be connected to the board via the **P1 connector**. The solar panel can also be used to charge the Li-ion battery. The matching connector for the solar panel wires is an <a href="https://www.jst-mfg.com/product/detail_e.php?series=287" target="_blank">JST ZHR-2 1.5&nbsp;mm pitch female</a>.
 
 ### Hardware
 
@@ -133,7 +159,7 @@ WisMesh Board ONE provides the following interfaces, headers, two buttons, and W
 
 - One Type-C USB connector
 - One connector for the Sensor slot
-- Two pin headers 2.54 mm hole pads
+- Two pin headers 2.54&nbsp;mm hole pads
 - 2-pin battery interface
 - 2-pin solar panel interface
 
@@ -147,11 +173,17 @@ The Type-C USB connector is compliant with the USB 2.0 specification. This USB i
 * Port can be input or output
 * Fast battery charging
 
-> **Image:** USB Type-C receptacle pinout
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/image-20220127173430838.png"
+  width="60%"
+  caption="USB Type-C receptacle pinout"
+/>
 
 ##### J4 and J9 Headers
 
-On the WisMesh Board ONE, there are two 2.54 mm pitch headers for IO extension. GPIOs, SPI, I2C, SWD pins from the WisDuo module are exposed on these headers.
+On the WisMesh Board ONE, there are two 2.54&nbsp;mm pitch headers for IO extension. GPIOs, SPI, I2C, SWD pins from the WisDuo module are exposed on these headers.
+
 
 ###### J4 Header Pinout
 
@@ -161,7 +193,7 @@ On the WisMesh Board ONE, there are two 2.54 mm pitch headers for IO extension.
 | 2       | VBAT         | Battery supply            | ---               |
 | 3       | VBUS_D       | USB supply                | ---               |
 | 4       | GND          | Ground pin                | ---               |
-| 5       | 3V3          | 3.3 V                | ---               |
+| 5       | 3V3          | 3.3&nbsp;V                | ---               |
 | 6       | GND          | Ground pin                | ---               |
 | 7       | I2C1_SDA     | I2C 1 data                | GPIO P0.13        |
 | 8       | I2C1_SCL     | I2C 1 clock               | GPIO P0.14        |
@@ -175,9 +207,10 @@ On the WisMesh Board ONE, there are two 2.54 mm pitch headers for IO extension.
 
 ###### J9 Header Pinout
 
+
 | **Pin** | **Pin Name** | **Description**               | **nRF52840 GPIO** |
 |---------|--------------|-------------------------------|-------------------|
-| 1       | 3V3_S        | 3.3 V, controlled by IO2 | ---               |
+| 1       | 3V3_S        | 3.3&nbsp;V, controlled by IO2 | ---               |
 | 2       | GND          | Ground pin                    | ---               |
 | 3       | IO2          | GPIO 2                        | GPIO P1.02        |
 | 4       | SPI_MOSI     | SPI MOSI pin                  | GPIO P0.30        |
@@ -193,19 +226,19 @@ On the WisMesh Board ONE, there are two 2.54 mm pitch headers for IO extension.
 
 #### Battery and Solar Panel / 5V Connection
 
-WisMesh Board ONE can be powered via the USB cable or Li-ion/LiPo battery via the dedicated connectors, as shown below. The matching connector for the battery wires is a <a href="https://www.jst-mfg.com/product/detail_e.php?series=199" target="_blank">JST PHR-2 2 mm pitch female</a>.
+WisMesh Board ONE can be powered via the USB cable or Li-ion/LiPo battery via the dedicated connectors, as shown below. The matching connector for the battery wires is a <a href="https://www.jst-mfg.com/product/detail_e.php?series=199" target="_blank">JST PHR-2 2&nbsp;mm pitch female</a>.
 
-The battery can be recharged as well via a small solar panel or a regulated 5V supply, as shown below. The matching connector for the battery wires is a <a href="https://www.jst-mfg.com/product/detail_e.php?series=287" target="_blank">JST ZHR-2 1.5 mm pitch female</a>.
+The battery can be recharged as well via a small solar panel or a regulated 5V supply, as shown below. The matching connector for the battery wires is a <a href="https://www.jst-mfg.com/product/detail_e.php?series=287" target="_blank">JST ZHR-2 1.5&nbsp;mm pitch female</a>.
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system.
 - If a non-rechargeable battery is used, it must be unplugged before connecting the USB cable to the board's USB port to configure the device. Failing to do so could damage the battery or cause a fire.
 - Make sure the battery wires match the polarity on the board. Not all batteries have the same wiring.
 :::
 
 :::warning
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - The GND pin of the Solar Panel Connector is located on edge of the board. Make sure the Solar Panel wires are matching the polarity on the WisMesh Board ONE.
 :::
 
@@ -229,7 +262,12 @@ The User Push Button is connected to the WisBlock Core modules IO5. It requires 
 
 The WisBlock sensor module connector is a **24-pin board-to-board connector**.
 
-> **Image:** WisBlock Sensor module connector
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/wisblock/rak19003/datasheet/13.wissensor-module-connector.png"
+  width="40%"
+  caption="WisBlock Sensor module connector"
+/>
 
 | **Sensor Slot** | **Pin Number** | **Pin Number** | **Sensor Slot** |
 |-----------------|----------------|----------------|-----------------|
@@ -246,6 +284,8 @@ The WisBlock sensor module connector is a **24-pin board-to-board connector**.
 | NC              | 21             | 22             | NC              |
 | GND             | 23             | 24             | RXD1            |
 
+
+
 As for the following table, it shows the pin name and description of each pin in the WisBlock Sensor module connector.
 
 | **Pin Number** | **Connector D** | **Type** | **Description**                                                                                                                                 |
@@ -258,14 +298,14 @@ As for the following table, it shows the pin name and description of each pin in
 | 6              | SPI_MOSI        | I/O      | SPI MOSI signal                                                                                                                                 |
 | 7              | I2C1_SCL        | I/O      | I2C clock signal                                                                                                                                |
 | 8              | I2C1_SDA        | I/O      | I2C data signal                                                                                                                                 |
-| 9              | VDD             | S        | Generated by CPU module. Used to power sensor board if MCU IO level is not 3.3 V                                                           |
+| 9              | VDD             | S        | Generated by CPU module. Used to power sensor board if MCU IO level is not 3.3&nbsp;V                                                           |
 | 10             | IO4             | I/O      | General purpose IO. IO2 controls the power switch of 3V3_S. When the 3V3_S function is used, IO2 can not be used as an interrupt of the sensor. |
-| 11             | 3V3_S           | S        | 3.3 V power supply. Can be shut down by the CPU module.                                                                                    |
+| 11             | 3V3_S           | S        | 3.3&nbsp;V power supply. Can be shut down by the CPU module.                                                                                    |
 | 12             | IO3             | I/O      | General purpose IO - IO controls the power switch of 3V3_S. When the 3V3_S function is used, IO2 cannot be used as an interrupt of the sensor.  |
 | 13             | NC              | NC       | Not connected                                                                                                                                   |
-| 14             | 3V3_S           | S        | 3.3 V power supply. Can be shut down by the CPU module.                                                                                    |
+| 14             | 3V3_S           | S        | 3.3&nbsp;V power supply. Can be shut down by the CPU module.                                                                                    |
 | 15             | NC              | NC       | Not connected                                                                                                                                   |
-| 16             | VDD             | S        | Generated by CPU module. Used to power sensor board if the MCU IO level is not 3.3 V.                                                      |
+| 16             | VDD             | S        | Generated by CPU module. Used to power sensor board if the MCU IO level is not 3.3&nbsp;V.                                                      |
 | 17             | NC              | NC       | Not connected                                                                                                                                   |
 | 18             | NC              | NC       | Not connected                                                                                                                                   |
 | 19             | NC              | NC       | Not connected                                                                                                                                   |
@@ -281,7 +321,12 @@ As for the following table, it shows the pin name and description of each pin in
 
 Dimensions and the mechanic drawing of WisMesh Board ONE.
 
-> **Image:** WisMesh Board ONE mechanic drawing
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-dimenstions.png"
+  width="100%"
+  caption="WisMesh Board ONE mechanic drawing"
+/>
 
 #### Environmental Characteristics
 
@@ -289,9 +334,9 @@ The table below lists the operation and storage temperature requirements of WisM
 
 | **Parameter**                 | **Minimum** | **Typical** | **Maximum** |
 |-------------------------------|:-----------:|:-----------:|:-----------:|
-| Operational Temperature Range | –35° C | +25° C | +75° C |
-| Extended Temperature Range    | –40° C | +25° C | +80° C |
-| Storage Temperature Range     | –40° C | +25° C | +80° C |
+| Operational Temperature Range | –35°&nbsp;C | +25°&nbsp;C | +75°&nbsp;C |
+| Extended Temperature Range    | –40°&nbsp;C | +25°&nbsp;C | +80°&nbsp;C |
+| Storage Temperature Range     | –40°&nbsp;C | +25°&nbsp;C | +80°&nbsp;C |
 
 ### Schematic Diagram
 
@@ -299,49 +344,95 @@ The table below lists the operation and storage temperature requirements of WisM
 
 Overcurrent protection is designed to safeguard electrical circuits and components from excessive current levels that could potentially cause damage or hazards. The protection current is determined by the combined resistance of resistors R59 and R25.
 
-> **Image:** OCP
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-ocp.png"
+  width="100%"
+  caption="OCP"
+/>
 
 #### Charge Management
 
 The SGM4152 is used as the charge management chip. D2 is the charging indicator (red LED). During the charging process, the indicator will be on. When charging is not occurring or when charging is complete, the indicator will turn off.
 
-The chip includes battery temperature-related charging control. Charging will stop if the battery temperature exceeds 55° C or falls below 0° C. This feature enhances device safety and is also a requirement for CE certification (IEC 62368‑1). Battery temperature sensing is typically achieved using a Negative Temperature Coefficient (NTC) thermistor, which can be integrated inside the battery or soldered onto the board (R62).
+The chip includes battery temperature-related charging control. Charging will stop if the battery temperature exceeds 55°&nbsp;C or falls below 0°&nbsp;C. This feature enhances device safety and is also a requirement for CE certification (IEC 62368‑1). Battery temperature sensing is typically achieved using a Negative Temperature Coefficient (NTC) thermistor, which can be integrated inside the battery or soldered onto the board (R62).
 
-> **Image:** Charge management
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-charger.png"
+  width="100%"
+  caption="Charge management"
+/>
 
-> **Image:** Battery connector
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-battery-conn.png"
+  width="100%"
+  caption="Battery connector"
+/>
 
 #### Power Path
 
 When an external power source is available, priority is given to using the external power supply.
 
-> **Image:** Power Path
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-power-path.png"
+  width="100%"
+  caption="Power Path"
+/>
 
 #### DC-DC
 
-The buck converter generates 3.3 V.
+The buck converter generates 3.3&nbsp;V.
 
-> **Image:** DC-DC
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-dcdc.png"
+  width="100%"
+  caption="DC-DC"
+/>
 
 #### Load Switch
 
 The load switch status can be controlled through IO2.
 
-> **Image:** Load Switch
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-loadswitch.png"
+  width="100%"
+  caption="Load Switch"
+/>
 
 #### OLED Display Interface
 
-> **Image:** OLED display interface
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-oled.png"
+  width="100%"
+  caption="OLED display interface"
+/>
 
 #### Sensor Slot
 
 This slot is specifically for the GPS module (RAK12500), but it can also be used for other WisBlock Sensor modules.
 
-> **Image:** Sensor Slot
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-sensorslot.png"
+  width="100%"
+  caption="Sensor Slot"
+/>
 
 #### Pin Header
 
 The pin headers on WisMesh Board ONE extend the power and signals of the RAK4630, allowing users to customize their own designs through the pin headers.
 
-> **Image:** Pin Headers
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/b1-pinheaders.png"
+  width="100%"
+  caption="Pin Headers"
+/>
 
+<RkBottomNav/>

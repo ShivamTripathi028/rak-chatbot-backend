@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK14014 WisBlock TFT LCD Display Module
 
 Thank you for choosing **RAK14014 WisBlock TFT LCD Display Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -30,19 +33,19 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen display that has a 2.4-inch active area and contains 240 x 320 pixels which can output colorful graphic displays. It is interfaced to WisBlock Core via SPI.
+RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen display that has a 2.4-inch active area and contains 240&nbsp;x&nbsp;320 pixels which can output colorful graphic displays. It is interfaced to WisBlock Core via SPI.
 
 ## Product Features
 
 * **Module Specifications**
     * Wide Supply Voltage Range:
-        - I/O Voltage (VDDI to DGND): 1.65 V ~ 3.3 V (VDDI ≦ VDD )
-        - Analog Voltage (VDD to AGND): 2.4 V ~ 3.3 V
-    * Operating current: 80 
+        - I/O Voltage (VDDI to DGND): 1.65&nbsp;V ~ 3.3&nbsp;V (VDDI ≦ VDD )
+        - Analog Voltage (VDD to AGND): 2.4&nbsp;V ~ 3.3&nbsp;V
+    * Operating current: 80&nbsp;
     * Touchscreen LCD
     * SPI interface
-    * LCD size: 2.4 inch
-    * 240 x 320 pixel display
+    * LCD size: 2.4&nbsp;inch
+    * 240&nbsp;x&nbsp;320 pixel display
     * IPS TFT-LCD
     * Full view direction
     * The backlight type is 4 x LED (white)
@@ -50,10 +53,10 @@ RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen displa
     * Display Colors (Color Mode)
         - Full Color: 262K, RGB=(666) max., Idle Mode Off
         - Color Reduce: 8-color, RGB=(111), Idle Mode On
-    * Operating temperature: **-30° C to 85° C**
+    * Operating temperature: **-30°&nbsp;C to 85°&nbsp;C**
 
 * **Module Size**
-    * 35 x 25 mm
+    * 35 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -63,3 +66,4 @@ To use a **RAK14014**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
+<RkBottomNav/>

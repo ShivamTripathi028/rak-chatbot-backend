@@ -12,6 +12,9 @@ sidebar_label: Product Overview
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7246G WisGate Developer D0
 
@@ -39,6 +42,6 @@ The RAK7246G Developer is an ideal choice for prototype design, concept verifica
 - Uses an SX1308 baseband processor with dual **SX1257**, full 8 uplink channels, and 1 downlink channel gateway
 - Built-in Ublox **MAX-7Q GPS** module
 - The pre-installed radiator guarantees the stable thermal performance
-- Tx max 20 dBm, Rx min -139 dBm @ SF12, BW 125 kHz
+- Tx max 20&nbsp;dBm, Rx min -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
 - Covers the entirety of the LoRa high-frequency band space: RU864, IN865, EU868, US915, AU915, KR920, AS923
-- Power supply 5 V / 2.5 A (power adapter sold separately)
+- Power supply 5&nbsp;V / 2.5&nbsp;A (power adapter sold separately)

@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13009 WisBlock QWIIC Module Datasheet
 
 ## Overview
@@ -18,11 +21,12 @@ sidebar_label: Datasheet
 
 The RAK13009 is a QWIIC module, which is part of the RAKWireless WisBlock Interface series. This module has two connectors: one for the WisBlock sensor and then for the standard QWIIC interface. By using this module you can plug any QWIIC interface module into the WisBlock sensor and use it just like any other WisBlock sensor.
 
+
 ### Features
 
  - WisBlock Sensor module
  - Standard QWIIC interface
- - Module Size: 10 mm x 10 mm
+ - Module Size: 10&nbsp;mm x 10&nbsp;mm
 
 ## Specifications
 
@@ -32,7 +36,12 @@ The RAK13009 is a QWIIC module, which is part of the RAKWireless WisBlock Interf
 
 The RAK13009 WisBlock QWIIC can be mounted to the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK13009 on a WisBlock Base board, such as the [RAK5005-O](https://store.rakwireless.com/products/rak5005-o-base-board).
 
-> **Image:** RAK13009 WisBlock QWIIC mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/mounting.png"
+  width="60%"
+  caption="RAK13009 WisBlock QWIIC mounting"
+/>
+
 
 ### Hardware
 
@@ -46,26 +55,33 @@ The RAK13009 WisBlock QWIIC comprises a standard WisBlock sensor connector. The 
 - **I2C** related pin, **INT** pin, **3V3_S**, and **GND** are connected to WisBlock sensor connector
 :::
 
- 
-> **Image:** RAK13009 WisBlock QWIIC pinout
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/rak13009_pinout.svg"
+  width="60%"
+  caption="RAK13009 WisBlock QWIIC pinout"
+/>
 
 #### Electrical Characteristics
 
 ##### QWIIC Interface Wiring Label
 
-> **Image:** QWIIC cable
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/qwicc-cable.png"
+  width="70%"
+  caption="QWIIC cable"
+/>
 
 All the QWIIC cables follow the color scheme and arrangement, as shown in the table below.
 
 | Wire Color | Label      |
 | ---------- | ---------- |
 | Black      | GND        |
-| Red        | 3.3 V |
+| Red        | 3.3&nbsp;V |
 | Blue       | SDA        |
 | Yellow     | SCL        |
 
 :::warning
-The recommended max current on a QWIIC cable is 226 mA.
+The recommended max current on a QWIIC cable is 226&nbsp;mA.
 :::
 
 #### Mechanical Characteristics
@@ -74,16 +90,37 @@ The recommended max current on a QWIIC cable is 226 mA.
 
 **Figure 4** shows the dimensions and the mechanical drawing of the RAK13009 module.
 
- 
-> **Image:** RAK13009 dimensions
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/mechanical_drawing.png"
+  width="60%"
+  caption="RAK13009 dimensions"
+/>
 
-> **Image:** QWIIC interface dimensions (in mm)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/qwiic_interface.png"
+  width="60%"
+  caption="QWIIC interface dimensions (in mm)"
+/>
+
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/pcb_footprint.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
+
 
 #### Schematic Diagram
 
-> **Image:** RAK13009 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13009/datasheet/schematic.png"
+  width="100%"
+  caption="RAK13009 schematic diagram"
+/>
 
+
+
+
+<RkBottomNav/>

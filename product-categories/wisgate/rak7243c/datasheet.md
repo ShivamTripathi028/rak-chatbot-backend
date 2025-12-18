@@ -10,6 +10,9 @@ sidebar_label: Datasheet
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7243C WisGate Developer D3+ Gateway Datasheet
 
@@ -45,13 +48,23 @@ The overview covers the board overview of RAK7243C and its block diagram that di
 
 #### Board Overview
 
-> **Image:** RAK7243C Outer Dimensions
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/2.rak7243-dimensions.png"
+  width="60%"
+  caption="RAK7243C Outer Dimensions"
+/>
 
 #### Block Diagram
 
 The following figure shows the basic concept of the of the system for LoRaWAN®. RAK7243 Pilot Gateway is the central hardware solution for all LoRa based radio communication. It receives and transmits radio messages. The processing of radio messages as well as the protocol related tasks are done by an embedded host system (Raspberry Pi). Received and processed radio messages are being sent to a LoRaWAN server. The concrete segmentation of the protocol related tasks is outside the scope of this document
 
-> **Image:** RAK7243C WisGate Developer D3+ Gateway System Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/3.rak7243-system-structure.svg"
+  width="80%"
+  caption="RAK7243C WisGate Developer D3+ Gateway System Structure"
+/>
 
 ### Hardware
 
@@ -59,7 +72,11 @@ The hardware specification is categorized into six parts. It discusses the inter
 
 #### Interfaces
 
-> **Image:** RAK7243C Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/4.rak7243c-interfaces.png"
+  width="80%"
+  caption="RAK7243C Interfaces"
+/>
 
 :::tip NOTE
 LTE Antenna(DIV) is only used for the EG91 / EG95 Version and reserved for the BG96 Version.
@@ -71,17 +88,29 @@ The RAK7243C WisGate Developer D3+ Gateway is composed of the LPWAN Concentrator
 
 ##### RAK2245 Pi HAT
 
-> **Image:** RAK2245 Pi HAT
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/5.rak2245.png"
+  width="40%"
+  caption="RAK2245 Pi HAT"
+/>
 
 RAK2245 Pi HAT(Model Name is: RAK2243) is an LPWAN Concentrator board that follows the Pi HAT standard and can be mounted to Pi board with 40-pin connector.
 
 - For detailed information about the RAK2245, Go to the [RAK2245 Pi HAT Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak2245-pi-hat/datasheet/).
 
-> **Image:** LoRa Hardware Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/6.lora-hardware-structure.svg"
+  width="80%"
+  caption="LoRa Hardware Structure"
+/>
 
 ##### RAK2013 Cellular
 
-> **Image:** RAK2013 Cellular Pi HAT
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/7.rak2013.png"
+  width="40%"
+  caption="RAK2013 Cellular Pi HAT"
+/>
 
 RAK2013 is an add-on board following Raspberry Pi HAT standard. It can transmit UART data from Raspberry Pi to a Cellular network. It can support several cellular protocols, such as NB-IOT, CAT-M, CAT1 or CAT 4, by choosing different modular on the board.
 
@@ -89,7 +118,11 @@ The RAK2013 integrates an audio codec and amplifier on it, with the carrier oper
 
 - For detailed information about the RAK2013, go to [RAK2013 Cellular Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak2013/datasheet/).
 
-> **Image:** Cellular Hardware Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/8.cellular-hardware-structure.png"
+  width="75%"
+  caption="Cellular Hardware Structure"
+/>
 
 #### RF Characteristics
 
@@ -199,13 +232,21 @@ Quectel EG95 is a series of LTE category 4 module optimized specially for M2M an
 
 The LoRa Antenna with RP-SMA male connector is shown in the figure below:
 
-> **Image:** LoRa Antenna Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/9.lora-antenna-overview.png"
+  width="50%"
+  caption="LoRa Antenna Overview"
+/>
 
 ###### Antenna Dimension
 
 The antenna's mechanical dimension is shown below:
 
-> **Image:** LoRa Antenna Dimension in mm
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/10.lora-antenna-dimensions.png"
+  width="50%"
+  caption="LoRa Antenna Dimension in mm"
+/>
 
 ###### Antenna Parameters
 
@@ -213,8 +254,8 @@ The antenna's mechanical dimension is shown below:
 | ---------------------------------- | ------------------------------ |
 | Voltage Standard Wave Ratio (VSWR) | 1.5:1                          |
 | Gain                               | -2.0 dBi                       |
-| Working Temperature & Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95% |
-| Storage Temperature & Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95% |
+| Working Temperature &amp; Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95% |
+| Storage Temperature &amp; Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95% |
 
 ##### LTE
 
@@ -224,11 +265,19 @@ built-in EG91/EG95, there are two LTE antennas, and no GPS antenna with the modu
 The LTE antenna for the Developer Gateway with RP-SMA male connector covers the working frequency band
 from 824MHz to 2690MHz. The antenna is shown below.
 
-> **Image:** LTE Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/11.lte-antenna.png"
+  width="50%"
+  caption="LTE Antenna"
+/>
 
 ###### Antenna Dimension
 
-> **Image:** LTE Antenna Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/12.lte-antenna-dimensions.png"
+  width="50%"
+  caption="LTE Antenna Dimension"
+/>
 
 ###### Antenna Parameters
 
@@ -237,18 +286,26 @@ from 824MHz to 2690MHz. The antenna is shown below.
 | Frequency (MHz)                    | 700 / 800 / 880 / 960 / 1710 / 1880 / 2170     |
 | Voltage Standard Wave Ratio (VSWR) | 9.3 / 4.6 / 3.6 / 4.9 / 9.3 / 4.4 / 15         |
 | Gain (dBi)                         | 1.63 / 1.84 / 1.96 / 2.23 / 0.03 / 0.01 / 1.97 |
-| Working Temperature & Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95%                 |
-| Storage Temperature & Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95%                 |
+| Working Temperature &amp; Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95%                 |
+| Storage Temperature &amp; Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95%                 |
 
 ##### GPS
 
 The GPS antenna with SMA Male Connector for Developer Gateway is shown below
 
-> **Image:** GPS Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/13.gps-antenna.png"
+  width="50%"
+  caption="GPS Antenna"
+/>
 
 ###### GPS Antenna Dimension
 
-> **Image:** GPS Antenna Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7243c/datasheet/14.gps-antenna-dimensions.png"
+  width="75%"
+  caption="GPS Antenna Dimensions"
+/>
 
 ###### GPS Environmental Requirements
 
@@ -331,6 +388,7 @@ Download the latest firmware of RAK7243 and RAK7243C in the table provided below
 
 ## Models / Bundles
 
+
 | Part Number    | Package                                                                               | Description                                                                                                                  |
 | -------------- | ------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | RAK7243-1x-142 | With 1x LoRa Antenna, 1x GPS Antenna, 2x LTE Antenna, 1x Power Adapter and 1x SD card | EG95-E version for Cat 4 Cellular, GPS and for EU433 / Cn470 / IN865 / EU868 / US915 / AU915 / AS923 / KR920 regions |
@@ -338,4 +396,5 @@ Download the latest firmware of RAK7243 and RAK7243C in the table provided below
 | RAK7243-0x-000 | With 1x LoRa Antenna, 1x GPS Antenna, 1x LTE Antenna, 1x Power Adapter and 1x SD card | Without Cellular version for EU433 / CN470 / IN865 / EU868 / US915 / AU915 / AS923 / KR920 regions                   |
 
 <!-- ## Certification -->
+
 

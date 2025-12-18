@@ -11,6 +11,9 @@ slug: /product-categories/wisduo/rak3172-sip/at-command-manual/
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK3172-SiP WisDuo LPWAN SiP AT Command Manual
 
 ## Overview
@@ -29,7 +32,9 @@ The RAK3172-SiP default firmware is based on <a href="https://docs.rakwireless.c
 
 The complete list of commands can be found in <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">RUI3 AT Commands Documentation.</a>
 
+
 :::tip NOTE
 In addition, aside on UART2, AT commands can also be interfaced via UART1 **Pin 17 (TX1)** and **Pin 18 (RX1)**. You can configure the settings of UART1 and UART2 interfaces via <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#rak-unified-interface-v3-rui3-serial-operating-modes" target="_blank">RUI3 Serial Operating Modes</a>.
 :::
 
+<RkBottomNav/>

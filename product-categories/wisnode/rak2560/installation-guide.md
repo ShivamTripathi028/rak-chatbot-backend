@@ -11,7 +11,12 @@ keywords:
 sidebar_label: Installation Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK2560 WisNode Sensor Hub Installation Guide
+
 
 During installation, make sure that the installer complies with all the necessary safety regulations to ensure personal safety.
 
@@ -21,19 +26,32 @@ Do not place the device and mounting kit on pedestrian walkways to avoid acciden
 
 :::
 
+
 ## Inserting the SIM Card and Batteries
 
 1. Remove the back cover by unscrewing the four screws using a Philips screwdriver.
 
-> **Image:** Removing the back cover
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/removing-the-back-cover.png"
+  width="25%"
+  caption="Removing the back cover"
+/>
 
 2. Put the SIM card in the groove and push it into the socket.
 
-> **Image:** Inserting the SIM card
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/inserting-the-sim-card.png"
+  width="40%"
+  caption="Inserting the SIM card"
+/>
 
 3. Insert the batteries by pressing the negative spring with the battery and fit the positive end in its place.
 
-> **Image:** Fitting the batteries
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/fitting-the-batteries.png"
+  width="25%"
+  caption="Fitting the batteries"
+/>
 
 :::tip NOTE
 The battery should be 18505 in size.
@@ -41,7 +59,11 @@ The battery should be 18505 in size.
 
 4. Put the back cover back and screw it in place.
 
-> **Image:** Closing the back cover
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/closing-the-back-cover.png"
+  width="25%"
+  caption="Closing the back cover"
+/>
 
 :::tip NOTE
 - Make sure to properly fit the rubber seal in place to ensure waterproof sealing.
@@ -52,53 +74,89 @@ The battery should be 18505 in size.
 
 ### Wall Mounting
 
-1. Using a 5 mm drill head, drill holes in the wall and plug the screw anchors in the holes.
+1. Using a 5&nbsp;mm drill head, drill holes in the wall and plug the screw anchors in the holes.
 
-> **Image:** Drilling the wall
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/drilling-the-wall1.png"
+  width="80%"
+  caption="Drilling the wall"
+/>
 
 2. Using the tapping screws, attach the mounting bracket to the wall.
 
-> **Image:** Install the bracket on the wall
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/install-the-bracket-on-the-wall.png"
+  width="40%"
+  caption="Install the bracket on the wall"
+/>
 
 ### Pole Mounting
 
 1. Fix the mounting bracket on the pole with one steel strip.
 
-> **Image:** Install the bracket on a pole
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/installing-the-bracket-on-a-pole.png"
+  width="20%"
+  caption="Install the bracket on a pole"
+/>
 
 :::tip NOTE
-The diameter of the pole that is supported by the brackets is 50-80 mm. If the pole diameter is more than this value, larger steel strips can be used. The standard mounting kit does not include larger steel strips. If needed, you should purchase them separately.
+The diameter of the pole that is supported by the brackets is 50-80&nbsp;mm. If the pole diameter is more than this value, larger steel strips can be used. The standard mounting kit does not include larger steel strips. If needed, you should purchase them separately.
 :::
 
 2. Align the hanging tab of the device with the slot on the bracket, and put the tab into the slot. Then, pull the device down until it clicks in place.
 
-> **Image:** Placing the Hub on the bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/placing-the-hub-on-the-bracket.png"
+  width="40%"
+  caption="Placing the Hub on the bracket"
+/>
 
 3. Add the security screw on top so the device and bracket are locked together.
 
-> **Image:** Adding a security screw
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/adding-a-security-screw.png"
+  width="25%"
+  caption="Adding a security screw"
+/>
 
 ## Mounting of the Sensor Probe
 
 ### Wall mounting
 
-1. Using a 5 mm drill head, drill holes in the wall and plug the screw anchors in the holes.
+1. Using a 5&nbsp;mm drill head, drill holes in the wall and plug the screw anchors in the holes.
 
-> **Image:** Drilling the wall
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/drilling-the-wall2.png"
+  width="80%"
+  caption="Drilling the wall"
+/>
 
 2. Use two tapping screws to attach the mounting bracket to the wall.
 
-> **Image:** Installing the bracket to the wall
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/installing-the-bracket-to-the-wall.png"
+  width="25%"
+  caption="Installing the bracket to the wall"
+/>
 
 3. Clip the probe into the bracket.
 
-> **Image:** Clipping the probe to the bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/clipping-the-probe-to-the-bracket.png"
+  width="20%"
+  caption="Clipping the probe to the bracket"
+/>
 
 ### Pole mounting
 
 Fix the probe on the pole with a steel strip directly.
 
-> **Image:** Pole mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/pole-mounting.png"
+  width="8%"
+  caption="Pole mounting"
+/>
 
 ## Connecting Probes to the Sensor Hub
 
@@ -108,15 +166,27 @@ You have multiple options, depending on the deployment requirements and availabl
 
 1. Connect the Sensor Probe to the Hub directly by plugging the cable into one of the free ports on the main body.
 
-> **Image:** Direct connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/direct-connection.png"
+  width="30%"
+  caption="Direct connection"
+/>
 
 2. Connect the probe to the Hub via an extender cable for better placement of the Probe.
 
-> **Image:** Connection via an extender
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/connection-via-an-extender.png"
+  width="25%"
+  caption="Connection via an extender"
+/>
 
 3. Connect the Probe to the Hub via a splitter cable for the option to connect multiple Probes to the same port of the Hub.
 
-> **Image:** Connection via a splitter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/connection-via-a-splitter.png"
+  width="40%"
+  caption="Connection via a splitter"
+/>
 
 :::tip NOTE
 A single port can support a maximum of four (4) Probe IOs or Sensor Probes.
@@ -124,7 +194,11 @@ A single port can support a maximum of four (4) Probe IOs or Sensor Probes.
 
 4. Connect the Probe to the Hub using a splitter and extender cable at once for maximum placement freedom.
 
-> **Image:** Connection via splitter and extender
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/connection-via-splitter-and-extender.png"
+  width="40%"
+  caption="Connection via splitter and extender"
+/>
 
 ### Connecting the Probe IO
 
@@ -132,11 +206,19 @@ RAK2560 Sensor Hub can support third-party sensors through the Probe IO.
 
 1. Remove the lid using a Philips screwdriver.
 
-> **Image:** Removing the lid
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/removing-the-lid.png"
+  width="50%"
+  caption="Removing the lid"
+/>
 
 2. Pass the cable of the sensor through the cable gland and the opening of the Probe IO, and connect the cable to the wiring terminal.
 
-> **Image:** Connecting the cable
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/connecting-the-cable.png"
+  width="55%"
+  caption="Connecting the cable"
+/>
 
 :::tip NOTE
 The connection of the wiring terminal depends on the type of sensor it is connected to. Different sensors have different pin connection requirements.
@@ -144,13 +226,27 @@ The connection of the wiring terminal depends on the type of sensor it is connec
 
 3. Screw the cable gland body and lock the nut in the proper sequence.
 
-> **Image:** Screw the cable gland
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/screw-the-cable-gland.png"
+  width="55%"
+  caption="Screw the cable gland"
+/>
 
 4.  Put the back cover back and screw it in place.
 
-> **Image:** Closing the Probe IO
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/closing-the-probe-io.png"
+  width="50%"
+  caption="Closing the Probe IO"
+/>
 
 5. Connect the Probe IO to the Hub the same way you would connect a Sensor Probe.
 
-> **Image:** Connection the Probe IO to the Hub
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2560/installation/connection-the-probe-io-to-the-hub.png"
+  width="45%"
+  caption="Connection the Probe IO to the Hub"
+/>
 
+
+<RkBottomNav/>

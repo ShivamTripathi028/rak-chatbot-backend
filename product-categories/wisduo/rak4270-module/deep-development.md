@@ -7,7 +7,11 @@ image: https://images.docs.rakwireless.com/wisduo/rak4270-module/RAK4270-Module.
 sidebar_label: Deep Development
 ---
 
+
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # LoRa Module Deep Development
 
@@ -55,7 +59,11 @@ In any MCU, after the power is connected, the System bootloader is on charge to 
 
 In the following image shows a usual memory map for an ARM Cortex M0+ MCU, which is the architecture of the MCU of the RAK4270.
 
-> **Image:** The flash section is between the 0x0800 0000 and 0x080X 0000. The X depends on the different models of MCU
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/deep-development/boot-mode.png"
+  width="70%"
+  caption="The flash section is between the 0x0800 0000 and 0x080X 0000. The X depends on the different models of MCU"
+/>
 
 The RAK’s bootloader is stored in the internal flash section and has a size of 12K, located between 0x0800 0000 to 0x0800 2FFF. Its primary function is to write a new version of firmware received from the serial port into the flash memory section. The bootloader uses the Ymodem protocol and supervise internally the exceptions in the upgrade process. When the upgrade process is interrupted and power on again, bootloader will detect abnormal events and can also upgrade again.
 

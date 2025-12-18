@@ -10,6 +10,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK13300 WisBlock LPWAN Wireless Module Datasheet
 
 ## Overview
@@ -20,6 +25,7 @@ The RAK13300 is a LoRa module based on the SX1262 LoRa chip. It provides an easy
 
 The module complies with LoRaWAN standards and supports LoRa point-to-point communication. It can easily connect to different LoRaWAN server platforms like TheThingsNetwork (TTN), Chirpstack, Actility, etc.
 
+
 ### Features
 
 - Based on Semtech SX1262 LoRa chip
@@ -28,9 +34,9 @@ The module complies with LoRaWAN standards and supports LoRa point-to-point comm
 - LoRaWAN Activation by OTAA/ABP
 - LoRa Point-to-Point (P2P) communication
 - Ultra-Low Power Consumption
-- Supply Voltage: 2.0 V ~ 3.6 V
-- Temperature Range: -40° C ~ 85° C
-- Module Size: 25 mm x 35 mm
+- Supply Voltage: 2.0&nbsp;V ~ 3.6&nbsp;V
+- Temperature Range: -40°&nbsp;C ~ 85°&nbsp;C
+- Module Size: 25&nbsp;mm x 35&nbsp;mm
 
 ## Specifications
 
@@ -40,7 +46,12 @@ The module complies with LoRaWAN standards and supports LoRa point-to-point comm
 
 The RAK13300 WisBlock LPWAN can be mounted to the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK13300 on a WisBlock Base board, such as the [RAK5005-O](https://store.rakwireless.com/products/rak5005-o-base-board).
 
-> **Image:** RAK13300 WisBlock LPWAN Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/mounting.png" 
+  figureCount="1"
+  caption="RAK13300 WisBlock LPWAN Mounting" 
+   width="60%"
+/>
 
 ### Hardware
 
@@ -60,7 +71,13 @@ The RAK13300 WisBlock LPWAN comprises a standard WisIO connector. The WisIO conn
 **SPI** related pin, **NRESET**, **ANT_SW**，**DIO1**，**3V3** and **GND** are connected to WisIO connector.
 :::
 
-> **Image:** RAK13300 WisBlock LPWAN Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/rak13300_pinouts.svg" 
+  figureCount="2"
+  caption="RAK13300 WisBlock LPWAN Pinout" 
+   width="80%"
+/>
+
 
 #### RF Characteristics
 ##### Operating Frequencies
@@ -101,25 +118,51 @@ The table below shows the supported LoRaWAN Bands of the RAK13300 module:
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK13300 module.
 
-> **Image:** RAK13300 WisBlock LPWAN Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/mechanical-drawing.png" 
+  figureCount="3"
+  caption="RAK13300 WisBlock LPWAN Dimensions" 
+   width="70%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/pcb-layout.png" 
+  figureCount="4"
+  caption="WisConnector PCB Footprint and Recommendations" 
+   width="100%"
+/>
+
 
 #### Schematic Diagram
 
 ##### Connector
 
-> **Image:** RAK13300 Module WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/pinout.png" 
+  figureCount="5"
+  caption="RAK13300 Module WisConnector" 
+   width="60%"
+/>
 
 ##### Oscillator
 
-> **Image:** RAK13300 Oscillator
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/oscillator.png" 
+  figureCount="6"
+  caption="RAK13300 Oscillator" 
+   width="60%"
+/>
 
 ##### SX1262
 
-> **Image:** RAK13300 Module WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/datasheet/sx162.png" 
+  figureCount="7"
+  caption="RAK13300 Module WisConnector" 
+   width="100%"
+/>
 
 :::tip NOTE
 - Uses DC-DC Converter as default.
@@ -128,9 +171,24 @@ The table below shows the supported LoRaWAN Bands of the RAK13300 module:
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_FCC_Certification.zip
-- **ISED:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_ISED_Certification.pdf
-- **UKCA:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_UKCA_Certification.pdf
+<RkCertificationIcons certifications={[
 
+{'ce': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_CE_Certification.pdf',
+
+},
+
+{'fcc': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_FCC_Certification.zip',
+
+},
+
+{'ised': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_ISED_Certification.pdf',
+
+},
+
+{'ukca': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13300/Certification/RAK13300_UKCA_Certification.pdf',
+
+},
+
+]}/>
+
+<RkBottomNav/>

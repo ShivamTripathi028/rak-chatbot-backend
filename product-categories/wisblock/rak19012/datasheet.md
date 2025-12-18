@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19012 WisBlock USB LiPo Solar Power Slot Module Datasheet
 
 ## Overview
@@ -18,6 +21,7 @@ sidebar_label: Datasheet
 
 The RAK19012 WisBlock USB LiPo Solar Power Slot Module is a power board comprising a USB-C connector, battery connector with an onboard charger, solar panel connector, LED indicator for charge status, two user-configurable LEDs, a reset button, and a power connector for connection with the WisBlock Base board. This power board allows debugging and firmware uploading to the WisBlock Core via the USB-C connector.
 
+
 ### Features
 
 - USB-C connector for programming and debugging the WisBlock Core
@@ -25,13 +29,19 @@ The RAK19012 WisBlock USB LiPo Solar Power Slot Module is a power board comprisi
 - Solar panel connector for battery charging
 - Onboard battery charger chip
 - LED for charging status and user-configurable LEDs
-- Module size: 30 mm X 20 mm
+- Module size: 30&nbsp;mm X 20&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK19012 WisBlock Power Module top (left) and bottom (right) view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/rak19012-front-back-overview.png"
+  figureCount="1"
+  caption="RAK19012 WisBlock Power Module top (left) and bottom (right) view"
+   width="55%"
+  zoomMode={true}
+/>
 
 ### Mounting Sketch
 
@@ -43,7 +53,13 @@ The RAK19012 **only** supports WisBlock Base boards with a power slot. It is not
 
 :::
 
-> **Image:** RAK19012 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/mounting-mechanism.png"
+  figureCount="2"
+  caption="RAK19012 mounting mechanism on a WisBlock Base module"
+   width="50%"
+  zoomMode={true}
+/>
 
 ### Hardware
 
@@ -59,13 +75,25 @@ The RAK19012 WisBlock LiPo Solar Power Slot Module provides the following interf
 * Three LEDs
 * One reset button
 
-> **Image:** RAK19012 part labels
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/rak19012-label.svg"
+  figureCount="3"
+  caption="RAK19012 part labels"
+   width="40%"
+  zoomMode={true}
+/>
 
 #### Battery and Solar Panel Connector
 
 **Figure 4** shows the polarity of battery and solar panel connectors.
 
-> **Image:** Battery and solar panel connector polarity
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/quickstart/rak19012-battery-solar.svg"
+  figureCount="4"
+  caption="Battery and solar panel connector polarity"
+   width="50%"
+  zoomMode={true}
+/>
 
 ##### LEDs
 
@@ -76,6 +104,7 @@ Three LEDs indicate the operating status. Their functions are:
 - 🟢 **Green LED:** Connected to the MCU module and controlled by user-defined MCU settings.
 
 - 🔵 **Blue LED:** Connected to the MCU module and controlled by user-defined MCU settings.
+
 
 ##### RESET Push Button
 
@@ -89,7 +118,14 @@ The RAK19012 module has a 40-pin WisConnector that is compatible with the WisBlo
 VBAT, 3V3, RESET, LED1, LED2, ADC_VBAT, and GND are connected to the WisIO connector.
 :::
 
-> **Image:** RAK19012 pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/rak19012-pinout.svg"
+  figureCount="5"
+  caption="RAK19012 pinout diagram"
+   width="60%"
+  zoomMode={true}
+/>
+
 
 #### Electrical Characteristics
 
@@ -120,10 +156,10 @@ A suitable Li-ion battery should have the following parameters, as shown in the 
 
 | **Parameter**     | **Value**            |
 | ----------------- | -------------------- |
-| Standard voltage  | 3.7 V           |
-| Charging voltage  | 4.2 V           |
+| Standard voltage  | 3.7&nbsp;V           |
+| Charging voltage  | 4.2&nbsp;V           |
 | Capacity          | As required          |
-| Discharge current | At least 500 mA |
+| Discharge current | At least 500&nbsp;mA |
 
 :::tip NOTE
 When using a solar panel, you can't use a non-rechargeable battery.
@@ -135,11 +171,23 @@ When using a solar panel, you can't use a non-rechargeable battery.
 
 The mechanical dimensions of the RAK19012 module are shown in **Figure 6** below.
 
-> **Image:** RAK19012 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/mechanical-dimensions.png"
+  figureCount="6"
+  caption="RAK19012 mechanical dimensions"
+   width="75%"
+  zoomMode={true}
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/wisconnector-pcb.png"
+  figureCount="7"
+  caption="WisConnector PCB footprint and recommendations"
+   width="100%"
+  zoomMode={true}
+/>
 
 #### Environmental Characteristics
 
@@ -147,42 +195,30 @@ The table below lists the operating and storage temperature requirements of the 
 
 | **Parameter**                 | **Minimum** | **Typical** | **Maximum** |
 | ----------------------------- | :---------: | :---------: | :---------: |
-| Operational temperature range | –35 ºC | +25 ºC | +75 ºC |
-| Extended temperature range    | –40 ºC | +25 ºC | +80 ºC |
-| Storage temperature range     | –40 ºC | +25 ºC | +80 ºC |
+| Operational temperature range | –35&nbsp;ºC | +25&nbsp;ºC | +75&nbsp;ºC |
+| Extended temperature range    | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
+| Storage temperature range     | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
 
 #### Schematic Diagram
 
 **Figure 8** shows the schematic of the RAK19012 USB LiPo Solar Power Slot Module.
 
-> **Image:** RAK19012 USB LiPo Solar Power Slot Module schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19012/datasheet/rak19012-schematic.png"
+  figureCount="8"
+  caption="RAK19012 USB LiPo Solar Power Slot Module schematics"
+   width="100%"
+  zoomMode={true}
+/>
 
 <!-- ## Models / Bundles
 
 |                               | **RAK19012** | **RAK19013** | **RAK19014** | **RAK19015** | **RAK19016** | **RAK19017** |
 | ----------------------------- | --------- | --------- | --------- | --------- | --------- | --------- |
 | Product Image                 | <img src="https://images.docs.rakwireless.com/wisblock/rak19012/rak19012.png" alt="img " style={{zoom:'15%'}}/>| <img src="https://images.docs.rakwireless.com/wisblock/rak19013/rak19013.png" alt="img " style={{zoom:'15%'}}/>| <img src="https://images.docs.rakwireless.com/wisblock/rak19014/rak19014.png" alt="img " style={{zoom:'15%'}}/>| <img src="https://images.docs.rakwireless.com/wisblock/rak19015/rak19015.png" alt="img " style={{zoom:'15%'}}/>|<img src="https://images.docs.rakwireless.com/wisblock/rak19016/rak19016.png" alt="img " style={{zoom:'15%'}}/>| <img src="https://images.docs.rakwireless.com/wisblock/rak19017/rak19017.png" alt="img " style={{zoom:'15%'}}/> |
-| Features |  <ul><li> USB-C connector for programming and debugging the WisBlock Core 
-</li><li> Compatible with LiPo rechargeable batteries
-</li><li> Solar panel connector for battery charging
-</li><li> Onboard battery charger chip
-</li><li> LEDs for charging status and user-configurable LEDs  </li></ul> |   <ul><li> Flexible building-block design enabling modular function realization and expansion.
-</li><li> Low-power battery power supply.
-</li><li> Supports lithium-ion battery charging. 
-</li><li> Supports solar charging.
-</li><li> Meets industrial-level design requirements.  </li></ul>| <ul><li>  Designed for battery-powered applications 
-</li><li> Supports reprogramming of WisBlock Core via USB connector
-</li><li> High-efficiency switching regulator
-</li><li> Optimized for low-power devices  </li></ul>| <ul><li> Designed for battery-only powered applications 
-</li><li> High-efficiency switching regulator
-</li><li> Optimized for low-power devices</li></ul>| <ul><li> Supports 5~24 V<sub>DC</sub> voltage supply input
-</li><li> Uses three-pin screw terminal connector
-</li><li> Compatible with LiPo rechargeable battery
-</li><li> On-board battery charger chip
-</li><li> LED for charging status and user-configurable LEDs
-</li><li> Applicable to industrial and enterprise setting </li></ul>| <ul><li> POE Power Module (power supply only, no Ethernet connection capability) 
-</li><li> 36 V to 57 V Input voltage range.
-</li><li> Short-circuit protection and Over temperature protection  </li></ul>|
-|Size|30 mm x 20 mm|30 mm x 20 mm|30 mm x 20 mm|30 mm x 20 mm|30 mm x 20 mm|30 mm x 50 mm|
+| Features |  <ul><li> USB-C connector for programming and debugging the WisBlock Core <br/></li><li> Compatible with LiPo rechargeable batteries<br/></li><li> Solar panel connector for battery charging<br/></li><li> Onboard battery charger chip<br/></li><li> LEDs for charging status and user-configurable LEDs  </li></ul> |   <ul><li> Flexible building-block design enabling modular function realization and expansion.<br/></li><li> Low-power battery power supply.<br/></li><li> Supports lithium-ion battery charging. <br/></li><li> Supports solar charging.<br/></li><li> Meets industrial-level design requirements.  </li></ul>| <ul><li>  Designed for battery-powered applications <br/></li><li> Supports reprogramming of WisBlock Core via USB connector<br/></li><li> High-efficiency switching regulator<br/></li><li> Optimized for low-power devices  </li></ul>| <ul><li> Designed for battery-only powered applications <br/></li><li> High-efficiency switching regulator<br/></li><li> Optimized for low-power devices</li></ul>| <ul><li> Supports 5~24&nbsp;V<sub>DC</sub> voltage supply input<br/></li><li> Uses three-pin screw terminal connector<br/></li><li> Compatible with LiPo rechargeable battery<br/></li><li> On-board battery charger chip<br/></li><li> LED for charging status and user-configurable LEDs<br/></li><li> Applicable to industrial and enterprise setting </li></ul>| <ul><li> POE Power Module (power supply only, no Ethernet connection capability) <br/></li><li> 36&nbsp;V to 57&nbsp;V Input voltage range.<br/></li><li> Short-circuit protection and Over temperature protection  </li></ul>|
+|Size|30&nbsp;mm x 20&nbsp;mm|30&nbsp;mm x 20&nbsp;mm|30&nbsp;mm x 20&nbsp;mm|30&nbsp;mm x 20&nbsp;mm|30&nbsp;mm x 20&nbsp;mm|30&nbsp;mm x 50&nbsp;mm|
 |SKU|110088|110089|110104|100090|110091|100105| -->
 
+
+<RkBottomNav/>

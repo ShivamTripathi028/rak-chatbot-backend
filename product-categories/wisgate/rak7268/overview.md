@@ -12,6 +12,9 @@ sidebar_label: Product Overview
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7268 WisGate Edge Lite 2
 
@@ -26,7 +29,7 @@ Thank you for choosing **RAK7268 WisGate Edge Lite 2** in your awesome IoT Proje
 
 ## Product Description
 
-The RAK7268 WisGate Edge Lite 2 is a full 8-channel indoor gateway, based on the LoRaWAN protocol, with built-in Ethernet connectivity for a straightforward setup. Additionally, there is an onboard Wi-Fi setup (supporting 2.4 GHz Wi-Fi) that allows it to be easily configured via the default Wi-Fi AP mode. Moreover, the gateway supports LTE uplink communication connections (optional).
+The RAK7268 WisGate Edge Lite 2 is a full 8-channel indoor gateway, based on the LoRaWAN protocol, with built-in Ethernet connectivity for a straightforward setup. Additionally, there is an onboard Wi-Fi setup (supporting 2.4&nbsp;GHz Wi-Fi) that allows it to be easily configured via the default Wi-Fi AP mode. Moreover, the gateway supports LTE uplink communication connections (optional).
 
 As with the other RAKwireless Industrial Gateways, it also supports MQTT Bridge mode, with the option for TLS authentication.
 
@@ -41,7 +44,7 @@ RAK7268 is especially suitable for small and medium-sized deployment scenarios i
 ## Product Features
 
 - Full LoRaWAN Stack support (V 1.0.3) with Semtech SX1302
-- Supports 2.4 GHz Wi-Fi AP for configuration
+- Supports 2.4&nbsp;GHz Wi-Fi AP for configuration
 - 100M Base-T Ethernet with PoE
 - Multi back-haul with Ethernet, Wi-Fi, Cellular
 - OpenWRT software supports Web UI for easy configuration and monitoring

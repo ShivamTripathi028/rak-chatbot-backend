@@ -10,7 +10,11 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK15002 WisBlock Micro SD Card Module Quick Start Guide
+
 
 ## Prerequisite
 
@@ -42,7 +46,13 @@ The RAK15002 is a Micro SD card module that can be mounted to the IO slot of the
 
 For more information about RAK15002, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak15002/datasheet/).
 
-> **Image:** RAK15002 connection to WisBlock Base
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/connection.png"
+  width="60%"
+  caption="RAK15002 connection to WisBlock Base"
+/>
+
 
 #### Assembling and Disassembling of WisBlock Modules
 
@@ -50,7 +60,12 @@ For more information about RAK15002, refer to the [Datasheet](https://docs.rakwi
 
 The RAK15002 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 2**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK15002 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/mounting.png"
+  width="60%"
+  caption="RAK15002 mounting connection to WisBlock Base module"
+/>
+
 
 ##### Disassembling Procedure
 
@@ -58,15 +73,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -78,17 +105,29 @@ The Micro SD Card should be formatted as FAT before using. You can use [SD Card 
 
 1. Open the SD Card Formatter application.
 
-> **Image:** SD Card Formatter Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/sd_format.png"
+  width="50%"
+  caption="SD Card Formatter Application"
+/>
 
 2. Plug in your Micro SD Card using Micro SD Card Reader, and choose your SD Card assigned drive.
 
 3. Select **Format** and proceed. *Formatting will remove your SD Card's files and contents*.
 
-> **Image:** Formatting Confirmation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/sd_format1.png"
+  width="50%"
+  caption="Formatting Confirmation"
+/>
 
 4. After successfully formatting, you will receive a message, as shown in **Figure 8**.
 
-> **Image:** Formatting Success
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/sd_format2.png"
+  width="50%"
+  caption="Formatting Success"
+/>
 
 5. You can now use your Micro SD Card on **RAK15002 Micro SD Card Module**.
 
@@ -106,11 +145,19 @@ These are the quick links that go directly to the software guide for the specifi
 
 ##### Arduino Setup
 
-> **Image:** RAK15002 in RAK4631 Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/connection4631.png"
+  width="60%"
+  caption="RAK15002 in RAK4631 Connection"
+/>
 
 1. Select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/selectboard4631.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE.
 
@@ -305,37 +352,73 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Click the link highlighted in red to locate the library, as shown in **Figure 11**.
 
-> **Image:** Locating the required library in the Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/click_library.png"
+  width="100%"
+  caption="Locating the required library in the Library Manager"
+/>
 
 4. Install the required library, as shown in **Figure 12**.
 
-> **Image:** Installing the Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/library.png"
+  width="100%"
+  caption="Installing the Library"
+/>
 
 5. Select the correct port and upload your code, as shown in **Figure 13** and **Figure 14**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/select_port4631.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/upload4631.png"
+  width="100%"
+  caption="Uploading code"
+/>
 
 6. When you have successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK15002 read/write message, as shown in **Figure 15**. You will be able to see the status and the function performed on your SD Card.
 
-> **Image:** RAK15002 logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/serialmonitor.png"
+  width="100%"
+  caption="RAK15002 logs"
+/>
 
 7. To verify the content, you can use a card reader and open the text file generated, as shown in **Figure 16** and **Figure 17**.
 
-> **Image:** The file generated using the code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/check_content.png"
+  width="70%"
+  caption="The file generated using the code"
+/>
 
-> **Image:** Text file contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/check_content1.png"
+  width="70%"
+  caption="Text file contents"
+/>
 
 #### RAK15002 in RAK11200 WisBlock Core Guide
 
 ##### Arduino Setup
 
-> **Image:** RAK15002 in RAK11200 Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/connection11200.png"
+  width="60%"
+  caption="RAK15002 in RAK11200 Connection"
+/>
 
 1. Select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/selectboard11200.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE.
 
@@ -544,17 +627,33 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Click the link highlighted in red to locate the library, as shown in **Figure 20**.
 
-> **Image:** Locating the required library in the Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/click_library11200.png"
+  width="100%"
+  caption="Locating the required library in the Library Manager"
+/>
 
 4. Install the required library, as shown in **Figure 21**.
 
-> **Image:** Installing the Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/library.png"
+  width="100%"
+  caption="Installing the Library"
+/>
 
 5. Select the correct port and upload your code, as shown in **Figure 22** and **Figure 23**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/select_port11200.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/upload11200.png"
+  width="100%"
+  caption="Uploading code"
+/>
 
 :::tip NOTE
 RAK11200 requires the BOOT0 pin to be configured properly before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
@@ -563,13 +662,25 @@ RAK11200 requires the BOOT0 pin to be configured properly before uploading. If n
 
 6. When you have successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK15002 read/write message, as shown in **Figure 24**. You will be able to see the status and the function performed on your SD Card.
 
-> **Image:** RAK15002 logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/serialmonitor.png"
+  width="100%"
+  caption="RAK15002 logs"
+/>
 
 7. To verify the content, you can use a card reader and open the text file generated, as shown in **Figure 25** and **Figure 26**.
 
-> **Image:** The file generated using the code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/check_content.png"
+  width="70%"
+  caption="The file generated using the code"
+/>
 
-> **Image:** Text file contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/check_content1.png"
+  width="70%"
+  caption="Text file contents"
+/>
 
 #### RAK15002 in RAK11300 WisBlock Core Guide
 
@@ -577,7 +688,11 @@ RAK11200 requires the BOOT0 pin to be configured properly before uploading. If n
 
 1. Select the RAK11300 WisBlock Core, as shown in **Figure 27**.
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/selectboard11300.png"
+  width="100%"
+  caption="Selecting RAK11300 as WisBlock Core"
+/>
 
 2. Next, copy the following sample code into your Arduino IDE.
 
@@ -773,25 +888,54 @@ If you experience any error in compiling the example sketch, check the updated c
 
 3. Click the link highlighted in red to locate the library, as shown in **Figure 28**.
 
-> **Image:** Locating the required library in the Library Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/click_library11200.png"
+  width="100%"
+  caption="Locating the required library in the Library Manager"
+/>
 
 4. Install the required library, as shown in **Figure 29**.
 
-> **Image:** Installing the Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/library.png"
+  width="100%"
+  caption="Installing the Library"
+/>
 
 5. Select the correct port and upload your code, as shown in **Figure 30** and **Figure 31**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/select_port11300_new.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/upload11300_new.png"
+  width="100%"
+  caption="Uploading code"
+/>
 
 6. When you have successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the RAK15002 read/write message, as shown in **Figure 32**. You will be able to see the status and the function performed on your SD Card.
 
-> **Image:** RAK15002 logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/serialmonitor.png"
+  width="100%"
+  caption="RAK15002 logs"
+/>
 
 7. To verify the content, you can use a card reader and open the text file generated, as shown in **Figure 33** and **Figure 34**.
 
-> **Image:** The file generated using the code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/check_content.png"
+  width="70%"
+  caption="The file generated using the code"
+/>
 
-> **Image:** Text file contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15002/quickstart/check_content1.png"
+  width="70%"
+  caption="Text file contents"
+/>
 
+<RkBottomNav/>

@@ -10,6 +10,13 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
+
+
 # RAK13600 WisBlock NFC Reader Module Datasheet
 
 ## Overview
@@ -18,6 +25,7 @@ sidebar_label: Datasheet
 
 **RAK13600** is a **WisBlock Wireless** NFC reader module based on the PN532 chip. It provides a compact and low-power solution for NFC-related IoT applications. The RAK13600 has an integrated transceiver module used for NFC applications which operates at 13.56 MHz and is also based on the standard 80C51 microcontroller core. It supports 6 different operating
 modes:
+
 
 - ISO/IEC 14443A/MIFARE Reader/Writer
 - FeliCa Reader/Writer
@@ -34,7 +42,7 @@ modes:
     * Low power
 
 * **Size**
-    * 35 x 25 mm
+    * 35 x 25&nbsp;mm
 
 ## Specifications
 
@@ -44,7 +52,12 @@ modes:
 
 The RAK13600 NFC reader module can be mounted to the IO slot of the WisBlock Base board. To illustrate, **Figure 1** shows how RAK13600 can be mounted on RAK5005-O WisBlock Base.
 
-> **Image:** RAK13600 Mounting to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13600/datasheet/mounting-mechanism.png" 
+  figureCount="1"
+  caption="RAK13600 Mounting to WisBlock Base" 
+   width="80%"
+/>
 
 ### Hardware
 
@@ -59,7 +72,12 @@ The hardware specification is categorized into four parts. It discusses the pino
 
 The RAK13600 WisBlock NFC Reader has the standard 40-pin WisConnector. It is compatible with the IO slot which allows the RAK13600 module to be mounted on a WisBlock baseboard, such as RAK5005-O. The pin order of the connector and the Pinout Definition is shown in **Figure 2**.
 
-> **Image:** RAK13600 IO Slot Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13600/datasheet/rak13600_pinouts.svg" 
+  figureCount="2"
+  caption="RAK13600 IO Slot Connector" 
+   width="70%"
+/>
 
 :::tip NOTE
 
@@ -86,21 +104,53 @@ The RAK13600 WisBlock NFC Reader has the standard 40-pin WisConnector. It is com
 
 Refer to **Figure 3** below for the mechanical dimensions of the RAK13600 module.
 
-> **Image:** RAK13600 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13600/datasheet/mechanical-dimensions.png" 
+  figureCount="3"
+  caption="RAK13600 Mechanical Dimensions" 
+   width="100%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13600/datasheet/mxxs1003k6m.png" 
+  figureCount="4"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK13600 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13600/datasheet/schematic.png" 
+  figureCount="5"
+  caption="RAK13600 Schematic Diagram" 
+   width="100%"
+/>
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_FCC_Certification.pdf
-- **ISED:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_ISED_Certification.pdf
-- **UKCA:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_UKCA_Certification.pdf
+<RkCertificationIcons certifications={[
 
+{'ce': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_CE_Certification.pdf',
+
+},
+
+{'fcc': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_FCC_Certification.pdf',
+
+},
+
+{'ised': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_ISED_Certification.pdf',
+
+},
+
+{'ukca': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK13600/Certification/RAK13600_UKCA_Certification.pdf',
+
+},
+
+]}/>
+
+
+
+<RkBottomNav/>

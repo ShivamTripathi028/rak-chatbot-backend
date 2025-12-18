@@ -20,11 +20,14 @@ tags:
   - overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Pod
 
 Thank you for choosing **WisMesh Pod** for your awesome IoT project! 🎉 To help you get started, we have provided all the necessary documentation for your product.
 
 * <a href="https://docs.rakwireless.com/product-categories/meshtastic/wismesh-pod/quickstart" target="_blank">Quick Start Guide</a>
+
 
 <a href="https://meshtastic.org" target="_blank">Meshtastic</a> is an open-source initiative aimed at building an off-grid, decentralized mesh network. Designed to operate on affordable and low-power devices.
 
@@ -40,7 +43,7 @@ The WisMesh Pod does not have a display.
 
 ## Product Features
 
-- Robust 1000 mAh built-in battery
+- Robust 1000&nbsp;mAh built-in battery
 - Antenna: Internal antennas for LoRa, BLE, and GNSS
 - Efficiency: Utilizes the most power-efficient solution in the Meshtastic community
 - Integrated acceleration sensor based on the ST LIS3DH
@@ -51,3 +54,4 @@ The WisMesh Pod does not have a display.
 
 To get started with the WisMesh Pod, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Pod_RAK10708.pdf" target="_blank">WisMesh Pod Getting Started</a> guide. 
 
+<RkBottomNav/>

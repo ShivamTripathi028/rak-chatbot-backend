@@ -9,6 +9,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # Pulsar Cable LMR400 Datasheet
 
 ## Overview
@@ -19,58 +23,75 @@ The Pulsar cable is a high-grade cable, suitable for all gateways from the **Wis
 
 ###  Features
 
--   Cable length variants: 5 m / 16.40 ft, 10 m / 32.80 ft
+-   Cable length variants: 5&nbsp;m / 16.40&nbsp;ft, 10&nbsp;m / 32.80&nbsp;ft
 -   Connector: RP-SMA male to N-type female
--   Frequency Range: 0~6 GHz
+-   Frequency Range: 0~6&nbsp;GHz
 -   Cable type: LMR400
 -   VSWR: ≤ 1.5
+
 
 ## Specifications
 
 | Feature                    | Specifications                                      |
 | :------------------------- | --------------------------------------------------- |
 | Model                      | Pulsar cable                                        |
-| Frequency range            | 0~6 GHz                                        |
+| Frequency range            | 0~6&nbsp;GHz                                        |
 | VSWR                       | ≤ 1.5                                               |
-| Length                     | 5 m / 16.40 ft, 10 m / 32.80 ft |
+| Length                     | 5&nbsp;m / 16.40&nbsp;ft, 10&nbsp;m / 32.80&nbsp;ft |
 | Cable type                 | LMR400                                              |
-| Impedance                  | 50 Ω                                           |
+| Impedance                  | 50&nbsp;Ω                                           |
 | Color                      | Black                                               |
 | Connector type             | RP-SMA male to N-type female                        |
-| Operation temperature (°C) | -40° C ~ +85° C                           |
+| Operation temperature (°C) | -40°&nbsp;C ~ +85°&nbsp;C                           |
 | Humidity range             | 5% ~ 95%                                            |
 
 ### Power Loss Report
 
 | Frequency          | 5-m Length     | 10-m Length    |
 | ------------------ | -------------- | -------------- |
-| 433 - 435 MHz | ≤ 0.65 dB | ≤ 1.15 dB |
-| 470 - 510 MHz | ≤ 0.70 dB | ≤ 1.20 dB |
-| 863 - 870 MHz | ≤ 0.85 dB | ≤ 1.65 dB |
-| 902 - 930 MHz | ≤ 0.90 dB | ≤ 1.70 dB |
-| 2.1 GHz       | ≤ 1.20 dB | ≤ 2.70 dB |
-| 4 GHz         | ≤ 2.15 dB | ≤ 1.05 dB |
+| 433 - 435&nbsp;MHz | ≤ 0.65&nbsp;dB | ≤ 1.15&nbsp;dB |
+| 470 - 510&nbsp;MHz | ≤ 0.70&nbsp;dB | ≤ 1.20&nbsp;dB |
+| 863 - 870&nbsp;MHz | ≤ 0.85&nbsp;dB | ≤ 1.65&nbsp;dB |
+| 902 - 930&nbsp;MHz | ≤ 0.90&nbsp;dB | ≤ 1.70&nbsp;dB |
+| 2.1&nbsp;GHz       | ≤ 1.20&nbsp;dB | ≤ 2.70&nbsp;dB |
+| 4&nbsp;GHz         | ≤ 2.15&nbsp;dB | ≤ 1.05&nbsp;dB |
+
 
 ### Mechanical Characteristics
 
 #### Connectors
 
-> **Image:** Connector Types
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9733/connectors.png"
+  width="45%"
+  caption="Connector Types"
+/>
 
 #### Dimensions
 
-> **Image:** Pulsar Cable Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9733/dimension.png"
+  width="85%"
+  caption="Pulsar Cable Dimensions"
+/>
 
-**Where:**
+<b>Where:</b>
 
 - 1 - RP-SMA male connector for LMR400 cable
 - 2 - N-type female connector for LMR400 cable
 - 3 - LMR400 cable
 - 4 - Ø13x25 heat shrinkable adhesive tube
 
+
 ## Certification
 
-### Certifications
-- **REACH:** https://downloads.rakwireless.com/Accessories/Pulsar-Cable/Certification/Pulsar_Cable_REACH_Report.PDF
-- **ROHS:** https://downloads.rakwireless.com/Accessories/Pulsar-Cable/Certification/Pulsar_Cable_RoHS_Report.PDF
+<RkCertificationIcons certifications={[
+    {
+        'reach': 'https://downloads.rakwireless.com/Accessories/Pulsar-Cable/Certification/Pulsar_Cable_REACH_Report.PDF',
+    },
+    {
+        'rohs': 'https://downloads.rakwireless.com/Accessories/Pulsar-Cable/Certification/Pulsar_Cable_RoHS_Report.PDF',
+    },
+]} />
 
+<RkBottomNav/>

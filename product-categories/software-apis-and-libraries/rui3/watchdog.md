@@ -1,4 +1,5 @@
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # Watchdog
 
@@ -18,7 +19,7 @@ api.system.wdt.enable(reload_value);
 
 | **Function**   | `void enable(int reload_value)`                                                                                                                                                                   |
 |----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | Setting the reload value, only accept following values: 15 ms, 30 ms, 60 ms, 120 ms, 250 ms, 500 ms, 1 s, 2 s, 4 s, and 8 s, Units:milliseconds |
+| **Parameters** | Setting the reload value, only accept following values: 15&nbsp;ms, 30&nbsp;ms, 60&nbsp;ms, 120&nbsp;ms, 250&nbsp;ms, 500&nbsp;ms, 1&nbsp;s, 2&nbsp;s, 4&nbsp;s, and 8&nbsp;s, Units:milliseconds |
 | **Returns**    | void                                                                                                                                                                                              |
 
 <details>
@@ -35,6 +36,7 @@ void loop() {
 }
 ```
 </details>
+
 
 ### reset()
 
@@ -63,3 +65,6 @@ void loop() {
 ```
 </details>
 
+
+
+<RkBottomNav/>

@@ -12,6 +12,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14006 WisBlock Rotary Encoder Module
 
 Thank you for choosing **RAK14006 WisBlock Rotary Encoder Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -24,19 +26,21 @@ Thank you for choosing **RAK14006 WisBlock Rotary Encoder Module** in your aweso
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 * [WisBlock IO Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26743881131927-How-To-Make-Your-Own-WisBlock-IO-Board)
 
+
 ## Product Description
 
 The RAK14006 is a rotary encoder module with PEC11L-4125F-S0020 from BOURNS. RAK14006 can detect user inputs such as rotation direction and rotation number of steps. Also, an independent push switch is provided for the user.
+
 
 ## Product Features
 
 * **Module Specifications**
     * Rotary Encoder with an independent push switch
     * Chipset: BOURNS PEC11L-4125F-S0020
-    * 3.3 V Power supply
+    * 3.3&nbsp;V Power supply
 
 * **Module Size**
-    * 25 mm x 35 mm
+    * 25&nbsp;mm x 35&nbsp;mm
 
 ## Prerequisites
 
@@ -46,3 +50,4 @@ To use a **RAK14006**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

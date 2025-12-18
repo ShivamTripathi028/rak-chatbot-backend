@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK14000 E-Ink Display Module Datasheet
 
 ## Overview
@@ -18,7 +22,7 @@ sidebar_label: Datasheet
 
 The **RAK14000 WisBlock E-Ink Display Module** is designed to be part of a production-ready IoT solution in a modular way and must be combined with a WisBlock Core and a WisBlock Base module.
 
-The **RAK14000** module provides an interface to connect an E-Ink Display, which is known to be an extremely power-efficient display. The **E-Ink Display** is an Active Matrix Electrophoretic Display (AM EPD) module with 2.13 inches active area (212 × 104 pixels for White Black Version and 250 x 122 pixels for the White-Black-Red Version). It also allows you to connect a Three-Button Module, which can be used on a different application. All of this can be controlled through a WisBlock Core.
+The **RAK14000** module provides an interface to connect an E-Ink Display, which is known to be an extremely power-efficient display. The **E-Ink Display** is an Active Matrix Electrophoretic Display (AM EPD) module with 2.13&nbsp;inches active area (212 × 104 pixels for White Black Version and 250 x 122 pixels for the White-Black-Red Version). It also allows you to connect a Three-Button Module, which can be used on a different application. All of this can be controlled through a WisBlock Core.
 
 :::tip NOTE
 There are two versions of RAK14000 module for sale in the RAKwireless Store, the [white-black display panel](https://store.rakwireless.com/products/wisblock-epd-module-rak14000?variant=39534109655238) and [white-black-red display panel](https://store.rakwireless.com/products/wisblock-epd-module-rak14000?variant=39534109688006) version.
@@ -26,8 +30,8 @@ There are two versions of RAK14000 module for sale in the RAKwireless Store, the
 
 ### Features
 
-*   Input Voltage: 3.3 V
-*   Display Size: 2.13 inches
+*   Input Voltage: 3.3&nbsp;V
+*   Display Size: 2.13&nbsp;inches
 *   Wide Viewing Angles
 *   Pure Reflective Mode. Very viewable displays!
 *   On-chip display RAM and oscillator
@@ -50,7 +54,12 @@ There are two versions of RAK14000 module for sale in the RAKwireless Store, the
 
 The **RAK14000 E-Ink Display Module** is mounted to the IO Slot of a WisBlock Base Board. Figure 1 shows the mounting mechanism of the RAK14000 on a WisBlock Base, such as the RAK5005-O.
 
-> **Image:** RAK14000 Module Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/rak14000-mounting.png"
+  figureCount="1"
+  width="50%"
+  caption="RAK14000 Module Mounting"
+/>
 
 ### Hardware
 
@@ -62,11 +71,17 @@ The hardware specification covers the pinouts of the board and its functionaliti
 | ----------------------- | ----------- |
 | Solomon Systech Limited | SSD1680     |
 
+
 #### Pin Definition
 
 The **RAK14000 WisBlock E-Ink Display Module** comprises a standard 40-pin WisConnector. The 40-pin WisConnector allows the RAK14000 module to be mounted on a WisBlock Base board, such as RAK5005-O. The pin order of the connector and the pinout definition is shown in Figure 2.
 
-> **Image:** RAK14000 Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/rak14000-pins.png"
+  figureCount="2"
+  width="60%"
+  caption="RAK14000 Module Pinout"
+/>
 
 | Pin Number | Pin Name  |   Description   | Pin Number |  Pin Name  |          Description          |
 | :--------: | :-------: | :-------------: | :--------: | :--------: | :---------------------------: |
@@ -99,7 +114,7 @@ SPI_CS, SPI_MISO, SPI_MOSI, SPI_CLK, IO1, IO3-IO7 are connected to 40-pin WisCon
 
 ##### DC Characteristics
 
-The following specifications apply for: VSS = 0V, VCI = 3.0 V, TOPR = 25 ºC
+The following specifications apply for: VSS = 0V, VCI = 3.0&nbsp;V, TOPR = 25&nbsp;ºC
 
 | Symbol           | Description               | Min. | Nom. | Max. | Unit |
 | ---------------- | ------------------------- | ---- | ---- | ---- | ---- |
@@ -113,23 +128,50 @@ The following specifications apply for: VSS = 0V, VCI = 3.0 V, TOPR = 25 ºC
 
 Figure 3 shows the dimensions and mechanical drawing of the RAK14000 module.
 
-> **Image:** RAK14000 Module Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/rak14000-dimensions.png"
+  figureCount="3"
+  width="60%"
+  caption="RAK14000 Module Mechanical Characteristics"
+/>
 
 #### Schematic Diagram
 
 Figure 4 shows the schematic diagram of 40-pin WisConnector:
 
-> **Image:** RAK14000 40-pin WisConnector Connection Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/wisio-connector.png"
+  figureCount="4"
+  width="80%"
+  caption="RAK14000 40-pin WisConnector Connection Schematic"
+/>
 
 Figure 5 shows the E-Ink Display Connector Schematic:
 
-> **Image:** RAK14000 E-Ink Display Connection Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/eink.png"
+  figureCount="5"
+  width="100%"
+  caption="RAK14000 E-Ink Display Connection Schematic"
+/>
 
 Figure 6 shows the E-Ink Display Driver Schematic:
 
-> **Image:** RAK14000 E-Ink Display Driver Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/driver-schematic.png"
+  figureCount="6"
+  width="100%"
+  caption="RAK14000 E-Ink Display Driver Schematic"
+/>
 
 Figure 7 shows the Three-Button Module Schematic, connected through FPC (Flexible PCB) cable:
 
-> **Image:** RAK14000 Three-Button Module Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14000/datasheet/button-connector.png"
+  figureCount="7"
+  width="80%"
+  caption="RAK14000 Three-Button Module Schematic"
+/>
 
+
+<RkBottomNav/>

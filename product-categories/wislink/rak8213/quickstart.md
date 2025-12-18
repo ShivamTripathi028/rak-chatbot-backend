@@ -10,9 +10,15 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK8213 WisLink Cellular mPCIe Quick Start Guide
 
 ## Prerequisites
+
+
 
 ### What Do You Need?
 
@@ -32,6 +38,8 @@ The following two sections will provide a list of the components and tools you n
 - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) (a Windows tool for SSH, required to connect to the Gateway)
 - Latest [RAK8213 Firmware](https://downloads.rakwireless.com/#Cellular/RAK8213/Firmware/)
 
+
+
 ### Device Firmware Setup
 
 An easy and quick way to have a fully functional gateway is by using a Precompiled Firmware Image provided. In this document, is the step by step instructions on how to install the Image into your SD card used for the gateway.
@@ -49,7 +57,12 @@ Your SD card should be automatically detected by the Etcher software in the Labe
 
 Click **Flash** and wait for a couple of minutes until it displays **Flash Complete.**
 
-> **Image:** Balena Etcher Software
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/balena-etcher.png"
+  width="80%"
+  caption="Balena Etcher Software"
+/>
+
 
 ### Assembly Guide
 
@@ -63,7 +76,11 @@ Insert the SIM card in the slot that sits on the back of the RAK8213. Best do th
 
 Insert your **RAK8213 module** into the mPCIe slot on the **RAK8213 Pi HAT**. Make sure the card fits snugly into the connector. It should end up sticking out at an **angle of 45°**. Gently press it down and fasten it with two (2) screws. If you have positioned the card right, the screw holes on the RAK8213 will match the ones on the RAK8213 HAT. Use **Figure 2** as a reference.
 
-> **Image:** Assembly of the NB-IoT Module and the HAT
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/device-assembly.png"
+  width="60%"
+  caption="Assembly of the NB-IoT Module and the HAT"
+/>
 
 #### Antennas
 
@@ -85,7 +102,11 @@ The RAK8213 requires additional power via the Micro USB port on the RAK8213 Pi H
 
 For the above-noted purpose, attach a standard Micro USB to USB cable connecting one of the Raspberry’s USB ports to the Micro USB port on the RAK8213 HAT.
 
-> **Image:** Assembly of the NB-IoT Module and the HAT
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/device-connection.png"
+  width="40%"
+  caption="Assembly of the NB-IoT Module and the HAT"
+/>
 
 #### SD card
 
@@ -96,8 +117,10 @@ Insert the SD card with the Firmware you flashed in the previous step into the S
 Power the Raspberry Pi via the **Micro USB port (Pi3) / USB type C port (Pi4)**. As this is going to be the first time to boot the OS, wait for a couple of minutes for everything to set up.
 
 :::tip NOTE
-It is recommended to use at least a **2 A power supply**.
+It is recommended to use at least a **2&nbsp;A power supply**.
 :::
+
+
 
 ### Access the Gateway
 
@@ -105,7 +128,11 @@ It is recommended to use at least a **2 A power supply**.
 
 By default, the firmware is configured to operate the Raspberry Pi in Wi-Fi AP mode, which means that you should be able to find an SSID named **“Rakwireless_XXXX”** on the Wi-Fi network list, for example:
 
-> **Image:** RAKWireless Access Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/wifi-ap.png"
+  width="80%"
+  caption="RAKWireless Access Point"
+/>
 
 - The default password for the AP: **rakwireless**.
 - The default IP address of the Raspberry Pi: **192.168.230.1.** This is also the address you will be using to SSH into the OS.
@@ -119,7 +146,11 @@ SSH (Secure Shell) is used to login to a remote machine and execute commands. Th
 
 After installation, open Putty and connect with the OS through Wi-Fi AP mode. The IP address is **192.168.230.1**.
 
-> **Image:** Putty Software for SSH in Windows
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/putty.png"
+  width="60%"
+  caption="Putty Software for SSH in Windows"
+/>
 
 - Click open and it will prompt you to enter the username and password.
 - The default username: **pi**
@@ -127,25 +158,42 @@ After installation, open Putty and connect with the OS through Wi-Fi AP mode. Th
 
 Upon successful login, you should see the initial screen with the messages notifying you that you should change your password. Refer to **Figure 6**.
 
-> **Image:** Command line after login
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/command-line.png"
+  width="80%"
+  caption="Command line after login"
+/>
 
 ##### 2. Mac OS
 
 Open the terminal of Mac OS. Then, launch the **Terminal** application found in this directory: **/Applications/Utilities/**. You can also launch it from Spotlight by hitting **Command + Spacebar** and typing “Terminal” and then return:
 
-> **Image:** Mac OS Terminal
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/mac-os.png"
+  width="80%"
+  caption="Mac OS Terminal"
+/>
 
 Open the terminal of Mac OS. Enter **root mode** by typing the following command: `sudo -i`.
 
-> **Image:** SSH in Mac OS
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/ssh-mac.png"
+  width="90%"
+  caption="SSH in Mac OS"
+/>
 
 - If you are not in root mode, enter `ssh pi@192.168.230.1` in the terminal to login to your gateway. The default password is **raspberry**.
 
-> **Image:** Log into the Raspberry
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/prerequisites/mac-login.png"
+  width="90%"
+  caption="Log into the Raspberry"
+/>
 
 ##### 3. Linux
 
  If you are using Linux the procedure is the same as the one for Mac OS.
+
 
 ## Product Configuration
 
@@ -165,11 +213,19 @@ Now that you are logged into Raspberry, you can proceed to access the configurat
 sudo qmi-config
 ```
 
-> **Image:** Main configuration menu
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/main-config.png"
+  width="100%"
+  caption="Main configuration menu"
+/>
 
 2. Select Option **2 Enable Client Mode/Disable AP Mode** and click **OK**. This will let you use the device as a Wi-Fi client rather than AP so you can connect to a network.
 
-> **Image:** Wi-Fi Configuration Options
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/wifi-config.png"
+  width="100%"
+  caption="Wi-Fi Configuration Options"
+/>
 
 As shown in **Figure 11**, there are five (5) different Wi-Fi configuration options you can choose from.
 
@@ -185,19 +241,35 @@ To enable the Wi-Fi Client Mode, you have to disable first the AP Mode.
 
 3. A window will pop-up, and then **click OK**.
 
-> **Image:** Client mode enabled
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/client-mode.png"
+  width="100%"
+  caption="Client mode enabled"
+/>
 
 4. Once Wi-Fi AP Mode is enabled, you will automatically return to the main configuration menu (**Figure 10**). Select option **1 Configure WIFI** then choose option **4 Add New SSID for Client.**
 
-> **Image:** Wi-Fi Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/wifi-settings.png"
+  width="100%"
+  caption="Wi-Fi Settings"
+/>
 
 5. **Enter the SSID** of the network you want to connect to then click OK.
 
-> **Image:** Wi-Fi SSID
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/wifi-ssid.png"
+  width="100%"
+  caption="Wi-Fi SSID"
+/>
 
 6. Enter also the password then click **OK**. Just leave it empty if it has none.
 
-> **Image:** Wi-Fi Passphrase
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/wifi-passphrase.png"
+  width="100%"
+  caption="Wi-Fi Passphrase"
+/>
 
 7. **Quit the setup**. Click the quit button at the lower right corner.
 
@@ -225,7 +297,11 @@ This will start minicom, a Linux tool that allows serial communication. In this 
 
 3. **Press E** to turn local echo on/off.
 
-> **Image:** Minicom Command Summary
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/minicom-command.png"
+  width="80%"
+  caption="Minicom Command Summary"
+/>
 
 The following code block is a summary of the commands you need to execute in the same order. Each code is discussed and an example output is provided at the end of this section.
 
@@ -360,11 +436,19 @@ You will need a **Device Key** that ties to your Hologram SIM (**this tutorial a
 
 3. Under **Data Engine**, press the **Show Device Key** button.
 
-> **Image:** Hologram Dashboard Webhooks
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/hologram-dashboard.png"
+  width="100%"
+  caption="Hologram Dashboard Webhooks"
+/>
 
 4. In the **Router credentials** window, click the **Generate New Device Key** button to generate a key. Then, click the **Copy Key** button.
 
-> **Image:** Hologram Dashboard Device Key
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak8213/quickstart/connecting-to-network/hologram-device-key.png"
+  width="75%"
+  caption="Hologram Dashboard Device Key"
+/>
 
 Now that you have your key, you can replace it with the **k** parameter. You can leave the message and the topic as per the example, which leads to the code line to follow if you use the copied key in **Figure 18**.
 
@@ -419,3 +503,4 @@ AT+QISEND=0,50
 AT+QISEND=0,0
 ```
 
+<RkBottomNav/>

@@ -10,11 +10,18 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK15006 WisBlock 512kByte FRAM Module Datasheet
 
 ## Overview
 
-> **Image:** RAK15006 WisBlock 512kByte FRAM Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15006/datasheet/rak15006_front_back.png"
+  width="60%"
+  caption="RAK15006 WisBlock 512kByte FRAM Module"
+/>
 
 ### Description
 
@@ -23,21 +30,21 @@ RAK15006 is a WisBlock 512kByte FRAM module that extends the WisBlock system wit
 ### Product Features
 
 * **Sensor specifications**
-    *  Temperature Range：-40 °C to +85 °C
-    *  SPI compatible digital interface, supports 40 MHz
-    *  Operating power supply current: 2.6 mA (Max @ 40 MHz)
-    *  Standby current: 50 uA (Max)
-    *  Sleep current: 8 uA (Max)
+    *  Temperature Range：-40&nbsp;°C to +85&nbsp;°C
+    *  SPI compatible digital interface, supports 40&nbsp;MHz
+    *  Operating power supply current: 2.6&nbsp;mA (Max @ 40&nbsp;MHz)
+    *  Standby current: 50&nbsp;uA (Max)
+    *  Sleep current: 8&nbsp;uA (Max)
     *  524,288 words x 8 bits
     *  High Reliability：
        - Read/write endurance：10,000,000,000,000/byte
        - Data retention：
-           - 10 years(+85 °C)
-           - 95 years(+55 °C)
-           - Over 200 years（+35 °C）
+           - 10 years(+85&nbsp;°C)
+           - 95 years(+55&nbsp;°C)
+           - Over 200 years（+35&nbsp;°C）
 
 * **Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Specifications
 
@@ -47,7 +54,11 @@ RAK15006 is a WisBlock 512kByte FRAM module that extends the WisBlock system wit
 
 **Figure 2** shows the mounting mechanism of the RAK15006 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK15006 module can be mounted on the slots: **A, C, D, E & F**.
 
-> **Image:** RAK15006 WisBlock FRAM Module Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15006/datasheet/rak19xx_mounting.png"
+  width="50%"
+  caption="RAK15006 WisBlock FRAM Module Mounting"
+/>
 
 ### Hardware
 
@@ -63,7 +74,11 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK15006 WisBlock 512kByte FRAM Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK15006 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition are  shown in **Figure 3**.
 
-> **Image:** RAK15006 WisBlock FRAM Module Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15006/datasheet/rak15006_pinout.png"
+  width="40%"
+  caption="RAK15006 WisBlock FRAM Module Pinout Diagram"
+/>
 
 The **WisBlock Sensor** connector is used to this module and the IO used for **WP** pin at **Pin 12** will depend on where sensor slot the module is plugged in. The table shows the compatible pins used by different sensor slots:
 
@@ -94,14 +109,27 @@ The **WisBlock Sensor** connector is used to this module and the IO used for **W
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK15006 module.
 
-> **Image:** RAK15006 WisBlock FRAM Module Mechanic Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15006/datasheet/rak19xx_mechanic_drawing.png"
+  width="60%"
+  caption="RAK15006 WisBlock FRAM Module Mechanic Drawing"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15006/datasheet/mxxs1003k6m.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 **Figure 6** shows the schematic of the RAK15006 module.
 
-> **Image:** RAK15006 WisBlock FRAM Module schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak15006/datasheet/rak15006-schematic.png"
+  width="100%"
+  caption="RAK15006 WisBlock FRAM Module schematics"
+/>
 
+<RkBottomNav/>

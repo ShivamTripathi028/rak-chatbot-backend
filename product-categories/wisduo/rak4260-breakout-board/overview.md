@@ -10,6 +10,8 @@ slug: /product-categories/wisduo/rak4260-breakout-board/overview/
 download: true
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK4260 WisDuo Breakout Board
 Thank you for choosing **RAK4260 WisDuo Breakout Board** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
@@ -17,11 +19,12 @@ Thank you for choosing **RAK4260 WisDuo Breakout Board** in your awesome IoT pro
 * <a href="https://docs.rakwireless.com/product-categories/wisduo/rak4260-breakout-board/datasheet/" target="_blank">Datasheet</a>
 * <a href="https://downloads.rakwireless.com/3D_File/WisDuo/PWB-RAK4260%20Breakout%20Board.stp" target="_blank">RAK4260 Breakout Board 3D Model</a>
 
+
 ## Product Description
 
-The **RAK4260 Breakout Board** is designed to provide easy access to the board's pins, simplifying development and testing. Its breakout board form factor transfers the RAK4260 stamp module pinout to 2.54 mm headers, making debugging more convenient for developers.
+The **RAK4260 Breakout Board** is designed to provide easy access to the board's pins, simplifying development and testing. Its breakout board form factor transfers the RAK4260 stamp module pinout to 2.54&nbsp;mm headers, making debugging more convenient for developers.
 
-The board itself has the RAK4260 at its core, which is a module that utilizes the **ATSAMR34J18B SIP**. This high level of integration allows for outstanding performance: 860 nA in sleep mode and LoRa TX Power of up to 20 dBm.
+The board itself has the RAK4260 at its core, which is a module that utilizes the **ATSAMR34J18B SIP**. This high level of integration allows for outstanding performance: 860&nbsp;nA in sleep mode and LoRa TX Power of up to 20&nbsp;dBm.
 
 A key feature of this Breakout Board is the **ATECC608A Cryptographic Co-Processor**, which provides secure hardware-based key storage. This sets the board apart from the RAK4200 and RAK4600, adding an extra layer of security to future-proof your platform.
 
@@ -33,15 +36,16 @@ The board's low-power, long-range LoRa communication capabilities make it ideal 
 
 - LoRa module for Smart City, Smart Agriculture, Smart Industry
 - I/O ports: UART/I2C/SPI/ADC
-- Frequency range: 863–923 MHz (entire LoRa high band spectrum)
-- Low-Power Wireless Systems with 7.8 kHz to 500 kHz Bandwidth
-- LoRa Tx power up to **20 dBm**
-- Ultra-Low Power Consumption **860 nA in sleep mode**
+- Frequency range: 863–923&nbsp;MHz (entire LoRa high band spectrum)
+- Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz Bandwidth
+- LoRa Tx power up to **20&nbsp;dBm**
+- Ultra-Low Power Consumption **860&nbsp;nA in sleep mode**
 - Core: **ARM 32-bit Cortex – M0+** with MPU
-- Up to 256 KB flash memory with ECC
-- 32 KB RAM
-- 6 KB of data EEPROM with ECC
+- Up to 256&nbsp;KB flash memory with ECC
+- 32&nbsp;KB RAM
+- 6&nbsp;KB of data EEPROM with ECC
 - **ATECC608A** cryptographic core
-- Supply Voltage: 2.0 V ~ 3.6 V
-- Temperature range: -40° C ~ +85° C
+- Supply Voltage: 2.0&nbsp;V ~ 3.6&nbsp;V
+- Temperature range: -40°&nbsp;C ~ +85°&nbsp;C
 
+<RkBottomNav/>

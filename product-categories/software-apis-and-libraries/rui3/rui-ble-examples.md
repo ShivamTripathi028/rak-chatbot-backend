@@ -1,4 +1,6 @@
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # BLE Introduction
 
@@ -7,6 +9,7 @@
 Formed in 1998, the Bluetooth SIG is the not-for-profit trade association that oversees Bluetooth® technology. Bluetooth SIG members created and maintain the specifications and drive global interoperability. The Bluetooth SIG is a global community of over 36,000 companies. 
 
 There is a question about BLE naming: While commonly referred to as `BLE`, the Bluetooth SIG discourages this name because `BLE` isn't a trademark they own. **Bluetooth LE** is the proper way to refer to it.
+
 
 ## Bluetooth Classic (BR/EDR) and Bluetooth LE
 
@@ -18,8 +21,11 @@ Bluetooth LE (BLE) devices are used in applications where power consumption is c
 
 The BLE protocol stack architecture consists of two parts: **Controller** and **Host**. Both are interfaced using **HCI** (Host to Controller Interface). The **HCI** layer provides communication between controller and host through standard interface types. Standard **HCI** commands and events are defined in the Bluetooth specifications.
 
-> **Image:** BLE protocol stack architecture
-
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-stack.png"
+  width="70%"
+  caption="BLE protocol stack architecture"
+/>
 ### Host Layer
 
 The **Host** layer contains the following layers:
@@ -39,13 +45,19 @@ The controller contains the following layers:
 - Direct Test Mode
 - Host Controller Interface (HCI) - controller part
 
+
 ### Physical Layer (PHY)
 
-The BLE transmitter uses **FHSS** Frequency Hopping Spread Spectrum transceiver and **GFSK** modulation. It operates at an unlicensed 2.4 GHz frequency band. BLE offers data rates of 1 Mbps (Bluetooth 4.2) or 2 Mbps (Bluetooth 5.0).
+The BLE transmitter uses **FHSS** Frequency Hopping Spread Spectrum transceiver and **GFSK** modulation. It operates at an unlicensed 2.4&nbsp;GHz frequency band. BLE offers data rates of 1&nbsp;Mbps (Bluetooth 4.2) or 2&nbsp;Mbps (Bluetooth 5.0).
 
-The Bluetooth LE specification divides the band into 40 channels of 1 MHz spaced 2 MHz apart. Channels 37 to 39 are **Advertisement Channels** used by BLE devices exclusively to send advertising and beacon packets. The advertising channel frequencies were chosen to minimize interference from Wi-Fi and other sources.
+The Bluetooth LE specification divides the band into 40 channels of 1&nbsp;MHz spaced 2&nbsp;MHz apart. Channels 37 to 39 are **Advertisement Channels** used by BLE devices exclusively to send advertising and beacon packets. The advertising channel frequencies were chosen to minimize interference from Wi-Fi and other sources.
 
-> **Image:** BLE channels
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-channels.png"
+  width="80%"
+  caption="BLE channels"
+/>
+
 
 ### Link Layer
 
@@ -57,7 +69,11 @@ This layer sits above the Physical Layer. It is responsible for advertising, sca
 - Initiating
 - Connected
 
-> **Image:** BLE link layer states
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-ll-states.png"
+  width="55%"
+  caption="BLE link layer states"
+/>
 
 #### BLE Roles
 
@@ -81,5 +97,11 @@ The BLE standard defines two ways to transfer data from the Peripheral to the Ce
 - **Notification** - an unacknowledged message or update.
 - **Indication** - an acknowledged message or update.
 
-> **Image:** BLE indication and notification
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/notif-indic.png"
+  width="50%"
+  caption="BLE indication and notification"
+/>
 
+
+<RkBottomNav/>

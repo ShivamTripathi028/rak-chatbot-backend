@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12021 WisBlock RGB Sensor Module
 
 Thank you for choosing **RAK12021 WisBlock RGB Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,14 +40,14 @@ RAK12021 is a WisBlock RGB Sensor that extends the WisBlock system which is base
     * Color light sensing with IR-Blocking filter
     * Proximity detection
     * Maskable light and proximity interrupt
-    * Low power (2.5 uA sleep current)
+    * Low power (2.5&nbsp;uA sleep current)
     * I2C interface
-    * 3.3 V power supply
-    * Current Consumption: 2.5 uA - 235 uA
+    * 3.3&nbsp;V power supply
+    * Current Consumption: 2.5&nbsp;uA - 235&nbsp;uA
     * Chipset: AMS TCS37725FN
 
 * **Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -55,3 +57,5 @@ To use a **RAK12021**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+
+<RkBottomNav/>

@@ -21,13 +21,16 @@ date: 2021-04-07
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19007 WisBlock Base Board 2nd Gen Datasheet
 
 ## Overview
 
 ### Description
 
-**RAK19007** is a **WisBlock Base Board 2nd Gen** that connects **WisBlock Core**, **WisBlock IO**, and **WisBlock Modules**. It provides the power supply and interconnection to the modules attached to it. It has one slot reserved for the WisBlock Core module and four slots A-D for WisBlock modules. The WisBlock Core is attached on the top side, and the WisBlock modules are attached to the top or bottom side of the RAK19007. The Slot D holds modules up to 23 mm in size, while slots A to C support 10 mm WisBlock modules. Also, there are three **2.54 mm pitch headers** for extension interface with **BOOT**, **GPIO**, **I2C**, and **UART** pins.
+**RAK19007** is a **WisBlock Base Board 2nd Gen** that connects **WisBlock Core**, **WisBlock IO**, and **WisBlock Modules**. It provides the power supply and interconnection to the modules attached to it. It has one slot reserved for the WisBlock Core module and four slots A-D for WisBlock modules. The WisBlock Core is attached on the top side, and the WisBlock modules are attached to the top or bottom side of the RAK19007. The Slot D holds modules up to 23&nbsp;mm in size, while slots A to C support 10&nbsp;mm WisBlock modules. Also, there are three **2.54&nbsp;mm pitch headers** for extension interface with **BOOT**, **GPIO**, **I2C**, and **UART** pins.
 
 For convenience, there is a Type-C USB connector that is connected directly to WisBlock Core MCU’s USB port (if supported) or to a USB-UART converter depending on the WisBlock Core. It can be used for uploading firmware or serial communication. The USB-C connector is also used as a battery charging port.
 
@@ -41,8 +44,8 @@ You can also use a [RAK19005 WisBlock Sensor Extension Cable](https://store.rakw
 * 1 WisBlock compatible with IO slot
 * 4 WisBlock modules compatible with slots A-D
 * 1 Type-C USB port for programming and debugging
-* 3.7 V Rechargeable battery connector
-* 5 V Solar panel connector
+* 3.7&nbsp;V Rechargeable battery connector
+* 5&nbsp;V Solar panel connector
 * Four 4-pin header with BOOT, I2C, and UART pins accessible with solder contacts
 
 Additionally, it has two user-definable LEDs, one power supply/charging indicator LED, and a reset button.
@@ -77,7 +80,7 @@ If you can't find a WisBlock module that fits your IoT requirements, use the sta
 - Supports lithium battery charging
 - Supports solar panel charging
 - Fulfills industrial level design
-- Compact size: 30 x 60 mm
+- Compact size: 30 x 60&nbsp;mm
 
 ## Specifications
 
@@ -89,17 +92,32 @@ There are six (6) slots on RAK19007 WisBlock Base Board 2nd Gen:
 - **IO SLOT**: This slot is used for IO extension modules.
 - **Four Sensor Slots**: The sensor slots A to D are used to connect with the I2C bus. Slot D can be used for GNSS modules, too.
 
-Also, there are three (3) 2.54 mm pitch hole pads for extension interface such as BOOT, I2C, UART, and GPIO pins.
+Also, there are three (3) 2.54&nbsp;mm pitch hole pads for extension interface such as BOOT, I2C, UART, and GPIO pins.
 
-> **Image:** WisBlock Base Board 2nd Gen top view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/rak19007-top.svg"
+  figureCount="1"
+  caption="WisBlock Base Board 2nd Gen top view"
+   width="50%"
+/>
 
-> **Image:** WisBlock Base Board 2nd Gen bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/rak19007-bottom.svg"
+  figureCount="2"
+  caption="WisBlock Base Board 2nd Gen bottom view"
+   width="50%"
+/>
 
 ### Block Diagram
 
 The block diagram in **Figure 3** shows the internal architecture and external interfaces of the RAK19007 board.
 
-> **Image:** RAK19007 WisBlock Base Board 2nd Gen block diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/rak19007-block-diagram.png"
+  figureCount="3"
+  caption="RAK19007 WisBlock Base Board 2nd Gen block diagram"
+   width="80%"
+/>
 
 ### Hardware
 
@@ -113,7 +131,7 @@ RAK19007 WisBlock Base Board 2nd Gen provides the following interfaces, headers,
 - One connector for CPU slot
 - One connector for the IO slot
 - Four connectors for WisBlock sensor modules (slots A to D)
-- Three 4-pin header 2.54 mm hole pads (GPIO, UART, I2C, Power)
+- Three 4-pin header 2.54&nbsp;mm hole pads (GPIO, UART, I2C, Power)
 - 2-pin battery interface
 - 2-pin solar panel interface
 
@@ -121,9 +139,19 @@ Additionally, the RAK19007 has two user-definable LEDs, one power supply/chargin
 
 **Figure 4** and **Figure 5** show the location of RAK19007 main components.
 
-> **Image:** RAK19007 top view components
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/rak19007-top-interface.png"
+  figureCount="4"
+  caption="RAK19007 top view components"
+   width="90%"
+/>
 
-> **Image:** RAK19007 bottom view components
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/rak19007-bot-interface.png"
+  figureCount="5"
+  caption="RAK19007 bottom view components"
+   width="90%"
+/>
 
 ##### Type-C USB port
 
@@ -133,11 +161,17 @@ The Type-C USB connector is compliant with the USB 2.0 specification. This USB i
 * Port can be input or output
 * Fast battery charging
 
-> **Image:** USB Type-C receptacle pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/image-20220127173430838.png"
+  figureCount="6"
+  caption="USB Type-C receptacle pinout"
+   width="60%"
+/>
 
 ##### J10, J11, J12 Headers
 
-On the RAK19007 Base Board, there are three 2.54 mm pitch headers for IO extension. BOOT, I2C, GPIO, and UART pins from the WisBlock Core module are also connected to these headers.
+On the RAK19007 Base Board, there are three 2.54&nbsp;mm pitch headers for IO extension. BOOT, I2C, GPIO, and UART pins from the WisBlock Core module are also connected to these headers.
+
 
 ###### J10 Header Pinout
 
@@ -161,10 +195,12 @@ On the RAK19007 Base Board, there are three 2.54 mm pitch headers for IO extens
 
 | **Pin** | **Pin Name** | **Description** |
 | ------- | ------------ | --------------- |
-| 1       | VDD          | 3.3 V      |
+| 1       | VDD          | 3.3&nbsp;V      |
 | 2       | GND          | Ground pin      |
 | 3       | SCL          | I2C1 clock      |
 | 4       | SDA          | I2C1 data       |
+
+
 
 :::tip NOTE
 BOOT pin is used on startup configuration or sequence of the WisBlock Core connected to it. It is commonly used for uploading the bootloader and/or application firmware. The requirements of the state of the BOOT pin depend on the specific model of the WisBlock Core used.
@@ -174,20 +210,30 @@ BOOT pin is used on startup configuration or sequence of the WisBlock Core conne
 
 **Figure 7** shows the battery connector V+(VBAT) and V-(GND).
 
-> **Image:** Battery connector pin order
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/battery-connector.svg"
+  figureCount="7"
+  caption="Battery connector pin order"
+   width="50%"
+/>
 
 :::warning
-The voltage of the battery **must not exceed 4.3 V**.
+The voltage of the battery **must not exceed 4.3&nbsp;V**.
 :::
 
 ##### Solar Panel Connector
 
 **Figure 8** shows the solar panel connector V+(Vin) and V-(GND)
 
-> **Image:** Solar panel connector V+ and V- Order
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/solar-panel-connector.svg"
+  figureCount="8"
+  caption="Solar panel connector V+ and V- Order"
+   width="50%"
+/>
 
 :::warning
-The output voltage of the solar panel **must not exceed 5.5 V**. Otherwise, it may cause permanent damage to the board.
+The output voltage of the solar panel **must not exceed 5.5&nbsp;V**. Otherwise, it may cause permanent damage to the board.
 :::
 
 ##### LEDs
@@ -208,9 +254,15 @@ The Reset Push Button is connected to the WisBlock Core module. When pushed, it 
 
 The **WisBlock Core module connector** is a 40-pin board-to-board connector. It is a high-speed and high-density connector, with an easy attaching mechanism.
 
-> **Image:** WisBlock Core module connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/12.mcu-module-connector.png"
+  figureCount="9"
+  caption="WisBlock Core module connector"
+   width="45%"
+/>
 
 The table below shows the pinout of the 40-pin WisBlock core connector:
+
 
 | **Function Name of WisBlock Base** | **Pin Number** | **Pin Number** | **Function Name of WisBlock Base** |
 | ---------------------------------- | -------------- | -------------- | ---------------------------------- |
@@ -243,8 +295,8 @@ As for the following table, it shows the definition of each pin of the WisBlock 
 | 2              | VBAT         | S        | Power supply from battery                                                            |
 | 3              | GND          | S        | Ground                                                                               |
 | 4              | GND          | S        | Ground                                                                               |
-| 5              | 3V3          | S        | 3.3 V power supply                                                              |
-| 6              | 3V3          | S        | 3.3 V power supply                                                              |
+| 5              | 3V3          | S        | 3.3&nbsp;V power supply                                                              |
+| 6              | 3V3          | S        | 3.3&nbsp;V power supply                                                              |
 | 7              | USB+         | I/O      | USB D+                                                                               |
 | 8              | USB–         | I/O      | USB D–                                                                               |
 | 9              | VBUS         | S        | VBUS for USB                                                                         |
@@ -255,8 +307,8 @@ As for the following table, it shows the definition of each pin of the WisBlock 
 | 14             | LED1         | I/O      | LED for battery charging indication                                                  |
 | 15             | LED2         | I/O      | LED for custom usage                                                                 |
 | 16             | LED3         | I/O      | LED for custom usage                                                                 |
-| 17             | VDD          | S        | Generated by MCU module for power sensor board if the MCU IO level is not 3.3 V |
-| 18             | VDD          | S        | Generated by MCU module for power sensor board if the MCU IO level is not 3.3 V |
+| 17             | VDD          | S        | Generated by MCU module for power sensor board if the MCU IO level is not 3.3&nbsp;V |
+| 18             | VDD          | S        | Generated by MCU module for power sensor board if the MCU IO level is not 3.3&nbsp;V |
 | 19             | I2C1_SDA     | I/O      | The first set of I2C data signal                                                     |
 | 20             | I2C1_SCL     | I/O      | The first set of I2C clock signal                                                    |
 | 21             | AIN0         | A        | Analog input for ADC                                                                 |
@@ -284,7 +336,12 @@ As for the following table, it shows the definition of each pin of the WisBlock 
 
 The WisBlock sensor module connector is a **24-pin board-to-board connector**.
 
-> **Image:** WisBlock Sensor module connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/13.wissensor-module-connector.png"
+  figureCount="10"
+  caption="WisBlock Sensor module connector"
+   width="40%"
+/>
 
 :::tip NOTE
 There are four connectors reserved for the sensor modules on the RAK19007. The pinout definition of the WisBlock modules with 24-pin connector on WisBlock Mini Base varies according to its connector.
@@ -317,14 +374,14 @@ As for the following table, it shows the pin name and description of each pin in
 | 6              | SPI_MOSI        | SPI_MOSI        | SPI_MOSI        | SPI_MOSI        | I/O      | SPI MOSI signal                                                                                                                                 |
 | 7              | I2C1_SCL        | I2C1_SCL        | I2C1_SCL        | I2C1_SCL        | I/O      | I2C clock signal                                                                                                                                |
 | 8              | I2C1_SDA        | I2C1_SDA        | I2C1_SDA        | I2C1_SDA        | I/O      | I2C data signal                                                                                                                                 |
-| 9              | VDD             | VDD             | VDD             | VDD             | S        | Generated by CPU module. Used to power sensor board if MCU IO level is not 3.3 V                                                           |
+| 9              | VDD             | VDD             | VDD             | VDD             | S        | Generated by CPU module. Used to power sensor board if MCU IO level is not 3.3&nbsp;V                                                           |
 | 10             | IO2             | IO1             | IO4             | IO6             | I/O      | General purpose IO. IO2 controls the power switch of 3V3_S. When the 3V3_S function is used, IO2 can not be used as an interrupt of the sensor. |
-| 11             | 3V3_S           | 3V3_S           | 3V3_S           | 3V3_S           | S        | 3.3 V power supply. Can be shut down by the CPU module.                                                                                    |
+| 11             | 3V3_S           | 3V3_S           | 3V3_S           | 3V3_S           | S        | 3.3&nbsp;V power supply. Can be shut down by the CPU module.                                                                                    |
 | 12             | IO1             | IO2             | IO3             | IO5             | I/O      | General purpose IO - IO controls the power switch of 3V3_S. When the 3V3_S function is used, IO2 cannot be used as an interrupt of the sensor.  |
 | 13             | NC              | NC              | NC              | NC              | NC       | Not connected                                                                                                                                   |
-| 14             | 3V3_S           | 3V3_S           | 3V3_S           | 3V3_S           | S        | 3.3 V power supply. Can be shut down by the CPU module.                                                                                    |
+| 14             | 3V3_S           | 3V3_S           | 3V3_S           | 3V3_S           | S        | 3.3&nbsp;V power supply. Can be shut down by the CPU module.                                                                                    |
 | 15             | NC              | NC              | NC              | NC              | NC       | Not connected                                                                                                                                   |
-| 16             | VDD             | VDD             | VDD             | VDD             | S        | Generated by CPU module. Used to power sensor board if the MCU IO level is not 3.3 V.                                                      |
+| 16             | VDD             | VDD             | VDD             | VDD             | S        | Generated by CPU module. Used to power sensor board if the MCU IO level is not 3.3&nbsp;V.                                                      |
 | 17             | NC              | NC              | NC              | NC              | NC       | Not connected                                                                                                                                   |
 | 18             | NC              | NC              | NC              | NC              | NC       | Not connected                                                                                                                                   |
 | 19             | NC              | NC              | NC              | NC              | NC       | Not connected                                                                                                                                   |
@@ -346,6 +403,7 @@ The Absolute Maximum Ratings of the device are shown in the table below. The str
 3. Exposure to maximum rating conditions may affect the device reliability.
 :::
 
+
 | **Ratings**                             | Maximum Value   | Unit |
 | --------------------------------------- | --------------- | ---- |
 | Power supply on the USB port (**VBUS**) | –0.3 to 5.5     | V    |
@@ -360,7 +418,7 @@ The RAK19007, as any electronic equipment, is sensitive to **electrostatic disch
 
 ##### Current Consumption
 
-The RAK19007 is designed for **low-power IoT products**, and the power supply uses a high-efficiency low grounding current regulator. When there is no module on RAK19007, the **leakage current is lower than 2 µA**. With WisBlock Core and WisBlock Sensor on it, the sleep current is **lower than 10 µA**. When a LoRa module is transmitting, the current may reach **130 mA**.
+The RAK19007 is designed for **low-power IoT products**, and the power supply uses a high-efficiency low grounding current regulator. When there is no module on RAK19007, the **leakage current is lower than 2 µA**. With WisBlock Core and WisBlock Sensor on it, the sleep current is **lower than 10&nbsp;µA**. When a LoRa module is transmitting, the current may reach **130&nbsp;mA**.
 
 | **Conditions**                                   | **Current** | **Unit** |
 | ------------------------------------------------ | ----------- | -------- |
@@ -368,9 +426,10 @@ The RAK19007 is designed for **low-power IoT products**, and the power supply us
 | Idle current, with MCU and sensors in sleep mode | 10          | µA       |
 | Working current, with LoRa module transmitting   | 130         | mA       |
 
+
 ##### Battery Connector
 
-The RAK19007 WisBlock Base Board 2nd Gen can be powered by a rechargeable battery, connected to the **P2 connector**. The nominal operating voltage of the battery should be within the range shown in the following table. The matching connector for the battery wires is an [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199)
+The RAK19007 WisBlock Base Board 2nd Gen can be powered by a rechargeable battery, connected to the **P2 connector**. The nominal operating voltage of the battery should be within the range shown in the following table. The matching connector for the battery wires is an [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199)
 
 | **Minimum** | **Typical** | **Maximum** | **Unit** |
 | ----------- | ----------- | ----------- | -------- |
@@ -380,25 +439,27 @@ The Type-C USB connector is used as a charging port. The voltage and current fed
 
 | **Parameter**    | **Value**        |
 | ---------------- | ---------------- |
-| Charging voltage | 4.5 – 5.5 V |
-| Charging current | 350 mA      |
+| Charging voltage | 4.5 – 5.5&nbsp;V |
+| Charging current | 350&nbsp;mA      |
 
 A suitable Li-Ion battery should have the following parameters as shown in the table below:
 
 | **Parameter**     | **Value**            |
 | ----------------- | -------------------- |
-| Standard voltage  | 3.7 V           |
-| Charging voltage  | 4.2 V           |
+| Standard voltage  | 3.7&nbsp;V           |
+| Charging voltage  | 4.2&nbsp;V           |
 | Capacity          | As required          |
-| Discharge current | At least 500 mA |
+| Discharge current | At least 500&nbsp;mA |
 
 :::tip NOTE
 Do not use a non-rechargeable battery.
 :::
 
+
 ##### Solar Panel Connector
 
-A 5 V solar panel can be connected to the board via the **P1 connector**. The solar panel can also be used to charge the Li-Ion battery. The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287).
+A 5&nbsp;V solar panel can be connected to the board via the **P1 connector**. The solar panel can also be used to charge the Li-Ion battery. The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287).
+
 
 #### Mechanical Characteristics
 
@@ -411,17 +472,37 @@ You may also refer and download the [M1.2 Stand-off fastener/inserts datasheet](
 
 **Figure 11** shows the detailed mechanical dimensions of the RAK19007 Board.
 
-> **Image:** RAK19007 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/image-20220218090849344.png"
+  figureCount="11"
+  caption="RAK19007 mechanical dimensions"
+   width="100%"
+/>
 
 **Figure 12** and **Figure 13** show the mounting holes location and diameter of the RAK19007 Board.
 
-> **Image:** RAK19007 mounting holes location and diameter top view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/mholes-rak19007-top.png"
+  figureCount="12"
+  caption="RAK19007 mounting holes location and diameter top view"
+   width="100%"
+/>
 
-> **Image:** RAK19007 mounting holes location and diameter bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/mholes-rak19007-bottom.png"
+  figureCount="13"
+  caption="RAK19007 mounting holes location and diameter bottom view"
+   width="100%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/fxxs1003k6m.png"
+  figureCount="14"
+  caption="WisConnector PCB footprint and recommendations"
+   width="100%"
+/>
 
 #### Environmental Characteristics
 
@@ -429,15 +510,26 @@ The table below lists the operation and storage temperature requirements of RAK1
 
 | **Parameter**                 | **Minimum** | **Typical** | **Maximum** |
 | ----------------------------- | :---------: | :---------: | :---------: |
-| Operational Temperature Range | –35 ºC | +25 ºC | +75 ºC |
-| Extended Temperature Range    | –40 ºC | +25 ºC | +80 ºC |
-| Storage Temperature Range     | –40 ºC | +25 ºC | +80 ºC |
+| Operational Temperature Range | –35&nbsp;ºC | +25&nbsp;ºC | +75&nbsp;ºC |
+| Extended Temperature Range    | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
+| Storage Temperature Range     | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
 
 #### Schematic Diagram
 
 The component schematics diagram of the RAK19007 is shown in **Figure 15** and **Figure 16**.
 
-> **Image:** RAK19007 schematic diagram (Power)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/power-schematic.png"
+  figureCount="15"
+  caption="RAK19007 schematic diagram (Power)"
+   width="100%"
+/>
 
-> **Image:** RAK19007 schematic diagram (Slots)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19007/datasheet/slots-schematic.png"
+  figureCount="16"
+  caption="RAK19007 schematic diagram (Slots)"
+   width="100%"
+/>
 
+<RkBottomNav/>

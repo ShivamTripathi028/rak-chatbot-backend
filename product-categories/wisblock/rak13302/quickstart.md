@@ -14,6 +14,9 @@ tags:
     - quickstart
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13302 WisBlock LPWAN Wireless Module Quick Start Guide
 
 ## Prerequisites
@@ -31,6 +34,7 @@ Before going through each and every step on using the RAK13302 WisBlock LPWAN Wi
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
+
 ### Software
 
 - Download and install the [Arduino IDE](https://www.arduino.cc/en/Main/Software).
@@ -44,13 +48,21 @@ You can integrate the RAK13302 Wireless module on WisBlock Core module that does
 
 RAK13302 module can be mounted to the IO slot of the WisBlock Base and communicated to the WisBlock Core via SPI. The module is activated via `WB_IO2` pin of the WisBlock Core.
 
-> **Image:** RAK13302 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-connection.png"
+  caption="RAK13302 connection to WisBlock Base"
+  width="80%"
+/>
 
 #### Assemble WisBlock Modules
 
-As shown in **Figure 2**, the location of the IO Slot is properly marked by silkscreen. Follow carefully the procedure defined in [RAK5005-O module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
+As shown in **Figure 2**, the location of the IO Slot is properly marked by silkscreen. Follow carefully the procedure defined in [RAK5005-O module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
 
-> **Image:** RAK13302 Wireless Module mounting mechanism
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/mounting-mechanism.png"
+  caption="RAK13302 Wireless Module mounting mechanism"
+  width="60%"
+/>
 
 #### Disassemble WisBlock Modules
 
@@ -58,15 +70,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Remove screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/removing_screw.png"
+  caption="Remove screws from the WisBlock module"
+  width="80%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detach silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/detach_silkscreen.png"
+  caption="Detach silkscreen on the WisBlock module"
+  width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the base board.
 
-> **Image:** Apply even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/detach_module.png"
+  caption="Apply even forces on the proper location of a WisBlock module"
+  width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK13302 uses UART communication lines, and it can cause possible conflict, especially on some modules that also use UART.
@@ -76,7 +100,11 @@ If you will connect other modules to the remaining WisBlock Base slots, check on
 
 The RAK13302 requires a LoRa Antenna to have a good signal. Do not power the module without an antenna connected to the IPEX connector, as this can damage the RF section of the chip.
 
-> **Image:** LoRa Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/lora-antenna.png"
+  caption="LoRa Antenna"
+  width="35%"
+/>
 
 :::tip NOTE
 Detailed information about the LoRa antenna can be found on the [LoRa Antenna Datasheet](https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/868%20915%20LoRa%20Antenna%20for%20WisBlock.pdf).
@@ -84,7 +112,11 @@ Detailed information about the LoRa antenna can be found on the [LoRa Antenna Da
 
 RAK13302 has the antenna slot which can be found in **Figure 7**.
 
-> **Image:** RAK13302 Antenna Slot
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-antenna-slot.png"
+  caption="RAK13302 Antenna Slot"
+  width="35%"
+/>
 
 :::warning
 To avoid damage, always connect an antenna when using LoRa transceivers. Use screws to keep the module firmly in place for proper operation.
@@ -100,34 +132,48 @@ The 3-pin jumper header is to select the supply source for the booster chip.
 
 | Jumprer Position  | Supply Source                           |
 | :---------------: | --------------------------------------- |
-| IN_5V to 5 V | Supply from WisBlock Base Board Battery |
-| EX_5V to 5 V | Supply from Jx connector                |
+| IN_5V to 5&nbsp;V | Supply from WisBlock Base Board Battery |
+| EX_5V to 5&nbsp;V | Supply from Jx connector                |
 
 :::tip NOTE
 If the supply is through EX_5V, the whole WisBlock Base Board can be supplied through this source.
 :::
 
-> **Image:** RAK13302 5 V supply selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-supply.png"
+  caption="RAK13302 5&nbsp;V supply selection"
+  width="80%"
+/>
 
 **External power supply cable connections:**
 
-> **Image:** RAK13302 5 V supply selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/datasheet/rak13302-power-cable.png"
+  caption="RAK13302 5&nbsp;V supply selection"
+  width="80%"
+/>
 
 ### Battery Connection
 
 If not using the external 5V supply for the module, it is required to use a Li-Ion/LiPo battery via connectors, as shown in **Figure 8**. This illustration shows RAK5005-O as WisBlock Base. There are other [WisBlock Base](https://store.rakwireless.com/collections/wisblock-base) boards available, and you need to check the datasheet of the specific WisBlock Base board for the right polarity and parameters.
 
-> **Image:** WisBlock Base RAK5005-O battery polarity and connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/battery-connection.gif"
+  caption="WisBlock Base RAK5005-O battery polarity and connection"
+  width="35%"
+/>
 
 :::warning
 
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 
 :::
+
+
 
 ### Software Configuration and Example
 
@@ -138,11 +184,17 @@ These are the quick links that go directly to the software guide for the specifi
 - [Set Up RAK13302 as the Receiver](https://docs.rakwireless.com/product-categories/wisblock/rak13300/quickstart/#set-up-rak13302-as-the-receiver)
 - [Set Up RAK13302 as the Transmitter](https://docs.rakwireless.com/product-categories/wisblock/rak13300/quickstart/#set-up-rak13302-as-the-transmitter)
 
+
+
 #### LoRa Point-to-Point Example
 
 In this example code, you will be able to send/receive payloads via LoRaP2P using the RAK13302 LPWAN Wireless Module. This will ensure that your RAK13302 is functional and ready for your IoT project.
 
-> **Image:** LoRaP2P Example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/lorap2p-example.png"
+  caption="LoRaP2P Example"
+  width="80%"
+/>
 
 :::tip NOTE
 You can use other [WisBlock Base](https://store.rakwireless.com/collections/wisblock-base) and [WisBlock Core](https://store.rakwireless.com/collections/wisblock-core) with LoRa capability as dummy transmitter.
@@ -154,11 +206,19 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 
 1. (a) If using the RAK11200, you need to select RAK11200 as your WisBlock Core, as shown in **Figure 10**.
 
-> **Image:** Select RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-board.png"
+  caption="Select RAK11200 as WisBlock Core"
+  width="90%"
+/>
 
 1. (b) If using the RAK3401, you need to select RAK4630 as your WisBlock Core, as shown in **Figure 10**.
 
-> **Image:** Select RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-board-rak3401.png"
+  caption="Select RAK4631 as WisBlock Core"
+  width="90%"
+/>
 
 :::tip NOTE
 The RAK3401 is not listed as separate board in the BSP. As it is compatible with the RAK4631, please choose this board to compile code for the RAK3401.
@@ -188,6 +248,7 @@ The RAK3401 is not listed as separate board in the BSP. As it is compatible with
 void OnRxDone(uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr);
 void OnRxTimeout(void);
 void OnRxError(void);
+
 
 // Define LoRa parameters
 #define RF_FREQUENCY 868300000	// Hz
@@ -303,9 +364,17 @@ void OnRxError(void)
 Since you are using RAK11200 as WisBlock Core, you need to configure the BOOT0 pin before uploading. You need to short it to the ground then press the reset button of the WisBlock Base before releasing the BOOT0 pin. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Select the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/select-serial-port.png"
+  caption="Select the correct Serial Port"
+  width="90%"
+/>
 
-> **Image:** Upload the RAK13302 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/upload-source-code.png"
+  caption="Upload the RAK13302 example code"
+  width="90%"
+/>
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK13302 WisBlock LPWAN Wireless Module that can be found on the [RAK13302 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11200/communications/LoRa/RAK13302_LoRaP2P/LoRaP2P_RX)
@@ -313,27 +382,48 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the initial logs. You may not see any logs yet if you have not set the transmitter up or you do not have any existing transmitting device.
 
+
 ##### Set Up a Dummy Transmitter
 
 In this example, you will use RAK11310 as the WisBlock Core and RAK19003 as the WisBlock Base for the dummy transmitter.
 
 1. You need to select RAK11300 as your WisBlock Core, as shown in **Figure 13**.
 
-> **Image:** Select RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/select-rak11300.png"
+  caption="Select RAK11300 as WisBlock Core"
+  width="90%"
+/>
 
 2. Open the example code for LoRaP2P Transmitter, as shown in **Figure 14**.
 
-> **Image:** Open the example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/tx-sample-code.png"
+  caption="Open the example code"
+  width="90%"
+/>
 
 3. Select the correct port and upload, as shown in **Figure 15** and **Figure 16**.
 
-> **Image:** Select the correct serial port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/select-rak11300-port.png"
+  caption="Select the correct serial port"
+  width="90%"
+/>
 
-> **Image:** Upload the code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak11302-code-upload.png"
+  caption="Upload the code"
+  width="90%"
+/>
 
 4. When you have successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the initial logs, as shown in **Figure 17**.
 
-> **Image:** Transmission logs in Serial Monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/transmition-logs.png"
+  caption="Transmission logs in Serial Monitor"
+  width="75%"
+/>
 
 :::tip NOTE
 
@@ -344,11 +434,19 @@ In this example, you will use RAK11310 as the WisBlock Core and RAK19003 as the 
 
 1. To check if the communication is successful, you can power the transmitting node via battery or power brick to avoid confusion in the serial port. You may refer to **Figure 18** for the illustration.
 
-> **Image:** Receive and Transmit Node Setup
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13300/quickstart/finalsetup.png"
+  caption="Receive and Transmit Node Setup"
+  width="90%"
+/>
 
 2. Connect the receiving node to your PC and open the serial monitor. You will see the message is received, as shown in **Figure 19**.
 
-> **Image:** Payload logs received in Serial Monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/payload-logs-received.png"
+  caption="Payload logs received in Serial Monitor"
+  width="75%"
+/>
 
 ##### Set Up RAK13302 as the Transmitter
 
@@ -356,11 +454,19 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 
 1. (a) If using the RAK11200, you need to select RAK11200 as your WisBlock Core, as shown in **Figure 20**.
 
-> **Image:** Select RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-board.png"
+  caption="Select RAK11200 as WisBlock Core"
+  width="90%"
+/>
 
 1. (b) If using the RAK3401, you need to select RAK4631 as your WisBlock Core, as shown in **Figure 20**.
 
-> **Image:** Select RAK3401 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-board-rak3401.png"
+  caption="Select RAK3401 as WisBlock Core"
+  width="90%"
+/>
 
 :::tip NOTE
 The RAK3401 is not listed as separate board in the BSP. As it is compatible with the RAK4631, please choose this board to compile code for the RAK3401.
@@ -390,6 +496,7 @@ The RAK3401 is not listed as separate board in the BSP. As it is compatible with
 // Function declarations
 void OnTxDone(void);
 void OnTxTimeout(void);
+
 
 // Define LoRa parameters
 #define RF_FREQUENCY 868300000  // Hz
@@ -492,9 +599,17 @@ void send()
 Since you are using RAK11200 as WisBlock Core, you need to configure the BOOT0 pin before uploading. Short it to the ground, then press the reset button on the WisBlock Base before releasing the BOOT0 pin. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Select the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-port.png"
+  caption="Select the correct Serial Port"
+  width="90%"
+/>
 
-> **Image:** Upload the RAK13302 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-upload.png"
+  caption="Upload the RAK13302 example code"
+  width="90%"
+/>
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for the RAK13302 WisBlock LPWAN Wireless Module that can be found on the [RAK13302 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11200/communications/LoRa/RAK13302_LoRaP2P/LoRaP2P_TX).
@@ -502,7 +617,11 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. When you have successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the transmission logs, as shown in **Figure 23**.
 
-> **Image:** Transmission logs in Serial Monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13302/quickstart/rak13302-tx-serial.png"
+  caption="Transmission logs in Serial Monitor"
+  width="75%"
+/>
 
 :::tip NOTE
 - You can set up a receiver node to see the transmitted messages:
@@ -511,3 +630,4 @@ If you experience any error in compiling the example sketch, check the updated c
   - [RAK11200 WisBlock Core and RAK13302 WisBlock LPWAN Module](https://docs.rakwireless.com/product-categories/wisblock/rak13300/quickstart/#set-up-rak13302-as-the-receiver) as a receiver.
 :::
 
+<RkBottomNav/>

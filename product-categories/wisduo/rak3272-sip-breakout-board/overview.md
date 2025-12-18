@@ -10,6 +10,8 @@ slug: /product-categories/wisduo/rak3272-sip-breakout-board/overview/
 download: true
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK3272-SiP Breakout Board
 
 Thank you for choosing **RAK3272-SiP Breakout Board** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -18,6 +20,8 @@ Thank you for choosing **RAK3272-SiP Breakout Board** in your awesome IoT projec
 * <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3272-sip-breakout-board/at-command-manual/" target="_blank">AT Command Manual</a>
 * <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3272-sip-breakout-board/datasheet/" target="_blank">Datasheet</a>
 * <a href="https://downloads.rakwireless.com/3D_File/WisDuo/3D_RAK3272-SiP.step" target="_blank">RAK3272-SiP 3D Model</a>
+
+
 
 ## Product Description
 
@@ -29,25 +33,26 @@ The board complies with Class A, B, & C of LoRaWAN 1.0.3 specifications and also
 
 ## Product Features
 
-- 32-bit Arm® Cortex®‐M4 48 MHz MCU and sub-GHz Semtech SX126x radio
+- 32-bit Arm® Cortex®‐M4 48&nbsp;MHz MCU and sub-GHz Semtech SX126x radio
 - Chipset STM32WLE5JC (single-core)
 - Two variants available
     - RAK3272-SiP (uses RFO_HP)
     - RAK3272LP-SiP (uses RFO_LP)
 - I/O ports: UART/I2C/GPIO/SPI
-- 32 MHz TCXO and 32 kHz xtal
+- 32&nbsp;MHz TCXO and 32&nbsp;kHz xtal
 - RUI3 API compatible
 - Custom firmware using Arduino via RUI3 API
 - Easy to use AT Command set via UART interface
 - Serial Wire Debug (SWD) interface
 - **LoRaWAN 1.0.3** specification compliant
 - **Supported bands**: IN865, EU868, AU915, US915, KR920, RU864, and AS923
-- Supply voltage: 1.8 V ~ 3.6 V
-- Temperature range: -40° C ~ 85° C
-- Size: 25.4 mm x 41.8 mm
+- Supply voltage: 1.8&nbsp;V ~ 3.6&nbsp;V
+- Temperature range: -40°&nbsp;C ~ 85°&nbsp;C
+- Size: 25.4&nbsp;mm x 41.8&nbsp;mm
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
+<RkBottomNav/>

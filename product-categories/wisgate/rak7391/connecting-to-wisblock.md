@@ -9,25 +9,42 @@ keywords:
 sidebar_label: Connecting to WisBlock
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7391 WisGate Connect Connecting to WisBlock
 
 ## Connectors Position
 
-There are two WisBlock slots on the RAK7391 board, right next to the USB 2.0 and USB 3.0 ports. The WisBlock slots support various industrial protocols via WisBlock modules: IO, Analog, 0-5 V, 4-20 mA, ModBUS, and LinBUS.
+There are two WisBlock slots on the RAK7391 board, right next to the USB 2.0 and USB 3.0 ports. The WisBlock slots support various industrial protocols via WisBlock modules: IO, Analog, 0-5&nbsp;V, 4-20&nbsp;mA, ModBUS, and LinBUS.
 
-> **Image:** WisBlock slots
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/connecting-to-wisblock/1.wisblock-slots.png"
+  width="60%"
+  caption="WisBlock slots"
+/>
 
 ## Pin Definition
 
 Both WisBlock slot connectors use 40-pin high-density headers. Each connector is linked to a GPIO expander (TPT29555-TS5R). The I2C addresses for these GPIO expander chips are 0x26 and 0x27. 
 
-> **Image:** WisBlock slot pinouts
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/connecting-to-wisblock/2.pinouts.png"
+  width="100%"
+  caption="WisBlock slot pinouts"
+/>
 
-> **Image:** GIPO expand pinouts
+<br />
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/connecting-to-wisblock/3.gpio.png"
+  width="100%"
+  caption="GIPO expand pinouts"
+/>
 
 ## Supported Modules
 
-The WisBlock slots support various industrial protocols via WisBlock modules: IO, Analog, 0-5 V, 4-20 mA, ModBUS, and LinBUS.
+The WisBlock slots support various industrial protocols via WisBlock modules: IO, Analog, 0-5&nbsp;V, 4-20&nbsp;mA, ModBUS, and LinBUS.
 
 ### Onboard
 
@@ -44,6 +61,7 @@ The WisBlock slots support various industrial protocols via WisBlock modules: IO
 - [RAK13007 Relay Module](https://docs.rakwireless.com/product-categories/wisblock/rak13007/overview/)
 - [RAK16001 ADC Module](https://docs.rakwireless.com/product-categories/wisblock/rak16001/overview/)
 - [RAK17000 Motor Control Module](https://docs.rakwireless.com/product-categories/wisblock/rak17000/overview/)
+
 
 ### Sensors
 
@@ -79,6 +97,7 @@ For each module supported by RAK7391 WisBlock slot, there is a Python and Node-R
 - RAK16001 ADC Module ([Python example](https://github.com/RAKWireless/wisblock-python/tree/master/interface/rak16001), [Node-RED flow](https://github.com/RAKWireless/wisblock-node-red/tree/master/interface/rak16001))
 - RAK17000 Motor Control Module ([Python example](https://github.com/RAKWireless/wisblock-python/tree/master/interface/rak17000))
 
+
 ### Sensors
 
 - RAK12004 MQ2 Gas Sensor Module ([Python example](https://github.com/RAKWireless/wisblock-python/tree/master/sensors/rak12004/rak12004-reading), [Node-RED flow](https://github.com/RAKWireless/wisblock-node-red/tree/master/sensors/rak12004/rak12004-reading))
@@ -93,3 +112,5 @@ For each module supported by RAK7391 WisBlock slot, there is a Python and Node-R
 - RAK13300 SX1262 LPWAN Module ([Python example](https://github.com/RAKWireless/wisblock-python/tree/master/wireless/rak13300/rak13300-p2p))
 - RAK13600 NFC Reader Module ([Python example](https://github.com/RAKWireless/wisblock-python/tree/master/interface/rak13600), [Node-RED flow](https://github.com/RAKWireless/wisblock-node-red/tree/master/wireless/rak13600))
 
+
+<RkBottomNav/>

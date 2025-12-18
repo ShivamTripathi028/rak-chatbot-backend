@@ -9,6 +9,8 @@ image: "https://images.docs.rakwireless.com/software-tools/wistoolbox/wtoolbox-c
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 ## Description
 
 WisToolBox is a complementary software tool for **RUI3-based RAK modules**. It is available as a computer application and as a mobile app. It also supports different operating systems - Windows, Linux, MacOS, Android and iOS. WisToolBox is primarily used for device configuration and management via intuitive user interface.
@@ -29,3 +31,6 @@ WisToolBox is a complementary software tool for **RUI3-based RAK modules**. It i
 - [WisToolBox](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-mobile/)
 - [WisToolBox for Desktop](https://docs.rakwireless.com/product-categories/software-tools/wistoolbox/wistoolbox-desktop/)
 
+
+
+<RkBottomNav/>

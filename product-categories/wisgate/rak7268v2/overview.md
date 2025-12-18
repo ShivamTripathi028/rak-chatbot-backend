@@ -18,6 +18,8 @@ sidebar_label: Product Overview
 date: 2022-09-26
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7268V2/RAK7268CV2 WisGate Edge Lite 2
 
 Thank you for choosing **RAK7268V2/RAK7268CV2 WisGate Edge Lite 2** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary information for your product.
@@ -28,7 +30,8 @@ Thank you for choosing **RAK7268V2/RAK7268CV2 WisGate Edge Lite 2** in your awes
 * [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/lorawan-network-server-guide/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/datasheet/)
 
-For more related tutorials, you can refer to <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/quickstart/#tutorials" target="_blank">Quick Start Guide >Tutorials</a>.
+
+For more related tutorials, you can refer to <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7268v2/quickstart/#tutorials" target="_blank">Quick Start Guide &gt;Tutorials</a>.
 
 **Resources**
 
@@ -37,34 +40,36 @@ For more related tutorials, you can refer to <a href="https://docs.rakwireless.c
 - Check our extensive collection of <a href="https://learn.rakwireless.com/hc/en-us" target="_blank">Applications & Tutorials</a> to get inspiration on exciting new use cases.
 - Need more specialized product assistance? Contact <a href="https://www.rakwireless.com/en-us/contact-us" target="_blank">RAKwireless Support</a>.
 
+
 :::info IMPORTANT
 The new RAK7268V2/RAK7268CV2 gateway now replaces the RAK7268. You can still browse the product information of <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7268/overview/" target="_blank">RAK7268</a>
 :::
 
+
 ## Product Description
 
-The **RAK7268V2 / RAK7268CV2 WisGate Edge Lite 2** is part of the **RAK Edge Series**, offering flexible connectivity options to meet the needs of a wide range of IoT (Internet of Things) applications. Designed for **indoor use**, this gateway simplifies deployment with built-in Ethernet connectivity and onboard **2.4 GHz WiFi** for easy configuration through the default WiFi AP mode. The **RAK7268CV2** version also supports LTE uplink communication, offering optional cellular backhaul for remote deployments or environments requiring LTE connectivity.
+The **RAK7268V2 / RAK7268CV2 WisGate Edge Lite 2** is part of the **RAK Edge Series**, offering flexible connectivity options to meet the needs of a wide range of IoT (Internet of Things) applications. Designed for **indoor use**, this gateway simplifies deployment with built-in Ethernet connectivity and onboard **2.4&nbsp;GHz WiFi** for easy configuration through the default WiFi AP mode. The **RAK7268CV2** version also supports LTE uplink communication, offering optional cellular backhaul for remote deployments or environments requiring LTE connectivity.
 
 This gateway operates on **[WisGateOS 2](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/)**, a powerful platform that ensures enhanced security, robust functionality, and flexibility for customizations via extensions. Furthermore, the **RAK7268V2 / RAK7268CV2** integrates seamlessly with **[WisDM](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisdm/overview/)**, enabling fleet management and remote monitoring of multiple devices, making it an ideal choice for managing large networks of gateways.
 
-Designed for versatile indoor deployments, this gateway supports flexible power input options—including PoE, 12 V<sub>DC</sub>, and 9–24 V<sub>DC</sub>—as well as multiple LTE configurations with either built-in antennas or external antennas.
+Designed for versatile indoor deployments, this gateway supports flexible power input options—including PoE, 12&nbsp;V<sub>DC</sub>, and 9–24&nbsp;V<sub>DC</sub>—as well as multiple LTE configurations with either built-in antennas or external antennas.
 
 **Product Variants Overview**
 
 | **Gateway  Model** | **Configuration  Type** | **LTE  Module**           | **Power  Input**         |
 |--------------------|-------------------------|---------------------------|--------------------------|
-| RAK7268CV2         | LTE (Internal Antennas) | Built-in LTE Cat 4 module | 12 V<sub>DC</sub>   |
-| RAK7268CV2         | LTE (External Antennas) | Built-in LTE Cat 4 module | 12 V<sub>DC</sub>   |
-| RAK7268CV2         | LTE (Internal Antennas) | Built-in LTE Cat 4 module | 9–24 V<sub>DC</sub> |
-| RAK7268V2          | Non-LTE                 | Not included              | 12 V<sub>DC</sub>   |
-| RAK7268V2          | Non-LTE                 | Not included              | 9–24 V<sub>DC</sub> |
+| RAK7268CV2         | LTE (Internal Antennas) | Built-in LTE Cat 4 module | 12&nbsp;V<sub>DC</sub>   |
+| RAK7268CV2         | LTE (External Antennas) | Built-in LTE Cat 4 module | 12&nbsp;V<sub>DC</sub>   |
+| RAK7268CV2         | LTE (Internal Antennas) | Built-in LTE Cat 4 module | 9–24&nbsp;V<sub>DC</sub> |
+| RAK7268V2          | Non-LTE                 | Not included              | 12&nbsp;V<sub>DC</sub>   |
+| RAK7268V2          | Non-LTE                 | Not included              | 9–24&nbsp;V<sub>DC</sub> |
 
 ## Product Features
 
 ### Hardware
 
 - **8 LoRa channels**
-- Supports **2.4 GHz WiFi AP** for easy configuration
+- Supports **2.4&nbsp;GHz WiFi AP** for easy configuration
 - **100M Base-T Ethernet** with **PoE** (Power over Ethernet)
 - **RP-SMA** LoRa antenna connector
 - **Multi backhaul options** with Ethernet, WiFi, and **Cellular** (only in **RAK7268CV2**)
@@ -87,7 +92,7 @@ Designed for versatile indoor deployments, this gateway supports flexible power 
 
 :::tip NOTE
 
-A 9~24 V<sub>DC</sub> power input version of RAK7268V2 or RAK7268CV2 WisGate  Edge Lite 2 is available upon request. For more information or to make a  purchase, kindly contact  [inquiry@rakwireless.com](mailto:inquiry@rakwireless.com).
+A 9~24&nbsp;V<sub>DC</sub> power input version of RAK7268V2 or RAK7268CV2 WisGate  Edge Lite 2 is available upon request. For more information or to make a  purchase, kindly contact  [inquiry@rakwireless.com](mailto:inquiry@rakwireless.com).
 :::
 
 ## Field Applications
@@ -148,27 +153,26 @@ WisDM is a cloud-based device management platform specifically designed to help 
 
 RAK offers a diverse range of indoor gateways designed to meet various connectivity and deployment needs. These gateways provide reliable, high-performance solutions for different use cases, incorporating advanced connectivity options such as LTE, WiFi, and LoRa. Below is an overview of key indoor gateways in the RAK product family:
 
-| Feature                        | RAK7268V2 / RAK7268CV2 
-WisGate Edge Lite 2                                                                                                               | RAK7266
-WisGate Soho Lite                                                                                                            |
+| Feature                        | RAK7268V2 / RAK7268CV2 <br />WisGate Edge Lite 2                                                                                                               | RAK7266<br />WisGate Soho Lite                                                                                                            |
 |--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | **Product Image**              | <img src="https://images.docs.rakwireless.com/wisgate/rak7268-v2/rak7268v2.png" alt="RAK7268V2" style={{zoom:'15%'}} />                                        | <img src="https://images.docs.rakwireless.com/wisgate/rak7266/rak7266.png" alt="RAK7266" style={{zoom:'15%'}} />                          |
-| **LoRa Features**              | <ul><li>SX1302 with 8 channels</li><li>RX Sensitivity: −139 dBm (Min)</li><li>TX Power: 27 dBm (Max)</li></ul>                                       | <ul><li>SX1302 with 8 channels</li><li>RX Sensitivity: −139 dBm (Min)</li><li>TX Power: 27 dBm (Max)</li></ul>                  |
+| **LoRa Features**              | <ul><li>SX1302 with 8 channels</li><li>RX Sensitivity: −139&nbsp;dBm (Min)</li><li>TX Power: 27&nbsp;dBm (Max)</li></ul>                                       | <ul><li>SX1302 with 8 channels</li><li>RX Sensitivity: −139&nbsp;dBm (Min)</li><li>TX Power: 27&nbsp;dBm (Max)</li></ul>                  |
 | **Frequency Bands**            | EU868, IN865, US915, AU915, KR920, AS923-1/2/3/4, EU433, CN470                                                                                                 | EU868, IN865, US915, AU915, KR920, AS923-1/2/3/4, EU433, CN470                                                                            |
 | **Cellular Connectivity**      | Available with RAK7268CV2, LTE Cat 4 (IoT/M2M-optimized) Supports EG95-E, EG95-NA, EC25-J, EC25-AU, EC25-E                                                     | LTE Cat 1 (IoT/M2M-optimized) Supports EG915U-EU, EG915U-LA, EG915Q-NA                                                                    |
-| **WiFi**                      | <ul><li>2.4 GHz (802.11b/g/n)</li><li>Operation Channels: 1-13</li></ul>                                                                                  | <ul><li>2.4 GHz (802.11b/g/n)</li><li>Operation Channels: 1-13</li></ul>                                                             |
+| **WiFi**                      | <ul><li>2.4&nbsp;GHz (802.11b/g/n)</li><li>Operation Channels: 1-13</li></ul>                                                                                  | <ul><li>2.4&nbsp;GHz (802.11b/g/n)</li><li>Operation Channels: 1-13</li></ul>                                                             |
 | **Multi-Network Connectivity** | Ethernet, WiFi, LTE                                                                                                                                           | Ethernet, WiFi, LTE                                                                                                                      |
-| **Power Supply**               | PoE (IEEE 802.3 af): 36-57 V<sub>DC</sub>
-12 V<sub>DC</sub> (depending on the version)
-9-24 V<sub>DC</sub> (depending on the version) | 12 V<sub>DC</sub>                                                                                                                    |
+| **Power Supply**               | PoE (IEEE 802.3 af): 36-57&nbsp;V<sub>DC</sub><br />12&nbsp;V<sub>DC</sub> (depending on the version)<br />9-24&nbsp;V<sub>DC</sub> (depending on the version) | 12&nbsp;V<sub>DC</sub>                                                                                                                    |
 | **GPS**                        | Not supported                                                                                                                                                  | Not supported                                                                                                                             |
 | **Antenna**                    | <ul><li>LoRa: External antenna</li><li>WiFi: Internal antenna</li><li>LTE: Internal or External antenna (depending on version)</li></ul>                      | <ul><li>LoRa: External antenna</li><li>WiFi: Internal antenna</li><li>LTE: Internal or External antenna (depending on version)</li></ul> |
 | **Ingress Protection**         | IP30                                                                                                                                                           | IP30                                                                                                                                      |
 | **Enclosure Material**         | Plastic (PC+ABS)                                                                                                                                               | Plastic (PC+ABS)                                                                                                                          |
-| **Dimensions (Gateway Only)**  | 166 mm x 127.5 mm x 36 mm                                                                                                                       | 166 mm x 127.5 mm x 36 mm                                                                                                  |
-| **Operating Temperature**      | −10° C to +55° C                                                                                                                                     | −10° C to +55° C                                                                                                                |
-| **Storage Temperature**        | −40° C to +85° C                                                                                                                                     | −40° C to +85° C                                                                                                                |
+| **Dimensions (Gateway Only)**  | 166&nbsp;mm x 127.5&nbsp;mm x 36&nbsp;mm                                                                                                                       | 166&nbsp;mm x 127.5&nbsp;mm x 36&nbsp;mm                                                                                                  |
+| **Operating Temperature**      | −10°&nbsp;C to +55°&nbsp;C                                                                                                                                     | −10°&nbsp;C to +55°&nbsp;C                                                                                                                |
+| **Storage Temperature**        | −40°&nbsp;C to +85°&nbsp;C                                                                                                                                     | −40°&nbsp;C to +85°&nbsp;C                                                                                                                |
 | **Operating Humidity**         | 0-95% RH (non-condensing)                                                                                                                                      | 0-95% RH (non-condensing)                                                                                                                 |
 | **Storage Humidity**           | 0-95% RH (non-condensing)                                                                                                                                      | 0-95% RH (non-condensing)                                                                                                                 |
 | **Installation Methods**       | Desktop, Wall (via included bracket), Rail (via included bracket)                                                                                              | Desktop, Wall (via included bracket), Rail (via included bracket)                                                                         | -->
 
+
+
+<RkBottomNav/>

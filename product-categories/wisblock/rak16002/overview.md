@@ -10,6 +10,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK16002 WisBlock Coulomb Sensor Module
 
 Thank you for choosing **RAK16002 WisBlock Coulomb Sensor Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -40,10 +42,10 @@ The precision coulomb counter integrates current through an internal sense resis
   * 1% Charge Accuracy
   * Configurable Alert Output/Charge Complete Input
   * I2C interface
-  * 3.3 V Power Supply
+  * 3.3&nbsp;V Power Supply
 
 * **Module Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -53,3 +55,4 @@ To use a **RAK16002**, you need at least a **WisBlock Base board** to plug the m
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

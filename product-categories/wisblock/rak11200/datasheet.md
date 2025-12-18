@@ -10,21 +10,24 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK11200 WisBlock WiFi Module Datasheet
 
 ## Overview
 
 ### Description
 
-**RAK11200** is a **WisBlock Core** module for RAK **WisBlock** based on Espressif ESP32-WROVER. It is a powerful, generic WiFi-BLE MCU module that targets a wide variety of applications. There are two CPU cores that can be individually controlled and the CPU clock frequency is adjustable from 80 MHz to 240 MHz. The low-power deep-sleep current consumption of the ESP32-WROVER is about 10 uA. This makes the **RAK11200** an ultra-low-power communication solution. **RAK11200** can be comfortably programmed with the Arduino™ IDE or PlatformIO.
+**RAK11200** is a **WisBlock Core** module for RAK **WisBlock** based on Espressif ESP32-WROVER. It is a powerful, generic WiFi-BLE MCU module that targets a wide variety of applications. There are two CPU cores that can be individually controlled and the CPU clock frequency is adjustable from 80&nbsp;MHz to 240&nbsp;MHz. The low-power deep-sleep current consumption of the ESP32-WROVER is about 10&nbsp;uA. This makes the **RAK11200** an ultra-low-power communication solution. **RAK11200** can be comfortably programmed with the Arduino™ IDE or PlatformIO.
 
 ### Features
 * Two low-power Xtensa® 32-bit LX6 microprocessors
-* Up to 240 MHz CPU clock
+* Up to 240&nbsp;MHz CPU clock
 * Built-in PCB antenna
-* 4 MB External SPI Flash, 520 KB RAM
-* 8 MB SPI Pseudo static RAM (PSRAM)
-* WiFi 802.11 b/g/n (802.11n up to 150 Mbps)
+* 4&nbsp;MB External SPI Flash, 520&nbsp;KB RAM
+* 8&nbsp;MB SPI Pseudo static RAM (PSRAM)
+* WiFi 802.11 b/g/n (802.11n up to 150&nbsp;Mbps)
 * Bluetooth v4.2 BR/EDR and BLE specification
 * Rich set of peripherals: RTC, UART, I2C, SPI, SD card interface
 * low-power deep-sleep mode
@@ -38,13 +41,23 @@ sidebar_label: Datasheet
 
 The RAK11200 WisBlock WiFi Module back view and front view (top) can be seen in Figure 1.
 
-> **Image:** RAK11200 WiFi Module Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/rak11200-back-&-front.png"
+  figureCount="1"
+  caption="RAK11200 WiFi Module Overview" 
+   width="40%"
+/>
 
 #### Mounting Sketch
 
 Figure 2 shows RAK11200 module mounting sketch with the WisBase RAK5005-O board.
 
-> **Image:** RAK11200 WiFi Module Mounting Sketch
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/image-20210317120135303.png"
+  figureCount="2"
+  caption="RAK11200 WiFi Module Mounting Sketch" 
+   width="50%"
+/>
 
 ### Hardware
 
@@ -62,7 +75,12 @@ The hardware specification is categorized into four parts. It discuses the inter
 Pin headers and jumpers are included on the RAK11200, which can be soldered to the WisBlock Base and help with BOOT0 pin accessibility.
 :::
 
-> **Image:** Force ESP32 Download mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/quickstart/rak11200-boot0-for-flashing.png"
+  figureCount="3"
+  caption="Force ESP32 Download mode" 
+   width="50%"
+/>
 
 #### Chipset
 | Vendor    | Part number        |
@@ -79,7 +97,12 @@ The RAK11200 module provides two UART interfaces: UART0 and UART1. The UART0 can
 
 To support USB, the RAK11200 has a USB-to-UART converter onboard to connect the ESP32's UART0 to the USB connector. Figure 4 shows the RAK11200 module UART programming circuit.
 
-> **Image:** RAK11200 USB to UART schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/image-20210310153554464.png"
+  figureCount="4"
+  caption="RAK11200 USB to UART schematic" 
+   width="60%"
+/>
 
 ##### SPI Interface
 
@@ -94,17 +117,22 @@ The RAK11200 supports one single SPI Interface in full-duplex or half-duplex com
 
 The RAK11200 module provides two I2C bus interfaces. The module allows you to access directly the registers to control I2C interfaces, which adds more flexibility to the design of the final product. Depending on your configuration, it can serve as an I2C master mode. The I2C interface supports:
 
-- Standard mode (100 Kbit/s) and Fast mode (400 Kbit/s);
-- Up to 5 MHz, constrained by the SDA pull-up strength;
+- Standard mode (100&nbsp;Kbit/s) and Fast mode (400&nbsp;Kbit/s);
+- Up to 5&nbsp;MHz, constrained by the SDA pull-up strength;
 - 7-bit/10-bit addressing mode.
 
 #### Pin Definition
 
 The RAK11200 module has an ESP32-WROVER module at its core. Figure 5 shows the core module pins and connection information.
 
-> **Image:** RAK11200 Core module pin connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/image-20210310153453674.png"
+  figureCount="5"
+  caption="RAK11200 Core module pin connection" 
+   width="80%"
+/>
 
-** WisBlock Core RAK11200 Pin Assignment **
+<b> WisBlock Core RAK11200 Pin Assignment </b>
 
 | Pin number WisBlock | Function | Pin name | Pin number ESP32 |
 | :-----------------: | -------- | -------- | ---------------- |
@@ -172,6 +200,7 @@ The RAK11200 module has an ESP32-WROVER module at its core. Figure 5 shows the c
 | Drift rate             | -          | -   | 0.7 | -   | kHz/50us |
 | Drift                  | -          | -   | 2   | -   | kHz      |
 
+
 ##### WiFi Radio
 
 | Parameter                 | Condition        | Min  | Typ  | Max  | Unit |
@@ -179,7 +208,7 @@ The RAK11200 module has an ESP32-WROVER module at its core. Figure 5 shows the c
 | Operating frequency range | -                | 2412 | -    | 2484 | MHz  |
 | TX power                  | 11b mode         | 17.5 | 18.5 | 20   | dBm  |
 | TX power                  | 11n MCS7         | 12   | 13   | 14   | dBm  |
-| Sensitivity               | 11b, 1 Mbps | -    | -97  | -    | dBm  |
+| Sensitivity               | 11b, 1&nbsp;Mbps | -    | -97  | -    | dBm  |
 
 #### Electrical Characteristics
 
@@ -203,15 +232,29 @@ The RAK11200 module has an ESP32-WROVER module at its core. Figure 5 shows the c
 
 ##### Board Dimensions
 
-> **Image:** RAK11200 Board Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/image-20210310153730185.png"
+  figureCount="6"
+  caption="RAK11200 Board Dimensions" 
+   width="80%"
+/>
 
 ##### WisConnector PCB Layout
-
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/mxxs1003k6m.png"
+  figureCount="7"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="90%"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK11200 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11200/datasheet/schematic.png"
+  figureCount="8"
+  caption="RAK11200 Schematic Diagram" 
+   width="100%"
+/>
+**RAK11200** is a **WisBlock Core** module for RAK **WisBlock** based on Espressif ESP32-WROVER. It is a powerful, generic WiFi-BLE MCU module that targets a wide variety of applications. There are two CPU cores that can be individually controlled and the CPU clock frequency is adjustable from 80&nbsp;MHz to 240&nbsp;MHz. The low-power deep-sleep current consumption of the ESP32-WROVER is about 10&nbsp;uA. This makes the **RAK11200** an ultra-low-power communication solution. **RAK11200** can be comfortably programmed with the Arduino™ IDE or PlatformIO.
 
-**RAK11200** is a **WisBlock Core** module for RAK **WisBlock** based on Espressif ESP32-WROVER. It is a powerful, generic WiFi-BLE MCU module that targets a wide variety of applications. There are two CPU cores that can be individually controlled and the CPU clock frequency is adjustable from 80 MHz to 240 MHz. The low-power deep-sleep current consumption of the ESP32-WROVER is about 10 uA. This makes the **RAK11200** an ultra-low-power communication solution. **RAK11200** can be comfortably programmed with the Arduino™ IDE or PlatformIO.
-
+<RkBottomNav/>

@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12019 WisBlock UV Sensor Module Datasheet
 
 ## Overview
@@ -18,23 +21,24 @@ sidebar_label: Datasheet
 
 The RAK12019 is an Ambient Light sensor (ALS) or Ultraviolet Light Sensor (UVS), which is part of the RAKwireless WisBlock sensor series. The measured ambient light intensity and ultraviolet index are interfaced via the I2C bus making it immune to electrical noises, unlike its analog output counterpart. This module utilizes the LTR-390UV-01 sensor from Lite-On.
 
+
 ### Features
 
  - Ambient Light Sensor (ALS) or Ultraviolet Light Sensor (UVS)
- - I2C interface capable of Standard mode @100 kHz or Fast mode @400kHz communication 1.8 V logic compatible
+ - I2C interface capable of Standard mode @100&nbsp;kHz or Fast mode @400kHz communication 1.8&nbsp;V logic compatible
  - Very low power consumption with sleep mode capability
  - 13 to 20 bits effective resolution
  - Wide dynamic range of 1:18,000,000 with linear response
  - Close to human eye spectral response
- - Automatic rejection for 50 Hz/60 Hz lighting flicker
- - Operating voltage ranges: 1.7 V to 3.6 V
- - Current Consumption: 1 uA - 110 uA
+ - Automatic rejection for 50&nbsp;Hz/60&nbsp;Hz lighting flicker
+ - Operating voltage ranges: 1.7&nbsp;V to 3.6&nbsp;V
+ - Current Consumption: 1&nbsp;uA - 110&nbsp;uA
  - Chipset: Lite-On LTR-390UV-01
- - Operating temperature ranges: -40 to +85 ºC
+ - Operating temperature ranges: -40 to +85&nbsp;ºC
  - Built-in temperature compensation circuit
  - Programmable interrupt function for ALS, UVS with upper and lower thresholds
  - RoHS and Halogen-free compliant
- - Module Size: 10 mm x 10 mm
+ - Module Size: 10&nbsp;mm x 10&nbsp;mm
 
 ## Specifications
 
@@ -44,7 +48,12 @@ The RAK12019 is an Ambient Light sensor (ALS) or Ultraviolet Light Sensor (UVS),
 
 **Figure 1** shows the mounting mechanism of the RAK12019 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12019 module can be mounted on the slots: **C, D, E, & F**.
 
-> **Image:** RAK12019 WisBlock UV Sensor Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12019/datasheet/mounting.png"
+  width="60%"
+  caption="RAK12019 WisBlock UV Sensor Mounting"
+/>
+
 
 ### Hardware
 
@@ -64,14 +73,18 @@ The RAK12019 WisBlock UV Sensor Module comprises a standard WisBlock connector. 
 - **I2C** related pin, **INT** pin, **3V3_S** and **GND** are connected to WisConnector
 :::
 
- 
-> **Image:** RAK12019 WisBlock UV Sensor Pinout
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12019/datasheet/rak12019_pinouts.svg"
+  width="60%"
+  caption="RAK12019 WisBlock UV Sensor Pinout"
+/>
 
 If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse depends on what slot the module is plugged in. The following table shows the default IO used for different slots:
 
 | SLOT C | SLOT D | SLOT E | SLOT F |
 | ------ | ------ | ------ | ------ |
 | WB_IO3 | WB_IO5 | WB_IO4 | WB_IO6 |
+
 
 #### Electrical Characteristics
 
@@ -91,14 +104,30 @@ If a 24-pin WisBlock Sensor connector is used, the IO used for the output pulse 
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK12019 module.
 
- 
-> **Image:** RAK12019 WisBlock UV Sensor Dimensions
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12019/datasheet/mechanical-drawing.png"
+  width="60%"
+  caption="RAK12019 WisBlock UV Sensor Dimensions"
+/>
+
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12019/datasheet/pcb-layout.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
+
 
 #### Schematic Diagram
 
-> **Image:** RAK12019 WisBlock UV Sensor Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12019/datasheet/schematic.png"
+  width="100%"
+  caption="RAK12019 WisBlock UV Sensor Schematic Diagram"
+/>
 
+
+
+<RkBottomNav/>

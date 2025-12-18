@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK2247 WisLink LPWAN Concentrator Datasheet
 
 ## Overview
@@ -29,8 +33,8 @@ Despite its small size, this is an 8 channel concentrator module. By integrating
 - SX1301 base band processor emulates 49 x LoRa demodulators, 10 parallel demodulation paths. It supports 8 uplinks channels and 1 downlink channel
 - 2 x SX125x Tx/Rx front-ends high/low frequency
 - Built-in FT2232H for SPI to USB 2.0 conversion (optional)
-- Operates at 3.3 V, making it compatible with standard 3G/LTE card slots of Mini PCI-e type
-- Tx power up to 27 dBm, Rx sensitivity down to -139 dBm @ SF12, BW 125 kHz
+- Operates at 3.3&nbsp;V, making it compatible with standard 3G/LTE card slots of Mini PCI-e type
+- Tx power up to 27&nbsp;dBm, Rx sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;kHz
 - Supports global license-free frequency band (EU433, CN470, IN865, EU868, US915, AU915, KR920,  and AS923)
 
 ## Specifications
@@ -41,15 +45,23 @@ The overview shows the top and back views of the RAK2247 board. It also presents
 
 #### Board Overview
 
-The outer dimension of the RAK2247 WisLink LPWAN Concentrator is **50.95 x 30.0 x 10.4 mm**. The board with top-side and bottom-side keep-out areas, and all other dimensions are defined by PCI Express Mini Card Electromechanical Specification except for the card thickness. The 10.4 mm thickness includes the 8 mm heat sink.
+The outer dimension of the RAK2247 WisLink LPWAN Concentrator is **50.95 x 30.0 x 10.4&nbsp;mm**. The board with top-side and bottom-side keep-out areas, and all other dimensions are defined by PCI Express Mini Card Electromechanical Specification except for the card thickness. The 10.4&nbsp;mm thickness includes the 8&nbsp;mm heat sink.
 
-> **Image:** RAK2247 WisLink LPWAN Concentrator Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/datasheet/board-overview-rak2247.jpg"
+  width="70%"
+  caption="RAK2247 WisLink LPWAN Concentrator Overview"
+/>
 
 #### Block Diagram
 
 RAK2247 WisLink LPWAN Concentrator integrates one SX1301 chip and two SX1255/7. The other chip is for RF signal, which represents the core of the device. This provides the related LoRa modem and processing functionalities. Additional signal conditioning circuitry is implemented for PCI Express Mini Card compliance, and one uFL connector is available for external antennas integration.
 
-> **Image:** RAK2247 WisLink LPWAN Concentrator Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/datasheet/block-diagram.png"
+  width="100%"
+  caption="RAK2247 WisLink LPWAN Concentrator Block Diagram"
+/>
 
 ### Hardware
 
@@ -63,7 +75,7 @@ Detailed electrical and RF testing results can be found on [RAK2247 Hardware Tes
 
 ##### Power Supply
 
-RAK2247 WisLink LPWAN Concentrator must be supplied through the **3.3 Vaux** pins by a **DC power supply**. The voltage must be stable, because during this operation the current drawn from 3.3 Vaux can vary significantly, based on the power consumption profile of the SX1301 chip (see [**SX1301 DS**](https://www.semtech.com/products/wireless-rf/lora-core/sx1301#documentation) datasheet).
+RAK2247 WisLink LPWAN Concentrator must be supplied through the **3.3&nbsp;Vaux** pins by a **DC power supply**. The voltage must be stable, because during this operation the current drawn from 3.3&nbsp;Vaux can vary significantly, based on the power consumption profile of the SX1301 chip (see [**SX1301 DS**](https://www.semtech.com/products/wireless-rf/lora-core/sx1301#documentation) datasheet).
 
 ##### SPI Interface
 
@@ -75,7 +87,7 @@ RAK2247-USB version does not have this interface.
 
 ##### USB Interface
 
-RAK2247 WisLink LPWAN Concentrator can support the high speed USB to SPI by FT2232HL, it includes a USB 2.0 compliant interface with a maximum 480 Mbps data rate, representing the interface for any communication with an external host application processor. The module itself acts as a USB device and can be connected to any USB host equipped with compatible drivers. For more information, refer to the [datasheet](https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf) of FT2232HL.
+RAK2247 WisLink LPWAN Concentrator can support the high speed USB to SPI by FT2232HL, it includes a USB 2.0 compliant interface with a maximum 480&nbsp;Mbps data rate, representing the interface for any communication with an external host application processor. The module itself acts as a USB device and can be connected to any USB host equipped with compatible drivers. For more information, refer to the [datasheet](https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf) of FT2232HL.
 
 :::tip NOTE
 RAK2247-SPI version does not have this interface.
@@ -95,16 +107,20 @@ Three (3) Green LED for indicating the status of **PWR**, **TX**, **RX**.
 
 ##### Antenna RF Interface
 
-The modules have one RF interface over a standard uFL connector (Hirose U. FL-RSMT) with a characteristic impedance of **50 Ω**. The RF port (J1) supports both Tx and Rx, providing the antenna interface.
+The modules have one RF interface over a standard uFL connector (Hirose U. FL-RSMT) with a characteristic impedance of **50&nbsp;Ω**. The RF port (J1) supports both Tx and Rx, providing the antenna interface.
 
 #### Pin Definition
 
-> **Image:** RAK2247 WisLink LPWAN Concentrator Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/datasheet/pinout.png"
+  width="70%"
+  caption="RAK2247 WisLink LPWAN Concentrator Pinout Diagram"
+/>
 
 | Pin No. | Mini PCIEx Pin Rev. 2.0 | RAK2247 Pin                   | Power   | I/O | Description                | Remarks                                                                                                                                                                               |
 | ------- | ----------------------- | ----------------------------- | ------- | --- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1       | WAKE#                   | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
-| 2       | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | N/A | RAK2247 Power Supply Input | Connect to 3.3 V                                                                                                                                                                 |
+| 2       | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | N/A | RAK2247 Power Supply Input | Connect to 3.3&nbsp;V                                                                                                                                                                 |
 | 3       | COEX1                   | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 4       | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 5       | COEX2                   | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
@@ -119,14 +135,14 @@ The modules have one RF interface over a standard uFL connector (Hirose U. FL-RS
 | 14      | UIM_RESET               | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 15      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 16      | UIM_SPU                 | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
-| 17      | UIM*IC* DM              | NC (5 V Optional For PA) |         | N/A |                            | Internally not connected                                                                                                                                                              |
+| 17      | UIM*IC* DM              | NC (5&nbsp;V Optional For PA) |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 18      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 19      | GPS_PPS                 | 1PPS                          |         | N/A |                            | Internal connection GPS_PPS for SX1301                                                                                                                                                |
 | 20      | W_DISABLE1#             | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 21      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
-| 22      | PERST#                  | RESET                         |         | I   | RAK2247 reset input        | Active high (≥100 ns) for SX1301 reset.                                                                                                                                          |
+| 22      | PERST#                  | RESET                         |         | I   | RAK2247 reset input        | Active high (≥100&nbsp;ns) for SX1301 reset.                                                                                                                                          |
 | 23      | PERn0                   | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
-| 24      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3 V                                                                                                                                                                 |
+| 24      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3&nbsp;V                                                                                                                                                                 |
 | 25      | PERp0                   | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 26      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 27      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
@@ -141,20 +157,20 @@ The modules have one RF interface over a standard uFL connector (Hirose U. FL-RS
 | 36      | USB_D-                  | USB_D-                        | USB     | I/O | USB Data Line D-           | 90Ω nominal differential impedance. Pull-up, pull-down and series resistors as required by USB 2.0 specifications are part of the USB pin driver and need not be provided externally. |
 | 37      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 38      | USB_D+                  | USB_D+                        | USB     | I/O | USB Data Line D+           | 90Ω nominal differential impedance. Pull-up, pull-down and series resistors as required by USB 2.0 specifications are part of the USB pin driver and need not be provided externally. |
-| 39      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3 V                                                                                                                                                                 |
+| 39      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3&nbsp;V                                                                                                                                                                 |
 | 40      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
-| 41      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3 V                                                                                                                                                                 |
+| 41      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3&nbsp;V                                                                                                                                                                 |
 | 42      | LED_WWAN#               | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 43      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 44      | LED_WLAN#               | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
-| 45      | Reserved                | PCIe_SCK                      |         | I/O | Host SPI CLK               | Max 10 MHz clock                                                                                                                                                                 |
+| 45      | Reserved                | PCIe_SCK                      |         | I/O | Host SPI CLK               | Max 10&nbsp;MHz clock                                                                                                                                                                 |
 | 46      | LED_WPAN#               | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 47      | Reserved                | PCIe_MISO                     |         | I/O | Host SPI MISO              |                                                                                                                                                                                       |
 | 48      | 1.5V                    | NC                            |         | N/A |                            | Internally not connected                                                                                                                                                              |
 | 49      | Reserved                | PCIe_MOSI                     |         | I/O | Host SPI MOSI              |                                                                                                                                                                                       |
 | 50      | GND                     | GND                           | GND     | N/A | Ground                     | Connect to ground                                                                                                                                                                     |
 | 51      | W_DISABLE2#             | PCIe_CSN                      |         | I/O | Host SPI CS                |                                                                                                                                                                                       |
-| 52      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3 V                                                                                                                                                                 |
+| 52      | 3.3Vaux                 | 3.3Vaux                       | 3.3Vaux | I   | RAK2247 supply input       | Connect to 3.3&nbsp;V                                                                                                                                                                 |
 
 #### RF Characteristics
 
@@ -197,13 +213,13 @@ Limiting values given below are in accordance with the Absolute Maximum Rating S
 
 | Symbol  | Description           | Condition                                  | Min.        | Max.       |
 | ------- | --------------------- | ------------------------------------------ | ----------- | ---------- |
-| 3.3Vaux | Module supply voltage | Input DC voltage at 3.3Vaux pins           | –0.3 V | 3.6 V |
-| USB     | USB D+/D- pins        | Input DC voltage at USB interface pins     | -           | 3.6 V |
-| RESET   | RAK2247 reset input   | Input DC voltage at RESET input pin        | –0.3 V | 3.6 V |
-| SPI     | SPI interface         | Input DC voltage at SPI interface pin      | –0.3 V | 3.6 V |
-| GPS_PPS | GPS 1 pps input       | Input DC voltage at GPS_PPS input pin      | –0.3 V | 3.6 V |
+| 3.3Vaux | Module supply voltage | Input DC voltage at 3.3Vaux pins           | –0.3&nbsp;V | 3.6&nbsp;V |
+| USB     | USB D+/D- pins        | Input DC voltage at USB interface pins     | -           | 3.6&nbsp;V |
+| RESET   | RAK2247 reset input   | Input DC voltage at RESET input pin        | –0.3&nbsp;V | 3.6&nbsp;V |
+| SPI     | SPI interface         | Input DC voltage at SPI interface pin      | –0.3&nbsp;V | 3.6&nbsp;V |
+| GPS_PPS | GPS 1 pps input       | Input DC voltage at GPS_PPS input pin      | –0.3&nbsp;V | 3.6&nbsp;V |
 | Rho_ANT | Antenna ruggedness    | Output RF load mismatch ruggedness at ANT1 | -           | 10:1 VSWR  |
-| Tstg    | Storage Temperature   | -                                          | –40° C | 85° C |
+| Tstg    | Storage Temperature   | -                                          | –40°&nbsp;C | 85°&nbsp;C |
 
 :::warning
 The product is not protected against over voltage or reversed voltages. If necessary, voltage spikes exceeding the power supply voltage specification, given in table above, must be limited to values within the specified boundaries by using appropriate protection devices.
@@ -215,10 +231,10 @@ The table below lists the maximum ESD.
 
 | Parameter                                | Min | Typical | Max         | Remarks                                      |
 | ---------------------------------------- | --- | ------- | ----------- | -------------------------------------------- |
-| ESD sensitivity for all pins except ANT1 |     |         | 1000 V | Human Body Model according to JESD22-A114    |
-| ESD sensitivity for ANT1                 |     |         | 1000 V | Human Body Model according to JESD22-A114    |
-| ESD immunity for ANT1                    |     |         | 4000 V | Contact Discharge according to IEC 61000-4-2 |
-|                                          |     |         | 8000 V | Air Discharge according to IEC 61000-4-2     |
+| ESD sensitivity for all pins except ANT1 |     |         | 1000&nbsp;V | Human Body Model according to JESD22-A114    |
+| ESD sensitivity for ANT1                 |     |         | 1000&nbsp;V | Human Body Model according to JESD22-A114    |
+| ESD immunity for ANT1                    |     |         | 4000&nbsp;V | Contact Discharge according to IEC 61000-4-2 |
+|                                          |     |         | 8000&nbsp;V | Air Discharge according to IEC 61000-4-2     |
 
 :::tip NOTE
 RAK2247 WisLink LPWAN Concentrator is an Electrostatic Sensitive Device and require special precautions when handling.
@@ -228,8 +244,8 @@ RAK2247 WisLink LPWAN Concentrator is an Electrostatic Sensitive Device and requ
 
 | Mode            | Condition                                                     | Min. | Typical     | Max. |
 | --------------- | ------------------------------------------------------------- | ---- | ----------- | ---- |
-| Active-Mode(TX) | The power of TX channel is 25 dBm and 3.3 V supply. |      | 789 mA |      |
-| Active-Mode(RX) | TX disabled and RX enabled.                                   |      | 422 mA |      |
+| Active-Mode(TX) | The power of TX channel is 25&nbsp;dBm and 3.3&nbsp;V supply. |      | 789&nbsp;mA |      |
+| Active-Mode(RX) | TX disabled and RX enabled.                                   |      | 422&nbsp;mA |      |
 
 ##### Power Supply Range
 
@@ -239,7 +255,7 @@ Input voltage at **3.3Vaux** must be above the normal operating range minimum li
 
 | Symbol  | Parameter                               | Min.     | Typical    | Max.       |
 | ------- | --------------------------------------- | -------- | ---------- | ---------- |
-| 3.3Vaux | Module supply operating input voltage14 | 3 V | 3.3 V | 3.6 V |
+| 3.3Vaux | Module supply operating input voltage14 | 3&nbsp;V | 3.3&nbsp;V | 3.6&nbsp;V |
 
 #### Environmental Requirements
 
@@ -249,22 +265,30 @@ The table below lists the operation temperature range.
 
 | Parameter                                         | Min.        | Typical     | Max.        | Remarks                                                                            |
 | ------------------------------------------------- | ----------- | ----------- | ----------- | ---------------------------------------------------------------------------------- |
-| Normal operating temperature (**RAK2247-SX1301**) | -40° C | +25° C | +85° C | Normal operating temperature range (fully functional and meet 3GPP specifications) |
-| Normal operating temperature (**RAK2247-SX1308**) | 0° C   | -           | 70° C  | Normal operating temperature range (fully functional and meet 3GPP specifications) |
+| Normal operating temperature (**RAK2247-SX1301**) | -40°&nbsp;C | +25°&nbsp;C | +85°&nbsp;C | Normal operating temperature range (fully functional and meet 3GPP specifications) |
+| Normal operating temperature (**RAK2247-SX1308**) | 0°&nbsp;C   | -           | 70°&nbsp;C  | Normal operating temperature range (fully functional and meet 3GPP specifications) |
 
 :::tip NOTE
-Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25° C. Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
+Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25°&nbsp;C. Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
 :::
 
 #### Schematic Diagram
 
 RAK2247 card refers to Semtech's reference design of SX1301. The SPI interface or USB interface converts SPI to USB2.0 by FT2232H and can be used on PCIE connector.
 
-> **Image:** RAK2247 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/datasheet/schematic-2.jpg"
+  width="80%"
+  caption="RAK2247 Schematic Diagram"
+/>
 
-**Figure 5** shows the minimum application schematic of the RAK2247 card. You should use it at least 3.3 V / 1 A DC power, connect the SPI interface or USB interface to the main processor.
+**Figure 5** shows the minimum application schematic of the RAK2247 card. You should use it at least 3.3&nbsp;V / 1&nbsp;A DC power, connect the SPI interface or USB interface to the main processor.
 
-> **Image:** RAK2247 Card Minimum Schematic Reference
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak2247/datasheet/schematic-1.png"
+  width="70%"
+  caption="RAK2247 Card Minimum Schematic Reference"
+/>
 
 ### Firmware
 
@@ -296,12 +320,28 @@ Order Information
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_CE_Certification.zip
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_FCC_Certification.pdf
-- **ISED:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_ISED_Certification.zip
-- **KC:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_KC_Certification.zip
-- **RCM:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_RCM_Certification.zip
-- **REACH:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_REACH_Report.pdf
-- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_RoHS_Report.pdf
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_CE_Certification.zip',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_FCC_Certification.pdf',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_ISED_Certification.zip',
+    },
+    {
+        'kc': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_KC_Certification.zip',
+    },
+    {
+        'rcm': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_RCM_Certification.zip',
+    },
+    {
+        'reach': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_REACH_Report.pdf',
+    },
+    {
+        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/Certification-Report/RAK2247_RoHS_Report.pdf',
+    }
+]} />
 
+<RkBottomNav/>

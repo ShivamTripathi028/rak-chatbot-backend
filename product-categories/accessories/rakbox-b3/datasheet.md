@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock RAKBox-B3 Enclosure Datasheet
 
 RAKBox-B3 is an IP20-rated enclosure for indoor usage. It is designed specifically for WisBlock products.
@@ -21,13 +24,17 @@ RAKBox-B3 is an IP20-rated enclosure for indoor usage. It is designed specifical
 
 ## Mechanical Characteristics
 
-- Dimensions W x L x H: 90 x 85 x 34 mm
-- Weight: approximately 3.87 oz (110 g)
-- Material thickness: 3 mm
+- Dimensions W x L x H: 90 x 85 x 34&nbsp;mm
+- Weight: approximately 3.87&nbsp;oz (110&nbsp;g)
+- Material thickness: 3&nbsp;mm
 - Support wall mounting
 - Ingress Protection: IP20
 
-> **Image:** WisBlock RAKBox-B3 Enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b3/datasheet/overview.png"
+  width="30%"
+  caption="WisBlock RAKBox-B3 Enclosure"
+/>
 
 ## WisBlock Module Support
 
@@ -49,5 +56,10 @@ The enclosure is compatible with the following WisBlock modules:
 
 Screws for the wall mount are included in the package.
 
-> **Image:** Mounting Kit
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakbox-b3/datasheet/mounting-kit.png"
+  width="20%"
+  caption="Mounting Kit"
+/>
 
+<RkBottomNav/>

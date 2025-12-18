@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Wi-Fi Modes Configuration
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisGate OS Wi-Fi Modes Configuration
 
 As mentioned in the Overview, the gateway can be configured to work in three modes: 
@@ -27,7 +30,14 @@ In the **ESSID** field, the name of the AP is shown. The default name is **RAKXX
 
 To protect their AP, you can choose between three encryption types. In the drop-down menu in the **Encryption** field, you can choose any of the following options: **WPA-PSK**, **WPA-PSK2**, and **WPA-PSK/WPA2-PSK Mixed Mode**.
 
-> **Image:** Access Point Encryption
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.1.encryption.png"
+  width="100%"
+  caption="Access Point Encryption"
+/>
+
+
 
 :::tip NOTE
 **WPA-PSK/WPA2-PSK Mixed Mode** is the recommended type of encryption. 
@@ -35,21 +45,42 @@ To protect their AP, you can choose between three encryption types. In the drop-
 
 When the desired protection is chosen, a **Key** field will pop up. In the **Key** field, enter a password to protect the AP. The green arrows ![13.a](https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.a.png) on the right will show/hide the password.
 
-> **Image:** Access Point Password
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.2.password.png"
+  width="100%"
+  caption="Access Point Password"
+/>
 
 Optionally, you can hide the AP by enabling the **Hidden** option. To connect to a hidden AP, you must manually type the ESSID, choose the correct encryption type, and type the password. 
+
 
 ## Client
 
 In the **ESSID** field, you can type the name of their wireless network manually or click on the **Scan** button ![13.b](https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.b.png) and scan the available networks. 
 
-> **Image:** Client ESSID Scanning
 
-> **Image:** Client ESSID Available Networks
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.3.scanning.png"
+  width="100%"
+  caption="Client ESSID Scanning"
+/>
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.4.essid-available.png"
+  width="100%"
+  caption="Client ESSID Available Networks"
+/>
 
 In the **Encryption** field, you must choose what encryption is used by the network. After the correct one is selected, a **Key** field will pop up.
 
-> **Image:** Client Encryption and Password
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.5.encryption-password.png"
+  width="100%"
+  caption="Client Encryption and Password"
+/>
 
 In the **Key** field, you must type the password that protects the wireless network. The green arrows ![13.a](https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.a.png) right to the field will show/hide the password.
 
@@ -57,7 +88,12 @@ Below the **Wireless Client** menu, you can see the **Status** of the mode and s
 
 In the **DHCP mode**, there is not much to configure. The DHCP server of the router will set an IP for the gateway. You can enable/disable the **Use DNS servers advertised by peer** button. If the button is unchecked, the advertised DNS server addresses are going to be ignored. Optionally, you can override the MTU.
 
-> **Image:** DHCP Client Protocol
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.6.dhcp.protocol.png"
+  width="100%"
+  caption="DHCP Client Protocol"
+/>
 
 If you chooses the Static address protocol, it can set a static IP address for the gateway. This way, after a reboot or restart of the router, the gateway will keep the assigned IP address.
 
@@ -69,11 +105,19 @@ Additionally, you can use custom DNS servers via the **Use custom DNS servers** 
 
 In the **Override MTU** field,  you can set a size for the largest packet or frame that can be sent over the network. The MTU of an Ethernet connection is 1500 bytes.
 
-> **Image:** Static Address Protocol
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument1/13.7.static-address.png"
+  width="100%"
+  caption="Static Address Protocol"
+/>
+
 
 ## Access Point + Client
 
 If this mode is selected, both the Access Point and Client mode will be available. You can connect the gateway to a wireless network and access it via the assigned IP.
 
 The steps to configure the mode are the same as the explained above for the **Access Point** (for configuring AP) and **Client** (for configuring Client mode).
+
+<RkBottomNav/>
 

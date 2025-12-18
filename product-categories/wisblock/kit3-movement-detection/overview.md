@@ -10,9 +10,13 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # WisBlock Movement Detection Kit
 
 Thank you for choosing **WisBlock IoT Education Kit - Movement Detection** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
+
 
 * [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/kit3-movement-detection/quickstart/)
 * [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/kit3-movement-detection/datasheet/)
@@ -45,3 +49,4 @@ Depending on the use case, this kit supports a variety of connectivity options, 
     - (Optional) Cellular variant dependent on a country: two (2) [RAK5860](https://docs.rakwireless.com/product-categories/wisblock/rak5860/quickstart/) with 5G LTE NB-IoT capability and two (2) [RAK13101](https://docs.rakwireless.com/product-categories/wisblock/rak13101/quickstart/) with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
+<RkBottomNav/>

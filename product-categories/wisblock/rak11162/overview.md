@@ -25,6 +25,8 @@ date: 2025-05-23
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK11162 WisBlock LoRaWAN Module
 
 Thank you for choosing **RAK11162 WisBlock LoRaWAN Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -51,10 +53,10 @@ By default, RAK11162 runs on RUI3 (RAKwireless Unified Interface) firmware, allo
 
 - Based on **STM32WLE5**
 	- ARM 32-bit Cortex – M4
-	- 256 kB Flash and 64 kB SRAM
+	- 256&nbsp;kB Flash and 64&nbsp;kB SRAM
 - Wi-Fi/BLE modem processor based on **Espressif ESP8684**
 	- RISC-V Single-Core CPU
-	- 2 MB Flash and 272 kB SRAM
+	- 2&nbsp;MB Flash and 272&nbsp;kB SRAM
 - **LoRaWAN 1.0.4** specification compliant
 - **Supported bands**: EU433, CN470, IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
@@ -65,10 +67,10 @@ By default, RAK11162 runs on RUI3 (RAKwireless Unified Interface) firmware, allo
 - Easy-to-use AT Command set STM32WLE5 and LoRa settings via UART interface.
 - Espressif AT command to set ESP8684 Wi-Fi and BLE settings via UART interface (same with STM32WLE5)
 - I/O ports: UART/I2C/SPI/ADC/GPIO
-- Long-range: greater than 10 km with optimized antenna
-- Ultra-low-power consumption of ~5 μA in sleep mode (ESP8684 powered down)
-- **Supply Voltage**: 1.8 V ~ 3.6 V
-- **Temperature range**: -40° C ~ 85° C
+- Long-range: greater than 10&nbsp;km with optimized antenna
+- Ultra-low-power consumption of ~5&nbsp;μA in sleep mode (ESP8684 powered down)
+- **Supply Voltage**: 1.8&nbsp;V ~ 3.6&nbsp;V
+- **Temperature range**: -40°&nbsp;C ~ 85°&nbsp;C
 
 ## Prerequisites
 
@@ -84,3 +86,4 @@ For CE and FCC certifications we provide an AT command guide.
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
+<RkBottomNav/>

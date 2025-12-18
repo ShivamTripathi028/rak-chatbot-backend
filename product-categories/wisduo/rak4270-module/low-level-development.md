@@ -8,7 +8,11 @@ image: https://images.docs.rakwireless.com/wisduo/rak4270-module/RAK4270-Module.
 sidebar_label: Low Level Development
 ---
 
+
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK4270 Low Level Development Reference
 
@@ -60,13 +64,17 @@ In any MCU, after the power is connected, the system bootloader is in charge to 
 
 In Figure 1, it shows a usual memory map for an ARM Cortex M0+ MCU, which is the architecture of the MCU of the RAK4270.
 
-> **Image:** Memory map for an ARM Cortex M0+ MCU
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4270-module/deep-development/boot-mode.png"
+  width="70%"
+  caption="Memory map for an ARM Cortex M0+ MCU"
+/>
 
 The RAK’s bootloader is stored in the internal flash section and has a size of 12K, located between 0x0800 0000 to 0x0800 2FFF. Its primary function is to write a new version of firmware received from the serial port into the flash memory section. The bootloader uses the Ymodem protocol and supervises all possible exceptions internally during the upgrade process. When the upgrade process is interrupted, the bootloader will detect abnormal events, and the FW upgrade will fail. You can perform the FW upgrade again using the bootloader after recycling the power.
 
 RAK4270’s bootloader uses the segment between 0x0808 1700 to 0x0808 17FF to store its parameters.
 
-In the bootloader parameter storage area, 256 bytes are planned, but only two words are used to store the jump flag and upgrade status flag.
+In the bootloader parameter storage area, 256&nbsp;bytes are planned, but only two words are used to store the jump flag and upgrade status flag.
 
 Finally, the serial port to communicate with the RAK’s bootloader in these modules is the UART1 (pin PA9, pin PA10). The parameters of the UART1 communication are 115200 / 8-N-1, which need to be properly configured in the RAK firmware upgrade tool.
 

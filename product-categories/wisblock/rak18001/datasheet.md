@@ -10,11 +10,19 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18001 WisBlock Buzzer Module Datasheet
 
 ## Overview
 
-> **Image:** RAK18001 Buzzer Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/datasheet/rak18001_illustrated.png"
+  width="40%"
+  caption="RAK18001 Buzzer Module"
+/>
+
 
 ### Description
 
@@ -22,15 +30,15 @@ The **RAK18001** is a WisBlock Extra module that uses a **MLT-5020** as its buil
 
 ### Features
 
-  * 3.3 V Input Voltage: On/Off Control by the WisBlock Core
-  * Operating Voltage: 2.0 V - 5.0 V
-  * 75 dB sound output at 10 cm distance
-  * Resonant Frequency: 4000 Hz
+  * 3.3&nbsp;V Input Voltage: On/Off Control by the WisBlock Core
+  * Operating Voltage: 2.0&nbsp;V - 5.0&nbsp;V
+  * 75&nbsp;dB sound output at 10&nbsp;cm distance
+  * Resonant Frequency: 4000&nbsp;Hz
   * PWM Controlled: Loudness and pitch level can be customized using your code
   * Uses MLT-5020 Buzzer - small and compact
   * Chipset: Jiangsu Huaneng Electronics MLT-5020
-  * Module Size: 10 mm x 10 mm
-  * Built-in Buzzer Size: 5 mm x 5 mm x 2 mm
+  * Module Size: 10&nbsp;mm x 10&nbsp;mm
+  * Built-in Buzzer Size: 5&nbsp;mm x 5&nbsp;mm x 2&nbsp;mm
 
 ## Specifications
 
@@ -40,7 +48,11 @@ The **RAK18001** is a WisBlock Extra module that uses a **MLT-5020** as its buil
 
 The RAK18001 Buzzer Module can be mounted to any IO Slots (A, B, C, or D) of WisBlock Base Board. **Figure 2** shows the mounting mechanism of the RAK18001 on a WisBlock Base, such as the RAK5005-O.
 
-> **Image:** RAK18001 WisBlock Buzzer Module Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/datasheet/rak18001_mounting.png"
+  width="50%"
+  caption="RAK18001 WisBlock Buzzer Module Mounting"
+/>
 
 ### Hardware
 
@@ -58,7 +70,11 @@ The RAK18001 uses the MLT-5020 Buzzer.Refer to the manufacturer's [MLT-5020 Buzz
 
 The RAK18001 WisBlock Buzzer Module comprises a standard WisSensor connector. The WisSensor connector allows the RAK18001 module to be mounted on a WisBlock baseboard, such as RAK5005-O. The pin order of the connector and the pinout definition are shown in **Figure 3**.
 
-> **Image:** RAK18001 Buzzer Module Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/datasheet/rak18001-pinouts.png"
+  width="60%"
+  caption="RAK18001 Buzzer Module Pinout Diagram"
+/>
 
 The table below shows the default IOs used for different slots:
 
@@ -66,7 +82,7 @@ The table below shows the default IOs used for different slots:
 | ------ | ------ | ------ | ------ |
 | IO1    | IO2    | IO3    | IO5    |
 
-As seen on **Figure 2**, the PWM1 is connected to R5 which is an NC (no connection). On the other hand, PWM2 is connected to a 330 Ω resistor R6.
+As seen on **Figure 2**, the PWM1 is connected to R5 which is an NC (no connection). On the other hand, PWM2 is connected to a 330&nbsp;Ω resistor R6.
 
 However, you can switch these two terminals by connecting the PWM1 to R6 and PWM2 to NC. This configuration will create an alternative IO pins as shown below:
 
@@ -95,11 +111,20 @@ The table below shows the RAK18001 Buzzer Module electrical characteristics:
 
 **Figure 4** shows the dimensions and mechanical drawing of the RAK18001 module.
 
-> **Image:** RAK18001 Buzzer Module Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/datasheet/board-dimensions.png"
+  width="60%"
+  caption="RAK18001 Buzzer Module Mechanical Characteristics"
+/>
 
 #### Schematic Diagram
 
 **Figure 5** shows the schematic diagram of RAK18001 Module. It consist of the pinouts of both RAK18001 Module and the Built-in Buzzer (MLT-5020).
 
-> **Image:** RAK18001 Buzzer Module Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/datasheet/schematic.png"
+  width="100%"
+  caption="RAK18001 Buzzer Module Schematic"
+/>
 
+<RkBottomNav/>

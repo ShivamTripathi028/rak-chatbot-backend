@@ -10,11 +10,15 @@ keywords:
 sidebar_label: AT Command Manual
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7201V2 WisNode Button 4K AT Command Manual
 
 ## Overview
 
 The configuration of RAK7201V2 can be done by AT commands send by RAK Serial Tool through a USB cable between a PC and the button.
+
 
 ### AT Commands Basics
 
@@ -112,6 +116,9 @@ The response will start with **"ERROR:"** followed by the error code.
 |      103       | Address fail. The address of the received packet does not match the address of the current  node.                                                                                        |
 |      104       | Invalid MIC was detected in the LoRa message.                                                                                                                                            |
 
+
+
+
 ## General AT Commands
 
 ### ATZ
@@ -174,6 +181,7 @@ AT+SN=?
 OK
 ```
 
+
 ### AT+BAT
 
 Battery level. This command is used to access the battery level.
@@ -216,10 +224,9 @@ This command is used to access the unique application identifier.
 
 | Command Type | Command             | Input Parameter | Return Value                                                      | Response                 |
 | ------------ | ------------------- | --------------- | ----------------------------------------------------------------- | ------------------------ |
-| Read         | `AT+APPEUI?`        | -               | `AT+APPEUI`: get or set the application EUI (8 bytes in hex) | OK                       |
+| Read         | `AT+APPEUI?`        | -               | `AT+APPEUI`: get or set the application EUI (8&nbsp;bytes in hex) | OK                       |
 | Read         | `AT+APPEUI=?`       | -               | `AT+APPEUI=<8 hex>`                                               | OK                       |
-| Write        | `AT+APPEUI=<input>` | `<8 hex>`       | -                                                                 | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+APPEUI=<input>` | `<8 hex>`       | -                                                                 | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -248,12 +255,12 @@ AT_PARAM_ERROR
 
 This command is used to access the application key.
 
+
 | Command Type | Command             | Input Parameter | Return Value                                                  | Response                 |
 | ------------ | ------------------- | --------------- | ------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+APPKEY? `       | -               | `AT+APPKEY`: get or set the application key (16 bytes in hex) | OK                       |
 | Read         | `AT+APPKEY=?`       | -               | `AT+APPKEY=<16 hex>`                                          | OK                       |
-| Write        | `AT+APPKEY=<input>` | `<16 hex>`      | -                                                             | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+APPKEY=<input>` | `<16 hex>`      | -                                                             | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -286,8 +293,7 @@ This command is used to set the application session key.
 | ------------ | -------------------- | --------------- | ---------------------------------------------------- | ------------------------ |
 | Read         | `AT+APPSKEY?`        | -               | `AT+APPSKEY`: get or set the application session key | OK                       |
 | Read         | `AT+APPSKEY=?`       | -               | `AT+APPSKEY=<16hex>`                                 | OK                       |
-| Write        | `AT+APPSKEY=<input>` | `<16 hex>`      | -                                                    | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+APPSKEY=<input>` | `<16 hex>`      | -                                                    | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -308,6 +314,8 @@ AT_PARAM_ ERROR
 - Keys are MSB first. `<Input>`: 32 digit length, character 0-9, a-f, A-F only, representing 16 hexadecimal numbers.
 :::
 
+
+
 ### AT+DEVADDR
 
 This command is used to access the device address.
@@ -316,8 +324,7 @@ This command is used to access the device address.
 | ------------ | -------------------- | --------------- | ------------------------------------------------------------ | ------------------------ |
 | Read         | `AT+DEVADDR?`        | -               | `AT+DEVADDR`: get or set the device address (4 bytes in hex) | OK                       |
 | Read         | `AT+DEVADDR=?`       | -               | `AT+DEVADDR=<4 hex>`                                         | OK                       |
-| Write        | `AT+DEVADDR=<input>` | `<4 hex>`       | -                                                            | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+DEVADDR=<input>` | `<4 hex>`       | -                                                            | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -350,8 +357,7 @@ This command is used to access the unique end-device ID.
 | ------------ | ------------------- | --------------- | ------------------------------------------------------- | ------------------------ |
 | Read         | `AT+DEVEUI?`        | -               | `AT+DEVEUI`: get or set the device EUI (8 bytes in hex) | OK                       |
 | Read         | `AT+DEVEUI=?`       | -               | `AT+DEVEUI=<8 hex>`                                     | OK                       |
-| Write        | `AT+DEVEUI=<input>` | `<8 hex>`       | -                                                       | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+DEVEUI=<input>` | `<8 hex>`       | -                                                       | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -384,8 +390,7 @@ This command is used to access the network identifier (NetID) of 3 octets.
 | ------------ | ------------------ | --------------- | -------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+NETID?`        | -               | `AT+NETID`: get or set the network ID (NetID) (3 bytes in hex) | OK                       |
 | Read         | `AT+NETID=?`       | -               | `AT+NETID=<3 hex>`                                             | OK                       |
-| Write        | `AT+NETID=<input>` | `<3 hex>`       | -                                                              | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+NETID=<input>` | `<3 hex>`       | -                                                              | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -412,8 +417,8 @@ This command is used to get or set the network session key.
 | ------------ | -------------------- | --------------- | ------------------------------------------------------------------ | ------------------------ |
 | Read         | `AT+NWKSKEY?`        | -               | `AT+NWKSKEY`: get or set the network session key (16 bytes in hex) | OK                       |
 | Read         | `AT+NWKSKEY=?`       | -               | `AT+NWKSKEY=<16 hex>`                                              | OK                       |
-| Write        | `AT+NWKSKEY=<input>` | `<16 hex>`      | -                                                                  | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+NWKSKEY=<input>` | `<16 hex>`      | -                                                                  | OK <br /> `AT_PARAM_ERROR` |
+
 
 Example:
 ```
@@ -434,8 +439,9 @@ AT_PARAM_ERROR
 
 :::tip NOTE
 - `AT_PARAM_ERROR` is returned when setting wrong or malformed value.
-- Keys are MSB first. `<Input>`: 32 digit length, character 0-9, a-f, A-F only, representing 16 hexadecimal numbers.
+- Keys are MSB first. `<Input>`: 32 digit length, character 0-9, a-f, A-F only, representing 16&nbsp;hexadecimal numbers.
 :::
+
 
 ### AT+MCROOTKEY
 
@@ -445,8 +451,7 @@ This command is used to get the mc root key of the device.
 | ------------ | ---------------------- | --------------- | ----------------------------------------------------- | ------------------------ |
 | Read         | `AT+MCROOTKEY?`        | -               | `AT+MCROOTKEY`: get the mc root key (32 bytes in hex) | OK                       |
 | Read         | `AT+MCROOTKEY=?`       | -               | `AT+MCROOTKEY=<32 hex>`                               | OK                       |
-| Write        | `AT+MCROOTKEY=<input>` | `<32 hex>`      | -                                                     | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+MCROOTKEY=<input>` | `<32 hex>`      | -                                                     | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -468,8 +473,7 @@ This command is used to configure the uplink payload to be confirmed or unconfir
 | ------------ | ---------------- | --------------- | ------------------------------------------------ | ------------------------ |
 | Read         | `AT+CFM?`        | -               | `AT+CFM`: get or set the confirmation mode (0-1) | OK                       |
 | Read         | `AT+CFM=?`       | -               | `AT+CFM=(0 or 1)`                                | OK                       |
-| Write        | `AT+CFM=<input>` | 0 or 1          | -                                                | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+CFM=<input>` | 0 or 1          | -                                                | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -509,6 +513,7 @@ This command is used to access the status of the last **SEND** command.
 | Read         | `AT+CFS?`  | -               | `AT+CFS`: get the confirmation status of the last AT+SEND (0 = failure, 1 = success) | OK       |
 | Read         | `AT+CFS=?` | -               | 0 or 1                                                                               | OK       |
 
+
 Example:
 
 ```
@@ -526,6 +531,7 @@ OK
 - If it is `0`, then the last confirmed uplink attempt failed. It's a read-only command, with a default value on device startup of `0`.
 :::
 
+
 ### AT+JOIN
 
 This command is used to join a LoRaWAN network.
@@ -533,8 +539,7 @@ This command is used to join a LoRaWAN network.
 | Command Type | Command           | Input Parameter                    | Return Value                               | Response            |
 | ------------ | ----------------- | ---------------------------------- | ------------------------------------------ | ------------------- |
 | Read         | `AT+JOIN?`        | -                                  | `AT+JOIN`: join network                    | OK                  |
-| Read         | `AT+JOIN=?`       | -                                  | `AT+JOIN=Param1, Param2, Param3 or Param4` | OK
-AT_BUSY_ERROR |
+| Read         | `AT+JOIN=?`       | -                                  | `AT+JOIN=Param1, Param2, Param3 or Param4` | OK<br />AT_BUSY_ERROR |
 | Write        | `AT+JOIN=<input>` | Param1, Param2, Param3, or Param4, | -                                          | OK                  |
 
 Where:
@@ -581,8 +586,7 @@ This command is used to access the network join mode.
 | ------------ | ---------------- | --------------- | -------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+NJM?`        | -               | `AT+NJM`: get or set the network join mode (0 = ABP, 1 = OTAA) | OK                       |
 | Read         | `AT+NJM=?`       | -               | `AT+NJM=(0 or 1)`                                              | OK                       |
-| Write        | `AT+NJM=<Input>` | 0 or 1          | -                                                              | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+NJM=<Input>` | 0 or 1          | -                                                              | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -615,8 +619,8 @@ This command is used to access the current activation status of the device. It s
 | ------------ | ---------------- | --------------- | ---------------------------------------------------------- | ------------------------ |
 | Read         | `AT+NJS?`        | -               | `AT+NJS`: get the join status (0 = not joined, 1 = joined) | OK                       |
 | Read         | `AT+NJS=?`       | -               | `AT+NJS=(0 or 1)`                                          | OK                       |
-| Write        | `AT+NJS=<input>` | 0 or 1          | -                                                          | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+NJS=<input>` | 0 or 1          | -                                                          | OK <br /> `AT_PARAM_ERROR` |
+
 
 Example:
 
@@ -659,6 +663,7 @@ AT+RECV=?
 AT+RECV=45:112233
 OK
 ```
+<br />
 
 - This command returns the last received data in a form, along with the port on which it was received. The format of the output is as follows:
 
@@ -666,6 +671,8 @@ OK
 <port>:<payload><CR><LF>
 <CR><LF>OK<CR><LF>
 ```
+
+<br />
 
 - When called twice, without new data received between the calls, the second `AT+RECV=?` returns an empty value as shown below:
 
@@ -682,10 +689,7 @@ This command provides a way to send data on a dedicated port number.
 | ------------ | ----------------- | ------------------ | ---------------------------------------------------- | --------------------------------------------------------------------------- |
 | Read         | `AT+SEND?`        | -                  | `AT+SEND`: send data along with the application port | OK                                                                          |
 | Read         | `AT+SEND=?`       | -                  | -                                                    | `AT_PARAM_ERROR`                                                            |
-| Write        | `AT+SEND=<input>` | `<port>:<payload>` | -                                                    | OK 
- `AT_PARAM_ERROR`  
- `AT_BUSY_ERROR`  
- `AT_NO_NETWORK_JOINED` |
+| Write        | `AT+SEND=<input>` | `<port>:<payload>` | -                                                    | OK <br /> `AT_PARAM_ERROR`  <br /> `AT_BUSY_ERROR`  <br /> `AT_NO_NETWORK_JOINED` |
 
 Where:
 * `<port>`: 1 decimal integer and the range of values is 1~233.
@@ -705,6 +709,8 @@ OK
 - `AT_NO_NETWORK_JOINED` is returned when the network is not yet joined.
 :::
 
+
+
 ### AT+RETY
 
 This command sets the number of retransmissions of confirmed packet data.
@@ -713,8 +719,7 @@ This command sets the number of retransmissions of confirmed packet data.
 | ------------ | ----------------- | ------------------------ | ------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+RETY?`        | -                        | `AT+RETY`: set the number of retransmissions of Confirm packet data | OK                       |
 | Read         | `AT+RETY=?`       | -                        | `AT+RETY=(0,1,2,3,4,5,6 or 7)`                                      | OK                       |
-| Write        | `AT+RETY=<input>` | 0, 1, 2, 3, 4, 5, 6 or 7 | -                                                                   | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+RETY=<input>` | 0, 1, 2, 3, 4, 5, 6 or 7 | -                                                                   | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -739,6 +744,7 @@ AT_PARAM_ERROR
 - In this case, the default value is 0, and the retry cycle range of values is 0~7.
 :::
 
+
 ### AT+ADR
 
 This command is used to access the adaptive data rate.
@@ -747,8 +753,7 @@ This command is used to access the adaptive data rate.
 | ------------ | ---------------- | --------------- | --------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+ADR?`        | -               | `AT+ADR`: get or set the adaptive data rate setting (0 = off, 1 = on) | OK                       |
 | Read         | `AT+ADR=?`       | -               | `AT+ADR=(0 or 1)`                                                     | OK                       |
-| Write        | `AT+ADR=<input>` | 0 or 1          | -                                                                     | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+ADR=<input>` | 0 or 1          | -                                                                     | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -781,8 +786,8 @@ Duty cycle settings
 | ------------ | ---------------- | --------------- | ---------------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+DCS?`        | -               | `AT+DCS`: get or set the ETSI duty cycle setting (0 = disabled, 1 = enabled) | OK                       |
 | Read         | `AT+DCS=?`       | -               | `AT+DCS=(0 or 1)`                                                            | OK                       |
-| Write        | `AT+DCS=<input>` | 0 or 1          | -                                                                            | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+DCS=<input>` | 0 or 1          | -                                                                            | OK <br /> `AT_PARAM_ERROR` |
+
 
 Example:
 
@@ -808,6 +813,7 @@ AT_PARAM_ERROR
 - It depends on the region to disable or enable, and it can only be read.
 :::
 
+
 ### AT+DR
 
 This command is used to access and configure data rate settings.
@@ -816,8 +822,8 @@ This command is used to access and configure data rate settings.
 | ------------ | --------------- | ---------------------- | --------------------------------- | ------------------------ |
 | Read         | `AT+DR?`        | -                      | `AT+DR`: get or set the data rate | OK                       |
 | Read         | `AT+DR=?`       | -                      | `AT+DR=(0, 1, 2, 3, 4, 5, 6, 7)`  | OK                       |
-| Write        | `AT+DR=<input>` | 0, 1, 2, 3, 4, 5, 6, 7 | -                                 | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+DR=<input>` | 0, 1, 2, 3, 4, 5, 6, 7 | -                                 | OK <br /> `AT_PARAM_ERROR` |
+
 
 Example:
 
@@ -840,6 +846,7 @@ OK
 - Complete information about DR parameter on each region can be found on [RUI3 Appendix - LoRaWAN Regional Parameter (Data Rate)](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/appendix#data-rate-by-region).
 :::
 
+
 ### AT+JN1DL
 
 This command is used to configure the join delay on RX window 1. The range of acceptable values is 1 to 14 seconds.
@@ -847,11 +854,8 @@ This command is used to configure the join delay on RX window 1. The range of ac
 | Command Type | Command            | Input Parameter | Return Value                                                                                          | Response                                  |
 | ------------ | ------------------ | --------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | Read         | `AT+JN1DL?`        | -               | `AT+JN1DL`: get or set the join accept delay between the end of TX and the join RX window 1 in second | OK                                        |
-| Read         | `AT+JN1DL=?`       | -               | `AT+JN1DL=seconds (1-14)`                                                                             | OK 
- `AT_BUSY_ERROR`                   |
-| Write        | `AT+JN1DL=<input>` | seconds (1-14)  | -                                                                                                     | OK 
- `AT_PARAM_ERROR
-AT_BUSY_ERROR` |
+| Read         | `AT+JN1DL=?`       | -               | `AT+JN1DL=seconds (1-14)`                                                                             | OK <br /> `AT_BUSY_ERROR`                   |
+| Write        | `AT+JN1DL=<input>` | seconds (1-14)  | -                                                                                                     | OK <br /> `AT_PARAM_ERROR<br />AT_BUSY_ERROR` |
 
 Example:
 
@@ -874,6 +878,9 @@ OK
 - In this case, the default value is **5**. `<Input>`: 1-decimal integer and the range of values is 1~14.
 :::
 
+
+
+
 ### AT+JN2DL
 
 This command is used to configure the join delay on RX window 2. The range of acceptable values is 2 to 15 seconds.
@@ -881,11 +888,8 @@ This command is used to configure the join delay on RX window 2. The range of ac
 | Command Type | Command            | Input Parameter | Return Value                                                                                   | Response                                      |
 | ------------ | ------------------ | --------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | Read         | `AT+JN2DL?`        | -               | `AT+JN2DL`: get the join accept delay between the end of TX and the join RX window 2 in second | OK                                            |
-| Read         | `AT+JN2DL=?`       | -               | `AT+JN2DL=seconds (2-15)`                                                                      | OK 
- `AT_BUSY_ERROR`                       |
-| Write        | `AT+JN2DL=<input>` | seconds (2-15)  | -                                                                                              | OK 
- `AT_PARAM_ERROR` 
- `AT_BUSY_ERROR` |
+| Read         | `AT+JN2DL=?`       | -               | `AT+JN2DL=seconds (2-15)`                                                                      | OK <br /> `AT_BUSY_ERROR`                       |
+| Write        | `AT+JN2DL=<input>` | seconds (2-15)  | -                                                                                              | OK <br /> `AT_PARAM_ERROR` <br /> `AT_BUSY_ERROR` |
 
 Example:
 
@@ -908,6 +912,8 @@ OK
 - `AT_BUSY_ERROR` is returned when setting wrong or malformed value.
 :::
 
+
+
 ### AT+PNM
 
 This command is used to access the public network mode.
@@ -916,8 +922,7 @@ This command is used to access the public network mode.
 | ------------ | ---------------- | --------------- | -------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+PNM?`        | -               | `AT+PNM`: get or set the public network mode (0 = off, 1 = on) | OK                       |
 | Read         | `AT+PNM=?`       | -               | `AT+PNM=(0 or 1)`                                              | OK                       |
-| Write        | `AT+PNM=<input>` | 0 or 1          | -                                                              | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+PNM=<input>` | 0 or 1          | -                                                              | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -942,17 +947,17 @@ AT_PARAM_ERROR
 - In this case, the default value is 1.
 :::
 
+
+
 ### AT+RX1DL
 
-This command is used to access the delay of the received window 1. The range of acceptable values is 1 to 15 seconds. Whenever `AT+RX1DL` is updated, `AT+RX2DL` is also updated automatically.
+This command is used to access the delay of the received window 1. The range of acceptable values is 1 to 15&nbsp;seconds. Whenever `AT+RX1DL` is updated, `AT+RX2DL` is also updated automatically.
 
 | Command Type | Command            | Input Parameter | Return Value                                                                                | Response                                      |
 | ------------ | ------------------ | --------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
 | Read         | `AT+RX1DL?`        | -               | `AT+RX1DL`: get or set the delay between the end of TX and the RX window 1 in second (1-15) | OK                                            |
 | Read         | `AT+RX1DL=?`       | -               | `AT+RX1DL=seconds (1-15)`                                                                   | OK                                            |
-| Write        | `AT+RX1DL=<input>` | seconds (1-15)  | -                                                                                           | OK 
- `AT_PARAM_ERROR` 
- `AT_BUSY_ERROR` |
+| Write        | `AT+RX1DL=<input>` | seconds (1-15)  | -                                                                                           | OK <br /> `AT_PARAM_ERROR` <br /> `AT_BUSY_ERROR` |
 
 Example:
 
@@ -982,8 +987,7 @@ This command is used to access the delay of the received window 2. The range of 
 | Command Type | Command            | Input Parameter | Return Value                                                                         | Response                |
 | ------------ | ------------------ | --------------- | ------------------------------------------------------------------------------------ | ----------------------- |
 | Read         | `AT+RX2DL?`        | -               | `AT+RX2DL`: get the delay between the end of TX and the RX window 2 in second (2-16) | OK                      |
-| Read         | `AT+RX2DL=?`       | -               | `AT+RX2DL=seconds (2-16)`                                                            | OK 
- `AT_BUSY_ERROR` |
+| Read         | `AT+RX2DL=?`       | -               | `AT+RX2DL=seconds (2-16)`                                                            | OK <br /> `AT_BUSY_ERROR` |
 | Write        | `AT+RX2DL=<input>` | seconds (2-16)  | -                                                                                    | OK                      |
 
 Example:
@@ -1002,6 +1006,8 @@ OK
 `AT_BUSY_ERROR` is returned when setting the wrong or malformed value.
 :::
 
+
+
 ### AT+RX2DR
 
 This command is used to access the data rate of received window 2.
@@ -1009,11 +1015,9 @@ This command is used to access the data rate of received window 2.
 | Command Type | Command            | Input Parameter                                | Return Value                                                  | Response                                      |
 | ------------ | ------------------ | ---------------------------------------------- | ------------------------------------------------------------- | --------------------------------------------- |
 | Read         | `AT+RX2DR?`        | -                                              | `AT+RX2DR`: get or set the RX2 window data rate               | OK                                            |
-| Read         | `AT+RX2DR=?`       | -                                              | `AT+RX2DR=(0, 1, 2, 3, 4, 5, 6, 7) or (8, 9, 10, 11, 12, 13)` | OK 
- `AT_BUSY_ERROR`                       |
-| Write        | `AT+RX2DR=<input>` | 0, 1, 2, 3, 4, 5, 6, 7 or 8, 9, 10, 11, 12, 13 | -                                                             | OK 
- `AT_PARAM_ERROR` 
- `AT_BUSY_ERROR` |
+| Read         | `AT+RX2DR=?`       | -                                              | `AT+RX2DR=(0, 1, 2, 3, 4, 5, 6, 7) or (8, 9, 10, 11, 12, 13)` | OK <br /> `AT_BUSY_ERROR`                       |
+| Write        | `AT+RX2DR=<input>` | 0, 1, 2, 3, 4, 5, 6, 7 or 8, 9, 10, 11, 12, 13 | -                                                             | OK <br /> `AT_PARAM_ERROR` <br /> `AT_BUSY_ERROR` |
+
 
 Example:
 
@@ -1043,8 +1047,7 @@ This command is used to access the frequency of the received window 2.
 | Command Type | Command      | Input Parameter | Return Value                                  | Response                |
 | ------------ | ------------ | --------------- | --------------------------------------------- | ----------------------- |
 | Read         | `AT+RX2FQ?`  | -               | `AT+RX2FQ`: get the Rx2 window frequency (Hz) | OK                      |
-| Read         | `AT+RX2FQ=?` | -               | `AT+RX2FQ=Frequency` in Hz                    | OK 
- `AT_BUSY_ERROR` |
+| Read         | `AT+RX2FQ=?` | -               | `AT+RX2FQ=Frequency` in Hz                    | OK <br /> `AT_BUSY_ERROR` |
 
 Example:
 
@@ -1070,10 +1073,8 @@ This command is used to access the transmit power.
 | Command Type | Command          | Input Parameter | Return Value                                | Response                 |
 | ------------ | ---------------- | --------------- | ------------------------------------------- | ------------------------ |
 | Read         | `AT+TXP?`        | -               | `AT+TXP`: get or set the transmitting power | OK                       |
-| Read         | `AT+TXP=?`       | -               | `AT+TXP=<value>`                            | OK 
- `AT_PARAM_ERROR` |
-| Write        | `AT+TXP=<input>` | `<value>`       | -                                           | OK 
- `AT_PARAM_ERROR` |
+| Read         | `AT+TXP=?`       | -               | `AT+TXP=<value>`                            | OK <br /> `AT_PARAM_ERROR` |
+| Write        | `AT+TXP=<input>` | `<value>`       | -                                           | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -1104,8 +1105,7 @@ This command is used to access and configure the device network link status.
 | ------------ | ---------------------- | --------------- | ----------------------------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+LINKCHECK?`        | -               | `AT+LINKCHECK`: get or set the link check setting (0 = disabled, 1 = once, 2 = everytime) | OK                       |
 | Read         | `AT+LINKCHECK=?`       | -               | `AT+LINKCHECK=(0, 1 or 2)`                                                                | OK                       |
-| Write        | `AT+LINKCHECK=<input`> | 0, 1 or 2       | -                                                                                         | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+LINKCHECK=<input`> | 0, 1 or 2       | -                                                                                         | OK <br /> `AT_PARAM_ERROR` |
 
 Where:
 
@@ -1143,6 +1143,7 @@ Reply format: `+EVT:LINKCHECK:Y0,Y1,Y2,Y3,Y4`:
 - **Y4** represents the SNR
 :::
 
+
 ### AT+TIMEREQ
 
 This command is used to request the current date and time.
@@ -1151,8 +1152,7 @@ This command is used to request the current date and time.
 | ------------ | -------------------- | --------------- | ----------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+TIMEREQ?`        | -               | `AT+TIMEREQ`: request the current date and time (0=Disabled, 1=Enabled) | OK                       |
 | Read         | `AT+TIMEREQ=?`       | -               | `AT+TIMEREQ=(0 or 1)`                                                   | OK                       |
-| Write        | `AT+TIMEREQ=<input>` | 0 or 1          | -                                                                       | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+TIMEREQ=<input>` | 0 or 1          | -                                                                       | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -1176,6 +1176,7 @@ AT_PARAM_ERROR
 `AT_PARAM_ERROR` is returned when setting wrong or malformed value.
 :::
 
+
 ### AT+LBT
 
 This command is used to enable or disable LoRaWAN Listen Before Talk (LBT).
@@ -1184,8 +1185,7 @@ This command is used to enable or disable LoRaWAN Listen Before Talk (LBT).
 | ------------ | ---------------- | --------------- | ---------------------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+LBT?`        | -               | `AT+LBT`: get or set the LoRaWAN LBT (support Korea Japan) (0=Disabled; 1=Enabled) | OK                       |
 | Read         | `AT+LBT=?`       | -               | `AT+LBT=(0 or 1)`                                                                  | OK                       |
-| Write        | `AT+LBT=<input>` | 0 or 1          | -                                                                                  | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+LBT=<input>` | 0 or 1          | -                                                                                  | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -1205,9 +1205,11 @@ AT+LBT=2
 AT_PARAM_ERROR
 ```
 
+
 :::tip NOTE
 `AT_PARAM_ERROR` is returned when setting wrong or malformed value.
 :::
+
 
 ### AT+LBTRSSI
 
@@ -1217,8 +1219,7 @@ This command is used to set or get LoRaWAN LBT RSSI.
 | ------------ | -------------------- | --------------- | ------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+LBTRSSI?`        | -               | `AT+LBTRSSI`: get or set the LoRaWAN LBT RSSI (support Korea Japan) | OK                       |
 | Read         | `AT+LBTRSSI=?`       | -               | `AT+LBTRSSI=RSSI`                                                   | OK                       |
-| Write        | `AT+LBTRSSI=<input>` | RSSI            | -                                                                   | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+LBTRSSI=<input>` | RSSI            | -                                                                   | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -1240,8 +1241,7 @@ This command is used to set or get LoRaWAN LBT Scantime.
 | ------------ | ------------------------ | --------------- | --------------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+LBTSCANTIME?`        | -               | `AT+LBTSCANTIME`: get or set the LoRaWAN LBT scantime (support Korea Japan) | OK                       |
 | Read         | `AT+LBTSCANTIME=?`       | -               | `AT+LBTSCANTIME=time`                                                       | OK                       |
-| Write        | `AT+LBTSCANTIME=<input>` | time (in msec)  | -                                                                           | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+LBTSCANTIME=<input>` | time (in msec)  | -                                                                           | OK <br /> `AT_PARAM_ERROR` |
 
 Example:
 
@@ -1276,6 +1276,8 @@ LTIME: 00h37m58s 2018-11-14
 OK
 ```
 
+
+
 ### AT+RSSI
 
 This command is used to access the RSSI on reception.
@@ -1304,9 +1306,8 @@ This command allows you to view all open channels RSSI
 | Command Type | Command       | Input Parameter | Return Value                                                               | Response |
 | ------------ | ------------- | --------------- | -------------------------------------------------------------------------- | -------- |
 | Read         | `AT+ARSSI?`   | -               | `AT+ARSSI`: access all open channel RSSI                                   | OK       |
-| Read         | ` AT+ARSSI=?` | -               | ` 0: <Channel 0 rssi>
-1: <Channel 1 rssi>
-.... 15:<Channel 15 rssi>` | OK       |
+| Read         | ` AT+ARSSI=?` | -               | ` 0: <Channel 0 rssi><br />1: <Channel 1 rssi><br />.... 15:<Channel 15 rssi>` | OK       |
+
 
 Example:
 
@@ -1350,9 +1351,7 @@ This command configures the channel of the device by setting the hexadecimal cha
 | ------------ | ----------------- | --------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | Read         | `AT+MASK?`        | -                     | `AT+MASK`: get or set the channel mask to close or open the channel (only for US915, AU915, CN470) | OK                                             |
 | Read         | `AT+MASK=?`       | -                     | `AT+MASK=(mask)`                                                                                   | OK                                             |
-| Write        | `AT+MASK=<input>` | mask (4-digit length) | -                                                                                                  | OK 
- `AT_PARAM_ERROR` 
-  `AT_BUSY_ERROR` |
+| Write        | `AT+MASK=<input>` | mask (4-digit length) | -                                                                                                  | OK <br /> `AT_PARAM_ERROR` <br />  `AT_BUSY_ERROR` |
 
 Example:
 
@@ -1372,6 +1371,8 @@ OK
 - `<Input>`: 4-digit length, character 0-9, a-f, A-F only, representing a 16-bit mask.
 :::
 
+
+
 ### AT+CHE
 
 This command sets the node to eight-channel mode.
@@ -1380,8 +1381,8 @@ This command sets the node to eight-channel mode.
 | ------------ | ---------------- | --------------- | --------------------------------------------------------------------- | ------------------------ |
 | Read         | `AT+CHE?`        | -               | `AT+CHE`: get or set eight channels mode (only for US915 AU915 CN470) | OK                       |
 | Read         | `AT+CHE=?`       | -               | `AT+CHE=(value)`                                                      | OK                       |
-| Write        | `AT+CHE=<input>` | value           | -                                                                     | OK 
- `AT_PARAM_ERROR` |
+| Write        | `AT+CHE=<input>` | value           | -                                                                     | OK <br /> `AT_PARAM_ERROR` |
+
 
 Example:
 
@@ -1397,68 +1398,444 @@ OK
 :::tip NOTE
 - `AT_PARAM_ERROR` is returned when setting wrong or malformed value.
 - In this case, the eight-channel mode is only for US915, AU915, CN470. US915 / AU915 range of values is 0~9, and CN470 range of values is 0~12. For example, use `AT+CHE=1:2:3:4` to enable ch0~31. `<value>`: maximum 12 decimal numbers and the range of values depends on region.
-- According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 902.3 MHz and increments linearly by 200 kHz to 914.9 MHz. The next eight (8) channels numbered 64 to 71 are starting at 903.0 MHz and increments linearly by 1.6 MHz to 914.2 MHz.
+- According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 902.3&nbsp;MHz and increments linearly by 200&nbsp;kHz to 914.9&nbsp;MHz. The next eight (8) channels numbered 64 to 71 are starting at 903.0&nbsp;MHz and increments linearly by 1.6&nbsp;MHz to 914.2&nbsp;MHz.
 :::
+
+
+
 
 - US915 Uplink Channels & Attached List
 
-| CHE | US915 Uplink Channels (125 kHz,4/5,Unit:MHz,CHS=0) |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 |
-| 1 | 902.3 | 902.5 | 902.7 | 902.9 | 903.1 | 903.3 | 903.5 | 903.7 | Channel 0-7 |
-| 2 | 903.9 | 904.1 | 904.3 | 904.5 | 904.7 | 904.9 | 905.1 | 905.3 | Channel 8-15 |
-| 3 | 905.5 | 905.7 | 905.9 | 906.1 | 906.3 | 906.5 | 906.7 | 906.9 | Channel 16-23 |
-| 4 | 907.1 | 907.3 | 907.5 | 907.7 | 907.9 | 908.1 | 908.3 | 908.5 | Channel 24-31 |
-| 5 | 908.7 | 908.9 | 909.1 | 909.3 | 909.5 | 909.7 | 909.9 | 910.1 | Channel 32-39 |
-| 6 | 910.3 | 910.5 | 910.7 | 910.9 | 911.1 | 911.3 | 911.5 | 911.7 | Channel 40-47 |
-| 7 | 911.9 | 912.1 | 912.3 | 912.5 | 912.7 | 912.9 | 913.1 | 913.3 | Channel 48-55 |
-| 8 | 913.5 | 913.7 | 913.9 | 914.1 | 914.3 | 914.5 | 914.7 | 914.9 | Channel 56-63 |
-| 9 | 903.0 | 904.6 | 906.2 | 907.8 | 909.4 | 911.0 | 912.6 | 914.2 | Channel 64-71 |
+<table>
+  <thead>
+    <tr>
+      <th>CHE</th>
+      <th colSpan="9">US915 Uplink Channels (125&nbsp;kHz,4/5,Unit:MHz,CHS=0)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td colSpan="9">ENABLE Channel 0-71</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>902.3</td>
+      <td>902.5</td>
+      <td>902.7</td>
+      <td>902.9</td>
+      <td>903.1</td>
+      <td>903.3</td>
+      <td>903.5</td>
+      <td>903.7</td>
+      <td>Channel 0-7</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>903.9</td>
+      <td>904.1</td>
+      <td>904.3</td>
+      <td>904.5</td>
+      <td>904.7</td>
+      <td>904.9</td>
+      <td>905.1</td>
+      <td>905.3</td>
+      <td>Channel 8-15</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>905.5</td>
+      <td>905.7</td>
+      <td>905.9</td>
+      <td>906.1</td>
+      <td>906.3</td>
+      <td>906.5</td>
+      <td>906.7</td>
+      <td>906.9</td>
+      <td>Channel 16-23</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>907.1</td>
+      <td>907.3</td>
+      <td>907.5</td>
+      <td>907.7</td>
+      <td>907.9</td>
+      <td>908.1</td>
+      <td>908.3</td>
+      <td>908.5</td>
+      <td>Channel 24-31</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>908.7</td>
+      <td>908.9</td>
+      <td>909.1</td>
+      <td>909.3</td>
+      <td>909.5</td>
+      <td>909.7</td>
+      <td>909.9</td>
+      <td>910.1</td>
+      <td>Channel 32-39</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>910.3</td>
+      <td>910.5</td>
+      <td>910.7</td>
+      <td>910.9</td>
+      <td>911.1</td>
+      <td>911.3</td>
+      <td>911.5</td>
+      <td>911.7</td>
+      <td>Channel 40-47</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>911.9</td>
+      <td>912.1</td>
+      <td>912.3</td>
+      <td>912.5</td>
+      <td>912.7</td>
+      <td>912.9</td>
+      <td>913.1</td>
+      <td>913.3</td>
+      <td>Channel 48-55</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>913.5</td>
+      <td>913.7</td>
+      <td>913.9</td>
+      <td>914.1</td>
+      <td>914.3</td>
+      <td>914.5</td>
+      <td>914.7</td>
+      <td>914.9</td>
+      <td>Channel 56-63</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>903.0</td>
+      <td>904.6</td>
+      <td>906.2</td>
+      <td>907.8</td>
+      <td>909.4</td>
+      <td>911.0</td>
+      <td>912.6</td>
+      <td>914.2</td>
+      <td>Channel 64-71</td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 :::tip NOTE
-According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 902.3 MHz and increments linearly by 200 kHz to 914.9 MHz. The next eight (8) channels numbered 64 to 71 are starting at 903.0 MHz and increments linearly by 1.6 MHz to 914.2 MHz.
+According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 902.3&nbsp;MHz and increments linearly by 200&nbsp;kHz to 914.9&nbsp;MHz. The next eight (8) channels numbered 64 to 71 are starting at 903.0&nbsp;MHz and increments linearly by 1.6&nbsp;MHz to 914.2&nbsp;MHz.
 :::
+
+<br />
 
 - AU915 Uplink Channels & Attached List
 
-| CHE | AU915 Uplink Channels (125 kHz, 4/5, Unit:MHz, CHS=0) |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 |
-| 1 | 915.2 | 915.4 | 915.6 | 915.8 | 916.0 | 916.2 | 916.4 | 916.6 | Channel 0-7 |
-| 2 | 916.8 | 917.0 | 917.2 | 917.4 | 917.6 | 917.8 | 918.0 | 918.2 | Channel 8-15 |
-| 3 | 918.4 | 918.6 | 918.8 | 919.0 | 919.2 | 919.4 | 919.6 | 919.8 | Channel 16-23 |
-| 4 | 920.0 | 920.2 | 920.4 | 920.6 | 920.8 | 921.0 | 921.2 | 921.4 | Channel 24-31 |
-| 5 | 921.6 | 921.8 | 922.0 | 922.2 | 922.4 | 922.6 | 922.8 | 923.0 | Channel 32-39 |
-| 6 | 923.2 | 923.4 | 923.6 | 923.8 | 924.0 | 924.2 | 924.4 | 924.6 | Channel 40-47 |
-| 7 | 924.8 | 925.0 | 925.2 | 925.4 | 925.6 | 925.8 | 926.0 | 926.2 | Channel 48-55 |
-| 8 | 926.4 | 926.6 | 926.8 | 927.0 | 927.2 | 927.4 | 927.6 | 927.8 | Channel 56-63 |
-| 9 | 915.9 | 917.5 | 919.1 | 920.7 | 922.3 | 923.9 | 925.5 | 927.1 | Channel 64-71 |
+<table>
+<thead>
+  <tr>
+    <th>CHE</th>
+    <th colSpan="9">AU915 Uplink Channels (125&nbsp;kHz, 4/5, Unit:MHz, CHS=0)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0</td>
+    <td colSpan="9">ENABLE Channel 0-71</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>915.2</td>
+    <td>915.4</td>
+    <td>915.6</td>
+    <td>915.8</td>
+    <td>916.0</td>
+    <td>916.2</td>
+    <td>916.4</td>
+    <td>916.6</td>
+    <td>Channel 0-7</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>916.8</td>
+    <td>917.0</td>
+    <td>917.2</td>
+    <td>917.4</td>
+    <td>917.6</td>
+    <td>917.8</td>
+    <td>918.0</td>
+    <td>918.2</td>
+    <td>Channel 8-15</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>918.4</td>
+    <td>918.6</td>
+    <td>918.8</td>
+    <td>919.0</td>
+    <td>919.2</td>
+    <td>919.4</td>
+    <td>919.6</td>
+    <td>919.8</td>
+    <td>Channel 16-23</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>920.0</td>
+    <td>920.2</td>
+    <td>920.4</td>
+    <td>920.6</td>
+    <td>920.8</td>
+    <td>921.0</td>
+    <td>921.2</td>
+    <td>921.4</td>
+    <td>Channel 24-31</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>921.6</td>
+    <td>921.8</td>
+    <td>922.0</td>
+    <td>922.2</td>
+    <td>922.4</td>
+    <td>922.6</td>
+    <td>922.8</td>
+    <td>923.0</td>
+    <td>Channel 32-39</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>923.2</td>
+    <td>923.4</td>
+    <td>923.6</td>
+    <td>923.8</td>
+    <td>924.0</td>
+    <td>924.2</td>
+    <td>924.4</td>
+    <td>924.6</td>
+    <td>Channel 40-47</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>924.8</td>
+    <td>925.0</td>
+    <td>925.2</td>
+    <td>925.4</td>
+    <td>925.6</td>
+    <td>925.8</td>
+    <td>926.0</td>
+    <td>926.2</td>
+    <td>Channel 48-55</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>926.4</td>
+    <td>926.6</td>
+    <td>926.8</td>
+    <td>927.0</td>
+    <td>927.2</td>
+    <td>927.4</td>
+    <td>927.6</td>
+    <td>927.8</td>
+    <td>Channel 56-63</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>915.9</td>
+    <td>917.5</td>
+    <td>919.1</td>
+    <td>920.7</td>
+    <td>922.3</td>
+    <td>923.9</td>
+    <td>925.5</td>
+    <td>927.1</td>
+    <td>Channel 64-71</td>
+  </tr>
+</tbody>
+</table>
+
+
+
 
 :::tip NOTE
-According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 915.2 MHz and increments linearly by 200 kHz to 927.8 MHz. The next eight (8) channels numbered 64 to 71 start at 915.9 MHz and increments linearly by 1.6 MHz to 927.1 MHz.
+According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 915.2&nbsp;MHz and increments linearly by 200&nbsp;kHz to 927.8&nbsp;MHz. The next eight (8) channels numbered 64 to 71 start at 915.9&nbsp;MHz and increments linearly by 1.6&nbsp;MHz to 927.1&nbsp;MHz.
 :::
 
 - CN470 Uplink Channels & Attached List
 
-| CHE | CN470 Uplink Channels (125 kHz, 4/5, Unit:MHz, CHS=0) |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 |
-| 1 | 470.3 | 470.5 | 470.7 | 470.9 | 471.1 | 471.3 | 471.5 | 471.7 | Channel 0-7 |
-| 2 | 471.9 | 472.1 | 472.3 | 472.5 | 472.7 | 472.9 | 473.1 | 473.3 | Channel 8-15 |
-| 3 | 473.5 | 473.7 | 473.9 | 474.1 | 474.3 | 474.5 | 474.7 | 474.9 | Channel 16-23 |
-| 4 | 475.1 | 475.3 | 475.5 | 475.7 | 475.9 | 476.1 | 476.3 | 476.5 | Channel 24-31 |
-| 5 | 476.7 | 476.9 | 477.1 | 477.3 | 477.5 | 477.7 | 477.9 | 478.1 | Channel 32-39 |
-| 6 | 478.3 | 478.5 | 478.7 | 478.9 | 479.1 | 479.3 | 479.5 | 479.7 | Channel 40-47 |
-| 7 | 479.9 | 480.1 | 480.3 | 480.5 | 480.7 | 480.9 | 481.1 | 481.3 | Channel 48-55 |
-| 8 | 481.5 | 481.7 | 481.9 | 482.1 | 482.3 | 482.5 | 482.7 | 482.9 | Channel 56-63 |
-| 9 | 483.1 | 483.3 | 483.5 | 483.7 | 483.9 | 484.1 | 484.3 | 484.5 | Channel 64-71 |
-| 10 | 484.7 | 484.9 | 485.1 | 485.3 | 485.5 | 485.7 | 485.9 | 486.1 | Channel 72-79 |
-| 11 | 486.3 | 486.5 | 486.7 | 486.9 | 487.1 | 487.3 | 487.5 | 487.7 | Channel 80-87 |
-| 12 | 487.9 | 488.1 | 488.3 | 488.5 | 488.7 | 488.9 | 489.1 | 489.3 | Channel 88-95 |
+<table>
+<thead>
+  <tr>
+    <th>CHE</th>
+    <th colSpan="9">CN470 Uplink Channels (125&nbsp;kHz, 4/5, Unit:MHz, CHS=0)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0</td>
+    <td colSpan="9">ENABLE Channel 0-95</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>470.3</td>
+    <td>470.5</td>
+    <td>470.7</td>
+    <td>470.9</td>
+    <td>471.1</td>
+    <td>471.3</td>
+    <td>471.5</td>
+    <td>471.7</td>
+    <td>Channel 0-7</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>471.9</td>
+    <td>472.1</td>
+    <td>472.3</td>
+    <td>472.5</td>
+    <td>472.7</td>
+    <td>472.9</td>
+    <td>473.1</td>
+    <td>473.3</td>
+    <td>Channel 8-15</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>473.5</td>
+    <td>473.7</td>
+    <td>473.9</td>
+    <td>474.1</td>
+    <td>474.3</td>
+    <td>474.5</td>
+    <td>474.7</td>
+    <td>474.9</td>
+    <td>Channel 16-23</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>475.1</td>
+    <td>475.3</td>
+    <td>475.5</td>
+    <td>475.7</td>
+    <td>475.9</td>
+    <td>476.1</td>
+    <td>476.3</td>
+    <td>476.5</td>
+    <td>Channel 24-31</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>476.7</td>
+    <td>476.9</td>
+    <td>477.1</td>
+    <td>477.3</td>
+    <td>477.5</td>
+    <td>477.7</td>
+    <td>477.9</td>
+    <td>478.1</td>
+    <td>Channel 32-39</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>478.3</td>
+    <td>478.5</td>
+    <td>478.7</td>
+    <td>478.9</td>
+    <td>479.1</td>
+    <td>479.3</td>
+    <td>479.5</td>
+    <td>479.7</td>
+    <td>Channel 40-47</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>479.9</td>
+    <td>480.1</td>
+    <td>480.3</td>
+    <td>480.5</td>
+    <td>480.7</td>
+    <td>480.9</td>
+    <td>481.1</td>
+    <td>481.3</td>
+    <td>Channel 48-55</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>481.5</td>
+    <td>481.7</td>
+    <td>481.9</td>
+    <td>482.1</td>
+    <td>482.3</td>
+    <td>482.5</td>
+    <td>482.7</td>
+    <td>482.9</td>
+    <td>Channel 56-63</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>483.1</td>
+    <td>483.3</td>
+    <td>483.5</td>
+    <td>483.7</td>
+    <td>483.9</td>
+    <td>484.1</td>
+    <td>484.3</td>
+    <td>484.5</td>
+    <td>Channel 64-71</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>484.7</td>
+    <td>484.9</td>
+    <td>485.1</td>
+    <td>485.3</td>
+    <td>485.5</td>
+    <td>485.7</td>
+    <td>485.9</td>
+    <td>486.1</td>
+    <td>Channel 72-79</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>486.3</td>
+    <td>486.5</td>
+    <td>486.7</td>
+    <td>486.9</td>
+    <td>487.1</td>
+    <td>487.3</td>
+    <td>487.5</td>
+    <td>487.7</td>
+    <td>Channel 80-87</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>487.9</td>
+    <td>488.1</td>
+    <td>488.3</td>
+    <td>488.5</td>
+    <td>488.7</td>
+    <td>488.9</td>
+    <td>489.1</td>
+    <td>489.3</td>
+    <td>Channel 88-95</td>
+  </tr>
+</tbody>
+</table>
+
+
 
 :::tip NOTE
-According to LoRaWAN Regional Parameters v1.0.3revA, the 96 channels are numbered 0 to 95, starting at 470.3 MHz and increment linearly by 200 kHz to 489.3 MHz.
+According to LoRaWAN Regional Parameters v1.0.3revA, the 96 channels are numbered 0 to 95, starting at 470.3&nbsp;MHz and increment linearly by 200&nbsp;kHz to 489.3&nbsp;MHz.
 :::
+
 
 ### AT+CHS
 
@@ -1484,73 +1861,407 @@ OK
 :::tip NOTE
 In this case, the single-channel mode is only for US915, AU915, CN470.
 
-- US915 frequency range is from 902300000 to 914900000 and increments linearly by 200 kHz (ch0-63).
-- US915 frequency range is from 903000000 to 914200000 and increments linearly by 1.6 MHz (ch64-71).
-- AU915 frequency range is from 915200000 to 927800000 and increments linearly by 200 kHz (ch0-63).
-- AU915 frequency range is from 915900000 to 927100000 and increments linearly by 1.6 MHz (ch64-71).
-- CN470 frequency range is from 470300000 to 489300000 and increments linearly by 200 kHz (ch0-95).
+- US915 frequency range is from 902300000 to 914900000 and increments linearly by 200&nbsp;kHz (ch0-63).
+- US915 frequency range is from 903000000 to 914200000 and increments linearly by 1.6&nbsp;MHz (ch64-71).
+- AU915 frequency range is from 915200000 to 927800000 and increments linearly by 200&nbsp;kHz (ch0-63).
+- AU915 frequency range is from 915900000 to 927100000 and increments linearly by 1.6&nbsp;MHz (ch64-71).
+- CN470 frequency range is from 470300000 to 489300000 and increments linearly by 200&nbsp;kHz (ch0-95).
 - If you input `AT+CHS=903900000`, it will overwrite the `AT+MASK` and `AT+CHE` settings.
 - `AT+MASK=0001(single channel mode: 903900000)`, the 0001 is the previous one, and the current is 90390000.
 :::
 
+
 - US915 Uplink Channels Frequency & Attached List
 
-| US915 Uplink Channels (125k Hz, 4/5, Unit: MHz, CHS=Frequency) |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 |
-| Channel 0-7 | 902300000 | 902500000 | 902700000 | 902900000 | 903100000 | 903300000 | 903500000 | 903700000 |
-| Channel 8-15 | 903900000 | 904100000 | 904300000 | 904500000 | 904700000 | 904900000 | 905100000 | 905300000 |
-| Channel 16-23 | 905500000 | 905700000 | 905900000 | 906100000 | 906300000 | 906500000 | 906700000 | 906900000 |
-| Channel 24-31 | 907100000 | 907300000 | 907500000 | 907700000 | 907900000 | 908100000 | 908300000 | 908500000 |
-| Channel 32-39 | 908700000 | 908900000 | 909100000 | 909300000 | 909500000 | 909700000 | 909900000 | 910100000 |
-| Channel 40-47 | 910300000 | 910500000 | 910700000 | 910900000 | 911100000 | 911300000 | 911500000 | 911700000 |
-| Channel 48-55 | 911900000 | 912100000 | 912300000 | 912500000 | 912700000 | 912900000 | 913100000 | 913300000 |
-| Channel 56-63 | 913500000 | 913700000 | 913900000 | 914100000 | 914300000 | 914500000 | 914700000 | 914900000 |
-| Channel 64-71 | 903000000 | 904600000 | 906200000 | 907800000 | 909400000 | 911000000 | 912600000 | 914200000 |
+<table>
+<thead>
+  <tr>
+    <th colSpan="9">US915 Uplink Channels (125k&nbsp;Hz, 4/5, Unit: MHz, CHS=Frequency)   </th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colSpan="9">ENABLE Channel 0-71</td>
+  </tr>
+  <tr>
+    <td>Channel 0-7</td>
+    <td>902300000</td>
+    <td>902500000</td>
+    <td>902700000</td>
+    <td>902900000</td>
+    <td>903100000</td>
+    <td>903300000</td>
+    <td>903500000</td>
+    <td>903700000</td>
+  </tr>
+  <tr>
+    <td>Channel 8-15</td>
+    <td>903900000</td>
+    <td>904100000</td>
+    <td>904300000</td>
+    <td>904500000</td>
+    <td>904700000</td>
+    <td>904900000</td>
+    <td>905100000</td>
+    <td>905300000</td>
+  </tr>
+  <tr>
+    <td>Channel 16-23</td>
+    <td>905500000</td>
+    <td>905700000</td>
+    <td>905900000</td>
+    <td>906100000</td>
+    <td>906300000</td>
+    <td>906500000</td>
+    <td>906700000</td>
+    <td>906900000</td>
+  </tr>
+  <tr>
+    <td>Channel 24-31</td>
+    <td>907100000</td>
+    <td>907300000</td>
+    <td>907500000</td>
+    <td>907700000</td>
+    <td>907900000</td>
+    <td>908100000</td>
+    <td>908300000</td>
+    <td>908500000</td>
+  </tr>
+  <tr>
+    <td>Channel 32-39</td>
+    <td>908700000</td>
+    <td>908900000</td>
+    <td>909100000</td>
+    <td>909300000</td>
+    <td>909500000</td>
+    <td>909700000</td>
+    <td>909900000</td>
+    <td>910100000</td>
+  </tr>
+  <tr>
+    <td>Channel 40-47</td>
+    <td>910300000</td>
+    <td>910500000</td>
+    <td>910700000</td>
+    <td>910900000</td>
+    <td>911100000</td>
+    <td>911300000</td>
+    <td>911500000</td>
+    <td>911700000</td>
+  </tr>
+  <tr>
+    <td>Channel 48-55</td>
+    <td>911900000</td>
+    <td>912100000</td>
+    <td>912300000</td>
+    <td>912500000</td>
+    <td>912700000</td>
+    <td>912900000</td>
+    <td>913100000</td>
+    <td>913300000</td>
+  </tr>
+  <tr>
+    <td>Channel 56-63</td>
+    <td>913500000</td>
+    <td>913700000</td>
+    <td>913900000</td>
+    <td>914100000</td>
+    <td>914300000</td>
+    <td>914500000</td>
+    <td>914700000</td>
+    <td>914900000</td>
+  </tr>
+  <tr>
+    <td>Channel 64-71</td>
+    <td>903000000</td>
+    <td>904600000</td>
+    <td>906200000</td>
+    <td>907800000</td>
+    <td>909400000</td>
+    <td>911000000</td>
+    <td>912600000</td>
+    <td>914200000</td>
+  </tr>
+</tbody>
+</table>
+
+
 
 :::tip NOTE
-According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 902. 3 MHz and increments linearly by 200 kHz to 914.9 MHz. The next eight (8) channels numbered 64 to 71 are starting at 903.0 MHz and increment linearly by 1.6 MHz to 914.2 MHz.
+According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 902.&nbsp;3&nbsp;MHz and increments linearly by 200&nbsp;kHz to 914.9&nbsp;MHz. The next eight (8) channels numbered 64 to 71 are starting at 903.0&nbsp;MHz and increment linearly by 1.6&nbsp;MHz to 914.2&nbsp;MHz.
 :::
+
+
 
 - AU915 Uplink Channels Frequency & Attached List
 
-| AU915 Uplink Channels (125 kHz, 4/5, Unit:MHz, CHS=Frequency) |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 | ENABLE Channel 0-71 |
-| Channel 0-7 | 915200000 | 915400000 | 915600000 | 915800000 | 916000000 | 916200000 | 916400000 | 916600000 |
-| Channel 8-15 | 916800000 | 917000000 | 917200000 | 917400000 | 917600000 | 917800000 | 918000000 | 918200000 |
-| Channel 16-23 | 918400000 | 918600000 | 918800000 | 919000000 | 919200000 | 919400000 | 919600000 | 919800000 |
-| Channel 24-31 | 920000000 | 920200000 | 920400000 | 920600000 | 920800000 | 921000000 | 921200000 | 921400000 |
-| Channel 32-39 | 921600000 | 921800000 | 922000000 | 922200000 | 922400000 | 922600000 | 922800000 | 923000000 |
-| Channel 40-47 | 923200000 | 923400000 | 923600000 | 923800000 | 924000000 | 924200000 | 924400000 | 924600000 |
-| Channel 48-55 | 924800000 | 925000000 | 925200000 | 925400000 | 925600000 | 925800000 | 926000000 | 926200000 |
-| Channel 56-63 | 926400000 | 926600000 | 926800000 | 927000000 | 927200000 | 927400000 | 927600000 | 927800000 |
-| Channel 64-71 | 915900000 | 917500000 | 919100000 | 920700000 | 922300000 | 923900000 | 925500000 | 927100000 |
+<table>
+<thead>
+  <tr>
+    <th colSpan="9">AU915 Uplink Channels (125&nbsp;kHz, 4/5, Unit:MHz, CHS=Frequency)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colSpan="9">ENABLE Channel 0-71</td>
+  </tr>
+  <tr>
+    <td>Channel 0-7</td>
+    <td>915200000</td>
+    <td>915400000</td>
+    <td>915600000</td>
+    <td>915800000</td>
+    <td>916000000</td>
+    <td>916200000</td>
+    <td>916400000</td>
+    <td>916600000</td>
+  </tr>
+  <tr>
+    <td>Channel 8-15</td>
+    <td>916800000</td>
+    <td>917000000</td>
+    <td>917200000</td>
+    <td>917400000</td>
+    <td>917600000</td>
+    <td>917800000</td>
+    <td>918000000</td>
+    <td>918200000</td>
+  </tr>
+  <tr>
+    <td>Channel 16-23</td>
+    <td>918400000</td>
+    <td>918600000</td>
+    <td>918800000</td>
+    <td>919000000</td>
+    <td>919200000</td>
+    <td>919400000</td>
+    <td>919600000</td>
+    <td>919800000</td>
+  </tr>
+  <tr>
+    <td>Channel 24-31</td>
+    <td>920000000</td>
+    <td>920200000</td>
+    <td>920400000</td>
+    <td>920600000</td>
+    <td>920800000</td>
+    <td>921000000</td>
+    <td>921200000</td>
+    <td>921400000</td>
+  </tr>
+  <tr>
+    <td>Channel 32-39</td>
+    <td>921600000</td>
+    <td>921800000</td>
+    <td>922000000</td>
+    <td>922200000</td>
+    <td>922400000</td>
+    <td>922600000</td>
+    <td>922800000</td>
+    <td>923000000</td>
+  </tr>
+  <tr>
+    <td>Channel 40-47</td>
+    <td>923200000</td>
+    <td>923400000</td>
+    <td>923600000</td>
+    <td>923800000</td>
+    <td>924000000</td>
+    <td>924200000</td>
+    <td>924400000</td>
+    <td>924600000</td>
+  </tr>
+  <tr>
+    <td>Channel 48-55</td>
+    <td>924800000</td>
+    <td>925000000</td>
+    <td>925200000</td>
+    <td>925400000</td>
+    <td>925600000</td>
+    <td>925800000</td>
+    <td>926000000</td>
+    <td>926200000</td>
+  </tr>
+  <tr>
+    <td>Channel 56-63</td>
+    <td>926400000</td>
+    <td>926600000</td>
+    <td>926800000</td>
+    <td>927000000</td>
+    <td>927200000</td>
+    <td>927400000</td>
+    <td>927600000</td>
+    <td>927800000</td>
+  </tr>
+  <tr>
+    <td>Channel 64-71</td>
+    <td>915900000</td>
+    <td>917500000</td>
+    <td>919100000</td>
+    <td>920700000</td>
+    <td>922300000</td>
+    <td>923900000</td>
+    <td>925500000</td>
+    <td>927100000</td>
+  </tr>
+</tbody>
+</table>
+
 
 :::tip NOTE
-According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 915.2 MHz and incrementing linearly by 200 kHz to 927.8 MHz. The next eight (8) channels numbered 64 to 71 start at 915.9 MHz and increment linearly by 1.6 MHz to 927.1 MHz.
+According to LoRaWAN Regional Parameters v1.0.3revA, the first 64 channels are numbered 0 to 63, starting at 915.2&nbsp;MHz and incrementing linearly by 200&nbsp;kHz to 927.8&nbsp;MHz. The next eight (8) channels numbered 64 to 71 start at 915.9&nbsp;MHz and increment linearly by 1.6&nbsp;MHz to 927.1&nbsp;MHz.
 :::
 
 - CN470 Uplink Channels Frequency & Attached List
 
-| CN470 Uplink Channels (125 kHz, 4/5, Unit:MHz, CHS=Frequency) |  |  |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 | ENABLE Channel 0-95 |
-| Channel 0-7 | 470300000 | 470500000 | 470700000 | 470900000 | 471100000 | 471300000 | 471500000 | 471700000 |
-| Channel 8-15 | 471900000 | 472100000 | 472300000 | 472500000 | 472700000 | 472900000 | 473100000 | 473300000 |
-| Channel 16-23 | 473500000 | 473700000 | 473900000 | 474100000 | 474300000 | 474500000 | 474700000 | 474900000 |
-| Channel 24-31 | 475100000 | 475300000 | 475500000 | 475700000 | 475900000 | 476100000 | 476300000 | 476500000 |
-| Channel 32-39 | 476700000 | 476900000 | 477100000 | 477300000 | 477500000 | 477700000 | 477900000 | 478100000 |
-| Channel 40-47 | 478300000 | 478500000 | 478700000 | 478900000 | 479100000 | 479300000 | 479500000 | 479700000 |
-| Channel 48-55 | 479900000 | 480100000 | 480300000 | 480500000 | 480700000 | 480900000 | 481100000 | 481300000 |
-| Channel 56-63 | 481500000 | 481700000 | 481900000 | 482100000 | 482300000 | 482500000 | 482700000 | 482900000 |
-| Channel 64-71 | 483100000 | 483300000 | 483500000 | 483700000 | 483900000 | 484100000 | 484300000 | 484500000 |
-| Channel 72-79 | 484700000 | 484900000 | 485100000 | 485300000 | 485500000 | 485700000 | 485900000 | 486100000 |
-| Channel 80-87 | 486300000 | 486500000 | 486700000 | 486900000 | 487100000 | 487300000 | 487500000 | 487700000 |
-| Channel 88-95 | 487900000 | 488100000 | 488300000 | 488500000 | 488700000 | 488900000 | 489100000 | 489300000 |
+<table>
+<thead>
+  <tr>
+    <th colSpan="9"><br />CN470 Uplink Channels (125&nbsp;kHz, 4/5, Unit:MHz, CHS=Frequency)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td colSpan="9"><br />ENABLE Channel 0-95</td>
+  </tr>
+  <tr>
+    <td>Channel 0-7</td>
+    <td>470300000</td>
+    <td>470500000</td>
+    <td>470700000</td>
+    <td>470900000</td>
+    <td>471100000</td>
+    <td>471300000</td>
+    <td>471500000</td>
+    <td>471700000</td>
+  </tr>
+  <tr>
+    <td>Channel 8-15</td>
+    <td>471900000</td>
+    <td>472100000</td>
+    <td>472300000</td>
+    <td>472500000</td>
+    <td>472700000</td>
+    <td>472900000</td>
+    <td>473100000</td>
+    <td>473300000</td>
+  </tr>
+  <tr>
+    <td>Channel 16-23</td>
+    <td>473500000</td>
+    <td>473700000</td>
+    <td>473900000</td>
+    <td>474100000</td>
+    <td>474300000</td>
+    <td>474500000</td>
+    <td>474700000</td>
+    <td>474900000</td>
+  </tr>
+  <tr>
+    <td>Channel 24-31</td>
+    <td>475100000</td>
+    <td>475300000</td>
+    <td>475500000</td>
+    <td>475700000</td>
+    <td>475900000</td>
+    <td>476100000</td>
+    <td>476300000</td>
+    <td>476500000</td>
+  </tr>
+  <tr>
+    <td>Channel 32-39</td>
+    <td>476700000</td>
+    <td>476900000</td>
+    <td>477100000</td>
+    <td>477300000</td>
+    <td>477500000</td>
+    <td>477700000</td>
+    <td>477900000</td>
+    <td>478100000</td>
+  </tr>
+  <tr>
+    <td>Channel 40-47</td>
+    <td>478300000</td>
+    <td>478500000</td>
+    <td>478700000</td>
+    <td>478900000</td>
+    <td>479100000</td>
+    <td>479300000</td>
+    <td>479500000</td>
+    <td>479700000</td>
+  </tr>
+  <tr>
+    <td>Channel 48-55</td>
+    <td>479900000</td>
+    <td>480100000</td>
+    <td>480300000</td>
+    <td>480500000</td>
+    <td>480700000</td>
+    <td>480900000</td>
+    <td>481100000</td>
+    <td>481300000</td>
+  </tr>
+  <tr>
+    <td>Channel 56-63</td>
+    <td>481500000</td>
+    <td>481700000</td>
+    <td>481900000</td>
+    <td>482100000</td>
+    <td>482300000</td>
+    <td>482500000</td>
+    <td>482700000</td>
+    <td>482900000</td>
+  </tr>
+  <tr>
+    <td>Channel 64-71</td>
+    <td>483100000</td>
+    <td>483300000</td>
+    <td>483500000</td>
+    <td>483700000</td>
+    <td>483900000</td>
+    <td>484100000</td>
+    <td>484300000</td>
+    <td>484500000</td>
+  </tr>
+  <tr>
+    <td>Channel 72-79</td>
+    <td>484700000</td>
+    <td>484900000</td>
+    <td>485100000</td>
+    <td>485300000</td>
+    <td>485500000</td>
+    <td>485700000</td>
+    <td>485900000</td>
+    <td>486100000</td>
+  </tr>
+  <tr>
+    <td>Channel 80-87</td>
+    <td>486300000</td>
+    <td>486500000</td>
+    <td>486700000</td>
+    <td>486900000</td>
+    <td>487100000</td>
+    <td>487300000</td>
+    <td>487500000</td>
+    <td>487700000</td>
+  </tr>
+  <tr>
+    <td>Channel 88-95</td>
+    <td>487900000</td>
+    <td>488100000</td>
+    <td>488300000</td>
+    <td>488500000</td>
+    <td>488700000</td>
+    <td>488900000</td>
+    <td>489100000</td>
+    <td>489300000</td>
+  </tr>
+</tbody>
+</table>
+
 
 :::tip NOTE
-According to LoRaWAN Regional Parameters v1.0.3revA, the 96 channels are numbered 0 to 95, starting at 470.3 MHz and increments linearly by 200 kHz to 489.3 MHz.
+According to LoRaWAN Regional Parameters v1.0.3revA, the 96 channels are numbered 0 to 95, starting at 470.3&nbsp;MHz and increments linearly by 200&nbsp;kHz to 489.3 MHz.
 :::
 
 ### AT+BAND
@@ -1559,12 +2270,9 @@ This command sets numbers corresponding to active regions.
 
 | Command Type | Command           | Input Parameter                        | Return Value                                                                                                                                                                                | **Response**                                   |
 | ------------ | ----------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| Read         | `AT+BAND?`        | -                                      | `AT+BAND`: get or set the active region 
- (0 = EU433, 1 = CN470, 2 = RU864, 3 = IN865, 4 = EU868, 5 = US915, 6 = AU915, 7 = KR920, 8 = AS923-1, 9 = AS923-2, 10 = AS923-3, 11 = AS923-4) | OK                                             |
+| Read         | `AT+BAND?`        | -                                      | `AT+BAND`: get or set the active region <br /> (0 = EU433, 1 = CN470, 2 = RU864, 3 = IN865, 4 = EU868, 5 = US915, 6 = AU915, 7 = KR920, 8 = AS923-1, 9 = AS923-2, 10 = AS923-3, 11 = AS923-4) | OK                                             |
 | Read         | `AT+BAND=?`       | -                                      | `AT+BAND=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 or 11)`                                                                                                                                          | OK                                             |
-| Write        | `AT+BAND=<input>` | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 or 11 | -                                                                                                                                                                                           | OK 
-  `AT_PARAM_ERROR` 
- `AT_BUSY_ERROR` |
+| Write        | `AT+BAND=<input>` | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 or 11 | -                                                                                                                                                                                           | OK <br />  `AT_PARAM_ERROR` <br /> `AT_BUSY_ERROR` |
 
 Example:
 ```
@@ -1645,110 +2353,110 @@ at+firmwarever
 
 | Data Rate | Configuration           | Indicative Physical Bit Rate (bit/s) |
 | --------- | ----------------------- | ------------------------------------ |
-| 0         | LoRa: SF12/125 kHz | 250                                  |
-| 1         | LoRa: SF11/125 kHz | 440                                  |
-| 2         | LoRa: SF10/125 kHz | 980                                  |
-| 3         | LoRa: SF9/125 kHz  | 1760                                 |
-| 4         | LoRa: SF8/125 kHz  | 3125                                 |
-| 5         | LoRa: SF7/125 kHz  | 5470                                 |
-| 6         | LoRa: SF7/250 kHz  | 11000                                |
-| 7         | FSK: 50 kbps       | 50000                                |
+| 0         | LoRa: SF12/125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11/125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10/125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9/125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8/125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7/125&nbsp;kHz  | 5470                                 |
+| 6         | LoRa: SF7/250&nbsp;kHz  | 11000                                |
+| 7         | FSK: 50&nbsp;kbps       | 50000                                |
 | 8-15      | RFU                     | RFU                                  |
 
 ### KR920
 
 | Data Rate | Configuration           | Indicative Physical Bit Rate (bit/s) |
 | --------- | ----------------------- | ------------------------------------ |
-| 0         | LoRa: SF12/125 kHz | 250                                  |
-| 1         | LoRa: SF11/125 kHz | 440                                  |
-| 2         | LoRa: SF10/125 kHz | 980                                  |
-| 3         | LoRa: SF9/125 kHz  | 1760                                 |
-| 4         | LoRa: SF8/125 kHz  | 3125                                 |
-| 5         | LoRa: SF7/125 kHz  | 5470                                 |
+| 0         | LoRa: SF12/125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11/125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10/125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9/125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8/125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7/125&nbsp;kHz  | 5470                                 |
 | 6-15      | RFU                     | RFU                                  |
 
 ### US915
 
 | Data Rate | Configuration           | Indicative Physical Bit Rate (bit/s) |
 | --------- | ----------------------- | ------------------------------------ |
-| 0         | LoRa: SF10/125 kHz | 980                                  |
-| 1         | LoRa: SF9/125 kHz  | 1760                                 |
-| 2         | LoRa: SF8/125 kHz  | 3125                                 |
-| 3         | LoRa: SF7/125 kHz  | 5470                                 |
-| 4         | LoRa: SF8/500 kHz  | 12500                                |
+| 0         | LoRa: SF10/125&nbsp;kHz | 980                                  |
+| 1         | LoRa: SF9/125&nbsp;kHz  | 1760                                 |
+| 2         | LoRa: SF8/125&nbsp;kHz  | 3125                                 |
+| 3         | LoRa: SF7/125&nbsp;kHz  | 5470                                 |
+| 4         | LoRa: SF8/500&nbsp;kHz  | 12500                                |
 | 5-7       | RFU                     | RFU                                  |
-| 8         | LoRa: SF12/500 kHz | 980                                  |
-| 9         | LoRa: SF11/500 kHz | 1760                                 |
-| 10        | LoRa: SF10/500 kHz | 3900                                 |
-| 11        | LoRa: SF9/500 kHz  | 7000                                 |
-| 12        | LoRa: SF8/500 kHz  | 12500                                |
-| 13        | LoRa: SF7/500 kHz  | 21900                                |
+| 8         | LoRa: SF12/500&nbsp;kHz | 980                                  |
+| 9         | LoRa: SF11/500&nbsp;kHz | 1760                                 |
+| 10        | LoRa: SF10/500&nbsp;kHz | 3900                                 |
+| 11        | LoRa: SF9/500&nbsp;kHz  | 7000                                 |
+| 12        | LoRa: SF8/500&nbsp;kHz  | 12500                                |
+| 13        | LoRa: SF7/500&nbsp;kHz  | 21900                                |
 | 14-15     | RFU                     | RFU                                  |
 
 ### AU915
 
 | Data Rate | Configuration           | Indicative Physical Bit Rate (bit/s) |
 | --------- | ----------------------- | ------------------------------------ |
-| 0         | LoRa: SF12/125 kHz | 250                                  |
-| 1         | LoRa: SF11/125 kHz | 440                                  |
-| 2         | LoRa: SF10/125 kHz | 980                                  |
-| 3         | LoRa: SF9/125 kHz  | 1760                                 |
-| 4         | LoRa: SF8/125 kHz  | 3125                                 |
-| 5         | LoRa: SF7/125 kHz  | 5470                                 |
-| 6         | LoRa: SF8/500 kHz  | 12500                                |
+| 0         | LoRa: SF12/125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11/125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10/125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9/125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8/125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7/125&nbsp;kHz  | 5470                                 |
+| 6         | LoRa: SF8/500&nbsp;kHz  | 12500                                |
 | 7         | RFU                     | RFU                                  |
-| 8         | LoRa: SF12/500 kHz | 980                                  |
-| 9         | LoRa: SF11/500 kHz | 1760                                 |
-| 10        | LoRa: SF10/500 kHz | 3900                                 |
-| 11        | LoRa: SF9/500 kHz  | 7000                                 |
-| 12        | LoRa: SF8/500 kHz  | 12500                                |
+| 8         | LoRa: SF12/500&nbsp;kHz | 980                                  |
+| 9         | LoRa: SF11/500&nbsp;kHz | 1760                                 |
+| 10        | LoRa: SF10/500&nbsp;kHz | 3900                                 |
+| 11        | LoRa: SF9/500&nbsp;kHz  | 7000                                 |
+| 12        | LoRa: SF8/500&nbsp;kHz  | 12500                                |
 
 ### IN865
 
 | Data Rate | Configuration           | Indicative Physical Bit Rate (bit/s) |
 | --------- | ----------------------- | ------------------------------------ |
-| 0         | LoRa: SF12/125 kHz | 250                                  |
-| 1         | LoRa: SF11/125 kHz | 440                                  |
-| 2         | LoRa: SF10/125 kHz | 980                                  |
-| 3         | LoRa: SF9/125 kHz  | 1760                                 |
-| 4         | LoRa: SF8/125 kHz  | 3125                                 |
-| 5         | LoRa: SF7/125 kHz  | 5470                                 |
+| 0         | LoRa: SF12/125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11/125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10/125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9/125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8/125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7/125&nbsp;kHz  | 5470                                 |
 | 6         | RFU                     | RFU                                  |
-| 7         | FSK: 50 kbps       | 50000                                |
+| 7         | FSK: 50&nbsp;kbps       | 50000                                |
 | 8-15      | RFU                     | RFU                                  |
 
 ## Appendix 2: TX Power
 
 ### EU868
 
-By default, Max EIRP is considered to be +16 dBm.
+By default, Max EIRP is considered to be +16&nbsp;dBm.
 
 | TX Power | Configuration (EIRP)  |
 | -------- | --------------------- |
 | 0        | Max EIRP              |
-| 1        | Max EIRP - 2 db  |
-| 2        | Max EIRP - 4 db  |
-| 3        | Max EIRP - 6 db  |
-| 4        | Max EIRP - 8 db  |
-| 5        | Max EIRP - 10 db |
-| 6        | Max EIRP - 12 db |
-| 7        | Max EIRP - 14 db |
+| 1        | Max EIRP - 2&nbsp;db  |
+| 2        | Max EIRP - 4&nbsp;db  |
+| 3        | Max EIRP - 6&nbsp;db  |
+| 4        | Max EIRP - 8&nbsp;db  |
+| 5        | Max EIRP - 10&nbsp;db |
+| 6        | Max EIRP - 12&nbsp;db |
+| 7        | Max EIRP - 14&nbsp;db |
 | 8-15     | RFU                   |
 
 ### US915
 
 | TX Power | Configuration (Conducted Power) |
 | -------- | ------------------------------- |
-| 0        | 30 dBm - 2*TXpower         |
-| 1        | 28 dBm                     |
-| 2        | 26 dBm                     |
+| 0        | 30&nbsp;dBm - 2*TXpower         |
+| 1        | 28&nbsp;dBm                     |
+| 2        | 26&nbsp;dBm                     |
 | 3-9      | -                               |
-| 10       | 10 dBm                     |
+| 10       | 10&nbsp;dBm                     |
 | 11-15    | RFU                             |
 
 ### AU915
 
-By default, Ma EIRP is considered to be +30 dBm.
+By default, Ma EIRP is considered to be +30&nbsp;dBm.
 
 | TX Power | Configuration (EIRP) |
 | -------- | -------------------- |
@@ -1758,52 +2466,55 @@ By default, Ma EIRP is considered to be +30 dBm.
 
 ### KR920
 
-By default, Max EIRP is considered to be +14 dBm.
+By default, Max EIRP is considered to be +14&nbsp;dBm.
 
 | TX Power | Configuration (EIRP)  |
 | -------- | --------------------- |
 | 0        | Max EIRP              |
-| 1        | Max EIRP - 2 db  |
-| 2        | Max EIRP - 4 db  |
-| 3        | Max EIRP - 6 db  |
-| 4        | Max EIRP - 8 db  |
-| 5        | Max EIRP - 10 db |
-| 6        | Max EIRP - 12 db |
-| 7        | Max EIRP - 14 db |
+| 1        | Max EIRP - 2&nbsp;db  |
+| 2        | Max EIRP - 4&nbsp;db  |
+| 3        | Max EIRP - 6&nbsp;db  |
+| 4        | Max EIRP - 8&nbsp;db  |
+| 5        | Max EIRP - 10&nbsp;db |
+| 6        | Max EIRP - 12&nbsp;db |
+| 7        | Max EIRP - 14&nbsp;db |
 | 8-15     | RFU                   |
 
 ### AS923
 
-By default, Max EIRP is considered to be 16 dBm.
+By default, Max EIRP is considered to be 16&nbsp;dBm.
 
 | TX Power | Configuration (EIRP)  |
 | -------- | --------------------- |
 | 0        | Max EIRP              |
-| 1        | Max EIRP - 2 db  |
-| 2        | Max EIRP - 4 db  |
-| 3        | Max EIRP - 6 db  |
-| 4        | Max EIRP - 8 db  |
-| 5        | Max EIRP - 10 db |
-| 6        | Max EIRP - 12 db |
-| 7        | Max EIRP - 14 db |
+| 1        | Max EIRP - 2&nbsp;db  |
+| 2        | Max EIRP - 4&nbsp;db  |
+| 3        | Max EIRP - 6&nbsp;db  |
+| 4        | Max EIRP - 8&nbsp;db  |
+| 5        | Max EIRP - 10&nbsp;db |
+| 6        | Max EIRP - 12&nbsp;db |
+| 7        | Max EIRP - 14&nbsp;db |
 | 8-15     | RFU                   |
 
 ### IN865
 
-By default, Max EIRP is considered to be 30 dBm.
+By default, Max EIRP is considered to be 30&nbsp;dBm.
 
 | TX Power | Configuration (EIRP)  |
 | -------- | --------------------- |
 | 0        | Max EIRP              |
-| 1        | Max EIRP - 2 db  |
-| 2        | Max EIRP - 4 db  |
-| 3        | Max EIRP - 6 db  |
-| 4        | Max EIRP - 8 db  |
-| 5        | Max EIRP - 10 db |
-| 6        | Max EIRP - 12 db |
-| 7        | Max EIRP - 14 db |
-| 8        | Max EIRP - 16 db |
-| 9        | Max EIRP - 18 db |
-| 10       | Max EIRP - 20 db |
+| 1        | Max EIRP - 2&nbsp;db  |
+| 2        | Max EIRP - 4&nbsp;db  |
+| 3        | Max EIRP - 6&nbsp;db  |
+| 4        | Max EIRP - 8&nbsp;db  |
+| 5        | Max EIRP - 10&nbsp;db |
+| 6        | Max EIRP - 12&nbsp;db |
+| 7        | Max EIRP - 14&nbsp;db |
+| 8        | Max EIRP - 16&nbsp;db |
+| 9        | Max EIRP - 18&nbsp;db |
+| 10       | Max EIRP - 20&nbsp;db |
 | 11-15    | RFU                   |
 
+
+
+<RkBottomNav/>

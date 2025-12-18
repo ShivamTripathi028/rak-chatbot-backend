@@ -10,6 +10,8 @@ keywords:
     - quectel l76k
 sidebar_label: Quick Start Guide
 ---
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RAK12501 WisBlock GNSS Location Module Quick Start Guide
 
@@ -48,15 +50,22 @@ This module gives information about:
 
 Connected to the sensor's slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base), the RAK12500 enables communication with the WisBlock Core, as shown in **Figure 1**. It functions on **SLOT A or SLOT D**. Additionally, always secure the WisBlock module connection using compatible screws.
 
-> **Image:** RAK12501 connection to the WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak12501-assembly.png"
+  caption="RAK12501 connection to the WisBlock Base"
+  width="100%"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for Slot A and D are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
-
-> **Image:** Attach RAK12501 to the WisBlock Base
+As shown in **Figure 2**, the location for Slot A and D are properly marked by silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/rak12500-mounting.png"
+  caption="Attach RAK12501 to the WisBlock Base"
+  width="60%"
+/>
 
 ##### Disassembling
 
@@ -64,21 +73,37 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Remove screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/16.removing-screws.png"
+  caption="Remove screws from the WisBlock module"
+  width="80%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detach silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/17.detaching-silkscreen.png"
+  caption="Detach silkscreen on the WisBlock module"
+  width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Apply even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/18.detaching-module.png"
+  caption="Apply even forces on the proper location of a WisBlock module"
+  width="70%"
+/>
 
 #### GPS Antenna
 
 Another important part component of RAK12501 is the GPS antenna. Make sure that it is properly connected to have a good GPS signal.
 
-> **Image:** GPS antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak12501-gps-antenna.png"
+  caption="GPS antenna"
+  width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK12501 uses UART communication lines, and it can cause possible conflict especially on some IO modules.
@@ -88,9 +113,9 @@ After all this setup, connect the battery and USB cable to start programming you
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -105,20 +130,33 @@ The RAK12501 is a very accurate GNSS Module that contains a Quectel L76K chip. T
 2. Choose the WisBlock Core that you have, as shown in **Figure 7** to **Figure 9**.
 
 **RAK4631 Board**
-
-> **Image:** Select RAK4631 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak4631-board.png"
+  caption="Select RAK4631 as the WisBlock Core"
+  width="100%"
+/>
 
 **RAK11200 Board**
-
-> **Image:** Select RAK11200 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak11200-board.png"
+  caption="Select RAK11200 as the WisBlock Core"
+  width="100%"
+/>
 
 **RAK11310 Board**
-
-> **Image:** Select RAK11300 as the WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak11300-board.png"
+  caption="Select RAK11300 as the WisBlock Core"
+  width="100%"
+/>
 
 3. The [Basic Sample Code for RAK12501](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/sensors/RAK12501_GPS_L76K) in GitHub will work on all WisBlock Core. Download the source code from the GitHub repository and open the `RAK12501_GPS_L76K.ino` file with Arduino IDE.
 
-> **Image:** Open the RAK12501 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/open-rak12501-example.png"
+  caption="Open the RAK12501 example code"
+  width="100%"
+/>
 
 :::tip NOTE
 If you experience any error in compiling the example sketch, check the updated code for your WisBlock Core Module that can be found on the [RAK12501 WisBlock Example Code Repository](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/sensors/RAK12501_GPS_L76K).
@@ -126,9 +164,17 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example code is open, install the [TinyGPS](https://github.com/neosarchizo/TinyGPS) library by clicking the highlighted link, as shown in **Figure 11** and **Figure 12**.
 
-> **Image:** Access the library used for the RAK12501 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak12501-code.png"
+  caption="Access the library used for the RAK12501 Module"
+  width="100%"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12501/quickstart/rak12501-library.png"
+  caption="Install the compatible library for the RAK12501 Module"
+  width="45%"
+/>
 
-> **Image:** Install the compatible library for the RAK12501 Module
 
 5. After installing the library, select the correct serial port and upload the code, as shown in **Figure 13** and **Figure 14**.
 
@@ -136,9 +182,16 @@ If you experience any error in compiling the example sketch, check the updated c
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Select the correct Serial Port
-
-> **Image:** Upload the RAK12501 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/rak12500_port.png"
+  caption="Select the correct Serial Port"
+  width="100%"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/rak12500_upload.png"
+  caption="Upload the RAK12501 example code"
+  width="100%"
+/>
 
 6. When the example sketch is uploaded, open the Serial Monitor of the Arduino IDE to see the sensor's reading logs. If you see the logs, as shown in **Figure 15**, then your RAK12501 is properly communicating to the WisBlock core.
 
@@ -146,5 +199,14 @@ If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the *
 The GPS antenna must have an unobstructed view of the sky to be able to receive satellite signals. For the example to work, you should test it outside of a building.
 :::
 
-> **Image:** RAK12501 sensor data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12500/quickstart/rak12500_log.png"
+  caption="RAK12501 sensor data logs"
+  width="100%"
+/>
+
+<RkBottomNav/>
+
+
+
 

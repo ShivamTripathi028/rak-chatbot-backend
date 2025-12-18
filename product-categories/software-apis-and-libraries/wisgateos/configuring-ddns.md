@@ -7,6 +7,9 @@ keywords:
 sidebar_label: Configuring the DDNS
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisgateOS Configuring DDNS
 
 This guide discusses on how to configure the Dynamic Domain Name System Service to access the gateway.
@@ -25,8 +28,12 @@ In this example, `afraid.org` DDNS provider will be used.
 
 1. First, create an account in a DDNS service provider like [freedns.afraid.org](https://freedns.afraid.org/) or other. Go to the site, click on the **Sign up Free** button and follow the registration instructions.
 
-> **Image:** Making an account
 
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.1.make-account.png"
+  width="100%"
+  caption="Making an account"
+/>
            
 
 :::tip NOTE
@@ -36,11 +43,19 @@ Activate the accounts from the link sent in their e-mail.
 
 2. After successful registration and activation, log in and navigate to the **Subdomains** menu.
 
-> **Image:** Subdomains menu
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.2.subdomains-menu.png"
+  width="100%"
+  caption="Subdomains menu"
+/>
 
 3. Proceed by clicking on **Add a subdomain**. 
 
-> **Image:** Adding a subdomain
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.3.add-subdomain.png"
+  width="100%"
+  caption="Adding a subdomain"
+/>
 
 In the **Add a new subdomain** menu, you must type the following information:
 
@@ -53,15 +68,28 @@ In the **Add a new subdomain** menu, you must type the following information:
 
 4. After filling in all the required information, type the verification image in the field and click on **Save!**. You will be redirected to the page of registered subdomains.
 
-> **Image:** List of Registered Subdomains
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.4.registered-subdomain.png"
+  width="100%"
+  caption="List of Registered Subdomains"
+/>
 
 5. To configure the gateway, the user needs to navigate to **Services -> Dynamic DNS (Beta)** tab in the Web UI. In the **Overview** menu, they should type a name for the configuration and click on the **Add** button. 
 
-> **Image:** Adding a DDNS Configuration
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.5.adding-dns.png"
+  width="100%"
+  caption="Adding a DDNS Configuration"
+/>
 
 6. This will redirect them to the configuration menu.
 
-> **Image:** Configuration Menu
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.6.configuration.png"
+  width="100%"
+  caption="Configuration Menu"
+/>
 
 7. First, you must enable the service by click on the **Enable** button in the **Basic Settings**. Then fill in the required information:
 
@@ -80,11 +108,21 @@ In the **Add a new subdomain** menu, you must type the following information:
 
 The other fields are optional and will be left as default. The **Log to syslog** drop-down menu selects the level of the system logs. The **Log to file** button will allow syslogs to be saved in a file on the gateway’s SD card. 
 
-> **Image:** Advanced Settings Tab
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.7.advanced-settings.png"
+  width="100%"
+  caption="Advanced Settings Tab"
+/>
 
 10.  In the **Timer Settings** tab, you can configure the details for the timer to check for changes of IP and errors.
 
-> **Image:** Timer Settings Tab
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.8.timer-settings.png"
+  width="100%"
+  caption="Timer Settings Tab"
+/>
 
 - **Check Interval** – The interval to check if there is a change of the IP for the gateway.
 - **Force Interval** – The interval to force updates to be sent to the DDNS provider.
@@ -97,13 +135,28 @@ For this example, Timer Settings will be left as default.
 
 11.  In the **Log File Viewer** tab, you can view the system logs, and it is helpful in the case of debugging. To see the logs, click on **Read / Reread log file.**
 
-> **Image:** Log File Viewer Tab
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.9.log-file-viewer.png"
+  width="100%"
+  caption="Log File Viewer Tab"
+/>
 
 12.  To save the settings, click **Save & Apply.**
 
 13.  If everything is configured correctly, the user will be able to access the gateway via the name of the subdomain in the list of the added subdomains in the DDNS provider.
 
-> **Image:** Name of the Subdomain
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.10.name-of-the-subdomain.png"
+  width="100%"
+  caption="Name of the Subdomain"
+/>
 
-> **Image:** Accessing the Gateway via the Domain Name
 
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument5/38.11.access-gateway.png"
+  width="100%"
+  caption="Accessing the Gateway via the Domain Name"
+/>
+
+<RkBottomNav/>

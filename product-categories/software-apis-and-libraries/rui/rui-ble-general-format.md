@@ -1,4 +1,5 @@
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RUI BLE General Format
 
@@ -84,13 +85,8 @@ void rui_ble_scan_adv(int8_t rssi_value, uint8_t *p_adv_data, uint16_t adv_data_
 | @brief | This API is used to scan all around BLE devices andvalid when the BLE works on master mode. | 
 | ---- | ---- | 
 | **@return** | NULL | 
-| **@param** | __int8_t rssi_value__: peripheral rssi value 
- __uint8_t *p_adv_data__: the advertise data 
- __uint16_t adv_data_len__: the length of advertise data 
- __uint8_t *p_device_mac__: the peripheral's MAC address | 
-| **@module** | RAK8212-M 
- RAK5010 
- RAK4600 | 
+| **@param** | __int8_t rssi_value__: peripheral rssi value <br /> __uint8_t *p_adv_data__: the advertise data <br /> __uint16_t adv_data_len__: the length of advertise data <br /> __uint8_t *p_device_mac__: the peripheral's MAC address | 
+| **@module** | RAK8212-M <br /> RAK5010 <br /> RAK4600 | 
 
 ---
 
@@ -104,12 +100,8 @@ uint32_t rui_ble_evt_register_callback(ble_evt_connect callback1, ble_evt_discon
 | @brief | This API is used to register ble event callback functions. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **ble_evt_connect**: the callback function for ble connected event. 
- **ble_evt_disconnect**: the callback function for ble disconnected event. | 
-| **@module** | RAK5010 
- RAK8212(M) 
- RAK4600 
- RAK4400 | 
+| **@param** | **ble_evt_connect**: the callback function for ble connected event. <br /> **ble_evt_disconnect**: the callback function for ble disconnected event. | 
+| **@module** | RAK5010 <br /> RAK8212(M) <br /> RAK4600 <br /> RAK4400 | 
 
 ---
 
@@ -119,16 +111,11 @@ uint32_t rui_ble_evt_register_callback(ble_evt_connect callback1, ble_evt_discon
 RUI_RETURN_STATUS rui_ble_set_work_mode(BLE_WORK_MODE mode, bool long_range_enable);
 ```
 
-| @brief | This API is used to set the
-work mode of BLE | 
+| @brief | This API is used to set the<br />work mode of BLE | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **BLE_WORK_MODE mode**: BLE_MODE_PERIPHERAL, BLE_MODE_CENTRAL, BLE_MODE_OBSERVER 
- **long_range_enable**: true or false | 
-| **@module** | RAK5010 
- RAK8212(M) 
- RAK4600 
- RAK4400 | 
+| **@param** | **BLE_WORK_MODE mode**: BLE_MODE_PERIPHERAL, BLE_MODE_CENTRAL, BLE_MODE_OBSERVER <br /> **long_range_enable**: true or false | 
+| **@module** | RAK5010 <br /> RAK8212(M) <br /> RAK4600 <br /> RAK4400 | 
 
 ---
 
@@ -141,11 +128,8 @@ void rui_ble_rx_data_notify(uint8_t *pdata, uint16_t len)
 | @brief | This API is used to receive the notify data coming from other devices through BLE |
 | ---- | ---- |
 | **@return** | NULL | 
-| **@param** | __uint8_t *pdata__:      the receive data 
- __uint16_t len__:       the length of receive data. |
-| **@module** | RAK8212-M 
- RAK5010 
- RAK4600 |
+| **@param** | __uint8_t *pdata__:      the receive data <br /> __uint16_t len__:       the length of receive data. |
+| **@module** | RAK8212-M <br /> RAK5010 <br /> RAK4600 |
 
 ---
 
@@ -158,11 +142,8 @@ RUI_RETURN_STATUS rui_ble_tx_data_write(uint8_t *pdata, uint16_t len)
 | @brief | This API is used to write data to another BLE device through BLE. | 
 | ---- | ---- | 
 | **@return** | <a href="/RUI/#rui-return-status.html" target="blank">RUI_RETURN_STATUS</a> | 
-| **@param** | **uint8_t pdata**: The data which will be sent. 
- **uint16_t len**: The length of data. | 
-| **@module** | RAK8212-M 
- RAK5010 
- RAK4600 | 
+| **@param** | **uint8_t pdata**: The data which will be sent. <br /> **uint16_t len**: The length of data. | 
+| **@module** | RAK8212-M <br /> RAK5010 <br /> RAK4600 | 
 
 ---
 
@@ -176,9 +157,6 @@ void rui_ble_advertising_start(void);
 | ---- | ---- | 
 | **@return** | NULL | 
 | **@param** | NULL | 
-| **@module** | RAK5010 
- RAK8212 
- RAK8212M 
- RAK4600 
- RAK4400 | 
+| **@module** | RAK5010 <br /> RAK8212 <br /> RAK8212M <br /> RAK4600 <br /> RAK4400 | 
 
+<RkBottomNav/>

@@ -1,4 +1,6 @@
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # BLE Beacon Custom Payload
 
@@ -13,19 +15,31 @@ The project is available on Arduino IDE **RAK WisBlock RUI Examples**.
 
 1. Launch Arduino IDE then go to: **File** -> **Examples** -> **RAK WisBlock RUI Examples** -> **Example** -> **BLE_Beacon_Custom_Payload**.
 
-> **Image:** RAK WisBlock RUI BLE Beacon custom payload example
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-beacon-custom-payload.png"
+  width="100%"
+  caption="RAK WisBlock RUI BLE Beacon custom payload example"
+/>
 
 2. Once the example code is open, you can now select the correct serial port, as shown in **Figure 2**.
 
-> **Image:** Selecting the correct serial port
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/arduino-port.png"
+  width="100%"
+  caption="Selecting the correct serial port"
+/>
 
 3. The last step is to upload the code by clicking the highlighted **Upload** icon.
 
-> **Image:** Uploading the BLE Beacon Custom Payload example code
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/custom-upload.png"
+  width="100%"
+  caption="Uploading the BLE Beacon Custom Payload example code"
+/>
 
 ## Example Details
 
-This sketch sends an [Eddystone URL](https://en.wikipedia.org/wiki/Eddystone_(Google)) beacon. The BLE beacons can contain up to 31 bytes of data in their payload.
+This sketch sends an [Eddystone URL](https://en.wikipedia.org/wiki/Eddystone_(Google)) beacon. The BLE beacons can contain up to 31&nbsp;bytes of data in their payload.
 
 ## Configurable Parameters
 
@@ -56,5 +70,10 @@ api.ble.settings.blemode(RAK_BLE_BEACON_MODE);
 
 You can scan the custom beacons sent by the `BLE_Beacon_Custom_Payload` project using the [nRF Connect for Mobile](https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-mobile) tool.
 
-> **Image:** nRF Connect for Mobile tool scan
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/eddystone-url.png"
+  width="40%"
+  caption="nRF Connect for Mobile tool scan"
+/>
 
+<RkBottomNav/>

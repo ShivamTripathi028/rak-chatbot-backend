@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19008 WisBlock IO Extension Cable Datasheet
 
 ## Overview
@@ -20,7 +23,7 @@ The RAK19008 is a **WisBlock IO Extension Cable** used to position WisBlock IO m
 
 ### Features
 
-* 120 mm length FPC (Flat Printed Circuit) board
+* 120&nbsp;mm length FPC (Flat Printed Circuit) board
 * All signals of the 40-pin Slot connector are available
 * Compatible with many WisBlock Base Board with 40-pin WisConnector
 * Easy click and use application
@@ -43,15 +46,28 @@ The hardware specification covers the mechanical characteristics and the schemat
 
 Figure 1 shows the dimensions and mechanical drawing of the RAK19008 WisBlock IO Extension cable.
 
-> **Image:** RAK19008 IO Extension Cable Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19008/datasheet/rak19008-detail.png"
+  width="80%"
+  caption="RAK19008 IO Extension Cable Mechanical Characteristics"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19008/datasheet/rak19008-footprint.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
 
 #### Schematic Diagram
 
 Figure 3 shows the schematic diagram of RAK19008 WisBlock IO Extension Cable.
 
-> **Image:** RAK19008 WisBlock IO Sensor Extension Cable Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19008/datasheet/rak19008_sch.png"
+  width="100%"
+  caption="RAK19008 WisBlock IO Sensor Extension Cable Schematic"
+/>
 
+<RkBottomNav/>

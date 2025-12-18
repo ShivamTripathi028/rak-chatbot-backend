@@ -12,6 +12,9 @@ slug: /product-categories/wisduo/bastwan/quickstart/
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK3244 BastWAN Breakout Board Quick Start Guide
 
 ## Description
@@ -34,7 +37,12 @@ Before powering the Feather Board, ensure that the included LoRa antenna is conn
 
 RAK3244 BastWAN board comes with a pre-flashed bootloader upon purchase. However, if it is necessary to replace the bootloader, you can burn the <a href="https://github.com/RAKWireless/Evaluation_Boards/tree/master/RAK4260/Arduino" target="_blank">bootloader-bast-wan-v3.4.0.bin</a> with Jlink as demonstrated below:
 
-> **Image:** Flash the bootloader
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/download.png"
+  width="60%"
+  caption="Flash the bootloader"
+  zoomMode={true}
+/>
 
 You can also flash the bootloader by using the <a href="https://docs.rakwireless.com/product-categories/accessories/rakdap1/overview/" target="_blank">RAKDAP1 Flash and Debug Tool</a>. The guide on how to connect RAK3244 to RAKDAP1 can be found on <a href="https://docs.rakwireless.com/product-categories/wisduo/bastwan/datasheet/#interfaces" target="_blank">SWD Programming Interface section of RAK3244 datasheet</a>.
 
@@ -50,7 +58,12 @@ Once the command is executed, the bootloader should be flashed successfully. You
 
 This section covers **The Things Network (TTN)** and the procedure for setting up the platform to connect with the RAK3244 BastWAN.
 
-> **Image:** RAK3244 BastWAN in the context of the TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/3.ttn-context.png"
+  width="65%"
+  caption="RAK3244 BastWAN in the context of the TTN"
+  zoomMode={true}
+/>
 
 As depicted in **Figure 2**, the RAK3244 BastWAN is one of the devices positioned on the left side. In an IoT solution, its purpose is to sense relevant process variables and transmit the data to backend servers in the cloud. The processed data is then integrated into a larger solution to enable efficiency, traceability, predictability, and other capabilities.
 
@@ -60,23 +73,44 @@ The RAK3244 BastWAN can be part of this ecosystem, and this section aims to demo
 The device name used for this setup is **"RAK4260"**, as it is the core of the RAK3244 BastWAN. However, you can assign any device name you prefer for your setup.
 :::
 
-**Sign up and Login**
+<b>Sign up and Login</b>
 
 If you don’t have an account yet, visit the <a href="https://www.thethingsnetwork.org/" target="_blank">TTN website</a> to create one. After completing the registration, log in to your account and navigate to the **Console**.
 
-> **Image:** The Things Network Home Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/4.ttn-home.png"
+  width="100%"
+  caption="The Things Network Home Page"
+  zoomMode={true}
+/>
 
-> **Image:** TTN Console Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/5.ttn_console.png"
+  width="100%"
+  caption="TTN Console Page"
+  zoomMode={true}
+/>
 
 #### Create a New Application
 
 1. Choose **APPLICATIONS**.
 
-> **Image:** Application Section
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/6.application_section.png"
+  width="100%"
+  caption="Application Section"
+  zoomMode={true}
+/>
 
 2. Click the **add application** button.
 
-> **Image:** Add an Application
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/7.adding_application.png"
+  width="100%"
+  caption="Add an Application"
+  zoomMode={true}
+/>
 
 * Here are the key points to remember when adding an application:
 
@@ -87,17 +121,32 @@ If you don’t have an account yet, visit the <a href="https://www.thethingsnetw
 
 3. After entering the required information, click the **Add Application** button. If a page similar to **Figure 8** appears, your application has been successfully registered.
 
-> **Image:** Application Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/8.application_overview.png"
+  width="100%"
+  caption="Application Overview"
+  zoomMode={true}
+/>
 
-**Register a New Device**
+<b>Register a New Device</b>
 
 1. Scroll down until you see the Devices section or click the **Devices** button at the top.
 
-> **Image:** Register a New Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/9.devices.png"
+  width="100%"
+  caption="Register a New Device"
+  zoomMode={true}
+/>
 
 2. Then, register a new device by clicking on **register devices**.
 
-> **Image:** Add your Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/10.adding_device.png"
+  width="100%"
+  caption="Add your Device"
+  zoomMode={true}
+/>
 
 In this form, the **Device ID** must be unique within the application and consist of lowercase, alphanumeric characters. The other parameters in the form are crucial for the proper functioning of the LoRaWAN protocol:
 
@@ -109,7 +158,12 @@ The TTN platform can generate these parameters randomly by leaving those fields 
 
 3. Click the **Register** button at the bottom of this page to finish the process.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/11.device_overview.png"
+  width="100%"
+  caption="Device Overview"
+  zoomMode={true}
+/>
 
 Now that the Device EUI, Application EUI, and Application Key are defined, proceed with the setup of RAK3244 BastWAN LoRa configurations.
 
@@ -124,25 +178,50 @@ This section introduces how to use the RAK3244 BastWAN with the Arduino™ IDE.
 
 2. Click **OK**.
 
-> **Image:** Arduino additional board support
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/additional-board-support.png"
+  width="60%"
+  caption="Arduino additional board support"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 If there is already an existing URL on the textbox, click the button at the right end of the field. This will open an editing window, allowing you to paste the above URL onto a new line as demonstrated in **Figure 12**.
 :::
 
-> **Image:** Alternative method for additional board support
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/support-board-add-url.png"
+  width="60%"
+  caption="Alternative method for additional board support"
+  zoomMode={true}
+/>
 
 2. Open the **Boards Manager** by navigating through **Tools > Board > Boards Manager**.
 
-> **Image:** Arduino boards manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/boards-manager.png"
+  width="60%"
+  caption="Arduino boards manager"
+  zoomMode={true}
+/>
 
 3. In the Boards Manager search bar, look for **Electronic Cats SAMD Boards**. Click **Install** next to **Electronic Cats SAMD Boards**, and wait for the installation to complete before closing the window.
 
-> **Image:** Install Electronic Cats SAMD Boards
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/electronic-cats-samd-boards.png"
+  width="60%"
+  caption="Install Electronic Cats SAMD Boards"
+  zoomMode={true}
+/>
 
 4. RAK3244 BastWAN should now be on the list of Boards by navigating through **Tools > Board > Electronic Cats SAMD(L)(C) Core for Arduino**.
 
-> **Image:** RAK3244 BastWAN available in Boards list
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/bastwan-in-boards.png"
+  width="85%"
+  caption="RAK3244 BastWAN available in Boards list"
+  zoomMode={true}
+/>
 
 ### LoRaWAN Library Installation
 
@@ -150,7 +229,12 @@ RAK3244 BastWAN board uses the Beelan-LoRaWAN library, which supports LoRaWAN Cl
 
 To ensure the sample code works, install the **Beelan-LoRaWAN** library. In the Arduino IDE, go to **Tools > Manage Libraries**. Search for **Beelan LoRaWAN** and install the latest version of the library. The window will indicate when the library is successfully installed, as shown in **Figure 15**.
 
-> **Image:** Beelan LoRaWAN library installed
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/library-installed.png"
+  width="70%"
+  caption="Beelan LoRaWAN library installed"
+  zoomMode={true}
+/>
 
 Visit the <a href="https://github.com/BeelanMX/Beelan-LoRaWAN" target="_blank">Beelan-LoRaWAN official GitHub repository</a> for more information.
 
@@ -168,7 +252,12 @@ For the RAK3244 BastWAN to successfully connect to a LoRaWAN Platform, several p
 
 The most volatile parameters on LoRaWAN configuration are the Device EUI, Application EUI, and Application Keys. These data must match with the ones on The Thing Network (TTN) platform. Copy the EUIs and Keys from the TTN platform and paste them on the sample source code. **Figure 17** shows the lines of codes that should be modified:
 
-> **Image:** Device EUI, Application EUI, and Application Keys
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/dev_app_eui.png"
+  width="60%"
+  caption="Device EUI, Application EUI, and Application Keys"
+  zoomMode={true}
+/>
 
 ### Compile and Flash the Firmware
 
@@ -176,13 +265,25 @@ Now that the LoRaWAN parameters are set, run the sample program.
 
 Click the **Verify** button on the upper left of Arduino IDE to compile the code. Before uploading the sample firmware, make sure that the RAK3244 BastWAN is connected and recognized by your PC. To verify this, there must be an assigned port on the **Tools** toolbar of Arduino IDE. It should not be grayed out.
 
-> **Image:** Compilation of sample source code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/compilation.png"
+  width="100%"
+  caption="Compilation of sample source code"
+  zoomMode={true}
+/>
 
 If everything is well, click the **Upload** button and the firmware should be flashed to your RAK3244 BastWAN.
 
-> **Image:** Upload the sample source code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/bastwan/quickstart/uploading.png"
+  width="100%"
+  caption="Upload the sample source code"
+  zoomMode={true}
+/>
 
 The RAK3244 BastWAN will try to join the LoRaWAN network server, and if it is successful, it will send a string to verify its presence. You can find more details of the operation by examining the sample source code and opening the serial monitor.
 
 Feel free to experiment with your own and explore the capabilities of RAK3244 BastWAN.
 
+
+<RkBottomNav/>

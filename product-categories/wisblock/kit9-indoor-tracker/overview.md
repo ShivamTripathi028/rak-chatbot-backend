@@ -11,6 +11,8 @@ image: "https://images.docs.rakwireless.com/wisblock/kits/9_indoor_tracker_kit_1
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock Indoor Location Tracker Kit
 
 Thank you for choosing **WisBlock Indoor Location Tracker Kit** in your awesome IoT project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -44,3 +46,5 @@ In addition to its powerful tracking capabilities, the WisBlock Indoor Location 
         - Two (2) <a href="https://store.rakwireless.com/products/wisblock-gsm-module-rak13101?utm_source=RAK13101&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK13101</a> with GSM/GPRS capability
 - GPS built-in on Cellular modules (only works outdoor)  
 
+
+<RkBottomNav/>

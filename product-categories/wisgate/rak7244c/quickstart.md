@@ -10,16 +10,21 @@ sidebar_label: Quick Start Guide
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7244C Quick Start Guide
 
 ## Prerequisites
 
+
+
 ### What Do You Need?
 
 1. [RAK7244C WisGate Developer D4+ Gateway](https://store.rakwireless.com/products/rak7244-lpwan-developer-gateway?variant=31446039691309&utm_source=RAK7244CDeveloperD4%2B&utm_medium=Document&utm_campaign=BuyFromStore)
-2. 16 GB SD Card + Card Reader
-3. 5 V at least 3 A Micro USB Power Supply
+2. 16&nbsp;GB SD Card + Card Reader
+3. 5&nbsp;V at least 3&nbsp;A Micro USB Power Supply
 4. A Windows/Mac OS/Linux Computer
 5. Latest [RAK7244C Firmware](https://docs.rakwireless.com/product-categories/wisgate/rak7244/datasheet/#firmware)
 
@@ -29,7 +34,12 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 
 ### What's Included in the Package?
 
-> **Image:** RAK7244C package contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/quick-start-guide/package.png"
+  width="100%"
+  caption="RAK7244C package contents"
+/>
+
 
 ## Product Configuration
 
@@ -47,7 +57,11 @@ Before powering the Raspberry Pi 4, you should connect the LoRa, GPS, and LTE an
 
 By default, the gateway will work in Wi-Fi AP mode, which means you can find an SSID named "**Rakwireless_XXXX**" on your PC Wi-Fi Network List.
 
-> **Image:** RAKwireless access point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/1.lz4jkwc4hc5bulz0tial.png"
+  width="80%"
+  caption="RAKwireless access point"
+/>
 
 :::tip NOTE
 **XXXX** is the last 2 bytes of your RAK7244C Wi-Fi MAC address. Connect to this Wi-Fi SSID using the password provided below. Take note also of the default IP address of the gateway provided below as this will be needed in connecting via SSH.
@@ -62,15 +76,27 @@ You can also connect your PC with the gateway through an Ethernet cable. By defa
 
 - To do this on a Windows PC, go to **Control Panel -> Network and Internet -> Network and Sharing Center** and **Click Ethernet**.
 
-> **Image:** Network and sharing center
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/2.em5xb92hmbrbk6l0k8ta.png"
+  width="100%"
+  caption="Network and sharing center"
+/>
 
 - Click **Properties**, then choose **Internet Protocol Version 4 (TCP/IPv4).**
 
-> **Image:** Ethernet properties
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/3.q1fuiang2vcayglvgirm.png"
+  width="90%"
+  caption="Ethernet properties"
+/>
 
 - By default, the PC will obtain an IP Address automatically. Click the option **Use the following IP Address** and enter the IP address `192.168.10.20`, then press **OK**.
 
-> **Image:** TCP/IPv4 properties
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/4.qdbxt5z0vcc0xuv6kjie.png"
+  width="90%"
+  caption="TCP/IPv4 properties"
+/>
 
 Now, you should be able to access your gateway from your PC successfully using the IP Address `192.168.10.10` through SSH.
 
@@ -80,7 +106,11 @@ Now, you should be able to access your gateway from your PC successfully using t
 
 SSH (Secure Shell) is typically used to log in to a remote machine and execute commands. There are a lot of free and good SSH Clients out there namely [**Putty**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), [**BitVise SSH Client**](https://www.bitvise.com/ssh-client-download), [**MobaXterm**](https://mobaxterm.mobatek.net/) and many more. Feel free to choose one that fits your needs, but for this guide, you will be using Putty.
 
-> **Image:** Putty software for SSH in Windows
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/5.o9zqtf7g3e8ortdutvtd.png"
+  width="60%"
+  caption="Putty software for SSH in Windows"
+/>
 
 - If you have connected to the gateway through **Wi-Fi AP Mode**, the IP Address is `192.168.230.1`.
 - If you have connected to the gateway through **Ethernet**, the IP Address is `192.168.10.10`.
@@ -89,32 +119,51 @@ SSH (Secure Shell) is typically used to log in to a remote machine and execute c
     - **Username**: pi
     - **Password**: raspberry
 
-> **Image:** Command line after log in
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/6.wzhirj41gxy8gnjgm0xy.png"
+  width="80%"
+  caption="Command line after log in"
+/>
 
 ##### 2. Mac OS
 
 Open the Terminal of Mac OS. Launch the **Terminal** application, which is found in `/Applications/Utilities/` directory. But you can also launch it from Spotlight by hitting **Command + Spacebar** and typing **Terminal** and then return:
 
-> **Image:** Opening terminal in Mac OS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/7.ml30pbgwlefwpd72liak.png"
+  width="80%"
+  caption="Opening terminal in Mac OS"
+/>
 
 Open the terminal of Mac OS. Enter **root mode** by typing the following command:
+
 
 ```
 sudo -i
 ```
 
-> **Image:** SSH in Mac OS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/8.nwmfjgjta9pulz2ztcns.png"
+  width="75%"
+  caption="SSH in Mac OS"
+/>
 
 - If you are not in root mode, enter `ssh pi@192.168.230.1` in the terminal to login to your gateway. The default password is "**raspberry**".
 - If you connect your PC with the gateway through Ethernet Cable, you should enter `ssh pi@192.168.10.10`. The default password is "**raspberry**".
 
 OK, you have logged into the Gateway through SSH successfully same with the image shown below:
 
-> **Image:** Log in successful notification
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/2.accessing-gateway/9.ke0ouxpmixgalqyu5cgk.png"
+  width="80%"
+  caption="Log in successful notification"
+/>
 
 ##### 3. Linux OS
 
 If the OS of your PC is Linux, you should do the same as the Mac OS, except for the root mode.
+
+
 
 ### Accessing the Internet
 
@@ -126,7 +175,11 @@ sudo gateway-config
 
 You will now then see a page the same as **Figure 11**.
 
-> **Image:** Configuration options for the gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/config-options.png"
+  width="75%"
+  caption="Configuration options for the gateway"
+/>
 
 1. **Set pi password** - used to set/change the password of the gateway.
 2. **Setup RAK Gateway LoRa Concentrator** - used to configure the frequency, on which the gateway will operate, and the LoRaWAN Server which the gateway will work with.
@@ -137,9 +190,11 @@ You will now then see a page the same as **Figure 11**.
 7. **Configure APN Name (optional)** – used to configure the access point name of the mobile network.
 8. **Configure LTE Module (optional)** – used to enable/disable LTE automatic dial-up.
 
+
 :::tip NOTE
 The last two options (numbers 7 and 8) can be found only on LTE versions of the gateway.
 :::
+
 
 #### Connect through Wi-Fi
 
@@ -147,7 +202,11 @@ If you want to connect through Wi-Fi, it can easily be done with the wireless ca
 
 For the gateway to connect to the router, it must work in Wi-Fi Client Mode.
 
-> **Image:** Configuration options for Wi-Fi
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/wifi-config.png"
+  width="75%"
+  caption="Configuration options for Wi-Fi"
+/>
 
 There are 5 options to choose from in the Wi-Fi configuration menu:
 
@@ -163,11 +222,19 @@ To enable Wi-Fi Client Mode, you have to disable first the AP Mode.
 
 Once Wi-Fi AP Mode has been disabled by choosing **2 Enable Client Mode/Disable AP Mode**, you can now then connect to a new Wi-Fi Network by choosing **4 Add New SSID for Client**.
 
-> **Image:** Add a new SSID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/wifi-ssid.png"
+  width="75%"
+  caption="Add a new SSID"
+/>
 
 - Start by selecting your country of residence.
 
-> **Image:** Selecting country of residence
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/region.png"
+  width="75%"
+  caption="Selecting country of residence"
+/>
 
 - Enter the SSID of the network you want to connect.
 
@@ -175,11 +242,19 @@ Once Wi-Fi AP Mode has been disabled by choosing **2 Enable Client Mode/Disable 
 Make sure to input the correct Wi-Fi SSID and Password, or you will not be able to connect to the RAK7244C again via SSH in Wi-Fi AP Mode. If stuck in this situation, follow this procedure listed in the [Reverting Back to Wi-Fi AP Mode](https://docs.rakwireless.com/product-categories/wisgate/rak7244c/quickstart/#reverting-to-wi-fi-ap-mode) section, which is applicable for all Raspberry Pi based gateways to work again in Wi-Fi AP mode.
 :::
 
-> **Image:** SSID of the network you want to connect
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/set-wifi.png"
+  width="75%"
+  caption="SSID of the network you want to connect"
+/>
 
 - Type the password. If there is none, leave it empty.
 
-> **Image:** Password of the Wi-Fi
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/set-password.png"
+  width="75%"
+  caption="Password of the Wi-Fi"
+/>
 
 #### Connect through Ethernet
 
@@ -189,11 +264,19 @@ If you want to connect to the router through an Ethernet Cable, do the following
 - Fill in a static IP Address according to the IP address of the router you want to connect to. Please note that the gateway and the router must be in the same network segment; otherwise, the connection will fail.
 - By default, the IP Address of the gateway's Ethernet is `192.168.10.10`.
 
-> **Image:** Default gateway ethernet IP address
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/gateway-eth-ip.png"
+  width="75%"
+  caption="Default gateway ethernet IP address"
+/>
 
 - Then configure the IP address of the Router. This is the LAN Interface IP address of the router.
 
-> **Image:** LAN interface IP Address of the router
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/router-eth-ip.png"
+  width="75%"
+  caption="LAN interface IP Address of the router"
+/>
 
 - Press **OK** and the success message will appear.
 - Lastly, reboot the gateway using the command shown below and put it in the command line. It will connect to the router successfully through Ethernet.
@@ -201,6 +284,7 @@ If you want to connect to the router through an Ethernet Cable, do the following
 ```
 sudo reboot
 ```
+
 
 ### Optional Configurations
 
@@ -212,7 +296,11 @@ If you have entered either or both incorrect Wi-Fi SSID and password in the Wi-F
 
 - Remove the SD card from your RAK7244C WisGate Developer D4+ Gateway and insert it into your PC. Your PC should be able to detect it same as **Figure 19**.
 
-> **Image:** Creating rak_ap file to your SD card
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/rak-ap-file.png"
+  width="50%"
+  caption="Creating rak_ap file to your SD card"
+/>
 
 - Using your **Command Prompt** or **Terminal**, navigate to your SD Card and type this command to generate the `rak_ap` file.
 
@@ -221,6 +309,7 @@ cd > rak_ap
 ```
 
 - Check if the `rak_ap` file is created successfully. If so, re-insert the SD card into your RAK7244C WisGate Developer D4+ Gateway and it should work again in Wi-Fi AP Mode.
+
 
 ### Configuring the Gateway
 
@@ -232,7 +321,11 @@ cd > rak_ap
 
 Then you will see a page like **Figure 20**:
 
-> **Image:** Gateway configuration options
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/gateway_id.png"
+  width="75%"
+  caption="Gateway configuration options"
+/>
 
 1. **Set pi password** - used to set/change the password of the gateway.
 2. **Setup RAK Gateway Channel Plan** - used to configure the frequency, on which the gateway will operate, and the LoRaWAN Server which the gateway will work with.
@@ -251,7 +344,11 @@ There is also another way to get your gateway ID, just enter the command below i
 sudo gateway-version
 ```
 
-> **Image:** Gateway ID using the command line
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/gateway_id_cmd.png"
+  width="70%"
+  caption="Gateway ID using the command line"
+/>
 
 #### Setting a New Password for the Gateway
 
@@ -259,36 +356,65 @@ It is a good security practice to change the default password **raspberry**, whi
 
 1. First, choose the **1 Set pi password** option referred to in the image below.
 
-> **Image:** Set Pi password
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/set_pi_pwd.png"
+  width="75%"
+  caption="Set Pi password"
+/>
 
 2. Next, press **Yes** and you will be asked to enter your new password twice then press **Enter**.
 
-> **Image:** Confirm password change
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/confirm_pwd.png"
+  width="75%"
+  caption="Confirm password change"
+/>
 
 3. Alright, the success message for changing the password will then pop up.
 
-> **Image:** Successful password change
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/success_pwd_change.png"
+  width="75%"
+  caption="Successful password change"
+/>
 
 ## Setup RAK Gateway Channel Plan
 
 This menu allows you to select your LoRa frequency band and one of the two available Networks Server options by choosing **2 Setup RAK Gateway LoRa concentrator**.
 
-> **Image:** Choosing Setup RAK Gateway LoRa concentrator
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/setup_rak_gateway.png"
+  width="75%"
+  caption="Choosing Setup RAK Gateway LoRa concentrator"
+/>
 
 You can choose one of two supported LoRa Servers here: **TTN** or
 **ChirpStack**.
 
 ##### Server is TTN
 
-> **Image:** TTN Server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/server_ttn.png"
+  width="75%"
+  caption="TTN Server"
+/>
 
 - **TTN (The Things Network)** - If you choose TTN as the LoRa Server, you will see the following page. Visit the [LoRa Alliance Regional Parameters](https://lora-alliance.org/wp-content/uploads/2021/05/RP002-1.0.3-FINAL-1.pdf) for more information on your local frequency plan. This will allow you to choose the correct plan.
 
-> **Image:** Selecting the TTN channel plan
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/ttn_channel_plan.png"
+  width="75%"
+  caption="Selecting the TTN channel plan"
+/>
 
 After choosing the correct frequency, a success message will appear, as shown in **Figure 41**.
 
-> **Image:** Successfully changed the frequency
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/success_freq_change.png"
+  width="75%"
+  caption="Successfully changed the frequency"
+/>
+
 
 :::tip NOTE
 
@@ -302,24 +428,41 @@ When a channel plan is selected, the gateway is configured to connect to the nea
 
 If you want to use TTN for LoRa Network server, you can skip the **If the Server is ChirpStack** section and head to registering the gateway in [TTN](https://eu1.cloud.thethings.network/console/).
 
+
 ##### Server is Chirpstack
 
-> **Image:** Chirpstack server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/chirpstack.png"
+  width="75%"
+  caption="Chirpstack server"
+/>
 
 **ChirpStack** - If you choose Chirpstack as your LoRa Server, you will see the following page with two options available:
 - **ChirpStack Channel Plan Configuration** - used to configure your Regional Frequency Band.
 - **ChirpStack ADR Configure** - used to enable/disable the Adaptive Data Rate (ADR)
   functionality.
 
-> **Image:** Configure ChirpStack channel plan
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/chirpstack_channel.png"
+  width="75%"
+  caption="Configure ChirpStack channel plan"
+/>
 
 First, select **1 ChirpStack Channel-plan configuration** for configuring your frequency channel.
 
-> **Image:** Regional frequency band option
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/chirpstack-channel-plan.png"
+  width="75%"
+  caption="Regional frequency band option"
+/>
 
 Then set the IP address of the ChirpStack.
 
-> **Image:** Default LoRaServer IP address
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/loraserver_ip.png"
+  width="75%"
+  caption="Default LoRaServer IP address"
+/>
 
 :::tip NOTE
 The default IP Address is `127.0.0.1`. If you want to use an external ChirpStack, you need to set it to its IP Address.
@@ -327,7 +470,14 @@ The default IP Address is `127.0.0.1`. If you want to use an external ChirpStack
 
 - If you have selected "**Chirpstack ADR Configure**", you can enable/disable the Adaptive Data Rate (ADR) functionality.
 
-> **Image:** Chirpstack ADR Enable/Disable
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/3.configure-gateway/adr_settings.png"
+  width="75%"
+  caption="Chirpstack ADR Enable/Disable"
+/>
+
+
+
 
 #### Connecting through an LTE Network
 
@@ -342,14 +492,22 @@ The RAK7244C comes with the RAK2013 Cellular, making it capable of connecting th
 
 3. In the main configuration menu, choose **7 Configure LTE Module**.
 
-> **Image:** Configure LTE module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/config-lte.png"
+  width="75%"
+  caption="Configure LTE module"
+/>
 
 Two configuration options are available for your LTE.
 
 1. **Enable LTE Automatic Dial-up** - the default option and is used to enable automatic connection during start-up.
 2. **Disable LTE Automatic Dial-up** - used to disable automatic connection during start-up.
 
-> **Image:** LTE configuration options
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/lte-config-options.png"
+  width="75%"
+  caption="LTE configuration options"
+/>
 
 3. Next, you need to configure the LTE network operator’s information. Make sure to disable the automatic connection on the start-up feature before starting.
 
@@ -359,11 +517,19 @@ Two configuration options are available for your LTE.
    sudo minicom -D /dev/ttyAMA0 -b 115200
    ```
 
-> **Image:** Minicom tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/minicom.png"
+  width="60%"
+  caption="Minicom tool"
+/>
 
 5. Then, try entering the command **at** in the tool. If it returns with **OK**, it means you have opened the serial port successfully.
 
-> **Image:** AT Command in Minicom
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/at-command.png"
+  width="60%"
+  caption="AT Command in Minicom"
+/>
 
 :::tip NOTE
 If you cannot see the `at`, which you just entered. Try to hold `CTRL+A`, then press `Z`, then `E`. This should allow you to go to the command entering mode.
@@ -371,11 +537,19 @@ If you cannot see the `at`, which you just entered. Try to hold `CTRL+A`, then p
 
 6. Next, execute the AT command `at+cops=?` to look for all available LTE networks in range.
 
-> **Image:** AT Command for LTE network query
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/lte-query.png"
+  width="60%"
+  caption="AT Command for LTE network query"
+/>
 
 This may take a couple of seconds. After that, you'll see the available LTE network information similar to **Figure 39**.
 
-> **Image:** LTE network example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/network-lte-sample.png"
+  width="75%"
+  caption="LTE network example"
+/>
 
 :::tip NOTE
 **Figure 39** shows the available LTE network in China. This information may vary depending on the available network in your region. For instance, in China, the available network are `CHINA MOBILE`, `CHN-UNICOM`, or `CHN-CT`.
@@ -388,11 +562,19 @@ This may take a couple of seconds. After that, you'll see the available LTE netw
 
 Now, take this LTE network in Europe (Bulgaria) as an example:
 
-> **Image:** Sample LTE Networks in EU
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/sample-lte.png"
+  width="75%"
+  caption="Sample LTE Networks in EU"
+/>
 
 Then, using the sample AT command described above, the command will be:
 
-> **Image:** Sample AT Command for LTE network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/sample-command.png"
+  width="75%"
+  caption="Sample AT Command for LTE network"
+/>
 
 Lastly, you will receive `OK`, which means you have successfully configured the LTE network.
 
@@ -402,7 +584,11 @@ To exit Minicom, press `Enter`, `Ctrl + A` then press `Q`. A pop-up will appear 
 
 8. Proceed to set the **APN name** for the **pppd** process. From the main configuration menu, choose **6 Configure APN name**.
 
-> **Image:** Configure APN name
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/config-apn.png"
+  width="75%"
+  caption="Configure APN name"
+/>
 
 9. Then, you will see the window option below where you can change the APN Name or retain its default name.
 
@@ -410,11 +596,19 @@ To exit Minicom, press `Enter`, `Ctrl + A` then press `Q`. A pop-up will appear 
 If you want to modify the APN Name, make sure it is a real and valid APN Name.
 :::
 
-> **Image:** APN name
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/apn-name.png"
+  width="75%"
+  caption="APN name"
+/>
 
 10. Lastly, set the baud rate. The default value is `115200`.
 
-> **Image:** Baud rate setting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/baud-rate.png"
+  width="75%"
+  caption="Baud rate setting"
+/>
 
 You have now finished configuring your LTE network. Now, you can test and verify the connection as follows:
 
@@ -426,11 +620,19 @@ sudo pppd call gprs
 
 There will be a series of logs. After that, you will see the following information at the end of the log.
 
-> **Image:** IP address Information
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/ip-add-info.png"
+  width="75%"
+  caption="IP address Information"
+/>
 
 You will be assigned with an IP address (local and remote) along with the DNS addresses. Having this information signifies that your connection has been  successfully established.
 
 Also, do not forget to re-enable the automatic LTE connection on startup
 
-> **Image:** Enabling the automatic LTE connection during start-Up
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244c/quickstart/1.accessing-internet/lte-connection-enabling.png"
+  width="75%"
+  caption="Enabling the automatic LTE connection during start-Up"
+/>

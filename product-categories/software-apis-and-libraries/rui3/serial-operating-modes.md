@@ -1,4 +1,5 @@
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # RAK Unified Interface V3 (RUI3) Serial Operating Modes
 
@@ -87,8 +88,11 @@ The default mode of every serial port can be switched to a new mode. After switc
 After switching to a new mode, the new mode setting will be kept even if the device resets.
 
 <!---
-
-> **Image:** RUI3 Serial Operating Modes
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/mode_switch.png"
+  width="85%"
+  caption="RUI3 Serial Operating Modes"
+/>
 
 **AT Command to Binary Mode**
 
@@ -138,3 +142,5 @@ You need to use the RUI API `Serial.begin` to switch the serial operating mode t
 | Drawback     | Inefficient in M2M case      |  Need to write parser from scratch |
 | Prerequisite | No                           |  Need to setup IDE to write code   |
 
+
+<RkBottomNav/>

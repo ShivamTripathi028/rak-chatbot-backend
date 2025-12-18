@@ -9,7 +9,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7204 WisNode Sense Home Datasheet
+
 
 ## Overview
 
@@ -21,14 +25,15 @@ Because the RAK7204 is built around a low-power MCU and low-power sensors, and t
  
  The firmware has built-in functionality that allows users to adjust the sampling interval of the sensors and the transmission cycle. This provides flexibility, as one can choose to have more detailed measurements at the cost of battery life or extend operational time, trading off the volume of data generated.
 
-Last but not least, the RAK7204 adopts a highly integrated design. The environmental sensors, LoRa transceiver module, LoRa antenna, and battery are fitted in a 90 mm x 85 mm x 34 mm housing. These small dimensions allow for installation in tight spaces or those that require the sensor to have a minimal impact on the overall feel of the surrounding environment. The housing adopts a hollow, permeable design to facilitate airflow to more accurately detect environmental changes.
+Last but not least, the RAK7204 adopts a highly integrated design. The environmental sensors, LoRa transceiver module, LoRa antenna, and battery are fitted in a 90&nbsp;mm x 85&nbsp;mm x 34&nbsp;mm housing. These small dimensions allow for installation in tight spaces or those that require the sensor to have a minimal impact on the overall feel of the surrounding environment. The housing adopts a hollow, permeable design to facilitate airflow to more accurately detect environmental changes.
+
 
 ### Features
 
 - Measurement of a variety of environmental parameters: **Temperature**, **Humidity**, **Gas Pressure**, and **Indoor Air Quality (IAQ)**
 - **BOSCH BME680** Integrated Environmental Unit
 - **LoRaWAN 1.0.2** fully compliant
-- Low power operation and standby current of less than 15 uA
+- Low power operation and standby current of less than 15&nbsp;uA
 - Adjustable sampling and transmission interval.
 - Comes with a **replaceable 3500 mAh high capacity lithium battery**
 - Real time battery status monitoring.
@@ -49,7 +54,11 @@ Furthermore, as all RAKwireless Industrial Gateways (including the aforementione
 Thus, the solution is both incredibly quick an easy to deploy initially, and also allows for scaling as the number of nodes grows and application requirements change.
 The aforementioned combination of RAK7204 and RAK7258 is visualized in **Figure 1** below.
 
-> **Image:** Typical deployment scenario
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/datasheet/typical-application.png"
+  width="75%"
+  caption="Typical deployment scenario"
+/>
 
 ### Hardware
 
@@ -114,11 +123,26 @@ The pin distance of the battery connector is **2.0mm**. Reverse connection or sh
 
 ##### Schematic Diagram
 
-> **Image:** Schematic Diagram - 1
 
-> **Image:** Schematic Diagram - 2
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/datasheet/rak7204-vc-1.png"
+  width="100%"
+  caption="Schematic Diagram - 1"
+/>
 
-> **Image:** Schematic Diagram - 3
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/datasheet/rak7204-vc-2.png"
+  width="100%"
+  caption="Schematic Diagram - 2"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7204/datasheet/rak7204-vc-3.png"
+  width="100%"
+  caption="Schematic Diagram - 3"
+/>
+
+
 
 #### Sensor Characteristics
 
@@ -181,3 +205,6 @@ Download the latest firmware of the RAK7204 in table provided below.
 
 ## Certification
 
+
+
+<RkBottomNav/>

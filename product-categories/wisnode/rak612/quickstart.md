@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK612 WisNode Button Quick Start Guide
 
 ## Prerequisites
@@ -18,6 +21,7 @@ sidebar_label: Quick Start Guide
 2. Micro USB Cable
 3. Gateway in Range for Testing
 4. A Windows PC
+
 
 :::tip NOTE
 This device released by RAKWireless is already pre-loaded with its latest firmware upon manufacture. If you want to have your device's firmware burned or upgraded, refer to the section below:
@@ -39,15 +43,27 @@ If this is your first time to connect your RAK612 WisNode Button to your compute
 
 2. Go to your **Device Manager** by pressing : **Windows + R** and type `devmgmt.msc` or **search in Start Menu** or right click **My Computer** or "**This PC**" and click **Manage**. Look for **Other Devices.**
 
-> **Image:** Missing Driver for the RAK612 WisNode Button
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/missing-driver.png"
+  width="100%"
+  caption="Missing Driver for the RAK612 WisNode Button"
+/>
 
 3. Under **Other devices** drop down list, an unknown **USB2.0-Serial** driver must appear. Right click into it and choose **Search automatically for updated driver software**. Again, before doing so, make sure to have an internet access or it will fail.
 
-> **Image:** Automatic Driver Installation via Internet
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/automatic-install.png"
+  width="100%"
+  caption="Automatic Driver Installation via Internet"
+/>
 
 4. Wait for it to automatically download and install the missing driver. Once installation is done, **USB-SERIAL CH340** must appear in the **Ports (COM & LPT)** drop down list. Take note of the COM Port associated with the driver as it will be used in the succeeding steps. For this sample process, the COM Port used by the USB-SERIAL CH340 driver is **COM4**.
 
-> **Image:** USB-SERIAL CH340 Driver Successfully Installed
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/usb-ch340.png"
+  width="100%"
+  caption="USB-SERIAL CH340 Driver Successfully Installed"
+/>
 
 :::tip NOTE
 In case the driver is still not installed upon doing the previous steps, kindly download the [driver](https://downloads.rakwireless.com/#LoRa/RAK811/Tools/) manually.
@@ -56,9 +72,13 @@ In case the driver is still not installed upon doing the previous steps, kindly 
 5. Test if your RAK612 WisNode Button can now communicate with the RAK Serial Port Tool. Connect with the RAK Serial Port Tool using the parameters listed below and click "**Open**".
 
    - **COM**: Choose the COMPort associated with the USB-SERIAL CH340 from the previous step. For this tutorial, the COM Port is COM4.
-   - **Baud Rate**: **115200** bps
+   - **Baud Rate**: **115200**&nbsp;bps
 
-> **Image:** Connecting to the RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/rak-serial.png"
+  width="90%"
+  caption="Connecting to the RAK Serial Port Tool"
+/>
 
 6. To verify connectivity, try sending AT Commands. In the RAK Serial Port Tool, there are built-in AT Commands within it at the right side. Try sending the code below to check the firmware version of your RAK612 WisNode Button. If connection is successful, in the monitor panel at the left, the firmware version should appear same with the image shown below:
 
@@ -66,25 +86,46 @@ In case the driver is still not installed upon doing the previous steps, kindly 
 at+version
 ```
 
-> **Image:** AT Command Sample Serial Communication Test
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/at-comm.png"
+  width="90%"
+  caption="AT Command Sample Serial Communication Test"
+/>
+
 
 ### Connecting to The Things Network (TTN)
 
 In this section, you will be connecting the RAK612 WisNode Button to The Things Network (TTN). If you don't have an account yet, head on to [The Things Network](https://www.thethingsnetwork.org/) and create one. Once done, Log in to your account and go to the console which can be found here:
 
-> **Image:** The Things Network Home Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/ttn-homepage.png"
+  width="100%"
+  caption="The Things Network Home Page"
+/>
 
-> **Image:** TTN Console Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/ttn-console.png"
+  width="100%"
+  caption="TTN Console Page"
+/>
 
 - Choose "**APPLICATIONS**"
 
-> **Image:** Application Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/ttn-application.png"
+  width="100%"
+  caption="Application Page"
+/>
 
 #### Adding An Application
 
 - Click the "**add application**" button
 
-> **Image:** Adding an Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/add-application.png"
+  width="100%"
+  caption="Adding an Application"
+/>
 
 Here are the things that you should take note in adding an application:
 
@@ -95,17 +136,29 @@ Here are the things that you should take note in adding an application:
 
 - After you fill in the necessary information, press the "**Add application**" button at the bottom of this page. If you see the following page, this means that you have successfully registered your application.
 
-> **Image:** Adding an Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/application-overview.png"
+  width="100%"
+  caption="Adding an Application"
+/>
 
 ##### Register Device
 
 - Scroll down until you see the Devices section, or you can also click the "**Devices**" button at the top:
 
-> **Image:** Device Section
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/device-section.png"
+  width="100%"
+  caption="Device Section"
+/>
 
 - Click "**Register device"**
 
-> **Image:** Add your Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/add-device.png"
+  width="100%"
+  caption="Add your Device"
+/>
 
 Here are the things that you should take note in registering your device:
 
@@ -116,7 +169,11 @@ Click the following icon and the Device EUI will be automatically generated. The
 
 - Lastly, click the Register button. Now, your device is registered under the corresponding application.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/device-overview.png"
+  width="100%"
+  caption="Device Overview"
+/>
 
 Depending on which authentication method you want to use ,proceed to either the **OTAA mode** or **ABP mode** section.
 
@@ -124,7 +181,11 @@ Depending on which authentication method you want to use ,proceed to either the 
 
 According to **The Things Network, Over-the-Air Activation** (OTAA) is the preferred and most secure way to connect with The Things Network. Thus, it is chosen as the default method when registering a device.
 
-> **Image:** Activation Method - OTAA
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/otaa-activation.png"
+  width="100%"
+  caption="Activation Method - OTAA"
+/>
 
 :::tip NOTE
 As an example, let's join in OTAA mode and EU868 frequency.
@@ -136,7 +197,11 @@ As an example, let's join in OTAA mode and EU868 frequency.
 at+set_config=join_mode:1
 ```
 
-> **Image:** AT Command for OTAA LoRa Join Mode via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lora-join-otaa.png"
+  width="45%"
+  caption="AT Command for OTAA LoRa Join Mode via RAK Serial Port Tool"
+/>
 
 2. Set the frequency/region to **EU868**:
 
@@ -144,7 +209,11 @@ at+set_config=join_mode:1
 at+band=EU868
 ```
 
-> **Image:** AT Command for OTAA LoRa Region/Frequency via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lora-region-otaa.png"
+  width="45%"
+  caption="AT Command for OTAA LoRa Region/Frequency via RAK Serial Port Tool"
+/>
 
 3. Set the **Device EUI.**
 
@@ -152,7 +221,11 @@ at+band=EU868
 at+set_config=dev_eui:XXXX
 ```
 
-> **Image:** AT Command for OTAA LoRa Device EUI via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lora-eui-otaa.png"
+  width="45%"
+  caption="AT Command for OTAA LoRa Device EUI via RAK Serial Port Tool"
+/>
 
 4. Set the **Application EUI**:
 
@@ -160,7 +233,11 @@ at+set_config=dev_eui:XXXX
 at+set_config=app_eui:XXXX
 ```
 
-> **Image:** AT Command for OTAA LoRa Application EUI via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lora-appeui-otaa.png"
+  width="45%"
+  caption="AT Command for OTAA LoRa Application EUI via RAK Serial Port Tool"
+/>
 
 5. Set the **Application Key**:
 
@@ -168,7 +245,11 @@ at+set_config=app_eui:XXXX
 at+set_config=app_key:XXXX
 ```
 
-> **Image:** AT Command for OTAA LoRa Application Key via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lora-appkey-otaa.png"
+  width="45%"
+  caption="AT Command for OTAA LoRa Application Key via RAK Serial Port Tool"
+/>
 
 :::tip NOTE
 After configuring all the parameters, you need to reset your RAK612 WisNode Button for saving parameters.
@@ -180,15 +261,27 @@ After configuring all the parameters, you need to reset your RAK612 WisNode Butt
 at+join=otaa
 ```
 
-> **Image:** AT Command for OTAA LoRa Join via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/otaa-join.png"
+  width="45%"
+  caption="AT Command for OTAA LoRa Join via RAK Serial Port Tool"
+/>
 
 7. Joined successfully! Now, let’s try to send a data to TTN. Try pressing any key on your RAK612 WisNode Button. You should see any data printed in the RAK Serial Port Tool whenever you press any key same as with the image below:
 
-> **Image:** Testing the RAK612 WisNode Button in RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/otaa-senddata.png"
+  width="45%"
+  caption="Testing the RAK612 WisNode Button in RAK Serial Port Tool"
+/>
 
 * You can then see the data sent from RAK612 WisNode Button in TTN website as follows:
 
-> **Image:** OTAA Test Sample Data Sent Viewed in The Things Network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/otaa-ttn-received.png"
+  width="100%"
+  caption="OTAA Test Sample Data Sent Viewed in The Things Network"
+/>
 
 #### ABP Mode
 
@@ -196,11 +289,19 @@ Follow these steps, if you want to join with The Things Network in **Activation 
 
 1. First, switch the activation method to ABP as shown in **Figure 23**.
 
-> **Image:** APB Activation in The Things Network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-ttn.png"
+  width="100%"
+  caption="APB Activation in The Things Network"
+/>
 
 2. These three parameters will be used on RAK612 WisNode Button: **Device Address**, **Network Session Key** and **App Session Key**.
 
-> **Image:** ABP Parameters in The Things Network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-param.png"
+  width="100%"
+  caption="ABP Parameters in The Things Network"
+/>
 
 :::tip NOTE
 As an example, let's join in ABP mode and EU868 frequency.
@@ -208,7 +309,11 @@ As an example, let's join in ABP mode and EU868 frequency.
 
 3. If the join mode is not in ABP Mode, just set the LoRa join mode to **ABP** as follows:
 
-> **Image:** AT Command for ABP LoRa Join Mode via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-lora-join.png"
+  width="45%"
+  caption="AT Command for ABP LoRa Join Mode via RAK Serial Port Tool"
+/>
 
 4. Set the frequency/region to **EU868**:
 
@@ -216,7 +321,11 @@ As an example, let's join in ABP mode and EU868 frequency.
 at+band=EU868
 ```
 
-> **Image:** AT Command for ABP LoRa Region/Frequency via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lora-region-otaa.png"
+  width="45%"
+  caption="AT Command for ABP LoRa Region/Frequency via RAK Serial Port Tool"
+/>
 
 5. Set the **Device Address**:
 
@@ -224,7 +333,11 @@ at+band=EU868
 at+set_config=dev_addr:XXXX
 ```
 
-> **Image:** AT Command for ABP LoRa Device Address via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-devaddr.png"
+  width="45%"
+  caption="AT Command for ABP LoRa Device Address via RAK Serial Port Tool"
+/>
 
 6. Set the **Network Session Key**:
 
@@ -232,7 +345,11 @@ at+set_config=dev_addr:XXXX
 at+set_config=nwks_key:XXXX
 ```
 
-> **Image:** AT Command for ABP LoRa Network Session Key via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-nwkskey.png"
+  width="45%"
+  caption="AT Command for ABP LoRa Network Session Key via RAK Serial Port Tool"
+/>
 
 7. Set the **Application Session Key**:
 
@@ -240,7 +357,11 @@ at+set_config=nwks_key:XXXX
 at+set_config=apps_key:XXXX
 ```
 
-> **Image:** AT Command for ABP LoRa Application Session Key via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-appskey.png"
+  width="45%"
+  caption="AT Command for ABP LoRa Application Session Key via RAK Serial Port Tool"
+/>
 
 :::tip NOTE
 After configuring all parameters, you need to reset the RAK612 WisNode Button for saving parameters.
@@ -248,15 +369,27 @@ After configuring all parameters, you need to reset the RAK612 WisNode Button fo
 
 8. After resetting your RAK612 WisNode Button, join in **ABP mode**:
 
-> **Image:** AT Command for ABP LoRa Join via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-join.png"
+  width="45%"
+  caption="AT Command for ABP LoRa Join via RAK Serial Port Tool"
+/>
 
 9. Joined successfully! Now, let’s try to send a data to TTN. Try pressing any key on your RAK612 WisNode Button. You should see any data printed in the RAK Serial Port Tool whenever you press any key same as with the image below:
 
-> **Image:** Testing the RAK612 WisNode Button in RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/abp-send-data.png"
+  width="45%"
+  caption="Testing the RAK612 WisNode Button in RAK Serial Port Tool"
+/>
 
 - You can then see the data sent from RAK612 WisNode Button in TTN website as follows:
 
-> **Image:** ABP Test Sample Data Sent Viewed in The Things Network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/ttn-abp-received.png"
+  width="100%"
+  caption="ABP Test Sample Data Sent Viewed in The Things Network"
+/>
 
 ### Key Functions Customizing
 
@@ -276,6 +409,7 @@ Listed below are the default messages send by the RAK612 WisNode Button whenever
 | Key 2 | "Key 2" |
 | Key 3 | "Key 3" |
 | Key 4 | "Key 4" |
+
 
 #### Customizing
 
@@ -297,7 +431,11 @@ at+key_config=<key>,<frame_port>,<message>
 at+key_config=2,37,Hello Mark Angelo!
 ```
 
-> **Image:** Configuring Each button
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/at-command.png"
+  width="45%"
+  caption="Configuring Each button"
+/>
 
 * You should be able to change the message to "**Hello Mark Angelo!**" whenever you press the key "**Key 2**". Congratulations, you have just customized your RAK612 WisNode Button keys. Go try the other keys with your desired message!
 
@@ -315,27 +453,51 @@ Please use the the latest firmware for the RAK612 WisNode Button in order to avo
 
 4. Open the RAK LPWAN Button Upgrade tool.
 
-> **Image:** RAK LPWAN Button Upgrade Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/upgrade-tool.png"
+  width="75%"
+  caption="RAK LPWAN Button Upgrade Tool"
+/>
 
 5. Choose the appropriate port number in the **COM Port** field. Open [Interfacing with RAK612 WisNode Button](#interfacing-with-rak612-wisnode-button) section to learn on how to choose the appropriate COM Port used. For this demonstration, the COM Port is "**COM3**".
 
-> **Image:** Select the Appropriate COM Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/select-com-port.png"
+  width="75%"
+  caption="Select the Appropriate COM Port"
+/>
 
 6. Click **Choose File** and navigate to the directory where you have saved the firmware, that you have just downloaded.
 
-> **Image:** Choosing the Firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/choosing-the-firmware.png"
+  width="75%"
+  caption="Choosing the Firmware"
+/>
 
 7. Click the **Start** Button and wait for a couple of minutes.
 
-> **Image:** Start Flashing the Firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/start-flashing.png"
+  width="75%"
+  caption="Start Flashing the Firmware"
+/>
 
-> **Image:** Upgrade Firmware Success
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/upgrade-success.png"
+  width="75%"
+  caption="Upgrade Firmware Success"
+/>
 
 #### Testing the Installed Firmware
 
 1. In order for you to check if you have successfully installed the firmware on your RAK612 WisNode Button, open the RAK Serial Port tool on your PC.
 
-> **Image:** RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/serial-port.png"
+  width="90%"
+  caption="RAK Serial Port Tool"
+/>
 
 * **COM Port** - this is where you choose the COM Port of your RAK612 WisNode Button.
 * **Baudrate** - the rate, at which information is transferred. (Use **115200** for RAK612 WisNode Button).
@@ -346,5 +508,10 @@ Please use the the latest firmware for the RAK612 WisNode Button in order to avo
 2. Choose the appropriate COM Port and Baud Rate for your RAK612 WisNode Button then click the **Open** button to open the serial port.
 3. Hold any key of the RAK612 WisNode Button for more than 5 seconds and then you will be able to see the following information:
 
-> **Image:** RAK612 WisNode Button Upgraded Firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/quickstart/lpwan-upgrade-success.png"
+  width="40%"
+  caption="RAK612 WisNode Button Upgraded Firmware"
+/>
 
+<RkBottomNav/>

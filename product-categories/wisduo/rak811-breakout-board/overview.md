@@ -10,6 +10,8 @@ slug: /product-categories/wisduo/rak811-breakout-board/overview/
 download: true
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK811 Breakout Board
 
 Thank you for choosing **RAK811 Breakout Board** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -36,17 +38,20 @@ This board is a complete solution in developing your LoRaWAN protocol techniques
 - LoRaWAN Activation by OTAA/ABP.
 - LoRa Point-to-Point (P2P) communication.
 - Integrates both **SMA** and **iPEX** antenna connectors.
-- Xbee form factor with standard 2.00 mm headers.
+- Xbee form factor with standard 2.00&nbsp;mm headers.
 - Easy to use AT Command Set via UART interface with configurable baud rate.
-- Maximum output power 100 mW (20 dBm), adjustable from 5 to 20 dBm.
-- High sensitivity at -148 dBm, enabling extremely long range connectivity.
-- Long-range - greater than 15 km with optimized antenna.
-- Low power consumption: 11 μA on on standby.
-- Ultra-Low Power Consumption of 11.9 μA (down to 1.11 μA @ 2.1 V) in sleep mode.
-- Multi-channel, dual data buffer (256 bytes each).
+- Maximum output power 100&nbsp;mW (20&nbsp;dBm), adjustable from 5 to 20&nbsp;dBm.
+- High sensitivity at -148&nbsp;dBm, enabling extremely long range connectivity.
+- Long-range - greater than 15&nbsp;km with optimized antenna.
+- Low power consumption: 11&nbsp;μA on on standby.
+- Ultra-Low Power Consumption of 11.9&nbsp;μA (down to 1.11&nbsp;μA @ 2.1&nbsp;V) in sleep mode.
+- Multi-channel, dual data buffer (256&nbsp;bytes each).
 - LoRa/FSK/GFSK/OOK modulation, bidirectional two-way communication.
 - Long battery life for battery-powered applications.
-- LoRa technology is capable of demodulating 20 dB below noise level which significantly improves immunity to interference when combined with integrated forward error correction.
-- **Operating temperature**: -30° C ~ 85° C (industrial grade)
-- **Storage temperature**: -40° C ~ 85° C (non-condensing)
+- LoRa technology is capable of demodulating 20&nbsp;dB below noise level which significantly improves immunity to interference when combined with integrated forward error correction.
+- **Operating temperature**: -30°&nbsp;C ~ 85°&nbsp;C (industrial grade)
+- **Storage temperature**: -40°&nbsp;C ~ 85°&nbsp;C (non-condensing)
 
+
+
+<RkBottomNav/>

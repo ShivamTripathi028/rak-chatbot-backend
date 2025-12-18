@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5814 WisBlock Crypto Module
 
 Thank you for choosing **RAK5814 WisBlock Crypto Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -33,12 +36,12 @@ Thank you for choosing **RAK5814 WisBlock Crypto Module** in your awesome IoT pr
     - Protected storage for up to 16 Keys, Certificates, or Data
     - Hardware support for Asymmetric Sign, Verify, and Key Agreement
     - Hardware support for Symmetric Algorithms
-    - 3.3 V Power Supply
-    - I2C Interface (Max Speed: 100 kHz)
-    - Sleep Current less than 150 nA
+    - 3.3&nbsp;V Power Supply
+    - I2C Interface (Max Speed: 100&nbsp;kHz)
+    - Sleep Current less than 150&nbsp;nA
 
 * **Module Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -48,3 +51,4 @@ To use a **RAK5814**, you need a **WisBlock Base** board to plug the module in. 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
+<RkBottomNav/>

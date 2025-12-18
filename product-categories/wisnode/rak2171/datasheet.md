@@ -12,11 +12,20 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
+
 # RAK2171 WisNode TrackIt Datasheet
 
 ## Overview
 
-> **Image:** RAK2171 WisNode TrackIt
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2171/datasheet/rak2171.png"
+  width="40%"
+  caption="RAK2171 WisNode TrackIt"
+/>
 
 ### Description
 
@@ -29,13 +38,14 @@ RAK2171 supports multiple working modes and notification options. When used with
 - MT2523 with built-in Bluetooth and GPS
 - SX1262 LoRa chip
 - Built-in accelerometer
-- Built-in battery: 400 mAh
+- Built-in battery: 400&nbsp;mAh
 - Charger with a magnetic plate
-- Small size: 42 x 42 x 18 mm
-- Low weight: 25 g
-- Operating temperature: -20° C to +60° C
+- Small size: 42 x 42 x 18&nbsp;mm
+- Low weight: 25&nbsp;g
+- Operating temperature: -20°&nbsp;C to +60°&nbsp;C
 - IP65 rating
 - Android and iOS application for easy management, configuration, and location tracking
+
 
 ## Specifications
 
@@ -43,27 +53,33 @@ RAK2171 supports multiple working modes and notification options. When used with
 
 #### Board Overview
 
-> **Image:** RAK2171 WisNode TrackIt Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2171/datasheet/dimensions.png"
+  width="40%"
+  caption="RAK2171 WisNode TrackIt Dimensions"
+/>
+
 
 | Parameter             | Value                                                                  |
 | --------------------- | ---------------------------------------------------------------------- |
-| Dimensions            | 42 x 42 x 18 mm                                                   |
-| Weight                | 25 g                                                              |
-| Operating temperature | -20° C to +60° C                                             |
-| Battery capacity      | 400 mAh                                                           |
-| Color                 | Tracker: White / Dark Grey 
- Charger: Black                       |
-| Charger               | 5-pin Magnetic Plate 
- USB Type-A 
- Cable Length: 50 cm |
+| Dimensions            | 42 x 42 x 18&nbsp;mm                                                   |
+| Weight                | 25&nbsp;g                                                              |
+| Operating temperature | -20°&nbsp;C to +60°&nbsp;C                                             |
+| Battery capacity      | 400&nbsp;mAh                                                           |
+| Color                 | Tracker: White / Dark Grey <br /> Charger: Black                       |
+| Charger               | 5-pin Magnetic Plate <br /> USB Type-A <br /> Cable Length: 50&nbsp;cm |
+
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It covers the interfacing and the standard values and requirements, such as the RF, electrical, and environmental of the RAK2171 WisNode TrackIt.
 
 #### Interfaces
-
-> **Image:** RAK2171 WisNode TrackIt Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2171/helium-datacake/07.png"
+  width="80%"
+  caption="RAK2171 WisNode TrackIt Interfaces"
+/>
 
 ##### Buttons and LED
 
@@ -94,8 +110,8 @@ Use the original charging plate and cable only.
 | Parameter     | Value                                                              |
 |---------------|--------------------------------------------------------------------|
 | Positioning   | GPS & GLONASS                                                      |
-| Communication | Bluetooth V4.2 (for configuration) 
- LoRa (data transmission) |
+| Communication | Bluetooth V4.2 (for configuration) <br /> LoRa (data transmission) |
+
 
 #### Antennas
 
@@ -106,15 +122,15 @@ The RAK2171 WisNode TrackIt has built-in LoRaWAN, GPS, and Bluetooth antennas.
 | Parameter        | Value              |
 | ---------------- | ------------------ |
 | Battery Type     | Lithium            |
-| Battery Capacity | 400 mAh       |
-| Charging         | 5 V, 1 A |
+| Battery Capacity | 400&nbsp;mAh       |
+| Charging         | 5&nbsp;V, 1&nbsp;A |
 
 #### Environmental Requirements
 
 | Parameter             | Value                      |
 | --------------------- | -------------------------- |
-| Charging temperature  | +10° C to +45° C |
-| Operating temperature | -20° C to +60° C |
+| Charging temperature  | +10°&nbsp;C to +45°&nbsp;C |
+| Operating temperature | -20°&nbsp;C to +60°&nbsp;C |
 
 ### Software
 
@@ -125,9 +141,21 @@ The RAK2171 WisNode TrackIt has built-in LoRaWAN, GPS, and Bluetooth antennas.
 
 ### Certification
 
-### Certifications
-- **REACH:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_REACH_Report.pdf
-- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_RoHS_Report.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_FCC_Certification.pdf
-- **ISED:** https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_ISED_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'reach': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_REACH_Report.pdf',
+    },
+    {
+        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_RoHS_Report.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_FCC_Certification.pdf',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/RAK2171/Certification/RAK2171_ISED_Certification.pdf',
+    },
+]} />
 
+
+
+<RkBottomNav/>

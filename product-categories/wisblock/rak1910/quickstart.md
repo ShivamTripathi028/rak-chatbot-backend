@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK1910 WisBlock GNSS Location Module Quick Start Guide
 
 This guide introduces the RAK1910 WisBlock GNSS Location Module and how to program with it. The information obtained from the GPS will then be printed over the USB debug port of the WisBlock Base board.
@@ -58,15 +61,23 @@ The GPS module gives the following information:
 
 RAK1910 module can be connected to the sensor's slot of [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) to communicate with the WisBlock Core, as shown in **Figure 1**. It will work on **SLOT A, E, and F**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK1910 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/rak1910-assembly.png"
+  width="70%"
+  caption="RAK1910 connection to WisBlock Base"
+/>
 
 #### Assembling and Disassembling WisBlock Modules
 
 ##### Assembling
 
-As shown in Figure 2, the location for slots A, B, C, and D are properly marked on the silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) in order to attach a WisBlock module. Once attached, carefully fix the module with one or more M1.2 x 3 mm screws depending on the module.
+As shown in Figure 2, the location for slots A, B, C, and D are properly marked on the silkscreen. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) in order to attach a WisBlock module. Once attached, carefully fix the module with one or more M1.2 x 3&nbsp;mm screws depending on the module.
 
-> **Image:** RAK1910 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/14.wisblock-sensor-silkscreen.png"
+  width="70%"
+  caption="RAK1910 connection to WisBlock Base"
+/>
 
 ##### Disassembling
 
@@ -74,21 +85,37 @@ The procedure to disassemble any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/16.removing-screws.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/17.detaching-silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in Figure 5, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/18.detaching-module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 #### GPS Antenna
 
 Another important component of RAK1910 is the GPS antenna. You need to ensure that it is properly connected to have a good GPS signal.
 
-> **Image:** GPS antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/gps_antenna.png"
+  width="65%"
+  caption="GPS antenna"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK1910 uses UART communication lines and it can cause possible conflicts, especially to some IO modules.
@@ -98,15 +125,16 @@ After setting up, you can now connect the battery and USB cable to start program
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
+
 ### Software Configuration and Example
 
-The GPS module starts up by default at 9600 bps. This UART speed can be increased using the library functions that have been designed for controlling and managing the module.
+The GPS module starts up by default at 9600&nbsp;bps. This UART speed can be increased using the library functions that have been designed for controlling and managing the module.
 
 The GPS receiver has two operational modes: the **NMEA** (National Marine Electronics Association) **Mode** and a **Binary Mode** called the UBX Protocol. The NMEA mode uses statements from this standard to obtain location, time, and date. The UBX Protocol is based on structured frames to establish communication between the microcontroller and the GPS receiver. The UBX Protocol allows you to configure your GPS module, request information about the position, navigation, even the hardware.
 
@@ -134,15 +162,27 @@ The most important NMEA statements are the GGA (Global positioning system fix da
 
 **RAK4631 WisBlock Core**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/rak4631_board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 **RAK11200 WisBlock Core**
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/rak11200_board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 **RAK11310 WisBlock Core**
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/rak11310_board.png"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 3. Next, copy the following sample code into your Arduino IDE:
 
@@ -183,6 +223,7 @@ void setup()
       break;
     }
   }
+
 
   //gps init
   pinMode(WB_IO2, OUTPUT);
@@ -289,7 +330,11 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example code is open, install the [TinyGPS](https://github.com/neosarchizo/TinyGPS) library by clicking the highlighted link, as shown in **Figure 10**.
 
-> **Image:** Installing TinyGPS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/tinygps_lib.png"
+  width="100%"
+  caption="Installing TinyGPS"
+/>
 
 5. After the successful installation of the library, you can now select the right port and upload the code, as shown in **Figure 11**.
 
@@ -297,11 +342,19 @@ If you experience any error in compiling the example sketch, check the updated c
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Opening RAK1910 example for RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/select_port.png"
+  width="100%"
+  caption="Opening RAK1910 example for RAK4631 WisBlock Core"
+/>
 
 6. When you successfully upload the example sketch, open the Serial Monitor of the Arduino IDE to see the logs. The GPS will try to get a signal fix from satellites, and this will vary depending on your location and whether you have a direct line of sight to the sky. It can take a few seconds to a few minutes. If you see the logs, as shown in **Figure 12**, your RAK1910 is properly communicating to the WisBlock core.
 
-> **Image:** Scanning GPS signal logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/log_scan.png"
+  width="80%"
+  caption="Scanning GPS signal logs"
+/>
 
 7. If everything is successful, you should now see the GPS coordinates on the Serial Monitor of the Arduino IDE, as shown in **Figure 13**.
 
@@ -311,7 +364,11 @@ It is possible that you will not see the same serial logs in Figure 12 as soon a
 It can range to more than 2 minutes depending on how good the satellite signals are in your location. After the almanac and ephemeris are updated, TTFF should be shorter, and getting a GPS signal fix will be faster.
 :::
 
-> **Image:** Scanning GPS signal logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/log_fix.png"
+  width="80%"
+  caption="Scanning GPS signal logs"
+/>
 
 #### RAK1910 LoRaWAN GPS Tracker
 
@@ -327,11 +384,19 @@ You also need to have a [RAK1904 (Accelerometer Module)](https://store.rakwirele
 
 After preparing the hardware, you can now open the example sketch, as shown in Figure 25.
 
-> **Image:** LoRaWAN GPS Tracker example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/lorawan-gps.png"
+  width="100%"
+  caption="LoRaWAN GPS Tracker example"
+/>
 
 After successful compilation, you should be able to see a successful join request if you are within range of a compatible gateway and with the right LoRaWAN joining parameters. More information about the LoRaWAN configuration can be found on [Quick Start Guide of RAK4631](https://docs.rakwireless.com/product-categories/wisblock/rak4631/quickstart/#configuration-of-lorawan-example-code).
 
-> **Image:** Successful upload of GPS Tracker example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/lorawan_tracker_join.png"
+  width="80%"
+  caption="Successful upload of GPS Tracker example"
+/>
 
 After uploading the code, the device will not automatically send GPS coordinates but only when a specific orientation is achieved. The following part of the code will trigger the sending of LoRaWAN packets.
 
@@ -347,17 +412,29 @@ There will be no LoRaWAN transmission if there is no GPS signal found or if the 
 
 It can take a few seconds or minutes to get a good fix depending on your location and situation. If all are successful after waiting for the GPS signal, you should now see this on the serial monitor/terminal.
 
-> **Image:** LoRaWAN GPS Coordinate Sent
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/lorawan_tracker_transmit.png"
+  width="85%"
+  caption="LoRaWAN GPS Coordinate Sent"
+/>
 
 The packet should also arrive at the LoRaWAN network server you use. The values you see will not make sense and don't look like GPS coordinates. It is normal because the payload hasn't been decoded yet.
 
 If you are using Chirpstack, you will see the packet as shown in Figure 28.
 
-> **Image:** Chirpstack LoRaWAN payload
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/chirpstack_nodecode.png"
+  width="40%"
+  caption="Chirpstack LoRaWAN payload"
+/>
 
 If you are using The Things Stack (TTN V3), you will see the packet as shown in Figure 29.
 
-> **Image:** TTS LoRaWAN payload
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/ttn_notdecoded.png"
+  width="90%"
+  caption="TTS LoRaWAN payload"
+/>
 
 ##### Payload Decoding of LoRaWAN GPS Tracker
 
@@ -395,7 +472,11 @@ function Decode(fport, bytes)
 
 If you got the right payload, the decoded payload should look like in Figure 30.
 
-> **Image:** Chirpstack decoded GPS payload
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/chirpstack_decoded.png"
+  width="30%"
+  caption="Chirpstack decoded GPS payload"
+/>
 
 ###### TTS Decoder
 
@@ -421,7 +502,11 @@ function Decoder(bytes, port)
 
 After modifying the decoder in TTS, you can now see the GPS coordinates value as latitude and longitude.
 
-> **Image:** TTS Decoded GPS payload
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/ttn_decoded.png"
+  width="95%"
+  caption="TTS Decoded GPS payload"
+/>
 
 ###### Timing
 
@@ -429,3 +514,4 @@ In this LoRaWAN GPS example, an accelerometer is checked every 10 seconds. On ac
 
 If there is no GPS coordinate transmission even if you are sure that the accelerometer is already in the right trigger orientation `if (abs(x - z) < 400)`, then you need to check the RAK1910 GPS module if you can get GPS signal. Perform the [initial RAK1910 quick test](#software-configuration-and-example).
 
+<RkBottomNav/>

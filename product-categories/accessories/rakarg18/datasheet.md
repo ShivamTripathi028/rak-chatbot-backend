@@ -9,17 +9,21 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg18/5dbi_antenna.pn
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # 863-870 MHz 5 dBi Fiberglass Antenna Datasheet
 
 ## Overview
 
 ### Product Description
 
-The 5 dBi fiberglass antenna is an outdoor, high-performance antenna, designed to withstand harsh outdoor conditions. It is specially designed for LoRa in the 863-870 MHz band – EU868, IN865, and RU864.
+The 5&nbsp;dBi fiberglass antenna is an outdoor, high-performance antenna, designed to withstand harsh outdoor conditions. It is specially designed for LoRa in the 863-870&nbsp;MHz band – EU868, IN865, and RU864.
 
 The antenna connector is one with the antenna body - this design further increases the resistance of the antenna to external conditions.
 
-With a length of only 480 mm, this antenna will be the best fit for your LPWAN gateway or outdoor deployed RAK Hotspot.
+With a length of only 480&nbsp;mm, this antenna will be the best fit for your LPWAN gateway or outdoor deployed RAK Hotspot.
 
 :::tip NOTE
 This antenna is designed to be directly mounted on the enclosure of the Gateway. It is suitable for the following RAK products:
@@ -47,8 +51,11 @@ The antenna is also compatible with the following:
 - **Storage Temperature:** -40°C~+85°C
 - **IP67 rated**
 
-> **Image:** RAKARG18 Antenna
-
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg18/1.png"
+  width="30%"
+  caption="RAKARG18 Antenna"
+/>
 ## Specification
 
 | Parameter              | Value                |
@@ -75,7 +82,12 @@ The antenna is also compatible with the following:
 | 863 MHz         | 1.40 | -15.6            |
 | 870 MHz         | 1.63 | -12.4            |
 
-> **Image:** RAKARG18 VSWR graph
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg18/2.png"
+  width="60%"
+  caption="RAKARG18 VSWR graph"
+/>
+
 
 ### Peak Gain & Efficiency
 
@@ -93,9 +105,19 @@ The antenna is also compatible with the following:
 
 ### Radiation Patterns
 
-> **Image:** RAKARG18 radiation patterns
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg18/3.png"
+  width="60%"
+  caption="RAKARG18 radiation patterns"
+/>
+
 
 ### Mechanical Specifications
 
-> **Image:** RAKARG18 mechanical specifications
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg18/4.png"
+  width="60%"
+  caption="RAKARG18 mechanical specifications"
+/>
 
+<RkBottomNav/>

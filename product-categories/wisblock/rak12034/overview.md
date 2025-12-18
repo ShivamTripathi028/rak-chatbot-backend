@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12034 WisBlock 9-Axis Accelerometer Module
 
 Thank you for choosing **RAK12034 WisBlock 9-Axis Accelerometer Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -28,6 +30,7 @@ Thank you for choosing **RAK12034 WisBlock 9-Axis Accelerometer Module** in your
 For All WisBlock Core:
 * [Sample Code: RAK12034](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/sensors/RAK12034_9_Axis_BMX160)
 
+
 ## Product Description
 
 The RAK12034 is a 9-axis accelerometer module, part of the RAKwireless WisBlock Sensor series. It is based on BMX160 Bosch Sensor, which is a highly integrated low-power 9-axis sensor providing precise acceleration, angular rate, and geomagnetic measurement in each spatial direction.
@@ -38,21 +41,23 @@ Due to its small form factor and low-power consumption, it is ideal for smart we
 
 * **Module Specifications**
 - Based on Bosch BMX160
-- Very low power consumption: typ. 1585 μA in high performance mode
-- Selectable acceleration range: ±2 g to ±16 g
-- Gyroscope range: 125 °/s to 2000 °/s
-- Magnetic field range x/y ±1300 μT, z ±2500 μT
-- 3.3 V Power supply
-- Operating temperature: -40 °C ~ 105 °C
+- Very low power consumption: typ. 1585&nbsp;μA in high performance mode
+- Selectable acceleration range: ±2&nbsp;g to ±16&nbsp;g
+- Gyroscope range: 125&nbsp;°/s to 2000&nbsp;°/s
+- Magnetic field range x/y ±1300&nbsp;μT, z ±2500&nbsp;μT
+- 3.3&nbsp;V Power supply
+- Operating temperature: -40&nbsp;°C ~ 105&nbsp;°C
 
 * **Module Size**
-    * 10 mm x 10 mm
+    * 10&nbsp;mm x 10&nbsp;mm
 
 ## Prerequisites
 
 To use a **RAK12034**, you need at least a **WisBlock Base** to plug the module in. **WisBlock Base** is the power supply for the **RAK12034** module. Furthermore, you need a **WisBlock Core** module to use the sensor.
 
+
 :::warning
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

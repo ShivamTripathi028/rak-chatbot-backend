@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Datasheet
 ---
  
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK9168 5V/6A 12V/2.5A PoE Splitter Datasheet
 
@@ -18,27 +21,36 @@ sidebar_label: Datasheet
 
 ### Description
 
-The RAK PoE Splitter RAK9168 is a device that draws power from a traditional Category 5 twisted-pair Ethernet cable with PoE and complies with the IEEE 802.3af/at PoE standard. It has an isolated 42~57 VDC input and a 30 W DC-DC converter. You can choose between two versions: one with 12V jack output with a maximum output current of 2.5 A, and the other is with 5 V USB Type-C output with a maximum current of 6 A.
+The RAK PoE Splitter RAK9168 is a device that draws power from a traditional Category 5 twisted-pair Ethernet cable with PoE and complies with the IEEE 802.3af/at PoE standard. It has an isolated 42~57&nbsp;VDC input and a 30&nbsp;W DC-DC converter. You can choose between two versions: one with 12V jack output with a maximum output current of 2.5&nbsp;A, and the other is with 5&nbsp;V USB Type-C output with a maximum current of 6&nbsp;A.
 
 ### Features
 
-- Wide Input Voltage: 42 V~57 V 
+- Wide Input Voltage: 42&nbsp;V~57&nbsp;V 
 - Full features 802.3af/at interface built-in
-- Output for the 5 V variant: 5 V / 6 A USB type-C connector
-- Output for the 12 V variant: 12 V / 2.5 A  barrel jack connector
+- Output for the 5&nbsp;V variant: 5&nbsp;V / 6&nbsp;A USB type-C connector
+- Output for the 12&nbsp;V variant: 12&nbsp;V / 2.5&nbsp;A  barrel jack connector
 - Over current /short circuit protection
 - Power Pin: 1/2(+),3/6(-) or 4/5(+),7/8(-)
 - Data Pin: 1/2, 3/6, 4/5, 7/8
-- Data Speed: 10/100/1000 Mbps
-- Operating Temperature: -30 ℃～+75 ℃
+- Data Speed: 10/100/1000&nbsp;Mbps
+- Operating Temperature: -30&nbsp;℃～+75&nbsp;℃
+
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK9168 5V PoE Splitter View
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9168/rak9168-5v-poe-spitter.png"
+  width="70%"
+  caption="RAK9168 5V PoE Splitter View"
+/>
 
-> **Image:** RAK9168 12V PoE Splitter View
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9168/rak9168-12v-poe-splitter.png"
+  width="70%"
+  caption="RAK9168 12V PoE Splitter View"
+/>
 
 ### Hardware
 
@@ -46,63 +58,91 @@ The hardware specification is categorized into three parts. It shows the interfa
 
 #### Interface 
 
-> **Image:** RJ45 Interface and Pins
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9168/rj45-interface.png"
+  width="40%"
+  caption="RJ45 Interface and Pins"
+/>
+
 
 ##### PoE Input
 
-**Figure 4** shows the DC 42-57 V Ethernet Input of the RAK9168 PoE Splitter.
+**Figure 4** shows the DC 42-57&nbsp;V Ethernet Input of the RAK9168 PoE Splitter.
 
-> **Image:** RAK9168 PoE Input
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9168/poe-input.png"
+  width="40%"
+  caption="RAK9168 PoE Input"
+/>
 
 ##### PoE Output
 
-- ** 5 V Version **
+- <b> 5&nbsp;V Version </b>
 
-**Figure 5** shows the DC 5 V and the ethernet output for the 5 V version.
+**Figure 5** shows the DC 5&nbsp;V and the ethernet output for the 5&nbsp;V version.
 
-> **Image:** RAK9168 PoE Output 5V
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9168/5v-output.png"
+  width="40%"
+  caption="RAK9168 PoE Output 5V"
+/>
 
-- ** 12 V Version **
 
-**Figure 6** shows the DC 12 V and the ethernet output for the 12 V version.
+- <b> 12&nbsp;V Version </b>
 
-> **Image:** RAK9168 PoE Output 12V
+**Figure 6** shows the DC 12&nbsp;V and the ethernet output for the 12&nbsp;V version.
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9168/12v-output.png"
+  width="40%"
+  caption="RAK9168 PoE Output 12V"
+/>
 
 #### Electrical Characteristics
 
-** For 5 V Version **
+
+<b> For 5&nbsp;V Version </b>
 
 | Parameter          | Value           |
 | ------------------ | --------------- |
-| Input Voltage      | DC 42-57 V |
-| Output Voltage     | DC 5 V     |
-| Max Output Current | 6 A        |
+| Input Voltage      | DC 42-57&nbsp;V |
+| Output Voltage     | DC 5&nbsp;V     |
+| Max Output Current | 6&nbsp;A        |
 | Connector Type     | USB Type-C      |
 
-** For 12 V Version **
+<b> For 12&nbsp;V Version </b>
 
 | Parameter          | Value                    |
 | ------------------ | ------------------------ |
-| Input Voltage      | DC 42-57 V          |
-| Output Voltage     | DC 12 V             |
-| Max Output Current | 2.5 A               |
-| Connector Type     | Barrel Jack 2.1 mmm |
+| Input Voltage      | DC 42-57&nbsp;V          |
+| Output Voltage     | DC 12&nbsp;V             |
+| Max Output Current | 2.5&nbsp;A               |
+| Connector Type     | Barrel Jack 2.1&nbsp;mmm |
 
 #### Environmental Characteristics
 
 | Feature               | Specifications             |
 | --------------------- | -------------------------- |
 | Type of use           | Indoor environment         |
-| Operating Temperature | -30 ˚C to +75 ˚C |
-| Storage Temperature   | -40 ˚C to +85 ˚C |
+| Operating Temperature | -30&nbsp;˚C to +75&nbsp;˚C |
+| Storage Temperature   | -40&nbsp;˚C to +85&nbsp;˚C |
 | Operating Humidity    | 35~90% RH non-condensing   |
 | Storage Humidity      | 10~95% RH non-condensing   |
 | Enclosure Material    | Aluminum                   |
-| Dimensions            | 108.4 x 46.2 x 28 mm  |
+| Dimensions            | 108.4 x 46.2 x 28&nbsp;mm  |
+
+
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/Accessories/RAK9168/Certification/RAK9168_CE_Certification.zip
-- **FCC:** https://downloads.rakwireless.com/Accessories/RAK9168/Certification/RAK9168_FCC_Certification.zip
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/Accessories/RAK9168/Certification/RAK9168_CE_Certification.zip',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/Accessories/RAK9168/Certification/RAK9168_FCC_Certification.zip',
+    }
+]} />
+
+<RkBottomNav/>
 

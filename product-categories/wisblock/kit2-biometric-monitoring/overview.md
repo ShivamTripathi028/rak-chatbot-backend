@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # WisBlock Biometric Monitoring Kit
 
 Thank you for choosing **WisBlock Biometric Monitoring Kit** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -39,3 +42,6 @@ With this kit, users can easily create custom biometric monitoring solutions for
     - (Optional) Cellular variant dependent on a country: two (2) [RAK5860](https://docs.rakwireless.com/product-categories/wisblock/rak5860/quickstart/) with 5G LTE NB-IoT capability and two (2) [RAK13101](https://docs.rakwireless.com/product-categories/wisblock/rak13101/quickstart/) with GSM/GPRS capability
 - GPS built-in on Cellular modules
 
+
+
+<RkBottomNav/>

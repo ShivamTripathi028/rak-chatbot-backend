@@ -10,9 +10,15 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
+
 # LX200V30 WisLink 500 Mbps Broadband PLC Module + EVB Datasheet
 
 ## Overview
+
 
 ### Description
 
@@ -20,21 +26,22 @@ LX200V30 is a new type of data transmission product based on OFDM (Orthogonal Fr
 
 ### Features
 
-- 500 Mbps PHY rate
+- 500&nbsp;Mbps PHY rate
 - 128-bit encryption
 - Range:
-  - Power line: up to 300 m
-  - Twisted pair: up to 600 m
-  - Coaxial cable: up to 2000 m
+  - Power line: up to 300&nbsp;m
+  - Twisted pair: up to 600&nbsp;m
+  - Coaxial cable: up to 2000&nbsp;m
 - Compliant with Homeplug AV specification and IEEE1901 standards
 - MII communication interface for communication with any Ethernet-based device
 - Data transmission via a coaxial cable, twisted pair, or a power line
-- Working frequency range 2-68 MHz
-- Dimensions: 40 x 30 mm
+- Working frequency range 2-68&nbsp;MHz
+- Dimensions: 40 x 30&nbsp;mm
 
 :::warning
 For optimal performance and extended device lifespan, use active or passive cooling such as fans or heatsinks to regulate chip temperature during operation.
 :::
+
 
 ### Applications
 
@@ -47,21 +54,29 @@ For optimal performance and extended device lifespan, use active or passive cool
 
 ## Specifications
 
+
 #### Block Diagram
 
-> **Image:** LX200V30 block diagram
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/2.lx200v30-block-diagram.png"
+  width="80%"
+  caption="LX200V30 block diagram"
+/>
 
 #### Parameters
 
 | Parameter                     | Value                 |
 | ----------------------------- | --------------------- |
-| Max. data rate                | 1000 Mbps        |
-| DC interface                  | 4.75 V~36 V |
+| Max. data rate                | 1000&nbsp;Mbps        |
+| DC interface                  | 4.75&nbsp;V~36&nbsp;V |
 | V50 supported unit connection | 6~8                   |
+
 
 ### Hardware
 
-The hardware specification is categorized into five parts. It shows the interfacing and the pinouts of the board and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters of the LX200V30 WisLink 500 Mbps Broadband PLC Module + EVB.
+The hardware specification is categorized into five parts. It shows the interfacing and the pinouts of the board and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters of the LX200V30 WisLink 500&nbsp;Mbps Broadband PLC Module + EVB.
+
 
 #### Interfaces
 
@@ -69,11 +84,20 @@ The hardware specification is categorized into five parts. It shows the interfac
 
 The external interface circuits required by the LX200V30 backplane include 7 ~ 28 V, 3.3V BUCK, DC power connector, Ethernet RJ45, PLC coupling transmission transformer, and other coupling parts and their interfaces. The auxiliary interface test board is designed to be convenient for testing. When customers design products, changes will be made according to different structure of products.
 
-> **Image:** Baseplate interfaces and top view
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/3.baseplate-interfaces-and-top-view.png"
+  width="70%"
+  caption="Baseplate interfaces and top view"
+/>
 
 #### Pin Definition
 
-> **Image:** Pin definition
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/4.pin-definition.png"
+  width="70%"
+  caption="Pin definition"
+/>
 
 | Pin No. | Definition    | Description                                          |
 | ------- | ------------- | ---------------------------------------------------- |
@@ -84,9 +108,9 @@ The external interface circuits required by the LX200V30 backplane include 7 ~ 2
 | 5       | TR1+          | Coupling signal receiving, positive                  |
 | 6       | NC4           | NC                                                   |
 | 7       | GND           | Ground                                               |
-| 8       | IN 12 V  | 12 V input operating voltage                    |
+| 8       | IN 12&nbsp;V  | 12&nbsp;V input operating voltage                    |
 | 9       | GND           | Ground                                               |
-| 10      | IN 3.3 V | 3.3 V input operating voltage                   |
+| 10      | IN 3.3&nbsp;V | 3.3&nbsp;V input operating voltage                   |
 | 11      | PWR           | Power indicator                                      |
 | 12      | ETH           | Net-port ACT light, flashing when there is data flow |
 | 13      | PLC           | Signal transmission indicator light                  |
@@ -98,25 +122,44 @@ The external interface circuits required by the LX200V30 backplane include 7 ~ 2
 | 19      | NC5           | NC                                                   |
 | 20      | NC6           | NC                                                   |
 
+
 #### Electrical Characteristics
 
 | Parameter                    | Min   | Typical | Max   | Unit |
 | ---------------------------- | ----- | ------- | ----- | ---- |
-| 12 V operating voltage  | 11.15 | 12      | 12.85 | V    |
-| 3.3 V operating voltage | 3.15  | 3.3     | 3.45  | V    |
+| 12&nbsp;V operating voltage  | 11.15 | 12      | 12.85 | V    |
+| 3.3&nbsp;V operating voltage | 3.15  | 3.3     | 3.45  | V    |
 | Operating current            | 125   | 130     | 145   | mA   |
+
+
 
 #### Mechanical Characteristics
 
 #### Schematic Diagram
 
-> **Image:** Connector pin map
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/5.connector-pin-map.png"
+  width="60%"
+  caption="Connector pin map"
+/>
 
-> **Image:** Ethernet port diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/6.ethernet-port-diagram.png"
+  width="60%"
+  caption="Ethernet port diagram"
+/>
 
-> **Image:** Signal receiving diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/7.signal-receiving-diagram.png"
+  width="70%"
+  caption="Signal receiving diagram"
+/>
 
-> **Image:** Signal indicators, factory parameter restoring circuit, and all kinds of filter circuits
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/7.signal-receiving-diagram.png"
+  width="70%"
+  caption="Signal indicators, factory parameter restoring circuit, and all kinds of filter circuits"
+/>
 
 #### Installation Guide
 
@@ -124,10 +167,15 @@ The external interface circuits required by the LX200V30 backplane include 7 ~ 2
 
 The LX200V30 module is connected to the EVB via the pin connector. Simply slide the pins of the module in the connector of the board.
 
-> **Image:** Assemble the module
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-plc/lx200v30/9.assembly-image.png"
+  width="60%"
+  caption="Assemble the module"
+/>
 
 :::tip NOTE
 
 1. The signals RX+ and RX-, TX+ and TX-, PERX_P and PERX_N, PETX_P and PETX_N all use differential signal lines, and the cabling should follow the rules for differential signal.
-2. The width of RX+ and RX-, TX+ and TX- should be no less than 20  mm. The length of the lines must not be more than 15 cm.
+2. The width of RX+ and RX-, TX+ and TX- should be no less than 20&nbsp; mm. The length of the lines must not be more than 15&nbsp;cm.
 
+<RkBottomNav/>

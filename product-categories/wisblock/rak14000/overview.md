@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14000 WisBlock E-Ink Display
 
 Thank you for choosing **RAK14000 WisBlock E-Ink Display Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,11 +31,13 @@ For All WisBlock Core Modules:
 
 * [Sample Code: Epaper Monochrome](https://github.com/RAKWireless/WisBlock/tree/master/examples/common/IO/RAK14000-Epaper-Monochrome)
 
+
+
 ## Product Description
 
 The **RAK14000 WisBlock E-Ink Display Module** is designed to be part of a production-ready IoT solution in a modular way and must be combined with a WisBlock Core and a WisBlock Base module.
 
-The **RAK14000** module provides an interface to connect an E-Ink Display, which is known to be an extremely power-efficient display. The **E-Ink Display** is an Active Matrix Electrophoretic Display (AM EPD) module with 2.13 inches active area (212 × 104 pixels for White Black Version and 250 x 122 pixels for the White-Black-Red Version). It also allows you to connect a Three-Button Module, which can be used on a different application. All of this can be controlled through a WisBlock Core.
+The **RAK14000** module provides an interface to connect an E-Ink Display, which is known to be an extremely power-efficient display. The **E-Ink Display** is an Active Matrix Electrophoretic Display (AM EPD) module with 2.13&nbsp;inches active area (212 × 104 pixels for White Black Version and 250 x 122 pixels for the White-Black-Red Version). It also allows you to connect a Three-Button Module, which can be used on a different application. All of this can be controlled through a WisBlock Core.
 
 :::tip NOTE
 There are two versions of RAK14000 module for sale in the RAKwireless Store, the [white-black display panel](https://store.rakwireless.com/products/wisblock-epd-module-rak14000?variant=39534109655238) and [white-black-red display panel](https://store.rakwireless.com/products/wisblock-epd-module-rak14000?variant=39534109688006) version.
@@ -42,7 +46,7 @@ There are two versions of RAK14000 module for sale in the RAKwireless Store, the
 ## Product Features
 
 * **Module Specification**
-    * 3.3 V Input Voltage, On/Off Control by the WisBlock Core
+    * 3.3&nbsp;V Input Voltage, On/Off Control by the WisBlock Core
     * Ultra-wide viewing angle
     * Ultra-low power consumption
     * Includes a Three-Button module
@@ -61,7 +65,9 @@ To use the **RAK14000 E-Ink Display Module**, you need a **WisBlock Base** to pl
 
 After the successful mounting of **RAK14000** module to the IO Port of a WisBlock Base, you can now proceed to interface the E-Ink Display and Three-Button Module.
 
+
 :::warning
 To be able to connect the E-Ink Display and Three-Button module, you must first unlock the slot connection on the RAK14000. You can do this by carefully pulling up the lock, then carefully insert the FPC (Flexible PCB) connector of the E-Ink Display and Three-Button module to the corresponding slots. Once done, make sure to lock the slot connection again by carefully pushing down until it tightens.
 :::
 
+<RkBottomNav/>

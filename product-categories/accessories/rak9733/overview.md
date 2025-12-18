@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Pulsar Cable LMR400
 
 Thank you for choosing **Pulsar Cable LMR400** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -20,9 +22,10 @@ The Pulsar cable is a high-grade cable, suitable for all gateways from the **Wis
 
 ## Product Features
 
--   Cable length variants: 5 m / 16.40 ft, 10 m / 32.80 ft
+-   Cable length variants: 5&nbsp;m / 16.40&nbsp;ft, 10&nbsp;m / 32.80&nbsp;ft
 -   Connector: RP-SMA male to N-type female
--   Frequency Range: 0~6 GHz
+-   Frequency Range: 0~6&nbsp;GHz
 -   Cable type: LMR400
 -   VSWR: ≤ 1.5
 
+<RkBottomNav/>

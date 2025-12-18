@@ -10,6 +10,9 @@ sidebar_label: Datasheet
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK4260 WisDuo LPWAN Module Datasheet
 
@@ -17,7 +20,7 @@ sidebar_label: Datasheet
 
 ### Description
 
-The **RAK4260 WisDuo LPWAN Module** is based on **Microchip’s ATSAMR34J18B**. It is a SiP device integrating a 32-bit ARM Cortex M0+ MCU with a LoRa Transceiver in a 15 mm x 15 mm compact package.
+The **RAK4260 WisDuo LPWAN Module** is based on **Microchip’s ATSAMR34J18B**. It is a SiP device integrating a 32-bit ARM Cortex M0+ MCU with a LoRa Transceiver in a 15&nbsp;mm x 15&nbsp;mm compact package.
 
 The SAM R34 chip provides a number of highly configurable peripherals (configurable as I2C/SPI/UART interfaces). There are 12-bit ADC in addition to the aforementioned.
 
@@ -29,13 +32,13 @@ RAK4260 is a solution that is cost-efficient and flexible that can be deployed i
 
 - Industry's lowest power LoRa SiP device
 - 32-bit ARM Cortex M0+ MCU and LoRa Transceiver
-- Small form factor: 15 mm x 15 mm  compact package
-- 256 KB Flash and 40 KB RAM accommodates application code and stack
+- Small form factor: 15&nbsp;mm x 15&nbsp;mm  compact package
+- 256&nbsp;KB Flash and 40&nbsp;KB RAM accommodates application code and stack
 - Most cost and size effective solution, eliminating the need for external MCU
-- Fully supported 862 to 1020 MHz frequency coverage
-- Receive Sensitivity down to -148 dBm
-- Maximum Transmit Power up to 20 dBm
-- Low RX current of 17 mA (typical)
+- Fully supported 862 to 1020&nbsp;MHz frequency coverage
+- Receive Sensitivity down to -148&nbsp;dBm
+- Maximum Transmit Power up to 20&nbsp;dBm
+- Low RX current of 17&nbsp;mA (typical)
 - LoRa Technology, (G)FSK, (G)MSK
 
 ## Specifications
@@ -48,35 +51,52 @@ The overview section covers the RAK4260 WisDuo LPWAN Module board overview where
 
 **Figure 1** and **Figure 2** present the different views of the RAK4260 chip labeled for the proper reference.
 
-> **Image:** RAK4260 WisDuo LPWAN Module Top View
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/rak4260-module-top-view.png"
+  width="45%"
+  caption="RAK4260 WisDuo LPWAN Module Top View"
+/>
 
-> **Image:** RAK4260 Bottom View
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/rak4260-bottom-view.png"
+  width="45%"
+  caption="RAK4260 Bottom View"
+/>
 
 #### Block Diagram
 
 The block diagram of the RAK4260 shows the various interfaces for the specific functionalities set in the product overview.
 
-> **Image:** RAK4260 Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/block-diagram.png"
+  width="70%"
+  caption="RAK4260 Interfaces"
+/>
 
 ### Hardware
 
 The hardware specifications are categorized into five parts. It presents the schematic diagram and pinouts of the module. This section covers also the electrical, mechanical, and frequency parameters including tabular data and diagrams of the RAK4260 WisDuo LPWAN Module board.
 
+
 #### Pin Definition
 
 Provided in this section is the pinout of the RAK4260 WisDuo LPWAN Module.
 
-> **Image:** RAK4260 Board Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/rak4260-board-pinout.svg"
+  width="70%"
+  caption="RAK4260 Board Pinout"
+/>
 
 :::warning
 When using `RFC` pin for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF trace must be away from interference (switching node of DC-DC supply, high current/voltage pulses from controllers of inductive load like motor, signal generators, etc.)
-- RF trace must have 50 Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF trace must have 50&nbsp;Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, make it close to the `RFC` pin.
 - Ground plane optimization is critical on certain antenna types like monopole.
 - GND trace used for RF path return must be directly connected to the GND plane and not be treated as thermal relief.
-- It is recommended for the RF trace to be routed in a curve and not in a sharp 90 degrees.
+- It is recommended for the RF trace to be routed in a curve and not in a sharp 90&nbsp;degrees.
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for [Antenna RF Design](https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test) which includes PCB design, tuning, matching, and RF testing.
 :::
@@ -139,13 +159,11 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 | RFI_HF (RX)   |      H       |     L     |    H     |
 | RFO_HF        |      H       |     H     |    H     |
 
+
 :::tip NOTE
-PA28 is RF Switch VDD pin
-
-H  = High level
-
-L  = Low level 
-
+PA28 is RF Switch VDD pin<br />
+H  = High level<br />
+L  = Low level <br />
 :::
 
 #### RF Requirements
@@ -171,35 +189,55 @@ Shown in the table provided below is the power consumption of the RAK4260 WisDuo
 
 |             Item              |   Power Consumption   |         Condition          |
 | :---------------------------: | :-------------------: | :------------------------: |
-| OUTPUT POWER 20 dB (MAX) |     126.3 mA     |   PA_BOOST V=3.3 V    |
-|    OUTPUT POWER 17 dB    | 95.6 mA(typical) |   PA_BOOST V=3.3 V    |
-|    OUTPUT POWER 14 dB    |     33.1 mA      |    RFO_HF V=3.3 V     |
-|         Receive mode          |     13.6 mA      |             -              |
-|          Sleep mode           |      860 nA      | V=3.3 V Backup Mode |
+| OUTPUT POWER 20&nbsp;dB (MAX) |     126.3&nbsp;mA     |   PA_BOOST V=3.3&nbsp;V    |
+|    OUTPUT POWER 17&nbsp;dB    | 95.6&nbsp;mA(typical) |   PA_BOOST V=3.3&nbsp;V    |
+|    OUTPUT POWER 14&nbsp;dB    |     33.1&nbsp;mA      |    RFO_HF V=3.3&nbsp;V     |
+|         Receive mode          |     13.6&nbsp;mA      |             -              |
+|          Sleep mode           |      860&nbsp;nA      | V=3.3&nbsp;V Backup Mode |
 
-##### OUTPUT POWER 20 dB(MAX)PA_BOOST mode
+##### OUTPUT POWER 20&nbsp;dB(MAX)PA_BOOST mode
 
-> **Image:** OUTPUT POWER 20 dB(MAX)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/output-power-20db.svg"
+  width="80%"
+  caption="OUTPUT POWER 20&nbsp;dB(MAX)"
+/>
 
-##### OUTPUT POWER 17 dB(PA_BOOST mode)
+##### OUTPUT POWER 17&nbsp;dB(PA_BOOST mode)
 
-> **Image:** OUTPUT POWER 17 dB
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/output-power-17db.svg"
+  width="80%"
+  caption="OUTPUT POWER 17&nbsp;dB"
+/>
 
-##### OUTPUT POWER 14 dB(RFO_HF mode)
+##### OUTPUT POWER 14&nbsp;dB(RFO_HF mode)
 
-> **Image:** OUTPUT POWER 14 dB
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/output-power-14db.svg"
+  width="80%"
+  caption="OUTPUT POWER 14&nbsp;dB"
+/>
 
 ##### Receive Mode
 
-> **Image:** Receive Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/receive-mode.svg"
+  width="80%"
+  caption="Receive Mode"
+/>
 
 ##### Sleep Mode
 
-> **Image:** Sleep Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/sleep-mode.svg"
+  width="80%"
+  caption="Sleep Mode"
+/>
 
 ##### Sensitivity Level
 
-The following chart shows the receiving sensitivity of RAK4260 at 868 Mhz.
+The following chart shows the receiving sensitivity of RAK4260 at 868&nbsp;Mhz.
 
 | Receive Power @iPEX | PER (%) @SF7 |
 | :-----------------: | :----------: |
@@ -211,7 +249,11 @@ The following chart shows the receiving sensitivity of RAK4260 at 868 Mhz.
 |        -129         |     100      |
 |        -130         |     100      |
 
-> **Image:** Sensitivity Level (SF7)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/sensitivity-level-sf7.png"
+  width="70%"
+  caption="Sensitivity Level (SF7)"
+/>
 
 | Receive Power @iPEX | PER (%) @SF7 |
 | :-----------------: | :----------: |
@@ -223,17 +265,37 @@ The following chart shows the receiving sensitivity of RAK4260 at 868 Mhz.
 |        -139         |      80      |
 |        -140         |     100      |
 
-> **Image:** Sensitivity Level (SF12)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/sensitivity-level-sf12.png"
+  width="70%"
+  caption="Sensitivity Level (SF12)"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK4260 WisDuo LPWAN Module Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/schematic-diagram.png"
+  width="100%"
+  caption="RAK4260 WisDuo LPWAN Module Schematic Diagram"
+/>
 
 #### Mechanical Characteristics
 
-> **Image:** RAK4260 Top View Dimensions
 
-> **Image:** RAK4260 Side View Dimensions
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/rak4260-top-view-dimensions.png"
+  width="65%"
+  caption="RAK4260 Top View Dimensions"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4260-module/datasheet/rak4260-side-view-dimensions.png"
+  width="65%"
+  caption="RAK4260 Side View Dimensions"
+/>
+
+
 
 ### Software
 

@@ -10,6 +10,9 @@ sidebar_label: AWS Greengrass
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # AWS IoT GreengrassV2
 
@@ -29,7 +32,11 @@ To learn more about AWS IoT GreengrassV2, see [how it works](https://docs.aws.am
 
 ## Set Up Your Hardware
 
-> **Image:** RAK7248 Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7248/lorawan-network-server-guide/greengrass/1.hardware-setup.png"
+  width="70%"
+  caption="RAK7248 Interfaces"
+/>
 
 - A detailed description of components and interfaces can be found in the Datasheet [here](https://docs.rakwireless.com/product-categories/wisgate/rak7248/datasheet/).
 - The required power supply is a 5 V/3A USB C that is not included in the package. The device only comes with a USB cable and no adapter. There are no battery options.
@@ -56,11 +63,14 @@ Refer to the instructions found at the [Create AWS IoT Resources](https://docs.a
 
 **Pay special attention to the Notes.**
 
+
 ## Install the AWS Command Line Interface
 
 To install the AWS CLI on your host machine, refer to the instructions found at the [Installing the AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) guide. Installing the CLI is needed to complete the instructions in this guide.
 
 Once you have installed AWS CLI, configure it as per the instructions in this [online guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config). Set the appropriate values for Access key ID, Secret access key, and AWS Region. You can set the output format to "json" if you prefer.
+
+
 
 ## Install AWS IoT Greengrass
 
@@ -70,8 +80,11 @@ Once you have installed AWS CLI, configure it as per the instructions in this [o
 2. Download the [balenaEtcher ](https://www.balena.io/etcher/)software. There are options for Windows, macOS, and Linux. Clicking the **Download** button will provide you with the software directly, no installation is required.
 3. Flash image to SD Card.
 
-> **Image:** Flashing Raspberry Pi Image
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7248/lorawan-network-server-guide/greengrass/2.etcher.png"
+  width="70%"
+  caption="Flashing Raspberry Pi Image"
+/>
 ### Download the AWS IoT Greengrass Core Software
 
 1. Greengrass has already been included in the SD card image, its directory is **~/greengrass-nucleus**.
@@ -165,6 +178,7 @@ Follow the instructions online under the section [To create a Hello World compon
 ### Upload the Hello World Component
 
 Follow the instructions online at [Upload your component](https://docs.aws.amazon.com/greengrass/v2/developerguide/getting-started.html) to upload your component to the cloud, where it can be deployed to other devices as needed.
+
 
 ## Debugging
 

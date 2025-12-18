@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12037 WisBlock CO2 Sensor Module
 
 Thank you for choosing **RAK12037 WisBlock CO2 Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -30,19 +32,19 @@ RAK12037 is a WisBlock Sensor that extends the WisBlock system based on the SCD3
 ## Product Features
 
 * **Sensor specifications**
-    * Voltage supply: **3.3 V ~ 5.5 V**
-    * Current consumption: **19 mA @ 1 meas. per 2s**
+    * Voltage supply: **3.3&nbsp;V ~ 5.5&nbsp;V**
+    * Current consumption: **19&nbsp;mA @ 1 meas. per 2s**
     * Chipset: **SCD30**
-    * Temperature range: **-40° C ~ 70° C**
-    * Measurement range: **400 ppm – 10.000 ppm**
-    * Accuracy: **±(30 ppm + 3%)**
+    * Temperature range: **-40°&nbsp;C ~ 70°&nbsp;C**
+    * Measurement range: **400&nbsp;ppm – 10.000&nbsp;ppm**
+    * Accuracy: **±(30&nbsp;ppm + 3%)**
     * Integrated temperature, humidity sensor, and CO2 sensor
     * Dual-channel detection for superior stability
     * I2C interface
     * Fully calibrated and linearized
 
 * **Module size**
-    * 50 x 25 mm
+    * 50 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -52,3 +54,4 @@ To use a **RAK12037**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

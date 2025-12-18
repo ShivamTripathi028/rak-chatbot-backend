@@ -9,6 +9,10 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK8213 WisLink Cellular mPCIe
 
 Thank you for choosing **RAK8213 WisLink Cellular mPCIe** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -18,13 +22,16 @@ Thank you for choosing **RAK8213 WisLink Cellular mPCIe** in your awesome IoT pr
 * [RAK8213 3D Model](https://downloads.rakwireless.com/3D_File/WisLink/PWB-RAK8213.stp)
 * [Quick Start Guide for Raspberry Pi and RAK LPWAN Concentrators](https://learn.rakwireless.com/hc/en-us/articles/26743452451095-How-To-Get-Started-with-Raspberry-Pi-and-RAK-LPWAN-Concentrators)
 
+
+
 ## Product Description
 
-The **RAK8213 WisLink Cellular mPCIe** is a multi-band LTE Cat M1/Cat NB1/EGPRS module based on the **Quectel BG96** with a standard PCI Express® form factor (**Mini PCIe**). It offers a maximum data rate of 375 Kbps downlink and 375 Kbps uplink.
+The **RAK8213 WisLink Cellular mPCIe** is a multi-band LTE Cat M1/Cat NB1/EGPRS module based on the **Quectel BG96** with a standard PCI Express® form factor (**Mini PCIe**). It offers a maximum data rate of 375&nbsp;Kbps downlink and 375&nbsp;Kbps uplink.
 
 RAK8213’s built-in GNSS module can support **GPS, GLONASS, BeiDou/Compass, Galileo, QZSS, integrated GNSS** greatly simplifies product design and provides faster, more accurate and more reliable positioning.
 
 Rich Internet protocol, industry-standard interfaces (USB/UART/I2C/Status indicators) and rich features (applicable to Windows XP, Windows Vista, Windows 7/8/8.1/10, Linux drivers for Linux and Android) Modules that extend applicability are suitable for a wide range of M2M applications such as wireless POS, smart metering, and tracking.
+
 
 ## Product Features
 
@@ -36,3 +43,4 @@ Rich Internet protocol, industry-standard interfaces (USB/UART/I2C/Status indica
 - Robust mounting and interfaces
 - PCM interface available for VOLTE
 
+<RkBottomNav/>

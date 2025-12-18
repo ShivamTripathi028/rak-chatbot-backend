@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13600 WisBlock NFC Reader Module
 
 Thank you for choosing **RAK13600 WisBlock NFC Reader Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -23,9 +25,11 @@ Thank you for choosing **RAK13600 WisBlock NFC Reader Module** in your awesome I
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 * [WisBlock IO Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26743881131927-How-To-Make-Your-Own-WisBlock-IO-Board)
 
+
 ## Product Description
 
-**RAK13600** is a **WisBlock Wireless** NFC reader module based on the PN532 chip. It provides a compact and low-power solution for NFC-related IoT applications. The RAK13600 has an integrated transceiver module used for NFC applications which operate at 13.56 MHz and is also based on the standard 80C51 microcontroller core. It supports six (6) different operating modes:
+**RAK13600** is a **WisBlock Wireless** NFC reader module based on the PN532 chip. It provides a compact and low-power solution for NFC-related IoT applications. The RAK13600 has an integrated transceiver module used for NFC applications which operate at 13.56&nbsp;MHz and is also based on the standard 80C51 microcontroller core. It supports six (6) different operating modes:
+
 
 - ISO/IEC 14443A/MIFARE Reader/Writer
 - FeliCa Reader/Writer
@@ -36,13 +40,14 @@ Thank you for choosing **RAK13600 WisBlock NFC Reader Module** in your awesome I
 
 ## Product Features
 
+
 * **Module specifications**
     * Based on NXP PN532
     * External Antenna
     * Low power
 
 * **Size**
-    * 35 x 25 mm
+    * 35 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -52,3 +57,4 @@ To use a **RAK13600**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

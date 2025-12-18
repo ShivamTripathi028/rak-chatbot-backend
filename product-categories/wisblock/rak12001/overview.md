@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK12001 WisBlock Fingerprint Sensor Module
 
 Thank you for choosing **RAK12001 WisBlock Fingerprint Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -31,21 +34,23 @@ Thank you for choosing **RAK12001 WisBlock Fingerprint Sensor Module** in your a
 
 The RAK12001 is a fingerprint sensor module based on GROW R307. This module supports both fingerprint enrollment and fingerprint matching. When enrolling, it is required to place the finger two times in the sensor. The system will process the fingerprint images collected and generate a template, then store the fingerprint template in its memory. When matching, the sensor will determine if the finger placed in its optical sensor has a match on its memory.
 
+
 ## Product Features
 
 * **Module Specifications**
     * Fingerprint Sensor Module
     * Interface: UART
-    * Window dimension: 19 mm x 21 mm
+    * Window dimension: 19&nbsp;mm x 21&nbsp;mm
     * Character file size: 256 bytes
     * Scanning speed: < 0.3 second
     * Verification speed: < 0.2 second
-    * 3.3 V Power supply (with built-in 5 V boost converter)
-    * Current Consumption: 50 mA
+    * 3.3&nbsp;V Power supply (with built-in 5&nbsp;V boost converter)
+    * Current Consumption: 50&nbsp;mA
     * Fingerprint Module: GROW R307
 
+
 * **Module Size**
-    * 10 mm x 23 mm
+    * 10&nbsp;mm x 23&nbsp;mm
 
 ## Prerequisites
 
@@ -55,3 +60,4 @@ To use a **RAK12001**, you need at least a **WisBlock Base** and also a **Finger
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

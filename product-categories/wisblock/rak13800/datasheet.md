@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13800 WisBlock Ethernet Module Datasheet
 
 ## Description
@@ -38,8 +41,9 @@ RAK13800 can be POE enabled by mounting its daughter power board [WisBlock RAK19
 - Support Auto-Negotiation
 - Support Auto-MDIX only when Auto-Negotiation mode
 - Network Indicator LEDs
-- Supply Voltage: 2.97nbsp;V ~ 3.63 V
-- Size: 25 x 50 mm
+- Supply Voltage: 2.97nbsp;V ~ 3.63&nbsp;V
+- Size: 25 x 50&nbsp;mm
+
 
 ## Specifications
 
@@ -47,15 +51,27 @@ RAK13800 can be POE enabled by mounting its daughter power board [WisBlock RAK19
 
 #### Board Overview
 
-> **Image:** RAK13800 top view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/rak13800_front_1.svg"
+  width="40%"
+  caption="RAK13800 top view"
+/>
 
-> **Image:** RAK13800 bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/rak13800_back_1.svg"
+  width="40%"
+  caption="RAK13800 bottom view"
+/>
 
 #### Mounting
 
 The RAK13800 module can be mounted to the IO slot of your WisBlock Base board. To illustrate, **Figure 3** shows how RAK13800 can be mounted on the RAK5005-O WisBlock Base Board.
 
-> **Image:** RAK13800 mounting mechanism
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/image-20210225140319101.png"
+  width="60%"
+  caption="RAK13800 mounting mechanism"
+/>
 
 ### Hardware
 
@@ -73,12 +89,19 @@ The RAK13800 WisBlock Ethernet module comprises a standard 40-pin IO Connector. 
 
 :::tip NOTES:
 - SPI-related pins, INTn, CSn, RSTn，3V3_S, and GND are connected to IO Connector.
-- +5 V is connected to the WisBlock IO connector to power the WisBlock Base Board with RAK19018 POE.
+- +5&nbsp;V is connected to the WisBlock IO connector to power the WisBlock Base Board with RAK19018 POE.
 :::
 
-> **Image:** RAK13800 pinout
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/rak13800_pinouts.svg"
+  width="100%"
+  caption="RAK13800 pinout"
+/>
+
 
 #### Electrical Characteristics
+
 
 ##### Absolute Maximum Ratings
 
@@ -98,37 +121,66 @@ The RAK13800 WisBlock Ethernet module comprises a standard 40-pin IO Connector. 
 | VDD        | Supply voltage  | 2.97     | 3.3      | 3.63     | V        |
 | IDD1       | Supply current  | -        | 132      | -        | mA       |
 
+
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 Refer to **Figure 5** below for the mechanical dimensions of the RAK13800 module.
 
-> **Image:** RAK13800 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/rak13800-dim.png"
+  width="100%"
+  caption="RAK13800 mechanical dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/image-20201228093039748.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
-##### Standard WisBlock Connector
 
-> **Image:** Standard WisBlock connector
+##### Standard WisBlock Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/image-20211116120503808.png"
+  width="70%"
+  caption="Standard WisBlock connector"
+/>
+
 
 ##### WIZnet W5100S-L Ethernet Controller
 
-> **Image:** WIZnet W5100S-L Ethernet controller and mounting holes
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/rak13800_w5100s.png"
+  width="100%"
+  caption="WIZnet W5100S-L Ethernet controller and mounting holes"
+/>
+
 
 ##### RJ45 Connector and Ethernet Transformer
 
 T1 is the Ethernet Transformer and J4 is the RJ-45 Connector.
 
-> **Image:** RJ45 connector and Ethernet transformer
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/rak13800-eth-rj.png"
+  width="100%"
+  caption="RJ45 connector and Ethernet transformer"
+/>
+
 
 ##### Power Connector for RAK19018 POE
 
-J6 is 5 V output and J5 is POE power input.
+J6 is 5&nbsp;V output and J5 is POE power input.
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13800/datasheet/image-20211116120716038.png"
+  width="70%"
+  caption="Power connector for RAK19018"
+/>
 
-> **Image:** Power connector for RAK19018
-
+<RkBottomNav/>

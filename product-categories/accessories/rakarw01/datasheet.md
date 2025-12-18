@@ -9,14 +9,17 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # 2.4 GHz Wi-Fi Fiberglass Antenna Datasheet
 
 ## Overview
 
 ### Features
 
-- Frequency range: 2400 MHz ~ 2500 MHz
-- Max gain: 2 dBi
+- Frequency range: 2400&nbsp;MHz ~ 2500&nbsp;MHz
+- Max gain: 2&nbsp;dBi
 - VSWR: ≤2
 - High efficiency
 - N-type male connector
@@ -25,35 +28,50 @@ sidebar_label: Datasheet
 - Omnidirectional
 - Outdoor use
 
-> **Image:** RAKARW01 Overview
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarw01/antenna-overview.png"
+  width="70%"
+  caption="RAKARW01 Overview"
+/>
 
 ## Specifications
+
+
 
 | Parameter              | Value                               |
 |------------------------|-------------------------------------|
 | Model                  | RAKARW01                            |
-| Frequency range        | 2400 MHz ~ 2500 MHz       |
-| Peak gain              | 2 dBi                          |
+| Frequency range        | 2400&nbsp;MHz ~ 2500&nbsp;MHz       |
+| Peak gain              | 2&nbsp;dBi                          |
 | VSWR                   | ≤2                                  |
 | Efficiency             | ≤60%                                |
-| Feed impedance         | 50 Ohms                        |
+| Feed impedance         | 50&nbsp;Ohms                        |
 | Radiation pattern      | Omnidirectional                     |
 | Beam width             | 360°                                |
 | Cover material (color) | Fiberglass (white)                  |
 | Connector type         | N-type male                         |
-| Dimensions (mm)        | Փ 20.0 mm x 215.0 mm |
-| Operation temp (°C)    | -20° C ~ +65° C           |
-| Storage temperature    | -30° C ~ +75° C           |
+| Dimensions (mm)        | Փ&nbsp;20.0&nbsp;mm x 215.0&nbsp;mm |
+| Operation temp (°C)    | -20°&nbsp;C ~ +65°&nbsp;C           |
+| Storage temperature    | -30°&nbsp;C ~ +75°&nbsp;C           |
 | Humidity range         | 5% ~ 95%                            |
+
+
 
 ### VSWR and Return Loss
 
 | Frequency (MHz) | VSWR | Return Loss (dB) |
 |-----------------|------|------------------|
-| 2400 MHz   | 1.55 | -13.45           |
-| 2500 MHz   | 1.56 | -13.20           |
+| 2400&nbsp;MHz   | 1.55 | -13.45           |
+| 2500&nbsp;MHz   | 1.56 | -13.20           |
 
-> **Image:** RAKARG13 VSWR Graph
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarw01/vswr.png"
+  width="80%"
+  caption="RAKARG13 VSWR Graph"
+/>
+
 
 ### Peak Gain & Efficiency
 
@@ -72,11 +90,21 @@ sidebar_label: Datasheet
 | 2500            | 3.5        | 68.2           |
 |                 | Average:   | 62.24          |
 
+
 ### Radiation Patterns
 
-> **Image:** RAKARG12 Radiation Pattern for 860 MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarw01/radiation-patterns.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 860 MHz"
+/>
 
 ### Mechanical Characteristics
 
-> **Image:** RAKARW01 Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarw01/mechanical-characteristics.png"
+  width="80%"
+  caption="RAKARW01 Mechanical Characteristics"
+/>
 
+<RkBottomNav/>

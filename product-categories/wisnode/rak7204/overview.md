@@ -9,6 +9,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7204 WisNode Sense Home
 
 Thank you for choosing **RAK7204 WisNode Sense Home** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -26,17 +28,19 @@ As an alternative product, we recommend [RAK WisBlock Weather Monitor Kit](https
 
 The RAK7204 WisNode Sense Home is an LPWAN node with integrated environmental sensors. The high-precision environmental sensors can measure changes in temperature, humidity, and air pressure and provide an indoor air quality index. All the accumulated data can be sent to a gateway and forwarded to the cloud.
 
-The environmental sensors, LoRa transceiver module, LoRa antenna, and battery are fitted in a 90 mm x 85 mm x 34 mm sized housing. These small dimensions allow for installation in tight spaces or those that require the sensor to have a minimal impact on the overall feel of the surrounding environment. The housing adopts a hollow, permeable design to facilitate airflow in order to more accurately detect environmental changes.
+The environmental sensors, LoRa transceiver module, LoRa antenna, and battery are fitted in a 90&nbsp;mm x 85&nbsp;mm x 34&nbsp;mm sized housing. These small dimensions allow for installation in tight spaces or those that require the sensor to have a minimal impact on the overall feel of the surrounding environment. The housing adopts a hollow, permeable design to facilitate airflow in order to more accurately detect environmental changes.
+
 
 ## Product Features
 
 - Measurement of a variety of environmental parameters: **Temperature**, **Humidity**, **Gas Pressure**, and **Indoor Air Quality (IAQ)**
 - **BOSCH BME680** Integrated Environmental Unit
 - **LoRaWAN 1.0.2** fully compliant
-- Low power operation and standby current of less than 15 uA
+- Low power operation and standby current of less than 15&nbsp;uA
 - Adjustable sampling and transmission interval.
-- Comes with a replaceable 3500 mAh high capacity lithium battery
+- Comes with a replaceable 3500&nbsp;mAh high capacity lithium battery
 - Real time battery status monitoring.
 - **Battery life of more than 2 years** (At 15 minute data transmission interval)
 - Compact in size, easy to install and maintain.
 
+<RkBottomNav/>

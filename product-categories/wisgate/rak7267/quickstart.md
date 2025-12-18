@@ -9,7 +9,12 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK7267 WisGate Soho Pro Quick Start Guide
+
 
 ## Prerequisites
 
@@ -18,11 +23,16 @@ sidebar_label: Quick Start Guide
 1. <a href="https://store.rakwireless.com/products/wisgate-soho-pro-gateway-rak7267?variant=43997899751622" target="_blank">RAK7267 WisGate Soho Pro</a>
 2. A Windows/Mac OS/Linux Computer
 3. Installation Accessories (e.g., mounting kit, power supply, screws, etc.)
-4. **NanoSIM Card** – Prepare a NanoSIM card (12 mm x 9 mm x 0.67 mm) before installation to enable cellular connectivity.
+4. **NanoSIM Card** – Prepare a NanoSIM card (12&nbsp;mm x 9&nbsp;mm x 0.67&nbsp;mm) before installation to enable cellular connectivity.
+
 
 ### Package Inclusion
 
-> **Image:** RAK7267 package list
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/1.package.png"
+  width="70%"
+  caption="RAK7267 package list"
+/>
 
 :::tip NOTE
 The packing list shows cables for all power options supported by the gateway. This may not exactly match the cable options out of the box, depending on the bundle you purchased.
@@ -41,11 +51,19 @@ The packing list shows cables for all power options supported by the gateway. Th
 
 1. Start by unscrewing the cap of the NanoSIM interface on the gateway Unify enclosure to expose the SIM card slot.
 
-> **Image:** SIM card slot
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/nanosim-interface.png"
+  width="40%"
+  caption="SIM card slot"
+/>
 
 2. Push the SIM card into the card slot according to the placement method marked on the interface.
 
-> **Image:** Inserting the SIM card
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/insert-sim-card.png"
+  width="40%"
+  caption="Inserting the SIM card"
+/>
 
 3. Once completed, screw back the metal cap. Make sure it is tightly screwed.
 
@@ -53,21 +71,33 @@ The packing list shows cables for all power options supported by the gateway. Th
 
 This section provides the instructions on mounting and securing the mounting kit to the enclosure and the mounting pole.
 
-1. Fix the pole mounts marked with the letter A on the gateway Unify enclosure using four (4) pieces of M3 x 8 mm head screw with a washer. The fixed positions are shown in **Figure 5**.
+1. Fix the pole mounts marked with the letter A on the gateway Unify enclosure using four (4) pieces of M3 x 8&nbsp;mm head screw with a washer. The fixed positions are shown in **Figure 5**.
 
-> **Image:** Pole mounts marked with the letter A
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/pole-vertical-a.png"
+  width="15%"
+  caption="Pole mounts marked with the letter A"
+/>
 
-> **Image:** Fixing the pole mounts on the enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/pole-mount-vertical1.png"
+  width="40%"
+  caption="Fixing the pole mounts on the enclosure"
+/>
 
-2. After fixing the mounts on the enclosure, place the Unify Enclosure onto the pole by using two (2) steel strips (65\~89 mm).
+2. After fixing the mounts on the enclosure, place the Unify Enclosure onto the pole by using two (2) steel strips (65\~89&nbsp;mm).
 
 :::tip NOTE
 
-The steel strips **ONLY** support 65\~89 mm diameter pole.
+The steel strips **ONLY** support 65\~89&nbsp;mm diameter pole.
 
 :::
 
-> **Image:** Fixing the enclosure on the pole
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/vertical-pole.png"
+  width="25%"
+  caption="Fixing the enclosure on the pole"
+/>
 
 ### Lightning Protection
 
@@ -83,15 +113,27 @@ The gateway supports multiple power supply options. Connect the gateway to the a
 
 **Cable and Power Adapter:** When the gateway is deployed indoors, it is recommended to use the cable and power adapter to power the gateway.
 
-> **Image:** Powering the gateway through a DC adapter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/power_by_dcadapter.png"
+  width="60%"
+  caption="Powering the gateway through a DC adapter"
+/>
 
-**DC Cable:** If you use a customized external DC power supply to power the gateway, you need to use the DC cable to connect the external power supply. The external power supply voltage range:  9~36 V<sub>DC</sub>.
+**DC Cable:** If you use a customized external DC power supply to power the gateway, you need to use the DC cable to connect the external power supply. The external power supply voltage range:  9~36&nbsp;V<sub>DC</sub>.
 
-> **Image:** Powering the gateway through an external DC power source
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/power_by_dccable.png"
+  width="60%"
+  caption="Powering the gateway through an external DC power source"
+/>
 
 **Cable for RAK9155 Battery Plus**: For outdoor deployment scenarios, it is recommended to use RAK9155 Battery Plus as its power supply. This cable is dedicated to the RAK9155 Battery Plus.
 
-> **Image:** Powering the gateway through RAK Battery Plus
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/power_by_rakbatteryplus.png"
+  width="60%"
+  caption="Powering the gateway through RAK Battery Plus"
+/>
 
 :::tip NOTE
 <a href="https://store.rakwireless.com/products/rak-battery-plus-rak9155?variant=42309251563718" target="_blank">RAK9155 Battery Plus</a> is not included in the bundle, it needs to be purchased separately.
@@ -109,7 +151,12 @@ For RAK7267, you need to access the gateway through Wi-Fi AP Mode. You can find 
 
    :::
 
-> **Image:** Accessing the gateway via Wi-Fi AP mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/access-the-gateway.jpg"
+  width="70%"
+  caption="Accessing the gateway via Wi-Fi AP mode"
+/>
+
 
 2. For security reasons, upon the first login, you must set a login password. To do this, enter the desired password and confirm it in the provided fields. The password must meet the following requirements:
 
@@ -118,15 +165,27 @@ For RAK7267, you need to access the gateway through Wi-Fi AP Mode. You can find 
 - Has at least one number
 - Has at least one standard Latin letter (used in the English alphabet)
 
-> **Image:** Web UI login page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/17.web-ui.png"
+  width="100%"
+  caption="Web UI login page"
+/>
 
 3. When the fields are filled in, click the **Set password** button to apply it. The web UI is now accessible and it will load the **LoRaWAN Statistics page**.
 
-> **Image:** LoRaWAN statistics page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/18.stat-page.png"
+  width="100%"
+  caption="LoRaWAN statistics page"
+/>
 
 4. On the next log in, you need to use the set password for access. The default login username is **root**.
 
-> **Image:** Login Page with set password
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/19.set-password.png"
+  width="100%"
+  caption="Login Page with set password"
+/>
 
 ### Access the Internet
 
@@ -134,7 +193,12 @@ In this section, two methods of accessing the internet are provided to give you 
 
 #### Connect Through Wi-Fi
 
-> **Image:** Accessing the Internet using Wi-Fi
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/access-using-wifi.jpg"
+  width="70%"
+  caption="Accessing the Internet using Wi-Fi"
+/>
+
 
 1. Access the gateway's Web UI, and navigate to **Network** > **WAN** > **Wi-Fi**.
 
@@ -148,8 +212,11 @@ In this section, two methods of accessing the internet are provided to give you 
    Assuming you have entered the correct parameter values, you should receive an IP address assigned by your Wi-Fi router's (AP) built-in DHCP server. You can use this new IP address to log in via a web browser (the same way as in AP mode).
    :::
 
-   
-> **Image:** Wi-Fi settings
+   <RkImage
+     src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/wifi-settings.png"
+     width="65%"
+     caption="Wi-Fi settings"
+   />
 
 For additional information, check the [WisGateOS 2 User Manual > WAN > Wi-Fi](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#wi-fi).
 
@@ -161,13 +228,19 @@ After inserting the SIM card, the gateway will automatically attempt to connect 
 
 2. Expand the **Cellular** section and click on **Settings**.
 
-   
-> **Image:** Cellular Interface Page
+   <RkImage
+     src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/21.cellular-settings.png"
+     width="85%"
+     caption="Cellular Interface Page"
+   />
 
 3. For parameter configuration, refer to the [WisGateOS 2 User Manual > WAN > Cellular ](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#cellular).
 
-   
-> **Image:** Cellular settings
+   <RkImage
+     src="https://images.docs.rakwireless.com/wisgate/rak7267/quickstart/cellular-confi.png"
+     width="60%"
+     caption="Cellular settings"
+   />
 
 :::tip NOTE
 Make sure that your SIM card is activated and supports data services.
@@ -184,3 +257,4 @@ In this section, you can browse tutorials about the RAK7267 gateway to help you 
 | <a href="https://learn.rakwireless.com/hc/en-us/articles/26526970499735-How-To-Configure-ThingsBoard-with-MQTT-HTTP-Integrations-via-WisGateOS2" target="_blank">ThingsBoard Configuration with MQTT/HTTP Integrations via WisGateOS 2</a> |
 | <a href="https://learn.rakwireless.com/hc/en-us/articles/26688144537623-How-To-Install-OpenVPN-for-Ubuntu-Systems" target="_blank">OpenVPN Server Installation Guide (For Ubuntu sys)</a>                                                  |
 
+<RkBottomNav/>

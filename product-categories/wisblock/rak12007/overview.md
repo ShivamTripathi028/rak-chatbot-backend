@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK12007 WisBlock Ultrasonic Sensor Module
 
 Thank you for choosing **RAK12007 WisBlock Ultrasonic Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -22,6 +25,7 @@ Thank you for choosing **RAK12007 WisBlock Ultrasonic Sensor Module** in your aw
 * [RAK12007 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12007.stp)
 * [40-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 * [WisBlock IO Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26743881131927-How-To-Make-Your-Own-WisBlock-IO-Board)
+
 
 **Examples**
 
@@ -37,13 +41,13 @@ For an ultrasonic detector, there are two main parts: **Emitter** and **Detector
 
 * **Sensor specifications**
 
-    * Detect range 2 cm to 4 m
-    * 3.3 V power supply
-    * Standby Current: < 170 uA
+    * Detect range 2&nbsp;cm to 4&nbsp;m
+    * 3.3&nbsp;V power supply
+    * Standby Current: < 170&nbsp;uA
     * Chipset: angoSense CS100
 
 * **Size**
-    * 25 x 48 mm
+    * 25 x 48&nbsp;mm
 
 ## Prerequisites
 
@@ -53,3 +57,4 @@ To use a **RAK12007**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

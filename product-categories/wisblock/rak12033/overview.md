@@ -10,6 +10,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12033 WisBlock 6-Axis Accelerometer Sensor Module
 
 Thank you for choosing **RAK12033 WisBlock 6-Axis Accelerometer Sensor Module** in your next IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -22,6 +24,7 @@ Thank you for choosing **RAK12033 WisBlock 6-Axis Accelerometer Sensor Module** 
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
 
+
 **Examples**
 
 For All WisBlock Core Modules:
@@ -29,22 +32,22 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-RAK12033 is a 6-axis accelerometer sensor module, part of the RAKWireless WisBlock Sensor series. The module is based on IIM-42652 from TDK InvenSense. It is a smart industrial motion tracking device that supports an extended operating temperature range. The module is combined with a 3-axis gyroscope and a 3-axis accelerometer. RAK12033 can measure the angular rate and report data through a standard I2C digital interface that speeds up to 1 MHz.
+RAK12033 is a 6-axis accelerometer sensor module, part of the RAKWireless WisBlock Sensor series. The module is based on IIM-42652 from TDK InvenSense. It is a smart industrial motion tracking device that supports an extended operating temperature range. The module is combined with a 3-axis gyroscope and a 3-axis accelerometer. RAK12033 can measure the angular rate and report data through a standard I2C digital interface that speeds up to 1&nbsp;MHz.
 
 ## Product Features
 
 * **Sensor specifications**
-    * Voltage supply: 3.3 V
-    * Current consumption: 46.7 uA to 959 uA
+    * Voltage supply: 3.3&nbsp;V
+    * Current consumption: 46.7&nbsp;uA to 959&nbsp;uA
     * Chipset: TDK InvenSense IIM-42652
     * Gyroscope output range: ±15.625, ±31.25, ±62.5, ±125, ±250, ±500, ±1000, and ±2000 degrees/sec.
     * Accelerometer output range: ±2g, ±4g, ±8g, and ±16g
-    * 20,000 g shock tolerant
+    * 20,000&nbsp;g shock tolerant
     * I2C digital output interface
-    * Operating temperature: -40° C ~ 105° C
+    * Operating temperature: -40°&nbsp;C ~ 105°&nbsp;C
 
 * **Size**
-    * 10 x 23 mm
+    * 10 x 23&nbsp;mm
 
 ## Prerequisites
 
@@ -54,3 +57,4 @@ To use a **RAK12033**, you need at least a **WisBlock Base board** to plug the m
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

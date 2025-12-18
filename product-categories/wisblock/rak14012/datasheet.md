@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14012 WisBlock LED Matrix Datasheet
 
 ## Overview
@@ -18,13 +21,14 @@ sidebar_label: Datasheet
 
 RAK14012 is an LED matrix driver module for WS2812B LEDs, which has a control circuit and RGB chip.
 
-To drive the WS2812B, the RAK14012 has a built-in boost circuit to generate 5 V voltage output. But it is recommended to use an external power supply to power the LED Matrix.
+To drive the WS2812B, the RAK14012 has a built-in boost circuit to generate 5&nbsp;V voltage output. But it is recommended to use an external power supply to power the LED Matrix.
+
 
 ### Features
 
 - LED matrix driver
-- 3.3 V Power supply
-- Module Size: 25 mm x 15 mm
+- 3.3&nbsp;V Power supply
+- Module Size: 25&nbsp;mm x 15&nbsp;mm
 
 ## Specifications
 
@@ -34,7 +38,12 @@ To drive the WS2812B, the RAK14012 has a built-in boost circuit to generate 5 V
 
 The RAK14012 WisBlock LED Matrix can be mounted to the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK14012 on a WisBlock Base board, such as the [RAK5005-O](https://store.rakwireless.com/products/rak5005-o-base-board).
 
-> **Image:** RAK14012 WisBlock LED Matrix mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/mounting.png"
+  figureCount="1"
+  width="60%"
+  caption="RAK14012 WisBlock LED Matrix mounting"
+/>
 
 ### Hardware
 #### Pin Definition
@@ -45,15 +54,20 @@ The RAK14012 WisBlock LED Matrix comprises a 40-pin WisConnector. The 40-pin Wis
 - The **VBAT**, **GND**, **EN (WB_IO6)**, and **DOUT (WB_IO5)** are connected to WisConnector.
 :::
 
- 
-> **Image:** RAK14012 WisBlock LED Matrix pinout
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/rak14012_pinout.svg"
+  figureCount="2"
+  width="80%"
+  caption="RAK14012 WisBlock LED Matrix pinout"
+/>
+
 
 #### Electrical Characteristics
 
 | Symbol | Description             | Condition        | Min. | Nom. | Max. | Unit |
 | ------ | ----------------------- | ---------------- | ---- | ---- | ---- | ---- |
 | VBAT   | Lithium battery output  | Normal operation | 3.3  | -    | 4.2  | V    |
-| 3V3_S  | 3.3 V from WisBase | Normal operation | -    | 3.3  | -    | V    |
+| 3V3_S  | 3.3&nbsp;V from WisBase | Normal operation | -    | 3.3  | -    | V    |
 | 5V     | Output from boost       | Normal operation | -    | 5    | -    | V    |
 
 #### Mechanical Characteristics
@@ -62,28 +76,57 @@ The RAK14012 WisBlock LED Matrix comprises a 40-pin WisConnector. The 40-pin Wis
 
 **Figure 3** shows the dimensions and the mechanical drawing of the RAK14012 module.
 
- 
-> **Image:** RAK14012 WisBlock LED Matrix dimensions
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/mechanical-drawing.png"
+  figureCount="3"
+  width="80%"
+  caption="RAK14012 WisBlock LED Matrix dimensions"
+/>
+
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/pcb_footprint.png"
+  figureCount="4"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
+
 
 #### Schematic Diagram
 
-It has a boost circuit to generate 5 V because the supply for WS2812B must be between 3.7 V and 5.3 V. It is recommended to use an external power source to power the LED Matrix because of its high power consumption.
+It has a boost circuit to generate 5&nbsp;V because the supply for WS2812B must be between 3.7&nbsp;V and 5.3&nbsp;V. It is recommended to use an external power source to power the LED Matrix because of its high power consumption.
+
+
 
 ##### Connector
 
-> **Image:** RAK14012 connector connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/connector.png"
+  figureCount="5"
+  width="50%"
+  caption="RAK14012 connector connection"
+/>
+
 
 ##### Boost
 
-> **Image:** RAK14012 boost circuit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/boost.png"
+  figureCount="6"
+  width="90%"
+  caption="RAK14012 boost circuit"
+/>
 
 ##### Power Selection
 
-> **Image:** RAK14012 power selection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/power.png"
+  figureCount="7"
+  width="50%"
+  caption="RAK14012 power selection"
+/>
 
 :::warning
 - Make sure that the jumper from 5V_OUT of RAK14012 WisBlock LED Matrix is disconnected when connecting to an external power supply.
@@ -93,5 +136,15 @@ It has a boost circuit to generate 5 V because the supply for WS2812B must be b
 
 ##### Connector for LED Matrix
 
-> **Image:** RAK14012 connector for LED matrix
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14012/datasheet/connector_for_led.png"
+  figureCount="8"
+  width="50%"
+  caption="RAK14012 connector for LED matrix"
+/>
+
+<RkBottomNav/>
+
+
+
 

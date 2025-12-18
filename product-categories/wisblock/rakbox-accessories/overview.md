@@ -8,11 +8,21 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # WisBlock Unify Enclosure Accessories
 
 ## Overview
 
 The WisBlock Unify Enclosure supports different types of mounting accessories.
 
-> **Image:** Different mounting options
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-accessories/list.png"
+  width="80%"
+  caption="Different mounting options"
+/>
+
+<RkBottomNav/>
 

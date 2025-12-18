@@ -14,6 +14,9 @@ sidebar_label: Product Overview
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK10706 Signal Meter for LoRa
 
 Thank you for choosing **RAK10706 Signal Meter for LoRa** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -33,7 +36,7 @@ The **RAK10706 Signal Meter for LoRa** operates in LoRa P2P and LoRaWAN modes, w
 ## Product Features
 
 - Supports LoRaWAN regions: RU864, IN865, EU868, US915, AU915, KR920, & AS923-1/2/3/4
-- Supports LoRa P2P from 830 to 960 MHz frequencies
+- Supports LoRa P2P from 830 to 960&nbsp;MHz frequencies
 - Compatible with LoRaWAN 1.0.3
 - Offers different test modes
    - LoRaWAN LinkCheck
@@ -49,23 +52,26 @@ The **RAK10706 Signal Meter for LoRa** operates in LoRa P2P and LoRaWAN modes, w
       - Can send out test packets to other LoRa P2P nodes
 - WisToolBox compatible
    - Allows wireless configuration via BLE
-- Powered by 3,200 mAh battery
+- Powered by 3,200&nbsp;mAh battery
 - Rechargeable over a USB Type-C connector
 - 1.3" OLED display
 - Single button UI and device control
-- 2.3 dBi external antenna via RP-SMA connector
-- Operating Temperature: -10° C ~ 60° C
-- Storage Temperature: -40° C ~ 80° C
+- 2.3&nbsp;dBi external antenna via RP-SMA connector
+- Operating Temperature: -10°&nbsp;C ~ 60°&nbsp;C
+- Storage Temperature: -40°&nbsp;C ~ 80°&nbsp;C
 
 ## Difference Between the RAK10706 Signal Meter and the RAK10701 Field Tester
 
 One of the advantages of the RAK10706 Signal Meter is that there is no backend installations required on LoRaWAN servers (e.g., Helium, TTN, Chirpstack) in LinkCheck Packet mode. It works with any LoRaWAN server, such as AWS IoT Core or Actility.
 
-The RAK10706 uses LinkCheckReq to gather information about the connection to the gateway(s). This helps monitor connectivity. With LinkCheck, the LoRaWAN server reports the number of gateways and the demodulation margin. The demodulation margin is calculated by the LoRaWAN server. It provides insights into the received signal quality. A higher margin indicates better signal quality.
-
+The RAK10706 uses LinkCheckReq to gather information about the connection to the gateway(s). This helps monitor connectivity. With LinkCheck, the LoRaWAN server reports the number of gateways and the demodulation margin. The demodulation margin is calculated by the LoRaWAN server. It provides insights into the received signal quality. A higher margin indicates better signal quality.<br/>
 Extract from the LoRaWAN 1.0.3 Specification:
 
-> **Image:** LinkCheck explanation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak10706/lorawan-linkcheck.png"
+  width="70%"
+  caption="LinkCheck explanation"
+/>
 
 ## Prerequisites
 
@@ -77,3 +83,4 @@ To use the **RAK10706**, you need the following:
 - LoRa P2P test mode
    - RAK10706 must be setup for same P2P frequency, SF, CR, BW, Preamble Length as other P2P nodes in the network.
 
+<RkBottomNav/>

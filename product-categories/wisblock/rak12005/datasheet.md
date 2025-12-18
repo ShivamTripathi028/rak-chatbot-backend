@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12005 WisBlock Rain Sensor Module Datasheet
 
 ## Overview
@@ -20,16 +23,20 @@ The RAK12005, a part of WisBlock Sensor, is an electroconductive-liquid detect m
 
 RAK12005 WisBlock Rain Sensor Module also has a separate sensor PCB, the RAK12030. This sensor PCB is connected to the RAK12005 with a cable so that you can place the sensor under the open sky and keep your WisBlock solution in a dry place or inside a waterproof enclosure.
 
-> **Image:** RAK12030 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/datasheet/rak12030_module.png"
+  width="20%"
+  caption="RAK12030 Module"
+/>
 
 ### Features
 
-- 3.3 V Power supply (disconnect option to save power)
+- 3.3&nbsp;V Power supply (disconnect option to save power)
 - Chipset: Microchip MCP606
 - Digital output
 - Configurable detection threshold via trimmer
-- Module size: 15 X 25 mm
-- Separate sensor PCB RAK12030, size 25 x 35 mm
+- Module size: 15 X 25&nbsp;mm
+- Separate sensor PCB RAK12030, size 25 x 35&nbsp;mm
 
 ## Specifications
 
@@ -39,7 +46,11 @@ RAK12005 WisBlock Rain Sensor Module also has a separate sensor PCB, the RAK1203
 
 The RAK12005 WisBlock Rain Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 2** shows the mounting mechanism of the RAK12005 on a WisBlock Base module.
 
-> **Image:** RAK12005 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/datasheet/mounting-mechanism.png"
+  width="60%"
+  caption="RAK12005 mounting mechanism on a WisBlock Base module"
+/>
 
 ### Hardware
 
@@ -55,7 +66,11 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK12005 WisBlock module has a 40-pin WisConnector that is compatible to the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-> **Image:** RAK12005 WisBlock Rain Sensor Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/datasheet/rak12005_pinout.svg"
+  width="60%"
+  caption="RAK12005 WisBlock Rain Sensor Pinout"
+/>
 
 :::tip NOTE
 - Only **OUT**, **3V3_S (optional)**, **3V3**, and **GND** are connected to WisConnector. **3V3_S** can be turn on or off on WisBlock Base through **IO2**. Default use **3V3** for this module.
@@ -78,11 +93,19 @@ This sections shows the maximum and minimum ratings of the RAK12005 module and i
 
 The mechanical dimensions of the RAK12005 module is shown in **Figure 4** below.
 
-> **Image:** RAK12005 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="RAK12005 Mechanical Dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
@@ -92,9 +115,14 @@ The second divider consists of resistor R4 and a water detect panel connector (J
 
 Since the voltage of the reference divider connected to the non-inverting input is VCC/2, the output of the comparator is at zero voltage. Once the liquid is present at the detect panel, its resistance drops and pulls the voltage on the inverting input of the comparator toward zero volts. Once this voltage falls below VCC/2, the comparator output swings toward VCC, signaling the presence of liquid. Then the comparator output is tied to the IO pin on the WisConnector.
 
-> **Image:** RAK12005 WisBlock Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12005/datasheet/rak12005-schematic.png"
+  width="100%"
+  caption="RAK12005 WisBlock Module Schematics"
+/>
 
 :::tip NOTE
 - The water detect panel is RAK12030, make sure you got this module.
 :::
 
+<RkBottomNav/>

@@ -8,6 +8,9 @@ image: "https://images.docs.rakwireless.com/accessories/rak9720/rak9720.png"
 sidebar_label: Product Overview
 ---
    
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # A-Fix Bracket Kit
 
@@ -36,3 +39,5 @@ The new A-fix Bracket Kit from RAKwireless helps you to easily install and optim
 - 4x Spring washers
 - 4x Nuts
 
+
+<RkBottomNav/>

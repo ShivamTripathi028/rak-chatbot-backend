@@ -10,15 +10,22 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12035 WisBlock Soil Moisture Sensor Module Datasheet
 
 ## Overview
 
-> **Image:** RAK12035 WisBlock Soil Moisture Sensor Probe
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/rak12035.png"
+  width="60%"
+  caption="RAK12035 WisBlock Soil Moisture Sensor Probe"
+/>
 
 ### Description
 
-RAK12035 is a soil sensor probe module based on the ATTINY441-SSU microcontroller from Atmel. It uses capacitive sensing to measure moisture. A 1 MHz square wave is the output from the chip through a resistor into a big pad, and the surrounding ground plane acts as a parasitic capacitor. Both the resistor and the capacitor form a low-pass filter whose cutoff frequency changes when there is a change in capacitance.
+RAK12035 is a soil sensor probe module based on the ATTINY441-SSU microcontroller from Atmel. It uses capacitive sensing to measure moisture. A 1&nbsp;MHz square wave is the output from the chip through a resistor into a big pad, and the surrounding ground plane acts as a parasitic capacitor. Both the resistor and the capacitor form a low-pass filter whose cutoff frequency changes when there is a change in capacitance.
 
 The soil around the sensor acts as an electrolyte whose dielectric constant changes depending on the amount of moisture in it, resulting in changing the capacitance of our makeshift capacitor too. The filtered square wave is fed into a peak detector, formed by a diode and capacitor. The diode allows the positive peaks to go through, while the capacitor stores the maximum voltage of those peaks. The voltage is measured by an ADC in the MCU. An NTC element is used to measure the temperature of the soil.
 
@@ -33,7 +40,7 @@ Because you need to bury the RAK12035 sensor probe into the soil, the electronic
 - I2C address is programmable
 - Calibration via software
 - Chipset: Atmel ATTINY441-SSU
-- Module size: 18.1 x 149 mm
+- Module size: 18.1 x 149&nbsp;mm
 
 ## Specifications
 
@@ -47,11 +54,16 @@ The hardware specification is categorized into four (4) parts. It shows the chip
 | ------ | ------------- |
 | Atmel  | ATTINY441-SSU |
 
+
 #### Pin Definition
 
 The pin order of the connector and the pinout definition of the RAK12035 is shown in **Figure 2**.
 
-> **Image:** RAK12035 Pinout Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/rak12035-pinout.png"
+  width="40%"
+  caption="RAK12035 Pinout Schematic"
+/>
 
 :::tip NOTE
 - Only **I2C** related pin, **SENSE_HIGH**, **3V3**, and **RESET** are connected to the module.
@@ -63,23 +75,46 @@ The pin order of the connector and the pinout definition of the RAK12035 is show
 
 **Figure 3** shows the board dimensions of the RAK12035 Module.
 
-> **Image:** RAK12035 Board Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/board-dimensions.png"
+  width="35%"
+  caption="RAK12035 Board Dimensions"
+/>
+
 
 #### Schematic Diagram
 
 **Figure 4** shows the schematic of the RAK12035 module.
 
-> **Image:** RAK12035 WisBlock Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/rak12035-schematic.png"
+  width="100%"
+  caption="RAK12035 WisBlock Module Schematics"
+/>
 
 ##### MCU Configuration Circuit
 
-> **Image:** MCU Configuration Circuit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/mcu-config.png"
+  width="70%"
+  caption="MCU Configuration Circuit"
+/>
 
 ##### Sensor Circuit
 
-> **Image:** Sensor Circuit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/sensor-circuit.png"
+  width="40%"
+  caption="Sensor Circuit"
+/>
 
 ##### Thermistor
 
-> **Image:** Thermistor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12035/datasheet/thermistor.png"
+  width="20%"
+  caption="Thermistor"
+/>
 
+
+<RkBottomNav/>

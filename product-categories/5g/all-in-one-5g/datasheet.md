@@ -11,11 +11,20 @@ sidebar_label: Datasheet
 slug: /product-categories/5g/all-in-one-5g/datasheet/
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # All-in-One 5G Datasheet
 
 ## Overview
 
-> **Image:** All-in-One 5G front view
+
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/datasheet/all-in-one-5g.png"
+  width="40%"
+  caption="All-in-One 5G front view"
+/>
 
 ### Description
 
@@ -26,8 +35,8 @@ All-in-One 5G is an indoor device which integrates all the AGW, LTE, 5G NR, and 
 - AGW, LTE, 5G NR, and LoRa all in one
 - Low-power ARM platform
 - 4G RAM+ 32G eMMC
-- 2.5 GbE RJ45 Port with PoE++ (802.3bt)
-- 24 dBm RF Tx power
+- 2.5&nbsp;GbE RJ45 Port with PoE++ (802.3bt)
+- 24&nbsp;dBm RF Tx power
 - Built-in antennas
 - 3GPP B48 LTE
 - 3GPP n48 5G NR
@@ -45,86 +54,136 @@ The hardware specification is categorized into five parts. It shows the differen
 
 #### Main Specifications
 
-| Feature | Specifications |
-| --- | --- |
-| Hardware Architecture | AGW |
-| Hardware Architecture | LTE |
-| Hardware Architecture | 5G NR |
-| Hardware Architecture | LoRa |
-| ETH | RJ45 (2.5G) |
-| USB | Type-C USB 3.0 |
-| Button | One pairing button |
-| Power Supply | PoE++ (IEEE 802.3bt Standard) |
-| Power Consumption | M320:55W (Max) |
-| Antenna | LTE: Internal Antenna |
-| Antenna | 5G NR: Internal Antenna |
-| Antenna | LoRa: Internal Antenna (Supporting switch to external antenna) |
-| Antenna | GPS: Internal Antenna (Supporting switch to external antenna) |
-| LED | Tricolor LED (Top side) |
-| Ingress Protection | IP30 |
-| Enclosure Material | Plastics |
-| Weight | 4.2 kg |
-| Dimension | 300 mm x 311.5 mm x 79 mm |
-| Operating Temperature | -5° C to 45° C |
-| Installation Method | Table or Wall Mounting |
+<table>
+  <thead>
+    <th> Feature </th>
+    <th> Specifications </th>
+  </thead>
+  <tbody>
+    <tr><td rowSpan="5"> Hardware Architecture </td> </tr>
+    <tr><td> AGW </td></tr>
+    <tr><td> LTE </td></tr>
+    <tr><td> 5G NR </td></tr>
+    <tr><td> LoRa </td></tr>
+  <tr>
+    <td> ETH </td>
+    <td> RJ45 (2.5G) </td>
+  </tr>
+  <tr>
+    <td> USB </td>
+    <td> Type-C USB 3.0 </td>
+  </tr>
+  <tr>
+    <td> Button </td>
+    <td> One pairing button </td>
+  </tr>
+  <tr>
+    <td> Power Supply </td>
+    <td> PoE++ (IEEE 802.3bt Standard) </td>
+  </tr>
+  <tr>
+    <td> Power Consumption </td>
+    <td> M320:55W (Max) </td>
+  </tr>
+  <tr><td rowspan="5"> Antenna </td></tr>
+  <tr><td> LTE: Internal Antenna </td></tr>
+  <tr><td> 5G NR: Internal Antenna </td></tr>
+  <tr><td> LoRa: Internal Antenna (Supporting switch to external antenna) </td></tr>
+  <tr><td> GPS: Internal Antenna (Supporting switch to external antenna) </td></tr>
+  <tr>
+    <td> LED </td>
+    <td> Tricolor LED (Top side) </td>
+  </tr>
+  <tr>
+    <td> Ingress Protection </td>
+    <td> IP30 </td>
+  </tr>
+  <tr>
+    <td> Enclosure Material </td>
+    <td> Plastics </td>
+  </tr>
+  <tr>
+    <td> Weight </td>
+    <td> 4.2&nbsp;kg </td>
+  </tr>
+  <tr>
+    <td> Dimension </td>
+    <td> 300&nbsp;mm x 311.5&nbsp;mm x 79&nbsp;mm </td>
+  </tr>
+  <tr>
+    <td> Operating Temperature </td>
+    <td> -5°&nbsp;C to 45°&nbsp;C </td>
+  </tr>
+  <tr>
+    <td> Installation Method </td>
+    <td> Table or Wall Mounting </td>
+  </tr>
+
+  </tbody>
+</table>
+
+
 
 #### AGW Specifications
 
 | Feature   | Specifications                |
 | --------- | ----------------------------- |
 | CPU       | Quad Core Cortex-A72 (ARM v8) |
-| DDR       | 4 GB LPDDR4              |
-| eMMC      | 32 GB                    |
+| DDR       | 4&nbsp;GB LPDDR4              |
+| eMMC      | 32&nbsp;GB                    |
 | Bluetooth | Bluetooth 5.0, BLE            |
+
 
 #### LTE Specifications
 
 | Feature              | Specifications                           |
 | -------------------- | ---------------------------------------- |
 | LTE Mode             | TDD                                      |
-| Frequency Bands      | Band 48 (3550 MHz to 3700 MHz) |
-| Channel Bandwidth    | 5/10/15/20 MHz                      |
-| Max TX Power         | 24 dBm                              |
-| Receiver Sensitivity | -100 dBm                            |
+| Frequency Bands      | Band 48 (3550&nbsp;MHz to 3700&nbsp;MHz) |
+| Channel Bandwidth    | 5/10/15/20&nbsp;MHz                      |
+| Max TX Power         | 24&nbsp;dBm                              |
+| Receiver Sensitivity | -100&nbsp;dBm                            |
 | Synchronization      | GPS                                      |
 | MIMO                 | 2x2 MIMO                                 |
 | Antenna              | Built-in 2-port Omni Antenna             |
-| Antenna Gain         | 5 ± 1 dBi                           |
+| Antenna Gain         | 5 ± 1&nbsp;dBi                           |
 
 #### 5G NR Specifications
 
 | Feature              | Specifications                       |
 | -------------------- | ------------------------------------ |
 | LTE Mode             | TDD                                  |
-| Frequency Bands      | n48 (3550 MHz to 3700 MHz) |
-| Channel Bandwidth    | 5/10/15/20/40 MHz               |
-| Max TX Power         | 24 dBm                          |
-| Receiver Sensitivity | -100 dBm                        |
+| Frequency Bands      | n48 (3550&nbsp;MHz to 3700&nbsp;MHz) |
+| Channel Bandwidth    | 5/10/15/20/40&nbsp;MHz               |
+| Max TX Power         | 24&nbsp;dBm                          |
+| Receiver Sensitivity | -100&nbsp;dBm                        |
 | Synchronization      | GPS                                  |
 | MIMO                 | 2x2 MIMO                             |
 | Antenna              | Built-in 2-port Omni Antenna         |
-| Antenna Gain         | 5 ± 1 dBi                       |
+| Antenna Gain         | 5 ± 1&nbsp;dBi                       |
+
 
 #### LoRa Specifications
 
 | Feature              | Specifications                    |
 | -------------------- | --------------------------------- |
 | Mode                 | LoRa                              |
-| Operating Frequency  | US915 (902 MHz~928 MHz) |
-| Channel Bandwidth    | 125/500 kHz                  |
-| Mac TX Power         | 27 dBm                       |
-| Receiver Sensitivity | -139 dBm (SF12)              |
+| Operating Frequency  | US915 (902&nbsp;MHz~928&nbsp;MHz) |
+| Channel Bandwidth    | 125/500&nbsp;kHz                  |
+| Mac TX Power         | 27&nbsp;dBm                       |
+| Receiver Sensitivity | -139&nbsp;dBm (SF12)              |
 | Antenna              | Built-in Omni Antenna             |
-| Antenna Gain         | 1.5 ± 0.5 dBi                |
+| Antenna Gain         | 1.5 ± 0.5&nbsp;dBi                |
 
 #### Environmental Characteristics
 
 | Feature               | Specifications                                        |
 | --------------------- | ----------------------------------------------------- |
-| Operating Temperature | 23° F to 113° F / -5° C to 45° C  |
-| Storage Temperature   | 14° F to 122° F / -10° C to 50° C |
+| Operating Temperature | 23°&nbsp;F to 113°&nbsp;F / -5°&nbsp;C to 45°&nbsp;C  |
+| Storage Temperature   | 14°&nbsp;F to 122°&nbsp;F / -10°&nbsp;C to 50°&nbsp;C |
 | Humidity              | 5% to 95% RH                                          |
-| Atmospheric Pressure  | 70 kPa to 106 kPa                           |
+| Atmospheric Pressure  | 70&nbsp;kPa to 106&nbsp;kPa                           |
+
 
 ### Software
 
@@ -137,14 +196,15 @@ The following introduces the software specifications of the All-in-One 5G:
 - Support 5G Core: AMF, SMF, UPF, UDM-lite
 - Support LTE and 5G NR simultaneously
 - Extend to support 7 LTE or 5G NR radios
-- User Plane throughput > 1 Gbps
+- User Plane throughput > 1&nbsp;Gbps
 - Connected users > 600
 - OTA software upgrade
+
 
 #### LTE
 
 - 3GPP R12 compliant
-- Peak rate: Up to DL 110 Mbps and UL 14 Mbps with 20 MHz bandwidth
+- Peak rate: Up to DL 110&nbsp;Mbps and UL 14&nbsp;Mbps with 20&nbsp;MHz bandwidth
 - Supports 32 concurrent  users
 - 2x2 MIMO, single carrier
 - Plug-and-play with Self-Organizing Network (SON) capabilities
@@ -181,6 +241,7 @@ The following introduces the software specifications of the All-in-One 5G:
 - Supports router module NAT
 - Supports firewall
 
+
 #### Management
 
 - Supports WEB management
@@ -194,7 +255,15 @@ The following introduces the software specifications of the All-in-One 5G:
 
 ## Certification
 
-### Certifications
-- **FCC:** https://downloads.rakwireless.com/5G/Certification/M310_FCC_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/5G/Certification/M320_FCC_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'fcc': 'https://downloads.rakwireless.com/5G/Certification/M310_FCC_Certification.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/5G/Certification/M320_FCC_Certification.pdf',
+    }
+    
+    
+]} />
 
+<RkBottomNav/>

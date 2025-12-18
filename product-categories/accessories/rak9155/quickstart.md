@@ -9,6 +9,10 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK9155 Battery Plus Quick Start Guide
 
 ## Overview
@@ -46,7 +50,7 @@ These symbols indicate important safety information in this guide or on the equi
 - Do not insert foreign objects into any part of RAK9155.
 - Do not expose RAK9155 or its components to direct flame.
 - Do not install RAK9155 near heat sources.
-- If there is a chance for the ambient temperature to reach 55° C or higher, make sure to shield RAK9155 from direct sunlight either by placing the device under the solar panel or other type of shield.
+- If there is a chance for the ambient temperature to reach 55°&nbsp;C or higher, make sure to shield RAK9155 from direct sunlight either by placing the device under the solar panel or other type of shield.
 - Do not immerse RAK9155 or its components in water or other fluids.
   :::
 
@@ -65,7 +69,7 @@ These symbols indicate important safety information in this guide or on the equi
 
 - Install RAK9155 in a location that prevents damage from flooding.
 - Operating or storing the RAK9155 in temperatures outside its specified range might cause damage to the device.
-- Do not expose RAK9155 to an ambient temperature above 45° C or below -20° C.
+- Do not expose RAK9155 to an ambient temperature above 45°&nbsp;C or below -20°&nbsp;C.
   :::
 
 :::note
@@ -228,30 +232,33 @@ Replace the module with a new one if discharge time at room temperature is notic
 | Standard Discharge Current (A)         | 8                                                                                                   |
 | Max Continuous Discharge Current(A)    | 10                                                                                                  |
 | Rated DC Power (W)                     | 102.4                                                                                               |
-| The short circuit current              | 40 A                                                                                           |
-| Standard Charging Method               | 0.1 C CC to 14.6 V                                                                        |
-| Working Temperature (° C)         | Charging Temperature: 0° C ~ 45° C 
-Discharging Temperature: -20° C ~ 65° C |
-| Heating at Low Temperature             | Start heating at 0° C; Stop heating at 3° C                                               |
+| The short circuit current              | 40&nbsp;A                                                                                           |
+| Standard Charging Method               | 0.1&nbsp;C CC to 14.6&nbsp;V                                                                        |
+| Working Temperature (°&nbsp;C)         | Charging Temperature: 0°&nbsp;C ~ 45°&nbsp;C <br/>Discharging Temperature: -20°&nbsp;C ~ 65°&nbsp;C |
+| Heating at Low Temperature             | Start heating at 0°&nbsp;C; Stop heating at 3°&nbsp;C                                               |
 | Heating Power (W)                      | 60                                                                                                  |
 | Working ROH                            | 20% ~ 80%                                                                                           |
-| Storage Temperature (° C)         | -20° C ~ 50° C                                                                            |
-| Self-discharging rate                  | ≤5% (25° C, 50% SOC)                                                                           |
+| Storage Temperature (°&nbsp;C)         | -20°&nbsp;C ~ 50°&nbsp;C                                                                            |
+| Self-discharging rate                  | ≤5% (25°&nbsp;C, 50% SOC)                                                                           |
 | SOC at the end of product line         | 50%                                                                                                 |
 | Voltage Difference in each module (mV) | ≤20                                                                                                 |
 | IP Rating                              | IP65                                                                                                |
 | Recommended Usage (indoor/outdoor)     | Outdoor                                                                                             |
-| Net Weight (kg)                        | ~ 8 kg                                                                                         |
-| Dimension (L/W/H, mm)                  | 499x280x75（±3) mm                                                                             |
+| Net Weight (kg)                        | ~ 8&nbsp;kg                                                                                         |
+| Dimension (L/W/H, mm)                  | 499x280x75（±3)&nbsp;mm                                                                             |
 
 ### Interfaces
 
-> **Image:** Right-Rear View of L051100-A
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/quickstart/05.png"
+  width="40%"
+  caption="Right-Rear View of L051100-A"
+/>
 
 | Item | Name         | Model              | Remarks                                                                                                                                    |
 |------|--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | PV Input 1   | LP-16-C02PE-02-001 | IP67, 2pins, Pin1-Positive; Pin2-Negative, Max. current 10 A - Mandatory - Connects to the primary solar panel to charge the battery. |
-| 2    | PV Input 2   | LP-16-C02PE-02-001 | IP67, 2pins, Pin1-Positive; Pin2-Negative, Max. current 10 A - Optional - To be used for a second solar panel.                        |
+| 1    | PV Input 1   | LP-16-C02PE-02-001 | IP67, 2pins, Pin1-Positive; Pin2-Negative, Max. current 10&nbsp;A - Mandatory - Connects to the primary solar panel to charge the battery. |
+| 2    | PV Input 2   | LP-16-C02PE-02-001 | IP67, 2pins, Pin1-Positive; Pin2-Negative, Max. current 10&nbsp;A - Optional - To be used for a second solar panel.                        |
 | 3    | Output       | LP-16-C04PE-02-001 | IP67, 4pins, Pin1-Positive (Red), Pin2-Negative (Yellow-green), Pin3-RS485A (Brown), Pin4-RS485B (Blue)                                    |
 | 4    | Power Switch | MPB12-SL4P-FRG3-B7 | Turn on/off the battery                                                                                                                    |
 | 5    | Valve        | GLS-VTB-M12        | Safety valve                                                                                                                               |
@@ -277,22 +284,34 @@ Do not place equipment and mounting kit on pedestrian walkways to avoid accident
 
 You can carry the equipment with both hands. If the equipment is lifted with one hand, a handle needs to be installed. The handle is fixed to the equipment with two M6 screws. Before lifting the equipment, please confirm that the screws are fixed securely. You can remove the handle before installing the device.
 
-> **Image:** Handle installation
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/quickstart/06.png"
+  width="20%"
+  caption="Handle installation"
+/>
 
 ### Installation
 
 :::tip NOTE
-The diameter of the pole that is supported by the brackets is 50-75 mm. If the pole diameter is more than this value, larger hose clamps can be used. The standard mounting kit does not include larger hose clamps. If needed, they should be purchased separately.
+The diameter of the pole that is supported by the brackets is 50-75&nbsp;mm. If the pole diameter is more than this value, larger hose clamps can be used. The standard mounting kit does not include larger hose clamps. If needed, they should be purchased separately.
 :::
 
 1. Fix the mounting bracket on the pole with three hose clamps.
 
-> **Image:** Fix mounting bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/quickstart/07.png"
+  width="15%"
+  caption="Fix mounting bracket"
+/>
 
-2. Install two M6 screws on the back of the equipment, leave a gap of about 3 mm.
+2. Install two M6 screws on the back of the equipment, leave a gap of about 3&nbsp;mm.
 3. Connect the Cables to the circular connectors. The 4 pin cable connects to the Output port. The 2 pin cable connects to the PV Input 1 port. If second Solar Panel need to be connected, connect it to PV Input 2 port.
 
-> **Image:** Install screws and connect cables
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/quickstart/08.png"
+  width="20%"
+  caption="Install screws and connect cables"
+/>
 
 :::tip NOTE
 The cables should be connected before installing equipment on the pole, otherwise it is difficult to do it. Before cable connection, make sure the pin definition of the cables connected to PV panels is correct.
@@ -300,11 +319,19 @@ The cables should be connected before installing equipment on the pole, otherwis
 
 4. First, hang the equipment on the mounting bracket, then tighten the two screws that were left loose and screw the other two screws to secure the mount.
 
-> **Image:** Fixing the equipment to the pole
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/quickstart/09.png"
+  width="20%"
+  caption="Fixing the equipment to the pole"
+/>
 
 5. Loosen the screw at the lower-left corner of the equipment (there is a Ground indicator on the side), connect the ground wire using the screw provided to the equipment. To complete the ground connection, lead the ground wire to the ground.
 
-> **Image:** Grounding
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/quickstart/10.png"
+  width="30%"
+  caption="Grounding"
+/>
 
 :::tip NOTE
 The ground wire is not provided with the kit. Determine the actual distance needed before purchasing/procuring the ground cable.
@@ -344,7 +371,7 @@ It is forbidden to encounter serious vibrations and shock during transportation.
 If the system is not placed to use, it must be properly stored.
 
 - It should be stored in 60% SOC status.
-- It should be stored in a well-ventilated environment, Temp. <35° C, ROH <65%.
+- It should be stored in a well-ventilated environment, Temp. &lt;35°&nbsp;C, ROH &lt;65%.
 - It should be stored avoiding humid conditions.
 - It should be stored in a place where it can be monitored by a professional.
 
@@ -352,3 +379,5 @@ If the system is not placed to use, it must be properly stored.
 
 It should be noted that RAKwireless shall not be liable if any necessary materials are added to this user’s manual without further informing the already existing customers.
 
+
+<RkBottomNav/>

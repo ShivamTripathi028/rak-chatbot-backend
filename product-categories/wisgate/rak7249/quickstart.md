@@ -10,15 +10,22 @@ sidebar_label: Quick Start Guide
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7249 Quick Start Guide
 
 ## Prerequisites
 
+
+
 ### What Do You Need?
 
 1. [**RAK7249 WisGate Edge Max**](https://store.rakwireless.com/products/rak7249-diy-outdoor-gateway?utm_source=RAK7249Max&utm_medium=Document&utm_campaign=BuyFromStore)
 2. A Windows/Mac OS/Linux Computer
+
+
 
 :::warning
 The SIM card slot of the cellular versions is not hot-swappable. Make sure the gateway is switched off before inserting or ejecting the SIM card.
@@ -26,11 +33,16 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 
 ### What's Included in the Package?
 
-> **Image:** RAK7249 Package Contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/package_contents.png"
+  width="80%"
+  caption="RAK7249 Package Contents"
+/>
 
 :::tip NOTE
 * The included type and number of antennas and the Backup Battery Kit is optional, depending on the purchased bundle.
 :::
+
 
 ## Product Configuration
 
@@ -40,25 +52,45 @@ For details about the interfaces and connectors of RAK7249 WisGate Edge Max Gate
 
 1. Fix the support plate on the base with three M3*6 screws.
 
-> **Image:** Fixing the support plate
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image007.png"
+  width="50%"
+  caption="Fixing the support plate"
+/>
 
 2. Install the motherboard with four M3*6 screws.
 
-> **Image:** Installing the motherboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image008.png"
+  width="50%"
+  caption="Installing the motherboard"
+/>
 
 3. Install the LoRa card. The motherboard supports two LoRa cards. Slot one supports only SPI type, and slot two supports only USB type.
 
-> **Image:** Installing the LoRa card
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/3.png"
+  width="70%"
+  caption="Installing the LoRa card"
+/>
 
 4. If your board supports the cellular function, you can install your SIM card into the motherboard’s SIM card slot.
 
 5. Installation of RF cables, Ethernet cable, and reserved hole plugs.
 
-> **Image:** Installing the cables and plugs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/2.png"
+  width="70%"
+  caption="Installing the cables and plugs"
+/>
 
 6. Connect the cables to the motherboard. The connectors on the motherboard are shown in Figure 6.
 
-> **Image:** Connecting the cables to the motherboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/1.png"
+  width="70%"
+  caption="Connecting the cables to the motherboard"
+/>
 
 :::tip NOTE
 You must use the Wi-Fi MAIN connector to connect the Wi-Fi antenna.
@@ -68,30 +100,55 @@ You must use the Wi-Fi MAIN connector to connect the Wi-Fi antenna.
 
 8. Fix the M3 hexagon spacers on the plate with four screws, and then fix the battery charging PCB board on top of them.
 
-> **Image:** Fixing the battery charging PCB board
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image020.png"
+  width="50%"
+  caption="Fixing the battery charging PCB board"
+/>
 
 9. Fix the battery with cable ties beside the charging PCB board. If the cable tie is not long enough, two ties can be connected.
 
-> **Image:** Fixing the battery
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image021.png"
+  width="50%"
+  caption="Fixing the battery"
+/>
 
 10. Fix the four M3*30mm hexagon spacers on the bottom plate.
 
-> **Image:** Adding Spacers
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image022.png"
+  width="50%"
+  caption="Adding Spacers"
+/>
 
 11. Connect the cables as shown in Figure 10.
 * Connect the PH2.0 socket on the motherboard and the charging PCB board with the 2pin signal cable.
 * Connect the DC socket of the charging PCB board and the battery socket with a DC Plug cable.
 * Plug the output plug of the battery into the DC socket of the motherboard.
 
-> **Image:** Connecting the cables
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image023.png"
+  width="50%"
+  caption="Connecting the cables"
+/>
 
 12.  Fix the Charge Module in the enclosure and tighten with four screws.
 
-> **Image:** Fixing the Charge Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image024.png"
+  width="50%"
+  caption="Fixing the Charge Module"
+/>
 
 13.  Close the top cover with M4*12 screws. Make sure that the rubber seal is placed correctly in the groove between the box and the lid to prevent leaks.
 
-> **Image:** Closing the enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image025.png"
+  width="50%"
+  caption="Closing the enclosure"
+/>
 
 #### Installation
 
@@ -99,31 +156,54 @@ Instructions on mounting and securing the mounting kit to the enclosure and the 
 
 1. Fix the included cross bracket on the bottom of the enclosure with four M6*12 bolts.
 
-> **Image:** Mounting the cross bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image026.png"
+  width="30%"
+  caption="Mounting the cross bracket"
+/>
 
 2. Place two pieces of the clamp around the pole and tighten them with the included M6*110 bolts, washers, and nuts.
 
-> **Image:** Mounting the clamp to the pole
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image027.png"
+  width="40%"
+  caption="Mounting the clamp to the pole"
+/>
 
 3. Connect the pole clamp and the cross bracket by securing the last piece of the mounting kit in place using M6*30 bolts, washers, and nuts.
 
-> **Image:** Fixing the enclosure to the pole clamp
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image028.png"
+  width="40%"
+  caption="Fixing the enclosure to the pole clamp"
+/>
 #### Weather Protection
 
 To better protect the Ethernet cable gland and the antenna connector from the weather, you need to cover them with PVC tape.
 
 1. Clean the surface area of the connector that will be wrapped. Wrap a layer of PVC tape with a 50% overlap according to the rotation direction of the connector. Continue wrapping the PVC tape to about 10 mm below the end of the connector.
 
-> **Image:** Wrapping with PVC tape
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image029.png"
+  width="30%"
+  caption="Wrapping with PVC tape"
+/>
 
 2. Cut off about 50 cm waterproof tape. Stretch it to double the length. Wrap three layers around the connector with a 50% overlap. Hold the tape in place with your hand for a few seconds.
 
-> **Image:** Wrapping with waterproof tape
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image031.png"
+  width="30%"
+  caption="Wrapping with waterproof tape"
+/>
 
 3. Wrap three additional layers with PVC tape with natural uncoiling force and a 50% overlap. Make sure to cover the head and the tail of the connector.
 
-> **Image:** Final PVC wrapping
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/gateway-installation-guide/image033.png"
+  width="30%"
+  caption="Final PVC wrapping"
+/>
 
 ### solar-panel-and-battery-kit-installation
 
@@ -131,7 +211,11 @@ This document shows the step-by-step guide on how to set-up the Solar Panel and 
 
 #### Package List
 
-> **Image:** solar-panel-and-battery-kit-installation Package List
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/package-list.png"
+  width="60%"
+  caption="solar-panel-and-battery-kit-installation Package List"
+/>
 
 #### Specifications
 
@@ -140,7 +224,11 @@ This document shows the step-by-step guide on how to set-up the Solar Panel and 
 ###### 1. Dimensions
 The dimension of the Solar Panel included in the kit is **665 x 815 millimeter**. Provided in the image below are the detailed dimensions of the solar panel for extended functions.
 
-> **Image:** Solar Panel Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/sp-dimensions.png"
+  width="50%"
+  caption="Solar Panel Dimensions"
+/>
 
 ###### 2. Electrical Characteristics
 
@@ -152,6 +240,7 @@ The table below is the electric characteristics of the Solar Panel included in t
 | Current at Pmax (Imp) | 2.2 - 5.5 Amperes |
 | Open Circuit Voltage (Voc) | 21.6 Volts |
 | Short Circuit Current (Isc) | 2.3-6.5 Amperes |
+
 
 ##### Lithium Battery
 
@@ -179,7 +268,11 @@ The operational temperature of the Lithium Battery is **-20˚C ~ 60˚C**. It is 
  Tighten the nuts and make sure that the rails that make up the base are holding tight against each other.
 :::
 
-> **Image:** H-Shaped Nuts and Bolts Placement for the Bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/bolts-placement.png"
+  width="40%"
+  caption="H-Shaped Nuts and Bolts Placement for the Bracket"
+/>
 
 2. Mount the battery on top of the two parallel rails in the middle. Make sure it is as close as possible to the middle of the construction. Fasten it to the rails with four bolts, each having a washer and a nut. Refer to the image below on how to insert the bolts into the railing that is part of the bottom of the battery casing.
 
@@ -187,7 +280,11 @@ The operational temperature of the Lithium Battery is **-20˚C ~ 60˚C**. It is 
 Tighten the bolts as possible as the battery is quite heavy.
 :::
 
-> **Image:** Mounting the Battery to the Bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/battery-bracket.png"
+  width="40%"
+  caption="Mounting the Battery to the Bracket"
+/>
 
 3. Connect the input port power cable of the Lithium Battery to the screw terminals on the back of the Solar Panel. The image below shows the connection on the back of the solar panel.
 
@@ -195,15 +292,27 @@ Tighten the bolts as possible as the battery is quite heavy.
 Make sure to follow the connection in the image below as interchanging the wires would reverse the polarity. Reversing the polarity when connecting the battery is dangerous and may cause a fire.
 :::
 
-> **Image:** Lithium Battery Input Cord to Solar Panel Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/battery-spanel.png"
+  width="50%"
+  caption="Lithium Battery Input Cord to Solar Panel Connection"
+/>
 
 4. The following image then shows where the cable connection between the solar panel entering the input terminal on the battery is performed in **Step 3**.
 
-> **Image:** Lithium Battery to Solar Panel Outside Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/battery-spanel-outside.png"
+  width="50%"
+  caption="Lithium Battery to Solar Panel Outside Connection"
+/>
 
 5. Connect the Lithium Battery output terminal cable to the input power cable of the RAK7249 - Macro Outdoor Gateway as shown in the following figure.
 
-> **Image:** Lithium Battery Output Cord to RAK7249 - Marco Outdoor Gateway Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/connection.png"
+  width="50%"
+  caption="Lithium Battery Output Cord to RAK7249 - Marco Outdoor Gateway Connection"
+/>
 
 :::tip NOTE
  Your battery life will vary depending on local illumination intensity. For a 50Ah battery and an 80W solar panel, such as the ones used in the kit, the RAK7249 - Macro Outdoor Gateway should function for about 4 days. This is the worst case scenario where there is constant heavy rain and or constant presence of clouds.
@@ -215,13 +324,22 @@ Make sure to follow the connection in the image below as interchanging the wires
 
 6. Mount the whole installation you have assembled on top of a circular pole. Put the panel facing up and insert the pole in the pipe opening on the bottom of the construction. Make sure the pole is of a sufficiently small diameter to fit with a recommended value of **65 millimeters**. Use **6 pieces of M8-bolts** to fix the bottom to the construction as shown in the image below.
 
-> **Image:** Installing Bolts in the Kit into the Vertical Circular Pole
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/solar-panel-and-battery-kit-installation/bolts-vertical-pole.png"
+  width="40%"
+  caption="Installing Bolts in the Kit into the Vertical Circular Pole"
+/>
+
 
 ### Lightning Protection
 
 In this document, we will be discussing how to set up your lightning surge protection system whether be your RAK7249 WisGate Edge Max situated outdoor or indoor. Such protection system must be taken into consideration to ensure a fully functional Gateway without interruption or damage from the lightings.
 
-> **Image:** Full lighting-protection Set-up Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/lighting-protection/diagram.png"
+  width="80%"
+  caption="Full lighting-protection Set-up Diagram"
+/>
 
 #### Outdoor Surge Protection System
 
@@ -253,7 +371,11 @@ For the purpose of protecting the indoor equipment and circuitry connected to th
 
 ##### Lightning Arrestor for the LoRa, LTE, and Wi-Fi antennas
 
-> **Image:** Lightning Arrestor for LoRa , LTE and Wi-Fi Antennas
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/lighting-protection/lora-lightning-arrestor.png"
+  width="20%"
+  caption="Lightning Arrestor for LoRa , LTE and Wi-Fi Antennas"
+/>
 
 <rk-btn
   src="https://store.rakwireless.com/products/lightning-arrestor"
@@ -265,7 +387,11 @@ This is a surge protective device for securing transceivers against over-voltage
 
 ##### Lightning Arrestor for the GPS Antenna
 
-> **Image:** Lightning Arrestor for GPS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/lighting-protection/gps-lightning-arrestor.png"
+  width="40%"
+  caption="Lightning Arrestor for GPS"
+/>
 
 <rk-btn
   src="https://store.rakwireless.com/products/lightning-arrestor-for-gps-antenna"
@@ -281,7 +407,11 @@ By adopting a high pass filter, this product can effectively suppress the low-fr
 
 ##### Antenna Feeder Line
 
-> **Image:** Antenna Feeder Line
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/lighting-protection/antenna-feeder-line.png"
+  width="50%"
+  caption="Antenna Feeder Line"
+/>
 
 <rk-btn
   src="https://store.rakwireless.com/products/antenna-feeder-line"
@@ -293,7 +423,11 @@ Antenna Feeder Line for RAK7249 Lightning Protection. This antenna feeder line i
 
 ##### Signal Surge Protective
 
-> **Image:** Signal Surge Protective Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/lighting-protection/surge-protective.png"
+  width="50%"
+  caption="Signal Surge Protective Device"
+/>
 
 <rk-btn
   src="https://store.rakwireless.com/products/signal-surge-protective"
@@ -309,7 +443,11 @@ Multiple stage protection structure provides good protection of lightning effect
 
 ##### Ethernet Cabling
 
-> **Image:** Ethernet Cabling
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/outdoor-deployment/lighting-protection/ethernet-cable.png"
+  width="40%"
+  caption="Ethernet Cabling"
+/>
 
 <rk-btn
   src="https://store.rakwireless.com/products/cat5-ethernet-cable"
@@ -331,7 +469,11 @@ In this section, it is assumed that you have read and performed the procedures l
 
 First and foremost screw on the antennas. All 5 of them should be installed (**WiFi**, **LoRa**, **LTE-DIV**, **LTE-MAIN** on the top, and **GPS** on the bottom) same with the image shown below.
 
-> **Image:** RAK7249 WisGate Edge Max with the Antennas installed
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/antennas_installed.png"
+  width="30%"
+  caption="RAK7249 WisGate Edge Max with the Antennas installed"
+/>
 
 :::warning
 Do not power the device if any antenna port has been left open. In case you do not desire to use one or more antenna feature, make sure to terminate the port with a **50 Ohm load**.
@@ -341,7 +483,12 @@ Do not power the device if any antenna port has been left open. In case you do n
 
 It is recommended to use a **CAT5 Cable** to provide power to the Gateway. Attach one end to the **PoE injector** and the other to the **Ethernet Port** on the bottom of the casing.
 
-> **Image:** Powering the Gateway using PoE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/probrf78ullrkleikvg2.png"
+  width="70%"
+  caption="Powering the Gateway using PoE"
+/>
+
 
 ### Access the Gateway
 
@@ -362,7 +509,11 @@ Using your preferred Web browser, input the aforementioned IP Address and you sh
   * **Username**: root
   * **Password**: root
 
-> **Image:** Accessing the Gateway via Wi-Fi AP Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/okvqxiyqxijphxovxdtu.png"
+  width="70%"
+  caption="Accessing the Gateway via Wi-Fi AP Mode"
+/>
 
 ### WAN Port (Ethernet)
 
@@ -370,17 +521,30 @@ Connect the Ethernet cable to the port marked “ETH” on the Gateway and the o
 
 The default IP is **169.254.X.X.** The last two segments(X.X) are mapped from the last four bits of the MAC address of your gateway. For example, the last four bits of the MAC address are 0F:01, and the IP address is 169.254.15.1. Make sure to manually set the address of your PC to one in the same network (for example 169.254.15.100). Use the same credentials for the Web UI as for AP mode.
 
-> **Image:** Accessing the Gateway via WAN Port (Ethernet)
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/cjrru7khtd2gvgcwsxdi.png"
+  width="70%"
+  caption="Accessing the Gateway via WAN Port (Ethernet)"
+/>
 
 ### Access the Internet
 
 #### Connect through Wi-Fi
 
-> **Image:** Accessing the Internet using Wi-Fi
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/aub7puijxy6ohinpgucq.png"
+  width="70%"
+  caption="Accessing the Internet using Wi-Fi"
+/>
 
 Go into the **Network>Wi-Fi Menu** and make sure to enable the **Wireless Client** as it is disabled initially. Enter or click "**Scan**" to choose your **ESSSID**, select the right **Encryption** method and enter the correct **Key**.
 
-> **Image:** Connect through Wi-Fi Credentials
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/wifi-credentials.png"
+  width="60%"
+  caption="Connect through Wi-Fi Credentials"
+/>
 
 :::tip NOTE
 Assuming you have entered the correct parameter values you should get an IP address assigned by your Wi-Fi router's (AP) built-in DHCP server. You can use this new IP address to log in via a web browser (same way as in AP mode).
@@ -388,9 +552,17 @@ Assuming you have entered the correct parameter values you should get an IP addr
 
 #### Connect through Ethernet/PoE
 
-> **Image:** Accessing the Internet through Ethernet
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/jzincjovysyxgk5rldoh.png"
+  width="70%"
+  caption="Accessing the Internet through Ethernet"
+/>
 
 Connect the Ethernet cable to the port marked “ETH” on the Gateway and the other end to the PoE port of the PoE injector. Connect the LAN port of the PoE injector to your router. The router’s DHCP server should assign an IP Address to the Gateway. You can change the default settings below if you wish (details in the User Manual).
 
-> **Image:** Connect through Ethernet Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7249/quickstart/2.quickstart/ethernet-settings.png"
+  width="60%"
+  caption="Connect through Ethernet Settings"
+/>
 

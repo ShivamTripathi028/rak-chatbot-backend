@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # 100M PoE Injector
 
 Thank you for choosing **100M RAK PoE injector** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -20,8 +22,9 @@ The **100M RAK PoE injector, model R012-4800500** is a device that allows you to
 
 ## Product Features
 
-- Input: 100-240 V<sub>AC</sub> (50~60 Hz)
-- Output: 48.0 V<sub>DC</sub> 0.5 A
+- Input: 100-240&nbsp;V<sub>AC</sub> (50~60&nbsp;Hz)
+- Output: 48.0&nbsp;V<sub>DC</sub> 0.5&nbsp;A
 - Overcurrent protection
-- Supports 10/100 Mbps Ethernet
+- Supports 10/100&nbsp;Mbps Ethernet
 
+<RkBottomNav/>

@@ -7,6 +7,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # IO.Box Quick Start Guide
 
 IO.Box is a software application designed for the easy configuration of WisNode Bridge devices, specifically the <a href="https://store.rakwireless.com/products/wisnode-bridge-serial-prime-rak2470?utm_source=rak2470&utm_medium=Document&utm_campaign=BuyFromStore" target="_blank">RAK2470</a> and the RAK246X series devices. This application is available for:
@@ -20,7 +23,11 @@ IO.Box is a software application designed for the easy configuration of WisNode 
 1. To configure the application, connect the device to the computer using the provided USB cable.
 2. Start the IO.Box and click **Connect Device**.
 
-> **Image:** Start the IO.Box
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/1.png"
+width="100%"
+caption="Start the IO.Box"
+/>
 
 3. After clicking **Connect Device**, the device will be automatically detected, and the **LoRaWAN Configuration** tab will appear.
 
@@ -29,13 +36,18 @@ IO.Box is a software application designed for the easy configuration of WisNode 
 - The main menu on the left will differ depending on the device you are configuring.
 :::
 
+
 ## Interface
 
 #### LoRaWAN Tab
 
 In this tab, you can see and change the LoRaWAN configuration and information. After the configuration, click **Save** to register the changes.
 
-> **Image:** LoRaWAN tab
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/2.png"
+width="100%"
+caption="LoRaWAN tab"
+/>
 
 - **Device EUI** - The unique identifier of the device.
 - **Region** - LoRaWAN region/band.
@@ -48,14 +60,19 @@ In this tab, you can see and change the LoRaWAN configuration and information. A
 - **Confirm Mode** - Activate to receive confirmation messages from the network server for each uplink.
 - **ADR** - Allows the network server to control the data rate for your device.
 - **Data Collection Interval** - Set up the data collection period (polling period) of the device.
-  - Range: 60~86400 seconds
+  - Range: 60~86400&nbsp;seconds
 - **LoRaWAN Status** - Indicates if the device is joined in the LoRaWAN network or not.
+
 
 #### RS485 Tab
 
 In this tab, you can configure the device to match the RS485 settings of the connected sensor.
 
-> **Image:** RS485 tab
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/3.png"
+width="100%"
+caption="RS485 tab"
+/>
 
 - **RS485 Interface Configuration** - The parameters between the sensor that is going to be connected and the bridge device need to match.
   - **Baudrate** - Select the communication speed for the RS485 interface, measured in bits per second. Choose a rate that matches your sensor's requirements.
@@ -68,7 +85,11 @@ In this tab, you can configure the device to match the RS485 settings of the con
 
 In this tab, you can set up the Digital Output. This tab appears only if your device supports DI/DO (like RAK2461). You can enable or disable, and change the state of the digital output ports. Then click **Save** to send the configuration to the device.
 
-> **Image:** DI/DO tab
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/4.png"
+width="100%"
+caption="DI/DO tab"
+/>
 
 - **Port ID** - The digital input port ID, found on the device's enclosure label.
 - **Channel ID** - The polling task ID, included in the uplink data to indicate the data source.
@@ -79,11 +100,19 @@ In this tab, you can set up the Digital Output. This tab appears only if your de
 
 This tab shows the general information about your device, you can choose the power output and you can perform system resets and updates.
 
-> **Image:** System tab 1
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/5.png"
+width="100%"
+caption="System tab 1"
+/>
 
-> **Image:** System tab 2
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/6.png"
+width="100%"
+caption="System tab 2"
+/>
 
-- ** Device Version Information **
+- <b> Device Version Information </b>
   - **Hardware Version** - Displays the specific version of the device's hardware.
   - **Firmware Version** - Displays the device's firmware version.
   - **Device EUI** - Displays the unique identifier assigned by the manufacturer.
@@ -92,19 +121,24 @@ This tab shows the general information about your device, you can choose the pow
   - **Device Type** - Indicates the device's category, defining its interface types and functionalities. For detailed specifications, refer to the model information.
   - **Frequency Band** - The device's frequency band.
 
-- ** Power Output **
+- <b> Power Output </b>
   - **DC Vout Output** - Toggle to enable or disable the Vout power output. When enabled, Vout passes through the same voltage as the Vin input.
-  - **DC 12V Output** - Toggle to enable or disable the 12V_Out power output, which provides a 12 V/0.5 A power output when enabled.
+  - **DC 12V Output** - Toggle to enable or disable the 12V_Out power output, which provides a 12&nbsp;V/0.5&nbsp;A power output when enabled.
 
 :::tip NOTE
 The **Power Output** option is not available in **RAK2470**.
 :::
 
-- ** System Reset & Firmware Update ** - Buttons for performing the desired task.
+- <b> System Reset & Firmware Update </b> - Buttons for performing the desired task.
 
 #### Console Tab
 
 This tab shows a log of the AT commands sent by the IO.Box and the device's responses.
 
-> **Image:** Console tab
+<RkImage
+src="https://images.docs.rakwireless.com/software-tools/io-box/7.png"
+width="100%"
+caption="Console tab"
+/>
 
+<RkBottomNav/>

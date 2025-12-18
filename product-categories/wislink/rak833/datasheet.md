@@ -10,7 +10,12 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK833 WisLink LPWAN Concentrator Datasheet
+
+
 
 ## Overview
 
@@ -18,16 +23,16 @@ sidebar_label: Datasheet
 
 The **RAK833 WisLink LPWAN Concentrator** is a family of LoRa concentrator modules with a mini PCIe form factor based on SX1301, which enables easy integration into existing routers and other network equipment with gateway capabilities. This can be used in any embedded platform offering a free mini-PCIe slot with USB and SPI connectivity.
 
-RAK833 WisLink LPWAN Concentrator is a complete and cost efficient gateway solution offering up to 10 programmable parallel demodulation paths. It is targeted at smart metering fixed networks and Internet of Things applications with up to 500 nodes per square kilometer (km²) in a moderately interfered environment. These modules have the industry standard PCI Express Mini Card form factor which enables easy integration into an application board.
+RAK833 WisLink LPWAN Concentrator is a complete and cost efficient gateway solution offering up to 10 programmable parallel demodulation paths. It is targeted at smart metering fixed networks and Internet of Things applications with up to 500&nbsp;nodes per square kilometer (km²) in a moderately interfered environment. These modules have the industry standard PCI Express Mini Card form factor which enables easy integration into an application board.
 
 ### Product Features
 
 - Full LoRaWAN 1.0.2 stack support
 - Compact size in the form of a mPCIe 52-pin form factor card
 - SX1301 base band processor emulates 49 x LoRa demodulators, 10 parallel demodulation paths. It supports 8 uplinks channels and 1 downlink channel.
-- Max Tx Power of 20 dBm
-- RX sensitivity of -136 dBm
-- Compatible with 3.3 V mPCIe type slots, common for 3G/LTE modules
+- Max Tx Power of 20&nbsp;dBm
+- RX sensitivity of -136&nbsp;dBm
+- Compatible with 3.3&nbsp;V mPCIe type slots, common for 3G/LTE modules
 - With an option for SPI interface board or both SPI and USB interfaces
 - Perfect for a Plug-and-Play Setup when used together with the mPCIe to USB adapter (check this option above to include the board)
 
@@ -39,11 +44,19 @@ The overview shows the top and back views of the RAK833 board. It also presents 
 
 #### Board Overview
 
-> **Image:** RAK833 WisLink LPWAN Concentrator Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/board_overview.png"
+  width="80%"
+  caption="RAK833 WisLink LPWAN Concentrator Dimension"
+/>
 
 #### Block Diagram
 
-> **Image:** RAK833 WisLink LPWAN Concentrator Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/block-diagram.png"
+  width="90%"
+  caption="RAK833 WisLink LPWAN Concentrator Block Diagram"
+/>
 
 ### Hardware
 
@@ -57,11 +70,11 @@ The RAK833 WisLink LPWAN Concentrator includes the GPS_PPS input for received pa
 
 ##### Module supply input
 
-RAK833 WisLink LPWAN Concentrator must be supplied through the **3.3 Vaux** pins by a DC power supply. The voltage must be stable, because during this operation the current drawn from 3.3 Vaux can vary significantly based on the power consumption profile of the SX1301 chip (see [**SX1301 DS**](https://www.semtech.com/products/wireless-rf/lora-core/sx1301#documentation) datasheet).
+RAK833 WisLink LPWAN Concentrator must be supplied through the **3.3&nbsp;Vaux** pins by a DC power supply. The voltage must be stable, because during this operation the current drawn from 3.3&nbsp;Vaux can vary significantly based on the power consumption profile of the SX1301 chip (see [**SX1301 DS**](https://www.semtech.com/products/wireless-rf/lora-core/sx1301#documentation) datasheet).
 
 ##### Antenna RF interfaces
 
-The modules have one RF interface over a standard **U. FL connectors** (Hirose U. FL-R-SMT) with a characteristic impedance of 50 Ω. The RF port (ANT1) supports both Tx and Rx, providing the antenna interface.
+The modules have one RF interface over a standard **U. FL connectors** (Hirose U. FL-R-SMT) with a characteristic impedance of 50&nbsp;Ω. The RF port (ANT1) supports both Tx and Rx, providing the antenna interface.
 
 ##### SPI interface
 
@@ -73,7 +86,7 @@ An SPI interface is provided on the PCIe*SCK, PCIe* MISO, PCIe*MOSI, PCIe* CSN p
 This feature is not available for RAK833-SPI version.
 :::
 
-RAK833 WisLink LPWAN Concentrator can support the high speed USB to SPI by **FT2232H**, it includes a high-speed USB 2.0 compliant interface with a maximum 480 Mbps data rate, representing the interface for any communication with an external host application processor. The module itself acts as a USB device and can be connected to any USB host equipped with compatible drivers. For more information, refer to the datasheet of [**FT2232H**](https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf).
+RAK833 WisLink LPWAN Concentrator can support the high speed USB to SPI by **FT2232H**, it includes a high-speed USB 2.0 compliant interface with a maximum 480&nbsp;Mbps data rate, representing the interface for any communication with an external host application processor. The module itself acts as a USB device and can be connected to any USB host equipped with compatible drivers. For more information, refer to the datasheet of [**FT2232H**](https://www.ftdichip.com/Support/Documents/DataSheets/ICs/DS_FT2232H.pdf).
 
 ##### RESET
 
@@ -90,12 +103,16 @@ RAK833 WisLink LPWAN Concentrator includes the SPDT_SEL input for selecting SPI 
 
 The following table lists the pin numbers of RAK833 WisLink LPWAN Concentrator and its corresponding names and description.
 
-> **Image:** RAK833 WisLink LPWAN Concentrator Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/rak833_pinout.svg"
+  width="80%"
+  caption="RAK833 WisLink LPWAN Concentrator Pinout Diagram"
+/>
 
 | Pin No. | Mini PCIE x Pin Rev. 2.0 | RAK833 Pin |  Power  |  I/O  |     Description     |                                                                                         Remarks                                                                                          |
 | :-----: | :----------------------: | :--------: | :-----: | :---: | :-----------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |    1    |          WAKE#           |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
-|    2    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |  N/A  | RAK833 supply input |                                                                                  Connect to 3.3 V                                                                                   |
+|    2    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |  N/A  | RAK833 supply input |                                                                                  Connect to 3.3&nbsp;V                                                                                   |
 |    3    |          COEX1           |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |    4    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |    5    |          COEX2           |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
@@ -110,14 +127,14 @@ The following table lists the pin numbers of RAK833 WisLink LPWAN Concentrator a
 |   14    |        UIM_RESET         |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |   15    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |   16    |         UIM_SPU          |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
-|   17    |       UIM_IC\_ DM        |  SPDT_SEL  |    -    |  N/A  |          -          |                                                                              Internal 10K ohm pull-up                                                                               |
+|   17    |       UIM_IC\_ DM        |  SPDT_SEL  |    -    |  N/A  |          -          |                                                                              Internal 10K&nbsp;ohm pull-up                                                                               |
 |   18    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |   19    |         GPS_PPS          |  GPS_PPS   |         |  N/A  |                     |                                                                          Internal connection GPS_PPS for SX1301                                                                          |
 |   20    |       W_DISABLE1#        |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |   21    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
-|   22    |          PERST#          |   RESET    |         |   I   | RAK833 reset input  |                                                                           Active high(≥100 ns) for SX1301                                                                           |
+|   22    |          PERST#          |   RESET    |         |   I   | RAK833 reset input  |                                                                           Active high(≥100&nbsp;ns) for SX1301                                                                           |
 |   23    |          PERn0           |     NC     |         |  N/A  |                     |                                                                                 Internally not connected                                                                                 |
-|   24    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3 V                                                                                   |
+|   24    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3&nbsp;V                                                                                   |
 |   25    |          PERp0           |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |   26    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |   27    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
@@ -132,20 +149,20 @@ The following table lists the pin numbers of RAK833 WisLink LPWAN Concentrator a
 |   36    |          USB_D-          |   USB_D-   |   USB   |  I/O  |  USB Data Line D-   | 90-Ohm nominal differential impedance. Pull-up, pull-down and series resistors as required by USB 2.0 specifications are part of the USB pin driver and need not be provided externally. |
 |   37    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |   38    |          USB_D+          |   USB_D+   |   USB   |  I/O  |  USB Data Line D+   | 90-ohm nominal differential impedance. Pull-up, pull-down and series resistors as required by USB 2.0 specifications are part of the USB pin driver and need not be provided externally. |
-|   39    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3 V                                                                                   |
+|   39    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3&nbsp;V                                                                                   |
 |   40    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
-|   41    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3 V                                                                                   |
+|   41    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3&nbsp;V                                                                                   |
 |   42    |        LED_WWAN#         |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |   43    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |   44    |        LED_WLAN#         |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
-|   45    |         Reserved         |  PCIe_SCK  |    -    |  I/O  |    Host SPI CLK     |                                                                                  Max 10 MHz clock                                                                                   |
+|   45    |         Reserved         |  PCIe_SCK  |    -    |  I/O  |    Host SPI CLK     |                                                                                  Max 10&nbsp;MHz clock                                                                                   |
 |   46    |        LED_WPAN#         |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |   47    |         Reserved         | PCIe_MISO  |    -    |  I/O  |    Host SPI MISO    |                                                                                            -                                                                                             |
 |   48    |           1.5V           |     NC     |    -    |  N/A  |          -          |                                                                                 Internally not connected                                                                                 |
 |   49    |         Reserved         | PCIe_MOSI  |    -    |  I/O  |    Host SPI MOSI    |                                                                                            -                                                                                             |
 |   50    |           GND            |    GND     |   GND   |  N/A  |       Ground        |                                                                                    Connect to Ground                                                                                     |
 |   51    |       W_DISABLE2#        |  PCIe_CSN  |    -    |  I/O  |     Host SPI CS     |                                                                                            -                                                                                             |
-|   52    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3 V                                                                                   |
+|   52    |         3.3Vaux          |  3.3Vaux   | 3.3Vaux |   I   | RAK833 supply input |                                                                                  Connect to 3.3&nbsp;V                                                                                   |
 
 #### RF Characteristics
 
@@ -180,7 +197,7 @@ Stressing the device above one or more of the ratings listed in the Absolute Max
 | SPI      | SPI interface         | Input DC voltage at SPI interface pin      | –0.3 | 3.6  | V        |
 | GPS_PPS  | GPS 1 pps input       | Input DC voltage at GPS_PPS input pin      | –0.3 | 3.6  | V        |
 | Rho_ANT  | Antenna ruggedness    | Output RF load mismatch ruggedness at ANT1 | -    | 10:1 | VSWR     |
-| Tstg     | Storage Temperature   | -                                          | –40  | 85   | ° C |
+| Tstg     | Storage Temperature   | -                                          | –40  | 85   | °&nbsp;C |
 
 :::warning
 The product is not protected against over-voltage or reversed voltages. If necessary, voltage spikes exceeding the power supply voltage specification, given in table above, must be limited to values within the specified boundaries by using appropriate protection devices.
@@ -201,7 +218,7 @@ RAK833 WisLink LPWAN Concentrators are Electrostatic Sensitive Devices and requi
 
 ##### Operating Conditions
 
-Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25° C.
+Unless otherwise indicated, all operating condition specifications are at an ambient temperature of 25°&nbsp;C.
 
 :::warning
 Operation beyond the operating conditions is not recommended and extended exposure beyond them may affect device reliability.
@@ -211,8 +228,8 @@ Operation beyond the operating conditions is not recommended and extended exposu
 
 | Parameter                      | Min | Typical | Max | Unit     | Remarks                                                                                                                                 |
 | ------------------------------ | --- | ------- | --- | -------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| Normal operating temperature   | –20 | +25     | +65 | ° C | Normal operating temperature range (fully functional and meet 3GPP specifications)                                                      |
-| Extended operating temperature | –40 | -       | +85 | ° C | Extended operating temperature range (RF performance may be affected outside normal operating range, though module is fully functional) |
+| Normal operating temperature   | –20 | +25     | +65 | °&nbsp;C | Normal operating temperature range (fully functional and meet 3GPP specifications)                                                      |
+| Extended operating temperature | –40 | -       | +85 | °&nbsp;C | Extended operating temperature range (RF performance may be affected outside normal operating range, though module is fully functional) |
 
 ##### Supply/Power Pins
 
@@ -227,42 +244,86 @@ Input voltage at **3.3Vaux** must be above the normal operating range minimum li
 | Mode              | Condition                                                     | Min | Type | Max | Unit |
 | ----------------- | ------------------------------------------------------------- | --- | ---- | --- | ---- |
 | Idle-Mode         | All of the chip on the board enter idle mode or shutdown.     | 60  | 100  | -   | uA   |
-| Active-Mode (TX)  | The power of TX channel is 23 dBm and 3.3 V supply. | -   | TBD  | -   | mA   |
+| Active-Mode (TX)  | The power of TX channel is 23&nbsp;dBm and 3.3&nbsp;V supply. | -   | TBD  | -   | mA   |
 | Active-Mode (RX ) | TX disabled and shutdown PA.                                  | -   | TBD  | -   | mA   |
 
 #### Mechanical Characteristics
 
-RAK833 WisLink LPWAN Concentrator is fully compliant with **52-pin PCI Express Full-Mini Card Type F2** form factor, with top-side and bottom-side keep-out areas, with 50.95 mm nominal length, 30 mm nominal width and all the other dimensions as defined by the PCI Express Mini Card Electromechanical Specification except for the card thickness with a nominal value of 3.7 mm. The weight of the RAK833 WisLink LPWAN Concentrator is about 9.7 grams.
+RAK833 WisLink LPWAN Concentrator is fully compliant with **52-pin PCI Express Full-Mini Card Type F2** form factor, with top-side and bottom-side keep-out areas, with 50.95&nbsp;mm nominal length, 30&nbsp;mm nominal width and all the other dimensions as defined by the PCI Express Mini Card Electromechanical Specification except for the card thickness with a nominal value of 3.7&nbsp;mm. The weight of the RAK833 WisLink LPWAN Concentrator is about 9.7&nbsp;grams.
 
-> **Image:** RAK833 WisLink LPWAN Concentrator Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/rak833-lpwan-gateway-concentrator-module-mechanical-characteristics.png"
+  width="70%"
+  caption="RAK833 WisLink LPWAN Concentrator Mechanical Characteristics"
+/>
 
 #### Schematic Diagrams
 
 RAK833 WisLink LPWAN Concentrator refers Semtech’s reference design of SX1301, and a 4 chancel SPDT to switch SPI of SX1301 to PCI edge connector or FT2232H which converts SPI to USB2.0 interface.
 
-> **Image:** RAK833 WisLink LPWAN Concentrator Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/interface-schematic-diagram.png"
+  width="80%"
+  caption="RAK833 WisLink LPWAN Concentrator Mechanical Characteristics"
+/>
 
-> **Image:** Power Source Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/power-source-schematic-diagram.png"
+  width="80%"
+  caption="Power Source Schematic Diagram"
+/>
 
-> **Image:** FT22323 IC Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/ft22323-ic-schematic-diagram.png"
+  width="80%"
+  caption="FT22323 IC Schematic Diagram"
+/>
 
-> **Image:** Semtech - SX1301 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/semtech-sx1301-schematic-diagram.png"
+  width="100%"
+  caption="Semtech - SX1301 Schematic Diagram"
+/>
 
-> **Image:** STM32F401CDU6 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/stm32f401cdu6-schematic-diagram.png"
+  width="80%"
+  caption="STM32F401CDU6 Schematic Diagram"
+/>
 
-> **Image:** RF Part-1 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/rf-part-1-schematic-diagram.png"
+  width="100%"
+  caption="RF Part-1 Schematic Diagram"
+/>
 
-> **Image:** RF Part-2 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/rf-part-2-schematic-diagram.png"
+  width="100%"
+  caption="RF Part-2 Schematic Diagram"
+/>
 
-> **Image:** RF Part-3 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/rf-part-3-schematic-diagram.png"
+  width="100%"
+  caption="RF Part-3 Schematic Diagram"
+/>
 
-> **Image:** RF Part-4 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/rf-part-4-schematic-diagram.png"
+  width="100%"
+  caption="RF Part-4 Schematic Diagram"
+/>
 
 #### Reference Applications
 
 The figure below shows the minimum application schematic of the RAK833 WisLink LPWAN Concentrator which uses at least **3.3V/1A DC power source**. It can either connect through the SPI interface or USB interface to the main processor. If the SPI interface is chosen, **SPDT_SEL** should be connected to the ground (GND) otherwise, leave the pin open.
 
-> **Image:** Reference Minimum Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lora/rak833/datasheet/wtmebjc8oldgbqvdkyfb.png"
+  width="100%"
+  caption="Reference Minimum Schematic"
+/>
 
 ### Firmware
 
@@ -279,8 +340,10 @@ Ordering Information
 
 |    Part Number     |          Description          |
 | :----------------: | :---------------------------: |
-| RAK833-SPI/USB-915 | USB and SPI, 902-928 MHz |
-| RAK833-SPI/USB-868 | USB and SPI, 863-870 MHz |
-|   RAK833-SPI-915   |     SPI, 902-928 MHz     |
-|   RAK833-SPI-868   |     SPI, 863-870 MHz     |
+| RAK833-SPI/USB-915 | USB and SPI, 902-928&nbsp;MHz |
+| RAK833-SPI/USB-868 | USB and SPI, 863-870&nbsp;MHz |
+|   RAK833-SPI-915   |     SPI, 902-928&nbsp;MHz     |
+|   RAK833-SPI-868   |     SPI, 863-870&nbsp;MHz     |
 
+
+<RkBottomNav/>

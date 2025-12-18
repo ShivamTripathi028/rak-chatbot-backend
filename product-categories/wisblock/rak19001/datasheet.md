@@ -10,13 +10,16 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19001 WisBlock Dual IO Base Board Datasheet
 
 ## Overview
 
 ### Description
 
-**RAK19001** is a **WisBlock Base** board that connects **WisBlock Core** and **WisBlock Modules**. It provides the power supply and interconnection to the modules attached to it. It has one slot reserved for the WisBlock Core module, two IO slots, and six sensor slots A to F for WisBlock Modules. Also, there are two **2.54 mm pitch headers** that expose all key input-output pins of the WisBlock Core that includes UART, I2C, SPI, and many IO Pins.
+**RAK19001** is a **WisBlock Base** board that connects **WisBlock Core** and **WisBlock Modules**. It provides the power supply and interconnection to the modules attached to it. It has one slot reserved for the WisBlock Core module, two IO slots, and six sensor slots A to F for WisBlock Modules. Also, there are two **2.54&nbsp;mm pitch headers** that expose all key input-output pins of the WisBlock Core that includes UART, I2C, SPI, and many IO Pins.
 
 For convenience, there is a Type-C USB connector that is connected directly to WisBlock Core MCU’s USB port (if supported) or to a USB-UART converter depending on the WisBlock Core. The USB-C connection can be used for uploading firmware, serial communication, and charging A rechargeable battery. RAK19001 also includes a slide switch to select between rechargeable and non-rechargeable batteries.
 
@@ -37,23 +40,33 @@ If you can't find a module that fits your IoT requirements, use the standard con
   * Access to various communication bus via headers: I2C, SPI, UART, and USB
   * One user-defined push button switch
 * **Power supply**
-  * Supports both 5 V USB, 3.7 V rechargeable battery, and 3.3 to 5.5 V non-rechargeable battery as power supply
+  * Supports both 5&nbsp;V USB, 3.7&nbsp;V rechargeable battery, and 3.3 to 5.5&nbsp;V non-rechargeable battery as power supply
   * The power supply for the **WisBlock modules** boards can be controlled by the **WisBlock Core** modules to minimize power consumption
   * Slide switch to select between a rechargeable or non-rechargeable battery
 * **Size**
-  * 60 x 67 mm
+  * 60 x 67&nbsp;mm
 
 ## Specifications
 
 ### Board Overview
 
-> **Image:** RAK19001 WisBlock Base top (left) and bottom (right) view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/rak19001_vb.png" 
+  figureCount="1"
+  caption="RAK19001 WisBlock Base top (left) and bottom (right) view" 
+   width="35%"
+/>
 
 ### Block Diagram
 
 The block diagram in **Figure 2** shows the internal architecture and external interfaces of the RAK19001 board.
 
-> **Image:** RAK19001 WisBlock Base block diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/rak19001-block-diagram.svg"
+  figureCount="2"
+  width="80%"
+  caption="RAK19001 WisBlock Base block diagram"
+/>
 
 ### Hardware
 
@@ -67,16 +80,21 @@ RAK19001 WisBlock Base board provides the following interfaces, headers, a butto
 * 2 IO slots for WisBlock modules
 * 6 Sensor slots A-F for WisBlock modules
 * 1 Type-C USB port for programming and debugging
-* 3.7 V rechargeable battery connector
+* 3.7&nbsp;V rechargeable battery connector
 * Non-rechargeable battery connector
-* 5 V Solar panel connector
+* 5&nbsp;V Solar panel connector
 * 2 Headers for complete access to BOOT, I2C, SPI, UART, USB, and IO pins
 * 2 User-defined LEDs
 * 1 Power supply/charging indicator LED
 * 1 User-defined button
 * 1 Reset button
 
-> **Image:** RAK19001 part labels
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/rak19001-label.png"
+  figureCount="3"
+  width="70%"
+  caption="RAK19001 part labels"
+/>
 
 ##### Type-C USB Port
 
@@ -86,54 +104,89 @@ The Type-C USB connector is compliant with the USB 2.0 specification. This USB i
 * Port can be input or output
 * Fast battery charging
 
-> **Image:** USB Type-C receptacle pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/usb-c-receptacle.png"
+  figureCount="4"
+  width="60%"
+  caption="USB Type-C receptacle pinout"
+/>
 
 ##### J10 and J15 Headers (Core IO Pins)
 
-On the WisBlock Dual IO Base board, there are a total of 40 2.54 mm pitch headers for IO access and extension. These IO pins are distributed to J10 and J15 pin headers with the corresponding label at the back of the board. The arrangement of the pins is based on the [40-pin WisConnector of the WisBlock Core](https://docs.rakwireless.com/product-categories/wisblock/rak19001/datasheet/#connector-for-wisblock-core).
+On the WisBlock Dual IO Base board, there are a total of 40 2.54&nbsp;mm pitch headers for IO access and extension. These IO pins are distributed to J10 and J15 pin headers with the corresponding label at the back of the board. The arrangement of the pins is based on the [40-pin WisConnector of the WisBlock Core](https://docs.rakwireless.com/product-categories/wisblock/rak19001/datasheet/#connector-for-wisblock-core).
 
 :::tip NOTE
 BOOT pin is used on startup configuration or sequence of the WisBlock Core connected to it. It is commonly used for uploading the bootloader and/or application firmware. The requirements of the state of the BOOT pin depend on the specific model of the WisBlock Core used.
 :::
 
-> **Image:** J10 and J15 pin header label in bottom side
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/j10_j15_label.png"
+  figureCount="5"
+  width="60%"
+  caption="J10 and J15 pin header label in bottom side"
+/>
 
 ##### J11 and J12 Headers (I2C and UART)
 
 A dedicated header is available as well to have access to commonly used serial interfaces **I2C** and **UART**.
 
-> **Image:** J11 and J12 (I2C and UART) pin header label in bottom side
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/j11_j12_label.png"
+  figureCount="6"
+  width="35%"
+  caption="J11 and J12 (I2C and UART) pin header label in bottom side"
+/>
 
 ##### Battery Connectors
 
 **Figure 7** and **Figure 8** show the battery connectors V+(positive) and GND on both rechargeable and non-rechargeable batteries.
 
-The matching connector for the rechargeable battery wires is a [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199). A cable assembly for the rechargeable battery connector is also available for purchase in [RAK store](https://store.rakwireless.com/products/battery-connector-cable).
+The matching connector for the rechargeable battery wires is a [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199). A cable assembly for the rechargeable battery connector is also available for purchase in [RAK store](https://store.rakwireless.com/products/battery-connector-cable).
 
-> **Image:** Rechargeable battery connector pin label V+ and GND
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/rechargeable.png"
+  figureCount="7"
+  width="50%"
+  caption="Rechargeable battery connector pin label V+ and GND"
+/>
 
 The onboard connector used on the non-rechargeable battery is [FWF20009-S02S22W1B](https://www.txga.com/product-details/FWF20009-S02S22W1B.html). The matching connector housing is [FHG20005-S02M2W1B](https://www.txga.com/product-details/FHG20005-S02M2W1B.html), and the connector tin-plate pin is [FT20004-F2H](https://www.txga.com/details/FT20004.html).
 
-> **Image:** Non-Rechargeable battery connector pin label V+ and GND
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/non-rechargeable.png"
+  figureCount="8"
+  width="50%"
+  caption="Non-Rechargeable battery connector pin label V+ and GND"
+/>
 
 **Figure 9** shows how to select the battery type used for the project. The battery selector is based on the [SS-12D10 slide SPDT switch](https://www.chinadaier.com/slide-switch-spdt/). You can also use this slide switch as a power on/off switch to disconnect the battery from the board.
 
-> **Image:** Battery selector switch
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/battery_select.png" 
+  figureCount="9"
+  width="50%"
+  caption="Battery selector switch"
+/>
 
 :::warning 
 
-- The voltage of the rechargeable battery **must not exceed 4.3 V**.
-- The voltage of the non-rechargeable battery **must not exceed 5.5 V**.
+- The voltage of the rechargeable battery **must not exceed 4.3&nbsp;V**.
+- The voltage of the non-rechargeable battery **must not exceed 5.5&nbsp;V**.
   :::
 
 ##### Solar Panel Connector
 
-**Figure 10** shows the solar panel connector V+(Vin) and GND. The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287). A cable assembly for the solar panel connector is also available for purchase in [RAK store](https://store.rakwireless.com/products/solar-panel-connector-cable).
+**Figure 10** shows the solar panel connector V+(Vin) and GND. The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287). A cable assembly for the solar panel connector is also available for purchase in [RAK store](https://store.rakwireless.com/products/solar-panel-connector-cable).
 
-> **Image:** Solar panel connector V+ and GND
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/solar_label.png"  
+  figureCount="10"
+  width="45%"
+  caption="Solar panel connector V+ and GND"
+/>
 
 :::warning 
-The output voltage of the solar panel **must not exceed 5.5 V**. Otherwise, it may cause permanent damage to the board.
+The output voltage of the solar panel **must not exceed 5.5&nbsp;V**. Otherwise, it may cause permanent damage to the board.
 :::
 
 ##### LEDs
@@ -152,13 +205,19 @@ The Reset Push Button shown in [Figure 3 of interfaces section](https://docs.rak
 
 The User Programmed Push Button shown in [Figure 3 of interfaces section](https://docs.rakwireless.com/product-categories/wisblock/rak19001/datasheet/#interfaces) is connected to the SW1 pin of the WisBlock Core.
 
+
 #### Pin Definition
 
 ##### Connector for WisBlock Core
 
 The **WisCore module connector** is a 40-pin board-to-board connector. It is a high-speed and high-density connector, with an easy attaching mechanism.
 
-> **Image:** WisBlock Core module 40-pin connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/12.mcu-module-connector.png"
+  figureCount="11"
+  width="45%"
+  caption="WisBlock Core module 40-pin connector"
+/>
 
 The table below shows the pinout of the 40-pin MCU module connector:
 
@@ -193,8 +252,8 @@ As for the following table, it shows the definition of each pin of the WisBlock 
 |       2        |     VBAT     |    S     |                  Power supply from battery                   |
 |       3        |     GND      |    S     |                            Ground                            |
 |       4        |     GND      |    S     |                            Ground                            |
-|       5        |     3V3      |    S     |                   3.3 V power supply                    |
-|       6        |     3V3      |    S     |                   3.3 V power supply                    |
+|       5        |     3V3      |    S     |                   3.3&nbsp;V power supply                    |
+|       6        |     3V3      |    S     |                   3.3&nbsp;V power supply                    |
 |       7        |     USB+     |   I/O    |                            USB D+                            |
 |       8        |     USB–     |   I/O    |                            USB D–                            |
 |       9        |     VBUS     |    S     |                           USB VBUS                           |
@@ -205,8 +264,8 @@ As for the following table, it shows the definition of each pin of the WisBlock 
 |       14       |     LED1     |   I/O    |             LED for battery charging indication              |
 |       15       |     LED2     |   I/O    |                     LED for custom usage                     |
 |       16       |     LED3     |   I/O    |                     LED for custom usage                     |
-|       17       |     VDD      |    S     | Generated by MCU module for power sensor board if the MCU IO level is not 3.3 V |
-|       18       |     VDD      |    S     | Generated by MCU module for power sensor board if the MCU IO level is not 3.3 V |
+|       17       |     VDD      |    S     | Generated by MCU module for power sensor board if the MCU IO level is not 3.3&nbsp;V |
+|       18       |     VDD      |    S     | Generated by MCU module for power sensor board if the MCU IO level is not 3.3&nbsp;V |
 |       19       |   I2C1_SDA   |   I/O    |               The first set of I2C data signal               |
 |       20       |   I2C1_SCL   |   I/O    |              The first set of I2C clock signal               |
 |       21       |   ADC_VBAT   |    A     |        Analog input for ADC (Connected to a battery)         |
@@ -238,7 +297,12 @@ The WisBlock sensor module connector is a 24-pin board-to-board connector.
 The WisBlock 24-pin connectors have the same connections for **3V3_S**, **GND**, **I2C**, and **SPI**. However, **UART** and **IO** pins are not the same for all slots.
 :::
 
-> **Image:** WisBlock 24-pin module connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/13.wissensor-module-connector.png"
+  figureCount="12"
+  width="40%"
+  caption="WisBlock 24-pin module connector"
+/>
 
 Pinout definition for standard size slot (A-D):
 
@@ -286,14 +350,14 @@ As for the following table, it shows the pin name and description of each pin in
 |       6        |   SPI_MOSI   |   I/O    |                       SPI MOSI signal                        |
 |       7        |   I2C1_SCL   |   I/O    |                       I2C clock signal                       |
 |       8        |   I2C1_SDA   |   I/O    |                       I2C data signal                        |
-|       9        |     VDD      |    S     | Generated by CPU module. Used to power sensor board if MCU IO level is not 3.3 V |
+|       9        |     VDD      |    S     | Generated by CPU module. Used to power sensor board if MCU IO level is not 3.3&nbsp;V |
 |       10       |     IOx      |   I/O    | General purpose IO pin. When 3V3_S is used, this pin cannot be used as an interrupt input. |
-|       11       |    3V3_S     |    S     | 3.3 V power supply. This power pin is controlled by IO2 from the WisBlock Core module. |
+|       11       |    3V3_S     |    S     | 3.3&nbsp;V power supply. This power pin is controlled by IO2 from the WisBlock Core module. |
 |       12       |     IOx      |   I/O    | General purpose IO pin. When 3V3_S is used, this pin cannot be used as an interrupt input. |
 |       13       |      NC      |    NC    |                        Not connected                         |
-|       14       |    3V3_S     |    S     | 3.3 V power supply. This power pin is controlled by IO2 from the WisBlock Core module. |
+|       14       |    3V3_S     |    S     | 3.3&nbsp;V power supply. This power pin is controlled by IO2 from the WisBlock Core module. |
 |       15       |      NC      |    NC    |                        Not connected                         |
-|       16       |     VDD      |    S     | Generated by CPU module. Used to power sensor board if the MCU IO level is not 3.3 V. |
+|       16       |     VDD      |    S     | Generated by CPU module. Used to power sensor board if the MCU IO level is not 3.3&nbsp;V. |
 |       17       |      NC      |    NC    |                        Not connected                         |
 |       18       |      NC      |    NC    |                        Not connected                         |
 |       19       |      NC      |    NC    |                        Not connected                         |
@@ -303,6 +367,7 @@ As for the following table, it shows the pin name and description of each pin in
 |       23       |     GND      |    S     |                            Ground                            |
 |       24       |     RXD1     |   I/O    |                        UART RX signal                        |
 
+
 ##### Connector for WisBlock IO Slot
 
 The WisBlock Module IO Slot connector, as shown in **Figure 13**, is a 40-pin board-to-board connector.
@@ -311,7 +376,12 @@ The WisBlock Module IO Slot connector, as shown in **Figure 13**, is a 40-pin bo
 The two WisBlock 40-pin connectors have the same connections for all IO, signal, and serial pins (UART, SPI, I2C).
 :::
 
-> **Image:** WisBlock IO slot connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/io-connector.png"
+  figureCount="13"
+  width="35%"
+  caption="WisBlock IO slot connector"
+/>
 
 Pinout definition for IO slot:
 
@@ -346,11 +416,11 @@ As for the following table, it shows the pin name and description of the WisBloc
 | 2              | VBAT         | S        | Power supply from battery                                    |
 | 3              | GND          | S        | Ground                                                       |
 | 4              | GND          | S        | Ground                                                       |
-| 5              | 3V3          | S        | 3.3 V power supply                                      |
-| 6              | 3V3_S        | S        | 3.3 V power supply. Can be shut down by a CPU module.   |
+| 5              | 3V3          | S        | 3.3&nbsp;V power supply                                      |
+| 6              | 3V3_S        | S        | 3.3&nbsp;V power supply. Can be shut down by a CPU module.   |
 | 7              | USB+         | I/O      | USB D+                                                       |
 | 8              | USB–         | I/O      | USB D–                                                       |
-| 9              | VBUS         | S        | 5 V input for USB                                       |
+| 9              | VBUS         | S        | 5&nbsp;V input for USB                                       |
 | 10             | SW1          | I/O      | User Defined Button (available on RAK4631/RAK4631-R and 11200 WisBlock Cores) |
 | 11             | TXD0         | I/O      | MCU UART0 TX signal                                          |
 | 12             | RXD0         | I/O      | MCU UART0 RX signal                                          |
@@ -358,8 +428,8 @@ As for the following table, it shows the pin name and description of the WisBloc
 | 14             | LED1         | I/O      | LED for battery charge indicator                             |
 | 15             | LED2         | I/O      | LED for custom used                                          |
 | 16             | LED3         | I/O      | LED for custom used                                          |
-| 17             | VDD          | S        | Generated by CPU module - Used for power sensor board if the MCU IO level is not 3.3 V |
-| 18             | VDD          | S        | Generated by CPU module - Used for power sensor board if the MCU IO level is not 3.3 V. |
+| 17             | VDD          | S        | Generated by CPU module - Used for power sensor board if the MCU IO level is not 3.3&nbsp;V |
+| 18             | VDD          | S        | Generated by CPU module - Used for power sensor board if the MCU IO level is not 3.3&nbsp;V. |
 | 19             | I2C1_SDA     | I/O      | The first set of I2C data signal                             |
 | 20             | I2C1_SCL     | I/O      | The first set of I2C clock signal                            |
 | 21             | AIN0         | A        | Analog input for ADC                                         |
@@ -382,6 +452,7 @@ As for the following table, it shows the pin name and description of the WisBloc
 | 38             | IO6          | I/O      | General purpose IO                                           |
 | 39             | GND          | S        | Ground                                                       |
 | 40             | GND          | S        | Ground                                                       |
+
 
 #### Electrical Characteristics
 
@@ -409,7 +480,7 @@ The RAK19001, as any electronic equipment, is sensitive to **electrostatic disch
 
 ##### Current Consumption
 
-The RAK19001 is designed for **low-power IoT products**. Its power supply uses a high-efficiency low ground current regulator. When there is no module on RAK19001, the **leakage current is lower than 2 µA**. With WisBlock Core and WisBlock sensor on it, the sleep current is **lower than 10 µA**. When a LoRa module is transmitting, the current may reach **130 mA**.
+The RAK19001 is designed for **low-power IoT products**. Its power supply uses a high-efficiency low ground current regulator. When there is no module on RAK19001, the **leakage current is lower than 2&nbsp;µA**. With WisBlock Core and WisBlock sensor on it, the sleep current is **lower than 10&nbsp;µA**. When a LoRa module is transmitting, the current may reach **130&nbsp;mA**.
 
 | **Conditions**                                               | **Current** | **Unit** |
 | ------------------------------------------------------------ | ----------- | -------- |
@@ -419,7 +490,7 @@ The RAK19001 is designed for **low-power IoT products**. Its power supply uses a
 
 ##### Rechargeable Battery Connector
 
-The RAK19001 WisBlock Base Board can be powered by a rechargeable battery connected to the **P1 connector**. The nominal operating voltage of the battery should be within the range shown in the following table. The matching connector for the battery wires is an [JST PHR-2 2 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199)
+The RAK19001 WisBlock Base Board can be powered by a rechargeable battery connected to the **P1 connector**. The nominal operating voltage of the battery should be within the range shown in the following table. The matching connector for the battery wires is an [JST PHR-2 2&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=199)
 
 | **Minimum** | **Typical** | **Maximum** | **Unit** |
 | ----------- | ----------- | ----------- | -------- |
@@ -429,17 +500,17 @@ If a rechargeable battery is used, the USB connector is used as a charging port.
 
 | **Parameter**    | **Value**        |
 | ---------------- | ---------------- |
-| Charging Voltage | 4.5 – 5.5 V |
-| Charging Current | 500 mA      |
+| Charging Voltage | 4.5 – 5.5&nbsp;V |
+| Charging Current | 500&nbsp;mA      |
 
 A suitable Li-Ion battery should have the following parameters as shown in the table below:
 
 | **Parameter**     | **Value**            |
 | ----------------- | -------------------- |
-| Standard Voltage  | 3.7 V           |
-| Charging Voltage  | 4.2 V           |
+| Standard Voltage  | 3.7&nbsp;V           |
+| Charging Voltage  | 4.2&nbsp;V           |
 | Capacity          | As required          |
-| Discharge current | At least 500 mA |
+| Discharge current | At least 500&nbsp;mA |
 
 ##### Non-Rechargeable Battery Connector
 
@@ -451,7 +522,7 @@ The RAK19001 WisBlock Base Board can be powered by a Non-rechargeable battery co
 
 ##### Solar Panel Connector
 
-A 5 V solar panel can be connected to the board via the **P2 connector** to also serve the purpose of charging the battery. The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287)
+A 5&nbsp;V solar panel can be connected to the board via the **P2 connector** to also serve the purpose of charging the battery. The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://www.jst-mfg.com/product/detail_e.php?series=287)
 
 #### Mechanical Characteristics
 
@@ -464,13 +535,28 @@ You may also refer and download the [M1.2 Stand-off fastener/inserts datasheet](
 
 **Figure 14** shows the detailed mechanical dimensions of RAK19001.
 
-> **Image:** RAK19001 board dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/board-dimension.png" 
+  figureCount="14"
+  width="100%"
+  caption="RAK19001 board dimensions"
+/>
 
-> **Image:** RAK19001 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/rak19001-pwb.png"
+  figureCount="15"
+  width="100%"
+  caption="RAK19001 mechanical dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/fxxs1003k6m.png"
+  figureCount="16"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Environmental Characteristics
 
@@ -478,17 +564,33 @@ The table below lists the operation and storage temperature requirements of RAK1
 
 | **Parameter**                 | **Minimum** | **Typical** | **Maximum** |
 | ----------------------------- | :---------: | :---------: | :---------: |
-| Operational Temperature Range | –35 ºC | +25 ºC | +75 ºC |
-| Extended Temperature Range    | –40 ºC | +25 ºC | +80 ºC |
-| Storage Temperature Range     | –40 ºC | +25 ºC | +80 ºC |
+| Operational Temperature Range | –35&nbsp;ºC | +25&nbsp;ºC | +75&nbsp;ºC |
+| Extended Temperature Range    | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
+| Storage Temperature Range     | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
 
 #### Schematic Diagram
 
 The component schematics diagram of the RAK19001 are shown in **Figure 14** and **Figure 15**.
 
-> **Image:** RAK19001 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/schematic1.png" 
+  figureCount="17"
+  width="100%"
+  caption="RAK19001 schematic diagram"
+/>
 
-> **Image:** RAK19001 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/schematic2.png" 
+ figureCount="18"
+  width="100%"
+  caption="RAK19001 schematic diagram"
+/>
 
-> **Image:** RAK19001 schematic diagram (Connectors)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19001/datasheet/schematic3.png"
+ figureCount="19"
+  width="100%"
+  caption="RAK19001 schematic diagram (Connectors)"
+/>
 
+<RkBottomNav/>

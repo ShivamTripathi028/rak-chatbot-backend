@@ -11,6 +11,10 @@ slug: /product-categories/wisduo/rak11300-module/datasheet/
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK11300 WisDuo LPWAN Module Datasheet
 
 ## Overview
@@ -25,12 +29,12 @@ The RAK11300 WisDuo LPWAN Module is based on the Raspberry Pi RP2040 chip and SX
 - **LoRaWAN 1.0.2** specification compliant
 - **Supported bands**: EU433, CN470, IN865, EU868, AU915, US915, KR920, RU864, and AS923-1/2/3/4
 - LoRaWAN Activation by OTAA/ABP
-- Long-range - greater than 15 km with optimized antenna
+- Long-range - greater than 15&nbsp;km with optimized antenna
 - ARM Cortex-M0+ Dual Core
-- 133 MHz CPU Clock
-- 246 kbytes RAM
-- **Supply Voltage**: 2.0 V ~ 3.6 V
-- **Temperature Range**: -20° C ~ 85° C
+- 133&nbsp;MHz CPU Clock
+- 246&nbsp;kbytes RAM
+- **Supply Voltage**: 2.0&nbsp;V ~ 3.6&nbsp;V
+- **Temperature Range**: -20°&nbsp;C ~ 85°&nbsp;C
 
 ## Specifications
 
@@ -40,7 +44,12 @@ This section covers the hardware and software specifications for the RAK11300. I
 
 #### Block Diagram
 
-> **Image:** RAK11300 System Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/datasheet/block-diagram.png"
+  width="50%"
+  caption="RAK11300 System Block Diagram"
+  zoomMode={true}
+/>
 
 ### Hardware
 
@@ -67,7 +76,12 @@ The hardware specification is divided into four sections, detailing the interfac
 
 #### Pin Definition
 
-> **Image:** RAK11300 Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/datasheet/rak11300_pin.png"
+  width="60%"
+  caption="RAK11300 Module Pinout"
+  zoomMode={true}
+/>
 
 ##### Pin Description
 
@@ -82,6 +96,7 @@ The table below shows the pin definition and description of RAK11300:
 |  IO  | Bidirectional  |
 |  AI  |  Analog Input  |
 |  AO  | Analog Output  |
+
 
 ##### Power Supply
 
@@ -145,19 +160,19 @@ The table below shows the pin definition and description of RAK11300:
 When using the `RF_LoRa` pin for the antenna and not the IPEX connector variant, design considerations are necessary to ensure optimum RF performance.
 
 - The RF trace must be away from interference sources (switching nodes of DC-DC supplies, high-current/voltage pulses from controllers of inductive loads like motors, signal generators, etc.).
-- The RF trace must have 50 ohm impedance.  Using impedance simulation software is advisable to achieve this.
+- The RF trace must have 50&nbsp;ohm impedance.  Using impedance simulation software is advisable to achieve this.
 - If using an external antenna connector, place it close to the `RF_LoRa` pin.
 - Ground plane optimization is critical for certain antenna types, such as monopoles.
 - The GND trace used for the RF return path must be directly connected to the GND plane and not treated as a thermal relief.
-- It is recommended to route the RF trace in a curve, rather than with sharp 90 degree bends.
+- It is recommended to route the RF trace in a curve, rather than with sharp 90&nbsp;degree bends.
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for <a href="https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test" target="_blank">Antenna RF Design</a> which includes PCB design, tuning, matching, and RF testing.
 :::
 
+
 | Pin Name | Pin No. | Type |      Description       | Comment                                                                                                          |
 |:--------:|:-------:|:----:|:----------------------:|------------------------------------------------------------------------------------------------------------------|
-| RF_LoRa  |   38    |  IO  | LoRa antenna interface | 50 Ω Impedance
-This pin can't be used on modules with an IPEX connector. If unused, keep this pin open. |
+| RF_LoRa  |   38    |  IO  | LoRa antenna interface | 50&nbsp;Ω Impedance<br/>This pin can't be used on modules with an IPEX connector. If unused, keep this pin open. |
 
 ##### ADC and GPIO
 
@@ -170,14 +185,8 @@ This pin can't be used on modules with an IPEX connector. If unused, keep this p
 |      GPIO23      |   28    |     IO      |                   General-purpose input/output                    |
 |      GPIO24      |   29    |     IO      |                   General-purpose input/output                    |
 |      GPIO27      |   41    |     IO      |                   General-purpose input/output                    |
-| GPIO26
- ADC1 |   43    | IO
- AI  | General-purpose input/output 
- General-purpose ADC interface  |
-| GPIO28
- ADC0 |   44    | IO 
- AI | General-purpose input/output 
-  General-purpose ADC interface |
+| GPIO26<br/> ADC1 |   43    | IO<br/> AI  | General-purpose input/output <br/> General-purpose ADC interface  |
+| GPIO28<br/> ADC0 |   44    | IO <br/> AI | General-purpose input/output <br/>  General-purpose ADC interface |
 
 #### RF Characteristics
 
@@ -185,17 +194,55 @@ The RAK11300 supports two different frequency variations: RAK11300(L) Low Radio 
 
 ##### Operating Frequencies
 
-| Module | Region | Frequency |
-| --- | --- | --- |
-| RAK11300(L) | Europe | EU433 |
-| RAK11300(L) | China | CN470 |
-| RAK11300(H) | Europe | EU868 |
-| RAK11300(H) | America | US915 |
-| RAK11300(H) | Australia | AU915 |
-| RAK11300(H) | Korea | KR920 |
-| RAK11300(H) | Asia | AS923 |
-| RAK11300(H) | India | IN865 |
-| RAK11300(H) | Russia | RU864 |
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Region</th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">RAK11300(L)</td>
+      <td>Europe</td>
+      <td>EU433</td>
+    </tr>
+    <tr>
+      <td>China</td>
+      <td>CN470</td>
+    </tr>
+    <tr>
+      <td rowspan="8">RAK11300(H)</td>
+      <td>Europe</td>
+      <td>EU868</td>
+    </tr>
+    <tr>
+      <td>America</td>
+      <td>US915</td>
+    </tr>
+    <tr>
+      <td>Australia</td>
+      <td>AU915</td>
+    </tr>
+    <tr>
+      <td>Korea</td>
+      <td>KR920</td>
+    </tr>
+    <tr>
+      <td>Asia</td>
+      <td>AS923</td>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>IN865</td>
+    </tr>
+    <tr>
+      <td>Russia</td>
+      <td>RU864</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Electrical Characteristics
 
@@ -208,6 +255,8 @@ The RAK11300 supports two different frequency variations: RAK11300(L) Low Radio 
 |    DVDD    |    Power supply  of MCU    |   2.0    |   3.3    |   3.6    |    V     |
 |    AVDD    |   ADC Reference Voltage    |    -     |   3.3    |    -     |    V     |
 
+
+
 ##### Absolute Maximum Ratings
 
 | **Symbol** |        **Description**        | **Min.** | **Nom.** | **Max.** | **Unit** |
@@ -219,15 +268,26 @@ The RAK11300 supports two different frequency variations: RAK11300(L) Low Radio 
 |  ESD HBM   |       Human Body Model        |    -     |    -     |   2000   |    V     |
 |  ESD  CDM  |     Charged Device Model      |    -     |    -     |   500    |    V     |
 
+
 #### Mechanical Characteristics
 
 ##### Module Dimensions
 
-> **Image:** RAK11300 Physical Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/datasheet/mechanical_dimension.png"
+  width="90%"
+  caption="RAK11300 Physical Dimension"
+  zoomMode={true}
+/>
 
 ##### Layout Recommendation
 
-> **Image:** RAK11300 Layout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/datasheet/pad_layout.png"
+  width="60%"
+  caption="RAK11300 Layout"
+  zoomMode={true}
+/>
 
 #### Environmental Characteristics
 
@@ -235,26 +295,31 @@ The RAK11300 supports two different frequency variations: RAK11300(L) Low Radio 
 
 |        Feature        | Minimum | Typical | Maximum |   Unit   |
 |:---------------------:|:-------:|:-------:|:-------:|:--------:|
-| Operating Temperature |   -20   |   25    |   85    | ° C |
+| Operating Temperature |   -20   |   25    |   85    | °&nbsp;C |
 
 ##### Storage Temperature
 
 |       Feature       | Minimum | Typical | Maximum |   Unit   |
 |:-------------------:|:-------:|:-------:|:-------:|:--------:|
-| Storage Temperature |   -20   |         |   85    | ° C |
+| Storage Temperature |   -20   |         |   85    | °&nbsp;C |
 
 ##### Recommended Reflow Profile
 
-> **Image:** Reflow Profile for RAK11300
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11300-module/datasheet/reflow.png"
+  width="70%"
+  caption="Reflow Profile for RAK11300"
+  zoomMode={true}
+/>
 
 Standard conditions for reflow soldering:
 
-- Pre-heating Ramp (A) (Initial temperature: 150° C): **1 ~ 2.5° C/sec**
-- Soaking Time (T2) (150 ~ 180° C): **60 ~ 100 sec**
-- Peak Temperature (G): **230 ~ 250° C**
-- Reflow Time (T3) (> 220° C): **30 ~ 60 sec**
-- Ramp-up Rate (B): **0 ~ 2.5° C/sec**
-- Ramp-down Rate (C): **1 ~ 3° C/sec**
+- Pre-heating Ramp (A) (Initial temperature: 150°&nbsp;C): **1 ~ 2.5°&nbsp;C/sec**
+- Soaking Time (T2) (150 ~ 180°&nbsp;C): **60 ~ 100&nbsp;sec**
+- Peak Temperature (G): **230 ~ 250°&nbsp;C**
+- Reflow Time (T3) (> 220°&nbsp;C): **30 ~ 60&nbsp;sec**
+- Ramp-up Rate (B): **0 ~ 2.5°&nbsp;C/sec**
+- Ramp-down Rate (C): **1 ~ 3°&nbsp;C/sec**
 
 ### Software
 
@@ -267,9 +332,20 @@ Download the latest firmware of the RAK11300 WisDuo LPWAN Module provided below.
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_FCC_Certification.zip
-- **ISED:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_ISED_Certification.pdf
-- **UKCA:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_UKCA_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_CE_Certification.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_FCC_Certification.zip',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_ISED_Certification.pdf',
+    },
+    {
+        'ukca': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_UKCA_Certification.pdf',
+    },
+]} />
 
+
+<RkBottomNav/>

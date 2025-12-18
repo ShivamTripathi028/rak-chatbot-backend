@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock RAKBox-B2 Enclosure
 
 Thank you for choosing **RAKBox-B2** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -16,6 +18,7 @@ Thank you for choosing **RAKBox-B2** in your awesome IoT Project! 🎉 To help y
 - [Installation Guide](https://docs.rakwireless.com/product-categories/accessories/rakbox-b2/installation-guide/)
 - [RAKBox-B2 3D Model](https://downloads.rakwireless.com/3D_File/Accessory/RAKBox-B2.stp)
 
+
 ## Product description
 RAKBox-B2 is an IP67 rated enclosure for outdoor usage. It is designed specifically for the WisBlock products.
 
@@ -23,7 +26,8 @@ The enclosure is a small, lightweight, yet very rigid design. Perfect for setups
 
 ## Product Features
 - IP67/NEMA6 rated
-- Dimensions W x L x H: 95 mm x 65 mm x 58 mm
+- Dimensions W x L x H: 95&nbsp;mm x 65&nbsp;mm x 58&nbsp;mm
 - Optional openings for N-type antenna and external components with a gland
 - Solar Panel
 
+<RkBottomNav/>

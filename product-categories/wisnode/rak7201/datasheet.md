@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7201 WisNode Button 4K Datasheet
 
 ## Overview
@@ -20,17 +23,21 @@ The **RAK7201 WisNode Button 4K** is a remote wireless trigger device. It suppor
 
 This WisNode Button is suitable for a variety of Smart Home applications. Including, but not limited to, entertainment system control, control of lights, a snooze button for the alarms, or a remote trigger. A device with long-range wireless connectivity, amazing battery life, and four programmable buttons. There are tons of applications this device can fit into.
 
-> **Image:** RAK7201
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7201/datasheet/rak7201.png"
+  caption="RAK7201"
+  width="50%"
+/>
 
 ### Features
 
 - 4 Buttons with LED indicator
-- **Product Size:** 43 x 57 x 15 mm
+- **Product Size:** 43 x 57 x 15&nbsp;mm
 - **LoRaWAN** 1.0.2 compatible
-- **Battery:** 350 mAh
+- **Battery:** 350&nbsp;mAh
 - **Battery working time:** 1 year (Rechargeable)
-- **Power Consumption:** Transmit: 77.4-153* mA, Standby: 4.8 uA
-- **Operating Temperature:** -20° C to 60° C
+- **Power Consumption:** Transmit: 77.4-153*&nbsp;mA, Standby: 4.8&nbsp;uA
+- **Operating Temperature:** -20°&nbsp;C to 60°&nbsp;C
 - **Working Environment:** Indoor
 
 *transmit current depends on factors such as transmit power, SF, and Payload Length
@@ -42,18 +49,22 @@ This WisNode Button is suitable for a variety of Smart Home applications. Includ
 | Parameter             | Value                     |
 | --------------------- | ------------------------- |
 | LoRa protocol         | LoRaWAN 1.0.2 Class A     |
-| LoRa TX power         | 20 dBm max           |
-| LoRa RX sensitivity   | -136 dBm             |
+| LoRa TX power         | 20&nbsp;dBm max           |
+| LoRa RX sensitivity   | -136&nbsp;dBm             |
 | LoRa antenna          | Spring antenna            |
-| Battery capacity      | 350 mAh              |
-| Charge current        | 500 mA/ 5 V     |
+| Battery capacity      | 350&nbsp;mAh              |
+| Charge current        | 500&nbsp;mA/ 5&nbsp;V     |
 | Battery lifetime      | 1 year                    |
-| Sleep current         | 4.8 uA               |
-| Operating temperature | -20° C to 60° C |
-| Dimensions            | 43 x 57 x 15 mm      |
+| Sleep current         | 4.8&nbsp;uA               |
+| Operating temperature | -20°&nbsp;C to 60°&nbsp;C |
+| Dimensions            | 43 x 57 x 15&nbsp;mm      |
 | Mounting              | Sticker                   |
 
-> **Image:** Deployment Scenario
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7201/datasheet/typical-deployment-scenario.png"
+  caption="Deployment Scenario"
+  width="100%"
+/>
 
 ### Hardware
 
@@ -64,8 +75,8 @@ The hardware specification covers the parameters of the RAK7201 in terms of elec
 | Parameter           | Value                 |
 | ------------------- | --------------------- |
 | LoRa protocol       | LoRaWAN 1.0.2 Class A |
-| LoRa TX power       | 20 dBm max       |
-| LoRa RX sensitivity | -136 dBm         |
+| LoRa TX power       | 20&nbsp;dBm max       |
+| LoRa RX sensitivity | -136&nbsp;dBm         |
 | LoRa Antenna        | Spring antenna        |
 
 The RAK7201 supports different LoRaWAN frequency bands for different country regions.
@@ -80,8 +91,11 @@ The RAK7201 supports different LoRaWAN frequency bands for different country reg
 | Korea         | KR920                            |
 
 #### Actuators
-
-> **Image:** RAK7201 buttons and LED
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7201/datasheet/rak7201-buttons-and-leds.png"
+  caption="RAK7201 buttons and LED"
+  width="60%"
+/>
 
 - **Buttons**
 
@@ -165,3 +179,6 @@ The WisNode Button 4K supports LoRaWAN. LoRaWAN supported modes are OTAA and ABP
 
 ## Certification
 
+
+
+<RkBottomNav/>

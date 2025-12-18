@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18031 WisBlock Audio PDM Microphone Module
 
 Thank you for choosing **RAK18031 WisBlock Audio PDM Microphone Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -34,18 +36,18 @@ RAK18031 is a WisBlock Audio that extends the WisBlock system based on the MP34D
 ## Product Features
 
 * **Sensor Specifications**
-    * Voltage supply: **3.3 V ~ 3.6 V**
-    * Current consumption: **5 uA ~ 650 uA**
+    * Voltage supply: **3.3&nbsp;V ~ 3.6&nbsp;V**
+    * Current consumption: **5&nbsp;uA ~ 650&nbsp;uA**
     * Chipset: **MP34DT06JTR**
     * PDM Microphone
     * Left or Right Channel Selection
-    * Flat frequency response: 100 Hz - 10,000 Hz
-    * Low distortion of 6% at 120 dB SPL
-    * 64 dB(A) Signal-to-Noise Ratio
+    * Flat frequency response: 100&nbsp;Hz - 10,000&nbsp;Hz
+    * Low distortion of 6% at 120&nbsp;dB SPL
+    * 64&nbsp;dB(A) Signal-to-Noise Ratio
     * Omnidirectional sensitivity
 
 * **Module Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -55,3 +57,4 @@ To use a **RAK18031**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
+<RkBottomNav/>

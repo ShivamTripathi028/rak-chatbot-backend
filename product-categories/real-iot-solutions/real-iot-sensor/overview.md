@@ -11,7 +11,10 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Real IoT Sensor
+
 
 Thank you for choosing **Real IoT Sensor** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
@@ -29,3 +32,4 @@ Real IoT Sensor is part of Real IoT Solutions Marketplace, which is a comprehens
 - Easy to use and less configurations needed.
 - Scalable solution with integration to IoT platform partners.
 
+<RkBottomNav/>

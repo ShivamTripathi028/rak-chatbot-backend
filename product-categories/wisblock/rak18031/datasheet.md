@@ -12,6 +12,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18031 WisBlock Audio PDM Microphone Module Datasheet
 
 ## Overview
@@ -20,27 +23,32 @@ sidebar_label: Datasheet
 
 RAK18031 is a WisBlock Audio that extends the WisBlock system based on the MP34DT06JTR module from ST. This module is a mono PDM microphone module, where the analog audio is converted to a Pulse Density Modulation (PDM) output. When used with other WisBlock modules, you can achieve rich applications such as audio monitoring, recording, and even voice control functions.
 
+
 ### Features
 
 * **Sensor Specifications**
-    * Voltage supply: **3.3 V ~ 3.6 V**
-    * Current consumption: **5 uA ~ 650 uA**
+    * Voltage supply: **3.3&nbsp;V ~ 3.6&nbsp;V**
+    * Current consumption: **5&nbsp;uA ~ 650&nbsp;uA**
     * Chipset: **MP34DT06JTR**
     * PDM Microphone
     * Left or Right Channel Selection
-    * Flat frequency response: 100 Hz - 10,000 Hz
-    * Low distortion of 6% at 120 dB SPL
-    * 64 dB(A) Signal-to-Noise Ratio
+    * Flat frequency response: 100&nbsp;Hz - 10,000&nbsp;Hz
+    * Low distortion of 6% at 120&nbsp;dB SPL
+    * 64&nbsp;dB(A) Signal-to-Noise Ratio
     * Omnidirectional sensitivity
 
 * **Module Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK18031 WisBlock Audio PDM Microphone Module top and bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031.png"
+  width="40%"
+  caption="RAK18031 WisBlock Audio PDM Microphone Module top and bottom view"
+/>
 
 #### Mounting
 
@@ -48,7 +56,11 @@ RAK18031 is a WisBlock Audio that extends the WisBlock system based on the MP34D
 
 **Figure 2** shows the mounting mechanism of the RAK18031 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK18031 module can be mounted on the IO slots.
 
-> **Image:** RAK18031 mount to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-mount.png"
+  width="50%"
+  caption="RAK18031 mount to WisBlock Base"
+/>
 
 ##### Mount to Enclosure
 
@@ -58,17 +70,26 @@ If you want to use the RAK18031 with an enclosure, there are two (2) mounting sc
 - The FPC with the Audio Interposer board is recommended as it provides a better mechanical mounting than the IO extension cable.
 :::
 
-> **Image:** RAK18031 mounted to the enclosure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-enclosure.png"
+  width="50%"
+  caption="RAK18031 mounted to the enclosure"
+/>
 
 ##### Mount to WisBlock Audio Stack
 
 With the use of WisBlock Audio Spacer, the RAK18031 can be mounted to any other WisBlock Audio module. **Figure 4** shows the mounting mechanism of the RAK18031 on a WisBlock Audio Stack.
 
-> **Image:** RAK18031 mounted to the WisBlock Audio Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-audiostack.png"
+  width="50%"
+  caption="RAK18031 mounted to the WisBlock Audio Stack"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It shows the chipset of the module and discusses the pinouts and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK18031.
+
 
 #### Chipset
 
@@ -82,7 +103,11 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 The RAK18031 WisBlock Audio PDM Microphone comprises a standard WisBlock connector. The WisBlock connector allows the RAK18031 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 5**.
 
-> **Image:** RAK18031 WisBlock Module pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-pinouts.png"
+  width="70%"
+  caption="RAK18031 WisBlock Module pinout diagram"
+/>
 
 :::tip NOTE
 - **3V3** and **GND** are power supply from the WisBlock Base.
@@ -94,7 +119,11 @@ The RAK18031 WisBlock Audio PDM Microphone comprises a standard WisBlock connect
 
 The RAK18031 WisBlock Audio PDM Microphone comprises a standard FPC connector. The FPC connector allows the RAK18031 module to be connected to a WisBlock Audio Interposer board, such as RAK18003. The pin order of the connector and the pinout definition is shown in **Figure 6**.
 
-> **Image:** RAK18031 FPC connector pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-fpc.png"
+  width="40%"
+  caption="RAK18031 FPC connector pinout diagram"
+/>
 
 :::tip NOTE
 - **3V3** and **GND** are power supply from the WisBlock Audio Interposer board.
@@ -103,16 +132,17 @@ The RAK18031 WisBlock Audio PDM Microphone comprises a standard FPC connector. T
 - **MIC_Check** is a signal to let the Interposer board know if the RAK18031 exists or is connected.
 :::
 
+
 #### Electrical Characteristics
 
 ##### Acoustic and Electrical Specifications
 | Symbol            | Description                                                                            | Min. | Nom. | Max. | Unit  |
 | ----------------- | -------------------------------------------------------------------------------------- | ---- | ---- | ---- | ----- |
 | V<sub>DD</sub>    | Supply voltage                                                                         | 1.6  | 3.3  | 3.6  | V     |
-| I<sub>dd</sub>    | Current consumption in normal mode (V<sub>DD</sub> = 1.8 V, Clock = 2.4 MHz) | -    | 650  | -    | uA    |
+| I<sub>dd</sub>    | Current consumption in normal mode (V<sub>DD</sub> = 1.8&nbsp;V, Clock = 2.4&nbsp;MHz) | -    | 650  | -    | uA    |
 | I<sub>sleep</sub> | Current consumption in Sleep Mode                                                      | -    | -    | 5    | uA    |
-| Sensitivity       | 94 dB SPL @ 1 kHz                                                            | -27  | -26  | -25  | dBFS  |
-| SNR               | Signal-to-noise ratio (94 dB SPL @ 1 kHz, A-weighted)                        | -    | 64   | -    | dB(A) |
+| Sensitivity       | 94&nbsp;dB SPL @ 1&nbsp;kHz                                                            | -27  | -26  | -25  | dBFS  |
+| SNR               | Signal-to-noise ratio (94&nbsp;dB SPL @ 1&nbsp;kHz, A-weighted)                        | -    | 64   | -    | dB(A) |
 | Clock             | Input clock frequency                                                                  | 1.2  | 2.4  | 3.25 | MHz   |
 | T<sub>op</sub>    | Operating temperature range                                                            | -40  | -    | +85  | °C    |
 
@@ -122,11 +152,20 @@ The RAK18031 WisBlock Audio PDM Microphone comprises a standard FPC connector. T
 
 **Figure 7** shows the dimensions and the mechanical drawing of the RAK18031 module.
 
-> **Image:** RAK18031 WisBlock Sensor mechanical drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-dim.png"
+  width="60%"
+  caption="RAK18031 WisBlock Sensor mechanical drawing"
+/>
 
 ##### WisBlock Connector PCB Layout
 
-> **Image:** WisBlock Connector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/wisblock-conn.png"
+  width="100%"
+  caption="WisBlock Connector PCB footprint and recommendations"
+/>
+
 
 #### Schematic Diagram
 
@@ -137,11 +176,20 @@ The **Pin 2** of the MP34DT06JTR is used to control the MIC as a left or right c
 - The MIC is the left channel when **Pin 2** is `HIGH`.
 - The MIC is the right channel when **Pin 2** is `LOW`.
 
-By default, the RAK18031 is the right channel. But, you can remove the 10 kΩ resistor on **R9** and connect it to **R8** to change the MIC to the left channel as its default. You may also use **MIC_CTR_IO1** to select the MIC as the right or left channel.
+By default, the RAK18031 is the right channel. But, you can remove the 10&nbsp;kΩ resistor on **R9** and connect it to **R8** to change the MIC to the left channel as its default. You may also use **MIC_CTR_IO1** to select the MIC as the right or left channel.
 
-> **Image:** RAK18031 Digital Microphone schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-mic.png"
+  width="60%"
+  caption="RAK18031 Digital Microphone schematic diagram"
+/>
 
 **Figure 10** below shows the full schematic diagram of the RAK18031 Audio PDM Microphone module.
 
-> **Image:** RAK18031 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18031/datasheet/rak18031-schem.png"
+  width="100%"
+  caption="RAK18031 schematic diagram"
+/>
 
+<RkBottomNav/>

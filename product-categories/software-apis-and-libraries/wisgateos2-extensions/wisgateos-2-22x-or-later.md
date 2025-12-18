@@ -24,6 +24,11 @@ tags:
   - user manual
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
+
 # WisGateOS 2 2.2.x or Later
 
 If your gateway firmware is WisGateOS 2 2.2.x or later. Installing extensions becomes easier, you can select and install extensions from the **Extension gallery**.
@@ -36,7 +41,11 @@ You can install extensions in two ways:
 
 1. To install an extension, access the gateway by referring to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#access-the-wisgateos-2-web-ui" target="_blank">Access the WisGateOS 2 Web UI</a> user manual.
 
-> **Image:** Login page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/1.login-page.svg"
+  width="100%"
+  caption="Login page"
+/>
 
 2. Once logged in successfully, navigate to the **Extensions** tab (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/2.svg" />).
 
@@ -45,11 +54,19 @@ You can install extensions in two ways:
 - By default, no extensions are installed.
 :::
 
-> **Image:** Extensions tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-login-page.svg"
+  width="100%"
+  caption="Extensions tab"
+/>
 
 3. Proceed with the installation by clicking on the **Extension gallery** tab. All extensions that support WisGateOS 2 2.2.x or later will be displayed in the gallery.
 
-> **Image:** Extension gallery
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-extensions-gallery.svg"
+  width="100%"
+  caption="Extension gallery"
+/>
 
 4. Select the desired extension, such as RAK OpenVPN Client, and click the **Install** button. The process may take a few moments to complete.
 
@@ -60,11 +77,19 @@ You can install extensions in two ways:
 + If the **Auto Update** is enabled during installation, the gateway will automatically update the extension when the latest version is available.
   :::
 
-> **Image:** Installing extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-install-extension.svg"
+  width="100%"
+  caption="Installing extension"
+/>
 
 5. Once installed, go to the **Installed** tab where the newly installed extension should now be visible.
 
-> **Image:** Installed extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-extension-list.svg"
+  width="100%"
+  caption="Installed extension"
+/>
 
 ### Manually Upload an Extension
 
@@ -73,7 +98,11 @@ In addition to the Extension Gallery, users can manually upload a custom extensi
 1. In the **Extensions** tab, click **Add new extension**.
 2. Drag and drop your `.ipk` file into the upload area, or click **choose file** to select it manually.
 
-> **Image:** Add an extension file
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/add-extension-file.png"
+  width="50%"
+  caption="Add an extension file"
+/>
 
 3. Check **Allow unsigned extensions to be installed** if you want to install an unsigned package.
 4. Click **Add extension** to complete the installation.
@@ -82,17 +111,33 @@ In addition to the Extension Gallery, users can manually upload a custom extensi
 
 1. Navigate to the **Extensions** > **Installed** and click on the **Remove** button of the extension you want to uninstall.
 
-> **Image:** Installed Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-installed.svg"
+  width="100%"
+  caption="Installed Extension"
+/>
 
 2. A pop-up window will appear to verify if you want delete the extension. Click **Remove** and wait for the process to finish.
 
-> **Image:**  Removing an Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-remove-extension.svg"
+  width="100%"
+  caption=" Removing an Extension"
+/>
 
-> **Image:** Removing extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-removed.svg"
+  width="100%"
+  caption="Removing extension"
+/>
 
 At this point, the uninstalled extension will no longer appear on the **Extensions** page.
 
-> **Image:** Extension is removed
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-removed-extension.svg"
+  width="100%"
+  caption="Extension is removed"
+/>
 
 ## How to Update an Extension
 
@@ -100,19 +145,35 @@ In order to use the latest features of the extension, it is strongly recommend t
 
 1. To update an extension, navigate to the **Extensions** > **Installed**.
 
-> **Image:** Installed extensions page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-update1.svg"
+  width="100%"
+  caption="Installed extensions page"
+/>
 
 2. If the latest version of the extension is available, the **Update** button will be highlighted, indicating that you can choose to update the extension. For example, the RAK Open/Close port extension. Click **Update**.  The process may take a few moments to complete.
 
-> **Image:** Updating extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-update2.svg"
+  width="100%"
+  caption="Updating extension"
+/>
 
 After the update is complete, the extension will show as up to date, with no further updates available.
 
-> **Image:** Updated extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-update3.svg"
+  width="100%"
+  caption="Updated extension"
+/>
 
 To facilitate timely updates, the RAK gateway provides an automatic update feature. It allows you to check the **Auto Update** button on the extension tab. Once **Auto Update** is enabled, the gateway will automatically update the extension when the latest version is available.
 
-> **Image:** Auto Update
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-update4.svg"
+  width="100%"
+  caption="Auto Update"
+/>
 
 ## How to Use the Extensions
 
@@ -147,11 +208,19 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the **RAK Breathing Light** extension, click **Launch**.
 
-> **Image:** Launch the RAK Breathing Light Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-light-extension.svg"
+  width="100%"
+  caption="Launch the RAK Breathing Light Extension"
+/>
 
 2. In the **Configuration** page, configure the mode, color, and blinking frequency of the LED.
 
-> **Image:** Configuration Page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-light-config.svg"
+  width="100%"
+  caption="Configuration Page"
+/>
 
 - **Interface**
 
@@ -183,7 +252,7 @@ Having the capability to rebrand your Web UI is essential for companies that nee
 
 #### Size and Format Requirements
 
-The uploaded logo image must be in `.svg` format and cannot exceed 300 kb. You can preview the **Web UI** page before finally switching RAKWireless' logo with your brand logo.
+The uploaded logo image must be in `.svg` format and cannot exceed 300&nbsp;kb. You can preview the **Web UI** page before finally switching RAKWireless' logo with your brand logo.
 
 #### Install the RAK Custom Logo Extension
 
@@ -193,20 +262,38 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the RAK Custom Logo extension, click **Launch**.
 
-> **Image:** Launch the RAK Custom Logo Extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-custom-logo.svg"
+  width="100%"
+  caption="Launch the RAK Custom Logo Extension"
+/>
 
 2. In the **Configuration** page, you can set a custom logo on the login page and on the sidebar menu.
 
-> **Image:** Configuration Page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22config-page.svg"
+  width="100%"
+  caption="Configuration Page"
+/>
 
    - **Interface**: Enables/disables custom logo extension.
    - **Large logo**: This logo will be used on the login page and the expanded sidebar menu. Upload a logo by dragging and dropping it, or by clicking **Choose File** to browse manually.
    - **Small logo**: This logo will be used for mobile view and the collapsed sidebar menu. Upload the logo by dragging and dropping it, or by clicking **Choose File** to browse manually.
    - **Preview**: After selecting the images, click **Preview** to see how the logo appears on the login page and sidebars in both desktop and mobile views.
 
-> **Image:** Logo Preview for Desktop Users
 
-> **Image:** Logo Preview for Mobile Users
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-logo-preview.svg"
+  width="100%"
+  caption="Logo Preview for Desktop Users"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-mobile-users.svg"
+  width="100%"
+  caption="Logo Preview for Mobile Users"
+/>
 
 3. To apply the selected logos, click **Save changes**. The page reloads automatically, applying the selected logos.
 
@@ -222,6 +309,7 @@ LBT is usually governed by regulations per country. In WisGateOS 2 2.x, there is
 AS923 end-devices operating in Japan shall perform Listen Before Talk (LBT), based on ARIB STD-T108 regulations. The ARIB STD-T108 regulation is available for free and should be consulted as needed.
 :::
 
+
 You can switch the frequency plan in the following regions:
 
 * AS923, KR920
@@ -233,31 +321,56 @@ The frequency plan will be limited to a particular region. Tx power will be limi
 * Downlink Tx Power
 * Beacon Tx Power
 
+
 #### Install the RAK Country Settings Extension
 
 To install the extension, follow the steps in [How to Add an Extension](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later/#how-to-add-an-extension) section.
 
 #### Configure the RAK Country Settings Extension
 
+
 1. To access the RAK Country Settings extension, click **Launch**.
 
-> **Image:** Launch the RAK Country Settings/LBT Extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-extensions-tab.svg"
+  width="100%"
+  caption="Launch the RAK Country Settings/LBT Extension"
+/>
 
 2. In the **Configuration** page, click the **Select your Country** button to set your country.
 
-> **Image:** Country selection
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-country-selection.svg"
+  width="100%"
+  caption="Country selection"
+/>
 
-> **Image:** Find your country in the list
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-country-list.svg"
+  width="100%"
+  caption="Find your country in the list"
+/>
 
 3. In the new window, find your country and select it. Tick the checkbox below to confirm that you have chosen the country where the gateway is located. Then click **Confirm** to set the LBT for your country.
 
-> **Image:** Confirm your country
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-confirm-country.svg"
+  width="100%"
+  caption="Confirm your country"
+/>
 
 4. Enable the LBT by clicking on the **Enable Listen Before Talk** switch.
 
-> **Image:** Enable LBT
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-enable-lbt.svg"
+  width="100%"
+  caption="Enable LBT"
+/>
 
 5. Click **Save changes** to apply the configuration. LBT is now enabled on your gateway.
+
+
 
 ### RAK Open/Close Port
 
@@ -271,7 +384,12 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the RAK Open/Close Port extension, click **Launch**.
 
-> **Image:** Launch the RAK Open/Close Port Extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-extension-tab.svg"
+  width="100%"
+  caption="Launch the RAK Open/Close Port Extension"
+/>
 
 After clicking **Launch**, the **Traffic rules** page will be displayed, showing the default rules of the **Open/Close port** extension with the following parameters:
 
@@ -281,7 +399,11 @@ After clicking **Launch**, the **Traffic rules** page will be displayed, showing
 * **From**: External source
 * **To**: Internal source
 
-> **Image:** Traffic rules page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/v22x-open-close-extension.svg"
+  width="100%"
+  caption="Traffic rules page"
+/>
 
 For example, the **Allow-http** service indicates that any host in WAN can communicate with the gateway through port 80 using the TCP protocol type.
 
@@ -297,9 +419,15 @@ For example, the **Allow-http** service indicates that any host in WAN can commu
   * **Source IP address**: Specify up to three host IPs.
 * **Destination port**: The destination port for routing.
 
-> **Image:** Add a new rule
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/v22x-new-rule.svg"
+  width="100%"
+  caption="Add a new rule"
+/>
+
 
 3. To save the changes, click **Add new rule**. The newly created rule will then appear in the **Traffic rules** interface.
+
 
 ### RAK Solar Battery
 
@@ -322,16 +450,28 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the RAK Solar Battery extension, click **Launch**.
 
-> **Image:** Launch the RAK Solar Battery Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/solar-battery-v2.2.png"
+  width="100%"
+  caption="Launch the RAK Solar Battery Extension"
+/>
 
 2. Enable the switch to activate **Monitor solar battery**.
 
-> **Image:** Overview page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/enable-monitor-feature.png"
+  width="100%"
+  caption="Overview page"
+/>
 
 3. When the confirmation window pops up, click **Enable monitoring** to activate the feature.
 4. In the **Details** page, you can view information about the Solar Battery.
 
-> **Image:** Details page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/solar-battery-details.png"
+  width="80%"
+  caption="Details page"
+/>
 
 * **Solar battery performance**: Shows the real-time performance of the battery.
   * **Temperature**: The temperature of the battery. Used to prevent overheating or freezing.
@@ -362,6 +502,7 @@ To display the **Serial number** and **Firmware version** of the solar battery, 
 - When using **earlier versions of WisGateOS 2**, only the **Firmware version** is shown, while the **Serial number** appears as *N/A*.
 :::
 
+
 ### RAK WireGuard
 
 WireGuard is a simple but fast VPN. It aims to be faster, simpler, and leaner than the IPsec protocol. It intends to be more performant than the well-known RAKwireless - OpenVPN. Before, it was not possible to use the WireGuard protocol on the RAKwireless gateways, but that is not the case now.
@@ -378,11 +519,19 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the RAK WireGuard extension, click **Launch**.
 
-> **Image:** Launch the RAK WireGuard Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/wireguard-v2.2.png"
+  width="100%"
+  caption="Launch the RAK WireGuard Extension"
+/>
 
 2. In the **Configuration** page, enable the **Enable WireGuard** switch and configure the following information:
 
-> **Image:** Configuration page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-enable-wireguard.svg"
+  width="80%"
+  caption="Configuration page"
+/>
 
 * **Interface**: Settings for the WireGuard client.
   * **Address with netmask**: The IP address the WireGuard client will use. It must be in the same range (e.g., `10.0.8.0` to `10.0.8.255`) defined by the server.
@@ -400,9 +549,11 @@ To install the extension, follow the steps in [How to Add an Extension](https://
   * **Persistent Keepalive (ms)**: The interval for sending keepalive packets to maintain the connection.
   * **Public Key**: The public key of the WireGuard server.
   * **Enable Preshared Key**: Enables the preshared key field. The preshared key is part of the Noise protocol used to establish an encrypted connection between peers.
-    
-> **Image:** Enable preshared key
-
+    <RkImage
+      src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-preshared-key.svg"
+      width="50%"
+      caption="Enable preshared key"
+    />
 * **Route All Traffic**: Allows traffic from all IPs.
   * **Allowed IPs**: Specifies the IPs that are allowed to connect to the gateway via the WireGuard IP. This option is only available when **Route All Traffic** is disabled.
 
@@ -413,7 +564,11 @@ Remember to add the WireGuard Client credentials to the WireGuard server configu
 
 4. After the connection is established, open the **Status** tab to view the WireGuard connection.
 
-> **Image:** WireGuard status
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-wireguard-status.svg"
+  width="100%"
+  caption="WireGuard status"
+/>
 
 ### RAK OpenVPN Client
 
@@ -431,37 +586,69 @@ Make sure you have local network access to your gateway and connect to it to acc
 
 1. To access the RAK OpenVPN Client extension, click **Launch**.
 
-> **Image:** Launch the RAK OpenVPN Client Extension
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-start-openvpn.svg"
+  width="100%"
+  caption="Launch the RAK OpenVPN Client Extension"
+/>
 
 2. Add an OpenVPN tunnel by clicking the **Add tunnel** button or the **add one now** link.
 
-> **Image:** Add OpenVPN tunnel
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-add-openvpn-tunnel.svg"
+  width="100%"
+  caption="Add OpenVPN tunnel"
+/>
 
 3. Click the **choose file** link and browse for the `.ovpn` file or drag and drop the `.ovpn` file you created by following the <a href="https://learn.rakwireless.com/hc/en-us/articles/26527371792535-How-To-Configure-WisGate-Edge-V2-Gateways-Remote-Management-OpenVPN" target="_blank">How to Configure WisGate Edge v2 Gateways Remote Management - OpenVPN</a> guide.
 
-> **Image:** Add .ovpn file to the gateway
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-add-.ovpn-file-to-the-gateway.svg"
+  width="100%"
+  caption="Add .ovpn file to the gateway"
+/>
 
 4. Once the file is added, click **Add tunnel** to add the OpenVPN tunnel.
 
-> **Image:** Add OpenVPN tunnel
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-add-openvpn-tunnel2.svg"
+  width="100%"
+  caption="Add OpenVPN tunnel"
+/>
 
 When the tunnel is added successfully, a confirmation message will appear at the bottom of the screen.
 
-> **Image:** Successfully added tunnel
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-successfully-added-tunnel.svg"
+  width="100%"
+  caption="Successfully added tunnel"
+/>
 
 5. Click the **Configure** button of the VPN tunnel. On the next window, toggle the **Enable Connection** switch to enable the OpenVPN tunnel and click **Save changes**.
 
-> **Image:** Start the OpenVPN tunnel
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-start-the-openvpn-tunnel.svg"
+  width="100%"
+  caption="Start the OpenVPN tunnel"
+/>
 
 #### Verify the Configuration
 
 + You can check the OpenVPN tunnel status under the **Logs** tab.
 
-> **Image:** OpenVPN tunnel status
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-openvpn-tunnel-status.svg"
+  width="100%"
+  caption="OpenVPN tunnel status"
+/>
 
 + You can view the assigned IP address on the **OpenVPN Overview** page.
 
-> **Image:** OpenVPN assigned IP
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-openvpn-assigned-ip.svg"
+  width="100%"
+  caption="OpenVPN assigned IP"
+/>
 
 ### Operation and Maintenance
 
@@ -479,17 +666,26 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the Operation and Maintenance extension, click **Launch**.
 
-> **Image:** Launch the Operation and Maintenance Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/operation-and-maintenance-v2.2.png"
+  width="100%"
+  caption="Launch the Operation and Maintenance Extension"
+/>
 
 2. On the **Configuration** page, configure cellular network monitoring and set a reboot schedule.
 
-> **Image:** Configuration page
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/v22x-configuration-page.svg"
+  width="100%"
+  caption="Configuration page"
+/>
 
 + **Cellular Network Monitoring**: When enabled, the gateway will monitor the cellular connection status every 2 minutes. If the 4G network connection is lost, it will automatically restart the cellular module to restore the connection.
 + **Schedule Reboot**: When enabled, the gateway will reboot periodically based on the configured schedule.
 + **Gateway Current Time**: The system time must be synced for scheduled tasks to function properly. To change the current time, go to **User Preferences** and set the time.
 + **Reboot Time**: The time when the gateway will reboot.
 + **Repeat Time**: The reboot cycle interval.
+
 
 3. To save the changes, click **Save changes**.
 
@@ -547,11 +743,19 @@ For setup instructions, see the [Pre-Test Network Setup](https://docs.rakwireles
 
 1. To access the Field Test Data Processor extension, click **Launch**.
 
-> **Image:** Launch the Field Test Data Processor extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/mapper-installed.svg"
+  width="100%"
+  caption="Launch the Field Test Data Processor extension"
+/>
 
 2. Click the **Configuration** tab to set the following parameters.
 
-> **Image:** Set parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/built-in-set-parameters.svg"
+  width="100%"
+  caption="Set parameters"
+/>
 
 + **LoRa Network Server**: Select the LoRaWAN Network Server where the Field Tester device is registered. In this example, select **Built-in Server**.
 + **MQTT Integration**:
@@ -568,14 +772,23 @@ For setup instructions, see the [Pre-Test Network Setup](https://docs.rakwireles
     application/{appName}/device/{devEui}/tx
     ```
 
+
 3. To save the changes, click **Save changes**.
 4. Click the **Device Overview** tab to access the Field Tester's **heatmap** and **network performance data**.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/built-in-data-checking.svg"
+  width="100%"
+  caption="Device Overview"
+/>
 
 5. Click **Show Data** to view a **detailed breakdown** of all data points collected by the Field Tester. For complete definitions of all parameters shown in this table, refer to the **[Field Test Data Processor Extension – Parameter Definitions](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#field-test-data-processor-extension-parameter-definitions)** section.
 
-> **Image:** Detailed data
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/built-in-detailed-data.svg"
+  width="100%"
+  caption="Detailed data"
+/>
 
 6. **Optional:** Click **Export** to generate a **CSV report** containing the Field Tester's collected data.
 
@@ -595,11 +808,19 @@ For detailed instructions, refer to the [Pre-Test Network Setup](https://docs.ra
 
 1. To access the Field Test Data Processor extension, click **Launch**.
 
-> **Image:** Launch the Field Test Data Processor extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/mapper-installed.svg"
+  width="100%"
+  caption="Launch the Field Test Data Processor extension"
+/>
 
 2. Click the **Configuration** tab to set the following parameters.
 
-> **Image:** Set parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/chirpstack-set-parameters1.svg"
+  width="100%"
+  caption="Set parameters"
+/>
 
 + **LoRa Network Server**: Select the LoRaWAN server where the Field Tester device is registered. In this case, choose **ChirpStack v3**.
 + **MQTT Integration**:
@@ -616,14 +837,23 @@ For detailed instructions, refer to the [Pre-Test Network Setup](https://docs.ra
     application/{applicationId}/device/{devEui}/command/down
     ```
 
+
 3. To save the changes, click **Save changes**.
 4. Click the **Device Overview** tab to access the Field Tester's **heatmap** and **network performance data**.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/chirpstack-data-checking1.svg"
+  width="100%"
+  caption="Device Overview"
+/>
 
 5. Click **Show Data** to view a **detailed breakdown** of all data points collected by the Field Tester. For complete definitions of all parameters shown in this table, refer to the **[Field Test Data Processor Extension – Parameter Definitions](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#field-test-data-processor-extension-parameter-definitions)** section.
 
-> **Image:** Detailed data
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/chirpstack-detailed-data1.svg"
+  width="100%"
+  caption="Detailed data"
+/>
 
 6. **Optional:** Click **Export** to generate a **CSV report** containing the Field Tester's collected data.
 
@@ -643,11 +873,19 @@ For detailed instructions, refer to the [Pre-Test Network Setup](https://docs.ra
 
 1. To access the Field Test Data Processor extension, click **Launch**.
 
-> **Image:** Launch the Field Test Data Processor extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/mapper-installed.svg"
+  width="100%"
+  caption="Launch the Field Test Data Processor extension"
+/>
 
 2. Click the **Configuration** tab to set the following parameters.
 
-> **Image:** Set parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/chirpstack-set-parameters.svg"
+  width="100%"
+  caption="Set parameters"
+/>
 
 + **LoRa Network Server**: Select the LoRaWAN server where the Field Tester device is registered. In this case, choose **ChirpStack v4**.
 + **MQTT Integration**:
@@ -664,14 +902,23 @@ For detailed instructions, refer to the [Pre-Test Network Setup](https://docs.ra
     application/{applicationId}/device/{devEui}/command/down
     ```
 
+
 3. To save the changes, click **Save changes**.
 4. Click the **Device Overview** tab to access the Field Tester's **heatmap** and **network performance data**.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/chirpstack-data-checking.svg"
+  width="100%"
+  caption="Device Overview"
+/>
 
 5. Click **Show Data** to view a **detailed breakdown** of all data points collected by the Field Tester. For complete definitions of all parameters shown in this table, refer to the **[Field Test Data Processor Extension – Parameter Definitions](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#field-test-data-processor-extension-parameter-definitions)** section.
 
-> **Image:** Detailed data
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/chirpstack-detailed-data.svg"
+  width="100%"
+  caption="Detailed data"
+/>
 
 6. **Optional:** Click **Export** to generate a **CSV report** containing the Field Tester's collected data.
 
@@ -691,15 +938,27 @@ For detailed setup steps, refer to the [Pre-Test Network Setup](https://docs.rak
 
 1. To access the Field Test Data Processor extension, click **Launch**.
 
-> **Image:** Launch the Field Test Data Processor extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/mapper-installed.svg"
+  width="100%"
+  caption="Launch the Field Test Data Processor extension"
+/>
 
 2. Click the **Configuration** tab to set the following parameters.
 
-> **Image:** Set parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/ttn-set-parameters.svg"
+  width="100%"
+  caption="Set parameters"
+/>
 
 On TTN, you can view your application's MQTT credentials under: **Applications** > ***your application*** > **Other integrations** > **MQTT**.
 
-> **Image:** MQTT integration credentials
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/ttn-mqtt-integration.svg"
+  width="100%"
+  caption="MQTT integration credentials"
+/>
 
 + **LoRa Network Server**: Select the LoRaWAN server where your Field Tester device is registered. In this case, choose **The Things Network**.
 + **MQTT Integration**:
@@ -718,14 +977,23 @@ On TTN, you can view your application's MQTT credentials under: **Applications**
     application/{applicationId}/device/{devEui}/command/up
     ```
 
+
 3. To save the changes, click **Save changes**.
 4. Click the **Device Overview** tab to access the Field Tester's **heatmap** and **network performance data**.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/ttn-data-checking.svg"
+  width="100%"
+  caption="Device Overview"
+/>
 
 5. Click **Show Data** to view a **detailed breakdown** of all data points collected by the Field Tester. For complete definitions of all parameters shown in this table, refer to the **[Field Test Data Processor Extension – Parameter Definitions](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#field-test-data-processor-extension-parameter-definitions)** section.
 
-> **Image:** Detailed data
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/ttn-detailed-data.svg"
+  width="100%"
+  caption="Detailed data"
+/>
 
 6. **Optional:** Click **Export** to generate a **CSV report** containing the Field Tester's collected data.
 
@@ -746,11 +1014,20 @@ For detailed setup instructions, refer to the [Pre-Test Network Setup – AWS Io
 
 1. To access the Field Test Data Processor extension, click **Launch**.
 
-> **Image:** Launch the Field Test Data Processor extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/mapper-installed.svg"
+  width="100%"
+  caption="Launch the Field Test Data Processor extension"
+/>
 
 2. Click the **Configuration** tab to set the following parameters.
 
-> **Image:** Configure the MQTT broker parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-set-mqtt-parameters.svg"
+  width="100%"
+  caption="Configure the MQTT broker parameters"
+/>
 
 + **LoRa NetWork Server**: Select the LoRaWAN network server where your Field Tester device is registered. In this example, select **AWS IoT**.
 
@@ -758,67 +1035,94 @@ For detailed setup instructions, refer to the [Pre-Test Network Setup – AWS Io
 
   To obtain the MQTT broker address, navigate to: **[AWS IoT](https://console.aws.amazon.com/iot)** > **Connect** > **Domain configurations**, then click on **iot:Data-ATS** in the **Domain configurations** list and copy the **Domain name**.
 
-  
-> **Image:** Configure the MQTT broker address
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-set-mqtt-address.svg"
+    width="100%"
+    caption="Configure the MQTT broker address"
+  />
 
 + **Port**: Set to `8883`, the default port for secure MQTT communication over TLS.
 
 + **Enable User Authentication**: Leave this setting as default.
 
-+ **Enable TLS Setting**: Enable TLS setting to ensure the security of MQTT message transmissions. Therefore, you need to create certificates in AWS IoT.
-
++ **Enable TLS Setting**: Enable TLS setting to ensure the security of MQTT message transmissions. Therefore, you need to create certificates in AWS IoT.<br/>
   **a**. AWS IoT policies allow you to control access to the AWS IoT Core data plane operations. To create an AWS IoT policy. Go to **AWS IoT** > **Security** > **Policies**, click **Create policy**.
 
-  
-> **Image:** Go to create an AWS IoT policy
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-aws-iot-policies.svg"
+    width="100%"
+    caption="Go to create an AWS IoT policy"
+  />
 
   **b**. Configure policy parameters and click **Create**.
 
-  
-> **Image:** Configure parameters
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-created-policy.svg"
+    width="100%"
+    caption="Configure parameters"
+  />
 
   **c**. Create certificates to authenticate the connection between the device and the Field Test Data Processor extension. Go to **AWS IoT** > **Security** > **Certificates**, click **Create certificate**.
 
-  
-> **Image:** Go to create certificates
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-add-certificates.svg"
+    width="100%"
+    caption="Go to create certificates"
+  />
 
   **d**. Configure certificate parameters and click **Create**.
 
-  
-> **Image:** Configure parameters
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-created-certificates.svg"
+    width="70%"
+    caption="Configure parameters"
+  />
 
   **e**. Download the certificate and key files. Click **Continue**.
 
-  
-> **Image:** Download the certificate and key files
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-download-certificates.svg"
+    width="60%"
+    caption="Download the certificate and key files"
+  />
 
   **f**. In the **Certificates** list,  click the **Certificate ID** created in the previous step to enter the certificate details page.
 
-  
-> **Image:** Certificate details
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-certificate-details.svg"
+    width="100%"
+    caption="Certificate details"
+  />
 
   **g**. Click **Attach policies** to add the created AWS IoT policy for the certificates.
 
-  
-> **Image:** Attach policies
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-attach-policies.svg"
+    width="50%"
+    caption="Attach policies"
+  />
 
   **h**. Add the certificates to the Field Test Data Processor extension.
 
-  
-> **Image:** Add certificates
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-add-certificates-to-mapper.svg"
+    width="50%"
+    caption="Add certificates"
+  />
 
 + **Uplink Topic**: To receive the uplink data from AWS IoT, you need to create a destination that will process the uplink data to this uplink topic.
 
   The uplink topic used here should match the one configured in your AWS IoT destination (e.g., `RecvFieldTesterUplink`), which is typically created during [device registration](https://docs.rakwireless.com/product-categories/wisgate/rak10701-plus/network-setup/#set-up-a-destination-for-device-traffic).
 
-+ **Downlink Topic**: To send downlink messages to a Field Tester device, you need to create a Lambda function.
-
-  **a**. To create a Lambda function. Go to the [AWS Lambda console](http://console.aws.amazon.com/lambda) and click **Create function**.
-
++ **Downlink Topic**: To send downlink messages to a Field Tester device, you need to create a Lambda function.<br/>
+  **a**. To create a Lambda function. Go to the [AWS Lambda console](http://console.aws.amazon.com/lambda) and click **Create function**.<br/>
   **b**. Configure the function name and runtime.
 
-  
-> **Image:** Create Lambda function
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-add-lambda-funcation.svg"
+    width="70%"
+    caption="Create Lambda function"
+  />
 
   **c**. Copy the following Python code into the **Code source** and click **Deploy**.
 
@@ -849,38 +1153,60 @@ For detailed setup instructions, refer to the [Pre-Test Network Setup – AWS Io
     }
   ```
 
-  
-> **Image:** Add Python code
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-edit-code.svg"
+    width="100%"
+    caption="Add Python code"
+  />
 
-  **d**. Create a message routing rule in AWS IoT to subscribe the downlink topic and call this Lambda Function to process the downlink message. Go to **AWS IoT** > **Message routing** > **Rules** and click **Create rule**.
-
+  **d**. Create a message routing rule in AWS IoT to subscribe the downlink topic and call this Lambda Function to process the downlink message. Go to **AWS IoT** > **Message routing** > **Rules** and click **Create rule**.<br/>
   **e**. Follow the steps in the following figure to create the message routing rule. Then click **Create**.
 
-  
-> **Image:** Specify rule properties
-
-  
-> **Image:** Configure SQL statement
-
-  
-> **Image:** Attach rule actions
-
-  
-> **Image:** Review and create
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-create-rule-step1.svg"
+    width="100%"
+    caption="Specify rule properties"
+  />
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-create-rule-step2.svg"
+    width="100%"
+    caption="Configure SQL statement"
+  />
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-create-rule-step3.svg"
+    width="100%"
+    caption="Attach rule actions"
+  />
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-create-rule-step4.svg"
+    width="100%"
+    caption="Review and create"
+  />
 
   **f**. Configure the downlink topic.
 
-  
-> **Image:** Downlink topic
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-downlink-topic.svg"
+    width="60%"
+    caption="Downlink topic"
+  />
 
 3. To save the changes, click **Save changes**.
 4. Click the **Device Overview** tab to access the Field Tester's **heatmap** and **network performance data**.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-data-checking.svg"
+  width="100%"
+  caption="Device Overview"
+/>
 
 5. Click **Show Data** to view a **detailed breakdown** of all data points collected by the Field Tester. For complete definitions of all parameters shown in this table, refer to the **[Field Test Data Processor Extension – Parameter Definitions](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#field-test-data-processor-extension-parameter-definitions)** section.
 
-> **Image:** Detailed data
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/aws-detailed-data.svg"
+  width="100%"
+  caption="Detailed data"
+/>
 
 6. **Optional:** Click **Export** to generate a **CSV report** containing the Field Tester's collected data.
 
@@ -900,15 +1226,27 @@ For step-by-step setup instructions, refer to the [Pre-Test Network Setup – TT
 
 1. To access the Field Test Data Processor extension, click **Launch**.
 
-> **Image:** Launch the Field Test Data Processor extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/mapper-installed.svg"
+  width="100%"
+  caption="Launch the Field Test Data Processor extension"
+/>
 
 2. Click the **Configuration** tab to set the following parameters.
 
-> **Image:** Set parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/tti-set-parameters.svg"
+  width="100%"
+  caption="Set parameters"
+/>
 
 On TTI, you can view your application's MQTT credentials under: **Applications** > ***your application*** > **Other integrations** > **MQTT**.
 
-> **Image:** MQTT integration
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/tti-mqtt-integration.svg"
+  width="100%"
+  caption="MQTT integration"
+/>
 
 + **LoRa Network Server**: Select the LoRaWAN network server where your Field Tester device is registered. In this example, select **The Things Industries**.
 + **MQTT Integration**:
@@ -927,14 +1265,23 @@ On TTI, you can view your application's MQTT credentials under: **Applications**
     application/{applicationId}/device/{devEui}/command/down
     ```
 
+
 3. To save the changes, click **Save changes**.
 4. Click the **Device Overview** tab to access the Field Tester's **heatmap** and **network performance data**.
 
-> **Image:** Device Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/tti-data-checking.svg"
+  width="100%"
+  caption="Device Overview"
+/>
 
 5. Click **Show Data** to view a **detailed breakdown** of all data points collected by the Field Tester. For complete definitions of all parameters shown in this table, refer to the **[Field Test Data Processor Extension – Parameter Definitions](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-22x-or-later#field-test-data-processor-extension-parameter-definitions)** section.
 
-> **Image:** Detailed data
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/tti-detailed-data.svg"
+  width="100%"
+  caption="Detailed data"
+/>
 
 6. **Optional:** Click **Export** to generate a **CSV report** containing the Field Tester's collected data.
 
@@ -948,7 +1295,11 @@ The Failover Reboot tool periodically checks the status of all enabled network l
 
 The following is the logic diagram of the Failover Reboot extension.
 
-> **Image:** Logic diagram
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/logic_diagram.svg"
+  width="90%"
+  caption="Logic diagram"
+/>
 
 :::tip NOTE
 
@@ -964,11 +1315,18 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the Failover Reboot extension, click **Launch**.
 
-> **Image:** Extensions tab
+<RkImage src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/failover-extension.svg"
+  width="100%"
+  caption="Extensions tab"
+/>
 
 2. In the configuration page, enable the **Failover Reboot** service and set the **Check Interval**.
 
-> **Image:** Configuration page
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/configuration.svg"
+  width="100%"
+  caption="Configuration page"
+/>
 
 + **Enable Service**: the **Failover Reboot** service
 + **Check Interval**: time interval for checking the network status, in minutes
@@ -1004,31 +1362,24 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the Wi-Fi Reboot extension, click **Launch**.
 
-> **Image:** Extensions tab
+<RkImage src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/wifi-reboot-extension.svg"
+  width="100%"
+  caption="Extensions tab"
+/>
 
 2. On the configuration page, configure the following parameters.
 
-> **Image:** Configuration page
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/wifi-reboot-configuration.png"
+  width="100%"
+  caption="Configuration page"
+/>
 
 | **Field**                    | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Enable Service**           | Toggle to enable or disable the WiFi Reboot extension. Enabled by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| **Ping Addresses**           | Define one or more IP addresses or domain names to be used for **ICMP ping tests**. These addresses help determine whether the gateway can reach the outside network.
-**Examples:**
-`8.8.8.8` (Google DNS)
-`8.8.4.4` (Google DNS Backup)
-`www.gov.hk` (HK Government)
-Can be public or private IPs.
-<div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong>
-<span style={{ display: 'block', marginTop: '4px' }}>Avoid incorrect or unreachable entries to prevent false positives and unnecessary reboots.</span></div> |
-| **Httping Addresses**        | Define one or more **full URLs** (must include `http://` or `https://`) for HTTP-based service availability testing.
-**Examples:**
-`https://www.google.com/`
-`https://www.gov.hk/`
-`https://www.hko.gov.hk/`
-URLs can point to internal status pages or public web services.
-<div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong>
-<span style={{ display: 'block', marginTop: '4px' }}>Only HTTP/HTTPS is supported (no FTP, RTSP). Pages must return **status code 200** to be considered successful.</span></div>   |
+| **Ping Addresses**           | Define one or more IP addresses or domain names to be used for **ICMP ping tests**. These addresses help determine whether the gateway can reach the outside network.<br />**Examples:**<br />`8.8.8.8` (Google DNS)<br />`8.8.4.4` (Google DNS Backup)<br />`www.gov.hk` (HK Government)<br />Can be public or private IPs.<br /><div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong><br/><span style={{ display: 'block', marginTop: '4px' }}>Avoid incorrect or unreachable entries to prevent false positives and unnecessary reboots.</span></div> |
+| **Httping Addresses**        | Define one or more **full URLs** (must include `http://` or `https://`) for HTTP-based service availability testing.<br />**Examples:**<br />`https://www.google.com/`<br />`https://www.gov.hk/`<br />`https://www.hko.gov.hk/`<br />URLs can point to internal status pages or public web services.<br /><div style={{ borderLeft: '6px solid #f4b400', backgroundColor: '#fff8e1', padding: '12px', borderRadius: '6px', color: '#5f370e', fontFamily: 'sans-serif' }}><strong style={{ display: 'inline-flex', alignItems: 'center', fontSize: '16px' }}>⚠️ WARNING</strong><br/><span style={{ display: 'block', marginTop: '4px' }}>Only HTTP/HTTPS is supported (no FTP, RTSP). Pages must return **status code 200** to be considered successful.</span></div>   |
 | **Check Interval (Minutes)** | Determines how often the extension checks Wi-Fi connectivity. Recommended value: **10 minutes** by default.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 3. To save the changes, click **Save changes**.
@@ -1062,28 +1413,43 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the RF Spectrum Scanner extension, click **Launch**.
 
-> **Image:** Extensions tab
+<RkImage src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/rf-spectrum-scanner-extension.svg"
+  width="100%"
+  caption="Extensions tab"
+/>
 
 2. In the **Live Scan** tab, configure the following scan parameters:
 
-> **Image:** Configuration parameters
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/rf-spectrum-scanner-configuration.png"
+  width="100%"
+  caption="Configuration parameters"
+/>
 
 | **Field**                 | **Description**                                     | **Valid Range / Notes**                                                                                            |
 | ------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| **Start Frequency (KHz)** | Starting frequency of the scan range                | 863000~925000 kHz (must be within gateway RF band)                                                            |
+| **Start Frequency (KHz)** | Starting frequency of the scan range                | 863000~925000&nbsp;kHz (must be within gateway RF band)                                                            |
 | **Channel Number**        | Total number of frequency points (channels) to scan | Must be an integer **≥1 and ≤32**                                                                                  |
-| **Steps (KHz)**           | Frequency increment between each channel            | 10~500 kHz                                                                                                    |
+| **Steps (KHz)**           | Frequency increment between each channel            | 10~500&nbsp;kHz                                                                                                    |
 | **Scan Duration**         | Determines how long the scan runs                   | <ul><li>**Continuous**: Runs until manually stopped</li><li>**Custom Duration**: Run for specified hours</li></ul> |
 | **Scan Time (hours)**     | Duration of scan if Custom Duration is selected     | Integer from **1 to 168**                                                                                          |
 
 3. Click **Start Scan** to initiate the scan.
 4. A confirmation dialog will appear. Click **Confirm** to proceed.
 
-> **Image:** Confirm to start scanning
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/comfirm-scan.svg"
+  width="50%"
+  caption="Confirm to start scanning"
+/>
 
 5. Once scanning begins, a real-time chart appears showing signal strength across the scanned frequency range:
 
-> **Image:** Scanning
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/scanning.svg"
+  width="100%"
+  caption="Scanning"
+/>
 
 + **X-Axis (MHz):** Shows the frequency range being scanned.
 + **Y-Axis (RSSI in dBm):** Displays signal strength levels for each frequency point.
@@ -1098,7 +1464,11 @@ All completed spectrum scans are automatically saved and accessible from the **H
 
 Each row in the History table represents a scan session. The following details are shown for each session:
 
-> **Image:** Scan records
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/scanning-session.svg"
+  width="100%"
+  caption="Scan records"
+/>
 
 - **START FREQ**: The starting frequency of the scan (in Hz).
 - **CHANNEL NUM**: The number of scanned frequency channels.
@@ -1107,14 +1477,18 @@ Each row in the History table represents a scan session. The following details a
 - **ACTION**:
     - **View Line Chart**: Click **View Line Chart** to display a graphical summary of the selected scan.
 
-    
-> **Image:** Scan session
-
+    <RkImage
+      src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/history-chart.svg"
+      width="80%"
+      caption="Scan session"
+    />
     - **Export as Data**: Click **⋮** menu and select **Export as Data** will download the raw scan results as a **CSV file**.
 
-    
-> **Image:** Downloaded data
-
+    <RkImage
+      src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/data-download.svg"
+      width="100%"
+      caption="Downloaded data"
+    />
     - **Delete**: Removes the scan record from the list.
 
 ### LoRa® Packet Logger
@@ -1132,11 +1506,18 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the LoRa® Packet Logger extension, click **Launch**.
 
-> **Image:** Extensions tab
+<RkImage src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/lora-packet-logger-extension.png"
+  width="100%"
+  caption="Extensions tab"
+/>
 
 2. In **Storage Duration**, select how long to keep the LoRa logs. The configuration saves automatically after selection.
 
-> **Image:** Set storage duration
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/set-storage-duration.png"
+  width="100%"
+  caption="Set storage duration"
+/>
 
 + **OFF**
 + **7 Days**
@@ -1145,13 +1526,21 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 3. When the status shows **Currently recording packet logs to CSV file**, the logger is active. Log files will appear under **Log File Management**, named as `lora-packets-YYYY-MM-DD.csv`.
 
-> **Image:** Recoding Packet Logs
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/enable-record.png"
+  width="100%"
+  caption="Recoding Packet Logs"
+/>
 
 #### Manage Packet Logs
 
 1. In **Log File Management**, check the box log files to select them.
 
-> **Image:** Manage Packet Logs
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/download-logs.png"
+  width="100%"
+  caption="Manage Packet Logs"
+/>
 
 2. Click **Download** to save the selected files to your local device, or **Delete** to remove them from the gateway.
 
@@ -1163,7 +1552,11 @@ To download or delete a single file, click the corresponding <img src="https://i
 
 Open the downloaded CSV file to view the recorded packet logs.
 
-> **Image:** Check Logs
+<RkImage
+src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-22x-or-later/check-logs.png"
+  width="100%"
+  caption="Check Logs"
+/>
 
 The downloaded CSV file contains the following columns:
 
@@ -1178,7 +1571,7 @@ The downloaded CSV file contains the following columns:
 | **CRC**      | CRC check result (`CRC_OK` means passed, `UNKNOWN` means no CRC or undetectable).       |
 | **Mod**      | Modulation type, e.g., `LORA` for LoRa modulation.                                      |
 | **CR**       | Coding rate, e.g., `CR_4/5`.                                                            |
-| **DataRate** | Data rate, e.g., `SF10BW125` means spreading factor SF10 and bandwidth 125 kHz.    |
+| **DataRate** | Data rate, e.g., `SF10BW125` means spreading factor SF10 and bandwidth 125&nbsp;kHz.    |
 | **FCnt**     | Frame counter.                                                                          |
 | **AirTime**  | Airtime (ms), the duration the packet occupies the radio channel.                       |
 | **DevAddr**  | LoRaWAN device address (hexadecimal).                                                   |
@@ -1187,3 +1580,4 @@ The downloaded CSV file contains the following columns:
 | **MacCmd**   | MAC command(s), if present.                                                             |
 | **Data**     | Payload in Base64 encoding.                                                             |
 
+<RkBottomNav/>

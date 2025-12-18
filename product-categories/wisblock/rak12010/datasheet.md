@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12010 WisBlock Ambient Light Sensor Module Datasheet
 
 ## Overview
@@ -22,13 +25,13 @@ RAK12010 is a WisBlock Sensor that extends the WisBlock system to have ambient l
 
 - Ambient Light Sensor (ALS) module
 - Digital 16-bit resolution sensor
-- **Ambient Light Range:** 0 lx to about 120,000 lx
-- **Ambient Light Resolution:** 0.0036 lx
+- **Ambient Light Range:** 0&nbsp;lx to about 120,000&nbsp;lx
+- **Ambient Light Resolution:** 0.0036&nbsp;lx
 - Excellent temperature compensation
-- 3.3 V Power Supply
-- Current Consumption: < 2 - 45 uA
+- 3.3&nbsp;V Power Supply
+- Current Consumption: < 2 - 45&nbsp;uA
 - Chipset: Vishay Semiconductors VEML7700
-- **Module size:** 10 X 10 mm
+- **Module size:** 10 X 10&nbsp;mm
 
 ## Specifications
 
@@ -38,7 +41,11 @@ RAK12010 is a WisBlock Sensor that extends the WisBlock system to have ambient l
 
 **Figure 1** shows the mounting mechanism of the RAK12010 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK12010 module can be mounted on the slots: **A, B, C, D, E, & F**.
 
-> **Image:** RAK12010 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12010/datasheet/mounting-mechanism.png"
+  width="50%"
+  caption="RAK12010 mounting mechanism on a WisBlock Base module"
+/>
 
 ### Hardware
 
@@ -53,7 +60,11 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK12010 WisBlock Ambient Light Sensor Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK12010 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-> **Image:** RAK12010 Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12010/datasheet/rak12010_pinout.svg"
+  width="60%"
+  caption="RAK12010 Pinout Diagram"
+/>
 
 :::tip NOTE
 - Only **I2C** related pins, **3V3_S**, and **GND** are connected to the WisConnector.
@@ -79,10 +90,10 @@ This sections shows the maximum and minimum ratings of the RAK12010 module and i
 | ------ | --------------------------- | ------------------------------------------------------- | ---- | ---- | ---- | ---- |
 | VBAT   | Supply Voltage              | Input voltage must within this range                    | 3.3  | 4.0  | 4.2  | V    |
 | 3V3_S  | VEML7700 Operating  Voltage | Input voltage must within this range                    | 2.5  | 3.3  | 3.6  | V    |
-| Isd    | Shut down current           | VDD is 3.3 V                                       | -    | 0.5  | -    | uA   |
-| IDD1   | Operation mode current      | VDD is 3.3 V, PSM = 11, refresh time 4100 ms  | -    | 2    | -    | uA   |
-| IDD2   | Operation mode current      | VDD is 3.3 V, PSM = 00, refresh time 600 ms   | -    | 8    | -    | uA   |
-| IDD3   | Operation mode current      | VDD is 3.3 V, PSM_EN = 0, refresh time 100 ms | -    | 45   | -    | uA   |
+| Isd    | Shut down current           | VDD is 3.3&nbsp;V                                       | -    | 0.5  | -    | uA   |
+| IDD1   | Operation mode current      | VDD is 3.3&nbsp;V, PSM = 11, refresh time 4100&nbsp;ms  | -    | 2    | -    | uA   |
+| IDD2   | Operation mode current      | VDD is 3.3&nbsp;V, PSM = 00, refresh time 600&nbsp;ms   | -    | 8    | -    | uA   |
+| IDD3   | Operation mode current      | VDD is 3.3&nbsp;V, PSM_EN = 0, refresh time 100&nbsp;ms | -    | 45   | -    | uA   |
 
 #### Mechanical Characteristics
 
@@ -90,21 +101,38 @@ This sections shows the maximum and minimum ratings of the RAK12010 module and i
 
 The mechanical dimensions of the RAK12010 module is shown in **Figure 3** below.
 
-> **Image:** RAK12010 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12010/datasheet/mechanical-dimensions.png"
+  width="60%"
+  caption="RAK12010 Mechanical Dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12010/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
 **Figure 5** shows the schematic of the RAK12010 module.
 
-> **Image:** RAK12010 WisBlock Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12010/datasheet/rak12010-schematic.png"
+  width="80%"
+  caption="RAK12010 WisBlock Module Schematics"
+/>
 
 ##### PCB Silkscreen
 
 **Figure 6** shows the PCB Silkscreen of the RAK12010 module.
 
-> **Image:** RAK12010 PCB Silkscreen
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12010/datasheet/pcb-silkscreen.png"
+  width="20%"
+  caption="RAK12010 PCB Silkscreen"
+/>
 
+<RkBottomNav/>

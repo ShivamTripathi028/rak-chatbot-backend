@@ -11,9 +11,14 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK9155 Battery Plus Datasheet
 
 ## Overview
+
 
 ### Description
 
@@ -21,52 +26,63 @@ Battery Plus is the RAK's latest battery system incorporating a solar charging s
 
 ### Features
 
-- **Long Life Span** - The Lithium Iron Phosphate battery can be expected to remain serviceable for more than 10 years, considering that it is charged and discharged once a day at room temperature (25° C).
-- **Integrated Heating Function** - The battery integrates a solar charger and heater, it can be connected to PV panels directly and charged under 0° C.
+- **Long Life Span** - The Lithium Iron Phosphate battery can be expected to remain serviceable for more than 10 years, considering that it is charged and discharged once a day at room temperature (25°&nbsp;C).
+- **Integrated Heating Function** - The battery integrates a solar charger and heater, it can be connected to PV panels directly and charged under 0°&nbsp;C.
 - **Lightweight Design** - The weight of RAK9155 is no more than 8 kg making installation by a single person easier.
 - **High Waterproof Grade** - With IP65 rating of the enclosure, RAK9155 is suitable for both indoor and outdoor environments.
 - **Two PV inputs** - One mandatory for primary solar panel and one optional for a second panel, ideal for high-altitude or low-sunlight areas.
+
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK9155 Battery Plus
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/datasheet/rak-battery-plus-rak9155-overview.webp"
+  width="50%"
+  caption="RAK9155 Battery Plus"
+/>
 
-| Term | Definition |
-| --- | --- |
-| Battery Cell | The smallest energy storage unit, a basic electrochemical energy storage device, consisting of a positive electrode, a negative electrode, an electrolyte, a separator, and a casing, also called a cell. |
-| Battery Module | Intermediate energy storage unit, a combination of several single-unit and circuit devices (monitoring and protection circuits, electrical and communication interfaces), also called modules, placed in a mechanical-electrical unit. |
-| Battery Pack | A power supply system consisting of a number of battery modules, circuit equipment (protection circuits, cell management systems, electrical and communication interfaces), and thermal management devices for powering electrical devices. |
-| Nominal Voltage | Indicates or identifies an appropriate voltage approximation for the cell. |
-| Capacity | The amount of electricity that can be supplied by a fully charged battery under specified conditions. Usually expressed in Ah. |
-| Energy Capacity | The energy that can be supplied by a fully charged cell under specified conditions. Usually expressed in Wh or kWh. |
-| Nominal Capacity | At the beginning of life (BOL), the minimum capacity that can be provided by a fully charged cell at a rate of 1 C (C-rate). |
-| Units | "V" (Volt) Volt (V), voltage unit |
-| Units | "A" (Ampere) Ampere (A), current unit |
-| Units | "Ah" (Ampere-Hour) Ampere-hour (Ah), charge unit |
-| Units | “Wh” (Watt-Hour) Watt-hour (Wh), unit of electrical energy |
-| Units | “Ω” (Ohm) ohm (Ω), resistance unit |
-| Units | °C (degree Celsius) Celsius (°C), temperature unit |
-| Units | "mm" (millimeter) mm (mm), length unit |
-| Units | "s" (second) seconds (s), time unit |
-| Units | "kg" (kilogram) kilograms (kg), weight unit |
-| Units | "Hz" (Hertz) Hertz (Hz), frequency unit |
+<table>
+ <thead><tr><th>Term</th><th>Definition</th></tr></thead>
+ <tbody>
+ <tr><td>Battery Cell</td><td>The smallest energy storage unit, a basic electrochemical energy storage device, consisting of a positive electrode, a negative electrode, an electrolyte, a separator, and a casing, also called a cell.</td></tr>
+ <tr><td rowSpan="1">Battery Module</td><td>Intermediate energy storage unit, a combination of several single-unit and circuit devices (monitoring and protection circuits, electrical and communication interfaces), also called modules, placed in a mechanical-electrical unit.</td></tr>
+ <tr><td rowSpan="1">Battery Pack</td><td>A power supply system consisting of a number of battery modules, circuit equipment (protection circuits, cell management systems, electrical and communication interfaces), and thermal management devices for powering electrical devices.</td></tr>
+ <tr><td>Nominal Voltage</td><td>Indicates or identifies an appropriate voltage approximation for the cell.</td></tr>
+ <tr><td rowSpan="1">Capacity</td><td>The amount of electricity that can be supplied by a fully charged battery under specified conditions. Usually expressed in Ah.</td></tr>
+ <tr><td>Energy Capacity</td><td>The energy that can be supplied by a fully charged cell under specified conditions. Usually expressed in Wh or kWh.</td></tr>
+ <tr><td>Nominal Capacity</td><td>At the beginning of life (BOL), the minimum capacity that can be provided by a fully charged cell at a rate of 1 C (C-rate).</td></tr>
+ <tr><td rowSpan="10">Units</td><td>"V" (Volt) Volt (V), voltage unit</td></tr>
+ <tr><td>"A" (Ampere) Ampere (A), current unit</td></tr>
+ <tr><td>"Ah" (Ampere-Hour) Ampere-hour (Ah), charge unit</td></tr>
+ <tr><td>“Wh” (Watt-Hour) Watt-hour (Wh), unit of electrical energy</td></tr>
+ <tr><td>“Ω” (Ohm) ohm (Ω), resistance unit</td></tr>
+ <tr><td>°C (degree Celsius) Celsius (°C), temperature unit</td></tr>
+ <tr><td>"mm" (millimeter) mm (mm), length unit</td></tr>
+ <tr><td>"s" (second) seconds (s), time unit</td></tr>
+ <tr><td>"kg" (kilogram) kilograms (kg), weight unit</td></tr>
+ <tr><td>"Hz" (Hertz) Hertz (Hz), frequency unit</td></tr>
+</tbody>
+</table>
 
 ### Abbreviations
 
-| Abbreviations | Meaning |
-| --- | --- |
-| BMS | Battery Management System |
-| BMU | Battery Management Unit |
-| BOL | Begin of Life |
-| Bus-bar | Battery Pole Connecting Rod |
-| CMC | Cell Manager Circuit |
-| EOL | End of Life |
-| HV | High Voltage |
-| LV | Low Voltage |
-| OCV | Open Circuit Voltage |
-| SOC | Stage of charge |
+<table>
+    <thead><tr><th>Abbreviations</th><th>Meaning</th></tr></thead>
+    <tbody>
+        <tr><td>BMS</td><td>Battery Management System</td></tr>
+        <tr><td rowSpan="1">BMU</td><td>Battery Management Unit</td></tr>
+        <tr><td rowSpan="1">BOL</td><td>Begin of Life</td></tr>
+        <tr><td>Bus-bar</td><td>Battery Pole Connecting Rod</td></tr>
+        <tr><td rowSpan="1">CMC</td><td>Cell Manager Circuit</td></tr>
+        <tr><td>EOL</td><td>End of Life</td></tr>
+        <tr><td>HV</td><td>High Voltage</td></tr>
+        <tr><td>LV</td><td>Low Voltage</td></tr>
+        <tr><td>OCV</td><td>Open Circuit Voltage</td></tr>
+        <tr><td>SOC</td><td>Stage of charge</td></tr>
+    </tbody>
+</table>
 
 #### Technical Parameters
 
@@ -74,29 +90,27 @@ The key parameters of the hybrid battery system are as follows:
 
 | Parameter                           | Value                                                                                               | Notes                                                                                                                        |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| Battery Type                        | Cathode: Lithium iron phosphate
-Anode: Graphite.                                                |                                                                                                                              |
-| Nominal Capacity                    | 50 Ah                                                                                          |                                                                                                                              |
-| Nominal Voltage                     | 12.8 V                                                                                         | Single-cell voltage 3.2 V.                                                                                              |
-| Operating Voltage Range             | 10 ~ 14.6 V                                                                                    |                                                                                                                              |
-| Rated Energy                        | 640 Wh                                                                                         |                                                                                                                              |
+| Battery Type                        | Cathode: Lithium iron phosphate<br/>Anode: Graphite.                                                |                                                                                                                              |
+| Nominal Capacity                    | 50&nbsp;Ah                                                                                          |                                                                                                                              |
+| Nominal Voltage                     | 12.8&nbsp;V                                                                                         | Single-cell voltage 3.2&nbsp;V.                                                                                              |
+| Operating Voltage Range             | 10 ~ 14.6&nbsp;V                                                                                    |                                                                                                                              |
+| Rated Energy                        | 640&nbsp;Wh                                                                                         |                                                                                                                              |
 | Available SOC Range                 | 0 ~ 100%                                                                                            |                                                                                                                              |
 | SOC Transportation Range            | 50%                                                                                                 |                                                                                                                              |
-| Operating Temperature               | Charging Temperature: 0° C ~ 45° C 
-Discharging Temperature: -20° C ~ 65° C | This operating temperature refers to cell temperature. The ambient temperature range must be narrower than that of the cell. |
-| Storage Temperature                 | -20° C ~ 50° C                                                                            | If the storage will be longer than three months, store the device at 25° C.                                             |
+| Operating Temperature               | Charging Temperature: 0°&nbsp;C ~ 45°&nbsp;C <br/>Discharging Temperature: -20°&nbsp;C ~ 65°&nbsp;C | This operating temperature refers to cell temperature. The ambient temperature range must be narrower than that of the cell. |
+| Storage Temperature                 | -20°&nbsp;C ~ 50°&nbsp;C                                                                            | If the storage will be longer than three months, store the device at 25°&nbsp;C.                                             |
 | Working Humidity                    | 20 ~ 80% RH                                                                                         |                                                                                                                              |
-| Standard Charging Current           | 0.16 C (8 A)                                                                              |                                                                                                                              |
-| Maximum Charging Continuous Current | 0.2 C (10 A)                                                                              | Limited by a solar charger.                                                                                                  |
-| Standard Discharge Current          | 0.16 C (8 A)                                                                              |                                                                                                                              |
-| Max Discharge Continuous Current    | 0.2 C (10 A)                                                                              |                                                                                                                              |
-| ∆ Voltage                           | ≤ 20 mV                                                                                        | 60 min after put in standby, stopped or after charging/discharging.                                                     |
-| Enclosure Flammability rating       | UL94 5 VA                                                                                      |                                                                                                                              |
-| Weight                              | ~ 8 kg                                                                                         |                                                                                                                              |
-| Dimensions (L/W/H)                  | 499x280x75（±3) mm                                                                             |                                                                                                                              |
+| Standard Charging Current           | 0.16&nbsp;C (8&nbsp;A)                                                                              |                                                                                                                              |
+| Maximum Charging Continuous Current | 0.2&nbsp;C (10&nbsp;A)                                                                              | Limited by a solar charger.                                                                                                  |
+| Standard Discharge Current          | 0.16&nbsp;C (8&nbsp;A)                                                                              |                                                                                                                              |
+| Max Discharge Continuous Current    | 0.2&nbsp;C (10&nbsp;A)                                                                              |                                                                                                                              |
+| ∆ Voltage                           | ≤ 20&nbsp;mV                                                                                        | 60&nbsp;min after put in standby, stopped or after charging/discharging.                                                     |
+| Enclosure Flammability rating       | UL94 5&nbsp;VA                                                                                      |                                                                                                                              |
+| Weight                              | ~ 8&nbsp;kg                                                                                         |                                                                                                                              |
+| Dimensions (L/W/H)                  | 499x280x75（±3)&nbsp;mm                                                                             |                                                                                                                              |
 
 :::tip NOTE
-Unless otherwise stated, all tests in this specification are performed under the following environmental conditions: Temperature: 25±3° C; Humidity: 65±20% RH.
+Unless otherwise stated, all tests in this specification are performed under the following environmental conditions: Temperature: 25±3°&nbsp;C; Humidity: 65±20% RH.
 :::
 
 ### Hardware
@@ -106,25 +120,38 @@ Unless otherwise stated, all tests in this specification are performed under the
 The appearance of the RAK9155 battery system is shown below. The battery system consists of 4 pcs of 50 Ah cells connected in serial and a 1pcs 12V solar charger. The appearance of the assembly has no obvious processing flaws or bumps, no cracks on the surface, and no burrs on the weld.
 
 ​
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/datasheet/rak9155-dimensions.png"
+  width="80%"
+  caption="RAK9155 Dimensions"
+/>
 
-> **Image:** RAK9155 Dimensions
 
 #### Electrical Schematic
 
-> **Image:** Electrical schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/datasheet/rak9155-schematic.png"
+  width="80%"
+  caption="Electrical schematic"
+/>
 
 :::tip NOTE
 For reference only, this module does not contain a sampling wiring harness.
 :::
 
-> **Image:** Wiring schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9155/datasheet/rak9155-wiring.svg"
+  width="80%"
+  caption="Wiring schematics"
+/>
+
 
 #### Panel Connector Definition
 
 | Connector | Connector  socket model | Connector  plug type | Definition                                      | Note                                                                  |
 |-----------|-------------------------|----------------------|-------------------------------------------------|-----------------------------------------------------------------------|
-| Load      | LP-16-J04SX-02-101      | LP-16-C04PE-02-001   | Pin1：P+;  Pin2：P-;  Pin3: RS485A;  Pin4: RS485B | Linco;  IP67; Rated current 10 A; Contact diameter 1.5 mm*4 |
-| PV INPUT  | LP-16-J02SX-02-101      | LP-16-J02PE-02-001   | Pin1: PV+;  Pin2: PV-                           | Linco; IP67; Rated current 10 A; Contact diameter 1.5 mm*2  |
+| Load      | LP-16-J04SX-02-101      | LP-16-C04PE-02-001   | Pin1：P+;  Pin2：P-;  Pin3: RS485A;  Pin4: RS485B | Linco;  IP67; Rated current 10&nbsp;A; Contact diameter 1.5&nbsp;mm*4 |
+| PV INPUT  | LP-16-J02SX-02-101      | LP-16-J02PE-02-001   | Pin1: PV+;  Pin2: PV-                           | Linco; IP67; Rated current 10&nbsp;A; Contact diameter 1.5&nbsp;mm*2  |
 
 :::tip NOTE
 The Battery Plus RAK9155 features two PV inputs for up to two Solar Panel:
@@ -144,7 +171,7 @@ During transportation, it should be protected from severe vibration, shock, sun,
 
 The module is stored in an incompletely charged state, typically around 40% SOC. Product storage environment requirements are as follows:
 
-- Storage temperature: storage time < 3 months, then stored at -30° C ~ 50° C, 40%SOC; Storage time > 3 months, then 0 ~ 25° C, 40%SOC;
+- Storage temperature: storage time < 3 months, then stored at -30°&nbsp;C ~ 50°&nbsp;C, 40%SOC; Storage time > 3 months, then 0 ~ 25°&nbsp;C, 40%SOC;
 - Storage humidity: humidity is 2%RH~ 90%RH, it is recommended to store in the range of no more than 85%RH;
 - Storage environment: The product should be stored in a clean, ventilated, and cool environment, avoiding direct sunlight, high temperature, corrosive gas, severe vibration, mechanical shock and heavy pressure; away from heat source; altitude is less than 1500 meters, atmospheric pressure is 86 ~ 106 kPa.
 - Maintenance: In a dry and ventilated environment, recharge is required once every 1 month during storage; the maintenance test method during product storage is as follows:
@@ -161,9 +188,16 @@ The module is stored in an incompletely charged state, typically around 40% SOC.
 - Although the module is not a high-pressure energy storage device, non-professionals and improper operation and use may still cause serious consequences such as burning and explosion. The installation and maintenance of the battery system must be operated by professional technicians. The use must strictly abide by the relevant safety regulations; non-professionals are strictly prohibited to install, and repairing battery systems and abuse.
 :::
 
+
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/Accessories/RAK9155/Certification/RAK9155_CE_Certification.jpg
-- **FCC:** https://downloads.rakwireless.com/Accessories/RAK9155/Certification/RAK9155_FCC_Certification.jpg
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/Accessories/RAK9155/Certification/RAK9155_CE_Certification.jpg',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/Accessories/RAK9155/Certification/RAK9155_FCC_Certification.jpg',
+    }
+]} />
 
+<RkBottomNav/>

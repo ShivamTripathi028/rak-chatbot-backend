@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12027 WisBlock Earthquake Sensor Module
 
 Thank you for choosing **RAK12027 WisBlock Earthquake Sensor Module** in your next IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -22,6 +24,7 @@ Thank you for choosing **RAK12027 WisBlock Earthquake Sensor Module** in your ne
 * [RAK12027 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK12027.stp)
 * [24-Pin Male Connector 3D File](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M24S1003K6M.stp)
 * [WisBlock Sensor Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26687819464343-How-To-Make-Your-Own-WisBlock-Sensor-Board)
+
 
 ## Product Description
 
@@ -37,16 +40,16 @@ Do not use the sensor in safety devices or for applications in which the sensor 
 
 * **Sensor specifications**
     * Chipset: **Omron D7S**
-    * Voltage supply: **3.3 V**
+    * Voltage supply: **3.3&nbsp;V**
     * Using the SI value, which has a high correlation with the seismic intensity scale that indicates the magnitude of an earthquake, provides higher-precision judgment of seismic intensity scales
     * A higher degree of freedom for incorporation into devices and prolonged operation on battery power
     * The shutoff output terminal (INT1) operates equivalent to a conventional mechanical vibration sensor and ensures compatibility with mechanical vibration sensors
     * Collapse alarm integrated
     * I2C digital output interface
-    * Operating temperature: **-30° C ~ 70° C**
+    * Operating temperature: **-30°&nbsp;C ~ 70°&nbsp;C**
 
 * **Module size**
-    * 10 x 23 mm
+    * 10 x 23&nbsp;mm
 
 ## Prerequisites
 
@@ -56,3 +59,4 @@ To use a **RAK12027**, you need at least a **WisBlock Base board** to plug the m
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

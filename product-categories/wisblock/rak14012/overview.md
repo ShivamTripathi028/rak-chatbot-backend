@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK14012 WisBlock LED Matrix
 
 Thank you for choosing **RAK14012 WisBlock LED Matrix** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -26,16 +29,17 @@ Thank you for choosing **RAK14012 WisBlock LED Matrix** in your awesome IoT Proj
 
 RAK14012 is an LED matrix driver module for WS2812B LEDs, which has a control circuit and RGB chip.
 
-To drive the WS2812B, the RAK14012 has a built-in boost circuit to generate 5 V voltage output. But it is recommended to use an external power supply to power the LED Matrix.
+To drive the WS2812B, the RAK14012 has a built-in boost circuit to generate 5&nbsp;V voltage output. But it is recommended to use an external power supply to power the LED Matrix.
+
 
 ## Product Features
 
 * **Module Specifications**
     * LED matrix driver
-    * 3.3 V Power supply
+    * 3.3&nbsp;V Power supply
 
 * **Module Size**
-    * 25 mm x 15 mm
+    * 25&nbsp;mm x 15&nbsp;mm
 
 ## Prerequisites
 
@@ -45,3 +49,5 @@ To use a **RAK14012**, you need the WS2812B LED matrix that is included in the m
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+
+<RkBottomNav/>

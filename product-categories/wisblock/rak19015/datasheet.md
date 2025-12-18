@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19015 WisBlock Battery Power Slot Module Datasheet
 
 ## Overview
@@ -18,14 +21,14 @@ sidebar_label: Datasheet
 
 The **RAK19015 WisBlock Battery Power Slot Module** is a power board that comprises a battery connector, a reset push button, and two LEDs. It is designed to be used with WisBlock Base Board with Power Slot via the 40-pin WisBlock connector.
 
-RAK19015 is optimized to support very low-power applications since it only has a Li-Ion battery and 3.3 V switching regulator in the circuit removing unnecessary components that consume extra current consumption.
+RAK19015 is optimized to support very low-power applications since it only has a Li-Ion battery and 3.3&nbsp;V switching regulator in the circuit removing unnecessary components that consume extra current consumption.
 
 ### Features
 
 - Designed for battery-only powered applications
 - High-efficiency switching regulator
 - Optimized for low-power devices
-- Module size: 30 x 20 mm
+- Module size: 30 x 20&nbsp;mm
 
 ## Specifications
 
@@ -33,13 +36,21 @@ RAK19015 is optimized to support very low-power applications since it only has a
 
 #### Board Overview
 
-> **Image:** RAK19015 WisBlock Power Module top (left) and bottom (right) view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/rak19015-front-back-overview.png"
+  width="40%"
+  caption="RAK19015 WisBlock Power Module top (left) and bottom (right) view"
+/>
 
 #### Mounting
 
 The RAK19015 module can be mounted on the Power slot of the WisBlock Base board. **Figure 2** shows the mounting mechanism of the RAK19015 on a WisBlock Base module, such as the RAK19010.
 
-> **Image:** RAK19015 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/mounting-mechanism.png"
+  width="50%"
+  caption="RAK19015 mounting mechanism on a WisBlock Base module"
+/>
 
 ### Hardware
 
@@ -58,16 +69,24 @@ RAK19015 WisBlock Battery Power Slot Module provides the following interfaces, h
 RAK19015 doesn't have a USB connector, so when RAK19015 and RAK19010 are used together, it is not possible to program the core (unless you use Jlink). If you want to program the core, you need the <a href="https://store.rakwireless.com/products/rak5804-wisblock-interface-extension-board" target="_blank">RAK5804</a>. Then you can supply over RAK19015 and program over RAK5804.
 :::
 
-> **Image:** RAK19015 part labels
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/rak19015-label.svg"
+  width="40%"
+  caption="RAK19015 part labels"
+/>
 
 ##### Battery Connector
 
 **Figure 4** shows the battery connector V+(VBAT) and V-(GND).
 
-> **Image:** Battery Connector Pin Order
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/rak19015-batt-con.svg"
+  width="40%"
+  caption="Battery Connector Pin Order"
+/>
 
 :::tip NOTE
-The voltage of the battery must not exceed 4.3 V.
+The voltage of the battery must not exceed 4.3&nbsp;V.
 :::
 
 ##### LEDs
@@ -89,7 +108,11 @@ The RAK19015 Battery Power Slot Module has a 40-pin WisConnector that is compati
 VBAT, 3V3, RESET, LED1, LED2, and GND are connected to the WisBlock IO connector.
 :::
 
-> **Image:** RAK19015 Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/rak19015-pinout.svg"
+  width="60%"
+  caption="RAK19015 Pinout Diagram"
+/>
 
 #### Electrical Characteristics
 
@@ -119,10 +142,10 @@ A suitable Li-Ion battery should have the following parameters as shown in the t
 
 | **Parameter**     | **Value**            |
 | ----------------- | -------------------- |
-| Standard voltage  | 3.7 V           |
-| Charging voltage  | 4.2 V           |
+| Standard voltage  | 3.7&nbsp;V           |
+| Charging voltage  | 4.2&nbsp;V           |
 | Capacity          | As required          |
-| Discharge current | At least 500 mA |
+| Discharge current | At least 500&nbsp;mA |
 
 #### Mechanical Characteristic
 
@@ -130,11 +153,19 @@ A suitable Li-Ion battery should have the following parameters as shown in the t
 
 The mechanical dimensions of the RAK19015 module are shown in **Figure 6** below.
 
-> **Image:** RAK19015 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="RAK19015 mechanical dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Environmental Characteristics
 
@@ -142,13 +173,19 @@ The table below lists the operation and storage temperature requirements of RAK1
 
 | **Parameter**                 | **Minimum** | **Typical** | **Maximum** |
 | ----------------------------- | :---------: | :---------: | :---------: |
-| Operational temperature range | –35º C | +25º C | +75º C |
-| Extended temperature range    | –40º C | +25º C | +80º C |
-| Storage temperature range     | –40º C | +25º C | +80º C |
+| Operational temperature range | –35º&nbsp;C | +25º&nbsp;C | +75º&nbsp;C |
+| Extended temperature range    | –40º&nbsp;C | +25º&nbsp;C | +80º&nbsp;C |
+| Storage temperature range     | –40º&nbsp;C | +25º&nbsp;C | +80º&nbsp;C |
 
 #### Schematic Diagram
 
 **Figure 8** shows the schematic of the RAK19015 power slot module.
 
-> **Image:** RAK19015 Battery Power Slot Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19015/datasheet/rak19015-schematic.png"
+  width="100%"
+  caption="RAK19015 Battery Power Slot Module Schematics"
+/>
 
+
+<RkBottomNav/>

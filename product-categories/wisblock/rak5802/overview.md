@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK5802 WisBlock RS485 Interface Module
 
 Thank you for choosing **RAK5802 WisBlock RS485 Interface Module** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -37,20 +40,23 @@ Thank you for choosing **RAK5802 WisBlock RS485 Interface Module** in your aweso
 - For WisBlock Core RAK11300:
     * [Sample Code: RAK5802 RS485](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11300/IO/RAK5802_RS485)
 
+
 ## Product Description
 
 **RAK5802** is a **WisBlock Interface** module, which extends the **WisBlock** system with an industry standard RS485 to serial converter. It supports one RS485 port and voltage supply for connected sensors.
 
-The **RAK5802** module features one RS485 interface. A protection circuity is added against ESD hazard. It complies with the IEC61000-4-2 standard and can protect up to 18 KV HBM ESD.
+The **RAK5802** module features one RS485 interface. A protection circuity is added against ESD hazard. It complies with the IEC61000-4-2 standard and can protect up to 18&nbsp;KV HBM ESD.
 
 In addition, the **RAK5802** supports one I2C interface to connect external sensors.
+
+
 
 ## Product Features
 
 * **Module specifications**
     * RS485 to serial converter
-    * Battery and 3.3 V output for sensors
-    * 18 kV ESD protection
+    * Battery and 3.3&nbsp;V output for sensors
+    * 18&nbsp;kV ESD protection
     * 1 port
     * Chipset: 3PEAK TP8485E
 
@@ -58,7 +64,7 @@ In addition, the **RAK5802** supports one I2C interface to connect external sens
     * The **RAK5802** modules power supply can be controlled by the **WisBlock Core** MCU to reduce power consumption.
 
 * **Size**
-    * 35 x 25 mm
+    * 35 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -68,3 +74,4 @@ To use a **RAK5802**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

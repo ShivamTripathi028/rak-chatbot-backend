@@ -9,11 +9,15 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # LX200V50 WisLink 1000 Mbps PLC Module + EVB
 
 Thank you for choosing **LX200V50 WisLink 1000 Mbps PLC Module + EVB** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
 * [Datasheet](https://docs.rakwireless.com/product-categories/wislink/lx200v50/datasheet/)
+
 
 ## Product Description
 
@@ -22,14 +26,14 @@ Thank you for choosing **LX200V50 WisLink 1000 Mbps PLC Module + EVB** in your a
 ## Product Features
 
 - HomePlug® AV2 compliant: 
-   - AV2 30 MHz and 67 MHz MIMO profiles 
-   - AV2 30 MHz and 67 MHz SISO profiles 
+   - AV2 30&nbsp;MHz and 67&nbsp;MHz MIMO profiles 
+   - AV2 30&nbsp;MHz and 67&nbsp;MHz SISO profiles 
    - Power Save Mode 
 - IEEE 1901, IEEE 1905.1, and HomePlug AV compliant 
 - Coexistence with HomePlug 1.0/Turbo nodes 
 - Integrated MAC/PHY, analog front end, and line driver 
 - Supports RGMII/RMII Ethernet with both MAC and PHY mode 
-- Internal DDR2 16 MB memory 
+- Internal DDR2 16&nbsp;MB memory 
 - HomePlug AV2 compliant PHY: 
    - Supports OFDM 4096/1024/256/64/16/8-QAM, QPSK, BPSK, ROBO, HS-ROBO, Mini-ROBO 
    - Supports Line-Neutral/Line-Ground 2x2 MIMO with beam-forming 
@@ -48,4 +52,5 @@ Thank you for choosing **LX200V50 WisLink 1000 Mbps PLC Module + EVB** in your a
 For optimal performance and extended device lifespan, use active or passive cooling such as fans or heatsinks to regulate chip temperature during operation.
 :::
 
-   
+
+   <RkBottomNav/>

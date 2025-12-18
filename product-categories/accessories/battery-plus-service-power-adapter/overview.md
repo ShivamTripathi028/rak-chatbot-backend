@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Battery Plus Service Power Adapter
 
 Thank you for choosing **Battery Plus Service Power Adapter** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -16,17 +18,19 @@ Thank you for choosing **Battery Plus Service Power Adapter** in your awesome Io
 
 ## Product Description
 
-The **RAK Battery Plus Service Power Adapter** is designed to pair with RAK9155 Battery Plus for thorough in-house charging prior to deployment. This adapter enables quick and reliable battery charging, ideal for reviving batteries with prolonged storage or simulating a full power cycle for maintenance and evaluation purposes. It provides a 19 V<sub>DC</sub> output with a 9.47 A current and 180 W power, featuring a dedicated connector that matches the Battery Plus input (PV input).
+The **RAK Battery Plus Service Power Adapter** is designed to pair with RAK9155 Battery Plus for thorough in-house charging prior to deployment. This adapter enables quick and reliable battery charging, ideal for reviving batteries with prolonged storage or simulating a full power cycle for maintenance and evaluation purposes. It provides a 19&nbsp;V<sub>DC</sub> output with a 9.47&nbsp;A current and 180&nbsp;W power, featuring a dedicated connector that matches the Battery Plus input (PV input).
 
 ## Product Features
 
-- Input: 100-240 V<sub>AC</sub> (50~60 Hz)
-- Output: 19 V<sub>DC</sub> 9.47 A
-- Rated Power: 180 W
+- Input: 100-240&nbsp;V<sub>AC</sub> (50~60&nbsp;Hz)
+- Output: 19&nbsp;V<sub>DC</sub> 9.47&nbsp;A
+- Rated Power: 180&nbsp;W
 - Protection:
   - Overcurrent protection
   - Short Circuit protection
   - Overvoltage protection
-- DC cable: 1.2 m with Battery Plus input (PV input) connector
+- DC cable: 1.2&nbsp;m with Battery Plus input (PV input) connector
 - Usage type: Indoor
 
+
+<RkBottomNav/>

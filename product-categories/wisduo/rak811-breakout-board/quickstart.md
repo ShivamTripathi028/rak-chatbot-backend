@@ -11,6 +11,10 @@ slug: /product-categories/wisduo/rak811-breakout-board/quickstart/
 download: true
 ---
 
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK811 Breakout Board Quick Start Guide
 
 ## Prerequisites
@@ -31,6 +35,7 @@ Before proceeding with the installation and setup guide for the RAK811 Breakout 
 2. <a href="https://docs.rakwireless.com/product-categories/wisduo/rak811-breakout-board/datasheet/#firmwareos" target="_blank">RAK811 Breakout Board Firmware</a>
 3. <a href="https://downloads.rakwireless.com/#LoRa/Tools/RAK_Device_Firmware_Upgrade_tool/" target="_blank">RAK Device Firmware Upgrade (DFU) Tool</a>
 
+
 :::tip NOTE
 The bootloader for the RAK811 Breakout Board is pre-installed during manufacturing, so flashing the bootloader is not required. If you find the bootloader of your RAK811 Breakout Board to be damaged, contact our support team through the <a href="https://forum.rakwireless.com/" target="_blank">RAKwireless forum</a>. For instructions on how to <a href="https://docs.rakwireless.com/product-categories/wisduo/rak811-breakout-board/quickstart/#upgrading-the-firmware" target="_blank">upgrade the firmware</a> of the device, refer to the miscellaneous section of this document.
 :::
@@ -46,25 +51,47 @@ The bootloader for the RAK811 Breakout Board is pre-installed during manufacturi
 
 The RAK811 Breakout Board can be configured using AT commands via the UART interface. To connect the RAK811 to a PC's USB port, you need a **USB to UART TTL adapter** and a serial terminal tool. It is highly recommended to use the <a href="https://downloads.rakwireless.com/#LoRa/Tools" target="_blank">RAK Serial Port Tool</a>, which allows you to easily send AT commands and view the corresponding replies from the console output.
 
+
 :::warning
 Before powering the RAK811 Breakout Board, install the LoRa antenna first. Failure to do so may result in damage to the board.
 :::
 
 - **Figure 1** shows the Pinout Diagram of the Board and **Figure 2** shows how to connect the RAK811 Breakout Board to the RAKDAP1.
 
-> **Image:** RAK811(H) Breakout Board Pinout Diagram
+<RkImage
+ src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/interfacing-with-rak811-breakout/pinout_diagram.png"
+  width="50%"
+  caption="RAK811(H) Breakout Board Pinout Diagram"
+  zoomMode={true}
+/>
 
-> **Image:** RAKDAP1 to RAK811 Breakout Board Connection
+<RkImage
+ src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/interfacing-with-rak811-breakout/rak811_diagram.svg"
+  width="70%"
+  caption="RAKDAP1 to RAK811 Breakout Board Connection"
+  zoomMode={true}
+/>
 
 - Connect your **RAKDAP1 Flash and Debug Tool** to your Windows machine. Then, open the **RAK Serial Port Tool** and select the correct **COM port**.
 
-> **Image:** Correct Port Number and Correct Baud rate
+<RkImage
+ src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/interfacing-with-rak811-breakout/correct-port-correct-baud-rate.png"
+  width="80%"
+  caption="Correct Port Number and Correct Baud rate"
+  zoomMode={true}
+/>
+
 
 ### Connecting to The Things Stack (TTN V3)
 
 This section will show how to connect the RAK811 Breakout Board to The Things Stack (TTN V3) platform.
 
-> **Image:** The Things Stack diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/4.ttn-context.png"
+  width="95%"
+  caption="The Things Stack diagram"
+  zoomMode={true}
+/>
 
 As shown in **Figure 4**, The Things Stack is an open source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments as well as for small, local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliancy and interoperability. This project is actively maintained by<a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries</a>.
 
@@ -72,35 +99,72 @@ LoRaWAN is a protocol for low-power wide-area networks. It allows for large scal
 
 The RAK811 Board can be part of this ecosystem as a device, and the objective of this section is to demonstrate how simple it is to send data to The Things Stack using the LoRaWAN protocol. To achieve this, the RAK811 Board must be located inside the coverage of a LoRaWAN gateway connected to The Things Stack server.
 
+
 #### Registration to TTN and Creating LoRaWAN Applications
 
 1. Visit the <a href="https://console.cloud.thethings.network/" target="_blank">The Things Network platform</a> and choose a cluster, as shown in **Figure 5**. The Things Industries periodically adds more clusters, so select the one closest to your location. For this guide, **Europe 1** is selected.
 
-> **Image:** Select Cluster in TTN V3
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/selecting-cluster.png"
+  width="100%"
+  caption="Select Cluster in TTN V3"
+  zoomMode={true}
+/>
 
 2. Log in using your existing TTN V2 credentials. If you don’t have an account, create one.
 
 To register as a new user on TTN, click on **Login with The Things ID**, then select **Register** on the next page, as shown in **Figures 6** and **7**. Fill in all the required details and activate your account.
 
-> **Image:** Log in using TTN account
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/login-ttn.png"
+  width="100%"
+  caption="Log in using TTN account"
+  zoomMode={true}
+/>
 
-> **Image:** Registration of new account
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/register-new-account.png"
+  width="100%"
+  caption="Registration of new account"
+  zoomMode={true}
+/>
+
 
 3. After creating an account, log in to the platform using your username/email and password, then click **Submit**, as shown in **Figure 8**.
 
-> **Image:** Log in to TTN platform
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/login-to-ttn.png"
+  width="100%"
+  caption="Log in to TTN platform"
+  zoomMode={true}
+/>
 
 4. Click **Authorize** to proceed.
 
-> **Image:** Authorization to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/authorization-to-ttn.png"
+  width="100%"
+  caption="Authorization to TTN"
+  zoomMode={true}
+/>
 
 5. Click **Create an application**.
 
-> **Image:** Create TTN application for your LoRaWAN devices
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/creating-ttn-app.png"
+  width="100%"
+  caption="Create TTN application for your LoRaWAN devices"
+  zoomMode={true}
+/>
 
 6. To register an application, first input the specific details and required information about your application, then click **Create application**.
 
-> **Image:** Details of the TTN application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/details-ttn-app.png"
+  width="100%"
+  caption="Details of the TTN application"
+  zoomMode={true}
+/>
 
 7. Add end devices to your **The Things Stack** application. The LoRaWAN specification requires that each end device be personalized and activated. Activation can be done through either **Over-The-Air Activation (OTAA)** or **Activation By Personalization (ABP)**.
 
@@ -116,13 +180,28 @@ RAKwireless offers <a href="https://store.rakwireless.com/collections/wisgate" t
 
 1. To start adding an OTAA end device, click **+ Add end device**, as shown in **Figure 12**.
 
-> **Image:** Add end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/add-end-device.png"
+  width="100%"
+  caption="Add end device"
+  zoomMode={true}
+/>
 
 2.    Click **Manually**, then configure the activation method by selecting **Over The Air Activation (OTAA)** and a compatible **LoRaWAN version**. Finally, click the **Start** button, as shown in **Figure 13** and **Figure 14**.
 
-> **Image:** Manually register device to The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/manual-register.png"
+  width="100%"
+  caption="Manually register device to The Things Stack"
+  zoomMode={true}
+/>
 
-> **Image:** Device activation configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/device-activation.png"
+  width="100%"
+  caption="Device activation configuration"
+  zoomMode={true}
+/>
 
 3. Enter a unique **End Device ID** and EUIs (**DevEUI** and **AppEUI**). Optionally, provide an **End Device Name** and **End Device Description**. Finally, click **Network Layer Settings** to proceed to the next step.
 
@@ -132,15 +211,30 @@ RAKwireless offers <a href="https://store.rakwireless.com/collections/wisgate" t
 - It is recommended to use meaningful **End Device ID**, **End Device Name**, and **End Device Description** that align with your device's purpose. The **End Device ID** `rak-device` is used for illustration purposes only.
 :::
 
-> **Image:** OTAA Device Information
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/otaa-device-info.png"
+  width="100%"
+  caption="OTAA Device Information"
+  zoomMode={true}
+/>
 
 4. Set up the **Frequency Plan**, compatible **Regional Parameter Version**, and supported **LoRaWAN Class**. Then, click **Join Settings** to proceed.
 
-> **Image:** OTAA Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/otaa-configuration.png"
+  width="100%"
+  caption="OTAA Configuration"
+  zoomMode={true}
+/>
 
 5. To obtain an **AppKey**, click the **Generate** button. Then, click **Add End Device** to complete the registration of your new device.
 
-> **Image:** OTAA AppKey generation and device registration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/otaa-appkey.png"
+  width="100%"
+  caption="OTAA AppKey generation and device registration"
+  zoomMode={true}
+/>
 
 You should now be able to see the device on The Things Stack console after you fully registered your device, **as shown in Figure 18**.
 
@@ -153,7 +247,13 @@ You should now be able to see the device on The Things Stack console after you f
 - These parameters are always accessible on the device console page, as shown in Figure 18.
 :::
 
-> **Image:** OTAA device successfully registered to The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/otaa-sucessfull-register.png"
+  width="100%"
+  caption="OTAA device successfully registered to The Things Stack"
+  zoomMode={true}
+/>
+
 
 #### RAK811 OTAA Configuration for The Things Stack
 
@@ -167,7 +267,12 @@ at+set_config=device:restart
 at+version
 ```
 
-> **Image:** AT Command response
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/3.command-response.png"
+  width="90%"
+  caption="AT Command response"
+  zoomMode={true}
+/>
 
 As an example, these are the list of the parameters you need to configure in RAK811:
 
@@ -193,6 +298,7 @@ at+set_config=lora:class:0
 3. Set the frequency/region to EU868.
 
 * Refer in the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak811-breakout-board/datasheet/#rf-characteristics" target="_blank">RAK811 Breakout Board Datasheet</a> for the list of supported frequencies.
+
 
 ```
 at+set_config=lora:region:EU868
@@ -220,7 +326,13 @@ at+set_config=lora:app_eui:1000000000000009
 at+set_config=lora:app_key:04FA4E626EF5CF227C969601176275C2
 ```
 
-> **Image:** Configure LoRa Parameters
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/14.lora-parameters.png"
+  width="90%"
+  caption="Configure LoRa Parameters"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 
@@ -242,23 +354,50 @@ After 5 or 6 seconds, if the request is successfully received by a LoRa gateway,
 at+send=lora:2:1234567890
 ```
 
-> **Image:** OTAA Test Sample Data Sent via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/15.send-message.png"
+  width="90%"
+  caption="OTAA Test Sample Data Sent via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 You will see the data sent by the RAK811 Board on The Things Stack platform, as shown in **Figure 22**.
 
-> **Image:** OTAA Test Sample Data Sent Viewed in The Things Stack
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/otaasend.png"
+  width="100%"
+  caption="OTAA Test Sample Data Sent Viewed in The Things Stack"
+  zoomMode={true}
+/>
+
 
 #### The Things Stack ABP Device Registration
 
 1. To register an ABP device, navigate to your application console and select the application where you want to add the device. Then, click **+ Add end device**, as shown in **Figure 23**.
 
-> **Image:** Add end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/add-end-device.png"
+  width="100%"
+  caption="Add end device"
+  zoomMode={true}
+/>
 
 2. To register the module, click **Manually**, then configure the activation method by selecting **Activation By Personalization (ABP)** and a compatible **LoRaWAN version**. Finally, click the **Start** button, as shown in **Figure 24** and **Figure 25**.
 
-> **Image:** Add end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/manual-register.png"
+  width="100%"
+  caption="Add end device"
+  zoomMode={true}
+/>
 
-> **Image:** Manually register device to The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/manual-register-ttn.png"
+  width="100%"
+  caption="Manually register device to The Things Stack"
+  zoomMode={true}
+/>
 
 3. Enter a unique **End Device ID** and **DevEUI**. Optionally, provide an **End Device Name** and **End Device Description** for your device. Then, click **Network Layer Settings** to proceed to the next step.
 
@@ -268,19 +407,39 @@ You will see the data sent by the RAK811 Board on The Things Stack platform, as 
 - It is recommended to use meaningful **End Device ID**, **End Device Name**, and **End Device Description** that align with your device's purpose. The **End Device ID** `rak-device-abp` is used for illustration purposes only.
 :::
 
-> **Image:** Device Information
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/device-information.png"
+  width="100%"
+  caption="Device Information"
+  zoomMode={true}
+/>
 
 4. Set up the **Frequency Plan**, compatible **Regional Parameter Version**, and supported **LoRaWAN Class**. For an ABP device, generate the **Device Address** and **NwkSKey** (Network Session Key). Then, click **Application Layer Settings** to proceed.
 
-> **Image:** ABP Configuration in The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/abp-configuration.png"
+  width="100%"
+  caption="ABP Configuration in The Things Stack"
+  zoomMode={true}
+/>
 
 5. To obtain the **AppSKey**, click the **Generate** button. Then, click **Add End Device** to complete your new device registration.
 
-> **Image:** ABP Configuration in The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/abp-configuration-ttn.png"
+  width="100%"
+  caption="ABP Configuration in The Things Stack"
+  zoomMode={true}
+/>
 
 You should now be able to see the device on The Things Stack console, as shown in **`Figure 29`**.
 
-> **Image:** RAK811 registered at The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/rak811-registered-ttn.png"
+  width="100%"
+  caption="RAK811 registered at The Things Stack"
+  zoomMode={true}
+/>
 
 #### RAK811 ABP Configuration for The Things Stack
 
@@ -294,7 +453,12 @@ at+set_config=device:restart
 at+version
 ```
 
-> **Image:** AT Command response
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/3.command-response.png"
+  width="90%"
+  caption="AT Command response"
+  zoomMode={true}
+/>
 
 As an example, here is the list of parameters you need to configure in the RAK811:
 
@@ -342,7 +506,12 @@ at+set_config=lora:nwks_key:433C7A924F7F6947778FE821525F183A
 at+set_config=lora:apps_key:A585653A949C2B2D44B55E99E94CB533
 ```
 
-> **Image:** AT Command for ABP LoRa parameters via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/21.abp-at-commands.png"
+  width="90%"
+  caption="AT Command for ABP LoRa parameters via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 
@@ -368,17 +537,28 @@ In **ABP mode** of LoRaWAN, a device does not need to join a network before send
 at+send=lora:2:1234567890
 ```
 
-> **Image:** ABP Test Sample Data Sent via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/15.send-message.png"
+  width="90%"
+  caption="ABP Test Sample Data Sent via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 You can see the data sent by the RAK811 Board on the The Things Stack device console *Live data* section and the *Last seen* info should be a few seconds ago.
 
-> **Image:** OTAA Test Sample Data Sent Viewed in The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/abpsend.png"
+  width="100%"
+  caption="OTAA Test Sample Data Sent Viewed in The Things Stack"
+  zoomMode={true}
+/>
 
 ### Connecting to ChirpStack
 
 The ChirpStack or previously known as LoRaServer project provides open-source components for building LoRaWAN networks. To learn more about ChirpStack, visit their <a href="https://www.chirpstack.io/" target="_blank">**website**</a>.
 
 You can use RAK811 Breakout Board to connect with ChirpStack according to the following steps:
+
 
 :::tip NOTE
 
@@ -390,25 +570,55 @@ In this document, it is assumed that you are using RAK Gateway and its built-in 
 
 2. By default, there is already one or more items in this page. You can either use it or create a new item, but for this, create a new item by clicking the “**CREATE**” button.
 
-> **Image:** ChirpStack Applications
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/connecting-to-chirpstack/chirpstack-app.png"
+  width="100%"
+  caption="ChirpStack Applications"
+  zoomMode={true}
+/>
 
 3. Fill up the necessary information then Click **CREATE APPLICATION**.
 
-> **Image:** Create the Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/connecting-to-chirpstack/creating-the-app.png"
+  width="100%"
+  caption="Create the Application"
+  zoomMode={true}
+/>
 
 4. Click the new item name **RAKwireless_Test_Application**:
 
-> **Image:** Applications page in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/connecting-to-chirpstack/applications-page.png"
+  width="100%"
+  caption="Applications page in ChirpStack"
+  zoomMode={true}
+/>
 
-> **Image:** RAK811 Breakout Board Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/connecting-to-chirpstack/rak811-application.png"
+  width="100%"
+  caption="RAK811 Breakout Board Application"
+  zoomMode={true}
+/>
 
 5. **Add** a Node device into ChirpStack by clicking the “**CREATE**” button.
 
-> **Image:** Add a Node Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/connecting-to-chirpstack/adding-node-device.png"
+  width="100%"
+  caption="Add a Node Device"
+  zoomMode={true}
+/>
 
 6. Fill in the required fields. You can generate a **Device EUI** automatically by clicking the **Device EUI** icon, or manually enter the correct **Device EUI** in the edit box.
 
-> **Image:** Fill the Device Parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/connecting-to-chirpstack/filling-deive-parameters.png"
+  width="100%"
+  caption="Fill the Device Parameters"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 - If you want to join in OTAA mode, select **DeviceProfile_OTAA** in the **Device-profile** item.
@@ -416,25 +626,46 @@ In this document, it is assumed that you are using RAK Gateway and its built-in 
 - If you want to join in ABP mode and other frequencies except AS923 and CN470, select **DeviceProfile_ABP** in the **Device-profile** item.
 :::
 
+
 #### OTAA Mode
 
 1. To join ChirpStack in OTAA mode, select **DeviceProfile_OTAA**.
 
-> **Image:** Select OTAA Activation Mode in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/selecting-otaa-activation.png"
+  width="100%"
+  caption="Select OTAA Activation Mode in ChirpStack"
+  zoomMode={true}
+/>
 
 2. Press the **CREATE DEVICE** button. You can either manually enter the **Application Key** or generate it automatically by clicking the icon highlighted in **Figure 41**.
 
-> **Image:** Application Key Generation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/app-key-generation.png"
+  width="100%"
+  caption="Application Key Generation"
+  zoomMode={true}
+/>
 
 3. Click the **SET DEVICE KEYS** button to finalize the configuration on **ChirpStack**.
 
 - The **Device EUI**, which was previously set on your **RAK811 Breakout Board** as `dev_eui`, matches the one highlighted in **Figure 42**.
 
-> **Image:** Device EUI Code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/device-eui-code.png"
+  width="100%"
+  caption="Device EUI Code"
+  zoomMode={true}
+/>
 
 - The **Application Key**, which was previously set as `app_key`, should match the one highlighted in **Figure 43**.
 
-> **Image:** Application Key LoRaWAN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/application-key-lorawan.png"
+  width="100%"
+  caption="Application Key LoRaWAN"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 The **Application EUI**, which was set in the RAK811 Breakout Board as **app_eui**, is not required for **ChirpStack**.
@@ -446,7 +677,12 @@ The **Application EUI**, which was set in the RAK811 Breakout Board as **app_eui
 at+version
 ```
 
-> **Image:** RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/rak-serial-port-tool.png"
+  width="45%"
+  caption="RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 5. If the join mode is not in OTAA, just set the LoRa join mode to **OTAA** and LoRa class to **Class A** by typing the AT commands shown in **Figure 45**.
 
@@ -458,7 +694,12 @@ at+set_config=lora:join_mode:0
 at+set_config-lora:class:0
 ```
 
-> **Image:** Set of LoRaWAN mode and class
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/settings-lorawan-mode.png"
+  width="90%"
+  caption="Set of LoRaWAN mode and class"
+  zoomMode={true}
+/>
 
 6. Type the following AT command to set the **Frequency/Region**, **Device EUI**, **Application EUI**, and **Application Key**. Remember to replace "**XXX"** and "**XXXX"** with the parameters set in the previous steps.
 
@@ -478,9 +719,19 @@ at+set_config=lora:app_eui:XXXX
 at+set_config=lora:app_key:XXXX
 ```
 
-> **Image:** Setting of Frequency and Device EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/settings-frequency-eui.png"
+  width="90%"
+  caption="Setting of Frequency and Device EUI"
+  zoomMode={true}
+/>
 
-> **Image:** Setting of Application EUI and Key
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/setting-app-eui-key.png"
+  width="90%"
+  caption="Setting of Application EUI and Key"
+  zoomMode={true}
+/>
 
 7. Then, **join** in OTAA mode.
 
@@ -488,13 +739,23 @@ at+set_config=lora:app_key:XXXX
 at+join
 ```
 
-> **Image:** Join in OTAA
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/joining-otaa.png"
+  width="45%"
+  caption="Join in OTAA"
+  zoomMode={true}
+/>
 
 - **Joined Successfully!**
 
 8. You should view the **JoinRequest** and **JoinAccept** on the ChirpStack page.
 
-> **Image:** Join Request of the Device in the ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/join-request-device.png"
+  width="100%"
+  caption="Join Request of the Device in the ChirpStack"
+  zoomMode={true}
+/>
 
 9. Try sending data from the RAK811 Breakout Board to the ChirpStack by typing the command below in the serial port.
 
@@ -502,11 +763,23 @@ at+join
 at+send=lora:2:1234567890
 ```
 
-> **Image:** Send Data to ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/sending-data-chirpstack.png"
+  width="45%"
+  caption="Send Data to ChirpStack"
+  zoomMode={true}
+/>
 
 The message will be displayed on ChirpStack page, as shown in **Figure 51**.
 
-> **Image:** Message Received in ChirpStack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-otaa-mode/message-recieved.png"
+  width="100%"
+  caption="Message Received in ChirpStack"
+  zoomMode={true}
+/>
+
+
 
 #### ABP Mode
 
@@ -516,11 +789,21 @@ The message will be displayed on ChirpStack page, as shown in **Figure 51**.
 Frequency AS923 in ABP Mode is not supported in Chirpstack.
 :::
 
-> **Image:** Chirpstack ABP Activation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-activation.png"
+  width="100%"
+  caption="Chirpstack ABP Activation"
+  zoomMode={true}
+/>
 
 2. Save the parameters for ABP in the **ACTIVATION** item.
 
-> **Image:** Chirpstack ABP Activation Parameters Needed
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/chirpstack-abp-activation.png"
+  width="100%"
+  caption="Chirpstack ABP Activation Parameters Needed"
+  zoomMode={true}
+/>
 
 3. Use the previously saved parameters to configure the RAK811 Breakout Board using AT commands. To set the **LoRa join** mode to **ABP**, type the following command:
 
@@ -528,7 +811,12 @@ Frequency AS923 in ABP Mode is not supported in Chirpstack.
 at+set_config=lora:join_mode:1
 ```
 
-> **Image:** Chirpstack ABP Join Mode via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-va-rak-serial-tool.png"
+  width="45%"
+  caption="Chirpstack ABP Join Mode via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 4. Set LoRa class to **Class A**.
 
@@ -536,7 +824,12 @@ at+set_config=lora:join_mode:1
 at+set_config=lora:class:0
 ```
 
-> **Image:** Chirpstack ABP Set Class via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-set-class.png"
+  width="45%"
+  caption="Chirpstack ABP Set Class via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 5. Set the frequency/region to **EU868**.
 
@@ -544,7 +837,12 @@ at+set_config=lora:class:0
 at+set_config=lora:region:EU868
 ```
 
-> **Image:** Chirpstack ABP Set Region/Frequency via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-set-region.png"
+  width="45%"
+  caption="Chirpstack ABP Set Region/Frequency via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 6. Set the **Device Address**.
 
@@ -552,7 +850,12 @@ at+set_config=lora:region:EU868
 at+set_config=lora:dev_addr:XXXX
 ```
 
-> **Image:** Chirpstack ABP Set Device Address via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/set-device-adress.png"
+  width="45%"
+  caption="Chirpstack ABP Set Device Address via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 7. Set the **Network Session Key**.
 
@@ -560,7 +863,12 @@ at+set_config=lora:dev_addr:XXXX
 at+set_config=lora:nwks_key:XXXX
 ```
 
-> **Image:** Chirpstack ABP Set Network Session Key via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-set-network-key.png"
+  width="45%"
+  caption="Chirpstack ABP Set Network Session Key via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 8. Set the **Application Session Key**.
 
@@ -568,7 +876,12 @@ at+set_config=lora:nwks_key:XXXX
 at+set_config=lora:apps_key:XXXX
 ```
 
-> **Image:** Chirpstack ABP Set Application Session Key via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-set-key-via-rak-port-toll.png"
+  width="45%"
+  caption="Chirpstack ABP Set Application Session Key via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 After configuring all the parameters, reset your RAK811 Breakout Board to save the parameters.
@@ -580,7 +893,12 @@ After configuring all the parameters, reset your RAK811 Breakout Board to save t
 at+join
 ```
 
-> **Image:** Chirpstack ABP Join via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/abp-join-via-rak-port-tool.png"
+  width="45%"
+  caption="Chirpstack ABP Join via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 Although joining is not required in **ABP mode**, you still need to set this AT command to validate the parameters configured for ABP mode.
@@ -592,11 +910,22 @@ Although joining is not required in **ABP mode**, you still need to set this AT 
 at+send=lora:2:1234567890
 ```
 
-> **Image:** Chirpstack Sample Data Sent via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/sample-data-sent.png"
+  width="45%"
+  caption="Chirpstack Sample Data Sent via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 - You will see the data, which is just sent from RAK811 Breakout Board on ChirpStack page:
 
-> **Image:** Chirpstack Data Received Preview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/chirpstack-abp-mode/data-received.png"
+  width="100%"
+  caption="Chirpstack Data Received Preview"
+  zoomMode={true}
+/>
+
 
 ### LoRa P2P Mode
 
@@ -612,9 +941,15 @@ This section shows how to use LoRa P2P mode. You will be using EU868 as the freq
 at+set_config=lora:work_mode:1
 ```
 
-> **Image:** P2P Initialization
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/lora-p2p-mode/lora-p2p.png"
+  width="45%"
+  caption="P2P Initialization"
+  zoomMode={true}
+/>
 
 4. Configure LoRa P2P parameters for both of them.
+
 
 ```
 at+set_config=lorap2p:XXX:Y:Z:A:B:C
@@ -622,12 +957,12 @@ at+set_config=lorap2p:XXX:Y:Z:A:B:C
 
 For this example, the LoRa parameters are the following:
 
-- Link frequency: **869525000 Hz**
+- Link frequency: **869525000&nbsp;Hz**
 - Spreading factor: **7**
-- Bandwidth: **125 kHz**
+- Bandwidth: **125&nbsp;kHz**
 - Coding Rate: **4/5**
 - Preamble Length: **5**
-- Power: **5 dBm**
+- Power: **5&nbsp;dBm**
 
 :::tip NOTE
 
@@ -641,7 +976,12 @@ Hence, it is translated into the following RAK811 AT command and sent to both un
 at+set_config=lorap2p:869525000:7:0:1:5:5
 ```
 
-> **Image:** Configure P2P in both RAK811 Breakout Board Nodes
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/lora-p2p-mode/configuring-p2p.png"
+  width="45%"
+  caption="Configure P2P in both RAK811 Breakout Board Nodes"
+  zoomMode={true}
+/>
 
 5. Set the transmission mode of the module. Unit 1 is configured as the sender, and Unit 2 is set to the receiver by AT command.
 
@@ -651,7 +991,12 @@ at+set_config=lorap2p:transfer_mode:2
 at+set_config=lorap2p:transfer_mode:1
 ```
 
-> **Image:** Set Modes in both RAK811 Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/lora-p2p-mode/mode-setting.png"
+  width="90%"
+  caption="Set Modes in both RAK811 Module"
+  zoomMode={true}
+/>
 
 6. Try sending a message from Unit 1 to Unit 2.
 
@@ -659,7 +1004,12 @@ at+set_config=lorap2p:transfer_mode:1
 at+send=lorap2p:1234567890
 ```
 
-> **Image:** Message sent and received status in the two modules
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/lora-p2p-mode/sending-message.png"
+  width="90%"
+  caption="Message sent and received status in the two modules"
+  zoomMode={true}
+/>
 
 You have successfully finished your RAK811 Breakout Board set up.
 
@@ -681,19 +1031,39 @@ Follow the steps below to upgrade the firmware in Device Firmware Upgrade (DFU) 
 2. Download and open the RAK Device Firmware Upgrade (DFU) tool.
     - <a href="https://downloads.rakwireless.com/#LoRa/Tools/RAK_Device_Firmware_Upgrade_tool/" target="_blank">RAK Device Firmware Upgrade (DFU) Tool</a>
 
-> **Image:** RAK Upgrade Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/upgrading-the-firmware/2.device-firmware.png"
+  width="90%"
+  caption="RAK Upgrade Tool"
+  zoomMode={true}
+/>
 
 3. Click **Choose File** and choose the firmware you have downloaded for your desired frequency band.
 
-> **Image:** Choose the Correct Upgrade file
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/upgrading-the-firmware/3.select-firmware.png"
+  width="90%"
+  caption="Choose the Correct Upgrade file"
+  zoomMode={true}
+/>
 
 4. Click **Start** to upgrade. This may take a minute.
 
-> **Image:** Firmware Upgrading in Process
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/upgrading-the-firmware/4.firmware-upgrading.png"
+  width="90%"
+  caption="Firmware Upgrading in Process"
+  zoomMode={true}
+/>
 
 5. You should see the same pop-up window, as shown in **Figure 62**, if everything was successful.
 
-> **Image:** Successfully Upgraded Firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/quickstart/upgrading-the-firmware/5.upgrade-success.png"
+  width="90%"
+  caption="Successfully Upgraded Firmware"
+  zoomMode={true}
+/>
 
 6. Close the upgrade tool and **OPEN** the serial port tool again.
 
@@ -707,3 +1077,5 @@ at+set_config=device:restart
 
 If you want to configure your RAK811 Breakout Board using the available **AT commands**, check the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak811-breakout-board/at-command-manual/" target="_blank">AT Commands for RAK811 Breakout Board</a>.
 
+
+<RkBottomNav/>

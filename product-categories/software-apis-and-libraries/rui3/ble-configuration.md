@@ -1,4 +1,6 @@
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # BLE Configuration
 
@@ -7,30 +9,48 @@
 Before compiling the **RUI3 BLE Examples**, you must check the procedures described in the Prerequisite section of [RAK4631-R QuickStart Guide](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/#prerequisite).
 You will also need to install and configure the Arduino IDE, as described in the RAK4631-R [Software](https://docs.rakwireless.com/product-categories/wisblock/rak4631-r/quickstart/#software) section.
 
+
 ## Loading the Example
 
 The project is available on Arduino IDE **RAK WisBlock RUI Examples**.
 
 1. Launch Arduino IDE then go to: **File** -> **Examples** -> **RAK WisBlock RUI examples** -> **Example** -> **BLE_Configuration**.
  
-
-> **Image:** RAK WisBlock RUI BLE configuration example
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-conf-arduino.png"
+  width="100%"
+  caption="RAK WisBlock RUI BLE configuration example"
+/>
 
 2. Once the example code is open, you can now select the correct serial port, as shown in **Figure 2**.
 
-> **Image:** Selecting the correct serial port
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/arduino-port.png"
+  width="100%"
+  caption="Selecting the correct serial port"
+/>
 
 3. The last step is to upload the code by clicking the highlighted **Upload** icon.
 
-> **Image:** Uploading the BLE_Configuration example code
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-conf-upload.png"
+  width="100%"
+  caption="Uploading the BLE_Configuration example code"
+/>
 
 4. You should now be able to see the project logs on the serial monitor of Arduino IDE.
 
-> **Image:** Serial monitor BLE_Configuration log
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-conf-log.png"
+  width="100%"
+  caption="Serial monitor BLE_Configuration log"
+/>
 
 ## Example details
 
-This sketch shows [RUI3 BLE API](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/ble/) configuration parameters that can be used in your RUI3 project.
+This sketch shows [RUI3 BLE API](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/ble/) configuration parameters that can be used in your RUI3 project.<br />
+
+
 
 ## Configurable Parameters
 
@@ -51,7 +71,7 @@ get_dav_status = api.ble.advertise.status();
 
 ### Set Tx Power Level
 
-Set the [Tx Power Level](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#set). The code below sets the Tx Power to 8 dBm.
+Set the [Tx Power Level](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/#set). The code below sets the Tx Power to 8&nbsp;dBm.
 
 ```c
 get_dav_status = api.ble.settings.txPower.set(8);
@@ -98,5 +118,10 @@ char *get_position_2_mac_addr = api.ble.mac.get(2);
 
 You can check the BLE packets sent by the `BLE_Configuration` project using the [nRF Connect for Mobile](https://www.nordicsemi.com/Products/Development-tools/nrf-connect-for-mobile) tool.
 
-> **Image:** nRF Connect for Mobile tool scan
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rui3/ble_examples/ble-conf-scan.png"
+  width="40%"
+  caption="nRF Connect for Mobile tool scan"
+/>
 
+<RkBottomNav/>

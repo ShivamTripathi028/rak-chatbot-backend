@@ -18,17 +18,21 @@ tags:
 date: 2026-06-26
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7266 WisGate Soho Lite Quick Start Guide
 
 This manual provides brief instructions for installing and deploying the gateway.
 
 ## Prerequisites
 
+
 + <a href="https://store.rakwireless.com/products/wisgate-soho-lite-lorawan-gateway-rak7266?utm_source=docs_center&utm_medium=organic&utm_campaign=rak7266-documentation-quickstart-page&utm_term=rak7266_wisgate_soho_lite&utm_content=store_link" target="_blank">RAK7266 WisGate Soho Lite</a>
 + [Ethernet Cable](https://store.rakwireless.com/products/ethernet-cable-gland?utm_source=docs_center&utm_medium=organic&utm_campaign=rak7266-documentation-quickstart-page&utm_term=ethernet-cable&utm_content_store-link) (RJ-45 Port): Required if you plan to use Ethernet as a wired backhaul or for initial configuration.
 + A Windows/MacOS/Linux Computer
 + Installation Accessories (e.g., mounting kit, power supply, screws, etc.)
-+ **NanoSIM Card** – **Size:** 12 mm x 9 mm x 0.67 mm.
++ **NanoSIM Card** – **Size:** 12&nbsp;mm x 9&nbsp;mm x 0.67&nbsp;mm.
 
 ### Package Inclusion
 
@@ -38,7 +42,11 @@ This manual provides brief instructions for installing and deploying the gateway
 + 1 × Power Supply
 + 1 × Mounting Bracket
 
-> **Image:** RAK7266 package contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/package-lists.png"
+  width="70%"
+  caption="RAK7266 package contents"
+/>
 
 :::tip NOTE
 
@@ -59,7 +67,11 @@ This manual provides brief instructions for installing and deploying the gateway
 
 1. On the **back** of the gateway, locate the **NanoSIM card slot**.
 
-> **Image:**  Inserting SIM card
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/sim-inserted.png"
+  width="60%"
+  caption=" Inserting SIM card"
+/>
 
 2. Insert the **NanoSIM card** into the slot, ensuring it is properly inserted.
 
@@ -73,7 +85,11 @@ The gateway can be mounted in multiple ways: wall-mounting, ceiling-mounting, or
 2. Insert the expansion plugs into the drilled holes.
 3. Secure the mounting bracket to the wall using screws through the bracket holes.
 
-> **Image:**  Mounting bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/wall_bracket_mounting.png"
+  width="50%"
+  caption=" Mounting bracket"
+/>
 
 #### Ceiling Mounting
 
@@ -83,25 +99,33 @@ For ceiling mounting, ensure the ceiling is strong enough to support the gateway
 
 1. Choose either self-tapping screws or expansion tubes with self-tapping screws to install the bracket, depending on the material of the ceiling.
 2. (Optional) Refer to this step when installing the bracket using expansion tubes and self-tapping screws. Otherwise, skip it.
-  - Use a 5 mm drill bit to drill 3 holes in the ceiling.
+  - Use a 5&nbsp;mm drill bit to drill 3 holes in the ceiling.
   - Insert the expansion tubes into the holes drilled in the ceiling.
 3. Secure the bracket to the ceiling using self-tapping screws through the holes in the bracket.
 
-> **Image:**  Mounting bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/ceiling_mounting.png"
+  width="50%"
+  caption=" Mounting bracket"
+/>
 
 #### T-Shaped Keel Mounting
 
 You can use a T-shaped keel for mounting the bracket on a rail system. The following instructions apply to a T-shaped keel, but other types of rails can also be used.
 
 :::tip NOTE
-The bracket supports rail widths of 14 mm, 16 mm, and 24 mm.
+The bracket supports rail widths of 14&nbsp;mm, 16&nbsp;mm, and 24&nbsp;mm.
 :::
 
 1. Remove the mounting clip from the bracket.
 2. Insert one side of the T-shaped keel into the two clips of the bracket.
 3. Insert the two T-shaped hooks on the mounting clip into the T-shaped rails of the bracket, slide the mounting clip to the other side of the T-shaped keel, and make sure the clip is in place.
 
-> **Image:**  Mounting bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/t-keel_mounting.png"
+  width="50%"
+  caption=" Mounting bracket"
+/>
 
 ### Install the Gateway
 
@@ -109,15 +133,17 @@ The bracket supports rail widths of 14 mm, 16 mm, and 24 mm.
 2. Move the gateway closer to the bracket until the bracket's locking plate engages with the gateway's hanging hole.
 3. Pull the gateway to ensure that the gateway is in place.
 
-> **Image:** Fixed gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/attach-gateway.png"
+  width="50%"
+  caption="Fixed gateway"
+/>
 
 ### Attach the Antenna
 
-1. **LoRa Antenna**
-
+1. **LoRa Antenna**<br/>
     Attach the **LoRa antenna** by screwing it onto the connector labeled **LoRa** on the gateway.
-2. **LTE Antenna**
-
+2. **LTE Antenna**<br/>
     Screw the **LTE antenna** onto the connector labeled **MAIN** to ensure optimal cellular performance.
 
 ### Power On and Status Verification
@@ -128,9 +154,9 @@ The bracket supports rail widths of 14 mm, 16 mm, and 24 mm.
 **DO NOT** power the device if any antenna port (LoRa or LTE) has been left open to avoid potential damage to the RAK7266 WisGate Soho Lite.
 :::
 
-The **RAK7266 WisGate Soho Lite** can be powered via a **12 V<sub>DC</sub> power adapter** (included in the product package).
+The **RAK7266 WisGate Soho Lite** can be powered via a **12&nbsp;V<sub>DC</sub> power adapter** (included in the product package).
 
-1. Connect the power adapter to the **12 V<sub>DC</sub>** jack on the gateway.
+1. Connect the power adapter to the **12&nbsp;V<sub>DC</sub>** jack on the gateway.
 2. Plug the other end of the adapter into a power outlet.
 
 #### Startup Status Checklist
@@ -140,8 +166,7 @@ To verify if the gateway is operating normally after powering on, check the foll
 | **LED**                                  | **Expected Status After Power-On**            | **Description**                                                                                                                                                                                                                                                                                   |
 | ---------------------------------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **PWR LED**                              | **ON (solid)**                                | Power is connected; the gateway is powered on.                                                                                                                                                                                                                                                    |
-| **Breathing LED**                        | **Red (fast blinking)**                       | When the gateway is first powered on and not yet connected to the internet, the LED will show **red with a fast blink** to indicate a network issue.
- Once the gateway successfully connects to the internet, the LED will switch to **blue with a slow blink**, indicating normal operation. |
+| **Breathing LED**                        | **Red (fast blinking)**                       | When the gateway is first powered on and not yet connected to the internet, the LED will show **red with a fast blink** to indicate a network issue.<br/> Once the gateway successfully connects to the internet, the LED will switch to **blue with a slow blink**, indicating normal operation. |
 | **ETH LED** *(if Ethernet is connected)* | **ON / Flickering**                           | Ethernet port is active; data transmission may be occurring.                                                                                                                                                                                                                                      |
 | **WLAN LED**                             | **ON / Flickering**                           | WiFi AP mode is active and functional.                                                                                                                                                                                                                                                           |
 | **LoRa LED**                             | **ON / Flickering**                           | Indicates the LoRa transceiver is operational and handling packets.                                                                                                                                                                                                                               |
@@ -159,7 +184,11 @@ In this section, two methods of accessing the gateway are provided to offer diff
 
 By default, the gateway will work in WiFi AP Mode which means that you can find an SSID named like **RAK7266_XXXX** on your PC's WiFi network list. **XXXX** is the last two bytes of the gateway's MAC address.
 
-> **Image:** Accessing the gateway via WiFi AP Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/3.access-via-wifi.png"
+  width="80%"
+  caption="Accessing the gateway via WiFi AP Mode"
+/>
 
 1. Connect to the gateway’s WiFi.
    :::tip NOTE
@@ -172,19 +201,36 @@ By default, the gateway will work in WiFi AP Mode which means that you can find 
     - Has at least one number
     - Has at least one standard Latin letter (used in the English alphabet)
 
-> **Image:** Web UI login page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/7.login-page.png"
+  width="100%"
+  caption="Web UI login page"
+/>
 
 4. Click **Set password** to continue. You will be redirected to the **LoRaWAN Statistics** page.
 
-> **Image:** LoRaWAN statistics page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/8.stat-page.png"
+  width="100%"
+  caption="LoRaWAN statistics page"
+/>
 
 5. On the next login, use the password you set. The default login username is **root**.
 
-> **Image:** Login page with set password
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/9.login-page.png"
+  width="100%"
+  caption="Login page with set password"
+/>
 
 #### WAN Port (Ethernet)
 
-> **Image:** Accessing the gateway via WAN Port (Ethernet)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/4.via-wan-port.png"
+  width="80%"
+  caption="Accessing the gateway via WAN Port (Ethernet)"
+/>
+
 
 1. Connect the Ethernet cable from the gateway’s **ETH** port to your PC’s Ethernet port.
 2. Set a static IP address on your PC in the same subnet as the gateway:
@@ -194,11 +240,19 @@ By default, the gateway will work in WiFi AP Mode which means that you can find 
    :::
 3. Open the **Internet Properties** of your PC, and select **Internet Protocol Version 4 (TCP/IPv4)**.
 
-> **Image:** Internet properties
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/5.internet-properties.png"
+  width="45%"
+  caption="Internet properties"
+/>
 
 4. Select **Use the following IP address**, and set the PC’s IP address (e.g., `169.254.15.100`). Ensure the PC’s IP address is in the same subnet as the gateway (e.g., if the gateway IP is `169.254.15.1`, set the PC to `169.254.15.100`).
 
-> **Image:** Setting IP address of the PC
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/6.setting-ip-address.png"
+  width="45%"
+  caption="Setting IP address of the PC"
+/>
 
 In this example, you can access the gateway on the `169.254.15.1` address.
 
@@ -217,7 +271,11 @@ The RAK7266 WisGate Soho Lite supports LTE, WiFi, and Ethernet backhaul. With th
 
 #### Connect Through WiFi
 
-> **Image:** Connect the internet via WiFi
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/10.access-wifi-mode.png"
+  width="80%"
+  caption="Connect the internet via WiFi"
+/>
 
 1. Log in to the Web UI, go to **Network** > **WAN** > **WiFi**.
 2. Expand the WiFi section and click on **Settings**. Ensure the **Interface** is enabled.
@@ -228,13 +286,21 @@ The RAK7266 WisGate Soho Lite supports LTE, WiFi, and Ethernet backhaul. With th
    Assuming you have entered the correct parameter values, you should receive an IP address assigned by your WiFi router's (AP) built-in DHCP server. You can use this new IP address to log in via a web browser.
    :::
 
-> **Image:** WiFi settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/11.wifi-credentials.png"
+  width="60%"
+  caption="WiFi settings"
+/>
 
-For details, refer to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/?intsource=docs_center&intmedium=organic&intcampaign=rak7266_documentation_quickstart_page&intterm=wisgateos2_user_manual_wan_wifi&intcontent=documentation_link#wi-fi" target="_blank">WisGateOS 2 User Manual > WAN > Wi-Fi</a>.
+For details, refer to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/?intsource=docs_center&intmedium=organic&intcampaign=rak7266_documentation_quickstart_page&intterm=wisgateos2_user_manual_wan_wifi&intcontent=documentation_link#wi-fi" target="_blank">WisGateOS 2 User Manual &gt; WAN &gt; Wi-Fi</a>.
 
 #### Connect Through Ethernet
 
-> **Image:** Accessing the Internet through Ethernet
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/12.ethernet-settings.png"
+  width="80%"
+  caption="Accessing the Internet through Ethernet"
+/>
 
 1. Connect one end of an Ethernet cable to the gateway’s **ETH** port, and the other end to your router.
 
@@ -242,7 +308,11 @@ For details, refer to the <a href="https://docs.rakwireless.com/product-categori
 The router's DHCP server will automatically assign an IP address to the gateway. You can use this IP to access the gateway via a web browser.
 :::
 
-> **Image:** Connect through Ethernet settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/13.connect-ethernet.png"
+  width="40%"
+  caption="Connect through Ethernet settings"
+/>
 
 If additional configuration is required, refer to the [WisGateOS 2 User Manual > WAN > Ethernet](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/?intsource=docs_center&intmedium=organic&intcampaign=rak7266_documentation_quickstart_page&intterm=wisgateos2_user_manual_complete_guide_for_lorawan_gateway_software&intcontent=documentation_link#ethernet).
 
@@ -256,7 +326,11 @@ To manually configure APN and other LTE settings:
 2. Expand the Cellular section and click on **Settings**.
 3. Enter the required **APN**, **username**, **password**, and **PIN code** if provided by your mobile operator.
 
-> **Image:** Connect through cellular settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7266/quickstart/cellular-settings.png"
+  width="60%"
+  caption="Connect through cellular settings"
+/>
 
 For details on each parameter, refer to the [WisGateOS 2 User Manual > WAN > Cellular](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/?intsource=docs_center&intmedium=organic&intcampaign=rak7266_documentation_quickstart_page&intterm=wisgateos2_user_manual_wan_cellular&intcontent=documentation_link#cellular).
 
@@ -266,3 +340,4 @@ Make sure that your SIM card is activated and supports data services.
 
 :::
 
+<RkBottomNav/>

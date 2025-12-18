@@ -13,6 +13,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Pocket Mini
 
 Thank you for choosing **WisMesh Pocket Mini** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,7 +27,7 @@ WisMesh Pocket Mini is a go-to device for ready-to-use. Ideal for users seeking 
 
 ## Product Features
 
-- Robust 1000 mAh built-in battery.
+- Robust 1000&nbsp;mAh built-in battery.
 - Antenna: Internal Antenna.
 - Efficiency: Utilizes the most power-efficient solution in the Meshtastic community.
 
@@ -33,3 +35,4 @@ WisMesh Pocket Mini is a go-to device for ready-to-use. Ideal for users seeking 
 
 To get started with the WisMesh Pocket Mini, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Pocket%20Mini.pdf" target="_blank">WisMesh Pocket Mini Getting Started</a> guide.
 
+<RkBottomNav/>

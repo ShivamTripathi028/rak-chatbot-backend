@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK612 WisNode Button Datasheet
 
 ## Overview
@@ -24,11 +27,11 @@ The RAK612 WisNode Button is suitable for a variety of Smart Home applications: 
 
 - **LoRaWAN**® compatible
 - **myDevices Cayenne** Certified
-- **Product Size:** 38 mm x 52 mm
-- **Battery:** 300 mAh
+- **Product Size:** 38&nbsp;mm x 52&nbsp;mm
+- **Battery:** 300&nbsp;mAh
 - **Battery working time:** 2 years (Rechargeable)
-- **Power Consumption:** Transmit: 30 mA, Standby: 10 uA
-- **Operating Temperature:** -20° C to 60° C
+- **Power Consumption:** Transmit: 30&nbsp;mA, Standby: 10&nbsp;uA
+- **Operating Temperature:** -20°&nbsp;C to 60°&nbsp;C
 - **Working Environment:** Indoor
 
 ### Application
@@ -41,6 +44,7 @@ The RAK612 WisNode Button is suitable for a variety of Smart Home applications: 
 - Wireless Trigger
 - Remote Switch
 
+
 ## Specifications
 
 ### Hardware
@@ -48,25 +52,37 @@ The RAK612 WisNode Button is suitable for a variety of Smart Home applications: 
 | Parameter              | Value                                         |
 | ---------------------- | --------------------------------------------- |
 | Model                  | RAK_LB801 LoRaButton                          |
-| Module Size            | 38 mm x 52 mm                       |
-| Battery Capacity       | 300 mAh (To be ordered individually)     |
+| Module Size            | 38&nbsp;mm x 52&nbsp;mm                       |
+| Battery Capacity       | 300&nbsp;mAh (To be ordered individually)     |
 | Battery Lifespan       | 2 Years (Chargeable)                          |
-| Power Consumption      | Transmit: 30 mA 
- Standby: 10 uA |
-| Operating Temperature  | -20° C to 60° C                     |
+| Power Consumption      | Transmit: 30&nbsp;mA <br /> Standby: 10&nbsp;uA |
+| Operating Temperature  | -20°&nbsp;C to 60°&nbsp;C                     |
 | Working Environment    | Indoor or Outdoor                             |
 | Equipped with Module   | RAK811                                        |
 | LoRaWAN Version        | V1.0.2                                        |
 | Network Activation Way | ABP and OTAA                                  |
 | Upgrade Method         | Serial Port                                   |
 
+
 #### Schematic
 
-> **Image:** RAK612 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/datasheet/rak612-schematic1.png"
+  width="100%"
+  caption="RAK612 Schematic Diagram"
+/>
 
-> **Image:** RAK612 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/datasheet/rak612-schematic2.png"
+  width="100%"
+  caption="RAK612 Schematic Diagram"
+/>
 
-> **Image:** RAK612 PCB File
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak612/datasheet/rak612-pcb.png"
+  width="40%"
+  caption="RAK612 PCB File"
+/>
 
 ## Models / Bundles
 
@@ -76,3 +92,4 @@ The RAK612 WisNode Button is suitable for a variety of Smart Home applications: 
 | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | RAK612  | Supported LoRaWAN Region: EU433, CN470, EU868, US915, AS923, AU915, KR920, IN865 (Different regions can be switched by upgrading different firmware) | OTAA/ABP   |
 
+<RkBottomNav/>

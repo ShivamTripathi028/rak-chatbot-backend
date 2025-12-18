@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK2470 WisNode Bridge Serial Prime Datasheet
 
 ## Overview
@@ -28,7 +32,7 @@ Together with a RAK WisGate Gateway and LoRa Server products, RAK2470 can quickl
 
 - **Regional Parameters Version**: RP001-1.0.3
 - **LoRaWAN 1.0.3** protocol stack, supports **Class C**
-- **Input range:** 5 ~ 12 V<sub>DC</sub>
+- **Input range:** 5 ~ 12&nbsp;V<sub>DC</sub>
 - **Mounting:** Pole
 - IP67 weatherproof
 
@@ -38,23 +42,15 @@ Together with a RAK WisGate Gateway and LoRa Server products, RAK2470 can quickl
 
 | Parameter           | Specifications                                                                                                                                                 |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| LoRa Feature        | Protocol stack: LoRaWAN 1.0.3
-Frequency: EU868 / IN865 / RU864 / US915 / AU915 / KR920 / AS923 / CN470
-LoRaWAN mode: Class C
-Tx power: 22 dBm |
-| RS485 Feature       | Data rate: 9600, 115200
-Carrying capacity: Up to 32 devices                                                                                                |
-| Power Supply        | 5-12 V<sub>DC</sub> input                                                                                                                                 |
-| Antenna             | LoRa: Built-in fiberglass antenna
-Frequency: 863 ~ 928 MHz
-VSWR: < 2
-Efficiency: > 80%
-Max Gain: 3 dBi                         |
+| LoRa Feature        | Protocol stack: LoRaWAN 1.0.3<br/>Frequency: EU868 / IN865 / RU864 / US915 / AU915 / KR920 / AS923 / CN470<br/>LoRaWAN mode: Class C<br/>Tx power: 22&nbsp;dBm |
+| RS485 Feature       | Data rate: 9600, 115200<br/>Carrying capacity: Up to 32 devices                                                                                                |
+| Power Supply        | 5-12&nbsp;V<sub>DC</sub> input                                                                                                                                 |
+| Antenna             | LoRa: Built-in fiberglass antenna<br/>Frequency: 863 ~ 928&nbsp;MHz<br/>VSWR: &lt; 2<br/>Efficiency: &gt; 80%<br/>Max Gain: 3&nbsp;dBi                         |
 | Enclosure Material  | Fiberglass                                                                                                                                                     |
-| Dimensions          | 30 mm × 215 mm                                                                                                                                       |
+| Dimensions          | 30&nbsp;mm × 215&nbsp;mm                                                                                                                                       |
 | Protection Grade    | IP67                                                                                                                                                           |
-| Working Temperature | -40° C ~ +85° C                                                                                                                                      |
-| Storage Temperature | -40° C ~ +85° C                                                                                                                                      |
+| Working Temperature | -40°&nbsp;C ~ +85°&nbsp;C                                                                                                                                      |
+| Storage Temperature | -40°&nbsp;C ~ +85°&nbsp;C                                                                                                                                      |
 | Installation method | Pole                                                                                                                                                           |
 
 ### Hardware
@@ -65,48 +61,111 @@ The hardware specification describes the device's interfaces and parameters.
 
 The **RAK2470 WisNode Bridge Serial Prime** comes with an M12-4 circular connector (including power and RS485 data interfaces). 
 
-The power interface needs to be powered by a DC power supply (5 ~ 12 V), and the voltage must be stable.
+The power interface needs to be powered by a DC power supply (5 ~ 12&nbsp;V), and the voltage must be stable.
 
 In addition, the RS485 host baud rate supports 9600 and 115200, and up to 32 devices can be connected.
 
-> **Image:** M12-4 connector pin definition
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2470/datasheet/3.m12-4-connector-pin-definition-new.png"
+  caption="M12-4 connector pin definition"
+  width="60%"
+/>
 
 | Pin | Circular Connector | Description                              | Type               |
 |-----|--------------------|------------------------------------------|--------------------|
-| 1   | VCC                | Power input (5 ~ 12 V<sub>DC</sub>) | PI (Power input)   |
+| 1   | VCC                | Power input (5 ~ 12&nbsp;V<sub>DC</sub>) | PI (Power input)   |
 | 2   | RS485_A            | RS485 A+                                 | IO (Bidirectional) |
 | 3   | RS485_B            | RS485 B-                                 | IO (Bidirectional) |
 | 4   | GND                | Ground                                   | PI (Power input)   |
 
+
+
 #### T-Type Conversion Cable
 
-The RAK2470 comes with a 1 m T-type conversion cable for each branch. Using this conversion cable, the RAK2470 can be connected to any RS485 equipped sensors, and power can be supplied to both the RAK2470 and the connected sensor via the DC power port.
+The RAK2470 comes with a 1&nbsp;m T-type conversion cable for each branch. Using this conversion cable, the RAK2470 can be connected to any RS485 equipped sensors, and power can be supplied to both the RAK2470 and the connected sensor via the DC power port.
 
-> **Image:** T-type conversion cable
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak2470/datasheet/4.t-type-conversion-cable-new.png"
+  caption="T-type conversion cable"
+  width="70%"
+/>
 
 :::tip NOTE
 
-The standard length of the T-type conversion cable is 1 m. If you need to customize the cable length, kindly contact [inquiry@rakwireless.com](mailto:inquiry@rakwireless.com).
+The standard length of the T-type conversion cable is 1&nbsp;m. If you need to customize the cable length, kindly contact [inquiry@rakwireless.com](mailto:inquiry@rakwireless.com).
 
 :::
 
-| Interface | Pin | Description |
-| --- | --- | --- |
-| L20-4 Four-core Straight-through Port | Pin1 | Connect to the positive terminal of the sensor power cord. |
-| L20-4 Four-core Straight-through Port | Pin2 | Connect to RS485-A of the sensor. |
-| L20-4 Four-core Straight-through Port | Pin3 | Connect to RS485-B of the sensor. |
-| L20-4 Four-core Straight-through Port | Pin4 | Connect to the negative terminal of the sensor power cord. |
-| M12-4 Female-pin Port | Pin1 | Power input (5 ~ 12 VDC) |
-| M12-4 Female-pin Port | Pin2 | RS485 A+ |
-| M12-4 Female-pin Port | Pin3 | RS485 B- |
-| M12-4 Female-pin Port | Pin4 | GND |
-| DC port |  | Power input port |
+
+<table>
+  <thead>
+    <tr>
+      <th>Interface</th>
+      <th>Pin</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowSpan="4">L20-4 Four-core Straight-through Port</td>
+      <td>Pin1</td>
+      <td>Connect to the positive terminal of the sensor power cord.</td>
+    </tr>
+    <tr>
+      <td>Pin2</td>
+      <td>Connect to RS485-A of the sensor.</td>
+    </tr>
+    <tr>
+      <td>Pin3</td>
+      <td>Connect to RS485-B of the sensor.</td>
+    </tr>
+    <tr>
+      <td>Pin4</td>
+      <td>Connect to the negative terminal of the sensor power cord.</td>
+    </tr>
+    <tr>
+      <td rowSpan="4">M12-4 Female-pin Port</td>
+      <td>Pin1</td>
+      <td>Power input (5 ~ 12&nbsp;V<sub>DC</sub>)</td>
+    </tr>
+    <tr>
+      <td>Pin2</td>
+      <td>RS485 A+</td>
+    </tr>
+    <tr>
+      <td>Pin3</td>
+      <td>RS485 B-</td>
+    </tr>
+    <tr>
+      <td>Pin4</td>
+      <td>GND</td>
+    </tr>
+    <tr>
+      <td>DC port</td>
+      <td></td>
+      <td>Power input port</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_CE_Certification.pdf
-- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_ROHS_Report.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_FCC_Certification.pdf
-- **ISED:** https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_ISED_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_CE_Certification.pdf',
+    },
+    {
+        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_ROHS_Report.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_FCC_Certification.pdf',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/RAK2470/Certification/RAK2470_ISED_Certification.pdf',
+    }
 
+]} />
+
+
+<RkBottomNav/>

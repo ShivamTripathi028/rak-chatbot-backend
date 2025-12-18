@@ -9,6 +9,9 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg12/antenna-overvie
 sidebar_label: Datasheet
 ---
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # 860-930 MHz 3dBi Fiberglass Antenna Datasheet
 
@@ -16,33 +19,40 @@ sidebar_label: Datasheet
 
 ### Features
 
-- Frequency Range: 860 ~ 930 MHz
-- One antenna to suit both 868 MHz and 915 MHz bands
-- Max Gain: 3 dBi
+- Frequency Range: 860 ~ 930&nbsp;MHz
+- One antenna to suit both 868 MHz and 915&nbsp;MHz bands
+- Max Gain: 3&nbsp;dBi
 - High efficiency
 - Vertically polarized monopole
 - Omnidirectional
 - Outdoor use
 
-> **Image:** RAKARG12 Overview
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/antenna-overview.png"
+  width="70%"
+  caption="RAKARG12 Overview"
+/>
 
 ### Specifications
 
 | Parameter       | Value                     |
 |-----------------|---------------------------|
 | Model           | RAKARG12                  |
-| Frequency Range | 860 ~ 930 MHz        |
-| Gain            | 2.6 ~ 3.1 dBi        |
+| Frequency Range | 860 ~ 930&nbsp;MHz        |
+| Gain            | 2.6 ~ 3.1&nbsp;dBi        |
 | VSWR            | ≤2.5                     |
 | Efficiency      | 60%                       |
 | Radiation       | 360°                      |
-| Impedance       | 50 Ω                 |
+| Impedance       | 50&nbsp;Ω                 |
 | Polarization    | Vertical                  |
 | Radome Body     | Fiberglass                |
 | Connector       | N-Type Male               |
-| Dimensions      | Փ 25 x L 360 ±10 mm  |
-| Operation Temp  | -20 C ~ +65° C |
-| Storage Temp    | -30 C ~ +75° C |
+| Dimensions      | Փ 25 x L 360 ±10&nbsp;mm  |
+| Operation Temp  | -20&nbsp;C ~ +65°&nbsp;C |
+| Storage Temp    | -30&nbsp;C ~ +75°&nbsp;C |
+
+
 
 #### VSWR and Return Loss
 
@@ -55,7 +65,13 @@ sidebar_label: Datasheet
 | 920             | 1.6967 | -11.91           |
 | 930             | 1.5974 | -12.73           |
 
-> **Image:** RAKARG13 VSWR Graph
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/vswr.png"
+  width="80%"
+  caption="RAKARG13 VSWR Graph"
+/>
+
 
 #### Peak Gain & Efficiency
 
@@ -77,25 +93,58 @@ sidebar_label: Datasheet
 | 925             | 64.9           | 2.8        |
 | 930             | 60.4           | 2.7        |
 
+
 #### Radiation Patterns
 
-> **Image:** RAKARG12 Radiation Pattern for 860 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 870 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 880 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 890 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 900 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 910 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 920 MHz
-
-> **Image:** RAKARG12 Radiation Pattern for 930 MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-860.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 860 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-870.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 870 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-880.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 880 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-890.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 890 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-900.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 900 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-910.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 910 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-920.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 920 MHz"
+/>
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/radiation-patterns-930.png"
+  width="70%"
+  caption="RAKARG12 Radiation Pattern for 930 MHz"
+/>
 
 #### Mechanical Characteristics
 
-> **Image:** RAKARG12 Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakarg12/mechanical-characteristics.png"
+  width="80%"
+  caption="RAKARG12 Mechanical Characteristics"
+/>
 
+
+
+<RkBottomNav/>

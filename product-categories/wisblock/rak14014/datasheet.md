@@ -10,27 +10,34 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14014 WisBlock TFT LCD Display Module Datasheet
 
 ## Overview
 
-> **Image:** RAK14014 WisBlock TFT LCD Display Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/rak14014-front-back.png"
+  width="60%"
+  caption="RAK14014 WisBlock TFT LCD Display Module"
+/>
 
 ### Description
 
-RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen display that has a 2.4-inch active area and contains 240 x 320 pixels which can output colorful graphic displays. It is interfaced to WisBlock Core via SPI.
+RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen display that has a 2.4-inch active area and contains 240&nbsp;x&nbsp;320 pixels which can output colorful graphic displays. It is interfaced to WisBlock Core via SPI.
 
 ### Features
 
 * **Module Specifications**
     * Wide Supply Voltage Range:
-        - I/O Voltage (VDDI to DGND): 1.65 V ~ 3.3 V (VDDI ≦ VDD )
-        - Analog Voltage (VDD to AGND): 2.4 V ~ 3.3 V
-    * Operating current: 80 
+        - I/O Voltage (VDDI to DGND): 1.65&nbsp;V ~ 3.3&nbsp;V (VDDI ≦ VDD )
+        - Analog Voltage (VDD to AGND): 2.4&nbsp;V ~ 3.3&nbsp;V
+    * Operating current: 80&nbsp;
     * Touchscreen LCD
     * SPI interface
-    * LCD size: 2.4 inch
-    * 240 x 320 pixel display
+    * LCD size: 2.4&nbsp;inch
+    * 240&nbsp;x&nbsp;320 pixel display
     * IPS TFT-LCD
     * Full view direction
     * The backlight type is 4 x LED (white)
@@ -38,10 +45,10 @@ RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen displa
     * Display Colors (Color Mode)
         - Full Color: 262K, RGB=(666) max., Idle Mode Off
         - Color Reduce: 8-color, RGB=(111), Idle Mode On
-    * Operating temperature: **-30° C to 85° C**
+    * Operating temperature: **-30°&nbsp;C to 85°&nbsp;C**
 
 * **Module Size**
-    * 35 x 25 mm
+    * 35 x 25&nbsp;mm
 
 ## Specifications
 
@@ -51,17 +58,28 @@ RAK14014 is a WisBlock Display module based on IPS TFT LCD. A touchscreen displa
 
 The RAK14014 WisBlock TFT LCD Display Module can be mounted on the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK14014 on a WisBlock Base module.
 
-> **Image:** RAK14014 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/rak14014-mount.png"
+  width="50%"
+  caption="RAK14014 mounting mechanism on a WisBlock Base module"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into four (4) parts. It discusses the pinouts and their corresponding functions and diagrams of the module. It also covers the electrical and mechanical characteristics that include the tabular data of the functionalities and standard values of the RAK14014 WisBlock TFT LCD Module.
 
+
 #### Pin Definition
 
 The RAK14014 WisBlock module has a 40-pin WisConnector that is compatible with the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-> **Image:** RAK14014 pinout diagram
+<br />
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/rak14014-pinout.png"
+  width="60%"
+  caption="RAK14014 pinout diagram"
+/>
 
 :::tip NOTE
 Only **CS**, **SPI_MISO**, **SPI_MOSI**, **SPI_CLK**, **IO3 - IO6**, **SCL**, and **SDA** are connected to the WisBlock Connector.
@@ -73,7 +91,7 @@ This section shows the maximum and minimum ratings of the RAK14014 module and it
 
 ##### DC Characteristics
 
-The following specifications applied for: VSS=0 V, VCI=3.3 V, TOPR =25° C.
+The following specifications applied for: VSS=0&nbsp;V, VCI=3.3&nbsp;V, TOPR =25°&nbsp;C.
 
 | Symbol          | Description       | Min. | Typ. | Max. | Unit |
 | --------------- | ----------------- | ---- | ---- | ---- | ---- |
@@ -81,31 +99,53 @@ The following specifications applied for: VSS=0 V, VCI=3.3 V, TOPR =25° C.
 | A<sub>VDD</sub> | Analog Voltage    | 2.4  | -    | 3.3  | V    |
 | I<sub>OP</sub>  | Operating Current | -    | 80   | -    | mA   |
 
+
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 **Figure 3** shows the mechanical dimensions of the RAK14014 module.
 
-> **Image:** RAK14014 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/rak14014-dim.png"
+  width="70%"
+  caption="RAK14014 mechanical dimensions"
+/>
 
 ##### WisBlock Connector PCB Layout
 
-> **Image:** WisBlock Connector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/wisblock-conn.png"
+  width="100%"
+  caption="WisBlock Connector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
 **Figure 6** shows the display connector schematic.
 
-> **Image:** Display Connector Schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/display-conn.png"
+  width="55%"
+  caption="Display Connector Schematic diagram"
+/>
 
 **Figure 7** shows the touch connector schematic.
 
-> **Image:** RAK14014 WisBlock Touch Drive Circuit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/touch-conn.png"
+  width="55%"
+  caption="RAK14014 WisBlock Touch Drive Circuit"
+/>
 
 The RAK14014 supports 2*3 thin-film buttons. If an FPC cable is connected, you can choose the
 touch-free version to control the screen by pressing buttons. **Figure 8** below shows button
 schematic.
 
-> **Image:** RAK14014 WisBlock Display Module buttons
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14014/datasheet/button-conn.png"
+  width="100%"
+  caption="RAK14014 WisBlock Display Module buttons"
+/>
 
+<RkBottomNav/>

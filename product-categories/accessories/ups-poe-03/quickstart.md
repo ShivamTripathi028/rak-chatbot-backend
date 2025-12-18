@@ -11,6 +11,11 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # UPS PoE-03 Quick Start Guide
 
 ## Product Configuration
@@ -24,26 +29,37 @@ sidebar_label: Quick Start Guide
 
 ### Connecting UPS PoE-03 and RAK7268
  
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/ups-poe-03/4.connection1.jpg"
+  width="90%"
+  caption="UPS PoE-03 and RAK7268 Connection"
+/>
 
-> **Image:** UPS PoE-03 and RAK7268 Connection
-
-1. The device comes with a power cord. Plug the 2-pin connector end of the power cord into the UPS POE-03 110-240 V AC power input port.
-2. Connect the power cord's plug end to the corresponding 110-240 V<sub>AC</sub> wall outlet.
-3. Hook up the RAK7268 to the POE-03 48 V<sub>DC</sub> 0.23 A output port (LAN OUT).
+1. The device comes with a power cord. Plug the 2-pin connector end of the power cord into the UPS POE-03 110-240&nbsp;V AC power input port.
+2. Connect the power cord's plug end to the corresponding 110-240&nbsp;V<sub>AC</sub> wall outlet.
+3. Hook up the RAK7268 to the POE-03 48&nbsp;V<sub>DC</sub> 0.23&nbsp;A output port (LAN OUT).
 4. Turn on the UPS POE-03 device switch.
 
 ### Connecting UPS PoE-03 and RAK7289
 
-> **Image:** UPS PoE-03 and RAK7289 Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/ups-poe-03/5.connection2.jpg"
+  width="90%"
+  caption="UPS PoE-03 and RAK7289 Connection"
+/>
 
-1. The device comes with a power cord. Plug the 2-pin connector end of the power cord into the UPS POE-03 110-240 V AC power input port.
-2. Connect the power cord's plug end to the corresponding 110-240 V<sub>AC</sub> wall outlet.
-3. Hook up the RAK7289 to the POE-03 48 V<sub>DC</sub> 0.23 A output port (LAN OUT).
+1. The device comes with a power cord. Plug the 2-pin connector end of the power cord into the UPS POE-03 110-240&nbsp;V AC power input port.
+2. Connect the power cord's plug end to the corresponding 110-240&nbsp;V<sub>AC</sub> wall outlet.
+3. Hook up the RAK7289 to the POE-03 48&nbsp;V<sub>DC</sub> 0.23&nbsp;A output port (LAN OUT).
 4. Affix the outdoor-type lightning protection device.
 
-> **Image:** Lightning Protection Device Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/ups-poe-03/6.grounding.jpg"
+  width="70%"
+  caption="Lightning Protection Device Connection"
+/>
 
 5. Turn on the UPS POE-03 device switch.
  
 
- 
+ <RkBottomNav/>

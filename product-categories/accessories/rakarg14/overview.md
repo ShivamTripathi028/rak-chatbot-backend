@@ -9,6 +9,9 @@ image: "https://images.docs.rakwireless.com/accessories/rakarg14/antenna-overvie
 sidebar_label: Product Overview
 ---
    
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # 902-928MHz 5.8dBi Fiberglass Antenna
 
@@ -18,8 +21,8 @@ Thank you for choosing **902-928MHz 5.8dBi Fiberglass Antenna** in your awesome 
 
 ## Product Features
 
-- Frequency Range: 902 ~ 930 MHz
-- Max Gain: 5.8 dBi
+- Frequency Range: 902 ~ 930&nbsp;MHz
+- Max Gain: 5.8&nbsp;dBi
 - VSWR: ≤ 2.0
 - High Efficiency
 - Radome Body: **Fiberglass**
@@ -28,3 +31,5 @@ Thank you for choosing **902-928MHz 5.8dBi Fiberglass Antenna** in your awesome 
 - Easy to mount with the included Installation kit
 - Outdoor use
 
+
+<RkBottomNav/>

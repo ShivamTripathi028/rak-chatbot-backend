@@ -7,6 +7,9 @@ keywords:
 sidebar_label: File Browser Explanation
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisgateOS File Browser Explanation
 
 This guide shows how to browse through the directory of the gateway where logs are saved and download certain files. 
@@ -15,13 +18,28 @@ While browsing through the directory, you will see a structure of folders where 
 
 1. Go to the file browser.
 
-> **Image:** Main Directory
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument4/49.1.main-directory.png"
+  width="100%"
+  caption="Main Directory"
+/>
 
 2. Select the folder and from the subfolders select syslog/.
 
-> **Image:** Subdirectories
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument4/49.2.subdirectories.png"
+  width="100%"
+  caption="Subdirectories"
+/>
 
 3. Select the `.log.tgz` archive that you want to download and click on it to download it.
 
-> **Image:** Files
 
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos/subdocument4/49.3.files.png"
+  width="100%"
+  caption="Files"
+/>
+
+<RkBottomNav/>

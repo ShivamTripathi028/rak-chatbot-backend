@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2013 WisLink Cellular Pi HAT Datasheet
 
 ## Overview
@@ -47,19 +50,35 @@ The overview shows the top view of the RAK2013 WisLink Cellular Pi HAT and its c
 
 Here are the top view and external interfaces of RAK2013 WisLink Cellular Pi HAT add-on board.
 
-> **Image:** Components of RAK2013 WisLink Cellular Pi HAT
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/components-of-rak2013-cellular.png"
+  width="65%"
+  caption="Components of RAK2013 WisLink Cellular Pi HAT"
+/>
 
-> **Image:** Nano Sim Card Slot and ESIM Chip in RAK2013
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/nano-sim-card-slot-and-esim-chip-in-rak2013.png"
+  width="65%"
+  caption="Nano Sim Card Slot and ESIM Chip in RAK2013"
+/>
 
-The outer dimension of the RAK2013 measures 65.0 x 56.0 mm as shown in **Figure 3**.
+The outer dimension of the RAK2013 measures 65.0 x 56.0&nbsp;mm as shown in **Figure 3**.
 
-> **Image:** RAK2013 WisLink Cellular Pi HAT Board Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/rak2013-board-dimension.png"
+  width="50%"
+  caption="RAK2013 WisLink Cellular Pi HAT Board Dimension"
+/>
 
 #### Block Diagram
 
 **Figure 4** shows the internal architecture and external interfaces of RAK2013.
 
-> **Image:** RAK2013 WisLink Cellular Pi HAT Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/block-diagram-rak2013.png"
+  width="80%"
+  caption="RAK2013 WisLink Cellular Pi HAT Board"
+/>
 
 ### Hardware
 
@@ -91,7 +110,11 @@ It is built with **Quectel BG96/EG91/EG95 module** and is compatible with **Rasp
 
 A standard Micro-B USB compliant with USB 2.0 standard specification is used to provide an interface to connect our device to Raspberry Pi or a PC for control of the board and firmware upgrade. The Micro-B USB pin connection and definition is shown in **Figure 5**.
 
-> **Image:** Micro-B USB connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/micro-b-usb-connection.png"
+  width="20%"
+  caption="Micro-B USB connection"
+/>
 
 | Pin | Description   |
 | --- | ------------- |
@@ -121,11 +144,11 @@ Reset Push Button is used to reset the BG96/EG91/EG95 module. To reset the modul
 
 ##### PWRKEY Push Button
 
-When either of Quectel BG96 / EG91 / EG95 module is in power off mode, it can be turned on to normal mode by driving the PWRKEY pin to a low level for at least 100 ms. Note that the module is still in power off mode even when plugging in the power socket, thus, press the PWRKEY to power up the module. When the module is in normal mode, it can be turned to power off mode by pressing the PWRKEY button.
+When either of Quectel BG96 / EG91 / EG95 module is in power off mode, it can be turned on to normal mode by driving the PWRKEY pin to a low level for at least 100&nbsp;ms. Note that the module is still in power off mode even when plugging in the power socket, thus, press the PWRKEY to power up the module. When the module is in normal mode, it can be turned to power off mode by pressing the PWRKEY button.
 
 ##### Antenna RF interface
 
-The modules have two RF interfaces for LTE antenna and GPS/LTE DIV antenna over standard UFL connectors (Hirose U. FL-R-SMT) with a characteristic impedance of 50 Ω. The RF ports support both the transmitter and receiver, providing the antenna interface.
+The modules have two RF interfaces for LTE antenna and GPS/LTE DIV antenna over standard UFL connectors (Hirose U. FL-R-SMT) with a characteristic impedance of 50&nbsp;Ω. The RF ports support both the transmitter and receiver, providing the antenna interface.
 
 #### Pin Definition
 
@@ -139,7 +162,11 @@ RAK2013 board is composed of four (4) connectors: **J3**, **J15**, **J16**, and 
 
 ##### J15 - Raspberry Connector
 
-> **Image:** RAK2013 Raspberry Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/rak2013-raspberry-connector.png"
+  width="85%"
+  caption="RAK2013 Raspberry Connector"
+/>
 
 The table below shows the pin connections of the raspberry connector.
 
@@ -188,7 +215,11 @@ The table below shows the pin connections of the raspberry connector.
 
 ##### J16 and J17 – MikroBus Interface
 
-> **Image:** MikroBus Interface
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/mikrobus_pinout.png"
+  width="80%"
+  caption="MikroBus Interface"
+/>
 
 #### RF Characteristics
 
@@ -198,13 +229,13 @@ RAK2013 supports different frequency bands based on the module mounted on the bo
 
 ###### BG96 Module
 
-**BG96** is a series of LTE Cat M1/Cat NB1/EGPRS modules offering a maximum data rate of **300 Kbps downlink** and **375 Kbps uplink**.
+**BG96** is a series of LTE Cat M1/Cat NB1/EGPRS modules offering a maximum data rate of **300&nbsp;Kbps downlink** and **375&nbsp;Kbps uplink**.
 
 | Frequency     | BG96                                    |
 | ------------- | --------------------------------------- |
 | **LTE - FDD** | B1 / B2 / B3 / B4 / B5 / B8 / B12 / B18 |
 | **LTE - TDD** | B39 (for CAT M1 only)                   |
-| **EGPRS**     | 850 / 900 / 1800 / 1900 MHz        |
+| **EGPRS**     | 850 / 900 / 1800 / 1900&nbsp;MHz        |
 
 ###### EG91 Module
 
@@ -214,7 +245,7 @@ RAK2013 supports different frequency bands based on the module mounted on the bo
 | :------------: | :----------------------------: | :----------------------: |
 |  **LTE FDD**   | B1 / B3 / B7 / B8 / B20 / B28A | B2 / B4 / B5 / B12 / B13 |
 |   **WCDMA**    |            B1 / B8             |       B2 / B4 / B5       |
-| **GSM / EDGE** |      900 / 1800 MHz       |            -             |
+| **GSM / EDGE** |      900 / 1800&nbsp;MHz       |            -             |
 |   **Region**   |             Europe             |      North America       |
 
 ###### EG95 Module
@@ -225,7 +256,7 @@ RAK2013 supports different frequency bands based on the module mounted on the bo
 | :------------: | :----------------------------: | :----------------------: |
 |  **LTE FDD**   | B1 / B3 / B7 / B8 / B20 / B28A | B2 / B4 / B5 / B12 / B13 |
 |   **WCDMA**    |            B1 / B8             |       B2 / B4 / B5       |
-| **GSM / EDGE** |      900 / 1800 MHz       |            -             |
+| **GSM / EDGE** |      900 / 1800&nbsp;MHz       |            -             |
 |   **Region**   |             Europe             |      North America       |
 
 #### Antennas
@@ -236,25 +267,74 @@ For module built-in BG96, there is one LTE antenna and one GPS antenna. For modu
 
 ###### Overview
 
-> **Image:** LTE Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/lte-antenna.png"
+  width="60%"
+  caption="LTE Antenna"
+/>
 
 ###### Antenna Dimension
 
-The LTE antenna for the RAK2013 covers a working frequency band from **824 MHz to 2690 MHz**.
+The LTE antenna for the RAK2013 covers a working frequency band from **824&nbsp;MHz to 2690&nbsp;MHz**.
 
-> **Image:** LTE Antenna Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/lte-antenna-dimension.png"
+  width="60%"
+  caption="LTE Antenna Dimension"
+/>
 
 ###### Antenna Parameter
 
 The specifications and parameter of the antenna are shown below:
 
-| Parameters | Specifications |  |  |  |  |  |  |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| Frequency (MHz) | 700 | 800 | 880 | 960 | 1710 | 1880 | 2170 |
-| Voltage Standard Wave Ratio (VSWR) | 9.3 | 4.6 | 3.6 | 4.9 | 9.3 | 4.4 | 15 |
-| Gain (dBi) | 1.63 | 1.84 | 1.96 | 2.23 | 0.03 | 0.01 | 1.97 |
-| Working Temperature & Humidity | T: -35° C ~ +80° C, H: 0% ~ 95% | T: -35° C ~ +80° C, H: 0% ~ 95% | T: -35° C ~ +80° C, H: 0% ~ 95% | T: -35° C ~ +80° C, H: 0% ~ 95% | T: -35° C ~ +80° C, H: 0% ~ 95% | T: -35° C ~ +80° C, H: 0% ~ 95% | T: -35° C ~ +80° C, H: 0% ~ 95% |
-| Storage Temperature & Humidity | T: -40° C ~ +85° C, H: 0% ~ 95% | T: -40° C ~ +85° C, H: 0% ~ 95% | T: -40° C ~ +85° C, H: 0% ~ 95% | T: -40° C ~ +85° C, H: 0% ~ 95% | T: -40° C ~ +85° C, H: 0% ~ 95% | T: -40° C ~ +85° C, H: 0% ~ 95% | T: -40° C ~ +85° C, H: 0% ~ 95% |
+<table>
+    <thead>
+        <tr>
+            <th>Parameters</th>
+            <th colspan ="7">Specifications</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Frequency (MHz)</td>
+            <td>700</td>
+            <td>800</td>
+            <td>880</td>
+            <td>960</td>
+            <td>1710</td>
+            <td>1880</td>
+            <td>2170</td>
+        </tr>
+        <tr>
+            <td>Voltage Standard Wave Ratio (VSWR)</td>
+            <td>9.3</td>
+            <td>4.6</td>
+            <td>3.6</td>
+            <td>4.9</td>
+            <td>9.3</td>
+            <td>4.4</td>
+            <td>15</td>
+        </tr>
+         <tr>
+            <td>Gain (dBi)</td>
+            <td>1.63</td>
+            <td>1.84</td>
+            <td>1.96</td>
+            <td>2.23</td>
+            <td>0.03</td>
+            <td>0.01</td>
+            <td>1.97</td>
+        </tr>
+        <tr>
+            <td>Working Temperature & Humidity</td>
+            <td colspan="7">T: -35°&nbsp;C ~ +80°&nbsp;C, H: 0% ~ 95%</td>
+        </tr>
+          <tr>
+            <td>Storage Temperature & Humidity</td>
+            <td colspan="7">T: -40°&nbsp;C ~ +85°&nbsp;C, H: 0% ~ 95%</td>
+        </tr>
+    </tbody>
+</table>
 
 ##### 2. GPS Antenna
 
@@ -262,11 +342,19 @@ The specifications and parameter of the antenna are shown below:
 
 The GPS antenna for RAK2013 is shown in **Figure 10**. Only the RAK2013 with BG96 supports the GPS function.
 
-> **Image:** GPS Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/gps-antenna.png"
+  width="50%"
+  caption="GPS Antenna"
+/>
 
 ###### GPS Antenna Dimensions
 
-> **Image:** GPS Antenna Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/gps-antenna-dimensions.png"
+  width="75%"
+  caption="GPS Antenna Dimensions"
+/>
 
 ###### GPS Environmental Requirements
 
@@ -274,8 +362,8 @@ The antenna environmental requirements are listed in the table below:
 
 | Conditions |        Temperature        | Humidity |
 | :--------: | :-----------------------: | :------: |
-|  Working   | -35° C ~ +80° C | 0% ~ 95% |
-|  Storage   | -40° C ~ +85° C | 0% ~ 95% |
+|  Working   | -35°&nbsp;C ~ +80°&nbsp;C | 0% ~ 95% |
+|  Storage   | -40°&nbsp;C ~ +85°&nbsp;C | 0% ~ 95% |
 
 ###### GPS Antenna Parameter
 
@@ -297,18 +385,18 @@ The amplifier specifications are listed in the table below:
 
 |       Item        |  Specifications  |
 | :---------------: | :--------------: |
-|  Frequency Range  | 1575.42 MHz |
-|       Gain        |    27 dB    |
-|       VSWR        |   ≤ 2.0 V   |
-| Noise Coefficient |  ≤ 2.0 dBm  |
-|    DC Voltage     |   3 ~ 5 V   |
-|    DC Current     |  5 ± 2 mA   |
+|  Frequency Range  | 1575.42&nbsp;MHz |
+|       Gain        |    27&nbsp;dB    |
+|       VSWR        |   ≤ 2.0&nbsp;V   |
+| Noise Coefficient |  ≤ 2.0&nbsp;dBm  |
+|    DC Voltage     |   3 ~ 5&nbsp;V   |
+|    DC Current     |  5 ± 2&nbsp;mA   |
 
 The environmental test performance specifications are listed below:
 
 |       Item        |   Normal Temp    |    High Temp     |     Low Temp     |
 | :---------------: | :--------------: | :--------------: | :--------------: |
-|  Amplifier Gain   | 27 dB ± 2.0 | 27 dB ± 2.0 | 27 dB ± 2.0 |
+|  Amplifier Gain   | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 | 27&nbsp;dB ± 2.0 |
 |       VSWR        |      ≤ 2.0       |      ≤ 2.0       |      ≤ 2.0       |
 | Noise Coefficient |      ≤ 2.0       |      ≤ 2.0       |      ≤ 2.0       |
 
@@ -316,13 +404,13 @@ The environmental test performance specifications are listed below:
 
 ##### Power Requirements
 
-The RAK2013 board operates at 5 V. It can be powered by micro USB with 5 V or powered by the Raspberry Pi board through 40-pin connector. Be cautious because the current of RAK2013 is about 300 mA on average when working in CAT- M1 mode, it can be reached to 2 A for peak when working in GSM900 mode. So you must carefully evaluate your power adapter’s rating.
+The RAK2013 board operates at 5&nbsp;V. It can be powered by micro USB with 5&nbsp;V or powered by the Raspberry Pi board through 40-pin connector. Be cautious because the current of RAK2013 is about 300&nbsp;mA on average when working in CAT- M1 mode, it can be reached to 2&nbsp;A for peak when working in GSM900 mode. So you must carefully evaluate your power adapter’s rating.
 
 |          Parameter          |  Min  |   Typical   |     Max      |
 | :-------------------------: | :---: | :---------: | :----------: |
-|    Current in CAT M mode    |   -   | 300 mA |      -       |
-| Current in GSM mode (peak） |   -   |             | 2000 mA |
-|       Power off mode        |   -   | 10 mA  |      -       |
+|    Current in CAT M mode    |   -   | 300&nbsp;mA |      -       |
+| Current in GSM mode (peak） |   -   |             | 2000&nbsp;mA |
+|       Power off mode        |   -   | 10&nbsp;mA  |      -       |
 
 #### Mechanical Characteristics
 
@@ -332,22 +420,26 @@ Here is the detailed dimension of RAK2013 module. For full specifications includ
 
 **Minimum HAT requirements**:
 
-- The board must be 65 x 56 mm or 65 x 56.5 mm.
-- The board must have 3 mm radius corners.
+- The board must be 65 x 56&nbsp;mm or 65 x 56.5&nbsp;mm.
+- The board must have 3&nbsp;mm radius corners.
 - It must have four (4) mounting holes in the corners and should follow mounting hole specifications.
-- The board must have a full 40 W GPIO connector.
+- The board must have a full 40&nbsp;W GPIO connector.
 
 **Mounting Holes specifications**:
 
 - Mounting holes should ideally non-plated. If plated, hole and grounding must be electrically isolated. (Do not connect these to GND)
-- Mounting hole ground should be 6.2 mm minimum and either isolated copper or bare board (open solder mask).
-- Mounting holes should be drilled to 2.75 ± 0.5 mm.
+- Mounting hole ground should be 6.2&nbsp;mm minimum and either isolated copper or bare board (open solder mask).
+- Mounting holes should be drilled to 2.75 ± 0.5&nbsp;mm.
 
 :::tip NOTE
 It is recommended to provide slots or cutouts for camera and display flexes so the camera and display can still be used with the HAT attached.
 :::
 
-> **Image:** Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="Mechanical Dimensions"
+/>
 
 #### Environmental Requirements
 
@@ -357,21 +449,34 @@ The table below lists the operation and storage temperature requirements:
 
 |       Parameter       |     Min     |   Typical   |     Max     |
 | :-------------------: | :---------: | :---------: | :---------: |
-| Operation Temp. Range | -35° C | +25° C | +75° C |
-| Extended Temp. Range  | -40° C |      -      | +80° C |
-|  Storage Temp. Range  | -40° C |      -      | +80° C |
+| Operation Temp. Range | -35°&nbsp;C | +25°&nbsp;C | +75°&nbsp;C |
+| Extended Temp. Range  | -40°&nbsp;C |      -      | +80°&nbsp;C |
+|  Storage Temp. Range  | -40°&nbsp;C |      -      | +80°&nbsp;C |
 
 #### Schematic Diagram
 
 The schematic diagram shows the power and MikroBus interface of RAK2013.
 
-> **Image:** Power and MikroBus Interface
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/power-and-mikrobus-interface.png"
+  width="100%"
+  caption="Power and MikroBus Interface"
+/>
 
 Here is the BG96 and Raspberry Interface of RAK2013:
 
-> **Image:** BG96 and Raspberry Interface
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/bg96-and-raspberry-interface.png"
+  width="100%"
+  caption="BG96 and Raspberry Interface"
+/>
 
 Below are the audio codec and amplifier schematics of RAK2013:
 
-> **Image:** Audio Codec and Amplifier
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2013/datasheet/audio-codec-and-amplifier.png"
+  width="100%"
+  caption="Audio Codec and Amplifier"
+/>
 
+<RkBottomNav/>

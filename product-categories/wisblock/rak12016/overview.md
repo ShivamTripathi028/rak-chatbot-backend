@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12016 WisBlock Flex Sensor Module
 
 Thank you for choosing **RAK12016 WisBlock Flex Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -35,11 +37,11 @@ RAK12016 is a flex sensor module, a part of the RAKWireless WisBlock Sensor seri
 * **Module specifications**
     * Measure bending between 1 to 180 degrees
     * Accuracy to 1 degree
-    * 3.3 V Power Supply
+    * 3.3&nbsp;V Power Supply
     * Chipset: Spectrasymbol FS-L-0095-103-ST
 
 * **Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -49,3 +51,4 @@ To use a **RAK12016**, you need at least a **FS-L-0095-103-ST Flex Sensor** and 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

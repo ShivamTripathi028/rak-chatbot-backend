@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Services
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7391 WisGate Connect Services
 
 ## Docker
@@ -17,6 +20,7 @@ sidebar_label: Services
 Docker is an open-source platform for building, deploying, and managing containerized applications. Everything you need to run an application, such as the application source code, the operating system libraries, and the dependencies, are all packed into one container. The best part of using docker is that it can simplify the development and delivery of distributed applications. Whether you are a developer or a user, you can deploy and use the application in any environment in just a few minutes.
 
 Since Docker makes application containerizations run easier, faster, and safer, docker-ce is pre-installed in the RAKPiOS, and the version is 20.10.17, build 100c701. The user `RAK` is added to the `docker` group, thus, the user won't need to preface the `docker` command with `sudo`.
+
 
 In this section, you will find a few services for users to get started with. These services can be classified into several categories: LoRaWAN, Zigbee, home automation, VPN, etc.
 
@@ -43,7 +47,14 @@ Commands:
 
 Portainer provides a pre-built set of app templates, but you are free to modify or replace these with your own. You can also create your own custom templates, either manually or from an existing stack.
 
-> **Image:** Portainer
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/services/1.portainer.png"
+  width="70%"
+  caption="Portainer"
+/>
+
+
 
 ## LoRaWAN Packet Forwarder
 
@@ -109,7 +120,12 @@ Grafana is an open-source analytics & monitoring solution for every database. Gr
 
 For references on running the Grafana Docker image, check the [official documentation](https://grafana.com/docs/grafana/next/setup-grafana/installation/docker/).
 
-> **Image:** Grafana
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/services/2.grafana.png"
+  width="70%"
+  caption="Grafana"
+/>
+
 
 ## InfluxDB
 
@@ -117,3 +133,4 @@ InfluxDB is an open-source time-series platform. It includes APIs for storing an
 
 If you need more details on the service's configurations, environmental variables, and references, check influxDB's Docker-hub [official page](https://hub.docker.com/_/influxdb) for more details.
 
+<RkBottomNav/>

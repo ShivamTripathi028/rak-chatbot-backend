@@ -30,6 +30,8 @@ sidebar_label: Product Overview
 date: 2025-10-28
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh TAP V2
 
 Thank you for choosing **WisMesh TAP V2** in your awesome IoT Project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -44,8 +46,8 @@ With its large TFT display and on-screen keyboard, messages can be sent over the
 
 ## Product Features
 
-- Battery: Robust **3600 mAh built-in battery**
-- Antenna: **2 dBi rubber antenna**, easily upgradeable to higher-gain options via plug-and-play
+- Battery: Robust **3600&nbsp;mAh built-in battery**
+- Antenna: **2&nbsp;dBi rubber antenna**, easily upgradeable to higher-gain options via plug-and-play
 - Efficiency: Utilizes the most **power-efficient solution in the Meshtastic community**
 - Usability: Supports Meshtastic UI with **advanced map display, messaging, and more**
 
@@ -55,3 +57,4 @@ To get started with the WisMesh TAP V2, download the <a href="https://downloads.
 
 To learn more about the Meshtastic UI (MUI), refer to the official <a href="https://meshtastic.org/docs/software/meshtastic-ui/" target = "_blank">MESHTASTIC UI documentation</a> provided by the Meshtastic community.
 
+<RkBottomNav/>

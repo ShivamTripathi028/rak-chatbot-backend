@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18001 WisBlock Buzzer Module
 
 Thank you for choosing **RAK18001 WisBlock Buzzer Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -40,17 +42,17 @@ Refer to the sample code: [RAK18001 Play a melody](https://github.com/RAKWireles
 ## Product Features
 
 * **Module Specification**
-    * 3.3 V Input Voltage: On/Off Control by the WisBlock Core
-    * Operating Voltage: 2.0 V - 5.0 V
-    * 75 dB sound output at 10 cm distance
-    * Resonant Frequency: 4000 Hz
+    * 3.3&nbsp;V Input Voltage: On/Off Control by the WisBlock Core
+    * Operating Voltage: 2.0&nbsp;V - 5.0&nbsp;V
+    * 75&nbsp;dB sound output at 10&nbsp;cm distance
+    * Resonant Frequency: 4000&nbsp;Hz
     * PWM Controlled: Loudness and pitch level can be customized using your code
     * Uses MLT-5020 Buzzer - small and compact
     * Chipset: Jiangsu Huaneng Electronics MLT-5020
 
 * **Size**
-    * Module Size: 10 mm x 10 mm
-    * Built-in Buzzer Size: 5 mm x 5 mm x 2 mm
+    * Module Size: 10&nbsp;mm x 10&nbsp;mm
+    * Built-in Buzzer Size: 5&nbsp;mm x 5&nbsp;mm x 2&nbsp;mm
 
 ## Prerequisites
 
@@ -60,3 +62,4 @@ To use the **RAK18001 Buzzer Module**, you need a **WisBlock Base** to plug the 
 Make sure to fix the module with the matching screws to ensure intact placement and connection.
 :::
 
+<RkBottomNav/>

@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK12011 WisBlock Barometer WT Sensor Module
 
 Thank you for choosing **RAK12011 WisBlock Barometer WT Sensor Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -35,19 +38,19 @@ The RAK12011 is a Barometric Pressure sensor module that is part of the RAKWirel
 
 * **Module specifications**
     * Measures Barometric Pressure
-    * **Operating Pressure Range:** 260-1260 hPa
-    * **Pressure Sensor Accuracy:** ±0.1 hPa
+    * **Operating Pressure Range:** 260-1260&nbsp;hPa
+    * **Pressure Sensor Accuracy:** ±0.1&nbsp;hPa
     * Measures Ambient Temperature
-    * **Operating Temperature Range:** -40 °C to +85 °C
+    * **Operating Temperature Range:** -40&nbsp;°C to +85&nbsp;°C
     * Embedded Temperature Compensation
-    * Low current consumption down to 3 μA
+    * Low current consumption down to 3&nbsp;μA
     * Via I2C interface
-    * Supply Voltage: 3.3 V
-    * Current Consumption: 1-15 uA
+    * Supply Voltage: 3.3&nbsp;V
+    * Current Consumption: 1-15&nbsp;uA
     * Chipset: STMicroelectronics LPS33HW
 
 * **Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -57,3 +60,4 @@ To use a **RAK12011**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

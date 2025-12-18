@@ -11,6 +11,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # WisBlock IoT Starter Kit Datasheet
 
 ## Overview
@@ -51,7 +55,11 @@ With this kit, you can easily create custom IoT solutions for a variety of use c
 
 The WisBlock IoT Starter Kit includes the following modules:
 
-> **Image:** Modules of the WisBlock IoT Starter Kit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kits/1_iot_starter_kit_2.png"
+  caption="Modules of the WisBlock IoT Starter Kit" 
+   width="70%"
+/>
 
 ### Hardware
 
@@ -103,3 +111,5 @@ The cellular modules support different cellular protocols, as shown in the follo
 
 The WisBlock IoT Starter Kit is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
+
+<RkBottomNav/>

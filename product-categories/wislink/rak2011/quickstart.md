@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2011 Quick Start Guide
 
 ## Prerequisites
@@ -28,6 +31,7 @@ The following two sections will provide a list of the components and tools you n
 
 1. [Quectel BG96 USB Driver](https://downloads.rakwireless.com/Cellular/WisLink-Cellular-RAK2011/Tools/Quectel_BG96_Windows_USB_Driver_V1.0.rar)
 2. [QCOM Serial Port Tool](https://downloads.rakwireless.com/Cellular/WisLink-Cellular-RAK2011/Tools/QCOM_V1.6.zip)
+
 
 ## Product Configuration
 
@@ -48,7 +52,14 @@ Push the PWRKEY once in order to turn on the module after connecting the USB cab
 3. After the Windows USB drive installation is complete, connect RAK2011 to a PC via a Type A to Micro B USB cable.
 4. Open the Windows’ Device Manager. It will show the following under Ports (COM & LPT):
 
-> **Image:** Windows Device Manager
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/device-manager.png"
+  width="40%"
+  caption="Windows Device Manager"
+/>
+
 
 ##### Send AT Commands
 
@@ -58,7 +69,14 @@ Push the PWRKEY once in order to turn on the module after connecting the USB cab
 
 You can send additional AT commands to control the module. For more AT commands, refer to the [BG96 AT Commands Manual](https://www.quectel.com/download/quectel_bg96_at_commands_manual_v2-3/).
 
-> **Image:** Send AT Commands
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/send-at-commands.png"
+  width="70%"
+  caption="Send AT Commands"
+/>
+
 
 ##### NB-IoT UDP Communication Test
 
@@ -90,11 +108,21 @@ AT+COPS=? // Manually search the current network
 AT+COPS=1,0,"CHN-CT",9 // Manually connect NB-IoT network
 ```
 
-> **Image:** NB-IoT UDP Communication Test
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/nbiot-udp-comm-test.png"
+  width="80%"
+  caption="NB-IoT UDP Communication Test"
+/>
 
 6. After setting the configuration, send `AT+CSQ` to check network signal strength. If there is a signal strength value, it indicates the module has connected to NB-IoT network. You can also send `AT+CGREG?` to check the connection status of the network to determine whether or not to connect to the network:
 
-> **Image:** Check Network Signal Strength
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/check-network-signal-strength.png"
+  width="80%"
+  caption="Check Network Signal Strength"
+/>
 
 7. After connecting to the network, you need to set up the APN and activate the APN network. You can set the APN by sending the following commands:
 
@@ -105,7 +133,11 @@ AT+QIACT? // Query the APN assigned IP address
 
 ```
 
-> **Image:** Setup and Activate APN
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/setup-activate-apn.png"
+  width="80%"
+  caption="Setup and Activate APN"
+/>
 
 8. After activating the APN, you can establish a UDP connection. (In China Telecom’s NB-IoT network, you must first inform the operator of your server’s IP address. The operator will make binding before the connection is successful. The behavior of other networks might be different).
 
@@ -114,7 +146,11 @@ AT+QIOPEN=1,0,"UDP","202.120.2.101",123,0,0 //Establish UDP connection
 AT+QISTATE? // Query connection is successful
 ```
 
-> **Image:** Establish UDP Connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/establish-udp-connection.png"
+  width="80%"
+  caption="Establish UDP Connection"
+/>
 
 9. When sending data to the server, there will be a prompt to receive data "recv". If there is no prompt you can send the following commands to check if there is data reception:
 
@@ -126,7 +162,13 @@ AT+QIRD=0,1500 // Check if there is data received, if there is,
 print it out directly
 ```
 
-> **Image:** Check Data Reception
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/check-data-reception.png"
+  width="80%"
+  caption="Check Data Reception"
+/>
+
 
 ##### GPS Function Test
 
@@ -146,6 +188,7 @@ AT+QGPSEND    // Turn off GNSS
 For detailed GPS command description, refer to Quectel BG96 GNSS AT Commands Manual.
 
 5. After sending the command, the GPS Function Test is completed. 
+
 
 #### Connect Through an Arduino Header Interface
 
@@ -175,6 +218,7 @@ Serial.write(Serial.read());
 
 ```
 
+
 #### Connect Through a Cellular 
 
 ##### Create an Hologram Account
@@ -188,17 +232,37 @@ To start with, create an [Hologram account](https://dashboard.hologram.io/accoun
 1. Login into your Hologram account and enter your Dashboard interface.
 2. Next, you need to activate your purchased Hologram SIM card by clicking on "Activate your first SIM".
 
-> **Image:** Activate you first SIM
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/sim-activation.png"
+  width="80%"
+  caption="Activate you first SIM"
+/>
 
 3. Enter the activation interface according to the given prompts. Then fill in the information to complete the activation of the SIM card.
 
-> **Image:** Input your SIM information
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/sim-information.png"
+  width="80%"
+  caption="Input your SIM information"
+/>
 
 4. Then enter the SIM card information interface. After waiting for a period of time, you will see the "Live" status.
 
-> **Image:** Manage your SIM card
 
-> **Image:** SIM card Status
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/manage-your-simcard.png"
+  width="80%"
+  caption="Manage your SIM card"
+/>
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/simcard-status.png"
+  width="80%"
+  caption="SIM card Status"
+/>
+
 
 ##### Send Data
 
@@ -229,11 +293,21 @@ AT+QISEND=0,0      // Query data is sent successfully
 
 ```
 
-> **Image:** Sending query data
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/send-data.png"
+  width="80%"
+  caption="Sending query data"
+/>
 
 If the data is sent successfully, you can see the sent information on your interface of the Hologram Dashboard.
 
-> **Image:** Data is sent successfully
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/data-sent-successfully.png"
+  width="80%"
+  caption="Data is sent successfully"
+/>
+
 
 ##### Receive Data
 
@@ -254,13 +328,31 @@ AT+QIRD=11,1500    // Read the received data, 11 is the returned Socket identifi
 
 ```
 
-> **Image:** Create a TCP server
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/tcp-server.png"
+  width="80%"
+  caption="Create a TCP server"
+/>
 
 After creating a successful TCP server, you need to return to the Hologram Dashboard interface, click on the "send to device" button, and then fill in the data to be sent. The PORT is the TCP server port of your board. Fill in and click "Send data message".
 
-> **Image:** Send a message
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/send-a-message.png"
+  width="80%"
+  caption="Send a message"
+/>
 
 After sending the data in the Hologram Dashboard, the board will receive a message of "recv, 11" indicating that the board have already received the data. At this time, sending the `AT+QIRD=11,1500` command to obtain the received data.
 
-> **Image:** Data is received
 
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wislink-lte/rak2011/quickstart/receive-data.png"
+  width="80%"
+  caption="Data is received"
+/>
+
+
+<RkBottomNav/>

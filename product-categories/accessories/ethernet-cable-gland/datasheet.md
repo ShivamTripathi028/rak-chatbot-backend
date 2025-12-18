@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Ethernet Cable Gland Datasheet
 
 ## Overview
@@ -23,7 +26,7 @@ The Ethernet cable gland is designed to safely connect your outdoor equipment wi
 - Protection level: IP67
 - Working temperature:
 - Mounting hole diameter: M25*1.5
-- Cable length: 250 mm
+- Cable length: 250&nbsp;mm
 - Casing connector: RJ45 female
 - Board connector: RJ45 male
 
@@ -31,19 +34,25 @@ The Ethernet cable gland is designed to safely connect your outdoor equipment wi
 The Ethernet Cable Gland is intended for use with the <a href="https://docs.rakwireless.com/product-categories/wisgate/rak7249/overview/" >RAK7249 WisGate Edge Max Gateway</a>, Outdoor Gateway Enclosure, or with enclosures with a threaded hole. In addition, a matching nut for securing it is not included.
 :::
 
+
 ## Specifications
 
 | Parameter              | Value              |
 | ---------------------- | ------------------ |
-| Rated current          | 1 - 3 A       |
+| Rated current          | 1 - 3&nbsp;A       |
 | Protection level       | IP67               |
-| Working temperature    | -20° to 60° C |
-| Cable length           | 250 mm        |
+| Working temperature    | -20° to 60°&nbsp;C |
+| Cable length           | 250&nbsp;mm        |
 | Mounting hole diameter | M25*1.5            |
 | Casing connector       | RJ45 female        |
 | Board connector        | RJ45 male          |
 
 ## Mechanical Characteristics
 
-> **Image:** Ethernet Cable Gland Mechanical Characteristics
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/ethernet-cable-gland/2.png"
+  width="100%"
+  caption="Ethernet Cable Gland Mechanical Characteristics"
+/>
 
+<RkBottomNav/>

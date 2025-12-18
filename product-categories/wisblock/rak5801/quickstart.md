@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5801 WisBlock 4-20mA Interface Module Quick Start Guide
 
 ## Prerequisite
@@ -38,9 +41,15 @@ Before going through each and every step on using the RAK5801 WisBlock module, m
 
 ### Block Diagram
 
-The RAK5801 module was designed to convert 4-20 mA current signals into voltage signals by applying a sampling resistor. As shown in **Figure 1**, the input current signal from the sensor is conditioned by an operational amplifier to match the level supported by the ADC input of an MCU where the signal is digitized.
+The RAK5801 module was designed to convert 4-20&nbsp;mA current signals into voltage signals by applying a sampling resistor. As shown in **Figure 1**, the input current signal from the sensor is conditioned by an operational amplifier to match the level supported by the ADC input of an MCU where the signal is digitized.
 
-> **Image:** RAK5801 Block Diagram
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_block_diagram.png" 
+  figureCount="1"
+  caption="RAK5801 Block Diagram" 
+   width="70%"
+/>
 
 Once the signal is digitalized, the user can recover the original current value by applying the following formula:
 
@@ -48,11 +57,11 @@ Once the signal is digitalized, the user can recover the original current value 
 
 Where **U** is the ADC reading and **I** is the sensor current.
 
-As shown in **Figure 1**, the module provides an output of 12 V for powering passive 4-20 mA sensors. This 12 V output is boosted by an internal DC-DC booster. The enable pin allows to control the power conversion module and set the RAK5801 module into a low-power consumption mode.
+As shown in **Figure 1**, the module provides an output of 12&nbsp;V for powering passive 4-20&nbsp;mA sensors. This 12&nbsp;V output is boosted by an internal DC-DC booster. The enable pin allows to control the power conversion module and set the RAK5801 module into a low-power consumption mode.
 
 ### Hardware Setup
 
-The RAK5801 is a 4-20 mA current loop extension module that allows you to make an IoT solution for analog sensors with 4-20 mA interface. This module converts the 4-20 mA current signal into voltage range supported by the WisBlock Core module for further digitalization and data transmission. This module integrates a 12 V power supply, which can be used to power external sensors. The RAK5801 can be connected to 2-wire, 3-wire, or 4-wire types of 4-20 mA sensor. For more information about RAK5801, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak5801/datasheet/).
+The RAK5801 is a 4-20&nbsp;mA current loop extension module that allows you to make an IoT solution for analog sensors with 4-20&nbsp;mA interface. This module converts the 4-20&nbsp;mA current signal into voltage range supported by the WisBlock Core module for further digitalization and data transmission. This module integrates a 12&nbsp;V power supply, which can be used to power external sensors. The RAK5801 can be connected to 2-wire, 3-wire, or 4-wire types of 4-20&nbsp;mA sensor. For more information about RAK5801, refer to the [Datasheet](https://docs.rakwireless.com/product-categories/wisblock/rak5801/datasheet/).
 
 #### Installation
 
@@ -66,19 +75,34 @@ The RAK5801 module is part of the WisBlock Interface category, which connects to
 For detailed instructions, refer to the [WisBlock Installation Guide](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/).
 :::
 
-> **Image:** WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/wisconnector.png" 
+  figureCount="2"
+  caption="WisConnector" 
+   width="50%"
+/>
 
 2. Always secure the RAK5801 module with **3 x M1.2 x3 pan head screws**, as shown in **Figure 3**.
 
-> **Image:** RAK5801 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_mounting.png" 
+  figureCount="3"
+  caption="RAK5801 mounting mechanism on a WisBlock Base module" 
+   width="50%"
+/>
 
 ##### RAK5801 Fast Crimping Terminal Mechanism
 
-The RAK5801 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20 AWG to 24 AWG. The usual stripping length is around 6 to 7 mm.
+The RAK5801 features a fast-crimping terminal connector to simplify and ensure the wiring process on the fields. The fast-crimping terminal can support cable with a width between 20 AWG to 24 AWG. The usual stripping length is around 6 to 7&nbsp;mm.
 
 As shown in **Figure 4**, during the crimping process, you should first press down and maintain the spring head of the crimping terminal firmly, then insert the stripped cable head into the corresponding connector’s hole. Once inserted correctly, then release the spring head, and the crimping process is completed.
 
-> **Image:** RAK5801 Sensor Connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/crimping_process.png" 
+  figureCount="4"
+  caption="RAK5801 Sensor Connector" 
+   width="40%"
+/>
 
 ##### Disassembling Procedure
 
@@ -86,15 +110,30 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. Remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/removing_screw.png" 
+  figureCount="5"
+  caption="Removing screws from the WisBlock module" 
+   width="70%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/detach_silkscreen.png" 
+  figureCount="6"
+  caption="Detaching silkscreen on the WisBlock module" 
+   width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 7**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/detach_module.png" 
+  figureCount="7"
+  caption="Applying even forces on the proper location of a WisBlock module" 
+   width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -102,7 +141,12 @@ If you will connect other modules to the remaining WisBlock Base slots, check on
 
 #### Pin Definition
 
-> **Image:** RAK5801 Pin Definition
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_pinout.png" 
+  figureCount="8"
+  caption="RAK5801 Pin Definition" 
+   width="70%"
+/>
 
 #### Typical Application
 
@@ -110,33 +154,48 @@ If you will connect other modules to the remaining WisBlock Base slots, check on
 
 Two-wire transmitters are energized by the current loop, where the supply voltage is included in the receptor. The transmitter is floating and the ground is in the receptor.
 
-> **Image:** RAK5801 with 2-wire/4-20mA sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_2wire.png" 
+  figureCount="9"
+  caption="RAK5801 with 2-wire/4-20mA sensor" 
+   width="70%"
+/>
 
 ##### Three-Wire Sensor
 
 Three-wire transmitters have three wires powered by the source voltage in them. In this case, the transmitter is the power source for the current loop. The transmitter common is connected to the common of the receptor.
 
-> **Image:** RAK5801 with 3-wire/4-20mA sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_3wire.png" 
+  figureCount="10"
+  caption="RAK5801 with 3-wire/4-20mA sensor" 
+   width="50%"
+/>
 
 ##### Four-Wire Sensor
 
 Four-wire transmitters have four wires powered by the source voltage in them. The transmitter powers the current loop and the receptor acts as a floating load.
 
-> **Image:** RAK5801 with 4-wire/4-20mA sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_4wire.png" 
+  figureCount="11"
+  caption="RAK5801 with 4-wire/4-20mA sensor" 
+   width="70%"
+/>
 
 Now, you can connect the battery (optional) and USB cable to start programming your WisBlock Core.
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires are matching the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
 ### Software Configuration and Example
 
-The RAK5801 module includes a 12 V voltage source which is controlled by the WisBlock Core module via IO1 (WB_IO1) of the WisBlock Base. This GPIO must be set to **HIGH** before sampling. The 12 V voltage source is designed to provide power supply to 4-20 mA sensors. The majority of 4-20 mA sensor works in the 9-24 V range. Before connecting a sensor to the RAK5801 module, you must be sure that the sensor can safely operate at 12 V.
+The RAK5801 module includes a 12&nbsp;V voltage source which is controlled by the WisBlock Core module via IO1 (WB_IO1) of the WisBlock Base. This GPIO must be set to **HIGH** before sampling. The 12&nbsp;V voltage source is designed to provide power supply to 4-20&nbsp;mA sensors. The majority of 4-20&nbsp;mA sensor works in the 9-24&nbsp;V range. Before connecting a sensor to the RAK5801 module, you must be sure that the sensor can safely operate at 12&nbsp;V.
 
 For RAK5801, the accessible ADC pin assignments are defined as follows in the Arduino IDE:
 
@@ -159,19 +218,34 @@ These are the quick links that go directly to the software guide for the specifi
 
 ##### Sensor Connection on RAK5801
 
-This is just an example and illustration on how to use the RAK5801 for external analog sensors. There are two analog input (ADC) pins available on the RAK5801, you can use any of the ADC pins as long as your sensors operate at 3.3 V or 12 V with 4-20 mA operating current.
+This is just an example and illustration on how to use the RAK5801 for external analog sensors. There are two analog input (ADC) pins available on the RAK5801, you can use any of the ADC pins as long as your sensors operate at 3.3&nbsp;V or 12&nbsp;V with 4-20&nbsp;mA operating current.
 
-> **Image:** Connecting the RAK5801 to the SUP-P300 Hydraulic Pressure Sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_hydraulic_press.png" 
+  figureCount="12"
+  caption="Connecting the RAK5801 to the SUP-P300 Hydraulic Pressure Sensor" 
+   width="70%"
+/>
 
 If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index), the WisBlock Core and example code should now be available on the Arduino IDE.
 
 1. Select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak4631-board.png" 
+  figureCount="13"
+  caption="Selecting RAK4631 as WisBlock Core" 
+   width="100%"
+/>
 
 2. The [Basic Sample Code for RAK5801](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK4630/IO/RAK5801_4-20mA) in GitHub will work on RAK4631 WisBlock Core. You can also open the example codes depending on your WisBlock Core, as shown in **Figure 14**.
 
-> **Image:** Opening RAK5801 example for RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak4631-examplecode.png" 
+  figureCount="14"
+  caption="Opening RAK5801 example for RAK4631 WisBlock Core" 
+   width="100%"
+/>
 
 ##### Code Explanation
 
@@ -210,29 +284,54 @@ If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWir
 ```
 3. After opening the example code, you can now select the right port and upload the code.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak4631-selectport.png" 
+  figureCount="15"
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the sensor's reading logs, as shown in **Figure 16**.
 
-> **Image:** SUP-P300 Hydraulic Pressure sensor data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801-logs.png" 
+  figureCount="16"
+  caption="SUP-P300 Hydraulic Pressure sensor data logs" 
+   width="70%"
+/>
 
 #### RAK5801 in RAK11200 WisBlock Core Guide
 
 ##### Sensor Connection on RAK5801
 
-This is just an example and illustration on how to use the RAK5801 for external analog sensors. There are two analog input (ADC) pins available on the RAK5801. You can use any of the ADC pins as long as your sensors operate at 3.3 V or 12 V with 4-20 mA operating current.
+This is just an example and illustration on how to use the RAK5801 for external analog sensors. There are two analog input (ADC) pins available on the RAK5801. You can use any of the ADC pins as long as your sensors operate at 3.3&nbsp;V or 12&nbsp;V with 4-20&nbsp;mA operating current.
 
-> **Image:** Connecting the RAK5801 to the SUP-P300 Hydraulic Pressure Sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_hydraulic_press.png" 
+  figureCount="17"
+  caption="Connecting the RAK5801 to the SUP-P300 Hydraulic Pressure Sensor" 
+   width="70%"
+/>
 
 If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index), the WisBlock Core and example code should now be available on the Arduino IDE.
 
 1. Select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak11200-board.png" 
+  figureCount="18"
+  caption="Selecting RAK11200 as WisBlock Core" 
+   width="100%"
+/>
 
 2. The [Basic Sample Code for RAK5801](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11200/IO/RAK5801_4-20mA) in GitHub will work on RAK11200 WisBlock Core. You can also open the example codes depending on your WisBlock Core, as shown in **Figure 19**.
 
-> **Image:** Opening RAK5801 example for RAK11200 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak11200-examplecode.png" 
+  figureCount="19"
+  caption="Opening RAK5801 example for RAK11200 WisBlock Core" 
+   width="100%"
+/>
 
 ##### Code Explanation
 
@@ -276,29 +375,54 @@ If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWir
 RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak11200-selectport.png" 
+  figureCount="20"
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the sensor's reading logs, as shown in **Figure 21**.
 
-> **Image:** SUP-P300 Hydraulic Pressure sensor data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801-logs.png" 
+  figureCount="21"
+  caption="SUP-P300 Hydraulic Pressure sensor data logs" 
+   width="70%"
+/>
 
 #### RAK5801 in RAK11310 WisBlock Core Guide
 
 ##### Sensor Connection on RAK5801
 
-This is just an example and illustration on how to use the RAK5801 for external analog sensors. There are two analog input (ADC) pins available on the RAK5801. You can use any of the ADC pins as long as your sensors operate at 3.3 V or 12 V with 4-20 mA operating current.
+This is just an example and illustration on how to use the RAK5801 for external analog sensors. There are two analog input (ADC) pins available on the RAK5801. You can use any of the ADC pins as long as your sensors operate at 3.3&nbsp;V or 12&nbsp;V with 4-20&nbsp;mA operating current.
 
-> **Image:** Connecting the RAK5801 to the SUP-P300 Hydraulic Pressure Sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801_hydraulic_press.png" 
+  figureCount="22"
+  caption="Connecting the RAK5801 to the SUP-P300 Hydraulic Pressure Sensor" 
+   width="70%"
+/>
 
 If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index), the WisBlock Core and example code should now be available on the Arduino IDE.
 
 1. Select the RAK11310 WisBlock Core.
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak11310-board.png" 
+  figureCount="23"
+  caption="Selecting RAK11310 as WisBlock Core" 
+   width="100%"
+/>
 
 2. The [Basic Sample Code for RAK5801](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11300/IO/RAK5801_4-20mA) in GitHub will work on RAK11310 WisBlock Core. You can also open the example codes depending on your WisBlock Core, as shown in **Figure 24**.
 
-> **Image:** Opening RAK5801 example for RAK11310 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak11310-examplecode.png" 
+  figureCount="24"
+  caption="Opening RAK5801 example for RAK11310 WisBlock Core" 
+   width="100%"
+/>
 
 ##### Code Explanation
 
@@ -338,15 +462,32 @@ If you already installed the [RAKwireless Arduino BSP](https://github.com/RAKWir
 
 3. After opening the example code, you can now select the right port and upload the code.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak11310-selectport.png" 
+  figureCount="25"
+  caption="Selecting the correct Serial Port" 
+   width="100%"
+/>
 
 4. When you successfully uploaded the example sketch, open the Serial Monitor of the Arduino IDE to see the sensor's reading logs, as shown in **Figure 26**.
 
-> **Image:** SUP-P300 Hydraulic Pressure sensor data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/rak5801-logs.png" 
+  figureCount="26"
+  caption="SUP-P300 Hydraulic Pressure sensor data logs" 
+   width="70%"
+/>
 
 #### LoRaWAN Hydraulic Pressure Monitoring with RAK5801
 
 For WisBlock Core RAK4630, check the example for [LoRaWAN Hydraulic Pressure Monitoring](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK4630/solutions/Hydraulic_Pressure_Monitoring) with RAK5801 Module.
 
-> **Image:** LoRaWAN Hydraulic Pressure Monitoring example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5801/quickstart/hydraulic_press_lora.png" 
+  figureCount="27"
+  caption="LoRaWAN Hydraulic Pressure Monitoring example code" 
+   width="100%"
+/>
 
+
+<RkBottomNav/>

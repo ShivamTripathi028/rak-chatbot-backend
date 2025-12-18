@@ -9,6 +9,11 @@ image: https://images.docs.rakwireless.com/wisgate/rak-hotspot-v2/rak-hotspot-v2
 sidebar_label: Quick Start Guide
 ---
 
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK Hotspot V2 Quick Start Guide
 
 ## Prerequisites
@@ -16,7 +21,7 @@ sidebar_label: Quick Start Guide
 ### Hardware
 
 1. [**RAK Hotspot V2**](https://store.rakwireless.com/products/rak-hotspot-miner?utm_source=RAKHotspotMiner&utm_medium=Document&utm_campaign=BuyFromStore)
-2. 32 GB microSD Card (included)
+2. 32&nbsp;GB microSD Card (included)
 3. USB Type-C Power Adapter (included)
 
 :::warning
@@ -25,7 +30,11 @@ The SIM card slot of the cellular versions is not hot-swappable. Ensure that the
 
 ### Package Inclusion
 
-> **Image:** RAK Hotspot V2 Package Inclusion
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot-v2/quickstart/package-contents.png"
+  width="75%"
+  caption="RAK Hotspot V2 Package Inclusion"
+/>
 
 ## Product Configuration
 
@@ -37,9 +46,18 @@ The application is available for both Android and iOS. You can manually search f
 * [**Android**](https://play.google.com/store/apps/details?id=com.helium.wallet)
 * [**iOS**](https://apps.apple.com/ph/app/helium-hotspot/id1450463605)
 
-> **Image:** QR Codes
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/qr.png"
+  width="50%"
+  caption="QR Codes"
+/>
 
-> **Image:** iOS and Android App
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/app.png"
+  width="50%"
+  caption="iOS and Android App"
+/>
+
 
 ### Power On the RAK Hotspot V2
 
@@ -61,5 +79,9 @@ To reconnect to the app in the future, simply press the button.
 
 When setting up your account, you will be prompted to enter a 12-word seed phrase. This phrase is essential for recovering or transferring your account to a new phone if needed.
 
-> **Image:** Account recovery or transfer keywords
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak-hotspot/quickstart/fill-up.png"
+  width="50%"
+  caption="Account recovery or transfer keywords"
+/>
 

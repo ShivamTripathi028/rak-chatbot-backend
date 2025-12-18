@@ -9,9 +9,14 @@ image: "https://images.docs.rakwireless.com/accessories/rak9720/rak9720.png"
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # A-Fix Bracket Kit Datasheet
 
 ## Overview
+
 
 ### Description
 
@@ -24,25 +29,52 @@ The new A-fix Bracket Kit from RAKwireless helps you to easily install and optim
 - Provides sturdy mounting for the antenna, that will endure rough weather
 - Easy to install
 
+
 ## Specifications
 
 ### Mechanical Characteristics
 
-> **Image:** Flat Plate Dimensions
 
-> **Image:** Rounded Plate Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9720/2.flat-plate.png"
+  width="80%"
+  caption="Flat Plate Dimensions"
+/>
 
-> **Image:** U-shaped Bracket Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9720/3.rounded-plate.png"
+  width="80%"
+  caption="Rounded Plate Dimensions"
+/>
 
-> **Image:** Dimensions of the whole construction
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9720/4.u-shaped-bracket.png"
+  width="90%"
+  caption="U-shaped Bracket Dimensions"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9720/5.dimensions.png"
+  width="75%"
+  caption="Dimensions of the whole construction"
+/>
 
 ### Typical Use
 
 #### Wall Mounting
 
-> **Image:** Wall Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9720/6.wall-mounting.png"
+  width="40%"
+  caption="Wall Mounting"
+/>
 
 #### Pole Mounting
 
-> **Image:** Pole Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rak9720/7.pole-mounting.png"
+  width="40%"
+  caption="Pole Mounting"
+/>
 
+<RkBottomNav/>

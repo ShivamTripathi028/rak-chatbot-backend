@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12013 Quick Start Guide
 
 ## Prerequisite
@@ -27,6 +30,7 @@ Before going through each and every step on using the RAK12013 WisBlock module, 
 - [Li-Ion/LiPo battery (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable?utm_source=BatteryConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 - [Solar charger (optional)](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable?utm_source=SolarPanelConnector&utm_medium=Document&utm_campaign=BuyFromStore)
 
+
 #### Software
 
 - Download and install the [ArduinoIDE](https://www.arduino.cc/en/Main/Software).
@@ -36,15 +40,23 @@ Before going through each and every step on using the RAK12013 WisBlock module, 
 
 ### Hardware Setup
 
-RAK12013 is a 3.2 GHz microwave radar module based on RCWL-9196. It uses the Doppler radar effect to detect moving objects/motion using microwaves. The RCWL-9196 will transmit and receive a 3.2 GHz radar signal and compare the difference between the two signals to determine whether the object is moving or not.
+RAK12013 is a 3.2&nbsp;GHz microwave radar module based on RCWL-9196. It uses the Doppler radar effect to detect moving objects/motion using microwaves. The RCWL-9196 will transmit and receive a 3.2&nbsp;GHz radar signal and compare the difference between the two signals to determine whether the object is moving or not.
 
 For more information about RAK12013, refer to the [Datasheet](datasheet.md).
 
-> **Image:** RAK12013 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak12013-assembly.png"
+  width="50%"
+  caption="RAK12013 connection to WisBlock Base"
+/>
 
 #### RCWL-9196 Antenna
 
-> **Image:** WisBlock Radar Sensor Antenna Coil
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak12013-antenna.png"
+  width="60%"
+  caption="WisBlock Radar Sensor Antenna Coil"
+/>
 
 The antenna coil of the RCWL-9196 is where part of the sensor gets the motion detected.
 
@@ -58,7 +70,11 @@ The antenna coil of the RCWL-9196 is where part of the sensor gets the motion de
 
 The RAK12013 module can be mounted on the IO slot of the WisBlock Base board, as shown in **Figure 3**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK12013 mounting connection to WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/mounting-mechanism.png"
+  width="60%"
+  caption="RAK12013 mounting connection to WisBlock Base module"
+/>
 
 ##### Disassembling
 
@@ -66,15 +82,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/removing_screw.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/detach_silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 6**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/detach_module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -84,9 +112,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -100,15 +128,27 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 **RAK4631 Board**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 **RAK11200 Board**
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 **RAK11310 Board**
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak11310-board.png"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 3. Next, copy the following sample code into your Arduino IDE:
 
@@ -199,11 +239,24 @@ If you experience any error in compiling the example sketch, check the updated c
 If you're using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak4631-selectport.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK12013 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak4631-upload.png"
+  width="100%"
+  caption="Uploading the RAK12013 example code"
+/>
 
 5. When you successfully uploaded the example sketch, open the serial monitor of the Arduino IDE to see the sensor's reading logs, as shown in **Figure 12**. You'll be able to see that the led from your WisBlock Base board, lights into blue whenever there is movement or motion, and lights to green whenever there is no movement or motion at all. Therefore, your RAK12013 is properly communicating to the WisBlock core.
 
-> **Image:** RAK12013 Radar Sensor readings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/quickstart/rak12013-serial.png"
+  width="80%"
+  caption="RAK12013 Radar Sensor readings"
+/>
 
+<RkBottomNav/>

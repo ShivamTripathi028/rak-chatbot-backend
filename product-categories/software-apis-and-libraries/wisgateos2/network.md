@@ -27,6 +27,9 @@ sidebar_label: Network
 date: 2022-08-01
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Network
 
 In the **Network** menu, you can configure both **WAN** (Wide Area Network) and **LAN** (Local Area Network) interfaces. The **WAN** section handles the settings for connecting to external networks (e.g., the internet), while the **LAN** section manages local network connections within your environment.
@@ -35,7 +38,11 @@ In the **Network** menu, you can configure both **WAN** (Wide Area Network) and 
 
 In the **WAN** menu, you can manage the priority of the WAN interfaces. If the highest-priority interface goes down, the gateway will automatically switch to the next available interface for Internet access. The status of each interface is indicated by a red/green light next to the interface name, showing whether the interface is available or not.
 
-> **Image:** WAN tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/network-wan.png"
+  width="100%"
+  caption="WAN tab"
+/>
 
 :::tip NOTE
 For gateways that do not support the **Ethernet** port (such as the **[RAK7267](https://docs.rakwireless.com/product-categories/wisgate/rak7267/datasheet)**), the **Ethernet** option will not be available in the interface list.
@@ -50,7 +57,11 @@ You can adjust the priority of each WAN interface to control the preferred netwo
 1. Click the **Change Priority** button.
 2. Use the arrows (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/c.png" width="6%"/>) next to each interface name to change its priority.
 
-> **Image:** Editing WAN interface priority
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/change-priority.png"
+  width="100%"
+  caption="Editing WAN interface priority"
+/>
 
 - The **upward arrow** increases the priority, making that network the preferred one.
 - The **downward arrow** decreases the priority, making it a secondary or backup network.
@@ -61,7 +72,11 @@ You can adjust the priority of each WAN interface to control the preferred netwo
 
 Displays information for the selected Ethernet interface. Expand the interface details by clicking on the interface name or the arrow to the left of it (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/d.png"/>).
 
-> **Image:** Ethernet
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/wan-ethernet.png"
+  width="100%"
+  caption="Ethernet"
+/>
 
   - **Protocol type**: Specifies the protocol type.
   - **IP Address**: The IP address assigned to the gateway.
@@ -73,8 +88,11 @@ Displays information for the selected Ethernet interface. Expand the interface d
   - **Settings**: Network interface and tracking preferences for ethernet mode.
     + **General**: Ensure that the Ethernet interface is configured correctly with static IP, DHCP, or PPPoE settings, giving the gateway a stable and predictable network connection.
 
-      
-> **Image:** Ethernet settings General tab
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/ethernet-general.png"
+        width="80%"
+        caption="Ethernet settings General tab"
+      />
 
       + **Enable WAN and disable LAN**: Enabling this option activates the WAN interface and disables LAN.
       + **Static address**: Configure a static address for the gateway.
@@ -89,8 +107,11 @@ Displays information for the selected Ethernet interface. Expand the interface d
 
     + **Tracking**: Provide the mechanism for the gateway to continuously monitor the network interface's stability and automatically failover to another available interface when necessary, ensuring continuous connectivity even in case of network issues.
 
-      
-> **Image:** Ethernet settings Tracking tab
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/ethernet-tracking.png"
+        width="90%"
+        caption="Ethernet settings Tracking tab"
+      />
 
       - **Type**: Select the method for link tracking.
         - **ICMP**: Sends ping packets to test connectivity at the IP level.
@@ -110,7 +131,11 @@ Displays information for the selected Ethernet interface. Expand the interface d
 
 Displays information about the selected Wi-Fi interface. Expand the interface details by clicking on the interface name or the arrow to the left of it (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/d.png"/>).
 
-> **Image:** Wi-Fi
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/wifi-info.png"
+  width="100%"
+  caption="Wi-Fi"
+/>
 
   - **Protocol Type**: Specifies the protocol type.
   - **IP Address**: The IP address assigned to the gateway.
@@ -124,8 +149,11 @@ Displays information about the selected Wi-Fi interface. Expand the interface de
   - **Settings**: Set the network interface and tracking preferences for Wi-Fi mode.
     + **General**: Ensure the Wi-Fi interface is set up properly with either static or dynamic (DHCP) addressing, SSID, encryption, and network settings. It helps the gateway connect securely and consistently to the Wi-Fi network.
 
-      
-> **Image:** Wi-Fi settings General tab
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/wifi-general.png"
+        width="80%"
+        caption="Wi-Fi settings General tab"
+      />
 
       - **Enabled/Disabled**: Enable or disable the Wi-Fi interface.
       - **Available (E)SSID networks**: Scan for available Wi-Fi networks and select one, or manually enter the details.
@@ -142,8 +170,11 @@ Displays information about the selected Wi-Fi interface. Expand the interface de
 
     + **Tracking**: Monitor the health of the Wi-Fi interface by performing periodic ping tests. If the interface becomes unstable (fails too many pings), it will failover to another interface. Once it becomes stable again, the gateway can switch back to the Wi-Fi network.
 
-      
-> **Image:** Wi-Fi settings Tracking tab
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/wifi-tracking.png"
+        width="90%"
+        caption="Wi-Fi settings Tracking tab"
+      />
 
       - **Type**: Select the method for link tracking.
         - **ICMP**: Sends ping packets to test connectivity at the IP level.
@@ -163,7 +194,11 @@ Displays information about the selected Wi-Fi interface. Expand the interface de
 
 Displays information for the selected cellular interface. Expand the interface details by clicking on the interface name or the arrow to the left of it (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/d.png"/>).
 
-> **Image:** Cellular
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/cellular-info.png"
+  width="100%"
+  caption="Cellular"
+/>
 
   - **RSRP**: Reference Signal Received Power. Indicates the strength of the received LTE reference signal.
   - **RSRQ**: Reference Signal Received Quality. Reflects signal quality by considering interference and signal strength.
@@ -181,8 +216,11 @@ Displays information for the selected cellular interface. Expand the interface d
   - **Settings**: Set the network interface and tracking preferences for cellular mode.
     - **General**: The purpose of the **General** settings is to configure the cellular connection (APN, username, password, PIN) to ensure the gateway can properly connect to the cellular network.
 
-      
-> **Image:** Cellular settings General tab
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/cellular-general.png"
+        width="80%"
+        caption="Cellular settings General tab"
+      />
 
         - **Enabled/Disabled**: Enable or disable the cellular interface.
         - **APN (optional)**: The Access Point Name for the connection.
@@ -192,8 +230,11 @@ Displays information for the selected cellular interface. Expand the interface d
 
     - **Tracking**: The **Tracking** settings ensure the gateway maintains stable connectivity by regularly testing the cellular network. If the network becomes unreliable (fails pings consecutively), the gateway will automatically switch to another available interface, ensuring continuous service.
 
-      
-> **Image:** Cellular settings Tracking tab
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/cellular-tracking.png"
+        width="90%"
+        caption="Cellular settings Tracking tab"
+      />
 
       - **Type**: Select the method for link tracking.
         - **ICMP**: Sends ping packets to test connectivity at the IP level.
@@ -209,24 +250,36 @@ Displays information for the selected cellular interface. Expand the interface d
       - **Down**: The number of consecutive ping failures required to confirm that the interface is down.
       - **Up**: The number of consecutive ping successes required to confirm that the interface is up.
 
+
 ## LAN
 
 In the **LAN** tab, you can view and configure the settings for your Local Area Network (LAN) interfaces. The status of each interface is indicated by a red/green light, showing whether the interface is enabled or disabled.
 
-> **Image:** LAN tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/lan-tab.png"
+  width="100%"
+  caption="LAN tab"
+/>
 
 ### DHCP Server
 
 The **DHCP Server** section allows you to configure the gateway's LAN IP settings. By default, the gateway has a preconfigured DHCP server that assigns IP addresses to connected devices. You can modify these settings as needed. Expand the interface details by clicking on the interface name or the arrow to the left of it (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/d.png"/>).
 
-> **Image:** DHCP Server
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/dhcp-server.png"
+  width="100%"
+  caption="DHCP Server"
+/>
 
 - **IP Address**: The default IP address of the gateway's DHCP server.
 - **Netmask**: The subnet mask for the DHCP server.
 - **Settings**: Set the network interface preferences for DHCP server.
 
-  
-> **Image:**  DHCP Settings
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/lan-dhcp-settings.png"
+    width="50%"
+    caption=" DHCP Settings"
+  />
 
   + **Address**: The IPv4 address of the LAN DHCP server.
   + **Netmask**: The subnet mask for the DHCP server.
@@ -235,25 +288,39 @@ The **DHCP Server** section allows you to configure the gateway's LAN IP setting
 
 The field only shows if the interface is active. Expand the interface details by clicking on the interface name or the arrow to the left of it (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/d.png"/>).
 
-> **Image:** Ethernet
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/lan-ethernet.png"
+  width="100%"
+  caption="Ethernet"
+/>
 
 - **Enable LAN and disable WAN**: Toggle this option to enable the LAN Ethernet interface and disable the WAN Ethernet interface.
 
-    
-> **Image:** Ethernet settings
+    <RkImage
+      src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/lan-ethernet-settings.png"
+      width="50%"
+      caption="Ethernet settings"
+    />
 
 ### Wi-Fi
 
 Manage the settings for the Wi-Fi LAN interface in this section. The Wi-Fi interface allows the gateway to create a wireless access point (AP) for local devices to connect. Expand the interface details by clicking on the interface name or the arrow to the left of it (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/d.png"/>).
 
-> **Image:** Wi-Fi
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/wifi.png"
+  width="100%"
+  caption="Wi-Fi"
+/>
 
 - **(E)SSID**: The name of the Access Point (AP) provided by the gateway.
 - **Encryption**: The encryption method used to secure the Wi-Fi connection.
 - **Settings**: Set the network interface and tracking preferences for Wi-Fi mode.
 
-  
-> **Image:** Wi-Fi settings
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/network/lan-wifi-settings.png"
+    width="60%"
+    caption="Wi-Fi settings"
+  />
 
   - **Enabled/Disabled**: Enable or disable the Wi-Fi LAN interface.
   - **Channel**: Set the Wi-Fi channel. The default is **Auto**, which allows the gateway to automatically choose the optimal channel.
@@ -265,3 +332,4 @@ Manage the settings for the Wi-Fi LAN interface in this section. The Wi-Fi inter
     - **WPA-PSK/WPA2-PSK Mixed Mode**
   - **Hidden**: Option to hide the SSID, making the AP invisible to devices scanning for networks.
 
+<RkBottomNav/>

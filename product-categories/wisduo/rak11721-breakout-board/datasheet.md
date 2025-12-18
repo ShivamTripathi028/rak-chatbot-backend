@@ -11,15 +11,18 @@ slug: /product-categories/wisduo/rak11721-breakout-board/datasheet/
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK11721 Breakout Board Datasheet
 
 ## Overview
 
 ### Description
 
-The **RAK11721 Breakout Board** is specifically designed to allow easy access to the pins on the board to simplify development and testing. The breakout board footprint allows the RAK11720 stamp module pins to be accessible via the 2.54 mm headers.
+The **RAK11721 Breakout Board** is specifically designed to allow easy access to the pins on the board to simplify development and testing. The breakout board footprint allows the RAK11720 stamp module pins to be accessible via the 2.54&nbsp;mm headers.
 
-The board itself has the RAK11720 at its core, integrating an **Ambiq Apollo3 Blue AMA3B1KK-KBR-B0 SoC MCU** chip and **Semtech SX1262** LoRa transceiver. It has an ultra-low power consumption of 2.37 uA in sleep mode.
+The board itself has the RAK11720 at its core, integrating an **Ambiq Apollo3 Blue AMA3B1KK-KBR-B0 SoC MCU** chip and **Semtech SX1262** LoRa transceiver. It has an ultra-low power consumption of 2.37&nbsp;uA in sleep mode.
 
 This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It also supports LoRa Point-to-Point (P2P) communication mode, which helps you in implementing your own customized LoRa network quickly.
 
@@ -29,9 +32,9 @@ This module complies with Class A, B, and C of LoRaWAN 1.0.3 specifications. It 
 - Custom firmware using Arduino via RUI3 API
 - I/O ports: UART/I2C/GPIO/SPI
 - Serial Wire Debug (SWD) interface
-- Module size: 25.4 mm x 32.3 mm
-- Supply Voltage: 1.8 V ~ 3.6 V
-- Temperature Range: -40° C ~ 85° C
+- Module size: 25.4&nbsp;mm x 32.3&nbsp;mm
+- Supply Voltage: 1.8&nbsp;V ~ 3.6&nbsp;V
+- Temperature Range: -40°&nbsp;C ~ 85°&nbsp;C
 
 ## Specifications
 
@@ -115,26 +118,63 @@ The tables below show the pin definition of the RAK11721 Breakout Board:
 
 The RAK11721 breakout board supports the LoRaWAN bands shown in the table below. When buying a RAK11721 board, pay attention to the correct module, RAK11721 (L) or RAK11721 (H) for your region, where L is for low-frequency regions. Take note that no suffix means high-frequency.
 
-| Module | Region | Frequency |
-| --- | --- | --- |
-| RAK11721 (L) | Europe | EU433 |
-| RAK11721 (L) | China | CN470 |
-| RAK11721 (H) | Europe | EU868 |
-| RAK11721 (H) | North America | US915 |
-| RAK11721 (H) | Australia | AU915 |
-| RAK11721 (H) | Korea | KR920 |
-| RAK11721 (H) | Asia | AS923-1/2/3/4 |
-| RAK11721 (H) | India | IN865 |
-| RAK11721 (H) | Russia | RU864 |
+<table>
+  <thead style={{ textAlign: 'center' }}><tr>
+    <th>Module</th>
+    <th>Region</th>
+    <th>Frequency</th>
+  </tr></thead>
+<tbody  style={{ textAlign: 'center' }}>
+  <tr>
+    <td rowSpan = "2">RAK11721 (L)</td>
+    <td>Europe</td>
+    <td>EU433</td>
+  </tr>
+  <tr>
+    <td>China</td>
+    <td>CN470</td>
+  </tr>
+    <tr>
+    <td rowSpan = "7">RAK11721 (H)</td>
+    <td>Europe</td>
+    <td>EU868</td>
+  </tr>
+  <tr>
+    <td>North America</td>
+    <td>US915</td>
+  </tr>
+  <tr>
+    <td>Australia</td>
+    <td>AU915</td>
+  </tr>
+  <tr>
+    <td>Korea</td>
+    <td>KR920</td>
+  </tr>
+  <tr>
+    <td>Asia</td>
+    <td>AS923-1/2/3/4</td>
+  </tr>
+  <tr>
+    <td>India</td>
+    <td>IN865</td>
+  </tr>
+  <tr>
+    <td>Russia</td>
+    <td>RU864</td>
+  </tr>
+</tbody>
+</table>
 
 #### Electrical Characteristics
 
 ##### Power Consumption
 
+
 | Feature           | Condition    | Typical                             | Unit |
 | :---------------: | :----------: | :---------------------------------: | :--: |
-| Operating Current | LoRa TX Mode | 87 @ 20 dBm, 868 MHz | mA   |
-|                   | BLE TX Mode  | 12.7 @ 4.0 dBm            | mA   |
+| Operating Current | LoRa TX Mode | 87 @&nbsp;20&nbsp;dBm, 868&nbsp;MHz | mA   |
+|                   | BLE TX Mode  | 12.7 @&nbsp;4.0&nbsp;dBm            | mA   |
 | Sleep Current     | With Ch340   | 20                                  | uA   |
 
 ##### Operating Voltage
@@ -145,11 +185,21 @@ The RAK11721 breakout board supports the LoRaWAN bands shown in the table below.
 
 ##### Schematic Diagram
 
-> **Image:** RAK11721 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11721-breakout-board/datasheet/schematic.png"
+  width="100%"
+  caption="RAK11721 Schematic Diagram"
+  zoomMode={true}
+/>
 
 #### Mechanical Characteristics
 
-> **Image:** RAK11721 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11721-breakout-board/datasheet/dimensions.png"
+  width="40%"
+  caption="RAK11721 Mechanical Dimensions"
+  zoomMode={true}
+/>
 
 ### Firmware
 
@@ -160,6 +210,8 @@ Download the latest firmware of the RAK11721 Breakout Board provided below. RAK1
 | RAK11721 (.bin via UART) | (default baudrate = 115200) | <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK11720_latest_Nonsecure_OTA_Package_UART.bin" target="_blank">Download</a> |
 | RAK11721 (.bin via BLE)  |                             | <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK11720_latest_Nonsecure_OTA_Package_BLE.bin" target="_blank">Download</a>  |
 | RAK11721 (.hex)          |                             | <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK11720_latest_final.hex" target="_blank">Download</a>                      |
+
+<RkBottomNav/>
 
 ### Certification
 

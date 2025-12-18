@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK18003 WisBlock Audio Interposer Module Datasheet
 
 ## Overview
@@ -28,19 +32,27 @@ The RAK18003 is an interposer module, part of the WisBlock Audio Series. The RAK
   - BTB connector for WisBlock Audio stack
 
 * **Module Size**
-  - 25 x 35 mm
+  - 25 x 35&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK18003 WisBlock Audio Interposer Module top and bottom view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003_back_front.png"
+  width="40%"
+  caption="RAK18003 WisBlock Audio Interposer Module top and bottom view"
+/>
 
 #### Mounting
 
 The RAK18003 WisBlock Audio Interposer Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 2** shows the mounting mechanism of the RAK18003 on a WisBlock Base module. Other WisBlock Audio modules can be interfaced via BTB connector.
 
-> **Image:** RAK18003 WisBlock Audio Interposer Module mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003_mounting.png"
+  width="50%"
+  caption="RAK18003 WisBlock Audio Interposer Module mounting"
+/>
 
 ### Hardware
 
@@ -61,7 +73,11 @@ The RAK18003 WisBlock Audio Interposer Module comprises a standard WisBlock conn
 
 The WisBlock connector allows the RAK18003 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-> **Image:** RAK18003 WisBlock Audio Interposer Module WisBlock Connector Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003-pinouts.png"
+  width="55%"
+  caption="RAK18003 WisBlock Audio Interposer Module WisBlock Connector Diagram"
+/>
 
 :::tip NOTE
 - **VBAT**,**VBUS**,**3V3_S**, and **GND** are the power supply from the WisBlock Base.
@@ -77,7 +93,11 @@ The WisBlock connector allows the RAK18003 module to be mounted to a WisBlock Ba
 
 The BTB connector is designed to support WisBlock Audio Modules. It allows the RAK18003 module to be stacked with other WisBlock Audio modules, such as RAK18080 (DSP board), RAK18060 (AMP board), and RAK18040 (Analog MIC driver).
 
-> **Image:** RAK18003 WisBlock Audio Interposer Module BTB Connector diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003_btb_pinout.png"
+  width="45%"
+  caption="RAK18003 WisBlock Audio Interposer Module BTB Connector diagram"
+/>
 
 :::tip NOTE
 - **3V3**, **VBAT**, **VBUS**, and **GND** are power supply from the WisBlock Base board.
@@ -97,7 +117,11 @@ The BTB connector is designed to support WisBlock Audio Modules. It allows the R
 
 The FPC connector allows the RAK18003 module to be connected to a PDM MIC board, such as RAK18030.
 
-> **Image:** RAK18003 WisBlock Audio Interposer Module FPC connector diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003_fpc_pinout.png"
+  width="40%"
+  caption="RAK18003 WisBlock Audio Interposer Module FPC connector diagram"
+/>
 
 :::tip NOTE
 - **3V3** and **GND** are the power supply for the MIC boards.
@@ -112,13 +136,26 @@ The FPC connector allows the RAK18003 module to be connected to a PDM MIC board,
 
 **Figure 6** shows the dimensions and the mechanical drawing of the RAK18003 module.
 
-> **Image:** RAK18003 Audio Interposer Module mechanical drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003_mechanic_drawing.png"
+  width="70%"
+  caption="RAK18003 Audio Interposer Module mechanical drawing"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/mxxs1003k6m.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK18003 Audio Interposer Module schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18003/datasheet/rak18003-schematic-1.png"
+  width="100%"
+  caption="RAK18003 Audio Interposer Module schematic diagram"
+/>
 
+<RkBottomNav/>

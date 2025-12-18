@@ -11,11 +11,14 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7432/RAK7434 Quick Start Guide
 
 ## Prerequisite
 
-Before going through each step in the installation guide of the WisNode Bridge Analog RAK7432 (4-20 mA) or RAK7434 (0-5 V), make sure to prepare the necessary items listed below:
+Before going through each step in the installation guide of the WisNode Bridge Analog RAK7432 (4-20&nbsp;mA) or RAK7434 (0-5&nbsp;V), make sure to prepare the necessary items listed below:
 
 ### Hardware Tools
 
@@ -32,9 +35,13 @@ Before going through each step in the installation guide of the WisNode Bridge A
 
 ### Typical Network Application
 
-RAK7432/RAK7434 converts data from the 4-20 mA/0-5 V analog protocol into LPWAN wireless messages and delivers it to a cloud server through an LPWAN gateway. Using the RAK7432/RAK7434, you can convert data from a conventional 4-20 mA/0-5 V analog sensor to a wireless network.
+RAK7432/RAK7434 converts data from the 4-20&nbsp;mA/0-5&nbsp;V analog protocol into LPWAN wireless messages and delivers it to a cloud server through an LPWAN gateway. Using the RAK7432/RAK7434, you can convert data from a conventional 4-20&nbsp;mA/0-5&nbsp;V analog sensor to a wireless network.
 
-> **Image:** Sample communication with 4-20mA/0-5V analog-enabled devices
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/1.sample-communication.png"
+  width="100%"
+  caption="Sample communication with 4-20mA/0-5V analog-enabled devices"
+/>
 
 ### Connect the RAK7432/RAK7434 to the Sensor
 
@@ -44,19 +51,27 @@ The RAK7432/RAK7434 device can be powered either by:
 - DC (VIN/GND) terminals
 - Micro USB
 
-The DC screw terminals are supporting 12 V to 24 V. The Micro USB port can be used to power the RAK7432/RAK7434, up to 5 V / 500 mA DC. At the same time, the USB port is used as the configuration port for the device. You can import your configuration settings using the Micro USB cable to connect the RAK7432/RAK7434 to a computer’s USB port.
+The DC screw terminals are supporting 12&nbsp;V to 24&nbsp;V. The Micro USB port can be used to power the RAK7432/RAK7434, up to 5&nbsp;V / 500&nbsp;mA DC. At the same time, the USB port is used as the configuration port for the device. You can import your configuration settings using the Micro USB cable to connect the RAK7432/RAK7434 to a computer’s USB port.
 
 :::tip NOTE
-The Micro USB port can be used only for powering the device. It cannot provide power to VOUT and power other devices in the other connected 4-20 mA/0-5 V.
+The Micro USB port can be used only for powering the device. It cannot provide power to VOUT and power other devices in the other connected 4-20&nbsp;mA/0-5&nbsp;V.
 :::
 
-> **Image:** RAK7432/RAK7434 bridge with connected sensor and power supply
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/2.rak7432-rak7434-bridge-with-connected-sensor-and-power-supply.png"
+width="60%"
+caption="RAK7432/RAK7434 bridge with connected sensor and power supply"
+/>
 
 #### Data Interface Configuration
 
 The RAK7432/RAK7434 analog interface allows you to connect sensors with the same output. The VOUT on the data interface can supply external power to the analog sensor (only when the device is powered from the DC input). The VOUT output voltage is the same as the DC input voltage VIN.
 
-> **Image:** RAK7432/RAK7434 interface pin definition
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/3.rak7432-rak7434-interface-pin-definition.png"
+width="50%"
+caption="RAK7432/RAK7434 interface pin definition"
+/>
 
 ### Gateway Connection Settings
 
@@ -71,11 +86,19 @@ In this section, the **RAK7432/RAK7434 WisNode Bridge Analog** will be connected
 
 1. Start by accessing the gateway. You can see how to do it on the [WisGateOS V2 user manual](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#overview).
 
-> **Image:** WisGateOS V2 login page
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/4.wisgateos-v2-login-page.png"
+width="100%"
+caption="WisGateOS V2 login page"
+/>
 
 2. Once logged in, head to the **LoRa** menu.
 
-> **Image:** LoRa page
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/5.lora-page.png"
+width="100%"
+caption="LoRa page"
+/>
 
 3. By default, the gateway works as a Built-In Network server. If that is not the case, check the [Built-in Network Server Mode Settings](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#lora) on the WisGateOS V2 User manual to switch the mode to Built-in network server.
 
@@ -83,7 +106,11 @@ In this section, the **RAK7432/RAK7434 WisNode Bridge Analog** will be connected
 
 1. Once the gateway is in Built-in network server mode, head to the **Applications** tab.
 
-> **Image:** Application page
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/6.application-page.png"
+width="100%"
+caption="Application page"
+/>
 
 2. Click the **Add application** button or **add one now** link to add a new application. On the new page fill in the following information.
 
@@ -92,21 +119,37 @@ In this section, the **RAK7432/RAK7434 WisNode Bridge Analog** will be connected
 - **Application Type** - from the drop-down menu select the type of application.
 - **Unified Application key** - all devices will use the same application key. Selecting this option pops up an **Application Key** field. You can type your application key there or use the **Autogenerate** button to generate one.
 
-> **Image:** Unified application key
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/7.unified-application-key.png"
+width="45%"
+caption="Unified application key"
+/>
 
 The **Auto Add Device** switch activates an **Application EUI** field. The device will be automatically added to the application after the application EUI and key verification.
 
-> **Image:** Auto add device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/8.auto-add-device.png"
+width="45%"
+caption="Auto add device"
+/>
 
 - **Separate Application keys** – each device will have its own application key. The key is added when registering the device.
 - **Payload type** - from the drop-down select **CayenneLPP** payload type and turn on the **Only forward data object** feature.
 
-> **Image:** Adding application
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/9.adding-application.png"
+width="100%"
+caption="Adding application"
+/>
 
 3. Once this is set, click **Save Application** to add the application.
 4. After the application is added, head to the **End devices** tab. The devices should automatically register upon join request if you are using the Auto Add Device feature.
 
-> **Image:** Successfully added end device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/10.successfully-added-end-device.png"
+width="100%"
+caption="Successfully added end device"
+/>
 
 If that’s not the case, click the **Add end device** button. On the **End device information** page fill in the following information:
 
@@ -116,7 +159,11 @@ If that’s not the case, click the **Add end device** button. On the **End devi
     - **Application Session Key**
     - **Network Session Key**
 
-> **Image:** Adding ABP device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/11.adding-abp-device.png"
+width="40%"
+caption="Adding ABP device"
+/>
 
 - **End device (group) name** – the name of the device.
 - **End device description (optional)** – optionally, you can add a description for the device.
@@ -124,18 +171,30 @@ If that’s not the case, click the **Add end device** button. On the **End devi
 - **Frame Counter width** – the width of the frame counter. Leave it as default.
 - **LoRaWAN MAC Version** – the LoRaWAN MAC version. V1.0.2 pops up a **LoRaWAN Regional Parameters reversion** field where you need to select the reversion of the device.
 
-> **Image:** Successfully created application
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/12.successfully-created-application.png"
+width="100%"
+caption="Successfully created application"
+/>
 
 ##### Adding the Device
 
 1. Once everything is set, click **Add end devices** to go to the page and add the device.
 
-> **Image:** Adding end device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/13.adding-end-device.png"
+width="100%"
+caption="Adding end device"
+/>
 
 2. In the **Adding end devices** page, type the device EUI at the **End Device EUI (main)** and click **Add to “End Devices list”**. If the EUI is correct, the device will show in the **End devices list**. If the EUI is not correct, the devices will show in the **End devices with an error**.
 3. Once the device is added to the **End devices list** click **Add end devices**. Confirm you are adding the device.
 
-> **Image:** Confirmation message for adding a device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/14.confirmation-message-for-adding-a-device.png"
+width="50%"
+caption="Confirmation message for adding a device"
+/>
 
 #### RAK7432/RAK7434 Configuration
 
@@ -145,7 +204,11 @@ If that’s not the case, click the **Add end device** button. On the **End devi
 2.  Open the RAK Serial Tool and select the correct COM port. The default baud rate is **115200**.
 3.  After selecting, press **Open**.
 
-> **Image:** RAK Serial tool
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/15.rak-serial-tool.png"
+width="35%"
+caption="RAK Serial tool"
+/>
 
 4. Run the following commands:
 
@@ -183,7 +246,11 @@ AT+APPEUI
 AT+APPKEY
 ```
 
-> **Image:** Configuring the RAK7432/RAK7434
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/16.configuring-the-rak7432-rak7434.png"
+width="35%"
+caption="Configuring the RAK7432/RAK7434"
+/>
 
 ##### Set the Frequency Region
 
@@ -236,7 +303,11 @@ AT+RESTART
 
 4. If everything is configured right, after the execution of the restart command this output pops up in the RAK Serial Tool:
 
-> **Image:** RAK7432/RAK7434 successful join
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/17.rak7432-rak7434-successful-join.png"
+width="35%"
+caption="RAK7432/RAK7434 successful join"
+/>
 
 ### Connecting to The Things Network V3 (TTNv3)
 
@@ -246,9 +317,17 @@ This section will show how to connect RAK7432/RAK7434 WisNode Bridge Analog to T
 
 First, log in to TTNv3. To do so, head to the [TTNv3 site](https://eu1.cloud.thethings.network/console). If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-> **Image:** The Things Network home page
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/18.the-things-network-home-page.png"
+width="100%"
+caption="The Things Network home page"
+/>
 
-> **Image:** The console page after successful login
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/19.the-console-page-after-successful-login.png"
+width="100%"
+caption="The console page after successful login"
+/>
 
 :::tip NOTE
 To be able to connect RAK7432/RAK7434 WisNode Bridge Analog to TTNv3 you should already have connected a gateway in range to TTNv2 or TTNv3, or you have to be sure that you are in the range of a public gateway.
@@ -262,7 +341,11 @@ This tutorial is for the EU868 Frequency band.
 
 1. To create an application, choose **Create an application** (for new users that do not already have created applications) or **Go to applications** > **+ Add application** (for users that have created applications before).
 
-> **Image:** Create an application
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/20.create-an-application.png"
+width="100%"
+caption="Create an application"
+/>
 
 2. Fill in the needed information:
 
@@ -273,7 +356,11 @@ This tutorial is for the EU868 Frequency band.
 
 3. After you fill in the information, click **Create application**. If everything is filled in correctly, you will see the same page, as shown in **Figure 21**.
 
-> **Image:** Application overview
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/21.application-overview.png"
+width="100%"
+caption="Application overview"
+/>
 
 #### Registering and Configuring the Device in OTAA Mode
 
@@ -281,13 +368,17 @@ This tutorial is for the EU868 Frequency band.
 
 1. From the Application Overview page, click **+ Register end device**.
 
-> **Image:** Adding a device in OTAA mode
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/22.adding-a-device-in-otaa-mode.png"
+width="100%"
+caption="Adding a device in OTAA mode"
+/>
 
 2. Select **Enter device specifics manually** and fill in the **Frequency plan**.
 3.  Select LoRaWAN version 1.0.3 and fill in the JoinEUI (AppEUI).
 
 :::tip NOTE
-For this example, the Europe 863-870 MHz (SF9 for RX2 - recommended) plan is chosen.
+For this example, the Europe 863-870&nbsp;MHz (SF9 for RX2 - recommended) plan is chosen.
 :::
 
 4. For the **JoinEUI**, the AppEUI uniquely identifies the owner of the end device. It is provided by the device manufacturer. To get the AppEUI, connect your device via a USB cable to your computer. Open RAK Serial Port Tool, choose the correct COM port and BaudRate, and run the following command:
@@ -296,15 +387,27 @@ For this example, the Europe 863-870 MHz (SF9 for RX2 - recommended) plan is ch
 AT+APPEUI
 ```
 
-> **Image:** AppEUI of the device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/23.appeui-of-the-device.png"
+width="75%"
+caption="AppEUI of the device"
+/>
 
 5. Press the **Confirm** button next to the **JoinEUI** field.
 
-> **Image:** Registering the device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/24.registering-the-device.png"
+width="100%"
+caption="Registering the device"
+/>
 
 6. The **Provisioning information** section will expand. Scroll down to enter the required data for the device.
 
-> **Image:** Registration Data
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/25.registration-data.png"
+width="60%"
+caption="Registration Data"
+/>
 
 Here you must enter the following information:
 
@@ -318,13 +421,21 @@ If you are going to register more than one device of this type, you can choose t
 
 7. After filling in the registration information, click **Register end device**.
 
-> **Image:** Registered device
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/26.registered-device.png"
+width="100%"
+caption="Registered device"
+/>
 
 ##### Configuring the Device in OTAA Mode
 
 1. For configuring the node you will need the following three parameters: **Device EUI**, **Application EUI**, and **Application Key**. You can see them all on the **Device Overview** page, but since the two EUIs come with the device, you only need the Application Key from there.
 
-> **Image:** OTAA device parameters
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/27.otaa-device-parameters.png"
+width="100%"
+caption="OTAA device parameters"
+/>
 
 2. Using the RAK Serial Port Tool, set the join mode, device class, and your LoRaWAN region to your correct frequency band, with the following set of AT commands:
 
@@ -346,7 +457,11 @@ AT+CLASS=A
 AT+REGION=EU868
 ```
 
-> **Image:** Setting up the RAK7432/RAK7434 operating modes
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/28.setting-up-the-rak7432-rak7434-operating-modes.png"
+width="75%"
+caption="Setting up the RAK7432/RAK7434 operating modes"
+/>
 
 :::tip NOTE
 The following tutorial is based on using the EU868 frequency band.
@@ -358,7 +473,11 @@ The following tutorial is based on using the EU868 frequency band.
 AT+APPKEY=XXXX
 ```
 
-> **Image:** Setting up the RAK7432/RAK7434 OTAA parameters
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/29.setting-up-the-rak7432-rak7434-otaa-parameters.png"
+width="75%"
+caption="Setting up the RAK7432/RAK7434 OTAA parameters"
+/>
 
 4. To connect to the LoRaWAN Network after configuration, the device must be restarted. Restart it with the command:
 
@@ -366,11 +485,19 @@ AT+APPKEY=XXXX
 AT+RESTART
 ```
 
-> **Image:** Joining the network configuration
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/30.joining-the-network-configuration.png"
+width="75%"
+caption="Joining the network configuration"
+/>
 
 5. You can see in the **Live data** feed that the RAK7432/RAK7434 WisNode Bridge Analog is successfully joined.
 
-> **Image:** Receiving data in the Live data feed
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/31.receiving-data-in-the-live-data-feed.png"
+width="100%"
+caption="Receiving data in the Live data feed"
+/>
 
 ##### **Configuring the Analog Interface**
 
@@ -382,7 +509,11 @@ Modifying the following values is not necessary but depends on the use case you 
 AT+AINPERIOD=100
 ```
 
-> **Image:** AINPERIOD command execution
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/32.ainperiod-command-execution.png"
+width="35%"
+caption="AINPERIOD command execution"
+/>
 
 2. The next step is to change the value range (the minimum and maximum value) of the analog interface data.
 
@@ -390,7 +521,11 @@ AT+AINPERIOD=100
 AT+AINVALUERANGE=1:-150:150
 ```
 
-> **Image:** AINVALUERANGE command execution
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/33.ainvaluerange-command-execution.png"
+width="35%"
+caption="AINVALUERANGE command execution"
+/>
 
 3. AINLPMODE (Low power mode) will also need to be changed. Enabling this value will allow the analog data input interface to be turned off while the device is in AINPERIOD (while no acquisition is initiated).
 
@@ -398,5 +533,10 @@ AT+AINVALUERANGE=1:-150:150
 AT+AINLPMODE=1
 ```
 
-> **Image:** AINLPMODE command execution
+<RkImage
+src="https://images.docs.rakwireless.com/wisnode/rak7432-rak7434/quickstart/34.ainlpmode-command-execution.png"
+width="35%"
+caption="AINLPMODE command execution"
+/>
 
+<RkBottomNav/>

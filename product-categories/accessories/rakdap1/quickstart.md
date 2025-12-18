@@ -26,6 +26,9 @@ date: 2020-09-22
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAKDAP1 Flash and Debug Tool Quick Start Guide
 
 ## Installation
@@ -44,19 +47,31 @@ To use it, the open-source pyOCD Python SW is required. If you have already inst
 
 Before anything else, it requires you to install Python 3 on your computer. Download the latest Python 3 from the official Python website. Go to their [Python Downloads](https://www.python.org/downloads/) and choose an installer depending on your system.
 
+
 #### Windows
 
 1. Choose the python installer for Windows.
 2. Once downloaded, start the installation process.
 3. Make sure to check the **`Add python.exe to PATH`**. Otherwise, you will have to add it manually later.
 
-> **Image:** Installing Python for Windows
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_2.png"
+  width="60%"
+  caption="Installing Python for Windows"
+/>
 
 4. Wait until the installation is finished.
 
-> **Image:** Disable the Path Limit
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_3.png"
+  width="60%"
+  caption="Disable the Path Limit"
+/>
 
 5. After the installation has finished, open a command prompt window and check the versions of **Python** and **pip3** using the following command listed below.
+
 
 ```
 python --version
@@ -66,7 +81,11 @@ python --version
 pip --version
 ```
 
-> **Image:** Checking the Python and pip3 versions
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_4.png"
+  width="75%"
+  caption="Checking the Python and pip3 versions"
+/>
 
 :::tip NOTE
 pip3 is required to install additional Python packages.
@@ -120,7 +139,11 @@ Next step is to install pyOCD which is the SW tool required to flash bootloaders
 pip3 install pyocd
 ```
 
-> **Image:** Installing pyOCD
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_5.png"
+  width="75%"
+  caption="Installing pyOCD"
+/>
 
 2. After the installation is finished, check the version.
 
@@ -128,7 +151,11 @@ pip3 install pyocd
 pyocd --version
 ```
 
-> **Image:** pyOCD version
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_6.png"
+  width="75%"
+  caption="pyOCD version"
+/>
 
 ### Support Packages Installation
 
@@ -136,27 +163,93 @@ To flash and debug MCU, DAPLink needs support packages. These support packages a
 
 But before installing, check the list first to know the required package for your RAKwireless product.
 
-| MODEL | SUPPORTED PACKAGE |
-| --- | --- |
-| RAK3172 Module | stm32wle5 |
-| RAK811 Module | stm32l151cb |
-| RAK8710 | stm32l151cb |
-| RAK4200 Module | stm32l071kb |
-| Products using RAK4200 | stm32l071kb |
-| RAK4270 Module | stm32l071kb |
-| Products using RAK4270 | stm32l071kb |
-| RAK7201/7202/7203 | stm32l071kb |
-| RAK4600 Module | nrf52 |
-| RAK4600 Evaluation Board | nrf52 |
-| RAK8212 Board | nrf52 |
-| RAK813 Module | nrf52 |
-| RAK5010 | nrf52840 |
-| RAK4630 | nrf52840 |
-| RAK4631 | nrf52840 |
-| RAK3401 | nrf52840 |
-| RAK4260 Evaluation Board | atsaml21j18a |
-| Products using RAK4260 | atsaml21j18a |
-| RAK11720 and its variants | AMA3B1KK-KBR |
+
+<table>
+<thead>
+  <tr>
+    <th>MODEL</th>
+    <th>SUPPORTED PACKAGE</th>
+  </tr>
+</thead>
+<tbody>
+    <tr>
+      <td>RAK3172 Module</td>
+      <td>stm32wle5</td>
+    </tr>
+    <tr>
+      <td>RAK811 Module</td>
+      <td>stm32l151cb</td>
+    </tr>
+    <tr>
+      <td>RAK8710</td>
+      <td>stm32l151cb</td>
+    </tr>
+    <tr>
+      <td>RAK4200 Module</td>
+      <td>stm32l071kb</td>
+    </tr>
+    <tr>
+      <td>Products using RAK4200</td>
+      <td>stm32l071kb</td>
+    </tr>
+    <tr>
+      <td>RAK4270 Module</td>
+      <td>stm32l071kb</td>
+    </tr>
+    <tr>
+      <td>Products using RAK4270</td>
+      <td>stm32l071kb</td>
+    </tr>
+    <tr>
+      <td>RAK7201/7202/7203</td>
+      <td>stm32l071kb</td>
+    </tr>
+    <tr>
+      <td>RAK4600 Module</td>
+      <td>nrf52</td>
+    </tr>
+    <tr>
+      <td>RAK4600 Evaluation Board</td>
+      <td>nrf52</td>
+    </tr>
+      <tr>
+      <td>RAK8212 Board</td>
+      <td>nrf52</td>
+    </tr>
+    <tr>
+      <td>RAK813 Module</td>
+      <td>nrf52</td>
+    </tr>
+    <tr>
+      <td>RAK5010</td>
+      <td>nrf52840</td>
+    </tr>
+    <tr>
+      <td>RAK4630</td>
+      <td>nrf52840</td>
+    </tr>
+    <tr>
+      <td>RAK4631</td>
+      <td>nrf52840</td>
+    </tr>
+    <tr>
+      <td>RAK3401</td>
+      <td>nrf52840</td>
+    </tr>
+    <tr>
+      <td>RAK4260 Evaluation Board</td>
+      <td>atsaml21j18a</td>
+    </tr>
+    <tr>
+      <td>Products using RAK4260</td>
+      <td>atsaml21j18a</td>
+    </tr>
+    <tr>
+      <td>RAK11720 and its variants</td>
+      <td>AMA3B1KK-KBR</td>
+    </tr>
+</tbody>
+</table>
 
 To install the support package, use the following command:
 
@@ -168,8 +261,11 @@ For example, if you have RAK4630 module, enter the following command:
 ```
 pyocd pack --i nrf52840
 ```
-
-> **Image:** Installing NRF52840 into the RAK4630 module
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_7.png"
+  width="75%"
+  caption="Installing NRF52840 into the RAK4630 module"
+/>
 
 To check installed packages, you can use the command:
 
@@ -203,40 +299,78 @@ Here is an overview on how to connect the SWD interface. If you cannot find your
 
 ### RAK3172 Module
 
-> **Image:** RAK3172 Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rak3172-swd.png"
+  width="40%"
+  caption="RAK3172 Module Pinout"
+/>
 
 ### RAK811 Module
 
-> **Image:** RAK811 Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rak811.svg"
+  width="40%"
+  caption="RAK811 Module Pinout"
+/>
 
 ### RAK4200 Module
 
-> **Image:** RAK4200 Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/7.rak4200-swd.png"
+  width="40%"
+  caption="RAK4200 Module Pinout"
+/>
 
 ### RAK4600 Module
 
-> **Image:** RAK4600 Module Pinout
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/8.rak4600-swd.png"
+  width="60%"
+  caption="RAK4600 Module Pinout"
+/>
 
 ### RAK4270 Module
 
-> **Image:** RAK4270 Module Pinout
+
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rak4270.svg"
+  width="40%"
+  caption="RAK4270 Module Pinout"
+/>
 
 ### RAK4260 Module
 
-> **Image:** RAK4260 Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rak4260.png"
+  width="60%"
+  caption="RAK4260 Module Pinout"
+/>
 
 ### RAK4260 Evaluation Board
 
-> **Image:** RAK4260 Evaluation Board Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rak4260.svg"
+  width="40%"
+  caption="RAK4260 Evaluation Board Pinout"
+/>
 
 ### RAK4600 Evaluation Board
 
-> **Image:** RAK4600 Evaluation Board Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rak4600.svg"
+  width="40%"
+  caption="RAK4600 Evaluation Board Pinout"
+/>
 
 ### RAK4630 Module
 - For RAK4630 module, it is recommended to include an external DC supply or battery to prevent errors during bootloader flashing.
 
-> **Image:** RAK4630 in WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_1.png"
+  width="50%"
+  caption="RAK4630 in WisBlock Base"
+/>
 
 Open the command prompt or terminal, then go to the directory where you saved the firmware file you want to flash using the `cd <path>` command.
 
@@ -254,8 +388,16 @@ Here is an example to flash the bootloader to a RAK4631 WisBlock Core module:
 ```
 pyocd flash -t nrf52840 RAK4631_latest_final.hex
 ```
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_9.png"
+  width="80%"
+  caption="Flashing the bootloader into the RAK4630 module"
+/>
 
-> **Image:** Flashing the bootloader into the RAK4630 module
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/rakdap1-flash-and-debug-tool/rakdap1_new_10.png"
+  width="80%"
+  caption="Flashing bootloader completed"
+/>
 
-> **Image:** Flashing bootloader completed
-
+<RkBottomNav/>

@@ -10,8 +10,13 @@ sidebar_label: Datasheet
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7240 WisGate Edge Prime Datasheet
+
+
 
 ## Overview
 
@@ -50,13 +55,22 @@ Thus, the **RAK7240 WisGate Edge Prime**, is suited for any use case scenario, b
 
 The overview presents the RAK7240 circuit board and its block diagram that shows how the module's components work.
 
+
 #### Circuit Board (Board Overview)
 
-> **Image:** RAK7240 WisGate Edge Prime Circuit Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7240/datasheet/2.circuit-board.png"
+  width="80%"
+  caption="RAK7240 WisGate Edge Prime Circuit Board"
+/>
 
 #### Block Diagram
 
-> **Image:** RAK7240 WisGate Edge Prime Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7240/datasheet/3.block-diagram.png"
+  width="80%"
+  caption="RAK7240 WisGate Edge Prime Block Diagram"
+/>
 
 ### Hardware
 
@@ -66,7 +80,11 @@ The hardware specification is categorized into four parts. It discusses the inte
 
 The hardware interfaces of **RAK7240 WisGate Edge Prime** include five (5) antenna ports (LoRa, LTE-DIV/LoRa2, LTE-MAIN, WiFi, and GPS), six (6) status indicator LEDs, TF Card and nano-SIM sockets, a console port, an Ethernet Port (PoE), and a ground pad, as shown in the following figure:
 
-> **Image:** RAK7240 WisGate Edge Prime Hardware Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7240/datasheet/4.hardware-interfaces.png"
+  width="60%"
+  caption="RAK7240 WisGate Edge Prime Hardware Interfaces"
+/>
 
 ##### LED Indicators
 
@@ -75,48 +93,20 @@ The status of the LEDs is described as below. Please refer to the printing of th
 | **LEDs**                          | **Status Indication Description**                                                                                                                                                                                                  |
 | --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **PWR**                           | Power Indicator, LED is **ON** when the device is powered                                                                                                                                                                          |
-| **ETH**                           | • **ON** – link is up 
-• **OFF** – link is down 
-• **Flashing** – Data is being transferred                                                                                                                                  |
-| **LoRa**®                         | • **ON** - LoRa module 1 status is up 
-• **OFF** – LoRa module 1 status is down 
-• **Flashing** – LoRa module 1 data is being transferred                                                                                 |
-| **ACT** _(LTE)_                   | • **Slow Flashing** (_200ms Bright/1800ms Dark)_ - searching for network 
-• **Slow Flashing** (200ms Dark/1800ms Bright) - idle status (online) 
-• **Fast Flashing** - Data is being transferred                             |
-| **STAT** 
-_(16 channels only)_ | • **ON** - LoRa module 2 status is up 
-• **OFF** – LoRa module 2 status is down 
-• **Flashing** – LoRa module 2 data is being transferred                                                                                 |
-| **WLAN**                          | **AP Mode** 
-• **ON** - WLAN status is up 
-• **Flashing** - Data is being transferred 
- **STA Mode** 
-• **Slow Flashing**(1Hz) - Disconnected 
-• **ON** - Connected 
-• **Flashing** - Data is being transferred |
+| **ETH**                           | • **ON** – link is up <br />• **OFF** – link is down <br />• **Flashing** – Data is being transferred                                                                                                                                  |
+| **LoRa**®                         | • **ON** - LoRa module 1 status is up <br />• **OFF** – LoRa module 1 status is down <br />• **Flashing** – LoRa module 1 data is being transferred                                                                                 |
+| **ACT** _(LTE)_                   | • **Slow Flashing** (_200ms Bright/1800ms Dark)_ - searching for network <br />• **Slow Flashing** (200ms Dark/1800ms Bright) - idle status (online) <br />• **Fast Flashing** - Data is being transferred                             |
+| **STAT** <br />_(16 channels only)_ | • **ON** - LoRa module 2 status is up <br />• **OFF** – LoRa module 2 status is down <br />• **Flashing** – LoRa module 2 data is being transferred                                                                                 |
+| **WLAN**                          | **AP Mode** <br />• **ON** - WLAN status is up <br />• **Flashing** - Data is being transferred <br/> **STA Mode** <br />• **Slow Flashing**(1Hz) - Disconnected <br />• **ON** - Connected <br />• **Flashing** - Data is being transferred |
 
 #### Main Specifications
 
 | Feature                   | Specifications                                                                                                                                                                                                                                                                     |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Computing**             | MT7628, DDR2RAM 128MB                                                                                                                                                                                                                                                              |
-| **Wi-Fi Feature**         | • **Frequency**: 2.400-2.4835GHz (802.11b/g/n)
-• **RX Sensitivity**: -95dBm (Min)
-• **TX Power**: 20dBm (Max)
-• **Operation Channels**: 2.4GHz: 1-13                                                                                                                      |
-| **LoRa Feature**          | • **Card**: SX1301 Mini PCIe card (connects maximum of two),
-• **Channels**: 8 Channels (Optional: 16 channels)
-• **RX Sensitivity**: -139dBm (Min)
-• **TX Power**: 27dBm (Max)
-• **Frequency**: EU433 / CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923 |
-| **Cellular Feature**      | **Variant for Europe** 
-• LTE FDD: B1/B3/B7/B8/B20/B28A 
-• WCDMA: B1/B8 
-• GSM: 900/1800MHz  
- **Variant for North America** 
-• LTE FDD: B2/B4/B5/B12/B13 
-• WCDMA: B2/B4/B5                                                                                   |
+| **Wi-Fi Feature**         | • **Frequency**: 2.400-2.4835GHz (802.11b/g/n)<br />• **RX Sensitivity**: -95dBm (Min)<br />• **TX Power**: 20dBm (Max)<br />• **Operation Channels**: 2.4GHz: 1-13                                                                                                                      |
+| **LoRa Feature**          | • **Card**: SX1301 Mini PCIe card (connects maximum of two),<br />• **Channels**: 8 Channels (Optional: 16 channels)<br />• **RX Sensitivity**: -139dBm (Min)<br />• **TX Power**: 27dBm (Max)<br />• **Frequency**: EU433 / CN470 / RU864 / IN865 / EU868 / US915 / AU915 / KR920 / AS923 |
+| **Cellular Feature**      | **Variant for Europe** <br />• LTE FDD: B1/B3/B7/B8/B20/B28A <br />• WCDMA: B1/B8 <br />• GSM: 900/1800MHz  <br/> **Variant for North America** <br />• LTE FDD: B2/B4/B5/B12/B13 <br />• WCDMA: B2/B4/B5                                                                                   |
 | **Power Supply**          | PoE (IEEE 802.3af) - 42~57V DC                                                                                                                                                                                                                                                     |
 | **Power Consumption**     | 12 W (typical)                                                                                                                                                                                                                                                                     |
 | **Ethernet** (ETH)        | RJ45 (10/100M)                                                                                                                                                                                                                                                                     |
@@ -150,32 +140,8 @@ _(16 channels only)_ | • **ON** - LoRa module 2 status is up
 | **Wireless Standard**                                                                             | IEEE 802.11b/g/n                                                                                                                                                                                                                              |
 | **Operating Frequency**                                                                           | ISM band: 2.412~2.472(GHz)                                                                                                                                                                                                                    |
 | **Operation Channels**                                                                            | 2.4GHz: 1-13                                                                                                                                                                                                                                  |
-| **Transmit Power**
-(The max. power may be different  
-depending on local regulations) -per chain | **802.11b** 
-• 1Mbps: 19dBm 
-• 11Mbps: 19dBm  
- **802.11g** 
-• 6Mbps: 18dBm 
-• 54Mbps: 16dBm  
- **802.11n (2.4G)** 
-• MCS0 (HT20): 18dBm 
-• MCS7 (HT20): 16dBm 
-• MCS0 (HT40): 17dBm 
-• MCS7 (HT40): 15dBm  |
-| **Receiver
-Sensitivity** 
-(Typical)                                                         | **802.11b** 
-• 1Mbps: 95dBm 
-• 11Mbps: 88dBm  
- **802.11g** 
-• 6 Mbps: 90dBm 
-• 54Mbps: 75dBm  
-  **802.11n (2.4G)** 
-• MCS0 (HT20): 89dBm
-• MCS7 (HT20): 72dBm 
-• MCS0 (HT40): 86dBm 
-• MCS7 (HT40): 68dBm |
+| **Transmit Power**<br />(The max. power may be different  <br />depending on local regulations) -per chain | **802.11b** <br />• 1Mbps: 19dBm <br />• 11Mbps: 19dBm  <br/> **802.11g** <br />• 6Mbps: 18dBm <br />• 54Mbps: 16dBm  <br/> **802.11n (2.4G)** <br />• MCS0 (HT20): 18dBm <br />• MCS7 (HT20): 16dBm <br />• MCS0 (HT40): 17dBm <br />• MCS7 (HT40): 15dBm  |
+| **Receiver<br />Sensitivity** <br />(Typical)                                                         | **802.11b** <br />• 1Mbps: 95dBm <br />• 11Mbps: 88dBm  <br/> **802.11g** <br />• 6 Mbps: 90dBm <br />• 54Mbps: 75dBm  <br/>  **802.11n (2.4G)** <br />• MCS0 (HT20): 89dBm<br />• MCS7 (HT20): 72dBm <br />• MCS0 (HT40): 86dBm <br />• MCS7 (HT40): 68dBm |
 
 ### Firmware
 

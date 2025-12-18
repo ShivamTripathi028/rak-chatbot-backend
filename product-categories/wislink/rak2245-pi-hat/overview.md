@@ -12,6 +12,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2245 Pi HAT WisLink LPWAN Concentrator
 
 Thank you for choosing **RAK2245 Pi HAT WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -22,6 +24,8 @@ Thank you for choosing **RAK2245 Pi HAT WisLink LPWAN Concentrator** in your awe
 * [RAK2245 Pi HAT Ready-to-Flash Firmware](https://downloads.rakwireless.com/LoRa/RAK2245-Pi-HAT/Firmware/RAK2245_Latest_Firmware.zip)
 * [RAK2245 Pi HAT 3D Model](https://downloads.rakwireless.com/3D_File/WisLink/PWB-RAK2245_PI_HAT.stp)
 * [Quick Start Guide for Raspberry Pi and RAK LPWAN Concentrators](https://learn.rakwireless.com/hc/en-us/articles/26743452451095-How-To-Get-Started-with-Raspberry-Pi-and-RAK-LPWAN-Concentrators)
+
+
 
 :::tip NOTE
 Purchasing the [RAK2013 WisLink Cellular Pi HAT](https://store.rakwireless.com/products/rak2013-cellular-pi-hat?utm_source=RAK2013WisLink-LTE&utm_medium=Document&utm_campaign=BuyFromStore) separately with the intent of adding a cellular feature to your existing [RAK2245 Pi HAT](https://store.rakwireless.com/products/rak2245-pi-hat/?utm_source=RAK2245PiHATWisLink-LoRa&utm_medium=Document&utm_campaign=BuyFromStore) is not possible. Instead, purchase the [RAK7243C](https://store.rakwireless.com/products/rak7243c-pilot-gateway?variant=32094762139693&utm_source=RAK7243CD3%2BGateway&utm_medium=Document&utm_campaign=BuyFromStore)/[RAK7244C](https://store.rakwireless.com/products/rak7244-lpwan-developer-gateway?variant=31446039691309&utm_source=RAK7244CDeveloperD4%2B&utm_medium=Document&utm_campaign=BuyFromStore), as it is a specifically modified gateway that is composed of RAK2245 and RAK2013.
@@ -36,15 +40,18 @@ The board can provide low data rate LoRa radio links at ultra-fast speed. It is 
 
 The RAK2245 Pi HAT is a complete and cost efficient gateway solution that can help you develop a full LoRa system. This is an economical way to create different solutions like smart grids, intelligent farms and other IoT applications. It is also ideal for manufacturing small series that can expand into more applications.
 
+
+
 ## Product Features
 
 - Compatible with Raspberry Pi 3 Model B+ edition
 - Integrated Ublox MAX-7Q GPS Module and heat sink
 - SX1301 base band processor, emulates 49 x LoRa demodulators, 10 parallel demodulation paths, supports 8 uplink / 1 downlink channels
 - Two (2) units of SX125x Tx/Rx front-ends for high/ low frequency
-- Supports 5 V power supply, integrated level conversion circuit
-- TX power up to 27 dBm, RX sensitivity down to -139 dBm @ SF12, BW 125 KHz
+- Supports 5&nbsp;V power supply, integrated level conversion circuit
+- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm @ SF12, BW 125&nbsp;KHz
 - Supports latest LoRaWAN 1.0.2 protocol
 - Supports global license-free frequency band (EU433, CN470, EU868, US915, AS923, AU915, KR920 and IN865)
 - Supports SPI, UART, I2C interface
 
+<RkBottomNav/>

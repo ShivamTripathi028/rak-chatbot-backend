@@ -10,11 +10,18 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK12013 WisBlock Radar Sensor Module Datasheet
 
 ## Overview
 
-> **Image:** RAK12013 WisBlock Radar Sensor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/rak12013.png"
+  width="50%"
+  caption="RAK12013 WisBlock Radar Sensor"
+/>
 
 ### Description
 
@@ -27,15 +34,15 @@ RAK12013 is a 3.2GHz microwave radar module based on RCWL-9196. It uses the Dopp
 
 ### Features
 
-- 3.3 V Power Supply
-- Current Consumption: < 3 uA
+- 3.3&nbsp;V Power Supply
+- Current Consumption: < 3&nbsp;uA
 - Chipset: RCWL RCWL-9196
 - Motion Detection Module
 - Detection Distance: 5 - 7 meters
 - Detection Area: 360 degrees angle with no blind spot
-- Frequency: 3.2 GHz
+- Frequency: 3.2&nbsp;GHz
 - Trigger Way: repeat trigger
-- Module size: 25 x 35 mm
+- Module size: 25 x 35&nbsp;mm
 
 ## Specifications
 
@@ -45,7 +52,11 @@ RAK12013 is a 3.2GHz microwave radar module based on RCWL-9196. It uses the Dopp
 
 The RAK12013 WisBlock Radar Sensor Module can be mounted to the IO slot of the [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. **Figure 2** shows the mounting mechanism of the RAK12013 on a WisBlock Base module.
 
-> **Image:** RAK12013 Mounting Mechanism on a WisBlock Base Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/mounting.png"
+  width="70%"
+  caption="RAK12013 Mounting Mechanism on a WisBlock Base Module"
+/>
 
 ### Hardware
 
@@ -57,11 +68,16 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 | ------ | ----------- |
 | RCWL   |  RCWL-9196  |
 
+
 #### Pin Definition
 
 The RAK12013 module has a 40-pin WisConnector that is compatible to the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 3**.
 
-> **Image:** RAK12013 Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/rak12013_pinout.svg"
+  width="60%"
+  caption="RAK12013 Pinout Diagram"
+/>
 
 :::tip NOTE
 - Only **OUT**, **EN**, **3V3_S**, and **GND** are connected to the WisConnector.
@@ -94,23 +110,39 @@ This section shows the maximum and minimum ratings of the RAK12013 module and it
 
 **Figure 4** shows the mechanical dimensions of the RAK12013 Module.
 
-> **Image:** RAK12013 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="RAK12013 Mechanical Dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK12013 module.
 
-> **Image:** RAK12013 WisBlock Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/rak12013-schematic.png"
+  width="100%"
+  caption="RAK12013 WisBlock Module Schematics"
+/>
 
 ##### Boost Converter
 
-The RCWL-9196 operating voltage is 4 V - 24 V. So, you need to boost it from 3.3 V to 5 V.
+The RCWL-9196 operating voltage is 4&nbsp;V - 24&nbsp;V. So, you need to boost it from 3.3&nbsp;V to 5&nbsp;V.
 
-> **Image:** Boost Converter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/boost-converter.png"
+  width="80%"
+  caption="Boost Converter"
+/>
 
 ##### RCWL-9196
 
@@ -121,11 +153,20 @@ The RCWL-9196 operating voltage is 4 V - 24 V. So, you need to boost it from 3
 2. **C-TM**: Adjust repeat trigger time (default 2s). To make the trigger repeat time longer, add a capacitor to the solder points of C-TM, and the actual counting trigger time can operate as follows:
  -  Stick capacitor on C-TM, test 9196 3-pin frequency (F), and repeat trigger time T=(1/f)*32768.
 
-3. **R-GN**: Detection distance adjustment. Connect with a resistor, and the detection distance will become shorter. If no resistor is connected, the default detection distance is 7 meters. If it is connected with a 1 MΩ resistor, the detection distance will become 5 meters. **R7** is NC as default.
+3. **R-GN**: Detection distance adjustment. Connect with a resistor, and the detection distance will become shorter. If no resistor is connected, the default detection distance is 7 meters. If it is connected with a 1&nbsp;MΩ resistor, the detection distance will become 5 meters. **R7** is NC as default.
 
-> **Image:** RCWL-9196
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/rcwl9196.png"
+  width="80%"
+  caption="RCWL-9196"
+/>
 
 ##### Antenna
 
-> **Image:** Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak12013/datasheet/antenna.png"
+  width="60%"
+  caption="Antenna"
+/>
 
+<RkBottomNav/>

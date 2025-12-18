@@ -8,6 +8,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # UPS 12V1A-V01
 
 Thank you for choosing **UPS 12V1A-V01** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,14 +27,15 @@ Additionally, it has useful features such as over-charged, over-discharged, over
 
 ## Product Features
 
-- Rated Capacity：14.8 Wh
-- Input Voltage: 12 V<sub>DC</sub> ±5%
-- Input Current: ≤350 mA + loading current
-- Output Voltage: 12 V<sub>DC</sub> ±5%
-- Output Current: ≤1000 mA
+- Rated Capacity：14.8&nbsp;Wh
+- Input Voltage: 12&nbsp;V<sub>DC</sub> ±5%
+- Input Current: ≤350&nbsp;mA + loading current
+- Output Voltage: 12&nbsp;V<sub>DC</sub> ±5%
+- Output Current: ≤1000&nbsp;mA
 - Working Temperature:
-  - Charging：0° C ~ 55° C
-  - Discharge：-20° C ~ 65° C
-- Net Weight: 153 g ~ 350 g
-- Dimension: 111 x 60 x 26 mm
+  - Charging：0°&nbsp;C ~ 55°&nbsp;C
+  - Discharge：-20°&nbsp;C ~ 65°&nbsp;C
+- Net Weight: 153&nbsp;g ~ 350&nbsp;g
+- Dimension: 111 x 60 x 26&nbsp;mm
 
+<RkBottomNav/>

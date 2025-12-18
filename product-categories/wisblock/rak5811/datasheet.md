@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK5811 WisBlock 0-5V Interface Module Datasheet
 
 ## Overview
@@ -18,24 +21,26 @@ sidebar_label: Datasheet
 
 The RAK5811 WisBlock Interface module is designed to be part of a production-ready IoT solution in a modular way and must be combined with a WisBlock Core and a Base module. RAKWireless has standardized the way modules are interconnected to the baseboards with the WisBlock Interface Connectors. This standard connector is a small high-density connector that not only saves spaces on the circuit boards but also allows to implement high-speed communication bus.
 
-The RAK5811 is a 0-5 V analog input interface module. The signal is routed through the IO bus to the WisBlock Core module. Inside of the WisBlock Core module, the MCU digitizes the signal and the sampled data is transmitted, for example, via a LoRa transceiver.
+The RAK5811 is a 0-5&nbsp;V analog input interface module. The signal is routed through the IO bus to the WisBlock Core module. Inside of the WisBlock Core module, the MCU digitizes the signal and the sampled data is transmitted, for example, via a LoRa transceiver.
 
-The RAK5811 module features two input channels of 0-5 V analog signals. Inside, a high-precision operational amplifier, which supports a wide range of operating temperatures, is used for signal amplification and conversion.
+The RAK5811 module features two input channels of 0-5&nbsp;V analog signals. Inside, a high-precision operational amplifier, which supports a wide range of operating temperatures, is used for signal amplification and conversion.
 
-In addition, this module integrates a 12 V power supply. The power supply is connected to an operational amplifier and be used to power the external sensors. The connection of the 0-5 V sensors is done through the fast crimping terminal without the need for special tools, this simplifies the installation process on the field.
+In addition, this module integrates a 12&nbsp;V power supply. The power supply is connected to an operational amplifier and be used to power the external sensors. The connection of the 0-5&nbsp;V sensors is done through the fast crimping terminal without the need for special tools, this simplifies the installation process on the field.
+
 
 ### Features
 
-* Two 0-5 V analog input channels
+* Two 0-5&nbsp;V analog input channels
 * Compatible with multiple WisBlock Core modules, such as the RAK4631
-* 10 mV conversion accuracy
+* 10&nbsp;mV conversion accuracy
 * Supports low power consumption mode, the module can be powered off by WisBlock Core module for saving energy during idle periods
-* 12 V output to power external sensors
+* 12&nbsp;V output to power external sensors
 * Reserved I2C expansion interface
 * Fast crimping terminal to easily connect external components on the field
-* Designed with a 2 kV ESD protection level
+* Designed with a 2&nbsp;kV ESD protection level
 * Chipset: STMicroelectronics LM2902
-* Small dimensions of 35 mm x 25 mm
+* Small dimensions of 35&nbsp;mm x 25&nbsp;mm
+
 
 ## Specifications
 
@@ -45,15 +50,26 @@ The overview shows the realistic view of the RAK5811 module and its block diagra
 
 #### Block Diagram
 
-> **Image:** RAK5811 block diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/block-diagram.png"
+  figureCount="1"
+  width="70%"
+  caption="RAK5811 block diagram"
+/>
 
-In the RAK5811 module, as shown in **Figure 1**, the 0-5 V input signal is connected to the operational amplifier by the R1/R2 voltage divider. The operational amplifier output is routed to an analog input of the MCU to be digitalized by an internal WisBlock Core ADC. Once the signal is digitalized, you can recover the original voltage value by applying the following relation:
+In the RAK5811 module, as shown in **Figure 1**, the 0-5&nbsp;V input signal is connected to the operational amplifier by the R1/R2 voltage divider. The operational amplifier output is routed to an analog input of the MCU to be digitalized by an internal WisBlock Core ADC. Once the signal is digitalized, you can recover the original voltage value by applying the following relation:
 
-> **Image:** Voltage divider relation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/voltage-divider.png"
+  figureCount="2"
+  width="25%"
+  caption="Voltage divider relation"
+/>
 
-Where Vout is the WisBlock Core read voltage; Vin is the analog input voltage (0-5 V). From the voltage divider R1 is 1 MΩ and R2 is 1.5 MΩ, so the final relationship is: **Vin = Vout / 0.6**.
+Where Vout is the WisBlock Core read voltage; Vin is the analog input voltage (0-5&nbsp;V). From the voltage divider R1 is 1&nbsp;MΩ and R2 is 1.5&nbsp;MΩ, so the final relationship is: **Vin = Vout / 0.6**.
 
-As shown in** Figure 1**, the module provides an output of 12 V controlled by an internal DC-DC booster. This 12 V output can be used to power industrial sensors. The **Enable** pin allows to control the booster and sets the RAK5811 module into a low power consumption mode.
+As shown in** Figure 1**, the module provides an output of 12&nbsp;V controlled by an internal DC-DC booster. This 12&nbsp;V output can be used to power industrial sensors. The **Enable** pin allows to control the booster and sets the RAK5811 module into a low power consumption mode.
+
 
 ### Hardware
 
@@ -67,29 +83,34 @@ The hardware specification is categorized into four parts. It discusses the pino
 
 #### Device Specification
 
-The following table shows the parameters and the description of the RAK5811 WisBlock 4-20 mA Interface Module:
+The following table shows the parameters and the description of the RAK5811 WisBlock 4-20&nbsp;mA Interface Module:
 
 | **Parameter**                    | **Description**                                                         |
 | -------------------------------- | ----------------------------------------------------------------------- |
-| Analog Input Interface           | 2 channels of 0-5 V                                                |
-| Analog Sampling Resolution       | 5 mV                                                               |
+| Analog Input Interface           | 2 channels of 0-5&nbsp;V                                                |
+| Analog Sampling Resolution       | 5&nbsp;mV                                                               |
 | Analog Sampling Accuracy         | 1%                                                                      |
-| Analog maximum input voltage     | 5.3 V (There is a risk to burn the circuit surpassing this limit.) |
-| Analog Port ESD Protection Level | 2 kV HBM                                                           |
+| Analog maximum input voltage     | 5.3&nbsp;V (There is a risk to burn the circuit surpassing this limit.) |
+| Analog Port ESD Protection Level | 2&nbsp;kV HBM                                                           |
 | Operational Amplifier Gain       | 3.0                                                                     |
-| Input Voltage                    | 3.0 V – 3.6 V                                                 |
-| Input Current                    | Maximum 100 mA                                                     |
-| Output Voltage                   | 12 V                                                               |
-| Output Current                   | Maximum 30 mA                                                      |
-| Operating Temperature            | -30 °C ~ 65 °C                                                |
-| Storage Temperature              | -40 °C ~ 85 °C                                                |
-| Module Dimensions                | 35 mm x 25 mm                                                 |
+| Input Voltage                    | 3.0&nbsp;V – 3.6&nbsp;V                                                 |
+| Input Current                    | Maximum 100&nbsp;mA                                                     |
+| Output Voltage                   | 12&nbsp;V                                                               |
+| Output Current                   | Maximum 30&nbsp;mA                                                      |
+| Operating Temperature            | -30&nbsp;°C ~ 65&nbsp;°C                                                |
+| Storage Temperature              | -40&nbsp;°C ~ 85&nbsp;°C                                                |
+| Module Dimensions                | 35&nbsp;mm x 25&nbsp;mm                                                 |
 
 #### Pin Definition
 
 This section shows the pin number of the Fast Crimping Terminal of the RAK5811 module.
 
-> **Image:** RAK5811 Fast Crimping Terminal
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/rak5811-pinout.png"
+  figureCount="3"
+  width="60%"
+  caption="RAK5811 Fast Crimping Terminal"
+/>
 
 | **Pin Number** | **Function Description**              |
 | -------------- | ------------------------------------- |
@@ -97,14 +118,19 @@ This section shows the pin number of the Fast Crimping Terminal of the RAK5811 m
 | 2              | SDA of the I2C interface              |
 | 3              | 3V3 output                            |
 | 4              | VBAT, Battery output                  |
-| 5              | 12 V output for external sensors |
+| 5              | 12&nbsp;V output for external sensors |
 | 6              | GND                                   |
 | 7              | Analog input 0                        |
 | 8              | Analog input 1                        |
 
 **Figure 4** shows the pin order of the IO connector of the module. Through this connector, the RAK5811 module is attached to the WisBlock Base Board.
 
-> **Image:** RAK5811 IO connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/rak5811-wisconnector.png"
+  figureCount="4"
+  width="70%"
+  caption="RAK5811 IO connector"
+/>
 
 The functionalities of each pin of the WisBlock IO connector are tabulated below.
 
@@ -137,42 +163,94 @@ The functionalities of each pin of the WisBlock IO connector are tabulated below
 
 **Figure 5** shows the dimensions of the module RAK5811 module.
 
-> **Image:** RAK5811 dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/rak5811-mech.png"
+  figureCount="5"
+  width="80%"
+  caption="RAK5811 dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/mxxs1003k6m.png"
+  figureCount="6"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK5811 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/schematic-diagram.png"
+  figureCount="7"
+  width="100%"
+  caption="RAK5811 schematic diagram"
+/>
 
 ## Typical Application
 
-A typical application is shown in **Figure 8**. You can connect up to two 0-5 V analog sensors independently.
+A typical application is shown in **Figure 8**. You can connect up to two 0-5&nbsp;V analog sensors independently.
 
-> **Image:** RAK5811 typical application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/typical-application.svg"
+  figureCount="8"
+  width="50%"
+  caption="RAK5811 typical application"
+/>
 
 ## WisBlock Compatibility
 
 In the ecosystem of WisBlock, the philosophy is to allow users to combine a WisBlock module of one category with a WisBlock module of other categories. This is true in most cases but it’s important to review the compatibility matrix when designing a customized solution. The RAK5811 module is as shown in the table below:
 
-|  | Adaptable Module | Description |
-| --- | --- | --- |
-| WisBlock Base Board | RAK5005-O | RAK5811 is designed to be assembled in the IO slot of RAK5005-O baseboard. |
-| WisBlock Core Board | RAK4631 | RAK5811 is fully compatible with RAK4631. |
-| WisBlock Core Board | RAK11200 | RAK5811 is fully compatible with RAK11200. |
+<table align="center">
+<thead>
+  <tr>
+    <th></th>
+    <th>Adaptable Module</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+        <tr>
+            <td>WisBlock Base Board</td>
+            <td>RAK5005-O</td>
+            <td>RAK5811 is designed to be assembled in the IO slot of RAK5005-O baseboard.</td>
+        </tr>
+        <tr>
+            <td rowspan="3">WisBlock Core Board</td>
+            <td>RAK4631</td>
+            <td>RAK5811 is fully compatible with RAK4631.</td>
+        </tr>
+        <tr>
+            <td>RAK11200</td>
+            <td>RAK5811 is fully compatible with RAK11200.</td>
+        </tr>
+</tbody>
+</table>
 
 :::tip NOTE
 
-** RAK5811+RAK4601 **
+<b> RAK5811+RAK4601 </b>
 
 The RAK5811 is not compatible with RAK4601. The main reason is that RAK4601 doesn’t expose any ADC pin through the RAK5005-O baseboard.
 :::
 
-> **Image:** R7 on RAK5005-O
 
-> **Image:** R94 and R95 on RAK5811.
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/r7.png"
+  figureCount="9"
+  width="60%"
+  caption="R7 on RAK5005-O"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak5811/datasheet/r94.png"
+  figureCount="10"
+  width="60%"
+  caption="R94 and R95 on RAK5811."
+/>
 
 :::tip NOTE 2: RAK5811+RAK4261+RAK5005-O
 To combine a RAK5811 module, a RAK4261 (WisBlock Core module), and the RAK5005-O, the following modification must be introduced:
@@ -183,3 +261,4 @@ This combination has the following restrictions:
 - The adapted RAK5005-O will not support battery power collection.
 :::
 
+<RkBottomNav/>

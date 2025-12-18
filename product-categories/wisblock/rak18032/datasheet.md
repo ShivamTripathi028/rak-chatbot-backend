@@ -12,6 +12,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18032 WisBlock Audio Ultrasonic Microphone Module Datasheet
 
 ## Overview
@@ -23,25 +26,32 @@ RAK18032 is a WisBlock Audio that extends the WisBlock system based on the SPH06
 ### Features
 
 * **Sensor Specifications**
-    * Voltage supply: **3.3 V ~ 3.6 V**
-    * Current consumption: **40 uA ~ 690 uA**
+    * Voltage supply: **3.3&nbsp;V ~ 3.6&nbsp;V**
+    * Current consumption: **40&nbsp;uA ~ 690&nbsp;uA**
     * Chipset: **SPH0655LM4H-1**
     * Ultrasonic PDM Microphone
     * Left or right channel selection
-    * Flat frequency response: 20 kHz - 80 kHz
+    * Flat frequency response: 20&nbsp;kHz - 80&nbsp;kHz
     * Low distortion
     * High SNR
     * Bottom port
     * Omnidirectional sensitivity
 
 * **Module Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Specifications
 
 ### Overview
 
-> **Image:** RAK18032 WisBlock Audio Ultrasonic Microphone Module top and bottom view
+<br />
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032.png"
+  width="40%"
+  caption="RAK18032 WisBlock Audio Ultrasonic Microphone Module top and bottom view"
+/>
 
 #### Mounting
 
@@ -49,17 +59,28 @@ RAK18032 is a WisBlock Audio that extends the WisBlock system based on the SPH06
 
 **Figure 2** shows the mounting mechanism of the RAK18032 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK18032 module can be mounted on the IO slots.
 
-> **Image:** RAK18032 mounted to the WisBlock Base
+<br />
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-mount.png"
+  width="50%"
+  caption="RAK18032 mounted to the WisBlock Base"
+/>
 
 ##### Mount to WisBlock Audio Stack
 
 With the use of WisBlock Audio Spacer, the RAK18032 can be mounted to any other WisBlock Audio module. **Figure 3** shows the mounting mechanism of the RAK18032 on a WisBlock Audio Stack.
 
-> **Image:** RAK18032 mounted to the WisBlock Audio Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-audiostack.png"
+  width="50%"
+  caption="RAK18032 mounted to the WisBlock Audio Stack"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into five (5) parts. It shows the chipset of the module and discusses the pinouts and their corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK18032 Audio Ultrasonic Microphone Module.
+
 
 #### Chipset
 
@@ -73,7 +94,11 @@ The hardware specification is categorized into five (5) parts. It shows the chip
 
 The RAK18032 WisBlock Audio Ultrasonic Microphone Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK18032 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in **Figure 4**.
 
-> **Image:** RAK18032 WisBlock Module pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-pinouts.png"
+  width="70%"
+  caption="RAK18032 WisBlock Module pinout diagram"
+/>
 
 :::tip NOTE
 - **3V3** and **GND** are power supplies from the WisBlock Base.
@@ -85,7 +110,11 @@ The RAK18032 WisBlock Audio Ultrasonic Microphone Module comprises a standard Wi
 
 The RAK18032 WisBlock Audio PDM Microphone comprises a standard FPC connector. The FPC connector allows the RAK18032 module to be connected to a WisBlock Audio Interposer board, such as RAK18003. The pin order of the connector and the pinout definition is shown in **Figure 5**.
 
-> **Image:** RAK18032 FPC connector pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-fpc.png"
+  width="40%"
+  caption="RAK18032 FPC connector pinout diagram"
+/>
 
 :::tip NOTE
 - **3V3** and **GND** are power supplies from the WisBlock Audio Interposer board.
@@ -94,22 +123,27 @@ The RAK18032 WisBlock Audio PDM Microphone comprises a standard FPC connector. T
 - **MIC_Check** is a signal to let the Interposer board know if the RAK18032 exists or is connected.
 :::
 
+
 #### Electrical Characteristics
 
 ##### Acoustic and Electrical Specifications
 | Symbol            | Description                                                                            | Min. | Nom. | Max. | Unit  |
 | ----------------- | -------------------------------------------------------------------------------------- | ---- | ---- | ---- | ----- |
 | V<sub>DD</sub>    | Supply voltage                                                                         | 1.6  | 3.3  | 3.6  | V     |
-| I<sub>dd</sub>    | Current consumption in normal mode (@ Fclock = 1.2 MHz)                           | -    | 650  | 690  | uA    |
+| I<sub>dd</sub>    | Current consumption in normal mode (@ Fclock = 1.2&nbsp;MHz)                           | -    | 650  | 690  | uA    |
 | I<sub>sleep</sub> | Current consumption in Sleep Mode                                                      | -    | 40   | 45   | uA    |
-| Sensitivity       | 94 dB SPL @ 1 kHz                                                            | -38  | -37  | -36  | dBFS  |
-| SNR               | Signal-to-noise ratio (94 dB SPL @ 1 kHz, A-weighted, Fclock = 1.2 MHz) | -    | 64.5 | -    | dB(A) |
+| Sensitivity       | 94&nbsp;dB SPL @ 1&nbsp;kHz                                                            | -38  | -37  | -36  | dBFS  |
+| SNR               | Signal-to-noise ratio (94&nbsp;dB SPL @ 1&nbsp;kHz, A-weighted, Fclock = 1.2&nbsp;MHz) | -    | 64.5 | -    | dB(A) |
 | Clock             | Input clock frequency                                                                  | 1.1  | -    | 4.8  | MHz   |
 | T<sub>op</sub>    | Operating temperature range                                                            | -40  | -    | +100 | °C    |
 
 **Figure 6** shows the RAK18032 typical free field ultrasonic response.
 
-> **Image:** RAK18032 typical free field ultrasonic response
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-field.png"
+  width="50%"
+  caption="RAK18032 typical free field ultrasonic response"
+/>
 
 #### Mechanical Characteristics
 
@@ -117,11 +151,20 @@ The RAK18032 WisBlock Audio PDM Microphone comprises a standard FPC connector. T
 
 **Figure 7** shows the dimensions and the mechanical drawing of the RAK18032 module.
 
-> **Image:** RAK18032 WisBlock Sensor mechanical drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-dim.png"
+  width="60%"
+  caption="RAK18032 WisBlock Sensor mechanical drawing"
+/>
 
 ##### WisBlock Connector PCB Layout
 
-> **Image:** WisBlock Connector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/wisblock-conn.png"
+  width="100%"
+  caption="WisBlock Connector PCB footprint and recommendations"
+/>
+
 
 #### Schematic Diagram
 
@@ -132,11 +175,20 @@ The **Pin 2** of the SPH0655LM4H-1 is used to control the MIC as a left or right
 - The MIC is the left channel when **Pin 2** is `HIGH`.
 - The MIC is the right channel when **Pin 2** is `LOW`.
 
-By default, the RAK18032 is the right channel. But, you can remove the 10K Ohms resistor on **R9** and connect it to **R8** to change the MIC to the left channel as its default. You may also use **MIC_CTR_IO1** to select the MIC as the right or left channel.
+By default, the RAK18032 is the right channel. But, you can remove the 10K&nbsp;Ohms resistor on **R9** and connect it to **R8** to change the MIC to the left channel as its default. You may also use **MIC_CTR_IO1** to select the MIC as the right or left channel.
 
-> **Image:** RAK18032 WisBlock Ultrasonic Microphone schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-mic.png"
+  width="60%"
+  caption="RAK18032 WisBlock Ultrasonic Microphone schematic diagram"
+/>
 
 **Figure 10** shows the full schematic diagram of the RAK18032 Audio PDM Microphone module.
 
-> **Image:** RAK18032 schematic diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18032/datasheet/rak18032-schem.png"
+  width="100%"
+  caption="RAK18032 schematic diagram"
+/>
 
+<RkBottomNav/>

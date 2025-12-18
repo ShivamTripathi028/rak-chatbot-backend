@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14004 WisBlock Keypad Module Quick Start Guide
 
 ## Prerequisite
@@ -48,7 +51,11 @@ The RAK14004 module is designed as an IO extension module that allows to add a k
 
 The RAK14004 module can be mounted on the IO slot of the WisBlock Base Board, as shown in **Figure 1**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK14004 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak14004-assembly.png"
+  width="60%"
+  caption="RAK14004 connection to WisBlock Base"
+/>
 
 ##### Disassembling
 
@@ -56,15 +63,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/16.removing-screws.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/17.detaching-silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/18.detaching-module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts.
@@ -87,15 +106,27 @@ The quick links below go directly to the software guide for the specific WisBloc
 
 - Selecting the RAK4631 WisBlock Core:
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 - Selecting RAK11200 WisBlock Core Guide:
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 - Selecting RAK11300 as WisBlock Core:
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11300-board.png"
+  width="100%"
+  caption="Selecting RAK11300 as WisBlock Core"
+/>
 
 2. Copy the following example code into your Arduino IDE:
 
@@ -156,6 +187,7 @@ void INTCallBack(void)
 {
   InterruptFlag = 1;
 }
+
 
 /*brief: IIC Read data*/
 uint8_t readflag = 0;
@@ -239,23 +271,44 @@ void loop() {
 
 - Selecting the RAK4631 Serial Port:
 
-> **Image:** Selecting the RAK4631 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak4631-port.png"
+  width="100%"
+  caption="Selecting the RAK4631 Serial Port"
+/>
 
 - Selecting the RAK11200 Serial Port:
 
-> **Image:** Selecting the RAK11200 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-port.png"
+  width="100%"
+  caption="Selecting the RAK11200 Serial Port"
+/>
 
 - Before uploading your sketch, short circuit `BOOT0` and `GND` pin and press the reset button. Then click the Upload button using the configuration below.
 
-> **Image:** Force RAK11200 to download mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-boot0-for-flashing.png"
+  width="50%"
+  caption="Force RAK11200 to download mode"
+/>
 
 - Selecting the RAK11300 Serial Port:
 
-> **Image:** Selecting the RAK11300 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11300-port.png"
+  width="100%"
+  caption="Selecting the RAK11300 Serial Port"
+/>
 
 4. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to check the module's reading logs. If you see the logs, as shown in **Figure 10**, then your RAK14004 module is properly communicating to the WisBlock Core using the I2C interface.
 
-> **Image:** RAK14004 and RAK14009 on RAK4631 data logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/3x3-log.png"
+  width="80%"
+  caption="RAK14004 and RAK14009 on RAK4631 data logs"
+/>
+
 
 #### RAK14010 Keypad Example
 
@@ -263,15 +316,27 @@ void loop() {
 
 - Selecting RAK4631 as WisBlock Core:
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 - Selecting RAK11200 as WisBlock Core:
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 - Selecting RAK11300 as WisBlock Core:
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11300-board.png"
+  width="100%"
+  caption="Selecting RAK11300 as WisBlock Core"
+/>
 
 2. Copy the following example code into your Arduino IDE:
 
@@ -332,6 +397,7 @@ void INTCallBack(void)
 {
   InterruptFlag = 1;
 }
+
 
 /*brief: IIC Read data*/
 uint8_t readflag = 0;
@@ -413,23 +479,44 @@ void loop() {
 
 - Selecting the RAK4631 Serial Port:
 
-> **Image:** Selecting the RAK4631 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak4631-port.png"
+  width="100%"
+  caption="Selecting the RAK4631 Serial Port"
+/>
 
 - Selecting the RAK11200 Serial Port:
 
-> **Image:** Selecting the RAK11200 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-port.png"
+  width="100%"
+  caption="Selecting the RAK11200 Serial Port"
+/>
 
 - Before uploading your sketch, short circuit `BOOT0` and `GND` pin and press the reset button. Then click the Upload button using the configuration below.
 
-> **Image:** Force RAK11200 to download mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-boot0-for-flashing.png"
+  width="50%"
+  caption="Force RAK11200 to download mode"
+/>
 
 - Selecting the RAK11300 Serial Port:
 
-> **Image:** Selecting the RAK11300 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11300-port.png"
+  width="100%"
+  caption="Selecting the RAK11300 Serial Port"
+/>
 
 When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to check the module's reading logs. If you see the logs, as shown in **Figure 18**, then your RAK14004 module is properly communicating to the WisBlock Core using the I2C interface.
 
-> **Image:** RAK14004 and RAK14010 on RAK4631 data logs
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/3x4-log.png"
+  width="80%"
+  caption="RAK14004 and RAK14010 on RAK4631 data logs"
+/>
 
 #### RAK14011 Keypad Example
 
@@ -437,19 +524,36 @@ When you successfully uploaded the sample code, open the Serial Monitor of the A
 
 - Selecting RAK4631 as WisBlock Core:
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 - Selecting RAK11200 as WisBlock Core:
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
+
 
 - Before uploading your sketch, short circuit `BOOT0` and `GND` pin and press the reset button. Then click the Upload button using the configuration below.
 
-> **Image:** Force RAK11200 to download mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-boot0-for-flashing.png"
+  width="50%"
+  caption="Force RAK11200 to download mode"
+/>
 
 - Selecting RAK11300 as WisBlock Core:
 
-> **Image:** Selecting RAK11300 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11300-board.png"
+  width="100%"
+  caption="Selecting RAK11300 as WisBlock Core"
+/>
 
 2. Copy the following example code into your Arduino IDE:
 
@@ -512,6 +616,7 @@ void INTCallBack(void)
 {
   InterruptFlag = 1;
 }
+
 
 /*brief: IIC Read data*/
 uint8_t readflag = 0;
@@ -595,21 +700,45 @@ void loop() {
 
 - Selecting the RAK4631 Serial Port:
 
-> **Image:** Selecting the RAK4631 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak4631-port.png"
+  width="100%"
+  caption="Selecting the RAK4631 Serial Port"
+/>
 
 - Selecting the RAK11200 Serial Port:
 
-> **Image:** Selecting the RAK11200 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-port.png"
+  width="100%"
+  caption="Selecting the RAK11200 Serial Port"
+/>
+
 
 - Before uploading your sketch, short circuit `BOOT0` and `GND` pin and press the reset button. Then click the Upload button using the configuration below.
 
-> **Image:** Force RAK11200 to download mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11200-boot0-for-flashing.png"
+  width="50%"
+  caption="Force RAK11200 to download mode"
+/>
 
 - Selecting the RAK11300 Serial Port
 
-> **Image:** Selecting the RAK11300 Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/rak11300-port.png"
+  width="100%"
+  caption="Selecting the RAK11300 Serial Port"
+/>
 
 4. When you successfully uploaded the sample code, open the Serial Monitor of the Arduino IDE to check the module's reading logs. If you see the logs, as shown in **Figure 27**, then your RAK14004 module is properly communicating to the WisBlock Core using the I2C interface.
 
-> **Image:** RAK14004 and RAK14011 on RAK4631 data logs
 
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14004/quickstart/4x4-log.png"
+  width="80%"
+  caption="RAK14004 and RAK14011 on RAK4631 data logs"
+/>
+
+
+<RkBottomNav/>

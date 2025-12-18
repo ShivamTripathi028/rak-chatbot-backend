@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Low Level Development
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK2305 WisBlock WiFi Interface Module Low Level Development Reference
 
 ## Overview
@@ -34,7 +37,11 @@ Additionally, RAK offers a second alternative for advanced customers who need to
 
    [How to install Python](https://www.c-sharpcorner.com/article/how-to-install-python-3-8-in-windows/)
 
-> **Image:** Checking python version
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak2305/lowlevel/esp-at-python.png"
+  caption="Checking python version" 
+   width="90%"
+/>
 
 4. Use the following command to check whether pip is installed:
 
@@ -93,11 +100,19 @@ python build.py menuconfig
 
 5. Select **PLATFORM_ESP32** on the **Platform Name**. Select **WROVER-32** on the **Module Name**. On the Enable Silent Mode option, select **1**.
 
-> **Image:** RAK2305 project configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak2305/lowlevel/esp-at-menuconfig.png"
+  caption="RAK2305 project configuration" 
+   width="100%"
+/>
 
 6. You can browse on the Framework Configuration menus and customize your build.
 
-> **Image:** RAK2305 Framework Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak2305/lowlevel/esp-at-config.png"
+  caption="RAK2305 Framework Configuration" 
+   width="100%"
+/>
 
 7. To build the project on **esp-at** folder, execute the commands below:
 
@@ -106,7 +121,11 @@ cd %userprofile%\esp\esp-at
 python build.py build
 ```
 
-> **Image:** RAK2305 successful build
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak2305/lowlevel/esp-at-build.png"
+  caption="RAK2305 successful build" 
+   width="100%"
+/>
 
 8. Flash the image on RAK2305 using the command:
 
@@ -114,7 +133,11 @@ python build.py build
 python build.py flash
 ```
 
-> **Image:** RAK2305 successful flash
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak2305/lowlevel/esp-at-flash.png"
+  caption="RAK2305 successful flash" 
+   width="100%"
+/>
 
 #### How to Proceed in Case of Compilation Error
 
@@ -245,5 +268,10 @@ void app_main()
 ```
 Testing the new ESP-AT command.
 
-> **Image:** RAK command output
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak2305/lowlevel/rak-cmd.png"
+  caption="RAK command output" 
+   width="40%"
+/>
 
+<RkBottomNav/>

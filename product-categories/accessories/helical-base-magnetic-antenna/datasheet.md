@@ -9,6 +9,8 @@ keywords:
     - datasheet
 sidebar_label: Datasheet
 ---
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # Helical Magnetic Base Antenna Datasheet
 
@@ -16,40 +18,108 @@ sidebar_label: Datasheet
 
 ### Description
 
-Helical Magnetic Base Antenna is an omnidirectional antenna tuned for operation in the license-free spectrum band of 433 MHz, 470-510 MHz, and 860-930 MHz. It is lightweight and can be easily mounted on a metallic surface thanks to its strong magnetic base. This antenna is designed to be a perfect match for RAK7258, with stable performance and good VSWR. The coaxial cable attached to the magnetic base has a length of 1.5 meters.
+Helical Magnetic Base Antenna is an omnidirectional antenna tuned for operation in the license-free spectrum band of 433&nbsp;MHz, 470-510&nbsp;MHz, and 860-930&nbsp;MHz. It is lightweight and can be easily mounted on a metallic surface thanks to its strong magnetic base. This antenna is designed to be a perfect match for RAK7258, with stable performance and good VSWR. The coaxial cable attached to the magnetic base has a length of 1.5&nbsp;meters.
 
 ### Features
 
 - Connector Type: **RP-SMA-J**
-- Impedance: **50 Ω**
-- Frequency Range: 433 MHz, 470-510 MHz, and 860-930 MHz
+- Impedance: **50&nbsp;Ω**
+- Frequency Range: 433&nbsp;MHz, 470-510&nbsp;MHz, and 860-930&nbsp;MHz
 - Radiation Pattern: **Omnidirectional**
+
 
 ## Specifications
 
 ### Overview
 
-> **Image:** Helical Magnetic Base Antenna 433 MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/helical-magnetic-base-antenna/433mhz.png"
+  width="40%"
+  caption="Helical Magnetic Base Antenna 433 MHz"
+/>
 
-> **Image:** Helical Magnetic Base Antenna 470-510 MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/helical-magnetic-base-antenna/470-510mhz.png"
+  width="40%"
+  caption="Helical Magnetic Base Antenna 470-510 MHz"
+/>
 
-> **Image:** Helical Magnetic Base Antenna 860-930 MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/helical-magnetic-base-antenna/860-930mhz.png"
+  width="40%"
+  caption="Helical Magnetic Base Antenna 860-930 MHz"
+/>
 
 ### Hardware
 
 #### Electrical Characteristics
 
-| Parameters | Frequency |  |  |
-| --- | --- | --- | --- |
-|  | 433 MHz | 470-510 MHz | 860-930 MHz |
-| Gain | -9.5 dBi | -9.5 dBi | 1.27 dBi |
-| VSWR | ≤ 2.5 | ≤ 3.0 | ≤ 2.0 |
-| Efficiency Max | 12% | 22% | 53% |
-| Impedance | 50 Ω | 50 Ω | 50 Ω |
-| Polarization | Linear Polarization - Vertical | Linear Polarization - Vertical | Linear Polarization - Vertical |
-| Radiation Pattern | Omnidirectional | Omnidirectional | Omnidirectional |
-| Connector | RP-SMA-J | RP-SMA-J | RP-SMA-J |
-| Length | 142 ± 3 mm | 142 ± 3 mm | 278 ± 3 mm |
+
+<table style={{ textAlign: 'center' }}>
+<thead>
+  <tr>
+    <th>Parameters</th>
+    <th colSpan = "3">Frequency</th>
+  </tr>
+</thead>
+<tbody>
+        <tr>
+            <td></td>
+            <td>433&nbsp;MHz</td>
+            <td>470-510&nbsp;MHz</td>
+            <td>860-930&nbsp;MHz</td>
+        </tr>
+        <tr>
+            <td>Gain</td>
+            <td>-9.5&nbsp;dBi</td>
+            <td>-9.5&nbsp;dBi</td>
+            <td>1.27&nbsp;dBi</td>
+        </tr>
+        <tr>
+            <td>VSWR</td>
+            <td>≤ 2.5</td>
+            <td>≤ 3.0</td>
+            <td>≤ 2.0</td>
+        </tr>
+        <tr>
+            <td>Efficiency Max</td>
+            <td>12%</td>
+            <td>22%</td>
+            <td>53%</td>
+        </tr>
+        <tr>
+            <td>Impedance</td>
+            <td>50&nbsp;Ω</td>
+            <td>50&nbsp;Ω</td>
+            <td>50&nbsp;Ω</td>
+        </tr>
+        <tr>
+            <td>Polarization</td>
+            <td>Linear Polarization - Vertical</td>
+            <td>Linear Polarization - Vertical</td>
+            <td>Linear Polarization - Vertical</td>
+        </tr>
+        <tr>
+            <td>Radiation Pattern</td>
+            <td>Omnidirectional</td>
+            <td>Omnidirectional</td>
+            <td>Omnidirectional</td>
+        </tr>
+        <tr>
+            <td>Connector</td>
+            <td>RP-SMA-J</td>
+            <td>RP-SMA-J</td>
+            <td>RP-SMA-J</td>
+        </tr>
+        <tr>
+            <td>Length</td>
+            <td>142 ± 3&nbsp;mm</td>
+            <td>142 ± 3&nbsp;mm</td>
+            <td>278 ± 3&nbsp;mm</td>
+        </tr>
+</tbody>
+</table>
+
 
 #### Environmental Characteristics
 
@@ -57,15 +127,16 @@ Helical Magnetic Base Antenna is an omnidirectional antenna tuned for operation 
 
 | Frequency        | Value                    |
 | ---------------- | ------------------------ |
-| 433 MHz     | -30° C ~ 65° C |
-| 470-510 MHz | -30° C ~ 65° C |
-| 860-930 MHz | -20° C ~ 65° C |
+| 433&nbsp;MHz     | -30°&nbsp;C ~ 65°&nbsp;C |
+| 470-510&nbsp;MHz | -30°&nbsp;C ~ 65°&nbsp;C |
+| 860-930&nbsp;MHz | -20°&nbsp;C ~ 65°&nbsp;C |
 
 **Storage Temperature:**
 
 | Frequency        | Value                    |
 | ---------------- | ------------------------ |
-| 433 MHz     | -30° C ~ 75° C |
-| 470-510 MHz | -30° C ~ 75° C |
-| 860-930 MHz | -30° C ~ 75° C |
+| 433&nbsp;MHz     | -30°&nbsp;C ~ 75°&nbsp;C |
+| 470-510&nbsp;MHz | -30°&nbsp;C ~ 75°&nbsp;C |
+| 860-930&nbsp;MHz | -30°&nbsp;C ~ 75°&nbsp;C |
 
+<RkBottomNav/>

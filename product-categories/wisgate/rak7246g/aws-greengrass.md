@@ -11,10 +11,14 @@ sidebar_label: AWS Greengrass
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # AWS IoT Greengrass v2
 
 To learn more about AWS IoT GreengrassV2, refer to AWS documentation to see [how it works](https://docs.aws.amazon.com/greengrass/v2/developerguide/how-it-works.html) and [what is new](https://docs.aws.amazon.com/greengrass/v2/developerguide/greengrass-v2-whats-new.html) about it.
+
 
 ## Set Up Your Development Environment
 
@@ -28,11 +32,13 @@ To learn more about AWS IoT GreengrassV2, refer to AWS documentation to see [how
 For additional references, you can refer to the following:
 - [**Community Forum**](https://forum.rakwireless.com/?utm_source=Docs&utm_medium=Docsheader&utm_campaign=RAKDocs)
 
+
 ## Set Up Your Hardware
 
 - A detailed description of components and interfaces can be found in the [RAK7246G Datasheet](https://docs.rakwireless.com/product-categories/wisgate/rak7246g/datasheet/).
 - [RAK7246G Quick Start Guide](https://docs.rakwireless.com/product-categories/wisgate/rak7246g/quickstart/).
 - Instructions on how to set up the new firmware can be found in the [Knowledge Hub](https://learn.rakwireless.com/hc/en-us/articles/26744073850775-How-To-Set-Up-WisGate-Developer-Gateway-Firmware).
+
 
 ## Set Up Your AWS Account and Permissions
 
@@ -53,11 +59,13 @@ Outlined steps in creating resources in AWS IoT are provided in this section. Fo
 
 Pay special attention to the **Notes**.
 
+
 ## Install the AWS Command Line Interface
 
 Installing the CLI is needed to complete the instructions in this guide. To install the AWS CLI on your host machine, refer to the instructions found in the [Installing the AWS CLI v2](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) guide.
 
 Once you have installed AWS CLI, configure it as per the instructions in this [online guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-config). Set the appropriate values for Access key ID, Secret access key, and AWS Region. You can set the output format to `json` if you prefer.
+
 
 ## Build a Linux Image with Greengrass Prerequisites
 
@@ -67,6 +75,7 @@ You can download the RAK7246 latest firmware with [AWS Greengrass V2](https://do
 If you don’t need to build an image with Greengrass prerequisites, you can download and install the [RAK7246 latest firmware](https://docs.rakwireless.com/product-categories/wisgate/rak7246g/datasheet/#firmware), and proceed to [Install and Configure](#install-and-configure) section.
 :::
 
+
 ### Flash Raspberry Image to SD Card
 
 1. Download the latest [Raspberry Pi OS Lite](https://www.raspberrypi.org/software/operating-systems#raspberry-pi-os-32-bit).
@@ -75,7 +84,12 @@ If you don’t need to build an image with Greengrass prerequisites, you can dow
 3. Flash Raspberry Pi OS Lite to SD Card.
     - For more information about the gateway firmware setup, refer to the [WisGate Developer Gateway Firmware Setup](https://learn.rakwireless.com/hc/en-us/articles/26744073850775-How-To-Set-Up-WisGate-Developer-Gateway-Firmware).
 
-> **Image:** Flashing Raspberry Pi OS Lite to SD card
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7246g/supported-lora-network-servers/aws/1.flash-raspberry-pi.png"
+  width="80%"
+  caption="Flashing Raspberry Pi OS Lite to SD card"
+/>
 
 ### Enable SSH
 

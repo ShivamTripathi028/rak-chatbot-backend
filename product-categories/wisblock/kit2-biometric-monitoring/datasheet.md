@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock Biometric Monitoring Kit Datasheet
 
 ## Overview
@@ -41,9 +44,15 @@ With this kit, users can easily create custom biometric monitoring solutions for
 
 ### Overview
 
+
 The WisBlock Biometric Monitoring Kit includes the following modules:
 
-> **Image:** Modules of WisBlock Biometric Monitoring Kit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kits/2_biometric_kit_2.png"
+ figureCount="1"
+  width="80%"
+  caption="Modules of WisBlock Biometric Monitoring Kit"
+/>
 
 ### Hardware
 
@@ -58,6 +67,7 @@ The table shows the base and core included in the kit.
 | [RAK19003](https://docs.rakwireless.com/product-categories/wisblock/rak19003/) | WisBlock Base | USB-C, 2 sensor slots, battery/solar connector                        |
 | [RAK19007](https://docs.rakwireless.com/product-categories/wisblock/rak19007/) | WisBlock Base | USB-C, 4 sensor slot, 1 IO slot, battery/solar connector              |
 | [RAK4631](https://docs.rakwireless.com/product-categories/wisblock/rak4631)   | WisBlock Core | Based on nrf52840 (BLE) and SX1262 (LoRa), IPEX connector for antenna |
+
 
 :::tip NOTE
 RAK4631 is compatible with Arduino IDE. You can add the module to the board manager by following either the [Installation Guide in the Learn section](https://learn.rakwireless.com/hc/en-us/articles/26687371039383-How-To-Perform-Installation-of-Board-Support-Package-in-Arduino-IDE) or the [RAK Arduino BSP GitHub Repo](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index).
@@ -89,3 +99,4 @@ The cellular modules support different cellular protocols as shown in the table.
 
 The WisBlock Biometric Monitoring Kit is designed to get you started on your IoT projects. Before connecting various modules, you must first check for any potential conflicts. To determine whether there are conflicts, you can use the [WisBlock Pin Mapper tool](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool).
 
+<RkBottomNav/>

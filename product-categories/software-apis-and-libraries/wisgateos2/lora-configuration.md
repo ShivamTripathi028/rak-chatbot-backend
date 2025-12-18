@@ -42,18 +42,20 @@ sidebar_label: LoRa Configuration
 date: 2022-08-01
 ---
 
+
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # LoRa Configuration
 
 In WisGateOS 2, LoRa configuration supports three operating modes, allowing the gateway to connect to different LoRa network servers and manage LoRa communication efficiently:
 
-+ **Built-in Network Server**
-
++ **Built-in Network Server**<br/>
 The gateway acts as a central LoRa Network Server (LNS), processing packets locally and managing devices directly. It supports multi-gateway networking, allowing extender gateways to join the network and be managed from the central gateway interface. This mode allows independent operation without relying on external services.
-+ **Packet Forwarder**
-
++ **Packet Forwarder**<br/>
 The gateway forwards packets to an external network server (e.g., TTN, ChirpStack) without local processing. The external network server handles packet processing, device management, and data routing. Suitable for integrating the gateway into an existing LoRaWAN network infrastructure.
-+ **Basics Station**
-
++ **Basics Station**<br/>
 The gateway uses a secure WebSocket (WSS) to communicate with a remote LoRaWAN network server. This mode offers enhanced security and stable connectivity, supporting dynamic updates and secure cloud-based communication.
 
 ## Built-in Network Server
@@ -68,13 +70,21 @@ This section covers how to configure the gateway as a Built-in Network Server, i
 
 Select the **Work mode** to make the gateway act as its own LoRaWAN Network Server.
 
-> **Image:** Work mode
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/work-mode-built-in.png"
+  width="80%"
+  caption="Work mode"
+/>
 
 #### Set Log Level
 
 Configure the **log level** for debugging and monitoring purposes.
 
-> **Image:** Log Level
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/log-level.png"
+  width="80%"
+  caption="Log Level"
+/>
 
 + **Error**: Logs of error conditions.
 + **Warning**:  Logs of warning conditions.
@@ -84,7 +94,11 @@ Configure the **log level** for debugging and monitoring purposes.
 
 #### Select Your Country & Region
 
-> **Image:** Select your country & region
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/frequency-plan.png"
+  width="70%"
+  caption="Select your country & region"
+/>
 
 **Select your country**(Optional)
 
@@ -96,7 +110,11 @@ The correct country setting ensures that the gateway operates in compliance with
 4. Check the confirmation box to acknowledge compliance with local regulations.
 5. Click **Confirm** to save your settings.
 
-> **Image:** Country code settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/country-code-settings.png"
+  width="50%"
+  caption="Country code settings"
+/>
 
 **Region**
 
@@ -129,19 +147,31 @@ The frequency settings vary by region due to different **radio regulations** and
 
 - **Frequency Sub-Band**: Select the specific frequency sub-band based on the region's frequency plan.
 
-> **Image:** Frequency Sub-Band Selection
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/frequency-subband.png"
+  width="45%"
+  caption="Frequency Sub-Band Selection"
+/>
 
 - **Multi-SF LoRa Channel Frequency (MHz)**: Set the frequency for the Multi-SF LoRa channel.
 - **Standard LoRa Channel Frequency (MHz)**: Set the frequency for the standard LoRa channel.
 - **FSK Channel Frequency (MHz)**: Set the frequency for the FSK channel.
 
-> **Image:** Frequency settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/frequency-custom.png"
+  width="70%"
+  caption="Frequency settings"
+/>
 
 #### Configure Network Server Parameters
 
 Click on **Network server parameters are used to configure general setup for your LoRa built-in server. This section is required for filling-in.** to expand the settings menu.
 
-> **Image:** Network Server Parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/network-server-parameters.png"
+  width="100%"
+  caption="Network Server Parameters"
+/>
 
   - **Network ID**: This is a decimal number to distinguish between networks if deploying multiple ones.
   - **Enable ADR**: Enables or disables **Adaptive Data Rate (ADR)**. When enabled, the server will automatically adjust data rates, airtime, and energy consumption based on current network conditions.
@@ -164,7 +194,11 @@ Set a filter for the packets from chosen devices (disabled by default).
 
 Click on **Allows to optimize bandwidth by filtering and forwarding packets from chosen end devices** to expand packet filter settings. If **White List Mode** and **Auto Filter** are enabled, these are the following options:
 
-> **Image:** Packet Filter
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/packet-filter.png"
+  width="100%"
+  caption="Packet Filter"
+/>
 
 - **OUI**: Filters devices based on the first 3 bytes (6 hexadecimal characters) of the DevEUI, which typically identify the device manufacturer.
 - **Network ID**: A number between 0 and 127 (decimal), derived from the first 7 most significant bits (MSB) of a device's DevAddr. For example, a DevAddr starting with 0x26 (00100110 in binary) has the first 7 bits 0010011, which equals decimal 19.
@@ -182,7 +216,11 @@ This creates a multi-gateway network in which extender gateways forward uplinks 
 
 To extend the settings field, click on **Configure the Gateway Backend to allow the central gateway and extenders to communicate via MQTT**.
 
-> **Image:** Gateway backend
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/gateway-backend.png"
+  width="100%"
+  caption="Gateway backend"
+/>
 
   - **MQTT Broker Address**: The IP address of the MQTT broker (default: `127.0.0.1` for the built-in broker).
   - **MQTT Broker Port**: The port used by the broker (default: `1883`).
@@ -209,7 +247,11 @@ Enable time-synchronized beaconing and set ping slot parameters for Class B end 
 
 To expand the menu, click on **Configure the beacon period and ping slots of class B devices to use time-sync beacons sent by the gateways**.
 
-> **Image:** Class B Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/class-b-settings.png"
+  width="100%"
+  caption="Class B Settings"
+/>
 
   - **Enable Beacon**: Enables/disables Class B beaconing.
   - **PingSlot Channel Frequency**: The frequency used for the beacon ping.
@@ -224,7 +266,11 @@ The Integration Interface forwards uplink data received by the built-in network 
 
 To expand the menu, click on **Configure the Integration Interface to forward all received data to an external network server**. The settings change depending on the chosen **Integration mode.**
 
-> **Image:** Integration Interface Parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/integration-interface-parameters.png"
+  width="100%"
+  caption="Integration Interface Parameters"
+/>
 
   - **Enable Integration Interface**: Enables the integration interface.
   - **Generic MQTT**: In this configuration, the gateway acts as an **MQTT client** that publishes messages to an **external MQTT broker**.
@@ -265,11 +311,19 @@ Applications **group LoRaWAN devices** for management.
 1. Navigate to the **LoRa** > **Applications** tab.
 2. To add a new application, click **Add application** or **add one now**.
 
-> **Image:** Applications tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/application.png"
+  width="100%"
+  caption="Applications tab"
+/>
 
 3. Set the following parameters:
 
-> **Image:** Set parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/set-application-parameters.png"
+  width="100%"
+  caption="Set parameters"
+/>
 
 - **Application name**: A unique name for the application.
 - **Application description**: (Optional) description of the application.
@@ -307,19 +361,29 @@ If **Auto Add Device** is enabled in the application settings, devices are **aut
 
 1. Navigate to the **LoRa > Applications**.
 2. Click on the application where the device should be added.
-   
-> **Image:** Application list
-
+   <RkImage
+     src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/application-list.png"
+     width="100%"
+     caption="Application list"
+   />
    :::tip NOTE
    You can also click **"Add end devices"** in the **END DEVICES** list. *(This button will only appear if no end devices are registered.)*
    :::
 3. In the **End devices** tab, click  **Add end device** or **add some now**.
 
-> **Image:** Add an end device
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/add-end-device.png"
+  width="100%"
+  caption="Add an end device"
+/>
 
 4. Set the following device parameters:
 
-> **Image:** Configuration page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/add-new-device.png"
+  width="100%"
+  caption="Configuration page"
+/>
 
 - **Activation Mode**
   + **OTAA**: Over-The-Air-Activation (OTAA).
@@ -342,7 +406,11 @@ If **Auto Add Device** is enabled in the application settings, devices are **aut
 
 ##### Manually Add Devices
 
-> **Image:** Manual Method
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/input_end_deviceeui02.png"
+  width="40%"
+  caption="Manual Method"
+/>
 
 1. Enter the following:
     + **End Device EUI (Main):** Fill in the device's unique EUI *(Required)*.
@@ -354,18 +422,30 @@ If **Auto Add Device** is enabled in the application settings, devices are **aut
     + Correct devices will appear under **End devices list**.
     + **Duplicate** devices will appear under **End devices with error** for correction.
 
-> **Image:** Add devices to the List
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/end_device-list.png"
+  width="80%"
+  caption="Add devices to the List"
+/>
 
 3. To add the uploaded devices, click **Add end devices**.
 4. Click **Add** to confirm and proceed.
 
-> **Image:** Confirm adding devices
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/confirm-device-info.png"
+  width="50%"
+  caption="Confirm adding devices"
+/>
 
 ##### Add Devices Using CSV File
 
 For **batch registration** of multiple devices, using a CSV file is more efficient.
 
-> **Image:** CSV Method
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/csv-add-device.png"
+  width="50%"
+  caption="CSV Method"
+/>
 
 1. You can create a CSV file in two ways:
     + Download the template by clicking **download it here**.
@@ -382,12 +462,20 @@ For **batch registration** of multiple devices, using a CSV file is more efficie
       + Correct devices will appear under **End devices list**.
       + **Duplicate** devices and devices with **invalid** fields will appear under **End devices with error**.
 
-> **Image:** Add devices to the List
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/end_device-list2.png"
+  width="90%"
+  caption="Add devices to the List"
+/>
 
 4. To add the uploaded devices, click **Add end devices**.
 5. Click **Add** to confirm and proceed.
 
-> **Image:** Confirm adding devices
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/confirm-device-info.png"
+  width="50%"
+  caption="Confirm adding devices"
+/>
 
 Once the device successfully joins or communicates, its **"LAST SEEN"** field will be updated in the **End Devices List** will be updated with a timestamp (e.g., *5s ago*), showing when the device was last active.
 
@@ -398,11 +486,19 @@ Once the device successfully joins or communicates, its **"LAST SEEN"** field wi
 1. Navigate to the **LoRa > Applications**. View all added applications in this panel.
 2. Click the target application to go to its **Configuration** tab, or click (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/icon2.png" width="18px" />) and choose **Edit Configuration**.
 
-> **Image:** Application list
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/application-list1.png"
+  width="90%"
+  caption="Application list"
+/>
 
 3. In the **Configuration** tab, you can view and modify the application settings.
 
-> **Image:** Application configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/application-info.png"
+  width="80%"
+  caption="Application configuration"
+/>
 
 ##### Delete Application
 
@@ -426,11 +522,19 @@ Once deleted, the applications cannot be recovered. Proceed with caution.
 2. Click the target application to go to its **End devices** tab, or click (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/icon2.png" width="18px" />) and choose **View end devices**.
 3. In the **End devices** tab, all devices in the application can be viewed here.
 
-> **Image:** Device list
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/device-list1.png"
+  width="100%"
+  caption="Device list"
+/>
 
 4. Click the target device to view or modify its information under the **Configuration** tab.
 
-> **Image:** Device configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/device-info.png"
+  width="80%"
+  caption="Device configuration"
+/>
 
 ##### Packet Capture
 
@@ -438,7 +542,11 @@ Use the **Packet Capture** tool to view all packets exchanged between the end de
 
 1. Go to the **Configuration** tab of the device, then click **Packet capture**.
 
-> **Image:** Packet capture
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/packet-capture-in-device.png"
+  width="100%"
+  caption="Packet capture"
+/>
 
 - **Pause/Restart session**: Pauses or restarts the session.
 - **Download session**: Downloads a `.json` file with packets data in it.
@@ -467,7 +575,11 @@ Export device profiles including:
 
 Send downlink messages to the end device.
 
-> **Image:** Downlink
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/downlink-to-end-devices.png"
+  width="100%"
+  caption="Downlink"
+/>
 
 - **Frame Confirmation**: Enable or disable frame confirmation for the downlink message.
 - **FPort**: Port number used for the downlink message.
@@ -483,7 +595,11 @@ Send downlink messages to the end device.
 
 The **Overview** tab provides a summary of the device's current status and performance. It includes key metrics and visualizations to monitor network activity and signal quality.
 
-> **Image:** Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/end-devices-view.png"
+  width="100%"
+  caption="Overview"
+/>
 
 **Device Status and Summary**
 - **TOTAL DOWNLINK**: Number of downlink messages sent to the device.
@@ -531,12 +647,20 @@ This section describes how to add and manage extender gateways in **Built-in Net
 
 1. Navigate to the **LoRa** > **Gateways** tab.
 
-> **Image:** Gateways tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/gateways-tab.png"
+  width="100%"
+  caption="Gateways tab"
+/>
 
 2. To add an extender gateway, click the **Add extender gateway**.
 3. In the new window, configure the following information.
 
-> **Image:** Add gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/add-extender-gateway.png"
+  width="100%"
+  caption="Add gateway"
+/>
 
 - **Extender gateway EUI**: Enter the gateway's EUI (Extended Unique Identifier).
 - **Extender gateway name (optional)**: Name of the gateway.
@@ -550,7 +674,11 @@ This section describes how to add and manage extender gateways in **Built-in Net
 5. Click **Add extender gateway** to add an extender gateway to the Built-in Network server.
    
 
-> **Image:** Added gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/added-gateway.png"
+  width="100%"
+  caption="Added gateway"
+/>
 
 :::tip NOTE
 
@@ -567,11 +695,19 @@ This section describes how to add and manage extender gateways in **Built-in Net
 1. Navigate to **LoRa** > **Gateways**. View all added extender gateways in this panel.
 2. Click the target extender gateway, or click (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/main/icon2.png" width="18px" />) and choose **View gateway details**.
 
-> **Image:** View or delete the gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/check-extender-gateway.png"
+  width="100%"
+  caption="View or delete the gateway"
+/>
 
 3. In the details tab, you can view and modify the extender settings.
 
-> **Image:** Extender gateway details
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/extender-gateway-details.png"
+  width="100%"
+  caption="Extender gateway details"
+/>
 
 ##### Delete Extender Gateway
 
@@ -591,10 +727,13 @@ Once deleted, the extender gateways cannot be recovered. Proceed with caution.
 
 The **Overview** tab provides a real-time summary of the traffic and connected end devices for both the **central gateway** and any **extender gateways**. This tab is available only when the gateway is set to **Built-in Network Server** mode.
 
-> **Image:** Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/built-in-overview.png"
+  width="100%"
+  caption="Overview"
+/>
 
-**General Status**
-
+**General Status**<br/>
 Displays key status information for the central gateway and extender gateways:
 - **Total Downlink**: Total number of downlink frames transmitted.
 - **Total Uplink**: Total number of uplink frames transmitted.
@@ -604,28 +743,24 @@ Displays key status information for the central gateway and extender gateways:
 - **Rejected OTAA Requests**: Total number of authentication requests rejected by the server.
 - **Uptime**: Total time the built-in server has been running without interruption.
 
-**SNR & RSSI**
-
+**SNR & RSSI**<br/>
 Displays the **Signal-to-Noise Ratio (SNR)** and **Received Signal Strength Indicator (RSSI)** values graphically.
 
-**Traffic History**
-
+**Traffic History**<br/>
 Provides a graph showing the number of packets transmitted over time.
 
-**DataRate**
-
+**DataRate**<br/>
 Displays the number of packets transmitted at each data rate (DR0 to DR7).
 
 ## Packet Forwarder
 
 When configuring **Packet Forwarder** mode, you can choose between two protocols:
 
-**Semtech UDP GWMP Protocol**
-
+**Semtech UDP GWMP Protocol**<br/>
 + The **Semtech UDP Packet Forwarder** is the traditional and widely used protocol for LoRaWAN gateways.
 + The gateway sends **uplinks** as raw UDP packets to the **LNS (LoRaWAN Network Server)** and receives **downlinks** via UDP.
 
-**LoRa Gateway MQTT Bridge**
+**LoRa Gateway MQTT Bridge**<br/>
 
 + The **MQTT-based Packet Forwarder** allows LoRaWAN traffic to be **encapsulated in MQTT messages** instead of raw UDP packets.
 + Provides **better security** than UDP by supporting **TLS encryption and authentication**.
@@ -638,13 +773,21 @@ This section explains how to configure the gateway in **Packet Forwarder** mode.
 
 Set the gateway into **Packet Forwarder** mode so it can forward LoRa packets to an external LNS.
 
-> **Image:** Work mode
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/work-mode-packet-forwarder.png"
+  width="70%"
+  caption="Work mode"
+/>
 
 #### Set Log Level
 
 Configure the **log level** for debugging and monitoring purposes.
 
-> **Image:** Log Level
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/log-level.png"
+  width="70%"
+  caption="Log Level"
+/>
 
 + **Error**: Logs of error conditions.
 + **Warning**:  Logs of warning conditions.
@@ -654,7 +797,11 @@ Configure the **log level** for debugging and monitoring purposes.
 
 #### Select Your Country & Region
 
-> **Image:** Select your country & region
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/frequency-plan.png"
+  width="70%"
+  caption="Select your country & region"
+/>
 
 **Select your country**(Optional)
 
@@ -666,7 +813,11 @@ Selecting the correct country ensures that the gateway operates in compliance wi
 4. Check the confirmation box to acknowledge compliance with local regulations.
 5. Click **Confirm** to save your settings.
 
-> **Image:** Country code settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/country-code-settings.png"
+  width="50%"
+  caption="Country code settings"
+/>
 
 **Region**
 
@@ -699,13 +850,21 @@ The frequency settings vary by region due to different **radio regulations** and
 
 - **Frequency Sub-Band**: Select the specific frequency sub-band based on the region's frequency plan.
 
-> **Image:** Frequency Sub-Band Selection
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/frequency-subband.png"
+  width="45%"
+  caption="Frequency Sub-Band Selection"
+/>
 
 - **Multi-SF LoRa Channel Frequency (MHz)**: Set the frequency for the Multi-SF LoRa channel.
 - **Standard LoRa Channel Frequency (MHz)**: Set the frequency for the standard LoRa channel.
 - **FSK Channel Frequency (MHz)**: Set the frequency for the FSK channel.
 
-> **Image:** Frequency settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/frequency-custom.png"
+  width="70%"
+  caption="Frequency settings"
+/>
 
 **When Conform to LoRaWAN is Disabled**
 
@@ -713,14 +872,20 @@ The gateway will not follow the LoRaWAN frequency plan, allowing **private chann
 
 1. Toggle **Conform to LoRaWAN** to **OFF** and **Confirm** when prompted.
 
-   
-> **Image:** Go to set private channels
+   <RkImage
+     src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/private-channels.png"
+     width="50%"
+     caption="Go to set private channels"
+   />
 
 2. Click **Edit** under per LoRa concentrator.
 3. Manually configure the frequencies based on your server's plan.
 
-   
-> **Image:** Set your LoRa concentrator
+   <RkImage
+     src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/concentrator-settings.png"
+     width="80%"
+     caption="Set your LoRa concentrator"
+   />
 
 4. Click **Confirm** to apply channel configuration.
 
@@ -736,7 +901,11 @@ When enabled (by default), the gateway will process data from all end devices. I
 
 The **Semtech UDP GWMP protocol** allows the gateway to communicate with an **LNS (LoRa Network Server)** using the UDP packet forwarder. Follow these steps to set it up:
 
-> **Image:** UDP Protocol Parameters
+<RkImage
+      src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/udp-protocol-parameters.png"
+      width="100%"
+      caption="UDP Protocol Parameters"
+  />
 
 1. Go to the **Protocol** settings in **Packet Forwarder** mode.
 2. From the protocol list, choose **Semtech UDP GWMP Protocol**.
@@ -758,7 +927,11 @@ The **Semtech UDP GWMP protocol** allows the gateway to communicate with an **LN
 
 The **LoRa Gateway MQTT Bridge** allows the gateway to communicate with an **LNS (LoRa Network Server)** using the MQTT protocol. Follow these steps to set it up:
 
-> **Image:** LoRa Gateway MQTT Bridge Parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/lora-gateway-mqtt-bridge-parameters.png"
+  width="100%"
+  caption="LoRa Gateway MQTT Bridge Parameters"
+/>
 
 1. Go to the **Protocol** settings in **Packet Forwarder** mode.
 2. From the protocol list, choose **LoRa Gateway MQTT Bridge**.
@@ -808,22 +981,31 @@ Enable forwarding of uplink packets to a secondary LoRaWAN Network Server (LNS) 
 
 1. Toggle **Secondary LNS Forwarding** to enable this feature.
 
-> **Image:** Enable Secondary LNS Forwarding
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/secondary-lns-conf.png"
+  width="100%"
+  caption="Enable Secondary LNS Forwarding"
+/>
 
 2. Choose the protocol for communication with the Secondary LNS:
    + **Semtech UDP GWMP Protocol**
    + **LoRa Gateway MQTT Bridge**
 3. Configure the Secondary LNS connection parameters.
 + **Semtech UDP GWMP Protocol**
-  
-> **Image:** Semtech UDP GWMP Protocol
-
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/secondary-lns-udp.png"
+    width="100%"
+    caption="Semtech UDP GWMP Protocol"
+  />
   + **Uplink server address**: IP address or domain of the Secondary LNS.
   + **Uplink server port up / down**: Port number for the protocol.
 + **LoRa Gateway MQTT Bridge**
 
-  
-> **Image:** LoRa Gateway MQTT Bridge
+  <RkImage
+    src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/secondary-lns-mqtt.png"
+    width="100%"
+    caption="LoRa Gateway MQTT Bridge"
+  />
 
   The parameters for the secondary LNS follow the same format and meaning as the primary LNS configuration (see [Configure LoRa Gateway MQTT Bridge](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/lora-configuration/#configure-lora-gateway-mqtt-bridge) section).
 
@@ -833,7 +1015,11 @@ Enable time-synchronized beaconing and set ping slot parameters for Class B end 
 
 To expand the menu, click on **Configure the beacon period and ping slots of class B devices to use time-sync beacons sent by the gateways**.
 
-> **Image:** Class B Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/class-b-settings.png"
+  width="100%"
+  caption="Class B Settings"
+/>
 
   - **Enable Beacon**: The switch enables/disables Class B beaconing.
   - **Enable Hopping**: Enables/disables Class B hopping as the class B beacon is transmitted following a frequency hopping pattern.
@@ -850,7 +1036,11 @@ Click **Add your GPS info manually** to expand the GPS settings and enable **Fak
 Once **enabled**, the gateway will use the manually configured GPS coordinates even if it can receive actual GPS signals.
 :::
 
-> **Image:** GPS Information
+<RkImage
+      src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/gps-information.png"
+      width="100%"
+      caption="GPS Information"
+  />
 
 - **Latitude**: Enter the latitude value.
 - **Longitude**: Enter the longitude value.
@@ -865,7 +1055,11 @@ Due to hardware differences, the Fine Timestamp feature is only available on spe
 
 Click on **Include fine timestamp in uplink packet for TDOA positioning** to expand the fine timestamp setting.
 
-> **Image:** Fine Timestamp
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/fine-timestamp.png"
+  width="100%"
+  caption="Fine Timestamp"
+/>
 
 #### Enable Packet Filter
 
@@ -873,7 +1067,11 @@ Set up a packet filter to optimize bandwidth by forwarding packets only from sel
 
 Click **Allows to optimize bandwidth by filtering and forwarding packets from chosen end devices** to expand packet filter settings.
 
-> **Image:** Packet Filter
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/packet-filter.png"
+  width="100%"
+  caption="Packet Filter"
+/>
 
 - **White List Mode**: Disabled by default. Enable it to allow filtering based on OUI and Network ID.
 - **OUI**: Filters devices based on the first 3 bytes (6 hexadecimal characters) of the DevEUI, which typically identify the device manufacturer.
@@ -936,13 +1134,21 @@ This section explains how to configure the gateway in **Basics Station** mode.
 
 Switch the gateway to Basics Station mode for secure and stable LoRaWAN communication via WebSockets.
 
-> **Image:** Work mode
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/work-mode-basic-station.png"
+  width="80%"
+  caption="Work mode"
+/>
 
 #### Set Log Level
 
 Configure the **log level** for debugging and monitoring purposes.
 
-> **Image:** Log Level
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/log-level.png"
+  width="80%"
+  caption="Log Level"
+/>
 
 + **Error**: Logs of error conditions.
 + **Warning**:  Logs of warning conditions.
@@ -954,7 +1160,11 @@ Configure the **log level** for debugging and monitoring purposes.
 
 Click on **Configure Basics Station server setup** to expand the **Basics Station server setup** menu.
 
-> **Image:** Basics Station server setup
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/basics-station-server-setup.png"
+  width="100%"
+  caption="Basics Station server setup"
+/>
 
   - **Basics Station Server Type**: When configuring **Basics Station** mode, you can select from the following server types.
     + **CUPS-BOOT Server**
@@ -978,7 +1188,11 @@ Set up a packet filter to optimize bandwidth by forwarding packets only from sel
 
 Click **Allows to optimize bandwidth by filtering and forwarding packets from chosen end devices** to expand packet filter settings.
 
-> **Image:** Packet Filter
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2/lora-configuration/packet-filter-bs.png"
+  width="100%"
+  caption="Packet Filter"
+/>
 
 - **White List Mode**: Disabled by default. When enabled, it filters devices based on their OUI and Network ID.
 - **OUI**: Filters devices based on the first 3 bytes (6 hexadecimal characters) of the DevEUI, which typically identify the device manufacturer.
@@ -1004,3 +1218,4 @@ To connect your gateway to TTN v3 using Basics Station CUPS, follow the <a href=
 
 To connect your gateway to the Actility ThingPark platform using Basics Station CUPS, follow the <a href="https://learn.rakwireless.com/hc/en-us/articles/33758568645399-how-to-connect-rak-gateways-to-actility-via-basics-station-cups" target="_blank">How to Connect RAK Gateways to Actility via Basics Station (CUPS)</a> guide.:
 
+<RkBottomNav/>

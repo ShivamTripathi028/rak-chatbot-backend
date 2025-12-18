@@ -9,6 +9,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14007 WisBlock Interface Module
 
 Thank you for choosing **RAK14007 WisBlock Interface Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -18,6 +20,7 @@ Thank you for choosing **RAK14007 WisBlock Interface Module** in your awesome Io
 * [RAK14007 3D Model](https://downloads.rakwireless.com/3D_File/WisBlock/3D_RAK14007.stp)
 * [40-Pin Male Connector 3D file](https://downloads.rakwireless.com/3D_File/Accessory/WisConnector/M40S1003K6M.stp)
 * [WisBlock IO Tutorial](https://learn.rakwireless.com/hc/en-us/articles/26743881131927-How-To-Make-Your-Own-WisBlock-IO-Board)
+
 
 ## Product Description
 
@@ -30,7 +33,7 @@ RAK14007 is an Interface module for connecting other WisBlock modules(like RAK14
     * One (1) available connector for RAK14013 WisBlock Joystick Module.
 
 * **Size**
-    * 15 x 25 mm
+    * 15 x 25&nbsp;mm
 
 ## Prerequisites
 
@@ -40,3 +43,4 @@ To use a **RAK14007**, you need to connect at least one **RAK14013** Joystick Mo
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

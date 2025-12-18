@@ -24,6 +24,9 @@ date: 2025-05-23
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK3312 WisBlock LoRaWAN + BLE + WiFi Module Quick Start Guide
 
 ## Prerequisites
@@ -63,7 +66,11 @@ To use the RAK3312 with PlatformIO and the ESP32 platform, a custom project stru
 
 Your project folder should look like this:
 
-> **Image:** RAK3312 Board definition in PlatformIO project folder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112-pio-project.png"
+  width="30%"
+  caption="RAK3312 Board definition in PlatformIO project folder"
+/>
 
 - Add the following entries to the platformio.ini file of your project:
 
@@ -100,18 +107,26 @@ RAKwireless offers many [WisBlock Base Boards](https://store.rakwireless.com/col
 
 To illustrate, RAK3312 can be connected to RAK19007 WisBlock Base, as shown in **Figure 1**.
 
-> **Image:** RAK3312 Connection to WisBlock Base RAK19007
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11162/quickstart/rak11162-rak19007-connection.png"
+  width="60%"
+  caption="RAK3312 Connection to WisBlock Base RAK19007"
+/>
 
 Few pins are exposed on RAK19007, and you can easily use them via header pins. The labels are at the back, as shown in **Figure 2**.
 
-> **Image:** WisBlock Base exposed pins
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631/quickstart/io-pins.svg"
+  width="35%"
+  caption="WisBlock Base exposed pins"
+/>
 
 More information can be found on the [official documentation of the specific WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) you used in your project.
 
 For RAK19007 WisBlock Base with RAK3312 WisBlock Core, the accessible GPIO pins are defined as follows in the Arduino IDE and Platform IO:
 
 - `WB_IO1` for IO1 pin
-- `WB_IO2` for IO2 pin (Also used to control the 3.3 V supply of some WisBlock Modules to achieve low-power IoT devices.)
+- `WB_IO2` for IO2 pin (Also used to control the 3.3&nbsp;V supply of some WisBlock Modules to achieve low-power IoT devices.)
 - `WB_A0` for AIN
 
 There are usable LEDs as well that can be controlled by the RAK3312 on the WisBlock Base board:
@@ -122,6 +137,7 @@ There are usable LEDs as well that can be controlled by the RAK3312 on the WisBl
 I2C_1 is also exposed on the header of the WisBlock Base board.
 
 - The I2C interface of the RAK3312 is exposed through the **I2C_1** header pins, which are also shared with WisBlock Base Slots A-D.
+
 
 #### RAK3312 to WisBlock Modules
 
@@ -141,15 +157,23 @@ The listed links are just examples. **All WisBlock Modules** have their own quic
 
 **Figure 3** shows an illustration on how you can combine various WisBlock Modules with the RAK3312 WisBlock Core via the WisBlock Base board.
 
-> **Image:** RAK3312 Connection to WisBlock Base and other WisBlock Modules
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak3312/example-weather-assembly.png"
+  width="60%"
+  caption="RAK3312 Connection to WisBlock Base and other WisBlock Modules"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-**Figure 4** shows how to mount the RAK3312 module on top of a WisBlock Base board (RAK19007). Follow carefully the procedure defined in [WisBlock module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) in order to secure the connection safely. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
+**Figure 4** shows how to mount the RAK3312 module on top of a WisBlock Base board (RAK19007). Follow carefully the procedure defined in [WisBlock module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard) in order to secure the connection safely. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
 
-> **Image:** RAK3312 Mounting Sketch
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631/datasheet/mounting-sketch.png"
+  width="60%"
+  caption="RAK3312 Mounting Sketch"
+/>
 
 ##### Disassembling
 
@@ -157,29 +181,54 @@ The procedure in disassembling any type of WisBlock module is the same.
 
 1. First, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/16.removing-screws.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/17.detaching-silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 7**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1910/quickstart/18.detaching-module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 #### LoRa and WiFi/BLE Antenna
 
 Another important components of the RAK3312 are the antennas.
 
-> **Image:** LoRa Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/ipex-mhf4-lora.png"
+  width="30%"
+  caption="LoRa Antenna"
+/>
 
-> **Image:** BLE/WiFi Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/ipex-mhf4-ble.png"
+  width="40%"
+  caption="BLE/WiFi Antenna"
+/>
 
 You need to ensure that these antennas are properly connected to have a good LoRa and BLE signal. Also, note that you can damage the RF section of the chip if you power the module without an antenna connected to the IPEX connector.
 
 RAK3312 has a label on its sticker where to connect the antennas, as shown in **Figure 10**.
 
-> **Image:** RAK3312 antenna label
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3312-antenna-label.svg"
+  width="40%"
+  caption="RAK3312 antenna label"
+/>
 
 :::tip NOTE
 - Detailed information about the RAK3312 LoRa IPEX MHF4 antenna can be found in the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_863-870_MHz_(RAKARB04)_Datasheet.pdf" target="_blank">863-870 MHz antenna datasheet</a> or the <a href="https://downloads.rakwireless.com/LoRa/WisBlock/Accessories/RAK_PCB_Antenna_for_LoRa_902-928_MHz_(RAKARB03)_Datasheet.pdf" target="_blank">902-928 MHz antenna datasheet.</a>
@@ -190,29 +239,42 @@ RAK3312 has a label on its sticker where to connect the antennas, as shown in **
 - When using the LoRa, WiFi or Bluetooth Low Energy transceivers, make sure that the antennas are connected. Using these transceivers without an antenna can damage the module.
 :::
 
+
 #### Battery and Solar Connection
 
-RAK3312 can be powered via the USB cable or Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 11**. The matching connector for the battery wires is a [JST PHR-2 2 mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable).
+RAK3312 can be powered via the USB cable or Li-Ion/LiPo battery via the dedicated connectors, as shown in **Figure 11**. The matching connector for the battery wires is a [JST PHR-2 2&nbsp;mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/battery-connector-cable).
 
 This illustration uses RAK19007 as WisBlock Base. There are other [WisBlock Base](https://store.rakwireless.com/collections/wisblock-base) boards available, and you need to check the datasheet of the specific WisBlock Base board for the right polarity and other parameters.
 
 :::warning
 
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 
 :::
 
-> **Image:** WisBlock Base connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631/quickstart/battery-connect.png"
+  width="60%"
+  caption="WisBlock Base connection"
+/>
 
-> **Image:** Battery connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631/quickstart/battery-connection.gif"
+  width="35%"
+  caption="Battery connection"
+/>
 
-The battery can be recharged as well via small solar panel, as shown in **Figure 13**. The matching connector for the solar panel wires is an [JST ZHR-2 1.5 mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable).
+The battery can be recharged as well via small solar panel, as shown in **Figure 13**. The matching connector for the solar panel wires is an [JST ZHR-2 1.5&nbsp;mm pitch female](https://store.rakwireless.com/collections/wisblock-accessory/products/solar-panel-connector-cable).
 
-> **Image:** Solar panel connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak4631/quickstart/solar-connect.png"
+  width="100%"
+  caption="Solar panel connection"
+/>
 
 Specification of the battery and solar panel can be found on the datasheet of the WisBlock Base.
 
@@ -251,23 +313,43 @@ void loop() {
 ```
 </details>
 
-> **Image:** Example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/hello-example.svg"
+  width="50%"
+  caption="Example code"
+/>
 
 8. Click the **Verify** button to compile and check for errors.
 
-> **Image:** Verify the example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/verify-code.svg"
+  width="100%"
+  caption="Verify the example code"
+/>
 
 9. When the compilation is complete, click the **Upload** button to flash the firmware to the RAK3312.
 
-> **Image:** Upload the example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/upload-code.svg"
+  width="100%"
+  caption="Upload the example code"
+/>
 
 10. Upon successful upload, the **Device programmed** message will appear.
 
-> **Image:** Device Programmed
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/dev-prog.svg"
+  width="100%"
+  caption="Device Programmed"
+/>
 
 11. After the **Device Programmed** is completed, you will see the "Hello" message every 5 seconds in the console.
 
-> **Image:** Application log output
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/log-output.svg"
+  width="100%"
+  caption="Application log output"
+/>
 
 #### LoRaWAN Example
 
@@ -295,7 +377,11 @@ This section shows how to connect the RAK3312 module to the TTN platform.
 A working gateway connected to TTN is required, or the device must be within the coverage of a TTN community network.
 :::
 
-> **Image:** The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/4.ttn-context.png"
+  width="100%"
+  caption="The Things Stack"
+/>
 
 As shown in **Figure 22**, The Things Stack (TTN V3) is an open-source LoRaWAN network server suitable for global, geo-distributed public and private deployments as well as for small local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliance and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries.</a>
 
@@ -307,37 +393,69 @@ The RAK3312 WisDuo module can be part of this ecosystem as a device, and the obj
 
 a. Go to <a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network</a> and click on **Sign up**.
 
-> **Image:** Sign up an account in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_1.png"
+  width="100%"
+  caption="Sign up an account in TTN"
+/>
 
 b. Select a community type by clicking **Get started**.
 
-> **Image:** TTN community type
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_2.png"
+  width="100%"
+  caption="TTN community type"
+/>
 
 c. Sign up through The Things ID by clicking **Sign up for free**.
 
-> **Image:** Sign up through The Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_4.png"
+  width="100%"
+  caption="Sign up through The Things ID"
+/>
 
 d. Enter your details, agree to the Terms and Conditions, and click **Sign up to The Things ID**.
 
-> **Image:** Enter account details
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_6.png"
+  width="100%"
+  caption="Enter account details"
+/>
 
 e. Then, select a cluster as shown in **Figure 27**.
 
-> **Image:** Select a cluster in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak11720-module/quickstart/rak11720_new_3.png"
+  width="100%"
+  caption="Select a cluster in TTN"
+/>
 
 Use the same login credentials on the TTN V2 if you have one. If you have no account yet, create one.
 
 2. Once logged in to the platform, create an application by clicking **Create an application**.
 
-> **Image:** Create a TTN application for your LoRaWAN devices
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_8.svg"
+  width="100%"
+  caption="Create a TTN application for your LoRaWAN devices"
+/>
 
 3. Navigate to the **Applications** tab.
 
-> **Image:** Details of the TTN application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_9.svg"
+  width="60%"
+  caption="Details of the TTN application"
+/>
 
 4. Fill in the necessary information about your application, then click **Create application**.
 
-> **Image:** TTN application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_10.svg"
+  width="60%"
+  caption="TTN application"
+/>
 
 If you had no errors in the previous step, the application console page should now be visible. The next step is to add end-devices to your TTN application.
 
@@ -347,33 +465,65 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+Register end device**, as shown in **Figure 29**.
 
-> **Image:** Register OTAA end-device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_11.svg"
+  width="80%"
+  caption="Register OTAA end-device"
+/>
 
 2. Register the board by selecting **Enter end device specifics manually**.
 
-> **Image:** Enter OTAA end-device specifics manually
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_12.svg"
+  width="60%"
+  caption="Enter OTAA end-device specifics manually"
+/>
 
 3. Configure the **Frequency plan**, compatible **LoRaWAN version**, and supported **Regional Parameters version**.
 
-> **Image:** OTAA Frequency plan setup
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_14.svg"
+  width="60%"
+  caption="OTAA Frequency plan setup"
+/>
 
-> **Image:** OTAA LoRaWAN version setup
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_15.svg"
+  width="60%"
+  caption="OTAA LoRaWAN version setup"
+/>
 
-> **Image:** OTAA LoRaWAN Regional Parameters version setup
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_13.svg"
+  width="60%"
+  caption="OTAA LoRaWAN Regional Parameters version setup"
+/>
 
 4. Set the **JoinEUI**.
 
-> **Image:** OTAA JoinEUI setup
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_16.svg"
+  width="60%"
+  caption="OTAA JoinEUI setup"
+/>
 
 5. Click **Show advanced activation, LoRaWAN class and cluster settings**.
 
-> **Image:** OTAA Show advanced activation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_17.svg"
+  width="60%"
+  caption="OTAA Show advanced activation"
+/>
 
 6. Configure the following, then click **Confirm**.
   - Activation mode: **Over the air activation (OTAA)**
   - Additional LoRaWAN class capabilities: **None (class A only)**
 
-> **Image:** OTAA LoRaWAN class and cluster settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_18.svg"
+  width="60%"
+  caption="OTAA LoRaWAN class and cluster settings"
+/>
 
 7. Once completed, push the _**Confirm**_ button and enter the device's **JoinEUI** credential.
 
@@ -382,15 +532,27 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 - The **AppEUI** is the same as **JoinEUI**.
 :::
 
-> **Image:** OTAA DevEUI credential
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_19.svg"
+  width="60%"
+  caption="OTAA DevEUI credential"
+/>
 
 8. Click **Generate** under **AppKey**, as shown in **Figure 39**.
 
-> **Image:** OTAA AppKey credential
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_20.svg"
+  width="60%"
+  caption="OTAA AppKey credential"
+/>
 
 9. Once done, click **Register end device** to complete the process.
 
-> **Image:** Click Register end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_21.svg"
+  width="50%"
+  caption="Click Register end device"
+/>
 
 After completing the device registration, the device should appear on the TTN console, as shown in **Figure 40**.
 
@@ -400,7 +562,11 @@ After completing the device registration, the device should appear on the TTN co
 - These parameters are always accessible on the device console page, as shown in **Figure 40**.
 :::
 
-> **Image:** OTAA end-device successfully registered to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/rak3112_new_22.svg"
+  width="60%"
+  caption="OTAA end-device successfully registered to TTN"
+/>
 
 ##### Upload OTAA LoRaWAN Example to RAK3312
 
@@ -409,7 +575,11 @@ After successfully registering the RAK3312 device to the LoRaWAN Network Server,
 1. Get the example code from <a href="https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK3112/communications/LoRa/RAK3112_OTAA" target="_blank">RAK3112_OTAA.</a>
 Copy the code into the Arduino IDE sketch.
 
-> **Image:** OTAA LoRaWAN application example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/lorawan_example.svg"
+  width="100%"
+  caption="OTAA LoRaWAN application example"
+/>
 
 2. In the example code, modify the device EUI (**DevEUI**) and application key (**AppKey**).
 
@@ -434,7 +604,11 @@ uint8_t nodeAppEUI[8] = {0x70,0xB3,0xD5,0x7E,0xD0,0x02,0x01,0xE1};
 uint8_t nodeAppKey[16] = {0x2b,0x84,0xe0,0xb0,0x9b,0x68,0xe5,0xcb,0x42,0x17,0x6f,0xe7,0x53,0xdc,0xee,0x79};
 ```
 
-> **Image:** Update the OTAA, DevEUI, and AppKey
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/lorawan_otaa_parameter.svg"
+  width="100%"
+  caption="Update the OTAA, DevEUI, and AppKey"
+/>
 
 3. Update the band in the code according to your region. This guide uses AS923-3 as an example, so no changes are needed if you're using the same band.
 
@@ -465,17 +639,30 @@ lmh_init(&lora_callbacks, lora_param_init, true, CLASS_A, LORAMAC_REGION_AS923_3
 
 4. The last step is to upload the code by clicking the **Upload** icon. Take note that you should select the right board and port.
 
-> **Image:** Upload the OTAA example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/upload-code.svg"
+  width="100%"
+  caption="Upload the OTAA example code"
+/>
 
 The terminal logs should now be visible in the Serial Monitor of the Arduino IDE. If the COM port disconnects, the terminal output may not appear immediately. Reconnecting the module or pressing the reset button can help restore the output.
 
-> **Image:** Terminal logs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/lorawan_logs.svg"
+  width="60%"
+  caption="Terminal logs"
+/>
 
 5. Check the ***Live data*** section on the LoRaWAN network server to see if the device has successfully joined with the `join request` and `join accept` logs.
 
-> **Image:** OTAA live data on TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3112-module/quickstart/ttn_success_uplink.svg"
+  width="100%"
+  caption="OTAA live data on TTN"
+/>
 
 ### Arduino Installation
 
 Refer to [Software section](#software).
 
+<RkBottomNav/>

@@ -9,12 +9,17 @@ keywords:
 sidebar_label: Flashing the OS
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAKR314 CM4 Base Board Flashing the OS
+
 
 The RAKR314 is designed to utilize a Raspberry Pi Compute Module 4 (CM4). Since CM4 modules are available with or without built-in eMMC, there are two usage options:
 
 - For models without eMMC storage (CM4 Lite versions), a Micro SD card can be used in the same way it is utilized with a Raspberry Pi 4 (RPi 4).
 - For models with eMMC storage, the OS image must be flashed directly to the onboard storage. **Using the SD card is not an option in this case.**
+
 
 ### Preparing the Software
 
@@ -24,13 +29,18 @@ You can use Windows, macOS, or Linux to flash the image. It is recommended to us
 
 ### Flashing a Micro SD Card
 
-It is recommended to use a Micro SD card with a capacity of 8 GB or greater, along with a high-quality, high-speed card reader. Insert the card into the reader and ensure it is properly connected to the host device. Then, follow these steps:
+It is recommended to use a Micro SD card with a capacity of 8&nbsp;GB or greater, along with a high-quality, high-speed card reader. Insert the card into the reader and ensure it is properly connected to the host device. Then, follow these steps:
 
 1. Open balenaEtcher and select the OS image (no need to unzip the archive).
 2. Select the target (your Micro SD card).
 3. Press the **Flash!** button to start the process.
 
-> **Image:** balena Etcher
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rakr314/3.balena.png"
+  width="70%"
+  caption="balena Etcher"
+/>
+
 
 Wait for the flashing process and the subsequent verification phase to complete. Once finished, unplug the card from the reader and insert it into the RAKR314's Micro SD slot located on the bottom side of the board.
 
@@ -47,9 +57,15 @@ Before installing the drivers, regardless of the operating system, ensure you pe
 1. Connect the Type-C port via a suitable cable to a USB port on your computer. Do not power the board on yet.
 2. Short the eMMC boot PIN and GND PIN.
 
-> **Image:** GND and eMMC boot pins
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rakr314/4.boot-pins.png"
+  width="50%"
+  caption="GND and eMMC boot pins"
+/>
 
 Once the appropriate utility is installed for your operating system, the eMMC storage will appear as mounted storage.
+
 
 #### Windows
 
@@ -112,13 +128,21 @@ rak@RAKR314 usbboot %
 
 Check Raspberry Pi's [official documentation](https://www.raspberrypi.com/documentation/computers/compute-module.html) for instructions on how to install the tools required, build the `usbboot` tool, and run the tool.
 
+
 #### Flashing the Image
 
 Now that the eMMC is properly mounted, the rest of the process is similar to flashing an SD card. Open balenaEtcher, select the firmware file, choose the drive labeled `Compute Module`, and click **Flash**.
 
-> **Image:** eMMC as seen in balenaEtcher
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rakr314/5.emmc.png"
+  width="70%"
+  caption="eMMC as seen in balenaEtcher"
+/>
+
 
 #### First Login
+
 
 :::tip NOTE
 It is recommended to connect the RAKR314 via Ethernet for its first-time setup.
@@ -128,3 +152,5 @@ The OS operates in DHCP client mode by default, allowing you to connect the devi
 
 The default RAKPiOS username is `rak`, and the password is `changeme`. During the first login, you will be required to change the default password. For instance, if you log in via SSH for the first time, you will need to enter the default password followed by a new one to complete the setup.
 
+
+<RkBottomNav/>

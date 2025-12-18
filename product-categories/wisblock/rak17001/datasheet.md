@@ -10,11 +10,19 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK17001 WisBlock H-Bridge Module Datasheet
 
 ## Overview
 
-> **Image:** RAK17001 WisBlock H-Bridge Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/datasheet/rak17001_front_back.png" 
+  figureCount="1"
+  caption="RAK17001 WisBlock H-Bridge Module" 
+   width="60%"
+/>
 
 ### Description
 
@@ -24,12 +32,12 @@ RAK17001 is a WisBlock H-Bridge module which extends the WisBlock system with a 
 
 * **Sensor specifications**
     *  DC motor drive module
-    *  Operating voltage from 1.8 V to 10 V
-    *  Maximum output current 2.6 Arms
+    *  Operating voltage from 1.8&nbsp;V to 10&nbsp;V
+    *  Maximum output current 2.6&nbsp;Arms
     *  Full protection set
 
 * **Size**
-    * 25 x 35 mm
+    * 25 x 35&nbsp;mm
 
 ## Specifications
 
@@ -39,7 +47,12 @@ RAK17001 is a WisBlock H-Bridge module which extends the WisBlock system with a 
 
 **Figure 2** shows the mounting mechanism of the RAK17001 module on a [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) board. The RAK17001 module can be mounted on the IO slots.
 
-> **Image:** RAK17001 WisBlock H-Bridge Module Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/datasheet/rak19xx_mounting.png" 
+  figureCount="2"
+  caption="RAK17001 WisBlock H-Bridge Module Mounting" 
+   width="50%"
+/>
 
 ### Hardware
 
@@ -55,7 +68,12 @@ The hardware specification is categorized into five parts. It shows the chipset 
 
 The RAK17001 WisBlock H-Bridge Module comprises a standard WisBlock connector. The WisBlock connector allows the RAK17001 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition are shown in **Figure 3**.
 
-> **Image:** RAK17001 WisBlock H-Bridge Module Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/datasheet/rak17001_pinout.png" 
+  figureCount="3"
+  caption="RAK17001 WisBlock H-Bridge Module Pinout Diagram" 
+   width="50%"
+/>
 
 :::tip NOTE
  - **PWM**, **PH**, and **FAULT_CKECK,EN** are connected to WisIO connector.
@@ -86,15 +104,32 @@ The RAK17001 WisBlock H-Bridge Module comprises a standard WisBlock connector. T
 
 **Figure 4** shows the dimensions and the mechanic drawing of the RAK17001 module.
 
-> **Image:** RAK17001 WisBlock H-Bridge Module Mechanic Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/datasheet/rak19xx_mechanic_drawing.png" 
+  figureCount="4"
+  caption="RAK17001 WisBlock H-Bridge Module Mechanic Drawing" 
+   width="60%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/datasheet/mxxs1003k6m.png" 
+  figureCount="5"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK17001 module.
 
-> **Image:** RAK17001 WisBlock H-Bridge Module schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak17001/datasheet/rak17001-schematic.png" 
+  figureCount="6"
+  caption="RAK17001 WisBlock H-Bridge Module schematics" 
+   width="100%"
+/>
 
+
+<RkBottomNav/>

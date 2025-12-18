@@ -12,6 +12,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK10702 WisBlock Indoor Comfort Node Quick Start Guide
 
 ## Prerequisites
@@ -19,6 +22,7 @@ sidebar_label: Quick Start Guide
 ### What Do You Need?
 
 Before going through each and every step in the installation guide of the RAK10702 Indoor Comfort Node, make sure you have assembled the device following the [assembly guide](assembly-guide.md).
+
 
 #### Hardware Tools
 
@@ -52,6 +56,7 @@ Serial Terminal Application, for example [Cool Term ⤴️](https://freeware.the
 
 :::
 
+
 ## Product Configuration
 
 :::tip NOTE
@@ -73,12 +78,18 @@ Once done, follow the listed steps to interface your RAK10702 Indoor Comfort Nod
 2. Test if your RAK10702 Indoor Comfort Node can now communicate with the Serial Port Tool. Configure the serial communication tool by selecting the proper port and configuring the link as listed below, then click **Open**.
 
 * **COM**: Choose the COM Port associated with the RAK10702 WisBlock Indoor Comfort Node from the previous step. For this tutorial, the COM Port is COM4.
-* Baud Rate: **115200 bps**
-* Data Bits: **8 bits**
-* Stop Bits: **1 bit**
+* Baud Rate: **115200&nbsp;bps**
+* Data Bits: **8&nbsp;bits**
+* Stop Bits: **1&nbsp;bit**
 * Parity: **NONE**
 
-> **Image:** Connecting to the Serial Port Tool
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/terminal_settings.png"
+  figureCount="1"
+  caption="Connecting to the Serial Port Tool"
+   width="50%"
+/>
 
 3. Verify your connection to the RAK10702 by sending the AT Command `AT+VER?`. If the connection is successful, the firmware version of your RAK10702 should appear.
 
@@ -86,7 +97,12 @@ Once done, follow the listed steps to interface your RAK10702 Indoor Comfort Nod
 AT+VER=?
 ```
 
-> **Image:** AT+Command Sample Serial Communication Test
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/at-ver-query.png"
+  figureCount="2"
+  caption="AT+Command Sample Serial Communication Test"
+   width="50%"
+/>
 
 ### Connecting to The Things Network V3
 
@@ -94,9 +110,20 @@ In this section, it will be shown how to connect RAK10702 WisBlock Indoor Comfor
 
 First, log in to the TTNv3. To do so, head to the [TTNv3 ⤴️](https://eu1.cloud.thethings.network/console) site. If you already have a TTN account, you can use your The Things ID credentials to log in.
 
-> **Image:** The Things Stack Home Page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_1.png"
+  figureCount="3"
+  caption="The Things Stack Home Page"
+   width="100%"
+/>
 
-> **Image:** Console Page after a successful login
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_2.png"
+  figureCount="4"
+  caption="Console Page after a successful login"
+   width="100%"
+/>
+
 
 :::tip NOTE
 - To connect RAK10702 WisBlock Indoor Comfort Node to TTNv3, you should already have connected a gateway in range to TTNv3. Or, you have to be sure that you are in the range of a public gateway.
@@ -104,11 +131,17 @@ First, log in to the TTNv3. To do so, head to the [TTNv3 ⤴️](https://eu1.clo
 - This tutorial is for the EU868 Frequency band.
 :::
 
+
 #### Adding an Application
 
 1. If you do not have created applications yet, to create an application, choose **Create an application**. If you have created applications before, navigate through **Go to applications** > **+ Add application**.
 
-> **Image:** Create an application page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_3.png"
+  figureCount="5"
+  caption="Create an application page"
+   width="100%"
+/>
 
 2. Fill in the needed information. After filling in, click **Create application**.
 
@@ -116,7 +149,12 @@ First, log in to the TTNv3. To do so, head to the [TTNv3 ⤴️](https://eu1.clo
    - **Application name** (optional) - This is the name of your application.
    - **Description** (optional) – Description of your application. Optional application description; can also be used to save notes about the application.
 
-> **Image:** Create an application page
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_4.png"
+  figureCount="6"
+  caption="Create an application page"
+   width="100%"
+/>
 
 #### OTAA Mode
 
@@ -134,7 +172,12 @@ First, log in to the TTNv3. To do so, head to the [TTNv3 ⤴️](https://eu1.clo
     ATC+STATUS=?
     ```
 
-> **Image:** AppEUI of the device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/atc-status-query.png"
+  figureCount="7"
+  caption="AppEUI of the device"
+   width="50%"
+/>
 
 	Write down the DevEUI, AppEUI and AppKey, they will be needed in the next steps to register the device in TTN.
 
@@ -146,12 +189,22 @@ First, log in to the TTNv3. To do so, head to the [TTNv3 ⤴️](https://eu1.clo
 	- For the Regional Parameters version choose **RP001 Regional Parameters 1.0.2 revision B**
 	- In the Provisioning information, enter the AppEUI of the device in the JoinEUI field.
 
-> **Image:** Adding a device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_5.png"
+  figureCount="8"
+  caption="Adding a device"
+   width="100%"
+/>
 
 4. On the same page, click on _**"Show advanced activation, LoRaWAN class and cluster settings"**_
    - Choose **Over the air activation (OTAA)**
 
-> **Image:** Registering the device in OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_6.png"
+  figureCount="9"
+  caption="Registering the device in OTAA mode"
+   width="100%"
+/>
 
 5. To get to the next step of the registration, click **Confirm** left of the JoinEUI field.
 Now new fields will be shown. Use the EUI's and Key you obtained from the device before.
@@ -159,13 +212,23 @@ Now new fields will be shown. Use the EUI's and Key you obtained from the device
    - Enter the AppKey of the device in the AppKey field.
    - Optionally you can enter an End Device ID
 
-> **Image:** Basic settings for OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_7.png"
+  figureCount="10"
+  caption="Basic settings for OTAA mode"
+   width="100%"
+/>
 
 6. Click **Register end device**.
 
 7. Now you can see the device overview screen:
 
-> **Image:** Basic settings for OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_8.png"
+  figureCount="11"
+  caption="Basic settings for OTAA mode"
+   width="100%"
+/>
 
 8. Start the network join on the RAK10702
 
@@ -175,15 +238,30 @@ Now new fields will be shown. Use the EUI's and Key you obtained from the device
     ATC+JOIN=1:0
     ```
 
-> **Image:** Join
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/at-join.png"
+  figureCount="12"
+  caption="Join"
+   width="50%"
+/>
 
 If all the settings are done correct, you will see in the **Live Data** the join request and join accept messages from the device.
 
-> **Image:** Basic settings for OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn_8.png"
+  figureCount="13"
+  caption="Basic settings for OTAA mode"
+   width="100%"
+/>
 
 If you get a response in the **Live data** feed in The Things Stack, it means your RAK10702 WisBlock Indoor Comfort Node is successfully connected.
 
-> **Image:** Sending data to The Things Stack from RAK10702 WisBlock Indoor Comfort Node
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ttn-9.png"
+  figureCount="14"
+  caption="Sending data to The Things Stack from RAK10702 WisBlock Indoor Comfort Node"
+   width="100%"
+/>
 
 ### Connecting with ChirpStack V4
 
@@ -195,7 +273,12 @@ In this guide, it is assumed that you are using Chirpstack V4. Setting up an app
 
 :::
 
-> **Image:** RAK10702 WisBlock Indoor Comfort Node in the context of the ChirpStack platform
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-1.png"
+  figureCount="15"
+  caption="RAK10702 WisBlock Indoor Comfort Node in the context of the ChirpStack platform"
+   width="60%"
+/>
 
 The ChirpStack, previously known as the LoRaServer project, provides open-source components for building LoRaWAN networks. Like the case of TTN, the RAK10702 WisBlock Indoor Comfort Node is located in the periphery and transmits the data to the backend servers through a LoRaWAN gateway. Learn more about [ChirpStack ⤴️](https://www.chirpstack.io/).
 
@@ -213,7 +296,7 @@ In this section, you need the following requirements:
   3. Serial Port Tool
   4. RAK10702 WisBlock Indoor Comfort Node
 
-**Sign up and Log in**
+<b>Sign up and Log in</b>
 
 Sign in to Chirpstack with your username and password.
 
@@ -221,11 +304,21 @@ Sign in to Chirpstack with your username and password.
 
 1. Go to the Application section, as shown in **Figure 16**.
 
-> **Image:** Application Section of ChirpStack LoRaServer
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-2.png"
+  figureCount="16"
+  caption="Application Section of ChirpStack LoRaServer"
+   width="100%"
+/>
 
 2. By default, you should create a new Application, although you can reuse the existing ones. For this setup, create a new Application by clicking on the “**Add application**” button, and filling the required parameters, as shown in **Figure 17** and **Figure 18**.
 
-> **Image:** Creating a New Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-3.png"
+  figureCount="17"
+  caption="Creating a New Application"
+   width="100%"
+/>
 
 * For this setup, create an Application named **RAK-PH-AS923-3**. You can choose any name that fits better for you.
 
@@ -233,11 +326,21 @@ Sign in to Chirpstack with your username and password.
 
 Once you have created the application, you need to setup a **Device Profile**. Click on Device profiles in the menu then click **Add device profile**
 
-> **Image:** Adding device profile
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-4.png"
+  figureCount="18"
+  caption="Adding device profile"
+   width="100%"
+/>
 
 In the **Add device profile** page, you have several tabs. For this tutorial, it is sufficient to fill out the information in the **General** tab.
 
-> **Image:** Filling Parameters of an Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-5.png"
+  figureCount="19"
+  caption="Filling Parameters of an Application"
+   width="100%"
+/>
 
 - Name
    - Enter a unique name for this device profile. Here I have choosen **RAK-Cayenne-LPP-AS923-3**
@@ -263,7 +366,12 @@ Chirpstack can use a payload decoder to show the payload in the device events. Y
 
 Adding the payload decoder is not difficult. From our [GitHub repo ⤴️](https://github.com/RAKWireless/RAKwireless_Standardized_Payload) open the [RAKwireless_Standardized_Payload.js](https://github.com/RAKWireless/RAKwireless_Standardized_Payload/blob/main/RAKwireless_Standardized_Payload.js) Javascript.
 
-> **Image:** Filling Parameters of an Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-6.png"
+  figureCount="20"
+  caption="Filling Parameters of an Application"
+   width="100%"
+/>
 
 In Chirpstack, in the Device Profile, go to the tab Codec.
 Select in the **Payload codec** tab the _**JavaScript functions**_
@@ -272,7 +380,12 @@ Copy the content of the [RAKwireless_Standardized_Payload.js ⤴️](https://git
 
 Then press the **Submit** button.
 
-> **Image:** Filling Parameters of an Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-7.png"
+  figureCount="21"
+  caption="Filling Parameters of an Application"
+   width="100%"
+/>
 
 #### Register a New Device
 
@@ -288,17 +401,34 @@ Then press the **Submit** button.
     ATC+STATUS=?
     ```
 
-> **Image:** AppEUI of the device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/atc-status-query.png"
+  figureCount="22"
+  caption="AppEUI of the device"
+   width="50%"
+/>
 
 	Write down the DevEUI and AppKey, they will be needed in the next steps to register the device in TTN.
 
+
 2. Choose the **Application** created in the previous step, then select the **DEVICES** tab, as shown in **Figure 23** and **Figure 24**.
 
-> **Image:** List of Applications Created
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-8.png"
+  figureCount="23"
+  caption="List of Applications Created"
+   width="100%"
+/>
+
 
 3. Create a new device (LoRa node) by clicking on the “**Add device**” button.
 
-> **Image:** Add a New Device at Device Tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-9.png"
+  figureCount="24"
+  caption="Add a New Device at Device Tab"
+   width="100%"
+/>
 
 4. On the device creation page, fill in the necessary data. You can generate a Device EUI automatically by clicking the following icon, or you can write a correct Device EUI in the edit box.
 
@@ -306,11 +436,21 @@ Then press the **Submit** button.
 * **Device EUI (EUI64)**: Enter the device EUI of your RAK10702 WisBlock Indoor Comfort Node here.
 * **Device Profile**: Select the profile you created before. Here we use **`RAK-Cayenne-LPP-AS923-3`**
 
-> **Image:** Add a New Device at Device Tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-10.png"
+  figureCount="25"
+  caption="Add a New Device at Device Tab"
+   width="100%"
+/>
 
 Click the **Submit** button. A new window will open where you have to enter the AppKey value:
 
-> **Image:** Add a New Device at Device Tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-11.png"
+  figureCount="26"
+  caption="Add a New Device at Device Tab"
+   width="100%"
+/>
 
 #### Device Join
 
@@ -324,19 +464,41 @@ The device needs to join the Chirpstack server in OTAA mode before it can send d
     ATC+JOIN=1:0
     ```
 
-> **Image:** Join
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/at-join.png"
+  figureCount="27"
+  caption="Join"
+   width="50%"
+/>
 
 If all the settings are done correct, you will see in the **LoRaWAN frames** the join request and join accept messages from the device.
 
-> **Image:** Basic settings for OTAA mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-12.png"
+  figureCount="28"
+  caption="Basic settings for OTAA mode"
+   width="100%"
+/>
+
 
 Depending on your device settings, you will see after the set interval time a data packet arriving at the Chirpstack LNS.
 
-> **Image:** Sending data to The Things Stack from RAK10702 WisBlock Indoor Comfort Node
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-13.png"
+  figureCount="29"
+  caption="Sending data to The Things Stack from RAK10702 WisBlock Indoor Comfort Node"
+   width="100%"
+/>
 
 If you click on the **up** icon, you can see the decoded data that was received from the RAK10702
 
-> **Image:** Sending data to The Things Stack from RAK10702 WisBlock Indoor Comfort Node
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/cs-14.png"
+  figureCount="30"
+  caption="Sending data to The Things Stack from RAK10702 WisBlock Indoor Comfort Node"
+   width="100%"
+/>
+
 
 ### Decoding the Payload
 
@@ -366,23 +528,24 @@ The data format uses the following sensor types:
 
 | Data                     | Channel No. | Channel ID | Length        | Comment                                                         | Required Module   | Decoded Field Name |
 | ------------------------ | ----------- | ---------- | ------------- | --------------------------------------------------------------- | ----------------- | ------------------ |
-| Battery value            | 1           | _**116**_  | 2 bytes  | 0.01 V Unsigned MSB                                        | RAK4631           | voltage_1          |
-| Humidity                 | 2           | 104        | 1 bytes  | in % RH                                                    | RAK1901           | humidity_2         |
-| Temperature              | 3           | 103        | 2 bytes  | in °C                                                           | RAK1901           | temperature_3      |
-| Illuminance 2            | 15          | 101        | 2 bytes  | 1 lux unsigned                                        | RAK12010          | illuminance_15     |
-| VOC                      | 16          | _**138**_  | 2 bytes  | VOC index                                                       | RAK12047          | voc_16             |
-| SCD30 CO2 concentration  | 35          | 125        | 2 bytes  | 1 ppm unsigned                                        | RAK12037          | concentration_35   |
-| SCD30 temperature        | 36          | 103        | 2 bytes  | in °C                                                           | RAK12037          | temperature_36     |
-| SCD30 humidity           | 37          | 104        | 1 bytes  | in % RH                                                    | RAK12037          | humidity_37        |
-| PM 1.0 value             | 40          | _**138**_  | 2 bytes  | in ug/m3                                                        | RAK12039          | voc_40             |
-| PM 2.5 value             | 41          | _**138**_  | 2 bytes  | in ug/m3                                                        | RAK12039          | voc_41             |
-| PM 10 value              | 42          | _**138**_  | 2 bytes  | in ug/m3                                                        | RAK12039          | voc_42             |
-| PIR sensor               | 48          | 102        | 1 bytes  | bool                                                            | ---               | presence_48        |
+| Battery value            | 1           | _**116**_  | 2&nbsp;bytes  | 0.01&nbsp;V Unsigned MSB                                        | RAK4631           | voltage_1          |
+| Humidity                 | 2           | 104        | 1&nbsp;bytes  | in %&nbsp;RH                                                    | RAK1901           | humidity_2         |
+| Temperature              | 3           | 103        | 2&nbsp;bytes  | in °C                                                           | RAK1901           | temperature_3      |
+| Illuminance 2            | 15          | 101        | 2&nbsp;bytes  | 1&nbsp;lux&nbsp;unsigned                                        | RAK12010          | illuminance_15     |
+| VOC                      | 16          | _**138**_  | 2&nbsp;bytes  | VOC index                                                       | RAK12047          | voc_16             |
+| SCD30 CO2 concentration  | 35          | 125        | 2&nbsp;bytes  | 1&nbsp;ppm&nbsp;unsigned                                        | RAK12037          | concentration_35   |
+| SCD30 temperature        | 36          | 103        | 2&nbsp;bytes  | in °C                                                           | RAK12037          | temperature_36     |
+| SCD30 humidity           | 37          | 104        | 1&nbsp;bytes  | in %&nbsp;RH                                                    | RAK12037          | humidity_37        |
+| PM 1.0 value             | 40          | _**138**_  | 2&nbsp;bytes  | in ug/m3                                                        | RAK12039          | voc_40             |
+| PM 2.5 value             | 41          | _**138**_  | 2&nbsp;bytes  | in ug/m3                                                        | RAK12039          | voc_41             |
+| PM 10 value              | 42          | _**138**_  | 2&nbsp;bytes  | in ug/m3                                                        | RAK12039          | voc_42             |
+| PIR sensor               | 48          | 102        | 1&nbsp;bytes  | bool                                                            | ---               | presence_48        |
 
 :::tip NOTE
 - The Channel IDs in cursive are extended format and not supported by standard Cayenne LPP data decoders.
 - Example decoders for TTN, Chirpstack, Helium, and Datacake can be found in the [Github repo ⤴️](https://github.com/RAKWireless/RAKwireless_Standardized_Payload).
 :::
+
 
 ### Button functions
 
@@ -391,21 +554,15 @@ The button of the RAK10702 WisBlock Indoor Comfort Node is configured for severa
 | Number of push(es) | Function                                                     |
 | ------------------ | ------------------------------------------------------------ |
 | 1                  | Switch the UI of the display between an simple UI and a scientific UI with detailed information of all sensor data |
-|                    | 
-> **Image:** Iconized UI
-
-> **Image:** Scientific UI
- |
+|                    | <RkImage  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ui1.png"  caption="Iconized UI"   width="49%"/><RkImage  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ui2.png"  caption="Scientific UI"   width="49%"/> |
 | 2                  | Invert the colors of the display                             |
-|                    | 
-> **Image:** Inverted
- |
+|                    | <RkImage  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/ui3.png"  caption="Inverted"   width="49%"/> |
 | 3                  | Enable BLE for debug or firmware upgrades over OTA DFU       |
 | 4                  | Show details of the device LoRa/LoRaWAN settings             |
-|                    | 
-> **Image:** Status
- |
+|                    | <RkImage  src="https://images.docs.rakwireless.com/wisblock/rak10702/quickstart/status.png"  caption="Status"   width="49%"/> |
 | 9                  | Restart the device                                           |
+
+
 
 ### Miscellaneous
 
@@ -419,3 +576,6 @@ Build your own RAK10702 WisBlock Indoor Comfort Node firmware with our open-sour
 
 You can extend the functionality of the RAK10702 WisBlock Indoor Comfort Node by using these sources. You can write, as well, your own RAK10702 WisBlock Indoor Comfort Node application based on these sources.
 
+
+
+<RkBottomNav/>

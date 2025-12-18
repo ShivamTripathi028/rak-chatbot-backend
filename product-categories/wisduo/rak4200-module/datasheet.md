@@ -10,6 +10,9 @@ sidebar_label: Datasheet
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK4200 WisDuo LPWAN Module Datasheet
 
@@ -17,25 +20,26 @@ sidebar_label: Datasheet
 
 ### Description
 
-**RAK4200 WisDuo LPWAN Module** includes an STM32L071 MCU and an SX1276 LoRa chip. It has Ultra-Low Power Consumption of 9.40 uA (down to 1.08 μA @ 2.0 V) in sleep mode and high LoRa output power up to 19 dBm max in work mode.
+**RAK4200 WisDuo LPWAN Module** includes an STM32L071 MCU and an SX1276 LoRa chip. It has Ultra-Low Power Consumption of 9.40&nbsp;uA (down to 1.08&nbsp;μA @ 2.0&nbsp;V) in sleep mode and high LoRa output power up to 19&nbsp;dBm max in work mode.
 
 The module complies with LoRaWAN 1.0.2 specification. It also supports LoRa P2P Point-to-Point communications. The module is suitable for various applications that require long-range data acquisition and low power consumption.
 
 ### Features
 
 * LoRa module for Smart City, Smart Agriculture, Smart Industry
-* **Compact Form Factor**: 15 x 15.5 x 2.5 mm
+* **Compact Form Factor**: 15 x 15.5 x 2.5&nbsp;mm
 * 20 Pin Stamp Pad for PCB SMT mounting
 * **I/O ports**: UART/I2C/GPIO/ADC
-* **Temperature range**: -40° C to +85° C
-* **Supply voltage**: 2.0 ~ 3.6 V
-* **Frequency range**: 863–870 MHz (EU) / 902–928 MHz (US), ISM and SRD systems
-* Low-Power Wireless Systems with 7.8 kHz to 500 kHz Bandwidth
-* Ultra-Low Power Consumption of 9.40 μA (down to 1.08 μA @ 2.0 V) in sleep mode
+* **Temperature range**: -40°&nbsp;C to +85°&nbsp;C
+* **Supply voltage**: 2.0 ~ 3.6&nbsp;V
+* **Frequency range**: 863–870&nbsp;MHz (EU) / 902–928&nbsp;MHz (US), ISM and SRD systems
+* Low-Power Wireless Systems with 7.8&nbsp;kHz to 500&nbsp;kHz Bandwidth
+* Ultra-Low Power Consumption of 9.40&nbsp;μA (down to 1.08&nbsp;μA @ 2.0&nbsp;V) in sleep mode
 * **Core**: ARM 32-bit Cortex – M0+ with MPU
-* Up to 128 KB flash memory with ECC
-* 20 KB RAM
-* 6 KB of data EEPROM with ECC
+* Up to 128&nbsp;KB flash memory with ECC
+* 20&nbsp;KB RAM
+* 6&nbsp;KB of data EEPROM with ECC
+
 
 ## Specifications
 
@@ -45,11 +49,23 @@ The overview covers the RAK4200 WisDuo board overview where the front and back v
 
 #### Board Overview
 
-> **Image:** RAK4200 WisDuo LPWAN Module Front and Back View
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/back_view.png"
+  width="60%"
+  caption="RAK4200 WisDuo LPWAN Module Front and Back View"
+/>
 
 #### Block Diagram
 
-> **Image:** RAK4200 WisDuo Block Diagram
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/block-diagram.png"
+  width="60%"
+  caption="RAK4200 WisDuo Block Diagram"
+/>
 
 ### Hardware
 
@@ -57,17 +73,21 @@ The hardware specification is categorized into five parts. It covers the pinouts
 
 #### Pin Definition
 
-> **Image:** Pinout for RAK4200
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/pinout-for-rak4200.svg"
+  width="65%"
+  caption="Pinout for RAK4200"
+/>
 
 :::warning
 When using `RF` pin for antenna and not the IPEX connector variant, there are design considerations to make sure optimum RF performance.
 
 - RF trace must be away from interference (switching node of DC-DC supply, high current/voltage pulses from controllers of inductive load like motor, signal generators, etc.)
-- RF trace must have 50 Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
+- RF trace must have 50&nbsp;Ohms impedance. It is advisable to use an impedance simulation software tool to achieve this requirement.
 - If using an external antenna connector, make it close to the `RF` pin.
 - Ground plane optimization is critical on certain antenna types like monopole.
 - GND trace used for RF path return must be directly connected to the GND plane and not be treated as thermal relief.
-- It is recommended for the RF trace to be routed in a curve and not in a sharp 90 degrees.
+- It is recommended for the RF trace to be routed in a curve and not in a sharp 90&nbsp;degrees.
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for [Antenna RF Design](https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test) which includes PCB design, tuning, matching, and RF testing.
 :::
@@ -119,9 +139,8 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 | RX mode       |       L        |       H        |
 
 :::tipLogic Level
-H level (1.8 - 5.0 V)
-
-L level (0 V)
+H level (1.8 - 5.0&nbsp;V)<br />
+L level (0&nbsp;V)
 :::
 
 #### RF Characteristics
@@ -130,16 +149,52 @@ L level (0 V)
 
 The board supports the following LoRaWAN frequency channels shown in the table below. The frequency parameter is easy to configure as you go through the device configuration setup. RAK4200 has two different types based on its frequency: RAK4200(L) for low frequency and RAK4200(H) for high frequency.
 
-| Module | Region | Frequency (MHz) |
-| --- | --- | --- |
-| RAK3172(L) | Europe | EU433 |
-| RAK3172(L) | China | CN470 |
-| RAK4200 (H) | Indian | IN865 |
-| RAK4200 (H) | Europe | EU868 |
-| RAK4200 (H) | North America | US915 |
-| RAK4200 (H) | Australia | AU915 |
-| RAK4200 (H) | Korea | KR920 |
-| RAK4200 (H) | Asia | AS923 |
+<table>
+  <thead style={{ textAlign: 'center' }}>
+    <tr>
+      <th>Module</th>
+      <th>Region</th>
+      <th>Frequency (MHz)</th>
+    </tr>
+  </thead>
+
+  <tbody style={{ textAlign: 'center' }}>
+    <tr>
+      <td rowSpan="2">RAK3172(L)</td>
+      <td>Europe</td>
+      <td>EU433</td>
+    </tr>
+    <tr>
+      <td>China</td>
+      <td>CN470</td>
+    </tr>
+    <tr>
+      <td rowSpan="6">RAK4200 (H)</td>
+      <td>Indian</td>
+      <td>IN865</td>
+    </tr>
+    <tr>
+      <td>Europe</td>
+      <td>EU868</td>
+    </tr>
+    <tr>
+      <td>North America</td>
+      <td>US915</td>
+    </tr>
+    <tr>
+      <td>Australia</td>
+      <td>AU915</td>
+    </tr>
+    <tr>
+      <td>Korea</td>
+      <td>KR920</td>
+    </tr>
+    <tr>
+      <td>Asia</td>
+      <td>AS923</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Electrical Characteristics
 
@@ -164,21 +219,29 @@ The following figures shown below are the average current consumptions based on 
 
 **LoRa Packet Sending**
 
-The RAK4200 WisDuo LPWAN Module takes **53.155 ms** to send a LoRa packet which consumes **68.4 mA** of current.
+The RAK4200 WisDuo LPWAN Module takes **53.155&nbsp;ms** to send a LoRa packet which consumes **68.4&nbsp;mA** of current.
 
-- **Sending Time**: 53.155 ms
-- **Current consumption**: 68.4 mA
+- **Sending Time**: 53.155&nbsp;ms
+- **Current consumption**: 68.4&nbsp;mA
 
-> **Image:** Oscilloscope Screen Capture of LoRa Packet Sending
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/oscilloscope-screen-capture-of-lora®-packet-sending.png"
+  width="75%"
+  caption="Oscilloscope Screen Capture of LoRa Packet Sending"
+/>
 
 **LoRa Packet Receiving**
 
-The RAK4200 WisDuo LPWAN Module takes **46.179 ms** to receive a LoRa packet which consumes **17.1 mA** of current.
+The RAK4200 WisDuo LPWAN Module takes **46.179&nbsp;ms** to receive a LoRa packet which consumes **17.1&nbsp;mA** of current.
 
-- **Receiving Time**: 46.179 ms
-- **Current consumption**: 17.1 mA
+- **Receiving Time**: 46.179&nbsp;ms
+- **Current consumption**: 17.1&nbsp;mA
 
-> **Image:** Oscilloscope Screen Capture of LoRa Packet Receiving
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/oscilloscope-screen-capture-of-lora®-packet-receiving.png"
+  width="75%"
+  caption="Oscilloscope Screen Capture of LoRa Packet Receiving"
+/>
 
 ##### Operating Current
 
@@ -197,28 +260,49 @@ The RAK4200 WisDuo LPWAN Module takes **46.179 ms** to receive a LoRa packet wh
 
 ##### Schematic
 
-> **Image:** RAK4200 Module Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/schematic.png"
+  width="100%"
+  caption="RAK4200 Module Schematic Diagram"
+/>
 
-> **Image:** RAK4200 Module Reference Circuit
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/rak4200-reference-ckt.png"
+  width="100%"
+  caption="RAK4200 Module Reference Circuit"
+/>
 
 #### Mechanical Characteristics
 
-> **Image:** Mechanical Dimensions
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/mechanical-dimensions.png"
+  width="55%"
+  caption="Mechanical Dimensions"
+/>
 
 #### Recommended Reflow Profile
 
 - MSL Rating : Class 3
 
-> **Image:** Recommended Reflow Profile
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak4200-module/datasheet/recommended-reflow-profile.png"
+  width="60%"
+  caption="Recommended Reflow Profile"
+/>
 
 ##### Standard Conditions for Reflow Soldering:
 
-- **Pre-heating Ramp** (A) (Initial temperature: 150 ℃): 1-2.5 ℃/sec;
-- **Soaking Time** (T2) (150 ℃~180 ℃): 60sec-100sec;
-- **Peak Temperature**(G): 230~250 ℃;
-- **Reflow Time** (T3) (>220 ℃): 30~60 sec;
-- **Ramp-up Rate** (B): 0~2.5 ℃/ sec;
-- **Ramp-down Rate** (C): 1~3 ℃/ sec.
+- **Pre-heating Ramp** (A) (Initial temperature: 150&nbsp;℃): 1-2.5&nbsp;℃/sec;
+- **Soaking Time** (T2) (150&nbsp;℃~180&nbsp;℃): 60sec-100sec;
+- **Peak Temperature**(G): 230~250&nbsp;℃;
+- **Reflow Time** (T3) (>220&nbsp;℃): 30~60 sec;
+- **Ramp-up Rate** (B): 0~2.5&nbsp;℃/ sec;
+- **Ramp-down Rate** (C): 1~3&nbsp;℃/ sec.
 
 ### Software
 
@@ -237,5 +321,6 @@ The **hex file** contains both the bootloader and the application code. You need
 | Model Source | Source                                                                                          |
 | :----------: | :---------------------------------------------------------------------------------------------: |
 | RAK4200      | [Download](https://downloads.rakwireless.com/LoRa/RAK4200/Firmware/RAK4200_Latest_Firmware.zip) |
+
 
 <!-- ## Certification -->

@@ -11,13 +11,20 @@ slug: /product-categories/wisduo/rak811-breakout-board/datasheet/
 download: true
 ---
 
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK811 Breakout Board Datasheet
+
+
 
 ## Overview
 
 ### Description
 
-The **RAK811 Breakout Board** is a compact, low-power, and easy-to-use device featuring long-range LoRa technology with wireless transceiver capabilities. It is built around the RAK811 Stamp Module, mounted on a breakout board with an Xbee form factor and standard 2.00 mm headers.
+The **RAK811 Breakout Board** is a compact, low-power, and easy-to-use device featuring long-range LoRa technology with wireless transceiver capabilities. It is built around the RAK811 Stamp Module, mounted on a breakout board with an Xbee form factor and standard 2.00&nbsp;mm headers.
 
 The RAK811 Breakout Board complies with Class A and Class C of the LoRaWAN 1.0.2 specification. It also supports LoRa Point-to-Point (P2P) communications, enabling the implementation of private LoRa wireless applications. The module's mode and operation can be configured using AT commands via the UART interface. Additionally, the RAK811 Breakout Board features low-power capabilities, making it ideal for battery-powered applications.
 
@@ -29,19 +36,19 @@ The RAK811 Breakout Board complies with Class A and Class C of the LoRaWAN 1.0.2
 - LoRaWAN Activation by OTAA/ABP.
 - LoRa Point-to-Point (P2P) communication.
 - Integrates both **SMA** and **iPEX** antenna connectors.
-- Xbee form factor with standard 2.00 mm headers.
+- Xbee form factor with standard 2.00&nbsp;mm headers.
 - Easy to use AT Command Set via UART interface with configurable baud rate.
-- Maximum output power 100 mW (20 dBm), adjustable from 5 to 20 dBm.
-- High sensitivity at -148 dBm, enabling extremely long range connectivity.
-- Long-range - greater than 15 km with optimized antenna.
-- Low power consumption: 11 μA on on standby.
-- Ultra-Low Power Consumption of 11.9 μA (down to 1.11 μA @ 2.1 V) in sleep mode.
-- Multi-channel, dual data buffer (256 bytes each).
+- Maximum output power 100&nbsp;mW (20&nbsp;dBm), adjustable from 5 to 20&nbsp;dBm.
+- High sensitivity at -148&nbsp;dBm, enabling extremely long range connectivity.
+- Long-range - greater than 15&nbsp;km with optimized antenna.
+- Low power consumption: 11&nbsp;μA on on standby.
+- Ultra-Low Power Consumption of 11.9&nbsp;μA (down to 1.11&nbsp;μA @ 2.1&nbsp;V) in sleep mode.
+- Multi-channel, dual data buffer (256&nbsp;bytes each).
 - LoRa/FSK/GFSK/OOK modulation, bidirectional two-way communication.
 - Long battery life for battery-powered applications.
-- LoRa technology is capable of demodulating 20 dB below noise level which significantly improves immunity to interference when combined with integrated forward error correction.
-- **Operating temperature**: -30° C ~ 85° C (industrial grade)
-- **Storage temperature**: -40° C ~ 85° C (non-condensing)
+- LoRa technology is capable of demodulating 20&nbsp;dB below noise level which significantly improves immunity to interference when combined with integrated forward error correction.
+- **Operating temperature**: -30°&nbsp;C ~ 85°&nbsp;C (industrial grade)
+- **Storage temperature**: -40°&nbsp;C ~ 85°&nbsp;C (non-condensing)
 
 ## Specifications
 
@@ -49,9 +56,14 @@ This section covers the hardware and software specifications of the RAK811 Break
 
 ### Overview
 
-The **RAK811 Breakout Board** is shown in **Figure 1** with its corresponding board dimension of **42 mm x 25 mm**. This board weighs at about **0.2 kg**.
+The **RAK811 Breakout Board** is shown in **Figure 1** with its corresponding board dimension of **42&nbsp;mm x 25&nbsp;mm**. This board weighs at about **0.2&nbsp;kg**.
 
-> **Image:** RAK811 Breakout Board Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/datasheet/2.dimensions.svg"
+  width="45%"
+  caption="RAK811 Breakout Board Dimensions"
+  zoomMode={true}
+/>
 
 ### Hardware
 
@@ -80,13 +92,18 @@ The low radio frequency is applicable to the bandwidth of regions EU433 and CN47
 
 ###### Low RF Pin Outline
 
-> **Image:** Board Pinout for RAK811 Breakout Low RF
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/datasheet/3.board-pinout-for-rak811-low-rf.png"
+  width="50%"
+  caption="Board Pinout for RAK811 Breakout Low RF"
+  zoomMode={true}
+/>
 
 ###### Low RF Pin Definition
 
 | **Pin No.** | **Name**       | **Type** | **Description**                             |
 | ----------- | -------------- | -------- | ------------------------------------------- |
-| 1           | VCC 3.3 V | P        | Main Power Voltage Source Input             |
+| 1           | VCC 3.3&nbsp;V | P        | Main Power Voltage Source Input             |
 | 2           | PA9/UART1_TX   | O        | UART1 Interface (AT Commands and FW Update) |
 | 3           | PA10/UART1_RX  | I        | UART1 Interface (AT Commands and FW Update) |
 | 4           | PB12/ADC       | I/O      | GPIO and ADC                                |
@@ -113,13 +130,18 @@ The high radio frequency hardware supports the regions of EU868, US915, AU915, K
 
 ###### High RF Pin Outline
 
-> **Image:** Board Pinout for RAK811 Breakout High RF
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/datasheet/4.board-pinout-for-rak811-high-rf.png"
+  width="50%"
+  caption="Board Pinout for RAK811 Breakout High RF"
+  zoomMode={true}
+/>
 
 ###### High RF Pin Definition
 
 | **Pin No.** | **Name**       | **Type** | **Description**                             |
 | ----------- | -------------- | -------- | ------------------------------------------- |
-| 1           | VCC 3.3 V | P        | Main Power Voltage Source Input             |
+| 1           | VCC 3.3&nbsp;V | P        | Main Power Voltage Source Input             |
 | 2           | PA9/UART1_TX   | O        | UART1 Interface (AT Commands and FW Update) |
 | 3           | PA10/UART1_RX  | I        | UART1 Interface (AT Commands and FW Update) |
 | 4           | PB12/ADC       | I/O      | GPIO and ADC                                |
@@ -139,6 +161,7 @@ The high radio frequency hardware supports the regions of EU868, US915, AU915, K
 | 18          | PA8            | I/O      | GPIO only                                   |
 | 19          | PA12           | I/O      | GPIO only                                   |
 | 20          | PB14/ADC       | I/O      | GPIO and ADC                                |
+
 
 #### RF Characteristics
 
@@ -165,9 +188,21 @@ The high radio frequency hardware supports the regions of EU868, US915, AU915, K
 
 ##### Schematic Diagram
 
-> **Image:** RAK811 Schematic Diagram
 
-> **Image:** Reference Design
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/datasheet/5.schematic-diagram-for-rak811.png"
+  width="100%"
+  caption="RAK811 Schematic Diagram"
+  zoomMode={true}
+/>
+
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/datasheet/6.reference-design.png"
+  width="100%"
+  caption="Reference Design"
+  zoomMode={true}
+/>
 
 ##### Operating Voltage
 
@@ -179,7 +214,7 @@ The high radio frequency hardware supports the regions of EU868, US915, AU915, K
 
 | Feature             | Condition | Minimum                 | Typical | Maximum | Unit |
 | ------------------- | --------- | ----------------------- | ------- | ------- | ---- |
-| Current Consumption | TX Power  | 30 (@ 14 dBm) |         |         | mA   |
+| Current Consumption | TX Power  | 30 (@&nbsp;14&nbsp;dBm) |         |         | mA   |
 |                     | RX Mode   | 5.5                     |         |         | mA   |
 
 ##### Sleep Current
@@ -194,7 +229,14 @@ The high radio frequency hardware supports the regions of EU868, US915, AU915, K
 
 ##### Module Dimensions
 
-> **Image:** RAK811 Physical Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak811-breakout-board/datasheet/7.rak811-physical-dimension.png"
+  width="55%"
+  caption="RAK811 Physical Dimension"
+  zoomMode={true}
+/>
+
+
 
 #### Environmental Characteristics
 
@@ -209,6 +251,7 @@ The high radio frequency hardware supports the regions of EU868, US915, AU915, K
 | Feature             | Minimum | Typical | Maximum | Unit |
 | ------------------- | ------- | ------- | ------- | ---- |
 | Storage Temperature | -40     |         | 85      | °C   |
+
 
 ### Software
 
@@ -231,10 +274,25 @@ The **hex file** contains both the bootloader and the application code. You need
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_CE_Certification.zip
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_FCC_Certification.zip
-- **KC:** https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_KC_Certification.zip
-- **MIC:** https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_MIC_Certification.zip
-- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_RoHS_Report.zip
 
+<RkCertificationIcons certifications={[
+  {
+'ce': 'https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_CE_Certification.zip'
+},
+{
+'fcc': 'https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_FCC_Certification.zip'
+},
+{
+'kc': 'https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_KC_Certification.zip'
+},
+{
+'mic': 'https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_MIC_Certification.zip'
+},
+{
+'rohs': 'https://downloads.rakwireless.com/LoRa/RAK811/Certification_Report/RAK811_RoHS_Report.zip'
+}
+]} />
+
+
+
+<RkBottomNav/>

@@ -9,6 +9,10 @@ keywords:
 sidebar_label: Mioty Command Line Utility
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # Miromico Miro EdgeCard mioty® Management
 
 ## Overview
@@ -19,13 +23,18 @@ RAKwireless aims to simplify IoT by making connectivity solutions, including mio
 
 The WisGate Connect for mioty is RAKwireless' first mioty-enabled product, built on the Miromico Miro EdgeCard for mioty and the WisGate Connect platform. Designed for system integrators, it is the ideal platform to get started with mioty and deploy multi-protocol solutions, supporting a variety of IoT protocols on a single device.
 
-> **Image:** WisGate Connect for mioty
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/wisgate-connect-aluminum.png"
+  width="60%"
+  caption="WisGate Connect for mioty"
+/>
 
 ## Solution Features
 
 The **WisGate Connect for mioty** is a CM4-based device with three (3) Mini PCIe slots and one (1) M.2 slot to support multiple radio protocols. All available slots have USB 2.0/3.0 connectivity, SPI bus (Mini PCIe slots #1 and #2), and PCIe (Mini PCIe slot #3 and M.2 slot). This enables many different IoT connectivity solutions, including both LoRaWAN and mioty coverage with a 4G or 5G backhaul.
 
-With three external USB 2.0/3.0 ports, HDMI output, a 2.5 Gb Ethernet port, and a 1 Gb Ethernet port (supporting PoE), the WisGate Connect enables seamless connectivity to multiple peripherals. Additionally, it features two slots for WisBlock modules, allowing connection to industrial devices via RS485, Modbus, CAN bus, and both analog and digital ports.
+With three external USB 2.0/3.0 ports, HDMI output, a 2.5&nbsp;Gb Ethernet port, and a 1&nbsp;Gb Ethernet port (supporting PoE), the WisGate Connect enables seamless connectivity to multiple peripherals. Additionally, it features two slots for WisBlock modules, allowing connection to industrial devices via RS485, Modbus, CAN bus, and both analog and digital ports.
 
 Furthermore, the power of the CM4 module is more than enough to deploy edge solutions, providing robust processing capabilities for demanding IoT applications, making the WisGate Connect an ideal solution for advanced edge computing and connectivity needs.
 
@@ -58,8 +67,7 @@ The **mioty-cli** tool is available to anyone, you can check the code and submit
 - If you get an error instead, it mean that you have install the tool.
 :::
 
-2. Install the `mioty-cli` using this command:
-
+2. Install the `mioty-cli` using this command:<br/>
   ```
   rak@rakpios:~$ curl https://raw.githubusercontent.com/RAKWireless/mioty-cli/master/mioty-cli -sSf | bash -s -- install
   ```
@@ -121,6 +129,7 @@ Tool management:
   mioty-cli update               --> updates tool to the latest version
 ```
 
+
 You will be able to see that the various commands are split into three (3) groups:
 1. Host configuration
 2. Edge card configuration
@@ -173,7 +182,12 @@ Check the [**Preprovisioned base stations**](#preprovisioned-base-stations) sect
 
 Create a new account in the <a href="https://eu3.loriot.io/" target="_blank">Loriot EU3 cluster</a> site, the one with support for mioty. Then, log in.
 
-> **Image:** Loriot login page
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/Login-LORIOT.png"
+  width="50%"
+  caption="Loriot login page"
+/>
 
 #### 2. Create a Network
 
@@ -206,7 +220,12 @@ profile             : eu1
 
 1. Go back to Loriot dashboard on your computer and click the **Add Base Station** button on the network page.
 
-> **Image:** Add base station to Loriot
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/loriot-add-basestation.png"
+  width="100%"
+  caption="Add base station to Loriot"
+/>
 
 2. Add the unique ID you retrieved from the device to the **Base Station EUI** field without the slashes. Optionally, add a location and click create.
 
@@ -263,7 +282,12 @@ root@mioty-bsm:~#
 ```
 You will be redirected to your local Base Station dashboard.
 
-> **Image:** Base station local dashboard
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/dashboard.png"
+  width="100%"
+  caption="Base station local dashboard"
+/>
 
 :::tip NOTE
 The **mioty-cli** uses an ssh tunnel to the EdgeCard forwarding the specific port. The dashboard will be accessible on the given URL as long as the connection is established. Press **`Ctrl`**+**`D`** to quit the connection and shut down the tunnel.
@@ -275,11 +299,21 @@ The **mioty-cli** uses an ssh tunnel to the EdgeCard forwarding the specific por
 2. Navigate to **Networks** and, under **mioty Networks**, click on the name of the existing network. The existing network(s) will be displayed.
 3. Click on the name corresponding to your base station's EUI. You will be redirected to a page displaying live data and a PING button (if the connection is established correctly).
 
-> **Image:** Loriot gateway dashboard
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/loriot-gateway-ping.png"
+  width="100%"
+  caption="Loriot gateway dashboard"
+/>
 
 If you have a sensor (provided it has already been provisioned; otherwise, you will need to provision it first), you can check its status under **Applications** by clicking on the application name under **mioty Applications**. There you will have your sensors listed under **End Points**.
 
-> **Image:** Loriot end-point dashboard
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/miro-insight-c87d-loriot-io.png"
+  width="100%"
+  caption="Loriot end-point dashboard"
+/>
 
 ### Summary
 
@@ -319,6 +353,7 @@ Enabling base station on boot
 
 With these three (3) commands you will have a mioty gateway up and running and the connection to the mioty backend will be reestablished across reboots.
 
+
 ## Annexes
 
 ### Preprovisioned Base Stations
@@ -327,7 +362,12 @@ The base station might come pre-provisioned by Miromico on Loriot. If that is th
 
 1. Open a browser on your PC and visit <a href="https://eu3.loriot.io/" target="_blank">Loriot EU3 cluster</a> site. You will be prompted with a login page.
 
-> **Image:** Loriot login page
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/software-apis-and-library/rakpios/rakpios/mioty/login-loriot.png"
+  width="50%"
+  caption="Loriot login page"
+/>
 
 The Miro EdgeCard comes with a pre-provisioned username and password based on the base station's EUI. You can use the **mioty-cli** tool to find the credentials using this command:
 
@@ -348,3 +388,4 @@ Password       : a125cc_B347a1
 - If you have not changed the credentials but you cannot log in, your base station may not be preprovisioned. In this case, return to the [Provision the Base Station](#provision-the-base-station) section and follow the steps to provision it.
 :::
 
+<RkBottomNav/>

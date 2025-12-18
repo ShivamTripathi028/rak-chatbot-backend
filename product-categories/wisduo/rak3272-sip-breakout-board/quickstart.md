@@ -10,7 +10,11 @@ sidebar_label: Quick Start Guide
 slug: /product-categories/wisduo/rak3272-sip-breakout-board/quickstart/
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK3272-SiP Quick Start Guide
+
 
 ## Prerequisites
 
@@ -28,8 +32,7 @@ Before going through the step in the installation guide of the RAK3272-SiP Break
 
 ----
 :::warning
-**If you are using Windows 10:** 
-
+**If you are using Windows 10:** <br />
 Do _**NOT**_ install the Arduino IDE from the Microsoft App Store. Instead, install the original Arduino IDE from the <a href="https://www.arduino.cc/en/software" target="_blank">Arduino official website</a>. The Arduino app from the Microsoft App Store has problems using third-party Board Support Packages.
 :::
 
@@ -58,6 +61,7 @@ Do _**NOT**_ install the Arduino IDE from the Microsoft App Store. Instead, inst
 | APPSKEY | Application Session Key                          |
 | P2P     | Point-to-Point                                   |
 
+
 ## Product Configuration
 
 ### RAK3272-SiP Breakout Board as a Stand-Alone Device Using RUI3
@@ -79,15 +83,31 @@ The RAK3272-SiP requires a few hardware connections to function properly. At a m
 - An alternative option to update firmware aside from UART2 is to use SWD pins (SWCLK and SWDIO). This method will require the use of external tools like ST-LINK or RAKDAP1.
 :::
 
-> **Image:** RAK3272-SiP Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-schematic.png"
+  width="90%"
+  caption="RAK3272-SiP Schematic"
+  zoomMode={true}
+/>
 
 Ensure the <a href="https://store.rakwireless.com/products/lora-antenna?variant=39942879641798" target="_blank">antenna</a> is properly connected to ensure a strong LoRa signal. Additionally, note that powering the module without an antenna connected to the RP-SMA connector can damage the RF section of the chip.
 
-> **Image:** LoRa Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rp-sma-antenna.png"
+  width="30%"
+  caption="LoRa Antenna"
+  zoomMode={true}
+/>
 
 - The RAK3272-SiP features an RP-SMA connector that is compatible with the included LoRa antenna, as illustrated in **Figure 3**.
 
-> **Image:** RP-SMA Connector of RAK3272-SiP for LoRa Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-breakout_antenna.png"
+  width="20%"
+  caption="RP-SMA Connector of RAK3272-SiP for LoRa Antenna"
+  zoomMode={true}
+/>
+
 
 :::tip NOTE
 Detailed information about the RAK3272-SiP LoRa antenna can be found on the <a href="https://downloads.rakwireless.com/#Accessories/Antenna/SMA-Antenna/" target="_blank">antenna datasheet</a>.
@@ -120,72 +140,157 @@ After successfully installing the Arduino IDE, configure it to add the RAK3272-S
 
 1. Open Arduino IDE and go to **File** > **Preferences**.
 
-> **Image:** Arduino preferences
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/preferences.png"
+  width="90%"
+  caption="Arduino preferences"
+  zoomMode={true}
+/>
 
 2. To add the RAK3272-SiP to your Arduino Boards list, edit the **Additional Board Manager URLs** and click the icon, as shown in **Figure 5**.
 
-> **Image:** Modify Additional Board Manager URLs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/additional-boards.png"
+  width="70%"
+  caption="Modify Additional Board Manager URLs"
+  zoomMode={true}
+/>
 
 3. Copy the URL `https://raw.githubusercontent.com/RAKWireless/RAKwireless-Arduino-BSP-Index/main/package_rakwireless_com_rui_index.json` and paste it on the field. If there are other URLs already there, just add them on the next line. After adding the URL, click **OK**.
 
-> **Image:** Add additional board manager URLs
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/preferences-url.png"
+  width="90%"
+  caption="Add additional board manager URLs"
+  zoomMode={true}
+/>
 
 4. Restart the Arduino IDE.
 5. Open the **Boards Manager** from the Tools Menu.
 
-> **Image:** Open Arduino boards manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/boards-manager.png"
+  width="90%"
+  caption="Open Arduino boards manager"
+  zoomMode={true}
+/>
 
 6. Write `RAK` in the search bar, as shown in **Figure 8**. This will show the available RAKwireless module boards that you can add to your Arduino Board list. Select and install the latest version of the  **RAKwireless RUI STM32 Boards**.
 
-> **Image:** Install RAKwireless RUI STM32 boards
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/installing-rak.png"
+  width="70%"
+  caption="Install RAKwireless RUI STM32 boards"
+  zoomMode={true}
+/>
 
 7. Once the BSP is installed, select  **Tools** > **Boards Manager** > **RAKWireless RUI STM32 Modules** > **WisDuo RAK3272-SiP Board**. The RAK3272-SiP breakout board uses the RAK3172-SiP WisDuo module.
 
-> **Image:** Select RAK3272-SiP Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rui-stm32.png"
+  width="90%"
+  caption="Select RAK3272-SiP Board"
+  zoomMode={true}
+/>
 
 ##### Compile an Example with Arduino Serial
 
 1. After adding the **RAK3272-SiP** to the Arduino IDE, test your setup by running a simple program. Ensure a USB connection is included in the schematic of the RAK3272-SiP breakout board, as illustrated in **Figure 10**.
 
-> **Image:** RAK3272-SiP with USB to Serial Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-usb.png"
+  width="90%"
+  caption="RAK3272-SiP with USB to Serial Schematic"
+  zoomMode={true}
+/>
 
 2. Connect the RAK3272-SiP via UART and check RAK3272-SiP COM Port using Windows **Device Manager**. Double-click the reset button if the module is not detected.
 
-> **Image:** Device manager ports (COM & LPT)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rui-port.png"
+  width="70%"
+  caption="Device manager ports (COM & LPT)"
+  zoomMode={true}
+/>
 
 3. Choose RAK3272-SiP on board selection select via **Tools** > **Boards Manager** > **RAKWireless RUI STM32 Modules** > **WisDuo RAK3272-SiP Board**.
 
-> **Image:** Select RAK3272-SiP Breakout Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rui-stm32.png"
+  width="90%"
+  caption="Select RAK3272-SiP Breakout Board"
+  zoomMode={true}
+/>
 
 4. Open the **Tools** menu and select the COM port. In this case, select **COM28**, as it is currently in use.
 
-> **Image:** Select COM port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/select-port.png"
+  width="90%"
+  caption="Select COM port"
+  zoomMode={true}
+/>
 
 5. Click on the **Serial Monitor** icon to connect to the COM port.
 
-> **Image:** Open Arduino serial monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/serial-mon.png"
+  width="90%"
+  caption="Open Arduino serial monitor"
+  zoomMode={true}
+/>
 
 6. To test the connection, send AT commands to the **RAK3272-SIP**. For instance, to check the RUI version, type `AT+VER=?` in the text area and click the **Send** button.
 
-> **Image:** Send AT command
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/at-ver.png"
+  width="90%"
+  caption="Send AT command"
+  zoomMode={true}
+/>
 
-> **Image:** Arduino serial monitor COM28
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/arduino-console.png"
+  width="90%"
+  caption="Arduino serial monitor COM28"
+  zoomMode={true}
+/>
 
 7. Open the **Arduino_Serial** example code.
 
-> **Image:** Arduino Serial example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/serial-example.png"
+  width="90%"
+  caption="Arduino Serial example"
+  zoomMode={true}
+/>
 
 8. Click on the **Verify** icon to check if you have successfully compiled the example code.
 
-> **Image:** Verify the example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/verify-code.png"
+  width="90%"
+  caption="Verify the example code"
+  zoomMode={true}
+/>
 
 9. Click the **Upload** icon to send the compiled firmware to your RAK3272-SiP.
 
-> **Image:** Upload the example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/upload-code.png"
+  width="90%"
+  caption="Upload the example code"
+  zoomMode={true}
+/>
 
 10. If the upload is successful, you will see the **Device programmed** message.
 
-> **Image:** Device programmed successfully
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/dev-prog.png"
+  width="90%"
+  caption="Device programmed successfully"
+  zoomMode={true}
+/>
 
 Once the device programming is complete, the **Arduino_Serial** example will be operational, indicating successful execution.
 
@@ -193,11 +298,17 @@ Once the device programming is complete, the **Arduino_Serial** example will be 
 
 This section discusses how to use and access RAK3272-SiP pins using RUI3 API. It shows basic code using digital I/O, analog input, UART, and I2C.
 
-> **Image:** Available Peripherals and Digital I/O pins in RAK3272-SiP Breakout Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-pins.png"
+  width="70%"
+  caption="Available Peripherals and Digital I/O pins in RAK3272-SiP Breakout Board"
+  zoomMode={true}
+/>
 
 ###### How to Use Digital I/O
 
 You can use any of the pins below as Digital Pin.
+
 
 | **Pin Name** | **Alternative Pin Usage** |
 | :----------: | :-----------------------: |
@@ -235,7 +346,14 @@ You can use any of the pins below as Digital Pin.
 |     PC6      |                           |
 |     PC13     |                           |
 
-> **Image:** Available Digital I/O pins in RAK3172-SiP Breakout Board
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-io.png"
+  width="70%"
+  caption="Available Digital I/O pins in RAK3172-SiP Breakout Board"
+  zoomMode={true}
+/>
+
 
 The pins listed below must not be used.
 
@@ -246,12 +364,16 @@ The pins listed below must not be used.
 | PA13         | J3 pin 5         | SWDIO         |
 | PA14         | J3 pin 6         | SWCLK         |
 
+
+
 :::tip NOTE
 The GPIO Pin Name is the one to be used on the **digitalRead** and **digitalWrite** and NOT the pin numbers.
 :::
 
 - Use Arduino <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/" target="_blank">digitalRead</a> to read the value from a specified Digital I/O pin, either HIGH or LOW.
 - Use Arduino <a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/" target="_blank">digitalWrite</a> to write a HIGH or a LOW value to a Digital I/O pin.
+
+
 
 **Example code**
 
@@ -274,14 +396,22 @@ void loop()
 
 You can use any of the pins below as Analog Input.
 
+
 | **Pin Location** | **Analog Port** | **Pin Name** |
 | ---------------- | --------------- | ------------ |
 | J8 pin 2         | ADC0            | PB3          |
 | J8 pin 3         | ADC1            | PB4          |
 
+
 - Use Arduino <a href="https://www.arduino.cc/reference/es/language/functions/analog-io/analogread/" target="_blank">analogRead</a> to read the value from the specified Analog Input pin.
 
-> **Image:** Available Analog pins in RAK3272-SiP Breakout Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-adc.png"
+  width="35%"
+  caption="Available Analog pins in RAK3272-SiP Breakout Board"
+  zoomMode={true}
+/>
+
 
 **Example code**
 
@@ -309,6 +439,7 @@ void loop()
 
 There are two UART peripherals available on the RAK3172 module. There are also different <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/serial-operating-modes/" target="_blank">Serial Operating Modes</a> possible in RUI3, namely <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/binary-command-manual/" target="_blank">Binary Mode</a>, <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/at-command-manual/" target="_blank">AT Mode</a>, and <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/custom-mode/" target="_blank">Custom Mode</a>.
 
+
 UART Pin map table
 
 | **Pin Location** | **Serial Port** | **Serial Instance Assignment** | **Default Mode** |
@@ -318,7 +449,13 @@ UART Pin map table
 | J3 pin 8         | UART2_RX        |             Serial             | AT Command       |
 | J3 pin 7         | UART2_TX        |             Serial             | AT Command       |
 
-> **Image:** Available UART pins in RAK3272-SiP Breakout Board
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-uart.png"
+  width="50%"
+  caption="Available UART pins in RAK3272-SiP Breakout Board"
+  zoomMode={true}
+/>
 
 **Example Code**
 
@@ -356,9 +493,17 @@ There is one I2C peripheral available on RAK3272-SiP.
 | J3 pin 1         | I2C_SCL      | PA11         |
 | J3 pin 2         | I2C_SDA      | PA12         |
 
+
+
 - Use Arduino <a href="https://www.arduino.cc/reference/en/language/functions/communication/wire/" target="_blank">Wire</a> library to communicate with I2C devices.
 
-> **Image:** Available I2C pins in RAK3272-SiP Breakout Board
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-i2c.png"
+  width="50%"
+  caption="Available I2C pins in RAK3272-SiP Breakout Board"
+  zoomMode={true}
+/>
 
 **Example Code**
 
@@ -375,6 +520,7 @@ void setup()
   while (!Serial);
   Serial.println("\nI2C Scanner");
 }
+
 
 void loop()
 {
@@ -434,8 +580,12 @@ The Arduino Serial Monitor shows the I2C device found.
 **SPI**
 
 If your RUI3 project uses SPI, then J4 pins 1 to 4 are reserved for the RUI3 SPI interface.
-
-> **Image:** Available SPI pins in RAK3272-SiP Breakout Board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-spi.png"
+  width="50%"
+  caption="Available SPI pins in RAK3272-SiP Breakout Board"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 More examples for the RAK3172-SiP can be found in the <a href="https://github.com/RAKWireless/RUI3-Best-Practice" target="_blank">RUI3-Best-Practices</a> on Github.
@@ -457,17 +607,22 @@ The RAK3272-SiP Breakout Board is configured using AT commands through the UART2
 
 #### Connect to the RAK3272-SiP Breakout Board
 
-1. Connect the RAK3272-SiP Breakout Board to the <a href="https://store.rakwireless.com/collections/hardware-tools/products/daplink-tool" target="_blank">RAKDAP1</a> or any USB-Serial adapter with 3.3 V voltage supply, as shown in **Figure 27**.
+1. Connect the RAK3272-SiP Breakout Board to the <a href="https://store.rakwireless.com/collections/hardware-tools/products/daplink-tool" target="_blank">RAKDAP1</a> or any USB-Serial adapter with 3.3&nbsp;V voltage supply, as shown in **Figure 27**.
 
-> **Image:** RAK3272-SiP Breakout Board to USB-Serial connection
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3272-sip-rakdap1.png"
+  width="70%"
+  caption="RAK3272-SiP Breakout Board to USB-Serial connection"
+  zoomMode={true}
+/>
 
 2. Any serial communication tool can be used; but, it is recommended to use the <a href="https://downloads.rakwireless.com/#LoRa/Tools" target="_blank">RAK Serial Port Tool</a>.
 
 3. Configure the serial communication tool by selecting the proper port detected by the computer and configure the link as follows:
 
- * Baud Rate: **115200 baud**
- * Data Bits: **8 bits**
- * Stop Bits: **1 stop bit**
+ * Baud Rate: **115200&nbsp;baud**
+ * Data Bits: **8&nbsp;bits**
+ * Stop Bits: **1&nbsp;stop&nbsp;bit**
  * Parity: **NONE**
 
 ##### RAK3272-SiP Breakout Board Configuration for LoRaWAN or LoRa P2P
@@ -489,7 +644,12 @@ This section shows how to connect the RAK3272-SiP Breakout Board to the TTN plat
 For this guide, ensure you have a functioning gateway connected to **TTN** or are within the coverage area of the **TTN community network**.
 :::
 
-> **Image:** RAK3272-SiP in the context of the TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/4.ttn-context.png"
+  width="95%"
+  caption="RAK3272-SiP in the context of the TTN"
+  zoomMode={true}
+/>
 
 As shown in **Figure 28**, The Things Stack (TTN V3) is an open-source LoRaWAN Network Server suitable for global, geo-distributed public and private deployments, as well as for small, local networks. The architecture follows the LoRaWAN Network Reference Model for standards compliance and interoperability. This project is actively maintained by <a href="https://www.thethingsindustries.com/" target="_blank">The Things Industries</a>.
 
@@ -501,31 +661,81 @@ The RAK3272-SiP Breakout Board can be part of this ecosystem as a device, and th
 
 1. Visit <a href="https://www.thethingsnetwork.org/" target="_blank">The Things Network</a> and create an account. After signing up, select a cluster.
 
-> **Image:** Sign up an account in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_1.png"
+  width="100%"
+  caption="Sign up an account in TTN"
+  zoomMode={true}
+/>
 
-> **Image:** Sign up an account in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_2.png"
+  width="100%"
+  caption="Sign up an account in TTN"
+  zoomMode={true}
+/>
 
-> **Image:** SelectCluster in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_3.png"
+  width="100%"
+  caption="SelectCluster in TTN"
+  zoomMode={true}
+/>
 
-> **Image:** Sign up through the Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_4.png"
+  width="100%"
+  caption="Sign up through the Things ID"
+  zoomMode={true}
+/>
 
-> **Image:** Creation of an account through the Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_5.png"
+  width="100%"
+  caption="Creation of an account through the Things ID"
+  zoomMode={true}
+/>
 
-> **Image:** Creation of an account through the Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_6.png"
+  width="100%"
+  caption="Creation of an account through the Things ID"
+  zoomMode={true}
+/>
 
 If you already have a TTN V2 account, use the same login credentials. If not, create a new account.
 
 2. Click **Create an application**.
 
-> **Image:** The Things Stack Platform
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_7x.png"
+  width="100%"
+  caption="The Things Stack Platform"
+  zoomMode={true}
+/>
 
-> **Image:** Create TTN application for your LoRaWAN devices
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_8x.png"
+  width="100%"
+  caption="Create TTN application for your LoRaWAN devices"
+  zoomMode={true}
+/>
 
 3. To register an application, first enter the specific details and necessary information about the application, then click **Create Application**.
 
-> **Image:** Details of the TTN application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_7.png"
+  width="100%"
+  caption="Details of the TTN application"
+  zoomMode={true}
+/>
 
-> **Image:** Details of the TTN application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_8.png"
+  width="80%"
+  caption="Details of the TTN application"
+  zoomMode={true}
+/>
 
 If there were no errors in the previous step, you should now be on the application console page. The next step is to add end-devices to your TTN application.
 
@@ -535,27 +745,67 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+ Register end device**, as shown in **Figure 39**.
 
-> **Image:** Register end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_9.png"
+  width="100%"
+  caption="Register end device"
+  zoomMode={true}
+/>
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-> **Image:** Enter end device specifics manually
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_10.png"
+  width="100%"
+  caption="Enter end device specifics manually"
+  zoomMode={true}
+/>
 
 3. Configure the **Frequency Plan**, compatible **LoRaWAN Version**, and **Regional Parameters Version** supported by your device. Then, provide the **JoinEUI** credentials by entering zeroes.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_11.png"
+  width="80%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_12.png"
+  width="80%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_13.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_14.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 4. Click **Show advanced activation, LoRaWAN class, and cluster settings**. Configure the activation mode by selecting **Over the Air Activation (OTAA)** and set **Additional LoRaWAN Class Capabilities** to **Class A only**. Finally, click **Confirm**.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_15.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_16.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 5.  After completing the previous steps, enter the **DevEUI** credentials of your device into the **DevEUI** field. This will automatically generate the specific End Device ID for your board. Next, click **Generate** under **AppKey** in the **Provisioning Information** section. Finally, click **Register End Device**.
 
@@ -565,11 +815,26 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 - The **AppEUI** is the same as **JoinEUI**
 :::
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_17b.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_18b.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Register end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_19a.png"
+  width="90%"
+  caption="Register end device"
+  zoomMode={true}
+/>
 
 6. You should now be able to see the device on the TTN console, as shown in **Figure 50**.
 
@@ -581,7 +846,12 @@ LoRaWAN specifications enforce that each end-device has to be personalized and a
 - These parameters are always accessible on the device console page, as shown in **Figure 36**.
 :::
 
-> **Image:** OTAA device successfully registered to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/rak3172_new_20a.png"
+  width="100%"
+  caption="OTAA device successfully registered to TTN"
+  zoomMode={true}
+/>
 
 ##### OTAA Configuration for TTN
 
@@ -597,21 +867,46 @@ The **RAK3172-SiP** should have the correct OTAA credentials to connect to TTN. 
 1. Connect your **RAK3272-SiP** module to the PC using the **RAKDAP** programmer, as described in the [Connect to the RAK3272-SiP](#connect-to-the-rak3272-sip-breakout-board) section. Then, open the **WisToolBox** application.
 2. Click the **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-> **Image:** CONNECT DEVICE button
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_1.png"
+  width="90%"
+  caption="CONNECT DEVICE button"
+  zoomMode={true}
+/>
 
 3. Select the target port where your **RAK3272-SIP** is connected. Once the device is recognized, click **CONNECT**, as shown in **Figure 53**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_2.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_3.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 4. After connecting, the **RAK3172-SiP** module will appear on the dashboard. Select it to proceed.
 
-> **Image:** Device seen from WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_4a.png"
+  width="90%"
+  caption="Device seen from WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 5. Click **PARAMETERS**
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_5.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 6. Click **Global settings** to set the network mode into **LoRaWAN** and join mode to **OTAA**. Make sure that the active region is using **EU868** for this configuration. If you wish to work on other regional bands, you can choose among active regions based on your location.
 
@@ -619,15 +914,35 @@ The **RAK3172-SiP** should have the correct OTAA credentials to connect to TTN. 
 - LoRaWAN join mode: **OTAA**
 - LoRaWAN region: **EU868**
 
-> **Image:** Global settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_6.png"
+  width="90%"
+  caption="Global settings"
+  zoomMode={true}
+/>
 
-> **Image:** Global settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_7a.png"
+  width="90%"
+  caption="Global settings"
+  zoomMode={true}
+/>
 
 7. Click **LoRaWAN keys, ID, EUI** to configure the **Application EUI (AppEUI)**, **Application key (AppKey)** and **Device EUI (DevEUI)**.
 
-> **Image:** LoRaWAN keys, ID, EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_7b.png"
+  width="90%"
+  caption="LoRaWAN keys, ID, EUI"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_8b.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 8. Return to the **TTN Console** where your **RAK3172 End Device** was previously created. Copy all the credentials, including **AppEUI**, **DevEUI**, and **AppKey**. Enter these credentials into the **WisToolBox** dashboard. Once the credentials are correctly entered, click **APPLY COMMAND** to update your device, as shown in **Figure 67**.
 
@@ -635,49 +950,114 @@ The **RAK3172-SiP** should have the correct OTAA credentials to connect to TTN. 
 The **AppEUI**, **DevEUI**, and **AppKey** are hidden in this section as these are unique from a specific device.
 :::
 
-> **Image:** You created an OTAA device from your console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_9.png"
+  width="100%"
+  caption="You created an OTAA device from your console"
+  zoomMode={true}
+/>
 
 - **For Application EUI (AppEUI)**
 
-> **Image:** Copy the AppEUI credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_9a.png"
+  width="100%"
+  caption="Copy the AppEUI credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the AppEUI credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_10a.png"
+  width="90%"
+  caption="Copy the AppEUI credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
 - **For Application key (AppKey)**
 
-> **Image:** Copy the AppKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_9b.png"
+  width="100%"
+  caption="Copy the AppKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the AppKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_10b.png"
+  width="90%"
+  caption="Copy the AppKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
 - **For Device EUI (DevEUI)**
 
-> **Image:** Copy the DevEUI credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_9c.png"
+  width="100%"
+  caption="Copy the DevEUI credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the DevEUI credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_10c.png"
+  width="90%"
+  caption="Copy the DevEUI credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
 - **WisToolBox Dashboard**
 
-> **Image:** Used credentials from your console in WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_10.png"
+  width="90%"
+  caption="Used credentials from your console in WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 9. After completing the configuration, a summary of the commands applied to your device will be displayed. Click **CLOSE** to finish.
 
-> **Image:** Summary of commands
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_11.png"
+  width="90%"
+  caption="Summary of commands"
+  zoomMode={true}
+/>
 
 10. You will be returned to the dashboard, where the updated credentials of your device will be displayed.
 
-> **Image:** Successfully configured OTAA device via WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_12.png"
+  width="90%"
+  caption="Successfully configured OTAA device via WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 11. Navigate to **Data on LoRa Network** under **PARAMETERS** in WisToolBox. Click **JOIN NETWORK** under LoRaWAN Join Settings.
 
-> **Image:** Join mode of your OTAA device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_13.png"
+  width="90%"
+  caption="Join mode of your OTAA device"
+  zoomMode={true}
+/>
 
 12. Wait a few seconds for a notification confirming that your OTAA device has joined the TTN server.
 
-> **Image:** OTAA device successfully joined the TTN server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_14.png"
+  width="90%"
+  caption="OTAA device successfully joined the TTN server"
+  zoomMode={true}
+/>
 
 13. Verify on the **TTN Console** to confirm that your device has successfully joined the TTN.
 
-> **Image:** OTAA device successfully joined the TTN server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/wis_rak3172_new_15.png"
+  width="90%"
+  caption="OTAA device successfully joined the TTN server"
+  zoomMode={true}
+/>
 
 ##### OTAA Configuration for TTN via WisToolBox Console
 
@@ -687,29 +1067,69 @@ Here's another way of OTAA configuration using **WisToolBox Console**. Below are
 
 2. Click **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-> **Image:** CONNECT DEVICE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_1.png"
+  width="90%"
+  caption="CONNECT DEVICE"
+  zoomMode={true}
+/>
 
 3. Select your target port where your **RAK3172-SiP** is connected. Once recognized, click **CONNECT** as shown in **Figure 75**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_2.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_3.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 4. Once done, **RAK3172-SiP** will appear in the dashboard then select it.
 
-> **Image:** Device seen from WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_4.png"
+  width="90%"
+  caption="Device seen from WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 5. Then click **ADVANCED**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_5.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 6. Once done, click **OPEN CONSOLE** to do the configuration.
 
-> **Image:** OPEN CONSOLE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_6.png"
+  width="90%"
+  caption="OPEN CONSOLE"
+  zoomMode={true}
+/>
 
-> **Image:** Open the Console terminal of WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_7.png"
+  width="90%"
+  caption="Open the Console terminal of WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Open the Console terminal of WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_8.png"
+  width="90%"
+  caption="Open the Console terminal of WisToolBox"
+  zoomMode={true}
+/>
 
 7. To begin the configuration, type **ATE** to enable command echoing during the setup process. Then press **Enter**.
 
@@ -731,21 +1151,51 @@ You will receive `OK` after entering the two commands. Once `ATE` is set, all th
 If you do not receive an `OK` or any reply, verify that the device is powered correctly. If using a USB port for power, ensure you are using a reliable USB cable.
 :::
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_9a.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_9b.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_9c.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 8. Next, configure the LoRaWAN join mode to **OTAA**. To check the current parameter, type **AT+NJM?** and press **Enter** in the console terminal.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_10.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_11.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 9. For **OTAA**, input **AT+NJM=1** and press **Enter**.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_12.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 10. After configuring the join mode, set the LoRaWAN region according to your location. To check the current parameter, type **AT+BAND?** and press **Enter** in the console terminal. For **EU868**, input **AT+BAND=4** and press **Enter**. If you need to configure a different regional band, refer to the list of band parameter options.
 
@@ -778,63 +1228,179 @@ AT+BAND=4
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
-> **Image:** Set up your Console
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_13.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_14.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_15.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 11. Return to the TTN console where your RAK3172 end device was created, copy the **AppEUI** credential, paste it into the WisToolBox console, and press **Enter**.
 
-> **Image:** Your created OTAA device from your TTN console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_w.png"
+  width="90%"
+  caption="Your created OTAA device from your TTN console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_16.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_17.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_18.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the AppEUI credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_x.png"
+  width="90%"
+  caption="Copy the AppEUI credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_19.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 12. After completing the AppEUI configuration, repeat the same procedure for the **Application Key (AppKey)** and **Device EUI (DevEUI)**.
 
 - **For Application key (AppKey)**
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_20.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_21.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_22.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the AppKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_y.png"
+  width="90%"
+  caption="Copy the AppKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_23.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 - **For Device EUI (DevEUI)**
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_24.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_25.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the DevEUI credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_z.png"
+  width="90%"
+  caption="Copy the DevEUI credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_26.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 13. Click **Dashboard** to check the updated credentials of your OTAA device.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_27.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_28.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 14. Click **PARAMETERS** to access the **Global Settings** and the **LoRaWAN Keys, ID, EUI** section. Verify that these fields have been updated.
 
-> **Image:** PARAMETERS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_29.png"
+  width="90%"
+  caption="PARAMETERS"
+  zoomMode={true}
+/>
 
-> **Image:** Global settings and LoRaWAN keys, ID, EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_30a.png"
+  width="90%"
+  caption="Global settings and LoRaWAN keys, ID, EUI"
+  zoomMode={true}
+/>
 
-> **Image:** Global settings and LoRaWAN keys, ID, EUI details
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_30b.png"
+  width="90%"
+  caption="Global settings and LoRaWAN keys, ID, EUI details"
+  zoomMode={true}
+/>
 
 15. Return to the WisToolBox console, type **AT+JOIN**, edit it to **AT+JOIN=1**, and press **Enter** to join the network.
 
@@ -853,7 +1419,7 @@ Join command format: **`AT+JOIN=w:x:y:z`**
 | y         | Reattempt interval in seconds (7-255) - 8 is the default.    |
 | z         | Number of join attempts (0-255) - 0 is default.              |
 
-After 5 or 6 seconds, if the request is successfully received by a LoRa gateway, you should see `+EVT:JOINED` status reply, as shown in the figure below:
+After 5 or 6&nbsp;seconds, if the request is successfully received by a LoRa gateway, you should see `+EVT:JOINED` status reply, as shown in the figure below:
 
 :::tip NOTE
 If the OTAA device fails to join, ensure the following:
@@ -868,17 +1434,47 @@ If the OTAA device fails to join, ensure the following:
 After addressing these points, attempt to join the network again.
 :::
 
-> **Image:** Join mode using WisToolBox Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_34.png"
+  width="90%"
+  caption="Join mode using WisToolBox Console"
+  zoomMode={true}
+/>
 
-> **Image:** Join mode using WisToolBox Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_35.png"
+  width="90%"
+  caption="Join mode using WisToolBox Console"
+  zoomMode={true}
+/>
 
-> **Image:** Join mode using WisToolBox Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_36.png"
+  width="90%"
+  caption="Join mode using WisToolBox Console"
+  zoomMode={true}
+/>
 
-> **Image:** Join mode using WisToolBox Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_37.png"
+  width="90%"
+  caption="Join mode using WisToolBox Console"
+  zoomMode={true}
+/>
 
-> **Image:** OTAA device successfully joined the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_38.png"
+  width="90%"
+  caption="OTAA device successfully joined the network"
+  zoomMode={true}
+/>
 
-> **Image:** OTAA device successfully joined the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_39a.png"
+  width="90%"
+  caption="OTAA device successfully joined the network"
+  zoomMode={true}
+/>
 
 16. With the end-device properly joined the TTN, try to send some payload. Send command format: **`AT+SEND=<port>:<payload>`**
 
@@ -886,61 +1482,151 @@ After addressing these points, attempt to join the network again.
 AT+SEND=2:12345678
 ```
 
-> **Image:** OTAA device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_40.png"
+  width="90%"
+  caption="OTAA device sending payload to the network"
+  zoomMode={true}
+/>
 
-> **Image:** OTAA device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_41.png"
+  width="90%"
+  caption="OTAA device sending payload to the network"
+  zoomMode={true}
+/>
 
-> **Image:** OTAA device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_42.png"
+  width="90%"
+  caption="OTAA device sending payload to the network"
+  zoomMode={true}
+/>
 
-> **Image:** OTAA device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_43.png"
+  width="90%"
+  caption="OTAA device sending payload to the network"
+  zoomMode={true}
+/>
 
 17. You will see the data sent by the RAK3172 module on the TTN device console *Live data* section. Also, the *Last seen* info should be a few seconds or minutes ago.
 
-> **Image:** OTAA Test Sample Data Sent Viewed in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/conwis_rak3172_new_44a.png"
+  width="90%"
+  caption="OTAA Test Sample Data Sent Viewed in TTN"
+  zoomMode={true}
+/>
 
 ##### TTN ABP Device Registration
 
 1.  To register an ABP device, navigate to the application console and select the application where the device will be added. Then, click **+ Register end device**, as shown in **Figure 121**.
 
-> **Image:** Add ABP Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_1.png"
+  width="100%"
+  caption="Add ABP Device"
+  zoomMode={true}
+/>
 
 2. Click the **Enter end device specifics manually**.
 
-> **Image:** Enter end device specifics manually
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_2.png"
+  width="100%"
+  caption="Enter end device specifics manually"
+  zoomMode={true}
+/>
 
 3. Configure the **Frequency Plan**, the compatible **LoRaWAN Version**, and the **Regional Parameters Version** supported.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_3.png"
+  width="80%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_4.png"
+  width="80%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_5.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 4. Click **Show advanced activation, LoRaWAN class and cluster settings**.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_6.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 5. Configure the activation mode by selecting **Activation by personalization (ABP)** and Additional LoRaWAN class capabilities to **class A only**.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_7.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 6. Provide the DevEUI credentials of your device into the **DevEUI** portion. This will automatically generate the specific End device ID of your board.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_8.png"
+  width="90%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_9.png"
+  width="100%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 7. Click **Generate** under **Device Address**, **AppSKey**, and **NwkSKey** in the **Provisioning Information** section.
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_10.png"
+  width="100%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_11.png"
+  width="100%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
-> **Image:** Setup for your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_12.png"
+  width="100%"
+  caption="Setup for your device"
+  zoomMode={true}
+/>
 
 8. Click **Register End Device**.
 
-> **Image:** Register end device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_13.png"
+  width="100%"
+  caption="Register end device"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 
@@ -950,7 +1636,12 @@ AT+SEND=2:12345678
 
 9. You should now be able to see the device on the TTN console, as shown in **Figure 134**.
 
-> **Image:** ABP device successfully registered to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abp_rak3172_new_14.png"
+  width="100%"
+  caption="ABP device successfully registered to TTN"
+  zoomMode={true}
+/>
 
 ##### ABP Configuration for TTN
 
@@ -965,17 +1656,37 @@ The **RAK3272-SiP Breakout Board**, which includes a **RAK3172-SiP module**, can
 
 2. Click **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-> **Image:** CONNECT DEVICE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_1.png"
+  width="90%"
+  caption="CONNECT DEVICE"
+  zoomMode={true}
+/>
 
 3. Then select your target port where your **RAK3172-SiP** is connected. Once recognized, click **CONNECT** as shown in **Figure 137**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_2.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_3.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 4. The **RAK3172-SiP** will appear on the dashboard; select it to proceed.
 
-> **Image:** Device seen from WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_4a.png"
+  width="90%"
+  caption="Device seen from WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 5. Click **PARAMETERS**.
 
@@ -983,11 +1694,21 @@ The **RAK3272-SiP Breakout Board**, which includes a **RAK3172-SiP module**, can
 The **AppSKey**, **Device address**, and **NwkSKey** are hidden in this section as these are unique from a specific device.
 :::
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_5.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
  6. Click **Global settings**.
 
-> **Image:** Global settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_6.png"
+  width="90%"
+  caption="Global settings"
+  zoomMode={true}
+/>
 
 7. Set the network mode to **LoRaWAN** and the join mode to **ABP**. Then, select the active region based on your location.
 
@@ -995,15 +1716,30 @@ The **AppSKey**, **Device address**, and **NwkSKey** are hidden in this section 
 - LoRaWAN join mode: **ABP**
 - LoRaWAN region: **EU868**
 
-> **Image:** Global settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_7a.png"
+  width="90%"
+  caption="Global settings"
+  zoomMode={true}
+/>
 
 8. Click **LoRaWAN keys, ID, EUI**.
 
-> **Image:** LoRaWAN keys, ID, EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_7b.png"
+  width="90%"
+  caption="LoRaWAN keys, ID, EUI"
+  zoomMode={true}
+/>
 
 9. Configure the **Application session key (AppSKey)**, **Device address** and **Network session key (NwkSKey)**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_8a.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 10.  Return to the TTN console where your RAK3172 end device was previously created and copy all the credentials. These credentials will also be used in the WisToolBox dashboard. Once entered into the dashboard, click **APPLY COMMANDS** to update your device, as shown in **Figure 151**.
 
@@ -1011,37 +1747,87 @@ The **AppSKey**, **Device address**, and **NwkSKey** are hidden in this section 
 - The **AppSKey**, **Device address**, and **NwkSKey** are hidden in this section as these are unique from a specific device.
 :::
 
-> **Image:** Your created ABP device from your console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_9.png"
+  width="100%"
+  caption="Your created ABP device from your console"
+  zoomMode={true}
+/>
 
 - **For Application session key (AppSKey)**
 
-> **Image:** Copy the AppSKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_9a.png"
+  width="90%"
+  caption="Copy the AppSKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the AppSKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_10a.png"
+  width="90%"
+  caption="Copy the AppSKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
 - **For Device address**
 
-> **Image:** Copy the Device address credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_9b.png"
+  width="90%"
+  caption="Copy the Device address credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the Device address credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_10b.png"
+  width="90%"
+  caption="Copy the Device address credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
 - **For Network session key (NwkSKey)**
 
-> **Image:** Copy the NwkSKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_9c.png"
+  width="90%"
+  caption="Copy the NwkSKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the NwkSKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_10c.png"
+  width="90%"
+  caption="Copy the NwkSKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
 - **WisToolBox Dashboard**
 
-> **Image:** Used credentials from your console in WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_10.png"
+  width="90%"
+  caption="Used credentials from your console in WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 11. Once completed, a summary of the commands applied to your device will be displayed. Then, click **CLOSE**.
 
-> **Image:** Summary of commands
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_11.png"
+  width="90%"
+  caption="Summary of commands"
+  zoomMode={true}
+/>
 
 You will be redirected back to the dashboard, where the updated credentials of your device will be displayed.
 
-> **Image:** Successfully configured ABP device via WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpwis_rak3172_new_12.png"
+  width="90%"
+  caption="Successfully configured ABP device via WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 ##### ABP Configuration for TTN via WisToolBox Console
 
@@ -1049,29 +1835,69 @@ You will be redirected back to the dashboard, where the updated credentials of y
 
 2. Click **CONNECT DEVICE** button to launch the WisToolBox Dashboard.
 
-> **Image:** CONNECT DEVICE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_1.png"
+  width="90%"
+  caption="CONNECT DEVICE"
+  zoomMode={true}
+/>
 
 3. Then select your target port where your **RAK3172-SiP** is connected. Once recognized, click **CONNECT**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_2.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_3.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 4. The **RAK3172** will appear on the dashboard; select it to proceed.
 
-> **Image:** Device seen from WisToolBox dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_4.png"
+  width="90%"
+  caption="Device seen from WisToolBox dashboard"
+  zoomMode={true}
+/>
 
 5. Click **ADVANCED**.
 
-> **Image:** Set up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_5.png"
+  width="90%"
+  caption="Set up your device"
+  zoomMode={true}
+/>
 
 6. Click **OPEN CONSOLE**.
 
-> **Image:** OPEN CONSOLE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_6.png"
+  width="90%"
+  caption="OPEN CONSOLE"
+  zoomMode={true}
+/>
 
-> **Image:** Open the Console terminal of WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_7.png"
+  width="90%"
+  caption="Open the Console terminal of WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Open the Console terminal of WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_8.png"
+  width="90%"
+  caption="Open the Console terminal of WisToolBox"
+  zoomMode={true}
+/>
 
 7. To begin the configuration, type `ATE` to enable command echoing during the setup process. Then press **Enter**.
 
@@ -1093,27 +1919,67 @@ You will receive `OK` after entering the two commands. Once `ATE` is set, all th
 If you do not receive an `OK` or any reply, verify that the device is powered correctly. If using a USB port for power, ensure you are using a reliable USB cable.
 :::
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_9a.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_9b.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_9c.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 8. Configure the LoRaWAN join mode to **ABP**. Check the current parameter by typing **AT+NJM?** and pressing **Enter** in the console terminal.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_10.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_11.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 9. For **ABP**, input **AT+NJM=0** and press **Enter**.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_12.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 10. Set up your LoRaWAN region. Check the available parameters by typing **AT+BAND?** and pressing **Enter** in the console terminal.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_13.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_14.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 11. For **EU868**, input **AT+BAND=4** and press **Enter**. If you need to configure a different regional band, refer to the list of available band parameter options.
 
@@ -1148,65 +2014,175 @@ AT+BAND=4
 | 10   | AS923-3       |
 | 11   | AS923-4       |
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_15.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 12. Return to the TTN console where the RAK3172 was created, copy the **AppSKey** credential, paste it into the WisToolBox console, and press **Enter**.
 
-> **Image:** Your created ABP device from your TTN console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_w.png"
+  width="90%"
+  caption="Your created ABP device from your TTN console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_16.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_17.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_18.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the AppSKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_x.png"
+  width="90%"
+  caption="Copy the AppSKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_19.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 13. Repeat the procedure for the **Device Address** and **Network Session Key (NwkSKey)**.
 
 - **For Device address**
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_20.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_21.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_22.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the Device address credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_y.png"
+  width="90%"
+  caption="Copy the Device address credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_23.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 - **For Network session key (NwkSKey)**
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_24.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_25.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_26.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Copy the NwkSKey credential from TTN to WisToolBox
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_z.png"
+  width="90%"
+  caption="Copy the NwkSKey credential from TTN to WisToolBox"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_27.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 14. Once completed, click **Dashboard** to verify the updated credentials of your ABP device.
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_28.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
-> **Image:** Set up your Console
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_29.png"
+  width="90%"
+  caption="Set up your Console"
+  zoomMode={true}
+/>
 
 15. Click **PARAMETERS**.
 
-> **Image:** PARAMETERS
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_30.png"
+  width="90%"
+  caption="PARAMETERS"
+  zoomMode={true}
+/>
 
 16. Open the **Global Settings**.
 
-> **Image:** Global settings and LoRaWAN keys, ID, EUI
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_31a.png"
+  width="90%"
+  caption="Global settings and LoRaWAN keys, ID, EUI"
+  zoomMode={true}
+/>
 
 17. Verify that the **LoRaWAN Keys, ID, EUI** fields have been updated.
 
-> **Image:** Global settings and LoRaWAN keys, ID, EUI details
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_31b.png"
+  width="90%"
+  caption="Global settings and LoRaWAN keys, ID, EUI details"
+  zoomMode={true}
+/>
 
 You now have a configured ABP device using the WisToolBox console. **ABP-configured devices** are directly connected to the network once the above procedures are completed, so no joining procedure is required.
 
@@ -1217,23 +2193,54 @@ You now have a configured ABP device using the WisToolBox console. **ABP-configu
 AT+SEND=2:12345678
 ```
 
-> **Image:** ABP device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_35.png"
+  width="90%"
+  caption="ABP device sending payload to the network"
+  zoomMode={true}
+/>
 
-> **Image:** ABP device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_36.png"
+  width="90%"
+  caption="ABP device sending payload to the network"
+  zoomMode={true}
+/>
 
-> **Image:** ABP device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_37.png"
+  width="90%"
+  caption="ABP device sending payload to the network"
+  zoomMode={true}
+/>
 
-> **Image:** ABP device sending payload to the network
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_38.png"
+  width="90%"
+  caption="ABP device sending payload to the network"
+  zoomMode={true}
+/>
 
 19. You will see the data sent by the RAK3172 module on the TTN device console *Live data* section. Also, the *Last seen* info should be a few seconds or minutes ago.
 
-> **Image:** ABP Test Sample Data Sent Viewed in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconwis_rak3172_new_39.png"
+  width="90%"
+  caption="ABP Test Sample Data Sent Viewed in TTN"
+  zoomMode={true}
+/>
 
 ##### Connect with ChirpStack
 
 This section shows how to connect the RAK3272-SiP Breakout Board to the ChirpStack platform.
 
-> **Image:** RAK3272-SiP Module in the context of the ChirpStack platform
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/23.chirpstack-platform.png"
+  width="60%"
+  caption="RAK3272-SiP Module in the context of the ChirpStack platform"
+  zoomMode={true}
+/>
 
 The ChirpStack or previously known as the LoRaServer project provides open-source components for building LoRaWAN networks. Like the case of TTN, the RAK3272-SiP Breakout Board is located in the periphery and will transmit the data to the backend servers through a LoRaWAN gateway. Learn more about <a href="https://www.chirpstack.io/" target="_blank">ChirpStack</a>.
 
@@ -1258,11 +2265,22 @@ The frequency band used in the demonstration is EU868.
 
 2. Go to the Application section.
 
-> **Image:** Application section
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/24.chirpstack.png"
+  width="100%"
+  caption="Application section"
+  zoomMode={true}
+/>
 
 3.  Create a new Application by clicking on the **CREATE** button, and filling the required parameters.
 
-> **Image:** Create a new application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/25.new-application.png"
+  width="100%"
+  caption="Create a new application"
+  zoomMode={true}
+/>
+
 
 * For this setup, create an Application named **rak_node_test**.
 
@@ -1271,23 +2289,48 @@ The **ChirpStack LoRaServer** supports multiple system configurations, with one 
 - **Service Profile**: Used to select the system profile.
 - **Payload Codec**: Defines the parsing method for load data, such as parsing LPP format data.
 
-> **Image:** Fill in in the parameters of an application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/26.filling-parameters.png"
+  width="100%"
+  caption="Fill in in the parameters of an application"
+  zoomMode={true}
+/>
 
-**Register a New Device**
+<b>Register a New Device</b>
 
 1. Choose the **Application** created in the previous step, then select the **DEVICES** tab.
 
-> **Image:** List of applications created
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/27.application-available.png"
+  width="100%"
+  caption="List of applications created"
+  zoomMode={true}
+/>
 
 2. Once done, click “**+ CREATE**”.
 
-> **Image:** Device tab of an application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/28.application-page.png"
+  width="100%"
+  caption="Device tab of an application"
+  zoomMode={true}
+/>
 
 3. Within the **DEVICE** tab, create a new device (LoRaWAN node) by clicking the **+ CREATE** button.
 
-> **Image:** Add a new device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/29.adding-node.png"
+  width="100%"
+  caption="Add a new device"
+  zoomMode={true}
+/>
 
-> **Image:** Chirpstack Adding Node into the RAK3272-SiP Breakout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/30.new-device-registration.png"
+  width="100%"
+  caption="Chirpstack Adding Node into the RAK3272-SiP Breakout"
+  zoomMode={true}
+/>
 
 4. After creating the node, fill in the required information. You can either generate a Device EUI automatically by clicking the icon or manually enter a valid Device EUI in the edit box.
 
@@ -1306,27 +2349,54 @@ Fill in the parameters requested:
 - If you have your own Chirpstack installation, you can set up the device profile with `LoRaWAN MAC version 1.0.4` and `LoRaWAN Regional Parameters revision B` to make it compatible with RAK3272-SiP.
 :::
 
-> **Image:** Generate a new device EUI
+<br />
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/31.adding-parameters.png"
+  width="100%"
+  caption="Generate a new device EUI"
+  zoomMode={true}
+/>
 
 ##### Chirpstack OTAA Device Registration
 
 1. If you have selected **DeviceProfile_OTAA**, as shown in **Figure 206**, an **Application Key** must be created for the device after it is set up.
 
-> **Image:** Chirpstack OTAA activation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/32.otaa.png"
+  width="100%"
+  caption="Chirpstack OTAA activation"
+  zoomMode={true}
+/>
 
 2. You can either enter a previously created **Application Key** or generate a new one automatically by clicking the icon highlighted in red in **Figure 207**.
 
-> **Image:** Chirpstack OTAA set application keys
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/33.otaa-set-device-keys.png"
+  width="100%"
+  caption="Chirpstack OTAA set application keys"
+  zoomMode={true}
+/>
 
 3. Once the Application Key is added to the form, the process can be finalized by clicking on the **SET DEVICE-KEYS** button.
 
 * As shown in **Figure 208**, a new device should be listed in the DEVICES tab. The most important parameters, such as the Device EUI are shown in the summary.
 
-> **Image:** Chirpstack OTAA list of the device in the device tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/34.set-device-eui.png"
+  width="100%"
+  caption="Chirpstack OTAA list of the device in the device tab"
+  zoomMode={true}
+/>
 
 4. To end the process, it is a good practice to review that the Application Key is properly associated with this device. The Application Key can be verified in the **KEYS(OTAA)** tab, as shown in **Figure 209**.
 
-> **Image:** Application key associated with the new device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/35.application-key.png"
+  width="100%"
+  caption="Application key associated with the new device"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 Standard OTAA mode requires the **Device EUI**, **Application Key**, and **Application EUI**. However, in ChirpStack's implementation, only the **Device EUI** and **Application Key** are mandatory. The **Application EUI** is not required and is not recorded in the Application tab. Nonetheless, you can reuse the **Device EUI** as the **Application EUI** during the node configuration.
@@ -1361,7 +2431,14 @@ If there is no `OK` or any reply, verify the following:
 4. If using a USB port for power, make sure you are using a reliable USB cable.
 :::
 
-> **Image:** at+version command response
+<br />
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/atstart.png"
+  width="90%"
+  caption="at+version command response"
+  zoomMode={true}
+/>
 
 2. The next step is to configure the OTAA LoRaWAN parameters in RAK3272-SiP:
 
@@ -1405,6 +2482,7 @@ AT+BAND=4
 
 **List of band parameter options**
 
+
 | Code | Regional Band         |
 | ---- | --------------------- |
 | 0    | EU433 (Not Supported) |
@@ -1420,7 +2498,13 @@ AT+BAND=4
 | 10   | AS923-3               |
 | 11   | AS923-4               |
 
-> **Image:** Configure LoRa parameters
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/otaaconfig.png"
+  width="90%"
+  caption="Configure LoRa parameters"
+  zoomMode={true}
+/>
 
 3. Set up the **DevEUI** and **AppKey** using the values provided in the ChirpStack device console.
 
@@ -1450,7 +2534,14 @@ Set the Application Key.
 AT+APPKEY=F921D50CD7D02EE3C5E6142154F274B2
 ```
 
-> **Image:** Configure LoRa Parameters
+<br />
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/chirp_otaa_eui.png"
+  width="90%"
+  caption="Configure LoRa Parameters"
+  zoomMode={true}
+/>
 
 4. After configuring the **EUI** and **AppKey**, the device is ready to join the network and send payloads.
 
@@ -1467,7 +2558,7 @@ Join command format: **`AT+JOIN=w:x:y:z`**
 | y         | Reattempt interval in seconds (7-255) - 8 is the default.   |
 | z         | Number of join attempts (0-255) - 0 is the default.             |
 
-5. After 5 or 6 seconds, if the request is successfully received by a LoRaWAN gateway, then you should see a **JOINED** status reply.
+5. After 5 or 6&nbsp;seconds, if the request is successfully received by a LoRaWAN gateway, then you should see a **JOINED** status reply.
 
 :::tip NOTE
 - If the OTAA device fails to join, verify that the device is within the coverage area of a functional LoRaWAN gateway configured to connect to ChirpStack. Ensure that the OTAA parameters (**DevEUI** and **AppKey**) are correct by using the commands:
@@ -1486,21 +2577,39 @@ AT+SEND=2:12345678
 
 Send command format: **`AT+SEND=<port>:<payload>`**
 
-> **Image:** OTAA test sample data sent via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/chirp_otaa_send.png"
+  width="90%"
+  caption="OTAA test sample data sent via RAK Serial Port Tool"
+  zoomMode={true}
+/>
 
 7. On the ChirpStack platform, you should see the join and uplink messages in the **LORAWAN FRAMES** tab, as shown in **Figure 214**. By convention, messages sent from nodes to gateways are considered as **Uplinks** while messages sent by gateways to nodes are considered as **Downlinks**.
 
-> **Image:** Chirpstack data received preview
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/41.message-received.png"
+  width="100%"
+  caption="Chirpstack data received preview"
+  zoomMode={true}
+/>
 
 ##### Chirpstack ABP Device Registration
 
 1. During the registration of a new device, if you select **DeviceProfile_ABP**, as shown in **Figure 215**, then the ChirpStack platform will assume that this device will join the LoRaWAN network using the ABP mode.
 
+
 :::tip NOTE
 Check **Disable counting frame verification**. During the test, when the board is restarted, the frame counting number will also be restarted from zero. This would cause a synchronization problem with the ChirpStack server treating it as a replay attack. For testing purposes, it is safe to disable this feature, but remember to activate it in a production environment.
 :::
 
-> **Image:** ChirpStack console, Configure a device
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/42.configuring-device-abp.png"
+  width="100%"
+  caption="ChirpStack console, Configure a device"
+  zoomMode={true}
+/>
 
 2. After selecting the ABP mode, the following parameters appear in the Activation tab, then you can see that there are some parameters for ABP in the **ACTIVATION** item:
 
@@ -1508,9 +2617,15 @@ Check **Disable counting frame verification**. During the test, when the board i
   * **Network Session Key**
   * **Application Session Key**
 
-> **Image:** Chirpstack ABP activation parameters needed
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/43.abp-activation-parameters.png"
+  width="100%"
+  caption="Chirpstack ABP activation parameters needed"
+  zoomMode={true}
+/>
 
 3. The parameters can be generated as random numbers by the platform or can be set with user values. Once these parameters are filled in properly, the process is completed by clicking on the **ACTIVATE DEVICE** button.
+
 
 ##### ABP Configuration for Chirpstack
 
@@ -1539,7 +2654,12 @@ If there is no `OK` or any reply, verify the following:
 4. If using a USB port for power, make sure you are using a reliable USB cable.
 :::
 
-> **Image:** at+version command response
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/atstart.png"
+  width="90%"
+  caption="at+version command response"
+  zoomMode={true}
+/>
 
 2. The next step is to configure the ABP LoRaWAN parameters in RAK3272-SiP:
 
@@ -1598,7 +2718,13 @@ AT+BAND=4
 | 10   | AS923-3               |
 | 11   | AS923-4               |
 
-> **Image:** Configure LoRa parameters
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/abpconfig.png"
+  width="90%"
+  caption="Configure LoRa parameters"
+  zoomMode={true}
+/>
 
 3. After the configuration of the LoRaWAN parameters, the next step is to set up the device address and session keys. You need to use the values from the TTN device console.
 
@@ -1624,7 +2750,12 @@ Set the Network Session Key.
 AT+NWKSKEY=C280CB8D1DF688BC18601A97025C5488
 ```
 
-> **Image:** Configure LoRa parameters
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/chirp_abp_key.png"
+  width="90%"
+  caption="Configure LoRa parameters"
+  zoomMode={true}
+/>
 
 4. After configuring the **EUI** and keys, the device is ready to join the network and send payloads.
 
@@ -1650,7 +2781,13 @@ AT+SEND=2:12341234
 ```
 Send command format: **`AT+SEND=<port>:<payload>`**
 
-> **Image:** ABP test sample data sent via RAK Serial Port Tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/chirp_abp_send.png"
+  width="90%"
+  caption="ABP test sample data sent via RAK Serial Port Tool"
+  zoomMode={true}
+/>
+
 
 #### LoRa P2P Mode
 
@@ -1672,16 +2809,29 @@ ATE
 
 You will receive `OK` after entering the two commands. Once `ATE` is set, you will see all the commands you input along with their replies. Try entering `AT` again, and it should appear in the terminal followed by `OK`.
 
-> **Image:** at+version command response
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/p2p-1.png"
+  width="90%"
+  caption="at+version command response"
+  zoomMode={true}
+/>
+
 
 1. To set up the **RAK3272-SIP** for LoRa P2P mode, change the LoRa network mode on both **RAK3272-SIP Breakout Boards** using the appropriate command.
+
 
 ```
 AT+NWM=0
 ```
 `AT+NWM` parameter mode can be either 0=LoRa P2P or 1=LoRaWAN.
 
-> **Image:** P2P Mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/p2p-2.png"
+  width="90%"
+  caption="P2P Mode"
+  zoomMode={true}
+/>
 
 :::tip NOTE
 - The device will start automatically if you change modes from LoRaWAN to LoRa P2P and vice-versa.
@@ -1690,24 +2840,30 @@ AT+NWM=0
 
 2. You need to input the P2P setup on both RAK3272-SiP boards. The parameters should be exactly the same on the two boards.
 
+
 ```
 AT+P2P=868000000:7:125:0:10:14
 ```
 
 For this P2P setup, the LoRa parameters are the following:
 
-- Link frequency: **868000000 Hz**
+- Link frequency: **868000000&nbsp;Hz**
 - Spreading factor: **7**
-- Bandwidth: **125 kHz**
+- Bandwidth: **125&nbsp;kHz**
 - Coding Rate: 0 = **4/5**
 - Preamble Length: **10**
-- Power: **14 dBm**
+- Power: **14&nbsp;dBm**
 
 :::tip NOTE
 Refer to the P2P Mode section of the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3272-sip-breakout-board/at-command-manual/" target="_blank">AT command documentation</a> to learn more about the definition of the parameters used and the individual commands if you want specific parameter changed.
 :::
 
-> **Image:** Configure P2P in both RAK3272-SiP Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/p2p-3.png"
+  width="90%"
+  caption="Configure P2P in both RAK3272-SiP Module"
+  zoomMode={true}
+/>
 
 3. To set one module as the receiver (RX), set the value of the P2P receive command.
 
@@ -1715,7 +2871,7 @@ Refer to the P2P Mode section of the <a href="https://docs.rakwireless.com/produ
 LoRa P2P default setting is Transmitter (TX) mode. This consumes lower power compared to Receiver (RX) mode where the radio is always listening for LoRa packets.
 :::
 
-a. P2P LoRa RX configurable duration value is from 1 to 65533 ms. In this example, the device will listen and wait for LoRa P2P Packets for 30000 ms or 30 seconds. It will automatically disable RX mode and switch to TX mode after the timeout. If the device did not receive any packets within the time period, then the callback after timeout is `+EVT:RXP2P RECEIVE TIMEOUT`.
+a. P2P LoRa RX configurable duration value is from 1 to 65533&nbsp;ms. In this example, the device will listen and wait for LoRa P2P Packets for 30000&nbsp;ms or 30&nbsp;seconds. It will automatically disable RX mode and switch to TX mode after the timeout. If the device did not receive any packets within the time period, then the callback after timeout is `+EVT:RXP2P RECEIVE TIMEOUT`.
 
 ```
 AT+PRECV=30000
@@ -1749,7 +2905,13 @@ AT+PSEND= <payload>
 - `<payload>`: 2\~500 digit length, must be an even number of digits and character 0-9, a-f, A-F only, representing 1~256 hexadecimal numbers. For example, if the payload is like ` 0x03, 0xAA, 0x32`, therefore the AT command should be `AT+PSEND = 03AA32`.
 :::
 
-> **Image:** Configure P2P in both RAK3272-SiP Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/p2p-4.png"
+  width="90%"
+  caption="Configure P2P in both RAK3272-SiP Module"
+  zoomMode={true}
+/>
+
 
 ## Miscellaneous
 ### Upgrading the Firmware
@@ -1757,8 +2919,7 @@ AT+PSEND= <payload>
 If you want to upgrade the module to the latest firmware version, follow the instructions in this section. The latest firmware is available in the software section of the <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3272-sip-breakout-board/datasheet/#firmwareos" target="_blank">RAK3272-SiP Datasheet</a>.
 
 :::tip NOTE
-**What if the RAK3272-SiP stops responding to AT commands and firmware updates?** 
-
+**What if the RAK3272-SiP stops responding to AT commands and firmware updates?** <br />
 You can recover your device by using the **`.hex`** file provided in the datasheet and uploading it via **STM32CubeProgrammer**. A guide on updating STM32 firmware with STM32CubeProgrammer is available in the <a href="https://learn.rakwireless.com/hc/en-us/articles/26687606549911-How-To-Guide-STM32CubeProgrammer-for-RAK-Modules" target="_blank">Knowledge Hub section</a>.
 :::
 
@@ -1789,23 +2950,49 @@ Execute the following procedure to upgrade the firmware in Device Firmware Upgra
 
 4.  Open the Device Firmware Upgrade tool. Select the serial port and baud rate (115200) of the board and click the **Select Port** button.
 
-> **Image:** Device firmware upgrade tool
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/56.device-firmware.png"
+  width="80%"
+  caption="Device firmware upgrade tool"
+  zoomMode={true}
+/>
 
 5.  Select the application firmware file of the board with the suffix **.bin**.
 
-> **Image:** Select firmware
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/57.select-firmware.png"
+  width="80%"
+  caption="Select firmware"
+  zoomMode={true}
+/>
 
 6.  Click the **Upgrade** button to upgrade the device. After the upgrade is complete, the RAK3272-SiP Breakout Board will be ready to work with the new firmware.
 
-> **Image:** Firmware upgrade
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/58.firmware-upgrading.png"
+  width="80%"
+  caption="Firmware upgrade"
+  zoomMode={true}
+/>
 
-> **Image:** Upgrade successful
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/59.upgrade-success.png"
+  width="80%"
+  caption="Upgrade successful"
+  zoomMode={true}
+/>
 
 ### Arduino Installation
 
 Go to the <a href="https://www.arduino.cc/en/Main/Software" target="_blank">Arduino official website</a> and download the Arduino IDE. You will see the multiple versions available for Windows, Linux, and Mac OS X. Choose the correct version of Arduino IDE and download it.
 
-> **Image:** Arduino IDE latest version
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/1.download-arduino.png"
+  width="70%"
+  caption="Arduino IDE latest version"
+  zoomMode={true}
+/>
 
 #### For Windows
 
@@ -1817,19 +3004,44 @@ Do **NOT** install the Arduino IDE from the Microsoft App Store. Instead, downlo
 1. Install the Arduino IDE, which you just downloaded, on your Windows PC.
 2. Click **I Agree** then **Next** to proceed.
 
-> **Image:** Arduino setup license agreement
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/2.agreement-license.png"
+  width="45%"
+  caption="Arduino setup license agreement"
+  zoomMode={true}
+/>
 
-> **Image:** Arduino setup installation options
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/3.installation-options.png"
+  width="45%"
+  caption="Arduino setup installation options"
+  zoomMode={true}
+/>
 
 3. Click **Install**.
 
-> **Image:** Install Arduino IDE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/4.installation-folder.png"
+  width="45%"
+  caption="Install Arduino IDE"
+  zoomMode={true}
+/>
 
-> **Image:** Ongoing installation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/5.installing.png"
+  width="45%"
+  caption="Ongoing installation"
+  zoomMode={true}
+/>
 
 After 100% progress, the Arduino IDE has been installed successfully.
 
-> **Image:** Successful installation
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/6.installation-success.png"
+  width="45%"
+  caption="Successful installation"
+  zoomMode={true}
+/>
 
 #### For Linux
 
@@ -1839,7 +3051,12 @@ First, you need the check the compatibility with your system and choose between 
 
 After downloading the correct Arduino version, open a terminal, then run `ls` to check the installation file on the download folder.
 
-> **Image:** Check the download folder
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/ls-arduino.png"
+  width="90%"
+  caption="Check the download folder"
+  zoomMode={true}
+/>
 
 A tarball is a type of compressed folder, like a `.zip` file, commonly used to distribute software in Linux. To extract the files from the tarball, change the directory to where the downloaded tarball is, then run the following:
 
@@ -1847,15 +3064,30 @@ A tarball is a type of compressed folder, like a `.zip` file, commonly used to d
 tar xvf arduino-version.xz
 ```
 
-> **Image:** Tarball extract command
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/tar-linux.png"
+  width="90%"
+  caption="Tarball extract command"
+  zoomMode={true}
+/>
 
 When the tar command finishes, run `ls` again. A folder named  **arduino-version** will be created.
 
-> **Image:** Arduino install folder created
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/ls-tarball.png"
+  width="90%"
+  caption="Arduino install folder created"
+  zoomMode={true}
+/>
 
 Change the current directory and go to the newly created folder directory. There will be a file named `install.sh` in the folder. Execute `sudo ./install.sh` to install the Arduino IDE.
 
-> **Image:** Arduino install script running
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/sudo-install.png"
+  width="90%"
+  caption="Arduino install script running"
+  zoomMode={true}
+/>
 
 The `sudo` command temporarily elevates privileges allowing the installer to complete sensitive tasks without logging in as the root user.
 
@@ -1863,11 +3095,17 @@ The `sudo` command temporarily elevates privileges allowing the installer to com
 
 In Mac OS X, the same as Linux, there is no installation process. It is just a process of decompression, then you can open Arduino IDE successfully.
 
+
 ### Arduino IDE Parts Guide
 
 **Figure 239** shows the five (5) parts of Arduino IDE.
 
-> **Image:** Arduino IDE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/7.arduino-ide.png"
+  width="75%"
+  caption="Arduino IDE"
+  zoomMode={true}
+/>
 
 1. **IDE Option Menu**
 
@@ -1882,7 +3120,12 @@ The operating buttons have five operations:
   - **Open** a **New** Arduino IDE window or existing application;
   - **Save** the current application.
 
-> **Image:** Operation buttons
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3272-sip-breakout-board/quickstart/8.operating-buttons.png"
+  width="30%"
+  caption="Operation buttons"
+  zoomMode={true}
+/>
 
 3. **Code Area**
 
@@ -1893,3 +3136,5 @@ Edit the source code which will be compiled and uploaded into WisBlock later in 
 5. **Output Message Area**
 See the output message in this area, whether it's failure or success information.
 
+
+<RkBottomNav/>

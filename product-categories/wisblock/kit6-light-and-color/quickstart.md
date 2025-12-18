@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisBlock IoT Education Kit - Light & Color Quick Start Guide
 
 ## Prerequisite
@@ -50,11 +53,19 @@ The **WisBlock IoT Education Kit - Light & Color** comes with **RAK19007** and *
 
 - **UV Index & UV Intensity Meter - RAK4631 + RAK12019 + RAK12010 + RAK14003**
 
-> **Image:** RAK4631 + RAK12019 + RAK12010 + RAK14003
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/uv_index.png"
+  width="65%"
+  caption="RAK4631 + RAK12019 + RAK12010 + RAK14003"
+/>
 
 - **RGB LED Color Changer - RAK4631 + RAK12021 + RAK14001**
 
-> **Image:** RAK4631 + RAK12021 + RAK14001
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/rgb.png"
+  width="60%"
+  caption="RAK4631 + RAK12021 + RAK14001"
+/>
 
 #### Assembly and Functionality Tests of WisBlock Light and Color Modules
 
@@ -79,9 +90,17 @@ The **UV Index & UV Intensity Monitoring LoRaWAN Application** is used to monito
 
 **UV Index** is the measure of the level of UV radiation from the sun exposure. It ranges from zero upward. The higher the UV Index level, the greater potential for damage to the skin and eye. The **UV Index & UV Intensity Monitoring** device will help alert people about the need to use sun protection when going outside. Below is the **UV Index Scale** which can help users monitor the level of the UV Index during daytime. For further details about UV index levels and their impacts, you can refer from this [link](https://www.epa.gov/sunsafety/uv-index-scale-0).
 
-> **Image:** UV Index Scale
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_uv_index.png"
+  width="60%"
+  caption="UV Index Scale"
+/>
 
-> **Image:** UV Index & UV Intensity Monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_uv.png"
+  width="50%"
+  caption="UV Index & UV Intensity Monitoring device"
+/>
 
 ###### UV Index & UV Intensity Monitoring - TTN Registration Section and Device Registration
 
@@ -745,25 +764,49 @@ uint8_t nodeAppKey[16] = { 0xE9, 0x0D, 0x28, 0x1D, 0x92, 0x3D, 0xE4, 0x9F, 0xD9,
 
 ```
 
-> **Image:** OTAA device successfully registered to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_21.png"
+  width="90%"
+  caption="OTAA device successfully registered to TTN"
+/>
 
-3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** > **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** > **Port** > then the specific port of your board.
+3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** &gt; **Board:XXXXX** &gt; **RAKwireless nRF Boards** &gt; **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** &gt; **Port** &gt; then the specific port of your board.
 
-> **Image:** Selecting the RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_1.png"
+  width="90%"
+  caption="Selecting the RAK4631 board"
+/>
 
-> **Image:** Selecting the port of RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_2.png"
+  width="90%"
+  caption="Selecting the port of RAK4631 board"
+/>
 
 4. Once done, you can now upload your code. Simply click the right arrow sign at the upper left portion of your Arduino IDE. Once done, you will see the **Device programmed** notification at the bottom part of your Arduino IDE.
 
-> **Image:** Uploading your code into your RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_3.png"
+  width="90%"
+  caption="Uploading your code into your RAK4631 board"
+/>
 
-> **Image:** Arduino code is successfully uploaded into your RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_4.png"
+  width="90%"
+  caption="Arduino code is successfully uploaded into your RAK4631 board"
+/>
 
 ###### UV Index & UV Intensity Monitoring via TTN
 
 1. To monitor the data of your **UV Index & UV Intensity Monitoring** device via **TTN**, you need to go back to your TTN account where you created your application and registered your device.
 
-> **Image:** Your UV Index & UV Intensity Monitoring device in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_5.png"
+  width="90%"
+  caption="Your UV Index & UV Intensity Monitoring device in TTN"
+/>
 
 2. Then go to **Payload formatters**. Under **Formatter type**, select **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace the default code with the one below. This will decode the data from your device going to **TTN**. Once done, simply click **Save changes**.
 
@@ -793,13 +836,25 @@ function Decoder(bytes, port)
 }
 ```
 
-> **Image:** Payload Formatter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_6.png"
+  width="90%"
+  caption="Payload Formatter"
+/>
 
 3. Then go back to **Live data** of your device in TTN and compare it with the live data from the **Serial Monitor** of your device. You should now seeing identical results between them.
 
-> **Image:** Live data from your device in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_7.png"
+  width="90%"
+  caption="Live data from your device in TTN"
+/>
 
-> **Image:** Live data from your device in its Serial Monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12019_8.png"
+  width="90%"
+  caption="Live data from your device in its Serial Monitor"
+/>
 
 ###### UV Index & UV Intensity Monitoring via Qubitro
 
@@ -807,39 +862,83 @@ This section will guide you on how to integrate your application using Qubitro.
 
 1. Go to [Qubitro Portal](https://portal.qubitro.com/login) and create your account.
 
-> **Image:** Creating qubitro Account
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_1.png"
+  width="80%"
+  caption="Creating qubitro Account"
+/>
 
-> **Image:** Creating Qubitro Account
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_2.png"
+  width="80%"
+  caption="Creating Qubitro Account"
+/>
 
 2. Once done with the account creation, login into your **Qubitro Account**. Then click **New Project**, then fill out your desired **Name**, as well as the **Description** based on your battery monitoring application, then click **Create**.
 
-> **Image:** Creating New Project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_3.png"
+  width="80%"
+  caption="Creating New Project"
+/>
 
-> **Image:** Creating New Project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_4.png"
+  width="80%"
+  caption="Creating New Project"
+/>
 
-> **Image:** Created New Project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_5.png"
+  width="80%"
+  caption="Created New Project"
+/>
 
 3. Then click into your newly-created project then click **New source**.
 
-> **Image:** Adding New source
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_6.png"
+  width="80%"
+  caption="Adding New source"
+/>
 
 4. Among the data sources, choose **The Things Stack**.
 
-> **Image:** Choosing The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_7.png"
+  width="80%"
+  caption="Choosing The Things Stack"
+/>
 
 5. For the **integration type**, choose **Import from network**, then copy and paste the **PROJECT ID** and **WEBHOOK SIGNING KEY** temporarily to notepad. These credentials will be used on the later part, then click **Go to project**.
 
-> **Image:** Copying the credentials
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_8.png"
+  width="80%"
+  caption="Copying the credentials"
+/>
 
-6. Then head back to your **TTN Application** where you created your battery monitoring application to add webhook from it. To do this, just click your device then go to **Integrations** > **Webhooks** > **+ Add webhook**.
+6. Then head back to your **TTN Application** where you created your battery monitoring application to add webhook from it. To do this, just click your device then go to **Integrations** &gt; **Webhooks** &gt; **+ Add webhook**.
 
-> **Image:** Going to your TTN application for your UV Monitoring Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_9.png"
+  width="80%"
+  caption="Going to your TTN application for your UV Monitoring Application"
+/>
 
-> **Image:** Adding Webhook
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_10.png"
+  width="80%"
+  caption="Adding Webhook"
+/>
 
 7. Then choose **Qubitro** as your webhook template.
 
-> **Image:** Qubitro
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_11.png"
+  width="80%"
+  caption="Qubitro"
+/>
 
 8. Then fill in the needed details:
    - **Webhook ID** - For this example, you can use **uv-monitoring-application**.
@@ -848,21 +947,45 @@ This section will guide you on how to integrate your application using Qubitro.
 
    Then click **Create Qubitro webhook**.
 
-> **Image:** Creating Qubitro webhook
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_12.png"
+  width="80%"
+  caption="Creating Qubitro webhook"
+/>
 
-> **Image:** Added a Qubitro webhook
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_13.png"
+  width="80%"
+  caption="Added a Qubitro webhook"
+/>
 
 9. After you created your webhook, go back to your **Qubitro** platform to check the changes made. Refresh **Qubitro** by clicking the **Refresh** button on the upper right side of your screen. You will notice that a newly-added device is included in the platform.
 
-> **Image:** Device successfully included in Qubitro
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_14.png"
+  width="80%"
+  caption="Device successfully included in Qubitro"
+/>
 
-10. To add the decoder, simply go to **Functions** > **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
+10. To add the decoder, simply go to **Functions** &gt; **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
 
-> **Image:** Creating Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_15.png"
+  width="80%"
+  caption="Creating Function"
+/>
 
-> **Image:** Decoder Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_16.png"
+  width="80%"
+  caption="Decoder Function"
+/>
 
-> **Image:** Function Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_17.png"
+  width="80%"
+  caption="Function Configuration"
+/>
 
 11. Under the **Formatter type**, choose **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace its default entry with the code below:
 
@@ -894,83 +1017,207 @@ function Decoder(bytes, port)
 
 Once done, simply click **Save and complete**.
 
-> **Image:** Function Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_18.png"
+  width="80%"
+  caption="Function Configuration"
+/>
 
-> **Image:** Created Decoder Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_19.png"
+  width="80%"
+  caption="Created Decoder Function"
+/>
 
 12. Then go to your device and click on the **Data** tab to check for the incoming data coming from your device. You should now be seeing live data from your device. To gather the most recent data, simply click **Refresh**.
 
-> **Image:** Data Tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_20.png"
+  width="80%"
+  caption="Data Tab"
+/>
 
-> **Image:** Historical Data
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_21.png"
+  width="80%"
+  caption="Historical Data"
+/>
 
-> **Image:** Refreshing data to get newer ones
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_22.png"
+  width="80%"
+  caption="Refreshing data to get newer ones"
+/>
 
-13. To add a monitoring dashboard for the data from the UV monitoring device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** > **New dashboard** > **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
+13. To add a monitoring dashboard for the data from the UV monitoring device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** &gt; **New dashboard** &gt; **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
 
-> **Image:** Creating dashboard for your UV Monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_23.png"
+  width="80%"
+  caption="Creating dashboard for your UV Monitoring device"
+/>
 
-> **Image:** Creating dashboard for your UV Monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_24.png"
+  width="80%"
+  caption="Creating dashboard for your UV Monitoring device"
+/>
 
-> **Image:** Creating dashboard for your UV Monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_25.png"
+  width="80%"
+  caption="Creating dashboard for your UV Monitoring device"
+/>
 
-> **Image:** Creating dashboard for your UV Monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_26.png"
+  width="80%"
+  caption="Creating dashboard for your UV Monitoring device"
+/>
 
-> **Image:** Newly-created dashboard for your UV Monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_27.png"
+  width="80%"
+  caption="Newly-created dashboard for your UV Monitoring device"
+/>
 
 14. Click **Edit** > **New widget** to add a widget for a specific parameter need to be monitored.
 
-> **Image:** Adding a widget
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_28.png"
+  width="80%"
+  caption="Adding a widget"
+/>
 
-> **Image:** Adding a widget
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_29.png"
+  width="80%"
+  caption="Adding a widget"
+/>
 
 15. Once done, you're now at the **Widget Configuration**. At the **WIDGET TYPE**, choose **Chart**. Then provide the name of the parameter under **SHOW WIDGET NAME**. Once done, proceed to **Add point +**. Choose your **existing project**, **application** and the **specific parameter** you need to monitor in your dashboard. Once done, just click **Save**.
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_30.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_31.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_32.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_33.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_34.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_35.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_36.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_37.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_38.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
 16. Now you have an existing preview of your data from your device. Under **CHART TYPE** at the left side of your screen, choose **Line**. Once done, go to **STANDARD OPTIONS** to choose the appropriate unit for your parameter to be monitored in the dashboard. Once done, click **Save widget**.
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_39.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_40.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_41.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_42.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Saving the changes made in your Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_43.png"
+  width="100%"
+  caption="Saving the changes made in your Widget Configuration"
+/>
 
 17. Then click **Save changes** to include the data of parameter. Then you have now the newly-made widget for your specific parameter.
 
-> **Image:** Save changes
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_44.png"
+  width="100%"
+  caption="Save changes"
+/>
 
-> **Image:** Newly-made widget
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_45.png"
+  width="100%"
+  caption="Newly-made widget"
+/>
 
-18. In able for you to include additional widgets for other parameters, you need to click **Edit** > **New widget** then repeat **Step 15** to **Step 17**.
+18. In able for you to include additional widgets for other parameters, you need to click **Edit** &gt; **New widget** then repeat **Step 15** to **Step 17**.
 
-> **Image:** Adding widgets into your dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_46.png"
+  width="100%"
+  caption="Adding widgets into your dashboard"
+/>
 
-> **Image:** Adding widgets into your dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_47.png"
+  width="100%"
+  caption="Adding widgets into your dashboard"
+/>
 
 19. Then there you have it a real-time monitoring dashboard for your UV monitoring device.
 
-> **Image:** Monitoring dashboard for your UV monitoring device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/qub_48.png"
+  width="100%"
+  caption="Monitoring dashboard for your UV monitoring device"
+/>
 
 [Back](#lorawan-applications-for-wisblock-iot-education-kit-light-color-using-ttn-and-qubitro)
 
@@ -978,7 +1225,11 @@ Once done, simply click **Save and complete**.
 
 The **Light Color Recognizer LoRaWAN Application** is used to evaluate the color of the light being monitored using an RGB sensor. It uses **RAK12021** which is an RGB sensor which is based on **TCS37725FN** from AMS. It also uses **RAK14001** RGB LED module which will visualize the color being monitored by **RAK12021** module.
 
-> **Image:** Light Color Recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_light.png"
+  width="85%"
+  caption="Light Color Recognizer device"
+/>
 
 ###### Light Color Recognizer - TTN Registration Section and Device Registration
 
@@ -1382,25 +1633,49 @@ uint8_t nodeAppEUI[8] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 uint8_t nodeAppKey[16] = { 0x96, 0xBD, 0xC5, 0x98, 0x17, 0x69, 0x8D, 0xFA, 0x1F, 0x64, 0xFE, 0x1C, 0xF9, 0x26, 0x7F, 0x8D };
 ```
 
-> **Image:** OTAA device successfully registered to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_1.png"
+  width="90%"
+  caption="OTAA device successfully registered to TTN"
+/>
 
-3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** > **Board:XXXXX** > **RAKwireless nRF Boards** > **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** > **Port** > then the specific port of your board.
+3. Once done with the code, you can now proceed uploading it into your device. You need to select first your RAK4631 board from desktop or laptop. To do this, go to **Tools** &gt; **Board:XXXXX** &gt; **RAKwireless nRF Boards** &gt; **WisBlock RAK4631**. After you selected your board, you need to select the specific port of your board. To do this, go to **Tools** &gt; **Port** &gt; then the specific port of your board.
 
-> **Image:** Selecting the RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_3.png"
+  width="90%"
+  caption="Selecting the RAK4631 board"
+/>
 
-> **Image:** Selecting the port of RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_4.png"
+  width="90%"
+  caption="Selecting the port of RAK4631 board"
+/>
 
 4. Once done, you can now upload your code. Simply click the right arrow sign at the upper left portion of your Arduino IDE. Once done, you will see the **Device programmed** notification at the bottom part of your Arduino IDE.
 
-> **Image:** Uploading your code into your RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_5.png"
+  width="90%"
+  caption="Uploading your code into your RAK4631 board"
+/>
 
-> **Image:** Arduino code is successfully uploaded into your RAK4631 board
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_6.png"
+  width="90%"
+  caption="Arduino code is successfully uploaded into your RAK4631 board"
+/>
 
 ###### Light Color Recognizer via TTN
 
 1. To monitor the data of your **Light Color Recognizer** device via **TTN**, you need to go back to your TTN account where you created your application and registered your device.
 
-> **Image:** Your Light Color Recognizer device in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_2.png"
+  width="90%"
+  caption="Your Light Color Recognizer device in TTN"
+/>
 
 2. Then go to **Payload formatters**. Under **Formatter type**, select **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace the default code with the one below. This will decode the data from your device going to **TTN**. Once done, simply click **Save changes**.
 
@@ -1430,13 +1705,25 @@ function Decoder(bytes, port)
 }
 ```
 
-> **Image:** Payload Formatter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_7.png"
+  width="90%"
+  caption="Payload Formatter"
+/>
 
 3. Then go back to **Live data** of your device in TTN and compare it with the live data from the **Serial Monitor** of your device. You should now seeing identical results between them.
 
-> **Image:** Live data from your device in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_8.png"
+  width="90%"
+  caption="Live data from your device in TTN"
+/>
 
-> **Image:** Live data from your device in its Serial Monitor
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_rak12021_9.png"
+  width="90%"
+  caption="Live data from your device in its Serial Monitor"
+/>
 
 ###### Light Color Recognizer via Qubitro
 
@@ -1444,39 +1731,83 @@ This section will guide you on how to integrate your application using Qubitro.
 
 1. Go to [Qubitro Portal](https://portal.qubitro.com/login) and create your account.
 
-> **Image:** Creating Qubitro Account
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_1.png"
+  width="80%"
+  caption="Creating Qubitro Account"
+/>
 
-> **Image:** Creating Qubitro Account
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_2.png"
+  width="80%"
+  caption="Creating Qubitro Account"
+/>
 
 2. Once done with the account creation, login into your **Qubitro Account**. Then click **New Project**, then fill out your desired **Name**, as well as the **Description** based on your light color recognizer application, then click **Create**.
 
-> **Image:** Creating New Project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_3.png"
+  width="80%"
+  caption="Creating New Project"
+/>
 
-> **Image:** Creating New Project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_4.png"
+  width="80%"
+  caption="Creating New Project"
+/>
 
-> **Image:** Created New Project
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_5.png"
+  width="80%"
+  caption="Created New Project"
+/>
 
 3. Then click into your newly-created project then click **New source**.
 
-> **Image:** Adding New source
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_6.png"
+  width="80%"
+  caption="Adding New source"
+/>
 
 4. Among the data sources, choose **The Things Stack**.
 
-> **Image:** Choosing The Things Stack
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_7.png"
+  width="80%"
+  caption="Choosing The Things Stack"
+/>
 
 5. For the **integration type**, choose **Import from network**, then copy and paste the **PROJECT ID** and **WEBHOOK SIGNING KEY** temporarily to notepad. These credentials will be used on the later part, then click **Go to project**.
 
-> **Image:** Copying the credentials
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_8.png"
+  width="80%"
+  caption="Copying the credentials"
+/>
 
-6. Then head back to your **TTN Application** where you created your light color recognizer application to add webhook from it. To do this, just click your device then go to **Integrations** > **Webhooks** > **+ Add webhook**.
+6. Then head back to your **TTN Application** where you created your light color recognizer application to add webhook from it. To do this, just click your device then go to **Integrations** &gt; **Webhooks** &gt; **+ Add webhook**.
 
-> **Image:** Going to your TTN application for your Light Color Recognizer Application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_9.png"
+  width="80%"
+  caption="Going to your TTN application for your Light Color Recognizer Application"
+/>
 
-> **Image:** Adding Webhook
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_10.png"
+  width="80%"
+  caption="Adding Webhook"
+/>
 
 7. Then choose **Qubitro** as your webhook template.
 
-> **Image:** Qubitro
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_11.png"
+  width="80%"
+  caption="Qubitro"
+/>
 
 8. Then fill in the needed details:
    - **Webhook ID** - For this example, you can use **light-color-recognizer-application**.
@@ -1485,21 +1816,45 @@ This section will guide you on how to integrate your application using Qubitro.
 
    Then click **Create Qubitro webhook**.
 
-> **Image:** Creating Qubitro webhook
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_12.png"
+  width="90%"
+  caption="Creating Qubitro webhook"
+/>
 
-> **Image:** Added a Qubitro webhook
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_13.png"
+  width="100%"
+  caption="Added a Qubitro webhook"
+/>
 
 9. After you created your webhook, go back to your **Qubitro** platform to check the changes made. Refresh **Qubitro** by clicking the **Refresh** button on the upper right side of your screen. You will notice that a newly-added device is included in the platform.
 
-> **Image:** Device successfully included in Qubitro
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_14.png"
+  width="80%"
+  caption="Device successfully included in Qubitro"
+/>
 
-10. To add the decoder, simply go to **Functions** > **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
+10. To add the decoder, simply go to **Functions** &gt; **Create Function**. Then under **Decoder Function**, click **Get started**. You will be now routed to **Function Configuration**.
 
-> **Image:** Creating Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_15.png"
+  width="80%"
+  caption="Creating Function"
+/>
 
-> **Image:** Decoder Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_16.png"
+  width="80%"
+  caption="Decoder Function"
+/>
 
-> **Image:** Function Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_17.png"
+  width="80%"
+  caption="Function Configuration"
+/>
 
 11. Under the **Formatter type**, choose **Custom Javascript formatter**. Then under the **Formatter code**, you need to replace its default entry with the code below:
 
@@ -1531,85 +1886,213 @@ function Decoder(bytes, port)
 
 Once done, simply click **Save and complete**.
 
-> **Image:** Function Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_18.png"
+  width="80%"
+  caption="Function Configuration"
+/>
 
-> **Image:** Created Decoder Function
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_19.png"
+  width="80%"
+  caption="Created Decoder Function"
+/>
 
 12. Then go to your device and click on the **Data** tab to check for the incoming data coming from your device. You should now be seeing live data from your device. To gather the most recent data, simply click **Refresh**.
 
-> **Image:** Data Tab
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_20.png"
+  width="80%"
+  caption="Data Tab"
+/>
 
-> **Image:** Historical Data
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_21.png"
+  width="80%"
+  caption="Historical Data"
+/>
 
-> **Image:** Refreshing data to get newer ones
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_22.png"
+  width="80%"
+  caption="Refreshing data to get newer ones"
+/>
 
-13. To add a monitoring dashboard for the data from the light color recognizer device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** > **New dashboard** > **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
+13. To add a monitoring dashboard for the data from the light color recognizer device, you need to go to **Home** which is located at the left top most part of your screen. Then click **Dashboards** &gt; **New dashboard** &gt; **Create new**. Then fill out the **Create New Dashboard** portion using the details of your device. For the **Tags**, just simply input **Test** then click **Create**. Once done, click on to your newly-created dashboard.
 
-> **Image:** Creating dashboard for your Light Color Recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_23.png"
+  width="90%"
+  caption="Creating dashboard for your Light Color Recognizer device"
+/>
 
-> **Image:** Creating dashboard for your Light Color Recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_24.png"
+  width="90%"
+  caption="Creating dashboard for your Light Color Recognizer device"
+/>
 
-> **Image:** Creating dashboard for your Light Color Recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_25.png"
+  width="90%"
+  caption="Creating dashboard for your Light Color Recognizer device"
+/>
 
-> **Image:** Creating dashboard for your Light Color Recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_26.png"
+  width="90%"
+  caption="Creating dashboard for your Light Color Recognizer device"
+/>
 
-> **Image:** Newly-created dashboard for your Light Color Recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_27.png"
+  width="90%"
+  caption="Newly-created dashboard for your Light Color Recognizer device"
+/>
 
-14. Click **Edit** > **New widget** to add a widget for a specific parameter need to be monitored.
+14. Click **Edit** &gt; **New widget** to add a widget for a specific parameter need to be monitored.
 
-> **Image:** Adding a widget
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_28.png"
+  width="80%"
+  caption="Adding a widget"
+/>
 
-> **Image:** Adding a widget
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_29.png"
+  width="80%"
+  caption="Adding a widget"
+/>
 
 15. Once done, you're now at the **Widget Configuration**. At the **WIDGET TYPE**, choose **Chart**. Then provide the name of the parameter under **SHOW WIDGET NAME**. Once done, proceed to **Add point +**. Choose your **existing project**, **application** and the **specific parameter** you need to monitor in your dashboard. Once done, just click **Save**.
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_30.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_31.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_32.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_33.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_34.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_35.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_36.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_37.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
-> **Image:** Connect Data Point
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_38.png"
+  width="100%"
+  caption="Connect Data Point"
+/>
 
 16. Now you have an existing preview of your data from your device. Under **CHART TYPE** at the left side of your screen, choose **Bar**. Also, you can modify the color of your bar graph at the **STYLE** section. Once done, go to **STANDARD OPTIONS** to choose the appropriate unit for your parameter to be monitored in the dashboard. Once done, click **Save widget**.
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_39.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_40.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_41.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_42.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_43.png"
+  width="100%"
+  caption="Widget Configuration"
+/>
 
-> **Image:** Saving the changes made in your Widget Configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_44.png"
+  width="100%"
+  caption="Saving the changes made in your Widget Configuration"
+/>
 
 17. Then click **Save changes** to include the data of parameter. Then you have now the newly-made widget for your specific parameter.
 
-> **Image:** Save changes
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_45.png"
+  width="100%"
+  caption="Save changes"
+/>
 
-> **Image:** Newly-made widget
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_46.png"
+  width="100%"
+  caption="Newly-made widget"
+/>
 
-18. In able for you to include additional widgets for other parameters, you need to click **Edit** > **New widget** then repeat **Step 15** to **Step 17**.
+18. In able for you to include additional widgets for other parameters, you need to click **Edit** &gt; **New widget** then repeat **Step 15** to **Step 17**.
 
-> **Image:** Adding widgets into your dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_47.png"
+  width="100%"
+  caption="Adding widgets into your dashboard"
+/>
 
-> **Image:** Adding widgets into your dashboard
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_48.png"
+  width="100%"
+  caption="Adding widgets into your dashboard"
+/>
 
 19. Then there you have it a real-time monitoring dashboard for your light color recognizer device.
 
-> **Image:** Monitoring dashboard for your light color recognizer device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/light_qub_49.png"
+  width="90%"
+  caption="Monitoring dashboard for your light color recognizer device"
+/>
 
 [Back](#lorawan-applications-for-wisblock-iot-education-kit-light-color-using-ttn-and-qubitro)
 
@@ -1619,29 +2102,65 @@ Once done, simply click **Save and complete**.
 
 1. The first step is to go to [The Things Network](https://www.thethingsnetwork.org/) and sign up an account shown in the figure below. Then select a cluster as shown in the figure below.
 
-> **Image:** Signing up an account in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_1.png"
+  width="90%"
+  caption="Signing up an account in TTN"
+/>
 
-> **Image:** Signing up an account in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_2.png"
+  width="90%"
+  caption="Signing up an account in TTN"
+/>
 
-> **Image:** Selecting Cluster in TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_3.png"
+  width="90%"
+  caption="Selecting Cluster in TTN"
+/>
 
-> **Image:** Signing up through the Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_4.png"
+  width="90%"
+  caption="Signing up through the Things ID"
+/>
 
-> **Image:** Creation of an account through the Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_5.png"
+  width="90%"
+  caption="Creation of an account through the Things ID"
+/>
 
-> **Image:** Creation of an account through the Things ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_6.png"
+  width="90%"
+  caption="Creation of an account through the Things ID"
+/>
 
 You can use the same login credentials on the TTN V2 if you have one. If you have no account yet, you need to create one.
 
 2. Now that you are logged in to the platform, the next step is to create an application. Click **Create an application**.
 
-> **Image:** The Things Stack Platform
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_7.png"
+  width="90%"
+  caption="The Things Stack Platform"
+/>
 
-> **Image:** Creating TTN Application of your LoRaWAN devices
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_8.png"
+  width="90%"
+  caption="Creating TTN Application of your LoRaWAN devices"
+/>
 
 3. To have an application registered, input first the specific details and necessary information about your application then click **Create application**.
 
-> **Image:** Details of the TTN application
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_9.png"
+  width="70%"
+  caption="Details of the TTN application"
+/>
 
 :::tip NOTE
 
@@ -1664,23 +2183,47 @@ Above procedures are applicable to all applications you will be using.
 
 1. Go to your application console to register a device. To start adding an OTAA end-device, click **+ Register end device**, as shown below.
 
-> **Image:** Register End Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_11.png"
+  width="90%"
+  caption="Register End Device"
+/>
 
 2. To register the board, click the **Enter end device specifics manually**.
 
-> **Image:** Enter end device specifics manually
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_12.png"
+  width="60%"
+  caption="Enter end device specifics manually"
+/>
 
 3. Next step is to set up **Frequency plan**, compatible **LoRaWAN version**, and **Regional Parameters version** supported. Then provide the **JoinEUI** credentials by entering zeroes into it.
 
-> **Image:** Setting up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_13.png"
+  width="70%"
+  caption="Setting up your device"
+/>
 
-> **Image:** Setting up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_14.png"
+  width="60%"
+  caption="Setting up your device"
+/>
 
 4. Then click **Show advanced activation, LoRaWAN class and cluster settings**. Configure the activation mode by selecting **Over the air activation (OTAA)** and Additional LoRaWAN class capabilities to **class A only**. Then click **Confirm**.
 
-> **Image:** Setting up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_15.png"
+  width="60%"
+  caption="Setting up your device"
+/>
 
-> **Image:** Setting up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_16.png"
+  width="50%"
+  caption="Setting up your device"
+/>
 
 5. Once done, provide the DevEUI credentials of your device into the **DevEUI** portion. This will automatically generate the specific End
 device ID of your board. Then click **Generate** under **AppKey** under Provisioning information section. Once done, you need to change the **End device ID** since it is automatically prefilled using the **DevEUI** of your device. Then click **Register end device**.
@@ -1695,13 +2238,29 @@ device ID of your board. Then click **Generate** under **AppKey** under Provisio
 
 :::
 
-> **Image:** Setting up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_17.png"
+  width="50%"
+  caption="Setting up your device"
+/>
 
-> **Image:** Setting up your device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_18.png"
+  width="50%"
+  caption="Setting up your device"
+/>
 
-> **Image:** Changing the End device ID
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_19.png"
+  width="50%"
+  caption="Changing the End device ID"
+/>
 
-> **Image:** Register End Device
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_20.png"
+  width="50%"
+  caption="Register End Device"
+/>
 
 6. You should now be able to see the device on the TTN console after you fully register your device, as shown below.
 
@@ -1712,7 +2271,11 @@ device ID of your board. Then click **Generate** under **AppKey** under Provisio
 - These parameters are always accessible on the device console page, as highlighted in the figure below.
 :::
 
-> **Image:** OTAA device successfully registered to TTN
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_21.png"
+  width="90%"
+  caption="OTAA device successfully registered to TTN"
+/>
 
 :::tip NOTE
 
@@ -1727,25 +2290,57 @@ Above procedures are applicable to all applications you will be using.
 
 1. Download the [Arduino IDE](https://www.arduino.cc/en/software) and install it on your PC or laptop. You must choose the appropriate **Arduino IDE** depending on your operating system.
 
-> **Image:** Download Options for the Arduino IDE
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_22.png"
+  width="80%"
+  caption="Download Options for the Arduino IDE"
+/>
 
-2. Open the **Arduino IDE** then install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE. Click on **File** > **Preference**. In the **Preference** window, look for **Additional Boards Manager URLs** then click the icon on the right side. Paste the link into it then click **OK** > **OK**.
+2. Open the **Arduino IDE** then install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE. Click on **File** &gt; **Preference**. In the **Preference** window, look for **Additional Boards Manager URLs** then click the icon on the right side. Paste the link into it then click **OK** &gt; **OK**.
 
-> **Image:** Preference Set-Up
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_23.png"
+  width="80%"
+  caption="Preference Set-Up"
+/>
 
-> **Image:** Preference Window
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_24.png"
+  width="80%"
+  caption="Preference Window"
+/>
 
-> **Image:** RAKwireless Arduino BSP
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_25.png"
+  width="80%"
+  caption="RAKwireless Arduino BSP"
+/>
 
-> **Image:** Completing the setup of the RAKwireless BSP support for the Arduino Board Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_26.png"
+  width="80%"
+  caption="Completing the setup of the RAKwireless BSP support for the Arduino Board Manager"
+/>
 
-3. Then to your **Arduino IDE**, go to **Tools** > **Board:XXXXX** > **Boards Manager**. Then look for **RAKwireless Boards by RAKwireless** since we will be working on with the **RAK4631 WisBlock Core**. Choose the latest version then install it. Once done, close the **Board Manager**.
+3. Then to your **Arduino IDE**, go to **Tools** &gt; **Board:XXXXX** &gt; **Boards Manager**. Then look for **RAKwireless Boards by RAKwireless** since we will be working on with the **RAK4631 WisBlock Core**. Choose the latest version then install it. Once done, close the **Board Manager**.
 
-> **Image:** Opening the Boards Manager
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_27.png"
+  width="80%"
+  caption="Opening the Boards Manager"
+/>
 
-> **Image:** Installing the RAKwireless nRF Boards
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_28.png"
+  width="80%"
+  caption="Installing the RAKwireless nRF Boards"
+/>
 
-> **Image:** Successfully installed the RAKwireless nRF Boards
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/kit6-light-color/quickstart/ttn_kit_light_29.png"
+  width="80%"
+  caption="Successfully installed the RAKwireless nRF Boards"
+/>
 
 :::tip NOTE
 
@@ -1755,4 +2350,7 @@ Above procedures are applicable to all applications you will be using.
 - For **Light Color Recognizer**, go to this [link](#lorawan-code-for-light-color-recognizer) once done with the device registration.
 
 :::
+
+<RkBottomNav/>
+
 

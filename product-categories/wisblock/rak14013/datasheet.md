@@ -10,11 +10,18 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK14013 WisBlock Joystick Module Datasheet
 
 ## Overview
 
-> **Image:** RAK14013 WisBlock Joystick Module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/rak14013_front_back.png"
+  width="40%"
+  caption="RAK14013 WisBlock Joystick Module"
+/>
 
 ### Description
 
@@ -24,9 +31,9 @@ The RAK14013 is a joystick module with embedded MCU based on ATTINY441-SSU from 
 
 - Joystick module and push buttons
 - I2C interface
-- 3.3 V Power supply
+- 3.3&nbsp;V Power supply
 - Chipset: ATMEL ATTINY441-SSU
-- Module Size: 54 mm x 85 mm
+- Module Size: 54&nbsp;mm x 85&nbsp;mm
 
 ## Specifications
 
@@ -36,7 +43,12 @@ The RAK14013 is a joystick module with embedded MCU based on ATTINY441-SSU from 
 
 The RAK14013 WisBlock Joystick Module can be mounted to the IO slot of the WisBlock Base board. **Figure 2** shows the mounting mechanism of the RAK14006 on a WisBlock Base board, such as the [RAK5005-O](https://store.rakwireless.com/products/rak5005-o-base-board).
 
-> **Image:** RAK14013 WisBlock Joystick Module mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image_mounting.png"
+  width="60%"
+  caption="RAK14013 WisBlock Joystick Module mounting"
+/>
+
 
 ### Hardware
 
@@ -52,8 +64,12 @@ The hardware specification is categorized into three parts. It provides the pino
 
 The pin definition of the RAK14013 connector is shown in **Figure 3**.
 
- 
-> **Image:** RAK14013 WisBlock Joystick Module pinout
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/rak14007_pinouts.svg"
+  width="80%"
+  caption="RAK14013 WisBlock Joystick Module pinout"
+/>
+
 
 :::tip NOTE
 - **3V3**, **I2C** related pin, **RESET**, and **INT** are connected to cable
@@ -66,46 +82,80 @@ The pin definition of the RAK14013 connector is shown in **Figure 3**.
 
 **Figure 4** shows the dimensions and the mechanical drawing of the RAK14013 module.
 
- 
-> **Image:** RAK14013 WisBlock Joystick Module Dimensions
+ <RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image-mechanical.png"
+  width="60%"
+  caption="RAK14013 WisBlock Joystick Module Dimensions"
+/>
+
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14006/datasheet/pcb-layout.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
+
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK14013 WisBlock Joystick Module.
 
-> **Image:** RAK14013 WisBlock Joystick Module schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/rak14013_schematic_diagram.png"
+  width="100%"
+  caption="RAK14013 WisBlock Joystick Module schematic"
+/>
 
 ##### Power Supply and I2C
 
 **Power supply** and **I2C** connections are shown in **Figure 7**.
 
-> **Image:** RAK14013 Power supply and I2C
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image-power-i2c.png"
+  width="60%"
+  caption="RAK14013 Power supply and I2C"
+/>
 
 ##### MCU Circuit
 
 The RAK14013 uses ATTINY441-SSU microcontroller unit (MCU) to control the four tactile push buttons and a rotary series potentiometer of the joystick.
 
-> **Image:** MCU circuit
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image-mcu.png"
+  width="100%"
+  caption="MCU circuit"
+/>
 
 ##### Joystick Circuit
 
 **Joystick** circuit diagram is shown in **Figure 9**.
 
-> **Image:** RAK14013 joystick
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image-joystick.png"
+  width="50%"
+  caption="RAK14013 joystick"
+/>
 
 ##### Tactile Pushbuttons Circuit
 
 **Tactile Pushbuttons** circuit diagram is shown in **Figure 10**.
 
-> **Image:** RAK14013 tactile push buttons
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image-buttons.png"
+  width="60%"
+  caption="RAK14013 tactile push buttons"
+/>
 
 ##### Debug Connector
 
 **Debug** connector circuit diagram is shown in **Figure 11**.
 
-> **Image:** RAK14013 debug connector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak14013/datasheet/image-debug.png"
+  width="40%"
+  caption="RAK14013 debug connector"
+/>
 
+<RkBottomNav/>

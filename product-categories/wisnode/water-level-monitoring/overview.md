@@ -10,6 +10,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Water Level Monitoring Sensor
 
 Thank you for choosing **Water Level Monitoring Sensor** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -25,12 +27,13 @@ With the plug-and-play feature of the Sensor Hub, the Water Level Solution comes
 
 The Sensor Hub’s connectivity function allows for versatile data transmission to the cloud using the two most commonly used communication protocols in IoT. This versatility ensures that data is readily available for storage, visualization, and in-depth analysis, enabling informed decision-making based on comprehensive knowledge of water levels.
 
+
 ## Solution Features
 
 - Support LoRaWAN and NB-IoT/LTE CAT-M wireless communication modes
 - Support LoRa frequency band: CN470, EU868, IN865, RU864, US915, AU915, KR920, AS923-1/2/3/4
-- Wide measurement range: 0~200 mH2O
-- Resolution: 0.25% FS
+- Wide measurement range: 0~200&nbsp;mH2O
+- Resolution: 0.25%&nbsp;FS
 - Easy to install and configure
 - Configurable network access with the WisToolBox mobile app
 - Pressure diaphragm in the probe
@@ -39,10 +42,32 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 
 ## Package Inclusion
 
-| DEVICE LIST | DESCRIPTION |
-| --- | --- |
-| 1 x Sensor Hub1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
-| 1 x Water Level Sensor1 x Sensor Probe IO | Sensor Probe IO + Water Level Sensor |
-| 1 x Power Adapter1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
-| 1 x Cable Tie | For wiring or fixing |
+<table>
+  <thead>
+    <tr>
+      <th>DEVICE LIST</th>
+      <th>DESCRIPTION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
+      <td>Sensor Hub + Sensor Hub Installation Kit</td>
+    </tr>
+    <tr>
+      <td>1 x Water Level Sensor <br/> 1 x Sensor Probe IO</td>
+      <td>Sensor Probe IO + Water Level Sensor</td>
+    </tr>
+    <tr>
+      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
+      <td>Sensor Hub Power Adapter + Power Cable</td>
+    </tr>
+    <tr>
+      <td>1 x Cable Tie</td>
+      <td>For wiring or fixing</td>
+    </tr>
+  </tbody>
+</table>
 
+
+<RkBottomNav/>

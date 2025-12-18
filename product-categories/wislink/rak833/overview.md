@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK833 WisLink LPWAN Concentrator
 Thank you for choosing **RAK833 WisLink LPWAN Concentrator** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
 
@@ -29,20 +32,25 @@ Thank you for choosing **RAK833 WisLink LPWAN Concentrator** in your awesome IoT
   * [RAK833 SPI + OpenWRT Firmware](https://downloads.rakwireless.com/LoRa/RAK2247-Mini-PCIe/MT7628-Firmware/RAK833%26RAK2247_SPI_MT7628_OpenWRT_V2.0_20190505.bin)
 * [Quick Start Guide for Raspberry Pi and RAK LPWAN Concentrators](https://learn.rakwireless.com/hc/en-us/articles/26743452451095-How-To-Get-Started-with-Raspberry-Pi-and-RAK-LPWAN-Concentrators)
 
+
 ## Product Description
 
 The **RAK833 WisLink LPWAN Concentrator** is a family of LoRa concentrator modules with a mini PCIe form factor based on SX1301, which enables easy integration into existing routers and other network equipment with gateway capabilities. This can be used in any embedded platform offering a free mini-PCIe slot with USB and SPI connectivity.
 
-RAK833 WisLink LPWAN Concentrator is a complete and cost efficient gateway solution offering up to 10 programmable parallel demodulation paths. It is targeted at smart metering fixed networks and Internet of Things applications with up to 500 nodes per square kilometer (km²) in amoderately interfered environment. These modules have the industry standard PCI Express Mini Card form factor which enables easy integration into an application board.
+RAK833 WisLink LPWAN Concentrator is a complete and cost efficient gateway solution offering up to 10 programmable parallel demodulation paths. It is targeted at smart metering fixed networks and Internet of Things applications with up to 500&nbsp;nodes per square kilometer (km²) in amoderately interfered environment. These modules have the industry standard PCI Express Mini Card form factor which enables easy integration into an application board.
+
+
 
 ## Product Features
 
 - Full LoRaWAN 1.0.2 stack support
 - Compact size in the form of a mPCIe 52-pin form factor card
 - SX1301 base band processor emulates 49 x LoRa demodulators, 10 parallel demodulation paths. It supports 8 uplinks channels and 1 downlink channel.
-- Max Tx Power of 20 dBm
-- RX sensitivity of -136 dBm
-- Compatible with 3.3 V mPCIe type slots, common for 3G/LTE modules
+- Max Tx Power of 20&nbsp;dBm
+- RX sensitivity of -136&nbsp;dBm
+- Compatible with 3.3&nbsp;V mPCIe type slots, common for 3G/LTE modules
 - With an option for SPI interface board or both SPI and USB interfaces
 - Perfect for a Plug-and-Play Setup when used together with the mPCIe to USB adapter (check this option above to include the board)
 
+
+<RkBottomNav/>

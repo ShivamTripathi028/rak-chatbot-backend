@@ -10,25 +10,28 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK19016 WisBlock 5-24 V Power Slot Module Datasheet
 
 ## Overview
 
 ### Description
 
-The **RAK19016** is a WisBlock 5~24 V Power Slot Module that comprises a 3-pin screw terminal connector, LiPo battery connector with an on-board charger, LED indicator for charge status, two user-configurable LEDs, reset button, and a power connector that can be connected with the WisBlock Base board with Power Slot.
+The **RAK19016** is a WisBlock 5~24&nbsp;V Power Slot Module that comprises a 3-pin screw terminal connector, LiPo battery connector with an on-board charger, LED indicator for charge status, two user-configurable LEDs, reset button, and a power connector that can be connected with the WisBlock Base board with Power Slot.
 
-This power module is designed to enable WisBlock to be powered by higher voltage levels up to 24 V<sub>DC</sub>. It also has a LiPo battery connector which allows the battery as a power source or as a backup secondary supply.
+This power module is designed to enable WisBlock to be powered by higher voltage levels up to 24&nbsp;V<sub>DC</sub>. It also has a LiPo battery connector which allows the battery as a power source or as a backup secondary supply.
 
 ### Features
 
-* Supports 5~24 V<sub>DC</sub> voltage supply input
+* Supports 5~24&nbsp;V<sub>DC</sub> voltage supply input
 * Uses three-pin screw terminal connector
 * Compatible with LiPo rechargeable battery
 * On-board battery charger chip
 * LED for charging status and user-configurable LEDs
 * Applicable to industrial and enterprise setting
-* Module size: 30 x 20 mm
+* Module size: 30 x 20&nbsp;mm
 
 ## Specifications
 
@@ -36,7 +39,11 @@ This power module is designed to enable WisBlock to be powered by higher voltage
 
 #### Board Overview
 
-> **Image:** RAK19016 WisBlock Power Module top (left) and bottom (right) view
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/rak19016-front-back-overview.png"
+  width="55%"
+  caption="RAK19016 WisBlock Power Module top (left) and bottom (right) view"
+/>
 
 #### Mounting
 
@@ -48,15 +55,19 @@ RAK19016 **only** supports WisBlock Base boards with Power Slot. It is not compa
 
 :::
 
-> **Image:** RAK19016 mounting mechanism on a WisBlock Base board with Power Slot
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/mounting-mechanism.png"
+  width="50%"
+  caption="RAK19016 mounting mechanism on a WisBlock Base board with Power Slot"
+/>
 
 ### Hardware
 
-The hardware specification is categorized into six parts. It discusses the interfacing, pinouts, and their corresponding functions and diagrams of the module. It also covers the electrical, mechanical, and environmental characteristics that include the tabular data of the functionalities and standard values of the RAK19016 WisBlock 5~24 V Power Slot Module.
+The hardware specification is categorized into six parts. It discusses the interfacing, pinouts, and their corresponding functions and diagrams of the module. It also covers the electrical, mechanical, and environmental characteristics that include the tabular data of the functionalities and standard values of the RAK19016 WisBlock 5~24&nbsp;V Power Slot Module.
 
 #### Interfaces
 
-RAK19016 WisBlock 5~24 V Power Slot Module provides the following interfaces:
+RAK19016 WisBlock 5~24&nbsp;V Power Slot Module provides the following interfaces:
 
 * Three-pin Screw Terminal Connector
 * Battery Connector
@@ -67,16 +78,24 @@ RAK19016 WisBlock 5~24 V Power Slot Module provides the following interfaces:
 RAK19016 doesn't have a USB connector. When RAK19016 is used together with WisBlock Base board with power slot, it is not possible to program the core (unless via SWD pins using external tools like Jlink and RAKDAP1). If you want to program the WisBlock Core, you can use <a href="https://store.rakwireless.com/products/rak5804-wisblock-interface-extension-board" target="_blank">RAK5804</a> and its USB connector.
 :::
 
-> **Image:** RAK19016 part labels
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/rak19016-label.svg"
+  width="60%"
+  caption="RAK19016 part labels"
+/>
 
-##### 5~24 V<sub>DC</sub> and Battery Connector
+##### 5~24&nbsp;V<sub>DC</sub> and Battery Connector
 
-**Figure 4** shows the polarity of 5~24 V<sub>DC</sub> input and battery connector V+ (VBAT) and V- (GND).
+**Figure 4** shows the polarity of 5~24&nbsp;V<sub>DC</sub> input and battery connector V+ (VBAT) and V- (GND).
 
-> **Image:** 5-24 V DC and Battery connector pins
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/rak19016-connection.svg"
+  width="60%"
+  caption="5-24 V DC and Battery connector pins"
+/>
 
 :::tip NOTE
-The voltage of the battery must not exceed 4.3 V.
+The voltage of the battery must not exceed 4.3&nbsp;V.
 :::
 
 ##### LEDs
@@ -99,7 +118,12 @@ The RAK19016 module has a 40-pin WisConnector that is compatible with the WisBlo
 VBAT, 3V3, RESET, LED1, LED2, ADC_VBAT, and GND have connected to WisBlock 40-pin connector.
 :::
 
-> **Image:** RAK19016 pinout diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/rak19016-pinout.svg"
+  width="70%"
+  caption="RAK19016 pinout diagram"
+/>
+
 
 #### Electrical Characteristics
 
@@ -120,7 +144,7 @@ The Absolute Maximum Ratings of the device are shown in the table below. The str
 
 ##### Voltage Specifications
 
-The RAK19016 WisBlock 5~24 V Power Slot Module is suitable for external input voltage supply. The nominal input operating voltage should be within the range shown in the following table.
+The RAK19016 WisBlock 5~24&nbsp;V Power Slot Module is suitable for external input voltage supply. The nominal input operating voltage should be within the range shown in the following table.
 
 | **Minimum** | **Typical** | **Maximum** | **Unit** |
 | :---------: | :---------: | :---------: | :------: |
@@ -136,10 +160,10 @@ A suitable Li-Ion battery should have the following parameters as shown in the t
 
 | **Parameter**     | **Value**            |
 | ----------------- | -------------------- |
-| Standard Voltage  | 3.7 V           |
-| Charging Voltage  | 4.2 V           |
+| Standard Voltage  | 3.7&nbsp;V           |
+| Charging Voltage  | 4.2&nbsp;V           |
 | Capacity          | As required          |
-| Discharge current | At least 500 mA |
+| Discharge current | At least 500&nbsp;mA |
 
 #### Mechanical Characteristic
 
@@ -147,11 +171,19 @@ A suitable Li-Ion battery should have the following parameters as shown in the t
 
 The mechanical dimensions of the RAK19016 module are shown in **Figure 6** below.
 
-> **Image:** RAK19016 mechanical dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="RAK19016 mechanical dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Environmental Characteristics
 
@@ -159,13 +191,19 @@ The table below lists the operation and storage temperature requirements of RAK1
 
 | **Parameter**                 | **Minimum** | **Typical** | **Maximum** |
 | ----------------------------- | :---------: | :---------: | :---------: |
-| Operational temperature range | –35 ºC | +25 ºC | +75 ºC |
-| Extended temperature range    | –40 ºC | +25 ºC | +80 ºC |
-| Storage temperature range     | –40 ºC | +25 ºC | +80 ºC |
+| Operational temperature range | –35&nbsp;ºC | +25&nbsp;ºC | +75&nbsp;ºC |
+| Extended temperature range    | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
+| Storage temperature range     | –40&nbsp;ºC | +25&nbsp;ºC | +80&nbsp;ºC |
 
 #### Schematic Diagram
 
-**Figure 8** shows the schematic of the WisBlock 5~24 V Power Slot Module.
+**Figure 8** shows the schematic of the WisBlock 5~24&nbsp;V Power Slot Module.
 
-> **Image:** RAK19016 5~24 V Power Slot Module schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak19016/datasheet/rak19016-schematic.jpg"
+  width="100%"
+  caption="RAK19016 5~24&nbsp;V Power Slot Module schematics"
+/>
 
+
+<RkBottomNav/>

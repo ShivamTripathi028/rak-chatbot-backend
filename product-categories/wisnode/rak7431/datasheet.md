@@ -10,6 +10,10 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK7431 WisNode Bridge Serial Datasheet
 
 ## Overview
@@ -18,7 +22,7 @@ sidebar_label: Datasheet
 
 **RAK7431** is an RS485 to LoRaWAN converter designed for industrial applications. The device relays ModBUS data using the LoRaWAN network as means of wirelessly transmitting to and from the end-devices.
 
-RAK7431 WisNode Bridge Serial can operate in all of the LoRaWAN bands within the standard parameters defined by the LoRa Alliance. Its open environment range is 15+ km and in industrial cases, where there are heavy obstructions in the path of the RF signal performance is improved compared to conventional wireless systems due to the characteristics of LoRa as a modulation technique. This allows for consistently good signal quality within the confines of large factories, densely populated offices, storehouses, etc.
+RAK7431 WisNode Bridge Serial can operate in all of the LoRaWAN bands within the standard parameters defined by the LoRa Alliance. Its open environment range is 15+&nbsp;km and in industrial cases, where there are heavy obstructions in the path of the RF signal performance is improved compared to conventional wireless systems due to the characteristics of LoRa as a modulation technique. This allows for consistently good signal quality within the confines of large factories, densely populated offices, storehouses, etc.
 
 This RS485 compatible devices can address up to 16 client terminal nodes. The conversion from and to LoRa frames is seamless and allows for real time control and monitoring of multiple RS485 devices, bus data to access and control the RS485 terminal nodes.
 
@@ -26,15 +30,16 @@ RAK7431 WisNode Bridge Serial together with RAK gateway and LoRa Server products
 
 ### Features
 
+
 - **LoRaWAN 1.0.3** protocol stack, supports Class A, B, & C
 - **Working modes**: Polling mode, transparent mode and packet mode
 - Remote cloud management of RS485 devices
 - Can address up to **16 RS485**, a que with up to **32 instruction sets**
-- Industrial grade STM MCU: ultra-low power (**4 uA sleep**) and wide temperature range of operation
-- Wide range of input voltages, **8-48 V<sub>DC</sub> input**
+- Industrial grade STM MCU: ultra-low power (**4&nbsp;uA sleep**) and wide temperature range of operation
+- Wide range of input voltages, **8-48&nbsp;V<sub>DC</sub> input**
 - Can power RS485 devices via a dedicated output
 - Mounting: Wall, DIN rail, and magnetic mounting
-- Compliant with IEC61000-4-2, IEC61000-4-4, and 18 kV HMB ESD protection
+- Compliant with IEC61000-4-2, IEC61000-4-4, and 18&nbsp;kV HMB ESD protection
 
 ## Specifications
 
@@ -46,13 +51,21 @@ RAK7431 WisNode Bridge Serial can convert the data of RS485 devices into LoRaWAN
 
 An example would be using the [RAK7249](https://store.rakwireless.com/products/rak7249-diy-outdoor-gateway?utm_source=RAK7249Max&utm_medium=Document&utm_campaign=BuyFromStore) LoRaWAN Gateway coupled with the RAK WisDM cloud management platform, in order to realize an end-to-end industrial field data acquisition and control system. Using the built-in LoRa Server, that comes standard with any RAK LoRaWAN Gateway, one could seamlessly achieve transmission of the end device data to any application server. Furthermore, the MQTT integration allows for a high level of security and efficiency.
 
-> **Image:** RAK7431 WisNode Bridge Serial network structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7431/datasheet/rak7431-1.png"
+  width="100%"
+  caption="RAK7431 WisNode Bridge Serial network structure"
+/>
 
 ##### Polling Mode
 
 RAK7431 WisNode Bridge Serial can work in polling mode in order to send query instructions to RS485 nodes, and convert the data returned into LoRa frames to be relayed to the application server via gateway.
 
-> **Image:** RAK7431 WisNode Bridge Serial polling mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7431/datasheet/rak7431-2.png"
+  width="100%"
+  caption="RAK7431 WisNode Bridge Serial polling mode"
+/>
 
 RAK7431 WisNode Bridge Serial can store a maximum of 32 query instructions in polling mode, each of which has a maximum length of 128 bytes. Polling time interval and waiting time can be adjusted as required.
 
@@ -63,7 +76,11 @@ RAK7431 WisNode Bridge Serial converts the data returned by RS485 nodes into LoR
 
 No matter whether polling mode is enabled or not, the server can actively send commands to query the RS485 nodes through the gateway via the RAK7431 WisNode Bridge Serial. The commands issued and the returned data can also be transmitted in transparent mode or in packet mode.
 
-> **Image:** RAK7431 WisNode Bridge Serial transparent mode
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7431/datasheet/rak7431-3.png"
+  width="100%"
+  caption="RAK7431 WisNode Bridge Serial transparent mode"
+/>
 
 ### Hardware
 
@@ -71,13 +88,17 @@ The hardware specification covers only the interfacing and detailed parameters a
 
 #### Interfaces
 
-> **Image:** RAK7431 WisNode Bridge Serial bottom panel
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7431/datasheet/rak7431-4.png"
+  width="80%"
+  caption="RAK7431 WisNode Bridge Serial bottom panel"
+/>
 
 ##### Power Supply and Configuration Interface
 
-RAK7431 WisNode Bridge Serial can be powered by its DC terminal or via its Micro USB port. The DC terminal accepts 8-48 V<sub>DC</sub> input, and the rated power of the device is 1 W. Pay attention to the positive and negative pole directions when crimping the terminal. Vin is connected to the positive pole of the power supply, and GND is connected to the negative pole of the power supply.
+RAK7431 WisNode Bridge Serial can be powered by its DC terminal or via its Micro USB port. The DC terminal accepts 8-48&nbsp;V<sub>DC</sub> input, and the rated power of the device is 1&nbsp;W. Pay attention to the positive and negative pole directions when crimping the terminal. Vin is connected to the positive pole of the power supply, and GND is connected to the negative pole of the power supply.
 
-The Micro USB port can also be used for powering the device (5 V / 500 mA DC). At the same time, the Micro USB port can be used as the configuration interface of the device.
+The Micro USB port can also be used for powering the device (5&nbsp;V / 500&nbsp;mA DC). At the same time, the Micro USB port can be used as the configuration interface of the device.
 
 Connect it to a PC and use the [**RAK Serial Port Tool**](https://downloads.rakwireless.com/en/LoRa/Tools/RAK_SERIAL_PORT_TOOL_V1.2.1.zip) to open a COM port. The default baud rate is 115200. There is a standard set of AT
 commands that can be used to configure the RAK7431 WisNode Bridge Serial.
@@ -94,7 +115,11 @@ Only valid when using the DC input interface power supply, USB power supply is i
 
 Also, the Vout output voltage is the same as DC input voltage Vin.
 
-> **Image:** RAK7431 WisNode Bridge Serial ModBus connection diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7431/datasheet/rak7431-5.png"
+  width="80%"
+  caption="RAK7431 WisNode Bridge Serial ModBus connection diagram"
+/>
 
 ##### Reset Key and Indicator LED
 
@@ -112,30 +137,32 @@ The table below shows the full specification of RAK7431 WisNode Bridge Serial.
 | LoRaWAN Protocol        | LoRaWAN 1.0.3                                                                                                             |                                                    |
 | LoRa Frequency          | RU864, IN865, EU868, US915, AU915, KR920, KR923                                                                           | Different models support different frequency bands |
 | LoRaWAN Mode            | Class A / Class B / Class C                                                                                               |                                                    |
-| LoRa Tx Power           | 20 dBm                                                                                                               |                                                    |
+| LoRa Tx Power           | 20&nbsp;dBm                                                                                                               |                                                    |
 | LoRa Antenna interface  | SMA MALE, External omnidirectional Antenna                                                                                |                                                    |
-| RS485 Data Rate         | Configurable 9600 -115200 bps                                                                                        |                                                    |
+| RS485 Data Rate         | Configurable 9600 -115200&nbsp;bps                                                                                        |                                                    |
 | RS485 Carrying Capacity | 16 Nodes                                                                                                                  |                                                    |
-| RS485 Protection        | 18 kV HBM protection 
- 13 kV IEC61000-4-2 contact discharge 
- 4 kV IEC61000-4-4 fast transient burst |                                                    |
-| Input Voltage           | 8 V - 48 V                                                                                                      | 5 V for Micro USB                             |
-| Rated Power             | Maximum 1 W                                                                                                          |                                                    |
-| Output Voltage          | 8 V - 48 V                                                                                                      |                                                    |
+| RS485 Protection        | 18&nbsp;kV HBM protection <br /> 13&nbsp;kV IEC61000-4-2 contact discharge <br /> 4&nbsp;kV IEC61000-4-4 fast transient burst |                                                    |
+| Input Voltage           | 8&nbsp;V - 48&nbsp;V                                                                                                      | 5&nbsp;V for Micro USB                             |
+| Rated Power             | Maximum 1&nbsp;W                                                                                                          |                                                    |
+| Output Voltage          | 8&nbsp;V - 48&nbsp;V                                                                                                      |                                                    |
 | Configuration Interface | Micro USB                                                                                                                 |                                                    |
 | Indicator LED           | Power LED, Data LED                                                                                                       |                                                    |
 | Housing Material        | Metal                                                                                                                     |                                                    |
-| Dimension               | 93.6 x 100.3 x 24 mm                                                                                                 |                                                    |
+| Dimension               | 93.6 x 100.3 x 24&nbsp;mm                                                                                                 |                                                    |
 | Protection Grade        | IP31                                                                                                                      |                                                    |
 | Installation            | Wall mounting, DIN rail installation, magnetic mounting                                                                   | Magnetic mounting requires optional accessories    |
-| Working Temperature     | -30° C ~ 65° C                                                                                                  |                                                    |
-| Storage Temperature     | -40° C ~ 85° C                                                                                                  |                                                    |
+| Working Temperature     | -30°&nbsp;C ~ 65°&nbsp;C                                                                                                  |                                                    |
+| Storage Temperature     | -40°&nbsp;C ~ 85°&nbsp;C                                                                                                  |                                                    |
 
 #### Installation
 
 RAK7431 allows for three installation methods: wall mounting, DIN rail installation and magnetic mounting. The wall installation and the DIN rail installation is the standard installation mode. The accessories required for magnetic mounting are optional.
 
-> **Image:** Different Types of Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisnode/rak7431/datasheet/mounting.jpg"
+  width="80%"
+  caption="Different Types of Mounting"
+/>
 
 ### Firmware
 
@@ -145,7 +172,13 @@ RAK7431 allows for three installation methods: wall mounting, DIN rail installat
 
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK7431/Certification-Report/RAK7431_CE_Certification.zip
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK7431/Certification-Report/RAK7431_FCC_Certification.zip
+<RkCertificationIcons certifications={[
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/RAK7431/Certification-Report/RAK7431_CE_Certification.zip',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK7431/Certification-Report/RAK7431_FCC_Certification.zip',
+    }
+]} />
 
+<RkBottomNav/>

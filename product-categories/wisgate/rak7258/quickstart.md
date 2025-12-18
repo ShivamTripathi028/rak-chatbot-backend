@@ -10,10 +10,15 @@ sidebar_label: Quick Start Guide
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7258 Quick Start Guide
 
 ## Prerequisites
+
+
 
 ### What Do You Need?
 
@@ -27,7 +32,11 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 
 ### What's Included in the Package?
 
-> **Image:** RAK7258 Package Contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/package_contents.png"
+  width="70%"
+  caption="RAK7258 Package Contents"
+/>
 
 ## Product Configuration
 
@@ -35,15 +44,27 @@ The SIM card slot of the cellular versions is not hot-swappable. Make sure the g
 
 1. Use a **5-millimeter drill bit** to drill 2 holes on a wall. Follow the dimensions on the image as a guideline for spacing the holes. When done insert the screw anchors into the wall.
 
-> **Image:** RAK7258 WisGate Edge Lite Bottom Panel
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/assembly-bottom-panel.png"
+  width="50%"
+  caption="RAK7258 WisGate Edge Lite Bottom Panel"
+/>
 
 2. Install the screws into the wall, leaving about **3-millimeters** of clearance.
 
-> **Image:** RAK7258 WisGate Edge Lite Wall Screw Arrangement
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/assembly-wall-screw.png"
+  width="60%"
+  caption="RAK7258 WisGate Edge Lite Wall Screw Arrangement"
+/>
 
 3. Insert the screw heads into the hanging holes located on the gateway back-plate, then gently pull down to complete the installation
 
-> **Image:** RAK7258 WisGate Edge Lite Wall Attachment Guide
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/assembly-wall-attachment.png"
+  width="60%"
+  caption="RAK7258 WisGate Edge Lite Wall Attachment Guide"
+/>
 
 ### Power on the Gateway
 
@@ -61,7 +82,11 @@ It is recommended to use the **12V DC adapter** that comes with the RAK7258 WisG
 
 #### Casing and Ports
 
-> **Image:** RAK7258 WisGate Edge Lite Back Panel
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/rak7258-back-panel.png"
+  width="50%"
+  caption="RAK7258 WisGate Edge Lite Back Panel"
+/>
 
 #### Status LED Indicators
 
@@ -75,11 +100,13 @@ It is recommended to use the **12V DC adapter** that comes with the RAK7258 WisG
 | WLAN | **AP Mode** : **ON** - WLAN status is up, **Flashing** - Data is being transferred                                            |
 |      | **STA Mode** : **Slow Flashing** (1Hz) - Disconnected, **ON** - Connected, **Flashing** - Data is being transferred           |
 
+
 #### Reset Key Functions
 The function of the **Reset** key is as follows:
 
 1. **Short press**: Restarts the Gateway
 2. **Long press** (**5 seconds and above**): Restore Factory Settings
+
 
 ### Access the Gateway
 
@@ -102,11 +129,16 @@ By default, the Gateway will work in Wi-Fi AP Mode which means that you can find
     * **Username**: root
     * **Password**: root
 
-> **Image:** Web User Interface Log-in
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/web-ui-home.png"
+  width="100%"
+  caption="Web User Interface Log-in"
+/>
 
 #### WAN Port DHCP IP
 
 When DHCP Server is in the network where the gateway WAN interface is located, the WAN interface can automatically get the IP address. After inquiring the IP address of the gateway through DHCP Server, the WEB management platform of the gateway can be accessed through the DHCP IP address of WAN interface. Same as with the Wi-Fi AP mode, the same IP Address: `192.168.230.1` shall be used to access the **Web Management Platform**.
+
 
 ### Access the Internet
 
@@ -114,7 +146,11 @@ When DHCP Server is in the network where the gateway WAN interface is located, t
 
 Go into the **Network>Wi-Fi Menu** and make sure to enable the **Wireless Client** as it is disabled initially. Enter or click "**Scan**" to choose your **ESSSID**, select the right **Encryption** method and enter the correct **Key**.
 
-> **Image:** Connect through Wi-Fi Credentials
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/wifi-credentials.png"
+  width="60%"
+  caption="Connect through Wi-Fi Credentials"
+/>
 
 :::tip NOTE
  Assuming you have entered the correct parameter values you should get an IP address assigned by your Wi-Fi router's (AP) built-in DHCP server. You can use this new IP address to log in via a web browser (same way as in AP mode).
@@ -124,5 +160,12 @@ Go into the **Network>Wi-Fi Menu** and make sure to enable the **Wireless Client
 
 Connect the **Ethernet Port (ETH)** of the RAK7258 WisGate Edge Lite via an Ethernet cable to your **Router**. The router’s DHCP server should assign an IP Address to the Gateway. You can change the default settings below if you wish (details in the User Manual).
 
-> **Image:** Connect through Ethernet Settings
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7258/quickstart/2.quickstart/ethernet-settings.png"
+  width="60%"
+  caption="Connect through Ethernet Settings"
+/>
+
+
+
 

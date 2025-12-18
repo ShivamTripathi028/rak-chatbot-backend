@@ -11,6 +11,10 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+
 # RAK15000 WisBlock EEPROM Module
 
 Thank you for choosing **RAK15000 WisBlock EEPROM Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -31,25 +35,25 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-The RAK15000 WisBlock EEPROM module, part of the RAKwireless Wisblock series, is a serial EEPROM module with an I2C interface. Designed to work at low-power mode, the standby average consumption is lower than 3 µA (VCC = 5.5 V). The RAK15000 uses Microchip AT24CM02, which provides 2,097,152 bits of Serial Electrically Erasable and Programmable Read-Only Memory (EEPROM), organized as 262,144 words of 8 bits each.
+The RAK15000 WisBlock EEPROM module, part of the RAKwireless Wisblock series, is a serial EEPROM module with an I2C interface. Designed to work at low-power mode, the standby average consumption is lower than 3&nbsp;µA (VCC = 5.5&nbsp;V). The RAK15000 uses Microchip AT24CM02, which provides 2,097,152 bits of Serial Electrically Erasable and Programmable Read-Only Memory (EEPROM), organized as 262,144 words of 8 bits each.
 
 ## Product Features
 
-* 3.3 V input voltage, on/off control by the WisBlock Core module
-* **Temperature range:** -40 °C to +85 °C
-* Internally organized as 262,144 x 8 bit (2 Mbit)
+* 3.3&nbsp;V input voltage, on/off control by the WisBlock Core module
+* **Temperature range:** -40&nbsp;°C to +85&nbsp;°C
+* Internally organized as 262,144 x 8&nbsp;bit (2&nbsp;Mbit)
 * I2C-Compatible (2-wire) Serial Interface
-    - 100 kHz Standard mode
-    - 400 kHz Fast Mode
+    - 100&nbsp;kHz Standard mode
+    - 400&nbsp;kHz Fast Mode
 * High Reliability
     - Endurance: 1,000,000 write cycles
     - Data retention: 100 years
 * Built in error detection and correction
 * 256-byte Page Write Mode
 * Random and Sequential Read Modes
-* Standby current less than 3 µA
+* Standby current less than 3&nbsp;µA
 * Chipset: Microchip AT24CM02
-* **Module size**: 10 x 10 mm
+* **Module size**: 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -59,3 +63,4 @@ To use a **RAK15000**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+<RkBottomNav/>

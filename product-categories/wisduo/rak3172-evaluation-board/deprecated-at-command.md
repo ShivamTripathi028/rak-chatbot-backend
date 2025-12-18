@@ -9,6 +9,10 @@ keywords:
 sidebar_label: Deprecated AT Command Manual
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK3172 Evaluation Board Deprecated AT Command Manual
 
 :::warning
@@ -18,6 +22,7 @@ sidebar_label: Deprecated AT Command Manual
 :::
 
 Here are the complete list of the old FW version of AT commands:
+
 
 ## AT Command Syntax
 
@@ -86,6 +91,7 @@ Description: Attention
 
 This command is used to check that the UART communication link is working properly and to show all available AT commands.
 
+
 | Command   | Input Parameter | Return Value              | Return Code |
 | --------- | --------------- | ------------------------- | ----------- |
 | **`AT`**  | -               | -                         | `OK`        |
@@ -99,6 +105,8 @@ AT
 OK
 ```
 
+
+
 ### ATZ
 
 Description: MCU reset
@@ -109,6 +117,7 @@ This command is used to trigger an MCU reset.
 | ---------- | --------------- | ---------------------------------- | ----------- |
 | **`ATZ?`** | -               | `ATZ`: Triggers a reset of the MCU | `OK`        |
 | **`ATZ`**  | -               | *No return. MCU resets.*           |             |
+
 
 **Example**:
 ```
@@ -126,6 +135,7 @@ ______  ___   _   __  _    _ _          _
 RAK3172-H Version:v1.0.2 May 26 2021
 Current Work Mode: LoRaWAN.
 ```
+
 
 ### ATR
 
@@ -155,6 +165,7 @@ RAK3172-H Version:v1.0.2 May 26 2021
 Current Work Mode: LoRa P2P.
 ```
 
+
 ### ATE
 
 Description: Set command echo
@@ -172,6 +183,8 @@ ATE
 
 OK
 ```
+
+
 
 ### AT+SN
 
@@ -191,6 +204,8 @@ AT+SN=?
 
 OK
 ```
+
+
 
 ### AT+BAUD
 
@@ -221,6 +236,8 @@ AT+BAUD=100000
 
 AT_PARAM_ERROR
 ```
+
+
 
 ## Keys, IDs, and EUIs Management
 
@@ -260,6 +277,8 @@ AT+DEVEUI=112233445566778800
 AT_PARAM_ERROR
 ```
 
+
+
 ### AT+APPEUI
 
 Description: Application unique identifier
@@ -286,6 +305,8 @@ AT+APPEUI=0080E11500004CF61234
 
 AT_PARAM_ERROR
 ```
+
+
 
 ### AT+APPKEY
 
@@ -314,6 +335,8 @@ AT+APPKEY=01020AFBA1CD4D20010230405A6B7F
 AT_PARAM_ERROR
 ```
 
+
+
 ### AT+DEVADDR
 
 Description: Device address or DEVADDR
@@ -340,6 +363,8 @@ AT+DEVADDR=01020A0BCC
 
 AT_PARAM_ERROR
 ```
+
+
 
 ### AT+APPSKEY
 
@@ -368,6 +393,8 @@ AT+APPSKEY=01020AFBA1CD4D20010230405A6B7F
 AT_PARAM_ERROR
 ```
 
+
+
 ### AT+NWKSKEY
 
 Description: Network session keys
@@ -394,6 +421,8 @@ AT+NWKSKEY=01020AFBA1CD4D20010230405A6B7F
 
 AT_PARAM_ERROR
 ```
+
+
 
 ## Joining and Sending Data to LoRaWAN Network
 
@@ -434,6 +463,8 @@ AT+NJM=2
 AT_PARAM_ERROR
 ```
 
+
+
 ### AT+CFM
 
 Description: Confirmed payload mode
@@ -460,6 +491,8 @@ AT+CFM=2
 
 AT_PARAM_ERROR
 ```
+
+
 
 ### AT+JOIN
 
@@ -506,6 +539,8 @@ If joining fails, make sure your device is within the coverage of the gateway. A
 
 :::
 
+
+
 ### AT+NJS
 
 Description: Network join status
@@ -524,6 +559,8 @@ AT+NJS=?
 
 OK
 ```
+
+
 
 ### AT+SEND
 
@@ -561,6 +598,8 @@ OK
 +EVT:3:4321
 ```
 
+
+
 ### AT+CFS
 
 Description: Confirm status
@@ -595,6 +634,8 @@ OK
 
 :::
 
+
+
 ### AT+RECV
 
 Description: Last received data
@@ -625,6 +666,8 @@ When called twice, without new data received between the calls, the second `AT+R
 `OK`
 :::
 
+
+
 ## LoRaWAN Device Configuration
 
 This section describes the commands related to the configuration of the LoRaWAN device.
@@ -649,6 +692,7 @@ This section describes the commands related to the configuration of the LoRaWAN 
 - [AT+USEND - Unified send payload data](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/deprecated-at-command/#atusend)
 - [AT+PNM - Public Network Mode](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/deprecated-at-command/#atpnm)
 
+
 ### AT+ADR
 
 Description: Adaptive data rate
@@ -671,6 +715,8 @@ AT+ADR=?
 
 OK
 ```
+
+
 
 ### AT+CLASS
 
@@ -706,6 +752,7 @@ When operating in CLASS B, more return value is shown that shows the current sta
 | `B,S2`         | Beacon Locked    |
 | `B,S3`         | Beacon Failed    |
 
+
 **Example**:
 ```
 AT+CLASS=B
@@ -717,6 +764,9 @@ B,S0
 OK
 ```
 :::
+
+
+
 
 ### AT+DCS
 
@@ -730,6 +780,7 @@ This command is used to access and configure duty cycle settings.
 | **`AT+DCS=?`**                 | -               | 0 *(disabled) or* 1 *(enabled)*                                        | `OK`                     |
 | **`AT+DCS=<Input Parameter>`** | 0 or 1          | -                                                                      | `OK` or `AT_PARAM_ERROR` |
 
+
 **Examples**:
 ```
 AT+DCS=1
@@ -740,6 +791,8 @@ AT+DCS=?
 
 OK
 ```
+
+
 
 ### AT+DUTYTIME
 
@@ -759,6 +812,8 @@ AT+DUTYTIME=?
 
 OK
 ```
+
+
 
 ### AT+DR
 
@@ -788,6 +843,8 @@ OK
 `AT+DR` command will return `AT+ERROR` if ADR is active via the `AT+ADR` command.
 :::
 
+
+
 ### AT+JN1DL
 
 Description: Join delay on RX1 window
@@ -800,6 +857,7 @@ This command is used to access and configure the join delay on the RX1 window.
 | **`AT+JN1DL=?`**                 | -               | *< integer >*                                                                                         | `OK` or `AT_BUSY_ERROR`                    |
 | **`AT+JN1DL=<Input Parameter>`** | *< integer >*   | -                                                                                                     | `OK`, `AT_BUSY_ERROR`, or `AT_PARAM_ERROR` |
 
+
 **Examples**:
 ```
 AT+JN1DL=5000
@@ -810,6 +868,8 @@ AT+JN1DL=?
 
 OK
 ```
+
+
 
 ### AT+JN2DL
 
@@ -834,6 +894,8 @@ AT+JN2DL=?
 OK
 ```
 
+
+
 ### AT+RX1DL
 
 Description: Delay on RX1 window
@@ -846,6 +908,7 @@ This command is used to access and configure the delay on the RX1 window.
 | **`AT+RX1DL=?`**                 | -               | *< integer >*                                                                        | `OK` or `AT_BUSY_ERROR`                    |
 | **`AT+RX1DL=<Input Parameter>`** | *< integer >*   | -                                                                                    | `OK`, `AT_BUSY_ERROR`, or `AT_PARAM_ERROR` |
 
+
 **Examples**:
 ```
 AT+RX1DL=1000
@@ -856,6 +919,8 @@ AT+RX1DL=?
 
 OK
 ```
+
+
 
 ### AT+RX2DL
 
@@ -880,6 +945,8 @@ AT+RX2DL=?
 OK
 ```
 
+
+
 ### AT+RX2DR
 
 Description: Data Rate on RX2 window
@@ -892,6 +959,7 @@ This command is used to access and configure the data rate of the RX2 window.
 | **`AT+RX2DR=?`**                 | -                               | `0`,`1`,`2`,`3`,`4`,`5`,`6`,`7`                                             | `OK` or `AT_BUSY_ERROR`                    |
 | **`AT+RX2DR=<Input Parameter>`** | `0`,`1`,`2`,`3`,`4`,`5`,`6`,`7` | -                                                                           | `OK`, `AT_BUSY_ERROR`, or `AT_PARAM_ERROR` |
 
+
 **Examples**:
 ```
 AT+RX2DR=8
@@ -902,6 +970,8 @@ AT+RX2DR=?
 
 OK
 ```
+
+
 
 ### AT+RX2FQ
 
@@ -930,6 +1000,8 @@ OK
 RX2 Frequency via the `AT+RX2FQ` command has a preset value depending on the regional band you selected via the `AT+BAND` command.
 :::
 
+
+
 ### AT+TXP
 
 Description: Transmit Power
@@ -944,7 +1016,7 @@ This command is used to access and configure the transmit power.
 
 Check [Appendix II Section](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/deprecated-at-command/#appendix-ii-tx-power-by-region) **TXPower** for the input parameter depending on the frequency band selected.
 
-For example, at EU868, a value of 2 represents **MaxEIRP - 4 dB** where MaxEIRP = +16 dBm.
+For example, at EU868, a value of 2 represents **MaxEIRP - 4&nbsp;dB** where MaxEIRP = +16&nbsp;dBm.
 
 **Examples**:
 ```
@@ -956,6 +1028,8 @@ AT+TXP=?
 
 OK
 ```
+
+
 
 ### AT+RETY
 
@@ -979,6 +1053,8 @@ AT+RETY=?
 
 OK
 ```
+
+
 
 ### AT+MASK
 
@@ -1021,6 +1097,8 @@ AT+MASK=?
 OK
 ```
 
+
+
 ### AT+BAND
 
 Description: Regional frequency band
@@ -1062,11 +1140,14 @@ AT+BAND=?
 OK
 ```
 
+
+
 ### AT+LPSEND
 
 Description: Long data payload
 
 This command is used to send a long data payload up to 1024 bytes. The total number of payload uplinks is dependent on the DR set using `AT+DR` and the frequency band using `AT+BAND`. It follows the limits set on the LoRaWAN Regional Specification.
+
 
 | Command                           | Input Parameter              | Return Value                                               | Return Code              |
 | --------------------------------- | ---------------------------- | ---------------------------------------------------------- | ------------------------ |
@@ -1076,7 +1157,11 @@ This command is used to send a long data payload up to 1024 bytes. The total num
 
 This command exclusively works in RAKwireless WisGate Edge LoRaWAN Gateways, in which the long payload is automatically combined in the backend. You need to activate the long payload mode (**Enable LPTP** switch) in the device configuration in the RAKwireless WisGate Edge LoRaWAN Gateway built-in network server, as shown in **Figure 1**, to enable this functionality in the gateway side.
 
-> **Image:** Enable long payload mode in the device configuration
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/at-command/lp_mode.png"
+  width="90%"
+  caption="Enable long payload mode in the device configuration"
+/>
 
 **Example**:
 
@@ -1088,13 +1173,23 @@ AT+LPSEND=2:1:111111111122222222223333333333444444444455555555556666666666777777
 OK
 ```
 
-> **Image:** AT+LPSEND command
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/at-command/lp_at.png"
+  width="90%"
+  caption="AT+LPSEND command"
+/>
 
-> **Image:** Payload sent in the network server
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-evaluation-board/at-command/lp_payload.png"
+  width="90%"
+  caption="Payload sent in the network server"
+/>
 
 :::tip NOTE
 The large payload via `AT+LPSEND` will be sliced automatically depending on the DR that follows the LoRaWAN specifications. You can check [Appendix III](https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/deprecated-at-command/#appendix-iii-maximum-transmission-load-by-region) for the maximum size.
 :::
+
+
 
 ### AT+LINKCHECK
 
@@ -1136,6 +1231,8 @@ OK
 +EVT:LINKCHECK:0,25,1,-53,11
 ```
 
+
+
 ### AT+USEND
 
 Description: Unified Send Data
@@ -1161,6 +1258,8 @@ OK
 +EVT:SEND CONFIRMED OK
 ```
 
+
+
 ### AT+PNM
 
 Description: Public Network Mode
@@ -1173,6 +1272,7 @@ This command is used to enable public network mode. This is only available in Lo
 | **`AT+PNM=?`**                 | -               | `0` or `1`                                                 | `OK`                     |
 | **`AT+PNM=<Input Parameter>`** | `0` or `1`      | -                                                          | `OK` or `AT_PARAM_ERROR` |
 
+
 **Example**:
 ```
 AT+PNM=1
@@ -1183,6 +1283,8 @@ AT+PNM=?
 
 OK
 ```
+
+
 
 ## Class B Mode
 
@@ -1208,6 +1310,7 @@ This command is used to access and configure unicast ping slot periodicity.
 | **`AT+PGSLOT=?`**                 | -               | `PS: 0` up to `PS: 7`       | `OK`                     |
 | **`AT+PGSLOT=<Input Parameter>`** | *< 0 to 7 >*    | -                           | `OK` or `AT_PARAM_ERROR` |
 
+
 **Examples**:
 ```
 AT+PGSLOT=3
@@ -1218,6 +1321,8 @@ AT+PGSLOT=?
 
 OK
 ```
+
+
 
 ### AT+BFREQ
 
@@ -1246,6 +1351,8 @@ AT+BFREQ=?
 OK
 ```
 
+
+
 ### AT+LTIME
 
 Description: Local Time Command
@@ -1264,6 +1371,8 @@ LTIME:03h56m52s on 09/18/2021
 
 OK
 ```
+
+
 
 ## Device Information
 
@@ -1285,6 +1394,7 @@ This command is used to get the RSSI value of the last packet received.
 | **`AT+RSSI?`**  | -               | `AT+RSSI`: Get the RSSI of the last received packet | `OK`        |
 | **`AT+RSSI=?`** | -               | *< integer > in dBm*                                | `OK`        |
 
+
 :::tip NOTE
 `AT+RSSI` will show the RSSI based on the last downlink received. If there is no downlink received yet, it will return 0.
 :::
@@ -1297,6 +1407,8 @@ AT+RSSI=?
 OK
 ```
 
+
+
 ### AT+SNR
 
 Description: Signal to Noise Ratio
@@ -1307,6 +1419,7 @@ This command is used to get the SNR value of the last packet received.
 | -------------- | --------------- | ------------------------------------------------- | ----------- |
 | **`AT+SNR?`**  | -               | `AT+SNR`: Get the SNR of the last received packet | `OK`        |
 | **`AT+SNR=?`** | -               | *< integer >*                                     | `OK`        |
+
 
 :::tip NOTE
 `AT+SNR` will show the SNR based on the last downlink received. If there is no downlink received yet, it will return 0.
@@ -1319,6 +1432,8 @@ AT+SNR=?
 
 OK
 ```
+
+
 
 ### AT+VER
 
@@ -1338,6 +1453,8 @@ V1.0.4
 
 OK
 ```
+
+
 
 ### AT+TIMEREQ
 
@@ -1380,6 +1497,8 @@ LTIME:02h46m12s on 22/10/2021
 
 OK
 ```
+
+
 
 ## RF Test
 
@@ -1429,6 +1548,8 @@ AT+CW=868000000:20:60
 OK
 ```
 
+
+
 ### AT+TRSSI
 
 Description: Receive Signal Strength Indicator
@@ -1449,6 +1570,8 @@ AT+TRSSI
 OK
 ```
 
+
+
 ### AT+TTONE
 
 Description: Start radio frequency tone test
@@ -1467,6 +1590,8 @@ AT+TTONE
 
 OK
 ```
+
+
 
 ### AT+TTX
 
@@ -1493,6 +1618,8 @@ AT+TTX=3
 OK
 ```
 
+
+
 ### AT+TRX
 
 Description: Start RF Rx LoRa test
@@ -1503,6 +1630,7 @@ This command is used to set the number of packets to be received for a PER RF TX
 | ------------------------------ | ---------------------- | ----------------------------------------------------------- | ------------------------ |
 | **`AT+TRX?`**                  | -                      | `AT+TRX`: Set number of packets received with RF LoRa test | `OK`                     |
 | **`AT+TRX=<Input Parameter>`** | *< 0 < Integer < 64 >* | -                                                           | `OK` or `AT_PARAM_ERROR` |
+
 
 **Example**:
 
@@ -1521,6 +1649,8 @@ AT+TRX=3
 
 OK
 ```
+
+
 
 ### AT+TCONF
 
@@ -1563,6 +1693,8 @@ OK
 
 ```
 
+
+
 ### AT+TTH
 
 Description: RF Tx hopping test
@@ -1597,6 +1729,8 @@ AT+TTH=p68000000,868300000,100000,4
 OK
 ```
 
+
+
 ### AT+TOFF
 
 Description: Stop ongoing radio frequency test
@@ -1615,6 +1749,8 @@ Test Stop
 
 OK
 ```
+
+
 
 ### AT+CERTIF
 
@@ -1647,6 +1783,8 @@ AT+CERTIF=0
 
 OK
 ```
+
+
 
 ## P2P Mode
 
@@ -1715,6 +1853,8 @@ RAK3172-H Version:v1.0.2 May 26 2021
 Current Work Mode: LoRa P2P.
 ```
 
+
+
 ### AT+PFREQ
 
 Description: P2P mode frequency
@@ -1745,6 +1885,8 @@ AT+PFREQ=?
 OK
 ```
 
+
+
 ### AT+PSF
 
 Description: P2P mode spreading factor
@@ -1767,6 +1909,8 @@ AT+PSF=?
 
 OK
 ```
+
+
 
 ### AT+PBW
 
@@ -1791,6 +1935,8 @@ AT+PBW=?
 OK
 ```
 
+
+
 ### AT+PCR
 
 Description: P2P mode coding rate
@@ -1813,6 +1959,8 @@ AT+PCR=?
 
 OK
 ```
+
+
 
 ### AT+PPL
 
@@ -1837,6 +1985,8 @@ AT+PPL=?
 OK
 ```
 
+
+
 ### AT+PTP
 
 Description: P2P mode TX power
@@ -1860,6 +2010,8 @@ AT+PTP=?
 OK
 ```
 
+
+
 ### AT+P2P
 
 Description: P2P configuration settings
@@ -1880,7 +2032,7 @@ Input parameter details:
 - Bandwidth: 125, 250 or 500
 - CR: 0=4/5, 1=4/6, 2=4/7, 3=4/8
 - Preamble: 2 to 65535
-- Power: 5 to 22 dBm. If the value is 14, it means 14 dBm.
+- Power: 5 to 22&nbsp;dBm. If the value is 14, it means 14&nbsp;dBm.
 
 **Examples**:
 ```
@@ -1892,6 +2044,8 @@ AT+P2P=?
 
 OK
 ```
+
+
 
 ### AT+PSEND
 
@@ -1914,6 +2068,8 @@ OK
 :::tip NOTE
 To successfully transmit P2P, you must have another device configured with the same P2P parameters and ready to receive the payload with the `AT+PRECV` command. The maximum payload in P2P mode is 255 bytes.
 :::
+
+
 
 ### AT+PRECV
 
@@ -1941,6 +2097,8 @@ OK
 +EVT:RXP2P, RSSI -37, SNR 11
 +EVT:11223344
 ```
+
+
 
 ## Multicast Group
 
@@ -1979,6 +2137,8 @@ AT+ADDMULC=C:11223344:11223344556677881122334455667788:1122334455667788112233445
 OK
 ```
 
+
+
 ### AT+RMVMULC
 
 Description: Remove multicast group
@@ -1999,6 +2159,8 @@ AT+RMVMULC=11223344
 OK
 ```
 
+
+
 ### AT+LSTMULC
 
 Description: Multicast list
@@ -2017,6 +2179,8 @@ MC1:ClassC:11223344:11223344556677881122334455667788:112233445566778811223344556
 
 OK
 ```
+
+
 
 ## Data Transparent Transmission
 
@@ -2052,6 +2216,8 @@ OK
 +EVT:SEND CONFIRMED OK
 ```
 
+
+
 ### +++
 
 Description: Stop transparent transmission mode
@@ -2067,118 +2233,135 @@ This command is used to stop the transparent transmission mode.
 There must be no any UART termination after `+++`. There must be no CR or LF after the `+++` command else it will be transmitted as payload and the device will continue in Data Transparent Transmission mode.
 :::
 
+
+
 ## Appendix
 
 ### Appendix I: Data Rate by Region
 
-** EU433/EU868/RU864/AS923 **
+<b> EU433/EU868/RU864/AS923 </b>
 
 | Data Rate | Configuration             | Indicative Physical Bit Rate [bit/s] |
 | --------- | ------------------------- | ------------------------------------ |
-| 0         | LoRa: SF12 / 125 kHz | 250                                  |
-| 1         | LoRa: SF11 / 125 kHz | 440                                  |
-| 2         | LoRa: SF10 / 125 kHz | 980                                  |
-| 3         | LoRa: SF9 / 125 kHz  | 1760                                 |
-| 4         | LoRa: SF8 / 125 kHz  | 3125                                 |
-| 5         | LoRa: SF7 / 125 kHz  | 5470                                 |
-| 6         | LoRa: SF7 / 250 kHz  | 11000                                |
-| 7         | FSK: 50 kbps         | 50000                                |
+| 0         | LoRa: SF12 / 125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11 / 125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10 / 125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9 / 125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8 / 125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7 / 125&nbsp;kHz  | 5470                                 |
+| 6         | LoRa: SF7 / 250&nbsp;kHz  | 11000                                |
+| 7         | FSK: 50&nbsp;kbps         | 50000                                |
 | 8 ~ 15    | RFU                       |                                      |
 
-** CN470/KR920 **
+<br />
+
+<b> CN470/KR920 </b>
 
 | Data Rate | Configuration             | Indicative Physical Bit Rate [bit/s] |
 | --------- | ------------------------- | ------------------------------------ |
-| 0         | LoRa: SF12 / 125 kHz | 250                                  |
-| 1         | LoRa: SF11 / 125 kHz | 440                                  |
-| 2         | LoRa: SF10 / 125 kHz | 980                                  |
-| 3         | LoRa: SF9 / 125 kHz  | 1760                                 |
-| 4         | LoRa: SF8 / 125 kHz  | 3125                                 |
-| 5         | LoRa: SF7 / 125 kHz  | 5470                                 |
+| 0         | LoRa: SF12 / 125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11 / 125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10 / 125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9 / 125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8 / 125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7 / 125&nbsp;kHz  | 5470                                 |
 | 6 ~ 15    | RFU                       |                                      |
 
-** US915 **
+<br />
+
+<b> US915 </b>
 
 | Data Rate | Configuration             | Indicative Physical Bit Rate [bit/s] |
 | --------- | ------------------------- | ------------------------------------ |
-| 0         | LoRa: SF10 / 125 kHz | 980                                  |
-| 1         | LoRa: SF9 / 125 kHz  | 1760                                 |
-| 2         | LoRa: SF8 / 125 kHz  | 3125                                 |
-| 3         | LoRa: SF7 / 125 kHz  | 5470                                 |
-| 4         | LoRa: SF8 / 500 kHz  | 12500                                |
+| 0         | LoRa: SF10 / 125&nbsp;kHz | 980                                  |
+| 1         | LoRa: SF9 / 125&nbsp;kHz  | 1760                                 |
+| 2         | LoRa: SF8 / 125&nbsp;kHz  | 3125                                 |
+| 3         | LoRa: SF7 / 125&nbsp;kHz  | 5470                                 |
+| 4         | LoRa: SF8 / 500&nbsp;kHz  | 12500                                |
 | 5 ~ 7     | RFU                       |                                      |
-| 8         | LoRa: SF12 / 500 kHz | 980                                  |
-| 9         | LoRa: SF11 / 500 kHz | 1760                                 |
-| 10        | LoRa: SF10 / 500 kHz | 3900                                 |
-| 11        | LoRa: SF9 / 500 kHz  | 7000                                 |
-| 12        | LoRa: SF8 / 500 kHz  | 12500                                |
-| 13        | LoRa: SF7 / 500 kHz  | 21900                                |
+| 8         | LoRa: SF12 / 500&nbsp;kHz | 980                                  |
+| 9         | LoRa: SF11 / 500&nbsp;kHz | 1760                                 |
+| 10        | LoRa: SF10 / 500&nbsp;kHz | 3900                                 |
+| 11        | LoRa: SF9 / 500&nbsp;kHz  | 7000                                 |
+| 12        | LoRa: SF8 / 500&nbsp;kHz  | 12500                                |
+| 13        | LoRa: SF7 / 500&nbsp;kHz  | 21900                                |
 | 14 ~ 15   | RFU                       |                                      |
 
-** AU915 **
+<br />
+
+<b> AU915 </b>
 
 | Data Rate | Configuration             | Indicative Physical Bit Rate [bit/s] |
 | --------- | ------------------------- | ------------------------------------ |
-| 0         | LoRa: SF12 / 125 kHz | 250                                  |
-| 1         | LoRa: SF11 / 125 kHz | 440                                  |
-| 2         | LoRa: SF10 / 125 kHz | 980                                  |
-| 3         | LoRa: SF9 / 125 kHz  | 1760                                 |
-| 4         | LoRa: SF8 / 125 kHz  | 3125                                 |
-| 5         | LoRa: SF7 / 125 kHz  | 5470                                 |
-| 6         | LoRa: SF8 / 500 kHz  | 12500                                |
+| 0         | LoRa: SF12 / 125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11 / 125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10 / 125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9 / 125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8 / 125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7 / 125&nbsp;kHz  | 5470                                 |
+| 6         | LoRa: SF8 / 500&nbsp;kHz  | 12500                                |
 | 7         | RFU                       | RFU                                  |
-| 8         | LoRa: SF12 / 500 kHz | 980                                  |
-| 9         | LoRa: SF11 / 500 kHz | 1760                                 |
-| 10        | LoRa: SF10 / 500 kHz | 3900                                 |
-| 11        | LoRa: SF9 / 500 kHz  | 7000                                 |
-| 12        | LoRa: SF8 / 500 kHz  | 12500                                |
+| 8         | LoRa: SF12 / 500&nbsp;kHz | 980                                  |
+| 9         | LoRa: SF11 / 500&nbsp;kHz | 1760                                 |
+| 10        | LoRa: SF10 / 500&nbsp;kHz | 3900                                 |
+| 11        | LoRa: SF9 / 500&nbsp;kHz  | 7000                                 |
+| 12        | LoRa: SF8 / 500&nbsp;kHz  | 12500                                |
 
-** IN865 **
+<br />
+
+<b> IN865 </b>
 
 | Data Rate | Configuration             | Indicative Physical Bit Rate [bit/s] |
 | --------- | ------------------------- | ------------------------------------ |
-| 0         | LoRa: SF12 / 125 kHz | 250                                  |
-| 1         | LoRa: SF11 / 125 kHz | 440                                  |
-| 2         | LoRa: SF10 / 125 kHz | 980                                  |
-| 3         | LoRa: SF9 / 125 kHz  | 1760                                 |
-| 4         | LoRa: SF8 / 125 kHz  | 3125                                 |
-| 5         | LoRa: SF7 / 125 kHz  | 5470                                 |
+| 0         | LoRa: SF12 / 125&nbsp;kHz | 250                                  |
+| 1         | LoRa: SF11 / 125&nbsp;kHz | 440                                  |
+| 2         | LoRa: SF10 / 125&nbsp;kHz | 980                                  |
+| 3         | LoRa: SF9 / 125&nbsp;kHz  | 1760                                 |
+| 4         | LoRa: SF8 / 125&nbsp;kHz  | 3125                                 |
+| 5         | LoRa: SF7 / 125&nbsp;kHz  | 5470                                 |
 | 6         | RFU                       | RFU                                  |
-| 7         | FSK: 50 kbps         | 50000                                |
+| 7         | FSK: 50&nbsp;kbps         | 50000                                |
 | 8 ~ 15    | RFU                       | RFU                                  |
+
+<br />
 
 ### Appendix II: TX Power by Region
 
-** EU868 **
+<b> EU868 </b>
 
-By default, MaxEIRP is considered to be +16 dBm.
+By default, MaxEIRP is considered to be +16&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP - 2 dB  |
-| 2       | MaxEIRP - 4 dB  |
-| 3       | MaxEIRP - 6 dB  |
-| 4       | MaxEIRP - 8 dB  |
-| 5       | MaxEIRP - 10 dB |
-| 6       | MaxEIRP - 12 dB |
-| 7       | MaxEIRP - 14 dB |
+| 1       | MaxEIRP - 2&nbsp;dB  |
+| 2       | MaxEIRP - 4&nbsp;dB  |
+| 3       | MaxEIRP - 6&nbsp;dB  |
+| 4       | MaxEIRP - 8&nbsp;dB  |
+| 5       | MaxEIRP - 10&nbsp;dB |
+| 6       | MaxEIRP - 12&nbsp;dB |
+| 7       | MaxEIRP - 14&nbsp;dB |
 | 8 ~ 15  | RFU                  |
 
-** US915 **
+<br />
+
+
+<b> US915 </b>
 
 | TXPower | Configuration (Conducted Power) |
 | ------- | ------------------------------- |
-| 0       | 30 dBm - 2*TXpower         |
-| 1       | 28 dBm                     |
-| 2       | 26 dBm                     |
+| 0       | 30&nbsp;dBm - 2*TXpower         |
+| 1       | 28&nbsp;dBm                     |
+| 2       | 26&nbsp;dBm                     |
 | 3 ~ 9   | -                               |
-| 10      | 10 dBm                     |
+| 10      | 10&nbsp;dBm                     |
 | 11 ~ 15 | RFU                             |
 
-** AU915 **
+<br />
 
-By default, MaxEIRP is considered to be +30 dBm.
+<b> AU915 </b>
+
+By default, MaxEIRP is considered to be +30&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
@@ -2186,101 +2369,117 @@ By default, MaxEIRP is considered to be +30 dBm.
 | 1 ~ 10  | MaxEIRP - 2*TXPower  |
 | 11 ~ 10 | RFU                  |
 
-** KR920 **
+<br />
 
-By default, MaxEIRP is considered to be +14 dBm.
+
+<b> KR920 </b>
+
+By default, MaxEIRP is considered to be +14&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP - 2 dB  |
-| 2       | MaxEIRP - 4 dB  |
-| 3       | MaxEIRP - 6 dB  |
-| 4       | MaxEIRP - 8 dB  |
-| 5       | MaxEIRP - 10 dB |
-| 6       | MaxEIRP - 12 dB |
-| 7       | MaxEIRP - 14 dB |
+| 1       | MaxEIRP - 2&nbsp;dB  |
+| 2       | MaxEIRP - 4&nbsp;dB  |
+| 3       | MaxEIRP - 6&nbsp;dB  |
+| 4       | MaxEIRP - 8&nbsp;dB  |
+| 5       | MaxEIRP - 10&nbsp;dB |
+| 6       | MaxEIRP - 12&nbsp;dB |
+| 7       | MaxEIRP - 14&nbsp;dB |
 | 8 ~ 15  | RFU                  |
 
-** AS923 **
+<br />
 
-By default, Max EIRP is considered to be 16 dBm.
+
+<b> AS923 </b>
+
+By default, Max EIRP is considered to be 16&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP - 2 dB  |
-| 2       | MaxEIRP - 4 dB  |
-| 3       | MaxEIRP - 6 dB  |
-| 4       | MaxEIRP - 8 dB  |
-| 5       | MaxEIRP - 10 dB |
-| 6       | MaxEIRP - 12 dB |
-| 7       | MaxEIRP - 14 dB |
+| 1       | MaxEIRP - 2&nbsp;dB  |
+| 2       | MaxEIRP - 4&nbsp;dB  |
+| 3       | MaxEIRP - 6&nbsp;dB  |
+| 4       | MaxEIRP - 8&nbsp;dB  |
+| 5       | MaxEIRP - 10&nbsp;dB |
+| 6       | MaxEIRP - 12&nbsp;dB |
+| 7       | MaxEIRP - 14&nbsp;dB |
 | 8 ~ 15  | RFU                  |
 
-** IN865 **
 
-By default, MaxEIRP is considered to be 30 dBm.
+<br />
+
+
+<b> IN865 </b>
+
+By default, MaxEIRP is considered to be 30&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP - 2 dB  |
-| 2       | MaxEIRP - 4 dB  |
-| 3       | MaxEIRP - 6 dB  |
-| 4       | MaxEIRP - 8 dB  |
-| 5       | MaxEIRP - 10 dB |
-| 6       | MaxEIRP - 12 dB |
-| 7       | MaxEIRP - 14 dB |
-| 8       | MaxEIRP - 16 dB |
-| 9       | MaxEIRP - 18 dB |
-| 10      | MaxEIRP - 20 dB |
+| 1       | MaxEIRP - 2&nbsp;dB  |
+| 2       | MaxEIRP - 4&nbsp;dB  |
+| 3       | MaxEIRP - 6&nbsp;dB  |
+| 4       | MaxEIRP - 8&nbsp;dB  |
+| 5       | MaxEIRP - 10&nbsp;dB |
+| 6       | MaxEIRP - 12&nbsp;dB |
+| 7       | MaxEIRP - 14&nbsp;dB |
+| 8       | MaxEIRP - 16&nbsp;dB |
+| 9       | MaxEIRP - 18&nbsp;dB |
+| 10      | MaxEIRP - 20&nbsp;dB |
 | 11 ~ 15 | RFU                  |
 
-** RU864 **
+<br />
 
-By default, MaxEIRP is considered to be +16 dBm.
+<b> RU864 </b>
+
+By default, MaxEIRP is considered to be +16&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP - 2 dB  |
-| 2       | MaxEIRP - 4 dB  |
-| 3       | MaxEIRP - 6 dB  |
-| 4       | MaxEIRP - 8 dB  |
-| 5       | MaxEIRP - 10 dB |
-| 6       | MaxEIRP - 12 dB |
-| 7       | MaxEIRP - 14 dB |
+| 1       | MaxEIRP - 2&nbsp;dB  |
+| 2       | MaxEIRP - 4&nbsp;dB  |
+| 3       | MaxEIRP - 6&nbsp;dB  |
+| 4       | MaxEIRP - 8&nbsp;dB  |
+| 5       | MaxEIRP - 10&nbsp;dB |
+| 6       | MaxEIRP - 12&nbsp;dB |
+| 7       | MaxEIRP - 14&nbsp;dB |
 | 8 ~ 15  | RFU                  |
 
-** CN470 **
+<br />
 
-By default, MaxEIRP is considered to be +19.15 dBm.
+<b> CN470 </b>
+
+By default, MaxEIRP is considered to be +19.15&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP 2 dB    |
-| 2       | MaxEIRP 4 dB    |
-| 3       | MaxEIRP 6 dB    |
-| 4       | MaxEIRP 8 dB    |
-| 5       | MaxEIRP - 10 dB |
-| 6       | MaxEIRP - 12 dB |
-| 7       | MaxEIRP - 14 dB |
+| 1       | MaxEIRP 2&nbsp;dB    |
+| 2       | MaxEIRP 4&nbsp;dB    |
+| 3       | MaxEIRP 6&nbsp;dB    |
+| 4       | MaxEIRP 8&nbsp;dB    |
+| 5       | MaxEIRP - 10&nbsp;dB |
+| 6       | MaxEIRP - 12&nbsp;dB |
+| 7       | MaxEIRP - 14&nbsp;dB |
 | 8 ~ 15  | RFU                  |
 
-** EU433 **
+<br />
 
-By default, MAxEIRP is considered to be +12.15 dBm.
+<b> EU433 </b>
+
+By default, MAxEIRP is considered to be +12.15&nbsp;dBm.
 
 | TXPower | Configuration (EIRP) |
 | ------- | -------------------- |
 | 0       | MaxEIRP              |
-| 1       | MaxEIRP - 2 dB  |
-| 2       | MaxEIRP - 4 dB  |
-| 3       | MaxEIRP - 6 dB  |
-| 4       | MaxEIRP - 8 dB  |
-| 5       | MaxEIRP - 10 dB |
+| 1       | MaxEIRP - 2&nbsp;dB  |
+| 2       | MaxEIRP - 4&nbsp;dB  |
+| 3       | MaxEIRP - 6&nbsp;dB  |
+| 4       | MaxEIRP - 8&nbsp;dB  |
+| 5       | MaxEIRP - 10&nbsp;dB |
 | 6 ~ 15  | RFU                  |
 
 ### Appendix III: Maximum Transmission Load by Region
@@ -2290,7 +2489,7 @@ M in the following list is the length with MAC header, N is the maximum usable p
 
 :::
 
-** EU868 **
+<b> EU868 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2304,7 +2503,9 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 7         | 250         | 242         |
 | 8 ~ 15    | Not Defined | Not Defined |
 
-** US915 **
+<br />
+
+<b> US915 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2322,7 +2523,9 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 13        | 250         | 242         |
 | 14 ~ 15   | Not Defined | Not Defined |
 
-** AU915 **
+<br />
+
+<b> AU915 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2342,7 +2545,9 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 13        | 250         | 242         |
 | 14 ~ 15   | Not Defined | Not Defined |
 
-** KR920 **
+<br />
+
+<b> KR920 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2354,22 +2559,93 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 5         | 250         | 242         |
 | 6 ~ 15    | Not Defined | Not Defined |
 
-** AS923 **
+<br />
 
-| Data Rate | Uplink MAC Payload Size (M) | Downlink MAC Payload Size (M) |  |  |
-| --- | --- | --- | --- | --- |
-|  | UplinkDwellTime = 0 | UplinkDwellTime = 1 | DownlinkDwellTime = 0 | DownlinkDwellTime = 1 |
-| 0 | 59 | N/A | 59 | N/A |
-| 1 | 59 | N/A | 59 | N/A |
-| 2 | 59 | 19 | 59 | 19 |
-| 3 | 123 | 61 | 123 | 61 |
-| 4 | 250 | 133 | 250 | 133 |
-| 5 | 250 | 250 | 250 | 250 |
-| 6 | 250 | 250 | 250 | 250 |
-| 7 | 250 | 250 | 250 | 250 |
-| 8 | RFU | RFU | RFU | RFU |
+<b> AS923 </b>
 
-** IN865 **
+<table>
+<thead>
+  <tr>
+    <th>Data Rate</th>
+    <th colspan = "2">Uplink MAC Payload Size (M)</th>
+    <th colspan = "2">Downlink MAC Payload Size (M)</th>
+  </tr>
+</thead>
+<tbody>
+        <tr>
+            <td></td>
+            <td>UplinkDwellTime = 0</td>
+            <td>UplinkDwellTime = 1</td>
+            <td>DownlinkDwellTime = 0</td>
+            <td>DownlinkDwellTime = 1</td>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>59</td>
+            <td>N/A</td>
+            <td>59</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>59</td>
+            <td>N/A</td>
+            <td>59</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>59</td>
+            <td>19</td>
+            <td>59</td>
+            <td>19</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>123</td>
+            <td>61</td>
+            <td>123</td>
+            <td>61</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>250</td>
+            <td>133</td>
+            <td>250</td>
+            <td>133</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>250</td>
+            <td>250</td>
+            <td>250</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>250</td>
+            <td>250</td>
+            <td>250</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>250</td>
+            <td>250</td>
+            <td>250</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td colspan="2">RFU</td>
+            <td colspan="2">RFU</td>
+        </tr>
+</tbody>
+</table>
+
+<br />
+
+<b> IN865 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2383,7 +2659,9 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 7         | 250         | 242         |
 | 8 ~ 15    | Not Defined | Not Defined |
 
-** RU864 **
+<br />
+
+<b> RU864 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2397,7 +2675,9 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 7         | 230         | 222         |
 | 8 ~ 15    | Not Defined | Not Defined |
 
-** CN470 **
+<br />
+
+<b> CN470 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2409,7 +2689,9 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 5         | 250         | 242         |
 | 6 ~ 15    | Not Defined | Not Defined |
 
-** EU433 **
+<br />
+
+<b> EU433 </b>
 
 | Data Rate | M           | N           |
 | --------- | ----------- | ----------- |
@@ -2422,6 +2704,8 @@ M in the following list is the length with MAC header, N is the maximum usable p
 | 6         | 250         | 242         |
 | 7         | 250         | 242         |
 | 8 ~ 15    | Not Defined | Not Defined |
+
+<br />
 
 ### Appendix IV: Asynchronous Events
 

@@ -11,6 +11,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18060 WisBlock Audio Stereo Amplifier Module
 
 Thank you for choosing **RAK18060 WisBlock Audio Stereo Amplifier Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -35,13 +38,13 @@ The RAK18060 can drive the speaker to play audio through the input I2S signals. 
     - Audio stereo amplifier
     - Amplifier power can be selected by a solder bridge
     - I2S interface for data and I2C interface for control
-    - 5.6 W at 1% THD+N into 4-Ω Load from 4.2 V supply
+    - 5.6&nbsp;W at 1% THD+N into 4-Ω Load from 4.2&nbsp;V supply
     - High-efficiency Class-H boost converter
     - Built-in speaker sense and automatic gain control
     - Thermal, short-circuit, and under-voltage protection
 
 * **Size**
-    * 25 x 35 mm
+    * 25 x 35&nbsp;mm
 
 ## Prerequisites
 
@@ -51,3 +54,4 @@ To use a **RAK18060**, you need a **WisBlock Base** board to plug the module in 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
+<RkBottomNav/>

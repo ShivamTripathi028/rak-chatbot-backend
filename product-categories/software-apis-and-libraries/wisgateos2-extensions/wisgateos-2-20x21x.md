@@ -24,6 +24,9 @@ tags:
   - user manual
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisGateOS 2 2.0.x/2.1.x
 
 Before installing the extension, obtain the extension file in the `.ipk` format. Gateways running WisGateOS 2 2.0.x/2.1.x support the extensions shown in the table below.
@@ -42,7 +45,11 @@ Before installing the extension, obtain the extension file in the `.ipk` format.
 
 1. To install an extension, access the gateway by referring to the <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2/overview/#access-the-wisgateos-2-web-ui" target="_blank">Access the WisGateOS 2 Web UI</a> user manual.
 
-> **Image:** WisGateOS 2 login page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/1.login-page.svg"
+  width="100%"
+  caption="WisGateOS 2 login page"
+/>
 
 2. Once logged in successfully, navigate to the **Extensions** tab (<img src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/2.svg" />).
 
@@ -51,11 +58,19 @@ Before installing the extension, obtain the extension file in the `.ipk` format.
 - By default, no extensions are installed.
 :::
 
-> **Image:** Extensions tab
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/4.extensions-tab.svg"
+  width="100%"
+  caption="Extensions tab"
+/>
 
 3. Proceed with the installation by clicking on the **Add new extension** button or the **install one now** link. This will open the **Add new extension** window.
 
-> **Image:** Add new extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/5.new-extensions.svg"
+  width="100%"
+  caption="Add new extension"
+/>
 
 4. In the window, either drag and drop the extension file into the **Drop your Extension file here** area, or click the **choose file** link in the form to browse and select the extension file manually.
 
@@ -63,16 +78,28 @@ Before installing the extension, obtain the extension file in the `.ipk` format.
 The extension files are in `.ipk` format, specifically created for the WisGateOS 2 and WisGate Edge hardware platform. A general `.ipk` file for OpenWrt cannot be installed.
 :::
 
-> **Image:** Choose an Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/6.choose-extensions.svg"
+  width="100%"
+  caption="Choose an Extension"
+/>
 
 5. Once the extension file is selected, click **Add extension** to begin the installation. The process may take a few moments to complete.
 
-> **Image:** Add an Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/7.add-extensions.svg"
+  width="100%"
+  caption="Add an Extension"
+/>
 
 6. When the installation is complete, the WisGateOS will automatically reboot, and you will need to log in again.
 7. After logging in, navigate back to the **Extensions** tab. The newly installed extension should now be listed and visible in the interface.
 
-> **Image:** Installed Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/9.installed-extension.svg"
+  width="100%"
+  caption="Installed Extension"
+/>
 
 8. To install additional extensions, use the **Add new extension** button or manage existing ones by clicking the **Launch** button next to the desired extension.
 
@@ -80,15 +107,27 @@ The extension files are in `.ipk` format, specifically created for the WisGateOS
 
 1. Navigate to the **Extensions** tab and click on the **Remove** button of the extension you want to uninstall.
 
-> **Image:** Remove the installed Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/10.installed.svg"
+  width="100%"
+  caption="Remove the installed Extension"
+/>
 
 2. A pop-up window will appear to verify if you want delete the extension. Click **Remove** and wait for the process to finish.
 
-> **Image:** Confirm the Extension removal
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/11.remove-extension.svg"
+  width="100%"
+  caption="Confirm the Extension removal"
+/>
 
 At this point, the uninstalled extension will no longer appear on the **Extensions** page.
 
-> **Image:** Successful Extension removal
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/13.removed-extension.svg"
+  width="100%"
+  caption="Successful Extension removal"
+/>
 
 ## How to Use the Extensions
 
@@ -123,11 +162,19 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the **Breathing Light** extension, click **Launch**.
 
-> **Image:** Launch the Breathing Light Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/14.light-extension.svg"
+  width="100%"
+  caption="Launch the Breathing Light Extension"
+/>
 
 2. In the **Configuration** page, configure the mode, color, and blinking frequency of the LED.
 
-> **Image:** Configuration Page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/15.light-config.svg"
+  width="100%"
+  caption="Configuration Page"
+/>
 
 - **Interface**
   * **Enable Breathing Light**: Enables or disables the breathing light extension.
@@ -154,7 +201,7 @@ Having the capability to rebrand your Web UI is essential for companies that nee
 
 #### Size and Format Requirements
 
-The uploaded logo image must be in `.svg` format and cannot exceed 300 kb. You can preview the **Web UI** page before finally switching RAKWireless' logo with your brand logo.
+The uploaded logo image must be in `.svg` format and cannot exceed 300&nbsp;kb. You can preview the **Web UI** page before finally switching RAKWireless' logo with your brand logo.
 
 #### Install the Custom Logo Extension
 
@@ -164,20 +211,37 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the Custom Logo extension, click **Launch**.
 
-> **Image:** Launch the Custom Logo Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/16.custom-logo.svg"
+  width="100%"
+  caption="Launch the Custom Logo Extension"
+/>
 
 2. In the **Configuration** page, you can set a custom logo on the login page and on the sidebar menu.
 
-> **Image:** Configuration Page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/17.config-page.svg"
+  width="100%"
+  caption="Configuration Page"
+/>
 
    - **Interface**: Enables/disables custom logo extension.
    - **Large logo**: This logo will be used on the login page and the expanded sidebar menu. Upload a logo by dragging and dropping it, or by clicking **Choose File** to browse manually.
    - **Small logo**: This logo will be used for mobile view and the collapsed sidebar menu. Upload the logo by dragging and dropping it, or by clicking **Choose File** to browse manually.
    - **Preview**: After selecting the images, click **Preview** to see how the logo appears on the login page and sidebars in both desktop and mobile views.
 
-> **Image:** Logo Preview for Desktop Users
 
-> **Image:** Logo Preview for Mobile Users
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/19.logo-preview.svg"
+  width="100%"
+  caption="Logo Preview for Desktop Users"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/20.mobile-users.svg"
+  width="100%"
+  caption="Logo Preview for Mobile Users"
+/>
 
 3. To apply the selected logos, click **Save changes**. The page reloads automatically, applying the selected logos.
 
@@ -193,6 +257,7 @@ LBT is usually governed by regulations per country. In WisGateOS 2 2.x, there is
 AS923 end-devices operating in Japan shall perform Listen Before Talk (LBT), based on ARIB STD-T108 regulations. The ARIB STD-T108 regulation is available for free and should be consulted as needed.
 :::
 
+
 You can switch the frequency plan in the following regions:
 
 * AS923, KR920
@@ -204,31 +269,55 @@ The frequency plan will be limited to a particular region. Tx power will be limi
 * Downlink Tx Power
 * Beacon Tx Power
 
+
 #### Install the Country Settings Extension
 
 To install the extension, follow the steps in [How to Add an Extension](https://docs.rakwireless.com/product-categories/software-apis-and-libraries/wisgateos2-extensions/wisgateos-2-20x21x/#how-to-add-an-extension) section.
 
 #### Configure the Country Settings Extension
 
+
 1. To access the Country Settings extension, click **Launch**.
 
-> **Image:** Launch the Country Settings/LBT Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/1.extensions-tab.svg"
+  width="100%"
+  caption="Launch the Country Settings/LBT Extension"
+/>
 
 2. In the **Configuration** page, click the **Select your Country** button to set your country.
 
-> **Image:** Country selection
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/2.country-selection.svg"
+  width="100%"
+  caption="Country selection"
+/>
 
-> **Image:** Find your country in the list
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/3.country-list.svg"
+  width="100%"
+  caption="Find your country in the list"
+/>
 
 3. In the new window, find your country and select it. Tick the checkbox below to confirm that you have chosen the country where the gateway is located. Then click **Confirm** to set the LBT for your country.
 
-> **Image:** Confirm your country
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/4.confirm-country.svg"
+  width="100%"
+  caption="Confirm your country"
+/>
 
 4. Enable the LBT by clicking on the **Enable Listen Before Talk** switch.
 
-> **Image:** Enable LBT
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/5.enable-lbt.svg"
+  width="100%"
+  caption="Enable LBT"
+/>
 
 5. Click **Save changes** to apply the configuration. LBT is now enabled on your gateway.
+
+
 
 ### Open/Close Port
 
@@ -242,7 +331,12 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the Open/Close Port extension, click **Launch**.
 
-> **Image:** Launch the Open/Close Port Extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/1.extension-tab.svg"
+  width="100%"
+  caption="Launch the Open/Close Port Extension"
+/>
 
 After clicking **Launch**, the **Traffic rules** page will be displayed, showing the default rules of the **Open/Close port** extension with the following parameters:
 
@@ -252,7 +346,11 @@ After clicking **Launch**, the **Traffic rules** page will be displayed, showing
 * **From**: External source
 * **To**: Internal source
 
-> **Image:** Traffic rules page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/v22x-open-close-extension.svg"
+  width="100%"
+  caption="Traffic rules page"
+/>
 
 For example, the **Allow-http** service indicates that any host in WAN can communicate with the gateway through port 80 using the TCP protocol type.
 
@@ -267,7 +365,12 @@ For example, the **Allow-http** service indicates that any host in WAN can commu
   * **Source IP address**: Specify up to three host IPs.
 * **Destination port**: The destination port for routing.
 
-> **Image:** Add a new rule
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/v22x-new-rule.svg"
+  width="100%"
+  caption="Add a new rule"
+/>
+
 
 3. To save the changes, click **Add new rule**. The newly created rule will then appear in the **Traffic rules** interface.
 
@@ -292,7 +395,12 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the Solar Battery extension, click **Launch**.
 
-> **Image:** Launch the Solar Battery Extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/solar-battery-extensions-tab.svg"
+  width="100%"
+  caption="Launch the Solar Battery Extension"
+/>
 
 After clicking **Launch**, the **Details** page will be displayed, showing information about the Solar Battery:
 
@@ -315,7 +423,12 @@ After clicking **Launch**, the **Details** page will be displayed, showing infor
 
 2. Enable the switch to activate **Monitor solar battery**.
 
-> **Image:** Details page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/2.solar-battery-page.svg"
+  width="100%"
+  caption="Details page"
+/>
+
 
 ### WireGuard
 
@@ -333,7 +446,12 @@ To install the extension, follow the steps in [How to Add an Extension](https://
 
 1. To access the WireGuard extension, click **Launch**.
 
-> **Image:** Launch the WireGuard Extension
+
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/wireguard-extensions-tab.svg"
+  width="100%"
+  caption="Launch the WireGuard Extension"
+/>
 
 2. In the **Configuration** page, enable the **Enable WireGuard** switch and configure the following information:
 * **Interface**: Settings for the WireGuard client.
@@ -351,13 +469,19 @@ To install the extension, follow the steps in [How to Add an Extension](https://
   * **Persistent Keepalive (ms)**: The interval at which keepalive packets are sent to maintain the connection.
   * **Public Key**: The public key of the WireGuard server.
   * **Enable Preshared Key**: Enables the preshared key field. This key is used as part of the Noise protocol during encrypted connection setup between the two peers.
-      
-> **Image:** Enable preshared key
-
+      <RkImage
+        src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/3.preshared-key.svg"
+        width="50%"
+        caption="Enable preshared key"
+      />
 * **Route All Traffic**: Allows traffic from all IPs.
   * **Allowed IPs**: Specifies the IPs that are allowed to connect to the gateway via the WireGuard IP. This option is only available when **Route All Traffic** is disabled.
 
-> **Image:** Configuration page
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/2.enable-wireguard.svg"
+  width="100%"
+  caption="Configuration page"
+/>
 
 3. To save the changes, click **Save changes**.
 :::tip NOTE
@@ -366,7 +490,11 @@ Remember to add the WireGuard Client credentials to the WireGuard server configu
 
 4. After the connection is established, open the **Status** tab to view the WireGuard connection.
 
-> **Image:** WireGuard status
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/4.wireguard-status.svg"
+  width="60%"
+  caption="WireGuard status"
+/>
 
 ### OpenVPN Client
 
@@ -384,36 +512,68 @@ Make sure you have local network access to your gateway and connect to it to acc
 
 1. To access the OpenVPN Client extension, click **Launch**.
 
-> **Image:** Launch the OpenVPN Client Extension
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/1-start-openvpn.svg"
+  width="100%"
+  caption="Launch the OpenVPN Client Extension"
+/>
 
 2. Add an OpenVPN tunnel by clicking the **Add tunnel** button or the **add one now** link.
 
-> **Image:** Add OpenVPN tunnel
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/2-add-openvpn-tunnel.svg"
+  width="100%"
+  caption="Add OpenVPN tunnel"
+/>
 
 3. Click the **choose file** link and browse for the `.ovpn` file or drag and drop the `.ovpn` file you created by following the <a href="https://learn.rakwireless.com/hc/en-us/articles/26527371792535-How-To-Configure-WisGate-Edge-V2-Gateways-Remote-Management-OpenVPN" target="_blank">How to Configure WisGate Edge v2 Gateways Remote Management - OpenVPN</a> guide.
 
-> **Image:** Add .ovpn file to the gateway
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/3-add-.ovpn-file-to-the-gateway.svg"
+  width="100%"
+  caption="Add .ovpn file to the gateway"
+/>
 
 4. Once the file is added, click **Add tunnel** to add the OpenVPN tunnel.
 
-> **Image:** Add OpenVPN tunnel
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/4-add-openvpn-tunnel.svg"
+  width="100%"
+  caption="Add OpenVPN tunnel"
+/>
 
 When the tunnel is added successfully, a confirmation message will appear at the bottom of the screen.
 
-> **Image:** Successfully added tunnel
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/5-successfully-added-tunnel.svg"
+  width="100%"
+  caption="Successfully added tunnel"
+/>
 
 5. Click the **Configure** button of the VPN tunnel. On the next window, toggle the **Enable Connection** switch to enable the OpenVPN tunnel and click **Save changes**.
 
-> **Image:** Start the OpenVPN tunnel
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/6-start-the-openvpn-tunnel.svg"
+  width="100%"
+  caption="Start the OpenVPN tunnel"
+/>
 
 :::tip NOTE
 - Once the configurations are set, you can check the OpenVPN status under the **Logs** tab.
 
-> **Image:** OpenVPN tunnel status
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/7-openvpn-tunnel-status.svg"
+  width="100%"
+  caption="OpenVPN tunnel status"
+/>
 
 - You can also view the assigned IP on the **OpenVPN Overview** page.
 
-> **Image:** OpenVPN assigned IP
-
+<RkImage
+  src="https://images.docs.rakwireless.com/software-apis-and-library/wisgateos2-extensions/wisgateos-2-20x21x/8-openvpn-assigned-ip.svg"
+  width="100%"
+  caption="OpenVPN assigned IP"
+/>
 :::
 
+<RkBottomNav/>

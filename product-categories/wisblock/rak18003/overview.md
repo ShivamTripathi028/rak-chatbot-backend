@@ -9,6 +9,9 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18003 WisBlock Audio Interposer Module
 
 Thank you for choosing **RAK18003 WisBlock Audio Interposer Module** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -39,7 +42,7 @@ WisBlock Audio stack must have an interposer. The interposer board should be con
   - BTB connector for WisBlock Audio stack
 
 * **Module Size**
-  - 25 x 35 mm
+  - 25 x 35&nbsp;mm
 
 ## Prerequisites
 
@@ -49,3 +52,4 @@ To use a **RAK18003**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with screws to ensure proper function.
 :::
 
+<RkBottomNav/>

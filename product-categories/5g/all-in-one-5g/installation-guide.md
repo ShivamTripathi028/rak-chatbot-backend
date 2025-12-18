@@ -10,33 +10,62 @@ sidebar_label: Installation Guide
 slug: /product-categories/5g/all-in-one-5g/installation-guide/
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Installation Guide
 
 ## Wall Mounting
 
 1. Choose the location to ensure enough space and then mark the position of the holes.
 
-> **Image:** Marking the holes and spaces
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/installation-guide/choose-location.png"
+  width="60%"
+  caption="Marking the holes and spaces"
+/>
 
-2. Use the 5 mm drill head, drill the holes on the wall, and plug the screw anchors into the wall.
+2. Use the 5&nbsp;mm drill head, drill the holes on the wall, and plug the screw anchors into the wall.
 
-> **Image:** Drilling holes and installing the anchors
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/installation-guide/drill-install.png"
+  width="60%"
+  caption="Drilling holes and installing the anchors"
+/>
 
 3. Use four (4) tapping screws and attach the mounting bracket to the wall.
 
-> **Image:** Installing the bracket on the wall
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/installation-guide/wall-bracket.png"
+  width="50%"
+  caption="Installing the bracket on the wall"
+/>
 
 4. Gently slide the device on the bracket.
 
-> **Image:** Attaching the device
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/installation-guide/attach-device.png"
+  width="50%"
+  caption="Attaching the device"
+/>
 
 ### Desktop Mounting
 
 1. Assemble the desktop bracket and put on the desk.
 
-> **Image:** Assembling the desktop bracket
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/installation-guide/assemble-bracket.png"
+  width="60%"
+  caption="Assembling the desktop bracket"
+/>
 
 2. Gently slide the device on the bracket.
 
-> **Image:** Attaching the device
+<RkImage
+  src="https://images.docs.rakwireless.com/5g/all-in-one-5g/installation-guide/slide-the-device.png"
+  width="40%"
+  caption="Attaching the device"
+/>
 
+
+<RkBottomNav/>

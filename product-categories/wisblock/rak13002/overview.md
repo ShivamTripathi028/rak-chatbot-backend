@@ -9,6 +9,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13002 WisBlock IO Module
 
 Thank you for choosing **RAK13002 WisBlock IO Module** in your awesome IoT Project! 🎉 To help you get started, we have provided you all the necessary documentation for your product.
@@ -29,7 +31,7 @@ For All WisBlock Core Modules:
 
 ## Product Description
 
-The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slot of the WisBlock Base board. This module exposed all WisBlock Core signals such as I2C, SPI, UART, GPIO, and ADC to standard 2.54 mm pitch pin header for easy integration of external components and devices.
+The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slot of the WisBlock Base board. This module exposed all WisBlock Core signals such as I2C, SPI, UART, GPIO, and ADC to standard 2.54&nbsp;mm pitch pin header for easy integration of external components and devices.
 
 ## Product Features
 
@@ -38,9 +40,9 @@ The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slo
 - Supports one SPI interface
 - Supports up to six (6) GPIOs
 - Supports two (2) ADC interfaces
-- 3.3 V power supply interfaces
+- 3.3&nbsp;V power supply interfaces
 - Backup battery (super cap) can keep the RTC running for up to 7 days (tested in lab)
-- Module size: 25X35 mm
+- Module size: 25X35&nbsp;mm
 
 ## Prerequisites
 
@@ -50,3 +52,6 @@ To use a **RAK13002**, you need at least a **WisBlock Base** to plug the module 
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+
+
+<RkBottomNav/>

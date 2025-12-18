@@ -1,8 +1,10 @@
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
 
 # Getting Started
 
 Welcome to the Official Rakwireless Unified Interface (RUI) API. Our API for easy platform integration for your business. You can easily build an IoT Software for your custom hardware IoT blocks in just few minutes!
+
 
 ### Document Guide
 
@@ -61,3 +63,4 @@ typedef enum DRIVER_MODE {
 }DRIVER_MODE;
 ```
 
+<RkBottomNav/>

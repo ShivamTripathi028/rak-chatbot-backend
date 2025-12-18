@@ -16,6 +16,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Ethernet MQTT Gateway
 
 Thank you for choosing **WisMesh Ethernet MQTT Gateway** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -32,10 +34,11 @@ Optionally, it is possible to use the RAK19018 PoE module to supply the gateway 
 
 ## Product Features
 
-- Power Solution: PoE for supply from Ethernet cable or 5 V over USB connector.
+- Power Solution: PoE for supply from Ethernet cable or 5&nbsp;V over USB connector.
 - Connectivity: Connects the Meshtastic Network to any MQTT broker
 
 ## Getting Started
 
 To get started with the WisMesh Ethernet MQTT Gateway, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Ethernet%20MQTT%20Gateway%20With%20Enclosure.pdf" target="_blank">WisMesh Ethernet MQTT Gateway Getting Started</a> guide.
 
+<RkBottomNav/>

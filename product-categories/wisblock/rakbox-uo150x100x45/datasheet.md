@@ -11,6 +11,8 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
  
 
 # WisBlock Unify Outdoor Enclosure 150x100x45 Datasheet
@@ -25,7 +27,7 @@ Moreover, it supports different types of mounting options such as pole, wall, DI
 
 ### Features
 - IP67-rated
-- Dimensions L x W x H: 150 mm x 100 mm x 45 mm
+- Dimensions L x W x H: 150&nbsp;mm x 100&nbsp;mm x 45&nbsp;mm
 - Available in two (2) colors: cool gray and white color
 - Two base plate options: **Plain Base Plate** and **WisBlock Bespoke Base Plate**
 - Support the application of various scenarios via optional mounting accessories
@@ -33,8 +35,12 @@ Moreover, it supports different types of mounting options such as pole, wall, DI
 
 ## Enclosure Mechanical Dimensions
 
-> **Image:** Medium WisBlock Unify Enclosure dimensions
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/m-enclosure.png" 
+  figureCount="1"
+  caption="Medium WisBlock Unify Enclosure dimensions" 
+   width="80%"
+/>
  
 ## Enclosure with Mounting Accessory
 
@@ -42,94 +48,168 @@ The installation guide for mounting the different types of accessories can be fo
 
 ### Pole Mount Vertical
 
-> **Image:** Vertical pole mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/vertical-pole.png" 
+  figureCount="2"
+  caption="Vertical pole mount" 
+   width="60%"
+/>
  
 **Figure 3** shows the dimensions of the medium unify enclosure with vertical pole mounts attached to it.
 
-> **Image:** Dimensions of enclosure with vertical pole mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/vertical-pole-dim.png" 
+  figureCount="3"
+  caption="Dimensions of enclosure with vertical pole mount" 
+   width="60%"
+/>
  
 ### Pole Mount Overlap Horizontal
 
-> **Image:** Horizontal pole overlap mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/pole-overlap.png" 
+  figureCount="4"
+  caption="Horizontal pole overlap mount" 
+   width="60%"
+/>
  
 **Figure 5** shows the dimensions of the medium unify enclosure with horizontal pole mounts attached to it.
 
-> **Image:** Dimensions of the enclosure with horizontal pole overlap mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/pole-overlap-dim.png" 
+  figureCount="5"
+  caption="Dimensions of the enclosure with horizontal pole overlap mount" 
+   width="60%"
+/>
   
 ### Wall Mount
 
-> **Image:** Wall mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/wall-mount.png" 
+  figureCount="6"
+  caption="Wall mount" 
+   width="60%"
+/>
  
 **Figure 7** shows the dimensions of the medium unify enclosure with wall mounts attached to it.
 
-> **Image:** Dimensions of the enclosure with wall mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/wall-mount-dim.png" 
+  figureCount="7"
+  caption="Dimensions of the enclosure with wall mount" 
+   width="60%"
+/>
  
  
 ### Belt Clip Mount
 
-> **Image:** Belt clip mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/belt-clip.png" 
+  figureCount="8"
+  caption="Belt clip mount" 
+   width="60%"
+/>
  
 **Figure 9** shows the dimensions of the medium unify enclosure with a belt clip mount attached to it.
 
-> **Image:** Dimensions of the enclosure with belt clip mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/belt-clip-dim.png" 
+  figureCount="9"
+  caption="Dimensions of the enclosure with belt clip mount" 
+   width="60%"
+/>
  
 ### DIN Mount
 
-> **Image:** DIN mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/din-mount.png" 
+  figureCount="10"
+  caption="DIN mount" 
+   width="60%"
+/>
  
 **Figure 11** shows the dimensions of the medium unify enclosure with a DIN mount attached to it.
 
-> **Image:** Dimensions of the enclosure with DIN mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/din-mount-dim.png" 
+  figureCount="11"
+  caption="Dimensions of the enclosure with DIN mount" 
+   width="60%"
+/>
  
 ### Magnet Mount
 
-> **Image:** Magnet mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/magnet-mount.png" 
+  figureCount="12"
+  caption="Magnet mount" 
+   width="60%"
+/>
  
 **Figure 13** shows the dimensions of the medium unify enclosure with a magnet mount attached to it.
 
-> **Image:** Dimensions of the enclosure with magnet mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/magnet-mount-dim.png" 
+  figureCount="13"
+  caption="Dimensions of the enclosure with magnet mount" 
+   width="60%"
+/>
  
 
 ### Belt Loop Mount
 
-> **Image:** Belt loop mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/belt-loop.png" 
+  figureCount="14"
+  caption="Belt loop mount" 
+   width="60%"
+/>
   
 
 **Figure 15** shows the dimensions of the medium unify enclosure with a belt loop mount attached to it.
 
-> **Image:** Dimensions of the enclosure with belt loop mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/belt-loop-dim.png" 
+  figureCount="15"
+  caption="Dimensions of the enclosure with belt loop mount" 
+   width="60%"
+/>
  
 ### Label Mount
 
-> **Image:** Label mount
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/label-mount.png" 
+  figureCount="16"
+  caption="Label mount" 
+   width="60%"
+/>
 
 **Figure 17** shows the dimensions of the medium unify enclosure with a label mount attached to it.
 
-> **Image:** Dimensions of the enclosure with label mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/label-mount-dim.png" 
+  figureCount="17"
+  caption="Dimensions of the enclosure with label mount" 
+   width="60%"
+/>
  
 ### Hook Loop Mount
 
-> **Image:** Hook loop mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/hook-loop.png" 
+  figureCount="18"
+  caption="Hook loop mount" 
+   width="60%"
+/>
  
 **Figure 19** shows the dimensions of the medium unify enclosure with a label mount attached to it.
 
-> **Image:** Dimensions of the enclosure with hook loop mount
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rakbox-uo150x100x45/datasheet/hook-loop-dim.png" 
+  figureCount="19"
+  caption="Dimensions of the enclosure with hook loop mount" 
+   width="60%"
+/>
  
 
+<RkBottomNav/>

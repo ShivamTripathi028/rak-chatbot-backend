@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13001 WisBlock Relay IO Module Datasheet
 
 ## Overview
@@ -23,10 +26,10 @@ RAK13001 is a WisBlock Interface module which extends the WisBlock system to be 
 - One relay isolated output
 - One opto-couple isolated input
 - The input supports wet contact(default mode) or dry contact
-- The isolation between internal and external is up to 2500 VDC
-- The output of relay supports 30 VDC/2 A rating
-- The input of opto-couple supports 12-24 V
-- Module size: 25 X 35 mm
+- The isolation between internal and external is up to 2500&nbsp;VDC
+- The output of relay supports 30&nbsp;VDC/2&nbsp;A rating
+- The input of opto-couple supports 12-24&nbsp;V
+- Module size: 25 X 35&nbsp;mm
 - Chipset: HONGFA HF46F
 
 ## Specifications
@@ -39,20 +42,31 @@ The overview covers the RAK13001 block diagram and the mounting mechanics of the
 
 The RAK13001 module can be mounted on the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK13001 on a WisBlock Base module, such as a RAK5005-O.
 
-> **Image:** RAK13001 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/mounting-mechanism.png"
+  width="60%"
+  caption="RAK13001 mounting mechanism on a WisBlock Base module"
+/>
 
 #### Block Diagram
 
-> **Image:** RAK13001 Block Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/block-diagram.png"
+  width="70%"
+  caption="RAK13001 Block Diagram"
+/>
 
-The RAK13001 use one relay to isolate output of MCU. The dielectric strength between coil and contacts of relay is 4000 VAC 1min.
+The RAK13001 use one relay to isolate output of MCU. The dielectric strength between coil and contacts of relay is 4000&nbsp;VAC 1min.
 
-For input, RAK13001 uses an opto-couple as isolation, and it supports wet contact as default. The rating of input is 12V-24 VDC. It also can be configurated as dry contact by reworking some resistors on the PCB module.
+For input, RAK13001 uses an opto-couple as isolation, and it supports wet contact as default. The rating of input is 12V-24&nbsp;VDC. It also can be configurated as dry contact by reworking some resistors on the PCB module.
 
 :::warning
 
-> **Image:** Safety Precaution
-
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/warning.png"
+  width="90%"
+  caption="Safety Precaution"
+/>
 :::
 
 ### Hardware
@@ -68,7 +82,11 @@ The hardware specification is categorized into four parts. It discusses the pino
 
 The RAK13001 WisBlock module has a 40-pin WisConnector that is compatible to the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 4**.
 
-> **Image:** RAK13001 Pinout Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/rak13001_pinout.svg"
+  width="50%"
+  caption="RAK13001 Pinout Schematic"
+/>
 
 :::tip NOTE
 - By default, PIN 10 (SW1) on WisConnector is used as DI input, and PIN 32 (IO4) is used as DO output.
@@ -98,50 +116,83 @@ This sections shows the maximum and minimum ratings of the RAK13001 module and i
 | Ii           | Input Current                  | -    | -    | 50   | mA   |
 | Viso         | Isolation Voltage              | -    | 2500 | -    | Vrms |
 
+
+
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
 The mechanical dimensions of the RAK13001 module is shown in **Figure 5** below.
 
-> **Image:** RAK13001 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/mechanical-dimensions.png"
+  width="75%"
+  caption="RAK13001 Mechanical Dimensions"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/wisconnector-pcb.png"
+  width="100%"
+  caption="WisConnector PCB footprint and recommendations"
+/>
 
 #### Schematic Diagram
 
 **Figure 7** shows the schematic of the RAK13001 module.
 
-> **Image:** RAK13001 WisBlock Module Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/rak13001-schematic.png"
+  width="100%"
+  caption="RAK13001 WisBlock Module Schematic"
+/>
 
 ##### 40-pin WisConnector
 
 **Figure 8** shows the WisConnector connection. By default, IO3 on WisConnector is used as DI, IO4 is used as DO.
 
-> **Image:** RAK13001 WisConnector
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/rak13001-wisio.png"
+  width="50%"
+  caption="RAK13001 WisConnector"
+/>
 
 ##### Relay
 
 **Figure 9** shows RAK13001 module relay schematic. Use **3V3_S** for relay coil power supply.
 
-> **Image:** RAK13001 WisBlock Relay Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/rak13001-relay.png"
+  width="50%"
+  caption="RAK13001 WisBlock Relay Schematic"
+/>
 
 ##### Opto-coupler
 
 **Figure 10** shows opto-coupler schematics.
 
-> **Image:** RAK13001 Opto-coupler Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/rak13001-optocoupler.png"
+  width="60%"
+  caption="RAK13001 Opto-coupler Schematics"
+/>
 
 :::tip NOTE
 - By default, it is connected as wet contact. If you want to use dry contact mode, rework resistors on the PCB Module as follows:
 
     1. Remove R11 and D2;
-    2. Add 680 Ω resistors on R9, R12, R13 ,and R14.
+    2. Add 680&nbsp;Ω resistors on R9, R12, R13 ,and R14.
 
 - Then, short K1 and K2 can make DI to be low logical.
 :::
 
-> **Image:** RAK13001 PCB Silkscreen
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13001/datasheet/rak13001-silkscreen.png"
+  width="60%"
+  caption="RAK13001 PCB Silkscreen"
+/>
 
+
+
+<RkBottomNav/>

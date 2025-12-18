@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK18001 WisBlock Buzzer Module Quick Start Guide
 
 ## Prerequisite
@@ -48,15 +51,23 @@ RAK18001 module can be connected to **Slot A, B, C, or D** of WisBlock Base to c
 
 Also, always secure the connection of the WisBlock module by using the compatible screws, as shown in **Figure 1**.
 
-> **Image:** RAK18001 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak18001_mounting.png"
+  width="70%"
+  caption="RAK18001 connection to WisBlock Base"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for Slot A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [RAK5005-O module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3 mm screws depending on the module.
+As shown in **Figure 2**, the location for Slot A, B, C, and D are properly marked by silkscreen. Follow carefully the procedure defined in [RAK5005-O module assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with one or more pieces of M1.2 x 3&nbsp;mm screws depending on the module.
 
-> **Image:** sensor connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/wisblock-sensor-silkscreen.png"
+  width="70%"
+  caption="sensor connection to WisBlock Base"
+/>
 
 ##### Disassembling
 
@@ -64,15 +75,27 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. To begin disassembling, remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/removing-screws.png"
+  width="70%"
+  caption="Removing screws from the WisBlock module"
+/>
 
 2. After removing the screws, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/detaching-silkscreen.png"
+  width="70%"
+  caption="Detaching silkscreen on the WisBlock module"
+/>
 
 3. Detach the module from the baseboard by applying force to the module at the position of the connector, as shown in **Figure 5**.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/detaching-module.png"
+  width="70%"
+  caption="Applying even forces on the proper location of a WisBlock module"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool). This tool finds possible pin conflicts.
@@ -103,17 +126,33 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 
 1. To begin with the Arduino setup, you need to select the RAK4631 WisBlock Core.
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak4631-board.png"
+  width="100%"
+  caption="Selecting RAK4631 as WisBlock Core"
+/>
 
 2. The [Basic Sample Code for RAK18001](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK4630/sensors/RAK18001_Buzzer) in GitHub will work on RAK4631 WisBlock Core. You can also open the example codes depending on your WisBlock Core, as shown in **Figure 7**.
 
-> **Image:** Opening RAK18001 example code for RAK4631 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak4631-examplecode.png"
+  width="100%"
+  caption="Opening RAK18001 example code for RAK4631 WisBlock Core"
+/>
 
 3. After that, select the right serial port and upload the code, as shown in **Figure 8** and **Figure 9**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak4631-selectport.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK18001 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak4631-upload.png"
+  width="100%"
+  caption="Uploading the RAK18001 example code"
+/>
 
 4. When you have successfully uploaded the example sketch, you'll now be able to hear the RAK18001 WisBlock Buzzer module's sound. The output sounds and pitch level can be customized on the example code. It is even possible to play some various melody on it.
 
@@ -127,11 +166,19 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 
 1. To begin with the Arduino setup, you need to select the RAK11200 WisBlock Core.
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11200-board.png"
+  width="100%"
+  caption="Selecting RAK11200 as WisBlock Core"
+/>
 
 2. The [Basic Sample Code for RAK18001](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11200/sensors/RAK18001_Buzzer) in GitHub will work on RAK11200 WisBlock Core. You can also open the example codes depending on your WisBlock Core, as shown in **Figure 11**.
 
-> **Image:** Opening RAK18001 example code for RAK11200 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11200-examplecode.png"
+  width="100%"
+  caption="Opening RAK18001 example code for RAK11200 WisBlock Core"
+/>
 
 3. After that, you can now select the right serial port and upload the code, as shown in **Figure 12** and **Figure 13**.
 
@@ -139,9 +186,17 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 RAK11200 requires **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11200-selectport.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK18001 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11200-upload.png"
+  width="100%"
+  caption="Uploading the RAK18001 example code"
+/>
 
 4. When you have successfully uploaded the example sketch, you'll now be able to hear the RAK18001 WisBlock Buzzer module's sound. The output sounds and pitch level can be customized on the example code. It is even possible to play some various melody on it.
 
@@ -155,17 +210,33 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 
 1. To begin with the Arduino setup, you need to select the RAK11310 WisBlock Core.
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11310-board.png"
+  width="100%"
+  caption="Selecting RAK11310 as WisBlock Core"
+/>
 
 2. The [Basic Sample Code for RAK18001](https://github.com/RAKWireless/WisBlock/tree/master/examples/RAK11300/sensors/RAK18001_Buzzer) in GitHub will work on RAK11310 WisBlock Core. You can also open the example codes depending on your WisBlock Core, as shown in **Figure 15**.
 
-> **Image:** Opening RAK18001 example code for RAK11310 WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11310-examplecode.png"
+  width="100%"
+  caption="Opening RAK18001 example code for RAK11310 WisBlock Core"
+/>
 
 3. After that, select the right serial port and upload the code, as shown in **Figure 16** and **Figure 17**.
 
-> **Image:** Selecting the correct Serial Port
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11310-selectport.png"
+  width="100%"
+  caption="Selecting the correct Serial Port"
+/>
 
-> **Image:** Uploading the RAK18001 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak18001/quickstart/rak11310-upload.png"
+  width="100%"
+  caption="Uploading the RAK18001 example code"
+/>
 
 4. When you successfully uploaded the example sketch, you'll now be able to hear the RAK18001 WisBlock Buzzer module's sound. The output sounds and pitch level can be customized on the example code. It is even possible to play some various melody on it.
 
@@ -173,3 +244,4 @@ If you have already installed the [RAKwireless Arduino BSP](https://github.com/R
 Make sure to set the PWM pin to _**LOW**_ with `digitalWrite(BUZZER_CONTROL, LOW);` after playing a sound. This is to ensure that the buzzer on the RAK18001 is in complete shut down and does not get hot.
 :::
 
+<RkBottomNav/>

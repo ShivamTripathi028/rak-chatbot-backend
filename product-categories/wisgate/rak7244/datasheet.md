@@ -10,6 +10,9 @@ sidebar_label: Datasheet
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7244 WisGate Developer D4 Gateway Datasheet
 
@@ -44,9 +47,17 @@ The RAK7244 WisGate Developer D4 Gateway is ideal for prototyping, proof-of-conc
 
 ### Package Contents
 
-> **Image:** RAK7244/RAK7244P Package Contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/rak7244-package.png"
+  width="100%"
+  caption="RAK7244/RAK7244P Package Contents"
+/>
 
-> **Image:** RAK7244C Package Contents
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/rak7244c-package.png"
+  width="100%"
+  caption="RAK7244C Package Contents"
+/>
 
 ## Specifications
 
@@ -58,7 +69,11 @@ The overview covers the RAK7244 board overview and block diagram of the three co
 
 The outer dimensions of Casing are 92mm x 68.3mm x 57.2mm (LxWxH) as shown below. They are the same for all 3 models: RAK7244/7244C/7244P. The example in Figure 3 is RAK7244C
 
-> **Image:**  RAK7244C Casing Outer Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/board-overview/board-overview.png"
+  width="90%"
+  caption=" RAK7244C Casing Outer Dimensions"
+/>
 
 #### Block Diagram
 
@@ -66,19 +81,31 @@ The outer dimensions of Casing are 92mm x 68.3mm x 57.2mm (LxWxH) as shown below
 
 The figure below summarizes the basic building blocks of RAK7244. The RAK2245 is an essential part of any of the RAK7244 models as it provides all LoRaWAN connectivity. It receives and transmits LoRa Frames and takes care of modulating/demodulating the signals among others. The processing of the LoRa Frames as well as higher level protocol related tasks is done by the embedded host system (Raspberry Pi). Received and processed LoRa Frames are being sent to a LoRaWAN Server. The segmentation of protocol related tasks is outside the scope of this document.
 
-> **Image:** RAK7244 System Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/system-structure/h7nold55ednaywcpmhuv.png"
+  width="80%"
+  caption="RAK7244 System Structure"
+/>
 
 ##### RAK7244P
 
 The figure below summarizes the basic building blocks of RAK7244P. It has the same functionality as far as LoRaWAN goes as RAK7244. In addition, there is the possibility to power the Gateway using a PoE 802.3 af compatible source (42-57VDC). This is made possible by the RAK9003 PoE HAT.
 
-> **Image:** RAK7244P System Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/system-structure/f4m73eapflxbk31bjash.png"
+  width="80%"
+  caption="RAK7244P System Structure"
+/>
 
 ##### RAK7244C
 
 The figure below summarizes the basic building blocks of RAK7244C. It has the same functionality as far as LoRaWAN goes as RAK7244. Its backhaul capabilities, however, are enhanced, with the additional of the RAK2013 Cellular HAT. This allows the Gateway to use its LTE modem to forward data to the Cloud.
 
-> **Image:** RAK7244C Gateway System Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/system-structure/wmishmfyonwnd31mgbph.png"
+  width="80%"
+  caption="RAK7244C Gateway System Structure"
+/>
 
 ### Hardware
 
@@ -88,11 +115,19 @@ The hardware specification is categorized into six parts. It discusses the inter
 
 ##### RAK7244 / RAK7244P
 
-> **Image:** RAK7244/RAK7244P Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/interfaces/interfaces.svg"
+  width="100%"
+  caption="RAK7244/RAK7244P Interfaces"
+/>
 
 ##### RAK7244C
 
-> **Image:** RAK7244C Interfaces
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/interfaces/rak7244c_interfaces.svg"
+  width="100%"
+  caption="RAK7244C Interfaces"
+/>
 
 #### Pin Definition
 
@@ -106,7 +141,11 @@ There are 3 available configuration options for the RAK7244x:
 
 The RAK9003 Pi HAT is a PoE (802.3 af) board, that is designed to be mounted on top of the 40-pin connector on a Raspberry Pi 3/4.
 
-> **Image:** RAK7244P Hardware Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/hardware-structure/cwywdzteeclf0dj4taux.png"
+  width="80%"
+  caption="RAK7244P Hardware Structure"
+/>
 
 For detailed information about the RAK9003 Pi Hat, go to the [RAK9003 PoE Hat Datasheet](https://docs.rakwireless.com/product-categories/wishat/rak9003-poe-pi-hat/datasheet/).
 
@@ -114,7 +153,11 @@ For detailed information about the RAK9003 Pi Hat, go to the [RAK9003 PoE Hat Da
 
 The **RAK2245 Pi HAT** is an LPWAN Gateway Concentrator Module based on the Pi HAT standard, and can be mounted to Pi board with 40-pin connector. The image below shows the hardware structure of the LoRa portion which describes the integration between RAK2245 and Raspberry Pi 4.
 
-> **Image:** RAK7244C LPWAN Developer Gateway Hardware Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/hardware-structure/rotyeaxfbqr7ngh9xfxm.png"
+  width="80%"
+  caption="RAK7244C LPWAN Developer Gateway Hardware Structure"
+/>
 
 For detailed information about the RAK2245 Pi Hat, Go to the [RAK2245 Pi Hat Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak2245-pi-hat/datasheet/).
 
@@ -122,7 +165,11 @@ For detailed information about the RAK2245 Pi Hat, Go to the [RAK2245 Pi Hat Dat
 
 The RAK2013 is an add-on board based on the Raspberry Pi HAT standard that can transmit UART data from Raspberry Pi to the Cellular network. It supports several cellular protocols, such as NB-IoT, CAT-M, CAT1 or CAT 4, by choosing different modular on the board. The device is capable of integrating audio codec and audio amplifier along with the carrier operator's network, plus it supports Voice Over LTE (VoLTE) function. It is easy to use with the earphone connector, MIC connector and speaker connector having an audio amplifier.
 
-> **Image:** Cellular Hardware Structure
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/hardware-structure/wkdg3qk1cnrg3sqhaqsc.png"
+  width="80%"
+  caption="Cellular Hardware Structure"
+/>
 
 For detailed information about the RAK2013 Pi HAT, Go to the [RAK2013 Pi HAT Datasheet](https://docs.rakwireless.com/product-categories/wislink/rak2013/datasheet/).
 
@@ -209,13 +256,21 @@ The Quectel EG95 is part of the LTE CAT4 module series that are specially optimi
 
 The LoRa Antenna with RP-SMA male connector is shown in the image below:
 
-> **Image:** LoRa Antenna Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/antenna-specifications/ve8scbrbhdlcdaxa8x43.png"
+  width="50%"
+  caption="LoRa Antenna Overview"
+/>
 
 ###### Antenna Dimension
 
 The figure below shows the antenna's mechanical dimension.
 
-> **Image:** LoRa Antenna Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/antenna-specifications/fggmm4b6rk79c5jj9xot.png"
+  width="50%"
+  caption="LoRa Antenna Dimension"
+/>
 
 ###### Antenna Parameters
 
@@ -223,18 +278,27 @@ The figure below shows the antenna's mechanical dimension.
 | ---------------------------------- | ------------------------------ |
 | Voltage Standard Wave Radio (VSWR) | 1:1.5                          |
 | Gain                               | -2.0 dBi                       |
-| Working Temperature & Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95% |
-| Storage Temperature & Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95% |
+| Working Temperature &amp; Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95% |
+| Storage Temperature &amp; Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95% |
 
 ##### LTE
 
 The LTE antenna for the Developer Gateway with RP-SMA male connector the covers working frequency band from 824MHz to 2690MHz. The antenna is shown in Figure 14.
 
-> **Image:** LTE Antenna
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/antenna-specifications/rhh9xrj0pfazqtaegxiv.png"
+  width="50%"
+  caption="LTE Antenna"
+/>
 
 ###### Antenna Dimension
 
-> **Image:** LTE Antenna Dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/antenna-specifications/hmqp4xvybryisixcoq86.png"
+  width="50%"
+  caption="LTE Antenna Dimension"
+/>
 
 ###### Antenna Parameters
 
@@ -243,18 +307,26 @@ The LTE antenna for the Developer Gateway with RP-SMA male connector the covers 
 | Frequency (MHz)                    | 700 / 800 / 880 / 960 / 1710 / 1880 / 2170     |
 | Voltage Standard Wave Radio (VSWR) | 9.3 / 4.6 / 3.6 / 4.9 / 9.3 / 4.4 / 15         |
 | Gain (dBi)                         | 1.63 / 1.84 / 1.96 / 2.23 / 0.03 / 0.01 / 1.97 |
-| Working Temperature & Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95%                 |
-| Storage Temperature & Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95%                 |
+| Working Temperature &amp; Humidity | T:-35 ºC ~ +80 ºC, H: 0% ~ 95%                 |
+| Storage Temperature &amp; Humidity | T:-40 ºC ~ +85 ºC, H: 0% ~ 95%                 |
 
 ##### GPS
 
 The GPS antenna with SMA male connector for Pilot Gateway is shown below
 
-> **Image:** GPS Antenna
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/antenna-specifications/ftzgxoaywuiq7xmy8shj.png"
+  width="40%"
+  caption="GPS Antenna"
+/>
 
 ###### GPS Antenna Dimension
 
-> **Image:** GPS Antenna Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7244/datasheet/antenna-specifications/boh9fwujcictm8er5yug.png"
+  width="60%"
+  caption="GPS Antenna Dimensions"
+/>
 
 ###### GPS Environmental Requirements
 
@@ -301,8 +373,7 @@ Environmental test performance specifications are listed below:
 | Noise Coefficient | ≤ 2.0        | ≤ 2.0         | ≤ 2.0        |
 
 :::tip NOTE
-**1** - High temperature test: soap in temperature (85º C) and humidity (95%) chamber for 24- hour and return to normal temperature (at least for 1-hour) without visual shape change.
-
+**1** - High temperature test: soap in temperature (85º C) and humidity (95%) chamber for 24- hour and return to normal temperature (at least for 1-hour) without visual shape change.<br />
 **2** - Low temperature test: soap in temperature (-40º C) chamber for 24-hour and return to normal temperature (at least for 1-hour) without visual shape change
 :::
 

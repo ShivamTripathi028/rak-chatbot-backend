@@ -11,6 +11,9 @@ slug: /product-categories/wisduo/rak3172-evaluation-board/at-command-manual/
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK3172 Evaluation Board AT Command Manual
 
 ## Introduction
@@ -35,6 +38,7 @@ For AT commands example usage, you can check these sections of the quick start g
 - <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/quickstart/#chirpstack-abp-device-registration" target="_blank">Chirpstack ABP Guide</a> - How to add ABP device on Chirpstack and what AT commands to use on RAK3172-E ABP activation.
 - <a href="https://docs.rakwireless.com/product-categories/wisduo/rak3172-evaluation-board/quickstart/#lora-p2p-mode" target="_blank">LoRa P2P</a> - Point to point communication between two RAK3172-E modules.
 
+
 ## AT Commands List
 
 There are two AT Commands set for RAK3172-E depending on the firmware uploaded on the device.
@@ -52,3 +56,6 @@ In addition, aside on UART2 that is connected to USB-UART converter, AT commands
 - If the host microcontroller code is based on this old firmware, we have a <a href="https://learn.rakwireless.com/hc/en-us/articles/26687498449559-AT-Command-Migration-Guide-of-RAK3172-to-RUI3-RAKwireless-Unified-Interface-V3" target="_blank">RAK3172 AT Command migration guide</a> that explain in detail the few differences between the two AT commands set.
 :::
 
+
+
+<RkBottomNav/>

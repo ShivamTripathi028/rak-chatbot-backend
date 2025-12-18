@@ -16,6 +16,9 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # WisMesh Ethernet MQTT Gateway
 
 The WisMesh MQTT Ethernet Gateway connects your Meshtastic devices to the Cloud, enabling communication with the Meshtastic or your own MQTT Broker. It supports sending sensor data, location information, and text messages.
@@ -26,7 +29,12 @@ Pre-assembled and pre-flashed with the original Meshtastic `firmware-rak4631_eth
 
 For added option, the gateway can be powered via the Ethernet cable using the optional RAK19018 PoE module.
 
-> **Image:** WisMesh Ethernet MQTT Gateway
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/wismesh-ethernet-gateway.png"
+  width="80%"
+  caption="WisMesh Ethernet MQTT Gateway"
+/>
 
 This guide covers the basics for the RAKwireless Meshtastic devices that are not covered by the <a href="https://meshtastic.org/docs/introduction" target="_blank">Meshtastic documentation</a>.
 
@@ -38,9 +46,12 @@ You can also check the following guides:
   <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-basic-device-setup/" class="no-underline text-white bg-rak-primary px-[15px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Basic Device Setup </a>
 </div>
 
+<br/>
+
 <div class="flex items-center flex-col align-center gap-2">
   <a target="_blank" href="https://docs.rakwireless.com/product-categories/meshtastic/meshtastic-gateway-setup/" class="no-underline text-white bg-rak-primary px-[25px] py-[5px] rounded-[20px] border-solid border hover:no-underline hover:text-rak-primary hover:bg-white  hover:border-rak-primary no-icon" > Meshtastic Gateway Setup </a>
 </div>
+
 
 ----
 
@@ -82,15 +93,25 @@ To access the connector, unscrew the mounting plate inside the enclosure and lif
 
 ### Hardware Setup
 
-The WisMesh Ethernet MQTT Gateway comes fully assembled. Due to its dimensions, this WisBlock assembly is not compatible with the smaller Unify Enclosure. However, it can be mounted using a custom plate with the <a href="https://store.rakwireless.com/products/unify-enclosure-ip67-150-100-45mm" target="_blank">Unify Enclosure 150x100x45 mm</a>.
+The WisMesh Ethernet MQTT Gateway comes fully assembled. Due to its dimensions, this WisBlock assembly is not compatible with the smaller Unify Enclosure. However, it can be mounted using a custom plate with the <a href="https://store.rakwireless.com/products/unify-enclosure-ip67-150-100-45mm" target="_blank">Unify Enclosure 150x100x45&nbsp;mm</a>.
 
-> **Image:** Suggested assembly in the Unify Enclosure 150x100x45mm
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/eth-gw-enclosure.png"
+  width="60%"
+  caption="Suggested assembly in the Unify Enclosure 150x100x45mm"
+/>
 
 #### Connect the Ethernet Cable
 
 Connect the Ethernet cable to the RAK13800 Ethernet module, as shown in **Figure 3**
 
-> **Image:** Connect the Ethernet cable
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/eth-gw-cable.png"
+  width="60%"
+  caption="Connect the Ethernet cable"
+/>
 
 #### Use PoE to Supply the Device
 
@@ -116,7 +137,7 @@ For Firmware 1.3 and 2.0 (from November 1, 2022), the WisBlock Base board is aut
 
 - Meshtastic Ethernet MQTT Gateway with RAK4631: **`firmware-rak4631_eth_gw-w.x.yy.zzzzzzz.uf2`**
 
-**Flashing the WisMesh Ethernet MQTT Gateway Firmware:**
+<b>Flashing the WisMesh Ethernet MQTT Gateway Firmware:</b>
 
 The WisMesh Ethernet MQTT Gateway comes pre-flashed with the Meshtastic firmware. If problems occur, update the Meshtastic firmware to the latest version.
 
@@ -137,7 +158,12 @@ The Meshtastic MQTT Gateway comes pre-flashed with Meshtastic firmware, but its 
 
 To set up the device, connect the Meshtastic Gateway by selecting it on the Meshtastic app.
 
-> **Image:** WisMesh devices in the Meshtastic Mobile App
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-device-list-2.png"
+  width="30%"
+  caption="WisMesh devices in the Meshtastic Mobile App"
+/>
 
 :::tip NOTE
 - Set all your devices to the same _**Region**_ and _**Channel**_.
@@ -145,13 +171,23 @@ To set up the device, connect the Meshtastic Gateway by selecting it on the Mesh
 - If required, a RAK12500 GNSS module can be added to sensor Slot A.
 :::
 
-> **Image:** Setup fixed location
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-fixed-location.png"
+  width="30%"
+  caption="Setup fixed location"
+/>
 
 ### Gateway Connections
 
 1. Connect the gateway to the internet. In this case, the RAK4631 with the RAK13800 Ethernet Module will be used.
 
-> **Image:** Ethernet setup
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-eth-network.png"
+  width="30%"
+  caption="Ethernet setup"
+/>
 
 :::warning IMPORTANT
 Below are the options for connecting the gateway through Ethernet:
@@ -161,7 +197,12 @@ Below are the options for connecting the gateway through Ethernet:
 
 2. Set up the connection to the MQTT broker.
 
-> **Image:** MQTT setup
+<RkImage
+  zoomMode={true}
+  src="https://images.docs.rakwireless.com/meshtastic/gw-mqtt-settings.png"
+  width="30%"
+  caption="MQTT setup"
+/>
 
 :::tip NOTE
 - The MQTT broker used here is the free MQTT broker provided by Meshtastic. You can find the URL, address, username, and password in the <a href="https://meshtastic.org/docs" target="_blank">Meshtastic documentation</a>
@@ -174,3 +215,5 @@ Below are the options for connecting the gateway through Ethernet:
 A more comprehensive guide for the Meshtastic Gateway can be found in the <a href="https://github.com/beegee-tokyo/Meshtastic-Sensor-Network" target="_blank">Meshtastic-Sensor-Network</a> PoC. This includes setting up multiple sensor nodes, retrieving the sensor data from the MQTT broker, and visualizing the data in Grafana.
 :::
 
+
+<RkBottomNav/>

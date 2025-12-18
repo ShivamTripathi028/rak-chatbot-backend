@@ -10,23 +10,39 @@ keywords:
 sidebar_label: Quick Start Guide
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK7391 WisGate Connect Quick Start Guide
+
 
 ## Powering on the Device
 
-The [RAK7391](https://store.rakwireless.com/products/wisgate-connect-base-kit-rak7391?utm_source=WisGateRAK7391&utm_medium=Document&utm_campaign=BuyFromStore) can be powered via 10-28 V<sub>DC</sub>. Make sure you power either using one or the other not both at the same time.
+The [RAK7391](https://store.rakwireless.com/products/wisgate-connect-base-kit-rak7391?utm_source=WisGateRAK7391&utm_medium=Document&utm_campaign=BuyFromStore) can be powered via 10-28&nbsp;V<sub>DC</sub>. Make sure you power either using one or the other not both at the same time.
 
-> **Image:** DC power connectors
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/quickstart/1.power-connectors.png"
+  width="70%"
+  caption="DC power connectors"
+/>
 
-The device also supports IEEE 802.3 at/bt active PoE when used with a specialized PoE HAT module. By mounting the PoE HAT module, you can power the board through the 1 GB Ethernet port.
+The device also supports IEEE 802.3&nbsp;at/bt active PoE when used with a specialized PoE HAT module. By mounting the PoE HAT module, you can power the board through the 1&nbsp;GB Ethernet port.
 
 :::tip NOTE
 The PoE board is specialized, and a standard Raspberry Pi 40-pin PoE HAT is not compatible.
 :::
 
-> **Image:** PoE HAT socket
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/quickstart/2.poe-hat-socket.png"
+  width="70%"
+  caption="PoE HAT socket"
+/>
 
-> **Image:** PoE provisioning via the 1-GB port (PoE HAT installed)
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/quickstart/3.poe-provisioning.png"
+  width="70%"
+  caption="PoE provisioning via the 1-GB port (PoE HAT installed)"
+/>
 
 ## Flashing the OS
 
@@ -51,9 +67,16 @@ sudo chown -R root:root
 
 ### Ethernet
 
-The gateway features two Ethernet ports: a 1 Gb Ethernet port (eth0) and a 2.5 Gb Ethernet port (eth1). Connecting to either port enables Ethernet DHCP to function automatically, without requiring specific NetworkManager configuration. The assigned address can be retrieved via the router interface or from the OLED screen, if installed.
+The gateway features two Ethernet ports: a 1&nbsp;Gb Ethernet port (eth0) and a 2.5&nbsp;Gb Ethernet port (eth1). Connecting to either port enables Ethernet DHCP to function automatically, without requiring specific NetworkManager configuration. The assigned address can be retrieved via the router interface or from the OLED screen, if installed.
 
-> **Image:** IP address listed on the OLED screen
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/quickstart/9.ip-address-listed.png"
+  width="70%"
+  caption="IP address listed on the OLED screen"
+/>
+
+
 
 To assign a static IP to an Ethernet interface, such as `eth0`, create a new connection file named `ethernet-eth0.nmconnection` in the `/etc/NetworkManager/system-connections/` folder.
 
@@ -157,7 +180,13 @@ The RAK7391 supports cellular connectivity when paired with the [RAK8213](https:
 
 Insert the RAK8213 module into either `mPCIe #2` or `mPCIe #3` on the RAK7391 board. Ensure you have a SIM card that supports at least one of the following: LTE Cat M1, Cat NB1, or EGPRS. Insert the SIM card into the SIM card slot `SIM #2` or `SIM #3`, both located on the underside of the board.
 
-> **Image:** SIM slots
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisgate/rak7391/quickstart/10.sim-slots.png"
+  width="70%"
+  caption="SIM slots"
+/>
+
 
 #### Cellular Configuration
 
@@ -234,3 +263,5 @@ The key details to note are:
 
 After creating the configuration file, reboot or power cycle the gateway for the changes to take effect. If the connection is established successfully, the `wwan0` interface will obtain an IP address, which can be verified on the OLED display.
 
+
+<RkBottomNav/>

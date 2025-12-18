@@ -11,6 +11,10 @@ slug: /product-categories/wisduo/rak3172-sip/datasheet/
 download: true
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK3172-SiP WisDuo LPWAN SiP Datasheet
 
 ## Overview
@@ -22,6 +26,7 @@ RAK3172-SiP (and the RAK3172LP-SiP variant) are low-power, long-range transceive
 WisDuo SiP LoRa modules provide a small, easy-to-use, low-power solution for long-range wireless data applications. These modules comply with Classes A, B, and C of the LoRaWAN 1.0.3 specifications. They can easily connect to different LoRaWAN server platforms such as TheThingsNetwork (TTN), Helium, ChirpStack, and Actility. They also support LoRa point-to-point (P2P) communication mode, which facilitates the quick implementation of customized long-range LoRa networks.
 
 You can configure the mode and operation of the RAK3172-SiP/RAK3172LP-SiP using AT commands via a UART interface or create custom firmware using the RUI3 API.  The RAK3172-SiP/RAK3172LP-SiP are very small and offer low-power features suitable for battery-powered applications.
+
 
 :::warning
 The RAK3172-SiP does not have pre-flashed LoRaWAN credentials and you have to define and setup your own unique credentials for the SiP's.
@@ -41,14 +46,14 @@ The RAK3172-SiP does not have pre-flashed LoRaWAN credentials and you have to de
 - LoRa Point-to-Point (P2P) communication
 - Custom firmware using Arduino via RUI3 API
 - Easy-to-use AT Command set via UART interface
-- Long-range - up to 15 km with optimized antenna
+- Long-range - up to 15&nbsp;km with optimized antenna
 - ARM Cortex-M4 32-bit
-- 256 kbytes flash memory with ECC
-- 64 kbytes RAM
-- Ultra-low power consumption of 1.69 μA in sleep mode
-- **Supply voltage**: 2.0 V ~ 3.6 V
-- **Temperature range**: -40° C ~ 85° C
-- **Size**: 12 mm x 12 mm x 1.22 mm
+- 256&nbsp;kbytes flash memory with ECC
+- 64&nbsp;kbytes RAM
+- Ultra-low power consumption of 1.69&nbsp;μA in sleep mode
+- **Supply voltage**: 2.0&nbsp;V ~ 3.6&nbsp;V
+- **Temperature range**: -40°&nbsp;C ~ 85°&nbsp;C
+- **Size**: 12&nbsp;mm x 12&nbsp;mm x 1.22&nbsp;mm
 - **Package**: LGA73 type
 
 ## Specifications
@@ -59,7 +64,12 @@ This section covers the hardware and software specifications for the RAK3172-SiP
 
 #### Block Diagram
 
-> **Image:** RAK3172-SiP system block diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/datasheet/rak3172-block-diagram.svg"
+  width="70%"
+  caption="RAK3172-SiP system block diagram"
+  zoomMode={true}
+/>
 
 ### Hardware
 
@@ -82,7 +92,12 @@ For the reference application schematic of RAK3172-SiP with minimum components r
 
 You can check the pin definitions on the table and illustration, as shown in **Figure 2**.
 
-> **Image:** RAK3172-SiP top view pin diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/datasheet/rak3172-sip-pins.png"
+  width="40%"
+  caption="RAK3172-SiP top view pin diagram"
+  zoomMode={true}
+/>
 
 :::warning
 When using the `RF_OUT` pin for an antenna and not the IPEX connector variant, design considerations are necessary to ensure optimum RF performance.
@@ -96,6 +111,7 @@ When using the `RF_OUT` pin for an antenna and not the IPEX connector variant, d
 
 In addition, with a commitment to making IoT easy, RAK offers a dedicated service for <a href="https://store.rakwireless.com/products/antenna-rf-design-service-including-pcb-design-tuning-matching-and-rf-test" target="_blank">Antenna RF Design</a> which includes PCB design, tuning, matching, and RF testing.
 :::
+
 
 | **Pin No.** | **Name**     | **Type** | **Description**                                                    |
 | :---------: | :----------: | :------: | ------------------------------------------------------------------ |
@@ -165,9 +181,10 @@ In addition, with a commitment to making IoT easy, RAK offers a dedicated servic
 | 64          | PA12         | I/O      | GPIO                                                               |
 | 65-73       | GND          |          | Ground                                                             |
 
+
 #### RF Characteristics
 
-The RAK3172-SiP supports the frequency of operation from 863 to 930 Mhz.
+The RAK3172-SiP supports the frequency of operation from 863 to 930&nbsp;Mhz.
 
 ##### Operating Frequencies
 
@@ -187,7 +204,8 @@ The RAK3172-SiP supports the frequency of operation from 863 to 930 Mhz.
 
 | Parameter    | Minimum     | Typical | Maximum | Unit      |
 | :----------: | :---------: | :-----: | :-----: | :-------: |
-| VDD and GPIO | -0.3 V | -       | 3.9     | Volts (V) |
+| VDD and GPIO | -0.3&nbsp;V | -       | 3.9     | Volts (V) |
+
 
 ##### Operating Voltage
 
@@ -202,7 +220,8 @@ The RAK3172-SiP supports the frequency of operation from 863 to 930 Mhz.
 | VDDRF                                 | 1.8     | -       | 3.6     | Volts (V) |
 | VDDPA                                 | 1.8     | -       | 3.6     | Volts (V) |
 | VREF+                                 | 2.0     | -       | VDDA    | Volts (V) |
-| VREF+ (VDDA < 2 V)               | VDDA    | -       | VDDA    | Volts (V) |
+| VREF+ (VDDA < 2&nbsp;V)               | VDDA    | -       | VDDA    | Volts (V) |
+
 
 ##### Operating Current
 
@@ -210,30 +229,70 @@ The RAK3172-SiP supports the frequency of operation from 863 to 930 Mhz.
 
 | Parameter  | Condition   | Current Consumption (Typical) |
 | :--------: | :---------: | :---------------------------: |
-| TX mode    | 20 dBm | 87 mA                    |
-| RX mode    | -           | 6.14 mA                  |
-| Sleep mode | -           | 1.69 uA                  |
+| TX mode    | 20&nbsp;dBm | 87&nbsp;mA                    |
+| RX mode    | -           | 6.14&nbsp;mA                  |
+| Sleep mode | -           | 1.69&nbsp;uA                  |
 
 ###### RAK3172LP-SiP (uses RFO_LP RF output)
 
-| Parameter | Condition | Current Consumption (Typical) |
-| --- | --- | --- |
-| TX mode | 14 dBm | 39.1 mA |
-| TX mode | 12 dBm | 33 mA |
-| TX mode | 10 dBm | 28 mA |
-| TX mode | 8 dBm | 25 mA |
-| RX mode | - | 9.69 mA |
-| Sleep mode | - | 2.1 uA |
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Condition</th>
+      <th>Current Consumption (Typical)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan = "4" >TX mode</td>
+      <td>14&nbsp;dBm</td>
+      <td>39.1&nbsp;mA</td>
+    </tr>
+    <tr>
+      <td>12&nbsp;dBm</td>
+      <td>33&nbsp;mA</td>
+    </tr>
+    <tr>
+      <td>10&nbsp;dBm</td>
+      <td>28&nbsp;mA</td>
+    </tr>
+    <tr>
+      <td>8&nbsp;dBm</td>
+      <td>25&nbsp;mA</td>
+    </tr>
+    <tr>
+      <td>RX mode</td>
+      <td>-</td>
+      <td>9.69&nbsp;mA</td>
+    </tr>
+    <tr>
+      <td>Sleep mode</td>
+      <td>-</td>
+      <td>2.1&nbsp;uA</td>
+    </tr>
+  </tbody>
+</table>
 
 #### Mechanical Characteristics
 
 ##### Module Dimensions
 
-> **Image:** RAK3172-SiP mechanical dimension
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/datasheet/rak3172-sip-mechanical.png"
+  width="80%"
+  caption="RAK3172-SiP mechanical dimension"
+  zoomMode={true}
+/>
 
 ##### Layout Recommendation
 
-> **Image:** RAK3172-SiP layout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/datasheet/rak3172-sip-pad.png"
+  width="40%"
+  caption="RAK3172-SiP layout"
+  zoomMode={true}
+/>
 
 #### Environmental Characteristics
 
@@ -253,19 +312,24 @@ The RAK3172-SiP supports the frequency of operation from 863 to 930 Mhz.
 
 :::warning
 - On SMT reflow process, follow MSL3 (Moisture Sensitivity Level 3) guidance for PCBA assembly.
-- Before SMT reflow, it is recommended to bake at 125° C for 12 hours first to reduce the risk of soldering issues and abnormalities.
+- Before SMT reflow, it is recommended to bake at 125°&nbsp;C for 12&nbsp;hours first to reduce the risk of soldering issues and abnormalities.
 :::
 
-> **Image:** Reflow profile for RAK3172-SiP
+<RkImage
+  src="https://images.docs.rakwireless.com/wisduo/rak3172-sip/datasheet/reflow.jpg"
+  width="50%"
+  caption="Reflow profile for RAK3172-SiP"
+  zoomMode={true}
+/>
 
 Standard conditions for reflow soldering:
 
-- Pre-heating Ramp (A) (Initial temperature: 150° C): **1~2.5° C/sec**
-- Soaking Time (T2) (110~190° C): **90~120 sec**
-- Peak Temperature (G): **240~245° C**
-- Reflow Time (T3) (240-245° C): **50~70 sec**
-- Ramp-up Rate (B): **1-3° C/sec**
-- Ramp-down Rate (C): **1~5° C/sec**
+- Pre-heating Ramp (A) (Initial temperature: 150°&nbsp;C): **1~2.5°&nbsp;C/sec**
+- Soaking Time (T2) (110~190°&nbsp;C): **90~120&nbsp;sec**
+- Peak Temperature (G): **240~245°&nbsp;C**
+- Reflow Time (T3) (240-245°&nbsp;C): **50~70&nbsp;sec**
+- Ramp-up Rate (B): **1-3°&nbsp;C/sec**
+- Ramp-down Rate (C): **1~5°&nbsp;C/sec**
 
 ### Software
 
@@ -287,6 +351,7 @@ Download the latest RAK3172-SiP and RAK3172LP-SiP firmware provided below.
 | RAK3172LP-SiP (.bin) | RUI3 (App only)           | <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK3272LP-SiP_latest.bin" target="_blank">Download</a>       |
 | RAK3172LP-SiP (.hex) | RUI3 (Bootloader and App) | <a href="https://downloads.rakwireless.com/RUI/RUI3/Image/RAK3272LP-SiP_latest_final.hex" target="_blank">Download</a> |
 
+
 ## Models and Bundles
 
 ### Ordering Information
@@ -298,24 +363,51 @@ Download the latest RAK3172-SiP and RAK3172LP-SiP firmware provided below.
 
 ## Certification
 
-### Certifications
-- **ANATEL:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_ANATEL_Certification.pdf
-- **CE:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_FCC_Certification.zip
-- **ISED:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_ISED_Certification.pdf
-- **JRL:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_JRL_Certfication.pdf
-- **KC:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_KC_Certification.pdf
-- **LORAWAN:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_Lora_Alliance_Certification.pdf
-- **RCM:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_RCM_Certification.pdf
-- **REACH:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_REACH_Report.pdf
-- **ROHS:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_RoHS_Report.pdf
-- **RSM:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_RSM_Certification.pdf
-- **UKCA:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_UKCA_Certification.pdf
-- **WPC:** https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_WPC_Certification.pdf
+<RkCertificationIcons certifications={[
+    {
+        'anatel': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_ANATEL_Certification.pdf',
+    },
+    {
+        'ce': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_CE_Certification.pdf',
+    },
+    {
+        'fcc': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_FCC_Certification.zip',
+    },
+    {
+        'ised': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_ISED_Certification.pdf',
+    },
+    {
+        'jrl': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_JRL_Certfication.pdf',
+    },
+    {
+        'kc': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_KC_Certification.pdf',
+    },
+    {
+        'lorawan': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_Lora_Alliance_Certification.pdf',
+    },
+    {
+        'rcm': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_RCM_Certification.pdf',
+    },
+    {
+        'reach': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_REACH_Report.pdf',
+    },
+    {
+        'rohs': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_RoHS_Report.pdf',
+    },
+    {
+        'rsm': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_RSM_Certification.pdf',
+    },
+    {
+        'ukca': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_UKCA_Certification.pdf',
+    },
+    {
+        'wpc': 'https://downloads.rakwireless.com/LoRa/RAK3172/Certification/RAK3172_WPC_Certification.pdf',
+    },
+]} />
 
 :::tip Note
 For CE and FCC certifications we provide an AT command guide.    
 You can find it in our <a href="https://docs.rakwireless.com/product-categories/software-apis-and-libraries/rui3/certification-guide" target="_blank">RUI3 documentation</a> or get it from our <a href="https://downloads.rakwireless.com/#RUI/RUI3/Certification%20Guide/" target="_blank">Download Center</a>.    
 ::: 
 
-  
+  <RkBottomNav/>

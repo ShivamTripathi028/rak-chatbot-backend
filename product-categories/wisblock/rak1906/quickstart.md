@@ -11,6 +11,9 @@ sidebar_label: Quick Start Guide
 date: 2020-08-22
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK1906 WisBlock Environmental Sensor Module Quick Start Guide
 
 ## Prerequisite
@@ -51,15 +54,25 @@ The RAK1906 module gives information about:
 
 RAK1906 module can be connected to the sensor's slot of [WisBlock Base](https://docs.rakwireless.com/product-categories/wisblock#wisblock-base) to communicate with the WisBlock Core, as shown in **Figure 1**. It will work on **SLOT A to F**. Also, always secure the connection of the WisBlock module by using compatible screws.
 
-> **Image:** RAK1906 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/rak1906_assembly.png"
+  figureCount="1"
+  caption="RAK1906 connection to WisBlock Base"
+   width="70%"
+/>
 
 #### Assembling and Disassembling of WisBlock Modules
 
 ##### Assembling
 
-As shown in **Figure 2**, the location for Slot A, B, C, and D are properly marked by silkscreen. Slots C and D are located on bottom of WisBlock Base. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with a M1.2 x 3 mm screw.
+As shown in **Figure 2**, the location for Slot A, B, C, and D are properly marked by silkscreen. Slots C and D are located on bottom of WisBlock Base. Follow carefully the procedure defined in [WisBlock Base board assembly/disassembly instructions](https://learn.rakwireless.com/hc/en-us/articles/26743966497431-How-To-Install-RAK5005-O-Baseboard/) to attach a WisBlock module. Once attached, carefully fix the module with a M1.2 x 3&nbsp;mm screw.
 
-> **Image:** RAK1906 connection to WisBlock Base
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/wisblock-sensor-silkscreen.png"
+  figureCount="2"
+  caption="RAK1906 connection to WisBlock Base"
+   width="70%"
+/>
 
 ##### Disassembling
 
@@ -67,15 +80,30 @@ The procedure in disassembling any type of WisBlock modules is the same.
 
 1. Remove the screws.
 
-> **Image:** Removing screws from the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/removing-screws.png"
+  figureCount="3"
+  caption="Removing screws from the WisBlock module"
+   width="70%"
+/>
 
 2. Once the screws are removed, check the silkscreen of the module to find the correct location where force can be applied.
 
-> **Image:** Detaching silkscreen on the WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/detaching-silkscreen.png"
+  figureCount="4"
+  caption="Detaching silkscreen on the WisBlock module"
+   width="70%"
+/>
 
 3. Apply force to the module at the position of the connector, as shown in **Figure 5**, to detach the module from the baseboard.
 
-> **Image:** Applying even forces on the proper location of a WisBlock module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/detaching-module.png"
+  figureCount="5"
+  caption="Applying even forces on the proper location of a WisBlock module"
+   width="70%"
+/>
 
 :::tip NOTE
 If you will connect other modules to the remaining WisBlock Base slots, check on the [WisBlock Pin Mapper](https://learn.rakwireless.com/hc/en-us/articles/26743306645143-How-To-Use-the-WisBlock-IO-Pin-Mapping-Tool) tool for possible conflicts. RAK1906 uses I2C communication lines, and it can cause possible conflict especially on some IO modules.
@@ -85,9 +113,9 @@ After all this setup, you can now connect the battery (optional) and USB cable t
 
 :::warning
 - Batteries can cause harm if not handled properly.
-- Only 3.7-4.2 V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
+- Only 3.7-4.2&nbsp;V Rechargeable LiPo batteries are supported. It is highly recommended not to use other types of batteries with the system unless you know what you are doing.
 - If a non-rechargeable battery is used, it has to be unplugged first before connecting the USB cable to the USB port of the board to configure the device. Not doing so might damage the battery or cause a fire.
-- Only 5 V solar panels are supported. Do not use 12 V solar panels. It will destroy the charging unit and eventually other electronic parts.
+- Only 5&nbsp;V solar panels are supported. Do not use 12&nbsp;V solar panels. It will destroy the charging unit and eventually other electronic parts.
 - Make sure the battery wires match the polarity on the WisBlock Base board. Not all batteries have the same wiring.
 :::
 
@@ -99,6 +127,7 @@ The RAK1906 is a 4-in-1 Environmental Sensor board that contains the Bosch BME68
 The BME680 requires a burn-in period to collect accurate readings. The burn-in procedure can be achieved by reading all sensors once every 5 seconds for at least 20 minutes the first time that you use it. For each subsequent use, the readings should stabilize 2-3 minutes after power-up.
 :::
 
+
 #### Initial Test of the RAK1906 WisBlock Module
 
 1. Install the [RAKwireless Arduino BSP](https://github.com/RAKWireless/RAKwireless-Arduino-BSP-Index) for WisBlock by using the `package_rakwireless_index.json` board installation package. The WisBlock Core should now be available on the Arduino IDE.
@@ -107,15 +136,30 @@ The BME680 requires a burn-in period to collect accurate readings. The burn-in p
 
 **RAK4631 WisBlock Core**
 
-> **Image:** Selecting RAK4631 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/rak4631_board.png"
+  figureCount="6"
+  caption="Selecting RAK4631 as WisBlock Core"
+   width="100%"
+/>
 
 **RAK11200 WisBlock Core**
 
-> **Image:** Selecting RAK11200 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/rak11200_board.png"
+  figureCount="7"
+  caption="Selecting RAK11200 as WisBlock Core"
+   width="100%"
+/>
 
 **RAK11310 WisBlock Core**
 
-> **Image:** Selecting RAK11310 as WisBlock Core
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/rak11310_board.png"
+  figureCount="8"
+  caption="Selecting RAK11310 as WisBlock Core"
+   width="100%"
+/>
 
 3. Copy the following sample code into your Arduino IDE:
 
@@ -224,13 +268,28 @@ If you experience any error in compiling the example sketch, check the updated c
 
 4. Once the example code is open, install the [Adafruit BME680](https://github.com/adafruit/Adafruit_BME680) library by clicking the link highlighted in yellow, as shown in **Figure 9** and **Figure 10**.
 
-> **Image:** Select Adafruit BME680 library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/adafruit-bme680.png"
+  figureCount="9"
+  caption="Select Adafruit BME680 library"
+   width="100%"
+/>
 
-> **Image:** Installing Adafruit BME680 library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/adafruit-lib-manager.png"
+  figureCount="10"
+  caption="Installing Adafruit BME680 library"
+   width="80%"
+/>
 
 During the installation, you will be asked to install the **Adafruit Unified Sensor** library. Install it as well.
 
-> **Image:** Installing Adafruit Unified Sensor Library
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/lib-bme680-install-2.png"
+  figureCount="11"
+  caption="Installing Adafruit Unified Sensor Library"
+   width="80%"
+/>
 
 5. After successful installation of the library, you can now select the right serial port and upload the code, as shown in **Figure 12** and **Figure 13**.
 
@@ -238,9 +297,20 @@ During the installation, you will be asked to install the **Adafruit Unified Sen
 If you are using the RAK11200 as your WisBlock Core, the RAK11200 requires the **Boot0** pin to be configured properly first before uploading. If not done properly, uploading the source code to RAK11200 will fail. Check the full details on the [RAK11200 Quick Start Guide](https://docs.rakwireless.com/product-categories/wisblock/rak11200/quickstart/#uploading-to-wisblock).
 :::
 
-> **Image:** Selecting the correct Serial Port
 
-> **Image:** Uploading the RAK1906 example code
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/env-mon-port.png"
+  figureCount="12"
+  caption="Selecting the correct Serial Port"
+   width="100%"
+/>
+
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/env-mon-upload.png"
+  figureCount="13"
+  caption="Uploading the RAK1906 example code"
+   width="100%"
+/>
 
 6. The RAK1906_Environment_BME680 application gets BME680 sensor data every 5 seconds and prints the results on the serial port.
 
@@ -362,28 +432,34 @@ uint8_t nodeAppsKey[16] = {0xFB, 0xAC, 0xB6, 0x47, 0xF3, 0x58, 0x45, 0xC7, 0x50,
 
 6. Set up uplink period.
 
-The default is **20000 mS**.
+The default is **20000&nbsp;mS**.
 
 ```
 #define LORAWAN_APP_INTERVAL 20000
 ```
 
+
 ### Data Format
+
 
 | Byte1 | Byte2        | Byte3        | Byte4     | Byte5     |
 | ----- | ------------ | ------------ | --------- | --------- |
 | 1     | Temperature1 | Temperature2 | Humidity1 | Humidity2 |
 
+
 | Byte6       | Byte7       | Byte8       | Byte9       | Byte10 | Byte11 | Byte12 | Byte13 |
 | ----------- | ----------- | ----------- | ----------- | ------ | ------ | ------ | ------ |
 | Barometric1 | Barometric2 | Barometric3 | Barometric4 | Gas1   | Gas2   | Gas3   | Gas4   |
+
+
 
   - Byte1 is a marker for the data type, here always 1.
   - Every byte value is MSB first.
   - Temperature is sent as two bytes, enlarged 100 times for accuracy. For example, 2510 means 25.01 C, sent as 0x09 0xCE.
   - Humidity is sent as two bytes, enlarged 100 times for accuracy. For example, 4173 means 41.73%, sent as 0x10 0x4D.
-  - Barometric pressure is sent as four bytes, enlarged 100 times for accuracy. For example, 100945 means 1009.45 hPa, sent as 0x00 0x01 0x8A 0x51.
-  - Gas resistance is sent as four bytes. For example, 63560 Ohm, sent as 0x00 0x00 0xF8 0x48.
+  - Barometric pressure is sent as four bytes, enlarged 100 times for accuracy. For example, 100945 means 1009.45&nbsp;hPa, sent as 0x00 0x01 0x8A 0x51.
+  - Gas resistance is sent as four bytes. For example, 63560&nbsp;Ohm, sent as 0x00 0x00 0xF8 0x48.
+
 
 ### Attention
 
@@ -416,5 +492,12 @@ When you successfully uploaded the example sketch, open the Serial Monitor of th
 
 Data arrives at LoRaWAN server.
 
-> **Image:** LoRaWAN Environment Monitoring example
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak1906/quickstart/exa-env-mon-data.png"
+  figureCount="14"
+  caption="LoRaWAN Environment Monitoring example"
+   width="100%"
+/>
 
+
+<RkBottomNav/>

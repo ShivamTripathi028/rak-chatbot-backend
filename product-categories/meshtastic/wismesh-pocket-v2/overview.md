@@ -13,6 +13,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # Meshtastic WisMesh Pocket V2
 
 Thank you for choosing **WisMesh Pocket V2** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -29,11 +31,12 @@ The WisMesh Pocket V2 is your go-to device for ready-to-use and long-lasting con
 
 ## Product Features
 
-- Robust 3600 mAh built-in battery.
-- Antenna: 2 dBi Rubber Antenna, easily upgradeable to higher gain options with plug-and-play.
+- Robust 3600&nbsp;mAh built-in battery.
+- Antenna: 2&nbsp;dBi Rubber Antenna, easily upgradeable to higher gain options with plug-and-play.
 - Efficiency: Utilizes the most power-efficient solution in the Meshtastic community.
 
 ## Getting Started
 
 To get started with the WisMesh Pocket V2, download our <a href="https://downloads.rakwireless.com/Meshtastic/Quick%20Start%20Guide_WisMesh%20Pocket%20V2.pdf" target="_blank">WisMesh Pocket V2 Getting Started</a> guide.
 
+<RkBottomNav/>

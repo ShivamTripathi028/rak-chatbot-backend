@@ -11,6 +11,11 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK11310 WisBlock LPWAN Module Datasheet
 
 ## Overview
@@ -33,10 +38,11 @@ The RF communication characteristic of the Lora module makes it suitable for a v
 - LoRaWAN 1.0.2 protocol stack
 - **I/O ports**: UART/I2C/GPIO/USB
 - Serial Wire Debug (SWD) interface
-- **Module Size**: 20 x 30 mm
-- **Supply Voltage**: 2.0 V ~ 3.6 V
-- **Temperature Range**: -20 °C ~ 70 °C
+- **Module Size**: 20 x 30&nbsp;mm
+- **Supply Voltage**: 2.0&nbsp;V ~ 3.6&nbsp;V
+- **Temperature Range**: -20&nbsp;°C ~ 70&nbsp;°C
 - **Chipset**: Raspberry Pi Foundation RP2040, Semtech SX1262
+
 
 ## Specifications
 
@@ -46,13 +52,23 @@ The overview covers the RAK11310 board overview and the mounting mechanics of th
 
 #### Board Overview
 
-> **Image:** RAK11310 Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11310/datasheet/rak11310_overview.svg" 
+  figureCount="1"
+  caption="RAK11310 Overview" 
+   width="70%"
+/>
 
 #### Mounting Sketch
 
 The RAK11310 module is designed to work with the RAK5005-O base board. **Figure 2** shows how a RAK11310 module should be mounted on top of the RAK5005-O.
 
-> **Image:** RAK11310 Mounting Sketch
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11310/datasheet/mounting-sketch.png" 
+  figureCount="2"
+  caption="RAK11310 Mounting Sketch" 
+   width="50%"
+/>
 
 ### Hardware
 
@@ -84,6 +100,7 @@ The RAK11310 module supports the LoRaWAN bands, as shown in the table below. The
 Check the frequency and band regions, as shown in the table, when ordering your RAK11310 WisBlock Core.
 :::
 
+
 | Module      | Core Module | Region        | Frequency |
 | ----------- | ----------- | ------------- | --------- |
 | RAK11310(L) | RAK11300(L) | Europe        | EU433     |
@@ -104,10 +121,12 @@ Check the frequency and band regions, as shown in the table, when ordering your 
 The power consumption will be published after the hardware test results.
 :::
 
+
 | Feature                   | Condition | Minimum | Typical | Maximum | Unit |
 | ------------------------- | --------- | ------- | ------- | ------- | ---- |
 | Operating Average Current | TX        | -       |  24.6   | -       | mA   |
 | Sleep Current             |           | -       |  3.8    | -       | mA   |
+
 
 ##### Voltage Ratings
 
@@ -115,19 +134,35 @@ The power consumption will be published after the hardware test results.
 | ------- | ------- | ------- | ------- | ---- |
 | VCC     | 2.0     | 3.3     | 3.6     | V    |
 
+
 #### Mechanical Characteristics
 
 ##### Board Dimensions
 
-> **Image:** Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11310/datasheet/board-dimensions.png" 
+  figureCount="3"
+  caption="Mechanical Dimensions" 
+   width="35%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11310/datasheet/fxxs1003k6m.png" 
+  figureCount="4"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 #### Schematic Diagram
 
-> **Image:** RAK11310 Schematic Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak11310/datasheet/schematic.png" 
+  figureCount="5"
+  caption="RAK11310 Schematic Diagram" 
+   width="100%"
+/>
 
 - **WisConnector**: The breakout module exposes the RAK11310 stamp module pinout to the board-to-board WisConnector.
 
@@ -139,11 +174,28 @@ The power consumption will be published after the hardware test results.
 
 - **Power Up Automatic Reset**: The breakout module has a power-up automatic reset circuit, and the schematic shows the automatic reset mechanism. This module also can be reset through the WisBlock Base reset pin.
 
+
 ## Certification
 
-### Certifications
-- **CE:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_CE_Certification.pdf
-- **FCC:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_FCC_Certification.zip
-- **ISED:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_ISED_Certification.pdf
-- **UKCA:** https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_UKCA_Certification.pdf
+<RkCertificationIcons certifications={[
 
+{'ce': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_CE_Certification.pdf',
+
+},
+
+{'fcc': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_FCC_Certification.zip',
+
+},
+
+{'ised': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_ISED_Certification.pdf',
+
+},
+
+{'ukca': 'https://downloads.rakwireless.com/LoRa/WisBlock/RAK11310/Certification/RAK11300_RAK11310_UKCA_Certification.pdf',
+
+},
+
+]}/>
+
+
+<RkBottomNav/>

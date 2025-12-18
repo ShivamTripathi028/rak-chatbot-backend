@@ -10,6 +10,9 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK16001 WisBlock ADC Module Datasheet
 
 ## Overview
@@ -21,13 +24,13 @@ The RAK16001 is an Analog-to-Digital (ADC) module, which uses an ADS7830 from Te
 ### Features
 
 - ADC Module: 8 Single-ended Inputs or 4 Differential Inputs
-- 70 kHz Sampling Rate
-- ±0.5 LSB INL/DNL
+- 70&nbsp;kHz Sampling Rate
+- ±0.5&nbsp;LSB INL/DNL
 - 8 Bits no missing codes
-- 3.3 V Power supply
-- Internal voltage reference at 2.5 V
+- 3.3&nbsp;V Power supply
+- Internal voltage reference at 2.5&nbsp;V
 - Chipset: Texas Instruments ADS7830
-- Module size: 25 X 45 mm
+- Module size: 25 X 45&nbsp;mm
 
 ## Specifications
 
@@ -37,7 +40,12 @@ The RAK16001 is an Analog-to-Digital (ADC) module, which uses an ADS7830 from Te
 
 The RAK16001 module can be mounted on the IO slot of the WisBlock Base board. **Figure 1** shows the mounting mechanism of the RAK16001 on a WisBlock Base module, such as the RAK5005-O.
 
-> **Image:** RAK16001 mounting mechanism on a WisBlock Base module
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/mounting-mechanism.png" 
+  figureCount="1"
+  caption="RAK16001 mounting mechanism on a WisBlock Base module" 
+   width="60%"
+/>
 
 ### Hardware
 
@@ -53,7 +61,12 @@ The hardware specification is categorized into four parts. It discusses the pino
 
 The RAK16001 module has a 40-pin WisConnector that is compatible to the WisBlock Base IO Slot. The pin order of the connector and the pinout definition is shown in **Figure 2**.
 
-> **Image:** RAK16001 Pinout Diagram
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/rak16001_pinout.svg" 
+  figureCount="2"
+  caption="RAK16001 Pinout Diagram" 
+   width="70%"
+/>
 
 :::tip NOTE
 - Only **I2C** related pins, **3V3_S** and **GND** are connected to the WisConnector of this module.
@@ -74,53 +87,96 @@ This section shows the maximum and minimum ratings of the RAK16001 module and it
 | U2     | Absolute Input Range   | Positive Input                  | –0.2 | -    | VDD+0.2 | V    |
 | U3     | Absolute Input Range   | Negative Input                  | –0.2 | -    | +0.2    | V    |
 
+
 #### Mechanical Characteristic
 
 ##### Board Dimensions
 
 The mechanical dimensions of the RAK16001 module are shown in **Figure 3** below.
 
-> **Image:** RAK16001 Mechanical Dimensions
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/mechanical-dimensions.png" 
+  figureCount="3"
+  caption="RAK16001 Mechanical Dimensions" 
+   width="75%"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB footprint and recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/wisconnector-pcb.png" 
+  figureCount="4"
+  caption="WisConnector PCB footprint and recommendations" 
+   width="100%"
+/>
 
 ##### PCB Silkscreen
 
-> **Image:** RAK16001 PCB Silkscreen
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/silkscreen.png" 
+  figureCount="5"
+  caption="RAK16001 PCB Silkscreen" 
+   width="30%"
+/>
 
 #### Schematic Diagram
 
 **Figure 6** shows the schematic of the RAK16001 module.
 
-> **Image:** RAK16001 WisBlock Module Schematics
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/rak16001-schematic.png" 
+  figureCount="6"
+  caption="RAK16001 WisBlock Module Schematics" 
+   width="100%"
+/>
 
 ##### ADC Voltage Reference
 
-**Figure 7** shows the reference voltage of 3 V.
+**Figure 7** shows the reference voltage of 3&nbsp;V.
 
-> **Image:** RAK16001 ADC Voltage Reference
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/voltage-ref.png" 
+  figureCount="7"
+  caption="RAK16001 ADC Voltage Reference" 
+   width="35%"
+/>
 
 ##### ADC Converter
 
-> **Image:** RAK16001 ADC Converter
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/adc-converter.png" 
+  figureCount="8"
+  caption="RAK16001 ADC Converter" 
+   width="70%"
+/>
 
 :::tip NOTE
-- R3-R20 are built for the voltage divider resistors that can expand the measure range. By default, this feature is disabled and not used. If you want to have input more than 3.3 V, change the value of these resistors.
+- R3-R20 are built for the voltage divider resistors that can expand the measure range. By default, this feature is disabled and not used. If you want to have input more than 3.3&nbsp;V, change the value of these resistors.
 :::
 
 ##### I2C Device Address Select
 
 You can change the I2C slave address. By default, the 7-bit I2C address is **0x48**.
 
-> **Image:** RAK16001 I2C Address Select
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/i2c-select.png" 
+  figureCount="9"
+  caption="RAK16001 I2C Address Select" 
+   width="20%"
+/>
 
 ##### I2C Pull-Up Resistance
 
-> **Image:** RAK16001 I2C Pull-up Resistance
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak16001/datasheet/i2c-pullup.png" 
+  figureCount="10"
+  caption="RAK16001 I2C Pull-up Resistance" 
+   width="30%"
+/>
 
 :::tip NOTE
 - The built-in I2C pull-up resistors are on the WisBlock Base module and not on the RAK16001.
 :::
 
+
+<RkBottomNav/>

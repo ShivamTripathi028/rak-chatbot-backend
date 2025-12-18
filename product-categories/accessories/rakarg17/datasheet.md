@@ -9,21 +9,31 @@ image: "https://images.docs.rakwireless.com/accessories/antenna-black/1.png"
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # 860-930MHz 5.8dBi LoRaWAN Antenna Black Datasheet
 
 ## Overview
 
-> **Image:** Antenna Black Overview
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/1.png"
+  width="60%"
+  caption="Antenna Black Overview"
+/>
+
 
 ### Features
 
-- Frequency Range: **860~930 MHz**
-- Max Gain: **5.9 dBi**
+- Frequency Range: **860~930&nbsp;MHz**
+- Max Gain: **5.9&nbsp;dBi**
 - VSWR: **≤ 2**
 - High Efficiency
 - Vertically Polarized Dipole
 - N-type connector
 - Easy to mount with the included Installation kit
+
 
 ## Specifications
 
@@ -31,18 +41,18 @@ sidebar_label: Datasheet
 
 | Parameter              | Value                           |
 | ---------------------- | ------------------------------- |
-| Model                  | RAK 5.8 dBi                |
-| Frequency Range        | 860 MHz – 930 MHz     |
-| Peak Gain              | 5.9 dBi                    |
+| Model                  | RAK 5.8&nbsp;dBi                |
+| Frequency Range        | 860&nbsp;MHz – 930&nbsp;MHz     |
+| Peak Gain              | 5.9&nbsp;dBi                    |
 | VSWR                   | ≤ 2                             |
 | Efficiency             | ≤ 83%                           |
-| Feed Impedance         | 50 Ω                       |
+| Feed Impedance         | 50&nbsp;Ω                       |
 | Polarization           | Vertical                        |
 | Cover Material (color) | Fiberglass (black)              |
 | Connector Type         | N-type male                     |
-| Dimensions             | 800 mm (±10), Ф 25 mm |
-| Operation Temperature  | -30 ℃ + 65 ℃          |
-| Storage Temperature    | -30 ℃ + 75 ℃          |
+| Dimensions             | 800&nbsp;mm (±10), Ф 25&nbsp;mm |
+| Operation Temperature  | -30&nbsp;℃ + 65&nbsp;℃          |
+| Storage Temperature    | -30&nbsp;℃ + 75&nbsp;℃          |
 | Humidity Range         | 5% ~ 95%                        |
 
 #### VSWR
@@ -52,7 +62,11 @@ sidebar_label: Datasheet
 | 860             | 1.83 |
 | 930             | 1.45 |
 
-> **Image:** VSWR Graph
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/2.jpg"
+  width="80%"
+  caption="VSWR Graph"
+/>
 
 ####  Peak Gain & Efficiency
 
@@ -77,37 +91,102 @@ sidebar_label: Datasheet
 
 #### Radiation Patterns
 
-> **Image:** Radiation Pattern at 860MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-860.png"
+  width="80%"
+  caption="Radiation Pattern at 860MHz"
+/>
 
-> **Image:** Radiation Pattern at 865MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-865.png"
+  width="80%"
+  caption="Radiation Pattern at 865MHz"
+/>
 
-> **Image:** Radiation Pattern at 870MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-870.png"
+  width="80%"
+  caption="Radiation Pattern at 870MHz"
+/>
 
-> **Image:** Radiation Pattern at 875MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-875.png"
+  width="80%"
+  caption="Radiation Pattern at 875MHz"
+/>
 
-> **Image:** Radiation Pattern at 880MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-880.png"
+  width="80%"
+  caption="Radiation Pattern at 880MHz"
+/>
 
-> **Image:** Radiation Pattern at 885MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-885.png"
+  width="80%"
+  caption="Radiation Pattern at 885MHz"
+/>
 
-> **Image:** Radiation Pattern at 890MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-890.png"
+  width="80%"
+  caption="Radiation Pattern at 890MHz"
+/>
 
-> **Image:** Radiation Pattern at 895MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-895.png"
+  width="80%"
+  caption="Radiation Pattern at 895MHz"
+/>
 
-> **Image:** Radiation Pattern at 900MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-900.png"
+  width="80%"
+  caption="Radiation Pattern at 900MHz"
+/>
 
-> **Image:** Radiation Pattern at 905MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-905.png"
+  width="80%"
+  caption="Radiation Pattern at 905MHz"
+/>
 
-> **Image:** Radiation Pattern at 910MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-910.png"
+  width="80%"
+  caption="Radiation Pattern at 910MHz"
+/>
 
-> **Image:** Radiation Pattern at 915MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-915.png"
+  width="80%"
+  caption="Radiation Pattern at 915MHz"
+/>
 
-> **Image:** Radiation Pattern at 920MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-920.png"
+  width="75%"
+  caption="Radiation Pattern at 920MHz"
+/>
 
-> **Image:** Radiation Pattern at 925MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-925.png"
+  width="80%"
+  caption="Radiation Pattern at 925MHz"
+/>
 
-> **Image:** Radiation Pattern at 930MHz
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/eh-930.png"
+  width="80%"
+  caption="Radiation Pattern at 930MHz"
+/>
 
 ### Mechanical Characteristics
 
-> **Image:** Mechanical Dimensions in mm
+<RkImage
+  src="https://images.docs.rakwireless.com/accessories/antenna-black/3.png"
+  width="80%"
+  caption="Mechanical Dimensions in mm"
+/>
 
+<RkBottomNav/>

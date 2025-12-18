@@ -9,6 +9,10 @@ image: https://images.docs.rakwireless.com/wisnode/soil-monitoring/soil-moisture
 sidebar_label: Product Overview
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # Soil Moisture, Temperature, and Electrical Conductivity Solution
 
 Thank you for choosing the **Soil Moisture, Temperature, and Electrical Conductivity Solution** in your awesome IoT project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -17,6 +21,7 @@ Thank you for choosing the **Soil Moisture, Temperature, and Electrical Conducti
 - [LoRaWAN Network Server Guide](https://docs.rakwireless.com/product-categories/wisnode/soil-monitoring/lorawan-network-server-guide/)
 - [Datasheet](https://docs.rakwireless.com/product-categories/wisnode/soil-monitoring/datasheet/)
 
+
 ### Solution Description
 
 The Soil Moisture, Temperature, and Electrical Conductivity Solution consists of the RAK Sensor Hub and soil sensor RK520-02. This solution provides accurate measurements with a sensor equipped with built-in temperature compensation and a probe that can be permanently embedded in the ground and linked to a data recorder for continuous testing. This comprehensive monitoring system is well-suited for various applications, including agriculture, turf farming, water conservation, and soil testing.
@@ -24,6 +29,8 @@ The Soil Moisture, Temperature, and Electrical Conductivity Solution consists of
 With the plug-and-play feature of the Sensor Hub, the Soil Moisture, Temperature, and Electrical Conductivity Solution comes with pre-installed components ready for easy installation and connection. The sensor provides highly accurate soil readings, with the Sensor Hub collecting and transmitting the data via LoRaWAN or NB-IoT/CAT M1.
 
 The Sensor Hub’s connectivity function allows for versatile data transmission to the cloud using the two most commonly used communication protocols in IoT. This versatility ensures that data is readily available for storage, visualization, and in-depth analysis, enabling informed decision-making based on comprehensive knowledge of Soil Moisture, Temperature, and Electrical Conductivity levels.
+
+
 
 ### Solution Features
 
@@ -34,19 +41,41 @@ The Sensor Hub’s connectivity function allows for versatile data transmission 
 - Accurate and reliable measurements
 - External DC power supply (optional)
 - Solar panel power source (optional)
-- Measure range: 0 ~ 1999 mg/kg
-- Accuracy: ±2% F.s
-- Resolution: 1 mg/kg (mg/l)
-- Working temperature: +5 ~ +45° C
-- Working humidity: 5 ~ 95% RH, no condensation
-- Fully sealed structure, waterproof and can be placed underground (up to 5000 mm)
+- Measure range: 0 ~ 1999&nbsp;mg/kg
+- Accuracy: ±2%&nbsp;F.s
+- Resolution: 1&nbsp;mg/kg (mg/l)
+- Working temperature: +5 ~ +45°&nbsp;C
+- Working humidity: 5 ~ 95%&nbsp;RH, no condensation
+- Fully sealed structure, waterproof and can be placed underground (up to 5000&nbsp;mm)
+
 
 ### Package Inclusion
 
-| Device List | Description |
-| --- | --- |
-| 1 x Sensor Hub1 x Mounting Kit | Sensor Hub + Sensor Hub Installation Kit |
-| 1 x Soil Moisture, Temperature, and Electrical Conductivity Sensor1 x Sensor Probe IO | Sensor Probe IO + Soil Moisture, Temperature, and Electrical Conductivity Sensor |
-| 1 x Power Adapter1 x Power Cable | Sensor Hub Power Adapter + Power Cable |
-| 1 x Cable Tie | For wiring or fixing |
+<table>
+  <thead>
+    <tr>
+      <th>Device List</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 x Sensor Hub <br/> 1 x Mounting Kit</td>
+      <td>Sensor Hub + Sensor Hub Installation Kit</td>
+    </tr>
+    <tr>
+      <td>1 x Soil Moisture, Temperature, and Electrical Conductivity Sensor <br/> 1 x Sensor Probe IO</td>
+      <td>Sensor Probe IO + Soil Moisture, Temperature, and Electrical Conductivity Sensor</td>
+    </tr>
+    <tr>
+      <td>1 x Power Adapter <br/> 1 x Power Cable</td>
+      <td>Sensor Hub Power Adapter + Power Cable</td>
+    </tr>
+    <tr>
+      <td>1 x Cable Tie</td>
+      <td>For wiring or fixing</td>
+    </tr>
+  </tbody>
+</table>
 
+<RkBottomNav/>

@@ -9,6 +9,8 @@ keywords:
 sidebar_label: Product Overview
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK811 Evaluation Board
 
 Thank you for choosing **RAK811 Evaluation Board** in your awesome IoT Project! 🎉 To help you get started, we have provided the necessary documentation for the product.
@@ -16,11 +18,15 @@ Thank you for choosing **RAK811 Evaluation Board** in your awesome IoT Project! 
 * [Quick Start Guide](https://docs.rakwireless.com/product-categories/wisduino/rak811-evaluation-board/quickstart/)
 * [AT Command Manual](https://docs.rakwireless.com/product-categories/wisduino/rak811-evaluation-board/at-command-manual/)
 
+
+
 ## Product Background
 
 The **RAK811 Evaluation Board** is a development board that comes in an Arduino Uno form factor. It has a built-in MCU which allows it to function as a standalone solution or as an Arduino shield. This board is highly suitable for rapid development and testing, with its form factor and easy access to GPIOs (via the headers), plus the integrated USB-UART convert and port.
 
 The board integrates the **Semtech SX1276** and an **STM32 Chip** that comes along with firmware, which comes with AT command support. It is easy to configure via the Micro USB and connects with LoRaWAN Network Server in just a couple of minutes. Now, rapid testing is made easy.
+
+
 
 ## Product Features
 
@@ -30,3 +36,4 @@ The board integrates the **Semtech SX1276** and an **STM32 Chip** that comes alo
 - Micro USB with UART converter for easy configuring
 - AT commands backed in the firmware, open-source platform
 
+<RkBottomNav/>

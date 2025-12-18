@@ -10,6 +10,9 @@ sidebar_label: Product Overview
 ---
 
     
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
 
 # RAK7244C WisGate Developer D4+
 Thank you for choosing **RAK7244C WisGate Developer D4+ Gateway** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -38,8 +41,8 @@ Pilot Gateway Pro is ideal for prototyping, proof-of-concept demonstration, or e
 - Support optional cellular module (Quectel BG96 or EG91 or EG95) for NB-IOT/CAT-M/CAT1 LTE/CAT4 LTE
 - Built-in **Ublox MAX-7Q GPS Module**
 - Built-in heat sink for thermal heat dissipation management
-- Supports 5 V / 2.5 A power supply
-- TX power up to 27 dBm, RX sensitivity down to -139 dBm@SF12, BW 125 kHz
+- Supports 5&nbsp;V / 2.5&nbsp;A power supply
+- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm@SF12, BW 125&nbsp;kHz
 - Frequency band support: EU433, CN470, RU864, IN865, EU868, US915, AU915, KR920, AS923
 - Housing with top cover, body, bottom cover with riveted motherboard standoff
 - Includes Pi ready **ID EEPROM**, **GPIO** setup, and a device tree that  can be automatically configured from vendor information

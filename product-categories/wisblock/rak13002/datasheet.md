@@ -10,13 +10,16 @@ keywords:
 sidebar_label: Datasheet
 ---
 
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK13002 WisBlock IO Module Datasheet
 
 ## Overview
 
 ### Description
 
-The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slot of the WisBlock Base board. This module exposed all WisBlock Core signals such as I2C, SPI, UART, GPIO, and ADC to standard 2.54 mm pitch pin header for easy integration of external components and devices.
+The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slot of the WisBlock Base board. This module exposed all WisBlock Core signals such as I2C, SPI, UART, GPIO, and ADC to standard 2.54&nbsp;mm pitch pin header for easy integration of external components and devices.
 
 ### Features
 
@@ -25,9 +28,9 @@ The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slo
 - Supports one SPI interface
 - Supports up to six (6) GPIOs
 - Supports two (2) ADC interfaces
-- 3.3 V power supply  interfaces
+- 3.3&nbsp;V power supply  interfaces
 - Backup battery (super cap) can keep the RTC running for up to 7 days (tested in lab)
-- Module size: 25X35 mm
+- Module size: 25X35&nbsp;mm
 
 ## Specifications
 
@@ -37,17 +40,26 @@ The RAK13002 is a WisBlock Core adaptor module that can be mounted to the IO slo
 
 The RAK13002 module can be mounted to the IO slot of the WisBlock Base board. Figure 1 shows the mounting mechanism of the RAK13002 on a WisBlock Base module.
 
-> **Image:** RAK13002 WisBlock Adaptor Module Mounting
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13002/datasheet/image-20210225140319101.png"
+  width="60%"
+  caption="RAK13002 WisBlock Adaptor Module Mounting"
+/>
 
 ### Hardware
 
 The hardware specification is categorized into four parts. It discusses the pinouts of the module and its corresponding functions and diagrams. It also covers the electrical and mechanical parameters that include the tabular data of the functionalities and standard values of the RAK13002 WisBlock Adaptor Module.
 
+
 #### Pin Definition
 
 The RAK13002 WisBlock Adaptor Module comprises a standard WisConnector connector. The WisConnector allows the RAK13002 module to be mounted to a WisBlock Base board. The pin order of the connector and the pinout definition is shown in Figure 2.
 
-> **Image:** RAK13002 WisBlock Adaptor Module Pinout
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13002/datasheet/rak13002_pinout.svg"
+  width="80%"
+  caption="RAK13002 WisBlock Adaptor Module Pinout"
+/>
 
 #### Electrical Characteristics
 
@@ -63,16 +75,32 @@ The RAK13002 WisBlock Adaptor Module comprises a standard WisConnector connector
 
 Figure 3 shows the dimensions and the mechanic drawing of the RAK13002 module.
 
-> **Image:** RAK13002 WisBlock Adaptor Module Mechanic Drawing
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13002/datasheet/image-20210225140329283.png"
+  width="70%"
+  caption="RAK13002 WisBlock Adaptor Module Mechanic Drawing"
+/>
 
 ##### WisConnector PCB Layout
 
-> **Image:** WisConnector PCB Footprint and Recommendations
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13002/datasheet/image-20201228093039748.png"
+  width="100%"
+  caption="WisConnector PCB Footprint and Recommendations"
+/>
 
 #### Schematic Diagram
 ##### Adaptor
 
-Figure 5 shows the RAK13002 adaptor module schematic. **VCC**: 3.3 V power supply
+Figure 5 shows the RAK13002 adaptor module schematic. **VCC**: 3.3&nbsp;V power supply
 
-> **Image:** RAK13002 WisBlock Adaptor Schematic
+<RkImage
+  src="https://images.docs.rakwireless.com/wisblock/rak13002/datasheet/image-20210329161838694.png"
+  width="80%"
+  caption="RAK13002 WisBlock Adaptor Schematic"
+/>
 
+
+
+
+<RkBottomNav/>

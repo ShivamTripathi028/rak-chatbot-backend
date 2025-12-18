@@ -26,6 +26,9 @@ tags:
 date: 2022-07-04
 ---
 
+
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RUI3 System API
 
 ## RUI System Data Type
@@ -107,9 +110,11 @@ This API allows the user to get the firmware version.
 api.system.firmwareVersion.get()
 ```
 
+
 | **Function** | `const string get()`           |
 |--------------|--------------------------------|
 | **Returns**  | firmware version(Type: string) |
+
 
 <details>
 <summary> Click to view the code </summary>
@@ -128,6 +133,7 @@ void loop()
 ```
 </details>
 
+
 #### set()
 
 This API allows the user to set the firmware version.
@@ -140,12 +146,12 @@ Changing the firmware version will make the firmware incompatible with WisToolBo
 api.system.firmwareVersion.set(String version)
 ```
 
+
 | **Function**    | `const string get()`                                                                                                            |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **Parameterss** | version	firmware version for user to be set(Type: String)                                                                       |
-| **Returns**     | bool 
- • **TRUE**	for successfully setting firmware version 
- • **FALSE**	for setting firmware version fail |
+| **Returns**     | bool <br /> &#x2022; **TRUE**	for successfully setting firmware version <br /> &#x2022; **FALSE**	for setting firmware version fail |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -164,6 +170,8 @@ void loop()
 ```
 </details>
 
+
+
 ### CLI Version
 
 #### get()
@@ -174,9 +182,11 @@ This API allows the user to get the cli version.
 api.system.cliVersion.get()
 ```
 
+
 | **Function** | `const string get()`      |
 |--------------|---------------------------|
 | **Returns**  | cli version(Type: string) |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -195,6 +205,8 @@ void loop()
 ```
 </details>
 
+
+
 #### set()
 
 This API allows the user to set the cli version.
@@ -207,12 +219,12 @@ Changing the CLI version will make the firmware **incompatible** with WisToolBox
 api.system.cliVersion.set()
 ```
 
+
 | **Function**   | `bool set()`                                                                                                          |
 |----------------|-----------------------------------------------------------------------------------------------------------------------|
 | **Parameters** | version	cli version for user to be set(Type: String)                                                                  |
-| **Returns**    | bool 
- • **TRUE**	for successfully setting cli version 
- • **FALSE**	for setting cli version fail |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for successfully setting cli version <br /> &#x2022; **FALSE**	for setting cli version fail |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -232,6 +244,8 @@ void loop()
 ```
 </details>
 
+
+
 ### API Version
 
 #### get()
@@ -242,9 +256,11 @@ This API allows the user to get the API version.
 api.system.apiVersion.get()
 ```
 
+
 | **Function** | `const string get()`      |
 |--------------|---------------------------|
 | **Returns**  | API version(Type: string) |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -263,6 +279,7 @@ void loop()
 ```
 </details>
 
+
 ### Model ID
 
 #### get()
@@ -273,9 +290,11 @@ This API allows the user to get the model ID.
 api.system.modelId.get()
 ```
 
+
 | **Function** | `const string get()`   |
 |--------------|------------------------|
 | **Returns**  | model ID(Type: string) |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -293,6 +312,7 @@ void loop()
 }
 ```
 </details>
+
 
 #### set()
 
@@ -306,12 +326,12 @@ Changing the model ID will make the firmware incompatible with WisToolBox!
 api.system.hwModel.set(model_id)
 ```
 
+
 | **Function**   | `const string get()`                                                                                    |
 |----------------|---------------------------------------------------------------------------------------------------------|
 | **Parameters** | model ID for user to be set(Type: String)                                                               |
-| **Returns**    | bool 
- • **TRUE**	for successfully set model ID 
- • **FALSE**	for set model ID fail |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for successfully set model ID <br /> &#x2022; **FALSE**	for set model ID fail |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -330,6 +350,7 @@ void loop()
 ```
 </details>
 
+
 ### Chip ID
 
 #### get()
@@ -340,9 +361,11 @@ This API allows the user to get the chip ID.
 api.system.chipId.get()
 ```
 
+
 | **Function** | `const string get()`  |
 |--------------|-----------------------|
 | **Returns**  | chip ID(Type: string) |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -361,6 +384,7 @@ void loop()
 ```
 </details>
 
+
 ### Battery
 
 #### get()
@@ -371,9 +395,11 @@ Gets the current battery level.
 api.system.bat.get()
 ```
 
+
 | **Function** | `float get(void)` |
 |--------------|-------------------|
 | **Returns**  | float (Unit: V)   |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -392,6 +418,7 @@ void loop()
 ```
 </details>
 
+
 ## Flash
 
 ### get()
@@ -402,14 +429,11 @@ Reads a range of data from user flash partition.
 api.system.flash.get(offset, buf, len)
 ```
 
+
 | **Function**   | `bool get(uint32_t offset, uint8_t * buf, uint32_t len)`                                                                                                                                                                                                                                                                                                                                             |
 |----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **offset** - the offset to the start of user flash partition (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840 (e.g. RAK4631), this limitation becomes 0x20000) 
- **buf** - the buffer for reading the data 
-**len** - the length of data (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840 (e.g. RAK4631), this limitation becomes 0x20000) |
-| **Returns**    | bool 
- • **TRUE**	for reading data successfully 
- • **FALSE** for reading data failure                                                                                                                                                                                                                                                                                           |
+| **Parameters** | **offset** - the offset to the start of user flash partition (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840 (e.g. RAK4631), this limitation becomes 0x20000) <br /> **buf** - the buffer for reading the data <br />**len** - the length of data (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840 (e.g. RAK4631), this limitation becomes 0x20000) |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for reading data successfully <br /> &#x2022; **FALSE** for reading data failure                                                                                                                                                                                                                                                                                           |
 
 <details>
 <summary> Click to view the code</summary>
@@ -452,6 +476,7 @@ void loop()
 }
 ```
 </details>
+
 
 ### set()
 
@@ -461,14 +486,11 @@ Writes a range of data to user flash partition.
 api.system.flash.set(offset, buf, len)
 ```
 
+
 | **Function**   | `bool set(uint32_t offset, uint8_t * buf, uint32_t len)`                                                                                                                                                                                                                                                                                                                                           |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **offset** - the offset to the start of user flash partition (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840(e.g. RAK4631), this limitation becomes 0x20000) 
- **buf** - the buffer for writing the data 
-**len** - the length of data (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840(e.g. RAK4631), this limitation becomes 0x20000) |
-| **Returns**    | bool 
- • **TRUE**	for writing data successfully 
- • **FALSE** for writing data failure                                                                                                                                                                                                                                                                                         |
+| **Parameters** | **offset** - the offset to the start of user flash partition (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840(e.g. RAK4631), this limitation becomes 0x20000) <br /> **buf** - the buffer for writing the data <br />**len** - the length of data (The sum of offset and length can't exceed 0x7800. If the chip is nRF52840(e.g. RAK4631), this limitation becomes 0x20000) |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for writing data successfully <br /> &#x2022; **FALSE** for writing data failure                                                                                                                                                                                                                                                                                         |
 <details>
 <summary> Click to view the code</summary>
 
@@ -511,9 +533,11 @@ void loop()
 ```
 </details>
 
+
 ## Timer
 
 On RUI3 Timer API, there are two different Timer modes based on the trigger.
+
 
 | **Timer Mode**     | **Comments**                 |
 |--------------------|------------------------------|
@@ -530,6 +554,7 @@ The timer control is performed via Timer ID. The Timer ID definition is shown be
 | RAK_TIMER_3  | timer ID #3  |
 | RAK_TIMER_4  | timer ID #4  |
 
+
 ### create()
 
 ```c
@@ -538,12 +563,8 @@ api.system.timer.create()
 
 | **Function**   | `bool api.system.timer.create(id, handler, mode)`                                                                                                                     |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **id** - is the Timer ID
-**handler** - the handler function for this Timer
-**mode** - the mode of this Timer (**RAK_TIMER_ONESHOT** or **RAK_TIMER_PERIODIC** ) |
-| **Returns**    | bool 
- • **TRUE**	for creating Timer successfully 
- • **FALSE** for creating Timer failure                                                        |
+| **Parameters** | **id** - is the Timer ID<br />**handler** - the handler function for this Timer<br />**mode** - the mode of this Timer (**RAK_TIMER_ONESHOT** or **RAK_TIMER_PERIODIC** ) |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for creating Timer successfully <br /> &#x2022; **FALSE** for creating Timer failure                                                        |
 
 <details>
 <summary> Click to view the code</summary>
@@ -565,6 +586,7 @@ void setup()
 }
 ```
 </details>
+
 
 ### start()
 
@@ -573,12 +595,8 @@ api.system.timer.start()
 ```
 | **Function**   | `bool api.system.timer.start(id, ms, data)`                                                                                         |
 |----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **id** - is the Timer ID
-**ms** - is the period of Timer (milliseconds)
- **data** - the data passed to Timer handler function |
-| **Returns**    | bool 
- • **TRUE**	for starting  Timer successfully 
- • **FALSE** for starting Timer failure                     |
+| **Parameters** | **id** - is the Timer ID<br />**ms** - is the period of Timer (milliseconds)<br /> **data** - the data passed to Timer handler function |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for starting  Timer successfully <br /> &#x2022; **FALSE** for starting Timer failure                     |
 
 <details>
 <summary> Click to view the code</summary>
@@ -600,6 +618,7 @@ void setup()
 }
 ```
 </details>
+
 
 ### stop()
 
@@ -609,9 +628,7 @@ api.system.timer.stop()
 | **Function**   | `bool api.system.timer.stop(id)`                                                                             |
 |----------------|--------------------------------------------------------------------------------------------------------------|
 | **Parameters** | **id** - is the Timer ID                                                                                     |
-| **Returns**    | bool 
- • **TRUE**	for stoping Timer successfully 
- • **FALSE** for stoping Timer failure |
+| **Returns**    | bool <br /> &#x2022; **TRUE**	for stoping Timer successfully <br /> &#x2022; **FALSE** for stoping Timer failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -643,6 +660,8 @@ void loop()
 ```
 </details>
 
+
+
 ## Powersave
 
 ### lpm()
@@ -660,8 +679,7 @@ api.system.lpm.get()
 | **Function**   | `uint8_t get(void) 	`                                           |
 |----------------|-----------------------------------------------------------------|
 | **Parameters** | **id** - is the Timer ID                                        |
-| **Returns**    | 1	for low power mode enabled 
- 0	for low power mode disabled |
+| **Returns**    | 1	for low power mode enabled <br /> 0	for low power mode disabled |
 
 <details>
 <summary> Click to view the code</summary>
@@ -693,12 +711,8 @@ api.system.lpm.set(uint8_t  	value)
 
 | **Function**   | `bool set(uint8_t value)`                                                                                         |
 |----------------|-------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **value** 
- 1	for low power mode enabled 
- 0	for low power mode disabled                                    |
-| **Returns**    | bool 
- • TRUE	for setting low power mode success 
- • FALSE	for setting low power mode failure |
+| **Parameters** | **value** <br /> 1	for low power mode enabled <br /> 0	for low power mode disabled                                    |
+| **Returns**    | bool <br /> &#x2022; TRUE	for setting low power mode success <br /> &#x2022; FALSE	for setting low power mode failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -734,6 +748,7 @@ api.system.sleep.cpu();
 | **Parameters** | **ms_time(optional)** - Duration for cpu to sleep(default = no timeout) |
 | **Returns**    | void                                                                    |
 
+
 <details>
 <summary> Click to view the code</summary>
 
@@ -749,6 +764,7 @@ void loop()
 ```
 </details>
 
+
 ### lora()
 
 Sleeps lora with default no timeout.
@@ -761,6 +777,7 @@ api.system.sleep.lora();
 |----------------|-------------------------------------------------------------------------|
 | **Parameters** | **ms_time(optional)** - Duration for cpu to sleep(default = no timeout) |
 | **Returns**    | void                                                                    |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -777,6 +794,7 @@ void loop()
 ```
 </details>
 
+
 ### all()
 
 Sleeps all the component with default no timeout.
@@ -789,6 +807,7 @@ api.system.sleep.all();
 |----------------|-----------------------------------------------------------------------------------|
 | **Parameters** | **ms_time(optional)** - Duration for all component to sleep(default = no timeout) |
 | **Returns**    | void                                                                              |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -805,6 +824,7 @@ void loop()
 ```
 </details>
 
+
 ### registerWakeupCallback()
 
 This registers a wakeup callback function. The wakeup is triggered by an GPIO pin that is setup with `api.system.sleep.setup`.
@@ -816,9 +836,8 @@ api.system.sleep.registerWakeupCallback(POWER_SAVE_HANDLER callback);
 | **Function**   | `api.system.sleep.registerWakeupCallback(POWER_SAVE_HANDLER callback);`                                          |
 |----------------|------------------------------------------------------------------------------------------------------------------|
 | **Parameters** | **callback** - Pointer to the function to be called                                                              |
-| **Returns**    | bool 
- • **TRUE** = add callback function success 
- • **FALSE** = add callback function fail |
+| **Returns**    | bool <br /> &#x2022; **TRUE** = add callback function success <br /> &#x2022; **FALSE** = add callback function fail |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -846,6 +865,8 @@ void WakeupCallback()
 ```
 </details>
 
+
+
 ### setup()
 
 Sets up the sleep function.
@@ -863,9 +884,9 @@ On sleep mode, the device wake up trigger can be configured.
 
 | **Function**   | `void setup(RUI_WAKEUP_TRIGGER_MODE mode, uint32_t pin)`                                                                         |
 |----------------|----------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **mode** - This decide to use Rising or Falling trigger mode. 
- **pin** - This is the pin to be chosen as the wake up source. |
+| **Parameters** | **mode** - This decide to use Rising or Falling trigger mode. <br /> **pin** - This is the pin to be chosen as the wake up source. |
 | **Returns**    | void                                                                                                                             |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -883,6 +904,8 @@ void loop()
 ```
 </details>
 
+
+
 ### lpm
 
 This API sets and gets the low power mode of the device.
@@ -899,6 +922,7 @@ uint8_t api.system.lpm.get(void);
 |--------------|------------------------------------------------|
 | **Returns**  | **uint8_t** - Low Power Mode 0 == off, 1 == on |
 
+
 <details>
 <summary> Click to view the code</summary>
 
@@ -918,6 +942,7 @@ void loop()
 }
 ```
 </details>
+
 
 ### set()
 
@@ -930,7 +955,8 @@ bool api.system.lpm.set(uint8_t value);
 | **Function**   | `uint8_t get(void)`                                                                                             |
 |----------------|-----------------------------------------------------------------------------------------------------------------|
 | **Parameters** | **value** - Low Power Mode 0 == off, 1 == on                                                                    |
-| **Returns**    | **bool** • **TRUE** if low power mode could be enabled or disabled, **FALSE** if failure (not supported) |
+| **Returns**    | **bool** &#x2022; **TRUE** if low power mode could be enabled or disabled, **FALSE** if failure (not supported) |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -951,6 +977,7 @@ void loop()
 }
 ```
 </details>
+
 
 <!--
 ### scheduler
@@ -967,11 +994,9 @@ bool api.system.scheduler.task.create(char * name, RAK_TASK_HANDLER handler);
 
 | **Function**   | `bool create(char * name, RAK_TASK_HANDLER handler)`                                                     |
 |----------------|----------------------------------------------------------------------------------------------------------|
-| **Parameters** | **name** - Task name 
- **handler** - Pointer to the task function                                     |
-| **Returns**    | **bool** 
- • TRUE for creating task successfully 
- • FALSE for creating task failure |
+| **Parameters** | **name** - Task name <br /> **handler** - Pointer to the task function                                     |
+| **Returns**    | **bool** <br /> &#x2022; TRUE for creating task successfully <br /> &#x2022; FALSE for creating task failure |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -998,6 +1023,7 @@ void loop()
 ```
 </details>
 
+
 ### destroy()
 
 Create a new task.
@@ -1009,9 +1035,8 @@ bool api.system.scheduler.task.destroy(char* name);
 | **Function**   | `bool destroy(char * name)`                                                                                  |
 |----------------|--------------------------------------------------------------------------------------------------------------|
 | **Parameters** | **name** - Task name (if not specified, current thread is destroyed)                                         |
-| **Returns**    | **bool** 
- • TRUE for destroying task successfully 
- • FALSE for destroying task failure |
+| **Returns**    | **bool** <br /> &#x2022; TRUE for destroying task successfully <br /> &#x2022; FALSE for destroying task failure |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -1042,6 +1067,7 @@ void loop()
 }
 ```
 </details>
+
 
 ## RAK Thread
 The RAK Thread API allows to define threads that can ???????????????????
@@ -1112,6 +1138,7 @@ void loop()
 ```
 </details>
 
+
 ### RT_BEGIN
 Begin a RAK thread.
 
@@ -1177,6 +1204,7 @@ void loop()
 }
 ```
 </details>
+
 
 ### RT_END
 End a RAK thread.
@@ -1244,6 +1272,7 @@ void loop()
 ```
 </details>
 
+
 ### RT_WAIT_UNTIL
 Yield CPU while the conditon is false.
 
@@ -1259,6 +1288,7 @@ Yield CPU while the conditon is false.
 // NONE
 ```
 </details>
+
 
 ### RT_WAIT_WHILE
 Yield CPU while the conditon is true.
@@ -1276,6 +1306,7 @@ Yield CPU while the conditon is true.
 ```
 </details>
 
+
 #### RT_WAIT_THREAD
 Yield CPU while the conditon is true.
 
@@ -1291,6 +1322,7 @@ Yield CPU while the conditon is true.
 // NONE
 ```
 </details>
+
 
 ### RT_SPAWN
 Spawn a new RAK thread.
@@ -1308,6 +1340,7 @@ Spawn a new RAK thread.
 ```
 </details>
 
+
 ### RT_RESTART
 Restart a RAK thread.
 
@@ -1323,6 +1356,7 @@ Restart a RAK thread.
 // NONE
 ```
 </details>
+
 
 ### RT_SCHEDULE
 Schedule a RAK thread to run.
@@ -1340,6 +1374,7 @@ Schedule a RAK thread to run.
 ```
 </details>
 
+
 ### RT_YIELD
 Yield CPU time.
 
@@ -1355,6 +1390,7 @@ Yield CPU time.
 // NONE
 ```
 </details>
+
 
 ### RT_YIELD_UNTIL
 Yield CPU time until the condition is false.
@@ -1372,6 +1408,7 @@ Yield CPU time until the condition is false.
 ```
 </details>
 
+
 ### RT_SLEEP
 Yield CPU time for a period of time.
 
@@ -1387,6 +1424,7 @@ Yield CPU time for a period of time.
 // NONE
 ```
 </details>
+
 
 -->
 
@@ -1407,14 +1445,11 @@ api.system.pword.set(passwd_Str);
 api.system.pword.set(passwd_Char, len);
 ```
 
+
 | **Function**   | `bool set(char * passwd_Char, size_t len)` `bool set(char * passwd_Str, size_t len)`                                                                                     |
 |----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **passwd_Str** - a string to set for unlocking the device 
- **passwd_Char** - a char array to set for unlocking the device 
- **len** -	the length of your password |
-| **Returns**    | **bool** 
- - **TRUE** - for successfully set a password  
- - **FALSE** - for set a password failure                                                                |
+| **Parameters** | **passwd_Str** - a string to set for unlocking the device <br /> **passwd_Char** - a char array to set for unlocking the device <br /> **len** -	the length of your password |
+| **Returns**    | **bool** <br /> - **TRUE** - for successfully set a password  <br /> - **FALSE** - for set a password failure                                                                |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1442,6 +1477,7 @@ void loop()
 ```
 </details>
 
+
 #### lock
 
 This API allows the user to lock the default serial with the pass set in `api.system.pword.set()`.
@@ -1449,6 +1485,7 @@ This API allows the user to lock the default serial with the pass set in `api.sy
 ```c
 api.system.pword.lock();
 ```
+
 
 | **Function** | `void lock(void)` |
 |--------------|-------------------|
@@ -1480,6 +1517,7 @@ void loop()
 ```
 </details>
 
+
 #### unlock
 
 This API allows the user to unlock the default serial without password when it is locked.
@@ -1487,6 +1525,7 @@ This API allows the user to unlock the default serial without password when it i
 ```c
 api.system.pword.unlock();
 ```
+
 
 | **Function** | `void unlock(void)` |
 |--------------|---------------------|
@@ -1518,6 +1557,7 @@ void loop()
 ```
 </details>
 
+
 ### alias
 
 #### set()
@@ -1530,10 +1570,8 @@ api.system.alias.set(buf, len)
 
 | **Function**   | `bool set(char* buf , uint32_t len)`                                                                         |
 |----------------|--------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **buf** - the buffer to set alias name 
- **len** - the length of alias name( < = 16 bytes)                  |
-| **Returns**    | • **TRUE**	for setting alias name successfully 
- • **FALSE**	for setting alias name failure |
+| **Parameters** | **buf** - the buffer to set alias name <br /> **len** - the length of alias name( < = 16 bytes)                  |
+| **Returns**    | &#x2022; **TRUE**	for setting alias name successfully <br /> &#x2022; **FALSE**	for setting alias name failure |
 
 :::tip NOTE
 Then length `len` on setting the alias must be the same on the size of the alias name.
@@ -1557,6 +1595,7 @@ void loop()
 ```
 </details>
 
+
 #### get()
 
 Gets the alias name for device.
@@ -1567,10 +1606,8 @@ api.system.alias.get(buf, len)
 
 | **Function**   | `bool get(char* buf , uint32_t len)`                                                                         |
 |----------------|--------------------------------------------------------------------------------------------------------------|
-| **Parameters** | **buf** - the buffer to get alias name 
- **len** - the length of alias name( < = 16 bytes)                  |
-| **Returns**    | • **TRUE**	for getting alias name successfully 
- • **FALSE**	for getting alias name failure |
+| **Parameters** | **buf** - the buffer to get alias name <br /> **len** - the length of alias name( < = 16 bytes)                  |
+| **Returns**    | &#x2022; **TRUE**	for getting alias name successfully <br /> &#x2022; **FALSE**	for getting alias name failure |
 
 <details>
 <summary> Click to view the code</summary>
@@ -1590,6 +1627,7 @@ void loop()
 ```
 </details>
 
+
 ### atMode
 
 #### add()
@@ -1602,11 +1640,8 @@ api.system.atMode.add(cmd, usage, title, handle, perm)
 
 | **Function**   | `bool add(char *cmd, char *usage, char *title, PF_handle handle,unsigned int perm = RAK_ATCMD_PERM_WRITE                                                                                                  | RAK_ATCMD_PERM_READ);`                        |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Parameters** | • **cmd** - the cmd to define cmd name 
- • **usage** - the cmd usage 
- • **title** - the cmd title 
- • **handle** - the handler that this command will execute 
- • **perm**	- the cmd execution permission |
+| **Parameters** | &#x2022; **cmd** - the cmd to define cmd name <br /> &#x2022; **usage** - the cmd usage <br /> &#x2022; **title** - the cmd title <br /> &#x2022; **handle** - the handler that this command will execute <br /> &#x2022; **perm**	- the cmd execution permission |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -1652,6 +1687,8 @@ void loop()
 }
 ```
 </details>
+
+
 
 ### CHANGE\_ATCMD\_PERM
 
@@ -1700,7 +1737,10 @@ void loop()
 ```
 </details>
 
+
+
 ### reboot()
+
 
 ```c
 api.system.reboot()
@@ -1709,6 +1749,7 @@ api.system.reboot()
 | **Function** | `void reboot()` |
 |--------------|-----------------|
 | **Returns**  | void            |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -1732,7 +1773,10 @@ void loop()
 ```
 </details>
 
+
+
 ### restoreDefault()
+
 
 ```c
 api.system.restoreDefault()
@@ -1741,6 +1785,7 @@ api.system.restoreDefault()
 | **Function** | `void restoreDefault()` |
 |--------------|-------------------------|
 | **Returns**  | void                    |
+
 
 <details>
 <summary> Click to view the code</summary>
@@ -1758,3 +1803,4 @@ void loop()
 
 </details>
 
+<RkBottomNav/>

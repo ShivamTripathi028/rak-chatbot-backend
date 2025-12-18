@@ -12,6 +12,8 @@ sidebar_label: Product Overview
 date: 2020-08-22
 ---
 
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+
 # RAK1906 WisBlock Environmental Sensor Module
 
 Thank you for choosing **RAK1906 WisBlock Environmental Sensor Module** in your awesome IoT project! To help you get started, we have provided you with all the necessary documentation for your product.
@@ -42,17 +44,17 @@ The RAK1906 WisBlock Environmental Sensor Module, part of the RAK WisBlock Senso
 ## Product Features
 
 * **Sensor specifications**
-    * Voltage supply: 3.3 V
-    * Current consumption: 0.15 uA to 350 uA
+    * Voltage supply: 3.3&nbsp;V
+    * Current consumption: 0.15&nbsp;uA to 350&nbsp;uA
     * Chipset: BOSCH BME680
-    * Temperature range: -40 °C to 85 °C
+    * Temperature range: -40&nbsp;°C to 85&nbsp;°C
     * Humidity range: 0 to 100%
-    * Pressure range: 300 hPa to 1100 hPa
-    * Gas sensor response time < 1 sec
+    * Pressure range: 300&nbsp;hPa to 1100&nbsp;hPa
+    * Gas sensor response time < 1&nbsp;sec
     * Sensor outputs can be used with the [Bosch BSEC library](https://github.com/BoschSensortec/BSEC-Arduino-library) algorithm to calculate the IAQ (Indoor Air Quality) index
 
 * **Size**
-    * 10 x 10 mm
+    * 10 x 10&nbsp;mm
 
 ## Prerequisites
 
@@ -62,3 +64,5 @@ To use a **RAK1906**, you need at least a **WisBlock Base** to plug the module i
 Make sure to fix the module with the screws to ensure a proper function.
 :::
 
+
+<RkBottomNav/>

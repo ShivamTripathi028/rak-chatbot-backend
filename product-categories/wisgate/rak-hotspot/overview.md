@@ -11,6 +11,11 @@ sidebar_label: Overview
 download: true
 ---
 
+
+import RkImage from '@site/src/components/Image'
+import RkBottomNav from '@site/src/components/Document/BottomNav'
+import RkCertificationIcons from '@site/src/components/CertificationPage/IconList'
+
 # RAK Hotspot
 
 Thank you for choosing **RAK Hotspot** in your awesome IoT Project! 🎉 To help you get started, we have provided you with all the necessary documentation for your product.
@@ -32,7 +37,7 @@ Thank you for choosing **RAK Hotspot** in your awesome IoT Project! 🎉 To help
 - Efficient for mining Helium (HNT) cryptocurrency
 - Complete set-up in minutes using a smartphone
 - **LongFi technology** maximizes range and battery life without Wi-Fi, cellular or Bluetooth
-- Low Power – only uses about the same amount as an LED light bulb (5 W)
+- Low Power – only uses about the same amount as an LED light bulb (5&nbsp;W)
 - Easily manage Hotspots and tokens from the mobile app
 - LongFi™ Technology
 
@@ -42,7 +47,7 @@ Thank you for choosing **RAK Hotspot** in your awesome IoT Project! 🎉 To help
 
 ![proof-of-coverage](https://images.docs.rakwireless.com/wisgate/rak-hotspot/icons/proof-of-coverage.png)
 
-RAK Hotspots earn Helium when devices connect and for validating wireless coverage provided by peers. Through a system called Proof-of-Coverage, RAK Hotspots earn more Helium when they are within range of other RAK Hotspots, provided they are at least 300 meters apart.
+RAK Hotspots earn Helium when devices connect and for validating wireless coverage provided by peers. Through a system called Proof-of-Coverage, RAK Hotspots earn more Helium when they are within range of other RAK Hotspots, provided they are at least 300&nbsp;meters apart.
 
 The range depends on the environment: in rural areas, it can reach **up to 10 miles or more**, while in dense urban areas, it is typically **up to a mile**. A single RAK Hotspot earns less because it can only issue Challenges over the internet and cannot participate in Proof-of-Coverage.
 
@@ -60,13 +65,13 @@ coverage for an entire city.
 ## Product Features
 
 - Computing with Raspberry Pi4 (Linux)
-- 2 GB on-board RAM
-- 32 GB SD card
+- 2&nbsp;GB on-board RAM
+- 32&nbsp;GB SD card
 - Based on the LoRa Concentrator Engine: Semtech® SX1302
 - Built-in Heat Sink for thermal heat dissipation management
-- Supports 5 V/ 3 A power supply
+- Supports 5&nbsp;V/ 3&nbsp;A power supply
 - IP30 housing
-- TX power up to 27 dBm, RX sensitivity down to -139 dBm @SF12, BW 125 kHz
+- TX power up to 27&nbsp;dBm, RX sensitivity down to -139&nbsp;dBm @SF12, BW 125&nbsp;kHz
 - LoRa Frequency band support: RU864, IN865, EU868, US915, AU915, KR920, AS923
 - Includes Pi ready 'ID EE PROM', GPIO setup, and device tree can be automatically configured
 from vendor information
